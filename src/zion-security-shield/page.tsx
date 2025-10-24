@@ -8,7 +8,7 @@ export default function ZionSecurityShieldPage() {
   return (
     <>
     :all-pages-backup/zion-security-shield/page.tsx
-  </>
+</>
       <title>ZionSecurityShield - Zion Tech Group</title>
         <meta name="description" content="Professional zionsecurityshield services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionSecurityShieldPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

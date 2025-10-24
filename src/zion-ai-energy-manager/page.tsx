@@ -8,7 +8,7 @@ export default function ZionAiEnergyManagerPage() {
   return (
     <>
     :all-pages-backup/zion-ai-energy-manager/page.tsx
-  </>
+</>
       <title>ZionAiEnergyManager - Zion Tech Group</title>
         <meta name="description" content="Professional zionaienergymanager services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiEnergyManagerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

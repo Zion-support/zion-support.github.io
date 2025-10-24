@@ -8,7 +8,7 @@ export default function IotPage() {
   return (
     <>
     :all-pages-backup/iot/page.tsx
-  </>
+</>
       <title>Iot - Zion Tech Group</title>
         <meta name="description" content="Professional iot services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function IotPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

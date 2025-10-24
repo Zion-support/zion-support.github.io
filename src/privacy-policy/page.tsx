@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
   return (
     <>
     :all-pages-backup/privacy-policy/page.tsx
-  </>
+</>
       <title>PrivacyPolicy - Zion Tech Group</title>
         <meta name="description" content="Professional privacypolicy services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function PrivacyPolicyPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

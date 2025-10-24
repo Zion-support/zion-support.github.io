@@ -8,7 +8,7 @@ export default function CookiesPage() {
   return (
     <>
     :all-pages-backup/cookies/page.tsx
-  </>
+</>
       <title>Cookies - Zion Tech Group</title>
         <meta name="description" content="Professional cookies services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function CookiesPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

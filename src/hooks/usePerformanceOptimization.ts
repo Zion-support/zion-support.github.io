@@ -19,14 +19,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableImageOptimization = true
     enableCodeSplitting = true
     enableCaching = true
-  } = options
-
+  } = options,
+;
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {
-    if (!enableLazyLoading || typeof window === 'undefined') return
-
+    if (!enableLazyLoading || typeof window === 'undefined') return,
+;
       // Preload critical resources
       if (options.enablePreloading) {;
         const criticalResources = document.querySelectorAll('[data-preload]');
@@ -68,8 +68,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         })
       }
       {
-        rootMargin: rootMargin,
-  threshold: 0.01,
+        rootMargin: rootMargin
+  threshold: 0.01
       }
     )
 
@@ -80,19 +80,19 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
-    if (!enablePreloading || typeof window === 'undefined') return
-
+    if (!enablePreloading || typeof window === 'undefined') return,
+;
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
+      '/fonts/inter.woff2'
+      '/images/hero-bg.jpg'
       '/images/logo.svg'
     ]
 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload'
-      link.href = resource
-
+      link.href = resource,
+;
       if (resource.endsWith('.woff2')) {
         link.as = 'font'
         link.type = 'font/woff2'
@@ -107,8 +107,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Image optimization
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization || typeof window === 'undefined') return
-
+    if (!enableImageOptimization || typeof window === 'undefined') return,
+;
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       // Add loading="lazy" for non-critical images
@@ -128,11 +128,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Code splitting optimization
   const optimizeCodeSplitting = useCallback(() => {
-    if (!enableCodeSplitting || typeof window === 'undefined') return
-
+    if (!enableCodeSplitting || typeof window === 'undefined') return,
+;
     // Preload critical chunks
     const criticalChunks = [
-      '/static/js/main.js',
+      '/static/js/main.js'
       '/static/css/main.css'
     ]
 
@@ -147,8 +147,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
-    if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
-
+    if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return,
+;
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js');
@@ -164,8 +164,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -199,14 +199,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Resource hints
   const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
-      { rel: 'preconnect', href: 'http,
-  s://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'http,
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
+      { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
+      { rel: 'preconnect', href: 'http
+  s://fonts.googleapis.com' }
+      { rel: 'preconnect', href: 'http
   s://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
 
@@ -252,6 +252,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupLazyLoading
     preloadCriticalResources
     optimizeImages
-    registerServiceWorker,
+    registerServiceWorker
     setupPerformanceMonitoring
   }}</IntersectionObserver>;

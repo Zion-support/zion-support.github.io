@@ -8,7 +8,7 @@ export default function ZionAiFraudDetectorPage() {
   return (
     <>
     :all-pages-backup/zion-ai-fraud-detector/page.tsx
-  </>
+</>
       <title>ZionAiFraudDetector - Zion Tech Group</title>
         <meta name="description" content="Professional zionaifrauddetector services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiFraudDetectorPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

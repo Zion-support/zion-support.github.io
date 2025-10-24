@@ -8,7 +8,7 @@ export default function QuantumComputingSolutionsPage() {
   return (
     <>
     :all-pages-backup/quantum-computing-solutions/page.tsx
-  </>
+</>
       <title>QuantumComputingSolutions - Zion Tech Group</title>
         <meta name="description" content="Professional quantumcomputingsolutions services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function QuantumComputingSolutionsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

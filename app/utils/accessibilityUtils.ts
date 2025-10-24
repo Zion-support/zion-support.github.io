@@ -1,11 +1,10 @@
-// Accessibility utilities for improving user experience and compliance;
-
+// Accessibility utilities for improving user experience and compliance
 export const generateId = (prefix: string = 'id'): string => {;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
 export const createAriaLabel = (text: string, context?: string): string => {;
-  return context ? `${text}, ${context}` : text;
+  return context ? `${text}, ${context}` : text
 };
 
 export const announceToScreenReader = (message: string): void => {;
@@ -13,8 +12,7 @@ export const announceToScreenReader = (message: string): void => {;
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
-  announcement.textContent = message;
-  
+  announcement.textContent = message
   document.body.appendChild(announcement);
   
   // Remove after announcement
@@ -28,9 +26,8 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   
-  const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-  
+  const firstElement = focusableElements[0] as HTMLElement
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
   const handleTabKey = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -53,10 +50,10 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   return (
     <>
       ) => {
-    </>
-    </>
+</>
+</>
     element.removeEventListener('keydown', handleTabKey
-    </>
+</>
   );
   };
 };
@@ -64,23 +61,23 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
-  skipLink.textContent = text;
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu,
+  skipLink.textContent = text
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu
   s:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
   
-  return skipLink;
+  return skipLink
 };
 
 export const validateColorContrast = (foreground: string, background: string): boolean => {
   // Simple contrast ratio calculation
-  const getLuminance = (colo,
+  const getLuminance = (colo
   r: string): number => {;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
       c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
   };
   
   const fgLuminance = getLuminance(foreground);
@@ -96,10 +93,10 @@ export const createHighContrastMode = (): void => {;
   style.id = 'high-contrast-mode';
   style.textContent = `
     .high-contrast {
-      filter: contrast(150%) brightness(120%);,
+      filter: contrast(150%) brightness(120%);
     }
     .high-contrast * {
-      border-color: currentColor !important;,
+      border-color: currentColor !important
     }
   `;
   document.head.appendChild(style);
@@ -123,18 +120,18 @@ export const createFocusIndicator = (): void => {;
   style.id = 'focus-indicator';
   style.textContent = `
     *:focus {
-      outline: 2px solid #3b82f6 !important;
-      outline-offse,
-  t: 2px !important;
+      outline: 2px solid #3b82f6 !important
+      outline-offse
+  t: 2px !important
     }
     *:focus:not(:focus-visible) {
-      outlin,
-  e: none !important;
+      outlin
+  e: none !important
     }
     *:focus-visible {
-      outline: 2px solid #3b82f6 !important;
-      outline-offse,
-  t: 2px !important;
+      outline: 2px solid #3b82f6 !important
+      outline-offse
+  t: 2px !important
     }
   `;
   document.head.appendChild(style);
@@ -144,15 +141,15 @@ export const createReducedMotionMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';
   style.textContent = `
-    @media (prefers-reduced-motion: reduce) {,
-      *,
-      *::before,
+    @media (prefers-reduced-motion: reduce) {
+      *
+      *::before
       *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavio,
-  r: auto !important;
+        animation-duration: 0.01ms !important
+        animation-iteration-count: 1 !important
+        transition-duration: 0.01ms !important
+        scroll-behavio
+  r: auto !important
       }
     }
   `;
@@ -164,7 +161,7 @@ export const setupKeyboardNavigation = (): void => {
   document.addEventListener('keydown', (e) => {
     // Escape key to close modals/dropdowns
     if (e.key === 'Escape') {;
-      const activeElement = document.activeElement as HTMLElement;
+      const activeElement = document.activeElement as HTMLElement
       if (activeElement && activeElement.blur) {
         activeElement.blur();
       }
@@ -184,28 +181,28 @@ export const createScreenReaderOnly = (): void => {;
   style.id = 'screen-reader-only';
   style.textContent = `
     .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      cli,
+      position: absolute
+      width: 1px
+      height: 1px
+      padding: 0
+      margin: -1px
+      overflow: hidden
+      cli
   p: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      borde,
-  r: 0;
+      white-space: nowrap
+      borde
+  r: 0
     }
     .sr-only:focus {
-      position: static;
-      width: auto;
-      height: auto;
-      padding: inherit;
-      margin: inherit;
-      overflow: visible;
-      clip: auto;
-      white-spac,
-  e: normal;
+      position: static
+      width: auto
+      height: auto
+      padding: inherit
+      margin: inherit
+      overflow: visible
+      clip: auto
+      white-spac
+  e: normal
     }
   `;
   document.head.appendChild(style);
@@ -225,15 +222,15 @@ export const createARIALiveRegion = (): HTMLElement => {;
   liveRegion.className = 'sr-only';
   liveRegion.id = 'aria-live-region';
   document.body.appendChild(liveRegion);
-  return liveRegion;
+  return liveRegion
 };
 
 export const updateLiveRegion = (message: string): void => {;
   let liveRegion = document.getElementById('aria-live-region');
-  if (!liveRegion) {,
-    liveRegion = createARIALiveRegion();,
+  if (!liveRegion) {
+    liveRegion = createARIALiveRegion();
   }
-  liveRegion.textContent = message;
+  liveRegion.textContent = message
 };
 
 export const createLandmarkNavigation = (): void => {;
@@ -257,7 +254,7 @@ export const setupLandmarkNavigation = (): void => {;
   });
   
   observer.observe(document.body, {
-    childList: true,
+    childList: true
     subtree: true)
   });
 };
@@ -269,47 +266,45 @@ export const setupLandmarkNavigation = (): void => {;
 export interface AccessibilityMetrics {
 
 
-  overallScore: number;
-  colorContrast: number;
-  keyboardNavigation: number;
-  screenReaderCompatibility: number;
-  focusManagement: number;
-  ariaLabels: number;
-  headingStructure: number;
-  altTex,
+  overallScore: number
+  colorContrast: number
+  keyboardNavigation: number
+  screenReaderCompatibility: number
+  focusManagement: number
+  ariaLabels: number
+  headingStructure: number
+  altTex
   t: number;}
 }
 ;
 export interface AccessibilityConfig {
 
 
-  enableHighContrast: boolean;
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableFocusManagement: boolean;
-  enableAriaLabel,
+  enableHighContrast: boolean
+  enableKeyboardNavigation: boolean
+  enableScreenReaderSupport: boolean
+  enableFocusManagement: boolean
+  enableAriaLabel
   s: boolean;}
 }
 ;
 class AccessibilityEnhancer {
-  private config: AccessibilityConfig;
-  private metrics: AccessibilityMetrics | null = null;
-
-  constructor(confi,)
+  private config: AccessibilityConfig
+  private metrics: AccessibilityMetrics | null = null
+  constructor(confi)
   g: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableHighContrast: true,
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableFocusManagement: true,
-      enableAriaLabels: true,
-      ...config,
+      enableHighContrast: true
+      enableKeyboardNavigation: true
+      enableScreenReaderSupport: true
+      enableFocusManagement: true
+      enableAriaLabels: true
+      ...config
     };
   }
 
   init(): void {
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return
     // Initialize accessibility enhancements
     if (this.config.enableHighContrast) {
       this.setupHighContrast();
@@ -336,20 +331,19 @@ class AccessibilityEnhancer {
   }
 
   private setupHighContrast(): void {
-    // Add high contrast mode support;
-
+    // Add high contrast mode support
 const style = document.createElement('style');
     style.textContent = `
-      @media (prefers-contrast: high) {,
+      @media (prefers-contrast: high) {
         .cyber-card, .quantum-card {
-          border: 2px solid #ffffff !important;
-          background: #000000 !important;
-          colo,
-  r: #ffffff !important;
+          border: 2px solid #ffffff !important
+          background: #000000 !important
+          colo
+  r: #ffffff !important
         }
         
         .neon-text, .cyber-text {
-          text-shadow: 0 0 5px #00ffff !important;,
+          text-shadow: 0 0 5px #00ffff !important
         }
       }
     `;
@@ -368,22 +362,20 @@ const style = document.createElement('style');
       document.body.classList.remove('keyboard-navigation');
     });
 
-    // Add focus styles;
-
+    // Add focus styles
 const focusStyle = document.createElement('style');
     focusStyle.textContent = `
       .keyboard-navigation *:focus {
-        outline: 2px solid #00ffff !important;
-        outline-offse,
-  t: 2px !important;
+        outline: 2px solid #00ffff !important
+        outline-offse
+  t: 2px !important
       }
     `;
     document.head.appendChild(focusStyle);
   }
 
   private setupScreenReaderSupport(): void {
-    // Add screen reader announcements;
-
+    // Add screen reader announcements
 const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -394,12 +386,11 @@ const announcement = document.createElement('div');
 
   private setupFocusManagement(): void {
     // Manage focus for modals and dynamic content
-    const focusHistory: HTMLElement[] = [];,
-,
+    const focusHistory: HTMLElement[] = [];
+
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        // Return focus to previous element;
-
+        // Return focus to previous element
 const previousElement = focusHistory.pop();
         if (previousElement) {
           previousElement.focus();
@@ -421,15 +412,15 @@ const previousElement = focusHistory.pop();
   private setupAriaLabels(): void {
     // Add ARIA labels to interactive elements
     const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach((button) => {,
-      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,
+    buttons.forEach((button) => {
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
     });
 
     const links = document.querySelectorAll('a:not([aria-label])');
-    links.forEach((link) => {,
-      if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,
+    links.forEach((link) => {
+      if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
         link.setAttribute('aria-label', 'Link');
       }
     });
@@ -437,38 +428,33 @@ const previousElement = focusHistory.pop();
 
   collectMetrics(): AccessibilityMetrics {
     const metrics: AccessibilityMetrics = {
-      overallScor,
-  e: 0,
-      colorContrast: this.checkColorContrast(),
-      keyboardNavigation: this.checkKeyboardNavigation(),
-      screenReaderCompatibility: this.checkScreenReaderCompatibility(),
-      focusManagement: this.checkFocusManagement(),
-      ariaLabels: this.checkAriaLabels(),
-      headingStructure: this.checkHeadingStructure(),
-      altText: this.checkAltText(),
+      overallScor
+  e: 0
+      colorContrast: this.checkColorContrast()
+      keyboardNavigation: this.checkKeyboardNavigation()
+      screenReaderCompatibility: this.checkScreenReaderCompatibility()
+      focusManagement: this.checkFocusManagement()
+      ariaLabels: this.checkAriaLabels()
+      headingStructure: this.checkHeadingStructure()
+      altText: this.checkAltText()
     };
 
-    // Calculate overall score;
-
+    // Calculate overall score
 const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);
-    metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length : 0;
-
-    this.metrics = metrics;
-    return metrics;
+    metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length : 0
+    this.metrics = metrics
+    return metrics
   }
 
   private checkColorContrast(): number {
-    // Simple color contrast check;
-
+    // Simple color contrast check
 const elements = document.querySelectorAll('*');
-    let goodContrast = 0;
-    let totalElements = 0;
-
+    let goodContrast = 0
+    let totalElements = 0
     elements.forEach((element) => {
       const styles = window.getComputedStyle(element);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
-      
+      const color = styles.color
+      const backgroundColor = styles.backgroundColor
       if (color && backgroundColor && color !== backgroundColor) {
         totalElements++;
         // This is a simplified check - in reality, you'd calculate actual contrast ratio
@@ -478,15 +464,14 @@ const elements = document.querySelectorAll('*');
       }
     });
 
-    return totalElements > 0 ? (goodContrast / totalElements) * 100 : 0;
+    return totalElements > 0 ? (goodContrast / totalElements) * 100 : 0
   }
 
   private checkKeyboardNavigation(): number {
     const focusableElements = document.querySelectorAll()
       'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
-    let accessibleElements = 0;
-
+    let accessibleElements = 0
     focusableElements.forEach((element) => {
       if (element instanceof HTMLElement) {
         const tabIndex = element.getAttribute('tabindex');
@@ -496,27 +481,25 @@ const elements = document.querySelectorAll('*');
       }
     });
 
-    return focusableElements.length > 0 ? (accessibleElements / focusableElements.length) * 100 : 0;
+    return focusableElements.length > 0 ? (accessibleElements / focusableElements.length) * 100 : 0
   }
 
   private checkScreenReaderCompatibility(): number {
     const elements = document.querySelectorAll('*');
-    let compatibleElements = 0;
-
+    let compatibleElements = 0
     elements.forEach((element) => {
       if (element instanceof HTMLElement) {
         const hasAriaLabel = element.hasAttribute('aria-label');
         const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
         const hasRole = element.hasAttribute('role');
-        const hasTextContent = element.textContent?.trim().length > 0;
-        
+        const hasTextContent = element.textContent?.trim().length > 0
         if (hasAriaLabel || hasAriaLabelledBy || hasRole || hasTextContent) {
           compatibleElements++;
         }
       }
     });
 
-    return elements.length > 0 ? (compatibleElements / elements.length) * 100 : 0;
+    return elements.length > 0 ? (compatibleElements / elements.length) * 100 : 0
   }
 
   private checkFocusManagement(): number {
@@ -525,7 +508,7 @@ const elements = document.querySelectorAll('*');
       'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     
-    let properlyManaged = 0;
+    let properlyManaged = 0
     focusableElements.forEach((element) => {
       if (element instanceof HTMLElement) {
         const hasFocusStyles = window.getComputedStyle(element).outline !== 'none';
@@ -535,7 +518,7 @@ const elements = document.querySelectorAll('*');
       }
     });
 
-    return focusableElements.length > 0 ? (properlyManaged / focusableElements.length) * 100 : 0;
+    return focusableElements.length > 0 ? (properlyManaged / focusableElements.length) * 100 : 0
   }
 
   private checkAriaLabels(): number {
@@ -543,63 +526,59 @@ const elements = document.querySelectorAll('*');
       'button, input, textarea, select, [role="button"], [role="link"]');
     );
     
-    let labeledElements = 0;
+    let labeledElements = 0
     interactiveElements.forEach((element) => {
       const hasAriaLabel = element.hasAttribute('aria-label');
       const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
-      const hasTextContent = element.textContent?.trim().length > 0;
-      
+      const hasTextContent = element.textContent?.trim().length > 0
       if (hasAriaLabel || hasAriaLabelledBy || hasTextContent) {
         labeledElements++;
       }
     });
 
-    return interactiveElements.length > 0 ? (labeledElements / interactiveElements.length) * 100 : 0;
+    return interactiveElements.length > 0 ? (labeledElements / interactiveElements.length) * 100 : 0
   }
 
   private checkHeadingStructure(): number {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let properStructure = 0;
-    let previousLevel = 0;
-
+    let properStructure = 0
+    let previousLevel = 0
     headings.forEach((heading) => {
       const level = parseInt(heading.tagName.charAt(1));</AccessibilityConfig>
       if (level <= previousLevel + 1) {
         properStructure++;
-        previousLevel = level;
+        previousLevel = level
       }
     });
 
-    return headings.length > 0 ? (properStructure / headings.length) * 100 : 0;
+    return headings.length > 0 ? (properStructure / headings.length) * 100 : 0
   }
 
   private checkAltText(): number {
     const images = document.querySelectorAll('img');
-    let imagesWithAlt = 0;
-
+    let imagesWithAlt = 0
     images.forEach((img) => {
       if (img.hasAttribute('alt')) {
         imagesWithAlt++;
       }
     });
 
-    return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0;
+    return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0
   }
 
-  announce(message: string): void {,
+  announce(message: string): void {
     const announcement = document.getElementById('screen-reader-announcements');
-    if (announcement) {,
-      announcement.textContent = message;,
+    if (announcement) {
+      announcement.textContent = message
     }
   }
 
   getMetrics(): AccessibilityMetrics | null {
-    return this.metrics;
+    return this.metrics
   }
 
   cleanup(): void {
-    // Cleanup accessibility enhancements;
-
+    // Cleanup accessibility enhancements
 const announcement = document.getElementById('screen-reader-announcements');
     if (announcement) {
       announcement.remove();

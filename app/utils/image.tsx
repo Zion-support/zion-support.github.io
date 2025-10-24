@@ -4,26 +4,26 @@ import React, { useState, useCallback } from 'react';
 interface ImageProps {
 
 
-  src: string,
+  src: string
     alt: string}
 interface ImageProps {};
-src: string,
+src: string
     alt: string
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
-sr,
-  c: string,
+sr
+  c: string
     alt: string
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
-sr,
-  c: string,
+sr
+  c: string
     alt: string
 width?: number
 height?: number
@@ -34,8 +34,8 @@ _placeholder?: 'blur' | 'empty'
 _blurDataURL?: string
 fill?: boolean
 sizes?: string
-style?: React.CSSProperties,
-onLoad?: () => void,
+style?: React.CSSProperties
+onLoad?: () => void
 onError?: () => void;}
 export const Image: React.FC<ImageProps>= ({}</ImageProps>
 export const Image: React.FC<ImageProps> = ({}
@@ -52,8 +52,8 @@ placeholder = 'empty'
 blurDataURL
 fill = false
 sizes
-style,
-onLoad,
+style
+onLoad
 onError}
 ...props}
 }) => {};
@@ -70,20 +70,20 @@ if (onError) onError()}
 const imageStyle: React.CSSProperties = {
 ...style
 ...(fill && {
-positio,
-  n: 'absolute',
+positio
+  n: 'absolute'
     top: 0
-lef,
+lef
   t: 0}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
-position: 'absolute',
+position: 'absolute'
     top: 0
-lef,
-  t: 0,
-    width: '100%',
-height: '100%',
+lef
+  t: 0
+    width: '100%'
+height: '100%'
     objectFit: 'cover'}
 })
 if (hasError) {</ImageProps>
@@ -98,14 +98,14 @@ if (hasError) {}
 return(<div};
 interface ImageProps {/* TODO: Fix JSX expression */};
 export const
-Image: React.FC<ImageProps>= ({/* TOD,)
+Image: React.FC<ImageProps>= ({/* TOD)
   O: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 }, [onError])
 const
-imageStyle: React.CSSProperties = {/* TOD,
+imageStyle: React.CSSProperties = {/* TOD
   O: Fix JSX expression */}
 })
 if (hasError) {/* TODO: Fix JSX expression */}
@@ -116,12 +116,7 @@ imageStyle
 {...props})
 >)
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-<<<<<<< HEAD
-;
-  );
-=======
-),
->>>>>>> cursor/fix-errors-and-merge-to-main-996d,
+
 {...props}
 ></div>
 <span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>

@@ -43,7 +43,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
             <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
               <span className=&quot;bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent&quot;></span>
                 OptimizedImage
-              <br /></br>
+              <br />
               <span className=&quot;text-white&quot;>Solutions</span>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -54,19 +54,19 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </div>,
-      </section>,
+        </div>
+      </section>
       {/* Features Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl m,
+            <h2 className=&quot;text-3xl m
   d:text-4xl font-bold text-white mb-4&quot;>
               Why Choose Our OptimizedImage?</h2>
             </h2>
@@ -74,7 +74,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
               Our optimizedimage solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
-          <div className=&quot;grid grid-cols-1 md: grid-cols-2 l,
+          <div className=&quot;grid grid-cols-1 md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
             {features.map((feature, index) => (
               <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300&quot;></div>
@@ -92,15 +92,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl m,
+            <h2 className=&quot;text-3xl m
   d:text-4xl font-bold text-white mb-4&quot;></h2>
               Key Benefits
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               Experience the power of our optimizedimage solutions for your business.</p>
             </p>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -110,7 +110,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -133,7 +133,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Phone className=&quot;mr-2 h-5 w-5&quot; />
                 Call Now</Phone>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove,
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
   r:scale-105&quot;></button>
                 <Mail className=&quot;mr-2 h-5 w-5&quot; />
                 Email Us</Mail>
@@ -141,12 +141,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
-    </>
+      <Footer />
+</>
 :all-pages-backup/components/OptimizedImage.tsx
   )};
 
 export default OptimizedImagePage
   );
 }
-export default OptimizedImagePage;
+export default OptimizedImagePage

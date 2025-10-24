@@ -8,7 +8,7 @@ export default function SystemAdministrationPage() {
   return (
     <>
     :all-pages-backup/system-administration/page.tsx
-  </>
+</>
       <title>SystemAdministration - Zion Tech Group</title>
         <meta name="description" content="Professional systemadministration services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SystemAdministrationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

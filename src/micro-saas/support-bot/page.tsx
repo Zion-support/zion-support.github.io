@@ -8,7 +8,7 @@ export default function SupportBotPage() {
   return (
     <>
     :all-pages-backup/micro-saas/support-bot/page.tsx
-  </>
+</>
       <title>SupportBot - Zion Tech Group</title>
         <meta name="description" content="Professional supportbot services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SupportBotPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

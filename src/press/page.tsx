@@ -8,7 +8,7 @@ export default function PressPage() {
   return (
     <>
     :all-pages-backup/press/page.tsx
-  </>
+</>
       <title>Press - Zion Tech Group</title>
         <meta name="description" content="Professional press services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function PressPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

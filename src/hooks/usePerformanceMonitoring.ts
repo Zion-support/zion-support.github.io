@@ -3,56 +3,54 @@ import { useState, useEffect, useCallback } from 'react';
 interface PerformanceMetrics {
 
 
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fp,
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  fp
   s: number;}
 }
 ;
 interface UsePerformanceMonitoringReturn {
 
 
-  metrics: PerformanceMetrics;
-  isMonitoring: boolean;
-  startMonitoring: () => void;
-  stopMonitorin,
+  metrics: PerformanceMetrics
+  isMonitoring: boolean
+  startMonitoring: () => void
+  stopMonitorin
   g: () => void;}
 }
 ;
 const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 60;
+    loadTime: 0
+    renderTime: 0
+    memoryUsage: 0
+    fps: 60
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   const measurePerformance = useCallback(() => {;
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-    
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    const loadTime = navigation.loadEventEnd - navigation.loadEventStart
     const renderTime = performance.now();
     
-    const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-    
+    const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0
     // Simple FPS calculation
-    let fps = 60;
+    let fps = 60
     let lastTime = performance.now();
     const calculateFPS = () => {;
       const currentTime = performance.now();
       fps = 1000 / (currentTime - lastTime);
-      lastTime = currentTime;
+      lastTime = currentTime
     };
     
     calculateFPS();
 
     setMetrics({
-      loadTime,
-      renderTime,
-      memoryUsage,
+      loadTime
+      renderTime
+      memoryUsage
       fps)
     });
   }, []);
@@ -74,9 +72,9 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
   }, [isMonitoring, measurePerformance]);
 
   return {
-    metrics,
-    isMonitoring,
-    startMonitoring,
+    metrics
+    isMonitoring
+    startMonitoring
     stopMonitoring
   };
 };

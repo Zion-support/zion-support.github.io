@@ -8,7 +8,7 @@ export default function InnovationLabsPage() {
   return (
     <>
     :all-pages-backup/innovation-labs/page.tsx
-  </>
+</>
       <title>InnovationLabs - Zion Tech Group</title>
         <meta name="description" content="Professional innovationlabs services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function InnovationLabsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

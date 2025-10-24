@@ -8,7 +8,7 @@ export default function SystemIntegrationPage() {
   return (
     <>
     :all-pages-backup/system-integration/page.tsx
-  </>
+</>
       <title>SystemIntegration - Zion Tech Group</title>
         <meta name="description" content="Professional systemintegration services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SystemIntegrationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

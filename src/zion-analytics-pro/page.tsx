@@ -8,7 +8,7 @@ export default function ZionAnalyticsProPage() {
   return (
     <>
     :all-pages-backup/zion-analytics-pro/page.tsx
-  </>
+</>
       <title>ZionAnalyticsPro - Zion Tech Group</title>
         <meta name="description" content="Professional zionanalyticspro services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAnalyticsProPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

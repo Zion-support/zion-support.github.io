@@ -13,4 +13,4 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '' }) => {
   );
 };
 
-export default MicroSAASCard;
+export default MicroSAASCard

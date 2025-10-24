@@ -8,7 +8,7 @@ export default function ZionAiRecruitmentProPage() {
   return (
     <>
     :all-pages-backup/zion-ai-recruitment-pro/page.tsx
-  </>
+</>
       <title>ZionAiRecruitmentPro - Zion Tech Group</title>
         <meta name="description" content="Professional zionairecruitmentpro services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiRecruitmentProPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -8,7 +8,7 @@ export default function DevopsCicdPage() {
   return (
     <>
     :all-pages-backup/devops-cicd/page.tsx
-  </>
+</>
       <title>DevopsCicd - Zion Tech Group</title>
         <meta name="description" content="Professional devopscicd services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function DevopsCicdPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

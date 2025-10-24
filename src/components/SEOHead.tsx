@@ -15,4 +15,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({ className = '' }) => {
   );
 };
 
-export default SEOHead;
+export default SEOHead

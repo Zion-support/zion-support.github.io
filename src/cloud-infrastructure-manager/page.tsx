@@ -8,7 +8,7 @@ export default function CloudInfrastructureManagerPage() {
   return (
     <>
     :all-pages-backup/cloud-infrastructure-manager/page.tsx
-  </>
+</>
       <title>CloudInfrastructureManager - Zion Tech Group</title>
         <meta name="description" content="Professional cloudinfrastructuremanager services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function CloudInfrastructureManagerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

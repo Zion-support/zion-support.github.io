@@ -6,4 +6,5 @@ import Navigation from '../components/Navigation';
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [;
 
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase
+}]

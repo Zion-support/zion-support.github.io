@@ -1,19 +1,18 @@
 
-// Type definitions for Next.js compatibility;
-
+// Type definitions for Next.js compatibility
 export interface Metadata {
   title?: string
   description?: string
   keywords?: string[]}
   authors?: Array<{ name: string; url?: string }> | string[]
-  creator?: string;
-  publisher?: string;
+  creator?: string
+  publisher?: string
   formatDetection?: {
-  email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
+  email?: boolean
+    address?: boolean
+    telephone?: boolean
 }
-  metadataBase?: URL;
+  metadataBase?: URL
   alternates?: {
   canonical?: string
     languages?: Record<string, string></string>
@@ -26,28 +25,28 @@ export interface Metadata {
     images?: Array<{
       url: string
       width?: number
-      height?: number,
-      alt?: string,
+      height?: number
+      alt?: string
 }>
-    locale?: string;
-    type?: string;
+    locale?: string
+    type?: string
     authors?: Array<{ name: string; url?: string }> | string[]
-    publishedTime?: string;
+    publishedTime?: string
   }
   twitter?: {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player'
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
+    site?: string
+    creator?: string
+    title?: string
+    description?: string
     images?: string[]
 }
   robots?: {
-  index?: boolean;
-    follow?: boolean;
+  index?: boolean
+    follow?: boolean
     googleBot?: {
-      index?: boolean;
-      follow?: boolean;
+      index?: boolean
+      follow?: boolean
       'max-video-preview'?: number
       'max-image-preview'?: 'none' | 'standard' | 'large'
       'max-snippet'?: number
@@ -69,16 +68,16 @@ export interface MetadataRoute {
   priority?: number}
 };
 export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string,
+  url: string
   lastModified?: string | Date
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
-  priority?: number,
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 // Custom Next.js types
 export interface NextPageProps {}
-  params: { [ke,
+  params: { [ke
   y: string]: string };
-  searchParams: { [ke,
+  searchParams: { [ke
   y: string]: string | string[] | undefined }
 }
 // API route types
@@ -86,13 +85,12 @@ export interface ApiRouteHandler {}</string>
   (req: Request): Promise<Response>};
 // Server components types
 export interface ServerComponentProps {}
-  params: { [ke,
+  params: { [ke
   y: string]: string };
-  searchParams: { [ke,
+  searchParams: { [ke
   y: string]: string | string[] | undefined }
 }
-// Client components types;
-
+// Client components types
 export interface ClientComponentProps {
 
 
@@ -109,18 +107,17 @@ export interface RouteHandler {</Response>
   PATCH?: (req: Request) => Promise<Response>};
 // Dynamic route types
 export interface DynamicRoute {}
-  params: { [ke,
+  params: { [ke
   y: string]: string };
 }
 // Static generation types
 export interface StaticProps {}
-  props: { [ke,
+  props: { [ke
   y: string]: any };
   revalidate?: number
   notFound?: boolean
 }
-// ISR types;
-
+// ISR types
 export interface ISRConfig {
 
 
@@ -139,7 +136,7 @@ declare module 'next' {
 
 
     user?: {
-      id: string,
+      id: string
     email: string
       name?: string}
 };

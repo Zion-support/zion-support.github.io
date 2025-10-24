@@ -8,7 +8,7 @@ export default function NetworkSolutionsPage() {
   return (
     <>
     :all-pages-backup/network-solutions/page.tsx
-  </>
+</>
       <title>NetworkSolutions - Zion Tech Group</title>
         <meta name="description" content="Professional networksolutions services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function NetworkSolutionsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -9,18 +9,18 @@ interface AdvancedErrorBoundaryProps {
 interface State {
   hasError: boolean
   error?: Error
-  errorInfo?: ErrorInfo,
-  errorId?: string,
+  errorInfo?: ErrorInfo
+  errorId?: string
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)}
     this.state = { hasError: false};
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorRepor,
-  t: ErrorReport = {,
+    const errorRepor
+  t: ErrorReport = {
     errorId: this.state.errorId || this.generateErrorId()
       error
-      errorI,
+      errorI
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
   this.setState({
@@ -37,6 +37,36 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)}
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {</Props>;
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+}

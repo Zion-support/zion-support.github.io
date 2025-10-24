@@ -8,7 +8,7 @@ export default function ZionCustomerInsightsPage() {
   return (
     <>
     :all-pages-backup/zion-customer-insights/page.tsx
-  </>
+</>
       <title>ZionCustomerInsights - Zion Tech Group</title>
         <meta name="description" content="Professional zioncustomerinsights services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionCustomerInsightsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

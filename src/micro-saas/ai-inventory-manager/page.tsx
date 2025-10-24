@@ -8,7 +8,7 @@ export default function AiInventoryManagerPage() {
   return (
     <>
     :all-pages-backup/micro-saas/ai-inventory-manager/page.tsx
-  </>
+</>
       <title>AiInventoryManager - Zion Tech Group</title>
         <meta name="description" content="Professional aiinventorymanager services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function AiInventoryManagerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

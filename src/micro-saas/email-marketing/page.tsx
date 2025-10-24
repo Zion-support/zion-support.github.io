@@ -8,7 +8,7 @@ export default function EmailMarketingPage() {
   return (
     <>
     :all-pages-backup/micro-saas/email-marketing/page.tsx
-  </>
+</>
       <title>EmailMarketing - Zion Tech Group</title>
         <meta name="description" content="Professional emailmarketing services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function EmailMarketingPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

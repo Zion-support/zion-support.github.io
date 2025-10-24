@@ -8,7 +8,7 @@ export default function BackupRecoveryPage() {
   return (
     <>
     :all-pages-backup/backup-recovery/page.tsx
-  </>
+</>
       <title>BackupRecovery - Zion Tech Group</title>
         <meta name="description" content="Professional backuprecovery services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function BackupRecoveryPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

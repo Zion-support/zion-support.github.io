@@ -8,7 +8,7 @@ export default function DataAnalyticsBiPage() {
   return (
     <>
     :all-pages-backup/data-analytics-bi/page.tsx
-  </>
+</>
       <title>DataAnalyticsBi - Zion Tech Group</title>
         <meta name="description" content="Professional dataanalyticsbi services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function DataAnalyticsBiPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

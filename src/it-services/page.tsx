@@ -13,4 +13,4 @@ const page: React.FC<pageProps> = ({ className = '' }) => {
   );
 };
 
-export default page;
+export default page

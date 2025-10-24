@@ -1,20 +1,17 @@
 
 'use client';
-import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
-
+import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
 declare global {
   interface Window {
 
 
-    gtag: (...args: any[]) => void,
-
+    gtag: (...args: any[]) => void
 }
 interface AnalyticsContextType {
 
 
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void,
-
+  trackPageView: (pageName: string) => void
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -26,8 +23,7 @@ export const useAnalytics = () => {
 interface AnalyticsProviderProps {
 
 
-  children: ReactNode,
-
+  children: ReactNode
 }
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
     if (type of windo w !=="undefined") {
@@ -46,33 +42,50 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
         window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")}
   }, [])
   consttrackEvent= (
-    eventName: string,
+    eventName: string
     parameters?: Record<string, unknown></string>
   ) => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", eventName, parameters)}
   consttrackPageView= (pageName: string) => {if (type of windo w !=="undefined" && windo w.gtag) {
       window.gtag("config","GA_MEASUREMENT_ID", {
-        page_title: pageName,
+        page_title: pageName
     page_location: window.location.href})}
-  constvalue: AnalyticsContextType = {,
-trackEvent,
+  constvalue: AnalyticsContextType = {
+trackEvent
     trackPageView
 };
   return (
     <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
- AnalyticsProvider
-  );
-}
-=======
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
 export default AnalyticsProvider
+,
+;
 
+
+
+
+
+
+
+})))
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+}

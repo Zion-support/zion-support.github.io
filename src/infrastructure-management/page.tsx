@@ -8,7 +8,7 @@ export default function InfrastructureManagementPage() {
   return (
     <>
     :all-pages-backup/infrastructure-management/page.tsx
-  </>
+</>
       <title>InfrastructureManagement - Zion Tech Group</title>
         <meta name="description" content="Professional infrastructuremanagement services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function InfrastructureManagementPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

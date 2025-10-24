@@ -8,7 +8,7 @@ export default function DataAnalytics5GPage() {
   return (
     <>
     :all-pages-backup/5g-data-analytics/page.tsx
-  </>
+</>
       <title>5G Data Analytics - Zion Tech Group</title>
       
         <Head></Head>

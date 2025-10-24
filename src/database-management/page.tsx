@@ -8,7 +8,7 @@ export default function DatabaseManagementPage() {
   return (
     <>
     :all-pages-backup/database-management/page.tsx
-  </>
+</>
       <title>DatabaseManagement - Zion Tech Group</title>
         <meta name="description" content="Professional databasemanagement services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function DatabaseManagementPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

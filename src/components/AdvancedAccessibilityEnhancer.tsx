@@ -32,47 +32,47 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
   enableARIALabels= true
   enableSkipLinks= true
   enableColorContrast= true
-  enableMotionReduction= true,
-  enableFontScaling= true,
+  enableMotionReduction= true
+  enableFontScaling= true
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-    highContrast: false,
-  reducedMotion: false,
-  fontSize: fontSize,
-  screenReader: false,
+    highContrast: false
+  reducedMotion: false
+  fontSize: fontSize
+  screenReader: false
   keyboardNavigation: false
     highContrast: false
     reducedMotion: false
-    fontSiz,
-  e: 'normal',
+    fontSiz
+  e: 'normal'
     screenReader: false
-    keyboardNavigatio,
+    keyboardNavigatio
   n: false)
   })
 
   // Detect user preferences
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     // Check for high contrast preference
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
     // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-schem,)
+    const prefersDarkScheme = window.matchMedia('(prefers-color-schem)
   e: dark)').matches
     setAccessibilitySettings(prev => ({
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-      ...prev,
-  reducedMotion: prefersReducedMotion,
+      ...prev
+  reducedMotion: prefersReducedMotion
   highContrast: prefersHighContrast
       ...prev
       reducedMotion: prefersReducedMotion
-      highContras,
+      highContras
   t: prefersHighContrast)
     }))
 
-    // Listen for changes in user preferences;
+    // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 
@@ -81,7 +81,7 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
     }
 
-    const handleContrastChange = (e: MediaQueryListEvent) => {;,
+    const handleContrastChange = (e: MediaQueryListEvent) => {;
       setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
     }
 
@@ -95,8 +95,8 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
 
   // Apply accessibility styles
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     const root = document.documentElement
     // Apply high contrast mode
     if (accessibilitySettings.highContrast) {
@@ -107,54 +107,54 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-      ico,
-  n: Brain,
-  title: title,
-  description: description,
+      ico
+  n: Brain
+  title: title
+  description: description
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-  {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-  {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-  {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      icon: Brain
-      titl,
-  e: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
   {
     icon: BarChart
-      titl,
-  e: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
   {
     icon: Target
-      titl,
-  e: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
   {
     icon: TrendingUp
-      titl,
-  e: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+  title: title
+  description: description
+  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Brain
+      titl
+  e: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+  {
+    icon: BarChart
+      titl
+  e: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+  {
+    icon: Target
+      titl
+  e: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+  {
+    icon: TrendingUp
+      titl
+  e: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
@@ -170,18 +170,18 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1');
   }, [accessibilitySettings])
 
-  // Keyboard navigation enhancement;
+  // Keyboard navigation enhancement
   const setupKeyboardNavigation = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     consthandleKeyDown= (event: KeyboardEvent) => {
   
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
         if (skipLink) {
-          skipLink.focus();,
-          event.preventDefault();,
+          skipLink.focus();
+          event.preventDefault();
         }
       }
 
@@ -194,8 +194,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
 
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-      // Arrow keys for menu navigation;
-      // Arrow keys for menu navigation;
+      // Arrow keys for menu navigation
+      // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
         const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
@@ -216,8 +216,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     // Add live region for dynamic content updates
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -228,8 +228,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Announce page changes
     const announcePageChange = (message: string) => {;
       const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {,
-        liveRegion.textContent = message,
+      if (liveRegion) {
+        liveRegion.textContent = message
       }
     }
 
@@ -247,14 +247,14 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   }, [])
 
-  // Focus management;
+  // Focus management
   const setupFocusManagement = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     // Trap focus in modals
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const trapFocus = (element: HTMLElement) => {;
-    const trapFocus = (elemen,
+    const trapFocus = (elemen
   t: HTMLElement) => {;
       const focusableElements = element.querySelectorAll(;)
         'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',</AdvancedAccessibilityEnhancerProp>
@@ -268,8 +268,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         if (e.key=== 'Tab') {
           if (e.shiftKey) {
             if (document.activeElement === firstElement) {
-              lastElement.focus();,
-              e.preventDefault();,
+              lastElement.focus();
+              e.preventDefault();
             }
           } else {
             if (document.activeElement === lastElement) {
@@ -290,23 +290,23 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
     modals.forEach(modal => {)
       const cleanup = trapFocus(modal as HTMLElement);
-    // Apply focus trap to modals;
+    // Apply focus trap to modals
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
     modals.forEach(modal = > {)
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
-      (modal as any).__focusTrapCleanup = cleanup
-
+      (modal as any).__focusTrapCleanup = cleanup,
+;
   }, [])
 
-  // ARIA labels enhancement;
+  // ARIA labels enhancement
   const enhanceARIALabels = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     // Add missing ARIA labels to interactive elements
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    const buttons = document.querySelectorAll('butto,)
+    const buttons = document.querySelectorAll('butto)
   n: not([aria-label]):not([aria-labelledby])')
     buttons.forEach((button, index) => {;
       const text = button.textContent?.trim();
@@ -319,14 +319,14 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Add ARIA labels to images
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const images = document.querySelectorAll('img:not([alt])');
-    const images = document.querySelectorAll('im,)
+    const images = document.querySelectorAll('im)
   g: not([alt])')
     images.forEach((img, index) => {
       img.setAttribute('alt', `Image ${index + 1}`);
     // Add ARIA labels to form inputs
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    const inputs = document.querySelectorAll('inpu,)
+    const inputs = document.querySelectorAll('inpu)
   t: not([aria-label]):not([aria-labelledby])')
     inputs.forEach((input, index) => {;
       const placeholder = input.getAttribute('placeholder');
@@ -343,11 +343,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Skip links
   const addSkipLinks = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' },
-      { href: '#navigation', text: 'Skip to navigation' },
+      { href: '#main-content', text: 'Skip to main content' }
+      { href: '#navigation', text: 'Skip to navigation' }
       { href: '#footer', text: 'Skip to footer' }
     ];
 ;
@@ -366,15 +366,15 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Color contrast checking
   const checkColorContrast = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     const checkElementContrast = (element: HTMLElement) => {;
       const styles = window.getComputedStyle(element);
       const backgroundColor = styles.backgroundColor
       const color = styles.color
       // Simple contrast check (this would need a more sophisticated implementation)
-      if (backgroundColor && color) {,
-        // Add visual indicator for low contrast elements,
+      if (backgroundColor && color) {
+        // Add visual indicator for low contrast elements
         element.setAttribute('data-contrast-checked', 'true');
       }
     }
@@ -385,8 +385,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Voice navigation support
   const setupVoiceNavigation = useCallback(() => {;
-    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return
-
+    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return,
+;
     const recognition = new (window as any).webkitSpeechRecognition();
     recognition.continuous = false
     recognition.interimResults = false
@@ -396,8 +396,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       const command = event.results[0][0].transcript.toLowerCase();
 
       // Voice commands
-      if (command.includes('go to home')) {,
-        window.location.href = '/',
+      if (command.includes('go to home')) {
+        window.location.href = '/'
       } else if (command.includes('go to about')) {
         window.location.href = '/about'
       } else if (command.includes('go to contact')) {
@@ -405,9 +405,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       } else if (command.includes('go to services')) {
         window.location.href = '/services'
       } else if (command.includes('call phone')) {
-        window.location.href = 'tel: +13024640950',
+        window.location.href = 'tel: +13024640950'
       } else if (command.includes('send email')) {
-        window.location.href = 'mailto: kleber@ziontechgroup.com',
+        window.location.href = 'mailto: kleber@ziontechgroup.com'
       }
     }
 
@@ -458,5 +458,5 @@ export default AdvancedAccessibilityEnhancer
 export default AdvancedAccessibilityEnhancerPage
 }}}}}
 }
-export default AdvancedAccessibilityEnhancerPage;
+export default AdvancedAccessibilityEnhancerPage
 </HTMLElement>

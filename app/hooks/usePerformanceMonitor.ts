@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef } from 'react'
+import { useCallback, useEffect, useState, useRef } from 'react';
 interface UsePerformanceMonitorOptions {
 
 
@@ -12,15 +12,15 @@ interface PerformanceData {
   fps: number
   memoryUsage: number
   loadTime: number
-  renderTim,
+  renderTim
   e: number}
 };
 export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
   const [metrics, setMetrics] = useState<PerformanceData>({
-    fps: 0,
-    memoryUsage: 0,
-    loadTime: 0,
-    renderTime: 0,
+    fps: 0
+    memoryUsage: 0
+    loadTime: 0
+    renderTime: 0
   })
   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
   const frameCountRef = useRef(0);
@@ -29,7 +29,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as any).memory
       setMetrics(prev => ({
-        ...prev,
+        ...prev
         memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB)
       }))
     }
@@ -41,16 +41,15 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     }
   }, [options.enabled, measureMemoryUsage])
   useEffect(() => {
-    if (!isMonitoringFPS) return;
-
+    if (!isMonitoringFPS) return
 const countFrames = () => {
       frameCountRef.current++
       const currentTime = performance.now();
       if (currentTime - lastTimeRef.current >= 1000) {
         const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current))
         setMetrics(prev => ({
-          ...prev,
-          fps,)
+          ...prev
+          fps)
         }))
         frameCountRef.current = 0
         lastTimeRef.current = currentTime
@@ -65,11 +64,11 @@ const countFrames = () => {
     }
   }, [measureMemoryUsage, options.measureMemoryUsage])
   return {
-    metrics,
-    setMetrics,
-    isMonitoringFPS,
-    setIsMonitoringFPS,
-    measureMemoryUsage,
+    metrics
+    setMetrics
+    isMonitoringFPS
+    setIsMonitoringFPS
+    measureMemoryUsage
     init
   }
 };

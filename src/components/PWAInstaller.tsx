@@ -13,4 +13,4 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '' }) => {
   );
 };
 
-export default PWAInstaller;
+export default PWAInstaller

@@ -11,24 +11,23 @@ import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-r
 import React from 'react';
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {,
-  const benefits = [,
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+const ContentPromotionBanner: React.FC = () => {
+  const benefits = [
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-:all-pages-backup/components/ContentPromotionBanner.tsx;
+:all-pages-backup/components/ContentPromotionBanner.tsx
     <>
     ;
-  </>
+</>
       <Helmet>;</Helmet>
     <>
-    
-  </>
+</>
       <Helmet>;</Helmet>
         <Head></Head>
         <title>ContentPromotionBanner</title>;
@@ -39,7 +38,7 @@ const ContentPromotionBanner: React.FC = () => {,
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
     </div>
@@ -55,7 +54,7 @@ const ContentPromotionBanner: React.FC = () => {,
             </p>
           </div>
           <div className = "hidden md:block w-px h-6 bg-white/30"></div>
-          <button className="bg-wh itetext-indigo-600 px-4 py-2 rounded-lg font-semibold hove,
+          <button className="bg-wh itetext-indigo-600 px-4 py-2 rounded-lg font-semibold hove
   r:bg-gray-100 transition-colors"></button>
             Learn More</button>
             <ArrowRight className="inl ine-blockml-1 h-4 w-4" /></ArrowRight>
@@ -101,10 +100,10 @@ const ContentPromotionBanner: React.FC = () => {,
           <div className=&quot;text-center mt-8&quot;></div>
             <button className=&quot;bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold&quot;></button>
               Get Started Today
-          </div>,
-        </div>,
+          </div>
+        </div>
         {/* Features Grid */}
-        <div className=&quot;grid md:grid-cols-2 l,
+        <div className=&quot;grid md:grid-cols-2 l
   g:grid-cols-4 gap-8 mb-16&quot;>{features.map((feature, index) => (</div>
             <div key={index} className=&quot;text-center&quot;></div>
               <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;></div>
@@ -121,7 +120,7 @@ const ContentPromotionBanner: React.FC = () => {,
             <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Why Choose Our Solutions?</h2>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>We provide comprehensive AI and IT solutions that deliver real results for your business.</p>p>
           </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-6&quot;>{/* Stats Section */}</div>
         <div className=&quot;grid md:grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat, index) => (</div>
             <div key={index} className=&quot;text-center&quot;></div>
@@ -155,14 +154,14 @@ const ContentPromotionBanner: React.FC = () => {,
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -172,7 +171,7 @@ const ContentPromotionBanner: React.FC = () => {,
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -202,7 +201,7 @@ const ContentPromotionBanner: React.FC = () => {,
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -232,14 +231,14 @@ const ContentPromotionBanner: React.FC = () => {,
           </div>
         </div>
       <div className=&quot;text-center&quot;></div>
-        <button className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hove,
+        <button className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hove
   r:to-purple-600 transition-all duration-300 inline-flex items-center&quot;></button>
           Get Started Now
           <ArrowRight className=&quot;w-5 h-5 ml-2&quot; /></ArrowRight>
         </button>
       </div>
-    </div>,
-  ),
+    </div>
+  )
     </div>
 }
 

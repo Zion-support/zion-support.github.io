@@ -19,8 +19,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
     if (!email) {
       setStatus('error');
-      setMessage('Please enter your email address');,
-      return,
+      setMessage('Please enter your email address');
+      return
     }
 ;
     if (!/\S+@\S+\.\S+/.test(email)) {
@@ -86,29 +86,27 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="fle x-1px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu,
+            className="fle x-1px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu
   s:border-transparent"
             disabled={status === 'loading'}</input>
           /></input>
           <button type="submit">
             disabled={status === 'loading'}
-            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disable,
+            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disable
   d:cursor-not-allowed flex items-center justify-center"
           ></button>
             {status === 'loading' ? (</button>
               <>
-    
-  </>
+</>
                 <div className="ani mate-spinrounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>
                 Subscribing...
               </div>
             ) : (
               <>
-    
-  </>
+</>
                 <Send className="w-4h-4mr-2" /></Send>
                 Subscribe</Send>
-              </>
+</>
             )}
           </button>
         </div>
@@ -129,8 +127,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
       <div className="mt-6te xt-center text-sm text-white/80"></div>
         <p></p>
-          ✓ No spam, unsubscribe anytime<br /></br>
-          ✓ Weekly updates on latest tech trends<br /></br>
+          ✓ No spam, unsubscribe anytime<br />
+          ✓ Weekly updates on latest tech trends<br />
           ✓ Exclusive content and early access</br>
         </p>
       </div>;
@@ -158,6 +156,6 @@ export default NewsletterSignup
     );
   }
 
-  return content;
+  return content
 }
-export default NewsletterSignup;
+export default NewsletterSignup

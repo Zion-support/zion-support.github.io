@@ -8,7 +8,7 @@ export default function ZionAiContentModerationPage() {
   return (
     <>
     :all-pages-backup/zion-ai-content-moderation/page.tsx
-  </>
+</>
       <title>ZionAiContentModeration - Zion Tech Group</title>
         <meta name="description" content="Professional zionaicontentmoderation services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiContentModerationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

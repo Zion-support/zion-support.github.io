@@ -8,7 +8,7 @@ export default function OfflinePage() {
   return (
     <>
     :all-pages-backup/offline/page.tsx
-  </>
+</>
       <title>Offline - Zion Tech Group</title>
         <meta name="description" content="Professional offline services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function OfflinePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

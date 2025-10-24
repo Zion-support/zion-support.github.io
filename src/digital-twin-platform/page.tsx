@@ -8,7 +8,7 @@ export default function DigitalTwinPlatformPage() {
   return (
     <>
     :all-pages-backup/digital-twin-platform/page.tsx
-  </>
+</>
       <title>DigitalTwinPlatform - Zion Tech Group</title>
         <meta name="description" content="Professional digitaltwinplatform services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function DigitalTwinPlatformPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -8,7 +8,7 @@ export default function ManagedItPage() {
   return (
     <>
     :all-pages-backup/managed-it/page.tsx
-  </>
+</>
       <title>ManagedIt - Zion Tech Group</title>
         <meta name="description" content="Professional managedit services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ManagedItPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

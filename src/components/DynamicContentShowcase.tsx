@@ -16,10 +16,10 @@ import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-r
 interface Testimonial {
 
 
-  id: number,
-  name: string,
-  company: string,
-  content: string,
+  id: number
+  name: string
+  company: string
+  content: string
   rating: number
   avatar?: string}
 }
@@ -31,48 +31,48 @@ const DynamicContentShowcase: React.FC = () => {;
   const testimonials: Testimonial[] = [;
     {
 :all-pages-backup/components/DynamicContentShowcase.tsx
-      i,
-  d: 1,
-  name: name,
-  company: company,
-  content: content,
-  rating: 5,
-    }
-    {
-      id: 2,
-  name: name,
-  company: company,
-  content: content,
-  rating: 5,
-    }
-    {
-      id: 3,
-  name: name,
-  company: company,
-  content: content,
+      i
+  d: 1
+  name: name
+  company: company
+  content: content
   rating: 5
-      id: 1
-      nam,
-  e: "Sarah Johnson",
-      company: "TechCorp",
-      content: "Zion Tech Group transformed our AI capabilities. Their solutions increased our operational efficiency by 40%.",
-      rating: 5,
     }
     {
       id: 2
-      nam,
-  e: "Michael Chen",
-      company: "InnovateLab",
-      content: "The micro SaaS platform they built for us has been a game-changer. Highly recommend their services.",
-      rating: 5,
+  name: name
+  company: company
+  content: content
+  rating: 5
     }
     {
       id: 3
-      nam,
-  e: "Emily Rodriguez",
-      company: "StartupXYZ",
-      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible.",
-      rating: 5,
+  name: name
+  company: company
+  content: content
+  rating: 5
+      id: 1
+      nam
+  e: "Sarah Johnson"
+      company: "TechCorp"
+      content: "Zion Tech Group transformed our AI capabilities. Their solutions increased our operational efficiency by 40%."
+      rating: 5
+    }
+    {
+      id: 2
+      nam
+  e: "Michael Chen"
+      company: "InnovateLab"
+      content: "The micro SaaS platform they built for us has been a game-changer. Highly recommend their services."
+      rating: 5
+    }
+    {
+      id: 3
+      nam
+  e: "Emily Rodriguez"
+      company: "StartupXYZ"
+      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible."
+      rating: 5
     }
   ]
 
@@ -89,46 +89,46 @@ const DynamicContentShowcase: React.FC = () => {;
     {
 :all-pages-backup/components/DynamicContentShowcase.tsx
       icon: <Brain className="h-8 w-8" />
-      titl,
-  e: title,
-  description: description,
-  color: "from-blue-500 to-cyan-500",
-    },
+      titl
+  e: title
+  description: description
+  color: "from-blue-500 to-cyan-500"
+    }
   {</Brain>
     icon: <Shield className="h-8 w-8" />
-      titl,
-  e: title,
-  description: description,
-  color: "from-green-500 to-emerald-500",
-    },
+      titl
+  e: title
+  description: description
+  color: "from-green-500 to-emerald-500"
+    }
   {</Shield>
     icon: <Zap className="h-8 w-8" />
-      titl,
-  e: title,
-  description: description,
+      titl
+  e: title
+  description: description
   color: "from-purple-500 to-pink-500"
     };
   ];
 ;</Zap>
       icon: <Brain className="h-8w-8" />
-      titl,
-  e: "AI-Powered Solutions",
-      description: "Advanced artificial intelligence to transform your business operations",
-      color: "from-blue-500 to-cyan-500",
-    },
+      titl
+  e: "AI-Powered Solutions"
+      description: "Advanced artificial intelligence to transform your business operations"
+      color: "from-blue-500 to-cyan-500"
+    }
   {</Brain>
     icon: <Shield className="h-8w-8" />
-      titl,
-  e: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets",
-      color: "from-green-500 to-emerald-500",
-    },
+      titl
+  e: "Cybersecurity"
+      description: "Comprehensive security solutions to protect your digital assets"
+      color: "from-green-500 to-emerald-500"
+    }
   {</Shield>
     icon: <Zap className="h-8w-8" />
-      titl,
-  e: "Automation",
-      description: "Streamline processes and increase efficiency with smart automation",
-      color: "from-purple-500 to-pink-500",
+      titl
+  e: "Automation"
+      description: "Streamline processes and increase efficiency with smart automation"
+      color: "from-purple-500 to-pink-500"
     }
   ]
 
@@ -151,14 +151,14 @@ const DynamicContentShowcase: React.FC = () => {;
             <button className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;></button>
               <Play className=&quot;w-5 h-5&quot; />
               Start Demo</Play>
-            <button className=&quot;inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hove,
+            <button className=&quot;inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hove
   r:bg-white/20 transition-all duration-300&quot;></button>
               <ArrowRight className=&quot;w-5 h-5&quot; />
               Learn More</ArrowRight>
           </div>
         </div>
 {/* Features Grid */}
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-8 mb-16&quot;>{features.map((feature, index) => (</div>
             <div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-cyan-400/50 transition-all duration-300&quot;></div>
               <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4&quot;></div>
@@ -172,7 +172,7 @@ const DynamicContentShowcase: React.FC = () => {;
         {/* Benefits Section */}
         <div className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16&quot;></div>
           <h3 className=&quot;text-2xl font-bold text-white mb-6 text-center&quot;>Why Choose Us?</h3>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-4&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-center&quot;></div>
                 <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; /></CheckCircle>
@@ -205,13 +205,13 @@ const DynamicContentShowcase: React.FC = () => {;
             </h2>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Comprehensive AI and IT solutions designed to transform your business operations.</p>p>
           </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-8&quot;>{features.map((feature, index) => (</div>
               <div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300&quot;></div>
                 <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4&quot;></div>
                   <feature.icon className=&quot;w-8 h-8 text-white&quot; /></feature>
                 </div>
-                <h3 className=&quot;text-xl font-bold text-white mb-4 group-hove,
+                <h3 className=&quot;text-xl font-bold text-white mb-4 group-hove
   r:text-purple-400 transition-colors&quot;>$3</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>{feature.description}</p>
                 {feature.stats && (
@@ -296,7 +296,7 @@ const DynamicContentShowcase: React.FC = () => {;
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Discover the advantages that make our solutions the preferred choice for businesses worldwide.</p>p>
           </div>
           <div className=&quot;bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20&quot;></div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-6&quot;>{benefits.map((benefit, index) => (</div>
                 <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
                   <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0 mt-1&quot; /></CheckCircle>
@@ -318,14 +318,14 @@ const DynamicContentShowcase: React.FC = () => {;
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -335,7 +335,7 @@ const DynamicContentShowcase: React.FC = () => {;
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -365,7 +365,7 @@ const DynamicContentShowcase: React.FC = () => {;
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -389,15 +389,15 @@ const DynamicContentShowcase: React.FC = () => {;
                 <Zap className=&quot;w-5 h-5&quot; />
                 Get Started Today</Zap>
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove,
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
   r:scale-105&quot;></button>
                 Schedule Demo
             </div>
           </div>
         </div>
       </section>
-    </div>,
-  ),
+    </div>
+  )
 }
 
-export default DynamicContentShowcase
+export default DynamicContentShowcase;)))

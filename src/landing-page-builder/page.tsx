@@ -8,7 +8,7 @@ export default function LandingPageBuilderPage() {
   return (
     <>
     :all-pages-backup/landing-page-builder/page.tsx
-  </>
+</>
       <title>LandingPageBuilder - Zion Tech Group</title>
         <meta name="description" content="Professional landingpagebuilder services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function LandingPageBuilderPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -8,7 +8,7 @@ export const PageLoader: React.FC = () => {;
   return (
     <>
     :all-pages-backup/components/LoadingStates.tsx
-  </>
+</>
       <Helmet>;</Helmet>
       <Helmet></Helmet>
         <Head></Head>
@@ -20,7 +20,7 @@ export const PageLoader: React.FC = () => {;
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
     </div>
@@ -38,14 +38,14 @@ export const PageLoader: React.FC = () => {;
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -55,7 +55,7 @@ export const PageLoader: React.FC = () => {;
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -85,7 +85,7 @@ export const PageLoader: React.FC = () => {;
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -118,7 +118,7 @@ export const PageLoader: React.FC = () => {;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="text-center"></div>
         <div className="relative w-20 h-20 mx-auto mb-6"></div>
-          <div className="absolute inset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" style={{ animationDirectio,
+          <div className="absolute inset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" style={{ animationDirectio
   n: 'reverse', animationDuration: '1.5s' }} /></div>
           <div className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDuration: '2s' }} /></div>
         </div>
@@ -135,8 +135,8 @@ export const PageLoader: React.FC = () => {;
 
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {;
   const sizeClasses = {;
-    sm: sm,
-  md: 'w-6 h-6',
+    sm: sm
+  md: 'w-6 h-6'
     lg: 'w-8 h-8'};
   return (
     <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} /></Loader2>
@@ -145,7 +145,7 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size =
 export const LoadingDots: React.FC = () => {;</Loader2>
   return (</Loader2>
     <div className="flex space-x-1"></div>
-      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDela,
+      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDela
   y: '0s' }} /></div>
       <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} /></div>
       <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />;</div>
@@ -155,7 +155,7 @@ export const LoadingDots: React.FC = () => {;</Loader2>
 export const LoadingPulse: React.FC = () => {;
   return (
     <div className="flex space-x-1"></div>
-      <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDela,
+      <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDela
   y: '0s' }} /></div>
       <div className="w-3 h-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} /></div>
       <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />;</div>
@@ -166,7 +166,7 @@ export const LoadingRings: React.FC = () => {;
   return (
     <div className="relative w-16 h-16"></div>
       <div className="absolute inset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" /></div>
-      <div className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirectio,
+      <div className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirectio
   n: 'reverse' }} />;</div>
     </div>
   )};
@@ -174,7 +174,7 @@ export const LoadingRings: React.FC = () => {;
 export const LoadingWaves: React.FC = () => {;
   return (
     <div className="flex space-x-1"></div>
-      <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDela,
+      <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDela
   y: '0s' }} /></div>
       <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: '0.1s' }} /></div>
       <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} /></div>
@@ -194,14 +194,14 @@ export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => 
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
   const sizeClasses = {
 
-    sm: 'w-4 h-4',
+    sm: 'w-4 h-4'
     md: 'w-6 h-6',;
     lg: 'w-8 h-8';
   };
   return (
     <>
       <Loader2 className = {`${sizeClasses[size]} animate-spin text-blue-500`} />;</Loader2>
-    </>
+</>
   );
 }
 export const LoadingDots: React.FC = () => {
@@ -209,24 +209,24 @@ export const LoadingDots: React.FC = () => {
     <>
       </Loader2>
     <div className="fle xspace-x-1"></div>
-      <div className="w-2h-2bg-b l ue-500 rounded-full animate-bounce" style={{ animationDela,
+      <div className="w-2h-2bg-b l ue-500 rounded-full animate-bounce" style={{ animationDela
   y: '0s' }} /></div>
       <div className="w-2h-2bg-b l ue-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} /></div>
       <div className="w-2h-2bg-b l ue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} /></div>
     </div>;
-    </>
+</>
   );
 }
 export const LoadingPulse: React.FC = () => {
   return (
     <>
       <div className="fle xspace-x-1"></div>
-      <div className="w-3h-3bg-g r adient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDela,
+      <div className="w-3h-3bg-g r adient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDela
   y: '0s' }} /></div>
       <div className="w-3h-3bg-g r adient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} /></div>
       <div className="w-3h-3bg-g r adient-to-r from-green-500 to-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} /></div>
     </div>;
-    </>
+</>
   );
 }
 export const LoadingRings: React.FC = () => {
@@ -234,29 +234,29 @@ export const LoadingRings: React.FC = () => {
     <>
       <div className="rel ativew-16 h-16"></div>
       <div className="abs oluteinset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" /></div>
-      <div className="abs oluteinset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirectio,
+      <div className="abs oluteinset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirectio
   n: 'reverse' }} /></div>
     </div>;
-    </>
+</>
   );
 }
 export const LoadingWaves: React.FC = () => {
   return (
     <>
       <div className="fle xspace-x-1"></div>
-      <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDela,
+      <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDela
   y: '0s' }} /></div>
       <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.1s' }} /></div>
       <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} /></div>
       <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }} /></div>
       <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} /></div>
     </div>;
-    </>
+</>
   );
 }
 export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
-    <div className="spa ce-y-2">
+    <div className="spa ce-y-2"></div>
       {Array.from({ length: lines }).map((_, index) => (</div>
 :all-pages-backup/components/LoadingStates.tsx</div>
         <div key={index} className="h-4 bg-gray-300 rounded animate-pulse" style={{ width: `${Math.random() * 40 + 60}%` }} /></div>
@@ -287,8 +287,8 @@ export const LoadingCard: React.FC = () => {
       <div className="h-3bg-gr ay-300 rounded mb-2" /></div>
       <div className="h-3bg-gr ay-300 rounded w-3/4"></div>
     </div>;
-    </>
+</>
   );
 };
 
-export default PageLoader;
+export default PageLoader

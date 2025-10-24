@@ -4,29 +4,25 @@ import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 
-  children: ReactNode;,
-,
-
+  children: ReactNode
 }
 interface State {
-  hasError: boolean;
-  error: Error | undefined;
+  hasError: boolean
+  error: Error | undefined
 }
 
 
-  hasError: boolean;
-  error: Error | undefined;,
-,
-
+  hasError: boolean
+  error: Error | undefined
 }
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {,
-    hasError: false,
-    error: undefined,
+  public state: State = {
+    hasError: false
+    error: undefined
   };
 
   public static getDerivedStateFromError(error: Error): State {
@@ -44,10 +40,10 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-centerbg-gray-900">
-        <div className="max-w-md w-full bg-gray-800rounded-lgshadow-lgp-6">
-            <div className="text-center">
-        <div className="mx-auto flex items-center justify-center h-12 w-12rounded-fullbg-red-100mb-4">
+        <div className="min-h-screen flex items-center justify-centerbg-gray-900"></div>
+        <div className="max-w-md w-full bg-gray-800rounded-lgshadow-lgp-6"></div>
+            <div className="text-center"></div>
+        <div className="mx-auto flex items-center justify-center h-12 w-12rounded-fullbg-red-100mb-4"></div>
                 <svg
                   className="h-6w-6text-red-600"
                   fill="none"
@@ -74,7 +70,7 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="text-gray-400 mb-4">
                 We're sorry, but something unexpected happened. Please try refreshing the page.
               </p>
-              <div className="flex space-x-3">
+              <div className="flex space-x-3"></div>
                 <button
                   onClick={() => window.location.reload()}
                   className="flex-1 bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors"
@@ -92,8 +88,8 @@ class ErrorBoundary extends Component<Props, State> {
                 <details className="mt-4 text-left">
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
                     Error Details (Development)
-                  </summary>,
-                  <pre className="mt-2 text-xs text-red-400 bg-gray-900p-2roundedoverflow-auto">,
+                  </summary>
+                  <pre className="mt-2 text-xs text-red-400 bg-gray-900p-2roundedoverflow-auto">
                     {this.state.error.toString()}
                   </pre>
                 </details>
@@ -103,16 +99,16 @@ class ErrorBoundary extends Component<Props, State> {
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -131,14 +127,14 @@ class ErrorBoundary extends Component<Props, State> {
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
@@ -169,20 +165,20 @@ class ErrorBoundary extends Component<Props, State> {
       
 </div>
 
-    return this.props.children;
+    return this.props.children
   }
 }
 }export default ErrorBoundaryPage
 error?: Error
 errorInfo?: ErrorInfo}
-class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,
-super(props);,
+class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
+super(props);
 this.state = {
- hasError: false,
+ hasError: false
 };
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
-if (process.env.NODE_ENV=== 'production') {,
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
+if (process.env.NODE_ENV=== 'production') {
 // In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo});
 this.setState({errorerrorInfo});
@@ -206,7 +202,7 @@ return (
 Error Details (Development)
 </summary>
 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
-{this.state.error.toString()},
+{this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>
@@ -236,5 +232,19 @@ className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transitio
 kleber@ziontechgroup.com
 </a>
 </div>
-</div>,
-</div>,
+</div>
+</div>
+
+
+
+
+}))
+
+
+
+}
+
+
+}
+
+}

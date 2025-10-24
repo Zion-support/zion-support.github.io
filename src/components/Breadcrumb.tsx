@@ -4,7 +4,7 @@ import { Home, ChevronRight } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 interface BreadcrumbItem {
-  name: string,
+  name: string
   path: string}
   icon?: React.ComponentType<{ className?: string }>
 }
@@ -12,13 +12,13 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {;
   const location = useLocation();
 
-  if (location.pathname === '/') {,
-    return null,
+  if (location.pathname === '/') {
+    return null
   }
 
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   const breadcrumbItems: BreadcrumbItem[] = [;
-    { nam,
+    { nam
   e: 'Home', path: '/', icon: Home }
   ]
 
@@ -41,7 +41,7 @@ const Breadcrumb: React.FC = () => {;
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
                   index === breadcrumbItems.length - 1
                     ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover: text-cyan-400',
+                    : 'text-gray-300 hover: text-cyan-400'
                 }`}
               ></a>
                 {item.icon && <item.icon className="w-4h-4" />}</item>
@@ -56,8 +56,8 @@ const Breadcrumb: React.FC = () => {;
 }
 :all-pages-backup/components/Breadcrumb.tsx
 ;
-export default Breadcrumb
-
+export default Breadcrumb,
+;
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
@@ -89,8 +89,8 @@ export default function Breadcrumb() {;
                 {isLast ? (</ChevronRight>
                   <span className="text-gray-300 capitalize">{name.replace(/-/g, ' ')}</span>
                 ) : (
-                  <Link 
-                    href={routeTo} 
+                  <Link ;
+                    href={routeTo}
                     className="hover:text-blue-400 transition-colors capitalize"
                   >
                     {name.replace(/-/g, ' ')}</Link>
@@ -103,4 +103,4 @@ export default function Breadcrumb() {;
     </nav>
   )}
 ;
-export default Breadcrumb;
+export default Breadcrumb

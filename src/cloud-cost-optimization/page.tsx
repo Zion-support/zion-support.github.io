@@ -8,7 +8,7 @@ export default function CloudCostOptimizationPage() {
   return (
     <>
     :all-pages-backup/cloud-cost-optimization/page.tsx
-  </>
+</>
       <title>CloudCostOptimization - Zion Tech Group</title>
         <meta name="description" content="Professional cloudcostoptimization services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function CloudCostOptimizationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -8,7 +8,7 @@ export default function SecurityMonitoringSuitePage() {
   return (
     <>
     :all-pages-backup/security-monitoring-suite/page.tsx
-  </>
+</>
       <title>SecurityMonitoringSuite - Zion Tech Group</title>
         <meta name="description" content="Professional securitymonitoringsuite services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SecurityMonitoringSuitePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

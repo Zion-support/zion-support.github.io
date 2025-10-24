@@ -8,7 +8,7 @@ export default function DataVisualizationPage() {
   return (
     <>
     :all-pages-backup/data-visualization/page.tsx
-  </>
+</>
       <title>DataVisualization - Zion Tech Group</title>
         <meta name="description" content="Professional datavisualization services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function DataVisualizationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

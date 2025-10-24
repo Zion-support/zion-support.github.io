@@ -8,7 +8,7 @@ export default function ZionAiSupplyChainOptimizerPage() {
   return (
     <>
     :all-pages-backup/zion-ai-supply-chain-optimizer/page.tsx
-  </>
+</>
       <title>ZionAiSupplyChainOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional zionaisupplychainoptimizer services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiSupplyChainOptimizerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

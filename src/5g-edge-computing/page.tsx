@@ -8,7 +8,7 @@ export default function EdgeComputing5GPage() {
   return (
     <>
     :all-pages-backup/5g-edge-computing/page.tsx
-  </>
+</>
       <title>5G Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Professional 5G edge computing services for low-latency applications." /></meta>
       </meta>
@@ -28,7 +28,7 @@ export default function EdgeComputing5GPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}
 

@@ -3,13 +3,13 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
   className?: string
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
   canonicalUrl = 'https://ziontechgroup.com'
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg'
+  structuredData
 }) => {
   useEffect(() => {
     // Update page title
@@ -22,7 +22,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
       const meta = document.createElement('meta');
       meta.name = 'description'
       meta.content = description
-      document.head.appendChild(meta),
+      document.head.appendChild(meta)
   ]
     // Update keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]')
@@ -117,21 +117,46 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
       {structuredData && (
         <script
           type="application/ld+json&quot
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}
-        />
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)} />
       )}
     </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
- SEOOptimizer
-  );
-}
-=======
-export default SEOOptimizer
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+
 =======
 
 export default SEOOptimizer }
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
+>>>>>>> cursor/fix-errors-and-merge-to-main-da11,
+;
+
+
+
+
+
+
+
+
+
+}))
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+}

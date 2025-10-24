@@ -8,7 +8,7 @@ export default function EdgeComputingPage() {
   return (
     <>
     :all-pages-backup/edge-computing/page.tsx
-  </>
+</>
       <title>EdgeComputing - Zion Tech Group</title>
         <meta name="description" content="Professional edgecomputing services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function EdgeComputingPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

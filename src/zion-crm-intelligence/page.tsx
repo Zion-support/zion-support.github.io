@@ -8,7 +8,7 @@ export default function ZionCrmIntelligencePage() {
   return (
     <>
     :all-pages-backup/zion-crm-intelligence/page.tsx
-  </>
+</>
       <title>ZionCrmIntelligence - Zion Tech Group</title>
         <meta name="description" content="Professional zioncrmintelligence services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionCrmIntelligencePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

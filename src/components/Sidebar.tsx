@@ -1,6 +1,6 @@
 'use client';
 :all-pages-backup/components/Sidebar.tsx
-import {Phone, Mail, Brain} from 'lucide-react';
+import { Phone, Mail, Brain } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -19,75 +19,74 @@ const SidebarPage: React.FC = () => {
   const features = [
     {
 :all-pages-backup/components/Sidebar.tsx
-      ico,
-  n: Brain,
-  title: title,
-  description: description,
+      ico
+  n: Brain
+  title: title
+  description: description
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-  {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-  {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-  {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      icon: Brain
-      titl,
-  e: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
   {
     icon: BarChart
-      titl,
-  e: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
   {
     icon: Target
-      titl,
-  e: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
   {
     icon: TrendingUp
-      titl,
-  e: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+  title: title
+  description: description
+  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Brain
+      titl
+  e: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+  {
+    icon: BarChart
+      titl
+  e: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+  {
+    icon: Target
+      titl
+  e: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+  {
+    icon: TrendingUp
+      titl
+  e: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-:all-pages-backup/components/Sidebar.tsx;
+:all-pages-backup/components/Sidebar.tsx
     <>
     ;
-  </>
+</>
       <Helmet>;</Helmet>
     <>
-    
-  </>
+</>
       <Helmet>;</Helmet>
         <Head></Head>
         <title>Sidebar</title>;
@@ -98,7 +97,7 @@ const SidebarPage: React.FC = () => {
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
     </div>
@@ -117,14 +116,14 @@ const SidebarPage: React.FC = () => {
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -134,7 +133,7 @@ const SidebarPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -164,7 +163,7 @@ const SidebarPage: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -187,7 +186,7 @@ const SidebarPage: React.FC = () => {
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales</button>
               </button>
@@ -195,15 +194,15 @@ const SidebarPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
-    </>
+      <Footer />
+</>
 :all-pages-backup/components/Sidebar.tsx
   )};
 
 export default SidebarPage
   );
 }
-export default SidebarPage;
+export default SidebarPage
 Menu
 Home
 Users
@@ -220,7 +219,7 @@ Mail
 :all-pages-backup/components/Sidebar.tsx
 {MapPin,Clock}
 {} from 'lucide-react'
-constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false);,
+constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false);
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));
 MapPin,Clock;}
 } from 'lucide-react'</Set>
@@ -240,8 +239,8 @@ return () => windo w.removeEventListener('resize', handleResize);
 consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSections);
 if (newExpanded.has(section)) {;) => {
   
-return (,
-$3,
+return (
+$3
 )}
 newExpanded.delete(section)}
 } else {newExpanded.add(section)}
@@ -250,138 +249,138 @@ setExpandedSections(newExpanded);
 :all-pages-backup/components/Sidebar.tsx
 {}
 constnavigationSections= [
-{title: title,
-  items: [,
+{title: title
+  items: [
 }
 constnavigationSections = [
 {title: 'Main'
 items: [
-{ nam,
-  e: 'Home', path: '/', icon: Home},
-{name: 'About', path: '/about', icon: Users},
-{name: 'Services', path: '/services', icon: Settings},
-{name: 'Contact', path: '/contact', icon: Phone},
-{name: 'Blog', path: '/blog', icon: BarChart},
+{ nam
+  e: 'Home', path: '/', icon: Home}
+{name: 'About', path: '/about', icon: Users}
+{name: 'Services', path: '/services', icon: Settings}
+{name: 'Contact', path: '/contact', icon: Phone}
+{name: 'Blog', path: '/blog', icon: BarChart}
 {name: 'Case Studies', path: '/case-studies', icon: BarChart}
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
-  key: key,
+{title: title
+  key: key
   items: [
 {title: 'AI Services'
-ke,
-  y: 'ai-services',
+ke
+  y: 'ai-services'
 items: [
-{ nam,
-  e: 'AI Services Overview', path: '/ai-services', icon: Brain},
-{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart},
-{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings},
-{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users},
-{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings},
-{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings},
-{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings},
-{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield},
-{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings},
-{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart},
-{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings},
-{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield},
+{ nam
+  e: 'AI Services Overview', path: '/ai-services', icon: Brain}
+{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart}
+{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings}
+{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users}
+{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings}
+{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings}
+{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings}
+{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield}
+{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings}
+{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart}
+{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings}
+{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield}
 {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings}
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
-  key: key,
+{title: title
+  key: key
   items: [
 {title: 'Micro SaaS'
-ke,
-  y: 'micro-saas',
+ke
+  y: 'micro-saas'
 items: [
-{ nam,
-  e: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
-{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart},
-{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users},
-{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings},
-{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail},
-{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings},
-{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart},
-{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings},
-{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings},
-{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock},
-{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart},
-{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart},
+{ nam
+  e: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings}
+{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart}
+{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users}
+{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings}
+{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail}
+{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings}
+{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart}
+{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings}
+{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings}
+{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock}
+{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart}
+{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart}
 {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings}
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
-  key: key,
+{title: title
+  key: key
   items: [
 {title: 'IT Services'
-ke,
-  y: 'it-services',
+ke
+  y: 'it-services'
 items: [
-{ nam,
-  e: 'IT Services Overview', path: '/it-services', icon: Code},
-{name: 'IT Consulting', path: '/it-consulting', icon: Users},
-{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings},
-{name: 'IT Support', path: '/it-support', icon: Users},
-{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud},
-{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud},
-{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield},
-{name: 'Database Management', path: '/database-management', icon: Settings},
+{ nam
+  e: 'IT Services Overview', path: '/it-services', icon: Code}
+{name: 'IT Consulting', path: '/it-consulting', icon: Users}
+{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings}
+{name: 'IT Support', path: '/it-support', icon: Users}
+{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud}
+{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud}
+{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield}
+{name: 'Database Management', path: '/database-management', icon: Settings}
 {name: 'Managed IT', path: '/managed-it', icon: Settings}
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
+{title: title
   items: [
 {title: 'Company'
 items: [
-{ nam,
-  e: 'Team', path: '/team', icon: Users},
-{name: 'Careers', path: '/careers', icon: Users},
-{name: 'Consultation', path: '/consultation', icon: Phone},
+{ nam
+  e: 'Team', path: '/team', icon: Users}
+{name: 'Careers', path: '/careers', icon: Users}
+{name: 'Consultation', path: '/consultation', icon: Phone}
 {name: 'Pricing', path: '/pricing', icon: BarChart}
 ]
 }
 :all-pages-backup/components/Sidebar.tsx
-{title: title,
+{title: title
   items: [
 {title: 'Resources'
 items: [
-{ nam,
-  e: 'Documentation', path: '/do cs', icon: Settings},
-{name: 'API Docs', path: '/api-do cs', icon: Code},
-{name: 'Support', path: '/support', icon: Users},
+{ nam
+  e: 'Documentation', path: '/do cs', icon: Settings}
+{name: 'API Docs', path: '/api-do cs', icon: Code}
+{name: 'Support', path: '/support', icon: Users}
 {name: 'Status', path: '/status', icon: Settings}
 ]
 }
 ]
 :all-pages-backup/components/Sidebar.tsx
 constcontactInfo = {
-phone: phone,
-  email: email,
-  address: address,
-  hours: 'Mon-Fri 9AM-6PM EST',
+phone: phone
+  email: email
+  address: address
+  hours: 'Mon-Fri 9AM-6PM EST'
 constcontactInfo= {phone: '(30 2) 46 4-095 0'
-emai,
-  l: 'kleber@ziontechgroup.com',
-address: '364 E Main St STE 1008 Middletown, DE 19709',
+emai
+  l: 'kleber@ziontechgroup.com'
+address: '364 E Main St STE 1008 Middletown, DE 19709'
 hours: 'Mon-Fri 9AM-6PM EST'
 }</Set>
 return (</Set>
 <>
     {/* Mobile Menu Button */}
-  </>
+</>
 <button ></button>
 onClick={() =></button> setIsOpen(true)}
 :all-pages-backup/components/Sidebar.tsx
 className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot
 aria-label=&quot;Open sidebar&quot
-className=&quot;lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hove,
-  r:bg-slate-700/90 transition-all&quot;
-aria-label=&quot;Open sidebar&quot;
+className=&quot;lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hove
+  r:bg-slate-700/90 transition-all&quot
+aria-label=&quot;Open sidebar&quot
 >
 <Menu className=&quot;w-6 h-6&quot; /></Menu>
 </button>
@@ -415,14 +414,14 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 :all-pages-backup/components/Sidebar.tsx
 <button
 onClick={() =></button> setIsOpen(false)}
-className=&quot;lg:hidden text-gray-400 hove,
+className=&quot;lg:hidden text-gray-400 hove
   r:text-white transition-colors&quot
 aria-label=&quot;Close sidebar&quot
 <button ></button>
 onClick = {() =></button> setIsOpen(false)}
-className=&quot;lg: hidden text-gray-400 hove,
-  r:text-white transition-colors&quot;
-aria-label=&quot;Close sidebar&quot;
+className=&quot;lg: hidden text-gray-400 hove
+  r:text-white transition-colors&quot
+aria-label=&quot;Close sidebar&quot
 >
 <X className=&quot;w-6 h-6&quot; /></X>
 </button>
@@ -447,3 +446,17 @@ expandedSections.has(section.key) ?
 {section.items.map((item, itemIndex) => (</div>
 <Link key = {itemIndex}></Link>
 </Link>
+
+
+
+
+}))))]]]]]]]
+
+
+
+}
+
+
+}
+
+}

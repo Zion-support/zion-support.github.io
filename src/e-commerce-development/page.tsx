@@ -8,7 +8,7 @@ export default function ECommerceDevelopmentPage() {
   return (
     <>
     :all-pages-backup/e-commerce-development/page.tsx
-  </>
+</>
       <title>ECommerceDevelopment - Zion Tech Group</title>
         <meta name="description" content="Professional ecommercedevelopment services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ECommerceDevelopmentPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

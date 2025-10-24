@@ -8,7 +8,7 @@ export default function GdprCompliancePage() {
   return (
     <>
     :all-pages-backup/gdpr-compliance/page.tsx
-  </>
+</>
       <title>GdprCompliance - Zion Tech Group</title>
         <meta name="description" content="Professional gdprcompliance services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function GdprCompliancePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -8,7 +8,7 @@ export default function ZionAiPredictiveMaintenancePage() {
   return (
     <>
     :all-pages-backup/zion-ai-predictive-maintenance/page.tsx
-  </>
+</>
       <title>ZionAiPredictiveMaintenance - Zion Tech Group</title>
         <meta name="description" content="Professional zionaipredictivemaintenance services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiPredictiveMaintenancePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

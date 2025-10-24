@@ -5,7 +5,7 @@ import  Helmet  } from 'react-helmet-async';
 interface SEOHeadProps {
   title: string
   description: string
-  keyword,
+  keyword
   s: string[]
 }
 const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
@@ -16,4 +16,4 @@ const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }
       <meta name="keywords" content={keywords.join(', ')} /></meta>
     </Helmet>
 
-export default SEOHeadWrapper
+export default SEOHeadWrapper;)

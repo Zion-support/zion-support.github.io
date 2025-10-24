@@ -8,7 +8,7 @@ export default function LeadScoringPage() {
   return (
     <>
     :all-pages-backup/micro-saas/lead-scoring/page.tsx
-  </>
+</>
       <title>LeadScoring - Zion Tech Group</title>
         <meta name="description" content="Professional leadscoring services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function LeadScoringPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

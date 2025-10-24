@@ -8,7 +8,7 @@ export default function SpecializedServicesPage() {
   return (
     <>
     :all-pages-backup/specialized-services/page.tsx
-  </>
+</>
       <title>SpecializedServices - Zion Tech Group</title>
         <meta name="description" content="Professional specializedservices services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SpecializedServicesPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

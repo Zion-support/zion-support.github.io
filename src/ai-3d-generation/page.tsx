@@ -1,61 +1,60 @@
 import React from "react";
-import { Play } from "lucide-react";
+import { Play } from 'lucide-react';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import SEOOptimizer from "../components/SEOOptimizer";
-import { CheckCircle, Camera, Zap } from "lucide-react";
+import { CheckCircle, Camera, Zap } from 'lucide-react';
 
-const AI3DGenerationPage: React.FC = () => {,
-  const features = [,
-    '3D Model Generation',
-    'Animation Creation',
-    'Texture Mapping',
-    'Rendering',
-    'VR/AR Support',
-    'Export Formats',
-    'AI Texturing',
-    'Lighting Setup',
-    'Material Library',
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
+    '3D Model Generation'
+    'Animation Creation'
+    'Texture Mapping'
+    'Rendering'
+    'VR/AR Support'
+    'Export Formats'
+    'AI Texturing'
+    'Lighting Setup'
+    'Material Library'
     'Scene Composition'
   ]
 
   const benefits = [
-    'Professional 3D content',
-    'Time savings',
-    'No 3D skills needed',
-    'High quality output',
-    'Cost-effective',
+    'Professional 3D content'
+    'Time savings'
+    'No 3D skills needed'
+    'High quality output'
+    'Cost-effective'
     'Scalable production'
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support'],
-      popular: false,
-    },
+      name: 'Starter'
+      price: '$299'
+      period: '/month'
+      features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support']
+      popular: false
+    }
     {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      features: ['Unlimited models', 'Premium textures', '4K rendering', 'API access', 'Priority support'],
-      popular: true,
-    },
+      name: 'Professional'
+      price: '$499'
+      period: '/month'
+      features: ['Unlimited models', 'Premium textures', '4K rendering', 'API access', 'Priority support']
+      popular: true
+    }
     {
-      name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
-      popular: false,
+      name: 'Enterprise'
+      price: '$999'
+      period: '/month'
+      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license']
+      popular: false
     }
   ]
 
   return (
     <>
-    
-  </>
+</>
       <SEOOptimizer
         title="AI 3D Generation Studio - Create 3D Models & Animations with AI | ZionTechGroup"
         description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
@@ -66,7 +65,7 @@ const AI3DGenerationPage: React.FC = () => {,
         canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
       /></SEOOptimizer>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>
+        <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24"></main>
           {/* Hero Section */}</main>
           <section className="text-center mb-16"></section>
@@ -91,21 +90,21 @@ const AI3DGenerationPage: React.FC = () => {,
                 </a>
                 <a
                   href="#demo"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove
   r:text-slate-900 transition-all duration-300"
                 ></a>
                   <Play className="w-5 h-5" /></Play>
                   View Gallery</Play>
                 </a>
               </div>
-            </div>,
-          </section>,
+            </div>
+          </section>
           {/* Features Section */}
           <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               AI 3D Generation Features</h2>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-3 gap-6"></div>
               {features.map((feature, index) => (</div>
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
@@ -122,7 +121,7 @@ const AI3DGenerationPage: React.FC = () => {,
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Why Choose AI 3D Generation Studio?</h2>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center"></div>
@@ -169,7 +168,7 @@ const AI3DGenerationPage: React.FC = () => {,
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? "cyber-button"
-                        : "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hove,
+                        : "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hove
   r:text-slate-900"
                     }`}
                   ></a>
@@ -197,7 +196,7 @@ const AI3DGenerationPage: React.FC = () => {,
                 </a>
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove
   r:text-slate-900 transition-all duration-300"
                 ></a>
                   <span />Call +1 302 464 0950</span>
@@ -206,10 +205,10 @@ const AI3DGenerationPage: React.FC = () => {,
             </div>
           </section>
         </main>
-        <Footer /></Footer>
+        <Footer />
       </div>
-    </div>,
-  ),
+    </div>
+  )
 }
 ;
-export default AI3DGenerationPage;
+export default AI3DGenerationPage

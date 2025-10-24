@@ -32,59 +32,59 @@ maxStoredErrors: number
 /**
 * Custom error messages by error type
 */
-customMessage,
+customMessage
   s: Record<string, string>
 /**
 * Fallback UI components
 */
-fallbackComponents: {,}</string>
-    default: React.ComponentType<{ error: Error; resetErro,
+fallbackComponents: {}</string>
+    default: React.ComponentType<{ error: Error; resetErro
   r: () => void }>
-network: React.ComponentType<{ error: Error; resetErro,
+network: React.ComponentType<{ error: Error; resetErro
   r: () => void }>
-notFound: React.ComponentType<{ error: Error; resetErro,
+notFound: React.ComponentType<{ error: Error; resetErro
   r: () => void }>}
 /**
 * Default error messages
 */
 const DEFAULT_ERROR_MESSAGES = {
 
-default: 'Something went wrong. Please try again.',
-    network: 'Network connection issue. Please check your internet connection.',
-notFound: 'The requested resource was not found.',
-    timeout: 'Request timed out. Please try again.',
-serverError: 'Server error occurred. Please try again later.',
-    validation: 'Validation error. Please check your input.',
+default: 'Something went wrong. Please try again.'
+    network: 'Network connection issue. Please check your internet connection.'
+notFound: 'The requested resource was not found.'
+    timeout: 'Request timed out. Please try again.'
+serverError: 'Server error occurred. Please try again later.'
+    validation: 'Validation error. Please check your input.'
 };
 /**
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
-logErrors: true,
+logErrors: true
     showDetails: isDevelopment
-reportError,
-  s: !isDevelopment,
+reportError
+  s: !isDevelopment
     reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
-showErrorOverla,
-  y: isDevelopment,
+showErrorOverla
+  y: isDevelopment
     maxStoredErrors: 50
-customMessage,
-  s: DEFAULT_ERROR_MESSAGES,
+customMessage
+  s: DEFAULT_ERROR_MESSAGES
     fallbackComponents: {
-defaul,
-  t: DefaultErrorFallback,
+defaul
+  t: DefaultErrorFallback
     network: NetworkErrorFallback
-notFoun,
+notFoun
   d: NotFoundFallback}
 /**
 * Default error fallback component
 */;
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+<div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
 <svg
 className="w-6h-6text-red-600"
 fill="none"
@@ -108,13 +108,13 @@ d="M6 18L18 6M6 6l12 12"
 {process.env['NODE_ENV'] === 'development' && (}
 <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>
 )}
-<div className="mt-6flexgap-4">
+<div className="mt-6flexgap-4"></div>
 <button
 onClick = {
 resetError
 };
-className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">Try Again</button>,
-<button,
+className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">Try Again</button>
+<button
 onClick={() =>(window.location.href = '/')}</button>
 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300transition-colors">
 Go Home
@@ -125,12 +125,12 @@ Go Home
 /**
 * Network error fallback component
 */
-function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
+function NetworkErrorFallback({ resetError }: { error: Error; resetErro)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+<div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
 <svg
 className="w-6h-6text-yellow-600"
 fill="none"
@@ -174,13 +174,13 @@ return (
 <p className="mt-2text-gray-600">
             The page you're looking for doesn't exist or has been moved.
           </p>
-<div className="mt-6 flexgap-4justify-center"></div>,
-<button,
+<div className="mt-6 flexgap-4justify-center"></div>
+<button
 onClick={() =>(window.location.href = '/')}</button>
 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700transition-colors">
 Go Home
-</,
-<button,
+</
+<button
 onClick={() =>window.history.back()}</button>
 className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300transition-colors">
 Go Back
@@ -191,11 +191,11 @@ Go Back
 /**
 * Get error type from error object
 */
-export function getErrorType(erro,)
+export function getErrorType(erro)
   r: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-return 'network',
-if (error.message.includes('404') || error.message.includes('not found')) {,
+return 'network'
+if (error.message.includes('404') || error.message.includes('not found')) {
   return 'notFound'}
 if (error.message.includes('timeout')) {
   return 'timeout'}
@@ -209,14 +209,36 @@ return 'default'
 */
 export function formatErrorForLogging(error: Error): Record<string, unknown> {
 return {
-message: error.message,
+message: error.message
     stack: error.stack
-nam,
-  e: error.name,
+nam
+  e: error.name
     type: getErrorType(error)
-timestam,
-  p: new Date().toISOString(),
+timestam
+  p: new Date().toISOString()
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
-ur,
+ur
   l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 export default getErrorBoundaryConfig</string>
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}

@@ -8,7 +8,7 @@ export default function SecurityAutomationPage() {
   return (
     <>
     :all-pages-backup/security-automation/page.tsx
-  </>
+</>
       <title>SecurityAutomation - Zion Tech Group</title>
         <meta name="description" content="Professional securityautomation services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SecurityAutomationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

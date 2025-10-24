@@ -8,7 +8,7 @@ export default function NewsPage() {
   return (
     <>
     :all-pages-backup/news/page.tsx
-  </>
+</>
       <title>News - Zion Tech Group</title>
         <meta name="description" content="Professional news services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function NewsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

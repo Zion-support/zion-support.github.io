@@ -8,7 +8,7 @@ export default function FaqPage() {
   return (
     <>
     :all-pages-backup/faq/page.tsx
-  </>
+</>
       <title>Faq - Zion Tech Group</title>
         <meta name="description" content="Professional faq services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function FaqPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

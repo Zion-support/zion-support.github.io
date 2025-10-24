@@ -8,7 +8,7 @@ export default function ResourcesPage() {
   return (
     <>
     :all-pages-backup/resources/page.tsx
-  </>
+</>
       <title>Resources - Zion Tech Group</title>
         <meta name="description" content="Professional resources services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ResourcesPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

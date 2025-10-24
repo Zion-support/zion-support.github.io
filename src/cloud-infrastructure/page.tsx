@@ -8,7 +8,7 @@ export default function CloudInfrastructurePage() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
-      <Navigation /></Navigation>
+      <Navigation />
       <main className="py-20 px-4"></main>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud Infrastructure</h1>
@@ -17,9 +17,9 @@ export default function CloudInfrastructurePage() {
           </p>
         </div>
       </main>
-      <Footer /></Footer>
+      <Footer />
     </div>;
-    </>
+</>
   );
 import React from 'react';
 import Head from "next/head";
@@ -31,7 +31,7 @@ export default function CloudInfrastructurePage() {
   return (
     <>
     :all-pages-backup/cloud-infrastructure/page.tsx
-  </>
+</>
       <title>CloudInfrastructure - Zion Tech Group</title>
         <meta name="description" content="Professional cloudinfrastructure services by Zion Tech Group." /></meta>
       </meta>
@@ -51,6 +51,7 @@ export default function CloudInfrastructurePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}
+}

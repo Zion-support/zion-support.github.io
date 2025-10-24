@@ -8,7 +8,7 @@ export default function SocialManagerPage() {
   return (
     <>
     :all-pages-backup/micro-saas/social-manager/page.tsx
-  </>
+</>
       <title>SocialManager - Zion Tech Group</title>
         <meta name="description" content="Professional socialmanager services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SocialManagerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

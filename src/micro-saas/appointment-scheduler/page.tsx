@@ -8,7 +8,7 @@ export default function AppointmentSchedulerPage() {
   return (
     <>
     :all-pages-backup/micro-saas/appointment-scheduler/page.tsx
-  </>
+</>
       <title>AppointmentScheduler - Zion Tech Group</title>
         <meta name="description" content="Professional appointmentscheduler services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function AppointmentSchedulerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

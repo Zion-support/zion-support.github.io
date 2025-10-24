@@ -8,7 +8,7 @@ export default function DocsPage() {
   return (
     <>
     :all-pages-backup/docs/page.tsx
-  </>
+</>
       <title>Docs - Zion Tech Group</title>
         <meta name="description" content="Professional docs services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function DocsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

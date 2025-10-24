@@ -8,7 +8,7 @@ export default function AiSocialMediaSchedulerPage() {
   return (
     <>
     :all-pages-backup/micro-saas/ai-social-media-scheduler/page.tsx
-  </>
+</>
       <title>AiSocialMediaScheduler - Zion Tech Group</title>
         <meta name="description" content="Professional aisocialmediascheduler services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function AiSocialMediaSchedulerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

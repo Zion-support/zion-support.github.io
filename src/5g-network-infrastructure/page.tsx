@@ -8,7 +8,7 @@ export default function NetworkInfrastructure5GPage() {
   return (
     <>
     :all-pages-backup/5g-network-infrastructure/page.tsx
-  </>
+</>
       <title>5G Network Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Professional 5G network infrastructure services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       </meta>
@@ -28,7 +28,7 @@ export default function NetworkInfrastructure5GPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}
 

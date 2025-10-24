@@ -66,7 +66,7 @@ const EnhancedFooter: React.FC = () => {
                 </Link>
               </li>
               <li></li>
-                <Link href="/contact" className="text-gray-300 hove,
+                <Link href="/contact" className="text-gray-300 hove
   r:text-cyan-400 transition-colors">
                   Contact</Link>
                 </Link>
@@ -103,4 +103,4 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
-export default EnhancedFooter;
+export default EnhancedFooter

@@ -8,7 +8,7 @@ export default function AnalyticsPage() {
   return (
     <>
     :all-pages-backup/analytics/page.tsx
-  </>
+</>
       <title>Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional analytics services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function AnalyticsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

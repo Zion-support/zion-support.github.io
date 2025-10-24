@@ -8,7 +8,7 @@ export default function MobileApplications5GPage() {
   return (
     <>
     :all-pages-backup/5g-mobile-applications/page.tsx
-  </>
+</>
       <title>5G Mobile Applications - Zion Tech Group</title>
         <meta name="description" content="Professional 5G mobile application development services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       </meta>
@@ -28,7 +28,7 @@ export default function MobileApplications5GPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}
 

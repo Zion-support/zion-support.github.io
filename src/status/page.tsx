@@ -8,7 +8,7 @@ export default function StatusPage() {
   return (
     <>
     :all-pages-backup/status/page.tsx
-  </>
+</>
       <title>Status - Zion Tech Group</title>
         <meta name="description" content="Professional status services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function StatusPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

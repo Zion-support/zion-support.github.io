@@ -8,7 +8,7 @@ export default function ArVrSolutionsPage() {
   return (
     <>
     :all-pages-backup/ar-vr-solutions/page.tsx
-  </>
+</>
       <title>ArVrSolutions - Zion Tech Group</title>
         <meta name="description" content="Professional arvrsolutions services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ArVrSolutionsPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

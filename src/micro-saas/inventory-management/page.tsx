@@ -8,7 +8,7 @@ export default function InventoryManagementPage() {
   return (
     <>
     :all-pages-backup/micro-saas/inventory-management/page.tsx
-  </>
+</>
       <title>InventoryManagement - Zion Tech Group</title>
         <meta name="description" content="Professional inventorymanagement services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function InventoryManagementPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

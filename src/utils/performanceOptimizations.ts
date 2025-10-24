@@ -1,20 +1,20 @@
 'use client';
 import { useCallback, useMemo, useState, useEffect } from 'react';
-// Performance optimization utilities
-
+// Performance optimization utilities,
+;
 // Debounce utility for performance
 :all-pages-backup/utils/performanceOptimizations.ts
 export const debounce = <T extends (...args: any[]) => any>(;
-  fun,
-  c: T,
+  fun
+  c: T
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout</T>
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T;
+  func: T
   wait: number;</T>
 ): ((...args: Parameters<T>) => void) => {;
-  let timeout: NodeJS.Timeout;
+  let timeout: NodeJS.Timeout
   return (...arg,</T>
   s: Parameters<T>) => {
     clearTimeout(timeout)
@@ -25,8 +25,8 @@ export const debounce = <T extends (...args: any[]) => any>(
 // Throttle utility for performance
 :all-pages-backup/utils/performanceOptimizations.ts</T>
 export const throttle = <T extends (...args: any[]) => any>(;
-  fun,
-  c: T,
+  fun
+  c: T
   limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean</T>
@@ -34,12 +34,12 @@ export const throttle = <T extends (...args: any[]) => any>(
   func: T
   limit: number</T>;
 ): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean;
+  let inThrottle: boolean
   return (...arg,</T>
   s: Parameters<T>) => {
     if (!inThrottle) {
-      func(...args);,
-      inThrottle = true,
+      func(...args);
+      inThrottle = true
       setTimeout(() => (inThrottle = false), limit)
     }
   }
@@ -48,11 +48,11 @@ export const throttle = <T extends (...args: any[]) => any>(
 // Intersection Observer hook for lazy loading
 :all-pages-backup/utils/performanceOptimizations.ts
 export const useIntersectionObserver = (;
-  callback: (entrie,
-  s: IntersectionObserverEntry[]) => void,
+  callback: (entrie
+  s: IntersectionObserverEntry[]) => void
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void
-  option,
+  option
   s: IntersectionObserverInit = {}
 ) => {;
   const observer = useMemo(;)
@@ -60,11 +60,11 @@ export const useIntersectionObserver = (
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
 :all-pages-backup/utils/performanceOptimizations.ts
-            threshold: 0.1,
-  rootMargin: '50px',
             threshold: 0.1
-            rootMargi,
-  n: '50px',
+  rootMargin: '50px'
+            threshold: 0.1
+            rootMargi
+  n: '50px'
             ...options)
           })
         : null
@@ -74,8 +74,8 @@ export const useIntersectionObserver = (
   const observe = useCallback(;)
     (element: Element | null) => {
       if (observer && element) {
-        observer.observe(element);,
-        return () => observer.unobserve(element);,
+        observer.observe(element);
+        return () => observer.unobserve(element);
       }
       return () => {}
     }
@@ -136,20 +136,20 @@ export const usePerformanceMonitoring = () => {;</T>
   }>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     const updateMetrics = () => {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
         fcp
 :all-pages-backup/utils/performanceOptimizations.ts
-        lcp,
+        lcp
   ttfb: navigation?.responseStart - navigation?.requestStart
         lcp
-        ttf,
+        ttf
   b: navigation?.responseStart - navigation?.requestStart)
       })
     }
@@ -180,7 +180,7 @@ export const usePerformanceMonitoring = () => {;</T>
   return metrics
 }
 
-// Memory usage monitoring;
+// Memory usage monitoring
 export const useMemoryMonitoring = () => {;
   const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number
@@ -189,19 +189,19 @@ export const useMemoryMonitoring = () => {;
   }>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-
+    if (typeof window === 'undefined' || !('memory' in performance)) return,
+;
     const updateMemoryInfo = () => {;
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
 :all-pages-backup/utils/performanceOptimizations.ts
-          usedJSHeapSize: memory.usedJSHeapSize,
-  totalJSHeapSize: memory.totalJSHeapSize,
+          usedJSHeapSize: memory.usedJSHeapSize
+  totalJSHeapSize: memory.totalJSHeapSize
   jsHeapSizeLimit: memory.jsHeapSizeLimit
           usedJSHeapSize: memory.usedJSHeapSize
           totalJSHeapSize: memory.totalJSHeapSize
-          jsHeapSizeLimi,
+          jsHeapSizeLimi
   t: memory.jsHeapSizeLimit)
         })
       }
@@ -221,8 +221,8 @@ export const preloadResource = (href: string, as: string) => {;
   const link = document.createElement('link');
   link.rel = 'preload'
   link.href = href
-  link.as = as,
-  document.head.appendChild(link);,
+  link.as = as
+  document.head.appendChild(link);
 }
 
 // Critical resource preloading
@@ -248,8 +248,8 @@ export const useBundleSizeMonitoring = () => {;
   }>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return,
+;
     const calculateBundleSize = () => {;
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0
@@ -291,7 +291,7 @@ export const useBundleSizeMonitoring = () => {;
   return bundleSize
 }
 
-:all-pages-backup/utils/performanceOptimizations.ts;
+:all-pages-backup/utils/performanceOptimizations.ts
 const performanceOptimizations = {;
 const performanceOptimizations = {
   debounce
@@ -303,10 +303,12 @@ const performanceOptimizations = {
   preloadResource
   preloadCriticalResources
   useBundleSizeMonitoring
-:all-pages-backup/utils/performanceOptimizations.ts;
+:all-pages-backup/utils/performanceOptimizations.ts
 };
 ;
 export default performanceOptimizations
 }
 
-export default performanceOptimizations;
+export default performanceOptimizations
+}
+}

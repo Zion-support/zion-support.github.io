@@ -8,7 +8,7 @@ export default function ZionSocialSchedulerPage() {
   return (
     <>
     :all-pages-backup/zion-social-scheduler/page.tsx
-  </>
+</>
       <title>ZionSocialScheduler - Zion Tech Group</title>
         <meta name="description" content="Professional zionsocialscheduler services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionSocialSchedulerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

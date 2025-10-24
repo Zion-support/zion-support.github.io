@@ -5,18 +5,18 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 
 interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-  suffix?: string;
-  prefix?: string;
+  end: number
+  duration?: number
+  suffix?: string
+  prefix?: string
   className?: string;}
 }
 ;
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
-  duration = 2000,
-  suffix = '',
-  prefix = '',
+  end
+  duration = 2000
+  suffix = ''
+  prefix = ''
   className = ''
 }) => {
   const [count, setCount] = useState(0);
@@ -32,14 +32,12 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [entry, isVisible]);
 
   useEffect(() => {
-    if (!isVisible) return;
-    
-    let startTime: number;
-    let animationFrame: number;
-    
-    const animate = (currentTim,
+    if (!isVisible) return
+    let startTime: number
+    let animationFrame: number
+    const animate = (currentTim
   e: number) => {;
-      if (!startTime) startTime = currentTime;
+      if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1);
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
@@ -67,4 +65,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   );
 };
 
-export default AnimatedCounter;
+export default AnimatedCounter

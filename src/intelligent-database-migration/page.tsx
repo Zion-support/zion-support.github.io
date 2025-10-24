@@ -8,7 +8,7 @@ export default function IntelligentDatabaseMigrationPage() {
   return (
     <>
     :all-pages-backup/intelligent-database-migration/page.tsx
-  </>
+</>
       <title>IntelligentDatabaseMigration - Zion Tech Group</title>
         <meta name="description" content="Professional intelligentdatabasemigration services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function IntelligentDatabaseMigrationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

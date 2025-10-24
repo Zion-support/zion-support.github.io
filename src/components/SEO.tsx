@@ -13,4 +13,4 @@ const SEO: React.FC<SEOProps> = ({ className = '' }) => {
   );
 };
 
-export default SEO;
+export default SEO

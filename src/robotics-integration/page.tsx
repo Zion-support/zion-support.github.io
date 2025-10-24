@@ -8,7 +8,7 @@ export default function RoboticsIntegrationPage() {
   return (
     <>
     :all-pages-backup/robotics-integration/page.tsx
-  </>
+</>
       <title>RoboticsIntegration - Zion Tech Group</title>
         <meta name="description" content="Professional roboticsintegration services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function RoboticsIntegrationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -13,4 +13,4 @@ const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ className = '' 
   );
 };
 
-export default DataCleanupManager;
+export default DataCleanupManager

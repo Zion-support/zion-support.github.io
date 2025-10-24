@@ -8,7 +8,7 @@ export default function PrivateNetworks5GPage() {
   return (
     <>
     :all-pages-backup/5g-private-networks/page.tsx
-  </>
+</>
       <title>5G Private Networks - Zion Tech Group</title>
         <meta name="description" content="Professional 5G private network solutions by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       </meta>
@@ -28,7 +28,7 @@ export default function PrivateNetworks5GPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}
 

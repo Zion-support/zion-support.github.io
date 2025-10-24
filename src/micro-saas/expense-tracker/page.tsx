@@ -8,7 +8,7 @@ export default function ExpenseTrackerPage() {
   return (
     <>
     :all-pages-backup/micro-saas/expense-tracker/page.tsx
-  </>
+</>
       <title>ExpenseTracker - Zion Tech Group</title>
         <meta name="description" content="Professional expensetracker services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ExpenseTrackerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

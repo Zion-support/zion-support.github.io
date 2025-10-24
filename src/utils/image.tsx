@@ -3,41 +3,41 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {};
 :all-pages-backup/utils/image.tsx
-src: string,
+src: string
 {alt: string}
 interface ImageProps {};
-  src: string,
+  src: string
   alt: string
-src: string;
-al,
+src: string
+al
   t: string;}
 interface ImageProps {};
   src: string
-al,
+al
   t: string
 width?: number
 height?: number
 className?: string
-priority?: boolean,
-:all-pages-backup/utils/image.tsx,
-_quality?: number,
-  src: string,
+priority?: boolean
+:all-pages-backup/utils/image.tsx
+_quality?: number
+  src: string
   alt: string
 _quality?: number
 src: string
-al,
+al
   t: string
 width?: number
 height?: number
 className?: string
-priority?: boolean,
-:all-pages-backup/utils/image.tsx,
-_quality?: number,
-  src: string,
+priority?: boolean
+:all-pages-backup/utils/image.tsx
+_quality?: number
+  src: string
   alt: string
 _quality?: number
 src: string
-al,
+al
   t: string
 width?: number
 height?: number
@@ -49,14 +49,14 @@ _blurDataURL?: string
 fill?: boolean
 sizes?: string
 style?: React.CSSProperties
-onLoad?: () => void,
-:all-pages-backup/utils/image.tsx,
-{onError?: () => void},
+onLoad?: () => void
+:all-pages-backup/utils/image.tsx
+{onError?: () => void}
 {}
 export const Image: React.FC<ImageProps>= ({}</ImageProps>
 export const Image: React.FC<ImageProps> = ({};
 src</ImageProps>
-export const Image: React.FC<ImageProps> = ({,
+export const Image: React.FC<ImageProps> = ({
 src
 onError?: () => void;}
 }</ImageProps>
@@ -74,11 +74,11 @@ quality = 75
 placeholder = 'empty'
 blurDataURL
 fill = false
-sizes,
-:all-pages-backup/utils/image.tsx,
-style,
-onLoad,
-onError,}
+sizes
+:all-pages-backup/utils/image.tsx
+style
+onLoad
+onError}
 {...props}
 {}) => {};
 const [, setIsLoaded] = useState(false);
@@ -94,17 +94,17 @@ setHasError(true);
 const imageStyle: React.CSSProperties = {};
 ...style
 ...(fill && {}
-position: position,
-  top: 0,
-{left: 0,}
+position: position
+  top: 0
+{left: 0}
 const imageStyle: React.CSSProperties = {};
 ...style
 ...(fill && {}
-position: position,
-  top: 0,
-  left: 0,
-  width: width,
-  height: '100%',
+position: position
+  top: 0
+  left: 0
+  width: width
+  height: '100%'
 {objectFit: 'cover'}
 {})
 {}</ImageProps>
@@ -116,7 +116,7 @@ return ()
 if (hasError) {}
 {return(<div}
 style
-onLoad;
+onLoad
 onError,;}
 ...props})
 }) => {}
@@ -133,19 +133,19 @@ if (onError) onError();}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
-position: 'absolute',
-top: 0;
-lef,
+position: 'absolute'
+top: 0
+lef
   t: 0,;}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
-position: 'absolute',
+position: 'absolute'
 top: 0
 left: 0
-widt,
-  h: '100%',
-height: '100%',
+widt
+  h: '100%'
+height: '100%'
 objectFit: 'cover'}
 })
 }</div>
@@ -153,21 +153,21 @@ if (hasError) {</ImageProps>;
 return (</ImageProps>;}
 if (hasError) {}
 return ()
-    <div }>
+    <div }></div>
 if (hasError) {;}</div>
-return(<div }>
+return(<div }></div>
 interface ImageProps {/* TODO: Fix JSX expression */};
 :all-pages-backup/utils/image.tsx
 {}
 export const,</div>
-Image: React.FC<ImageProps>= ({/* TOD,)</ImageProps>
+Image: React.FC<ImageProps>= ({/* TOD)</ImageProps>
   O: Fix JSX expression */})</div>
 {}) => {/* TODO: Fix JSX expression */}
 {}, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
 {}, [onError])
-const,
-  imageStyle: React.CSSProperties = {/* TOD,
+const
+  imageStyle: React.CSSProperties = {/* TOD
   O: Fix JSX expression */}
 {})
 {}
@@ -180,7 +180,7 @@ Image: React.FC<ImageProps>= ({/* TOD,</ImageProps>
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 }, [onError])
 const
-imageStyle: React.CSSProperties = {/* TOD,
+imageStyle: React.CSSProperties = {/* TOD
   O: Fix JSX expression */}
 })
 }
@@ -192,14 +192,14 @@ imageStyle
 {...props})
 >)</div>
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-</div>),
-),
+</div>)
+)
 {...props}
 ></div>
 <span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
 </div>
-),
-:all-pages-backup/utils/image.tsx,
+)
+:all-pages-backup/utils/image.tsx
 {}
 return(<img)
 return ()

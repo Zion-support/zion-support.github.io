@@ -8,7 +8,7 @@ export default function SupportPage() {
   return (
     <>
     :all-pages-backup/support/page.tsx
-  </>
+</>
       <title>Support - Zion Tech Group</title>
         <meta name="description" content="Professional support services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SupportPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

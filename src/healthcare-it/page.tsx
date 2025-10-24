@@ -8,7 +8,7 @@ export default function HealthcareItPage() {
   return (
     <>
     :all-pages-backup/healthcare-it/page.tsx
-  </>
+</>
       <title>HealthcareIt - Zion Tech Group</title>
         <meta name="description" content="Professional healthcareit services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function HealthcareItPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

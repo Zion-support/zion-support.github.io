@@ -25,8 +25,8 @@ export interface Metadata {;
     images?: Array<{
       url: string
       width?: number
-      height?: number,
-      alt?: string,
+      height?: number
+      alt?: string
 }>
     locale?: string
     type?: string
@@ -70,14 +70,14 @@ export interface MetadataRoute {
 export interface MetadataRouteSitemap extends MetadataRoute {;
   url: string
   lastModified?: string | Date
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
-  priority?: number,
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 // Custom Next.js types
 export interface NextPageProps {;}
-  params: { [ke,
+  params: { [ke
   y: string]: string };
-  searchParams: { [ke,
+  searchParams: { [ke
   y: string]: string | string[] | undefined }
 }
 // API route types
@@ -85,9 +85,9 @@ export interface ApiRouteHandler {;}</string>
   (req: Request): Promise<Response>};
 // Server components types
 export interface ServerComponentProps {;}
-  params: { [ke,
+  params: { [ke
   y: string]: string };
-  searchParams: { [ke,
+  searchParams: { [ke
   y: string]: string | string[] | undefined }
 }
 // Client components types
@@ -107,12 +107,12 @@ export interface RouteHandler {;</Response>
   PATCH?: (req: Request) => Promise<Response>};
 // Dynamic route types
 export interface DynamicRoute {;}
-  params: { [ke,
+  params: { [ke
   y: string]: string };
 }
 // Static generation types
 export interface StaticProps {;}
-  props: { [ke,
+  props: { [ke
   y: string]: any };
   revalidate?: number
   notFound?: boolean
@@ -137,10 +137,10 @@ declare module 'next' {
 
     user?: {
 :all-pages-backup/types/next.d.ts
-      id: string,
+      id: string
   email: string
       id: string
-    emai,
+    emai
   l: string
       name?: string}
 };

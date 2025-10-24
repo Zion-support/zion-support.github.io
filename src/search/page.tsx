@@ -8,7 +8,7 @@ export default function SearchPage() {
   return (
     <>
     :all-pages-backup/search/page.tsx
-  </>
+</>
       <title>Search - Zion Tech Group</title>
         <meta name="description" content="Professional search services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SearchPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

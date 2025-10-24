@@ -8,7 +8,7 @@ export default function TermsOfServicePage() {
   return (
     <>
     :all-pages-backup/terms-of-service/page.tsx
-  </>
+</>
       <title>TermsOfService - Zion Tech Group</title>
         <meta name="description" content="Professional termsofservice services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function TermsOfServicePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

@@ -8,7 +8,7 @@ export default function ZionAiTranslatorProPage() {
   return (
     <>
     :all-pages-backup/zion-ai-translator-pro/page.tsx
-  </>
+</>
       <title>ZionAiTranslatorPro - Zion Tech Group</title>
         <meta name="description" content="Professional zionaitranslatorpro services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiTranslatorProPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

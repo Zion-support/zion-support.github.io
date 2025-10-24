@@ -9,15 +9,15 @@ interface AnimatedCounterProps {
 }
 ;
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({;
-  className?: string;
+  className?: string
 }
 </AnimatedCounterProps>
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end
   duration = 2000
   suffix = ''
-  prefix = '',
-  className = '',
+  prefix = ''
+  className = ''
 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -32,11 +32,11 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [entry, isVisible])
 
   useEffect(() => {
-    if (!isVisible) return
-
+    if (!isVisible) return,
+;
     let startTime: number
-    let animationFrame: number
-
+    let animationFrame: number,
+;
     const animate = (currentTim,;
   e: number) => {;
       if (!startTime) startTime = currentTime

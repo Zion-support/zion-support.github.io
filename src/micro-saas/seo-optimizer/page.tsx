@@ -8,7 +8,7 @@ export default function SeoOptimizerPage() {
   return (
     <>
     :all-pages-backup/micro-saas/seo-optimizer/page.tsx
-  </>
+</>
       <title>SeoOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional seooptimizer services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function SeoOptimizerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

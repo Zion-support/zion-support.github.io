@@ -26,4 +26,4 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className =
   );
 };
 
-export default PerformanceDashboard;
+export default PerformanceDashboard

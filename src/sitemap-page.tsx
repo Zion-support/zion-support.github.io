@@ -6,11 +6,10 @@ import SEOOptimizer from '../components/SEOOptimizer';
 const Page: React.FC = () => {
   return (
     <>
-    
-  </>
+</>
       <SEOOptimizer
-        title="Sitemap Page",
-        description="Professional sitemap page services and solutions for your business needs.",
+        title="Sitemap Page"
+        description="Professional sitemap page services and solutions for your business needs."
         keywords = {
 ["sitemap page","AI solutions","business automation","technology services"]
 };
@@ -18,10 +17,10 @@ const Page: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/sitemap-page"
       /></SEOOptimizer>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>
+        <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24"></main>
           <div className="text-center"></div>
-            <h1 className="text-4xl m,
+            <h1 className="text-4xl m
   d:text-5xl font-bold text-white mb-8 neon-text"></h1>
               Sitemap Page</h1>
             </h1>
@@ -35,11 +34,11 @@ const Page: React.FC = () => {
             </div>
           </div>
         </main>
-        <Footer /></Footer>
+        <Footer />
       </div>
     </div>
     </div>
   );
 };
 
-export default Page;
+export default Page

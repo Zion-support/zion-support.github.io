@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
-      <Navigation /></Navigation>
+      <Navigation />
       <main className="py-20 px-4"></main>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>
@@ -16,6 +16,6 @@ export default function SolutionsPage() {
           </p>
         </div>
       </main>
-      <Footer /></Footer>
+      <Footer />
     </div>;
   )}

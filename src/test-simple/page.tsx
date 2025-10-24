@@ -8,7 +8,7 @@ export default function TestSimplePage() {
   return (
     <>
     :all-pages-backup/test-simple/page.tsx
-  </>
+</>
       <title>TestSimple - Zion Tech Group</title>
         <meta name="description" content="Professional testsimple services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function TestSimplePage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

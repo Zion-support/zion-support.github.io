@@ -8,7 +8,7 @@ export default function IoT5GPage() {
   return (
     <>
     :all-pages-backup/5g-iot-solutions/page.tsx
-  </>
+</>
       <title>5G IoT Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional 5G IoT solutions for connected devices and smart systems." /></meta>
       </meta>
@@ -28,7 +28,7 @@ export default function IoT5GPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}
 

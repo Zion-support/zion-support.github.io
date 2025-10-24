@@ -6,23 +6,23 @@ import React from 'react';
  */
 const performanceConfig = {
 
-  monitoring: {,
+  monitoring: {
     enableLongTaskDetection: true
-    enableMemoryMonitorin,
-  g: true,
+    enableMemoryMonitorin
+  g: true
     sampleRate: 0.1}
-  webVitals: {,
-    lcp: { goo,
+  webVitals: {
+    lcp: { goo
   d: 2500, needsImprovement: 4000 }
-    fid: { goo,
+    fid: { goo
   d: 100, needsImprovement: 300 }
-    cls: { goo,
+    cls: { goo
   d: 0.1, needsImprovement: 0.25 }
-    fcp: { goo,
+    fcp: { goo
   d: 1800, needsImprovement: 3000 }
-    ttfb: { goo,
+    ttfb: { goo
   d: 800, needsImprovement: 1800 }
-    inp: { goo,
+    inp: { goo
   d: 200, needsImprovement: 500 }
   }
 }
@@ -39,23 +39,23 @@ export interface PerformanceMetrics {
 export interface ErrorReport {
 
 
-  message: string;
+  message: string
   stack?: string
   component?: string
-  timestam,
-  p: number;,
-    userAgent: string;
-  ur,
+  timestam
+  p: number
+    userAgent: string
+  ur
   l: string}
   };
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
-  private observe,
+  private observe
   r: PerformanceObserver | null = null
   constructor() {
-    if (typeof window !== 'undefined') {,
-      this.initializeMonitoring();,
+    if (typeof window !== 'undefined') {
+      this.initializeMonitoring();
     }
   }
   private initializeMonitoring(): void {
@@ -82,8 +82,8 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {,
-            this.metrics.fid = (entry as any).processingStart - entry.startTime,
+          entries.forEach((entry: PerformanceEntry) => {
+            this.metrics.fid = (entry as any).processingStart - entry.startTime
             this.reportMetric('fid', this.metrics.fid);
           })
         })
@@ -92,10 +92,10 @@ class MonitoringService {
         let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {)
           const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {,
+          entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value,
-              this.metrics.cls = clsValue,
+              clsValue += entry.value
+              this.metrics.cls = clsValue
               this.reportMetric('cls', clsValue);
             }
           })
@@ -132,8 +132,8 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {,
-            if (entry.duration > 1000) {,
+          entries.forEach((entry: PerformanceResourceTiming) => {
+            if (entry.duration > 1000) {
               }
           })
         })
@@ -146,29 +146,29 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message,
+        message: event.message
     stack: event.error?.stack
-        timestam,)
-  p: Date.now(),
+        timestam)
+  p: Date.now()
     userAgent: navigator.userAgent
-        ur,
+        ur
   l: window.location.href})
     })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejectio,
+        message: `Unhandled Promise Rejectio
   n: ${event.reason}`)
-        timestamp: Date.now(),
+        timestamp: Date.now()
     userAgent: navigator.userAgent
-        ur,
+        ur
   l: window.location.href})
     })
   }
-  private reportMetric(name: string, value: number): void {,
+  private reportMetric(name: string, value: number): void {
   // Sample rate
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {,
-      return,
+    if (Math.random() > performanceConfig.monitoring.sampleRate) {
+      return
 }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
@@ -177,15 +177,15 @@ class MonitoringService {
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {)
-        value: Math.round(name === 'cls' ? value * 1000 : value),
+        value: Math.round(name === 'cls' ? value * 1000 : value)
     event_category: 'Web Vitals'})
     }
   }
   public logError(error: ErrorReport): void {
     this.errors.push(error);
     // Keep only last 50 errors
-    if (this.errors.length > 50) {,
-      this.errors = this.errors.slice(-50);,
+    if (this.errors.length > 50) {
+      this.errors = this.errors.slice(-50);
     }
     // Send to error tracking service (if configured)
   }
@@ -200,7 +200,7 @@ class MonitoringService {
 }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi
   t: number } }).memory
       if (memory) {
         this.metrics.memory = {
@@ -230,7 +230,6 @@ class MonitoringService {
     }
   }
 }
-// Singleton instance;
-
+// Singleton instance
 const monitoring = new MonitoringService()
-export default monitoring;
+export default monitoring

@@ -19,9 +19,8 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
         "@context": "https://schema.org"
         "@type": "Organization"
         "name": "Zion Tech Group"
-        "description": "Professional AI and IT solutions for modern businesses",
-        "url": window.location.origin,
-      
+        "description": "Professional AI and IT solutions for modern businesses"
+        "url": window.location.origin
 };
       const script = document.createElement('script');
       script.type = 'application/ld+json'
@@ -38,15 +37,14 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
 
   return (
     <>
-    
-  </>
+</>
       <Helmet></Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>
         <meta name="theme-color" content="#059669" /></meta>
         <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} /></link>
       </Helmet>
       {children}
-    </>
+</>
   );
 };
 ;
@@ -67,18 +65,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
   canonicalUrl = 'https://ziontechgroup.com'
-  ogImage = 'http,
+  ogImage = 'http
   s://ziontechgroup.com/og-image.jpg'
   structuredData
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title
-
+    document.title = title,
+;
 :all-pages-backup/components/SEOOptimizer.tsx
     // Update meta description
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
-    // Update meta description;
+    // Update meta description
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
     if (metaDescription) {
       metaDescription.setAttribute('content', description);
@@ -93,7 +91,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 :all-pages-backup/components/SEOOptimizer.tsx
     // Update keywords
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]');
-    // Update keywords;
+    // Update keywords
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]');
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
@@ -107,7 +105,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 :all-pages-backup/components/SEOOptimizer.tsx
     // Update canonical URL
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]');
-    // Update canonical URL;
+    // Update canonical URL
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]');
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl);
@@ -119,8 +117,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {;,
-:all-pages-backup/components/SEOOptimizer.tsx,
+    const updateOGTag = (property: string, content: string) => {;
+:all-pages-backup/components/SEOOptimizer.tsx
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`);
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`);
       if (ogTag) {
@@ -139,8 +137,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateOGTag('og:url', canonicalUrl);
     updateOGTag('og:type', 'website');
     // Update Twitter Card tags
-    const updateTwitterTag = (name: string, content: string) => {;,
-:all-pages-backup/components/SEOOptimizer.tsx,
+    const updateTwitterTag = (name: string, content: string) => {;
+:all-pages-backup/components/SEOOptimizer.tsx
       let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`);
       let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`);
       if (twitterTag) {
@@ -168,7 +166,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 :all-pages-backup/components/SEOOptimizer.tsx
     // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]');
-    // Add viewport meta tag if not present;
+    // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]');
     if (!viewport) {
       viewport = document.createElement('meta');
@@ -195,21 +193,21 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name=&quot;keywords&quot; content={keywords.join(', ')} /></meta>
       <link rel=&quot;canonical&quot; href={canonicalUrl} /></link>
         <title>{title}</title>;
-      <meta name=&quot;description&quot; content = {description} />;</meta>
-      <meta name=&quot;keywords&quot; content = {keywords.join(', ')} />;</meta>
-      <link rel=&quot;canonical&quot; href = {canonicalUrl} /></link>
+      <meta name=&quot;description&quot; content={description} />;</meta>
+      <meta name=&quot;keywords&quot; content={keywords.join(', ')} />;</meta>
+      <link rel=&quot;canonical&quot; href={canonicalUrl} /></link>
       {/* Open Graph */}</link>
-      <meta property=&quot;og:title&quot; content = {title} />;</meta>
-      <meta property=&quot;og:description&quot; content = {description} />;</meta>
-      <meta property=&quot;og:image&quot; content = {ogImage} />;</meta>
-      <meta property=&quot;og:url&quot; content = {canonicalUrl} />;</meta>
+      <meta property=&quot;og:title&quot; content={title} />;</meta>
+      <meta property=&quot;og:description&quot; content={description} />;</meta>
+      <meta property=&quot;og:image&quot; content={ogImage} />;</meta>
+      <meta property=&quot;og:url&quot; content={canonicalUrl} />;</meta>
       <meta property=&quot;og: type&quot; content=&quot;website&quot; /></meta>
       {/* Twitter Card */}</meta>
       <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; /></meta>
-      <meta name=&quot;twitte,
-  r:title&quot; content = {title} />;</meta>
-      <meta name=&quot;twitter:description&quot; content = {description} />;</meta>
-      <meta name=&quot;twitter:image&quot; content = {ogImage} /></meta>
+      <meta name=&quot;twitte
+  r:title&quot; content={title} />;</meta>
+      <meta name=&quot;twitter:description&quot; content={description} />;</meta>
+      <meta name=&quot;twitter:image&quot; content={ogImage} /></meta>
       {/* Additional SEO meta tags */}</meta>
       <meta name=&quot;robots&quot; content=&quot;index, follow&quot; /></meta>
       <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; /></meta>
@@ -229,11 +227,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   )
 }
 
-export default SEOOptimizer;
+export default SEOOptimizer
   );
 :all-pages-backup/components/SEOOptimizer.tsx
 {};
 
 export default SEOOptimizerPage
 }
-export default SEOOptimizerPage;
+export default SEOOptimizerPage

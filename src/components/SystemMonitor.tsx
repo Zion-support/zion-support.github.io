@@ -19,18 +19,17 @@ import { Brain, Mail } from 'lucide-react';
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ];
 ;
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</SystemMonitorProps>
   return (</SystemMonitorProps>
     <>
-    
-  </>
+</>
       <Helmet>;</Helmet>
 :all-pages-backup/components/SystemMonitor.tsx</Helmet>
         <Head></Head>
@@ -42,7 +41,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */};
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -59,14 +58,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -76,7 +75,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -106,7 +105,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -129,7 +128,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales</button>
               </button>
@@ -137,8 +136,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;</
           </div>
         </section>
       </div>
-      <Footer /></Footer>
-    </>
+      <Footer />
+</>
 :all-pages-backup/components/SystemMonitor.tsx
   )};
 
@@ -146,7 +145,7 @@ export default SystemMonitorPage
     </div>
   );
 }
-export default SystemMonitorPage;
+export default SystemMonitorPage
             </div>
         </div>
     </div>

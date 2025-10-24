@@ -8,7 +8,7 @@ export default function ZionAiSeoOptimizerPage() {
   return (
     <>
     :all-pages-backup/zion-ai-seo-optimizer/page.tsx
-  </>
+</>
       <title>ZionAiSeoOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional zionaiseooptimizer services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ZionAiSeoOptimizerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

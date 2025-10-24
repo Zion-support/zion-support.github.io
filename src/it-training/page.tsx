@@ -8,7 +8,7 @@ export default function ItTrainingPage() {
   return (
     <>
     :all-pages-backup/it-training/page.tsx
-  </>
+</>
       <title>ItTraining - Zion Tech Group</title>
         <meta name="description" content="Professional ittraining services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ItTrainingPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

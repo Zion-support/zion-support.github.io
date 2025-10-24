@@ -8,7 +8,7 @@ export default function BlockchainDevelopmentPage() {
   return (
     <>
     :all-pages-backup/blockchain-development/page.tsx
-  </>
+</>
       <title>BlockchainDevelopment - Zion Tech Group</title>
         <meta name="description" content="Professional blockchaindevelopment services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function BlockchainDevelopmentPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

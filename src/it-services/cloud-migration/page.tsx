@@ -8,7 +8,7 @@ export default function CloudMigrationPage() {
   return (
     <>
     :all-pages-backup/it-services/cloud-migration/page.tsx
-  </>
+</>
       <title>CloudMigration - Zion Tech Group</title>
         <meta name="description" content="Professional cloudmigration services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function CloudMigrationPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

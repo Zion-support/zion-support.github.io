@@ -8,7 +8,7 @@ export default function EmailOptimizerPage() {
   return (
     <>
     :all-pages-backup/email-optimizer/page.tsx
-  </>
+</>
       <title>EmailOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional emailoptimizer services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function EmailOptimizerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}

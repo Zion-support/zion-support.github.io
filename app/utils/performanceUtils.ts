@@ -2,44 +2,40 @@
 export interface PerformanceMetric {
 
 
-  name: string;
-  value: number;
-  timestamp: number;
-  ur,
+  name: string
+  value: number
+  timestamp: number
+  ur
   l: string;}
 }
 ;
 class PerformanceMonitor {
   private metrics: PerformanceMetric[] = [];
-  private isEnable,
-  d: boolean;
-
-  constructor() {,
-    this.isEnabled = typeof window !== "undefined" && "performance" in window;,
+  private isEnable
+  d: boolean
+  constructor() {
+    this.isEnabled = typeof window !== "undefined" && "performance" in window
   }
 
   // Measure page load time
   measurePageLoad(): number | null {
-    if (!this.isEnabled) return null;
-
-    const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
-    if (!navigation) return null;
-
-    const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    if (!this.isEnabled) return null
+    const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming
+    if (!navigation) return null
+    const loadTime = navigation.loadEventEnd - navigation.loadEventStart
     this.recordMetric("page_load", loadTime);
-    return loadTime;
+    return loadTime
   }
 
   // Record a custom metric
   recordMetric(name: string, value: number): void {
-    if (!this.isEnabled) return;
-
-    const metri,
+    if (!this.isEnabled) return
+    const metri
   c: PerformanceMetric = {
-      name,
-      value,
-      timestamp: Date.now(),
-      url: window.location.href,
+      name
+      value
+      timestamp: Date.now()
+      url: window.location.href
     };
 
     this.metrics.push(metric);
@@ -57,12 +53,12 @@ class PerformanceMonitor {
 
   // Send metrics to analytics service
   private sendToAnalytics(metric: PerformanceMetric): void {
-    // Exampl,
+    // Exampl
   e: Send to Google Analytics
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", metric.name, {
-        event_category: "Performance",)
-        value: Math.round(metric.value),
+        event_category: "Performance")
+        value: Math.round(metric.value)
       });
     }
   }

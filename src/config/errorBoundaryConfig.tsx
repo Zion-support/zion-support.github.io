@@ -31,54 +31,54 @@ maxStoredErrors: number
 /**
 * Custom error messages by error type
 */
-customMessage,
+customMessage
   s: Record<string, string>
 /**
 * Fallback UI components
 */;</string>
 fallbackComponents: {};</string>
-default: React.ComponentType<{ error: Error; resetErro,
+default: React.ComponentType<{ error: Error; resetErro
   r: () => void }>
-network: React.ComponentType<{ error: Error; resetErro,
+network: React.ComponentType<{ error: Error; resetErro
   r: () => void }>
-notFound: React.ComponentType<{ error: Error; resetErro,
+notFound: React.ComponentType<{ error: Error; resetErro
   r: () => void }>
-{},
+{}
 {}
 /**
 * Default error messages
 */
 :all-pages-backup/config/errorBoundaryConfig.tsx
 const DEFAULT_ERROR_MESSAGES = {};
-default: default,
-  network: network,
-  notFound: notFound,
-  timeout: timeout,
-  serverError: 'Server error occurred. Please try again later.',
+default: default
+  network: network
+  notFound: notFound
+  timeout: timeout
+  serverError: 'Server error occurred. Please try again later.'
 {validation: 'Validation error. Please check your input.'}
 /**
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {};
-logErrors: true,
-  showDetails: isDevelopment,
-  reportErrors: !isDevelopment,
-  reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-  showErrorOverlay: isDevelopment,
-  maxStoredErrors: 50,
-  customMessages: DEFAULT_ERROR_MESSAGES,
+logErrors: true
+  showDetails: isDevelopment
+  reportErrors: !isDevelopment
+  reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
+  showErrorOverlay: isDevelopment
+  maxStoredErrors: 50
+  customMessages: DEFAULT_ERROR_MESSAGES
   fallbackComponents: {}
-default: DefaultErrorFallback,
+default: DefaultErrorFallback
   network: NetworkErrorFallback
-{notFoun,
+{notFoun
   d: NotFoundFallback}}
 {}
 const DEFAULT_ERROR_MESSAGES = {}
-default: 'Something went wrong. Please try again.',
-network: 'Network connection issue. Please check your internet connection.',
-notFound: 'The requested resource was not found.',
-timeout: 'Request timed out. Please try again.',
-serverError: 'Server error occurred. Please try again later.',
+default: 'Something went wrong. Please try again.'
+network: 'Network connection issue. Please check your internet connection.'
+notFound: 'The requested resource was not found.'
+timeout: 'Request timed out. Please try again.'
+serverError: 'Server error occurred. Please try again later.'
 validation: 'Validation error. Please check your input.'}
 /**
 * Get error boundary configuration based on environment
@@ -91,22 +91,21 @@ reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
 showErrorOverlay: isDevelopment
 maxStoredErrors: 50
 customMessages: DEFAULT_ERROR_MESSAGES
-fallbackComponent,
+fallbackComponent
   s: {}
 default: DefaultErrorFallback
 network: NetworkErrorFallback
-notFoun,
+notFoun
   d: NotFoundFallback}}
 }
 /**
-* Default error fallback component;
+* Default error fallback component
 */;
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro)
   r: () => void }) {}
 return ();
     <>
-    
-  </>
+</>
     <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
@@ -136,8 +135,8 @@ onClick = {
 resetError
 };
 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">Try Again</button>
-<button,
-<h2 className="mt-4te xt-2xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>,
+<button
+<h2 className="mt-4te xt-2xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>
 <p className="mt-2text-centertext-gray-600">
             {error.message || 'An unexpected error occurred'}
           </p>;
@@ -155,13 +154,13 @@ Go Home
 </
 </div>
 </div>
-</div>,
-),
+</div>
+)
 {}
 /**
 * Network error fallback component
 */;
-function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
+function NetworkErrorFallback({ resetError }: { error: Error; resetErro)
   r: () => void }) {}
 return ();
     <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
@@ -188,8 +187,8 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Retry Connection</button>
 </div>
 </div>
-</div>,
-),
+</div>
+)
 {}
 /**
 * Not found error fallback component
@@ -216,8 +215,8 @@ Go Back
 </
 </div>
 </div>
-</div>,
-),
+</div>
+)
 {}
 /**
 * Get error type from error object
@@ -227,16 +226,16 @@ if (error.message.includes('Network') || error.message.includes('fetch')) {}
 return 'network'
 {}
 if (error.message.includes('404') || error.message.includes('not found')) {};
-{return 'notFound'},
+{return 'notFound'}
 {}
 if (error.message.includes('timeout')) {}
-{return 'timeout'},
+{return 'timeout'}
 {}
 if (error.message.includes('500') || error.message.includes('server')) {}
-{return 'serverError'},
+{return 'serverError'}
 {}
 if (error.message.includes('validation')) {}
-{return 'validation'},
+{return 'validation'}
 {}
 return 'default'
 {}
@@ -246,14 +245,14 @@ return 'default'
 export function formatErrorForLogging(error: Error): Record<string, unknown> {};
 return {}
 :all-pages-backup/config/errorBoundaryConfig.tsx
-message: error.message,
-  stack: error.stack,
-  name: error.name,
+message: error.message
+  stack: error.stack
+  name: error.name
   type: getErrorType(error)
 timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
-{ur,
-  l: typeof window !== 'undefined' ? window.location.href : 'unknown'},
+{ur
+  l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 {}
 message: error.message
 stack: error.stack
@@ -261,9 +260,9 @@ name: error.name
 type: getErrorType(error)
 timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
-ur,
+ur
   l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 }
 export default getErrorBoundaryConfig</string>
 ;</string>
-    </>
+</>

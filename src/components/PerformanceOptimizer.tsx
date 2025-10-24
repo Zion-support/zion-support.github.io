@@ -16,7 +16,7 @@ interface PerformanceOptimizerProps {
 }
 ;
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
-  className?: string;
+  className?: string
 }</PerformanceOptimizerProps>
 </PerformanceOptimizerProps>
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -27,26 +27,26 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 }) => {</PerformanceOptimizerProps>
   const [isOptimizing, setIsOptimizing] = useState(false);</PerformanceOptimizerProps>
   const [optimizationStatus, setOptimizationStatus] = useState<{;
-    images: boolean,
-  lazyLoading: boolean,
-  preloading: boolean,
-  codeSplitting: boolean,
+    images: boolean
+  lazyLoading: boolean
+  preloading: boolean
+  codeSplitting: boolean
   }>({
 :all-pages-backup/components/PerformanceOptimizer.tsx
-    images: false,
-  lazyLoading: false,
-  preloading: false,
+    images: false
+  lazyLoading: false
+  preloading: false
   codeSplitting: false
     images: false
     lazyLoading: false
     preloading: false
-    codeSplittin,
+    codeSplittin
   g: false
   })
 
   const optimizeImages = useCallback(() => {;
-    if (!enableImageOptimization) return
-
+    if (!enableImageOptimization) return,
+;
     // Optimize images
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
@@ -70,8 +70,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization])
 
   const enableLazyLoadingOptimization = useCallback(() => {;
-    if (!enableLazyLoading) return
-
+    if (!enableLazyLoading) return,
+;
     // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver()
       (entries) => {
   
@@ -97,11 +97,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableLazyLoading])
 
   const enablePreloadingOptimization = useCallback(() => {;
-    if (!enablePreloading) return
-
+    if (!enablePreloading) return,
+;
     // Preload critical resources
     const criticalResources = [
-      '/fonts/main.woff2',
+      '/fonts/main.woff2'
       '/css/critical.css'
     ]
 ;
@@ -120,11 +120,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enablePreloading])
 
   const enableCodeSplittingOptimization = useCallback(() => {;
-    if (!enableCodeSplitting) return
-
+    if (!enableCodeSplitting) return,
+;
     // Dynamic imports for codesplittingconstloadComponent= async (componentName: string) => {
-  ,
-      try {,
+  
+      try {
         const module = await import(`../components/${componentName}.tsx`);
         return module.default
       } catch (error) {
@@ -134,8 +134,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
 
     // Store the function globally for use in other components
-    (window as any).loadComponent = loadComponent
-
+    (window as any).loadComponent = loadComponent,
+;
     setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
   }, [enableCodeSplitting])
 
@@ -163,8 +163,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <>
-    
-  </>
+</>
       <Helmet></Helmet>
 :all-pages-backup/components/PerformanceOptimizer.tsx</Helmet>
         <Head></Head>
@@ -176,7 +175,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
     </div>
@@ -194,14 +193,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -211,7 +210,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -241,7 +240,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -264,7 +263,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales</button>
               </button>
@@ -272,8 +271,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </div>
         </section>
       </div>
-    </div>,
-  ),
+    </div>
+  )
 }
 
 export default PerformanceOptimizer
@@ -286,4 +285,4 @@ export default PerformanceOptimizer
 
 export default PerformanceOptimizerPage
 }
-export default PerformanceOptimizerPage;
+export default PerformanceOptimizerPage

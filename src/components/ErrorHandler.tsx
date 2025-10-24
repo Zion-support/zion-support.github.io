@@ -19,75 +19,74 @@ const ErrorHandlerPage: React.FC = () => {
   const features = [
     {
 :all-pages-backup/components/ErrorHandler.tsx
-      ico,
-  n: Brain,
-  title: title,
-  description: description,
+      ico
+  n: Brain
+  title: title
+  description: description
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-  {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-  {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-  {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      icon: Brain
-      titl,
-  e: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
   {
     icon: BarChart
-      titl,
-  e: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
   {
     icon: Target
-      titl,
-  e: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
   {
     icon: TrendingUp
-      titl,
-  e: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+  title: title
+  description: description
+  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Brain
+      titl
+  e: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+  {
+    icon: BarChart
+      titl
+  e: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+  {
+    icon: Target
+      titl
+  e: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+  {
+    icon: TrendingUp
+      titl
+  e: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-:all-pages-backup/components/ErrorHandler.tsx;
+:all-pages-backup/components/ErrorHandler.tsx
     <>
     ;
-  </>
+</>
       <Helmet>;</Helmet>
     <>
-    
-  </>
+</>
       <Helmet>;</Helmet>
         <Head></Head>
         <title>ErrorHandler</title>;
@@ -98,7 +97,7 @@ const ErrorHandlerPage: React.FC = () => {
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
     </div>
@@ -113,7 +112,7 @@ const ErrorHandlerPage: React.FC = () => {
               Advanced ErrorHandler solution for modern businesses.</p>
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hove,
+              <button className=&quot;bg-emerald-600 hove
   r:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
@@ -131,15 +130,15 @@ const ErrorHandlerPage: React.FC = () => {
     try {
       // Replace with your actual error reportingserviceconsterrorData= {
 :all-pages-backup/components/ErrorHandler.tsx
-        messag,
-  e: error.message,
-  stack: error.stack,
-  componentStack: errorInfo.componentStack,
+        messag
+  e: error.message
+  stack: error.stack
+  componentStack: errorInfo.componentStack
   timestamp: new Date().toISOString();
         message: error.message
         stack: error.stack
         componentStack: errorInfo.componentStack
-        timestam,
+        timestam
   p: new Date().toISOString()
       }
       // Send to your error reporting service here
@@ -151,12 +150,12 @@ const ErrorHandlerPage: React.FC = () => {
 
   handleRetry= () => {this.setState({
 :all-pages-backup/components/ErrorHandler.tsx
-      hasError: false,
-  error: null,
+      hasError: false
+  error: null
   errorInfo: null
       hasError: false
       error: null
-      errorInf,
+      errorInf
   o: null)
    })
   }
@@ -193,13 +192,13 @@ const ErrorHandlerPage: React.FC = () => {
                   </div>
                   {this.state.error.stack && (
                     <div></div>
-                      <strong>Stack: </strong>,
+                      <strong>Stack: </strong>
                       <pre className=&quot;whitespace-pre-wrap&quot;></p>{this.state.error.stack}</pre>
                     </div>
                   )}
                   {this.state.errorInfo?.componentStack && (
                     <div></div>
-                      <strong>Component Stack: </strong>,
+                      <strong>Component Stack: </strong>
                       <pre className=&quot;whitespace-pre-wrap&quot;></p>{this.state.errorInfo.componentStack}</pre>
                     </div>
                   )}
@@ -219,8 +218,8 @@ const ErrorHandlerPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
+
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -230,7 +229,7 @@ const ErrorHandlerPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -251,8 +250,8 @@ const ErrorHandlerPage: React.FC = () => {
           </div>
         </section>
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot
-              ></,
-:all-pages-backup/components/ErrorHandler.tsx,
+              ></
+:all-pages-backup/components/ErrorHandler.tsx
                 onClick = {
 this.handleRetry
 };
@@ -265,14 +264,14 @@ this.handleRetry
                 onClick={this.handleGoHome}
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
                 onClick = {this.handleRetry}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
+               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot
               ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again</RefreshCwclassName>
             </butto><
                 onClick = {this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
               ></
                 onClick = {this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
               ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home</HomeclassName>
             </butto></di></di></di>
       )
@@ -291,7 +290,7 @@ this.handleRetry
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -314,7 +313,7 @@ this.handleRetry
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales</button>
               </button>
@@ -322,12 +321,12 @@ this.handleRetry
           </div>
         </section>
       </div>
-      <Footer /></Footer>
-    </>
+      <Footer />
+</>
   );
 :all-pages-backup/components/ErrorHandler.tsx
 {};
 
 export default ErrorHandlerPage
 }
-export default ErrorHandlerPage;
+export default ErrorHandlerPage

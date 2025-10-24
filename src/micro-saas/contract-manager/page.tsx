@@ -8,7 +8,7 @@ export default function ContractManagerPage() {
   return (
     <>
     :all-pages-backup/micro-saas/contract-manager/page.tsx
-  </>
+</>
       <title>ContractManager - Zion Tech Group</title>
         <meta name="description" content="Professional contractmanager services by Zion Tech Group." /></meta>
       </meta>
@@ -28,6 +28,6 @@ export default function ContractManagerPage() {
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-</div>;,
+      </div>
+</div>;
   )}
