@@ -201,9 +201,9 @@ const Page: React.FC = () => {
           </section>
         </div>
       </div>
-</>
-  )
-{}
+    </div>
+  );
+};
 
 export default Page;
 }}}}

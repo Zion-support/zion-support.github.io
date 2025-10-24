@@ -273,9 +273,9 @@ constAIDataVisualizationPage: React.FC = () => {constfeature,
         </main>
         <Footer />
       </div>
-</>
-  )
-{}
+    </div>
+  );
+};
 
 export default Page;
 }}}}}}

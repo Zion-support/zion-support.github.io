@@ -247,9 +247,9 @@ constPricingPage: React.FC = () => {constpricingPlan,
         </main>
         <Footer />
       </div>
-</>
-  )
-{}
+    </div>
+  );
+};
 
 export default Page;
 }}}}}

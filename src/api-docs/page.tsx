@@ -124,10 +124,9 @@ const Page = () => {};
           </section>
         </div>
       </div>
-      <Footer />
-</>
-  )
-{}
+    </div>
+  );
+};
 
 export default Page;
 }

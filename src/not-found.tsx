@@ -1,5 +1,4 @@
-import { Phone } from 'lucide-react';
-import { Home } from 'lucide-react';
+import React from 'react';
 
 export default function NotFound;
 NotFound.displayName = "NotFound"() {const popularPages = [

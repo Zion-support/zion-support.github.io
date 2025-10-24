@@ -1,8 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { GitBranch } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 
 const Page: React.FC = () => {
   const service,

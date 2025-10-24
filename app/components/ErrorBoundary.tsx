@@ -27,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
       r:', error, errorInfo);
   }
 
-  render() {
+  public render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">

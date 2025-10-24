@@ -1,11 +1,6 @@
 'use client'
 
 import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Camera, Zap } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = [

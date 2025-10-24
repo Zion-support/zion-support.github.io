@@ -274,9 +274,9 @@ const Page: React.FC = () => {
         </main>
         <Footer />
       </div>
-</>
-  )
-{}
+    </div>
+  );
+};
 
 export default Page;
 }}}}}}

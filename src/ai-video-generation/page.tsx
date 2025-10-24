@@ -1,9 +1,4 @@
 import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Zap, Video } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = []
@@ -214,9 +209,9 @@ const Page: React.FC = () => {
         </main>
         <Footer />
       </div>
-</>
-  )
-{}
+    </div>
+  );
+};
 
 export default Page;
 }}}}}

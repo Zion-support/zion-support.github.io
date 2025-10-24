@@ -400,9 +400,9 @@ constConsultationPage: React.FC = () => {const [
         </main>
         <Footer />
       </div>
-</>
-  )
-{}
+    </div>
+  );
+};
 
 export default Page;
 }}}}}}}
