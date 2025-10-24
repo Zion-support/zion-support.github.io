@@ -20,15 +20,21 @@ export const metadata: Metadata = {
       title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
     },
+    {
       icon: Shield,
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.'
+    },
+    {
       icon: Globe,
       title: 'Global Reach',
       description: 'Serving clients worldwide with localized support and expertise.'
+    },
+    {
       icon: Users,
       title: 'Collaboration',
       description: 'We work closely with our clients to understand their unique needs.'
+    }
   ];
 
   const _stats = [
@@ -38,6 +44,6 @@ export const metadata: Metadata = {
     { number: '24/7', label: 'Support Available' }
 
 
-  );
+  ];
 
 export default AboutPage;

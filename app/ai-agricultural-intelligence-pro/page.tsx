@@ -138,10 +138,10 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
 };
 
 export default AIAgriculturalIntelligenceProPage;
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiAgriculturalIntelligenceProPage: React.FC = () => {,
 'use client'
 import React from 'react'
