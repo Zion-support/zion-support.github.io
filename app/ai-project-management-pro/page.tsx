@@ -6,22 +6,22 @@ import { ArrowRight, Users, BarChart, CheckCircle, Brain, Settings, Target, Tren
 const AIProjectManagementProPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
       title: 'AI Project Planning',
       description: 'Intelligent project planning with AI-powered task breakdown, resource allocation, and timeline optimization.'
     },
     {
-      icon: <Users className="w-8 h-8 text-purple-400" />,
+      icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication, task assignment, and progress tracking.'
     },
     {
-      icon: <BarChart className="w-8 h-8 text-green-400" />,
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive project analytics with AI insights, performance metrics, and predictive forecasting.'
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: Target,
       title: 'Smart Resource Management',
       description: 'AI-driven resource allocation and workload balancing for optimal team productivity.'
     }

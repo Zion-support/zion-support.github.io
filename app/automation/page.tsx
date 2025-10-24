@@ -6,22 +6,22 @@ import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar,
 const AutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      icon: Zap,
       title: 'Process Automation',
       description: 'Automate repetitive business processes to increase efficiency and reduce human error.'
     },
     {
-      icon: <Workflow className="w-8 h-8 text-purple-400" />,
+      icon: Workflow,
       title: 'Workflow Optimization',
       description: 'Design and implement optimized workflows that streamline your business operations.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'AI-Powered Automation',
       description: 'Leverage AI and machine learning to create intelligent automation solutions.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: Settings,
       title: 'Custom Integration',
       description: 'Seamlessly integrate automation solutions with your existing systems and tools.'
     }
@@ -50,14 +50,14 @@ const AutomationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/it-services"
+              href="/it-services"
               className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All IT Services
@@ -139,14 +139,14 @@ const AutomationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Your Automation Journey
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
-              to="/it-services" 
+              href="/it-services" 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All IT Services

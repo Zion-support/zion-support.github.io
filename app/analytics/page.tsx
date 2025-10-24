@@ -6,22 +6,22 @@ import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target,
 const AnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart className="w-8 h-8 text-cyan-400" />,
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive data analysis and visualization tools for deep business insights.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+      icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Real-time performance monitoring and trend analysis across all business metrics.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Machine learning algorithms that identify patterns and predict future trends.'
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: Target,
       title: 'Custom Dashboards',
       description: 'Personalized dashboards tailored to your specific business needs and KPIs.'
     }

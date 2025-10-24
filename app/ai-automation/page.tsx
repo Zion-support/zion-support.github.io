@@ -9,22 +9,22 @@ import {
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      icon: Zap,
       title: 'Workflow Automation',
       description: 'Automate complex business processes with intelligent workflow management.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
+      icon: Brain,
       title: 'Intelligent Decision Making',
       description: 'AI-powered decision making based on data analysis and business rules.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-green-400" />,
+      icon: Settings,
       title: 'Custom Integrations',
       description: 'Seamlessly integrate with your existing systems and third-party applications.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-orange-400" />,
+      icon: Globe,
       title: 'Scalable Solutions',
       description: 'Automation solutions that grow with your business and adapt to changing needs.'
     }
@@ -34,22 +34,22 @@ const AIAutomationPage: React.FC = () => {
     {
       title: 'Customer Service',
       description: 'Automate ticket routing, response generation, and issue resolution.',
-      icon: <Users className="w-6 h-6 text-blue-400" />
+      icon: Users
     },
     {
       title: 'Data Processing',
       description: 'Automate data collection, validation, and analysis workflows.',
-      icon: <BarChart className="w-6 h-6 text-green-400" />
+      icon: BarChart
     },
     {
       title: 'Marketing Automation',
       description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: <MessageCircle className="w-6 h-6 text-purple-400" />
+      icon: MessageCircle
     },
     {
       title: 'Financial Operations',
       description: 'Automate invoice processing, expense management, and financial reporting.',
-      icon: <FileText className="w-6 h-6 text-orange-400" />
+      icon: FileText
     }
   ];
 
@@ -63,10 +63,10 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '70%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '24/7', label: 'Automated Operations', icon: <Clock className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Shield className="w-6 h-6" /> },
-    { number: '3-6', label: 'Months ROI', icon: <Star className="w-6 h-6" /> }
+    { number: '70%', label: 'Cost Reduction', icon: TrendingUp },
+    { number: '24/7', label: 'Automated Operations', icon: Clock },
+    { number: '99.9%', label: 'Accuracy Rate', icon: Shield },
+    { number: '3-6', label: 'Months ROI', icon: Star }
   ];
 
   return (
@@ -106,7 +106,11 @@ const AIAutomationPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
+<<<<<<< HEAD
                   <stat.icon className="w-8 h-8 text-white" />
+=======
+                  <stat.icon className="w-6 h-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-5202
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -156,7 +160,11 @@ const AIAutomationPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
+<<<<<<< HEAD
                   <useCase.icon className="w-8 h-8 text-purple-400" />
+=======
+                  <useCase.icon className="w-6 h-6 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-5202
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>

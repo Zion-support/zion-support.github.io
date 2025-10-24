@@ -8,37 +8,37 @@ const AiChatbotBuilderPage: React.FC = () => {
     {
       title: 'No-Code Builder',
       description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      icon: Zap,
       color: 'from-cyan-500 to-blue-500'
     },
     {
       title: 'Multi-Language Support',
       description: 'Deploy chatbots in 50+ languages with automatic translation and localization',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
+      icon: Globe,
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Advanced Analytics',
       description: 'Track performance with detailed analytics, conversation insights, and user behavior data',
-      icon: <BarChart className="w-8 h-8 text-purple-400" />,
+      icon: BarChart,
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'AI-Powered Responses',
       description: 'Leverage advanced NLP and machine learning for intelligent, context-aware conversations',
-      icon: <Brain className="w-8 h-8 text-orange-400" />,
+      icon: Brain,
       color: 'from-orange-500 to-red-500'
     },
     {
       title: 'Easy Integration',
       description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms',
-      icon: <Workflow className="w-8 h-8 text-blue-400" />,
+      icon: Workflow,
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Custom Branding',
       description: 'Customize the chatbot appearance to match your brand identity and design guidelines',
-      icon: <Settings className="w-8 h-8 text-indigo-400" />,
+      icon: Settings,
       color: 'from-indigo-500 to-purple-500'
     }
   ];
@@ -47,25 +47,25 @@ const AiChatbotBuilderPage: React.FC = () => {
     {
       title: 'Customer Support',
       description: 'Provide 24/7 customer support with instant responses to common queries',
-      icon: <MessageCircle className="w-6 h-6 text-blue-400" />,
+      icon: MessageCircle,
       benefits: ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses']
     },
     {
       title: 'Lead Generation',
       description: 'Qualify leads and capture contact information through engaging conversations',
-      icon: <Target className="w-6 h-6 text-green-400" />,
+      icon: Target,
       benefits: ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates']
     },
     {
       title: 'E-commerce Assistant',
       description: 'Help customers find products, answer questions, and guide them through purchases',
-      icon: <ShoppingCart className="w-6 h-6 text-purple-400" />,
+      icon: ShoppingCart,
       benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
     },
     {
       title: 'Internal HR Bot',
       description: 'Answer employee questions about policies, benefits, and company information',
-      icon: <Users className="w-6 h-6 text-orange-400" />,
+      icon: Users,
       benefits: ['Reduce HR workload', 'Consistent information', 'Employee satisfaction']
     }
   ];
@@ -120,10 +120,10 @@ const AiChatbotBuilderPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Chatbots Created', icon: <MessageCircle className="w-6 h-6" /> },
-    { number: '50+', label: 'Languages Supported', icon: <Globe className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Server className="w-6 h-6" /> },
-    { number: '24/7', label: 'Customer Support', icon: <Clock className="w-6 h-6" /> }
+    { number: '10,000+', label: 'Chatbots Created', icon: MessageCircle },
+    { number: '50+', label: 'Languages Supported', icon: Globe },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Server },
+    { number: '24/7', label: 'Customer Support', icon: Clock }
   ];
 
   return (
@@ -163,7 +163,11 @@ const AiChatbotBuilderPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
+<<<<<<< HEAD
                   <stat.icon className="w-8 h-8 text-white" />
+=======
+                  <stat.icon className="w-6 h-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-5202
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -213,7 +217,11 @@ const AiChatbotBuilderPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
+<<<<<<< HEAD
                   <useCase.icon className="w-8 h-8 text-purple-400" />
+=======
+                  <useCase.icon className="w-6 h-6 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-5202
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>

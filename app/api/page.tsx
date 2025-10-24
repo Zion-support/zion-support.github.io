@@ -6,22 +6,22 @@ import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Cal
 const APIPage: React.FC = () => {
   const features = [
     {
-      icon: <Code className="w-8 h-8 text-cyan-400" />,
+      icon: Code,
       title: 'RESTful API Design',
       description: 'Well-designed RESTful APIs that are intuitive, scalable, and easy to integrate.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      icon: Zap,
       title: 'High Performance',
       description: 'Optimized APIs with fast response times and efficient data processing capabilities.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'AI-Powered Features',
       description: 'APIs enhanced with AI capabilities for intelligent data processing and automation.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: Settings,
       title: 'Easy Integration',
       description: 'Comprehensive documentation and SDKs for seamless integration with any platform.'
     }
@@ -50,14 +50,14 @@ const APIPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/it-services"
+              href="/it-services"
               className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All IT Services
@@ -139,14 +139,14 @@ const APIPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Your API Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
-              to="/it-services" 
+              href="/it-services" 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All IT Services

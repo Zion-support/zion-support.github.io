@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 'use client'
+=======
+'use client';
+import Link from 'next/link';
+>>>>>>> cursor/fix-errors-and-merge-to-main-5202
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'

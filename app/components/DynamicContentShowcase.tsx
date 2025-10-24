@@ -53,19 +53,19 @@ const DynamicContentShowcase: React.FC = () => {
 
   const features = [
     {
-      icon: <Brain className="h-8 w-8" />,
+      icon: Brain,
       title: "AI-Powered Solutions",
       description: "Advanced artificial intelligence to transform your business operations",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <Shield className="h-8 w-8" />,
+      icon: Shield,
       title: "Cybersecurity",
       description: "Comprehensive security solutions to protect your digital assets",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: <Zap className="h-8 w-8" />,
+      icon: Zap,
       title: "Automation",
       description: "Streamline processes and increase efficiency with smart automation",
       color: "from-purple-500 to-pink-500"
