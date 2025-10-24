@@ -17,11 +17,19 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
 }) => {
   return (
     <div className={`animate-pulse ${className}`} style={{ height }}>
+<<<<<<< HEAD
       <div className="...">
         {showAvatar && (
           <div className="...">
             <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
             <div className="...">
+=======
+      <div className="space-y-4">
+        {showAvatar && (
+          <div className="flex items-center space-x-4">
+            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+            <div className="space-y-2 flex-1">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
               <div className="h-4 bg-gray-300 rounded w-1/4"></div>
               <div className="h-3 bg-gray-300 rounded w-1/2"></div>
             </div>
@@ -32,7 +40,11 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
           <div className="w-full h-48 bg-gray-300 rounded-lg"></div>
         )}
         
+<<<<<<< HEAD
         <div className="...">
+=======
+        <div className="space-y-2">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
           {Array.from({ length: lines }).map((_, index) => (
             <div
               key={index}

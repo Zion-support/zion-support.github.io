@@ -62,8 +62,13 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
         cumulative_layout_shift: metrics.cumulativeLayoutShift
         time_to_interactive: metrics.timeToInteractive
         total_blocking_time: metrics.totalBlockingTime
+<<<<<<< HEAD
       }
     });
+=======
+      });
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   }
 };
 

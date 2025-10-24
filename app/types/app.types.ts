@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 "use client";
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
 export interface User {
   id: string;
   email: string;

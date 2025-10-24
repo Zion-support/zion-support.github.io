@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number;

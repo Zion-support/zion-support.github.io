@@ -11,7 +11,10 @@ const InteractiveAIROICalculator: React.FC = () => {
   };
   
   const roi = calculateROI();
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -80,6 +83,27 @@ const InteractiveAIROICalculator: React.FC = () => {
               <div className='space-y-4'>
                 <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
                   <span className='text-gray-700'>Annual Savings:</span>
+<<<<<<< HEAD
+=======
+                  <span className='font-semibold text-green-600'>
+                    ${((currentCost * efficiencyGain) / 100).toLocaleString()}
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div className='bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl'>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
+                ROI Analysis
+              </h3>
+              <div className='space-y-4'>
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-700'>Current Annual Cost:</span>
+                  <span className='font-semibold'>${currentCost.toLocaleString()}</span>
+                </div>
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-700'>Expected Annual Savings:</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
                   <span className='font-semibold text-green-600'>
                     ${((currentCost * efficiencyGain) / 100).toLocaleString()}
                   </span>
@@ -95,6 +119,24 @@ const InteractiveAIROICalculator: React.FC = () => {
                   <span className='font-semibold text-blue-600'>
                     ${(((currentCost * efficiencyGain * timeframe) / 1200) - currentCost).toLocaleString()}
                   </span>
+<<<<<<< HEAD
+=======
+                </div>
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-700'>Total Savings ({timeframe} months):</span>
+                  <span className='font-semibold text-green-600'>
+                    ${(((currentCost * efficiencyGain) / 100) * (timeframe / 12)).toLocaleString()}
+                  </span>
+                </div>
+                <div className='border-t pt-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-lg font-semibold text-gray-900'>ROI:</span>
+                    <span className={`text-2xl font-bold ${roi > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                      {roi.toFixed(1)}%
+                    </span>
+                  </div>
+>>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
                 </div>
               </div>
               

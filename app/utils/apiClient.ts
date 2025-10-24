@@ -52,8 +52,8 @@ export class ApiClient {
         headers: Object.fromEntries(response.headers.entries())
       }
     } catch (error) {
-      clearTimeout(timeoutId)
-      throw error
+      clearTimeout(timeoutId);
+      throw error;
     }
   }
 

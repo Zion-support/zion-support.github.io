@@ -9,6 +9,13 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
+<<<<<<< HEAD
   )
 }
 export default EnhancedLoading
+=======
+  );
+};
+
+export default EnhancedLoading;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a

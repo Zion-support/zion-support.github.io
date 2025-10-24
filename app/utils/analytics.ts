@@ -44,7 +44,10 @@ class Analytics {
         page_url: window.location.href
       }
     });
+<<<<<<< HEAD
   }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
 
   // Track user interactions
   trackClick(element: string, location?: string): void {

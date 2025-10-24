@@ -29,7 +29,11 @@ const LazyImage: React.FC<LazyImageProps> = ({
           setIsInView(true);
           observer.disconnect();
         }
+<<<<<<< HEAD
           }
+=======
+      },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
       { threshold: 0.1 }
     );
 
@@ -38,7 +42,11 @@ const LazyImage: React.FC<LazyImageProps> = ({
     }
 
     return () => observer.disconnect();
+<<<<<<< HEAD
   }, []);
+=======
+  }, [])
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
 
   const handleLoad = () => {
     setIsLoaded(true);
