@@ -9,7 +9,7 @@ export default function APIDocsPage() {
   const [_copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, _setSearchQuery] = useState('');
 
-  const copyToClipboard = (code: string, id: string) => {
+  const _copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
