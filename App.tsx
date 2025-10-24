@@ -9,18 +9,18 @@ import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
-import Breadcrumb from './app/components/Breadcrumb';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import FuturisticBackground from './app/components/FuturisticBackground';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import Breadcrumb from './app/components/Breadcrumb';
+import HomePage from './app/page';
+import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/EnhancedAccessibility';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 
 // Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
@@ -155,10 +155,11 @@ function App() {
             </Suspense>
             <Footer />
             <PerformanceOptimizer />
-            <AccessibilityEnhancer />
-            <EnhancedAccessibility>
-              <div></div>
-            </EnhancedAccessibility>
+            <AccessibilityEnhancer>
+              <EnhancedAccessibility>
+                <div></div>
+              </EnhancedAccessibility>
+            </AccessibilityEnhancer>
             <PerformanceMonitor />
           </div>
         </Router>

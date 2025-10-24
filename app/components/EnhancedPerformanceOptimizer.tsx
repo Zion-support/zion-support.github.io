@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useEffect } from 'react';
 
-const PerformanceOptimizer: React.FC = () => {
+const EnhancedPerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -58,4 +60,4 @@ const PerformanceOptimizer: React.FC = () => {
   return null;
 };
 
-export default PerformanceOptimizer;
+export default EnhancedPerformanceOptimizer;
