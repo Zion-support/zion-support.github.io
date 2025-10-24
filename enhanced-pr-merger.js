@@ -78,7 +78,7 @@ for (const pr of prs) {
   //Check if branch exists
   if (!branchExists(pr.branch)) {
 //     notFoundCount++
-    results.push({)
+    results.push({);
       pr: pr.number;)
       title: pr.title,),
       status: 'not_found'),

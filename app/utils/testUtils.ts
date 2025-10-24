@@ -37,7 +37,7 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = (global as any).jest.fn(() =>
+    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
@@ -98,7 +98,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
         ...global.window,
         ...overrides
       },
-      writable: true
+      writable: true,
     })
   }
 }
@@ -119,7 +119,7 @@ export const createMockPerformance = (): Performance => {
         toJSON: () => ({})
       } as PerformanceEntry)
     },
-    measure: (name: string, _startMark?: string, _endMark?: string) => {
+    measure: (name: string, startMark?: string, endMark?: string) => {
       entries.push({
         name,
         entryType: 'measure',
@@ -195,7 +195,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
  * Spy on console methods
  */
 export class ConsoleSpy {
-  private originalConsole: typeof console
+  private originalConsole: Console
   private logs: string[] = []
   private errors: string[] = []
   private warnings: string[] = []
@@ -206,15 +206,12 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
-     
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
-     
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
     }
-     
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
     }
@@ -233,7 +230,9 @@ export class ConsoleSpy {
   }
 
   restore(): void {
-    Object.assign(console, this.originalConsole)
+    console.log = this.originalConsole.log
+    console.error = this.originalConsole.error
+    console.warn = this.originalConsole.warn
   }
 
   clear(): void {
@@ -248,13 +247,13 @@ export class ConsoleSpy {
  */
 export interface Deferred<T> {
   promise: Promise<T>
-  resolve: (_value: T) => void
-  reject: (_reason?: unknown) => void
+  resolve: (value: T) => void
+  reject: (reason?: unknown) => void
 }
 
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (_value: T) => void
-  let reject: (_reason?: unknown) => void
+  let resolve: (value: T) => void
+  let reject: (reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {
     resolve = res
     reject = rej
@@ -296,7 +295,7 @@ export const measureExecutionTime = async <T>(
   return { result, duration }
 }
 
-const testUtils = {
+export default {
   wait,
   waitFor,
   mockFetch,
@@ -311,5 +310,3 @@ const testUtils = {
   retryWithBackoff,
   measureExecutionTime
 }
-
-export default testUtils

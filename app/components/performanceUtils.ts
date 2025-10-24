@@ -1,9 +1,3 @@
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void;
-  }
-}
-
 interface PerformanceMetrics {
   loadTime: number | null;
   firstContentfulPaint: number | null;
@@ -33,7 +27,6 @@ export const performanceUtils = {
       }
     }
   },
-
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -53,13 +46,95 @@ export const performanceUtils = {
         performance.clearMarks();
       }
     }
-  }
-};
+  },
 
+  // Monitor Web Vitals
+  monitorWebVitals: () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Basic Web Vitals monitoring
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Performance entry:', entry);
+        }
+      });
+<<<<<<< HEAD
+      observer.observe({ entryTypes: ['measure', 'navigation'] });
+=======
+      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+>>>>>>> origin/main
+    }
+  },
+
+  // Optimize images
+  optimizeImages: () => {
+    if (typeof window !== 'undefined') {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+      });
+    }
+  },
+
+  // Optimize fonts
+  optimizeFonts: () => {
+    if (typeof window !== 'undefined') {
+      // Preload critical fonts
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = '/fonts/inter-var.woff2';
+      link.as = 'font';
+      link.type = 'font/woff2';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    }
+  },
+
+  // Optimize third-party scripts
+  optimizeThirdPartyScripts: () => {
+    if (typeof window !== 'undefined') {
+      // Defer non-critical scripts
+<<<<<<< HEAD
+      const scripts = document.querySelectorAll<HTMLScriptElement>('script[src]');
+      scripts.forEach(script => {
+        if (!script.defer && !script.async) {
+          script.defer = true;
+=======
+      const scripts = document.querySelectorAll('script[src]');
+      scripts.forEach(script => {
+        const htmlScript = script as HTMLScriptElement;
+        if (!htmlScript.defer && !htmlScript.async) {
+          htmlScript.defer = true;
+>>>>>>> origin/main
+        }
+      });
+    }
+  },
+
+  // Cleanup resources
+  cleanup: () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.clearMeasures();
+      performance.clearMarks();
+    }
+  },
+
+  // Preload resource
+  preloadResource: (href: string, as: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = href;
+      link.as = as;
+      document.head.appendChild(link);
+    }
+  }
+}
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    window.gtag('event', 'performance_metrics', {
+    (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
       custom_map: {
@@ -74,3 +149,9 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
     });
   }
 };
+
+declare global {
+  interface Window {
+    gtag: (..._args: unknown[]) => void;
+  }
+}

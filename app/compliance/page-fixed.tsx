@@ -3,9 +3,14 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight, Check } from 'lucide-react';;
+=======
+import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight, } from 'lucide-react';
+>>>>>>> origin/main
 
 const CompliancePageFixed: React.FC = () => {
+
   const features = [
     {
       icon: Shield,
@@ -59,12 +64,23 @@ const CompliancePageFixed: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
+      </section>
+=======
         </section>
+>>>>>>> origin/main
 
+<<<<<<< HEAD
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> origin/main
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">

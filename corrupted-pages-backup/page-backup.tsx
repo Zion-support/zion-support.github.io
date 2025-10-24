@@ -20,7 +20,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
     </div><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
+                </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
@@ -43,14 +43,16 @@ const HomePage: React.FC = () => {
 const HomePage: React.FC = () => {
     const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
+  useEffect(() =>
+                {
     setIsLoaded(true)
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100)
     return () => clearTimeout(timer)
   }, [])
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  const handlePhoneClick = useCallback(() =>
+                {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag()
@@ -221,7 +223,7 @@ const PageBackupPage: React.FC = () => {
                     <span className="text-3xl md: text-5xl lg:text-6xl">,</span>
                       for the Future;
                     </span>
-                  </h1>
+                </h1>
                   <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,</p>
                     Transform your business with cutting-edge artificial intelligence, quantum computing, 
                     and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
@@ -240,7 +242,7 @@ const PageBackupPage: React.FC = () => {
                       aria-label="Call us at (302) 464-0950">
                       </a><Phone className="w-5 h-5" />
                       <span>(302) 464-0950</span>
-                    </a>
+                </a>
                   </div>
                   
                   {/* Stats Section */} <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">,</div>
@@ -341,7 +343,7 @@ const HomePage: React.FC = memo(() => {,
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            </section>
+                </section>
 
             {/* Services Section */} <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
@@ -355,23 +357,22 @@ const HomePage: React.FC = memo(() => {,
         </main></main><section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
           </section></section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
-          <div className="relative max-w-7xl mx-auto text-center">
-            </div><h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            </div><h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Transform Your Business with
               </h1><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
-            </h1>
+                </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" /></p>
               We help businesses leverage cutting-edge technology to drive growth, 
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-            </section>
-
-            {/* Services Section */}
-            <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
+                </section>
+                {/* Services Section */}
+                <section className="py-20 bg-slate-800/50 backdrop-blur-sm"></section>
               </section>< className="$2 />
-                </div><div className="text-center mb-16">
-                  </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </div><div className="text-center mb-16"></div>
+                  </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                     Our Core Services
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
@@ -403,7 +404,7 @@ const HomePage: React.FC = memo(() => {,
                           </a><span>Learn More</span>
                           <ArrowRight className="w-4 h-4" />
                         </a>
-                      </div>
+                </div>
                     </div>
                   ))}
                 </div>
@@ -437,8 +438,8 @@ const HomePage: React.FC = memo(() => {,
                               <span className="text-sm text-gray-300">{benefit</span>}</span>
                             </div>
                           ))}
-                        </div>
-                      </div>
+                </div>
+                </div>
                     </div>
                   ))}
                 </div>
@@ -467,10 +468,10 @@ const HomePage: React.FC = memo(() => {,
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">JS;</div>
                       </div>
-                      <div>
+                      <div></div>
                         </div><div className="text-white font-semibold">John Smith</div>
                         <div className="text-sm text-gray-400">CEO, TechCorp</div>
-                      </div>
+                </div>
                     </div>
                   </div>
                   <div className="cyber-card">
@@ -485,10 +486,10 @@ const HomePage: React.FC = memo(() => {,
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">MJ;</div>
                       </div>
-                      <div>
+                      <div></div>
                         </div><div className="text-white font-semibold">Maria Johnson</div>
                         <div className="text-sm text-gray-400">CTO, InnovateLabs</div>
-                      </div>
+                </div>
                     </div>
                   </div>
                   <div className="cyber-card">
@@ -503,10 +504,10 @@ const HomePage: React.FC = memo(() => {,
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">DW;</div>
                       </div>
-                      <div>
+                      <div></div>
                         </div><div className="text-white font-semibold">David Wilson</div>
                         <div className="text-sm text-gray-400">VP Engineering, DataFlow</div>
-        </section>
+                </section>
       </main>
       <Footer />
     </>
@@ -534,7 +535,8 @@ const HomePage: React.FC = memo(() => {,
                   >
                     </a><Phone className="w-5 h-5" />
                     <span>(302) 464-0950</span>
-                  </a>
+                </a>
+                </div>
                 </div>
         </div>
       </section>
@@ -543,7 +545,7 @@ const HomePage: React.FC = memo(() => {,
           </div>
 
         </AccessibilityEnhancer>
-      </PerformanceOptimizer>
+                </PerformanceOptimizer>
 
     </>
   )
@@ -567,7 +569,7 @@ export default HomePage
     'Proven track record of success'
   ]
   return (
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your business with our advanced page backup solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -593,18 +595,10 @@ export default HomePage
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page backup solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {feature.title}
+                <p className="text-gray-300"></p>
+                {feature.description}
             ))}
           </div>
         </div>
@@ -639,13 +633,13 @@ export default HomePage
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8"></p>
               Contact our experts to discuss your page backup needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>

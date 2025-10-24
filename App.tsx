@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, Suspense } from "react";
+import React, { useEffect, useState, useCallback, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./app/components/Navigation";
@@ -17,18 +17,9 @@ import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
-
-// Components
-import Header from './app/components/Header';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingSpinner from "./app/components/LoadingSpinner";
 
 // Pages
-import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
@@ -37,39 +28,39 @@ import TermsPage from './app/terms/page';
 import BlogPage from './app/blog/page';
 import CareersPage from './app/careers/page';
 
-// Service Pages
-import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
-import AiContentGenerationProPage from './app/ai-content-generation-pro/page';
-import AiAutomationSuitePage from './app/ai-automation-suite/page';
-import AiBusinessIntelligenceProPage from './app/ai-business-intelligence-pro/page';
-import AiCodeAssistantProPage from './app/ai-code-assistant-pro/page';
-import AiChatbotEnterprisePage from './app/ai-chatbot-enterprise/page';
-import AiCloudInfrastructurePage from './app/ai-cloud-infrastructure/page';
-import AiApiManagementPage from './app/ai-api-management/page';
-import DatabaseSolutionsPage from './app/database-solutions/page';
-import AdvancedSecuritySuitePage from './app/advanced-security-suite/page';
-import PerformanceMonitoringPage from './app/performance-monitoring/page';
-import DevOpsSolutionsPage from './app/devops-solutions/page';
-import FiveGImplementationPage from './app/5g-implementation/page';
-import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page';
-import FiveGIotSolutionsPage from './app/5g-iot-solutions/page';
-import FiveGSmartCitySolutionsPage from './app/5g-smart-city-solutions/page';
-import FiveGEdgeComputingPage from './app/5g-edge-computing/page';
-import FiveGPrivateNetworksPage from './app/5g-private-networks/page';
-import AiAccountingAssistantPage from './app/ai-accounting-assistant/page';
-import AiContentModerationProPage from './app/ai-content-moderation-pro/page';
-import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
-import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
-import Ai3DGenerationPage from './app/ai-3d-generation/page';
-import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
-import AiCustomerInsightsProPage from './app/ai-customer-insights-pro/page';
-import AiProjectManagementProPage from './app/ai-project-management-pro/page';
-import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
-import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
-import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
-import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
-import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
-import MicroSaasPage from './app/micro-saas/page';
+// Service Pages - Lazy loaded for better performance
+const AiAnalyticsDashboardProPage = lazy(() => import('./app/ai-analytics-dashboard-pro/page'));
+const AiContentGenerationProPage = lazy(() => import('./app/ai-content-generation-pro/page'));
+const AiAutomationSuitePage = lazy(() => import('./app/ai-automation-suite/page'));
+const AiBusinessIntelligenceProPage = lazy(() => import('./app/ai-business-intelligence-pro/page'));
+const AiCodeAssistantProPage = lazy(() => import('./app/ai-code-assistant-pro/page'));
+const AiChatbotEnterprisePage = lazy(() => import('./app/ai-chatbot-enterprise/page'));
+const AiCloudInfrastructurePage = lazy(() => import('./app/ai-cloud-infrastructure/page'));
+const AiApiManagementPage = lazy(() => import('./app/ai-api-management/page'));
+const DatabaseSolutionsPage = lazy(() => import('./app/database-solutions/page'));
+const AdvancedSecuritySuitePage = lazy(() => import('./app/advanced-security-suite/page'));
+const PerformanceMonitoringPage = lazy(() => import('./app/performance-monitoring/page'));
+const DevOpsSolutionsPage = lazy(() => import('./app/devops-solutions/page'));
+const FiveGImplementationPage = lazy(() => import('./app/5g-implementation/page'));
+const FiveGNetworkInfrastructurePage = lazy(() => import('./app/5g-network-infrastructure/page'));
+const FiveGIotSolutionsPage = lazy(() => import('./app/5g-iot-solutions/page'));
+const FiveGSmartCitySolutionsPage = lazy(() => import('./app/5g-smart-city-solutions/page'));
+const FiveGEdgeComputingPage = lazy(() => import('./app/5g-edge-computing/page'));
+const FiveGPrivateNetworksPage = lazy(() => import('./app/5g-private-networks/page'));
+const AiAccountingAssistantPage = lazy(() => import('./app/ai-accounting-assistant/page'));
+const AiContentModerationProPage = lazy(() => import('./app/ai-content-moderation-pro/page'));
+const AiClimateSolutionsProPage = lazy(() => import('./app/ai-climate-solutions-pro/page'));
+const AiAgriculturalIntelligenceProPage = lazy(() => import('./app/ai-agricultural-intelligence-pro/page'));
+const Ai3DGenerationPage = lazy(() => import('./app/ai-3d-generation/page'));
+const AiBlockchainSolutionsPage = lazy(() => import('./app/ai-blockchain-solutions/page'));
+const AiCustomerInsightsProPage = lazy(() => import('./app/ai-customer-insights-pro/page'));
+const AiProjectManagementProPage = lazy(() => import('./app/ai-project-management-pro/page'));
+const AiSocialMediaManagerProPage = lazy(() => import('./app/ai-social-media-manager-pro/page'));
+const AiEmailMarketingProPage = lazy(() => import('./app/ai-email-marketing-pro/page'));
+const AiInventoryManagementProPage = lazy(() => import('./app/ai-inventory-management-pro/page'));
+const AiHrAssistantProPage = lazy(() => import('./app/ai-hr-assistant-pro/page'));
+const AiSalesOptimizerProPage = lazy(() => import('./app/ai-sales-optimizer-pro/page'));
+const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
 
 // IT Services Pages
 const ITServicesPage = lazy(() => import('./app/it-services/page'));
@@ -127,6 +118,12 @@ const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 
 // Missing pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
+const PricingPage = lazy(() => import('./app/pricing/page'));
+const SolutionsPage = lazy(() => import('./app/solutions/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
@@ -221,6 +218,7 @@ const LoadingFallback = () => (
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   useEffect(() => {
     // Simulate loading time
@@ -238,8 +236,6 @@ function App() {
       </div>
     );
   }
-
-function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -247,7 +243,8 @@ function App() {
           <div className="min-h-screen bg-slate-900">
             <Navigation />
             <main className="relative z-10" id="main-content" role="main">
-              <Routes>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
@@ -285,7 +282,8 @@ function App() {
                     </div>
                   </div>
                 } />
-              </Routes>
+                </Routes>
+              </Suspense>
             </main>
             <Footer />
             <PerformanceMonitor />

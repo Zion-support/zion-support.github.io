@@ -1,92 +1,69 @@
-'use client'
+'use client';
+<<<<<<< HEAD
+import { ArrowRight, CheckCircle, Check } from 'lucide-react';;
+=======
 
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+import { ArrowRight, CheckCircle, } from 'lucide-react';
+>>>>>>> origin/main
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const AccessibilityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Accessibility',
-      description: 'Advanced AI algorithms automatically detect and fix accessibility issues in real-time.',
-      benefits: [
-        'Automated WCAG 2.1 AA compliance checking',
-        'Real-time accessibility monitoring',
-        'Intelligent content optimization',
-        'Voice navigation enhancement'
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Assurance',
-      description: 'Ensure your digital assets meet international accessibility standards and legal requirements.',
-      benefits: [
-        'ADA compliance verification',
-        'Section 508 compliance',
-        'WCAG 2.1 AA/AAA standards',
-        'Legal compliance reporting'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Inclusive Design',
-      description: 'Create experiences that work for everyone, regardless of ability or assistive technology.',
-      benefits: [
-        'Screen reader optimization',
-        'Keyboard navigation support',
-        'High contrast mode support',
-        'Text scaling compatibility'
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Accessibility improvements that also enhance overall site performance and user experience.',
-      benefits: [
-        'Faster page load times',
-        'Improved SEO rankings',
-        'Better user engagement',
-        'Reduced bounce rates'
-      ]
-    }
-  ]
+const stats = [
+  { number: '1B+', label: 'People with disabilities worldwide' },
+  { number: '15%', label: 'Of global population' },
+  { number: '$13T', label: 'Annual spending power' },
+  { number: '71%', label: 'Leave sites due to accessibility issues' }
+];
 
-  const services = [
-    {
-      icon: CheckCircle,
-      title: 'Accessibility Audits',
-      description: 'Comprehensive evaluation of your digital assets for accessibility compliance.',
-      price: 'Starting at $2,500'
-    },
-    {
-      icon: Settings,
-      title: 'Implementation',
-      description: 'Full implementation of accessibility improvements and fixes.',
-      price: 'Starting at $5,000'
-    },
-    {
-      icon: BarChart3,
-      title: 'Monitoring',
-      description: 'Ongoing monitoring and maintenance of accessibility standards.',
-      price: 'Starting at $500/month'
-    },
-    {
-      icon: FileText,
-      title: 'Training',
-      description: 'Team training on accessibility best practices and standards.',
-      price: 'Starting at $1,500'
-    }
-  ]
+const features = [
+  {
+    title: 'AI-Powered Audits',
+    description: 'Automated accessibility testing using advanced AI algorithms to identify issues quickly and accurately.',
+    icon: 'ai-audit',
+    benefits: [
+      'Comprehensive WCAG 2.1 AA compliance checking',
+      'Real-time issue detection and reporting',
+      'Automated remediation suggestions',
+      'Detailed accessibility score and recommendations'
+    ]
+  },
+  {
+    title: 'Manual Testing',
+    description: 'Expert human testing to catch issues that automated tools might miss.',
+    icon: 'manual-test',
+    benefits: [
+      'Screen reader compatibility testing',
+      'Keyboard navigation verification',
+      'Color contrast and visual accessibility',
+      'User experience evaluation'
+    ]
+  }
+];
 
-  const stats = [
-    { number: '15%', label: 'of the global population has a disability' },
-    { number: '71%', label: 'of users with disabilities leave sites that are not accessible' },
-    { number: '98%', label: 'of websites fail basic accessibility tests' },
-    { number: '200%', label: 'increase in legal accessibility lawsuits since 2018' }
-  ]
+const services = [
+  {
+    title: 'Accessibility Audit',
+    description: 'Comprehensive evaluation of your digital assets',
+    price: 'Starting at $500'
+  },
+  {
+    title: 'Implementation',
+    description: 'Fix identified accessibility issues',
+    price: 'Starting at $1,000'
+  },
+  {
+    title: 'Training',
+    description: 'Team training on accessibility best practices',
+    price: 'Starting at $300'
+  },
+  {
+    title: 'Ongoing Support',
+    description: 'Continuous monitoring and maintenance',
+    price: 'Starting at $200/mo'
+  }
+];
 
+export default function AccessibilityPage() {
   return (
     <>
       <Navigation />
@@ -148,7 +125,11 @@ const AccessibilityPage: React.FC = () => {
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                    <feature.icon className="h-6 w-6 text-emerald-600" />
+<<<<<<< HEAD
+                    <div className="h-6 w-6 bg-emerald-600 rounded" />
+=======
+                    {feature.icon()}
+>>>>>>> origin/main
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
                 </div>
@@ -180,7 +161,11 @@ const AccessibilityPage: React.FC = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="h-8 w-8 text-emerald-600" />
+<<<<<<< HEAD
+                  <div className="h-8 w-8 bg-emerald-600 rounded" />
+=======
+                  {service.icon()}
+>>>>>>> origin/main
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
@@ -214,7 +199,5 @@ const AccessibilityPage: React.FC = () => {
 
       <Footer />
     </>
-  )
+  );
 }
-
-export default AccessibilityPage

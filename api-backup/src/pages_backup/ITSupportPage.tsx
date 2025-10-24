@@ -74,12 +74,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children
   }
 }
-import React from 'react'
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
+import React from 'react';
+import { ServiceLandingTemplate  } from '@/components/services/ServiceLandingTemplate';
+import { Phone, ShieldCheck, Clock  } from 'lucide-react';export default function ITSupportPage() {
   const benefits = [
-    {import React from "react"
+    {import React from "react";
+import { ServiceLandingTemplate  } from '@/components/services/ServiceLandingTemplate';
+import { Phone, ShieldCheck, Clock  } from 'lucide-react';import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 import React from "react"
@@ -98,7 +99,7 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       testimonials = {testimonials,};
       ctaText="Get IT Support"
       ctaLink="/request-quote"
-    />
+    />;
   );      benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -162,3 +163,4 @@ export default function ITSupportPage() {
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 
+;

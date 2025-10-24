@@ -1,41 +1,25 @@
-'use client';
+"use client"
 
-import React, { useEffect } from 'react';
-
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void;
-  }
-}
+import React, { useEffect } from "react"
 
 interface AnalyticsProps {
-  children: React.ReactNode;
+  className?: string;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+const Analytics: React.FC<AnalyticsProps> = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Initialize gtag
-      window.gtag = window.gtag || function(..._args: unknown[]) {
-        const gtag = window as { gtag?: { q?: unknown[] } };
-        gtag.gtag = gtag.gtag || { q: [] };
-        gtag.gtag.q = gtag.gtag.q || [];
-        gtag.gtag.q.push(_args);
-      };
-
-      // Load GA script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-      document.head.appendChild(script);
-
-      // Initialize GA
-      window.gtag('js', new Date());
-      window.gtag('config', 'GA_MEASUREMENT_ID');
+    const initAnalytics = () => {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
+          page_location: window.location.href,
+        })
+      }
     }
-  }, []);
+    initAnalytics()
+  }, [])
 
-  return <>{children}</>;
-};
+  return null; // Analytics component doesn't render anything
+}
 
-export default Analytics;
+export default Analytics

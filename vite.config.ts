@@ -152,7 +152,8 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
+        assetFileNames: (assetInfo) =>
+                {
           const ext = assetInfo.name?.split('.').pop()
           if (/\.(css)$/i.test(assetInfo.name || '')) {
             return `assets/css/[name]-[hash].${ext}`
@@ -207,4 +208,4 @@ export default defineConfig({
   css: {
     devSourcemap: true
   }
-})
+});
