@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number;
@@ -23,8 +16,6 @@ export interface ErrorContext {
   timestamp?: string;
   userId?: string;
   sessionId?: string;
-  component?: string;
-<<<<<<< HEAD
   action?: string;
   stack?: string;
 }
@@ -101,24 +92,6 @@ export interface AnalyticsEvent {
   properties?: Record<string, string | number | boolean | null>;
   userId?: string;
   sessionId?: string;
-=======
-  errorBoundary?: string;
-  stackTrace?: string;
-}
-
-export interface AccessibilityMetrics {
-  score: number;
-  issues: AccessibilityIssue[];
-  recommendations: string[];
-}
-
-export interface AccessibilityIssue {
-  id: string;
-  severity: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  helpUrl?: string;
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 }
 
 export interface SEOData {

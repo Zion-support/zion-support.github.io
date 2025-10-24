@@ -61,9 +61,9 @@ interface TestRunnerProps {
 }
 
 const TestRunner: React.FC<TestRunnerProps> = ({
-  config
-  onTestComplete
-  onPerformanceUpdate
+  config,
+  onTestComplete,
+  onPerformanceUpdate,
   onCoverageUpdate
 }) => {
   const runTests = useCallback(async () => {
@@ -100,19 +100,19 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     const endTime = performance.now()
     const endMemory = (performance as any).memory?.usedJSHeapSize || 0
     return {
-      renderTime: endTime - startTime
-      memoryUsage: endMemory - startMemory
+      renderTime: endTime - startTime,
+      memoryUsage: endMemory - startMemory,
       timestamp: new Date().toISOString()
-    }
+    };
   }
   const measureCoverage = async (): Promise<CoverageMetrics> => {
     // Simulate coverage measurement
     return {
-      statements: Math.floor(Math.random() * 100)
-      branches: Math.floor(Math.random() * 100)
-      functions: Math.floor(Math.random() * 100)
+      statements: Math.floor(Math.random() * 100),
+      branches: Math.floor(Math.random() * 100),
+      functions: Math.floor(Math.random() * 100),
       lines: Math.floor(Math.random() * 100)
-    }
+    };
   }
   const runAccessibilityTests = async (): Promise<TestSuite> => {
     const tests: TestResult[] = [  ];
@@ -120,11 +120,11 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     const images = document.querySelectorAll('img')
     const imagesWithAlt = document.querySelectorAll('img[alt]')
     tests.push({
-      name: 'Images have alt text'
-      status: images.length === imagesWithAlt.length ? 'passed' : 'failed'
+      name: 'Images have alt text',
+      status: images.length === imagesWithAlt.length ? 'passed' : 'failed',
       duration: 0,
       error: images.length !== imagesWithAlt.length ? 'Some images are missing alt text' : undefined
-    })
+    });
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     tests.push({

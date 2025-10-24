@@ -4,24 +4,24 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonicalUrl?: string
-  ogImage?: string
-  twitterCard?: string
-  structuredData?: object
-  children: React.ReactNode
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  structuredData?: object;
+  children: React.ReactNode;
 }
 
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.'
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group'
-  canonicalUrl
-  ogImage = '/images/og-image.jpg'
-  twitterCard = 'summary_large_image'
-  structuredData
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData,
   children
 }) => {
   const [seoScore, setSeoScore] = useState(0)
@@ -91,25 +91,22 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [analyzeSEO])
   const generateStructuredData = () => {
     const defaultStructuredData = {
-      "@context": "https://schema.org"
-      "@type": "Organization"
-      "name": "Zion Tech Group"
-      "description": description
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : '')
-      "logo": ogImage
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": description,
+      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
+      "logo": ogImage,
       "sameAs": [
-        "https://twitter.com/ziontechgroup"
+        "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
-        ];
+      ]
     }
     return structuredData || defaultStructuredData
   }
     return (
     <>
       <Helmet>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-      </Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -157,16 +154,16 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <div
           className="seo-debug"
           style={{
-            position: 'fixed'
-            top: '10px'
-            left: '10px'
-            background: 'rgba(0,0,0,0.8)'
-            color: 'white'
-            padding: '10px'
-            borderRadius: '5px'
-            fontSize: '12px'
+            position: 'fixed',
+            top: '10px',
+            left: '10px',
+            background: 'rgba(0,0,0,0.8)',
+            color: 'white',
+            padding: '10px',
+            borderRadius: '5px',
+            fontSize: '12px',
             zIndex: 1000,
-      maxWidth: '300px'
+            maxWidth: '300px'
           }}
         >
           <div>SEO Score: {seoScore}/100</div>

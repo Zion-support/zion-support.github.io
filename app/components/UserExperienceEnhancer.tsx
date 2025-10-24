@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode
-  enableAnimations?: boolean
-  enableHoverEffects?: boolean
-  enableFocusManagement?: boolean
-  enableKeyboardNavigation?: boolean
-  enableAccessibility?: boolean
+  children: React.ReactNode;
+  enableAnimations?: boolean;
+  enableHoverEffects?: boolean;
+  enableFocusManagement?: boolean;
+  enableKeyboardNavigation?: boolean;
+  enableAccessibility?: boolean;
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children
-  enableAnimations = true
-  enableHoverEffects = true
-  enableFocusManagement = true
-  enableKeyboardNavigation = true
+  children,
+  enableAnimations = true,
+  enableHoverEffects = true,
+  enableFocusManagement = true,
+  enableKeyboardNavigation = true,
   enableAccessibility = true
 }) => {
   const [isReducedMotion, setIsReducedMotion] = useState(false)
@@ -51,13 +51,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyDown)
       document.addEventListener('mousedown', handleMouseDown)
       return () => {
-<<<<<<< HEAD
-        document.removeEventListener('keydown', handleKeyDown)
-        document.removeEventListener('mousedown', handleMouseDown)
-      }
-    }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
-=======
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);
       };

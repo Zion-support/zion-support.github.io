@@ -7,30 +7,25 @@ const ErrorHandler: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'  ];
-        }
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
     {
       icon: BarChart,
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics'  ];
-        }
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
+    },
     {
       icon: Target,
-      title: 'Precision Targeting'
-      description: 'Target the right audience with AI-driven precision and accuracy.'
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking'  ];
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
-<<<<<<< HEAD
-    ];
-    return (
-=======
   ];
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -48,7 +43,6 @@ const ErrorHandler: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-<<<<<<< HEAD
                 <h2 className="text-2xl font-bold text-white mb-4">{feature.title}</h2>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -91,8 +85,4 @@ const ErrorHandler: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ErrorHandler;
-=======
-export default ErrorHandler;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a

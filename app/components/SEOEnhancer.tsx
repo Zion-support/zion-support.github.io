@@ -2,24 +2,24 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonicalUrl?: string
-  ogImage?: string
-  twitterCard?: string
-  structuredData?: object
-  children: React.ReactNode
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  structuredData?: object;
+  children: React.ReactNode;
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.'
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group'
-  canonicalUrl
-  ogImage = '/images/og-image.jpg'
-  twitterCard = 'summary_large_image'
-  structuredData
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData,
   children
 }) => {
   useEffect(() => {
@@ -54,13 +54,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         canonical.setAttribute('href', canonicalUrl)
       } else {
         const link = document.createElement('link')
-        link.rel = 'canonical'
-<<<<<<< HEAD
-        link.href = canonicalUrl
-        document.head.appendChild(link)
+        link.rel = 'canonical';
+        link.href = canonicalUrl;
+        document.head.appendChild(link);
       }
     }
-  }, [title, description, keywords, canonicalUrl])
+  }, [title, description, keywords, canonicalUrl]);
     return (
     <>
       <Helmet>
@@ -76,7 +75,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
   return (
     <Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />

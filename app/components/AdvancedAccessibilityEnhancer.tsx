@@ -42,9 +42,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-      </Helmet>
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Advanced Accessibility Enhancer, AI solutions, IT services, Zion Tech Group, accessibility" />

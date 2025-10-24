@@ -2,7 +2,8 @@
 import React from 'react';
 
 interface PWAInstallerProps {
-  // Add props here
+  onInstall?: () => void;
+  onDismiss?: () => void;
 }
 
 const PWAInstaller: React.FC<PWAInstallerProps> = (_props) => {
