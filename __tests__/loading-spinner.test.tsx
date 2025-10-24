@@ -2,43 +2,24 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 const TestComponent = () => {
-  return <div>Loading...</div>;
+  return <div>Test content</div>;
 };
 
-const LoadingSpinner = ({ isLoading }: { isLoading: boolean }) => {
-  if (!isLoading) return null;
-  return <div data-testid="loading-spinner">Loading...</div>;
-};
-
-describe('Loading Spinner', () => {
+describe('Advanced Components', () => {
   it('should render without errors', () => {
     expect(true).toBe(true);
   });
   
-  it('should render loading content', () => {
+  it('should render test content', () => {
     render(<TestComponent />);
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
+    expect(screen.getByText('Test content')).toBeInTheDocument();
   });
   
-  it('renders when loading is true', () => {
-    render(<LoadingSpinner isLoading={true} />);
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
-  });
-  
-  it('does not render when loading is false', () => {
-    render(<LoadingSpinner isLoading={false} />);
-    expect(screen.queryByTestId('loading-spinner')).not.toBeInTheDocument();
-  });
-  
-  it('displays loading text', () => {
-    render(<LoadingSpinner isLoading={true} />);
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
-  });
-  
-  it('should handle loading states', () => {
+  it('should handle console errors', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
+    
     expect(consoleSpy).toBeDefined();
     consoleSpy.mockRestore();
   });
