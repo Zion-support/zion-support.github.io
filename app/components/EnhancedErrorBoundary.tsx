@@ -1,9 +1,10 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const EnhancedErrorBoundaryPage: React.FC = () => {
   const features = [
@@ -49,24 +50,21 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         <meta name="description" content="Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="AI, artificial intelligence, EnhancedErrorBoundary, AI solutions, intelligent automation" />
       </Helmet>
-<<<<<<< HEAD
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+        <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
+          <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               EnhancedErrorBoundary
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -75,13 +73,12 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -93,17 +90,17 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -122,17 +119,17 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -142,13 +139,13 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
@@ -175,7 +172,7 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
     // Log error to monitoring service
-    // console.error('Error caught by boundary:', error, errorInfo)
+    // // console.error('Error caught by boundary:', error, errorInfo)
   }
   handleReload= () => {windo w.location.reload()
  }
@@ -184,13 +181,13 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
         return thi s.props.fallback
      }
       return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center"></div>
+            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto"></div>
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
-            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
@@ -198,46 +195,3 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                 </summary>
                 <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto"></p>
                   {this.state.error.toString()}
-=======
-            </div>
-          </div>
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
-              ></button>
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              <button
-                onClick={this.handleReload}
-                className="w-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
-              ></button>
-                <Home className="w-4 h-4 mr-2" />
-                Reload Page
-              </button>
-            </div>
-            <div className="mt-6 pt-6 border-t border-gray-700">
-              <p className="text-sm text-gray-400 mb-3">Still having issues? Contact our support team:</p>p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                support@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-        </div>
-      )
-    }
-    return this.props.children
-  }
-}
-export default EnhancedErrorBoundary
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

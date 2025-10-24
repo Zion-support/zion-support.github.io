@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'lucide-react'
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
+import { Code, Helmet } from 'lucide-react';
 
 interface SEOEnhancerProps {
   title?: string

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {
@@ -28,9 +27,9 @@ interface AnalyticsProviderProps {
   children: ReactNode
 }
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
-  
-    if (type of windo w !=="undefined") {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
@@ -50,7 +49,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     }
   }, [])
 
-  consttrackEvent= (
+  const trackEvent = (
     eventName: string,
     parameters?: Record<string, unknown>,
   ) => {
@@ -59,15 +58,17 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     }
   }
 
-  consttrackPageView= (pageName: string) => {if (type of windo w !=="undefined" && windo w.gtag) {
-      window.gtag("config","GA_MEASUREMENT_ID", {
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", "GA_MEASUREMENT_ID", {
         page_title: pageName,
         page_location: window.location.href,
       })
     }
   }
 
-  constvalue: AnalyticsContextType = {trackEvent,
+  const value: AnalyticsContextType = {
+    trackEvent,
     trackPageView,
   }
 
@@ -79,9 +80,3 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 }
 
 export default AnalyticsProvider
-  );
-};
-
-export default AnalyticsProviderPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
