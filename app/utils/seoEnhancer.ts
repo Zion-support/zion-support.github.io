@@ -8,7 +8,7 @@
 // Generate meta tags
 export const generateMetaTags = (data: {,
     title: string,
-      description: string
+      description: string;
   keywords?: string
   canonical?: string
   ogTitle?: string
@@ -52,23 +52,23 @@ export const generateMetaTags = (data: {,
 
 // Generate structured data
 export const generateStructuredData = (data: {
-  name: string
-  description: string
-  url: string
+  name: string;
+  description: string;
+  url: string;
   logo?: string
   address?: {
-    streetAddress: string
-    addressLocality: string
-    addressRegion: string
-    postalCode: string
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
     addressCountr,
-  y: string
+  y: string;
   }
   contactPoint?: {
-    telephone: string
-    contactType: string
+    telephone: string;
+    contactType: string;
     emai,
-  l: string
+  l: string;
   }
   sameAs?: string[]
 }) => {
@@ -99,11 +99,11 @@ export const generateStructuredData = (data: {
 
 // Generate sitemap
 export const generateSitemap = (pages: Array<{
-  url: string
-  lastModified: string
+  url: string;
+  lastModified: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priorit,
-  y: number
+  y: number;
 }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>

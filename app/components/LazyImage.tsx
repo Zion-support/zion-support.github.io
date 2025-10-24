@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const LazyImage: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>LazyImage</title>

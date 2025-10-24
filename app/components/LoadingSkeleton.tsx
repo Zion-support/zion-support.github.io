@@ -40,8 +40,7 @@ const LoadingSkeletonPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>Loading Skeleton - Zion Tech Group</title>

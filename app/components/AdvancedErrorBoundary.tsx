@@ -7,7 +7,7 @@ interface AdvancedErrorBoundaryProps {
 
   className?: string
 interface State {
-  hasError: boolean
+  hasError: boolean;
   error?: Error
   errorInfo?: ErrorInfo,
   errorId?: string,

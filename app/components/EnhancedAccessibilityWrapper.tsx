@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
   return (</Props>

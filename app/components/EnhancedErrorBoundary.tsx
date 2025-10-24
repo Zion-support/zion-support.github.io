@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const EnhancedErrorBoundary: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>EnhancedErrorBoundary</title>

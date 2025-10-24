@@ -23,7 +23,7 @@ export interface Metadata {
     url?: string
     siteName?: string</string>
     images?: Array<{
-      url: string
+      url: string;
       width?: number
       height?: number,
       alt?: string,
@@ -62,13 +62,13 @@ export interface Metadata {
 export interface MetadataRoute {
 
 
-  url: string
+  url: string;
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number}
 };
 export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string
+  url: string;
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
   priority?: number,
@@ -121,7 +121,7 @@ export interface StaticProps {}
 export interface ISRConfig {
 
 
-  revalidate: number
+  revalidate: number;
   tags?: string[]}
 };
 // Edge runtime types
@@ -137,7 +137,7 @@ declare module 'next' {
 
     user?: {
       id: string,
-    email: string
+    email: string;
       name?: string}
 };
   }

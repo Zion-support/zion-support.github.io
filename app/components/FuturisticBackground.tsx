@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const FuturisticBackground: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>FuturisticBackground</title>

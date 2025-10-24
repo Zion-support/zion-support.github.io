@@ -40,8 +40,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>Advanced Performance Monitor</title>

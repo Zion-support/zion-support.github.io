@@ -31,8 +31,7 @@ const PageFixedPage: React.FC = () => {
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>Page Fixed - Zion Tech Group</title>

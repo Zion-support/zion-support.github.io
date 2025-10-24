@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const PerformanceDashboard: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>PerformanceDashboard</title>

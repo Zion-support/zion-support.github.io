@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const PerformanceOptimizations: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>PerformanceOptimizations</title>

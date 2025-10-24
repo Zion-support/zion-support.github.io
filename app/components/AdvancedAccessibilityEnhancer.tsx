@@ -53,8 +53,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     contrastQuery.addEventListener('change', handleContrastChange);
     return (
     <div>
-
-
       ) => {
       motionQuery.removeEventListener('change', handleMotionChange
     </div>
@@ -191,8 +189,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       firstElement?.focus();
       return (
     <div>
-
-
       ) => element.removeEventListener('keydown', handleTabKey
     </div>
   )

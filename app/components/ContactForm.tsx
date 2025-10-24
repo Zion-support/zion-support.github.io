@@ -67,7 +67,7 @@ const ContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (</HTMLInputElement>
-    <>
+    <div>
       </HTMLInputElement>
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"></div>
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /></CheckCircle>
@@ -203,15 +203,13 @@ handleChange
   d:cursor-not-allowed"
         ></button>
           {isSubmitting ? (</button>
-            <>
-    
+            <div>
   </div>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
               Sending...
             </div>
           ) : (
-            <>
-    
+            <div>
   </div>
               <Send className="w-5 h-5 mr-2" /></Send>
               Send Message</Send>

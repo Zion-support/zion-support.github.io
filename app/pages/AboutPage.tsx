@@ -49,8 +49,7 @@ export default function AboutPage() {
     description: 'Machine learning expert focused on developing cutting-edge AI solutions.'}
   ]
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>;
@@ -110,7 +109,7 @@ export default function AboutPage() {
               {values.map((value, index) => {
                 const Icon = value.icon
                 return (</div>
-    <>
+    <div>
       </div>
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
                     <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4"></div>

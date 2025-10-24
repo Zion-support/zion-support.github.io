@@ -15,8 +15,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
   keywords = "AI, artificial intelligence, technology solutions, business automation" }
 }) => {</SEOHeadProps>
   return (</SEOHeadProps>
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>{title}</title>

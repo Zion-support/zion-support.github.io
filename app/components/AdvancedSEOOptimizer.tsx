@@ -35,8 +35,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     'Stay ahead of SEO trends and updates'
   ]
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>Advanced SEO Optimizer</title>

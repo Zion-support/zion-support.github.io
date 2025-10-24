@@ -3,7 +3,7 @@ import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(,
-    func: T
+    func: T;
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
@@ -15,7 +15,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
 }
 // Throttle utility for performance</T>
 export const throttle = <T extends (...args: any[]) => any>(,
-    func: T
+    func: T;
   limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
@@ -50,7 +50,7 @@ export const useIntersectionObserver = (
       if (observer && element) {
         observer.observe(element)
         return (</T>
-    <>
+    <div>
       ) => observer.unobserve(element)
       }
       return () => {}
@@ -138,8 +138,6 @@ export const usePerformanceMonitoring = (
     }
     return (
     <div>
-
-
       ) => {
       window.removeEventListener('load', updateMetrics
     </div>
@@ -175,8 +173,6 @@ export const useMemoryMonitoring = (
     const interval = setInterval(updateMemoryInfo, 5000);
     return (
     <div>
-
-
       ) => clearInterval(interval
     </div>
   )
@@ -250,8 +246,6 @@ export const useBundleSizeMonitoring = (
     }
     return (
     <div>
-
-
       ) => {
       window.removeEventListener('load', calculateBundleSize
     </div>

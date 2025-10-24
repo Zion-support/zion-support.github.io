@@ -8,15 +8,15 @@ export interface ErrorBoundaryConfig {
 /**
 * Whether to log errors to console
 */
-logErrors: boolean
+logErrors: boolean;
 /**
 * Whether to show detailed error messages
 */
-showDetails: boolean
+showDetails: boolean;
 /**
 * Whether to send errors to external service
 */
-reportErrors: boolean
+reportErrors: boolean;
 /**
 * Error reporting endpoint
 */
@@ -24,11 +24,11 @@ reportingEndpoint?: string
 /**
 * Whether to show error overlay in development
 */
-showErrorOverlay: boolean
+showErrorOverlay: boolean;
 /**
 * Maximum number of errors to store
 */
-maxStoredErrors: number
+maxStoredErrors: number;
 /**
 * Custom error messages by error type
 */
@@ -61,19 +61,19 @@ serverError: 'Server error occurred. Please try again later.',
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
 logErrors: true,
-    showDetails: isDevelopment
+    showDetails: isDevelopment;
 reportError,
   s: !isDevelopment,
     reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
 showErrorOverla,
   y: isDevelopment,
-    maxStoredErrors: 50
+    maxStoredErrors: 50;
 customMessage,
   s: DEFAULT_ERROR_MESSAGES,
     fallbackComponents: {
 defaul,
   t: DefaultErrorFallback,
-    network: NetworkErrorFallback
+    network: NetworkErrorFallback;
 notFoun,
   d: NotFoundFallback}
 /**

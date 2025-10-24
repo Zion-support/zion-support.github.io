@@ -8,7 +8,7 @@ export interface PerformanceMetric {
 
 
 name: string,
-    value: number
+    value: number;
 ratin,
   g: 'good' | 'needs-improvement' | 'poor',}
     timestamp: number};
@@ -27,7 +27,7 @@ export interface CustomMetric {
 
 
   name: string,
-    value: number
+    value: number;
   uni,
   t: 'ms' | 'bytes' | 'count' | 'percentage',
     rating: 'good' | 'needs-improvement' | 'poor'}
@@ -42,7 +42,7 @@ INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {};
 name: string,
-    value: number
+    value: number;
 uni,
   t: 'ms' | 'bytes' | 'count' | 'percentage',
     timestamp: number;}
@@ -410,12 +410,12 @@ return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.len
 */
 getSummary(): {
 score: number,
-    webVitals: WebVitals
+    webVitals: WebVitals;
 customMetric,
   s: CustomMetric[]}
 getSummary(): {}
 score: number,
-    webVitals: WebVitals
+    webVitals: WebVitals;
 customMetric,
   s: CustomMetric[],
     recommendations: string[];}
@@ -596,13 +596,13 @@ interface MetricData {
 };
 interface MetricData {};
 values: number[],
-    count: number
+    count: number;
 averag,
   e: number,
-    min: number
+    min: number;
 ma,
   x: number,
-    unit: string
+    unit: string;
 rating?: 'good' | 'needs-improvement' | 'poor';}
 }</T>
 const simpleMetrics = new Map<string, MetricData>()
@@ -630,11 +630,11 @@ ma,
 unit)} else {}
 simpleMetrics.set(name, {)}
 values: [value],
-    count: 1
+    count: 1;
 averag,
   e: value,
-    min: value
-max: value
+    min: value;
+max: value;
 unit
 ratin,
   g: getRating(name, value)}

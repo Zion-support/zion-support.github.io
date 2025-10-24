@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const NeonButton: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>NeonButton</title>

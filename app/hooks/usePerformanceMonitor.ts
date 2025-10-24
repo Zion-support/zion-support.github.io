@@ -9,9 +9,9 @@ interface UsePerformanceMonitorOptions {
 interface PerformanceData {
 
 
-  fps: number
-  memoryUsage: number
-  loadTime: number
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
   renderTim,
   e: number}
 };

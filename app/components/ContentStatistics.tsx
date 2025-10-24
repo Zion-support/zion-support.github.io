@@ -5,20 +5,20 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp, Users, Globe, Database
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
-    projects: 0
+    projects: 0;
     satisfactio,
   n: 0,
-    years: 0
+    years: 0;
     countrie,
   s: 0,)
     uptime: 0})
   const targetCounters = {
 
     clients: 1000,
-    projects: 500
+    projects: 500;
     satisfactio,
   n: 99,
-    years: 10
+    years: 10;
     countrie,
   s: 25,
     uptime: 99.9}
@@ -47,7 +47,7 @@ const ContentStatistics: React.FC = () => {
       })
     }, stepDuration)
     return (
-    <>
+    <div>
     ) => clearInterval(interval)
   </div>
   }, []
@@ -91,8 +91,7 @@ const ContentStatistics: React.FC = () => {
     color: "from-red-500 to-pink-500"}
   ]</Zap>
   return (</Zap>
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>ContentStatistics</title>
@@ -199,10 +198,10 @@ const ContentStatistics: React.FC = () => {
 }
  ContentStatisticsPage
 clients: 0,
-    projects: 0
+    projects: 0;
 satisfactio,
   n: 0,
-    years: 0
+    years: 0;
 countrie,
   s: 0,
     uptime: 0})

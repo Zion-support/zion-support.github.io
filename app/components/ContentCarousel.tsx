@@ -91,8 +91,6 @@ const ContentCarousel: React.FC = () => {
 
   return (
     <div>
-
-
       <Helmet></Helmet>
         <title>ContentCarousel</title>
         <meta name="description" content="Advanced ContentCarousel solution for modern businesses." />

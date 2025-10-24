@@ -4,7 +4,7 @@ interface PerformanceMetrics {
 
 
   lcp: number,
-    fid: number
+    fid: number;
   cl,
   s: number,
     fcp: number}
@@ -24,10 +24,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 }) => {</AdvancedPerformanceOptimizerProps>
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
     lcp: 0,
-    fid: 0
+    fid: 0;
     cl,
   s: 0,
-    fcp: 0
+    fcp: 0;
     ttf,
   b: 0})
   // Web Vitals monitoring

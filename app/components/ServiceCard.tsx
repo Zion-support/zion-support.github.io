@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const ServiceCard: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>ServiceCard</title>

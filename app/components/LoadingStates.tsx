@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const LoadingStates: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>LoadingStates</title>

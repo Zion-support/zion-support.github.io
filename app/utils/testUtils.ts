@@ -30,7 +30,7 @@ export const waitFor = async (
  * Mock fetch for testing
  */
 export const mockFetch = (
-  response: unknown
+  response: unknown;
   status = 200
   header,</void>
   s: Record<string, string> = {}
@@ -140,7 +140,7 @@ export const createMockPerformance = (): Performance => {
     addEventListener: () => {}
     removeEventListener: () => {}
     dispatchEvent: () => true,
-    onresourcetimingbufferfull: null
+    onresourcetimingbufferfull: null;
     timeOrigi,
   n: Date.now()} as unknown as Performance
 }
@@ -192,7 +192,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
  * Spy on console methods
  */
 export class ConsoleSpy {
-  private originalConsole: Console
+  private originalConsole: Console;
   private logs: string[] = []
   private errors: string[] = []
   private warning,

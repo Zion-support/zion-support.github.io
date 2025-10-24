@@ -42,7 +42,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Enhanced SEO Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced SEO optimization tools powered by AI for maximum search engine visibility" />

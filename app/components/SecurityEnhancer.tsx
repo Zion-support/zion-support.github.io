@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const SecurityEnhancer: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>SecurityEnhancer</title>

@@ -8,7 +8,7 @@ interface ImageProps {
     alt: string}
 interface ImageProps {};
 src: string,
-    alt: string
+    alt: string;
 width?: number
 height?: number
 className?: string
@@ -16,7 +16,7 @@ priority?: boolean
 _quality?: number
 sr,
   c: string,
-    alt: string
+    alt: string;
 width?: number
 height?: number
 className?: string
@@ -24,7 +24,7 @@ priority?: boolean
 _quality?: number
 sr,
   c: string,
-    alt: string
+    alt: string;
 width?: number
 height?: number
 className?: string
@@ -72,14 +72,14 @@ const imageStyle: React.CSSProperties = {
 ...(fill && {
 positio,
   n: 'absolute',
-    top: 0
+    top: 0;
 lef,
   t: 0}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
-    top: 0
+    top: 0;
 lef,
   t: 0,
     width: '100%',

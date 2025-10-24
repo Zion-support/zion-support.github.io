@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const ContentPreviewCard: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>ContentPreviewCard</title>

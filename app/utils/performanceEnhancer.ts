@@ -7,7 +7,7 @@ import { useRef } from 'react';
  */
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
-    func: T
+    func: T;
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
@@ -19,7 +19,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
 }
 // Throttle function for performance optimization</T>
 export const throttle = <T extends (...args: unknown[]) => unknown>(,
-    func: T
+    func: T;
   limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
@@ -172,7 +172,7 @@ export const optimizeScrollPerformance = () => {
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
       valu,
-  e: number
+  e: number;
   }
     const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {

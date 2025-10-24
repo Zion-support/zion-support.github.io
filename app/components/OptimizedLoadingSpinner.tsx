@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const OptimizedLoadingSpinner: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>OptimizedLoadingSpinner</title>

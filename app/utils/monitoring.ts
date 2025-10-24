@@ -7,7 +7,7 @@ import React from 'react';
 const performanceConfig = {
 
   monitoring: {,
-    enableLongTaskDetection: true
+    enableLongTaskDetection: true;
     enableMemoryMonitorin,
   g: true,
     sampleRate: 0.1}

@@ -7,7 +7,7 @@ interface Props {
 
 interface State {
   hasErro,
-  r: boolean
+  r: boolean;
   error?: Error
 
 class ErrorBoundaryWrapper extends Component<Props, State> {

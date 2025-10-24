@@ -8,8 +8,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEnhancerProps>
   return (</SEOEnhancerProps>
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>

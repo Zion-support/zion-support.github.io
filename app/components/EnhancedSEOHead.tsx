@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const EnhancedSEOHead: React.FC = () => {
   return (
-    <>
-    
+    <div>
   </div>
       <Helmet></Helmet>
         <title>EnhancedSEOHead</title>
