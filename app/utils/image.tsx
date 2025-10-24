@@ -1,12 +1,11 @@
-'use client'
 import React from 'react'
 'use client'
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
 src: string,
 alt: string;}
-interface ImageProps {}
-src: string,
+interface ImageProps {
+  src: string,
 alt: string
 width?: number
 height?: number

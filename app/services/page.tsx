@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
+import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe, Send, BarChart3, Target, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'AI Solutions',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
       description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
       services: [
         'AI Chatbots & Virtual Assistants',
@@ -19,7 +19,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'IT Services',
-      icon: <Cloud className="w-8 h-8 text-purple-400" />,
+      icon: Cloud,
       description: 'Comprehensive IT services to modernize your infrastructure and operations.',
       services: [
         'Cloud Migration & Management',
@@ -32,7 +32,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'Web Development',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
+      icon: Globe,
       description: 'Custom web applications and websites built with modern technologies.',
       services: [
         'React & Next.js Applications',
@@ -45,7 +45,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'Mobile Development',
-      icon: <Smartphone className="w-8 h-8 text-orange-400" />,
+      icon: Smartphone,
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       services: [
         'iOS App Development',
@@ -72,7 +72,7 @@ const ServicesPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="w-8 h-8" />
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
               View Portfolio
@@ -88,21 +88,21 @@ const ServicesPage: React.FC = () => {
             {serviceCategories.map((category, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  {category.icon}
+                  <category.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-2xl font-bold text-white ml-4">{category.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{category.description}</p>
                 <ul className="space-y-3">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <Circle className="w-4 h-4 text-cyan-400 mr-3" />
+                      <Circle className="w-8 h-8" />
                       {service}
                     </li>
                   ))}
                 </ul>
                 <button className="mt-6 text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
                   Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="w-8 h-8" />
                 </button>
               </div>
             ))}
@@ -116,12 +116,12 @@ const ServicesPage: React.FC = () => {
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help you achieve your goals.
+              Let&apos;s discuss your project and see how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 Contact Us
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="w-8 h-8" />
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
                 Schedule Call

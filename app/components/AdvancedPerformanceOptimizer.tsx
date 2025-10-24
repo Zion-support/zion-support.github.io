@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
@@ -213,7 +213,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000
+          cls: Math.round(performanceMetrics.cls * 100 0) / 1000}
 
     }
   }, [performanceMetrics])
@@ -246,3 +246,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 }
 
 export default AdvancedPerformanceOptimizer
+}}}}}
+};
+
+export default AdvancedPerformanceOptimizerPage;

@@ -30,10 +30,7 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <>
-      
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
         {/* Hero Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -62,7 +59,7 @@ const DemoPage: React.FC = () => {
                     }`}
                   >
                     <div className="flex items-center mb-4">
-                      {demo.icon}
+                      <demo.icon className="w-8 h-8 text-cyan-400" />
                       <h3 className="text-xl font-bold text-white ml-3">{demo.title}</h3>
                     </div>
                     <p className="text-gray-300 mb-4">{demo.description}</p>
@@ -133,7 +130,6 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 

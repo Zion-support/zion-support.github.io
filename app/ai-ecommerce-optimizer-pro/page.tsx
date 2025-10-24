@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, BarChart } from 'lucide-react';
 
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
@@ -70,7 +70,6 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -85,14 +84,14 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
-                to="/ai-services" 
+                href="/ai-services" 
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 View All Services
@@ -117,7 +116,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group text-center">
                 <div className="mb-6">
-                  {feature.icon}
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -158,7 +157,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center block"
                 >
                   Get Started
@@ -176,18 +175,18 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             Ready to Optimize Your E-commerce Store?
           </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI e-commerce optimizer can transform your online business and drive growth.
+            Let&apos;s discuss how our AI e-commerce optimizer can transform your online business and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Optimization
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services
