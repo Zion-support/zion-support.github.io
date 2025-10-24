@@ -1,245 +1,79 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-// import { Phone, Mail } from 'lucide-react';
-// import { CheckCircle } from 'lucide-react';
-
-const ITInfrastructurePage: React.FC = () => {
-  const _itServices = [
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
     {
-      title: 'Cloud Infrastructure Management',
-      description: 'Comprehensive cloud infrastructure setup, optimization, and management across AWS, Azure, and Google Cloud platforms.',
-      icon: '☁️',
-      price: '$2,999/month',
-      features: [
-        'Multi-cloud architecture design',
-        'Infrastructure as Code (IaC)',
-        'Auto-scaling and load balancing',
-        'Cost optimization',
-        'Security hardening',
-        '24/7 monitoring and support'
-      ],
-      benefits: [
-        'Reduce infrastructure costs by 40%',
-        'Improve system reliability by 99.9%',
-        'Scale automatically with demand',
-        'Ensure enterprise-grade security'
-      ],
-      marketPrice: '$5000-10000/month',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-      title: 'DevOps & CI/CD Pipeline',
-      description: 'Complete DevOps transformation with automated deployment pipelines, testing, and continuous integration.',
-      icon: '🔄',
-      price: '$1,999/month',
-      features: [
-        'CI/CD pipeline setup',
-        'Automated testing integration',
-        'Container orchestration',
-        'Infrastructure monitoring',
-        'Security scanning',
-        'Deployment automation'
-      ],
-      benefits: [
-        'Deploy 10x faster',
-        'Reduce deployment errors by 90%',
-        'Improve team productivity',
-        'Ensure consistent deployments'
-      ],
-      marketPrice: '$3000-6000/month',
-      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Ansible'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-      title: 'Database Administration & Optimization',
-      description: 'Expert database management, optimization, and migration services for MySQL, PostgreSQL, MongoDB, and more.',
-      icon: '🗄️',
-      price: '$1,499/month',
-      features: [
-        'Database design and optimization',
-        'Performance tuning',
-        'Backup and recovery',
-        'Security hardening',
-        'Migration services',
-        'Monitoring and alerting'
-      ],
-      benefits: [
-        'Improve query performance by 300%',
-        'Ensure data security and compliance',
-        'Reduce downtime to near zero',
-        'Optimize storage costs'
-      ],
-      marketPrice: '$2500-5000/month',
-      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
     },
     {
-      title: 'Network Security & Firewall Management',
-      description: 'Advanced network security solutions with firewall configuration, intrusion detection, and threat monitoring.',
-      icon: '🛡️',
-      price: '$2,499/month',
-      features: [
-        'Firewall configuration and management',
-        'Intrusion detection systems',
-        'VPN setup and management',
-        'Network monitoring',
-        'Security policy implementation',
-        'Threat response and mitigation'
-      ],
-      benefits: [
-        'Prevent 99% of security breaches',
-        'Ensure compliance with regulations',
-        'Reduce security incidents by 95%',
-        'Protect sensitive data'
-      ],
-      marketPrice: '$4000-8000/month',
-      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'pfSense', 'Snort', 'Wireshark'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Server Management & Maintenance',
-      description: 'Comprehensive server administration including Windows, Linux, and virtualized environments.',
-      icon: '🖥️',
-      price: '$1,799/month',
-      features: [
-        'Server setup and configuration',
-        'OS updates and patching',
-        'Performance monitoring',
-        'Backup and disaster recovery',
-        'User management',
-        'Security hardening'
-      ],
-      benefits: [
-        'Ensure 99.9% uptime',
-        'Reduce maintenance costs by 50%',
-        'Improve system performance',
-        'Prevent security vulnerabilities'
-      ],
-      marketPrice: '$3000-6000/month',
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Ansible', 'Puppet'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'IT Support & Help Desk',
-      description: '24/7 IT support services with remote assistance, ticketing system, and proactive monitoring.',
-      icon: '🎧',
-      price: '$1,299/month',
-      features: [
-        '24/7 technical support',
-        'Remote desktop assistance',
-        'Ticketing and issue tracking',
-        'Proactive system monitoring',
-        'User training and documentation',
-        'Hardware and software support'
-      ],
-      benefits: [
-        'Reduce IT downtime by 80%',
-        'Improve user satisfaction',
-        'Resolve issues faster',
-        'Prevent problems proactively'
-      ],
-      marketPrice: '$2000-4000/month',
-      technologies: ['ServiceNow', 'Jira', 'TeamViewer', 'SCCM', 'Active Directory', 'Office 365'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Data Backup & Disaster Recovery',
-      description: 'Comprehensive backup solutions and disaster recovery planning to protect your critical data.',
-      icon: '💾',
-      price: '$999/month',
-      features: [
-        'Automated backup systems',
-        'Disaster recovery planning',
-        'Data encryption',
-        'Offsite storage',
-        'Recovery testing',
-        'Compliance monitoring'
-      ],
-      benefits: [
-        'Protect against data loss',
-        'Ensure business continuity',
-        'Meet compliance requirements',
-        'Reduce recovery time to minutes'
-      ],
-      marketPrice: '$1500-3000/month',
-      technologies: ['Veeam', 'Acronis', 'AWS Backup', 'Azure Backup', 'Commvault', 'Rubrik'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Email & Communication Systems',
-      description: 'Enterprise email solutions with Microsoft 365, Google Workspace, and custom email server management.',
-      icon: '📧',
-      price: '$799/month',
-      features: [
-        'Email server setup and management',
-        'Microsoft 365 administration',
-        'Google Workspace management',
-        'Email security and filtering',
-        'Mobile device management',
-        'User provisioning and deprovisioning'
-      ],
-      benefits: [
-        'Improve email security',
-        'Reduce spam and phishing',
-        'Ensure email compliance',
-        'Enhance productivity'
-      ],
-      marketPrice: '$1200-2500/month',
-      technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
-  ];
-
-  const _infrastructureStats = [
-    { metric: '99.9%', description: 'Uptime Guarantee' },
-    { metric: '500+', description: 'Servers Managed' },
-    { metric: '50+', description: 'Enterprise Clients' },
-    { metric: '24/7', description: 'Support Available' },
-    { metric: '< 1hr', description: 'Response Time' },
-    { metric: '100%', description: 'Security Compliance' }
-  ];
-
-
+  ]
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Infrastructure Solutions - Zion Tech Group</title>
-        <meta name="description" content="Build and maintain robust IT infrastructure with our comprehensive solutions for servers, networks, and cloud systems." />
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              IT Infrastructure Solutions
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Build and maintain robust IT infrastructure with our comprehensive solutions for servers, networks, and cloud systems.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Server Management</h3>
-              <p className="text-gray-600">Comprehensive server setup, configuration, and maintenance services.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Network Design</h3>
-              <p className="text-gray-600">Scalable network architecture design and implementation.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>
-              <p className="text-gray-600">Seamless migration to cloud infrastructure platforms.</p>
             </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-};
-
-
-export default ITInfrastructurePage;
+      </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your page needs and get a customized solution.</p>p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+  </
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+  </
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+export default PagePage

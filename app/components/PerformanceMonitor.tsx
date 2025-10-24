@@ -1,42 +1,20 @@
 'use client'
-import React, { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Performance monitoring logic
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('Performance Entry:', entry.name, (entry as any).value || 'N/A')
-        }
-      })
-
-      try {
-        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] })
-      } catch (e) {
-        console.warn('Performance Observer not supported')
-      }
-
-      // Monitor resource loading
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {
-          console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart)
-        }
-      })
-
-      return () => {
-        observer.disconnect()
-      }
-    }
-
-    return () => {
-      // Cleanup function
-    }
-  }, [])
-
-  return null
+interface PerformanceMetrics {
+  loadTime: number | null
+  firstContentfulPaint: number | null
+  largestContentfulPaint: number | null
+  firstInputDelay: number | null
+  cumulativeLayoutShift: number | null
+  timeToInteractive: number | null
+  totalBlockingTime: number | null
 }
 
-export default PerformanceMonitor
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+  enableRealTimeMonitoring?: boolean
+  logToConsole?: boolean
+}
+
+export default function PerformanceMonitor({ 

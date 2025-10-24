@@ -1,22 +1,23 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
 
 // Function to create a valid React component
 function createValidComponent(filePath, content) {
   const fileName = path.basename(filePath, path.extname(filePath));
-  const isTestFile = filePath.includes('__tests__') || filePath.includes('.test.');
-  const isPageFile = filePath.includes('/page.tsx');
-  const isComponentFile = filePath.includes('/components/');
-  const isHookFile = filePath.includes('/hooks/');
-  const isUtilFile = filePath.includes('/utils/');
-  const isTypeFile = filePath.includes('/types/');
-  const isContextFile = filePath.includes('/contexts/');
-  const isConstantFile = filePath.includes('/constants/');
-  const isConfigFile = filePath.includes('/config/');
-  const isLibFile = filePath.includes('/lib/');
-  const isDataFile = filePath.includes('/data/');
-  
+  const isTestFile =
+    filePath.includes("__tests__") || filePath.includes(".test.");
+  const isPageFile = filePath.includes("/page.tsx");
+  const isComponentFile = filePath.includes("/components/");
+  const isHookFile = filePath.includes("/hooks/");
+  const isUtilFile = filePath.includes("/utils/");
+  const isTypeFile = filePath.includes("/types/");
+  const isContextFile = filePath.includes("/contexts/");
+  const isConstantFile = filePath.includes("/constants/");
+  const isConfigFile = filePath.includes("/config/");
+  const isLibFile = filePath.includes("/lib/");
+  const isDataFile = filePath.includes("/data/");
+
   if (isTestFile) {
     return `import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -31,7 +32,7 @@ describe('${fileName}', () => {
   });
 });`;
   }
-  
+
   if (isPageFile) {
     return `import React from 'react';
 
@@ -46,7 +47,7 @@ export default function ${fileName}() {
   );
 }`;
   }
-  
+
   if (isComponentFile) {
     return `import React from 'react';
 
@@ -63,7 +64,7 @@ export default function ${fileName}({ className }: ${fileName}Props) {
   );
 }`;
   }
-  
+
   if (isHookFile) {
     return `import { useState, useEffect } from 'react';
 
@@ -77,7 +78,7 @@ export function use${fileName}() {
   return { state, setState };
 }`;
   }
-  
+
   if (isUtilFile) {
     return `// Utility functions for ${fileName}
 
@@ -86,7 +87,7 @@ export function ${fileName}() {
   return null;
 }`;
   }
-  
+
   if (isTypeFile) {
     return `// Type definitions for ${fileName}
 
@@ -95,7 +96,7 @@ export interface ${fileName} {
   name: string;
 }`;
   }
-  
+
   if (isContextFile) {
     return `import React, { createContext, useContext } from 'react';
 
@@ -121,7 +122,7 @@ export function use${fileName}() {
   return context;
 }`;
   }
-  
+
   if (isConstantFile) {
     return `// Constants for ${fileName}
 
@@ -129,7 +130,7 @@ export const ${fileName.toUpperCase()}_CONSTANTS = {
   // Constants
 };`;
   }
-  
+
   if (isConfigFile) {
     return `// Configuration for ${fileName}
 
@@ -137,7 +138,7 @@ export const ${fileName}Config = {
   // Configuration
 };`;
   }
-  
+
   if (isLibFile) {
     return `// Library functions for ${fileName}
 
@@ -146,7 +147,7 @@ export function ${fileName}() {
   return null;
 }`;
   }
-  
+
   if (isDataFile) {
     return `// Data for ${fileName}
 
@@ -154,7 +155,7 @@ export const ${fileName}Data = {
   // Data
 };`;
   }
-  
+
   return `import React from 'react';
 
 export default function ${fileName}() {
@@ -169,37 +170,37 @@ export default function ${fileName}() {
 
 // Main function
 async function cleanSlate() {
-  console.log('🔧 Clean slate - replacing ALL files with valid components...');
-  
+  console.log("🔧 Clean slate - replacing ALL files with valid components...");
+
   const patterns = [
-    'app/**/*.{ts,tsx}',
-    'components/**/*.{ts,tsx}',
-    'api/**/*.{ts,tsx}',
-    '__tests__/**/*.{ts,tsx}',
-    '*.{ts,tsx}'
+    "app/**/*.{ts,tsx}",
+    "components/**/*.{ts,tsx}",
+    "api/**/*.{ts,tsx}",
+    "__tests__/**/*.{ts,tsx}",
+    "*.{ts,tsx}",
   ];
-  
+
   let totalFiles = 0;
   let replacedFiles = 0;
-  
+
   for (const pattern of patterns) {
-    const files = glob.sync(pattern, { 
+    const files = glob.sync(pattern, {
       ignore: [
-        'node_modules/**',
-        'dist/**',
-        '.next/**',
-        'backup*/**',
-        'app-broken/**',
-        'app-disabled/**',
-        'corrupted-src-backup/**'
-      ]
+        "node_modules/**",
+        "dist/**",
+        ".next/**",
+        "backup*/**",
+        "app-broken/**",
+        "app-disabled/**",
+        "corrupted-src-backup/**",
+      ],
     });
-    
+
     for (const filePath of files) {
       try {
         totalFiles++;
-        const validComponent = createValidComponent(filePath, '');
-        fs.writeFileSync(filePath, validComponent, 'utf8');
+        const validComponent = createValidComponent(filePath, "");
+        fs.writeFileSync(filePath, validComponent, "utf8");
         replacedFiles++;
         console.log(`✅ Replaced: ${filePath}`);
       } catch (error) {
@@ -207,7 +208,7 @@ async function cleanSlate() {
       }
     }
   }
-  
+
   console.log(`\n🎉 Clean slate completed!`);
   console.log(`📊 Processed: ${totalFiles} files`);
   console.log(`🔧 Replaced: ${replacedFiles} files`);
