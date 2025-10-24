@@ -12,7 +12,7 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -20,11 +20,17 @@
       {
         "name": "next"
       }
+<<<<<<< HEAD
     ]
+=======
+    ],
+    "target": "ES2017"
+>>>>>>> origin/main
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
+<<<<<<< HEAD
     "types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
@@ -34,5 +40,20 @@
     "corrupted-src-backup",
     "problematic-files-backup",
     "problematic-pages"
+=======
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/ai-pages-backup/**",
+    "**/all-pages-backup/**",
+    "**/backup*/**",
+    "**/*.backup.*",
+    "**/*.bak",
+    "**/backup/**"
+>>>>>>> origin/main
   ]
 }

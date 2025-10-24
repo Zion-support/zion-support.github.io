@@ -9,6 +9,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
+<<<<<<< HEAD
   globals: {
     'ts-jest': {
       tsconfig: {
@@ -28,6 +29,12 @@ const customJestConfig = {
     '<rootDir>/problematic-files-backup/',
     '<rootDir>/problematic-pages/',
   ],
+=======
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+>>>>>>> origin/main
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
@@ -35,12 +42,19 @@ const customJestConfig = {
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
+<<<<<<< HEAD
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
+=======
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testMatch: [
+    '<rootDir>/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '<rootDir>/**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+>>>>>>> origin/main
   ],
 }
 
