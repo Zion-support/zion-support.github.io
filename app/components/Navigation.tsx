@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [aiServicesOpen, setAiServicesOpen] = useState(false)
   const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [_microSaasOpen, _setMicroSaasOpen] = useState(false)
+  const [_microSaasOpen, setMicroSaasOpen] = useState(false)
 
   // Handle scroll effect
   useEffect(() => {
