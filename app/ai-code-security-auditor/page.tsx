@@ -81,7 +81,7 @@ const Page: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
