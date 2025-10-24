@@ -1,103 +1,59 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode
-  enableAnimations?: boolean
-  enableHoverEffects?: boolean
-  enableFocusManagement?: boolean
-  enableKeyboardNavigation?: boolean
   enableAccessibility?: boolean
+  enableKeyboardNavigation?: boolean
+  enableAnimations?: boolean
+  enableHighContrast?: boolean
+  enableReducedMotion?: boolean
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children
-  enableAnimations = true
-  enableHoverEffects = true
-  enableFocusManagement = true
-  enableKeyboardNavigation = true
-  enableAccessibility = true
+  enableAccessibility = true,
+  enableKeyboardNavigation = true,
+  enableAnimations = true,
+  enableHighContrast = false,
+  enableReducedMotion = false
 }) => {
-  const [isReducedMotion, setIsReducedMotion] = useState(false)
-  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [isHighContrast, setIsHighContrast] = useState(enableHighContrast)
+  const [isReducedMotion, setIsReducedMotion] = useState(enableReducedMotion)
+
   useEffect(() => {
-    // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setIsReducedMotion(mediaQuery.matches)
-    // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
-    setIsHighContrast(highContrastQuery.matches)
-    // Apply accessibility enhancements
-    if (enableAccessibility) {
-      document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
-      if (isHighContrast) {
-        document.documentElement.classList.add('high-contrast')
-      }
-      
-      if (isReducedMotion) {
-        document.documentElement.classList.add('reduced-motion')
+    // Handle keyboard navigation
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!enableKeyboardNavigation) return
+
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey) {
+        const skipLink = document.querySelector('.skip-link')
+        if (skipLink) {
+          (skipLink as HTMLElement).focus()
+        }
       }
     }
 
-<<<<<<< HEAD
-const enhanceUserExperience = () => {
-      // Add smooth scrolling
-      if (typeof document !== 'undefined') {
-        document.documentElement.style.scrollBehavior = 'smooth';
+    // Handle mouse interactions for accessibility
+    const handleMouseDown = (event: MouseEvent) => {
+      if (!enableAccessibility) return
 
-        // Add loading states for interactive elements;
-
-const buttons = document.querySelectorAll('button');
-        buttons.forEach((button) => {
-          button.addEventListener('click', () => {
-            button.classList.add('opacity-75', 'cursor-not-allowed');
-            setTimeout(() => {
-              button.classList.remove('opacity-75', 'cursor-not-allowed');
-            }, 1000);
-          });
-        });}
-    enhanceUserExperience();
-  }, []);
-
-const enhanceUserExperience = () => {
-  return (
-
-    <div className={className}>{children}
-    </div></div>
-  );
-};
-
-
-export default UserExperienceEnhancer;
-=======
-    // Add keyboard navigation support
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation')
-        }
+      // Add focus indicators for mouse users
+      const target = event.target as HTMLElement
+      if (target && target.classList.contains('focusable')) {
+        target.classList.add('mouse-focus')
       }
-      const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation')
-      }
+    }
+
+    if (enableAccessibility || enableKeyboardNavigation) {
       document.addEventListener('keydown', handleKeyDown)
       document.addEventListener('mousedown', handleMouseDown)
+
       return () => {
-<<<<<<< HEAD
         document.removeEventListener('keydown', handleKeyDown)
         document.removeEventListener('mousedown', handleMouseDown)
       }
     }
   }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
-=======
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
-    }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   // Add CSS classes for enhanced UX
   useEffect(() => {
     const style = document.createElement('style')
@@ -106,43 +62,59 @@ export default UserExperienceEnhancer;
         ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
       }
       
-      .ux-enhanced button:hover {
-        ${enableHoverEffects ? 'transform: translateY(-2px);' : ''}
-        ${enableHoverEffects ? 'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' : ''}
+      .ux-enhanced * {
+        ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
       }
       
-      .ux-enhanced input:focus
-      .ux-enhanced textarea:focus
-      .ux-enhanced select:focus {
-        ${enableFocusManagement ? 'outline: 2px solid #3b82f6;' : ''}
-        ${enableFocusManagement ? 'outline-offset: 2px;' : ''}
+      .ux-enhanced .focusable:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
       }
       
-      .keyboard-navigation *:focus {
-        ${enableKeyboardNavigation ? 'outline: 2px solid #3b82f6;' : ''}
-        ${enableKeyboardNavigation ? 'outline-offset: 2px;' : ''}
+      .ux-enhanced .mouse-focus:focus {
+        outline: none;
       }
       
-      .high-contrast {
-        filter: contrast(150%)
+      .ux-enhanced .mouse-focus:hover {
+        outline: 1px solid #3b82f6;
+        outline-offset: 1px;
       }
       
-      .reduced-motion * {
-        animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important
-      }
+      ${isHighContrast ? `
+        .ux-enhanced {
+          filter: contrast(1.2) brightness(1.1);
+        }
+      ` : ''}
+      
+      ${isReducedMotion ? `
+        .ux-enhanced * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      ` : ''}
     `
     document.head.appendChild(style)
+
     return () => {
       document.head.removeChild(style)
     }
-  }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion])
-  return (
-    <div className="...">
-      {children}
-    </div>
-  )
+  }, [enableAnimations, isHighContrast, isReducedMotion])
+
+  // Add accessibility attributes
+  useEffect(() => {
+    if (enableAccessibility) {
+      document.documentElement.setAttribute('data-accessibility', 'enabled')
+      document.body.classList.add('ux-enhanced')
+    }
+
+    return () => {
+      document.documentElement.removeAttribute('data-accessibility')
+      document.body.classList.remove('ux-enhanced')
+    }
+  }, [enableAccessibility])
+
+  return null
 }
+
 export default UserExperienceEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
