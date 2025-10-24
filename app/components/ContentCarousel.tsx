@@ -87,7 +87,7 @@ interface Slide {
   title: string;
   description: string;
   features: string[];
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
   stats?: {
     value: string;

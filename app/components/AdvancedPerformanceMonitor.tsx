@@ -12,14 +12,10 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-<<<<<<< HEAD
-  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void
-  enableRealTimeMonitoring?: boolean
-=======
   onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
 }
+
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
@@ -44,11 +40,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
         entries.forEach((entry: PerformanceEntry) => {
-=======
-        entries.forEach((entry: any) => {
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
           }
@@ -64,19 +56,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-<<<<<<< HEAD
         entries.forEach((entry: PerformanceEntry) => {
-          if (entry.processingStart && entry.startTime) {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
-          }
-        })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] })
-      observers.push(fidObserver)
-    } catch (error) {
-      console.warn('FID measurement failed:', error)
-=======
-        entries.forEach((entry: any) => {
           if (entry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           }
@@ -86,7 +66,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.push(fidObserver);
     } catch (error) {
       console.warn('FID measurement failed:', error);
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
     }
 
     // Measure Cumulative Layout Shift (CLS)
@@ -94,22 +73,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-<<<<<<< HEAD
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value
-            setMetrics(prev => ({ ...prev, cls: clsValue }))
-          }
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
-      observers.push(clsObserver)
-    } catch (error) {
-      console.warn('CLS measurement failed:', error)
-=======
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+            clsValue += entry.value || 0;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         });
@@ -118,45 +84,23 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.push(clsObserver);
     } catch (error) {
       console.warn('CLS measurement failed:', error);
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
     }
 
     // Measure Time to First Byte (TTFB)
     try {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
-<<<<<<< HEAD
-        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart
-        setMetrics(prev => ({ ...prev, ttfb }))
-      }
-    } catch (error) {
-      console.warn('TTFB measurement failed:', error)
-=======
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
       }
     } catch (error) {
       console.warn('TTFB measurement failed:', error);
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
     }
 
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-<<<<<<< HEAD
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory
-        setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }))
-      }
-    } catch (error) {
-      console.warn('Memory measurement failed:', error)
-    }
-
-    return () => {
-      observers.forEach(observer => observer.disconnect())
-    }
-  }, [])
-=======
-        const memory = (performance as any).memory;
+        const memory = performance.memory;
         setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
       }
     } catch (error) {
@@ -167,7 +111,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => observer.disconnect());
     };
   }, []);
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return
@@ -187,11 +130,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     if (onMetricsUpdate) {
-<<<<<<< HEAD
-      onMetricsUpdate(metrics)
-=======
       onMetricsUpdate(metrics);
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
     }
   }, [metrics, onMetricsUpdate]);
 
