@@ -7,8 +7,7 @@ export const usePerformanceMonitoring = () => {
       navigator.sendBeacon(url, body);
     } else {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
-        // Analytics tracking failed - log to error tracking service
-        // console.error('Analytics tracking failed');
+        // Failed to send analytics - handle silently
       });
     }
   }, []);

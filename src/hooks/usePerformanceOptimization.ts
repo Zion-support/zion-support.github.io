@@ -52,13 +52,11 @@ const usePerformanceOptimization = (): UsePerformanceOptimizationReturn => {
       // Enable compression
       if (options.enableCompression) {
         // This would typically be handled by the server
-        // console.log('Compression enabled');
       }
 
       // Enable caching
       if (options.enableCaching) {
         // This would typically be handled by the server
-        // console.log('Caching enabled');
       }
 
       setIsOptimized(true);

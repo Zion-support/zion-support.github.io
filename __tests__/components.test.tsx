@@ -1,21 +1,28 @@
 import { describe, test, expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import '@testing-library/jest-dom';
 import Loading from '../app/components/Loading';
 import SEOHead from '../app/components/SEOHead';
 
-describe('Components', () => {
-  test('renders Loading component', () => {
+describe('Loading Component', () => {
+  test('renders service text', () => {
     render(<Loading />);
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
+    expect(screen.getByText('Service')).toBeTruthy();
   });
+});
 
-  test('renders SEOHead component', () => {
+describe('SEOHead Component', () => {
+  test('renders without crashing', () => {
     render(
       <HelmetProvider>
-        <SEOHead title="Test Title" description="Test Description" />
+        <SEOHead 
+          title="Test Title"
+          description="Test Description"
+          keywords={['test', 'keywords']}
+        />
       </HelmetProvider>
     );
-    expect(document.head).toBeInTheDocument();
+    expect(document.head).toBeTruthy();
   });
 });

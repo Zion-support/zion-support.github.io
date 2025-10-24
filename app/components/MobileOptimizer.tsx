@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react';
 
 const MobileOptimizer: React.FC = () => {
@@ -8,13 +10,23 @@ const MobileOptimizer: React.FC = () => {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
     }
 
-    // Add touch event optimizations
-    const addTouchOptimizations = () => {
-      document.addEventListener('touchstart', () => {}, { passive: true });
-      document.addEventListener('touchmove', () => {}, { passive: true });
+    // Add touch-friendly classes
+    document.documentElement.classList.add('touch-device');
+
+    // Optimize for mobile performance
+    const optimizeForMobile = () => {
+      // Reduce animations on mobile
+      if (window.innerWidth < 768) {
+        document.documentElement.classList.add('mobile-optimized');
+      }
     };
 
-    addTouchOptimizations();
+    optimizeForMobile();
+    window.addEventListener('resize', optimizeForMobile);
+
+    return () => {
+      window.removeEventListener('resize', optimizeForMobile);
+    };
   }, []);
 
   return null;
