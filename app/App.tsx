@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
 import LoadingSpinner from './components/LoadingSpinner';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -75,7 +75,7 @@ const App: React.FC = () => {
           <div className="App">
             <PerformanceOptimizer>
               <PerformanceMonitor />
-              <AccessibilityEnhancer>
+              <EnhancedAccessibility>
               <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
@@ -126,7 +126,7 @@ const App: React.FC = () => {
                 <Route path="/consultation" element={<ConsultationPage />} />
               </Routes>
             </Suspense>
-            </AccessibilityEnhancer>
+            </EnhancedAccessibility>
             </PerformanceOptimizer>
           </div>
         </BrowserRouter>

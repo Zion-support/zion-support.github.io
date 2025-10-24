@@ -30,9 +30,14 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     emptyOutDir: true,
     copyPublicDir: true,
+    // Additional optimizations
+    assetsInlineLimit: 4096,
+    cssMinify: true,
     rollupOptions: {
       treeshake: {
         moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
       },
       output: {
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -126,10 +131,6 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize chunk size
-    // Additional optimizations
-    assetsInlineLimit: 4096,
-    cssMinify: true,
   },
   server: {
     port: 3000,
