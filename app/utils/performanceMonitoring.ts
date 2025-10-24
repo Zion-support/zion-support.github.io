@@ -18,11 +18,11 @@ TTFB?: PerformanceMetric; // Time to First Byte;}
 INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {
-  name: string
-  value: number
-  unit: 'ms' | 'bytes' | 'count' | 'percentage'
-  rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number
+name: string
+value: number
+unit: 'ms' | 'bytes' | 'count' | 'percentage'
+rating: 'good' | 'needs-improvement' | 'poor'
+timestamp: number
 }
 export interface WebVitals {}
 FCP?: PerformanceMetric; // First Contentful Paint

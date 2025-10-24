@@ -212,6 +212,7 @@ const ContentPromotionBanner: React.FC = () => {
         </button>
       </div>
     </div>
+        </>
   )
 }
 
