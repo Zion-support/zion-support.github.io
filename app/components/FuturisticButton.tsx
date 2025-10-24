@@ -1,21 +1,26 @@
+'use client'
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+import React from 'react'
+
+interface FuturisticButtonProps {
+  children: React.ReactNode
+  onClick?: () => void
+  variant?: 'primary' | 'secondary'
+}
+
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+  children, 
+  onClick, 
+  variant = 'primary' 
+}) => {
+  return (
+    <button 
+      className={`futuristic-button ${variant}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  )
+}
+
+export default FuturisticButton

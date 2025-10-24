@@ -1,25 +1,46 @@
+'use client'
 
-    <
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<
-    <
-    <
-              <
-              </p>,<
-                <
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />,<
-                  <
-                  <
-                      <
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800">,<
-    <
-    <
-              <
-              </div>,<
-                <
-                  <
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12"></div>,<
-              <
-              </p>,<
-                <
-                <
+import React, { useEffect, useState } from 'react'
+
+interface PerformanceMetrics {
+  loadTime: number
+  renderTime: number
+  memoryUsage?: number
+}
+
+const EnhancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+
+  useEffect(() => {
+    const startTime = performance.now()
+    
+    const measurePerformance = () => {
+      const loadTime = performance.now() - startTime
+      const renderTime = performance.now()
+      
+      setMetrics({
+        loadTime,
+        renderTime,
+        memoryUsage: (performance as any).memory?.usedJSHeapSize
+      })
+    }
+
+    // Measure after component mount
+    setTimeout(measurePerformance, 100)
+  }, [])
+
+  if (!metrics) return null
+
+  return (
+    <div className="performance-monitor">
+      <h3>Performance Metrics</h3>
+      <p>Load Time: {metrics.loadTime.toFixed(2)}ms</p>
+      <p>Render Time: {metrics.renderTime.toFixed(2)}ms</p>
+      {metrics.memoryUsage && (
+        <p>Memory Usage: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</p>
+      )}
+    </div>
+  )
+}
+
+export default EnhancedPerformanceMonitor

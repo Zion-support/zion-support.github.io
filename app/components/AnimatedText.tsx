@@ -1,5 +1,29 @@
+'use client'
 
-<
-    <
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<
-          <
+import React from 'react'
+import { motion } from 'framer-motion'
+
+interface AnimatedTextProps {
+  text: string
+  className?: string
+  delay?: number
+}
+
+const AnimatedText: React.FC<AnimatedTextProps> = ({ 
+  text, 
+  className = '', 
+  delay = 0 
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay }}
+      className={className}
+    >
+      {text}
+    </motion.div>
+  )
+}
+
+export default AnimatedText

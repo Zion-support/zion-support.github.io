@@ -1,21 +1,13 @@
+'use client'
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+import React from 'react'
+
+const FuturisticGlow: React.FC = () => {
+  return (
+    <div className="futuristic-glow">
+      <div className="glow-effect"></div>
+    </div>
+  )
+}
+
+export default FuturisticGlow

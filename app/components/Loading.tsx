@@ -1,30 +1,13 @@
+'use client'
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-<
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-<
-    <
-    <
-            <
+import React from 'react'
+
+const Loading: React.FC = () => {
+  return (
+    <div className="loading">
+      <div className="spinner"></div>
+    </div>
+  )
+}
+
+export default Loading

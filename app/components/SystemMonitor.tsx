@@ -1,29 +1,16 @@
+'use client'
 
-const SystemMonitor: React.FC<
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-                <
-                  <
-    </div><CheckCircleclassName="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / /><
-    <
-    <
-            <
-    <
+import React, { useEffect, useState } from 'react'
+
+const SystemMonitor: React.FC = () => {
+  const [systemInfo, setSystemInfo] = useState<any>(null)
+
+  useEffect(() => {
+    // System monitoring logic
+    console.log('System monitor initialized')
+  }, [])
+
+  return null
+}
+
+export default SystemMonitor

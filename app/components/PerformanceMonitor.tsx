@@ -1,21 +1,16 @@
+'use client'
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+import React, { useEffect, useState } from 'react'
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<any>(null)
+
+  useEffect(() => {
+    // Performance monitoring logic
+    console.log('Performance monitor initialized')
+  }, [])
+
+  return null
+}
+
+export default PerformanceMonitor

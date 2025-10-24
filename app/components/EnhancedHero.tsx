@@ -1,9 +1,21 @@
+'use client'
 
-    <
-    </div>,<div className="flex-shrink-0" /><
-                  <
-        <
-    <div className="max-w-4 xl mx-auto text-center" /></div><
-            <
-            <
-    <
+import React from 'react'
+
+interface EnhancedHeroProps {
+  title: string
+  subtitle?: string
+  children?: React.ReactNode
+}
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({ title, subtitle, children }) => {
+  return (
+    <section className="hero-section">
+      <h1>{title}</h1>
+      {subtitle && <p>{subtitle}</p>}
+      {children}
+    </section>
+  )
+}
+
+export default EnhancedHero

@@ -1,21 +1,18 @@
+'use client'
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+import React from 'react'
+
+interface FuturisticCardProps {
+  children: React.ReactNode
+  className?: string
+}
+
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`futuristic-card ${className}`}>
+      {children}
+    </div>
+  )
+}
+
+export default FuturisticCard

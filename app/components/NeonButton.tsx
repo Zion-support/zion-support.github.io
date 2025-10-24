@@ -1,30 +1,18 @@
+'use client'
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+import React from 'react'
+
+interface NeonButtonProps {
+  children: React.ReactNode
+  onClick?: () => void
+}
+
+const NeonButton: React.FC<NeonButtonProps> = ({ children, onClick }) => {
+  return (
+    <button className="neon-button" onClick={onClick}>
+      {children}
+    </button>
+  )
+}
+
+export default NeonButton

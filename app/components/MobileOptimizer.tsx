@@ -1,21 +1,14 @@
+'use client'
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+import React, { useEffect } from 'react'
+
+const MobileOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Mobile optimization logic
+    console.log('Mobile optimizer initialized')
+  }, [])
+
+  return null
+}
+
+export default MobileOptimizer

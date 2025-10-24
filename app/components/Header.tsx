@@ -1,35 +1,20 @@
+'use client'
 
-    <
-        <
-    <
-    <
-    <
-              <
-              </p>,<
-                <
-                <
-          <
-<
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    </div><CheckCircleclassName="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / /><p className="text-gray-300 text-lg">benefit<
-    <
-    <
-            <
-    <
-              <
-<
+import React from 'react'
+
+const Header: React.FC = () => {
+  return (
+    <header className="header">
+      <div className="container">
+        <h1>Zion Tech Group</h1>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+  )
+}
+
+export default Header

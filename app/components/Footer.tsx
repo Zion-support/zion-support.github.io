@@ -1,44 +1,15 @@
+'use client'
 
-    <
-    <
-      </div>,<
-    <
-    <
-    <
-    <
-    <
-            <
-    <
-              <
-              <
-              <
-    <
-    <
-            <
-                <
-                  <
-    <
-    <
-            <
-                <
-                  <
-    <
-      <
-    <
-              <
-                  <
-                    <
-      <
-    <
-              <
-                  <
-                    <
-    <
-    <div className="grid grid-cols-1 md: grid-cols-3 gap-6"></div>,<
-    <
-    <
-    <
-    <
-    <
-    <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md: flex-row justify-between items-center"></div>,<
-              <
+import React from 'react'
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

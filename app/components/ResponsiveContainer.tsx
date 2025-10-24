@@ -1,30 +1,21 @@
+'use client'
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+import React from 'react'
+
+interface ResponsiveContainerProps {
+  children: React.ReactNode
+  className?: string
+}
+
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
+  children, 
+  className = '' 
+}) => {
+  return (
+    <div className={`responsive-container ${className}`}>
+      {children}
+    </div>
+  )
+}
+
+export default ResponsiveContainer

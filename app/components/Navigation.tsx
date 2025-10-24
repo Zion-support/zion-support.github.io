@@ -1,21 +1,17 @@
+'use client'
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+import React from 'react'
+import Link from 'next/link'
+
+const Navigation: React.FC = () => {
+  return (
+    <nav className="navigation">
+      <Link href="/">Home</Link>
+      <Link href="/services">Services</Link>
+      <Link href="/about">About</Link>
+      <Link href="/contact">Contact</Link>
+    </nav>
+  )
+}
+
+export default Navigation
