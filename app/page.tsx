@@ -14,57 +14,45 @@ const HomePage = () => {
       stats: "40% efficiency boost",
       link: "/ai-services"
     },
-    {
-      title: "IT Services",
-      description: "Comprehensive technology solutions including cloud infrastructure and cybersecurity",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      stats: "99.9% uptime",
-      link: "/it-services"
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
-    {
-      title: "Performance Optimization",
-      description: "Advanced performance monitoring and optimization for maximum efficiency",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      stats: "3x faster",
-      link: "/performance"
-    },
-    {
-      title: "Quality Assurance",
-      description: "Rigorous testing and quality assurance to ensure reliable solutions",
-      icon: <Star className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
-      stats: "100% tested",
-      link: "/quality"
-    }
-  ];
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ]
+  }), []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation."
+        keywords="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence"
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={structuredData}
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transforming businesses with cutting-edge AI and IT solutions. 
-              We deliver innovative technology that drives growth and efficiency.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/about" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Learn More
-              </Link>
-              <Link 
-                href="/contact" 
-                className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                 Get Started
+              </Link>
+              <Link to="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+                Learn More
               </Link>
             </div>
           </div>
@@ -108,11 +96,55 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-600 mb-4">
+                  Scalable cloud solutions that provide reliability, security, and performance for your business applications.
+                </p>
+                <Link to="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
+                <p className="text-gray-600 mb-4">
+                  Complete digital transformation services to modernize your business processes and systems.
+                </p>
+                <Link to="/digital-transformation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+            </div>
+          </div>
+          
+          {/* AI Tools Preview */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
+                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
+                <Link to="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
+                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
+                <Link to="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
+                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
+                <Link to="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
+                <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 };
 
