@@ -180,37 +180,4 @@ const formattedServiceName = serviceName
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix JSX syntax issues
-function fixJSXSyntax(content) {
-  // Fix missing semicolons after imports
-  content = content.replace(/(import [^;]+)(\n)/g, '$1;$2');
-  
-  // Remove extra semicolons
-  content = content.replace(/;\n;/g, ';');
-  content = content.replace(/;\n\nexport/g, ';\n\nexport');
-  
-  // Fix malformed JSX return statements
-  content = content.replace(/return \(\n    <div>/g, 'return (\n    <div>');
-  
-  // Fix unterminated strings and malformed JSX
-  content = content.replace(/content="([^]*)"  \/>/g, 'content=$1 />');
-  content = content.replace(/\/>/g, '/>');
-  content = content.replace(/<\/Head>\n/g, '</Head>\n');
-  content = content.replace(/    <\/>/g, '    </>');
-  content = content.replace(/  \);"/g, '  );');
-  content = content.replace(/}\"'/g, '}');
-  
-  // Fix malformed JSX structure - ensure proper wrapping
-  content = content.replace(/return \(\n    <div>\n      <Head>/g, 'return (\n    <>\n      <Head>');
-  content = content.replace(/      <\/Head>\n      <div className="min-h-screen/g, '      </Head">\n      <div className=min-h-screen');
-  
-  // Ensure proper closing tags
-  content = content.replace(/        <\/div>\n      <\/div>\n    <\/div>/g, '        </div>\n      </div>\n    </>');
-  
-  return content;
-}
-
-//Main execution
-console.log("Starting JSX syntax fix...");
-const fixedCount = fixAllJSXFiles("/workspace/app')
-console.log(`Fixed JSX syntax in${fixedCount} files`)
+// Conflict resolved: taking HEAD version

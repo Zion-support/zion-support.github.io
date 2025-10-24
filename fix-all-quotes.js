@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix all extra quotes at end of lines
+    const newContent = content.replace(/"\s*$/gm, '');
+    
+    if (newContent !== content) {
+      content = newContent;
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+=======
 const fs = require('fs');
 const path = require('path');
 
@@ -106,16 +129,49 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
+>>>>>>> origin/main
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
+<<<<<<< HEAD
+    console.error(`Error fixing ${filePath}:`, error.message);
+=======
     console.error(`Error processing ${filePath}:`, error.message);
+>>>>>>> origin/main
     return false;
   }
 }
 
+<<<<<<< HEAD
+function main() {
+  console.log('Starting comprehensive quote fixes...');
+  
+  // Get all TypeScript/TSX files
+  const files = glob.sync('**/*.{ts,tsx}', {
+    ignore: ['node_modules/**', '.next/**', 'dist/**']
+  });
+
+  let fixedCount = 0;
+  let totalFiles = files.length;
+
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+
+  console.log(`\nFixed ${fixedCount} out of ${totalFiles} files`);
+  console.log('Comprehensive quote fixes completed!');
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixFile };
+=======
 // Function to recursively find and process files
 function processDirectory(dirPath) {
   let fixedCount = 0;
@@ -150,3 +206,4 @@ function processDirectory(dirPath) {
 console.log('Starting comprehensive quote fixes...');
 const fixedCount = processDirectory('/workspace');
 console.log(`Fixed ${fixedCount} files`);
+>>>>>>> origin/main
