@@ -159,7 +159,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
