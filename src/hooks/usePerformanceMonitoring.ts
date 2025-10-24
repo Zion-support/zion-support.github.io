@@ -1,29 +1,29 @@
-import { useState, useEffect, useCallback } from from 'react'
+import { useState, useEffect, useCallback } from from 'react';
 ;
-interface PerformanceMetrics {;
+interface PerformanceMetrics { ;
 ;
 loadTime: "number;
-  renderTime: number;"
-  memoryUsage: number;"
+  renderTime: number;
+  memoryUsage: number; }
   fp",s: "number"}
 }
 }
-interface UsePerformanceMonitoringReturn {;"
-;"
+interface UsePerformanceMonitoringReturn { ;
+;
 metrics: "PerformanceMetrics;
-  isMonitoring: boolean;"
-  startMonitoring: () => void;"
+  isMonitoring: boolean;
+  startMonitoring: () => void; }
   stopMonitorin",g: "() => void"}
 }
 }
-const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {;
-;"
-const [metrics, setMetrics] = useState<PerformanceMetrics>({;");"
+const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => { ;
+;
+const [metrics, setMetrics] = useState<PerformanceMetrics>({;"); }
 loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60"});
 ;
 const [isMonitoring, setIsMonitoring] = useState(false);
 ;
-const measurePerformance = useCallback(() => {;
+const measurePerformance = useCallback(() => { ;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
 ;
@@ -37,70 +37,66 @@ let fps = 60;
       const currentTime = performance.now();
       fps = 1000 / (currentTime - lastTime);
       lastTime = currentTime) => {;
-$3;
+$3; }
 }
 calculateFPS();
-setMetrics({;
+setMetrics({ ;
 loadTime,;
 renderTime,);
 memoryUsage,);
-fps);
+fps); }
     })}, []);
 ;
-const startMonitoring = useCallback(() => {;
+const startMonitoring = useCallback(() => { ;
     setIsMonitoring(true);
-    measurePerformance();
+    measurePerformance(); }
   }, [measurePerformance]);
 ;
-const stopMonitoring = useCallback(() => {;
+const stopMonitoring = useCallback(() => { ; }
     setIsMonitoring(false)}, []);
 ;
-useEffect(() => {;
+useEffect(() => { ;
 if(isMonitoring) {  ;
-const interval = setInterval(measurePerformance, 1000);
+const interval = setInterval(measurePerformance, 1000); }
       return () => clearInterval(interval)}
   }, [isMonitoring, measurePerformance]);
 ;
-return{;
+return{ ;
 metrics,;
 isMonitoring,;
-startMonitoring,;
+startMonitoring,; }
 stopMonitoring}
   }
 }
-export default usePerformanceMonitoring;</PerformanceMetrics>;"
-}";'"
+export default usePerformanceMonitoring;</PerformanceMetrics>;
+}";'
 import { useState, useEffect, useCallback   } from "react";
-interface PerformanceMetrics {
-
+interface PerformanceMetrics { 
 loadTime: "number
   renderTime: number
   memoryUsage: number
-  fp",s: "number;"
+  fp",s: "number;" }
 }
 }
 }
 
-interface UsePerformanceMonitoringReturn {
-
+interface UsePerformanceMonitoringReturn { 
 metrics: "PerformanceMetrics
   isMonitoring: boolean
   startMonitoring: () => void
-  stopMonitorin",g: "() => void;"
+  stopMonitorin",g: "() => void;" }
 }
 }
 }
 
-const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
-
-const [metrics, setMetrics ] = useState<PerformanceMetrics>({
+const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => { const [metrics, setMetrics ] = useState<PerformanceMetrics>({
 loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60
-  "
+  " }
 })
 
 const [isMonitoring, setIsMonitoring ] = useState(false)
 
-const measurePerformance = useCallback(() => {
+const measurePerformance = useCallback(() => { 
     const navigation = performance.getEntriesByType("navigation")[0,] as PerformanceNavigationTiming
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart
 
@@ -114,22 +110,20 @@ let fps = 60
       const currentTime = performance.now()
       fps = 1000 /(currentTime - lastTime)
       lastTime = currentTime) => {
-
+ }
 }
 
 
 calculateFPS()
 
-setMetrics({
-loadTime
+setMetrics({ loadTime
 renderTime
 memoryUsage)
-fps)
+fps) }
     })
   }, [])
 
-const startMonitoring = useCallback(() => {
-    setIsMonitoring(true)
+const startMonitoring = useCallback(() => { setIsMonitoring(true)
     measurePerformance(), [measurePerformance,])
 
 const stopMonitoring = useCallback(() => {
@@ -138,13 +132,12 @@ const stopMonitoring = useCallback(() => {
 useEffect(() => {
 if(isMonitoring) {  
 const interval = setInterval(measurePerformance, 1000)
-      return () => clearInterval(interval)
+      return () => clearInterval(interval) }
   }, [isMonitoring, measurePerformance ])
 
-return{
-metrics
+return{ metrics
 isMonitoring
-startMonitoring
+startMonitoring }
 stopMonitoring}
   }
 

@@ -1,25 +1,23 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix extra quotes at end of lines
-function fixQuotes(content) {
+// Function to fix quote issues
+function fixQuoteIssues(content) {
   let fixed = content;
 
-  // Fix lines ending with single quotes
-  fixed = fixed.replace(/;'$/gm, ';');
-  fixed = fixed.replace(/^'use client';'$/gm, "'use client';");
-  fixed = fixed.replace(/^import.*';'$/gm, (match) => match.slice(0, -1));
-  fixed = fixed.replace(/^export.*';'$/gm, (match) => match.slice(0, -1));
-  fixed = fixed.replace(/^const.*';'$/gm, (match) => match.slice(0, -1));
-  fixed = fixed.replace(/^function.*';'$/gm, (match) => match.slice(0, -1));
-  fixed = fixed.replace(/^return.*';'$/gm, (match) => match.slice(0, -1));
-
-  // Fix specific patterns
-  fixed = fixed.replace(/^'use client';'$/gm, "'use client';");
-  fixed = fixed.replace(/^import React from 'react';'$/gm, "import React from 'react';");
-  fixed = fixed.replace(/^import Head from 'next\/head';'$/gm, "import Head from 'next/head';");
-  fixed = fixed.replace(/^import Link from 'next\/link';'$/gm, "import Link from 'next/link';");
-
+  // Fix "use client" directive
+  fixed = fixed.replace(/"use client""/g, '"use client"');
+  
+  // Fix import statements with extra quotes
+  fixed = fixed.replace(/import\s+([^;]+);"/g, 'import $1;');
+  
+  // Fix any other double quotes at end of lines
+  fixed = fixed.replace(/;""/g, ';');
+  fixed = fixed.replace(/""/g, '"');
+  
   return fixed;
 }
 
@@ -27,11 +25,11 @@ function fixQuotes(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixQuotes(content);
+    const fixed = fixQuoteIssues(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed quotes in: ${filePath}`);
       return true;
     }
     return false;
@@ -41,33 +39,37 @@ function processFile(filePath) {
   }
 }
 
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
+// Main function
+function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts',
+    'src/**/*.tsx',
+    'src/**/*.ts'
+  ];
+
+  let totalFixed = 0;
+  let totalProcessed = 0;
+
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        fixedCount += processDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
+    files.forEach(file => {
+      totalProcessed++;
+      if (processFile(file)) {
+        totalFixed++;
       }
-    }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-  
-  return fixedCount;
+    });
+  });
+
+  console.log(`\nProcessed ${totalProcessed} files`);
+  console.log(`Fixed quotes in ${totalFixed} files`);
 }
 
-// Main execution
-console.log('Starting quote fixes...');
-const fixedCount = processDirectory('/workspace');
-console.log(`Fixed ${fixedCount} files`);
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixQuoteIssues, processFile };

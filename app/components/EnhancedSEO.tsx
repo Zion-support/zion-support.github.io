@@ -3,15 +3,14 @@ import React from "react";
 import { Helmet  } from "react-helmet-async";
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe   } from "lucide-react";
 import { Navigation  } from "../components/Navigation";
-const EnhancedSEOPage: "React.FC = () => {
-const benefits = [
+const EnhancedSEOPage: "React.FC = () => { const benefits = [
 
-    "Advanced AI technology integration"","Real-time processing and analytics"
-    "Enterprise-grade security and compliance"
-    "Scalable and flexible solutions"
-    "24/7 technical support"
-    "Easy integration with existing systems"
-    "Cost-effective pricing plans"
+    "Advanced AI technology integration","Real-time processing and analytics
+    "Enterprise-grade security and compliance
+    "Scalable and flexible solutions
+    "24/7 technical support
+    "Easy integration with existing systems
+    "Cost-effective pricing plans
     "Proven track record of success" <div className="[^"]*"> <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /> <Phone className="mr-2 h-5 w-5" />
 Call Now <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /> <Mail className="mr-2 h-5 w-5" />
 Email Us
@@ -19,7 +18,7 @@ Email Us
 
   )
 
-export default EnhancedSEOPage
+export default EnhancedSEOPage" }
               ))} <div className="[^"]*">{benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
 

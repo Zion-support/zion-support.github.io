@@ -2,92 +2,86 @@
 import { Navigation  } from "./Navigation";
 import { Helmet  } from "react-helmet-async";
 import { ArrowRight  } from "lucide-react";
-import, React, { useEffect, useState, useCallback } from "react"
+import, React, { useEffect, useState, useCallback } from "react
 import { Settings, Zap, CheckCircle, AlertTriangle   } from "lucide-react";
 import { CheckCircle  } from "lucide-react";
 import { AlertTriangle  } from "lucide-react";
-interface PerformanceOptimizerProps {
-:all-pages-backup/components/PerformanceOptimizer.tsx
-className?: string
+interface PerformanceOptimizerProps { :all-pages-backup/components/PerformanceOptimizer.tsx
+className?: string }
 }
 }
 }
 
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({
-  className?: string
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ className?: string" }
 "}</PerformanceOptimizerProps>
 </PerformanceOptimizerProps>
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({
-enableImageOptimization = true
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ enableImageOptimization = true
 enableLazyLoading = true
 enablePreloading = true
-enableCodeSplitting = true
-"}) => {</PerformanceOptimizerProps>
+enableCodeSplitting = true" }
+"}) => { </PerformanceOptimizerProps>
 const [isOptimizing, setIsOptimizing ] = useState(false);</PerformanceOptimizerProps>
-const [optimizationStatus, setOptimizationStatus ] = useState<{
-    images: "boolean",lazyLoading: "boolean",preloading: "boolean",codeSplitting: "boolean"}>({
-:all-pages-backup/components/PerformanceOptimizer.tsx
+const [optimizationStatus, setOptimizationStatus ] = useState<{" }
+    images: "boolean",lazyLoading: "boolean",preloading: "boolean",codeSplitting: "boolean"}>({ :all-pages-backup/components/PerformanceOptimizer.tsx
 images: "false",lazyLoading: "false",preloading: "false",codeSplitting: "false",images: "false
 lazyLoading: false",preloading: "false
-codeSplittin",g: "false
+codeSplittin",g: "false" }
   "})
-const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return //Optimize images
+const optimizeImages = useCallback(() => { if (!enableImageOptimization) return //Optimize images
 const images = document.querySelectorAll("img")
     images.forEach((img) => {
 if(img.loading !== "lazy") {
-img.loading = "lazy"
+img.loading = "lazy" }
       }
 
       //Add WebP support detection
-if (!img.src.includes(".webp") && img.src.includes(".jpg")) {
+if (!img.src.includes(".webp") && img.src.includes(".jpg")) { 
 const webpSrc = img.src.replace(".jpg", ".webp")
         const webpImg = new Image()
         webpImg.onload = () => {
-img.src = webpSrc
+img.src = webpSrc }
         }
         webpImg.src = webpSrc
       }
     })
 setOptimizationStatus(prev => ({ ...prev, images: "true "}))
   }, [enableImageOptimization,])
-const enableLazyLoadingOptimization = useCallback(() => {
-    if (!enableLazyLoading) return //Intersection Observer for lazyloadingconstobserver= new IntersectionObserver()
+const enableLazyLoadingOptimization = useCallback(() => { if (!enableLazyLoading) return //Intersection Observer for lazyloadingconstobserver= new IntersectionObserver()
       (entries) => {
 entries.forEach((entry) => {
 if(entry.isIntersecting) {  
 'use client'
-import Navigation from './Navigation'
+import Navigation from './Navigation' }
 import { Helmet } from from 'react-helmet-async'
 import { ArrowRight } from from 'lucide-react'
 import, React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle } from from 'lucide-react'
 import { CheckCircle } from from 'lucide-react'
-import { AlertTriangle } from from 'lucide-react'
-interface PerformanceOptimizerProps {;
+import { AlertTriangle } from from 'lucide-react';
+interface PerformanceOptimizerProps { ;
 :all-pages-backup/components/PerformanceOptimizer.tsx;
-className?: string;
+className?: string; }
 }
 }
 }
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({;"
-  className?: string"
-"}</PerformanceOptimizerProps>;"
-</PerformanceOptimizerProps>"
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({;
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ ;
+  className?: string" }
+"}</PerformanceOptimizerProps>;
+</PerformanceOptimizerProps>
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ ;
 enableImageOptimization = true;
-enableLazyLoading = true;"
-enablePreloading = true");"
-enableCodeSplitting = true"}) => {</>;
-const [isOptimizing, setIsOptimizing] = useState(false);</PerformanceOptimizerProps>;"
-const [optimizationStatus, setOptimizationStatus] = useState<{"
-    images: "boolean",lazyLoading: "boolean",preloading: "boolean",codeSplitting: "boolean"}>({;"
-:all-pages-backup/components/PerformanceOptimizer.tsx"
-images: "false",lazyLoading: "false",preloading: "false",codeSplitting: "false",images: "false"
-lazyLoading: false",preloading: "false"
-codeSplittin",g: "false");"
+enableLazyLoading = true;
+enablePreloading = true"); }
+enableCodeSplitting = true"}) => { </>;
+const [isOptimizing, setIsOptimizing] = useState(false);</PerformanceOptimizerProps>;
+const [optimizationStatus, setOptimizationStatus] = useState<{" }
+    images: "boolean",lazyLoading: "boolean",preloading: "boolean",codeSplitting: "boolean"}>({ ;
+:all-pages-backup/components/PerformanceOptimizer.tsx
+images: "false",lazyLoading: "false",preloading: "false",codeSplitting: "false",images: "false
+lazyLoading: false",preloading: "false
+codeSplittin",g: "false"); }
   "});
-const optimizeImages = useCallback(() => {;
+const optimizeImages = useCallback(() => { ;
     if (!enableImageOptimization) return // Optimize images;
 const images = document.querySelectorAll('img');
     images.forEach((img) => {;
@@ -96,56 +90,55 @@ img.loading = 'lazy'
 const img = entry.target as HTMLImageElement
 if(img.dataset.src) {
 img.src = img.dataset.src img.removeAttribute("data-src")
-              observer.unobserve(img)
+              observer.unobserve(img) }
             ,}
           }
         })
       }
-      { rootMargin: ""50 px" "}
+      { rootMargin: "50 px" "}
     )
 
     const lazyImages = document.querySelectorAll("img[data-src,]")
     lazyImages.forEach((img) => observer.observe(img))
 setOptimizationStatus(prev => ({ ...prev, lazyLoading: "true "}))
   }, [enableLazyLoading,])
-const enablePreloadingOptimization = useCallback(() => {
-    if (!enablePreloading) return //Preload critical resources
-const criticalResources = ["/fonts/main.woff2"
-      "/css/critical.css"
+const enablePreloadingOptimization = useCallback(() => { if (!enablePreloading) return //Preload critical resources
+const criticalResources = ["/fonts/main.woff2
+      "/css/critical.css
     ]
     criticalResources.forEach((resource) => {
       const link = document.createElement("link")
-      link.rel = "preload"
+      link.rel = "preload
 link.href = resource
-link.as = resource.endsWith(".css") ? "style" : "font"
+link.as = resource.endsWith(".css") ? "style" : "font
 if (resource.endsWith(".woff2")) {
-link.crossOrigin = "anonymous"
+link.crossOrigin = "anonymous" }
       }
       document.head.appendChild(link)
     })
 setOptimizationStatus(prev => ({ ...prev, preloading: "true "}))
   }, [enablePreloading,])
-const enableCodeSplittingOptimization = useCallback(() => {
+const enableCodeSplittingOptimization = useCallback(() => { 
     if (!enableCodeSplitting) return //Dynamic imports for codesplittingconstloadComponent= async (componentName: "string) => {
-  ",try {
+  ",try { }
 const module = await import(`../components/${componentName}.tsx`)
-        return module.default } catch(error) {
+        return module.default } catch(error) { " }`
         ////console.warn(`Failed to load component: "${componentName"}`, error)
         return, null
       }
       // Add WebP support detection;
-if (!img.src.includes('.webp') && img.src.includes('.jpg')) {;
+if (!img.src.includes('.webp') && img.src.includes('.jpg')) { ;
 const webpSrc = img.src.replace('.jpg', '.webp');
         const webpImg = new Image();
         webpImg.onload = () => {;
-img.src = webpSrc;
+img.src = webpSrc; }
         }
         webpImg.src = webpSrc;
-      }"
-    })"
+      }
+    })
 setOptimizationStatus(prev => ({ ...prev, images: "true "}));
   }, [enableImageOptimization]);
-const enableLazyLoadingOptimization = useCallback(() => {;
+const enableLazyLoadingOptimization = useCallback(() => { ;
     if (!enableLazyLoading) return // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver();
       (entries) => {;
 entries.forEach((entry) => {;
@@ -154,18 +147,18 @@ const img = entry.target as HTMLImageElement;
 if(img.dataset.src) {;
 img.src = img.dataset.src;
 img.removeAttribute('data-src');
-              observer.unobserve(img);
+              observer.unobserve(img); }
             ,}
           }
-        });"
-      }";'"
+        });
+      }";'
       { rootMargin: "'50 px' "}
     );
-    const lazyImages = document.querySelectorAll('img[data-src]');"
-    lazyImages.forEach((img) => observer.observe(img))"
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach((img) => observer.observe(img))
 setOptimizationStatus(prev => ({ ...prev, lazyLoading: "true "}));
   }, [enableLazyLoading]);
-const enablePreloadingOptimization = useCallback(() => {;
+const enablePreloadingOptimization = useCallback(() => { ;
     if (!enablePreloading) return // Preload critical resources;
 const criticalResources = [;
       '/fonts/main.woff2'
@@ -177,17 +170,17 @@ const criticalResources = [;
 link.href = resource;
 link.as = resource.endsWith('.css') ? 'style' : 'font'
 if (resource.endsWith('.woff2')) {;
-link.crossOrigin = 'anonymous'
+link.crossOrigin = 'anonymous' }
       }
-      document.head.appendChild(link);"
-    })"
+      document.head.appendChild(link);
+    })
 setOptimizationStatus(prev => ({ ...prev, preloading: "true "}));
-  }, [enablePreloading]);"
-const enableCodeSplittingOptimization = useCallback(() => {"
-    if (!enableCodeSplitting) return // Dynamic imports for codesplittingconstloadComponent= async (componentName: "string) => {"
-  ",try {;
-const module = await import(`../components/${componentName}.tsx`);"
-        return module.default } catch(error) {";`"
+  }, [enablePreloading]);
+const enableCodeSplittingOptimization = useCallback(() => { 
+    if (!enableCodeSplitting) return // Dynamic imports for codesplittingconstloadComponent= async (componentName: "string) => {
+  ",try {;" }`
+const module = await import(`../components/${componentName}.tsx`);`
+        return module.default } catch(error) { ";`" }`
         // // console.warn(`Failed to load component: "${componentName"}`, error);
         return, null}
     }
@@ -195,42 +188,40 @@ const module = await import(`../components/${componentName}.tsx`);"
     //Store the function globally for use in other components
     (window as any).loadComponent = loadComponent
 setOptimizationStatus(prev => ({ ...prev, codeSplitting: "true "})), [enableCodeSplitting,])
-const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true)
+const runOptimizations = useCallback(async () => { setIsOptimizing(true)
     try { await Promise.all([)
 optimizeImages()
 enableLazyLoadingOptimization()
 enablePreloadingOptimization()
 enableCodeSplittingOptimization()
-      ])
-    } catch(error) {
-      ////console.error("Optimization failed: """,error) finally {  setIsOptimizing(false)
+      ]) }
+    } catch(error) { 
+      ////console.error("Optimization failed: "",error) finally {  setIsOptimizing(false) }
     }
   }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization,])
-useEffect(() => {
-runOptimizations(), [runOptimizations,])
+useEffect(() => { runOptimizations(), [runOptimizations,])
 const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
 return (<Helmet />
 :all-pages-backup/components/PerformanceOptimizer.tsx</Helmet>
-    // Store the function globally for use in other components;"
-    (window, as, any).loadComponent = loadComponent"
+    // Store the function globally for use in other components;
+    (window, as, any).loadComponent = loadComponent" }
 setOptimizationStatus(prev => ({ ...prev, codeSplitting: "true "}));
   }, [enableCodeSplitting]);
-const runOptimizations = useCallback(async () => {;
+const runOptimizations = useCallback(async () => { ;
     setIsOptimizing(true);
     try { await Promise.all([);
 optimizeImages();
 enableLazyLoadingOptimization();
 enablePreloadingOptimization();
-enableCodeSplittingOptimization();
-      ]),}"
-    } catch(error) {";'"
-      // // console.error('Optimization failed: "'",error);
+enableCodeSplittingOptimization();" }
+      ]),}
+    } catch(error) { ";'
+      // // console.error('Optimization failed: "'",error); }
     } finally {  setIsOptimizing(false), }
     }
   }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization]);
-useEffect(() => {;
-runOptimizations();
+useEffect(() => { ;
+runOptimizations(); }
   }, [runOptimizations]);
 const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
 return (<>;
@@ -238,11 +229,11 @@ return (<>;
       <Helmet  />;
 :all-pages-backup/components/PerformanceOptimizer.tsx</Helmet>;
         <Head />;
-        <title>PerformanceOptimizer</>;"
-        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />"
+        <title>PerformanceOptimizer</>;
+        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; / />
+<meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." />
+      </>;
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
       </>;
@@ -282,23 +273,23 @@ Get Started</button>
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,;
-    <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,;"
-    <div className=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,"
+    <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,;
+    <div className=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,
     <h1 className=&quottext-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; /  />;
 PerformanceOptimizer</h1>
             </h1>
-            <p className=&quottext-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; /  />;"
+            <p className=&quottext-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; /  />;
 Advanced PerformanceOptimizer solution for modern businesses.</p>
             </p>",<div className=&quotflex flex-col sm: "flex-row gap-4 justify-center&quot /  />;
               <button className=&quotbg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;  />;
 Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /  />;"
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /  />;
               </button>
               <button className=&quotborder border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;  />;
 Learn More</button>
-              </button>"
-              </div>"
-            </div>"
+              </button>
+              </div>
+            </div>
         </section>",{/* Features Section */}
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-7 xl mx-auto&quot; / />,;
@@ -322,14 +313,14 @@ Powerful AI-driven features designed to transform your business operations</p>
               <p className=&quottext-xl text-gray-300 max-w-3 xl mx-auto&quot; /  />;
 Powerful AI-driven features designed to transform your business operations</p>
               </p>
-              </>");"
-    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
+              </>");
+    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)
               {features.map((feature",index) => (<divkey = {index} className=&quotbg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot /  />;
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,;
     <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className = &quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot; />);
-                    {feature.benefits.map((benefit, idx) => (</ul>
+                    { feature.benefits.map((benefit, idx) => (</ul> }
                       <li key = {idx} className = &quot;flex items-center text-sm text-gray-300&quot; />
                         <CheckCircleclassName=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; / />
                         {benefit}</CheckCircle>
@@ -345,8 +336,8 @@ Powerful AI-driven features designed to transform your business operations</p>
               <p className=&quottext-xl text-gray-300 max-w-3 xl mx-auto&quot; /  />;
 Experience the benefits of cutting-edge AI technology</p>
               </p>
-              </>"
-    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />"
+              </>
+    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
               {benefits.map((benefit",index) => (<divkey = {index} className = &quotflex items-start space-x-4&quot /  />;
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /  />;
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
@@ -388,20 +379,20 @@ Experience the benefits of cutting-edge AI technology</p>
 Join thousands of businesses already using our AI solutions</p>
             </p>
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />"
-Start Free Trial</button>"
-              </button>"
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Start Free Trial</button>
+              </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Contact Sales</button>
               </button>
               </div>
-            </div>"
-        </section>"
-        </div>"
+            </div>
+        </section>
+        </div>
     </div>",)
             <p className=&quottext-xl text-gray-300 mb-8&quot; /  />;
 Join thousands of businesses already using our AI solutions</p>
-            </>"
+            </>
     <div className=&quotflex flex-col sm: "flex-row gap-4 justify-center&quot /  />;
               <button className=&quotbg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;  />;
 Start Free Trial</button>
@@ -422,16 +413,16 @@ export default PerformanceOptimizer;
   );
 :all-pages-backup/components/PerformanceOptimizer.tsx;
 {}
-export default PerformanceOptimizerPage}"
-export default PerformanceOptimizerPage}";`'"
+export default PerformanceOptimizerPage}"`
+export default PerformanceOptimizerPage}";`'
     </div>")
 }
 
 export default PerformanceOptimizer
       </div>
       </div>
-    </>
-  )
+        </>
+  );
   )
 :all-pages-backup/components/PerformanceOptimizer.tsx
 {}
@@ -439,3 +430,4 @@ export default PerformanceOptimizerPage
 }
 export default PerformanceOptimizerPage
 }
+"`

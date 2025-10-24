@@ -1,7 +1,7 @@
 import React from "react";
 import { Link  } from "next/link";
 import { ArrowRight, Mail, Phone, MapPin   } from "lucide-react";
-const EnhancedFooter: React.FC = () => {
+const EnhancedFooter: React.FC = () => { 
 return(<footer className="bg-slate-900 text-white" />,<div className="max-w-7 xl mx-auto px-4 py-12" />
     <div className="grid md: grid-cols-4 gap-8">
       <div />,<h1 className="text-2 xl font-bold text-white mb-4">Zion Tech Group</h3> <p className="text-gray-300 mb-4" />
@@ -15,18 +15,18 @@ Get Started</Link> <ArrowRight className="w-4 h-4 ml-2" />
                 <Link href="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
 AI Solutions</Link>
                 </Link>
-              </li>"
-              <li>"
+              </li>
+              <li>
                 <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   IT Services;
                 </Link>
-              </li>"
-              <li>"
+              </li>
+              <li>
                 <Link href="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Cloud Solutions;
                 </Link>
-              </li>"
-              <li>"
+              </li>
+              <li>
                 <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Cybersecurity;
                 </Link>
@@ -38,18 +38,18 @@ AI Solutions</Link>
                 <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
 About Us</Link>
                 </Link>
-              </li>"
-              <li>"
+              </li>
+              <li>
                 <Link href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Our Team;
                 </Link>
-              </li>"
-              <li>"
+              </li>
+              <li>
                 <Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Careers;
                 </Link>
-              </li>"
-              <li>"
+              </li>
+              <li>
                 <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Contact;
                 </Link>
@@ -67,8 +67,8 @@ Contact</Link>
               </div>
     <div className="flex items-center"> <Phone className="w-5 h-5 text-cyan-400 mr-3" />
     </div>
-    </>
-  )
+        </>
+  );
     <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
     <div className="flex items-center"> <MapPin className="w-5 h-5 text-cyan-400 mr-3" />
@@ -84,9 +84,8 @@ Contact</Link>
       </div>
     </footer>
   )
-
-export const EnhancedFooter: React.FC<EnhancedFooterProps> = ({ className = '', children }) => {
-  return (
+ }
+export const EnhancedFooter: React.FC<EnhancedFooterProps> = ({ className = '', children }) => { return ( }
     <div className={`enhancedfooter ${className}`}>
       {children}
     </div>
@@ -94,3 +93,4 @@ export const EnhancedFooter: React.FC<EnhancedFooterProps> = ({ className = '', 
 };
 
 export default EnhancedFooter;
+"`

@@ -10,14 +10,14 @@ import { Helmet } from from 'react-helmet-async'
 import { Brain, Mail } from from 'lucide-react'
 import { Brain, Mail } from from 'lucide-react'
 import { Brain, Mail } from from 'lucide-react'
-{    }
+{    };
   ];
 const benefits = [;
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'"
-    'Gain competitive advantage with advanced technology"
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology
 "use client"
 :all-pages-backup/components/PerformanceEnhancer.tsx
 import React from "react";
@@ -33,11 +33,11 @@ import { Brain, Mail  } from "lucide-react";
 {    }
   ]
 const benefits = [
-    "Increase efficiency by up to 50%"
-    "Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
-    "Gain competitive advantage with advanced technology"
+    "Increase efficiency by up to 50%
+    "Reduce costs by 30% with automation
+    "Improve decision-making with AI insights
+    "Scale operations without proportional staff increases
+    "Gain competitive advantage with advanced technology
                   </div>
 {              ))}
               </div>
@@ -45,7 +45,7 @@ const benefits = [
             </div>
             </>;
             </div>,;
-    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 gap-6&quot;>"
+    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 gap-6&quot;>
       {benefits.map((benefit",index) => (<divkey = {index} className = &quotflex items-start space-x-3&quot /  />;
     </div>
                 <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /  />;
@@ -55,8 +55,8 @@ const benefits = [
             </div>
           </div>
       </section>
-{}"
-export default PerformanceEnhancerPage}";'"
+{}
+export default PerformanceEnhancerPage}";'
             </div>
             </div>
             </div>

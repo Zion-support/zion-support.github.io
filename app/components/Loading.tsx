@@ -1,14 +1,12 @@
-const Loading: React.FC = () => {
-return (<div>
+const Loading: React.FC = () => { return (<div>
 import React from "react";
         <title>Loading</title>
-        
-        <meta name="description" content="Advanced Loading solution for modern businesses." / />
+        <meta name="description" content="Advanced Loading solution for modern businesses." />
         <meta name="keywords" content="AI,artificial, intelligence, Loading, AI, solutions, intelligent automation" / />
 
       </Helmet>
     </div>
-      <Navigation/ /> <div className="[^"]*">
+      <Navigation/ /> <div className="[^"]*">" }
         {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
 Loading</h1>
             </h1> <p className="[^"]*">
@@ -17,7 +15,7 @@ Advanced Loading solution for modern businesses.</p>
             </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove",
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Learn More</button>
               </button>
@@ -25,7 +23,7 @@ Learn More</button>
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
 Discover the powerful features that make Loading the perfect solution for your business.</p>
               </p>
-    <divclassName="grid md: "grid-cols-2 l","
+    <divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8" />,<div className="[^"]*">
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
@@ -51,24 +49,24 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
-  )
+        </>
+  );
   )  )}
 
 export default Loading
 }
 
-const Loading: React.FC<LoadingProps> = ({ size = "md", className="" }) => {
-  const sizeClasses = {
-    sm: "w-4 h-4"
-    md: "w-8 h-8"
-    lg: "w-12 h-12"
+const Loading: React.FC<LoadingProps> = ({ size = "md", className=" }) => { const sizeClasses = {
+    sm: "w-4 h-4
+    md: "w-8 h-8
+    lg: "w-12 h-12" }
   }
 
-  return (<div className={`flex items-center justify-center${className}`}>
+  return (<div className={`flex items-center justify-center${className}`}>`
       <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
        />
   )
 }
 
 export default Loading;
+"`

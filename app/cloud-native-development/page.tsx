@@ -9,15 +9,10 @@ export default function ServicePage() {
     <>
       <Head>
         <title>Cloud Native Development | Zion Tech Group</title>
-        
         <meta name="description" content="Professional cloud native development services and solutions for modern businesses." />
-        
-        <meta name="robots" content="index, follow" />
-        
-        <meta property="og:type" content="website" />
-        
-        <meta property="og:title" content="Cloud Native Development|Zion Tech Group" />
-        
+        <meta name="description" content="index, follow" />
+        <meta name="description" content="website" />
+        <meta name="description" content="Cloud Native Development|Zion Tech Group" />
         <meta property="og:description" content="Professional cloud native development services and solutions for modern businesses." />
       
       </Head>
@@ -32,16 +27,16 @@ export default function ServicePage() {
               Professional Page services designed to help your business grow and succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              <Link
+              href="/contact
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              <Link
+              href="/about
+              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors
               >
                 Learn More
               </Link>
@@ -51,5 +46,5 @@ export default function ServicePage() {
       </div>
       <Footer />
     </>
-  )
+  ) }
 }

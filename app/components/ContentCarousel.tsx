@@ -1,64 +1,60 @@
 "use client"
 import React  useState useEffect  from "react" } from;
-import ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users, Settings     } from "lucide-react"
+import ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users, Settings     } from "lucide-react
 interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 => 
-3 features     features       color "from-red-500 to-pink-500"
-const ContentCarousel: "React.FC = () => {
+3 features     features       color "from-red-500 to-pink-500
+const ContentCarousel: "React.FC = () => { 
 const [currentSlide",setCurrentSlide,] = useState(0)
 const slides: "Slide[] = [{
 id: 1",title: "AI-Powered Analytics",description: "Transform your data into actionable insights with our advanced AI analytics platform.",features: [
-        "Real-time data processing","Predictive analytics"
-        "Custom dashboards"
-        "Automated reporting"
+        "Real-time data processing","Predictive analytics
+        "Custom dashboards
+        "Automated reporting
     ]
-icon: <BarChart className="h-12 w-12" />,color: "from-blue-500 to-cyan-500"
+icon: <BarChart className="h-12 w-12" />,color: "from-blue-500 to-cyan-500" }
   }
-    {
-id: "2",title: "Cloud Infrastructure",description: "Scalable,secure, and reliable cloud solutions for your business needs."
-features: "[","99.9% uptime guarantee"Auto-scaling capabilities"Advanced security"24/7 monitoring"
+    { 
+id: "2",title: "Cloud Infrastructure",description: "Scalable,secure, and reliable cloud solutions for your business needs.
+features: "[","99.9% uptime guarantee"Auto-scaling capabilities"Advanced security"24/7 monitoring
       ]
-icon: <Cloud className="h-12 w-12" />,color: "from-green-500 to-emerald-500"
+icon: <Cloud className="h-12 w-12" />,color: "from-green-500 to-emerald-500" }
     }
-    {
-id: "3",title: "Cybersecurity Solutions",description: "Protect your business with our comprehensive cybersecurity services.",features: ["Threat detection","Vulnerability assessment"
-        "Incident response"
-        "Security training"
+    { 
+id: "3",title: "Cybersecurity Solutions",description: "Protect your business with our comprehensive cybersecurity services.",features: ["Threat detection","Vulnerability assessment
+        "Incident response
+        "Security training
       ]
-icon: <Shield className="h-12 w-12" />,color: "from-red-500 to-pink-500"
+icon: <Shield className="h-12 w-12" />,color: "from-red-500 to-pink-500" }
     }
-    {
-id: "4",title: "Digital Transformation",description: "Modernize your business processes with cutting-edge technology solutions.",features: ["Process automation","Digital workflows"
-        "Integration services"
-        "Change management"
+    { 
+id: "4",title: "Digital Transformation",description: "Modernize your business processes with cutting-edge technology solutions.",features: ["Process automation","Digital workflows
+        "Integration services
+        "Change management
 icon <Settings className="h-12 w-12" />
-color "from-purple-500 to-indigo-500"
+color "from-purple-500 to-indigo-500
 useEffect(() => {
 const timer = setInterval(() => {
 setCurrentSlide((prev) => (prev+1) % slides.length), 5000)
-return () => clearInterval(timer)
+return () => clearInterval(timer) }
   }, [slides.length,])
-const nextSlide = () => {
-return
+const nextSlide = () => { return
 setCurrentSlide((prev) => (prev+1) % slides.length)
   ) => {
-
+ }
 }
-const prevSlide = () => {
-return
+const prevSlide = () => { return
 setCurrentSlide((prev) => (prev - 1+slides.length) % slides.length)
   ) => {
-
+ }
 }
-const goToSlide = () => {
-setCurrentSlide(index) => {
-
+const goToSlide = () => { setCurrentSlide(index) => {
+ }
 }
 return (<div>
 
       <Helmet />
 
         <title>ContentCarousel</title>
-        
         <meta name="description" content="Advanced ContentCarousel solution for modern businesses." />
         <meta name="keywords" content="AI, artificial, intelligence, ContentCarousel, AI, solutions, intelligent automation" />
 
@@ -80,7 +76,7 @@ Learn More
         {/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
 Powerful AI-driven features designed to transform your business operations
-              </p> <div className="[^"]*">)
+              </p> <div className="[^"]*">)";
               {features.map((feature,index) => (<divkey = {index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
     <h1 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -98,9 +94,9 @@ Powerful AI-driven features designed to transform your business operations
 Experience the benefits of cutting-edge AI technology
               </p> <div className="[^"]*">
     <div className="overflow-hidden rounded-xl">
-      <divclassName="[^"]*"
+      <divclassName="[^"]*
 style={{ transform: "`translateX(-${currentSlide*100"};%)`} />
-    </div>{slides.map((slide, index) => ("
+    </div>{ slides.map((slide, index) => (" }
 <divkey = {index};className="w-full flex-shrink-0" /> <div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*">
                         <slide.icon className="h-10 w-10 text-white" />
     <h1 className="text-2 xl font-bold mb-4">{slide.title}</h3>
@@ -165,7 +161,7 @@ Learn More
   ))}
             </div>
             {/* Stats*/}
-            {currentSlideData.stats && (<div className="grid grid-cols-1 md: grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">
+            { currentSlideData.stats && (<div className="grid grid-cols-1 md: grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">" }
       {currentSlideData.stats.map((stat,index) => (<divkey = {index};className="text-center" />
     </div>
     <div className="text-3 xl font-bold text-white mb-1">
@@ -186,7 +182,7 @@ onClick = {prevSlide};className="absolute left-4 top-1/2 transform -translate-y-
           </button>
         </div>
 {/* Slide Indicators*/}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"> <ChevronLeft className="w-6 h-6" />
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"> <ChevronLeft className="w-6 h-6" />
           </button>
           <button onClick={nextSlide};className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" /> <ChevronRight className="w-6 h-6" />
           </button>
@@ -314,10 +310,10 @@ Learn More</div>
 
         {/* Slide Indicators*/}
 
-    <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
-            <button
-key = {index};onClick={() => goToSlide(index);className = {`w-3 h-3 rounded-full transition-colors${
-index === currentSlide?"bg-cyan-400" : "bg-white/30"
+    <div className="flex justify-center mt-8 space-x-2">{ slides.map((_, index) => (</div>
+            <button }`
+key = {index};onClick={ () => goToSlide(index);className={``w-3 h-3 rounded-full transition-colors${" }`
+index === currentSlide?"bg-cyan-400" : "bg-white/30"`}`
               };`}
             />
           ))}
@@ -330,7 +326,8 @@ index === currentSlide?"bg-cyan-400" : "bg-white/30"
               {benefits.map((benefit,index) => (<divkey = {index};className="flex items-start space-x-4" /> <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-    </>)
+        </>
+  );
   ))}
             </div>
           </div>
@@ -357,5 +354,5 @@ Contact Sales
       </div>
 export default ContentCarousel}
 </pExperience>
-</pPowerful>
-}}}}";`'
+</pPowerful>"`
+}}}}";`'"`

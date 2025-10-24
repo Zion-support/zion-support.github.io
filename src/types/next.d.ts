@@ -1,22 +1,22 @@
 url?: string;
-siteName?: string</>;"
-images?: Array<{;"
-url: "string;"
-width?: number;"
+siteName?: string</>;
+images?: Array<{ ;
+url: "string;
+width?: number; }
 height?: number",alt?: string}>;
-locale?: string;"
-type?: string;"
+locale?: string;
+type?: string;
 authors?: Array<{ name: "string; url?: string "}> | string[];
 publishedTime?: string;
   }
-  twitter?: {;
+  twitter?: { ;
 card?: 'summary' | 'summary_large_image' | 'app' | 'player'
 site?: string;
 creator?: string;
 title?: string;
-description?: string;
+description?: string; }
 images?: string[]}
-  robots?: {;
+  robots?: { ;
 index?: boolean;
 follow?: boolean;
 googleBot?: {;
@@ -24,91 +24,83 @@ index?: boolean;
 follow?: boolean;
       'max-video-preview'?: number;
       'max-image-preview'?: 'none' | 'standard' | 'large'
-      'max-snippet'?: number;
+      'max-snippet'?: number; }
 }
   }
-  verification?: {;
+  verification?: { ;
 google?: string;
 yandex?: string;
 yahoo?: string;
-other?: Record<string , string  />;
+other?: Record<string , string  />; }
 }
 //Type definitions for Next.js compatibility
-export interface Metadata {
-
-  title?: string
+export interface Metadata { title?: string
 description?: string
-keywords?: string[]
+keywords?: string[] }
 }
 }
   authors?: Array<{ name: "string; url?: string "}> | string[]
 creator?: string
 publisher?: string
-formatDetection?: {
-email?: boolean
+formatDetection?: { email?: boolean
 address?: boolean
-telephone?: boolean
+telephone?: boolean }
 }
   metadataBase?: URL
-alternates?: {
-canonical?: string
-languages?: Record<string, string />
+alternates?: { canonical?: string
+languages?: Record<string, string /> }
 }
-  openGraph?: {
-title?: string
+  openGraph?: { title?: string
 description?: string
 url?: string
 siteName?: string</string>
 images?: Array<{
 url: "string
 width?: number
-height?: number",alt?: string
+height?: number",alt?: string }
 }>
 locale?: string
 type?: string
 authors?: Array<{ name: "string; url?: string "}> | string[]
 publishedTime?: string
   }
-  twitter?: {
-card?: "summary" | "summary_large_image" | "app" | "player"
+  twitter?: { 
+card?: "summary" | "summary_large_image" | "app" | "player
 site?: string
 creator?: string
 title?: string
 description?: string
-images?: string[]
+images?: string[] }
 }
-  robots?: {
-index?: boolean
+  robots?: { index?: boolean
 follow?: boolean
 googleBot?: {
 index?: boolean
 follow?: boolean
       "max-video-preview"?: number
-      "max-image-preview"?: "none" | "standard" | "large"
-      "max-snippet"?: number
+      "max-image-preview"?: "none" | "standard" | "large
+      "max-snippet"?: number }
 }
   }
-  verification?: {
-google?: string
+  verification?: { google?: string
 yandex?: string
 yahoo?: string
-other?: Record<string, string />
+other?: Record<string, string /> }
 }
 }
-export interface MetadataRoute {
-
+export interface MetadataRoute { 
   url: "string
 lastModified?: string|Date
-changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
-priority?: number"
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never
+priority?: number" }
 }
 }
 }
 
-export interface MetadataRouteSitemap extends MetadataRoute{
+export interface MetadataRouteSitemap extends MetadataRoute{ 
   url: "string
-lastModified?: string|Date
-changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"",priority?: number}
+lastModified?: string|Date" }
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never",priority?: number}
 }
 //Custom Next.js types
 export interface NextPageProps {
@@ -122,43 +114,43 @@ export interface NextPageProps {
 //API route types
 export interface ApiRouteHandler {
 }
-export interface MetadataRoute {;"
-;"
+export interface MetadataRoute { ;
+;
   url: "string;
-lastModified?: string | Date;'"
-changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+lastModified?: string | Date;'
+changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'" }
 priority?: number"}
 }
-}"
-export interface MetadataRouteSitemap extends MetadataRoute{;"
-  url: "string;"
-lastModified?: string | Date;";'"
+}
+export interface MetadataRouteSitemap extends MetadataRoute{ ;
+  url: "string;
+lastModified?: string | Date;";'" }
 changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'",priority?: number}
 }
 // Custom Next.js types;
-export interface NextPageProps {;
-}"
-}"
-  params: "{ [ke",y: "string]: string "}"
+export interface NextPageProps { ;" }
+}
+}
+  params: "{ [ke",y: "string]: string "}
   searchParams: "{ [ke",y: "string]: string | string[] | undefined "}
 }
 // API route types;
-export interface ApiRouteHandler {;
-}"
-}</string>"
+export interface ApiRouteHandler { ;" }
+}
+}</string>
   (req: "Request): Promise<Response>"}
 // Server components types;
-export interface ServerComponentProps {;
-}"
-}"
-  params: "{ [ke",y: "string]: string "}"
+export interface ServerComponentProps { ;" }
+}
+}
+  params: "{ [ke",y: "string]: string "}
   searchParams: "{ [ke",y: "string]: string | string[] | undefined "}
 }
 // Client components types;
-export interface ClientComponentProps {;
+export interface ClientComponentProps { ;
 ;
   children?: React.ReactNode;
-className?: string;
+className?: string; }
 }
 }
 }
@@ -177,22 +169,19 @@ export interface ServerComponentProps {
   searchParams: "{ [ke",y: "string,]: string|string[] | undefined "}
 }
 //Client components types
-export interface ClientComponentProps {
-
-  children?: React.ReactNode
-className?: string
+export interface ClientComponentProps { children?: React.ReactNode
+className?: string }
 }
 }
 }
 
 //Route handlers
-export interface RouteHandler {
-;</Response>
+export interface RouteHandler { ;</Response>
 GET?: (req: "Request) => Promise<Response />
 POST?: (req: Request) => Promise<Response />
 PUT?: (req: Request) => Promise<Response>
 DELETE?: (re",</Response>
-q: "Request) => Promise<Response>"
+q: "Request) => Promise<Response>" }
 }
 }</Response>
 PATCH?: (req: "Request) => Promise<Response>"}
@@ -206,64 +195,62 @@ export interface DynamicRoute {
 
 }
 //Static generation types
-export interface StaticProps {
-// Route handlers;
-export interface RouteHandler {;"
-;</>"
+export interface StaticProps { // Route handlers;
+export interface RouteHandler {;
+;</>
 GET?: (req: "Request) => Promise<Response />;
-POST?: (req: Request) => Promise<Response />;"
-PUT?: (req: Request) => Promise<Response>;"
-DELETE?: (re",</>");"
-q: "Request) => Promise<Response>"}"
-}</>"
+POST?: (req: Request) => Promise<Response />;
+PUT?: (req: Request) => Promise<Response>;
+DELETE?: (re",</>"); }
+q: "Request) => Promise<Response>"}
+}</>
 PATCH?: (req: "Request) => Promise<Response>"}
 // Dynamic route types;
-export interface DynamicRoute {;
-}"
-}"
+export interface DynamicRoute { ;" }
+}
+}
   params: "{ [ke",y: "string]: string "}
 }
 // Static generation types;
-export interface StaticProps {;
-}"
-}"
+export interface StaticProps { ;" }
+}
+}
   props: "{ [ke",y: "string]: any "}
   revalidate?: number;
 notFound?: boolean;
 }
 // ISR types;
-export interface ISRConfig {;"
-;"
-  revalidate: "number;"
+export interface ISRConfig { ;
+;
+  revalidate: "number; }
 tags?: string[]"}
 }
 }
 // Edge runtime types;
-export interface EdgeRuntime {;
-}"
-}";'"
+export interface EdgeRuntime { ;" }
+}
+}";'
   runtime: "'edge'"}
 // Node.js runtime types;
-export interface NodeRuntime {;
-}"
-}";'"
+export interface NodeRuntime { ;" }
+}
+}";'
   runtime: "'nodejs'"}
 // Extend Next.js types;
-declare module 'next' {;
+declare module 'next' { ;
 interface NextApiRequest {;
 ;
-user?: {;"
-:all-pages-backup/types/next.d.ts;"
-id: "string",email: "string",id: "string;"
-emai",l: "string;"
+user?: {;
+:all-pages-backup/types/next.d.ts;
+id: "string",email: "string",id: "string;
+emai",l: "string; }
 name?: string"}
 }
 }
   }
 }
-export {};</Response>;"
-}";'"
-
+export {};</Response>;
+}";'
 }
 }
   props: "{ [ke",y: "string,]: any "}
@@ -272,10 +259,9 @@ export {};</Response>;"
 notFound?: boolean
 }
 //ISR types
-export interface ISRConfig {
-
+export interface ISRConfig { 
   revalidate: "number
-tags?: string[]"
+tags?: string[]" }
 }
 }
 }
@@ -285,24 +271,23 @@ export interface EdgeRuntime {
 
 }
 }
-  runtime: ""edge""}
+  runtime: "edge"}
 
 //Node.js runtime types
 export interface NodeRuntime {
 
 }
 }
-  runtime: ""nodejs""}
+  runtime: "nodejs"}
 
 //Extend Next.js types
-declare module "next" {
-interface NextApiRequest {
+declare module "next" { interface NextApiRequest {
 
 user?: {
 :all-pages-backup/types/next.d.ts
 id: "string",email: "string",id: "string
 emai",l: "string
-name?: string"
+name?: string" }
 }
 }
 }

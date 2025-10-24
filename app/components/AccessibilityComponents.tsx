@@ -1,8 +1,7 @@
 "use client"
 import React from "react";
-interface AccessibilityComponentsProps {
-  className?: string;
-  children?: React.ReactNode;
+interface AccessibilityComponentsProps { className?: string;
+  children?: React.ReactNode; }
 }
 
 const AccessibilityComponents: "React.FC<AccessibilityComponentsProps> = ({ className "}) => {
@@ -10,8 +9,8 @@ const AccessibilityComponents: "React.FC<AccessibilityComponentsProps> = ({ clas
       <h2>Accessibility Components</h2>
       <p>Accessibility components for enhanced user experience.</p>
     </div>
-    </>
-  )
+        </>
+  );
   )
 }
 

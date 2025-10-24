@@ -1,23 +1,21 @@
 import React from "react";
-import { Image  } from "next/image"
-interface OptimizedImageProps {
-src: string
+import { Image  } from "next/image
+interface OptimizedImageProps { src: string
 alt: string
 width?: number
 height?: number
 className?: string
-  "data-testid"?: string
+  "data-testid"?: string }
 }
-  [ke,y: "string,]: any"}
+  [ke,y: "string,]: any"};
 };
 ;
-const OptimizedImage: "React.FC<OptimizedImageProps /> = ({
+const OptimizedImage: "React.FC<OptimizedImageProps /> = ({ 
 src",alt
 width = 800
-height = 600 className=""
-  "data-testid": testId
-  ...props }) => {
-return (</OptimizedImageProps>
+height = 600 className=
+  "data-testid": testId }
+  ...props }) => { return (</OptimizedImageProps> }
     <Imagesrc = {src}
       alt = {alt}
       width = {width}
@@ -28,34 +26,33 @@ return (</OptimizedImageProps>
   )
 }
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
-  return (
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => { return ( }
     <div className={`optimizedimage ${className}`}>
       {children}
     </div>
   );
-import React from "react"
-import Image from "next/image"
-interface OptimizedImageProps {;
+import React from "react
+import Image from "next/image";
+interface OptimizedImageProps { ;
 src: string;
 alt: string;
 width?: number;
-height?: number;"
-className?: string"
-  "data-testid"?: string;"
-}"
+height?: number;
+className?: string
+  "data-testid"?: string; }
+}
   [ke,y: "string]: any"}
-}"
-"
-const OptimizedImage: "React.FC<OptimizedImageProps /> = ({"
+}
+
+const OptimizedImage: "React.FC<OptimizedImageProps /> = ({ 
 src",alt;
-width = 800;"
-height = 600"
-className="""
+width = 800;
+height = 600
+              className=
   "data-testid": testId;
-  ...props);
-}) => {;
-return(</OptimizedImageProps>;
+  ...props); }
+}) => { ;
+return(</OptimizedImageProps>; }
     <Imagesrc = {src}
       alt = {alt}
       width = {width}
@@ -63,8 +60,9 @@ return(</OptimizedImageProps>;
       className={className}
       data-testid = {testId});
       {...props} />);
-  )}"
-export default OptimizedImage;</Image>"
+  )}
+export default OptimizedImage;</Image>
 };
 
 export default OptimizedImage;
+"`

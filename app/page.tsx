@@ -9,15 +9,10 @@ export default function ServicePage() {
     <>
       <Head>
         <title>App | Zion Tech Group</title>
-        
         <meta name="description" content="Professional app services and solutions for modern businesses." />
-        
-        <meta name="robots" content="index, follow" />
-        
-        <meta property="og:type" content="website" />
-        
-        <meta property="og:title" content="App|Zion Tech Group" />
-        
+        <meta name="description" content="index, follow" />
+        <meta name="description" content="website" />
+        <meta name="description" content="App|Zion Tech Group" />
         <meta property="og:description" content="Professional app services and solutions for modern businesses." />
       
       </Head>
@@ -31,20 +26,20 @@ export default function ServicePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
+                href="/contact
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
             >
               Get Started
             </Link>
             <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
+                href="/ai-services
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105
             >
               Learn More
             </Link>
           </div>
         </div>
-
+ }
         {/* Services Preview*/}
         <div className="py-24 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,14 +150,14 @@ export default function ServicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
+                href="/contact
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
                 >
                   Get Started
                 </Link>
                 <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
+                href="/ai-services
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105
                 >
                   Learn More
                 </Link>

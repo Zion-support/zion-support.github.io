@@ -1,30 +1,30 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-const MicroSAASPage: React.FC = () => {;
+import SEOOptimizer from '../components/SEOOptimizer';
+const MicroSAASPage: React.FC = () => { ;
 return (<>;
-  </>;
+  </>; }
       <SEOOptimizer title="Micro SAAS Solutions - Zion Tech Group",description="Professional micro SAAS solutions and services for your business needs.", keywords={ ['micro saas', 'AI solutions', 'business automation', 'technology services'] }; </div>
-canonicalUrl = "https: //ziontechgroup.com/micro-saas""
-      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
-        <Navigation/ />"
-        <main className="container mx-auto px-4 py-16 pt-24" />,"
-    <div className="text-center" / />,"
+canonicalUrl = "https: //ziontechgroup.com/micro-saas
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />
+        <Navigation/ />
+        <main className="container mx-auto px-4 py-16 pt-24" />,
+    <div className="text-center" / />,
     <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
 Micro SAAS Solutions</h1>
             </h1>
-            <p className="text-xl text-gray-300 mb-8" /  />"
+            <p className="text-xl text-gray-300 mb-8" /  />
 Professional micro SAAS solutions and services for your business needs.</p>
-            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />
               <p className="text-gray-300" /  />
-import { React from "react";
+import { React from "react"; }
 import { Navigation  } from "../components/Navigation";
 import { Footer  } from "../components/Footer";
 import { SEOOptimizer  } from "../components/SEOOptimizer";
-const MicroSAASPage: React.FC = () => {
+const MicroSAASPage: React.FC = () => { " }
 return (<SEOOptimizer title="Micro SAAS Solutions - Zion Tech Group",description="Professional micro SAAS solutions and services for your business needs.", keywords={ ["micro saas", "AI solutions", "business automation", "technology services"] }; </div>
-canonicalUrl = "https: //ziontechgroup.com/micro-saas"
+canonicalUrl = "https: //ziontechgroup.com/micro-saas
       /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
 Micro SAAS Solutions</h1>
@@ -42,17 +42,15 @@ This page is under development. Please check back soon for more information abou
       </div>);
   );
 }
-}"
-export default MicroSAASPage}";'"
+}
+export default MicroSAASPage}";'
   )
 
-interface PageOriginalProps {
-  className?: string;
-  children?: React.ReactNode;
+interface PageOriginalProps { className?: string;
+  children?: React.ReactNode; }
 }
 
-export const PageOriginal: React.FC<PageOriginalProps> = ({ className = '', children }) => {
-  return (
+export const PageOriginal: React.FC<PageOriginalProps> = ({ className = '', children }) => { return ( }
     <div className={`pageoriginal ${className}`}>
       {children}
     </div>
@@ -60,3 +58,4 @@ export const PageOriginal: React.FC<PageOriginalProps> = ({ className = '', chil
 };
 
 export default PageOriginal;
+"`

@@ -5,11 +5,11 @@ const ContactPage = () => {
       <h1>Contact Page</h1>
       <p>Contact information coming soon.</p>
     </div>
-    </>
-  )
+        </>
+  );
   )
 ) => {
-
+ }
 }
 
 export default function ContactPagePage() {
@@ -30,16 +30,16 @@ export default function ContactPagePage() {
               Professional ContactPage services designed to help your business grow and succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              <Link
+              href="/contact
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              <Link
+              href="/about
+              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors
               >
                 Learn More
               </Link>
@@ -48,5 +48,5 @@ export default function ContactPagePage() {
         </div>
       </div>
     </>
-  );
+  ); }
 }

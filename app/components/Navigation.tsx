@@ -2,7 +2,7 @@
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const Navigation = () => {
-  return (<div>
+  return (<div> }
           {/* Desktop Navigation*/}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
@@ -18,23 +18,22 @@ const Navigation = () => {
               Contact
             </Link>
             <Link
-              href="/contact"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors"
+                href="/contact
+              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors
             >
               Get Started
             </Link>
           </div>
 
         <title>404 - Page Not Found|Zion Tech Group</title>
-        
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="noindex, nofollow" />
         <meta property="og: type" content="website" />
 
       
       </Head>
     </div>,<div className="[^"]*"> <div className="[^"]*">
-          {/* 404 Animation*/) => {
-
+          { /* 404 Animation*/) => {
+" }
 } <div className="[^"]*"> <div className="[^"]*">
               404 <div className="[^"]*"> <AlertTriangle className="w-6 h-6 text-red-400" />
                 </div>
@@ -71,9 +70,9 @@ Go Home
     </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md p-1"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md p-1
               aria-expanded={isOpen}
-              aria-controls="mobile-menu"
+              aria-controls="mobile-menu
               aria-label={isOpen?"Close menu" : "Open menu"}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

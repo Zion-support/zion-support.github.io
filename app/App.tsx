@@ -1,11 +1,11 @@
 "use client"
-import React, { Suspense, lazy } from "react"
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { PerformanceMonitor  } from "./components/PerformanceMonitor";
-import { AccessibilityEnhancer  } from "./components/AccessibilityEnhancer"
-import { LoadingSpinner  } from "./components/LoadingSpinner"
+import { AccessibilityEnhancer  } from "./components/AccessibilityEnhancer
+import { LoadingSpinner  } from "./components/LoadingSpinner
 //Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"))
 const AboutPage = lazy(() => import("./about/page"))
@@ -130,7 +130,7 @@ const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"))
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"))
 const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"))
 const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"))
-const FiveGMobileApplicationsPage = lazy(() => import("./5g-mobile-applications/page"))
+const FiveGMobileApplicationsPage = lazy(() => import("./5g-mobile-applications/page"))";
 const FiveGNetworkInfrastructurePage = lazy(() => import("./5g-network-infrastructure/page"));
 const FiveGPrivateNetworksPage = lazy(() => import("./5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions/page"));
@@ -139,10 +139,9 @@ const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"))
 
 //Main App Component
 function App() {
-
   return (<HelmetProvider>
       <ErrorBoundary>
-        <BrowserRouter>
+        <BrowserRouter> }
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages*/}

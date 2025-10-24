@@ -1,14 +1,14 @@
 "use client"
 import React from "react";
-interface ServiceTemplateProps {
+interface ServiceTemplateProps { 
 title: "string;",description: "string
   features: string[]
-const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({"
-title",description, features
+const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({
+title",description, features }
 }
 }
-}) => {
-return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
+}) => { 
+return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*"> }
           {title};</h1>
         </h1> <div className="[^"]*"> <p className="[^"]*">
             {description}</p>
@@ -25,13 +25,11 @@ return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <
           </div>
       </div>}
 
-interface ServiceTemplateProps {
-  className?: string;
-  children?: React.ReactNode;
+interface ServiceTemplateProps { className?: string;
+  children?: React.ReactNode; }
 }
 
-export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = '', children }) => {
-  return (
+export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = '', children }) => { return ( }
     <div className={`servicetemplate ${className}`}>
       {children}
     </div>
@@ -39,3 +37,4 @@ export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = ''
 };
 
 export default ServiceTemplate;
+"`

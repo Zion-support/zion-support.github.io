@@ -1,21 +1,20 @@
 "use client"
 import React from "react";
-import { Head  } from "next/head"
+import { Head  } from "next/head";
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const addHighContrastSupport = () => {
-return (<div>
+  return (<div>
       <Head>
         <title>404 - Page Not Found|Zion Tech Group</title>
-        
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="noindex, nofollow" />
         <meta property="og: type" content="website" />
 
       
       </Head>
     </div>,<div className="[^"]*"> <div className="[^"]*">
           {/* 404 Animation*/) => {
-
+" }
 } <div className="[^"]*"> <div className="[^"]*">
               404 <div className="[^"]*"> <AlertTriangle className="w-6 h-6 text-red-400" />
                 </div>
@@ -49,11 +48,11 @@ Go Home
       </Link>
     </div>
             <button
-onClick={() => window.history.back()
+onClick={ () => window.history.back()
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"> <ArrowLeft className="w-5 h-5 mr-2" />
 Go Back
             </button>
-              </div>
+              </div>" }
           {/* Help Section*/} <div className="[^"]*">
     <h1 className="text-lg font-semibold text-white mb-3">Need Help?</h3> <p className="[^"]*">
 Our support team is here to help you navigate our services and find exactly what you"re looking for.
@@ -67,7 +66,7 @@ Contact Support
 Send Email
               </a>
                 </div></div>
-          {/* Fun Fact */,},<div className="mt-8 p-4 bg-slate-800/30 rounded-lg" /><p className="text-sm text-gray-400" />,<span className="text-cyan-400">Fun Fact: </span> Even our AI gets"
+          {/* Fun Fact */,},<div className="mt-8 p-4 bg-slate-800/30 rounded-lg" /><p className="text-sm text-gray-400" />,<span className="text-cyan-400">Fun Fact: </span> Even our AI gets
 confused sometimes. That"s why we have humans to help when things
 go wrong! 🤖
             </p>
@@ -87,8 +86,7 @@ export default addHighContrastSupport
     </div>
 }
 
-export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '', children }) => {
-  return (
+export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '', children }) => { return ( }
     <div className={`enhancedaccessibility ${className}`}>
       {children}
     </div>
@@ -96,3 +94,4 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ cl
 };
 
 export default EnhancedAccessibility;
+"`

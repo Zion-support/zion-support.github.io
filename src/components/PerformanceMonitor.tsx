@@ -1,18 +1,15 @@
-import, React, { useEffect } from "react"
-interface PerformanceMonitorProps {
-performanceData?: any
+import, React, { useEffect } from "react
+interface PerformanceMonitorProps { performanceData?: any }
 }
 }
 }
 
-const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => {
-useEffect(() => {
-    //Monitor Core Web Vitals if("web-vitals" in, window) { import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-const logMetric = () => {
+const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => { useEffect(() => {" }
+    //Monitor Core Web Vitals if("web-vitals" in, window) { import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => { const logMetric = () => {
 if(process.env.NODE_ENV === "development") {  
             //eslint-disable-next-line no-console
 console.log(metric) => {
-
+ }
 }
         }
         getCLS(logMetric)
@@ -20,68 +17,66 @@ console.log(metric) => {
         getFCP(logMetric)
         getLCP(logMetric);</PerformanceMonitorProps>
 getTTFB(logMetric);</PerformanceMonitorProps>
-const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => {
-  useEffect(() => {
-    //Monitor Core Web Vitals if("web-vitals" in, window) { import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log)
+const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => { useEffect(() => {" }
+    //Monitor Core Web Vitals if("web-vitals" in, window) { import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => { getCLS(console.log)
         getFID(console.log)
         getFCP(console.log)
-        getLCP(console.log)
+        getLCP(console.log) }
 import, React, { useEffect } from 'react'
-interface PerformanceMonitorProps {;
-performanceData?: any;
+interface PerformanceMonitorProps { ;
+performanceData?: any; }
 }
 }
 }
-const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => {;
+const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => { ;
 useEffect(() => {;
     // Monitor Core Web Vitals;
-if('web-vitals' in, window) {;
-import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
+if('web-vitals' in, window) {; }
+import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => { ;
 const logMetric = (;
 if(process.env.NODE_ENV === 'development') {;
             // eslint-disable-next-line no-console;
 console.log(metric),) => {;
-$3;
+$3; }
 }
         }
         getCLS(logMetric);
         getFID(logMetric);
         getFCP(logMetric);
-        getLCP(logMetric);</PerformanceMonitorProps>;"
-getTTFB(logMetric);</PerformanceMonitorProps>"
-const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => {;
+        getLCP(logMetric);</PerformanceMonitorProps>;
+getTTFB(logMetric);</PerformanceMonitorProps>
+const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData "}) => { ;
   useEffect(() => {;
     // Monitor Core Web Vitals;
-if('web-vitals' in, window) {;
-import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
+if('web-vitals' in, window) {; }
+import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => { ;
         getCLS(console.log);
         getFID(console.log);
         getFCP(console.log);
-        getLCP(console.log);
+        getLCP(console.log); }
         getTTFB(console.log)})}
     // Monitor performance metrics;
-if('performance' in, window) {;
+if('performance' in, window) { ;
 window.addEventListener('load', () => {;
 setTimeout(() => {;
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
-          if(process.env.NODE_ENV === 'development') {;"
-            // eslint-disable-next-line no-console";'"
-console.log('Performance Metrics: "'",{)"
-domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)";'"
-firstPaint: "paint.find(entry => entry.name === 'first-paint')?.startTime",firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime"})}";'"
-          console.log('Performance Metrics: "'",{)"
-domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)";'"
+          if(process.env.NODE_ENV === 'development') {;
+            // eslint-disable-next-line no-console";'
+console.log('Performance Metrics: "'",{)
+domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)";'" }
+firstPaint: "paint.find(entry => entry.name === 'first-paint')?.startTime",firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime"})}";'
+          console.log('Performance Metrics: "'",{ )
+domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)";'" }
 firstPaint: "paint.find(entry => entry.name === 'first-paint')?.startTime",firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime"})}, 0)})}
     // Monitor memory usage;
-if('memory' in, performance) {;
+if('memory' in, performance) { ;
 const memory = (performance, as, any).memory;
-if(process.env.NODE_ENV === 'development') {;"
-        // eslint-disable-next-line no-console";'"
-console.log('Memory Usage: "'",{)";'"
-used: "Math.round(memory.usedJSHeapSize / 1048576) + ' MB'",total: "Math.round(memory.totalJSHeapSize / 1048576) + ' MB'";'"
-limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'"
+if(process.env.NODE_ENV === 'development') {;
+        // eslint-disable-next-line no-console";'
+console.log('Memory Usage: "'",{)";'
+used: "Math.round(memory.usedJSHeapSize / 1048576) + ' MB'",total: "Math.round(memory.totalJSHeapSize / 1048576) + ' MB'";'
+limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'" }
         "})}</PerformanceMonitorProps>;
 return(</PerformanceMonitorProps>;
     <>;
@@ -102,22 +97,20 @@ setTimeout(() => {
 const navigation = performance.getEntriesByType("navigation")[0,] as PerformanceNavigationTiming
           const paint = performance.getEntriesByType("paint")
           if(process.env.NODE_ENV === "development") {
-            //eslint-disable-next-line no-console console.log("Performance Metrics: """,{)
-domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart")
+            //eslint-disable-next-line no-console console.log("Performance Metrics: "",{)
+domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart")" }
 firstPaint: "paint.find(entry => entry.name === "first-paint")?.startTime",firstContentfulPaint: "paint.find(entry => entry.name === "first-contentful-paint")?.startTime"})}
-          console.log("Performance Metrics: """,{)
-domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart")
+          console.log("Performance Metrics: "",{ )
+domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart")" }
 firstPaint: "paint.find(entry => entry.name === "first-paint")?.startTime",firstContentfulPaint: "paint.find(entry => entry.name === "first-contentful-paint")?.startTime"})}, 0)})}
 
-    //Monitor memory usage if("memory" in, performance) {
-const memory = (performance as any).memory
+    //Monitor memory usage if("memory" in, performance) { const memory = (performance as any).memory
 if(process.env.NODE_ENV === "development") {
-        //eslint-disable-next-line no-console console.log("Memory Usage: """,{)
-used: "Math.round(memory.usedJSHeapSize /1048576) + " MB"",total: "Math.round(memory.totalJSHeapSize /1048576) + " MB"
-limi",t: "Math.round(memory.jsHeapSizeLimit /1048576) + " MB"
+        //eslint-disable-next-line no-console console.log("Memory Usage: "",{)
+used: "Math.round(memory.usedJSHeapSize /1048576) + " MB",total: "Math.round(memory.totalJSHeapSize /1048576) + " MB
+limi",t: "Math.round(memory.jsHeapSizeLimit /1048576) + " MB" }
         "})</PerformanceMonitorProps>
 return (</PerformanceMonitorProps> <>
-
   </>
       <Helmet />
         <title>PerformanceMonitor</title>
@@ -133,33 +126,33 @@ return (</PerformanceMonitorProps> <>
     <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 PerformanceMonitor</h1>
-            </h1>"
-            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />"
-Advanced PerformanceMonitor solution for modern businesses.</p>"
+            </h1>
+            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
+Advanced PerformanceMonitor solution for modern businesses.</p>
             </p>",<divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
-Get Started</button>"
-                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />"
-              </button>"
+Get Started</button>
+                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />
+              </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,;
-    <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,;"
-    <div className=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,"
+    <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,;
+    <div className=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,
     <h1 className=&quottext-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; /  />;
 PerformanceMonitor</h1>
             </h1>
-            <p className=&quottext-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; /  />;"
+            <p className=&quottext-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; /  />;
 Advanced PerformanceMonitor solution for modern businesses.</p>
             </p>",<div className=&quotflex flex-col sm: "flex-row gap-4 justify-center&quot /  />;
               <button className=&quotbg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;  />;
 Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /  />;"
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /  />;
               </button>
               <button className=&quotborder border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;  />;
 Learn More</button>
-              </button>"
-            </div>"
-          </div>"
+              </button>
+            </div>
+          </div>
         </section>",{/* Features Section */}
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-7 xl mx-auto&quot; / />,;
@@ -185,14 +178,14 @@ Powerful AI-driven features designed to transform your business operations</p>
               <p className=&quottext-xl text-gray-300 max-w-3 xl mx-auto&quot; /  />;
 Powerful AI-driven features designed to transform your business operations</p>
               </p>
-            </>");"
-    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
+            </>");
+    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)
               {features.map((feature",index) => (<divkey = {index} className=&quotbg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot /  />;
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,;
     <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className = &quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot; />);
-                    {feature.benefits.map((benefit, idx) => (</ul>
+                    { feature.benefits.map((benefit, idx) => (</ul> }
                       <li key = {idx} className = &quot;flex items-center text-sm text-gray-300&quot; />
                         <CheckCircleclassName=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; //>
                         {benefit}</CheckCircle>
@@ -208,8 +201,8 @@ Powerful AI-driven features designed to transform your business operations</p>
               <p className=&quottext-xl text-gray-300 max-w-3 xl mx-auto&quot; /  />;
 Experience the benefits of cutting-edge AI technology</p>
               </p>
-            </>"
-    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />"
+            </>
+    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
               {benefits.map((benefit",index) => (<divkey = {index} className = &quotflex items-start space-x-4&quot /  />;
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /  />;
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
@@ -224,7 +217,7 @@ Experience the benefits of cutting-edge AI technology</p>
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quottext-xl text-gray-300 mb-8&quot; /  />;
 Join thousands of businesses already using our AI solutions</p>
-            </>"
+            </>
     <div className=&quotflex flex-col sm: "flex-row gap-4 justify-center&quot /  />;
               <button className=&quotbg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;  />;
 
@@ -274,180 +267,177 @@ interface PerformanceMonitorProp s{onMetricsUpdate?: (metrics: "PerformanceMetri
 logToConsole?: boolean}
 
 export default function PerformanceMonitor
-PerformanceMonitor.displayName = "PerformanceMonitor"({
-onMetricsUpdate
+PerformanceMonitor.displayName = "PerformanceMonitor"({ onMetricsUpdate
 enableRealTimeMonitoring = true
-logToConsole = true
-}: PerformanceMonitorProps) {
-const [metrics, setMetrics ] = useState<PerformanceMetrics>({
+logToConsole = true }
+}: PerformanceMonitorProps) { const [metrics, setMetrics ] = useState<PerformanceMetrics>({" }
     loadTime: "null",firstContentfulPaint: "null",largestContentfulPaint: "null",firstInputDelay: "null",cumulativeLayoutShift: "null",timeToInteractive: "null",totalBlockingTime: "null"}
     </div>
-    </>
-  )
-  useEffect(() => {
+        </>
+  );
+  useEffect(() => { 
 if (!enableRealTimeMonitoring || typeof window = == "undefined") return const measurePerformance = () => {
       const newMetrics: "PerformanceMetrics={
         loadTim",e: "null",firstContentfulPaint: "null",largestContentfulPaint: "null",firstInputDelay: "null",cumulativeLayoutShift: "null",timeToInteractive: "null",totalBlockingTime: "null") => {
-
+ }
 }
       //Measure page load time
-if(performance.timing) {consttiming = performance.timing
+if(performance.timing) { consttiming = performance.timing
 newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart
       </div>
-      <Footer /  />;"
-    </>"
-  )"}"
-export default PerformanceMonitorPage;"
+      <Footer /  />;
+    </>" }
+  )"}
+export default PerformanceMonitorPage;
 interface PerformanceMonitorProp s{onMetricsUpdate?: (metrics: "PerformanceMetrics) =>void",enableRealTimeMonitoring?: boolean}
-logToConsole?: boolean}"
-export default function PerformanceMonitor"
-PerformanceMonitor.displayName = "PerformanceMonitor"({;
+logToConsole?: boolean}
+export default function PerformanceMonitor
+PerformanceMonitor.displayName = "PerformanceMonitor"({ ;
 onMetricsUpdate;
 enableRealTimeMonitoring = true;
-logToConsole = true);
-}: PerformanceMonitorProps) {;"
-const [metrics, setMetrics] = useState<PerformanceMetrics>({"
+logToConsole = true);" }
+}: PerformanceMonitorProps) { ;
+const [metrics, setMetrics] = useState<PerformanceMetrics>({" }
     loadTime: "null",firstContentfulPaint: "null",largestContentfulPaint: "null",firstInputDelay: "null",cumulativeLayoutShift: "null",timeToInteractive: "null",totalBlockingTime: "null"}
     </div>);
   );
-  useEffect(() => {;'"
-if (!enableRealTimeMonitoring || typeof window = == 'undefined') return const measurePerformance = ("
-      const newMetrics: "PerformanceMetrics={");"
+  useEffect(() => { ;'
+if (!enableRealTimeMonitoring || typeof window = == 'undefined') return const measurePerformance = (
+      const newMetrics: "PerformanceMetrics={");
         loadTim",e: "null",firstContentfulPaint: "null",largestContentfulPaint: "null",firstInputDelay: "null",cumulativeLayoutShift: "null",timeToInteractive: "null",totalBlockingTime: "null",) => {;
-$3;
+$3; }
 }
       // Measure page load time;
-if(performance.timing) {consttiming = performance.timing;
-newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart;
+if(performance.timing) { consttiming = performance.timing;
+newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart; }
      }
       // Measure Core Web Vitals using Performance Observer;
-if('PerformanceObserver' in, windo, w) {  // First Contentful Paint (FCP);
+if('PerformanceObserver' in, windo, w) { // First Contentful Paint (FCP);
 constfcpObserver= new PerformanceObserver((list) => {;
 constentries= list.getEntries();
           constfcpEntry= entries.find(entry=> entry.name=== 'first-contentful-paint');
           if(fcpEntr, y) {;
-newMetrics.firstContentfulPaint = fcpEntry.startTime;
-         ,}"
-        })";'"
+newMetrics.firstContentfulPaint = fcpEntry.startTime;" }
+         ,}
+        })";'
         fcpObserver.observe({ entryTypes: "['paint'] "});
         // Largest Contentful Paint (LCP);
-const lcpObserver = new PerformanceObserver((list) => {;
+const lcpObserver = new PerformanceObserver((list) => { ;
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          newMetrics.largestContentfulPaint = lastEntry.startTime;"
-        })";'"
+          newMetrics.largestContentfulPaint = lastEntry.startTime; }
+        })";'
         lcpObserver.observe({ entryTypes: "['largest-contentful-paint'] "});
-        // First Input Delay (FID);"
-constfidObserver= new PerformanceObserver((list) => {constentries= list.getEntries()"
-          entries.forEach((entry: "any) => {"
-  ",newMetrics.firstInputDelay = entry.processingStart - entry.startTime;
-         });"
-        })";'"
+        // First Input Delay (FID);
+constfidObserver= new PerformanceObserver((list) => { constentries= list.getEntries()
+          entries.forEach((entry: "any) => {
+  ",newMetrics.firstInputDelay = entry.processingStart - entry.startTime;" }
+         });
+        })";'
         fidObserver.observe({ entryTypes: "['first-input'] "});
-        // Cumulative Layout Shift (CLS);"
-letclsValue=0 constclsObserver= new PerformanceObserver((list) => {constentries= list.getEntries()"
-          entries.forEach((entry: "any) => {"
-if(!entry.hadRecentInput) {  ",clsValue += entry.value;
+        // Cumulative Layout Shift (CLS);
+letclsValue=0 constclsObserver= new PerformanceObserver((list) => { constentries= list.getEntries()
+          entries.forEach((entry: "any) => {
+if(!entry.hadRecentInput) {  ",clsValue += entry.value; }
            , }
           });
-newMetrics.cumulativeLayoutShift = clsValue;"
-        })";'"
+newMetrics.cumulativeLayoutShift = clsValue;
+        })";'
         clsObserver.observe({ entryTypes: "['layout-shift'] "});
-        // Time to Interactive (TTI) - approximation;"
-constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries()"
-          constlongTasks= entries.filter((entry: "any) => entry.duration >50);"
-if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now();
-         ,}"
-        })";'"
+        // Time to Interactive (TTI) - approximation;
+constttiObserver= new PerformanceObserver((list) => { constentries= list.getEntries()
+          constlongTasks= entries.filter((entry: "any) => entry.duration >50);
+if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now();" }
+         ,}
+        })";'
 ttiObserver.observe({ entryTypes: "['longtask'] "});
         // Total Blocking Time (TBT) - approximation;
-consttbtObserver = new PerformanceObserver((list) => {constentries= list.getEntries();"
-          constblockingTime= entries"
+consttbtObserver = new PerformanceObserver((list) => { constentries= list.getEntries();
+          constblockingTime= entries
             .filter((entry: "any) => entry.duration >50)",.reduce((total, entry: "any) => total + (entry.duration -50)",0);
-newMetrics.totalBlockingTime = blockingTime;"
-       })";'"
+newMetrics.totalBlockingTime = blockingTime; }
+       })";'
 tbtObserver.observe({entry Types: "['longtask']"});
       }
       // Update metrics state;
 setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }));
       // Call callback if provided;
-if(onMetricsUpdat, e) {onMetricsUpdate(newMetrics);
+if(onMetricsUpdat, e) { onMetricsUpdate(newMetrics); }
      }
-      // Log to console if enabled;"
-if(logToConsole) {  ";'"
-        // // console.log('Performance Metrics Updated: "'",newMetrics);
+      // Log to console if enabled;
+if(logToConsole) { ";'
+        // // console.log('Performance Metrics Updated: "'",newMetrics); }
       }
     }
     // Measure performance after page load;
-if(do, cument.readyState = == 'complete') {measurePerformance();
+if(do, cument.readyState = == 'complete') { measurePerformance(); }
    } else { windo w.addEventListener('load', measurePerformance)}
    }
     // Cleanup;
-return () => {windo w.removeEventListener('load', measurePerformance);
+return () => { windo w.removeEventListener('load', measurePerformance); }
    }
   }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole]);
   // Service Worker registration for performance monitoring;
-useEffect(() => {if('serviceWorker' in, navigator) {;
-navigator.serviceWorker.register('/sw.js');"
-        .then((registration) => {";'"
-          // // console.log('Service Worker registered successfully: "'",registration);
-        });"
-        .catch((registrationError) => {";'"
-          // // console.log('Service Worker registration failed: "'",registrationError);
+useEffect(() => { if('serviceWorker' in, navigator) {;
+navigator.serviceWorker.register('/sw.js');
+        .then((registration) => {";'
+          // // console.log('Service Worker registered successfully: "'",registration);" }
+        });
+        .catch((registrationError) => { ";'
+          // // console.log('Service Worker registration failed: "'",registrationError); }
         });
     }
   }, []);
-  // Performance monitoring dashboard (only, in, development);</PerformanceMetrics>;'"
-if(process.env.NODE_ENV=== 'development') {return(;</PerformanceMetrics>)";'"
+  // Performance monitoring dashboard (only, in, development);</PerformanceMetrics>;'
+if(process.env.NODE_ENV=== 'development') { return(;</PerformanceMetrics>)";'" }
     <div className=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot; /><h3 className=&quot;font-boldmb-2&quot; />PerformanceMetrics</h><div className=&quot;space-y-1&quot; /><di v>LoadTime: "{metrics.loadTime ?`${metrics.loadTime.toFixed(2)"}ms`:'N/A'}</di><di v>FCP: "{metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)"}ms`:'N/A'}</di><di v>LCP: "{metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)"}ms`:'N/A'}</di><di v>FID: "{metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)"}ms`:'N/A'}</di><di v>CLS: "{metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'"}</di><di v>TTI: "{metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)"}ms`:'N/A'}</di><di v>TBT: "{metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)"}ms`:'N/A'}</di></di></di>;
         </div>
         </div>
     );
      }
 
-      //Measure Core Web Vitals using Performance Observer if("PerformanceObserver" in, windo, w) {  //First Contentful Paint (FCP)
+      //Measure Core Web Vitals using Performance Observer if("PerformanceObserver" in, windo, w) { //First Contentful Paint (FCP)
 constfcpObserver= new PerformanceObserver((list) => {
 constentries= list.getEntries()
           constfcpEntry= entries.find(entry=> entry.name=== "first-contentful-paint")
           if(fcpEntr, y) {
-newMetrics.firstContentfulPaint = fcpEntry.startTime
+newMetrics.firstContentfulPaint = fcpEntry.startTime }
          ,}
         })
         fcpObserver.observe({ entryTypes: "["paint"] "})
         //Largest Contentful Paint (LCP)
-const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
+const lcpObserver = new PerformanceObserver((list) => { const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1,]
-          newMetrics.largestContentfulPaint = lastEntry.startTime
+          newMetrics.largestContentfulPaint = lastEntry.startTime }
         })
         lcpObserver.observe({ entryTypes: "["largest-contentful-paint"] "})
         //First Input Delay (FID)
-constfidObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+constfidObserver= new PerformanceObserver((list) => { constentries= list.getEntries()
           entries.forEach((entry: "any) => {
-  ",newMetrics.firstInputDelay = entry.processingStart - entry.startTime
+  ",newMetrics.firstInputDelay = entry.processingStart - entry.startTime }
          }))
         fidObserver.observe({ entryTypes: "["first-input"] "})
         //Cumulative Layout Shift (CLS)
-letclsValue= 0 constclsObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+letclsValue= 0 constclsObserver= new PerformanceObserver((list) => { constentries= list.getEntries()
           entries.forEach((entry: "any) => {
-if(!entry.hadRecentInput) {  ",clsValue+= entry.value
+if(!entry.hadRecentInput) {  ",clsValue+= entry.value }
            }
           })
 newMetrics.cumulativeLayoutShift = clsValue
         })
         clsObserver.observe({ entryTypes: "["layout-shift"] "})
         //Time to Interactive (TTI) - approximation
-constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+constttiObserver= new PerformanceObserver((list) => { constentries= list.getEntries()
           constlongTasks= entries.filter((entry: "any) => entry.duration >50)
-if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now()
+if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now() }
          ,}
         })
 ttiObserver.observe({ entryTypes: "["longtask"] "})
         //Total Blocking Time (TBT) - approximation
-consttbtObserver = new PerformanceObserver((list) => {constentries= list.getEntries()
+consttbtObserver = new PerformanceObserver((list) => { constentries= list.getEntries()
           constblockingTime= entries
             .filter((entry: "any) => entry.duration >50)",.reduce((total, entry: "any) => total+(entry.duration -50)",0)
-newMetrics.totalBlockingTime = blockingTime
+newMetrics.totalBlockingTime = blockingTime }
        })
 tbtObserver.observe({entry Types: "["longtask"]"})
       }
@@ -455,128 +445,128 @@ tbtObserver.observe({entry Types: "["longtask"]"})
       //Update metrics state
 setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }))
       //Call callback if provided
-if(onMetricsUpdat, e) {onMetricsUpdate(newMetrics)
+if(onMetricsUpdat, e) { onMetricsUpdate(newMetrics) }
      }
 
       //Log to console if enabled
-if(logToConsole) {  
-        ////console.log("Performance Metrics Updated: """,newMetrics)
+if(logToConsole) { 
+        ////console.log("Performance Metrics Updated: "",newMetrics) }
     }
 
     //Measure performance after page load
-if(do, cument.readyState = == "complete") {measurePerformance() else { windo w.addEventListener("load", measurePerformance)
+if(do, cument.readyState = == "complete") { measurePerformance() else { windo w.addEventListener("load", measurePerformance) }
    }
 
     //Cleanup
-return () => {windo w.removeEventListener("load", measurePerformance)
+return () => { windo w.removeEventListener("load", measurePerformance) }
    }
   }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole,])
   //Service Worker registration for performance monitoring
-useEffect(() => {if("serviceWorker" in, navigator) { navigator.serviceWorker.register("/sw.js")
+useEffect(() => { if("serviceWorker" in, navigator) { navigator.serviceWorker.register("/sw.js")
         .then((registration) => {
-          ////console.log("Service Worker registered successfully: """,registration)
+          ////console.log("Service Worker registered successfully: "",registration) }
         })
-        .catch((registrationError) => {
-          ////console.log("Service Worker registration failed: """,registrationError)
+        .catch((registrationError) => { 
+          ////console.log("Service Worker registration failed: "",registrationError) }
         })
 
   }, [])
   //Performance monitoring dashboard (only, in, development);</PerformanceMetrics>
-if(process.env.NODE_ENV=== "development") {return(;</PerformanceMetrics>)
-    <divclassName=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot; /><h3className=&quot;font-boldmb-2&quot; />PerformanceMetrics</h><divclassName=&quot;space-y-1&quot; /><di v>LoadTime: "{metrics.loadTime?`${metrics.loadTime.toFixed(2)"}ms`:"N/A"}</di><di v>FCP: "{metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)"}ms`:"N/A"}</di><di v>LCP: "{metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)"}ms`:"N/A"}</di><di v>FID: "{metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)"}ms`:"N/A"}</di><di v>CLS: "{metrics.cumulativeLayoutShift?metrics.cumulativeLayoutShift.toFixed(4):"N/A""}</di><di v>TTI: "{metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)"}ms`:"N/A"}</di><di v>TBT: "{metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)"}ms`:"N/A"}</di></di></di>
+if(process.env.NODE_ENV=== "development") { return(;</PerformanceMetrics>)" }`
+    <divclassName=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot; /><h3className=&quot;font-boldmb-2&quot; />PerformanceMetrics</h><divclassName=&quot;space-y-1&quot; /><di v>LoadTime: "{metrics.loadTime?`${metrics.loadTime.toFixed(2)"}ms`:"N/A"}</di><di v>FCP: "{metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)"}ms`:"N/A"}</di><di v>LCP: "{metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)"}ms`:"N/A"}</di><di v>FID: "{metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)"}ms`:"N/A"}</di><di v>CLS: "{metrics.cumulativeLayoutShift?metrics.cumulativeLayoutShift.toFixed(4):"N/A"}</di><di v>TTI: "{metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)"}ms`:"N/A"}</di><di v>TBT: "{metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)"}ms`:"N/A"}</di></di></di>
         </div>
         </div>
-    </>
-  )
+        </>
+  );
   }
 return nul, l
 }
 
-//Global performance monitoring utilitiesexportconstperformanceUtils = {//Measure custom performance marksmark: "(nam",e: "string) => {
+//Global performance monitoring utilitiesexportconstperformanceUtils = { //Measure custom performance marksmark: "(nam",e: "string) => {
 if(type",of, windo, w !== "undefined" && "performance" in, windo, w) {  
-performance.mark(name)
+performance.mark(name) }
   }
   //Measure time between marks
-measure: "(nam",e: "string",startMark: "string",endMark?: string) => {
+measure: "(nam",e: "string",startMark: "string",endMark?: string) => { 
 if(typeof, window !== "undefined" && "performance" in, window) {
 if(endMark) {
-performance.measure(name, startMark, endMark)
-     } else { performance.measure(namestartMark)
+performance.measure(name, startMark, endMark) }
+     } else { performance.measure(namestartMark) }
      }
 return nul, l;
-}"
-"
-// Global performance monitoring utilitiesexportconstperformanceUtils = {// Measure custom performance marksmark: "(nam",e: "string) => {;";'"
-if(type",of, windo, w !== 'undefined' && 'performance' in, windo, w) {  ;
+}
+
+// Global performance monitoring utilitiesexportconstperformanceUtils = { // Measure custom performance marksmark: "(nam",e: "string) => {;";'
+if(type",of, windo, w !== 'undefined' && 'performance' in, windo, w) {  ; }
 performance.mark(name)}
-  }"
-  // Measure time between marks"
-measure: "(nam",e: "string",startMark: "string",endMark?: string) => {;
+  }
+  // Measure time between marks
+measure: "(nam",e: "string",startMark: "string",endMark?: string) => { ;
 if(typeof, window !== 'undefined' && 'performance' in, window) {;
 if(endMark) {;
-performance.measure(name, startMark, endMark);
+performance.measure(name, startMark, endMark); }
      } else { performance.measure(namestartMark)}
      }
     }
-  }"
-  // Get performance entries"
-getEntries: "(type?: string) => {";'"
+  }
+  // Get performance entries
+getEntries: "(type?: string) => { ";'
 if(typeof",window !== 'undefined' && 'performance' in, window) {;
-return type ? performance.getEntriesByType(type) : performance.getEntries();
+return type ? performance.getEntriesByType(type) : performance.getEntries(); }
     }
     return [];
-  }"
-  // Clear performance entries"
-clearEntries: "(type?: string) => {";'"
+  }
+  // Clear performance entries
+clearEntries: "(type?: string) => { ";'
 if(typeof",window !== 'undefined' && 'performance' in, window) {;
 if(type) {;
-performance.clearMeasures(type);
-performance.clearMarks(type)} else { performance.clearMeasures();
+performance.clearMeasures(type); }
+performance.clearMarks(type)} else { performance.clearMeasures(); }
         performance.clearMarks()}
      }
     }
     }
   }
   //Get performance entries
-getEntries: "(type?: string) => {
+getEntries: "(type?: string) => { 
 if(typeof",window !== "undefined" && "performance" in, window) {
-return type?performance.getEntriesByType(type) : performance.getEntries()
+return type?performance.getEntriesByType(type) : performance.getEntries() }
     }
     return []
   }
   //Clear performance entries
-clearEntries: "(type?: string) => {
+clearEntries: "(type?: string) => { 
 if(typeof",window !== "undefined" && "performance" in, window) {
 if(type) {
 performance.clearMeasures(type)
-performance.clearMarks(type)
+performance.clearMarks(type) }
      } else { performance.clearMeasures()
-        performance.clearMarks()
+        performance.clearMarks() }
      }
     }
   }
 }
 
-//Google Analytics integration for performance trackingexportconsttrackPerformanceToGA = (metrics: "PerformanceMetrics) => {if(type",of, windo, w !== "undefined" && "gtag" in, windo, w) {
+//Google Analytics integration for performance trackingexportconsttrackPerformanceToGA = (metrics: "PerformanceMetrics) => { if(type",of, windo, w !== "undefined" && "gtag" in, windo, w) {
 windo w.gtag("event", "performance_metrics", {
 event_category: "event_category",event_label: "event_label",custom_map: "{
-load_tim",e: "metrics.loadTime",first_contentful_paint: "metrics.firstContentfulPaint",largest_contentful_paint: "metrics.largestContentfulPaint",first_input_delay: "metrics.firstInputDelay",cumulative_layout_shift: "metrics.cumulativeLayoutShift",time_to_interactive: "metrics.timeToInteractive",total_blocking_time: "metrics.totalBlockingTime)
+load_tim",e: "metrics.loadTime",first_contentful_paint: "metrics.firstContentfulPaint",largest_contentful_paint: "metrics.largestContentfulPaint",first_input_delay: "metrics.firstInputDelay",cumulative_layout_shift: "metrics.cumulativeLayoutShift",time_to_interactive: "metrics.timeToInteractive",total_blocking_time: "metrics.totalBlockingTime)" }
      "})
     })
   }
 }
 
-declare global{interface Window {
+declare global{ interface Window {
 
-
+ }
 }
 gtag: "(...arg",s: "any[]) => void"}
   }
 }
-    //Monitor memory usage if("memory" in, performance) {
-const memory = (performance as any).memory console.log("Memory Usage: """,{)
-used: "Math.round(memory.usedJSHeapSize /1048576) + " MB"",total: "Math.round(memory.totalJSHeapSize /1048576) + " MB"
-limi",t: "Math.round(memory.jsHeapSizeLimit /1048576) + " MB"
+    //Monitor memory usage if("memory" in, performance) { 
+const memory = (performance as any).memory console.log("Memory Usage: "",{)
+used: "Math.round(memory.usedJSHeapSize /1048576) + " MB",total: "Math.round(memory.totalJSHeapSize /1048576) + " MB
+limi",t: "Math.round(memory.jsHeapSizeLimit /1048576) + " MB" }
       "})
   }, [])
 return null
@@ -586,31 +576,31 @@ export default PerformanceMonitor
 {}
 export default PerformanceMonitor
 </divclassName>
-</h3 className>"
-</divclassName>"
-}}"'"
+</h3 className>
+</divclassName>
+}}"'
   }
-}"
-";'"
-// Google Analytics integration for performance trackingexportconsttrackPerformanceToGA = (metrics: "PerformanceMetrics) => {if(type",of, windo, w !== 'undefined' && 'gtag' in, windo, w) {;'"
-windo w.gtag('event', 'performance_metrics', {"
-event_category: "event_category",event_label: "event_label",custom_map: "{");"
-load_tim",e: "metrics.loadTime",first_contentful_paint: "metrics.firstContentfulPaint",largest_contentful_paint: "metrics.largestContentfulPaint",first_input_delay: "metrics.firstInputDelay",cumulative_layout_shift: "metrics.cumulativeLayoutShift",time_to_interactive: "metrics.timeToInteractive",total_blocking_time: "metrics.totalBlockingTime)"
+}
+";'
+// Google Analytics integration for performance trackingexportconsttrackPerformanceToGA = (metrics: "PerformanceMetrics) => { if(type",of, windo, w !== 'undefined' && 'gtag' in, windo, w) {;'
+windo w.gtag('event', 'performance_metrics', {
+event_category: "event_category",event_label: "event_label",custom_map: "{");
+load_tim",e: "metrics.loadTime",first_contentful_paint: "metrics.firstContentfulPaint",largest_contentful_paint: "metrics.largestContentfulPaint",first_input_delay: "metrics.firstInputDelay",cumulative_layout_shift: "metrics.cumulativeLayoutShift",time_to_interactive: "metrics.timeToInteractive",total_blocking_time: "metrics.totalBlockingTime)" }
      "});
     });
   }
 }
-declare global{interface Window {;"
-}"
+declare global{ interface Window {; }
+}
 gtag: "(...arg",s: "any[]) => void"}
   }
 }
     // Monitor memory usage;
-if('memory' in, performance) {;"
-const memory = (performance, as, any).memory";'"
-console.log('Memory Usage: "'",{)";'"
-used: "Math.round(memory.usedJSHeapSize / 1048576) + ' MB'",total: "Math.round(memory.totalJSHeapSize / 1048576) + ' MB'";'"
-limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'"
+if('memory' in, performance) { ;
+const memory = (performance, as, any).memory";'
+console.log('Memory Usage: "'",{)";'
+used: "Math.round(memory.usedJSHeapSize / 1048576) + ' MB'",total: "Math.round(memory.totalJSHeapSize / 1048576) + ' MB'";'
+limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'" }
       "})}
   }, []);
 return null}
@@ -619,5 +609,6 @@ export default PerformanceMonitor;
 export default PerformanceMonitor;
 </div className>;
 </h3 className>;
-</div className>;"
-}}";`'"
+</div className>;`
+}}";`'
+"`

@@ -1,15 +1,14 @@
 "use client"
 import React from "react";
 import { Helmet  } from "react-helmet-async";
-import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe        } from "lucide-react"
+import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe        } from "lucide-react";
 import { Phone, Mail  } from "lucide-react";
-    "use client"
-      "Gain competitive advantage with advanced technology"
-const EnhancedHero: "React.FC = () => {
-const benefits = [
-    "Increase efficiency by up to 50%"","Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
+    "use client
+      "Gain competitive advantage with advanced technology
+const EnhancedHero: "React.FC = () => { const benefits = [
+    "Increase efficiency by up to 50%","Reduce costs by 30% with automation
+    "Improve decision-making with AI insights
+    "Scale operations without proportional staff increases
 "Gain competitive advantage with advanced technology" <div className="[^"]*">
 
         </section>
@@ -33,16 +32,15 @@ Start Your Free Trial</button>
         </section>
         </div>
       </div>
-    </>
-  )
+        </>
+  );
 
-export default EnhancedHero;    "Gain competitive advantage with advanced technology"
-    <divclassName = quotflex flex-col sm flex-row gap-4 justify-centerquot ////>
+export default EnhancedHero;    "Gain competitive advantage with advanced technology
+    <divclassName = quotflex flex-col sm flex-row gap-4 justify-centerquot ////> }
 }
 }
 
-export const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
-  return (
+export const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => { return ( }
     <div className={`enhancedhero ${className}`}>
       {children}
     </div>
@@ -50,3 +48,4 @@ export const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', chil
 };
 
 export default EnhancedHero;
+"`

@@ -1,18 +1,16 @@
 "use client"
 import React from "react";
 import React, { useEffect } from &quot;react&quot
-interface AnalyticsProps {
-className?: string
+interface AnalyticsProps { className?: string }
 }
 }
-const Analytics: "React.FC<AnalyticsProps> = ({ children "}) => {
-useEffect(() => {
+const Analytics: "React.FC<AnalyticsProps> = ({ children "}) => { useEffect(() => {
     //Initialize analytics tracking
 const initAnalytics = () => {
 return //Google Analytics initialization
 if (typeof window !== "undefined" && window.gtag) { window.gtag("config", "GA_MEASUREMENT_ID", {)
 page_title: "document.title",page_location: "window.location.href") => {
-
+ }
 })
         })
 
@@ -25,17 +23,16 @@ return (<React.Fragment>
 )
   )
 //Extend Window interface for gtag
-declare global{interface Window {
+declare global{ interface Window {
 
-
+ }
 }
 }
     gtag: "(...arg",s: "any[]) => void;"}
 export default Analytics
 }
 
-export const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }) => {
-  return (
+export const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }) => { return ( }
     <div className={`analytics ${className}`}>
       {children}
     </div>
@@ -43,3 +40,4 @@ export const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }
 };
 
 export default Analytics;
+"`

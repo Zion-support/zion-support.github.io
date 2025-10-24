@@ -9,83 +9,75 @@ keywords?: string[]
 authors?: Array<{ name: "string; url?: string "}> | string[]
 creator?: string
   publisher?: string
-  formatDetection?: {
-email?: boolean
-    address?: boolean
+  formatDetection?: { email?: boolean
+    address?: boolean }
     telephone?: boolean}
   metadataBase?: URL
-  alternates?: {
-canonical?: string
-languages?: Record<string , string  />
+  alternates?: { canonical?: string
+languages?: Record<string , string  /> }
 }
 
 authors?: Array<{ name: "string; url?: string "}> | string[]
 creator?: string
   publisher?: string
-  formatDetection?: {
-email?: boolean
+  formatDetection?: { email?: boolean
     address?: boolean
-    telephone?: boolean
+    telephone?: boolean }
 }
   metadataBase?: URL
-  alternates?: {
-canonical?: string
-languages?: Record<string, string />
+  alternates?: { canonical?: string
+languages?: Record<string, string /> }
 }
-  openGraph?: {
-title?: string
+  openGraph?: { title?: string
 description?: string
 url?: string
 siteName?: string</string>
 images?: Array<{
 url: "string
 width?: number
-height?: number",alt?: string
+height?: number",alt?: string }
 }>
 locale?: string
     type?: string
     authors?: Array<{ name: "string; url?: string "}> | string[]
 publishedTime?: string
   }
-  twitter?: {
-card?: "summary" | "summary_large_image" | "app" | "player"
+  twitter?: { 
+card?: "summary" | "summary_large_image" | "app" | "player
 site?: string
     creator?: string
     title?: string
     description?: string
-    images?: string[]
+    images?: string[] }
 }
-  robots?: {
-index?: boolean
+  robots?: { index?: boolean
     follow?: boolean
     googleBot?: {
 index?: boolean
       follow?: boolean
       "max-video-preview"?: number
-      "max-image-preview"?: "none" | "standard" | "large"
-      "max-snippet"?: number
+      "max-image-preview"?: "none" | "standard" | "large
+      "max-snippet"?: number }
 }
   }
-  verification?: {
-google?: string
+  verification?: { google?: string
 yandex?: string
 yahoo?: string
-other?: Record<string, string />
+other?: Record<string, string /> }
 }
 }
-export interface MetadataRoute {
-
+export interface MetadataRoute { 
 url: "string
 lastModified?: string|Date
-changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
-priority?: number"
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never
+priority?: number" }
 }
 }
 }
 
-export interface MetadataRouteSitemap extends MetadataRoute{
+export interface MetadataRouteSitemap extends MetadataRoute{ 
 url: "string",lastModified?: string|Date
-changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" }
 priority?: number}
 }
 //Custom Next.js types
@@ -119,22 +111,19 @@ export interface ServerComponentProps {
 }
 //Client components types
 
-export interface ClientComponentProps {
-
-children?: React.ReactNode
-className?: string
+export interface ClientComponentProps { children?: React.ReactNode
+className?: string }
 }
 }
 }
 
 //Route handlers
-export interface RouteHandler {
-</Response>
+export interface RouteHandler { </Response>
 GET?: (req: "Request) => Promise<Response />
 POST?: (req: Request) => Promise<Response />
 PUT?: (req: Request) => Promise<Response>
 DELETE?: (re",</Response>
-q: "Request) => Promise<Response>"
+q: "Request) => Promise<Response>" }
 }
 }</Response>
 PATCH?: (req: "Request) => Promise<Response>"}
@@ -161,10 +150,9 @@ notFound?: boolean
 }
 //ISR types
 
-export interface ISRConfig {
-
+export interface ISRConfig { 
 revalidate: "number
-tags?: string[]"
+tags?: string[]" }
 }
 }
 }
@@ -175,7 +163,7 @@ export interface EdgeRuntime {
 
 }
 }
-  runtime: ""edge""}
+  runtime: "edge"}
 
 //Node.js runtime types
 export interface NodeRuntime {
@@ -183,23 +171,22 @@ export interface NodeRuntime {
 
 }
 }
-  runtime: ""nodejs""}
+  runtime: "nodejs"}
 
 //Extend Next.js types
-declare module "next" {
-interface NextApiRequest {
+declare module "next" { interface NextApiRequest {
 
 user?: {
 id: "string",email: "string
-name?: string"
+name?: string" }
 }
 }
 }
 
   }
-}"
+}
 export {}</Response>
-}"
+}
 }
 export {}</Response>
 }

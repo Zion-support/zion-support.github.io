@@ -1,48 +1,47 @@
 "use client"
 :all-pages-backup/components/SEOEnhancer.tsx
 import { { Footer   } from "./Footer";
-import { Navigation  } from "./Navigation"
-import { React  } from "react"
+import { Navigation  } from "./Navigation
+import { React  } from "react
 interface SEOEnhancerProps {
 className?: string}
 }
 }
 
-const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className="" "}) => {
-return (</SEOEnhancerProps>
+const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className=" "}) => { return (</SEOEnhancerProps> }
     <divclassName = {className} / />
       <h2>SEOEnhancer</h2>
       <p>This component is under construction.</p>
       </div>
-    </>
-  )
+        </>
+  );
   )
 }
 
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
-  return (
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => { return ( }
     <div className={`seoenhancer ${className}`}>
       {children}
-    </div>
+    </div>;
   );
 'use client'
 :all-pages-backup/components/SEOEnhancer.tsx;
 import Footer from './Footer'
 import Navigation from './Navigation'
-import React from 'react'
-interface SEOEnhancerProps {;
-className?: string;
+import React from 'react';
+interface SEOEnhancerProps { ;
+className?: string; }
 }
 }
 }'
-const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = '' "}) => {;
-return(</>;
+const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = '' "}) => { ;
+return(</>; }
     <div className={className} /  />
       <h2>SEOEnhancer</h2>
       <p>This component is under construction.</p>);
       </div>);
-  )}"
-export default SEOEnhancer}";'"
+  )}
+export default SEOEnhancer}";'
 };
 
 export default SEOEnhancer;
+"`

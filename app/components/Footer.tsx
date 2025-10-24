@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from "lucide-react";
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
+const Footer: React.FC = () => { const currentYear = new Date().getFullYear()" }
   const aiServices = [{ name: "AI Analytics & BI", url: "/ai-analytics", description: "Business intelligence" },
     { name: "AI Automation", url: "/ai-automation", description: "Process automation" },
     { name: "AI Chatbots & NLP", url: "/ai-chatbot-builder", description: "Conversational AI" },
@@ -71,7 +70,7 @@ const Footer: React.FC = () => {
               {aiServices.map((service, index) => (<li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+              className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group
                   > <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
@@ -90,7 +89,7 @@ const Footer: React.FC = () => {
               {itServices.map((service, index) => (<li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+              className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group
                   > <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
@@ -107,7 +106,7 @@ const Footer: React.FC = () => {
                 {companyLinks.map((link, index) => (<li key={index}>
                     <Link 
                       href={link.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
+              className="text-gray-300 hover:text-white transition-colors text-sm
                     >
                       {link.name}
                     </Link>
@@ -122,7 +121,7 @@ const Footer: React.FC = () => {
                 {supportLinks.map((link, index) => (<li key={index}>
                     <Link 
                       href={link.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
+              className="text-gray-300 hover:text-white transition-colors text-sm
                     >
                       {link.name}
                     </Link>
