@@ -1,8 +1,5 @@
 import React from 'react';
 
-
-import React from 'react';
-
 interface ServiceCardSkeletonProps {
   // Add props here
 }
