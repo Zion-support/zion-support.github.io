@@ -59,11 +59,22 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
               {subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center transform hover:scale-105">
                 {ctaText}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+=======
+              <a
+                href={ctaLink}
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
+              >
+                {ctaText}
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
                 Learn More
               </button>
             </div>
@@ -72,12 +83,28 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
           {/* Features grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+=======
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              >
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  {feature.description}
+                </p>
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
               </div>
             ))}
           </div>
@@ -87,4 +114,8 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticHero;
+=======
+export default FuturisticHero
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb

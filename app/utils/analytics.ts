@@ -1,24 +1,24 @@
 // Analytics utilities for tracking user interactions and performance
-import React from "react"
+import React from "react";
 
 interface AnalyticsEvent {
-  category: string
-  action: string
-  label?: string
-  value?: number
-  timestamp?: number
-  custom_parameters?: Record<string, unknown>
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+  timestamp?: number;
+  custom_parameters?: Record<string, unknown>;
 }
 
 class Analytics {
-  private static instance: Analytics
-  private events: AnalyticsEvent[] = []
+  private static instance: Analytics;
+  private events: AnalyticsEvent[] = [];
 
   static getInstance(): Analytics {
     if (!Analytics.instance) {
-      Analytics.instance = new Analytics()
+      Analytics.instance = new Analytics();
     }
-    return Analytics.instance
+    return Analytics.instance;
   }
 
   // Track custom events
@@ -26,13 +26,19 @@ class Analytics {
     this.events.push({
       ...event,
       timestamp: Date.now()
-    })
+    });
 
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
+<<<<<<< HEAD
       this.sendToAnalytics(event)
     } else {
       console.log("Analytics Event:", event)
+=======
+      this.sendToAnalytics(event);
+    } else {
+      console.log("Analytics Event:", event);
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
     }
   }
 
@@ -46,7 +52,11 @@ class Analytics {
         page_title: title || document.title,
         page_url: window.location.href
       }
+<<<<<<< HEAD
     })
+=======
+    });
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
   }
 
   // Track user interactions
@@ -58,7 +68,12 @@ class Analytics {
       custom_parameters: {
         location
       }
+<<<<<<< HEAD
     })
+=======
+    });
+  }
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
 
   // Track form submissions
   trackFormSubmission(formName: string, success: boolean): void {
@@ -66,7 +81,8 @@ class Analytics {
       category: "Form",
       action: success ? "Submit Success" : "Submit Error",
       label: formName
-    })
+    });
+  }
 
   // Track performance metrics
   trackPerformance(metric: string, value: number, unit: string = "ms"): void {
@@ -78,7 +94,12 @@ class Analytics {
       custom_parameters: {
         unit
       }
+<<<<<<< HEAD
     })
+=======
+    });
+  }
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
 
   // Track errors
   trackError(error: Error, context?: string): void {
@@ -91,15 +112,22 @@ class Analytics {
         error_stack: error.stack,
         context
       }
+<<<<<<< HEAD
     })
+=======
+    });
+  }
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
 
   // Get all events
   getEvents(): AnalyticsEvent[] {
-    return [...this.events]
+    return [...this.events];
+  }
 
   // Clear events
   clearEvents(): void {
-    this.events = []
+    this.events = [];
+  }
 
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
@@ -110,12 +138,16 @@ class Analytics {
         event_label: event.label,
         value: event.value,
         ...event.custom_parameters
+<<<<<<< HEAD
       })
+=======
+      });
+    }
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
   }
 }
 
-
-export const analytics = Analytics.getInstance()
+export const analytics = Analytics.getInstance();
 
 // React hooks for easy integration
 export function useAnalytics() {
@@ -126,15 +158,24 @@ export function useAnalytics() {
     trackFormSubmission: analytics.trackFormSubmission.bind(analytics),
     trackPerformance: analytics.trackPerformance.bind(analytics),
     trackError: analytics.trackError.bind(analytics)
-  }
+  };
+}
 
 // Higher-order component for automatic page view tracking
 export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
   return ((props: unknown) => {
-    const { trackPageView } = useAnalytics()
+    const { trackPageView } = useAnalytics();
     React.useEffect(() => {
+<<<<<<< HEAD
       trackPageView(window.location.pathname, document.title)
     }, [trackPageView])
     return React.createElement(WrappedComponent, props)
   }) as T
 }
+=======
+      trackPageView(window.location.pathname, document.title);
+    }, [trackPageView]);
+    return React.createElement(WrappedComponent, props);
+  }) as T;
+}
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb

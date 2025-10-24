@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import { X, Menu } from 'lucide-react';
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
 
 interface NavigationBackupProps {
   logo?: string;
@@ -62,7 +66,11 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
                   {item.label}
                 </a>
                 {item.submenu && (
+<<<<<<< HEAD
                   <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+=======
+                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
                     <div className="py-1">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
@@ -96,9 +104,13 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
+<<<<<<< HEAD
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
+=======
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
             </button>
           </div>
         </div>

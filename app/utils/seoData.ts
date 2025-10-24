@@ -1,14 +1,15 @@
 export interface StructuredData {
-  '@context': string
-  '@type': string
-  name: string
-  description: string
-  url: string
-  logo?: string
-  sameAs?: string[]
+  '@context': string;
+  '@type': string;
+  name: string;
+  description: string;
+  url: string;
+  logo?: string;
+  sameAs?: string[];
 }
 
 export interface SEOData {
+<<<<<<< HEAD
   title: string
   description: string
   keywords: string[]
@@ -22,6 +23,21 @@ export interface SEOData {
   twitterDescription?: string
   twitterImage?: string
   structuredData?: StructuredData
+=======
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: StructuredData;
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
 }
 
 export const defaultSEOData: SEOData = {
@@ -49,7 +65,11 @@ export const defaultSEOData: SEOData = {
       'https://linkedin.com/company/ziontechgroup'
     ]
   }
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
 
 export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
   return {
@@ -59,5 +79,10 @@ export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
       ...defaultSEOData.structuredData,
       ...customData.structuredData
     }
+<<<<<<< HEAD
   }
 }
+=======
+  };
+};
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb

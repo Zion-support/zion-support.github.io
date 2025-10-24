@@ -68,9 +68,35 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
+<<<<<<< HEAD
       .keyboard-navigation *:focus {
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
+=======
+      .ux-enhanced {
+        ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
+      }
+      
+      .ux-enhanced button:hover {
+        ${enableHoverEffects ? 'transform: translateY(-2px);' : ''}
+        ${enableHoverEffects ? 'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' : ''}
+      }
+      
+      .ux-enhanced input:focus,
+      .ux-enhanced textarea:focus,
+      .ux-enhanced select:focus {
+        ${enableFocusManagement ? 'outline: 2px solid #3b82f6;' : ''}
+        ${enableFocusManagement ? 'outline-offset: 2px;' : ''}
+      }
+      
+      .keyboard-navigation *:focus {
+        ${enableKeyboardNavigation ? 'outline: 2px solid #3b82f6;' : ''}
+        ${enableKeyboardNavigation ? 'outline-offset: 2px;' : ''}
+      }
+      
+      .high-contrast {
+        filter: contrast(150%);
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
       }
       
       .reduced-motion * {
@@ -78,6 +104,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
+<<<<<<< HEAD
       
       .high-contrast {
         filter: contrast(150%);
@@ -91,12 +118,15 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
       }
+=======
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
     `;
     document.head.appendChild(style);
 
     return () => {
       document.head.removeChild(style);
     };
+<<<<<<< HEAD
   }, []);
 
   return (
@@ -107,6 +137,12 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         ${enableFocusManagement ? 'focus-management-enabled' : ''}
       `}
     >
+=======
+  }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion]);
+
+  return (
+    <div className="ux-enhanced">
+>>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
       {children}
     </div>
   );
