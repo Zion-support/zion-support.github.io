@@ -1,8 +1,8 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const CybersecurityPage: React.FC = () => {
+export default function Cybersecurity() {
   const features = [
     {
       icon: Brain,
@@ -26,21 +26,34 @@ const CybersecurityPage: React.FC = () => {
     }
   ];
 
-  // const benefits = [] // Unused variable
-
-export default function CybersecurityPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cybersecurity
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Learn more about our cybersecurity solutions.
-          </p>
+    <>
+      
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Cybersecurity
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional cybersecurity solutions powered by advanced AI and cutting-edge technology.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

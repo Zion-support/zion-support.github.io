@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const ServicesPage: React.FC = () => {
+export default function Services() {
   const features = [
     {
       icon: Brain,
@@ -27,76 +26,34 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  // const benefits = [] // Unused variable
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We provide comprehensive AI and IT solutions to help your business thrive in the digital age.
-          </p>
-        </div>
-      </section>
+    <>
+      
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional services solutions powered by advanced AI and cutting-edge technology.
+            </p>
+          </div>
 
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {serviceCategories.map((category, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <category.icon />
-                  <h3 className="text-2xl font-bold text-white ml-4">{category.title}</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <p className="text-gray-300 mb-6">{category.description}</p>
-                <ul className="space-y-3">
-                  {category.services.map((service, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <Circle className="w-8 h-8" />
-                      {service}
-                    </li>
-                  ))}
-                </ul>
-                <button className="mt-6 text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
-                  Learn More
-                  <ArrowRight className="w-8 h-8" />
-                </button>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss your project and see how we can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                Contact Us
-                <ArrowRight className="w-8 h-8" />
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-                Schedule Call
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
-
-
-}}
-
-
-
+}

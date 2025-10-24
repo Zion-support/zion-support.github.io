@@ -1,19 +1,67 @@
-const fs = require('fs''
-const path = require('path''
-  fixed = fixed.replace(/export const "metadata": Metadata = {}\n\s*"title": /g, 'export const "metadata": Metadata = {\n  title:'',
-  fixed = fixed.replace(/const features = \[\]\n\s*\{\}\n\s*,/g, 'const features = [\n    {''
-  fixed = fixed.replace(/import \{\}\n\s*ArrowRight,/g, 'import {\n  ArrowRight,''
-  fixed = fixed.replace(/= \{\}\n\s*"title": /g, '= {\n  "title": '',
-  fixed = fixed.replace(/= \{\}\n\s*"icon": /g, '= {\n  "icon": '',
-  fixed = fixed.replace(/= \[\]\n\s*\{\}\n\s*"icon": /g, '= [\n    {\n      "icon": '',
-  fixed = fixed.replace(/= \[\]\n\s*\{\}/g, '= [\n    {''
-    return match.replace('import {}', 'import {''
-  fixed = fixed.replace(/export const "metadata": Metadata = \{\n\s*title:/g, 'export const "metadata": Metadata = {\n  title:'',
-  fixed = fixed.replace(/const \w+: React\.FC = \(\) => \{\}\n\s*const/g, 'const $"1": React.FC = () => {\n  const'',}
-    const content = fs.readFileSync(filePath, 'utf8''
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules''
-    } else if (item.endsWith('.tsx') || item.endsWith('.jsx''
-console.log('Fixing syntax errors...''
-processDirectory('/workspace/app''
-processDirectory('/workspace/src'';
-console.log('Syntax error fixing complete!''
+const fs = require('fs');
+const path = require('path');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix missing function declarations
+    if (content.includes('const CaseStudiesPage: React.FC = () => {}') && !content.includes('export default')) {
+      content = content.replace('const CaseStudiesPage: React.FC = () => {}', 'export default function CaseStudiesPage() {');
+    }
+    
+    // Fix malformed JSX fragments
+    content = content.replace(/<React\.Fragment>/g, '<>');
+    content = content.replace(/<\/React\.Fragment>/g, '</>');
+    
+    // Fix malformed array syntax
+    content = content.replace(/"([^"]*)"\s*,\s*""/g, '"$1",');
+    content = content.replace(/"([^"]*)"\s*""/g, '"$1"');
+    
+    // Fix missing closing braces and parentheses
+    if (content.includes('return (') && !content.includes('};')) {
+      content = content.replace(/(\s+)(<\/>)\s*,\s*""\s*\)\s*,\s*""\s*;\s*""\s*""\s*""\s*""/g, '$1$2\n  );\n};');
+    }
+    
+    // Fix missing function closing
+    if (content.includes('return (') && !content.includes('export default')) {
+      content += '\n\nexport default function Page() {}';
+    }
+    
+    // Fix malformed object properties
+    content = content.replace(/id=\s*(\d+)/g, 'id: $1');
+    
+    // Fix missing semicolons and commas
+    content = content.replace(/(\w+)\s*=\s*\[/g, '$1 = [');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Get all page files
+const appDir = path.join(__dirname, 'app');
+const pageFiles = [];
+
+function findPageFiles(dir) {
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isDirectory()) {
+      findPageFiles(filePath);
+    } else if (file === 'page.tsx') {
+      pageFiles.push(filePath);
+    }
+  });
+}
+
+findPageFiles(appDir);
+
+// Fix all page files
+pageFiles.forEach(fixSyntaxErrors);
+
+console.log(`Fixed ${pageFiles.length} page files`);

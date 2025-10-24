@@ -1,5 +1,34 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import {
+  HomeIcon,
+  InformationCircleIcon,
+  CpuChipIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  CogIcon,
+  ChartBarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  GlobeAltIcon,
+  CheckCircleIcon,
+  CircleStackIcon,
+  CurrencyDollarIcon,
+  CloudIcon,
+  ShieldCheckIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  SignalIcon,
+  AcademicCapIcon,
+  QuestionMarkCircleIcon,
+  UserGroupIcon,
+  UserPlusIcon,
+  PhoneIcon,
+  ChevronDownIcon
+} from '@heroicons/react/24/outline';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -11,30 +40,30 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },";
-    { name: 'About', href: '/about', icon: InformationCircleIcon },";
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
       name: 'AI Services',
       href: '/ai-services',
       icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },";
-        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },";
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },";
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },";
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },";
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },";
-        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },";
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },";
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }";
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
       ]
     },
     {
-      name: 'Micro SaaS',";
-      href: '/micro-saas-solutions',";
+      name: 'Micro SaaS',
+      href: '/micro-saas-solutions',
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
@@ -62,59 +91,45 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     {
-      name: 'Resources',";
-      href: '#',";
+      name: 'Resources',
+      href: '#',
       icon: DocumentTextIcon,
       submenu: [
-        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },";
-        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },";
-        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },";
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },";
-        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },";
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }";
+        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
       ]
     },
     {
-      name: 'Company',";
-      href: '#',";
+      name: 'Company',
+      href: '#',
       icon: UserGroupIcon,
       submenu: [
-        { name: 'About Us', href: '/about', icon: InformationCircleIcon },";
-        { name: 'Our Team', href: '/team', icon: UserGroupIcon },";
-        { name: 'Careers', href: '/careers', icon: UserGroupIcon },";
-        { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },";
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }";
+        { name: 'About Us', href: '/about', icon: InformationCircleIcon },
+        { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+        { name: 'Careers', href: '/careers', icon: UserGroupIcon },
+        { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },
+        { name: 'Contact', href: '/contact', icon: PhoneIcon }
       ]
     },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
-  // const aiServices = [
-  //   { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
-  //   { name: 'AI Content Generator', href: '/ai-content-generator' },
-  //   { name: 'AI Data Visualizer', href: '/ai-data-visualizer' },
-  //   { name: 'AI Document Intelligence', href: '/ai-document-intelligence' },
-  //   { name: 'AI Financial Forecasting', href: '/ai-financial-forecasting' },
-  //   { name: 'AI Fraud Detection', href: '/ai-fraud-detection' }
-  // ];
+  const toggleServicesMenu = () => setIsServicesOpen(!isServicesOpen);
+  const toggleSolutionsMenu = () => setIsSolutionsOpen(!isSolutionsOpen);
+  const toggleResourcesMenu = () => setIsResourcesOpen(!isResourcesOpen);
+  const toggleCompanyMenu = () => setIsCompanyOpen(!isCompanyOpen);
 
-  // const itServices = [
-  //   { name: 'Web Development', href: '/web-development' },
-  //   { name: 'Mobile Development', href: '/mobile-development' },
-  //   { name: 'API Development', href: '/api-development' },
-  //   { name: 'Cloud Solutions', href: '/cloud-solutions' },
-  //   { name: 'Cybersecurity', href: '/cybersecurity' },
-  //   { name: 'Data Analytics', href: '/data-analytics' }
-  // ];
-
-  // const microSaas = [
-  //   { name: 'Analytics Dashboard', href: '/analytics-dashboard' },
-  //   { name: 'Expense Tracker Pro', href: '/expense-tracker-pro' },
-  //   { name: 'Inventory Manager', href: '/inventory-manager' },
-  //   { name: 'Task Manager Pro', href: '/task-manager-pro' },
-  //   { name: 'Social Media Scheduler', href: '/social-media-scheduler' }
-  // ];
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <nav className="bg-slate-900 shadow-lg">
@@ -122,13 +137,67 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="flex-shrink-0 flex items-center">
+              <Link href="/" className="flex-shrink-0 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">Z</span>
                 </div>
                 <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
               </Link>
             </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                {item.submenu ? (
+                  <div className="relative">
+                    <button className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                      <item.icon className="w-5 h-5 mr-2" />
+                      {item.name}
+                      <ChevronDownIcon className="w-4 h-4 ml-1" />
+                    </button>
+                    {/* Desktop Dropdown */}
+                    <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="py-1">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
+                          >
+                            <subItem.icon className="w-4 h-4 mr-3" />
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                    }`}
+                  >
+                    <item.icon className="w-5 h-5 mr-2" />
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -164,7 +233,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     }`}>
                       {item.submenu.map((subItem) => (
                         <Link key={subItem.name}
-                          to={subItem.href}
+                          href={subItem.href}
                           className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700"
                           onClick={() => setIsOpen(false)}
                         >
@@ -177,7 +246,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 ) : (
                   <div>
                     <Link
-                      to={item.href}
+                      href={item.href}
                       className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
                         isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'
                       }`}

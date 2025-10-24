@@ -1,99 +1,59 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const ITServicesPage: React.FC = () => {
-  const services = [
+export default function ItServices() {
+  const features = [
     {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure for modern businesses",
-      features: [
-        "AWS/Azure/GCP Migration",
-        "Cloud Architecture Design",
-        "Cost Optimization",
-        "24/7 Monitoring"
-      ],
-      price: "Starting at $2,000"
+      icon: Brain,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Protect your business from evolving threats",
-      features: [
-        "Security Audits",
-        "Threat Detection",
-        "Compliance Management",
-        "Incident Response"
-      ],
-      price: "Starting at $3,500"
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.'
     },
     {
-      icon: Server,
-      title: "DevOps Services",
-      description: "Streamline development and deployment processes",
-      features: [
-        "CI/CD Pipeline Setup",
-        "Infrastructure as Code",
-        "Container Orchestration",
-        "Performance Monitoring"
-      ],
-      price: "Starting at $4,000"
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Turn your data into actionable insights",
-      features: [
-        "Data Warehousing",
-        "Business Intelligence",
-        "Real-time Dashboards",
-        "Predictive Analytics"
-      ],
-      price: "Starting at $5,000"
+      icon: Globe,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
   ];
 
-  // const benefits = [] // Unused variable
-
-      import {},
-      Server,
-      Cloud,
-      Network,
-      Globe,
-      Settings,
-      Users,
-      Lock,
-      Code,
-      HardDrive,
-      Wifi,
-      CheckCircle,
-      ArrowRight,
-      Star,
-      TrendingUp,
-      Award,
-      Sparkles,
-      Layers,
-      Key,
-      FileText,
-      MessageSquare,
-      ShoppingCart,
-
-const ItServicesPage: React.FC = () => {
   return (
-      <SEOHead;>
-title="It Services - Zion Tech Group"""
-        description="Professional it services solutions for modern businesses""
-      />""
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div  className ="text-center">""
-          <h1  className ="text-4xl font-bold mb-4">It Services</h1>""
-          <p  className ="text-gray-300">Professional solutions coming soon...</p>;""
+    <>
+      
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              It Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional it services solutions powered by advanced AI and cutting-edge technology.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
-  ),
-
-
-
+  );
+}
