@@ -156,11 +156,7 @@ const AIAutomationPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-<<<<<<< HEAD
                   <useCase.icon className="w-8 h-8 text-purple-400" />
-=======
-                  <useCase.icon className="w-6 h-6 text-blue-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-5202
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
