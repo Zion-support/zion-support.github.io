@@ -1,3 +1,0 @@
-
-const EnhancedAccessibilityWrapper: React.FC<
-    <

@@ -1,6 +1,0 @@
-
-const sitemap = `<
-    <
-    <
-    <
-    <priority><

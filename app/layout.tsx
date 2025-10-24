@@ -1,17 +1,39 @@
-'use client';
-import React from 'react';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-interface layoutProps {
-  className?: string;
-}
+const inter = Inter({ subsets: ['latin'] });
 
-const layout: React.FC<layoutProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>layout</h2>
-      <p>layout component for enhanced functionality.</p>
-    </div>
-  );
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
+  authors: [{ name: 'Zion Tech Group' }],
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  },
 };
 
-export default layout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  );
+}
