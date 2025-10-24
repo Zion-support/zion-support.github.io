@@ -5,7 +5,7 @@ import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (..._args: unknown[]) => void;
   }
 }
 
