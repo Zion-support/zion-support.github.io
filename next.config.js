@@ -1,6 +1,6 @@
 /** @type {import("next").NextConfig} */const nextConfig = {
-  //Use standalone output for better compatibility
-  output: "standalone",
+  //Use export output to avoid static generation issues
+  output: "export",
   trailingSlash: true,
   
   // Image optimization
@@ -29,8 +29,12 @@
     optimizePackageImports: ["@heroicons/react", "lucide-react"]
   },
 
-  //Optimize static generation
-  staticPageGenerationTimeout: 60,
+  //Disable static generation to avoid Module type errors
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
   //Enable SWC minification for better performance
   swcMinify: true,
   //Generate build ID for better caching

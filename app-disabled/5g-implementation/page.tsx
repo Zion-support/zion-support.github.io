@@ -3,7 +3,9 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
+
+export const dynamic = 'force-dynamic'
 
 export default function ServicePage() {
   return (
@@ -36,7 +38,7 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
