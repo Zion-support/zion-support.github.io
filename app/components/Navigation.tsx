@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [aiServicesOpen, setAiServicesOpen] = useState(false)
   const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [microSaasOpen, setMicroSaasOpen] = useState(false)
+  const [_microSaasOpen, _setMicroSaasOpen] = useState(false)
 
   // Handle scroll effect
   useEffect(() => {
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain', url: '/blockchain', icon: LinkIcon, description: 'Blockchain technology' }
   ]
 
-  const microSaasServices = [
+  const _microSaasServices = [
     { name: 'AI Project Management Pro', url: '/ai-project-management-pro', icon: Target, description: 'AI-powered project management' },
     { name: 'AI Financial Analytics Pro', url: '/ai-financial-analytics-pro', icon: DollarSign, description: 'Advanced financial analytics' },
     { name: 'AI Email Automation', url: '/ai-email-automation', icon: Mail, description: 'Automated email marketing' },
