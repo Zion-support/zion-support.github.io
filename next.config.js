@@ -15,7 +15,6 @@ const nextConfig = {
   },
   
   // Disable static optimization
-  generateStaticParams: false,
   
   // Disable linting and type checking during build
   eslint: {

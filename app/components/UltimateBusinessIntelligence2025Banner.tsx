@@ -4,7 +4,7 @@ import Link from 'next/link';
   
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true); // eslint-disable-line @typescript-eslint/no-unused-vars
   
   const content = [
     {
@@ -58,6 +58,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(timer);
   }, [content.length]);
 
+  // const handleClose = () => {
+  //   setIsVisible // eslint-disable-line @typescript-eslint/no-unused-vars(false);
+  // };
   if (!isVisible) return null;
   const currentContent = content[currentSlide];
   return (
