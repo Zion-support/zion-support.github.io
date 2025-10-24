@@ -4,18 +4,23 @@
  * Real-time application monitoring, performance tracking, and error reporting
  */
 
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: any[]): void
+}
+
 const performanceConfig = {
   monitoring: {
-    enableLongTaskDetection: true
-    enableMemoryMonitoring: true
+    enableLongTaskDetection: true,
+    enableMemoryMonitoring: true,
     sampleRate: 0.1
-  }
+  },
   webVitals: {
-    lcp: { good: 2500, needsImprovement: 4000 }
-    fid: { good: 100, needsImprovement: 300 }
-    cls: { good: 0.1, needsImprovement: 0.25 }
-    fcp: { good: 1800, needsImprovement: 3000 }
-    ttfb: { good: 800, needsImprovement: 1800 }
+    lcp: { good: 2500, needsImprovement: 4000 },
+    fid: { good: 100, needsImprovement: 300 },
+    cls: { good: 0.1, needsImprovement: 0.25 },
+    fcp: { good: 1800, needsImprovement: 3000 },
+    ttfb: { good: 800, needsImprovement: 1800 },
     inp: { good: 200, needsImprovement: 500 }
   }
 }
@@ -88,7 +93,7 @@ class MonitoringService {
           const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value
+              clsValue += (entry as any).value
               this.metrics.cls = clsValue
               this.reportMetric('cls', clsValue)
             }
@@ -154,10 +159,10 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message
-        stack: event.error?.stack
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })
@@ -165,9 +170,9 @@ class MonitoringService {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })
@@ -189,7 +194,7 @@ class MonitoringService {
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value)
+        value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })
     }
@@ -208,7 +213,7 @@ class MonitoringService {
     // Send to error tracking service (if configured)
     if (typeof gtag === 'function') {
       gtag('event', 'exception', {
-        description: error.message
+        description: error.message,
         fatal: false
       })
     }
@@ -227,13 +232,13 @@ class MonitoringService {
   }
 
   public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
+    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
         // eslint-disable-next-line no-console
         console.log('Memory usage:', {
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`
+          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         })
       }
@@ -246,12 +251,12 @@ class MonitoringService {
       if (navigation) {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`
-          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`
-          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`
-          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`
-          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`
-          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`
+          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
+          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
+          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
+          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
+          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         })
       }
