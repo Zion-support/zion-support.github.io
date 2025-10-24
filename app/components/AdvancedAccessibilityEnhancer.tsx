@@ -87,38 +87,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       root.classList.add('high-contrast')
     } else {
       root.classList.remove('high-contrast')
-
-const AdvancedAccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  // Apply accessibility settings
-  useEffect(() => {
-    const root = document.documentElement
 
     // Apply reduced motion
     if (accessibilitySettings.reducedMotion) {
@@ -136,7 +105,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (typeof window === 'undefined') return
 
     const handleKeyDown = (event: KeyboardEvent) => {
-  
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
@@ -221,9 +189,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       const firstElement = focusableElements[0]
       const lastElement = focusableElements[focusableElements.length - 1]
 
-      consthandleTabKey= (e: KeyboardEvent) => {
-  
-        if (e.key=== 'Tab') {
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
           if (e.shiftKey) {
             if (document.activeElement === firstElement) {
               lastElement.focus()
@@ -250,7 +217,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup
-
+    })
   }, [])
 
   // ARIA labels enhancement
@@ -266,11 +233,13 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       } else {
         button.setAttribute('aria-label', `Button ${index + 1}`)
       }
+    })
 
     // Add ARIA labels to images
     const images = document.querySelectorAll('img:not([alt])')
     images.forEach((img, index) => {
       img.setAttribute('alt', `Image ${index + 1}`)
+    })
 
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
@@ -284,7 +253,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       } else {
         input.setAttribute('aria-label', `Input ${index + 1}`)
       }
-
+    })
   }, [])
 
   // Skip links
@@ -308,6 +277,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       link.className = 'skip-link'
       link.setAttribute('data-skip-link', 'true')
       skipLinksContainer.appendChild(link)
+    })
 
     document.body.insertBefore(skipLinksContainer, document.body.firstChild)
   }, [])
@@ -402,4 +372,3 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
 
 export default AdvancedAccessibilityEnhancer
-

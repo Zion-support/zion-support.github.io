@@ -4,7 +4,7 @@ interface AnalyticsProps {
   className?: string;
 }
 
-const Analytics: React.FC = () => {
+const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
   useEffect(() => {
     const initAnalytics = () => {
       if (typeof window !== "undefined" && window.gtag) {
@@ -21,6 +21,3 @@ const Analytics: React.FC = () => {
 }
 
 export default Analytics
-};
-
-export default AnalyticsPage;

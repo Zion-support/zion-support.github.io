@@ -27,9 +27,9 @@ interface AnalyticsProviderProps {
   children: ReactNode
 }
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
-  
-    if (type of windo w !=="undefined") {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
@@ -37,36 +37,36 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         script.async = true
         document.head.appendChild(script)
 
-        window.gtag =
-          window.gtag ||
-          function (...args: any[]) {
-            (window.gtag as any).q = (window.gtag as any).q || []
-            (window.gtag as any).q.push(args)
-          }
+        window.gtag = function() {
+          // eslint-disable-next-line prefer-rest-params
+          window.dataLayer = window.dataLayer || []
+          // eslint-disable-next-line prefer-rest-params
+          window.dataLayer.push(arguments)
+        }
+
         window.gtag("js", new Date())
-        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
+        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID)
       }
     }
   }, [])
 
-  consttrackEvent= (
-    eventName: string,
-    parameters?: Record<string, unknown>,
-  ) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", eventName, parameters)
     }
   }
 
-  consttrackPageView= (pageName: string) => {if (type of windo w !=="undefined" && windo w.gtag) {
-      window.gtag("config","GA_MEASUREMENT_ID", {
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID, {
         page_title: pageName,
         page_location: window.location.href,
       })
     }
   }
 
-  constvalue: AnalyticsContextType = {trackEvent,
+  const value: AnalyticsContextType = {
+    trackEvent,
     trackPageView,
   }
 
@@ -78,7 +78,3 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 }
 
 export default AnalyticsProvider
-  );
-};
-
-export default AnalyticsProviderPage;

@@ -3,8 +3,8 @@
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
-import React from 'react';
-import { useRef } from 'react';
+import React, { useEffect } from 'react';
+
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -16,6 +16,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
     timeout = setTimeout(() => func(...args), wait);
   };
 };
+
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -30,17 +31,20 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
     }
   };
 };
+
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
+
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor();
     }
     return PerformanceMonitor.instance;
   }
+
   // Track component render time
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
@@ -48,6 +52,7 @@ export class PerformanceMonitor {
       console.log(`${componentName} rendered in ${renderTime}ms`);
     }
   }
+
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
@@ -57,14 +62,17 @@ export class PerformanceMonitor {
       }
     }
   }
+
   // Get performance metrics
   getMetrics() {
     return Object.fromEntries(this.metrics);
   }
+
   // Clear metrics
   clearMetrics() {
     this.metrics.clear();
   }
+
   // Monitor long tasks
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -80,16 +88,19 @@ export class PerformanceMonitor {
     observer.observe({ entryTypes: ['longtask'] });
     this.observers.push(observer);
   }
+
   // Cleanup observers
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
 }
+
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
-  const renderStartTime = useRef<number>(0);
+  const renderStartTime = React.useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
+
   useEffect(() => {
     renderStartTime.current = performance.now();
     return () => {
@@ -98,6 +109,7 @@ export const usePerformanceMonitor = (componentName: string) => {
       monitor.trackMemory(componentName);
     };
   }, [componentName, monitor]);
+
   return {
     trackRender: (fn: () => void) => {
       const start = performance.now();
@@ -107,6 +119,7 @@ export const usePerformanceMonitor = (componentName: string) => {
     }
   };
 };
+
 // Image lazy loading utility
 export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return;
@@ -123,6 +136,7 @@ export const lazyLoadImages = () => {
   });
   images.forEach((img) => imageObserver.observe(img));
 };
+
 // Preload critical resources
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return;
@@ -141,6 +155,7 @@ export const preloadCriticalResources = () => {
     document.head.appendChild(link);
   });
 };
+
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {
   if (typeof window === 'undefined') return;
@@ -157,6 +172,7 @@ export const optimizeScrollPerformance = () => {
       ticking = true;
     }
   };
+
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0;
@@ -180,16 +196,19 @@ export const optimizeScrollPerformance = () => {
       return clsValue;
     };
   };
+
   const trackLCP = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-          }
+          // console.log('LCP:', entry);
+        }
       }
     });
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
     return () => observer.disconnect();
   };
+
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number;
@@ -199,23 +218,28 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-          }
+          // console.log('FID:', fid);
+        }
       }
     });
     observer.observe({ entryTypes: ['first-input'] });
     return () => observer.disconnect();
   };
+
   window.addEventListener('scroll', requestTick, { passive: true });
+
   // Start tracking
   const cleanupCLS = trackCLS();
   const cleanupLCP = trackLCP();
   const cleanupFID = trackFID();
+
   return () => {
     cleanupCLS();
     cleanupLCP();
     cleanupFID();
   };
 };
+
 // Memory usage monitoring
 export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
@@ -229,6 +253,7 @@ export const getMemoryUsage = () => {
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
   };
 };
+
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined') return null;
@@ -247,6 +272,7 @@ export const collectPerformanceMetrics = () => {
     memory: getMemoryUsage()
   };
 };
+
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {
   if (typeof window === 'undefined') return;
@@ -259,11 +285,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-<<<<<<< HEAD:src/utils/performanceEnhancer.ts
-    // // console.log('Performance metrics:', metrics)
+    // console.log('Performance metrics:', metrics)
   }
-}
-=======
-    }
 };
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/performanceEnhancer.ts
