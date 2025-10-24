@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
+import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
