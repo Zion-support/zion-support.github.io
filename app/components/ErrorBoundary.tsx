@@ -1,16 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
 =======
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+=======
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
 
 interface State {
   hasError: boolean;
@@ -24,6 +32,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -49,6 +58,17 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   render() {
+=======
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+  }
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Uncaught error:', error, errorInfo)
+  }
+
+  public render() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
@@ -108,6 +128,7 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -122,3 +143,10 @@ export default function Errorboundary({ className = '', children, ...props }: Er
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
+=======
+    return this.props.children
+  }
+}
+
+export default ErrorBoundary
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
