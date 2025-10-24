@@ -58,7 +58,11 @@ export
 <<<<<<< HEAD
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
+<<<<<<< HEAD
     
+=======
+    let clsValue = 0;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
@@ -113,11 +117,14 @@ export
     const imageObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+<<<<<<< HEAD
 =======
 
     const images = document.querySelectorAll('img[data-src]');
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
@@ -129,9 +136,12 @@ export
   }, []);
 <<<<<<< HEAD
   const preloadCriticalResources = useCallback(() => {
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
@@ -149,6 +159,9 @@ export
     const timer = setTimeout(() => {
       const metrics = measurePerformance();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       if (metrics) {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {

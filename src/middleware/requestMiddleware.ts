@@ -3,7 +3,7 @@
  * Request Middleware System
  * Provides middleware for handling requests and responses
  */
-import logger from '../utils/logger';
+import { logger } from '../utils/logger';
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {
   request: {
@@ -63,7 +63,11 @@ export class MiddlewareExecutor {// TODO: Add content;}
  */
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
+<<<<<<< HEAD
   logger.info('Request started', 'RequestMiddleware', {
+=======
+  logger.info('Request started', {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     component: 'RequestMiddleware',
     method: context.request.method,
     url: context.request.url
@@ -71,7 +75,11 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   try {
     const result = await next();
     const duration = Date.now() - startTime;
+<<<<<<< HEAD
     logger.info('Request completed', 'RequestMiddleware', {
+=======
+    logger.info('Request completed', {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
@@ -81,7 +89,11 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     return result;
   } catch (error) {
     const duration = Date.now() - startTime;
+<<<<<<< HEAD
     logger.error('Request failed', error as Error, 'RequestMiddleware', {
+=======
+    logger.error('Request failed', error as Error, {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
@@ -168,7 +180,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const key = context.request.url;
     const cached = cache.get(key);
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', { component: 'CachingMiddleware', url: key });
       return cached.data;
     }
     const result = await next();
@@ -194,7 +206,10 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
           logger.warn(
             `Request failed, retrying (${attempt + 1}/${maxRetries})`,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'RetryMiddleware',
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
             {
               component: 'RetryMiddleware',
               url: context.request.url

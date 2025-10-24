@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const HomePage = lazy(() => import('./page'));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const HomePage = lazy(() => import('../app/page'));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -60,14 +61,20 @@ import Footer from './components/Footer';
 const HomePage = lazy(() => import('./page'));
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+<<<<<<< HEAD
 <<<<<<< HEAD
 const BlogPage = lazy(() => import('./blog/page'));
 =======
 const NotFoundPage = lazy(() => import('./not-found'));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
+=======
+const NotFoundPage = lazy(() => import('./not-found'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));

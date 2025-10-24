@@ -10,8 +10,25 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp } from 'lucide-react';
 
+interface ITService {
+  title: string;
+  description: string;
+  icon: any; // Using any to avoid complex type issues with Lucide icons
+  features: string[];
+  price: string;
+  category: string;
+  benefits: string[];
+  technologies: string[];
+  contactInfo: string;
+}
+
 const ITServicesPage: React.FC = () => {
+<<<<<<< HEAD
   const itServices = [
+=======
+  const itServices: ITService[] = [
+    // Infrastructure & Cloud Services
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     {
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',

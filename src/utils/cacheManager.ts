@@ -203,6 +203,7 @@ export class CacheManager {// TODO: Add content;}
 }
         localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -211,6 +212,10 @@ export class CacheManager {// TODO: Add content;}
 =======
       } catch (error) {
         logger.error('Failed to set localStorage cache', { error: error as Error });
+=======
+      } catch (error) {
+        logger.error('Failed to set localStorage cache', error as Error, { component: 'CacheManager' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
         // Fallback to memory cache
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
         this.memoryCache.set(key, entry);
@@ -226,6 +231,7 @@ export class CacheManager {// TODO: Add content;}
 }
         sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -234,6 +240,10 @@ export class CacheManager {// TODO: Add content;}
 =======
       } catch (error) {
         logger.error('Failed to set sessionStorage cache', { error: error as Error });
+=======
+      } catch (error) {
+        logger.error('Failed to set sessionStorage cache', error as Error, { component: 'CacheManager' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
         // Fallback to memory cache
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
         this.memoryCache.set(key, entry);
@@ -274,6 +284,7 @@ export class CacheManager {// TODO: Add content;}
           <T>;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -282,6 +293,10 @@ export class CacheManager {// TODO: Add content;}
       } catch (error) {
         logger.error('Failed to get localStorage cache', { error: error as Error });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+      } catch (error) {
+        logger.error('Failed to get localStorage cache', error as Error, { component: 'CacheManager' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       }
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
@@ -300,6 +315,7 @@ export class CacheManager {// TODO: Add content;}
           <T>;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -308,6 +324,10 @@ export class CacheManager {// TODO: Add content;}
       } catch (error) {
         logger.error('Failed to get sessionStorage cache', { error: error as Error });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+      } catch (error) {
+        logger.error('Failed to get sessionStorage cache', error as Error, { component: 'CacheManager' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       }
     }
     if (!entry) {/* TODO: Fix JSX expression */}
@@ -420,12 +440,16 @@ export class CacheManager {// TODO: Add content;}
       keysToRemove.forEach(key => sessionStorage.removeItem(key))
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */}
   e: this.storage })
   )
 =======
     logger.info('Cache cleared', { component: 'CacheManager', storage: this.storage });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+    logger.info('Cache cleared', { component: 'CacheManager', storage: this.storage });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
   }
   /**
    * Get or set with function (handles both sync and async)

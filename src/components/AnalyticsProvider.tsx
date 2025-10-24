@@ -252,4 +252,30 @@ export default AnalyticsProvider;
   }, [GA_TRACKING_ID]);
   return <>{children}<  />;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+// Export useAnalytics hook for other components
+export const useAnalytics = () => {
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, parameters);
+    }
+  };
+  
+  const trackPerformance = (metricName: string, value: number) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        event_category: 'performance',
+        event_label: metricName,
+        value: Math.round(value)
+      });
+    }
+  };
+  
+  return { trackEvent, trackPerformance };
+};
+
+export default AnalyticsProvider;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f

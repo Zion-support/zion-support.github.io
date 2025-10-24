@@ -78,6 +78,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 }
       return () => {};
     }
+<<<<<<< HEAD
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -85,10 +86,16 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
+=======
+    try {
+      // LCP - Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver(list => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       lcpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
@@ -106,6 +113,14 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
   y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      // FID - First Input Delay
+      const fidObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach(
+          (entry: PerformanceEntry & { processingStart?: number }) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
             const fid =
 =======
 
@@ -115,6 +130,7 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
           }
         );
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       fidObserver.observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] });
@@ -135,6 +151,16 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
   y: PerformanceEntry & {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      // CLS - Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach(
+          (
+            entry: PerformanceEntry & {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
               hadRecentInput?: boolean;
               value?: number;
             }
@@ -150,6 +176,7 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
         );
         reportMetric('CLS', clsValue);
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] });
@@ -167,10 +194,19 @@ const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
           if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      // FCP - First Contentful Paint
+      const fcpObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.name === 'first-contentful-paint') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
             reportMetric('FCP', entry.startTime);
           }
         });
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       fcpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] });
@@ -188,12 +224,21 @@ const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX exp
           if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+=======
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      // TTFB - Time to First Byte
+      const navigationObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
           }
         });
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       navigationObserver.observe({/* TODO: Fix JSX expression */})
   s: ['navigation'] });
@@ -217,6 +262,18 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
   O: Add content;}
 }
               // Only track slow resources;
+=======
+      navigationObserver.observe({ entryTypes: ['navigation'] });
+      // Resource timing
+      const resourceObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+            if (loadTime > 1000) {
+              // Only track slow resources
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
               reportMetric('SLOW_RESOURCE', loadTime);
             }
           }

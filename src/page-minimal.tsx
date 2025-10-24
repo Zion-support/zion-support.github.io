@@ -2,6 +2,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 
@@ -14,16 +15,23 @@ import { Phone, CheckCircle, Star } from 'lucide-react';
 =======
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
+=======
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default function HomePage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default function HomePage() {
+=======
+function HomePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-white">

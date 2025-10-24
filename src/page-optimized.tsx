@@ -1,11 +1,16 @@
 'use client';
+<<<<<<< HEAD
 import React, { lazy } from 'react';
+=======
+import React, { lazy, Suspense } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component
 const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional
+<<<<<<< HEAD
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
@@ -45,10 +50,17 @@ const ContentShowcase = lazy(() =>
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 export default function OptimizedHomePage() {
+=======
+const UnifiedBanner = lazy(() => Promise.resolve({ default: EmptyComponent }));
+const ContentPromotion = lazy(() => Promise.resolve({ default: EmptyComponent }));
+const ContentShowcase = lazy(() => Promise.resolve({ default: EmptyComponent }));
+function OptimizedHomePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <AccessibilityEnhancer>
 =======
@@ -72,6 +84,9 @@ export default function OptimizedHomePage() {
 =======
       <AccessibilityEnhancer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
+=======
+      <AccessibilityEnhancer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative"></main>

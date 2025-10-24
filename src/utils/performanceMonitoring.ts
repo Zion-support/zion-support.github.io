@@ -288,12 +288,16 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }
 
   )
 =======
     logger.debug(`Custom Metric: ${name}`, { component: 'PerformanceMonitoring', value, unit });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+    logger.debug(`Custom Metric: ${name}`, { component: 'PerformanceMonitoring', value, unit });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
   }
   /**
    * Send metric to analytics service;

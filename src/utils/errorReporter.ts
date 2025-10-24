@@ -228,8 +228,12 @@ export class ErrorReporter {// TODO: Add content;}
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
+<<<<<<< HEAD
         logger.warn('Failed to send error to remote endpoint:', { error: error as Error });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
+=======
+        logger.warn('Failed to send error to remote endpoint:', { component: 'ErrorReporter', error: error as Error });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       }
     }
   }
