@@ -23,7 +23,7 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission here
-    console.log('Form submitted:', formData)
+    // Form data: formData
   }
 
   const contactInfo = [
