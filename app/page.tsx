@@ -2,7 +2,7 @@
 import React from "react"
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Send, BarChart3, Shield, Zap, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 
 export default function HomePage() {
   const features = [
@@ -77,7 +77,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
               Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="w-8 h-8" />
             </button>
             <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               Learn More
@@ -108,7 +108,7 @@ export default function HomePage() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-emerald-500 mr-2" />
+                      <CheckCircle className="w-8 h-8" />
                       {benefit}
                     </li>
                   ))}
@@ -133,7 +133,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-emerald-500 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-8 h-8" />
                 <p className="text-gray-700 text-lg">{benefit}</p>
               </div>
             ))}
@@ -148,11 +148,11 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let&apos;s discuss how our AI and IT solutions can help you achieve your goals.
+            Let's discuss how our AI and IT solutions can help you achieve your goals.
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Your Journey
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="w-8 h-8" />
           </button>
         </div>
       </section>

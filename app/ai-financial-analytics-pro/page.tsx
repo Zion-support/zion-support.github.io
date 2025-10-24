@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, DollarSign, Star, Zap, Target, Globe, Database, Activity, Lock, FileText, CreditCard, Sparkles, PieChart } from 'lucide-react';
+    // Conflict resolved - keeping clean version
 
 export default function AiFinancialAnalyticsProPage() {
 
@@ -13,13 +13,13 @@ export default function AiFinancialAnalyticsProPage() {
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      icon: <Shield className="w-8 h-8 text-green-400" />,
       title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
       benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
@@ -31,7 +31,7 @@ export default function AiFinancialAnalyticsProPage() {
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
     },
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
@@ -58,7 +58,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Expense Management',
-      icon: <Calculator className="w-6 h-6 text-red-400" />,
+      icon: <Calculator className="w-6 h-6 text-blue-400" />,
       items: [
         'Cost center analysis',
         'Budget variance tracking',
@@ -69,7 +69,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Cash Flow Analysis',
-      icon: <Activity className="w-6 h-6 text-blue-400" />,
+      icon: <Activity className="w-6 h-6 text-purple-400" />,
       items: [
         'Cash flow forecasting',
         'Working capital analysis',
@@ -80,7 +80,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Investment Analytics',
-      icon: <TrendingUp className="w-6 h-6 text-purple-400" />,
+      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
       items: [
         'Portfolio performance',
         'Risk-return analysis',
@@ -91,7 +91,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Compliance & Audit',
-      icon: <Lock className="w-6 h-6 text-orange-400" />,
+      icon: <Lock className="w-6 h-6 text-red-400" />,
       items: [
         'Regulatory compliance',
         'Audit trail management',
@@ -234,14 +234,14 @@ export default function AiFinancialAnalyticsProPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-8 h-8" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               View All AI Services
@@ -259,7 +259,7 @@ export default function AiFinancialAnalyticsProPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
-                    <stat.icon className="h-8 w-8 text-white" />
+                    {stat.icon}
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -387,14 +387,14 @@ export default function AiFinancialAnalyticsProPage() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
@@ -402,7 +402,7 @@ export default function AiFinancialAnalyticsProPage() {
                   }`}
                 >
                   {plan.cta}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-8 h-8" />
                 </Link>
               </div>
             ))}
@@ -459,18 +459,18 @@ export default function AiFinancialAnalyticsProPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Start Free Trial
-                <Sparkles className="w-5 h-5 ml-2" />
+                <Sparkles className="w-8 h-8" />
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
                 Learn More
-                <PieChart className="w-5 h-5 ml-2" />
+                <PieChart className="w-8 h-8" />
               </Link>
             </div>
             <div className="mt-8 text-white/80 text-sm">
