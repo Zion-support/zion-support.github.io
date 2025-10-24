@@ -4,7 +4,7 @@
 
 import '@testing-library/jest-dom';
 
-// Declare Jest globals for TypeScript
+// Jest globals are already available in test environment
 declare global {
   var jest: any;
 }
