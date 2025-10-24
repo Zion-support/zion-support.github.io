@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Play } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Video } from 'lucide-react'
-=======
-import React from 'react';
-import { Play, CheckCircle, Star, Zap, Video, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 
 constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
     'AI Video Creation',

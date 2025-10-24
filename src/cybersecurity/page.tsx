@@ -4,13 +4,9 @@ import { Lock } from 'lucide-react'
 import { CheckCircle, Star, Eye, Shield, Database, Helmet } from 'lucide-react'
 import { Globe, AlertTriangle } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-import { Lock, CheckCircle, Star, Shield, Globe, Database, Helmet, Eye, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
-=======
 import {Lock, CheckCircle, Star, Eye, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
 constCybersecurityPage: React.FC= () =>{constsecurityServices= [
     {

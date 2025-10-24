@@ -3,13 +3,9 @@ import React from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { CheckCircle, TrendingUp, Helmet } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-import { ArrowLeft, CheckCircle, Star, TrendingUp, Helmet, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
-=======
 import {ArrowLeft, CheckCircle, TrendingUp, Helmet} from 'lucide-react';;
 constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
     {

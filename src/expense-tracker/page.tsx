@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Receipt } from 'lucide-react'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-=======
-'use client';
-import React from 'react';
-import { Receipt, CheckCircle, Phone, Star, Brain, Zap, Shield, Target, TrendingUp, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 
 constExpenseTrackerPage: React.FC= () =>{constfeatures= [
     {

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-=======
-'use client';
-import React from 'react';
-import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Users, BarChart, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

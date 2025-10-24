@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState, useEffect } from 'react'
-import { X } from 'lucide-react'
-import { Download } from 'lucide-react'
 
-=======
-'use client';
-import React, { useState, useEffect } from 'react';
-import { X, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>

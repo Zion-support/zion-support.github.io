@@ -1,14 +1,5 @@
 'use client'
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-import { Home } from 'lucide-react'
-=======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -181,7 +172,6 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
                className="flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors"
               ></
                 onClick={this.handleRetry}

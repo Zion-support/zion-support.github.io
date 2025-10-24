@@ -1,26 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-// Function to fix merge conflicts
-function fixMergeConflicts(content) {
-  const lines = content.split('\n');
-  let result = [];
-  let skipUntil = null;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.includes('<<<<<<< HEAD')) {
-      skipUntil = '=======';
-      continue;
-    }
-    
-    if (line.includes('=======')) {
-      skipUntil = '>>>>>>>';
-      continue;
-    }
-    
-    if (line.includes('>>>>>>>')) {
       skipUntil = null;
       continue;
     }

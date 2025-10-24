@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Key, Copy } from 'lucide-react'
-import { Code } from 'lucide-react'
-import { Check } from 'lucide-react'
-=======
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Key, Copy, Star, Code, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)

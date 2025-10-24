@@ -4,13 +4,9 @@ import { Wifi } from 'lucide-react'
 import { CheckCircle, Star, Zap, BarChart, Shield, Database, Helmet } from 'lucide-react'
 import { Cpu, Globe } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-import { Wifi, CheckCircle, Star, Zap, Shield, Globe, Database, Cpu, BarChart, Helmet, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
-=======
 import {Wifi, CheckCircle, Star, Zap, BarChart, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
 constIoTEdgeComputingPage: React.FC= () =>{constiotServices= [
     {

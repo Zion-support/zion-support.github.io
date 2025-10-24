@@ -140,7 +140,6 @@ const LoadingStatesPage: React.FC = () => {
 };
 
 export default LoadingStatesPage;
-=======
 import {Loader2} from 'lucide-react'
 export constPageLoader: React.FC= () =>{return(<divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900flexitems-centerjustify-center"><divclassName="text-center"><divclassName="w-16h-16bg-gradient-to-r from-cyan-400to-purple-400rounded-full flex items-center justify-centermx-automb-4"><Loader2className="w-8 h-8 text-slate-900animate-spin" /></di><h2className="text-xl font-semiboldtext-whitemb-2">Loading...</h><pclassName="text-gray-300">Please wait while we loadthepage</p></di></di>)}
 export constComponentLoader: React.FC= () => {return(<divclassName="flex items-centerjustify-centerp-8"><divclassName="flex items-center space-x-2text-cyan-400"><Loader2className="w-5h-5animate-spin" /><spa n>Loadingcomponent...</spa></di></di>)}

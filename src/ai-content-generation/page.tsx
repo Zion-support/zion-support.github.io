@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react'
-=======
-'use client';
-import React from 'react';import { CheckCircle, Star, Brain, Zap, BarChart, Eye, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
     {

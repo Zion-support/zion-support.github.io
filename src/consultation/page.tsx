@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
-import { Clock } from 'lucide-react'
-=======
-'use client';
-import React, { useState } from 'react';import { CheckCircle, Phone, Mail, Star, Brain, Shield, Target, TrendingUp, Clock, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',

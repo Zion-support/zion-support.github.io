@@ -140,7 +140,6 @@ const EnhancedAccessibilityPage: React.FC = () => {
 };
 
 export default EnhancedAccessibilityPage;
-=======
 import React, {useEffect} from 'react'
 constEnhancedAccessibility: React.FC<{children: React.ReactNode}>= ({children}) => {const [settingssetSettings]=useState<AccessibilitySetting s>({
     highContrast: false,

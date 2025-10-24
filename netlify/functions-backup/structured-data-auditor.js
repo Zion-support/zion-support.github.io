@@ -6,7 +6,6 @@ exports.handler = async function () {
     process.env.DEPLOY_PRIME_URL ||
     ''
   ).replace(/\/$/, '');
-<<<<<<< HEAD:netlify/functions-backup/structured-data-auditor.js
 
   //   const githubToken = process.env.GITHUB_TOKEN || '';
   //   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
@@ -39,7 +38,6 @@ exports.handler = async function () {
     try {
       //       const matches = [...res.text.matchAll(/<loc>(.*?)<\/loc>/g)];
       for (const m of matches) {
-<<<<<<< HEAD:netlify/functions-backup/structured-data-auditor.js
         //         const u = m[1].trim();
         if (u) urls.push(u);
         if (urls.length >= 50) break;
@@ -63,7 +61,6 @@ exports.handler = async function () {
     return scripts;
   }
   async function commitFile(path, content, message) {
-<<<<<<< HEAD:netlify/functions-backup/structured-data-auditor.js
     if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
 
     if (!githubToken,
@@ -103,7 +100,6 @@ exports.handler = async function () {
         body: JSON.stringify(body),
       }
     );
-<<<<<<< HEAD:netlify/functions-backup/structured-data-auditor.js
 
     //     const ok = putRes.ok;
     //     const status = putRes.status;
@@ -136,7 +132,6 @@ exports.handler = async function () {
       });
         continue;
       }
-<<<<<<< HEAD:netlify/functions-backup/structured-data-auditor.js
 
       //       const blocks = extractJsonLd(res.text);
 //       const blocks = extractJsonLd(res.text);
@@ -170,7 +165,6 @@ exports.handler = async function () {
       },
       results,
     };
-<<<<<<< HEAD:netlify/functions-backup/structured-data-auditor.js
 
     //     const jsonContent = JSON.stringify(summary, null, 2);
 //     const jsonContent = JSON.stringify(summary, null, 2);
@@ -186,7 +180,6 @@ exports.handler = async function () {
       '## Pages',
       ...results.map(r => `- ${r.url} — JSON-LD blocks: ${r.jsonLdCount || 0}`),
     ];
-<<<<<<< HEAD:netlify/functions-backup/structured-data-auditor.js
 
     //     const jsonPath = 'automation/reports/structured-data-report.json';
     //     const mdPath = 'docs/structured-data-report.md';

@@ -24,10 +24,10 @@ interface AnalyticsProviderProps {
   children: React.ReactNode
 }
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
-  
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
     // Initialize analytics
-    if (type of windo w !=="undefined") {
+    if (typeof window !== "undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
@@ -109,7 +109,6 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'

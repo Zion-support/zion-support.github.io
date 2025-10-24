@@ -1,18 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 
-<<<<<<< HEAD
-import { BarChart3 } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-=======
-import { BarChart3, CheckCircle, Phone, Mail, Star, Brain, Zap, TrendingUp, Users, BarChart, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -20,7 +9,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true)
   }, [])
-=======
 'use client';
 import React, {useStateuseEffect} from 'react';
 

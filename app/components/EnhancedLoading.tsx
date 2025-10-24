@@ -140,6 +140,3 @@ const EnhancedLoadingPage: React.FC = () => {
 };
 
 export default EnhancedLoadingPage;
-  )
-}
-export default EnhancedLoadingPage
