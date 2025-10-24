@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -96,20 +97,26 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">&copy; 2025 Zion Tech Group. All rights reserved.</p>
 =======
+=======
+>>>>>>> cursor/delete-records-bf70
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Brain } from 'lucide-react';
+<<<<<<< HEAD
 =======
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight } from 'lucide-react';
 >>>>>>> cursor/delete-records-fd55
+=======
+>>>>>>> cursor/delete-records-bf70
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const aiServices = [
@@ -218,12 +225,15 @@ const Footer: React.FC = memo(() => {
   ]
 
 >>>>>>> cursor/delete-records-fd55
+=======
+>>>>>>> cursor/delete-records-bf70
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
+<<<<<<< HEAD
     { name: 'News', url: '/news' }
   ]
 
@@ -231,6 +241,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Contact Us', url: '/contact' },
     { name: 'Support', url: '/support' },
 <<<<<<< HEAD
+=======
+    { name: 'Careers', url: '/careers' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Support', url: '/support' },
+>>>>>>> cursor/delete-records-bf70
     { name: 'Status', url: '/status' }
   ];
 
@@ -253,6 +268,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
   ];
+<<<<<<< HEAD
 =======
     { name: 'Documentation', url: '/docs' },
     { name: 'API Documentation', url: '/api-docs' },
@@ -268,6 +284,8 @@ const Footer: React.FC = memo(() => {
     emergency: '24/7 Emergency Support Available'
   };
 >>>>>>> cursor/delete-records-fd55
+=======
+>>>>>>> cursor/delete-records-bf70
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -412,9 +430,14 @@ const Footer: React.FC = memo(() => {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
+=======
+});
+>>>>>>> cursor/delete-records-bf70
 
 export default Footer;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/delete-records-fd55
@@ -426,3 +449,5 @@ export default Footer;
 >>>>>>> cursor/delete-records-acd8
 =======
 >>>>>>> cursor/delete-records-fd55
+=======
+>>>>>>> cursor/delete-records-bf70

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from "react";
 export default function HomePage() {
@@ -33,6 +34,8 @@ export default function HomePage() {
 =======
 =======
 >>>>>>> cursor/delete-records-fd55
+=======
+>>>>>>> cursor/delete-records-bf70
 'use client';
 import React from 'react';
 import Navigation from './components/Navigation';
@@ -71,6 +74,7 @@ const HomePage: React.FC = () => {
       </main>
       <Footer />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -2668,8 +2672,13 @@ export default HomePage;
     </div>
     </>
 >>>>>>> cursor/delete-records-fd55
+=======
+>>>>>>> cursor/delete-records-bf70
   );
 };
 
 export default HomePage;
+<<<<<<< HEAD
 >>>>>>> cursor/delete-records-acd8
+=======
+>>>>>>> cursor/delete-records-bf70
