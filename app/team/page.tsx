@@ -1,65 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function TeamZionTechGroup() {
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Team - Zion Tech Group</title>
-        <meta name="description" content="Team solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Team</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive team solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -70,18 +16,15 @@ export default function TeamZionTechGroup() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Linkedin, Github } from 'lucide-react'
-=======
         linkedin: 'https://linkedin.com/in/klebersantos',
         twitter: 'https://twitter.com/klebersantos',
         email: 'kleber@ziontechgroup.com'},
@@ -303,7 +246,6 @@ import { Helmet } from 'react-helmet-async';
 import { Users, Award, Linkedin, Mail, MapPin, Calendar, GraduationCap, Briefcase, Star, CheckCircle } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 const TeamPage: React.FC = () => {
   const teamMembers = [
@@ -387,7 +329,6 @@ const TeamPage: React.FC = () => {
     { label: 'Client Satisfaction', value: '99%', icon: Star }
   ]
 
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -440,31 +381,10 @@ const OurTeamPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   return (
-<<<<<<< HEAD
-    <React.Fragment>
-      <Helmet>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         <title>Our Team - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, development, and design are dedicated to delivering exceptional solutions." />
-        <meta name="keywords" content="team, AI experts, developers, designers, Zion Tech Group, leadership" />
-      </Helmet>
-      
-      <Navigation />
-      
-<<<<<<< HEAD
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Our Team
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -494,12 +414,10 @@ export default function Team() {return (
             <h1 className="w-5h-5ml-2"   /></h1>
               <span className="w-5h-5ml-2"   />Team;
               </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Meet the talented individuals who make Zion Tech Group a leader in AI and IT solutions. 
               Our diverse team brings together expertise, passion, and innovation.
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto text-center"></div>
@@ -530,22 +448,10 @@ export default function Team() {return (
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4"></h2>
-              Leadership Team;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
-              Meet the visionary leaders driving innovation and growth at Zion Tech Group;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive team solutions.
               Contact us to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -554,10 +460,6 @@ export default function Team() {return (
                   <span className="text-white font-semibold">{stat.value}</span>
                   <span className="text-gray-400 text-sm">{stat.label}</span>
                 </div>
-<<<<<<< HEAD
-              ))}
-            </div>
-=======
                 <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
@@ -600,25 +502,7 @@ export default function Team() {return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our leadership team combines decades of experience in AI, technology, and business to drive innovation and deliver exceptional results.
             </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
-<<<<<<< HEAD
-        </section>
-
-<<<<<<< HEAD
-        {/* Team Members */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="text-center mb-6">
-                    <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
@@ -704,7 +588,6 @@ export default function Team() {return (
                 <h3 className="text-xl font-bold text-white mb-2">{dept.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{dept.description}</p><div className="text-cyan-400 font-medium mb-4">{dept.members} Members</div>
                 <div className="space-y-1">{dept.specialties.map((specialty, specIndex) => (</div><div key={specIndex} className="text-xs text-gray-400">{specialty}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
                     <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
@@ -740,55 +623,6 @@ export default function Team() {return (
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Values Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Join Our Team
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals to join our growing team. 
-              If you're passionate about AI and technology, we'd love to hear from you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/careers"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                View Open Positions
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
-                href="mailto:careers@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Send Your Resume
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-=======
       {/* Values */}
       <section className="py-20 bg-slate-800/50"></section>
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4"></h2>
@@ -815,7 +649,6 @@ export default function Team() {return (
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
-=======
 import React  from 'react';
 const TeamPage: React.FC = () => {
   return (
@@ -849,7 +682,6 @@ const TeamPage: React.FC = () => {
       </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </div>
       </section>
@@ -911,18 +743,6 @@ const TeamPage: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-      <Footer />
-    </>
-  )
-}
-
-export default TeamPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
         <meta name="description" content="Meet the talented team behind Zion Tech Group." />
         <meta name="keywords" content="team, about us, employees, company" />
       </Helmet>
@@ -1034,35 +854,19 @@ export default TeamPage
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </>
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
       </div>
       </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
-<<<<<<< HEAD
-export default OurTeamPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 export default TeamPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
       </div>
     <  />
   );
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -1088,6 +892,3 @@ export default function TeamPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

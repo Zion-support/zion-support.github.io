@@ -1,128 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Layout from "../layout";
-import { Link } from 'react-router-dom';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CFO",
-      company: "TechCorp",
-      content: "The AI financial analysis platform has revolutionized our decision-making process.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Investment Manager",
-      company: "FinancePro",
-      content: "Incredible accuracy and insights that have improved our portfolio performance.",
-      rating: 5
-    }
-  ];
-export default function AISmartScheduler() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechFlow Solutions",
-      role: "Operations Manager",
-      content: "AI Smart Scheduler has revolutionized our team coordination. It automatically finds the best meeting times and eliminates scheduling conflicts.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Global Consulting",
-      role: "Project Director",
-      content: "The AI understands our team's preferences and automatically schedules meetings that work for everyone. It's like having a personal assistant.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Remote Teams Inc",
-      role: "Team Lead",
-      content: "Managing a distributed team across time zones is now effortless. The AI handles all the complexity and finds optimal meeting times.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  return null;
-};
-
-export default function AiSmartSchedulerPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Smart Scheduler - Zion Tech Group</title>
-        <meta name="description" content="Ai Smart Scheduler solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Smart Scheduler</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai smart scheduler solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -133,11 +8,9 @@ export default function AiSmartSchedulerPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 import React from 'react'
 import {Link} from 'react-router-dom'
 
@@ -284,7 +157,6 @@ export default function AISmartScheduler() {const features = [{
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       <Star className="w-5h-5ml-2"   /></Star>
                       Most Popular;
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Calendar, Users, Zap, CheckCircle, ArrowRight, Brain, Globe, Star, Sparkles } from 'lucide-react';
@@ -307,7 +179,6 @@ import Layout from '../layout'
                     <div className="inline-flex items-center px-3 py-1 bg-cyan-500/20 rounded-full text-cyan-400 text-smfont-mediummb-4">
                       <Star className="w-4h-4mr-1" />
                       Most Popular
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                     </div>
   )}
                   <h3 className="w-5h-5ml-2"   />{plan.name}</h3>
@@ -318,13 +189,8 @@ import Layout from '../layout'
                   </div>
                   <ul className="w-5h-5ml-2"   /></ul>
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                      <li key={featureIndex} className="flex items-center text-gray-300"   /></li>
-                        <CheckCircle className="w-5h-5ml-2"   /></CheckCircle>
-=======
                       <li key="{featureIndex}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5text-green-400mr-3" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                         {feature}
                       </li>
   ))}
@@ -334,54 +200,23 @@ import Layout from '../layout'
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-<<<<<<< HEAD
-                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400/10'}`}
-                    />Get Started;
-                  </Link>
-                </div>
-  ))}
-=======
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400/10'
                     }`}
                     />Get Started
                   </Link>
                 </div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
         </section>
         {/* Testimonials */}
-<<<<<<< HEAD
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2"   />Trusted by Teams Worldwide;
-=======
         <section className="py-16 px-4sm:px-6lg:px-8" />
           <div className="max-w-7xlmx-auto">
             <div className="text-centermb-12">
               <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Teams Worldwide
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="w-5h-5ml-2">See what our customers say about AI Smart Scheduler;
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700"   /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5h-5tex t-yellow-400fill-current"    /></Star>
-  ))}
-                  </div>
-                  <p className="w-5h-5ml-2">"{testimonial.content}"</p>
-                  <div   /></div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
-                </div>
-  ))}
-=======
             <div className="grid grid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
@@ -397,31 +232,18 @@ import Layout from '../layout'
                     <div className="text-smtext-gray-400"   />{testimonial.company}</div>
                 </div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2"   />Ready to Transform Your Scheduling?
-=======
         <section className="py-16 px-4sm:px-6lg:px-8" />
           <div className="max-w-4 xlmx-autotext-center">
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xll p-8borderborder-cyan-500/30">
               <h2 className="text-3 xl font-bold text-white mb-4"  />Ready to Transform Your Scheduling?
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="w-5h-5ml-2">Join thousands of teams already using AI Smart Scheduler to optimize their productivity;
               </p>
-<<<<<<< HEAD
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-all duration-300">Start Your Free Trial;
-=======
               <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </Link>
                 <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
                 </Link>
@@ -433,10 +255,6 @@ import Layout from '../layout'
   )
 
 };
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -467,6 +285,3 @@ export default function AismartschedulerPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

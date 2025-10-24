@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const IoTPage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 export default function Page() {
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -22,91 +14,15 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-<<<<<<< HEAD
-const IoTSolutionsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-      icon: Shield,
-      title: 'Secure Analytics',
-      description: 'Enterprise-grade security for your sensitive data and analytics.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-=======
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </Link>
       </div>
-=======
     <div>
       <Head>
         <title>Iot - Zion Tech Group</title>
@@ -128,7 +44,6 @@ export default function PagePage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -153,8 +68,6 @@ import {ArrowRight} from 'lucide-react';
           Contact Us;
           <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -181,36 +94,15 @@ export default function IotPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
         <title>IoT Solutions - Zion Tech Group</title>
         <meta name="description" content="Internet of Things solutions for modern businesses." />
         <meta name="keywords" content="IoT, internet of things, connected devices, sensors" />
       </Helmet>
 
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              IoT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Internet of Things solutions for modern businesses.
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}</div>
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20">
@@ -410,7 +302,6 @@ export default function IotPage() {
             </h2>
             <p className="text-xl mb-8 text-green-100">
               Contact our IoT experts for a free consultation and custom IoT strategy development
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -506,25 +397,13 @@ export default function IotPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </>
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 };
 
 export default IoTSolutionsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 };
 
 export default IoTPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

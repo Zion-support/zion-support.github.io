@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const AdvancedSEOOptimizer_new: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="advancedseooptimizer_new">
-      <h2>AdvancedSEOOptimizer_new</h2>
-      <p>AdvancedSEOOptimizer_new component.</p>
-    </div>
-=======
     <React.Fragment>
       <Helmet>
         <title>{title}</title>
@@ -31,7 +20,6 @@ const AdvancedSEOOptimizer_new: React.FC = () => {
         
         {/* Structured Data */}
         <script type="application/ld+json">
-=======
 'use client';
 import React, { useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -534,45 +522,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         <meta name="twitter:description" content={mergedSEO.twitterDescription} />
         <meta name="twitter:image" content={mergedSEO.twitterImage} />
         <script type="application/ld+json"></script>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           {JSON.stringify(generateStructuredData())}
         </script>
       </Helmet>
       
       {children}
-<<<<<<< HEAD
-      
-      {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style={{
-          position: 'fixed',
-          top: '10px',
-          left: '10px',
-          background: 'rgba(0,0,0,0.8)',
-          color: 'white',
-          padding: '10px',
-          borderRadius: '5px',
-          fontSize: '12px',
-          zIndex: 1000,
-          maxWidth: '300px',
-        }}>
-          <div>SEO Score: {seoScore,}/100</div></div>
-          {recommendations.length > 0 && (
-            <div>
-              <div>Recommendations:</div></div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
-                {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
-    </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 

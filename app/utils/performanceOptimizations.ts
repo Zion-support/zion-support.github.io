@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Performanceoptimizations utility functions
-export function performanceoptimizations() {
-  // Implementation here
-  return null;
-=======
 'use client'
 // Performance optimization utilities;
 // Debounce utility for performance;
@@ -16,8 +8,6 @@ export const debounce = <T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout),
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   func: T,
   wait: number,
 ): ((...args: Parameters<T>) => void) => {,}
@@ -29,17 +19,6 @@ export const debounce = <T extends (...args: any[]) => any>(
 }
 // Throttle utility for performance;
 export const throttle = <T extends (...args: any[]) => any>(
-<<<<<<< HEAD
-  func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
-      func(...args),
-      inThrottle = true;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   func: T,
   limit: number,
 ): ((...args: Parameters<T>) => void) => {,}
@@ -60,12 +39,6 @@ export const useIntersectionObserver = (
   const observer = useMemo()
     () =>
       typeof window !== 'undefined'
-<<<<<<< HEAD
-        ? new IntersectionObserver(callback, {)
-            threshold: 0.1),
-            rootMargin: '50px'),
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         ? new IntersectionObserver(callback, {)}
             threshold: 0.1,
             rootMargin: '50px',
@@ -74,13 +47,6 @@ export const useIntersectionObserver = (
         : null,
     [callback, options]
   )
-<<<<<<< HEAD
-  const observe = useCallback(
-    (element: Element | null) => {,
-      if (observer && element) {,
-        observer.observe(element),
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   const observe = useCallback()
     (element: Element | null) => {,}
       if (observer && element) {}
@@ -95,11 +61,7 @@ export const debounce = <T extends (...arg)
   wai,
   t: number;)
 ): ((...arg)
-<<<<<<< HEAD
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}
-=======
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   };
 };
 // Throttle utility for performance;
@@ -109,11 +71,7 @@ export const throttle = <T extends (...arg)
   limi,
   t: number;)
 ): ((...arg)
-<<<<<<< HEAD
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}
-=======
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   };
 };
@@ -129,38 +87,11 @@ export const useIntersectionObserver = (callbac,
     [callback, options]
   );
   const observe = useCallback((elemen)
-<<<<<<< HEAD
-  t: Element | null) => {/* TODO: Fix JSX expression */,}
-=======
   t: Element | null) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
       return () => {}
     },
     [observer]
-<<<<<<< HEAD
-  )
-  const disconnect = useCallback(() => {}
-    if (observer) {}
-      observer.disconnect();}
-    }
-  }, [observer])
-  useEffect(() => {}
-    return () => disconnect();}
-  }, [disconnect])
-  return { observe, disconnect }
-}
-// Image lazy loading hook;
-export const useLazyImage = useCallback((...args) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false);}
-  const { observe } = useIntersectionObserver(useCallback()
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !isLoaded && !isError) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Image lazy loading hook
 export const useLazyImage = useCallback((...args) => {}
   const [imageSrc, setImageSrc] = useState(placeholder || '')
@@ -189,11 +120,7 @@ export const useLazyImage = useCallback((...args) => {}
 };
 // Image lazy loading hook;
 export const useLazyImage = (sr)
-<<<<<<< HEAD
-  c: string, placeholder?: string) => {/* TODO: Fix JSX expression */,}
-=======
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   const { observe } = useIntersectionObserver(useCallback()
       (entries) => {/* TODO: Fix JSX expression */,}
             };
@@ -205,36 +132,6 @@ export const useLazyImage = (sr)
       },
       [src, isLoaded, isError]
     )
-<<<<<<< HEAD
-  )
-  return { imageSrc, isLoaded, isError, observe }
-}
-// Performance monitoring hook;
-export const usePerformanceMonitoring = useCallback((...args) => {
-  const [metrics, setMetrics] = useState<{
-    fcp?: number;
-    lcp?: number;
-    fid?: number;
-    cls?: number;
-    ttfb?: number;}
-  }>({})
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const updateMetrics = useCallback((...args) => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
-      setMetrics({)
-        fcp)
-        lcp)
-        ttfb: navigation?.responseStart - navigation?.requestStart,}
-      })
-    }
-    // Monitor performance after page load;
-    if (document.readyState === 'complete') {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Performance monitoring hook
 export const usePerformanceMonitoring = useCallback((...args) => {}
   const [metrics, setMetrics] = useState<{}
@@ -279,24 +176,6 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
   }, [])
   return metrics;
 }
-<<<<<<< HEAD
-// Memory usage monitoring;
-export const useMemoryMonitoring = useCallback((...args) => {
-  const [memoryInfo, setMemoryInfo] = useState<{
-    usedJSHeapSize?: number;
-    totalJSHeapSize?: number;
-    jsHeapSizeLimit?: number;}
-  }>({})
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = useCallback((...args) => {
-      const memory = (performance as any).memory;
-      if (memory) {
-        setMemoryInfo({)
-          usedJSHeapSize: memory.usedJSHeapSize),
-          totalJSHeapSize: memory.totalJSHeapSize),
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Memory usage monitoring
 export const useMemoryMonitoring = useCallback((...args) => {}
   const [memoryInfo, setMemoryInfo] = useState<{}
@@ -312,11 +191,7 @@ export const useMemoryMonitoring = useCallback((...args) => {}
         setMemoryInfo({)}
           usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
-<<<<<<< HEAD
-          jsHeapSizeLimit: memory.jsHeapSizeLimit,}
-=======
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         })
   );
   return { imageSrc, isLoaded, isError, observe };
@@ -362,13 +237,6 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */,}
     return () => clearInterval(interval)
   }, [])
   return memoryInfo;
-<<<<<<< HEAD
-}
-// Resource preloading utility;
-export const preloadResource = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Resource preloading utility
 export const preloadResource = useCallback((...args) => {}
   if (typeof window === 'undefined') return
@@ -378,13 +246,6 @@ export const preloadResource = useCallback((...args) => {}
   link.as = as;
   document.head.appendChild(link);}
 }
-<<<<<<< HEAD
-// Critical resource preloading;
-export const preloadCriticalResources = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Critical resource preloading
 export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return
@@ -397,29 +258,6 @@ export const preloadCriticalResources = useCallback((...args) => {}
   // Preload critical CSS;
   preloadResource('/styles/critical.css', 'style');}
 }
-<<<<<<< HEAD
-// Bundle size monitoring;
-export const useBundleSizeMonitoring = useCallback((...args) => {
-  const [bundleSize, setBundleSize] = useState<{
-    totalSize?: number;
-    jsSize?: number;
-    cssSize?: number;
-    imageSize?: number;}
-  }>({})
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const calculateBundleSize = useCallback((...args) => {
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0;
-      let jsSize = 0;
-      let cssSize = 0;
-      let imageSize = 0;
-      resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
-        totalSize += size;
-        if (resource.name.includes('.js')) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Bundle size monitoring
 export const useBundleSizeMonitoring = useCallback((...args) => {}
   const [bundleSize, setBundleSize] = useState<{}
@@ -447,18 +285,6 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
           imageSize += size;}
         }
       })
-<<<<<<< HEAD
-      setBundleSize({)
-        totalSize)
-        jsSize)
-        cssSize)
-        imageSize}
-      })
-    }
-    // Calculate after page load;
-    if (document.readyState === 'complete') {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       setBundleSize({)}
         totalSize,
         jsSize,
@@ -493,11 +319,7 @@ export default {}
 // Resource preloading utility;
 export const preloadResource = (hre,
   f: string, a)
-<<<<<<< HEAD
-  s: string,) => {/* TODO: Fix JSX expression */,}
-=======
   s: string) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 // Critical resource preloading;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}
@@ -524,11 +346,6 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */,}
 };
 export default {/* TODO: Fix JSX expression */,}
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 // Utility file: performanceOptimizations
 
 export interface OptimizationConfig {
@@ -622,4 +439,3 @@ export class PerformanceOptimizations {
 }
 
 export const performanceOptimizations = new PerformanceOptimizations();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

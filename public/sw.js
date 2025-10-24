@@ -1,44 +1,7 @@
-<<<<<<< HEAD
-const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [;
-  '/',;
-  '/static/js/bundle.js',;
-  '/static/css/main.css',;
-  '/manifest.json'
-];
-self.addEventListener('install', (event) => {;
-event.waitUntil();
-caches.open(CACHE_NAME);
-      .then((cache) => cache.addAll(urlsToCache));
-  )});
-;
-self.addEventListener('fetch', (event) => {;
-event.respondWith();
-caches.match(event.request);
-      .then((response) => {;
-if (response) {;
-return response}
-        return fetch(event.request);
-      })
-  );
-});
-
-<<<<<<< HEAD
-<<<<<<< HEAD"
-// Notification click;"
-  event.notification.close();"'"
-if (event.action = == 'explore") {;"
-event.waitUntil();"'"
-clients.openWindow('/")
-    )
-,})"
-======="
 // Fetch event - serve from cache when offline"'"
 self.addEventListener('fetch", (event) => {
-=======
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-=======
 // Service Worker for Zion Tech Group;
 const CACHE_NAME = 'zion-tech-group-v1'
 const STATIC_CACHE = 'zion-static-v1'
@@ -71,25 +34,13 @@ const STATIC_ASSETS = ['/',
 // Activate event - clean up old caches;
   console.log('Service Worker activating...')
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-<<<<<<< HEAD
-          cacheNames
-            .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
-            })
-            .map((cacheName) => {
-              return caches.delete(cacheName);
-            })
-        );
-=======
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {console.log('Deleting old cache: ', cacheName)
               return caches.delete(cacheName)})
         )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       })
       .then(() => {
         return self.clients.claim();
@@ -97,19 +48,6 @@ const STATIC_ASSETS = ['/',
   );
 });
 
-<<<<<<< HEAD
-// Fetch event - serve from cache or network
-self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
-
-  // Skip chrome-extension and other non-http requests
-=======
 // Fetch event - serve from cache, fallback to network;
   const {request} = event;
   const url = new URL(request.url)
@@ -117,67 +55,11 @@ self.addEventListener('fetch', (event) => {
   // Skip non-GET requests;
   if (request.method !== 'GET') {return;
   // Skip chrome-extension and other non-http requests;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   if (!url.protocol.startsWith('http')) {
     return;
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   event.respondWith(
-<<<<<<< HEAD
-    caches.match(event.request)
-      .then((response) => {"
-        // Return cached version or fetch from "network"
-        return response || fetch(event.request)";
-      })
-  );
-});"
-
-// Activate event - clean up old caches"'"
-self.addEventListener('activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all("
-        cacheNames.map((cacheName) => {"
-          if (cacheName !== CACHE_NAME) {"'"
-            console.log('Deleting old cache:", cacheName);
-            return caches.delete(cacheName);
-const CACHE_NAME = "zion-tech-group-v1";
-const urlsToCache = ["/"
-  "/static/js/bundle.js"
-  "/static/css/main.css"
-  "/manifest.json"
-]
-event.waitUntil()
-caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  )
-})
- self.addEventListener("fetch", (event) => {
-event.respondWith()
-caches.match(event.request)
-      .then((response) => {
-if (response) {
-return response
-        }
-        return fetch(event.request)
-
-//Install event - cache resources self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log("Opened cache")
-        return cache.addAll(urlsToCache)
-      })
-  )
-})
-//Fetch event - serve from cache when offline self.addEventListener("fetch", (event) => {
-  event.respondWith(caches.match(event.request)
-      .then((response) => {
-        //Return cached version or fetch from network
-        return response || fetch(event.request)
-      })
-  )
-=======
     caches.match(request)
         // Return cached version if available;
         if (cachedResponse) {
@@ -237,7 +119,6 @@ return response
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 })
 //Activate event - clean up old caches self.addEventListener("activate", (event) => {
   event.waitUntil(caches.keys().then((cacheNames) => {
@@ -251,11 +132,8 @@ return response
     })
   );
 });"
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
 
 }}'"
-=======
-=======;
 // Install event - cache resources;
 self.addEventListener('install', (event) => {;
   event.waitUntil(;
@@ -263,20 +141,9 @@ self.addEventListener('install', (event) => {;
       .then((cache) => {;
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;
       });
   )});
 ;
-<<<<<<< HEAD;
-// Notification click;
-<<<<<<< HEAD
-  event.notification.close();
-if (event.action = == 'explore') {;
-event.waitUntil();
-clients.openWindow('/');
-    );
-});
-=======;
 // Fetch event - serve from cache when offline;
 self.addEventListener('fetch', (event) => {;
   event.respondWith(;
@@ -301,10 +168,8 @@ self.addEventListener('activate', (event) => {;
   )
 })
 }}}}}))))))
-=======
   event.notification.close()
 
   if (event.action === 'explore') {event.waitUntil(
       clients.openWindow('/')
     )})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

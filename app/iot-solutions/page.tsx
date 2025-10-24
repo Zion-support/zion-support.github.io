@@ -1,38 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 export default function Page() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
     <div>
       <Head>
         <title>Iot Solutions - Zion Tech Group</title>
@@ -56,17 +28,13 @@ export default function Page() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 import React from 'react'
 import {Link} from 'react-router-dom'
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 import React from 'react';
 
@@ -141,26 +109,6 @@ export default function IoTSolutionsPage() {const iotServices = [{
       description: 'Scale your IoT solutions as your business grows with our flexible platform'}]
 
   return (
-<<<<<<< HEAD
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
-
-                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">World?</span>
-
-                    Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
-
-                      <span>Get Started</span>
-                      <span>View Pricing</span>
-
-      <  />
-  );
-
-  );
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -191,8 +139,6 @@ export default function IotsolutionsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -377,4 +323,3 @@ export default function IotsolutionsPage() {
 
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
@@ -18,7 +12,6 @@ import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { Hand } from 'lucide-react';
 "use client";
-=======
 "use client";
 import React from "react";
 import { Helmet } from "react-helmet-async";
@@ -34,85 +27,16 @@ import {
   Settings,
   Users,
 } from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AIEmailAssistant() {
-  return (
-<<<<<<< HEAD
-    <div>
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
         <meta name="keywords" content="AI analytics, data analysis, business intelligence, machine learning" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-analytics" />
       </Helmet>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Analytics Platform
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with our advanced AI analytics platform. 
-            Get real-time predictions, automated reporting, and intelligent recommendations.
-          </p>
-<<<<<<< HEAD
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-              <Zap className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
-            >
-              View Demo
-              <Target className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Analytics Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI analytics platform provides everything you need to make data-driven decisions
-            </p>
-=======
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         {/* Hero Section */}
@@ -125,7 +49,6 @@ export default function AIEmailAssistant() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai email assistant solution for modern businesses.
-=======
 const AiEmailAssistantPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -178,7 +101,6 @@ const AiEmailAssistantPage: React.FC = () => {
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto"></p>
               Powerful capabilities designed to transform your business;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-violet-500 to-blue-600 hover:from-violet-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -188,16 +110,8 @@ const AiEmailAssistantPage: React.FC = () => {
                 View Demo
               </button>
             </div></div></div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <BarChart3 className="w-6 h-6 text-white" />
-=======
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta const name = "description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." / / />
         <meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification" / / />
@@ -213,7 +127,6 @@ const AiEmailAssistantPage: React.FC = () => {
                 </Link>
                 <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services
                 </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
               <p className="text-gray-300">
@@ -284,7 +197,6 @@ const AiEmailAssistantPage: React.FC = () => {
               <p className="text-gray-300">
                 Enterprise-grade security with full compliance and data protection
               </p>
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -317,7 +229,6 @@ const AiEmailAssistantPage: React.FC = () => {
                   )}
                 </div>
               ))}
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
@@ -471,34 +382,10 @@ const AiEmailAssistantPage: React.FC = () => {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709;
               </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-=======
         {/* Features Section */}
         <section className="py-20" />
           <div className="containermx-autopx-4">
@@ -522,20 +409,10 @@ const AiEmailAssistantPage: React.FC = () => {
               {feature.description}</p>
                 </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-=======
 
         {/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
@@ -571,27 +448,10 @@ const AiEmailAssistantPage: React.FC = () => {
           <div className="containermx-autopx-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
               <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Transform Your Email Management?
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-violet-500 to-blue-600 hover:from-violet-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-            </div>
-          </div>
-        </div>
-      </div>
-</div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -602,21 +462,13 @@ const AiEmailAssistantPage: React.FC = () => {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
-=======
       <Footer />,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default Page;
-=======
 
 
   const features = [{icon: Mail,
@@ -663,10 +515,8 @@ export default Page;
               </p>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building;
-=======
               <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </Link>
                 <Link to="/ai-services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services;
                 </Link>
@@ -737,9 +587,6 @@ export default Page;
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    <  />
-=======
         </div>
       </div>
           </div>
@@ -754,32 +601,10 @@ export default Page;
       </div>
       </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
 export default AIEmailAssistantPage;
-<<<<<<< HEAD
-
-import React from 'react';
-import {Helmet} from 'react-helmet-async';
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-export default function AiEmailAssistant() {return (
-    <>
-      <title>AiEmailAssistant - Zion Tech Group</title>
-
-            <h1 className="text-4xl font-bold text-white mb-6">AiEmailAssistant</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aiemailassistant services coming soon.</p>
-
-              Contact Us
-
-      <  />
-  );}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function AiemailassistantPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -805,6 +630,3 @@ export default function AiemailassistantPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

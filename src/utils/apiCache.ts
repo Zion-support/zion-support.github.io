@@ -4,15 +4,8 @@
  * API Caching Utility;
  * Provides caching, deduplication, and retry logic for API calls;
  */
-<<<<<<< HEAD
-
-interface ApiCacheConfig {// TODO: Add content;}
-
-}
-=======
 import { CacheManager, CacheStorage } from './cacheManager';
 interface ApiCacheConfig {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
   ttl?: number;
   maxRetries?: number;
   retryDelay?: number;
@@ -32,32 +25,6 @@ interface PendingRequest;
 /**
  * API Cache Manager with request deduplication;
  */
-<<<<<<< HEAD
-
-export class ApiCache {// TODO: Add content;}
-
-}
-  private,
-  cache: CacheManager;
-          <unknown>;
-  private,
-  pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
-  private,
-  config: Required<ApiCacheConfig>;
-  constructor(_confi)
-  g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    this.cache = new CacheManager({/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  maxSiz,
-  e: 500,
-      defaultTT,
-  L: config.ttl || 5 * 60 * 1000, // 5 minutes,
-  storag,
-  e: 'memory')
-=======
 export class ApiCache {
   private cache: CacheManager;
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
@@ -66,7 +33,6 @@ export class ApiCache {
     this.cache = new CacheManager({
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
       storage: CacheStorage.Memory
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
     });
     this.config = {/* TODO: Fix JSX expression */}
   O: Add content;}

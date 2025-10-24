@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-=======
 const ARVRPlatformPage: React.FC = () => {
   const features = [
     {
@@ -49,7 +40,6 @@ const ARVRPlatformPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -57,15 +47,6 @@ const ARVRPlatformPage: React.FC = () => {
         <title>Ar Vr Platform - Zion Tech Group</title>
         <meta name="description" content="Ar Vr Platform solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ar Vr Platform</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ar vr platform solutions designed to meet your business needs.
-=======
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-purple-800/20 opacity-20"></section>
@@ -77,33 +58,7 @@ const ARVRPlatformPage: React.FC = () => {
           <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto"></p>
             Build immersive augmented and virtual reality experiences that transform how people work, learn, and interact. 
             Create photorealistic 3 D environments with our cutting-edge platform.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"></button>
               Start Building
@@ -111,11 +66,9 @@ const ARVRPlatformPage: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Watch</butto></<<butto>Demo</butto>
             </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -126,8 +79,6 @@ const ARVRPlatformPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -158,26 +109,6 @@ const ARVRPlatformPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AR/VR Platform?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AR/VR solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div></div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div></div>
-=======
       <section className="py-24 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-20"></div>
@@ -198,25 +129,11 @@ const ARVRPlatformPage: React.FC = () => {
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our AR/VR solutions for your business.
-            </p>
-          </div></div>
-=======
       {/* Use Cases Section */}
       <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
@@ -343,32 +260,10 @@ const ARVRPlatformPage: React.FC = () => {
               </div>
             ))}
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div></div></div>
-=======
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8"></h2>
@@ -385,15 +280,12 @@ const ARVRPlatformPage: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Schedule</butto></<<butto>Demo</butto>
             </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     </div>
   );
 }
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -410,23 +302,15 @@ export default function ArvrplatformPage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function ArvrplatformPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ar Vr Platform - Zion Tech Group</title>
         <meta name="description" content="Professional ar vr platform services by Zion Tech Group" />
@@ -437,24 +321,9 @@ export default function ArvrplatformPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Ar Vr Platform</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ar vr platform services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

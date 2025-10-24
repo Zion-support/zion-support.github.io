@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Metadata utility functions
-export function metadata() {
-  // Implementation here
-  return null;
-=======
 // Define metadata type for compatibility;
-=======
 // Define metadata type for compatibility
 export interface Metadata {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   title: string;
   description: string;
   keywords: string[];
@@ -55,11 +46,6 @@ export interface Metadata {
   category: string;
 }
 
-<<<<<<< HEAD
-  keywords: ['technology consulting'
-    images: []]
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export const defaultMetadata: Metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description: 'Leading provider of AI and IT solutions for businesses worldwide',
@@ -105,4 +91,3 @@ export const defaultMetadata: Metadata = {
   },
   category: 'technology',
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

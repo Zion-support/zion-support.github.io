@@ -1,96 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 
 const Navigation: React.FC = () => {
-=======
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-import React, { useState, useCallback, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Home } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Package } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { Receipt } from 'lucide-react';
-=======
 import { Menu, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 export default function Navigation({ onSidebarToggle }: NavigationProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
 
 const Navigation: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   const [isOpen, setIsOpen] = useState(false);
 
-<<<<<<< HEAD
-  const navigationItems = [
-<<<<<<< HEAD
-    { name: "Home", href: "/" },
-    { name: "AI Services", href: "/ai-services" },
-    { name: "IT Services", href: "/it-services" },
-    { name: "Micro SaaS", href: "/micro-saas-solutions" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" }
-  ];
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
 
 import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Database, Smartphone, Settings, CheckSquare, FileText, MessageCircle, Link as LinkIcon, Mic, Eye} from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   const aiServices = [
     { name: "AI Analytics", href: "/ai-analytics" },
@@ -103,12 +37,6 @@ import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart,
   ];
 
   const itServices = [
-<<<<<<< HEAD
-    { name: "Autonomous Systems", href: "/autonomous-systems" },
-    { name: "Blockchain Solutions", href: "/blockchain" },
-    { name: "Blockchain Web3", href: "/blockchain-web3" },
-    { name: "Business Intelligence", href: "/business-intelligence" }
-=======
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
@@ -158,18 +86,8 @@ import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart,
     { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: Users, description: 'Automated Invoicing' },
     { name: 'AI Document Processor', href: '/ai-document-processor', icon: Zap, description: 'Document AI Processing' },
     { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Cpu, description: 'Intelligent Lead Qualification' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   ];
 
-<<<<<<< HEAD
-  const microSaaSServices = [
-    { name: "E-commerce Analytics Pro", href: "/ecommerce-analytics-pro" },
-    { name: "Legal Document Manager", href: "/legal-document-manager" },
-    { name: "Medical Records Manager", href: "/medical-records-manager" },
-    { name: "Online Learning Platform", href: "/online-learning-platform" },
-    { name: "Property Management AI", href: "/property-management-ai" },
-    { name: "Supply Chain Optimizer", href: "/supply-chain-optimizer" }
-=======
   const specializedServices = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
@@ -183,7 +101,6 @@ import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart,
     { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
     { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Check },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
   ];
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -210,8 +127,6 @@ import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart,
     };
   }, []);
 
-<<<<<<< HEAD
-=======
     {
       name: 'Home',
       path: '/',
@@ -277,7 +192,6 @@ import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart,
 };
 
 export default function Navigation({ className = '', children, ...props }: NavigationProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -397,7 +311,6 @@ export default function Navigation({ className = '', children, ...props }: Navig
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-purple-600 transition-colors"
-=======
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-amber-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -429,12 +342,9 @@ export default function Navigation({ className = '', children, ...props }: Navig
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
-<<<<<<< HEAD
-=======
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -492,34 +402,6 @@ const Navigation: React.FC = () => {
   }, [])
 
   const aiServices = [
-<<<<<<< HEAD
-    { name: 'AI Chatbots & NLP', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Automated content' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Business intelligence' },
-    { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Monitor, description: 'Image analysis' },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'Marketing AI' },
-    { name: 'AI Process Automation', href: '/ai-automation', icon: Settings, description: 'Workflow automation' }
-  ]
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'API Development', href: '/api-development', icon: Code, description: 'RESTful & GraphQL APIs' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Server, description: 'Deployment automation' },
-    { name: 'Database Management', href: '/database', icon: Database, description: 'Data optimization' },
-    { name: 'System Integration', href: '/integration', icon: LinkIcon, description: 'Seamless connectivity' }
-  ]
-
-  const microSaasProducts = [
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Smartphone, description: 'Social media automation' },
-    { name: 'AI Video Generator', href: '/ai-video-generator', icon: Monitor, description: 'Video creation AI' },
-    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: MessageCircle, description: 'Voice AI solutions' },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: BarChart, description: 'Data visualization' },
-    { name: 'AI Content Optimizer', href: '/ai-content-optimizer', icon: FileText, description: 'Content optimization' },
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Heart, description: 'Customer service AI' }
-  ]
-
-=======
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' ,},
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' ,},
     { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support Systems' ,},
@@ -628,7 +510,6 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' ,},
     { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' ,}
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-700' : 'bg-transparent'
@@ -719,13 +600,8 @@ const Navigation: React.FC = () => {
                       >
                         <service.icon className="w-5 h-5 text-purple-400 group-hover:text-purple-300" />
                         <div>
-<<<<<<< HEAD
-                          <div className="text-white font-medium">{service.name}</div>
-                          <div className="text-gray-400 text-sm">{service.description}</div>
-=======
                           <div className="text-white font-medium">{service.name}</div></div></div></div></div>
                           <div className="text-xs text-gray-400">{service.description}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                         </div>
                       </Link>
                     ))}
@@ -733,10 +609,6 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-=======
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
@@ -802,7 +674,6 @@ const Navigation: React.FC = () => {
               )}
             </div>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
               About
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
@@ -819,7 +690,6 @@ const Navigation: React.FC = () => {
               Get Started
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
           </div>
 
           {/* Mobile menu button */}
@@ -829,7 +699,6 @@ const Navigation: React.FC = () => {
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -879,102 +748,10 @@ const Navigation = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              {navigationItems.map((item, index) => (
-                <div key={index}>
-                  {item.name === "AI Services" ? (
-                    <div>
-                      <button
-                        onClick={() => handleDropdownToggle('ai-mobile')}
-                        className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                      {activeDropdown === 'ai-mobile' && (
-                        <div className="pl-4 space-y-1">
-                          {aiServices.map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.href}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                              onClick={() => {
-                                setIsOpen(false);
-                                handleDropdownClose();
-                              }}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : item.name === "IT Services" ? (
-                    <div>
-                      <button
-                        onClick={() => handleDropdownToggle('it-mobile')}
-                        className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                      {activeDropdown === 'it-mobile' && (
-                        <div className="pl-4 space-y-1">
-                          {itServices.map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.href}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                              onClick={() => {
-                                setIsOpen(false);
-                                handleDropdownClose();
-                              }}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : item.name === "Micro SaaS" ? (
-                    <div>
-                      <button
-                        onClick={() => handleDropdownToggle('saas-mobile')}
-                        className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                      {activeDropdown === 'saas-mobile' && (
-                        <div className="pl-4 space-y-1">
-                          {microSaaSServices.map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.href}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                              onClick={() => {
-                                setIsOpen(false);
-                                handleDropdownClose();
-                              }}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-=======
           <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
@@ -997,7 +774,6 @@ const Navigation = () => {
                 <div className="text-gray-300 font-medium mb-2">AI Services</div>
                 <div className="ml-4 space-y-1">
                   {aiServices.map((service, index) => (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                     <Link
                       href={item.href}
                       className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
@@ -1017,8 +793,6 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
-<<<<<<< HEAD
-=======
           <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900 border-t border-slate-700 shadow-xl">
             <div className="container mx-auto px-4 py-6 space-y-4">
               <Link
@@ -1069,7 +843,6 @@ const Navigation = () => {
                 className="block text-gray-300 hover:text-white transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
-=======
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}>
@@ -1183,7 +956,6 @@ const Navigation = () => {
                 Blog
               </Link>
               <Link href="/contact" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 Contact
               </Link>
 
@@ -1193,12 +965,6 @@ const Navigation = () => {
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
                   onClick={() => setIsOpen(false)}
                 >
-<<<<<<< HEAD
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-                </Link>
-=======
                   <Phone className="w-4 h-4" />
                   <span>(302) 464-0950</span>
                 </a>
@@ -1213,9 +979,7 @@ const Navigation = () => {
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
               </div>
-=======
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800/50 backdrop-blur-sm rounded-lg mt-2">
               {navigation.map((item) => (
@@ -1228,18 +992,13 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
                 </Link>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
           </div>
         )}
-=======
           </div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
       </div>
 
       {isOpen && (
@@ -1261,7 +1020,6 @@ const Navigation = () => {
         </div>
       )}
     </nav>
-=======
 import React from 'react';
 
 const Navigation: React.FC<NavigationProps> = () => {
@@ -1270,34 +1028,13 @@ const Navigation: React.FC<NavigationProps> = () => {
       <h2>Navigation</h2>
       <p>Component content coming soon.</p>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
-<<<<<<< HEAD
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default Navigation;
-=======
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
 
 export default Navigation
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

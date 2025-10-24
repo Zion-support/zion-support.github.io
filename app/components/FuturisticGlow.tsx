@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-'use client';
-
-interface FuturisticGlowProps {children: React.ReactNode;
-=======
 import { useEffect, useRef} from 'react';
 interface FuturisticGlowProps {
   children: React.ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;}
@@ -68,7 +59,6 @@ export default function FuturisticGlow() {return (
 {children}
   );
 
-=======
 import React from 'react';
 
 const FuturisticGlow: React.FC<FuturisticGlowProps> = () => {
@@ -81,4 +71,3 @@ const FuturisticGlow: React.FC<FuturisticGlowProps> = () => {
 };
 
 export default FuturisticGlow;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

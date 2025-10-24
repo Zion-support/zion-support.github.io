@@ -1,44 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-export default function AIAnalyticsDashboardZionTechGroup() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Ai Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Ai Analytics Dashboard solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Analytics Dashboard</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai analytics dashboard solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import {
   BarChart3,
@@ -112,9 +79,7 @@ import {
   Mail as MailIcon,
   MapPin as Location;
 } from 'lucide-react';
-=======
 'use client';
-=======
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {
@@ -198,7 +163,6 @@ import {
 }
 export default AiAnalyticsDashboardPage;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -210,7 +174,6 @@ const AIAnalyticsDashboard: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -370,7 +333,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Transform Data into Actionable Insights with AI</p><p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">Unlock the power of your data with our advanced AI analytics platform.</p>
               Get real-time insights, predictive analytics, and automated reporting that drives business growth.</p>
               <span>AI-Powered Analytics</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -385,64 +347,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <p className="text-gray-300">
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
-=======
 
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Analytics Dashboard
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai analytics dashboard solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-=======
             <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced"></h1>
               AI Analytics Dashboard;
             </h1>
@@ -544,37 +449,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                       </CheckCircle>
                     ))}
                   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-=======
       {/* Pricing Section */}
       <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
@@ -588,35 +468,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"></p>
               Choose the plan that fits your analytics needs. All plans include our core AI features.
             </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -627,15 +481,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
-=======
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${tier.popular ? 'ring-2 ring-cyan-400/30' : ''}`}></div>
@@ -767,10 +615,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     </div>);
 };
 
-<<<<<<< HEAD
-export default AIAnalyticsDashboardPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -791,27 +635,16 @@ export default function AIAnalyticsDashboard() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default AIAnalyticsDashboard;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AianalyticsdashboardPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ai Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Professional ai analytics dashboard services by Zion Tech Group" />
@@ -822,26 +655,9 @@ export default function AianalyticsdashboardPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Ai Analytics Dashboard</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai analytics dashboard services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b

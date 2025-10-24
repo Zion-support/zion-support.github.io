@@ -1,51 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function GDataAnalyticsZionTechGroupPage() {
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 
 const CRMLitePage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Crm Lite - Zion Tech Group</title>
-        <meta name="description" content="Crm Lite solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Crm Lite</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive crm lite solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-=======
   const features = [
     {
       icon: Users;
@@ -333,7 +289,6 @@ const CRMLitePage: React.FC = () => {
               <div className="p-4 bg-white/10 rounded-lg mb-4"></div>
                 <Mail className="w-8 h-8 text-cyan-400 mx-auto" />
               <h3 className="text-lg font-semibold text-white">Email</h3><p className="text-gray-300 text-sm">Gmail, Outlook, Yahoo</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -344,9 +299,6 @@ const CRMLitePage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -357,11 +309,9 @@ const CRMLitePage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
     <>
       <Helmet>
         <title>CRM Lite - Zion Tech Group</title>
@@ -393,7 +343,6 @@ const CRMLitePage: React.FC = () => {
       <Footer />
     </>
   );
-=======
 
         {/* CTA Section */}
           <h2 className="text-3xl font-bold text-white mb-4"></h2>
@@ -426,12 +375,9 @@ const CRMLitePage: React.FC = () => {
         </div>
       </div>,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default CRMLitePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -448,23 +394,15 @@ export default function CrmlitePage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function CrmlitePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Crm Lite - Zion Tech Group</title>
         <meta name="description" content="Professional crm lite services by Zion Tech Group" />
@@ -475,24 +413,9 @@ export default function CrmlitePage() {
           <h1 className="text-4xl font-bold text-white mb-6">Crm Lite</h1>
           <p className="text-lg text-gray-300 mb-8">Professional crm lite services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

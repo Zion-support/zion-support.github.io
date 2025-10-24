@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-import { MetadataRoute } from 'next';
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://zion.app';
-  const currentDate = new Date();
-  
-  return [
-    {
-<<<<<<< HEAD
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 1,
-=======
       url: 'https://ziontechgroup.com',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       url: `${baseUrl}/about`,
@@ -57,7 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
-=======
 
 
 export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'https://ziontechgroup.com'}
@@ -105,4 +88,3 @@ export default function sitemap(): MetadataRoute.Sitemap {const _baseUrl = 'http
 }
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

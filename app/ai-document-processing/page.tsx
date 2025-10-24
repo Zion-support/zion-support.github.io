@@ -1,54 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-export default function AiDocumentProcessingZionTechGroup() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Ai Document Processing - Zion Tech Group</title>
         <meta name="description" content="Ai Document Processing solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Document Processing</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai document processing solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
@@ -106,7 +60,6 @@ export default function AiDocumentProcessingZionTechGroup() {
                   )}
                 </div>
               ))}
-=======
 'use client';
 import React from 'react';
 import Navigation from '../../components/Navigation';
@@ -322,61 +275,10 @@ const AiDocumentProcessingPage: React.FC = () => {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709;
               </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-violet-500 to-blue-600 hover:from-violet-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -387,13 +289,7 @@ const AiDocumentProcessingPage: React.FC = () => {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 import React  from 'react';
 const AiDocumentProcessingPage: React.FC = () => {
   return (
@@ -439,18 +335,13 @@ const AiDocumentProcessingPage: React.FC = () => {
       </div>
       </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 }
-=======
       <Footer />,
     </div>);
 };
 
 export default AiDocumentProcessingPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
 
 const AiDocumentProcessingPage: React.FC = () => {return (
@@ -460,8 +351,6 @@ const AiDocumentProcessingPage: React.FC = () => {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -492,6 +381,3 @@ export default function AidocumentprocessingPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

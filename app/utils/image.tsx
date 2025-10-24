@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-export default function UtilsPage() {
-
-  return (
-}
-    <div className={`image-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
 'use client';
 import React from 'react';
 'use client'
@@ -19,23 +8,16 @@ interface ImageProps {
 interface ImageProps {}
   src: string;
   alt: string;
-=======
 interface ImageProps {}
   src: string
   alt: string
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   width?: number
   height?: number
   className?: string
   priority?: boolean
   _quality?: number
-<<<<<<< HEAD
-  src: string,
-  alt: string,
-=======
   src: string;
   alt: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   width?: number;
   height?: number;
   className?: string;
@@ -49,16 +31,9 @@ interface ImageProps {}
   onLoad?: () => void;
   onError?: () => void;}
 }
-<<<<<<< HEAD
-export const Image: React.FC<ImageProps>= ({
-export const Image: React.FC<ImageProps> = ({,}
-  src,
-export const Image: React.FC<ImageProps> = ({,
-=======
 export const Image: React.FC<ImageProps> = ({}
   src,
 export const Image: React.FC<ImageProps> = ({
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   src;
   alt,
   width,
@@ -85,17 +60,7 @@ export const Image: React.FC<ImageProps> = ({
     setHasError(true)
     if (onError) onError();}
   }, [onError])
-<<<<<<< HEAD
-  const imageStyle: React.CSSProperties = {
-    ...style;
-    ...(fill && {
-      position: 'absolute'
-      top: 0,
-      left: 0,
-  const imageStyle: React.CSSProperties = {,}
-=======
   const imageStyle: React.CSSProperties = {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     ...style,
     ...(fill && {}
       position: 'absolute',
@@ -106,11 +71,6 @@ export const Image: React.FC<ImageProps> = ({
       objectFit: 'cover',}
     })
   }
-<<<<<<< HEAD
-  if (hasError) {</ImageProps>
-    return (</ImageProps>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   if (hasError) {}
     return (
       <div}
@@ -130,30 +90,15 @@ export const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}
     })
   };
-<<<<<<< HEAD
-  if (hasError) {/* TODO: Fix JSX expression */,}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props})
-      >)</div>
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>)
-    ),
-=======
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         {...props}
       ></div>
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
       </div>
     )
   }
-<<<<<<< HEAD
-  return(<img;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   return (<img></img>
       src={src}
       alt={alt}
@@ -162,16 +107,6 @@ export const,
       className={className}
       style={imageStyle}
       sizes={sizes}
-<<<<<<< HEAD
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
-      {...props}
-    >)</img>
-}</img>
-export default Image</img>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       loading={priority ? 'eager' : 'lazy'})
       onLoad={handleLoad})
       onError={handleError})
@@ -181,12 +116,7 @@ export default Image</img>
 }
 export default Image;
     />)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
-<<<<<<< HEAD
-}
-=======
 };
 export default Image;
 "`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

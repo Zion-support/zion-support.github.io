@@ -1,31 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-interface ImprovedfooterProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-export default function ImprovedFooter({ className = '', children, ...props }: ImprovedfooterProps) {
-=======
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, CheckCircle } from 'lucide-react';
 
 const ImprovedFooter = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
   const currentYear = new Date().getFullYear();
 
   const companyLinks = [

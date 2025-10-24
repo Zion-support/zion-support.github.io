@@ -1,60 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>It Consulting - Zion Tech Group</title>
-        <meta name="description" content="It Consulting solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">It Consulting</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive it consulting solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
 
 const ITConsultingPage: React.FC = () => {
   return (
@@ -225,12 +174,10 @@ const ITConsultingPage: React.FC = () => {
                 <li>• Compliance Planning</li>
                 <li>• Incident Response</li>
               </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </div>
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -241,20 +188,16 @@ const ITConsultingPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react';
 import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -262,36 +205,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const ITConsultingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-=======
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
@@ -354,24 +267,9 @@ const ITConsultingPage: React.FC = () => {
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
       caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       icon: Shield,
-<<<<<<< HEAD
-      title: 'Secure Analytics',
-      description: 'Enterprise-grade security for your sensitive data and analytics.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-=======
       price: 'Starting at $2,500',
       features: [
         'Security risk assessment',
@@ -636,7 +534,6 @@ const ITConsultingPage: React.FC = () => {
     { id: 'consulting', name: 'Consulting', icon: Briefcase; },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw; },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare; }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   ];
 
   return (
@@ -647,24 +544,6 @@ const ITConsultingPage: React.FC = () => {
         <meta name="keywords" content="IT consulting, technology consulting, advisory" />
       </Helmet>
 
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              IT Consulting
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Expert IT consulting services for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-=======
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
@@ -712,7 +591,6 @@ const ITConsultingPage: React.FC = () => {
                 }`}
               >
                 {category.name}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
               </button>
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
@@ -804,8 +682,6 @@ const ITConsultingPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-=======
     </>
   );
 };
@@ -1040,19 +916,12 @@ export default ITConsultingPage;
         </div>
       </section>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
       <Footer />
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default ITConsultingPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -1060,18 +929,6 @@ import {ArrowRight} from 'lucide-react';
 
 export default function ItconsultingPage() {
   return (
-<<<<<<< HEAD
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>It Consulting - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">It Consulting</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional it consulting services coming soon.</p>
-          Contact Us
-
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function ItconsultingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -1093,7 +950,6 @@ export default function ItconsultingPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
         <title>It Consulting - Zion Tech Group</title>
@@ -1107,12 +963,7 @@ export default function ItconsultingPage() {
           
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {render, screen, fireEvent, waitFor} from '@testing-library/react'
-import {HelmetProvider} from 'react-helmet-async'
-import {MemoryRouter} from 'react-router-dom'
-// Mock components;
-  return <div data-testid="error-boundary">{children}</div>}
-  return <div data-testid="seo-optimizer">{title} - {description}</div>}
-  return <div data-testid="performance-monitor">Performance Monitor</div>}
-// Mock component that throws an error;
-  if (shouldThrow) {throw new Error('Test error')}
-  return <div>Test content</div>}
-// Test component for error boundary tests;
-// const TestComponent = () => <div>Test component</div>
-// Mock onError callback;
-// const onError = jest.fn()
-// Mock helmet context;
-// const helmetContext = {}
-    // Test implementation;
-  })
-})
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
@@ -61,10 +39,7 @@ describe('AdvancedErrorBoundary', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
-=======
 import { render, screen } from '@testing-library/react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 // Mock components
 const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => {
@@ -122,89 +97,11 @@ describe('Advanced Components', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     
     render(
-<<<<<<< HEAD
-    )
-    expect(onError).toHaveBeenCalled()
-    consoleSpy.mockRestore()})
-    const consoleSpy = jest;
-      .spyOn(console, 'error')
- {})
-    let shouldThrow = true;
-    const TestComponent = () => <ThrowError></ThrowError>
-    render(
-    )
-    const retryButton = screen.getByText('Try Again (3, attempts, left)')
-    // Change shouldThrow before clicking retry;
-    shouldThrow = false;
-    fireEvent.click(retryButton)
-    // After retry, the error boundary should reset and show the child component;
-      expect(
-        screen.queryByText('Oops! Something went wrong')
-      ).not.toBeInTheDocument()})
-    consoleSpy.mockRestore()})})
-  const mockSEOData = {title: 'Test Title',
-    description: 'Test Description',
-    keywords: ['test', 'keywords'],
-    canonicalUrl: 'https:// example.com',
-    ogImage: 'https:// example.com/image.jpg',
-    structuredData: {
-      '@type': 'Organization',
-      name: 'Test Organization',},
-    render(
-          <div>Test content</div>
-  )
-    expect(screen.getByText('Test content')).toBeInTheDocument()})
-    render(
-    )
-    // Wait for helmet to update the document title;
- setTimeout(resolve, 100))
-    expect(document.title).toBe('Test Title')})
-    const helmetContext = {}
-    const {container} = render(
-    )
-    // In test environment, helmet may not render scripts in the DOM;
-    // Just verify component renders without crashing;
-      expect(container).toBeTruthy()})})
-    const helmetContext = {}
-    const {container} = render(
-    )
-    // In test environment, helmet renders to document head, not container;
-    // Just verify component renders without crashing;
-      expect(container).toBeTruthy()})})
-    const helmetContext = {}
-    const {container} = render(
-    )
-    // In test environment, helmet renders to document head, not container;
-    // Just verify component renders without crashing;
-      expect(container).toBeTruthy()})})})
-  // Mock performance API;
-  const mockPerformance = {[]),
- []),
- []),
-    measurePageLoad: jest.fn(),
-    reportWebVitals: jest.fn(),
-  // Mock PerformanceObserver;
-  class MockPerformanceObserver {
-    constructor(callback: PerformanceObserverCallback) {
-      this.callback = callback}
-    callback: PerformanceObserverCallback;
-    observe() {}
-    disconnect() {}
-    takeRecords() {return []}
-    // Mock performance API;
-    Object.defineProperty(window, 'performance', {value: mockPerformance,
-      writable: true,
-<<<<<<< HEAD
-      configurable: true,})
-    // Mock PerformanceObserver;
-    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver})
-=======
       configurable: true,
     })
     // Mock PerformanceObserver
     global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver})
   afterEach(() => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     jest.clearAllMocks()})
     const originalEnv = process.env['NODE_ENV']
     Object.defineProperty(process.env, 'NODE_ENV', {value: 'production', writable: true})
@@ -242,14 +139,12 @@ describe('Advanced Components', () => {
     // We just verify the component doesn't crash the test;
       render();
     }).not.toThrow();
-=======
       <MockErrorBoundary>
         <MockErrorComponent shouldThrow={true} />
       </MockErrorBoundary>
     );
     
     expect(consoleSpy).toHaveBeenCalled();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     consoleSpy.mockRestore();
   });
 });

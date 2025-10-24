@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-export default function Page() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
     <div>
       <Head>
         <title>News - Zion Tech Group</title>
@@ -50,7 +19,6 @@ export default function Page() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -75,99 +43,26 @@ import {ArrowRight} from 'lucide-react';
           Contact Us;
           <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function NewsPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>News - Zion Tech Group</title>
-        <meta name="description" content="Professional news services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">News</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional news services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
 
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-<<<<<<< HEAD
-const NewsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-      icon: Shield,
-      title: 'Secure Analytics',
-      description: 'Enterprise-grade security for your sensitive data and analytics.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
-=======
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
@@ -185,10 +80,8 @@ const NewsPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -210,7 +103,6 @@ const NewsPage: React.FC = () => {
           </a>
         </section>
       </main>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -252,41 +144,6 @@ const NewsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -356,7 +213,6 @@ const NewsPage: React.FC = () => {
                 Email Us
               </button>
             </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </section>
 
@@ -408,24 +264,10 @@ const NewsPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </>
-=======
     </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 export default NewsPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

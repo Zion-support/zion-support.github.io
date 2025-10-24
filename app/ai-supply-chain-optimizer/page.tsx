@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 export default function AiSupplyChainOptimizerPage() {
   return (
@@ -22,33 +15,6 @@ export default function AiSupplyChainOptimizerPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai supply chain optimizer solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -59,18 +25,15 @@ export default function AiSupplyChainOptimizerPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 
 import {Helmet} from 'react-helmet-async';
 
 import {Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target} from 'lucide-react';
 
   const features = [{title: 'Predictive Demand Forecasting',
-=======
 import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
@@ -79,7 +42,6 @@ export default function AISupplyChainOptimizerPage() {
   const features = [
     {
       title: 'Predictive Demand Forecasting',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
       icon: <TrendingUp className="w-5h-5ml-2"   />,
       benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']},
@@ -144,21 +106,6 @@ export default function AISupplyChainOptimizerPage() {
       role: 'CEO',
       company: 'Manufacturing Solutions',
       content: 'This AI tool transformed our entire supply chain. We can now predict disruptions before they happen and optimize accordingly.',
-<<<<<<< HEAD
-      rating: 5;}];
-  const stats = [{number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2"   />,</TrendingUp></TrendingUp>
-    {number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-5h-5ml-2"   />,</Target></Target>
-    {number: '500+', label: 'Companies Using', icon: <Globe className="w-5h-5ml-2"   />,</Globe></Globe>
-    {number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-5h-5ml-2"   /></Clock></Clock>];
-  return (
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-
-                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -188,8 +135,6 @@ export default function AisupplychainoptimizerPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
       rating: 5
     }
   ];
@@ -310,4 +255,3 @@ export default function AisupplychainoptimizerPage() {
 
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,33 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Network } from 'lucide-react';
-export default function AIContentDeliveryNetworkZionTechGroup() {
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AIContentDeliveryNetworkPage: React.FC = () => {
@@ -55,7 +30,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
     },
     {
       icon: Zap,
@@ -64,113 +38,33 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
     {
-<<<<<<< HEAD
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
       icon: Shield,
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
-=======
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-<<<<<<< HEAD
-        <title>Ai Content Delivery Network - Zion Tech Group</title>
-        <meta name="description" content="Ai Content Delivery Network solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Content Delivery Network</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai content delivery network solutions designed to meet your business needs.
-=======
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
-=======
     <>
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>AI Content Delivery Network - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered content delivery network for optimal performance." />
         <meta name="keywords" content="AI CDN, content delivery, artificial intelligence, performance optimization, network solutions" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
       </Helmet>
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Page
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-<<<<<<< HEAD
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -180,7 +74,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
           </Link>
         </div>
       </div>
-=======
       </section>
 
       {/* Features Section */}
@@ -209,7 +102,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
@@ -230,7 +122,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Started
@@ -239,7 +130,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
                   Learn More
                 </button>
               </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </section>
@@ -254,53 +144,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Advanced AI technology that drives results
               </p>
-<<<<<<< HEAD
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-=======
             </div></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -319,7 +162,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
@@ -343,74 +185,14 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
                 <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
-<<<<<<< HEAD
-}
-=======
-=======
 const aicontentdeliverynetworkPage: React.FC = () => {
   return(<>)
       <Helmet>)
@@ -465,16 +247,9 @@ const aicontentdeliverynetworkPage: React.FC = () => {
         </div>
       </div>,
     </>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
-<<<<<<< HEAD
-export default PagePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-=======
 export default AIContentDeliveryNetworkPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -495,23 +270,15 @@ export default function AIContentDeliveryNetwork() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AicontentdeliverynetworkPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ai Content Delivery Network - Zion Tech Group</title>
         <meta name="description" content="Professional ai content delivery network services by Zion Tech Group" />
@@ -522,24 +289,9 @@ export default function AicontentdeliverynetworkPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Ai Content Delivery Network</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai content delivery network services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

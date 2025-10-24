@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AIDevOpsAutomationZionTechGroup() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Devops Automation - Zion Tech Group</title>
-        <meta name="description" content="Ai Devops Automation solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Devops Automation</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai devops automation solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -58,16 +8,13 @@ export default function AIDevOpsAutomationZionTechGroup() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 
 export default function AIDevOpsAutomationPage() {const features = [{
-=======
 import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Server, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
@@ -78,7 +25,6 @@ import FuturisticButton from '../components/FuturisticButton';
 export default function AIDevOpsAutomationPage() {
   const features = [
     {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       title: 'Intelligent CI/CD Pipeline',
       description: 'AI-powered continuous integration and deployment with automatic testing, code quality checks, and smart rollback capabilities.',
       icon: <Zap className="w-5h-5ml-2"   />,
@@ -144,23 +90,6 @@ export default function AIDevOpsAutomationPage() {
       role: 'Platform Engineer',
       company: 'CloudScale Inc',
       content: 'Smart resource management reduced our cloud costs by 40% while improving performance. The AI optimization is game-changing.',
-<<<<<<< HEAD
-      rating: 5;}];
-  const stats = [{number: '80%', label: 'Faster Deployments', icon: <Zap className="w-5h-5ml-2"   />,</Zap></Zap>
-    {number: '95%', label: 'Issue Reduction', icon: <Shield className="w-5h-5ml-2"   />,</Shield></Shield>
-    {number: '300+', label: 'Companies Using', icon: <Users className="w-5h-5ml-2"   />,</Users></Users>
-    {number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2"   /></TrendingUp></TrendingUp>];
-  return (
-    <>
-      <title>AI DevOps Automation - Zion Tech Group</title>
-
-            <h1 className="text-4xl font-bold text-white mb-6">AI DevOps Automation</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI DevOps automation services coming soon.</p>
-
-              Contact Us
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -191,8 +120,6 @@ export default function AidevopsautomationPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
       rating: 5
     }
   ];
@@ -284,4 +211,3 @@ export default function AidevopsautomationPage() {
 
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

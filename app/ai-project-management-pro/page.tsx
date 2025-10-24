@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "use client";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -32,33 +26,6 @@ export default function AiProjectManagementProPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai project management pro solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -69,11 +36,9 @@ export default function AiProjectManagementProPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
   return null;
-=======
 
 
 'use client';
@@ -125,20 +90,13 @@ const Page: React.FC = () => {
       company: 'Software Company',
       content: 'Our team collaboration and project visibility have improved dramatically since using this platform.',
       rating: 5]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 export default function AiprojectmanagementproPage() {
   return (
-<<<<<<< HEAD
-    <title>AI Project Management Pro - Zion Tech Group</title>
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Ai Project Management Pro - Zion Tech Group</title>
@@ -162,8 +120,6 @@ export default function AiprojectmanagementproPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -340,4 +296,3 @@ import { ArrowRight, CheckCircle, Zap, Shield, Brain } from 'lucide-react';
               </div>
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

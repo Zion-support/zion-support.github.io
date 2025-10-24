@@ -4,13 +4,8 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const team = [
-=======
   const _team = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -27,7 +22,6 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -39,44 +33,6 @@ const AboutPage: React.FC = () => {
     {
       icon: Target,
       title: 'Innovation',
-<<<<<<< HEAD
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
-    },
-    {
-      icon: Brain,
-      title: 'Excellence',
-      description: 'We deliver solutions that exceed expectations and drive real business value.'
-    },
-    {
-      icon: Shield,
-      title: 'Integrity',
-      description: 'We maintain the highest ethical standards in all our business practices.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners in their success.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead Developer',
-      bio: 'Full-stack developer passionate about creating scalable solutions.'
-    }
-  ];
-=======
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'},
     {
       icon: Shield,
@@ -90,7 +46,6 @@ const AboutPage: React.FC = () => {
       icon: Users,
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.'}];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -100,8 +55,6 @@ const AboutPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
-<<<<<<< HEAD
-=======
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
 
 export default function AboutPage() {
@@ -205,11 +158,6 @@ export default function AboutPage() {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      {/* Hero Section */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
@@ -219,7 +167,6 @@ export default function AboutPage() {
           <p className='text-xl text-gray-600'>
             Leading the future of AI and IT solutions
           </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
@@ -244,21 +191,14 @@ export default function AboutPage() {
             <p className="text-gray-300">Enterprise-grade security</p>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </div>
-      <Footer />
-=======
 
       {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-=======
 
         {/* Stats Section */}
         <section className="py-16 bg-white rounded-xl mb-16"></section>
@@ -267,7 +207,6 @@ export default function AboutPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center"></div>
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                     {stat.number}
                   </div>
                   <div className="text-gray-600 font-medium"></div>
@@ -280,19 +219,11 @@ export default function AboutPage() {
         </section>
 
         {/* Mission Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-=======
         <section className="py-20 bg-gray-50 rounded-xl mb-16"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
               <div></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   Our Mission
                 </h2>
                 <p className="text-lg text-gray-600 mb-6"></p>
@@ -323,17 +254,10 @@ export default function AboutPage() {
         </section>
 
         {/* Values Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-=======
         <section className="py-20 bg-white rounded-xl mb-16"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 Our Values
               </h2>
               <p className="text-xl text-gray-600"></p>
@@ -360,17 +284,10 @@ export default function AboutPage() {
         </section>
 
         {/* Team Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-=======
         <section className="py-20 bg-gray-50 rounded-xl mb-16"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 Meet Our Team
               </h2>
               <p className="text-xl text-gray-600"></p>
@@ -404,15 +321,9 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"></p>
@@ -435,12 +346,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-      <Footer />
-<<<<<<< HEAD
-      </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">About</h1>
@@ -449,13 +354,11 @@ export default function AboutPage() {
           Contact Us
         </a>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     </div>
   );
 };
 
 export default AboutPage;
-=======
       {/* Stats Section */}
       <section className="py-16 bg-white"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -706,4 +609,3 @@ export default AboutPage;
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

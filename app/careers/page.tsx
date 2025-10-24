@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import EnhancedSEO from '../components/EnhancedSEO';
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 
 export default function CareersPage() {
@@ -20,36 +10,6 @@ export default function CareersPage() {
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Careers solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Careers</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive careers solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -68,7 +28,6 @@ export default function CareersPage() {
                   <div className="text-3xl font-bold text-white mb-2">{item.stat}</div>
                   <div className="text-gray-400 text-sm">{item.label}</div>
                   <div className="text-gray-500 text-xs mt-1">{item.description}</div>
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -79,13 +38,6 @@ import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight, CheckC
 
 const CareersPage: React.FC = () => {
   const openPositions = [
-<<<<<<< HEAD
-    {
-      title: 'Senior AI Engineer',
-      department: 'AI Solutions',
-      location: 'Remote',
-      type: 'Full-time',
-=======
     {}
       id: 1,
       title: 'Senior AI Engineer',
@@ -108,7 +60,6 @@ const CareersPage: React.FC = () => {
       ],
       postedDate: '2024-01-15',
       salary: '$120,000 - $180,000',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       experience: '5+ years',
       description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
       requirements: [
@@ -124,13 +75,6 @@ const CareersPage: React.FC = () => {
         'Professional development budget'
       ]
     },
-<<<<<<< HEAD
-    {
-      title: 'Full Stack Developer',
-      department: 'Engineering',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-=======
     {}
       id: 2,
       title: 'AI Research Scientist',
@@ -153,7 +97,6 @@ const CareersPage: React.FC = () => {
       ],
       postedDate: '2024-01-12',
       salary: '$150,000 - $220,000',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       experience: '3+ years',
       description: 'Build scalable web applications and APIs for our AI platform.',
       requirements: [
@@ -169,27 +112,6 @@ const CareersPage: React.FC = () => {
         'Professional development budget'
       ]
     },
-<<<<<<< HEAD
-    {
-      title: 'DevOps Engineer',
-      department: 'Infrastructure',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Manage and scale our cloud infrastructure and deployment pipelines.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science or related field',
-        '4+ years experience with AWS, Docker, and Kubernetes',
-        'Experience with CI/CD pipelines and monitoring',
-        'Knowledge of infrastructure as code (Terraform, CloudFormation)'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget'
-      ]
-=======
     {}
       id: 3,
       title: 'Data Scientist',
@@ -289,36 +211,20 @@ const CareersPage: React.FC = () => {
       salary: '$80,000 - $120,000',
       experience: '3+ years',
       skills: ['Figma', 'User Research', 'Prototyping', 'AI/ML UX']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ]
 
   const benefits = [
-<<<<<<< HEAD
-    {
-<<<<<<< HEAD
-      title: 'Competitive Compensation',
-      description: 'We offer competitive salaries, equity, and performance bonuses.',
-      icon: Star
-    },
-    {
-=======
     {}
       icon: Award,
       title: 'Competitive Compensation',
       description: 'Above-market salaries with equity participation and performance bonuses'},
     {}
       icon: Heart,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       title: 'Health & Wellness',
       description: 'Comprehensive health, dental, and vision insurance for you and your family.',
       icon: Heart
     },
-<<<<<<< HEAD
-    {
-      title: 'Flexible Work',
-      description: 'Remote work options and flexible hours to support work-life balance.',
-=======
     {}
       icon: Home,
       title: 'Flexible Work',
@@ -357,7 +263,6 @@ const CareersPage: React.FC = () => {
     {}
       title: 'Work-Life Balance',
       description: 'We understand that great work comes from well-rested, happy people',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       icon: Clock
     },
     {
@@ -374,7 +279,6 @@ const CareersPage: React.FC = () => {
       title: 'Team Culture',
       description: 'Collaborative, inclusive environment where everyone can thrive.',
       icon: Users
-=======
       icon: Star,
       title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology',
@@ -393,49 +297,9 @@ const CareersPage: React.FC = () => {
       icon: Award,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ]
 
-<<<<<<< HEAD
-  const stats = [
-    { label: 'Open Positions', value: '15+', icon: Briefcase },
-    { label: 'Team Members', value: '50+', icon: Users },
-    { label: 'Remote Friendly', value: '100%', icon: MapPin },
-    { label: 'Employee Satisfaction', value: '98%', icon: Star }
-  ]
-
-  return (
-    <>
-      <Helmet>
-        <title>Careers | Zion Tech Group</title>
-        <meta name="description" content="Join our team of AI and technology experts. Explore career opportunities at Zion Tech Group." />
-        <meta name="keywords" content="careers, jobs, AI engineer, developer, remote work, Zion Tech Group" />
-      </Helmet>
-<<<<<<< HEAD
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Join Our Team
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Be part of a team that's shaping the future of AI and technology. 
-              We're looking for passionate individuals who want to make a difference.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-slate-700">
-                  <stat.icon className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white font-semibold">{stat.value}</span>
-                  <span className="text-gray-400 text-sm">{stat.label}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-                </div>
-=======
   const getDepartmentIcon = (department: string) => {}
     const icons = {}
       engineering: Code,
@@ -567,10 +431,8 @@ const CareersPage: React.FC = () => {
                 ></button>
                   {type.label} ({type.count})</button>
                 </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               ))}
             </div>
-=======
 
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -585,30 +447,6 @@ const CareersPage: React.FC = () => {
         </div></div></div></div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {openPositions.map((position, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4">
-                  <div className="flex items-center space-x-1">
-                    <Briefcase className="w-4 h-4" />
-                    <span>{position.department}</span>
-                  </div></div></div></div></div>
-                  <div className="flex items-center space-x-1">
-                    <MapPin className="w-4 h-4" />
-                    <span>{position.location}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{position.type}</span>
-=======
       {/* Open Positions */}
       <section className="py-20"></section>
             <h2 className="text-3xl font-bold text-white mb-8">Open Positions</h2>
@@ -664,7 +502,6 @@ const CareersPage: React.FC = () => {
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{position.salary}</div>
                       <div className="text-gray-400 text-sm">{position.experience}</div>
                     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{position.description}</p>
@@ -685,35 +522,9 @@ const CareersPage: React.FC = () => {
                 </button>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Company Values */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our company culture.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                  <div className={`w-16 h-16 ${value.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
-                    <value.icon className="w-8 h-8" />
-                  </div>
-                  <h3 className={`text-xl font-bold ${value.color} mb-4`}>{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-              ))}
-            </div>
-=======
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
@@ -727,30 +538,9 @@ const CareersPage: React.FC = () => {
                 <p className="text-gray-300">{value.description}</p>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Benefits & Perks</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We offer comprehensive benefits and perks to support our team members' well-being and growth.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
@@ -759,7 +549,6 @@ const CareersPage: React.FC = () => {
               <div key={index} className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div></div></div></div>
                 <span className="text-gray-300">{benefit}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
               </div>
             </div>
           </div>
@@ -844,7 +633,6 @@ const CareersPage: React.FC = () => {
                       Apply Now
                       <ArrowRight className="w-4 h-4" />
                     </button>
-=======
         {/* Open Positions */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -904,7 +692,6 @@ const CareersPage: React.FC = () => {
                             <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
                             <span className="text-sm">{benefit}</span>
                           </li>
-=======
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
                     <div></div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>
@@ -927,16 +714,9 @@ const CareersPage: React.FC = () => {
                     <div></div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:<div className="flex flex-wrap gap-2">{position.skills.map((skill, index) => (</div><span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{skill}</span>
                           </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-                  </div>
-                </div>
-              ))}
-=======
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4"></div>
@@ -952,29 +732,7 @@ const CareersPage: React.FC = () => {
                     </button>,
                   </div>,
                 </div>))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Don't See Your Dream Job?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-              </p>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -985,14 +743,11 @@ const CareersPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
           </div>
         </section>
-=======
       </section>
 
       {/* Benefits */}
@@ -1015,7 +770,6 @@ const CareersPage: React.FC = () => {
             </h2>,
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">,
               We offer competitive benefits and a culture that values innovation, growth, and work-life balance;
-=======
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
@@ -1051,157 +805,8 @@ export default function Careers() {return (
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive careers solutions.
               Contact us to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
-                  <benefit.icon className="w-8 h-8 text-white" />,
-                </div>,
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-        <div className="container mx-auto px-4"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Work With Us?</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">We offer competitive benefits and a culture that values innovation, growth, and work-life balance</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center group"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Culture */}
-      <section className="py-20"></section>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"></h2>
-              Our Culture
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
-              The values and principles that shape how we work together
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {culture.map((item, index) => (}
-              <div key={index} className="text-center group"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <item.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}<p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4"></h2>
-              Our Culture;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
-              The values and principles that shape how we work together;
-            </p>,
-          </div>,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-            {culture.map((item, index) => (
-              <div key={index} className="text-center group"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
-                  <item.icon className="w-8 h-8 text-white" />,
-                </div>,
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
-        <div className="container mx-auto px-4"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Culture</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">The values and principles that shape how we work together</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{culture.map((item, index) => (</div>
-              <div key={index} className="text-center group"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <item.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"></section>
-        <div className="container mx-auto px-4 text-center"></section>
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Don't See the Right Role?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals. Send us your resume and we'll</p>
-            reach out when we have a position that matches your skills.</p>
-          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6"></h2>
-            Don't See the Right Role?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"></p>
-            We're always looking for talented individuals. Send us your resume and we'll;
-            reach out when we have a position that matches your skills.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
-              to="/contact"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            ></Link>
-              <Mail className="w-5 h-5 mr-2" />
-              Send Your Resume;
-            </Link>
-            <Link;
-              to="/team"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            ></Link>
-              <Users className="w-5 h-5 mr-2" />
-              Meet Our Team;
-            </Link>
-          </div>
-        </div>
-      </section>,
-    </div>);
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-
-        {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <benefit.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Don't See the Right Role?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals. Send us your resume and let us know 
-              how you'd like to contribute to our mission.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Send Your Resume
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <a
-                href="mailto:careers@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-=======
 import React  from 'react';
 const CareersPage: React.FC = () => {
   return (
@@ -1236,22 +841,16 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </>
   )
 }
 
 export default CareersPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
       </div>
     <  />
   );
 };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -1281,7 +880,4 @@ export default function CareersPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 export default CareersPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

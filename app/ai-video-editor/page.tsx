@@ -1,48 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 export default function AiVideoEditorZionTechGroup() {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';export default function AiVideoEditorZionTechGroup() {
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Ai Video Editor - Zion Tech Group</title>
         <meta name="description" content="Ai Video Editor solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Video Editor</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai video editor solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-=======
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></mai>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -61,9 +32,7 @@ import { Link } from 'react-router-dom';export default function AiVideoEditorZio
               <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"></p>
                 Create professional videos with AI-powered editing tools. Automated cutting, effects, 
                 and optimization for content creators and businesses.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </p>
-=======
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -215,7 +184,6 @@ export default function Page() {
         </Link>
               <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
               </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -230,7 +198,6 @@ export default function Page() {
               <p className="text-gray-300">
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
-=======
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -257,16 +224,6 @@ export default function Page() {
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></section>
           <div className="max-w-7xl mx-auto"></section>
             <div className="text-center mb-16"></div>
@@ -275,7 +232,6 @@ export default function Page() {
               </h2>
               <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Transform your video content with intelligent automation and professional editing tools
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </p>
             </div></div>
 
@@ -298,9 +254,6 @@ export default function Page() {
                     </ul>
                   )}
                 </div>
-<<<<<<< HEAD
-              ))}
-=======
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h>
                 <p className="text-gray-600 mb-4"></p>
                   AI automatically detects and cuts out dead air, filler words, and unwanted segments.
@@ -402,22 +355,10 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-=======
         {/* Pricing Section */}
         <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"></section>
           <div className="max-w-7xl mx-auto"></section>
@@ -427,7 +368,6 @@ export default function Page() {
               </h2>
               <p className="text-xl text-gray-600 max-w-3 xl mx-auto"></p>
                 Professional video editing tools for every budget
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </p>
             </div></div>
 
@@ -439,9 +379,6 @@ export default function Page() {
                   </div></div></div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-<<<<<<< HEAD
-              ))}
-=======
                 <ul className="space-y-4 mb-8"></u>
                   <li className="flex items-center"></l>
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
@@ -550,44 +487,19 @@ export default function Page() {
                   Contact Sales
                 </a>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-=======
         <section className="py-20" />
           <div className="containermx-autopx-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
               <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -598,13 +510,7 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600"></section>
           <div className="max-w-4xl mx-auto text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -653,10 +559,8 @@ export default function Page() {
 
       <Footer /></Foote>
     </ErrorBoundary>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 }
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -674,8 +578,6 @@ export default function AiVideoEditor() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -706,8 +608,6 @@ export default function AivideoeditorPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
               <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
                 </Link>
@@ -719,4 +619,3 @@ export default function AivideoeditorPage() {
       </div>
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

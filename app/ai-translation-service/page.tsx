@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-export default function AiTranslationServicePage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Translation Service - Zion Tech Group</title>
-        <meta name="description" content="Ai Translation Service solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Translation Service</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai translation service solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -54,11 +8,9 @@ export default function AiTranslationServicePage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 import React from 'react'
 import {Link} from 'react-router-dom'
 
@@ -243,7 +195,6 @@ export default function AITranslationService() {const features = [{
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       <Star className="w-5h-5ml-2"   /></Star>
                       Most Popular;
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react';
@@ -269,7 +220,6 @@ import Layout from '../layout'
                     <div className="inline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-4">
                       <Star className="w-4h-4mr-1" />
                       Most Popular
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                     </div>
   )}
                   <h3 className="w-5h-5ml-2"   />{plan.name}</h3>
@@ -280,13 +230,8 @@ import Layout from '../layout'
                   </div>
                   <ul className="w-5h-5ml-2"   /></ul>
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                      <li key={featureIndex} className="flex items-center text-gray-300"   /></li>
-                        <CheckCircle className="w-5h-5ml-2"   /></CheckCircle>
-=======
                       <li key="{featureIndex}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5text-amber-400mr-3" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                         {feature}
                       </li>
   ))}
@@ -296,54 +241,23 @@ import Layout from '../layout'
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
-<<<<<<< HEAD
-                        : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'}`}
-                    />Get Started;
-                  </Link>
-                </div>
-  ))}
-=======
                         : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
                     }`}
                     />Get Started
                   </Link>
                 </div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
         </section>
         {/* Testimonials */}
-<<<<<<< HEAD
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2"   />Trusted by Global Businesses;
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
           <div className="max-w-7xlmx-auto">
             <div className="text-centermb-12">
               <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Global Businesses
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="w-5h-5ml-2">See how our AI Translation Service enables global communication;
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700"   /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5h-5tex t-yellow-400fill-current"    /></Star>
-  ))}
-                  </div>
-                  <p className="w-5h-5ml-2">"{testimonial.content}"</p>
-                  <div   /></div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
-                </div>
-  ))}
-=======
             <div className="grid grid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
@@ -359,31 +273,18 @@ import Layout from '../layout'
                     <div className="text-smtext-gray-400"   />{testimonial.company}</div>
                 </div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2"   />Break Down Language Barriers Today;
-=======
         <section className="py-16 px-4sm:px-6lg:px-8" />
           <div className="max-w-4 xlmx-autotext-center">
             <div className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2xll p-8borderborder-amber-500/30">
               <h2 className="text-3 xl font-bold text-white mb-4"  />Break Down Language Barriers Today
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="w-5h-5ml-2">Join thousands of businesses using AI Translation Service to reach global audiences;
               </p>
-<<<<<<< HEAD
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link to="/contact" className="bg-gradient-to-rfrom-amber-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-all duration-300">Start Your Free Trial;
-=======
               <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </Link>
                 <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
                 </Link>
@@ -395,10 +296,6 @@ import Layout from '../layout'
   )
 
 };
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -429,6 +326,3 @@ export default function AitranslationservicePage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

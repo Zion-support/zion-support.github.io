@@ -1,27 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-"use client";
-=======
 'use client';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calculator, Building2, Wallet} from 'lucide-react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 export default function AiFinancialAnalyticsProPage() {
   return null;
 };
-=======
 "use client";
 import React from "react";
 import {
@@ -90,7 +73,6 @@ export default function page() {
       ],
     },
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 
   const analyticsFeatures = [
     {
@@ -190,28 +172,6 @@ export default function page() {
 
 export default function Page() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>AI Financial Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional AI financial analytics services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          AI Financial Analytics Pro
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional AI financial analytics services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
     <div>
       <Head>
         <title>Ai Financial Analytics Pro - Zion Tech Group</title>
@@ -235,7 +195,6 @@ export default function Page() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
@@ -281,7 +240,6 @@ export default function AiFinancialAnalyticsProPage() {
         </div>
       </div>
     </div>
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -424,30 +382,6 @@ export default function AiFinancialAnalyticsProPage() {const features = [{
       content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.',
       rating: 5,
       avatar: 'LT',
-<<<<<<< HEAD
-      results: '20+ hours saved weekly'}];
-  const stats = [{number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-5h-5ml-2"   />,</Building2></Building2>
-    {number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-5h-5ml-2"   />,</Database></Database>
-    {number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-5h-5ml-2"   />,</Shield></Shield>
-    {number: '50%', label: 'Faster Reporting', icon: <Zap className="w-5h-5ml-2"   /></Zap></Zap>];
-  const integrations = [{name: 'QuickBooks', icon: <Calculator className="w-5h-5ml-2"   />, category: 'Accounting'},
-    {name: 'Xero', icon: <FileText className="w-5h-5ml-2"   />, category: 'Accounting'},
-    {name: 'SAP', icon: <Database className="w-5h-5ml-2"   />, category: 'ERP'},
-    {name: 'Oracle', icon: <Building2 className="w-5h-5ml-2"   />, category: 'ERP'},
-    {name: 'Salesforce', icon: <TrendingUp className="w-5h-5ml-2"   />, category: 'CRM'},
-    {name: 'HubSpot', icon: <Target className="w-5h-5ml-2"   />, category: 'CRM'},
-    {name: 'Stripe', icon: <CreditCard className="w-5h-5ml-2"   />, category: 'Payments'},
-    {name: 'PayPal', icon: <Wallet className="w-5h-5ml-2"   />, category: 'Payments'}];
-  return (
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-
-        {/* Open Graph Meta Tags */}
-
-        {/* Twitter Card Meta Tags */}
-
-=======
       results: '20+ hours saved weekly'
     }
   ];
@@ -490,7 +424,6 @@ export default function AiFinancialAnalyticsProPage() {const features = [{
         <meta name="twitter: description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." / / />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-financial-analytics.jpg" / / />
         <meta name="twitter:site" content="@ziontechgroup" / / />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         {/* Structured Data */}
         <script type="application/ld+json"    />{JSON.stringify({
             "@context": "https: // schema.org",
@@ -511,14 +444,6 @@ export default function AiFinancialAnalyticsProPage() {const features = [{
                 "unitText": "MONTH"},
             "provider": {"@type": "Organization",
               "name": "Zion Tech Group",
-<<<<<<< HEAD
-              "url": "https: // ziontechgroup.com"})}
-
-              <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -545,7 +470,6 @@ export default function AifinancialanalyticsproPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
-=======
               "url": "https: //ziontechgroup.com"
             }
           })}
@@ -671,12 +595,7 @@ export default function AifinancialanalyticsproPage() {
               <p />✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
             </div>
         </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

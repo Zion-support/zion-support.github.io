@@ -21,20 +21,11 @@ export interface MiddlewareContext {
 }
 export type Middleware = (
   context: MiddlewareContext,
-<<<<<<< HEAD
-  next: NextFunction
-) => Promise<unknown> | unknown;
-/**
- * Middleware executor
- */
-export class MiddlewareExecutor {
-=======
   next: NextFunction) => Promise;
           <unknown> | unknown;
  * Middleware executor;
 export class MiddlewareExecutor {// TODO: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   private middlewares: Middleware[] = [];
   /**
    * Add middleware to the chain
@@ -63,11 +54,7 @@ export class MiddlewareExecutor {// TODO: Add content;}
  */
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
-<<<<<<< HEAD
-  logger.info('Request started', 'RequestMiddleware', {
-=======
   logger.info('Request started', {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     component: 'RequestMiddleware',
     method: context.request.method,
     url: context.request.url
@@ -75,11 +62,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   try {
     const result = await next();
     const duration = Date.now() - startTime;
-<<<<<<< HEAD
-    logger.info('Request completed', 'RequestMiddleware', {
-=======
     logger.info('Request completed', {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
@@ -89,11 +72,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     return result;
   } catch (error) {
     const duration = Date.now() - startTime;
-<<<<<<< HEAD
-    logger.error('Request failed', error as Error, 'RequestMiddleware', {
-=======
     logger.error('Request failed', error as Error, {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
@@ -118,36 +97,12 @@ export const authMiddleware: Middleware = async (context, next) => {
 function getAuthToken(): string | null {
   if (typeof window === 'undefined') return null;
   return localStorage.getItem('authToken');
-<<<<<<< HEAD
-}
-/**
- * Error handling middleware
- */
-export const errorHandlingMiddleware: Middleware = async (context, next) => {
-  try {
-    return await next();
-  } catch (error) {
-    // Transform error into a standardized format
-    const standardError = {
-      message: error instanceof Error ? error.message : 'Unknown error',
-      status: context.response?.status || 500,
-      url: context.request.url,
-      method: context.request.method
-    };
-    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
-      component: 'ErrorHandlingMiddleware',
-      ...standardError
-    });
-    throw standardError;
-  }
-=======
  * Error handling middleware;
 export const errorHandlingMiddleware: Middleware = async (context, next) => {// Transform error into a standardized format;}
     const standardError = {message: error instanceof Error ? error.message : 'Unknown error'}
       status: context.response?.status || 500,
       method: context.request.method;
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {// TODO: Add content;}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 /**
  * Rate limiting middleware
@@ -205,46 +160,25 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
         if (attempt < maxRetries) {
           logger.warn(
             `Request failed, retrying (${attempt + 1}/${maxRetries})`,
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'RetryMiddleware',
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
             {
               component: 'RetryMiddleware',
               url: context.request.url
             }
           );
-=======
 //             'RetryMiddleware',
             {// TODO: Add content;}
 };
   component: 'RetryMiddleware');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
         }
       }
     }
     throw lastError;
-<<<<<<< HEAD
-  };
-};
-/**
- * Timeout middleware
- */
-export const timeoutMiddleware = (timeoutMs: number): Middleware => {
-  return async (context, next) => {
-    return await Promise.race([
-      next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
-    ]);
-=======
  * Timeout middleware;
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {return await Promise.race([}
   // TODO: Add items]
 //       next(),
       new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs))]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   };
 };
 /**
@@ -282,10 +216,6 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
 }
-<<<<<<< HEAD
-export default {
-  MiddlewareExecutor,
-=======
   const executor = new MiddlewareExecutor();
   return executor;
 //     .use(loggingMiddleware)
@@ -294,7 +224,6 @@ export default {
 //     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
 export default {MiddlewareExecutor}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   loggingMiddleware,
   authMiddleware,
   errorHandlingMiddleware,

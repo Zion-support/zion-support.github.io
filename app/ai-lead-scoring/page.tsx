@@ -1,33 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
-=======
 import { Helmet } from 'react-helmet-async'
 import { Target, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Shield, DollarSign } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import React  from 'react';
 import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AiLeadScoringZionTechGroup() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
 const AILeadScoringPage: React.FC = () => {
   const features = [
     {
@@ -147,19 +131,10 @@ const AILeadScoringPage: React.FC = () => {
   ]
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ai Lead Scoring - Zion Tech Group</title>
         <meta name="description" content="Ai Lead Scoring solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Lead Scoring</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai lead scoring solutions designed to meet your business needs.
-=======
         <title>AI Lead Scoring - Smart Sales Intelligence | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered lead scoring with intent detection, conversion analytics, and automated workflows. Increase conversion rates by 180% and ROI by 250%." / / />
         <meta name="keywords" content="AI lead scoring, sales intelligence, lead qualification, conversion optimization, sales automation, CRM integration" / / />
@@ -187,36 +162,7 @@ const AILeadScoringPage: React.FC = () => {
           <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
               Transform your sales process with AI-powered lead scoring, 
             intent detection, and conversion analytics that increase conversion rates by 180%.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -227,10 +173,8 @@ const AILeadScoringPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
-=======
           <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
             <Link to="/contact" className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40transformhover:scale-105" >
            
@@ -354,14 +298,8 @@ const AILeadScoringPage: React.FC = () => {
       </section>
 
   )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
-=======
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function AileadscoringPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -387,7 +325,4 @@ export default function AileadscoringPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 export default AILeadScoringPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

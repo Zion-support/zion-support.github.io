@@ -1,78 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 const features = [
-=======
 "use client";
 import React from "react";
 import { Brain, Clock, Target, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-=======
 import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 const AiCustomerSupportChatbotPage: React.FC = () => {
 import { ArrowRight, CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
-<<<<<<< HEAD
-export default function AICustomerSupportChatbot() {
-  const chatbotFeatures = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CFO",
-      company: "TechCorp",
-      content: "The AI financial analysis platform has revolutionized our decision-making process.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Investment Manager",
-      company: "FinancePro",
-      content: "Incredible accuracy and insights that have improved our portfolio performance.",
-      rating: 5
-    }
-  ];
-<<<<<<< HEAD
-export default function AICustomerSupportChatbot() {
-=======
 
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -104,7 +50,6 @@ export default function AICustomerSupportChatbot() {const features = [{
 
   const pricingPlans = [{name: 'Starter',
       price: '$29',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: [
@@ -113,19 +58,6 @@ export default function AICustomerSupportChatbot() {const features = [{
         'Website integration',
         'Email support',
         'Basic analytics',
-<<<<<<< HEAD
-        'Standard templates'
-      ],
-      popular: false;
-    },
-    {
-      name: 'Professional',
-      price: '$199',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-        'Up to 10,000 conversations/month',
-=======
         'Website integration'],
       popular: false;},
     {name: 'Professional',
@@ -133,28 +65,10 @@ export default function AICustomerSupportChatbot() {const features = [{
       period: '/month',
       description: 'Ideal for growing businesses',
       features: ['Up to 10,000 conversations/month',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         'Advanced AI features',
         'Multi-channel support',
         'Priority support',
         'Advanced analytics',
-<<<<<<< HEAD
-        'Custom branding',
-        'API access',
-        'Integrations'
-      ],
-      popular: true;
-    },
-    {
-      name: 'Enterprise'
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations with complex needs',
-      features: [
-        'Unlimited conversations',
-        'Custom AI models',
-        'White-label options',
-=======
         'Multi-channel support',
         'API access'],
       popular: true;},
@@ -165,50 +79,9 @@ export default function AICustomerSupportChatbot() {const features = [{
       features: ['Unlimited conversations',
         'Custom AI training',
         'White-label solution',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         'Dedicated support',
         'Advanced security',
         'Custom integrations',
-<<<<<<< HEAD
-        'SLA guarantee',
-        'Training & onboarding'
-      ],
-      popular: false;
-    }
-  ];
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechSupport Solutions",
-      role: "Customer Success Manager",
-      content: "Our AI chatbot has reduced response time by 80% and increased customer satisfaction by 40%. It handles 90% of inquiries automatically.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Plus",
-      role: "Operations Director",
-      content: "The chatbot understands context perfectly and escalates complex issues to humans seamlessly. Our support team can focus on high-value tasks.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "SaaS Platform Inc",
-      role: "Head of Support",
-      content: "24/7 availability with consistent quality responses. Our customers love the instant help and our team loves the reduced workload.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return null;
-=======
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -218,37 +91,6 @@ export default function AICustomerSupportChatbot() {const features = [{
   ];
 
   return (
-<<<<<<< HEAD
-    <React.Fragment>
-      <Helmet>
-        <title>Ai Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai customer support chatbot solution for modern businesses." />
-        <meta name="keywords" content="AI ai customer support chatbot, artificial intelligence, ai customer support chatbot, AI solutions, intelligent automation" />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Customer Support Chatbot
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai customer support chatbot solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
-          </div>
-=======
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" />
       </Helmet>
@@ -275,7 +117,6 @@ export default function AICustomerSupportChatbot() {const features = [{
               <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
               </Link>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </section>
 
         {/* Features Section */}
@@ -308,7 +149,6 @@ export default function AICustomerSupportChatbot() {const features = [{
                       ))}
                     </ul>
                   )}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Helmet></Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
@@ -486,67 +326,12 @@ export default function AICustomerSupportChatbot() {const features = [{
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div><div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </React.Fragment>
-  );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600"></section>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
@@ -577,7 +362,6 @@ export default function AICustomerSupportChatbot() {const features = [{
         </div>
       </section>,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default function AiCustomerSupportChatbotPage() {
@@ -594,33 +378,6 @@ export default function AiCustomerSupportChatbotPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai customer support chatbot solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -631,11 +388,9 @@ export default function AiCustomerSupportChatbotPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
         'Advanced analytics',
         'SLA guarantee'],
       popular: false;}
@@ -706,8 +461,6 @@ export default function AiCustomerSupportChatbot() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function AicustomersupportchatbotPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -733,8 +486,6 @@ export default function AicustomersupportchatbotPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
         <section className="py-20" />
           <div className="containermx-autopx-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
@@ -752,4 +503,3 @@ export default function AicustomersupportchatbotPage() {
 
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

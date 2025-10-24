@@ -1,124 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 export default function TermsPage() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-=======
 import React  from 'react';
 const TermsPage: React.FC = () => {
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Terms - Zion Tech Group</title>
         <meta name="description" content="Terms solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Terms</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive terms solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const TermsofServicePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-<<<<<<< HEAD
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-=======
       title: 'Service Availability',
       icon: Server,
       content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       icon: Shield,
-<<<<<<< HEAD
-      title: 'Secure Analytics',
-      description: 'Enterprise-grade security for your sensitive data and analytics.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-=======
       content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.',
     },
     {
@@ -159,7 +59,6 @@ const TermsofServicePage: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
   return (
     <>
@@ -181,7 +80,6 @@ const TermsofServicePage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Terms of service and legal information.
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         <div className="container mx-autopx-4py-16">
@@ -200,7 +98,6 @@ const TermsofServicePage: React.FC = () => {
             <p className="text-gray-300 mb-6">
               We're working on bringing you comprehensive terms solutions. 
               Contact us to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -211,95 +108,6 @@ const TermsofServicePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-<<<<<<< HEAD
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -307,17 +115,13 @@ const TermsofServicePage: React.FC = () => {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-=======
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -414,20 +218,8 @@ const TermsPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </main>
-      
       <Footer />
     </>
-  )
-}
-
-export default TermsPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
-      <Footer />
-    </>
-=======
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -463,13 +255,10 @@ const TermsPage = () => {
 
       <Footer />
     </ErrorBoundary>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 export default TermsofServicePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -516,8 +305,6 @@ export default function Terms() {return (
   );
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -548,8 +335,6 @@ export default function TermsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
       </div>
         </div>
       </div>
@@ -564,4 +349,3 @@ export default function TermsPage() {
 };
 
 export default TermsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

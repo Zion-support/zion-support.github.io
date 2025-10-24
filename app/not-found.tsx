@@ -1,53 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import Link from 'next/link'
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
-=======
 'use client';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import React from 'react';
 import { Home, ArrowLeft, Search, Phone, Mail, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Target, CheckCircle, ArrowRight, Globe, Database, Smartphone, Settings, Lock, TrendingUp, Star, Award, Phone as PhoneIcon, Mail as MailIcon } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function NotFoundPage() {
-  const quickLinks = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Cloud },
-    { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Contact', href: '/contact', icon: Phone },
-    { name: 'Blog', href: '/blog', icon: Code }
-  ];
-
-  const popularServices = [
-    { name: 'AI Marketing', href: '/ai-marketing', icon: Target },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'Case Studies', href: '/case-studies', icon: BarChart },
-    { name: 'Consultation', href: '/consultation', icon: Phone }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-
-export default function NotFound() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-<<<<<<< HEAD
-
       <div className="text-center">
-
-=======
-      <div className="text-center">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
         <span className="text-8xl font-bold text-white mb-4">404</span>
         <h1 className="text-2xl font-semibold text-white mb-4">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
         <div className="flex justify-center mb-6">
@@ -56,34 +13,17 @@ export default function NotFound() {
           </div></div></div></div>
         </div>
         <h1 className="text-2xl font-bold text-white mb-4">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           Page Not Found
         </h1>
         <p className="text-gray-300 mb-8 max-w-md">
           Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-
-          <Link href="/" 
-            className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">
-            <Home className="w-5 h-5 mr-2" />
-            Go Home
-          </Link>
-          <button onClick={() => window.history.back()}
-            className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors">
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Go Back
-          </button>
-          <button onClick={() => window.location.reload()}
-            className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors">
-=======
           <Link
             href="/"
             className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
           >
             <Home className="w-5 h-5 mr-2" />
-=======
 const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4">
@@ -102,7 +42,6 @@ const NotFound: React.FC = () => {
            
           <Home className="w-4 h-4 mr-2" /  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             Go Home
           </Link>
           <button
@@ -116,12 +55,8 @@ const NotFound: React.FC = () => {
             onClick={() => window.location.reload()}
             className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
           >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
             <RefreshCw className="w-5 h-5 mr-2" />
             Refresh
-<<<<<<< HEAD
-          </button>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
       <div className="container mx-auto px-4 py-20"></div>
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -219,17 +154,11 @@ const NotFound: React.FC = () => {
               <span>Back to Home</span>
             </a>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -264,17 +193,11 @@ const NotFound: React.FC = () => {return (
           >
             <RefreshCw className="w-5h-5ml-2"   /></RefreshCw>
             Refresh;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </button>
         </div>
     </div>
   )
 };
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 const NotFoundPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -302,6 +225,3 @@ const NotFoundPage: React.FC = () => {
 };
 
 export default NotFoundPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

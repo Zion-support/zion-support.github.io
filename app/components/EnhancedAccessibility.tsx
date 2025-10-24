@@ -1,47 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-    </div>
-  );
-}
-=======
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
-=======
-=======
 import { useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -50,7 +9,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     focusVisible: false
   })
   // const { trackEvent } = useAnalytics()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
@@ -114,26 +72,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
 
     // Initialize accessibility enhancements
-<<<<<<< HEAD
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-      }
-    };
-  }, []);
-
-  return <React.Fragment>{children}</React.Fragment>;
-};
-
-export default EnhancedAccessibility;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 import React from 'react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -141,12 +79,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 };
 
 export default EnhancedAccessibility;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 'use client';
 import React from "react";
 
@@ -182,16 +116,10 @@ const EnhancedAccessibility: React.FC<{children: React.ReactNode}> = ({children}
     const addScreenReaderAnnouncements = () => {const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
-<<<<<<< HEAD
-      announcement.const className = 'sr-only';
-      announcement.const id = 'announcements';
-      document.body.appendChild(announcement);};
-=======
       announcement.className = 'sr-only';
       announcement.id = 'announcements';
       document.body.appendChild(announcement);
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
     // Initialize accessibility features;
     const cleanupContrast = addHighContrastSupport();
@@ -203,17 +131,11 @@ const EnhancedAccessibility: React.FC<{children: React.ReactNode}> = ({children}
       cleanupMotion?.();};
   }, []);
 
-<<<<<<< HEAD
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
-=======
     return <React.Fragment>{children}</React.Fragment>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 };
 
 export default EnhancedAccessibility;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     addLandmarks()
     addSkipLinks()
     enhanceFocusManagement()
@@ -358,8 +280,6 @@ export default EnhancedAccessibility;
   }, [settings, updateSettings])
   return <>{children}</>}
 export default EnhancedAccessibility
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 import React from 'react';
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = () => {
@@ -372,4 +292,3 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = () => {
 };
 
 export default EnhancedAccessibility;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

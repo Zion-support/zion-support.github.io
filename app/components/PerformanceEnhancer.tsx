@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -16,20 +10,7 @@ interface PerformanceMetrics {
   fcp: number;
   ttfb: number;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
-<<<<<<< HEAD
-const PerformanceEnhancer: React.FC = () => {
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-    <div className="performanceenhancer">
-      <h2>PerformanceEnhancer</h2>
-      <p>PerformanceEnhancer component.</p>
-    </div>
-  );
-=======
-=======
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     lcp: 0,
@@ -84,7 +65,6 @@ const PerformanceEnhancer: React.FC = () => {
   ];
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>PerformanceEnhancer | Zion Tech Group</title>
@@ -116,53 +96,12 @@ const PerformanceEnhancer: React.FC = () => {
                 Learn More
               </button>
             </div></div></div></div>
-=======
 'use client';
 
 import React, {useState} from 'react';
 import {ArrowRight, Zap} from 'lucide-react';
 import {Helmet} from 'react-helmet-async';
 
-<<<<<<< HEAD
-const PerformanceEnhancer: React.FC = () => {const [isOptimizing, setIsOptimizing] = useState(false);
-  const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    performanceScore: 0,
-    optimizationLevel: 0});
-
-  const features = [{title: "Real-time Monitoring",
-      description: "Monitor your application performance in real-time with advanced analytics"},
-    {title: "Automatic Optimization",
-      description: "AI-powered optimization that automatically improves your app's performance"},
-    {title: "Performance Analytics",
-      description: "Detailed insights and reports on your application's performance metrics"}];
-
-  const benefits = ['Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'];
-
-  const optimizePerformance = async () => {setIsOptimizing(true);
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setMetrics({
-      loadTime: Math.random() * 1000 + 500,
-      performanceScore: Math.random() * 40 + 60,
-      optimizationLevel: Math.random() * 30 + 70});
-    setIsOptimizing(false);
-  };
-
-  return (
-    <>
-      <Helmet>
-        <title>Performance Enhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional Performance Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business."   />
-        <meta name="keywords" content="Performance Enhancer, AI solutions, IT services, Zion Tech Group, performance optimization"   />
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -259,24 +198,14 @@ const PerformanceEnhancer: React.FC = () => {const [isOptimizing, setIsOptimizin
         <title>PerformanceEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional PerformanceEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
         <meta name="keywords" content="PerformanceEnhancer, AI solutions, IT services, Zion Tech Group, performanceenhancer" / / />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Performance Enhancer
-=======
       <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
         <div className="max-w-7xlmx-auto"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
               <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />PerformanceEnhancer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </span>
               <br   />
               <span className="text-white">Solutions</span>
@@ -285,54 +214,17 @@ const PerformanceEnhancer: React.FC = () => {const [isOptimizing, setIsOptimizin
               Transform your business with our advanced performance enhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2">
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2"   />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-=======
             <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
                 Get Started
                 <ArrowRight className="ml-2h-5w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </button>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our PerformanceEnhancer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div></div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div></div></div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -350,24 +242,10 @@ const PerformanceEnhancer: React.FC = () => {const [isOptimizing, setIsOptimizin
                 <p className="text-gray-300">{feature.description}</p>
               </div>
   ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our performanceenhancer solutions for your business.
-            </p>
-          </div></div>
-=======
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
   enableWebVitals = true,
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
@@ -422,7 +300,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       userAgent: navigator.userAgent,
       performanceMetrics: performanceMetrics
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -435,9 +312,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         </div>
       </section>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
     // Send to custom endpoint;
     if (typeof window !== 'undefined' && navigator.sendBeacon) {
     // Send to analytics
@@ -780,10 +654,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   }, [enableAnalytics, enableConsoleLogging, performanceMetrics, reportError]);
 
   return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
-=======
       {/* Performance Metrics */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -849,9 +721,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   );
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 export default PerformanceEnhancer;
-=======
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Zap, TrendingUp, Activity, CheckCircle } from 'lucide-react'
@@ -1109,8 +979,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 }
 
 export default PerformanceEnhancer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 import React from 'react';
 
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = () => {
@@ -1118,16 +986,11 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = () => {
     <div className="performanceenhancer">
       <h2>PerformanceEnhancer</h2>
       <p>Component content coming soon.</p>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </div>
   );
 };
 
 export default PerformanceEnhancer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
             </h2>
             <p className="text-xl text-gray-300 max-w-3xlmx-auto">
               Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
@@ -1165,4 +1028,3 @@ export default PerformanceEnhancer;
               </div>))}
           </div>
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

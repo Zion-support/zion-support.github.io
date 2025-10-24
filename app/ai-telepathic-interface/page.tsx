@@ -1,46 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional services coming soon." />
       </Helmet>
-<<<<<<< HEAD
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
         <title>Ai Telepathic Interface - Zion Tech Group</title>
@@ -53,10 +21,8 @@ export default function GDataAnalyticsZionTechGroupPage() {
           Contact Us
           
           <ArrowRight className="w-5h-5ml-2"  />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </Link>
       </div>
-=======
     <div>
       <Head>
         <title>Ai Telepathic Interface - Zion Tech Group</title>
@@ -77,7 +43,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-=======
 const AITelepathicInterfacePage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Navigation */}
@@ -333,15 +298,10 @@ const AITelepathicInterfacePage: React.FC = () => {
           <div className="flex justify-center space-x-6"></div>
             <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
-<<<<<<< HEAD
-=======
-=======
             <a href="/privacy" className="text-gray-300 hover: text-cyan-400 transition-colors">Privacy Policy</a>
             <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service</a>
             <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
@@ -350,7 +310,6 @@ const AITelepathicInterfacePage: React.FC = () => {
       </footer>,
     </div>);
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
@@ -461,11 +420,8 @@ const AITelepathicInterfacePage: React.FC = () => {
       </div>
       <Footer />
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -482,8 +438,6 @@ export default function AitelepathicinterfacePage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function AitelepathicinterfacePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -509,6 +463,3 @@ export default function AitelepathicinterfacePage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

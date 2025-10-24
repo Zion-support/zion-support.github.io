@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Advancedcaching utility functions
-export function advancedcaching() {
-  // Implementation here
-  return null;
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -32,7 +24,6 @@ const AdvancedCachingPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-=======
 /**
 export interface CacheOptions {}
   ttl?: number; // Time to live in milliseconds
@@ -63,7 +54,6 @@ class AdvancedCache<T = unknown> {}
     // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {}
       this.loadFromStorage();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ];
 
@@ -78,15 +68,6 @@ class AdvancedCache<T = unknown> {}
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AdvancedCaching | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedCaching services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="advancedCaching, AI solutions, IT services, Zion Tech Group, advancedcaching" />
-      </Helmet>
-=======
   private setupCleanup(): void {}
     if (typeof window !== 'undefined') {}
       // Clean expired entries every minute
@@ -95,7 +76,6 @@ class AdvancedCache<T = unknown> {}
       }, 60 * 1000);
     }
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -174,37 +154,6 @@ class AdvancedCache<T = unknown> {}
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedcaching needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div></div></div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AdvancedCachingPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
     switch (this.options.storage) {}
       case 'localStorage':
         return window.localStorage;
@@ -453,8 +402,6 @@ export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<
 // Export default cache instance;
 export const defaultCache = new AdvancedCache();
 export default AdvancedCache;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 // Utility file: advancedCaching
 
 export interface CacheItem<T> {
@@ -529,4 +476,3 @@ export class AdvancedCache {
 }
 
 export const advancedCache = new AdvancedCache();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

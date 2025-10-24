@@ -1,15 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
-=======
-=======
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -143,7 +133,6 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
       avatar: "EW",
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 
 export default function ZionaiworkflowautomatorproPage() {
   return (

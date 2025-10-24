@@ -30,26 +30,6 @@ export default function ServicesAdvertisingPage() {
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-<<<<<<< HEAD
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
-                Start Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link 
-                href="#services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
-                View Our Services
-              </Link>
-            </div>
-          </div>
-        </div>
-=======
             
           
           
@@ -69,7 +49,6 @@ export default function ServicesAdvertisingPage() {
 href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
 
                 View Our Services;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </section>
       {/* Key Metrics */}
       <section className="py-16 bg-white">
@@ -336,20 +315,11 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Advertising?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-=======
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
 Ready to Transform Your Advertising?
           <p className="text-xl mb-8 text-blue-100"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

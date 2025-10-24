@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-/// <reference types="@testing-library/jest-dom" />
-=======
 import '@testing-library/jest-dom';
 
 declare global {
@@ -30,4 +27,3 @@ declare global {
     }
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738

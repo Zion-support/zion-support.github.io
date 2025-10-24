@@ -3,29 +3,6 @@
  * Environment Configuration Manager;
  * Provides type-safe access to environment variables with validation;
  */
-<<<<<<< HEAD
-export interface EnvConfig {}
-  nodeEnv: 'development' | 'production' | 'test'
-  apiUrl: string,
-  apiKey?: string;
-  enableAnalytics: boolean,
-  enableLogging: boolean,
-  logLevel: 'debug' | 'info' | 'warn' | 'error',
-  sentryDsn?: string;
-  gaTrackingId?: string;}
-}
-class EnvironmentConfig {
-  private config: EnvConfig,
-  private isInitialized = false;
-  constructor() {,
-    this.config = this.loadConfig(),
-    this.isInitialized = true;}
-  }
-  private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults;
-    return {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 class EnvironmentConfig {}
   private config: EnvConfig;
   private isInitialized = false
@@ -47,11 +24,7 @@ class EnvironmentConfig {}
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN;
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,}
     }
-<<<<<<< HEAD
-export interface EnvConfig {/* TODO: Fix JSX expression */,}
-=======
 export interface EnvConfig {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 class EnvironmentConfig {/* TODO: Fix JSX expression */,}
   }
@@ -61,86 +34,37 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}
   /**
    * Get the entire configuration object;
    */
-<<<<<<< HEAD
-  public getConfig(): Readonly<EnvConfig> {}
-    return Object.freeze({ ...this.config })
-  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */,}
-=======
   public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     return Object.freeze({ ...this.config });
   }
   /**
    * Get a specific configuration value;
    */
-<<<<<<< HEAD
-  public get<K extends keyof EnvConfig>(key: K,): EnvConfig[K] {,
-  public get<K extends keyof EnvConfig>(key: K,): EnvConfig[K] {,}
-    return this.config[key];}
-  public get<K extends keyof EnvConfig>(ke)
-  y: K,): EnvConfig[K] {/* TODO: Fix JSX expression */,}
-=======
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
     return this.config[key];}
   public get<K extends keyof EnvConfig>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Check if running in production;
    */
-<<<<<<< HEAD
-  public isProduction(): boolean {}
-    return this.config.nodeEnv === 'production';}
-  public isProduction(): boolean {/* TODO: Fix JSX expression */,}
-=======
   public isProduction(): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Check if running in development;
    */
-<<<<<<< HEAD
-  public isDevelopment(): boolean {}
-    return this.config.nodeEnv === 'development';}
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */,}
-=======
   public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Check if running in test mode;
    */
-<<<<<<< HEAD
-  public isTest(): boolean {}
-    return this.config.nodeEnv === 'test';}
-  public isTest(): boolean {/* TODO: Fix JSX expression */,}
-=======
   public isTest(): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Validate required environment variables;
    */
-<<<<<<< HEAD
-  public validate(requiredVars: (keyof EnvConfig)[]): {,
-    valid: boolean,
-    missing: string[];}
-  } {
-    const missing: string[] = [],
-    for (const varName of requiredVars) {,
-      if (!this.config[varName]) {,
-        missing.push(varName);}
-      }
-    }
-    return {
-      valid: missing.length === 0;
-  public validate(requiredVars: (keyof EnvConfig)[]): {,}
-    valid: boolean;
-=======
   public validate(requiredVars: (keyof EnvConfig)[]): {}
     valid: boolean
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     missing: string[];}
   } {}
     const missing: string[] = []
@@ -154,13 +78,8 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}
       missing}
     }
   public validate(requiredVar)
-<<<<<<< HEAD
-  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */,}
-  } {/* TODO: Fix JSX expression */,}
-=======
   s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
     }
     return {/* TODO: Fix JSX expression */,}
@@ -169,17 +88,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}
   /**
    * Get API headers with authentication;
    */
-<<<<<<< HEAD
-  public getApiHeaders(): Record<string, string> {}
-    const headers: Record<string, string> = {}
-      'Content-Type': 'application/json'}
-    }
-    if (this.config.apiKey) {}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`
-  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */,}
-=======
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     };
     if (this.config.apiKey) {/* TODO: Fix JSX expression */,}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
@@ -189,30 +98,13 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}
   /**
    * Log configuration in development mode;
    */
-<<<<<<< HEAD
-  public logConfig(): void {}
-    if (this.isDevelopment()) {}
-  public logConfig(): void {/* TODO: Fix JSX expression */,}
-      });
-=======
   public logConfig(): void {/* TODO: Fix JSX expression */}
       });
       console.groupEnd();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
 }
 // Export singleton instance;
-<<<<<<< HEAD
-export const envConfig = new EnvironmentConfig()
-// Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction()
-export const isDevelopment = () => envConfig.isDevelopment()
-export const isTest = () => envConfig.isTest()
-export const getConfig = () => envConfig.getConfig()
-export const getApiHeaders = () => envConfig.getApiHeaders()
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export const envConfig = new EnvironmentConfig();
 // Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction();

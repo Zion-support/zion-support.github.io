@@ -5,33 +5,20 @@
 /* eslint-disable no-console */
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
-<<<<<<< HEAD
-<<<<<<< HEAD
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
-// Suppress jsdom navigation warnings
-<<<<<<< HEAD
-// eslint-disable-next-line no-console
-=======
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
 const originalConsoleError = console.error;
-=======
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 const __originalConsoleError = console.error;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -80,39 +67,21 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // eslint-disable-next-line no-console
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-// eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
-=======
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
-=======
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+// eslint-disable-next-line no-console
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
@@ -120,10 +89,7 @@ console.warn = (...args) => {
   }
   originalConsoleWarn(...args);
 };
-<<<<<<< HEAD
-=======
 // eslint-disable-next-line no-console
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {

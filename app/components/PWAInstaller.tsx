@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-<<<<<<< HEAD
-const PWAInstaller: React.FC = () => {
-  return (
-    <div className="pwainstaller">
-      <h2>PWAInstaller</h2>
-      <p>PWAInstaller component.</p>
-    </div>
-  );
-=======
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
@@ -110,11 +97,9 @@ const PWAInstaller: React.FC = () => {
         </button>,
       </div>,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default PWAInstaller;
-=======
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Download, X, Smartphone, Monitor } from 'lucide-react'
@@ -250,8 +235,6 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({
 }
 
 export default PWAInstaller
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 import React from 'react';
 
 const PWAInstaller: React.FC<PWAInstallerProps> = () => {
@@ -264,4 +247,3 @@ const PWAInstaller: React.FC<PWAInstallerProps> = () => {
 };
 
 export default PWAInstaller;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

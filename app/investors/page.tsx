@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-export default function Page() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -41,10 +12,8 @@ export default function PagePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </Link>
       </div>
-=======
     <div>
       <Head>
         <title>Investors - Zion Tech Group</title>
@@ -66,7 +35,6 @@ export default function PagePage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -91,8 +59,6 @@ import {ArrowRight} from 'lucide-react';
           Contact Us;
           <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -119,35 +85,17 @@ export default function InvestorsPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-<<<<<<< HEAD
-const InvestorsPage: React.FC = () => {
-  const features = [
-    {
-<<<<<<< HEAD
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-=======
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       icon: BarChart,
@@ -218,7 +166,6 @@ const InvestorsPage: React.FC = () => {
                 View Demo
               </button>
             </div>
-=======
 const InvestorsPage: React.FC = () => {}
   const metrics = [
     {}
@@ -312,42 +259,9 @@ const InvestorsPage: React.FC = () => {}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Strong financial performance and market position;
             </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {metrics.map((metric, index) => (}
               <div key={index} className="text-center"></div>
@@ -359,34 +273,12 @@ const InvestorsPage: React.FC = () => {}
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <metric.icon className="w-8 h-8 text-white" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-=======
       {/* Investors Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
@@ -438,7 +330,6 @@ const InvestorsPage: React.FC = () => {}
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <highlight.icon className="w-8 h-8 text-white" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
@@ -465,13 +356,6 @@ const InvestorsPage: React.FC = () => {}
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-=======
         </div>
       </section>
 
@@ -500,19 +384,11 @@ const InvestorsPage: React.FC = () => {}
 
       <Footer />,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default InvestorsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 };
 
 export default InvestorsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

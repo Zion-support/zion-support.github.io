@@ -1,29 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -31,7 +13,6 @@ import { ArrowRight } from 'lucide-react';
 export default function TaskmanagerproPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Task Manager Pro - Zion Tech Group</title>
         <meta name="description" content="Task Manager Pro solutions by Zion Tech Group" />
@@ -43,38 +24,9 @@ export default function TaskmanagerproPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive task manager pro solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -85,12 +37,9 @@ export default function TaskmanagerproPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -118,7 +67,6 @@ const TaskManagerProPage: React.FC = () => {
       title: 'Goal Tracking',
       description: 'Set and track goals with detailed progress monitoring and analytics',
       benefits: ['Goal setting', 'Progress tracking', 'Milestone management', 'Performance metrics']
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -127,31 +75,6 @@ const TaskManagerProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-<<<<<<< HEAD
-      description: 'Comprehensive analytics and reporting to optimize your productivity',
-      benefits: ['Productivity metrics', 'Time tracking', 'Performance reports', 'Insights dashboard']
-    },
-    {
-      icon: Zap,
-      title: 'Automation',
-      description: 'Automate repetitive tasks and workflows to save time and effort',
-      benefits: ['Workflow automation', 'Rule-based actions', 'Smart notifications', 'Auto-assignment']
-    },
-    {
-      icon: Shield,
-      title: 'Security & Privacy',
-      description: 'Enterprise-grade security to protect your data and privacy',
-      benefits: ['Data encryption', 'Access controls', 'Audit logs', 'GDPR compliance']
-=======
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
@@ -178,8 +101,6 @@ const TaskManagerProPage: React.FC = () => {
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
@@ -197,57 +118,20 @@ const TaskManagerProPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ]
 
   const benefits = [
-<<<<<<< HEAD
-    'Increased productivity and efficiency',
-    'Better team collaboration and communication',
-    'Improved project visibility and tracking',
-    'Reduced project delays and missed deadlines',
-    'Enhanced data security and compliance',
-    'Streamlined workflow and processes'
-  ]
-
-  const stats = [
-    { label: 'Tasks Managed', value: '1M+', icon: CheckCircle },
-    { label: 'User Satisfaction', value: '99%', icon: Star },
-    { label: 'Productivity Increase', value: '40%', icon: TrendingUp },
-    { label: 'Time Saved', value: '5 hours/week', icon: Clock }
-  ]
-=======
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Task Manager Pro | Zion Tech Group</title>
-        <meta name="description" content="Professional task management solution with AI-powered features for modern businesses." />
-        <meta name="keywords" content="task manager, project management, team collaboration, productivity tools, Zion Tech Group" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Task Manager Pro
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              The ultimate task management solution with AI-powered features that help you 
-              stay organized, productive, and achieve your goals efficiently.
-=======
         <title>Task Manager Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced task management solution for teams." />
         <meta name="keywords" content="task management, productivity, team collaboration" />
@@ -265,7 +149,6 @@ const TaskManagerProPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced task management solution for teams.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -277,160 +160,17 @@ const TaskManagerProPage: React.FC = () => {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Try Demo
-              </Link>
-=======
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-            </div>
-=======
             </div></div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Powerful Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Task Manager Pro comes packed with advanced features designed to 
-                streamline your workflow and boost productivity.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">
-                  Why Choose Task Manager Pro?
-                </h2>
-                <p className="text-gray-300 mb-8">
-                  Our task management solution is designed to help teams and individuals 
-                  achieve their goals with powerful features and intuitive design.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Increased Productivity</h4>
-                      <p className="text-gray-300 text-sm">Boost your team's productivity with smart task management</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Better Collaboration</h4>
-                      <p className="text-gray-300 text-sm">Seamless team collaboration with real-time updates</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Smart Automation</h4>
-                      <p className="text-gray-300 text-sm">Automate repetitive tasks and focus on what matters</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Advanced Analytics</h4>
-                      <p className="text-gray-300 text-sm">Get insights into your team's performance and productivity</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Boost Your Productivity?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start using Task Manager Pro today and experience the difference that 
-              intelligent task management can make for your team.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Watch Demo
-              </Link>
-=======
 'use client';
 import React from 'react';
 import Navigation from '../../components/Navigation';
@@ -646,7 +386,6 @@ const TaskManagerProPage: React.FC = () => {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709;
               </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
@@ -657,10 +396,6 @@ const TaskManagerProPage: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
-export default TaskManagerProPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -746,15 +481,11 @@ export default TaskManagerProPage
       <Footer />
     </>
   );
-=======
       <Footer />,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default TaskManagerProPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -771,8 +502,6 @@ export default function TaskmanagerproPage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function TaskmanagerproPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -798,6 +527,3 @@ export default function TaskmanagerproPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

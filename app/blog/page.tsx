@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 export default function BlogPage() {
-=======
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -34,9 +23,7 @@ interface BlogPost {
   featured: boolean;
 }
 
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -116,20 +103,13 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Blog solutions by Zion Tech Group" />
-=======
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from our expert team." />
         <meta name="keywords" content="AI blog, IT insights, technology trends, cloud computing, cybersecurity, software development" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
@@ -138,41 +118,14 @@ const BlogPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive blog solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-<<<<<<< HEAD
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-=======
             {filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
               </div>
             )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
           </div>
         </div>
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -183,11 +136,9 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -195,13 +146,11 @@ import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Calendar, User, Tag } from 'lucide-react'
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
@@ -211,23 +160,6 @@ const BlogPage: React.FC = () => {
       excerpt: 'Explore the latest AI trends and how they\'re transforming businesses across industries.',
       author: 'Sarah Johnson',
       date: '2024-01-15',
-<<<<<<< HEAD
-      readTime: '5 min read',
-      category: 'AI & Machine Learning',
-      image: '/images/blog/ai-trends-2024.jpg',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Building Scalable Cloud Infrastructure: Best Practices',
-      excerpt: 'Learn how to design and implement cloud infrastructure that can grow with your business.',
-      author: 'Michael Chen',
-      date: '2024-01-12',
-      readTime: '7 min read',
-      category: 'Cloud Computing',
-      image: '/images/blog/cloud-infrastructure.jpg',
-      featured: false
-=======
       category: 'AI & Technology',
       readTime: '5 min read',
     },
@@ -239,7 +171,6 @@ const BlogPage: React.FC = () => {
       date: '2024-01-10',
       category: 'Cloud Services',
       readTime: '8 min read',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       id: 3,
@@ -249,43 +180,6 @@ const BlogPage: React.FC = () => {
       date: '2024-01-10',
       readTime: '6 min read',
       category: 'Cybersecurity',
-<<<<<<< HEAD
-      image: '/images/blog/ai-cybersecurity.jpg',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'API Development: From Design to Deployment',
-      excerpt: 'A comprehensive guide to building robust and scalable APIs for modern applications.',
-      author: 'David Kim',
-      date: '2024-01-08',
-      readTime: '8 min read',
-      category: 'Development',
-      image: '/images/blog/api-development.jpg',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'The Rise of Micro SaaS: Building Profitable Small Software',
-      excerpt: 'How to build and scale micro SaaS products that solve specific business problems.',
-      author: 'Lisa Wang',
-      date: '2024-01-05',
-      readTime: '4 min read',
-      category: 'Business',
-      image: '/images/blog/micro-saas.jpg',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Data Analytics with AI: Turning Data into Business Insights',
-      excerpt: 'Learn how AI-powered analytics can help you make better business decisions.',
-      author: 'James Wilson',
-      date: '2024-01-03',
-      readTime: '6 min read',
-      category: 'Data Analytics',
-      image: '/images/blog/ai-analytics.jpg',
-      featured: false
-=======
       readTime: '6 min read',
     },
     {
@@ -296,7 +190,6 @@ const BlogPage: React.FC = () => {
       date: '2024-01-01',
       category: 'Micro SaaS',
       readTime: '7 min read',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ]
 
@@ -330,11 +223,6 @@ const BlogPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
         <section className="py-20 px-4">
-<<<<<<< HEAD
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Our Blog
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -364,12 +252,10 @@ export default function Blog() {return (
             <h1 className="w-5h-5ml-2"   /></h1>
               <span className="w-5h-5ml-2"   />Blog;
               </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Stay updated with the latest insights on AI, technology, and business trends. 
               Our expert team shares knowledge to help you stay ahead of the curve.
-=======
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Blog services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="blog, AI solutions, IT services" />
@@ -385,9 +271,7 @@ export default function Blog() {return (
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional blog services by Zion Tech Group.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
-=======
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -398,7 +282,6 @@ export default function Blog() {return (
               </p>
             </div></div></div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
                 <div key={index} className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-slate-700">
@@ -409,20 +292,6 @@ export default function Blog() {return (
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </section>
-
-<<<<<<< HEAD
-        {/* Featured Post */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
-            {blogPosts.filter(post => post.featured).map((post) => (
-              <div key={post.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="grid lg:grid-cols-2 gap-8">
-                  <div className="p-8">
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
                 <article
@@ -445,7 +314,6 @@ export default function Blog() {return (
                       </span>
                     </div></div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full">
                         Featured
@@ -535,35 +403,6 @@ export default function Blog() {return (
                 </article>
               ))}
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 max-w-2xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
-              <p className="text-gray-300 mb-6">
-                Subscribe to our newsletter and never miss the latest insights on AI, technology, and business trends.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-=======
 
           <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
@@ -577,14 +416,11 @@ export default function Blog() {return (
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </>
   )
 }
 
 export default BlogPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 
             <div className="text-center mt-12">
               <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
@@ -599,9 +435,6 @@ export default BlogPage
 };
 
 export default BlogPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 'use client';
 
 import React from 'react';
@@ -632,8 +465,6 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive blog solutions.
@@ -647,8 +478,6 @@ export default BlogPage;
   );
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -679,6 +508,3 @@ export default function BlogPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

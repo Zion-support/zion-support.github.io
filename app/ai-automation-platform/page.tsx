@@ -125,92 +125,6 @@ const AIAutomationPlatformPage = () => {
             Transform your data into actionable insights with our advanced AI analytics platform. 
             Get real-time predictions, automated reporting, and intelligent recommendations.
           </p>
-<<<<<<< HEAD
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-              <Zap className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
-            >
-              View Demo
-              <Target className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Analytics Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI analytics platform provides everything you need to make data-driven decisions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <BarChart3 className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
-              <p className="text-gray-300">
-                Get instant insights from your data with real-time processing and visualization
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI Predictions</h3>
-              <p className="text-gray-300">
-                Leverage machine learning to predict trends and make proactive decisions
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Secure & Compliant</h3>
-              <p className="text-gray-300">
-                Enterprise-grade security with full compliance and data protection
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Analytics?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies using our AI analytics platform to make better decisions
-          </p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Free Trial
-            <Zap className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </section>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -221,7 +135,6 @@ const AIAutomationPlatformPage = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 };

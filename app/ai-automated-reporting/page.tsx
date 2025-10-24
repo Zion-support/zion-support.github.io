@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function AiAutomatedReporting() {
@@ -23,33 +16,6 @@ export default function AiAutomatedReporting() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai automated reporting solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -59,7 +25,6 @@ export default function AiAutomatedReporting() {
           </Link>
         </div>
       </div>
-=======
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -145,7 +110,6 @@ const AiAutomatedReportingPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with AI-powered automated reporting and visualization.
-=======
 import React  from 'react';
 const AiAutomatedReportingPage: React.FC = () => {
   return (
@@ -172,7 +136,6 @@ const AiAutomatedReportingPage: React.FC = () => {
             <p className="text-gray-300 mb-6">
               We're working on bringing you comprehensive ai automated reporting solutions. 
               Contact us to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center">
@@ -184,103 +147,6 @@ const AiAutomatedReportingPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Automated Reporting Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that automates your reporting processes
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive automated reporting solutions for your business
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                    <p className="text-gray-300 mb-6">{service.description}</p>
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Automate Your Reporting?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Start using our AI automated reporting platform today and transform your data into insights.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-  );
-}
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -317,12 +183,7 @@ export default function AiAutomatedReporting() {return (
   );
 };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default AiAutomatedReportingPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -353,8 +214,6 @@ export default function AiautomatedreportingPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
       </div>
         </div>
       </div>
@@ -374,4 +233,3 @@ export default function AiautomatedreportingPage() {
 };
 
 export default AiAutomatedReportingPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

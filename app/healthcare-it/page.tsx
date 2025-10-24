@@ -1,28 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const Component: React.FC = () => {
 'use client';
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -30,7 +14,6 @@ import { ArrowRight } from 'lucide-react';
 export default function HealthcareitPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Healthcare It - Zion Tech Group</title>
         <meta name="description" content="Healthcare It solutions by Zion Tech Group" />
@@ -42,38 +25,9 @@ export default function HealthcareitPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive healthcare it solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -84,12 +38,9 @@ export default function HealthcareitPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -97,17 +48,10 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const HealthcareITPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-=======
       icon: Heart;
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
       benefits: ['Automated compliance', 'Audit trails', 'Risk management']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     },
     {
       icon: BarChart,
@@ -141,37 +85,6 @@ const HealthcareITPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Healthcare IT - Zion Tech Group</title>
-        <meta name="description" content="Specialized IT solutions for healthcare organizations." />
-        <meta name="keywords" content="healthcare IT, medical, health, technology" />
-      </Helmet>
-
-      <Navigation />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Healthcare IT
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Specialized IT solutions for healthcare organizations.
-=======
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -192,7 +105,6 @@ const HealthcareITPage: React.FC = () => {
             </button>
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">)
       <Navigation />)
       {/* Hero Section */})
@@ -228,19 +140,12 @@ const HealthcareITPage: React.FC = () => {
             </button>
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               Schedule Demo;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </button>
 </div></div></div></div>
         </div>
       </section>
 
 {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
@@ -251,7 +156,6 @@ const HealthcareITPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Comprehensive IT solutions designed specifically for healthcare industry;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -262,46 +166,6 @@ const HealthcareITPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
@@ -309,7 +173,6 @@ const HealthcareITPage: React.FC = () => {
                 <div className="text-4xl mb-4">{service.icon}</div></div></div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
-=======
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-red-400/50 transition-all duration-300 group">,
@@ -323,86 +186,12 @@ const HealthcareITPage: React.FC = () => {
                     </CheckCircle>
                   ))}
                 </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Healthcare IT Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of modern healthcare technology with our proven solutions.
-            </p>
-          </div></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div></div></div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-=======
       {/* CTA Section */}
 <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></section>
@@ -427,12 +216,9 @@ const HealthcareITPage: React.FC = () => {
 
       <Footer />,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default HealthcareITPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -449,8 +235,6 @@ export default function HealthcareitPage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function HealthcareitPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -476,6 +260,3 @@ export default function HealthcareitPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

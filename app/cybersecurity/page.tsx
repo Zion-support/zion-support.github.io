@@ -1,187 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-
-export default function Cybersecurity() {
-
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-  ];
-const capabilities = [
-    "Machine Learning Models",
-    "Real-time Data Processing",
-    "Risk Assessment Algorithms",
-    "Predictive Analytics",
-    "Automated Reporting",
-    "API Integration"
-  ];
-const services = [
-    {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud infrastructure",
-      icon: "Cloud"
-    },
-    {
-      title: "Security Solutions",
-      description: "Advanced security and compliance",
-      icon: "Shield"
-    },
-    {
-      title: "Performance Optimization",
-      description: "Optimize your cloud performance",
-      icon: "Zap"
-  ];
-  return null;
-};
-
-export default function Page() {
-
-  const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
-  ];
-  const services = [
-    {
-      title: "AI Cybersecurity Suite",
-      description: "Advanced AI-powered threat detection and response system. Real-time monitoring, automated incident response, and compliance reporting.",
-      icon: <Shield className="w-8 h-8" />,
-      path: "/ai-cybersecurity-suite-pro",
-      color: "from-red-500 to-orange-500",
-      price: "Starting at $399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"]
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security solutions including vulnerability assessments, penetration testing, and security architecture design.",
-      icon: <Lock className="w-8 h-8" />,
-      path: "/cybersecurity-solutions",
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $299/month",
-      features: ["Vulnerability Assessment", "Penetration Testing", "Security Architecture", "Risk Management"]
-    },
-    {
-      title: "Advanced Security Suite",
-      description: "Enterprise-grade security with advanced threat protection, identity management, and security automation capabilities.",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      path: "/advanced-security-suite",
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $499/month",
-      features: ["Threat Protection", "Identity Management", "Security Automation", "Incident Response"]
-    },
-    {
-      title: "Security Monitoring",
-      description: "Continuous security monitoring with real-time alerts, log analysis, and security event correlation across your entire infrastructure.",
-      icon: <Eye className="w-8 h-8" />,
-      path: "/security-monitoring-suite",
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $249/month",
-      features: ["Real-time Monitoring", "Log Analysis", "Event Correlation", "Alert Management"]
-    },
-    {
-      title: "Network Security",
-      description: "Comprehensive network security solutions including firewall management, intrusion detection, and network segmentation.",
-      icon: <Database className="w-8 h-8" />,
-      path: "/network-security",
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $199/month",
-      features: ["Firewall Management", "Intrusion Detection", "Network Segmentation", "Traffic Analysis"]
-    },
-    {
-      title: "Security Automation",
-      description: "Automated security processes including vulnerability scanning, patch management, and security policy enforcement.",
-      icon: <Users className="w-8 h-8" />,
-      path: "/security-automation",
-      color: "from-teal-500 to-cyan-500",
-      price: "Starting at $179/month",
-      features: ["Vulnerability Scanning", "Patch Management", "Policy Enforcement", "Compliance Automation"]
-  ];
-
-  return null;
-};
-
-export default function CybersecurityPage() {
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Cybersecurity - Zion Tech Group</title>
-        <meta name="description" content="Cybersecurity solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Cybersecurity</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive cybersecurity solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -190,7 +9,6 @@ export default function CybersecurityPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -215,8 +33,6 @@ import {ArrowRight} from 'lucide-react';
           Contact Us;
           <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -243,8 +59,6 @@ export default function CybersecurityPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -260,17 +74,10 @@ export default function PagePage() {
       <Helmet>
 
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -278,7 +85,6 @@ import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Lock, Eye, AlertTriangle, FileText, Server, Network } from 'lucide-react'
-=======
 'use client';
 import React from 'react';
   return (
@@ -381,7 +187,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 const CybersecurityPage: React.FC = () => {
   const services = [
@@ -459,57 +264,14 @@ const CybersecurityPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Cybersecurity | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions to protect your business from threats and ensure compliance." />
-        <meta name="keywords" content="cybersecurity, security audit, data protection, threat monitoring, compliance, Zion Tech Group" />
-=======
       <Helmet></Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions to protect your business from threats. Advanced security measures and 24/7 monitoring." />
         <meta name="keywords" content="cybersecurity, security solutions, threat protection, network security, data protection" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Cybersecurity Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Protect your business from evolving cyber threats with our comprehensive security solutions. 
-              We provide end-to-end cybersecurity services to keep your data and systems secure.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-slate-700">
-                  <stat.icon className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white font-semibold">{stat.value}</span>
-                  <span className="text-gray-400 text-sm">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Get Security Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
-=======
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 pt-20"></main>
         <div className="container mx-auto px-4 py-16"></div>
           <div className="text-center mb-16"></div>
@@ -581,7 +343,6 @@ const CybersecurityPage: React.FC = () => {
               ></a>
                 View Security Suite
               </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
@@ -686,13 +447,6 @@ const CybersecurityPage: React.FC = () => {
       
       <Footer />
     </>
-<<<<<<< HEAD
-  )
-}
-
-export default CybersecurityPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -753,20 +507,6 @@ const CybersecurityPage: React.FC = () => {
         <meta name="keywords" content="cybersecurity, security, data protection, network security" />
       </Helmet>
 
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Cybersecurity
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive cybersecurity solutions for your business.
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -825,7 +565,6 @@ const CybersecurityPage: React.FC = () => {
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -923,21 +662,12 @@ const CybersecurityPage: React.FC = () => {
       </div>
       <Footer />
     </>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 export default CybersecurityPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 };
 
 export default CybersecurityPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -14,16 +14,10 @@ const generateImportStatement = (route) => {
   return `const ${componentName} = React.lazy(() => import('.${route}/page'));`;
 };
 
-<<<<<<< HEAD
-// Generate route statements;
- l.toUpperCase()) + 'Page';
-  return`            <Route path="${route}" element={<${componentName}   />} />`;
-=======
 // Generate route statements
 const generateRouteStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/(^|_)([a-z])/g, (match, p1, p2) => p2.toUpperCase()) + 'Page';
   return `            <Route path="${route}" element={<${componentName} />} />`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 };
 
 // Generate the new App.tsx content

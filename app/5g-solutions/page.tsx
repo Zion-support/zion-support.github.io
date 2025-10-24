@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-export default function FiveGSolutionsPage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-=======
 
 
 export default function FiveGSolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced 5g solutions solutions for next-generation connectivity and performance." />
@@ -35,30 +18,6 @@ export default function FiveGSolutionsPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive 5g solutions solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
     <>
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
@@ -91,17 +50,13 @@ export default function FiveGSolutionsPage() {
               >
                 View Demo
               </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-=======
 
 export default function FiveGgsolutionsPage() {
   return (
@@ -119,29 +74,18 @@ export default function FiveGgsolutionsPage() {
           <Link
             to="/contact"
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           >
             Contact Us
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
 }
-=======
           <ArrowRight className="w-5 h-5 ml-2"  />
         </Link>
       </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

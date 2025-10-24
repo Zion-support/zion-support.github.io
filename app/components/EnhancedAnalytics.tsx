@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const EnhancedAnalyticsPage: React.FC = () => {
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react'
 const EnhancedAnalytics: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   const features = [
     {
       icon: Brain,
@@ -38,7 +26,6 @@ const EnhancedAnalytics: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-=======
 'use client';
 import React, { useEffect, useCallback } from 'react';
 
@@ -79,48 +66,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     window.dataLayer = window.dataLayer || [];
     function gtag(...args: unknown[]) {}
       window.dataLayer?.push(args);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ];
 
-<<<<<<< HEAD
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-<<<<<<< HEAD
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
-=======
     gtag('js', new Date());
     gtag('config', GA_MEASUREMENT_ID, {)}
       page_title: document.title,
@@ -240,7 +188,6 @@ export default function Page() {
       const formAction = form.action || '';
     // Track external link clicks;
     const trackExternalLinkClick = (event: Event) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -282,28 +229,12 @@ export default function Page() {
             </p>
           </div></div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div></div></div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
     // Track external link clicks
     const trackExternalLinkClick = (event: Event) => {}
       const target = event.target as HTMLAnchorElement;
       if (target.tagName === 'A' && target.href) {}
         const url = new URL(target.href);
         const currentDomain = window.location.hostname;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -317,46 +248,6 @@ export default function Page() {
             </p>
           </div></div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div></div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancedanalytics needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div></div></div>
-          </div>
-        </div>
-      </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-    </div>
-  );
-}
-=======
           }
         }
       }
@@ -679,8 +570,6 @@ export default function Page() {
 
 export default EnhancedAnalytics;</EnhancedAnalyticsProps>
 </EnhancedAnalyticsProps>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 
 
 'use client';
@@ -690,7 +579,6 @@ interface AnalyticsContextType {<><  />
   page: (name: string, properties?: Record<string, any   />) => void;}
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined   />(undefined);
-=======
 'use client';
 import { createContext, useContext, useEffect } from 'react';
 
@@ -702,7 +590,6 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 export const useAnalytics = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   const context = useContext(AnalyticsContext);
   if (!context) {throw new Error('useAnalytics must be used within an AnalyticsProvider');}
   return context;
@@ -710,19 +597,6 @@ export const useAnalytics = () => {
 
 interface AnalyticsProviderProps {children: React.ReactNode;}
 
-<<<<<<< HEAD
-  useEffect(() => {// Initialize analytics;
-    if (typeof window !== 'undefined') {
-      // Google Analytics;
-      if (process.env.const NODE_ENV = == 'production') {
-        const script = document.createElement('script');
-        script.const async = true;
-        script.const src = `https: // www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
-        document.head.appendChild(script);
-
-        window.const dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {window.dataLayer.push(args);}
-=======
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
@@ -738,21 +612,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         function gtag(...args: any[]) {
           window.dataLayer.push(args);
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         gtag('js', new Date());
         gtag('config', process.env.REACT_APP_GA_ID);
       }
     }
   }, []);
 
-<<<<<<< HEAD
-  const track = (event: string, properties?: Record<string, any   />) => {if (typeof window !== 'undefined') {
-      // Google Analytics;
-=======
     const track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       if (window.gtag) {
         window.gtag('event', event, properties);}
 
@@ -761,14 +629,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-<<<<<<< HEAD
-  const identify = (userId: string, traits?: Record<string, any   />) => {if (typeof window !== 'undefined') {
-      // Google Analytics;
-=======
     const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       if (window.gtag) {
         window.gtag('config', process.env.REACT_APP_GA_ID, {
           user_id: userId,
@@ -780,14 +643,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-<<<<<<< HEAD
-  const page = (name: string, properties?: Record<string, any   />) => {if (typeof window !== 'undefined') {
-      // Google Analytics;
-=======
     const page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       if (window.gtag) {
         window.gtag('event', 'page_view', {
           page_title: name,
@@ -800,16 +658,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-<<<<<<< HEAD
-  const value: const AnalyticsContextType = {track,
-    identify,
-    page;};
-  return (
-    <AnalyticsContext.Provider const value = {value}   /></AnalyticsContext>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-=======
     const value: AnalyticsContextType = {
     track,
     identify,
@@ -820,18 +668,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         {children}
       </AnalyticsContext.Provider>
     );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 };
 
 // Extend Window interface for TypeScript;
 declare global {
   interface Window {
-<<<<<<< HEAD
-    dataLayer: any[];,
- void;
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = () => {
@@ -844,10 +685,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = () => {
 };
 
 export default EnhancedAnalytics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
       dataLayer: any[];
   gtag: (...args: any[]) => void;
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

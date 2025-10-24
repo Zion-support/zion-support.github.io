@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
 
-<<<<<<< HEAD
-interface AccessibilityEnhancerProps {
-=======
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({}
   enableKeyboardNavigation = true,
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
@@ -378,7 +372,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   return null;
 interface AdvancedAccessibilityEnhancerProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   children: React.ReactNode;
 }
 
@@ -418,34 +411,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       document.body.classList.remove('keyboard-navigation');
     };
 
-<<<<<<< HEAD
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, [isHighContrast, isReducedMotion]);
-
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast');
-  };
-
-  const changeFontSize = (size: string,) => {
-    setFontSize(size);
-    document.documentElement.setAttribute('data-font-size', size);
-  };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-const AdvancedAccessibilityEnhancer: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="advancedaccessibilityenhancer">
-      <h2>AdvancedAccessibilityEnhancer</h2>
-      <p>AdvancedAccessibilityEnhancer component.</p>
-=======
     <div className="accessibility-enhanced">
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000; }}>
         <button
@@ -479,10 +444,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           </button>
         </div></div></div>
       </div>
-<<<<<<< HEAD
-      {children}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 
       <div className="space-y-4">
         {features.map((feature) => (
@@ -534,12 +495,9 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           Accessibility features are active
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     </div>
   );
-=======
   return <>{children}</>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default AdvancedAccessibilityEnhancer;

@@ -4,27 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-<<<<<<< HEAD
-const ErrorPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Error - Zion Tech Group</title>
-        <meta name="description" content="An error occurred while loading the page." />
-        <meta name="keywords" content="error, 404, not found" />
-      </Helmet>
-
-      <Navigation />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Error
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              An error occurred while loading the page.
-=======
       
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
@@ -91,7 +70,6 @@ const ErrorPage: React.FC = () => {
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Contact us today to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
@@ -116,7 +94,6 @@ const ErrorPage: React.FC = () => {
 };
 
 export default ErrorPage;
-=======
 import { useEffect } from 'react';
 
 export default function Error({
@@ -165,4 +142,3 @@ export default function Error({)}
       </div>,
     </div>);
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

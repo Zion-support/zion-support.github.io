@@ -1,11 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
@@ -35,7 +28,6 @@ const AnalyticsDashboardPage: React.FC = () => {
   ];
 
   
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 export default function AnalyticsdashboardPage() {
   return (

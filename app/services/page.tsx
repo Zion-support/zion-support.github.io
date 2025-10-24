@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
@@ -46,9 +35,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function Services() {
-=======
 import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 
   const services = [
     {
@@ -403,33 +390,6 @@ export default function ServicesPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive services solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -440,11 +400,9 @@ export default function ServicesPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -479,13 +437,8 @@ import {
 } from 'lucide-react'
 
 const ServicesPage: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState('all')
-=======
   const services = [
     // AI Services
-=======
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -624,7 +577,6 @@ const ServicesPage: React.FC = () => {
 
   const benefits = [
   const additionalServices = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
     {
       icon: Brain,
       title: 'AI Solutions',
@@ -1129,28 +1081,9 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $499/month',
       category: 'IT Services',
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
   const aiServices = [
     {
-<<<<<<< HEAD
-      id: 'ai-chatbots',
-      name: 'AI Chatbots & NLP',
-      description: 'Intelligent conversational AI for customer service and support',
-      icon: Brain,
-      features: ['Natural language processing', 'Multi-language support', '24/7 availability', 'Custom integrations'],
-      price: 'Starting at $299/month',
-      popular: true
-    },
-    {
-      id: 'ai-content',
-      name: 'AI Content Generation',
-      description: 'Automated content creation for blogs, social media, and marketing',
-      icon: FileText,
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'SEO optimization'],
-      price: 'Starting at $199/month',
-      popular: false
-=======
       icon: Smartphone,
       title: 'AI-Powered CRM',
       description: 'Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics.',
@@ -1360,27 +1293,12 @@ const ServicesPage: React.FC = () => {
       features: ['HIPAA Compliance', 'Data Extraction', 'Medical Analysis', 'Patient Portal', 'Integration APIs'],
       price: '$299/month',
       category: 'Micro SAAS',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       id: 'ai-analytics',
       name: 'AI Data Analytics',
       description: 'Advanced analytics and insights powered by artificial intelligence',
       icon: BarChart3,
-<<<<<<< HEAD
-      features: ['Predictive analytics', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
-      price: 'Starting at $499/month',
-      popular: true
-    },
-    {
-      id: 'ai-vision',
-      name: 'AI Computer Vision',
-      description: 'Image and video analysis using advanced computer vision technology',
-      icon: Cpu,
-      features: ['Image recognition', 'Object detection', 'Video analysis', 'Quality control'],
-      price: 'Starting at $399/month',
-      popular: false
-=======
       title: 'AI Accounting Assistant',
       description: 'Automated accounting with AI-powered bookkeeping, tax preparation, and financial reporting.',
       features: ['Automated Bookkeeping', 'Tax Preparation', 'Financial Reports', 'Expense Tracking', 'Compliance'],
@@ -1418,7 +1336,6 @@ const ServicesPage: React.FC = () => {
       features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Risk Assessment', 'Cost Optimization'],
       price: '$399/month',
       category: 'Micro SAAS',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ]
 
@@ -1526,79 +1443,28 @@ const ServicesPage: React.FC = () => {
     { label: 'Response Time', value: '<2 hours', icon: Clock },
     { label: 'Success Rate', value: '100%', icon: TrendingUp }
   ]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <React.Fragment>
-      <Helmet>
-        <title>Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services including chatbots, cloud infrastructure, cybersecurity, and custom development solutions." />
-        <meta name="keywords" content="AI services, IT services, cloud infrastructure, cybersecurity, API development, micro SaaS" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-=======
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
               Our Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive AI and IT solutions designed to transform your business. 
               From intelligent automation to robust infrastructure, we've got you covered.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-slate-700">
-                  <stat.icon className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white font-semibold">{stat.value}</span>
-                  <span className="text-gray-400 text-sm">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-=======
           </div></div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
         </section>
 
         {/* Category Filter */}
         <section className="py-8 px-4">
-<<<<<<< HEAD
-          <div className="container mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-=======
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -1647,8 +1513,6 @@ import { ArrowRight } from 'lucide-react';
                   </button>
                 ))}
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 'use client';
 
 import React from 'react';
@@ -1733,17 +1597,11 @@ const ServicesPage = () => {
                 Comprehensive technology solutions designed to accelerate your business growth 
                 and digital transformation journey.
               </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center mb-8">
@@ -1755,7 +1613,6 @@ const ServicesPage = () => {
               </span>
             </div></div>
             
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {getFilteredServices().map((service) => (
                 <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
@@ -1764,13 +1621,6 @@ const ServicesPage = () => {
                       Popular
                     </div></div></div>
                   )}
-<<<<<<< HEAD
-                  <div className="flex items-center gap-4 mb-4">
-                    <service.icon className="w-12 h-12 text-cyan-400" />
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>
-                      <p className="text-gray-400 text-sm">{service.description}</p>
-=======
                   
                   <div className="flex items-start mb-6">
                     <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
@@ -1781,7 +1631,6 @@ const ServicesPage = () => {
                       <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
                         {service.category}
                       </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                     </div>
                   </div>
                   
@@ -1789,32 +1638,6 @@ const ServicesPage = () => {
                     <div className="text-2xl font-bold text-white mb-2">{service.price}</div>
                     <p className="text-green-400 text-sm font-semibold">Flexible pricing</p>
                   </div>
-<<<<<<< HEAD
-
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex gap-3">
-                    <Link
-                      to="/contact"
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center group"
-                    >
-                      Get Started
-                      <ArrowRight className="w-4 h-4 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      to="/demo"
-                      className="px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-                    >
-                      Demo
-                    </Link>
-=======
                   
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div></div>
@@ -1829,13 +1652,10 @@ const ServicesPage = () => {
                     <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
                       Learn More
                     </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                   </div>
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
             
             {/* Pagination */}
             {totalPages > 1 && (
@@ -1873,8 +1693,6 @@ const ServicesPage = () => {
                 </button>
               </div>
             )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1901,8 +1719,6 @@ const ServicesPage = () => {
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
     <>
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
@@ -1980,44 +1796,10 @@ const ServicesPage = () => {
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and find the perfect solution for your needs. 
-              Our team of experts is ready to help you succeed.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Start Your Project
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/case-studies"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View Case Studies
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -2045,14 +1827,11 @@ const ServicesPage = () => {
           </div>
         </section>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </>
   )
 }
-=======
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Free Consultation
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -2067,7 +1846,6 @@ const ServicesPage = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Schedule Demo
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </button>
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
                 View Portfolio
@@ -2075,27 +1853,14 @@ const ServicesPage = () => {
             </div></div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>
-    </React.Fragment>
-=======
       </main>
 
       <Footer />
     </ErrorBoundary>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
-<<<<<<< HEAD
-export default ServicesPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 export default ServicesPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -2110,8 +1875,6 @@ export default function Services() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Services - Zion Tech Group</title>
@@ -2135,6 +1898,3 @@ export default function Services() {return (
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

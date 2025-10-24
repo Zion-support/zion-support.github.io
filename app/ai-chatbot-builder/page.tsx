@@ -1,60 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-=======
 'use client';
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function AiChatbotBuilder() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Ai Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Ai Chatbot Builder solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Chatbot Builder</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai chatbot builder solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-<<<<<<< HEAD
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {
     features.map((feature, index) => (
@@ -77,7 +31,6 @@ import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -182,13 +135,10 @@ import { MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, 
                   Learn More
                 </button>
               </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -199,15 +149,9 @@ import { MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, 
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
-=======
 
 
 import React, {useState} from 'react';
@@ -304,7 +248,6 @@ export default function AiChatbotBuilder() {<title>AI Chatbot Builder - Zion Tec
 
               </div>
   ))}
-=======
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -314,7 +257,6 @@ import { Link } from 'react-router-dom';
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50transition-allduration-300" />
                 <div className="{`w-16" h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`} />
                   {feature.icon}
-=======
       <Footer>
     </>
   ),
@@ -322,21 +264,14 @@ import { Link } from 'react-router-dom';
 export default AiChatbotBuilderPage;
 
                   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
                 </div>
                 <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Pricing Section */}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -367,8 +302,6 @@ export default function AichatbotbuilderPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 
       {/* Use Cases Section */}
       <section className="py-20px-4bg-slate-800/30" />
@@ -442,9 +375,4 @@ export default function AichatbotbuilderPage() {
   );
 };
 
-<<<<<<< HEAD
-export default AiChatbotBuilderPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-=======
 export default AIChatbotBuilder;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b

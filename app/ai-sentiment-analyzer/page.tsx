@@ -1,46 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional services coming soon." />
       </Helmet>
-<<<<<<< HEAD
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
         <title>Ai Sentiment Analyzer - Zion Tech Group</title>
@@ -53,10 +21,8 @@ export default function GDataAnalyticsZionTechGroupPage() {
           Contact Us
           
           <ArrowRight className="w-5h-5ml-2"  />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </Link>
       </div>
-=======
     <div>
       <Head>
         <title>Ai Sentiment Analyzer - Zion Tech Group</title>
@@ -69,7 +35,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             ai-sentiment-analyzer services Transform your business with our expert solutions. services coming soon.
-=======
 const AISentimentAnalyzer: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -200,7 +165,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
             Transform customer feedback into actionable insights with our advanced AI-powered sentiment analysis platform.),
             Monitor brand perception, optimize customer experience, and drive business growth with 95% accuracy.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </p>
           <Link
             href="/contact"
@@ -212,68 +176,8 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
-=======
 
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Sentiment Analyzer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai sentiment analyzer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
@@ -305,35 +209,10 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
             </div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div><div className="text-white font-semibold mb-2">Monitoring</div><div className="text-gray-400 text-sm">Continuous brand and sentiment tracking</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-=======
         {/* Features */}
         <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
@@ -444,31 +323,10 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
                 </a>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
-            </div>
-=======
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30"></section>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Insights?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 500+ companies already using our AI Sentiment Analyzer to drive better business decisions.</p>
           </p>
@@ -487,17 +345,13 @@ const AISentimentAnalyzer: React.FC = memo(() => {}
               <MessageSquare className="w-5 h-5 mr-2" />
               Email Us;
             </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
       </div>
       <Footer />
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -514,8 +368,6 @@ export default function AisentimentanalyzerPage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function AisentimentanalyzerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -541,6 +393,3 @@ export default function AisentimentanalyzerPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

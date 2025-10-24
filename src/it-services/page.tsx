@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -23,12 +17,8 @@ interface ITService {
 }
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  const itServices = [
-=======
   const itServices: ITService[] = [
     // Infrastructure & Cloud Services
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     {
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
@@ -93,45 +83,6 @@ $4},
     { number: '50+', label: 'Expert Engineers' }
   ];
 
-<<<<<<< HEAD
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Rapid Deployment',
-      description: 'Get your IT infrastructure up and running in record time with our proven methodologies.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security measures to protect your critical data and systems.'
-    },
-    {
-      icon: BarChart,
-      title: 'Performance Optimization',
-      description: 'Continuous monitoring and optimization to ensure peak performance.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Access to certified professionals with years of experience in enterprise IT.'
-    }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content=" solutions by Zion Tech Group" />
-      </Helmet>
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8"></h1>
-        <div className="prose prose-invert max-w-none">
-          <p>This page is under construction. Please check back later for  solutions.</p>
-=======
       <main className="pt-24 pb-16 px-4"></main>
         <div className="max-w-7xl mx-auto"></div>
           {/* Hero Section */}
@@ -176,7 +127,6 @@ export default function Page() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
   // Removed unused benefits variable;
         {/* Hero Section */}
               IT Services & Infrastructure;
@@ -190,7 +140,6 @@ export default function Page() {
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
                         {feature}
                       </li>
                     ))}
@@ -228,77 +177,6 @@ export default function Page() {
                       {feature}
                     </li>
                   ))}
-<<<<<<< HEAD
-                </ul>
-                <div className="text-center"></div>
-                  <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
-                  <a
-                    href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
-                  ></a>
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
-                </div>
-              ))}
-    <>
-      <SEOOptimizer
-        title="IT Services - Zion Tech Group"
-        description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, database management, and infrastructure solutions. Expert IT support for modern businesses."
-        keywords={['IT services', 'cloud migration', 'cybersecurity', 'DevOps', 'database management', 'IT infrastructure', 'IT consulting']}
-        canonicalUrl="https://ziontechgroup.com/it-services"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation />
-        
-        <main className="pt-16"></main>
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center"></section>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
-                Comprehensive IT Services
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8"></p>
-                Expert IT solutions for modern businesses
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
-                From cloud migration to cybersecurity, our expert IT team provides comprehensive solutions 
-                to keep your business running smoothly and securely in the digital age.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center space-x-2"
-                ></a>
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                ></a>
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Consultation</span>
-                </a>
-              </div>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center"></div>
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-            </div>
-          </div>
-        </section>
-=======
                   <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                     Learn More <ArrowRight></ArrowRight>
   ))}
@@ -310,7 +188,6 @@ export default function Page() {
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                 <div className="text-cyan-400 font-bold text-sm">{service.price}</div>
   ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
         {/* Support Tiers */}
         <section className="mb-16"></section>
@@ -545,9 +422,7 @@ export default function ITServicesPage() {
               Contact Us
             </a>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
-=======
 
 export default function ITServicesPage() {
   return (
@@ -557,19 +432,12 @@ export default function ITServicesPage() {
         <p className="text-lg text-gray-300">
           Comprehensive IT solutions for your business needs.
         </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-=======
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
-=======
 import { Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -643,16 +511,7 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-const ItServicesPage: React.FC = () => {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -663,7 +522,6 @@ const ItServicesPage: React.FC = () => {
         </a>
       </div>
     }</div>;  );
-=======
 
   const benefits = [
     {
@@ -915,23 +773,12 @@ const ItServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
-          </section>
-        </main>
-        <Footer />
-      </div>
-=======
         </section>
       </main>
 
       <Footer />
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
 };
 
 export default ItServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

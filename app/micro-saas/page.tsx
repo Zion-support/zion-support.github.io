@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Page() {
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Brain, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, Clock, Smartphone, Mail, FileText, BarChart3, Target, Video, Grid, Cloud, Calendar } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
   const benefits = [
     "Benefit 1",
@@ -164,15 +151,11 @@ import { Brain, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, Cloc
   ];
 
 export default function MicroSaasPage() {
-=======
-=======
 'use client';
 import React from "react";
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   return (
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -180,8 +163,6 @@ import { Link } from "react-router-dom";
 import { Mic } from 'lucide-react';
 
 export default function MicroSaasZionTechGroup() {
-=======
-=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></h1>
               AI-Powered Micro SAAS;
             </h1>
@@ -203,15 +184,9 @@ import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
@@ -334,32 +309,11 @@ const MicroSAASPage: React.FC = () => {
         return filtered;
     }
   }, [searchTerm, selectedCategory, sortBy]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 const MicroSaaSServicesPage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   return (
-<<<<<<< HEAD
-    <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Professional micro SaaS services for modern business solutions." />
-      </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Micro SaaS Services
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional micro SaaS services for modern business solutions.
-          </p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -378,25 +332,16 @@ export default function MicrosaasPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Micro Saas</h1>
           <p className="text-lg text-gray-300 mb-8">Professional micro saas services coming soon.</p>
           
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           <Link
-<<<<<<< HEAD
-            to="/contact"
-<<<<<<< HEAD
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-=======
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-=======
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
           >
             Contact Us
             <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           </Link>
         </div>
     <div className="min-h-screen bg-gray-900 text-white">
@@ -432,7 +377,6 @@ export default function MicrosaasPage() {
               <p className="text-gray-300">
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
-=======
         <meta name="description" content="Specialized micro SaaS services for niche markets." />
         <meta name="keywords" content="micro SaaS, software as a service, niche markets" />
       </Helmet>
@@ -454,22 +398,14 @@ export default function MicrosaasPage() {
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
-=======
 
 
 const MicroSaasPage: React.FC = () => {
@@ -533,7 +469,6 @@ const MicroSaasPage: React.FC = () => {
             <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
               View All Plans
             </button>
-=======
       <Helmet></Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Discover our collection of micro SaaS services designed to streamline your business operations." />
@@ -658,24 +593,16 @@ const MicroSaasPage: React.FC = () => {
                 Get Free Quote
               </a>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
       </main>
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default MicroSaaSServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 export default MicroSAASPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
       <title>MicroSaas - Zion Tech Group</title>
 
             <h1 className="text-4xl font-bold text-white mb-6">MicroSaas</h1>
@@ -687,13 +614,9 @@ export default MicroSAASPage;
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
         <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
         <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / />
         <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
@@ -776,4 +699,3 @@ export default MicroSAASPage;
 };
 
 export default MicroSaasPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

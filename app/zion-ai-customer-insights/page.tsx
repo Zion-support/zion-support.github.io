@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap, ShoppingCart, Store } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';

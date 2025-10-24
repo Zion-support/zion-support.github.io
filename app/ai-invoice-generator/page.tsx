@@ -1,39 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-"use client";
-=======
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 
 export default function AiInvoiceGeneratorZionTechGroup() {
   return (
-<<<<<<< HEAD
-    <div>
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>AiInvoiceGenerator - Zion Tech Group</title>
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AiInvoiceGenerator
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional aiinvoicegenerator services coming soon.
-          </p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -52,22 +28,14 @@ export default function AiinvoicegeneratorPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Ai Invoice Generator</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai invoice generator services coming soon.</p>
           
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           <Link
-<<<<<<< HEAD
-            to="/contact"
-<<<<<<< HEAD
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-=======
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -160,7 +128,6 @@ export default function AiinvoicegeneratorPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
-=======
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -320,47 +287,23 @@ export default function Page() {
           <div className="containermx-autopx-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
               <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
-            </div>
-=======
               <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
                 </Link>
                 <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
                 </Link>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-</div>
-=======
       <Footer />
-<<<<<<< HEAD
-    </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -378,8 +321,6 @@ export default function AiInvoiceGenerator() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
           >
             Contact Us
@@ -390,8 +331,5 @@ export default function AiInvoiceGenerator() {return (
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,51 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-=======
 import React, { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, RefreshCw } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
-<<<<<<< HEAD
-const GlobalErrorBoundary: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="globalerrorboundary">
-      <h2>GlobalErrorBoundary</h2>
-      <p>GlobalErrorBoundary component.</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>GlobalErrorBoundary | Zion Tech Group</title>
         <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary" />
       </Helmet>
-=======
 
 
                 Go Home
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
 
-<<<<<<< HEAD
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our GlobalErrorBoundary?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our globalerrorboundary solutions deliver unmatched performance, security, and scalability.
-=======
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -89,63 +58,9 @@ class GlobalErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
             <div className="text-6xl mb-4">⚠️</div><h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
           </div></div></div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div></div></div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our globalerrorboundary solutions for your business.
-            </p>
-          </div></div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div></div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your globalerrorboundary needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-=======
             {process.env.NODE_ENV === 'development' && this.state.error && ()
               <details className="text-left bg-black/20 rounded-lg p-4 mb-6">)
                 <summary className="cursor-pointer text-cyan-400 font-medium mb-2">)
@@ -179,8 +94,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 className="w-full bg-purple-600 hover: bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 Try Again;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'
@@ -281,43 +194,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
       }
 
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h2>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-black/20 rounded-lg p-4 text-xs text-gray-300 font-mono">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.error.stack && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">{this.state.error.stack}</pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="space-y-3">
-              {this.props.enableRetry && this.state.retryCount < this.maxRetries && (
-=======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xll p-8 border border-white/20">
@@ -328,7 +204,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 We're sorry, but something unexpected happened. Please try refreshing the page.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 <button
                   onClick={this.handleRetry}
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -336,38 +211,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Try Again ({this.maxRetries - this.state.retryCount} attempts left)
                 </button>
-<<<<<<< HEAD
-              )}
-              
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-white/20 text-white py-3 px-6 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300 flex items-center justify-center"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Reload Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-              </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="w-full border border-white/30 text-white py-3 px-6 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go to Homepage
-              </button>
-<<<<<<< HEAD
-            </div></div></div>
-          </div>
-        </div>
-      </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default GlobalErrorBoundary;
-=======
               <a;
                 href="/"
                 className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
@@ -377,7 +220,6 @@ export default GlobalErrorBoundary;
             </div>
           </div>,
         </div>);
-=======
                 
                 <Link
                   to="/"
@@ -390,7 +232,6 @@ export default GlobalErrorBoundary;
             </div>
         </div>
       );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     }
 
     return this.props.children;
@@ -398,10 +239,6 @@ export default GlobalErrorBoundary;
 }
 
 export { GlobalErrorBoundary };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
             </div>
 
             {this.props.enableReporting && (
@@ -425,8 +262,6 @@ export { GlobalErrorBoundary };
 }
 
 export default GlobalErrorBoundary
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 import React from 'react';
 
 const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = () => {
@@ -439,7 +274,3 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = () => {
 };
 
 export default GlobalErrorBoundary;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

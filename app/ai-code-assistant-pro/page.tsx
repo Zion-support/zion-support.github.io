@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -24,12 +18,10 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 const AICodeAssistantProZionTechGroup = () => {
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function AICodeAssistantProPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   const features = [
     {
       title: "AI Code Generation",
@@ -147,33 +139,6 @@ export default function AiCodeAssistantProPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai code assistant pro solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -184,11 +149,9 @@ export default function AiCodeAssistantProPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 
 
 import React from 'react';
@@ -270,39 +233,6 @@ const AICodeAssistantProPage: React.FC = () => {const features = [{
       popular: false;}
   ];
 
-<<<<<<< HEAD
-export default function AICodeAssistantPro() {</Link>
-              </div>
-  ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Supercharge Your Development?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of developers already using our AI assistant to write better code faster.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2"   />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Schedule a Demo
-            </Link>
-          </div>
-=======
   const testimonials = [
     {
       name: 'Alex Chen',
@@ -526,7 +456,6 @@ export default function AICodeAssistantPro() {</Link>
                   <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
                 </div>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </div>
       </section>
     </div>
@@ -535,8 +464,6 @@ export default function AICodeAssistantPro() {</Link>
 
 export default AICodeAssistantProPage;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -567,7 +494,3 @@ export default function AicodeassistantproPage() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

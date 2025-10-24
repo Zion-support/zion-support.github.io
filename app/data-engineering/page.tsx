@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -17,47 +8,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function DataEngineeringZionTechGroup() {
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Data Engineering - Zion Tech Group</title>
-        <meta name="description" content="Data Engineering solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Data Engineering</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive data engineering solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -68,11 +18,9 @@ export default function DataEngineeringZionTechGroup() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -157,7 +105,6 @@ const DataEngineeringPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Build robust, scalable data infrastructure that transforms raw data into 
               actionable insights. Our data engineering solutions power your analytics and AI initiatives.
-=======
 import React  from 'react';
 const DataEngineeringPage: React.FC = () => {
   return (
@@ -176,7 +123,6 @@ const DataEngineeringPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xlmx-auto">
               Professional data engineering services by Zion Tech Group.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -203,124 +149,12 @@ const DataEngineeringPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our Data Engineering Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We provide comprehensive data engineering solutions that help you build 
-                and maintain robust data infrastructure for your organization.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">
-                  Why Choose Our Data Engineering Solutions?
-                </h2>
-                <p className="text-gray-300 mb-8">
-                  Our experienced data engineers combine deep technical expertise with business 
-                  understanding to deliver solutions that drive real value.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-6">Our Process</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Data Assessment</h4>
-                      <p className="text-gray-300 text-sm">Analyze your current data landscape and identify requirements</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Architecture Design</h4>
-                      <p className="text-gray-300 text-sm">Design scalable data architecture and infrastructure</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Implementation</h4>
-                      <p className="text-gray-300 text-sm">Build and deploy data pipelines and infrastructure</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Optimization</h4>
-                      <p className="text-gray-300 text-sm">Monitor, optimize, and maintain your data infrastructure</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Build Your Data Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our data engineering solutions can help you build 
-              a robust data infrastructure that powers your analytics and AI initiatives.
-=======
 
           <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="text-gray-300 mb-6">
               We're working on bringing you comprehensive data engineering solutions. 
               Contact us to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -338,18 +172,6 @@ const DataEngineeringPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-      </main>
-      
-      <Footer />
-    </>
-  )
-}
-
-export default DataEngineeringPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 import React from 'react';
 
 const DataEngineeringPage: React.FC = () => {return (
@@ -359,8 +181,6 @@ const DataEngineeringPage: React.FC = () => {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function DataengineeringPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -386,8 +206,6 @@ export default function DataengineeringPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
       </div>
         </div>
       </div>
@@ -407,4 +225,3 @@ export default function DataengineeringPage() {
 };
 
 export default DataEngineeringPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

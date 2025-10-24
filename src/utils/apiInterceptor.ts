@@ -4,20 +4,6 @@
  * API Interceptor Utility;
  * Centralized API request handling with error handling, retry logic, and caching;
  */
-<<<<<<< HEAD
-// ErrorHandler class definition;
-class ErrorHandler {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  private static,
-  instance: ErrorHandler;
-  static getInstance(): ErrorHandler {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (!ErrorHandler.instance) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-=======
 import { ErrorHandler as BaseErrorHandler } from './errorHandler';
 import { performanceMetrics } from './performanceMetrics';
 // ErrorHandler class definition
@@ -25,7 +11,6 @@ class ErrorHandler {
   private static instance: ErrorHandler;
   static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;

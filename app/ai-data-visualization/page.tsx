@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
         canonicalUrl="https: //ziontechgroup.com/ai-data-visualization",
@@ -15,7 +9,6 @@ import React from 'react';
           <section className="text-center mb-16"></section>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text"></h1>
               AI Data Visualization;
-=======
 'use client';
 import React from "react";
 import { Helmet } from 'react-helmet-async';
@@ -33,7 +26,6 @@ const AiDataVisualizationPage: React.FC = () => {
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               AI Data Visualization
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">)
               Transform data into actionable insights;)
@@ -82,131 +74,27 @@ const AiDataVisualizationPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function AIDataVisualizationZionTechGroup() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Ai Data Visualization - Zion Tech Group</title>
         <meta name="description" content="Ai Data Visualization solutions by Zion Tech Group" />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." />
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-data-visualization" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Data Visualization</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai data visualization solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
 
       <Navigation />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Data Visualization
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai data visualization solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-violet-500 to-blue-600 hover:from-violet-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-=======
       
       <main className="pt-24 pb-16 px-4"></main>
         <div className="max-w-7xl mx-auto"></div>
@@ -314,34 +202,10 @@ export default function AIDataVisualizationZionTechGroup() {
                 <h3 className="text-xl font-semibold text-white mb-3">Data Integration</h3>
                 <p className="text-gray-300">Connect multiple data sources for comprehensive analysis</p>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-=======
           {/* CTA Section */}
             <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Visualize Your Data?</h2><p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get started with our AI data visualization platform today. Contact us for a free demo</p>
               and custom implementation plan.</p>
@@ -390,7 +254,6 @@ export default function AIDataVisualizationZionTechGroup() {
                 <Mail className="w-5 h-5" />
                 Email Us
               </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
@@ -413,11 +276,9 @@ export default function AIDataVisualizationZionTechGroup() {
                   Learn More
                 </button>
               </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
         <title>Ai Data Visualization - Zion Tech Group</title>
@@ -431,9 +292,7 @@ export default function AIDataVisualizationZionTechGroup() {
           
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -444,19 +303,9 @@ export default function AIDataVisualizationZionTechGroup() {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-<<<<<<< HEAD
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 }
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -477,8 +326,6 @@ export default function AIDataVisualization() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function AidatavisualizationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -504,6 +351,3 @@ export default function AidatavisualizationPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

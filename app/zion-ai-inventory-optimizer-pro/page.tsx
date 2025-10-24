@@ -1,11 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -150,7 +144,6 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
       avatar: "MT",
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 
 export default function ZionaiinventoryoptimizerproPage() {
   return (

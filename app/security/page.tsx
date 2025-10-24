@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-export default function Page() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
     <div>
       <Head>
         <title>Security - Zion Tech Group</title>
@@ -51,7 +19,6 @@ export default function Page() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -76,55 +43,22 @@ import {ArrowRight} from 'lucide-react';
           Contact Us;
           <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function SecurityPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Security - Zion Tech Group</title>
-        <meta name="description" content="Professional security services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Security</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional security services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
 
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -133,41 +67,6 @@ const SecuritySolutionsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-      icon: Shield,
-      title: 'Secure Analytics',
-      description: 'Enterprise-grade security for your sensitive data and analytics.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
-=======
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
@@ -185,7 +84,6 @@ const SecuritySolutionsPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
 
@@ -215,10 +113,6 @@ const SecuritySolutionsPage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Security Solutions
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive security solutions for your business.
-=======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
@@ -248,7 +142,6 @@ const SecuritySolutionsPage: React.FC = () => {
                 </div></div></div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -295,7 +188,6 @@ const SecuritySolutionsPage: React.FC = () => {
                     </CheckCircle>
                   ))}
                 </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </div>
             ))}
           </div>
@@ -334,7 +226,6 @@ const SecuritySolutionsPage: React.FC = () => {
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -347,38 +238,6 @@ const SecuritySolutionsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-=======
         {/* Compliance Standards */}
         <section className="mb-16"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications</h2>
@@ -397,25 +256,12 @@ const SecuritySolutionsPage: React.FC = () => {
                     <standard.icon className="w-6 h-6 text-green-400" />
                   <p className="text-gray-300 text-sm mb-3">{standard.description}</p><span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">{standard.status}</span>
                   </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-=======
         {/* Security Features */}
         <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features</h2>
@@ -491,18 +337,8 @@ const SecuritySolutionsPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-=======
         {/* Incident Response */}
         <section className="mb-16"></section>
           <div className="cyber-card p-8"></section>
@@ -589,7 +425,6 @@ const SecuritySolutionsPage: React.FC = () => {
                   <p>Email:</p> <a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">security@ziontechgroup.com</a>
                   <p>Phone:</p> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
                   <p>Emergency:</p> <a href="tel:+13024640951" className="text-red-400 hover:text-red-300">+1 302 464 0951</a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
@@ -617,8 +452,6 @@ const SecuritySolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
       </main>,
 ,
       <Footer />,
@@ -686,7 +519,6 @@ const SecurityPage: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </div>
       <Footer />
     </>
@@ -694,12 +526,5 @@ const SecurityPage: React.FC = () => {
 };
 
 export default SecuritySolutionsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

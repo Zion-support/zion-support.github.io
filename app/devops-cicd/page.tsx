@@ -1,104 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-export default function DevopsCicdZionTechGroup() {
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-const DevOpsCICDPage: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Devops Cicd - Zion Tech Group</title>
-        <meta name="description" content="Devops Cicd solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Devops Cicd</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive devops cicd solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -109,11 +14,9 @@ const DevOpsCICDPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
     <>
       <Helmet>
         <title>DevOps & CI/CD - Zion Tech Group</title>
@@ -128,16 +31,11 @@ const DevOpsCICDPage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               DevOps & CI/CD
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Streamline your development workflow with DevOps and CI/CD.
-=======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </div>
-=======
 import React  from 'react';
 const DevopsCicdPage: React.FC = () => {
   return (
@@ -171,7 +69,6 @@ const DevopsCicdPage: React.FC = () => {
       </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </div>
       </section>
@@ -234,7 +131,6 @@ const DevopsCicdPage: React.FC = () => {
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -247,15 +143,9 @@ const DevopsCicdPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </>
-=======
       </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
-=======
 const devopscicdPage: React.FC = () => {
   return(<>)
       <Helmet>)
@@ -310,13 +200,8 @@ const devopscicdPage: React.FC = () => {
         </div>
       </div>,
     </>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
-<<<<<<< HEAD
-export default DevOpsCICDPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import React from 'react';
 
 const DevopsCicdPage: React.FC = () => {return (
@@ -326,8 +211,6 @@ const DevopsCicdPage: React.FC = () => {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function DevopscicdPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -353,7 +236,4 @@ export default function DevopscicdPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 export default DevopsCicdPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,38 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Phone, Mail, ArrowRight, MapPin } from 'lucide-react'
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 // import React from "react";
 // import { Link } from "react-router-dom"; // Unused import
 // import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"; // Unused import
-=======
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function EnhancedFooter() {
-
-=======
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   return (
-<<<<<<< HEAD
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4">
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
 import {Link} from 'react-router-dom';
 import {ArrowRight, Mail, Phone, MapPin} from 'lucide-react';
 
@@ -54,7 +29,6 @@ const EnhancedFooter: React.FC = () => {return (
             </Link>
           </div>
 
-=======
     <footer className="bg-slate-900 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -73,7 +47,6 @@ const EnhancedFooter: React.FC = () => {return (
               </Link>
             </div>
           
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
@@ -85,39 +58,6 @@ const EnhancedFooter: React.FC = () => {return (
           </div>
 
           <div>
-<<<<<<< HEAD
-            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">Our Team</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">Careers</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 text-cyan-400 mr-3"   />
-                <span className="text-gray-300">info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 text-cyan-400 mr-3"   />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 text-cyan-400 mr-3"   />
-                <span className="text-gray-300">San Francisco, CA</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
-=======
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -138,19 +78,10 @@ const EnhancedFooter: React.FC = () => {return (
           <div className="border-t border-slate-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
               © 2024 Zion Tech Group. All rights reserved.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </p>
         </div>
       </div>
     </footer>
   );};
 
-<<<<<<< HEAD
 export default EnhancedFooter;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-export default EnhancedFooter;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

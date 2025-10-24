@@ -201,9 +201,6 @@ describe('performanceMonitoring', () => {
     });
   });
 });
-<<<<<<< HEAD
-=======
 
 
 export default testFn;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

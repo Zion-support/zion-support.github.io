@@ -61,10 +61,6 @@ const ItConsulting: React.FC = () => {
         </section>
       </main>
 
-<<<<<<< HEAD
-      <Footer />
-    </div>
-=======
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16"></div>
               {consultingServices.map((service, index) => (
@@ -160,7 +156,6 @@ const ItConsulting: React.FC = () => {
 
 
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 

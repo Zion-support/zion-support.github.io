@@ -883,13 +883,6 @@ const score = Math.max(0, 100 - totalPenalty);
       return 'No accessibility issues found. Great job!';
     }
     
-<<<<<<< HEAD
-    const report = this.issues.map(issue => 
-      `${issue.type}: ${issue.message} (${issue.wcagLevel})`
-    ).join('\n');
-    
-    return `Accessibility Issues Found:\n${report}`;
-=======
     let report = `Found ${this.issues.length} accessibility issues:\n\n`;
     this.issues.forEach((issue, index) => {
       report += `${index + 1}. ${issue.type}: ${issue.message}\n`;
@@ -903,7 +896,6 @@ const score = Math.max(0, 100 - totalPenalty);
     });
     
     return report;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
   }
 }"`
 

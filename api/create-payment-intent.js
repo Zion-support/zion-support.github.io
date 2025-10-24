@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-  return async (req, res) => {;
-try { ;
-      await handler(req, res)}
-  } catch (error) {;
-console.error(error)}
-  }
-      res.status(500).json({;
-error: 'Internal server error",message: "error.message "
-)"
-  ",});
-    };
-  };
-};
-
-export default withErrorLogging(async (req, res) => {"
-
-;"'"
-=======
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
@@ -54,4 +34,3 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

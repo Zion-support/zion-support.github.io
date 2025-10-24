@@ -1,52 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 'use client';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AiWorkflowAutomationZionTechGroup() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional services coming soon." />
       </Helmet>
-<<<<<<< HEAD
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
     <div>
       <Head>
         <title>Ai Workflow Automation - Zion Tech Group</title>
@@ -70,9 +32,7 @@ export default function AiWorkflowAutomationZionTechGroup() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
-=======
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
@@ -98,26 +58,8 @@ export default function AiWorkflowAutomationZionTechGroup() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 const AIWorkflowAutomationPage: React.FC = () => {
-=======
 'use client';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -131,7 +73,6 @@ const AIWorkflowAutomation: React.FC = () => {
     setIsLoaded(true);
   }, []);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   const features = [
     {
       icon: Workflow;
@@ -260,7 +201,6 @@ const AIWorkflowAutomation: React.FC = () => {
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">,
               Transform your business operations with AI-powered workflow automation that learns),
               adapts, and optimizes your processes for maximum efficiency and productivity.
-=======
 import React  from 'react';
 const AiWorkflowAutomationPage: React.FC = () => {
   return (
@@ -279,7 +219,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xlmx-auto">
               Professional ai workflow automation services by Zion Tech Group.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
@@ -303,7 +242,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
               Key Features;
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -311,19 +249,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
                   </div></div></div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-<<<<<<< HEAD
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-<<<<<<< HEAD
-                  )}
-=======
                   <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</section>
@@ -337,9 +262,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
-=======
 
             </div>
           </div>
@@ -386,11 +308,9 @@ const AiWorkflowAutomationPage: React.FC = () => {
                 <button>
                   Learn More
                 </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
                   </div>
                 ))}
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
             </div>
           </section>
 
@@ -431,36 +351,10 @@ const AiWorkflowAutomationPage: React.FC = () => {
                   ></a>
                     Get Started;
                   </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-=======
           {/* Benefits Section */}
           <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text"></h2>
@@ -473,11 +367,9 @@ const AiWorkflowAutomationPage: React.FC = () => {
                 <div key={index} className="text-center"></div>
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
-=======
 
           <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
@@ -491,30 +383,9 @@ const AiWorkflowAutomationPage: React.FC = () => {
       </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-violet-500 to-blue-600 hover:from-violet-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
-=======
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
@@ -542,26 +413,16 @@ const AiWorkflowAutomationPage: React.FC = () => {
                   </div>
                 ))}
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
         </div>
       </div>
       </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-12 border border-cyan-500/20"></section>
             <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Automate Your Workflows?</h2><p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get started with our AI workflow automation platform today. Contact us for a free consultation</p>
@@ -596,8 +457,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
 };
 
 export default AIWorkflowAutomationPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
 
 const AiWorkflowAutomationPage: React.FC = () => {return (
@@ -607,14 +466,7 @@ const AiWorkflowAutomationPage: React.FC = () => {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default AiWorkflowAutomationPage;
-<<<<<<< HEAD
-
-export default AIWorkflowAutomation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
-=======
 export default function AiworkflowautomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -640,9 +492,4 @@ export default function AiworkflowautomationPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-=======
 export default AIWorkflowAutomation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b

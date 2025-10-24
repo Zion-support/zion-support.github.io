@@ -1,64 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  DollarSign, 
-  Target, 
-  CheckCircle, 
-  Cpu,
-  Globe,
-  Activity,
-  PieChart
-} from 'lucide-react';
-import React from 'react';
-import {   Brain, 
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Brain, TrendingUp, Shield, Zap, BarChart3, DollarSign, Target, CheckCircle, Cpu, Globe, Clock, Activity, PieChart } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  DollarSign, 
-  Target, 
-  CheckCircle, 
-  Cpu,
-  Globe,
-  Activity,
-  PieChart
-} from 'lucide-react';
-const AIQuantumFinancialOraclePage = () => {
-  return null;
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -166,7 +105,6 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 import { Brain, Zap, Target, BarChart, Shield, Cpu, Navigation, Zap, Target, Shield, DollarSign } from 'lucide-react';
 
 const AIQuantumFinancialOraclePage: React.FC = () => {
@@ -227,7 +165,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Intelligence</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Harness the power of quantum computing to predict market movements and optimize your financial strategy.</p>
             </p>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
@@ -252,36 +189,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </React.Fragment>
-  );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
         </div>,
       </section>,
 ,
@@ -436,7 +343,6 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
         </div>,
       </footer>,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
   return null;
@@ -456,33 +362,6 @@ export default function AiQuantumFinancialOraclePage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai quantum financial oracle solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -493,11 +372,9 @@ export default function AiQuantumFinancialOraclePage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
@@ -513,22 +390,14 @@ export default function AiquantumfinancialoraclePage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiquantumfinancialoraclePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ai Quantum Financial Oracle - Zion Tech Group</title>
         <meta name="description" content="Professional ai quantum financial oracle services by Zion Tech Group" />
@@ -539,24 +408,9 @@ export default function AiquantumfinancialoraclePage() {
           <h1 className="text-4xl font-bold text-white mb-6">Ai Quantum Financial Oracle</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai quantum financial oracle services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

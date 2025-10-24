@@ -7,11 +7,7 @@
  * Deep clone an object;
  */
 export function deepClone<T>(ob)
-<<<<<<< HEAD
-  j: T,): T {/* TODO: Fix JSX expression */,}
-=======
   j: T): T {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   if (obj instanceof Date) {/* TODO: Fix JSX expression */,}
   }
@@ -31,11 +27,7 @@ export function deepClone<T>(ob)
  */
 export function deepMerge<T extends Record<string, unknown>>(targe,
   t: T, sourc)
-<<<<<<< HEAD
-  e: Partial<T>): T {/* TODO: Fix JSX expression */,}
-=======
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   const output = { ...target };
   for (const key in source) {/* TODO: Fix JSX expression */,}
       } else {/* TODO: Fix JSX expression */,}
@@ -114,13 +106,8 @@ export function groupBy<T>(arra,
   y: T[],
   ke,
   y: keyof T | ((ite)
-<<<<<<< HEAD
-  m: T,) => string | number)
-): Record<string, T[]> {/* TODO: Fix JSX expression */,}
-=======
   m: T) => string | number)
 ): Record<string, T[]> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     },
     {} as Record<string, T[]></string>
   );
@@ -129,11 +116,7 @@ export function groupBy<T>(arra,
  * Get unique items from an array;
  */
 export function unique<T>(arra)
-<<<<<<< HEAD
-  y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */,}
-=======
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   const seen = new Set();
   return array.filter(item => {/* TODO: Fix JSX expression */,}
@@ -149,11 +132,7 @@ export function sortBy<T>(arra,
   y: T[],
   key,
   s: Array<keyof T | ((ite)
-<<<<<<< HEAD
-  m: T,) => unknown)>,
-=======
   m: T) => unknown)>,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   order,
   s: Array<'asc' | 'desc'> = []
 ): T[] {/* TODO: Fix JSX expression */,}
@@ -178,11 +157,7 @@ export function sortBy<T>(arra,
  */
 export function chunk<T>(arra,
   y: T[], siz)
-<<<<<<< HEAD
-  e: number,): T[][] {/* TODO: Fix JSX expression */,}
-=======
   e: number): T[][] {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   return chunks;
 }
@@ -190,11 +165,7 @@ export function chunk<T>(arra,
  * Zip multiple arrays together;
  */
 export function zip<T>(...array)
-<<<<<<< HEAD
-  s: T[][]): T[][] {/* TODO: Fix JSX expression */,}
-=======
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   return result;
 }
@@ -202,32 +173,20 @@ export function zip<T>(...array)
  * Format bytes to human readable string;
  */
 export function formatBytes(byte)
-<<<<<<< HEAD
-  s: number, decimals = 2): string {/* TODO: Fix JSX expression */,}`
-=======
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
 }
 /**
  * Format number with separators;
  */
 export function formatNumber(nu)
-<<<<<<< HEAD
-  m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */,}
-=======
   m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Format currency;
  */
 export function formatCurrency(amoun)
-<<<<<<< HEAD
-  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}
-=======
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }).format(amount);
 }
 /**
@@ -244,11 +203,7 @@ export function formatDate(dat,
  * Format relative time;
  */
 export function formatRelativeTime(dat)
-<<<<<<< HEAD
-  e: Date | string | number): string {/* TODO: Fix JSX expression */,}`
-=======
   e: Date | string | number): string {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;`
   if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;`
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
@@ -261,61 +216,37 @@ export function formatRelativeTime(dat)
  */
 export function truncate(st,
   r: string, lengt)
-<<<<<<< HEAD
-  h: number, suffix = '...'): string {/* TODO: Fix JSX expression */,}
-=======
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Capitalize first letter;
  */
 export function capitalize(st)
-<<<<<<< HEAD
-  r: string,): string {/* TODO: Fix JSX expression */,}
-=======
   r: string): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Convert to title case;
  */
 export function titleCase(st)
-<<<<<<< HEAD
-  r: string,): string {/* TODO: Fix JSX expression */,}
-=======
   r: string): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Convert to kebab case;
  */
 export function kebabCase(st)
-<<<<<<< HEAD
-  r: string,): string {/* TODO: Fix JSX expression */,}
-=======
   r: string): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Convert to camel case;
  */
 export function camelCase(st)
-<<<<<<< HEAD
-  r: string,): string {/* TODO: Fix JSX expression */,}
-=======
   r: string): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 /**
  * Convert to snake case;
  */
 export function snakeCase(st)
-<<<<<<< HEAD
-  r: string,): string {/* TODO: Fix JSX expression */,}
-=======
   r: string): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 export default {/* TODO: Fix JSX expression */,}
 };

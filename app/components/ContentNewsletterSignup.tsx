@@ -1,45 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
-=======
 'use client'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 interface ContentNewsletterSignupProps {
-<<<<<<< HEAD
-  title?: string
-  subtitle?: string
-  placeholder?: string
-  buttonText?: string
-  features?: Array<{}
-    icon: React.ComponentType<{ className?: string }>
-<<<<<<< HEAD
-    text: string}>
-  onSubscribe?: (email: string) => void}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({
-  title= "Stay Updated with Our LatestInsights"
-  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox."
-  placeholder= "Enter your emailaddress"
-  buttonText= "Subscribe"
-  features= [
-    { icon: Star, text: "Exclusive content&quot
-  },
-  {
-    icon: Users, text: "Industry insights&quot
-  },
-  {
-    icon: Globe, text: "Global updates&quot
-  },
-  {
-    icon: Zap, text: "Early access&quot,
-  ]
-=======
   title?: string;
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -48,29 +12,21 @@ import {ArrowRight} from 'lucide-react';
 'use client'
 
 interface ContentNewsletterSignupProps {title?: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   subtitle?: string;
   placeholder?: string;
   buttonText?: string;
   features?: Array<{
-<<<<<<< HEAD
-    icon: React.ComponentType<{ className?: string ,}>;
-=======
     icon: React.ComponentType<{ className?: string}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     text: string;
   }>;
   onSubscribe?: (email: string,) => void;
 }
 
-<<<<<<< HEAD
-=======
     text: string
   }>
   onSubscribe?: (email: string) => void
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -94,13 +50,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       text: "Global community access",
     }
   ],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   onSubscribe
 }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-=======
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({const title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
@@ -113,46 +67,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
 }) => {const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      if (onSubscribe) {
-<<<<<<< HEAD
-        onSubscribe(email);
-      }
-      setIsSubscribed(true);
-      setEmail('');
-    } catch (error) {
-      console.error('Subscription failed:', error);
-    } finally {
-<<<<<<< HEAD
-      setIsSubmitting(false),}
-  return (</ContentNewsletterSignupProp>
-    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4"></div>
-      <div className="max-w-4xl mx-auto text-center"></div>
-        <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
-        <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
-        
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8"></form>
-          <div className="flex flex-col sm:flex-row gap-4"></div>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder={placeholder}
-              className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focu,
-  s:border-transparent"
-              required
-            /></input>
-=======
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -178,65 +92,27 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
 
   if (isSubscribed) {
     return (
-<<<<<<< HEAD
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-white" />
-=======
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         <div className="max-w-4 xlmx-autotext-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
             <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-automb-6">
               <CheckCircle className="w-10h-10text-white" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Thank You for Subscribing!
             </h2>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8">
-=======
             <p className="text-xltext-gray-300 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               You'll receive our latest insights and updates soon.
             </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
             <button
               type="submit"
               disabled={isLoading}
               className="bg-emerald-600 hover:bg-emerald-700 disable,
   d:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
-<<<<<<< HEAD
-              {isLoading ? 'Subscribing...' : buttonText}</button>
-              <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
-=======
               Subscribe another email
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </button>
           </div>
-<<<<<<< HEAD
-        </form>
-        
-        {isSubscribed && (
-          <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg"></div>
-            <p className="text-emerald-400 flex items-center justify-center"></p>
-              <CheckCircle className="h-5 w-5 mr-2" />
-              Thank you for subscribing!</CheckCircle>
-            </p>
-          </div>
-        )}
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-          {features.map((feature, index) => (</div>
-            <div key={index} className="flex items-center space-x-2 text-gray-300"></div>
-              <feature.icon className="h-5 w-5 text-emerald-400" /></feature>
-              <span className="text-sm">{feature.text}</span>
-            </div>
-          ))}
-=======
       setIsLoading(false);
     }
   };
@@ -263,43 +139,23 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
         </div>
       </div>
     );
-=======
         </div>
       </div>
     )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   }
 
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              {title}
-=======
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
       <div className="max-w-4xlmx-auto">
         <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
           <div className="text-centermb-12">
             <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />{title}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </h2>
-<<<<<<< HEAD
-            <p className="text-xl text-blue-100 mb-8">
-              {subtitle}
-            </p>
-            
-            <div className="space-y-4">
-=======
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
               {subtitle}
             </p>
             
             <div className="flex flex-wrap justify-center gap-6 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
@@ -310,21 +166,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-
-          {/* Newsletter Form */}
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address
-                </label>
-<<<<<<< HEAD
-=======
           <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
             <div className="flex flex-colsm:flex-rowgap-4">
               <div className="flex-1">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 <input
                   type="email"
                   id="email"
@@ -344,7 +188,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
                 {isLoading ? (
                   <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
-=======
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
@@ -367,17 +210,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
                 {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
                     Subscribing...
                   </>
                 ) : (
                   <>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
-                  </React.Fragment>
-                )}
-=======
     return (
       <section className="py-16" aria-labelledby="newsletter-success"></section>
         <div className="container mx-auto px-4"></section>
@@ -543,35 +381,23 @@ const ContentNewsletterSignup: React.FC = () => {
               ></button>
                 <Send className="w-5 h-5 mr-2" />
                 Subscribe
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </button>
               
               <p className="text-sm text-blue-200 text-center">
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </form>
-<<<<<<< HEAD
-          </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
           )}
           
           <p className="text-sm text-gray-400 mt-4"></p>
             We respect your privacy. Unsubscribe at any time.
           </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
       </div>
   );
 };
 
-<<<<<<< HEAD
-export default ContentNewsletterSignup
-;
-=======
 export default ContentNewsletterSignup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
         onSubscribe(email)}
       setIsSubscribed(true)
       setEmail('')
@@ -617,17 +443,6 @@ export default function ContentNewsletterSignup() {return (
                 disabled="{isSubmitting}"
                 className="bg-gradient-to-rfrom-blue-600to-purple-600 hover: from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]"   /></button>
                 {isSubmitting ? (
-<<<<<<< HEAD
-                  <><  />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <span  >Subscribing...</span>
-                  <  />
-                ) : (
-                  <><  />
-                    <span  >{buttonText}</span>
-                    <ArrowRight className="w-5h-5ml-2"   />    </ArrowRight>
-<  />
-=======
                     <div className="animate-spin rounded-full h-5 w-5border-b-2border-white"></div>
                     <span  >Subscribing...</span>
 
@@ -635,15 +450,10 @@ export default function ContentNewsletterSignup() {return (
                     <span>{buttonText}</span>
                     <ArrowRight className="h-5w-5" />
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 )}
               </button>
             </div>
           </form>
-<<<<<<< HEAD
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {features.map((feature, index) => (
-=======
                   </>
                 )}
               </button>
@@ -658,7 +468,6 @@ export default function ContentNewsletterSignup() {return (
     </div>
   )
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
                 <div key={index} className="text-center"   /></div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -667,7 +476,6 @@ export default function ContentNewsletterSignup() {return (
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
   ))}
-=======
 
           <div className="grid grid-cols-2md:grid-cols-4gap-6">
         </div>
@@ -679,16 +487,11 @@ export default function ContentNewsletterSignup() {return (
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
       </div>
   )
 
 export default ContentNewsletterSignup;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
@@ -701,6 +504,3 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
 };
 
 export default ContentNewsletterSignup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

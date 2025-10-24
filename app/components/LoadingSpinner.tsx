@@ -1,53 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface LoadingspinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
-  return (
-    <div className={`loadingspinner-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
 'use client'
 import React from 'react'
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
   className?: string
 }
 
-<<<<<<< HEAD
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    lg: 'w-12 h-12'
-  }
-
-  return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-cyan-500 ${sizeClasses[size]}`}></div>
-=======
     lg: 'w-12 h-12',
   };
 
@@ -64,7 +25,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
           {text}
         </p>
-=======
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text,
@@ -83,16 +43,12 @@ const,
       <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} /></Loader2>
       {/* TODO: Fix JSX expression */}
         <p className="text-gray-300 text-sm animate-pulse">{text}</p>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     </div>
   )
 }
 
 export default LoadingSpinner
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
@@ -114,7 +70,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps   /> = ({const size = 'md',
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`}   /></div>
         <svg;
-=======
     lg: 'w-12 h-12'
   };
   const colorClasses = {
@@ -126,7 +81,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps   /> = ({const size = 'md',
     <div className="flex flex-col items-centerjustify-centerspace-y-4">
       <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
         <svg
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           className="w-fullh-full"
           xmlns="http:// www.w3.org/2000/svg"
           fill="none"
@@ -143,35 +97,20 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps   /> = ({const size = 'md',
             className="opacity-75"
             fill="currentColor"
             d="M4 12 a8 8 0 018-8 V0 C5.373 0 0 5.373 0 12 h4 zm2 5.291 A7.962 7.962 0 014 12 H0 c0 3.042 1.135 5.824 3 7.938 l3-2.647 z"
-<<<<<<< HEAD
-             /></path>
-=======
           / />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </svg>
       </div>
       {text && (
         <p className="text-gray-400text-smanimate-pulse">{text}</p>
   )}
-=======
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
   return (
     <div className="loadingspinner">
       <h2>LoadingSpinner</h2>
       <p>Component content coming soon.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default LoadingSpinner;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-export default LoadingSpinner;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

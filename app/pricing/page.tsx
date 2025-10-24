@@ -1,40 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Hand } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-export default function Pricing() {
-
-  const aiServicesPricing = [
-    {
-      name: "AI Analytics Dashboard",
-      price: "$299",
-      period: "/month",
-      description: "Advanced business intelligence with AI insights",
-=======
 
 const PricingPage: React.FC = () => {
   const plans = [
@@ -45,7 +12,6 @@ const PricingPage: React.FC = () => {
       price: { month: 999, year: 9999 },
       icon: Target,
       category: 'all',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       features: [
         "Real-time Analytics Dashboard",
         "Predictive Analytics",
@@ -55,15 +21,6 @@ const PricingPage: React.FC = () => {
         "Up to 5 data sources"
       ],
       popular: false,
-<<<<<<< HEAD
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "AI Customer Support",
-      price: "$199",
-      period: "/month",
-      description: "Intelligent chatbots and automation",
-=======
       color: 'from-gray-400 to-gray-600'
       popular: false,
       color: 'from-blue-500 to-cyan-500'
@@ -75,7 +32,6 @@ const PricingPage: React.FC = () => {
       price: { month: 2499, year: 24999 },
       icon: Star,
       category: 'all',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       features: [
         "Multi-language Support",
         "Sentiment Analysis",
@@ -85,15 +41,6 @@ const PricingPage: React.FC = () => {
         "Up to 10,000 conversations"
       ],
       popular: true,
-<<<<<<< HEAD
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      name: "AI Content Generation",
-      price: "$149",
-      period: "/month",
-      description: "AI-powered content creation at scale",
-=======
       color: 'from-cyan-400 to-blue-500'
     },
     {
@@ -103,7 +50,6 @@ const PricingPage: React.FC = () => {
       price: { month: 4999, year: 49999 },
       icon: Award,
       category: 'all',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       features: [
         "SEO Optimization",
         "Brand Voice Training",
@@ -113,45 +59,12 @@ const PricingPage: React.FC = () => {
         "Up to 1,000 articles/month"
       ],
       popular: false,
-<<<<<<< HEAD
-      color: "from-purple-500 to-pink-500"
-=======
       color: 'from-purple-400 to-pink-500'
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   ];
 
   const microSaasPricing = [
     {
-<<<<<<< HEAD
-      name: "Zion Analytics Pro",
-      price: "$29",
-      period: "/month",
-      description: "Business intelligence platform",
-      features: [
-        "Real-time Dashboards",
-        "Predictive Analytics",
-        "Custom Reports",
-        "API Access",
-        "Email Support",
-        "Up to 5 data sources"
-      ],
-      popular: false,
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      name: "Zion Security Shield",
-      price: "$49",
-      period: "/month",
-      description: "Advanced cybersecurity protection",
-      features: [
-        "Threat Detection",
-        "Real-time Monitoring",
-        "Vulnerability Scanning",
-        "Incident Response",
-        "Priority Support",
-        "Up to 10 users"
-=======
       name: 'AI Marketing Automation',
       price: { month: 599, year: 5999 },
       description: 'Automate your marketing campaigns with AI',
@@ -174,7 +87,6 @@ const PricingPage: React.FC = () => {
         'Advanced Analytics',
         'Custom Integrations',
         'Dedicated Account Manager'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       ],
       popular: true,
       color: "from-red-500 to-orange-500"
@@ -193,12 +105,8 @@ const PricingPage: React.FC = () => {
         "Up to 5 devices"
       ],
       popular: false,
-<<<<<<< HEAD
-      color: "from-blue-500 to-cyan-500"
-=======
       color: 'from-green-500 to-teal-500'
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   ];
 
   const enterprisePricing = [
@@ -221,24 +129,6 @@ const PricingPage: React.FC = () => {
       color: "from-purple-500 to-pink-500"
     },
     {
-<<<<<<< HEAD
-      name: "IT Infrastructure",
-      price: "Custom",
-      period: "",
-      description: "Complete IT infrastructure management",
-      features: [
-        "Cloud Infrastructure",
-        "Cybersecurity Solutions",
-        "5G Implementation",
-        "Data Analytics",
-        "24/7 Monitoring",
-        "Disaster Recovery",
-        "Compliance Management",
-        "Custom SLA"
-      ],
-      popular: true,
-      color: "from-indigo-500 to-purple-500"
-=======
       name: 'Cloud Migration & Setup',
       price: { month: 1999, year: 19999 },
       description: 'Seamless cloud migration services',
@@ -250,7 +140,6 @@ const PricingPage: React.FC = () => {
       description: 'Comprehensive security solutions',
       features: ['Threat monitoring', 'Vulnerability scanning', 'Incident response', 'Compliance management']
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   ];
 
   const faqs = [
@@ -279,26 +168,6 @@ const PricingPage: React.FC = () => {
       answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
   ];
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Pricing plans for AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Pricing Plans
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Choose the perfect plan for your business. All plans include our core features with no hidden fees.
-          </p>
-<<<<<<< HEAD
-        </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -307,7 +176,6 @@ const PricingPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
-=======
   const handlePhoneClick = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'phone_click', {
@@ -711,22 +579,12 @@ const PricingPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Choose the plan that fits your business needs. All plans include our core AI and IT solutions with no hidden fees.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
 
-<<<<<<< HEAD
-        {/* AI Services Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12">AI Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {aiServicesPricing.map((plan, index) => (
-=======
           {/* Pricing Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"></div>
             {plans.map((plan, index) => (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border ${
@@ -734,51 +592,27 @@ const PricingPage: React.FC = () => {
                 }`}
               ></div>
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-=======
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center"></div>
                       <Star className="w-4 h-4 mr-1" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-<<<<<<< HEAD
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-=======
                 <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="mb-4"></div>
                     <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   </div>
                 </div>
 
                 <ul className="space-y-4 mb-8"></ul>
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li key={featureIndex} className="flex items-center">
-                      <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.color} mr-3 flex items-center justify-center`}>
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-300">{feature}</span>
-=======
                     <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                     </li>
                   ))}
                 </ul>
@@ -789,146 +623,15 @@ const PricingPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
                   }`}
-<<<<<<< HEAD
-                >
-                  Get Started
-=======
                 ></button>
                   {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </button>
               </div>
             ))}
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Micro SaaS Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12">Micro SaaS Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {microSaasPricing.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border ${
-                  plan.popular ? 'border-green-500/50 ring-2 ring-green-500/20' : 'border-white/10'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Best Value
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.color} mr-3 flex items-center justify-center`}>
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white'
-                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Enterprise Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12">Enterprise Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {enterprisePricing.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border ${
-                  plan.popular ? 'border-purple-500/50 ring-2 ring-purple-500/20' : 'border-white/10'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Enterprise Choice
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${plan.color} mr-3 flex items-center justify-center`}>
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white'
-                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
-                  }`}
-                >
-                  Contact Sales
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-                <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                <p className="text-gray-300">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-<<<<<<< HEAD
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -939,14 +642,10 @@ const PricingPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
-=======
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
   );
 }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -1044,85 +743,10 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Transparent Pricing
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Choose the perfect plan for your business needs. All plans include our core features 
-              with no hidden fees or surprises.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-slate-700">
-                  <stat.icon className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white font-semibold">{stat.value}</span>
-                  <span className="text-gray-400 text-sm">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Plans */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
-                <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' 
-                    : 'border-slate-700 hover:border-cyan-400/50'
-                }`}>
-                  {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
-                      Most Popular
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 text-sm">{plan.description}</p>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-=======
 
     </React.Fragment>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
         {/* Add-ons Section */}
         <section className="py-16 px-4">
@@ -1163,7 +787,6 @@ const PricingPage: React.FC = () => {
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700">
                 <h3 className="text-lg font-semibold text-white mb-2">Do you offer custom pricing?</h3>
                 <p className="text-gray-300">Yes, we offer custom pricing for large enterprises with specific requirements. Contact us to discuss your needs.</p>
-=======
           {/* FAQ Section */}
           <div className="max-w-4xl mx-auto"></div>
             <h2 className="text-4xl font-bold text-white text-center mb-12"></h2>
@@ -1205,37 +828,11 @@ const PricingPage: React.FC = () => {
                 <p className="text-gray-300"></p>
                   All plans include email support. Professional and Enterprise plans include priority support and dedicated account management.
                 </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Choose the plan that's right for your business and start transforming your operations with AI and IT solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Start Your Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
-=======
           {/* CTA Section */}
           <div className="mt-20 text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6"></h2>
@@ -1258,7 +855,6 @@ const PricingPage: React.FC = () => {
               ></a>
                 Get Free Quote
               </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
@@ -1266,17 +862,10 @@ const PricingPage: React.FC = () => {
       
       <Footer />
     </>
-<<<<<<< HEAD
-  )
-}
-=======
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default PricingPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 
 
   return (
@@ -1287,7 +876,6 @@ export default PricingPage
             <p className="text-lg text-gray-300 mb-8">Professional pricing services coming soon.</p>
 
       <  />
-=======
 
 const PricingPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -1376,13 +964,9 @@ const PricingPage: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -1413,7 +997,4 @@ export default function PricingPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 export default PricingPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

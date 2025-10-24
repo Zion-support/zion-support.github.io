@@ -5,9 +5,6 @@ const {TextEncoder, TextDecoder} = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
@@ -70,9 +67,6 @@ jest.mock('react-router-dom', () => {
   };
 });
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -87,29 +81,21 @@ Object.defineProperty(window, 'matchMedia', {writable: true,
 });
 
 // Mock IntersectionObserver
-<<<<<<< HEAD
-global.IntersectionObserver = class IntersectionObserver {constructor() {}
-=======
 global.IntersectionObserver = class IntersectionObserver {
 // Mock window.matchMedia;
 });
 
 // Mock IntersectionObserver;
   constructor() {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   disconnect() {}
   observe() {}
   unobserve() {}
 };
 
 // Mock ResizeObserver
-<<<<<<< HEAD
-global.ResizeObserver = class ResizeObserver {constructor() {}
-=======
 global.ResizeObserver = class ResizeObserver {
 // Mock ResizeObserver;
   constructor() {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   disconnect() {}
   observe() {}
   unobserve() {}
@@ -119,13 +105,9 @@ global.ResizeObserver = class ResizeObserver {
 global.gtag = jest.fn();
 
 // Mock window.dataLayer
-<<<<<<< HEAD
-global.dataLayer = [];
-=======
 global.dataLayer = [];
 // Mock window.gtag;
 });
 
 // Mock window.dataLayer;
 });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

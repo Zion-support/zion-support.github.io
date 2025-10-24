@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-<<<<<<< HEAD
-const ContactForm: React.FC = () => {
-  return (
-    <div className="contactform">
-      <h2>ContactForm</h2>
-      <p>ContactForm component.</p>
-=======
-=======
 'use client';
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface FormData {
   name: string;
   email: string;
@@ -32,7 +18,6 @@ interface FormStatus {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-=======
 import {useState} from 'react';
 import {MessageSquare} from 'lucide-react';
 
@@ -44,20 +29,9 @@ interface FormData {name: string;,
   service: string;
 
   const [formData, setFormData] = useState<FormData   />({
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     name: '',
     email: '',
     company: '',
-<<<<<<< HEAD
-    phone: '',
-    service: '',
-<<<<<<< HEAD
-    message: ''});
-
-  const [status, setStatus] = useState<FormStatus>({
-    type: 'idle',
-    message: ''});
-=======
     message: ''
   })
 
@@ -65,35 +39,12 @@ interface FormData {name: string;,
     type: 'idle',
     message: ''
   })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-<<<<<<< HEAD
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' ,});
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-<<<<<<< HEAD
-      setStatus({
-        type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.',
-      });
-
-      // Reset form
-      setFormData({
-        name: '',
-=======
     message: '',
     service: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -103,21 +54,7 @@ interface FormData {name: string;,
       [name]: value;}));
   };
 
-<<<<<<< HEAD
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
- setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    // Reset form after 3 seconds
-
-      setIsSubmitted(false);
-      setFormData({name: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     }))
-=======
   if (isSubmitted) {
     return (
     <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 borderborder-white/20text-center">
@@ -126,7 +63,6 @@ interface FormData {name: string;,
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -145,16 +81,10 @@ interface FormData {name: string;,
       // Reset form
       setFormData({
         name: '',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
         email: '',
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
-        message: '',
-<<<<<<< HEAD
-      });
-=======
       setStatus({)
         type: 'success'),
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'});
@@ -167,7 +97,6 @@ interface FormData {name: string;,
         phone: ''),
         service: ''),
         message: ''});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     } catch (error) {
       setStatus({
         type: 'error',
@@ -188,41 +117,6 @@ interface FormData {name: string;,
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2">
-        {/* Contact Information */}
-        <div className="bg-gradient-to-br from-blue-600 to-purple-700 p-8 text-white">
-          <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-          <p className="text-lg mb-8 text-blue-100">
-            Ready to transform your business with AI and IT solutions? Let's discuss your project.
-          </p>
-          
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <Mail className="w-6 h-6 text-blue-200" />
-              <div>
-                <p className="font-semibold">Email</p>
-                <p className="text-blue-100">contact@ziontechgroup.com</p>
-              </div></div></div></div></div></div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <Phone className="w-6 h-6 text-blue-200" />
-              <div>
-                <p className="font-semibold">Phone</p>
-                <p className="text-blue-100">+1 (555) 123-4567</p>
-              </div></div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <MapPin className="w-6 h-6 text-blue-200" />
-              <div>
-                <p className="font-semibold">Address</p>
-                <p className="text-blue-100">123 Tech Street, Innovation City, IC 12345</p>
-              </div></div>
-=======
     <div className="max-w-4xl mx-auto"></div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
         {/* Contact Information */}</div>
@@ -275,18 +169,11 @@ interface FormData {name: string;,
                 </p>
                 <p className="text-gray-400 text-sm mt-1">United States</p>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </div>
 
         {/* Contact Form */}
-<<<<<<< HEAD
-        <div className="p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-=======
         message: ''
       })
     } catch {
@@ -311,7 +198,6 @@ interface FormData {name: string;,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
                 Full Name *
               </label>
               <input
@@ -342,12 +228,6 @@ interface FormData {name: string;,
               />
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                  Company
-=======
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
           <form onSubmit={handleSubmit} className="space-y-6"></form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
@@ -388,7 +268,6 @@ interface FormData {name: string;,
               <div></div>
                 <label htmlFor="company" className="block text-white font-medium mb-2"></label>
                   Company;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </label>
                 <input
                   type="text"
@@ -401,15 +280,9 @@ interface FormData {name: string;,
                 />
               </div></div>
 
-<<<<<<< HEAD
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number
-=======
               <div></div>
                 <label htmlFor="phone" className="block text-white font-medium mb-2"></label>
                   Phone Number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </label>
                 <input
                   type="tel"
@@ -423,47 +296,28 @@ interface FormData {name: string;,
               </div>
             </div>
 
-<<<<<<< HEAD
-            <div>
-              <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                Service Interest
-=======
             <div></div>
               <label htmlFor="service" className="block text-white font-medium mb-2"></label>
                 Service Interest;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </label>
               <select
                 id="service"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-<<<<<<< HEAD
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-              >
-                <option value="">Select a service</option>
-                {services.map((service) => (
-                  <option key={service} value={service}>
-=======
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors",
               >,
                 <option value="">Select a service</option>,
                 {services.map((service) => (,
                   <option key={service} value={service} className="bg-gray-800"></option>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                     {service}
                   </option>
                 ))}
               </select>
             </div>
 
-<<<<<<< HEAD
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-=======
             <div></div>
               <label htmlFor="message" className="block text-white font-medium mb-2"></label>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 Message *
               </label>
               <textarea
@@ -477,17 +331,6 @@ interface FormData {name: string;,
                 placeholder="Tell us about your project..."
               />
             </div>
-<<<<<<< HEAD
-
-            {status.type !== 'idle' && (
-              <div className={`flex items-center space-x-2 p-4 rounded-lg ${
-                status.type === 'success' ? 'bg-green-50 text-green-800' : 
-                status.type === 'error' ? 'bg-red-50 text-red-800' : 
-                'bg-blue-50 text-blue-800'
-              }`}>
-                {status.type === 'success' ? (
-                  <CheckCircle className="h-5 w-5" />
-=======
 ,
             {status.message && (,
               <div className={`flex items-center space-x-2 p-4 rounded-lg ${
@@ -497,7 +340,6 @@ interface FormData {name: string;,
               }`}></div>
                 {status.type === 'success' ? (</div>
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 ) : status.type === 'error' ? (
                   <AlertCircle className="h-5 w-5" />
                 ) : (
@@ -510,31 +352,18 @@ interface FormData {name: string;,
             <button
               type="submit"
               disabled={status.type === 'loading'}
-<<<<<<< HEAD
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-            >
-=======
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
             ></button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               {status.type === 'loading' ? (
                 <React.Fragment>
                   <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                   <span>Sending...</span>
                 </React.Fragment>
               ) : (
-<<<<<<< HEAD
-                <React.Fragment>
-                  <Send className="h-5 w-5" />
-                  <span>Send Message</span>
-                </React.Fragment>
-              )}
-=======
                 <>
                   Send Message;
                   <Send className="w-5 h-5 ml-2" />,
                 </>)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </button>
           </form>
 
@@ -573,9 +402,7 @@ interface FormData {name: string;,
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     </div>
-=======
         service: ''});
     }, 3000);
   };
@@ -585,23 +412,10 @@ interface FormData {name: string;,
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
   );}
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 const ContactForm: React.FC<ContactFormProps> = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
-        <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
-      </div>
-      <form onSubmit="{handleSubmit}" className="space-y-6"   /></form>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div   /></div>
-            <label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2"    />Full Name *
-=======
     <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8borderborder-white/20">
       <div className="text-centermb-8">
         <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
@@ -611,7 +425,6 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         <div className="grid grid-cols-1md:grid-cols-2gap-6">
           <div />
             <label htmlFor="name" className="block text-sm font-mediumtext-gray-300 mb-2"  />Full Name *
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="text"
@@ -624,13 +437,8 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               placeholder="Your full name"
                /></input>
           </div>
-<<<<<<< HEAD
-          <div   /></div>
-            <label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2"    />Email Address *
-=======
           <div />
             <label htmlFor="email" className="block text-sm font-mediumtext-gray-300 mb-2"  />Email Address *
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="email"
@@ -641,20 +449,12 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               required;
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="your@email.com"
-<<<<<<< HEAD
-               /></input>
-          </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div   /></div>
-            <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"    />Phone Number;
-=======
             / />
           </div>
 
         <div className="grid grid-cols-1md:grid-cols-2gap-6">
           <div />
             <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300 mb-2"  />Phone Number
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="tel"
@@ -666,13 +466,8 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               placeholder="+1 (555) 123-4567"
                /></input>
           </div>
-<<<<<<< HEAD
-          <div   /></div>
-            <label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"    />Company;
-=======
           <div />
             <label htmlFor="company" className="block text-sm font-mediumtext-gray-300 mb-2"  />Company
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="text"
@@ -682,36 +477,16 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               onChange="{handleChange}"
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="Your company name"
-<<<<<<< HEAD
-               /></input>
-          </div>
-        <div   /></div>
-          <label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"    />Service Interest;
-=======
             / />
           </div>
         <div />
           <label htmlFor="service" className="block text-sm font-mediumtext-gray-300 mb-2"  />Service Interest
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </label>
           <select;
             id="service"
             name="service"
             value="{formData.service}"
             onChange="{handleChange}"
-<<<<<<< HEAD
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"   /></select>
-            <option value=""  >Select a service</option>
-            <option value="ai-services"  >AI Services</option>
-            <option value="it-services"  >IT Services</option>
-            <option value="5 g-solutions"  >5 G Solutions</option>
-            <option value="micro-saas"  >Micro SAAS</option>
-            <option value="consulting"  >Consulting</option>
-          </select>
-        </div>
-        <div   /></div>
-          <label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2"    />Message *
-=======
             className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent" />
             <option value="">Select a service</option>
             <option value="ai-services">AI Services</option>
@@ -723,7 +498,6 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         </div>
         <div />
           <label htmlFor="message" className="block text-sm font-mediumtext-gray-300 mb-2"  />Message *
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </label>
           <textarea;
             id="message"
@@ -741,27 +515,10 @@ const ContactForm: React.FC<ContactFormProps> = () => {
           disabled="{isSubmitting}"
           className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed"   /></button>
           {isSubmitting ? (
-<<<<<<< HEAD
-            <><  />
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-=======
               <div className="animate-spin rounded-full h-5 w-5 border-b-2border-whitemr-2"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               Sending...
             <  />
           ) : (
-<<<<<<< HEAD
-            <><  />
-              <Send className="w-5h-5ml-2"   /></Send>
-              Send Message;
-            <  />
-          )}
-
-            <span className="text-gray-300">kleber@ziontechgroup.com</span>
-            <span className="text-gray-300">+1 (302) 464-0950</span>
-            <span className="text-gray-300">24/7 Support</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
               <Send className="w-5h-5mr-2" />
               Send Message
           )}
@@ -783,12 +540,10 @@ const ContactForm: React.FC<ContactFormProps> = () => {
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
 export default ContactForm;
-=======
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                 Email Address *
@@ -931,11 +686,6 @@ export default ContactForm;
     </div>
   )
 }
-<<<<<<< HEAD
-
-export default ContactForm
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
     <div className="contactform">
       <h2>ContactForm</h2>
       <p>Component content coming soon.</p>
@@ -944,6 +694,3 @@ export default ContactForm
 };
 
 export default ContactForm;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

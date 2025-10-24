@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-export default function AICybersecuritySuiteProZionTechGroup() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Cybersecurity Suite Pro - Zion Tech Group</title>
-        <meta name="description" content="Ai Cybersecurity Suite Pro solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Cybersecurity Suite Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai cybersecurity suite pro solutions designed to meet your business needs.
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -229,18 +207,7 @@ export default function AICybersecuritySuiteProPage() {
           <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
               Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
             Achieve 99.9% threat detection accuracy with zero-trust architecture and automated incident response.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-=======
           <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
             <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
            
@@ -369,7 +336,6 @@ export default function AICybersecuritySuiteProPage() {
                 <div className="text-white/80text-sm">
                   <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
                 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -388,7 +354,6 @@ export default function AICybersecuritySuiteProPage() {
           </div>
         </div>
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -399,12 +364,9 @@ export default function AICybersecuritySuiteProPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 
   return (
@@ -425,8 +387,6 @@ export default function AICybersecuritySuiteProPage() {
 
               Contact Us
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -457,6 +417,3 @@ export default function AicybersecuritysuiteproPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

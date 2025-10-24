@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "use client";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
-export default function AIExpenseTracker() {
-  return null;
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
 import { Receipt, Target, Users, CheckCircle, Brain, BarChart } from 'lucide-react';
 
 const AIExpenseTracker: React.FC = memo(() => {}
@@ -32,36 +15,9 @@ const AIExpenseTracker: React.FC = memo(() => {}
   React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 const AiExpenseTrackerPage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-=======
     {}
       icon: Receipt,
       title: 'Smart Receipt Scanning',
@@ -159,7 +115,6 @@ const AiExpenseTrackerPage: React.FC = () => {
       description: 'Track team expenses and enforce spending policies',
       icon: Users;
       result: '100% control'}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   ];
 
   const benefits = [
@@ -171,69 +126,6 @@ const AiExpenseTrackerPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <React.Fragment>
-      <Helmet>
-        <title>Ai Expense Tracker - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai expense tracker solution for modern businesses." />
-        <meta name="keywords" content="AI ai expense tracker, artificial intelligence, ai expense tracker, AI solutions, intelligent automation" />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Expense Tracker
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai expense tracker solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>AI Expense Tracker - Smart Financial Management | Zion Tech Group</title>
@@ -319,37 +211,12 @@ const AiExpenseTrackerPage: React.FC = () => {
                   <div></div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
                   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-=======
         {/* Use Cases */}
         <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
@@ -423,31 +290,10 @@ const AiExpenseTrackerPage: React.FC = () => {
                 </a>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
-            </div>
-=======
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30"></section>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Simplify Your Finances?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 10,000+ users already saving time and money with our AI Expense Tracker.</p>
           </p>
@@ -466,14 +312,12 @@ const AiExpenseTrackerPage: React.FC = () => {
               <MessageSquare className="w-5 h-5 mr-2" />
               Email Us;
             </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
       </div>
       <Footer />
     </React.Fragment>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 };
 
   return null;
@@ -493,33 +337,6 @@ export default function AiExpenseTrackerPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai expense tracker solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -530,11 +347,9 @@ export default function AiExpenseTrackerPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
   return null;
-=======
 
 
 'use client';
@@ -594,8 +409,6 @@ export default function AIExpenseTracker() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import { ArrowRight } from 'lucide-react';
 
 export default function AiexpensetrackerPage() {
@@ -623,8 +436,6 @@ export default function AiexpensetrackerPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 
 import React from 'react'
 import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
@@ -640,4 +451,3 @@ import { Link } from 'react-router-dom'
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
                   <div className="flexjustify-centermb-4">
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-export default function AiCybersecurityMonitorProZionTechGroup() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Cybersecurity Monitor Pro - Zion Tech Group</title>
-        <meta name="description" content="Ai Cybersecurity Monitor Pro solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Cybersecurity Monitor Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai cybersecurity monitor pro solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -58,18 +8,15 @@ export default function AiCybersecurityMonitorProZionTechGroup() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 
 export default function AiCybersecurityMonitorProPage() {const features = [{
       icon: <Brain className="w-5h-5ml-2"   />,
-=======
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, AlertCircle, Building2, Bug } from 'lucide-react';
@@ -80,7 +27,6 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
   const features = [
     {
       icon: <Brain className="w-8h-8text-cyan-400" />,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time',
       benefits: ['Behavioral analysis', 'Anomaly detection', 'Threat prediction', 'Zero-day protection']},
@@ -211,31 +157,6 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
       content: 'The compliance management features have made our HIPAA audits seamless. We maintain continuous compliance with automated monitoring and reporting.',
       rating: 5,
       avatar: 'DR',
-<<<<<<< HEAD
-      results: '100% compliance score'}];
-  const stats = [{number: '1 M+', label: 'Threats Blocked', icon: <Shield className="w-5h-5ml-2"   />,</Shield></Shield>
-    {number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-5h-5ml-2"   />,</Building2></Building2>
-    {number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-5h-5ml-2"   />,</Activity></Activity>
-    {number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-5h-5ml-2"   /></Eye></Eye>];
-  const threatTypes = [{name: 'Malware', icon: <Bug className="w-5h-5ml-2"   />, category: 'Malicious Software'},
-    {name: 'Phishing', icon: <Target className="w-5h-5ml-2"   />, category: 'Social Engineering'},
-    {name: 'Ransomware', icon: <Lock className="w-5h-5ml-2"   />, category: 'Data Encryption'},
-    {name: 'DDoS', icon: <Network className="w-5h-5ml-2"   />, category: 'Network Attacks'},
-    {name: 'Insider Threats', icon: <Users className="w-5h-5ml-2"   />, category: 'Internal Risks'},
-    {name: 'Zero-Day', icon: <AlertCircle className="w-5h-5ml-2"   />, category: 'Unknown Vulnerabilities'},
-    {name: 'APTs', icon: <Search className="w-5h-5ml-2"   />, category: 'Advanced Persistent Threats'},
-    {name: 'IoT Attacks', icon: <Smartphone className="w-5h-5ml-2"   />, category: 'Device Vulnerabilities'}];
-  return (
-    <>
-      <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
-
-            <h1 className="text-4xl font-bold text-white mb-6">AiCybersecurityMonitorPro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aicybersecuritymonitorpro services coming soon.</p>
-
-              Contact Us
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -262,7 +183,6 @@ export default function AicybersecuritymonitorproPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
-=======
       results: '100% compliance score'
     }
   ];
@@ -453,12 +373,7 @@ export default function AicybersecuritymonitorproPage() {
               <p />✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 monitoring • ✓ Cancel anytime</p>
             </div>
         </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

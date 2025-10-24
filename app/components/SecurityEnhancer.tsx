@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const SecurityEnhancer: React.FC = () => {
-  return (
-    <div className="securityenhancer">
-      <h2>SecurityEnhancer</h2>
-      <p>SecurityEnhancer component.</p>
-    </div>
-  );
-=======
 interface SecurityEnhancerProps {
   children: React.ReactNode;
-=======
 interface SecurityEnhancerProps {
   children: React.ReactNode;
     </div>
   )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children ,}) => {
@@ -32,13 +15,11 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children ,}) => {
         'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',
-=======
 
 import {useEffect} from 'react';
 'use client'
   children: React.ReactNode}
     // Security enhancement logic;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       };
 
@@ -48,11 +29,6 @@ import {useEffect} from 'react';
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
       document.head.appendChild(cspMeta);
 
-<<<<<<< HEAD
-      // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-=======
       // Add HSTS header
       const hstsMeta = document.createElement('meta');
       hstsMeta.setAttribute('http-equiv', 'Strict-Transport-Security');
@@ -69,7 +45,6 @@ import {useEffect} from 'react';
             element.removeAttribute(attr);
           }
         });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       });
 
       // Disable F12 and other dev tools shortcuts
@@ -84,8 +59,6 @@ import {useEffect} from 'react';
   }, []);
 
   return <React.Fragment>{children}</React.Fragment>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 'use client';
 
 
@@ -332,63 +305,6 @@ const,
         throw new Error('Suspicious network request blocked');
       }
 
-<<<<<<< HEAD
-      return originalFetch.apply(window, args);
-    };
-
-  }, [validateURL]);
-
-  // Security headers validation
-  const validateSecurityHeaders = useCallback(() => {}
-    if (typeof window === 'undefined') return;
-
-    const warnings: string[] = [];
-
-    // Check for HTTPS
-    if (location.protocol !== 'https:') {}
-      warnings.push('Site is not served over HTTPS');
-      setIsSecure(false);
-    }
-
-    // Check for security headers (if available)
-    const headers = (window as any).securityHeaders;
-    if (headers) {}
-      if (!headers['x-frame-options']) {}
-        warnings.push('X-Frame-Options header missing');
-      }
-      if (!headers['x-content-type-options']) {}
-        warnings.push('X-Content-Type-Options header missing');
-      }
-      if (!headers['x-xss-protection']) {}
-        warnings.push('X-XSS-Protection header missing');
-      }
-    }
-
-    setSecurityWarnings(warnings);
-
-    if (warnings.length > 0) {}
-      logger.warn('Security warnings detected', { warnings });
-    }
-  }, []);
-
-  // Rate limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {}
-    const now = Date.now();
-    const windowStart = now - windowMs;
-,
-    const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
-      .filter((timestamp: number) => timestamp > windowStart);
-
-    if (requests.length >= limit) {}
-      logger.warn('Rate limit exceeded', { key, limit, windowMs });
-      return false;
-    }
-
-    requests.push(now);
-    localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
-    return true;
-  }, []);
-=======
       // Add CSP meta tag;
       const cspMeta = document.createElement('meta')
       cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
@@ -432,7 +348,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({children}) => {useEf
     enhanceSecurity()}, [])
   return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
 export default SecurityEnhancer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   // Initialize security monitoring
   useEffect(() => {}
@@ -451,82 +366,6 @@ export default SecurityEnhancer
   const handleSecurityEvent = useCallback((event: string, data: any) => {}
     logger.info('Security event', { event, data });
 
-<<<<<<< HEAD
-    // Rate limit security events
-    if (!rateLimit('security_events', 10, 60000)) {}
-      return;
-    }
-
-    // Send to security monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {}
-      (window as any).gtag('event', 'security_event', {)}
-        event_category: 'Security',
-        event_label: event)
-    custom_map: data,
-
-      (window as any).gtag('event', 'security_event', {)
-        event_category: 'Security')
-        event_label: event),
-        custom_map: data)}
-  }, [rateLimit]);
-
-  // Expose security utilities globally for debugging
-  useEffect(() => {}
-    if (typeof window !== 'undefined') {}
-      (window as any).securityUtils = {}
-        sanitizeInput,
-        validateURL,
-        rateLimit,
-        metrics,
-        isSecure,
-        warnings: securityWarnings;
-      };
-    }
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
-
-      {!isSecure && (}
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50"></div>
-          ⚠️ Security Warning: This site is not served over HTTPS
-        </div>
-  return(<>)
-      {/* Security Status Indicator */})
-      {!isSecure && ()
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">)
-          ⚠️ Security Warning: This site is not served over HTTPS;),
-        </div>))}
-
-      {/* Security Warnings */}
-      {securityWarnings.length > 0 && (}
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"></div>
-          <h4 className="font-bold mb-2">Security Warnings</h4>
-          <ul className="text-sm space-y-1"></ul>
-            {securityWarnings.map((warning, index) => (}
-              <li key={index}>• {warning}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Security Metrics (Development Only) */}
-      {process.env.NODE_ENV === 'development' && (}
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"></div>
-          <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1"></div>
-            <div>CSP Violations: {metrics.cspViolations}</div><div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}</div><div>Suspicious Activity: {metrics.suspiciousActivity}</div>
-          </div>
-        </div>
-      )}
-    
-  );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-};
-
-export default SecurityEnhancer;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
@@ -539,6 +378,3 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
 };
 
 export default SecurityEnhancer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

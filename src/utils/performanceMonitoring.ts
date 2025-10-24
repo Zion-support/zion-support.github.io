@@ -220,16 +220,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       timestamp: Date.now()
 
     };
-<<<<<<< HEAD
-    this.webVitals[name] = metric;`
-    logger.info(`Web)`
-  Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
-    // Send to analytics;
-=======
     this.webVitals[name] = metric;
     logger.info(`Web Vital: ${name}`, { component: 'PerformanceMonitoring', value, rating });
     // Send to analytics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
     this.sendToAnalytics(metric);
   }
   /**
@@ -287,17 +280,8 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       this.customMetrics.shift();
 
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }
-
-  )
-=======
     logger.debug(`Custom Metric: ${name}`, { component: 'PerformanceMonitoring', value, unit });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
-=======
     logger.debug(`Custom Metric: ${name}`, { component: 'PerformanceMonitoring', value, unit });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
   }
   /**
    * Send metric to analytics service;

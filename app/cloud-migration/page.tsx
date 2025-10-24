@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-export default function CloudMigration() {
-=======
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -33,33 +19,6 @@ import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive cloud migration solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -70,15 +29,11 @@ import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
-=======
 import React from 'react';
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -86,61 +41,18 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const CloudMigrationPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-=======
-=======
     {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       icon: Cloud,
       title: 'Seamless Migration',
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption',
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
     },
-<<<<<<< HEAD
-    {
-=======
     {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       icon: Database,
       title: 'Data Migration',
       description: 'Secure and efficient migration of databases and data warehouses',
       benefits: ['Data validation', 'Incremental sync', 'Backup & recovery']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
     },
-<<<<<<< HEAD
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-<<<<<<< HEAD
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-=======
-=======
     {}
       icon: Server,
       title: 'Infrastructure Setup',
@@ -148,27 +60,18 @@ const CloudMigrationPage: React.FC = () => {
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
     },
     {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       icon: Shield,
       title: 'Security First',
       description: 'Enterprise-grade security throughout the migration process',
       benefits: ['Data encryption', 'Access controls', 'Compliance']
     },
-<<<<<<< HEAD
-    {
-=======
     {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
       benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
     },
-<<<<<<< HEAD
-    {
-=======
     {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       icon: Target,
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
@@ -183,21 +86,6 @@ const CloudMigrationPage: React.FC = () => {
       icon: CheckCircle,
       features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
     },
-<<<<<<< HEAD
-    {
-      step: '2',
-      title: 'Planning',
-      description: 'Create detailed migration plan with timelines and rollback strategies'
-    },
-    {
-      title: 'Optimization & Support',
-      description: 'Post-migration optimization and ongoing support',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-      icon: Shield,
-      title: 'Secure Analytics',
-      description: 'Enterprise-grade security for your sensitive data and analytics.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
-=======
       icon: Shield,
       title: 'Secure Cloud Migration',
       description: 'Safe and secure migration of your applications and data to the cloud',
@@ -216,8 +104,6 @@ const CloudMigrationPage: React.FC = () => {
       icon: Globe,
       title: 'Multi-Cloud Support',
       description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
     {}
       step: '02',
       title: 'Architecture Design',
@@ -278,34 +164,15 @@ const CloudMigrationPage: React.FC = () => {
         'Dedicated team'
       ],
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-  return (
-<<<<<<< HEAD
-    <>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Cloud Migration - Zion Tech Group</title>
         <meta name="description" content="Professional cloud migration solutions." />
         <meta name="keywords" content="cloud migration, AWS, Azure, Google Cloud" />
       </Helmet>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
     {
       title: 'Cost Reduction',
       description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
@@ -365,7 +232,6 @@ const CloudMigrationPage: React.FC = () => {
               >
                 Free Assessment
               </Link>
-=======
     {}
       title: 'Cost Reduction',
       description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
@@ -673,7 +539,6 @@ const CloudMigrationPage: React.FC = () => {
                 <li>• Testing & Validation</li>
                 <li>• Performance Optimization</li>
               </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </div>
@@ -702,7 +567,6 @@ const CloudMigrationPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
@@ -724,7 +588,6 @@ const CloudMigrationPage: React.FC = () => {
                 View Demo
               </button>
             </div>
-=======
         <title>Cloud Migration Services - Expert Cloud Transformation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our expert cloud migration services. AWS, Azure, Google Cloud migration with zero downtime. Starting at $2,500. Free consultation available." / / />
         <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting, infrastructure migration" / / />
@@ -791,46 +654,10 @@ const CloudMigrationPage: React.FC = () => {
                 <Clock className="w-4h-4text-purple-400" />
                 <span   />24/7 Support</span>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-<<<<<<< HEAD
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-=======
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
@@ -882,7 +709,6 @@ const CloudMigrationPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let our experts help you migrate to the cloud safely and efficiently
             </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
           </div>
         </section>
 
@@ -897,7 +723,6 @@ const CloudMigrationPage: React.FC = () => {
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-=======
         <section className="py-20px-4relative" />
           <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
           <div className="relative max-w-7xlmx-auto">
@@ -974,7 +799,6 @@ const CloudMigrationPage: React.FC = () => {
               ))}
             </div>
         </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -989,25 +813,6 @@ const CloudMigrationPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-=======
       {/* CTA Section */}
       <div className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -1044,7 +849,6 @@ const CloudMigrationPage: React.FC = () => {
               <div key={index} className="cyber-card p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
-=======
         <section className="py-20px-4relative" />
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
           <div className="relative max-w-7xlmx-auto">
@@ -1088,7 +892,6 @@ const CloudMigrationPage: React.FC = () => {
                       <MapPin className="w-5h-5text-pink-300" />
                       <span className="text-sm"   />Middletown DE 19709</span>
                     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p>
@@ -1139,13 +942,11 @@ const CloudMigrationPage: React.FC = () => {
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
                 </button>
               </div>
             </div>
           </div>
         </section>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -1202,14 +1003,6 @@ const CloudMigrationPage: React.FC = () => {
             </button>
           </div></div>
         </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-      </div>
-<<<<<<< HEAD
-      <Footer />
-    </>
-<<<<<<< HEAD
-=======
       </section>
 
       <Footer />
@@ -1225,24 +1018,16 @@ const CloudMigrationPage: React.FC = () => {
         </a>
       </div>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   );
 };
 
 export default CloudMigrationPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 export default CloudMigrationPage;
 export default CloudMigrationPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
   );
 };
 
 export default CloudMigrationPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 
 
   return (
@@ -1254,8 +1039,6 @@ export default CloudMigrationPage;
 
               Contact Us
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -1286,8 +1069,6 @@ export default function CloudmigrationPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
           </div>
         </div>
       </div>
@@ -1297,4 +1078,3 @@ export default function CloudmigrationPage() {
 
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

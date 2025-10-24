@@ -1,41 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { memo } from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
-=======
 import React from 'react';
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Link } from 'react-router-dom';
 import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
-=======
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Globe, Database, Sparkles, Star } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 const Footer: React.FC = memo(function Footer() {
   const aiServices = [
-<<<<<<< HEAD
-    { name: 'AI Services', url: '/ai-services' },
-    { name: 'AI Marketing', url: '/ai-marketing' },
-    { name: 'AI Automation', url: '/ai-automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare' },
-    { name: 'AI Fintech', url: '/ai-fintech' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation' },
-=======
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' ,},
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' ,},
     { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' ,},
@@ -52,18 +24,9 @@ const Footer: React.FC = memo(function Footer() {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' ,},
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' ,},
     { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' ,}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   ];
 
   const itServices = [
-<<<<<<< HEAD
-    { name: 'IT Services', url: '/it-services' },
-    { name: 'Micro SAAS', url: '/micro-saas' },
-    { name: 'Cybersecurity', url: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development' },
-=======
 import React, { useMemo } from "react";
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -167,7 +130,6 @@ const Footer: React.FC = () => {
         { name: "5G Implementation", href: "/5g-implementation" },
         { name: "5G Private Networks", href: "/5g-private-networks" }
       ]
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   ];
 
   const technologies = [
@@ -184,7 +146,6 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Enterprise Solutions', url: '/enterprise' },
     { name: 'Contact Us', url: '/contact' },
-=======
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' ,},
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' ,},
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' ,},
@@ -237,7 +198,6 @@ const Footer: React.FC = () => {
     { name: 'News', url: '/news' ,},
     { name: 'Partners', url: '/partners' ,},
     { name: 'Contact', url: '/contact' ,}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   ];
 
   const resources = [
@@ -248,13 +208,10 @@ const Footer: React.FC = () => {
     { name: 'Sitemap', url: '/sitemap' },
   ];
 
-<<<<<<< HEAD
-=======
   return null;
 };
 
 export default function Footer({ className = '', children, ...props }: FooterProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -279,10 +236,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-<<<<<<< HEAD
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-=======
 'use client'
 import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
@@ -301,14 +254,6 @@ const Footer: React.FC = memo(() => {
   ]
 
   const itServices = [
-<<<<<<< HEAD
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'Scalable cloud solutions' },
-    { name: 'API Development', url: '/api-development', description: 'RESTful & GraphQL APIs' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Deployment automation' },
-    { name: 'Database Management', url: '/database', description: 'Data optimization' },
-    { name: 'System Integration', url: '/integration', description: 'Seamless connectivity' }
-=======
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -351,7 +296,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
     { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   ]
 
   const companyLinks = [
@@ -364,16 +308,6 @@ const Footer: React.FC = memo(() => {
   ]
 
   const supportLinks = [
-<<<<<<< HEAD
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Help Center', url: '/help' },
-    { name: 'Status Page', url: '/status' },
-    { name: 'Community', url: '/community' },
-    { name: 'Support', url: '/support' }
-  ]
-
-=======
     { name: 'Documentation', url: '/docs' ,},
     { name: 'API Reference', url: '/api-docs' ,},
     { name: 'Support Center', url: '/support' ,},
@@ -388,7 +322,6 @@ const Footer: React.FC = memo(() => {
     hours: 'Mon-Fri: 9AM-6PM EST',
     emergency: '24/7 Emergency Support Available',
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       <div className="container mx-auto px-4 py-16">
@@ -417,7 +350,6 @@ const Footer: React.FC = memo(() => {
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <MapPin className="w-4 h-4" />
               <span>San Francisco, CA</span>
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
@@ -450,31 +382,11 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
-              AI Services
-            </h3>
-            <ul className="space-y-3">
-              {aiServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors text-sm block"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-                  >
-                    {service.name}
-                  </Link>
-                  <p className="text-gray-500 text-xs mt-1">{service.description}</p>
-                </li>
-              ))}
-=======
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -497,26 +409,9 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </ul>
-<<<<<<< HEAD
-          </div>
-
-<<<<<<< HEAD
-=======
           </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           {/* IT Services */}
-<<<<<<< HEAD
-          <div className="lg:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">IT Services</h4>
-            <ul className="space-y-2">
-              {itServices.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-=======
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Code className="w-5 h-5 mr-2 text-purple-400" />
@@ -528,7 +423,6 @@ const Footer = () => {
                   <Link
                     to={service.url}
                     className="text-gray-400 hover:text-purple-400 transition-colors text-sm block"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
                   >
                     {service.name}
                   </Link>
@@ -538,19 +432,6 @@ const Footer = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
-          {/* Technologies */}
-          <div className="lg:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Technologies</h4>
-            <ul className="space-y-2">
-              {technologies.map((tech, index) => (
-                <li key={index}>
-                  <Link
-                    href={tech.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                  >
-                    {tech.name}
-=======
                     to={service.url}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
                   >
@@ -583,26 +464,10 @@ const Footer = () => {
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{service.name}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
-          </div>
-
-          {/* Company & Resources */}
-          <div className="lg:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
-            <ul className="space-y-2 mb-6">
-              {company.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                  >
-                    {item.name}
-=======
             <Link
               to="/it-services"
               className="text-green-400 hover:text-green-300 text-sm font-medium mt-4 inline-flex items-center gap-1"
@@ -626,26 +491,10 @@ const Footer = () => {
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{item.name}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
-            
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h4>
-            <ul className="space-y-2">
-              {resources.map((resource, index) => (
-                <li key={index}>
-                  <Link
-                    href={resource.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                  >
-                    {resource.name}
-                  </Link>
-                </li>
-              ))}
-=======
           {/* Services */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
@@ -670,28 +519,7 @@ const Footer = () => {
                   Consultation
                 </Link>
               </li>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </ul>
-<<<<<<< HEAD
-          </div>
-        </div>
-
-<<<<<<< HEAD
-        {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">info@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">San Francisco, CA</span>
-=======
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2 text-cyan-400" />
@@ -716,7 +544,6 @@ const Footer = () => {
               <div className="text-xs text-cyan-400 font-medium">
                 {contactInfo.emergency}
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </div>
@@ -740,7 +567,6 @@ const Footer = () => {
             </div>
             <div className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
-=======
           {/* Company & Support */}
           <div className="space-y-6">
             <div>
@@ -800,8 +626,6 @@ const Footer = () => {
               <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
               </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -840,15 +664,6 @@ const Footer: React.FC = () => {
         
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
-<<<<<<< HEAD
-            <p className="text-gray-300 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
-              <Link href="/terms" className="text-gray-300 hover:text-white text-sm">Terms of Service</Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div></div></div>
@@ -862,8 +677,6 @@ const Footer: React.FC = () => {
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -877,10 +690,8 @@ const Footer: React.FC = () => {
               <Link to="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Terms of Service
               </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
-=======
           </div>
 
           {/* Resources */}
@@ -993,36 +804,21 @@ const Footer: React.FC = () => {
           <p className="text-gray-500 text-sm">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-
-export default Footer;
-=======
   )
 })
 
 Footer.displayName = 'Footer'
 
 export default Footer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 };
 
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 };
 
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -1091,8 +887,6 @@ import {Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield
 
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const Footer: React.FC<FooterProps> = () => {
@@ -1105,4 +899,3 @@ const Footer: React.FC<FooterProps> = () => {
 };
 
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

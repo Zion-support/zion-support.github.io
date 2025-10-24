@@ -1,201 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function StatusZionTechGroup() {
-=======
 'use client';
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-
-export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const refreshStatus = async () => {
-    setIsRefreshing(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
-    setIsRefreshing(false);
-  };
-
-  const services = [
-    {
-      name: 'API Services',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '45ms',
-      lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication',
-    },
-    {
-      name: 'AI Services',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '120ms',
-      lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing',
-    },
-    {
-      name: 'Cloud Infrastructure',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '25ms',
-      lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services',
-    },
-    {
-      name: 'Database',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '15ms',
-      lastIncident: '2024-01-12',
-      description: 'Primary and backup databases',
-    },
-    {
-      name: 'CDN',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '8ms',
-      lastIncident: '2024-01-08',
-      description: 'Content delivery network',
-    },
-    {
-      name: 'Monitoring',
-      status: 'operational',
-      uptime: '100%',
-      responseTime: '5ms',
-      lastIncident: 'Never',
-      description: 'System monitoring and alerts',
-    }
-  ];
-
-  const incidents = [
-    {
-      id: 1,
-      title: 'API Response Time Degradation',
-      status: 'resolved',
-      severity: 'minor',
-      startTime: '2024-01-15T10:30:00Z',
-      endTime: '2024-01-15T11:45:00Z',
-      description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']
-    },
-    {
-      id: 2,
-      title: 'Database Connection Issues',
-      status: 'resolved',
-      severity: 'major',
-      startTime: '2024-01-12T14:20:00Z',
-      endTime: '2024-01-12T16:30:00Z',
-      description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']
-    }
-  ];
-
-  const getStatusIcon = (status: string,) => {
-    switch (status) {
-      case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-      case 'outage':
-        return <XCircle className="w-5 h-5 text-red-400" />;
-      default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
-    }
-  };
-
-  const getStatusColor = (status: string,) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-400';
-      case 'degraded':
-        return 'text-yellow-400';
-      case 'outage':
-        return 'text-red-400';
-      default:
-        return 'text-gray-400';
-    }
-  };
-
-  const getSeverityColor = (severity: string,) => {
-    switch (severity) {
-      case 'critical':
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
-      case 'major':
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
-      case 'minor':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
-    }
-  };
-
-  const overallStatus = services.every(service => service.status === 'operational') 
-    ? 'operational' 
-    : services.some(service => service.status === 'outage') 
-      ? 'outage' 
-      : 'degraded';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Status - Zion Tech Group</title>
-        <meta name="description" content="Status solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Status</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive status solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -203,7 +14,6 @@ export default function StatusPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-=======
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2">
               {getStatusIcon(overallStatus)}
@@ -219,7 +29,6 @@ export default function StatusPage() {
             >
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -259,7 +68,6 @@ export default function Status() {return (
               Contact us to learn more about our services.
             </p>
             <button className="w-5h-5ml-2">Contact Us;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </button>
           </div>
           
@@ -406,16 +214,8 @@ export default function Status() {return (
               Contact Support
             </button>
           </div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
         </div>
       </div>
-<<<<<<< HEAD
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-  );
-}
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -491,7 +291,6 @@ const SystemStatusPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Real-time system status and monitoring.
-=======
 import React  from 'react';
 const StatusPage: React.FC = () => {
   return (
@@ -518,7 +317,6 @@ const StatusPage: React.FC = () => {
             <p className="text-gray-300 mb-6">
               We're working on bringing you comprehensive status solutions. 
               Contact us to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -529,47 +327,9 @@ const StatusPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-=======
       </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
@@ -620,18 +380,11 @@ const StatusPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
 export default SystemStatusPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 
 import React from 'react';
 import Footer from '../components/Footer';
@@ -663,15 +416,10 @@ const StatusPage = () => {
 };
 
 export default StatusPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
     <  />
   );
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -702,6 +450,3 @@ export default function StatusPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

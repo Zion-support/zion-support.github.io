@@ -1,33 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-export default function AiBlockchainSolutionsZionTechGroup() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Ai Blockchain Solutions solutions by Zion Tech Group" />
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AIBlockchainSolutionsPage: React.FC = () => {
@@ -55,7 +30,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
     },
     {
       icon: Zap,
@@ -64,69 +38,14 @@ const AIBlockchainSolutionsPage: React.FC = () => {
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
     {
-<<<<<<< HEAD
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
       icon: Shield,
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Blockchain Solutions</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai blockchain solutions solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-=======
     {
       metric: '99.9%',
       description: 'Security improvement over traditional systems',
@@ -240,12 +159,8 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}</div><div className="text-gray-300">{benefit.description}</div>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -256,22 +171,12 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
-=======
       <section className="py-16 px-4"></section>
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
@@ -286,26 +191,11 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our platform combines cutting-edge AI with blockchain technology to deliver;
               unprecedented security, efficiency, and intelligence.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-<<<<<<< HEAD
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-=======
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors">,
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">,
                   <feature.icon className="w-6 h-6 text-cyan-400" />,
@@ -315,10 +205,8 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                     <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
                     </CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   ))}
                 </ul>
-=======
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -326,29 +214,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-<<<<<<< HEAD
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>AI Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI-powered blockchain solutions for modern enterprises." />
-        <meta name="keywords" content="AI blockchain solutions, blockchain technology, artificial intelligence, enterprise solutions" />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Blockchain Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive AI-powered blockchain solutions for modern enterprises.
-=======
 
         <title>Ai Blockchain Solutions - Zion Tech Group</title>
         <meta name="description" content="Ai Blockchain Solutions services by Zion Tech Group. Professional AI and IT solutions." / / />
@@ -372,7 +237,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             <p className="text-gray-300 mb-6">
               We're working on bringing you comprehensive ai blockchain solutions solutions. 
               Contact us to learn more about our services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -381,7 +245,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-=======
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -399,9 +262,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                   Learn More
                 </button>
               </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
-=======
       {/* Applications Section */}
       <section className="py-16 px-4 bg-slate-800/30"></section>
         <div className="container mx-auto max-w-6xl"></section>
@@ -454,68 +315,9 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the right plan for your blockchain AI needs.
             </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-<<<<<<< HEAD
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-=======
             </div></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -534,7 +336,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
@@ -558,33 +359,9 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-=======
           <div className="grid md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
@@ -612,34 +389,16 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 }`}></a>
                   Get Started;
                 </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </div>
             ))}
-=======
       </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-=======
       <section className="py-16 px-4 bg-slate-800/30"></section>
         <div className="container mx-auto max-w-4xl text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build AI Blockchain Solutions?</h2><p className="text-xl text-gray-300 mb-8">Start building secure, intelligent, and decentralized solutions today.</p>
@@ -656,35 +415,17 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg"></a>
               Schedule Demo;
             </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <Footer />
-    </div>
-  );
-=======
       <Footer />,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 
 export default PagePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-=======
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  );
-};
-
-export default AIBlockchainSolutionsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -703,8 +444,6 @@ export default function AiBlockchainSolutions() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -735,8 +474,6 @@ export default function AiblockchainsolutionsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
         </div>
       </div>
       </div>
@@ -745,4 +482,3 @@ export default function AiblockchainsolutionsPage() {
 };
 
 export default AiBlockchainSolutionsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

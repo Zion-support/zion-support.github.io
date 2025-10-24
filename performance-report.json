@@ -1,14 +1,6 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T04:15:00.707Z",
-=======
   "timestamp": "2025-10-13T00:25:37.493Z",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03bd
-=======
   "timestamp": "2025-10-13T00:35:59.667Z",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05d7
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",
@@ -19,7 +11,6 @@
     "Error boundaries added",
     "Performance monitoring enabled"
   ],
-=======
   "timestamp": "2025-10-13T11:08:44.372Z",
   "buildStats": {
     "totalFiles": 86,
@@ -31,7 +22,6 @@
     "imageFiles": 0,
     "imageSize": 0
   },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
   "recommendations": [
     "Consider implementing image optimization pipeline",
     "Add more granular code splitting for large pages",

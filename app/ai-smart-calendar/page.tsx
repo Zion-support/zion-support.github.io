@@ -1,40 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional services coming soon." />
       </Helmet>
-<<<<<<< HEAD
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
     <div>
       <Head>
         <title>Ai Smart Calendar - Zion Tech Group</title>
@@ -58,9 +26,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
-=======
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -74,7 +40,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai smart calendar solution for modern businesses.
-=======
 
 const aismartcalendarPage: React.FC = () => {
   return(<>)
@@ -93,7 +58,6 @@ const aismartcalendarPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16"></div>
           <div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Smart Calendar</h1><p className="text-xl text-gray-300 mb-8">Professional ai smart calendar services powered by advanced AI and cutting-edge technology.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -118,31 +82,6 @@ const aismartcalendarPage: React.FC = () => {
               </p>
             </div></div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-=======
             <div className="space-y-4"></div>
               <a
                 href="/contact"
@@ -164,7 +103,6 @@ const aismartcalendarPage: React.FC = () => {
       </div>,
     </>);
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
@@ -215,10 +153,8 @@ const aismartcalendarPage: React.FC = () => {
       </div>
       <Footer />
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -235,23 +171,15 @@ export default function AismartcalendarPage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AismartcalendarPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ai Smart Calendar - Zion Tech Group</title>
         <meta name="description" content="Professional ai smart calendar services by Zion Tech Group" />
@@ -262,24 +190,9 @@ export default function AismartcalendarPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Ai Smart Calendar</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai smart calendar services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

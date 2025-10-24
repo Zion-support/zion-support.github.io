@@ -1,56 +1,11 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function DataAnalytics5GPage() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">5G Data Analytics</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Leverage the power of 5G networks for advanced data analytics and real-time insights.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Real-time Processing</h3>
-              <p className="text-gray-300">
-                Process massive data streams in real-time with 5G's ultra-low latency.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Edge Analytics</h3>
-              <p className="text-gray-300">
-                Deploy analytics at the edge for faster decision making and reduced bandwidth usage.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Machine Learning</h3>
-              <p className="text-gray-300">
-                Leverage AI and ML algorithms for intelligent data analysis and predictions.
-              </p>
-=======
     <>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
@@ -83,17 +38,11 @@ export default function DataAnalytics5GPage() {
               >
                 View Demo
               </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-=======
 export default function FiveGgdataanalyticsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -116,14 +65,10 @@ export default function FiveGgdataanalyticsPage() {
           </Link>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
-=======
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <h1 className="text-4xl font-bold text-white mb-6">5G Data Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Professional 5G data analytics services coming soon.</p>
@@ -137,4 +82,3 @@ export default function FiveGgdataanalyticsPage() {
       </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,62 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
-}
-
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics,) => void;
-  enableRealTimeMonitoring?: boolean;
-}
-
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null;
-  });
-
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
-
-    const observers: PerformanceObserver[] = [];
-
-    // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
-
-    // Measure Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {
-      try {
-        const lcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime ,}));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] ,});
-        observers.push(lcpObserver);
-      } catch (error) {
-<<<<<<< HEAD
-        // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);
-=======
         console.warn('LCP measurement failed:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
       }
     }
 
@@ -82,12 +24,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] ,});
         observers.push(fidObserver);
       } catch (error) {
-<<<<<<< HEAD
-        // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);
-=======
         console.warn('FID measurement failed:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
       }
     }
 
@@ -114,12 +51,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] ,});
         observers.push(clsObserver);
       } catch (error) {
-<<<<<<< HEAD
-        // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);
-=======
         console.warn('CLS measurement failed:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
       }
     }
 
@@ -143,12 +75,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);
-=======
       console.warn('TTFB/Memory measurement failed:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     }
 
     // Cleanup observers
@@ -157,12 +84,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-<<<<<<< HEAD
-          // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);
-=======
           console.warn('Observer disconnect failed:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
         }
       });
     };
@@ -177,14 +99,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-<<<<<<< HEAD
-      // Slow resources detected - could be logged to analytics service
-      // console.log('Slow resources detected:', slowResources.map(r => ({
-      //   name: r.name,
-      //   duration: r.duration,
-      //   size: r.transferSize,
-      // })));
-=======
        
       // eslint-disable-next-line no-console
       console.log(
@@ -195,7 +109,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           size: r.transferSize,
         }))
       );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   }, []);
 
@@ -310,21 +223,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
-<<<<<<< HEAD
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
-          </div>
-=======
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0),}ms` : 'N/A'}</div></div></div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0),}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0),}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A',}</div>
           <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0),}ms` : 'N/A'}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           <div>
             Memory: {' ',}
             {metrics.memory
@@ -352,7 +255,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default AdvancedPerformanceMonitor;
-=======
 import React from 'react';
 import { Monitor } from 'lucide-react';
 interface AdvancedperformancemonitorProps {
@@ -366,8 +268,6 @@ export default function Advancedperformancemonitor({ className = '', children, .
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
 import React from 'react';
 
 const AdvancedPerformanceMonitor: React.FC = () => {
@@ -380,12 +280,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 };
 
 export default AdvancedPerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 // import React from 'react';
 
 // interface AdvancedPerformanceMonitorProps {
 //   className?: string;
 //   children?: React.ReactNode;
 // }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

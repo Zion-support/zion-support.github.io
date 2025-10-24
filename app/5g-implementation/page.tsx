@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function Implementation5GPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Comprehensive 5G implementation services for seamless network deployment." />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">5G Implementation</h1>
-        <div className="prose prose-invert max-w-none">
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -142,33 +125,9 @@ const FiveGImplementationPage: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Implement 5G?
           </h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           <p className="text-xl text-gray-300 mb-8">
             Complete 5G implementation services for seamless network deployment and optimization.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Network Planning</h3>
-              <p className="text-gray-300">
-                Strategic planning and design for optimal 5G network coverage and performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Infrastructure Setup</h3>
-              <p className="text-gray-300">
-                Complete infrastructure deployment including base stations and core network components.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Testing & Optimization</h3>
-              <p className="text-gray-300">
-                Comprehensive testing and optimization to ensure peak network performance.
-              </p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -250,14 +209,9 @@ const FiveGImplementationPage: React.FC = () => {
                   Learn More
                 </button>
               </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-<<<<<<< HEAD
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -268,71 +222,25 @@ const FiveGImplementationPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-=======
       </section>
 
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     </div>
-=======
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 import React from 'react';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function FiveGImplementationPage() {
   return (
-<<<<<<< HEAD
-    <>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Complete 5G implementation services for seamless network deployment and optimization." />
         <meta name="keywords" content="5G implementation, network deployment, 5G optimization, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                5G Implementation
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete 5G implementation services for seamless network deployment, optimization, and management.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -361,10 +269,8 @@ export default function FiveGgimplementationPage() {
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
 }
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
         <p className="text-lg text-gray-300 mb-8">Professional 5G implementation services coming soon.</p>
@@ -377,4 +283,3 @@ export default function FiveGgimplementationPage() {
       </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

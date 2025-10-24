@@ -7,20 +7,12 @@ interface UseIntersectionObserverOptions {
   freezeOnceVisible?: boolean;
 }
 
-<<<<<<< HEAD
-interface UseIntersectionObserverReturn {
-  ref: React.RefObject<HTMLElement>;
-  isIntersecting: boolean;
-  entry: IntersectionObserverEntry | undefined;
-}
-=======
 export const useIntersectionObserver = ({
   threshold = 0,
   root = null,
   rootMargin = '0%',
   freezeOnceVisible = false}: UseIntersectionObserverProps = {}) => {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();</IntersectionObserverEntry></<<<IntersectionObserverEntry>const</IntersectionObserverEntry></IntersectionObserverEntry> [node, setNode] = useState<Element | null>(null);</Element></<<<Element>const</Element></<<Element>frozen</Element> = entry?.isIntersecting && freezeOnceVisible;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export function useIntersectionObserver(
   options: UseIntersectionObserverOptions = {,}

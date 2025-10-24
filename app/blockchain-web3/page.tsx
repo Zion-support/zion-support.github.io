@@ -1,56 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-export default function BlockchainWeb3Page() {
-
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Blockchain Web3 - Zion Tech Group</title>
         <meta name="description" content="Blockchain Web3 solutions by Zion Tech Group" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Blockchain Web3</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive blockchain web3 solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -61,9 +14,7 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -72,7 +23,6 @@ export default function BlockchainWeb3Page() {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
-=======
 const BlockchainWeb3Page: React.FC = () => {
   const services = [
     {
@@ -307,41 +257,9 @@ const BlockchainWeb3Page: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Development Packages</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Transparent pricing for blockchain development services with no hidden costs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </p>
           </div></div></div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div></div></div></div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-  );
-}
-=======
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {pricing.map((package_, index) => (
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 hover: border-indigo-400/40 transition-all duration-300">,
@@ -394,8 +312,6 @@ const BlockchainWeb3Page: React.FC = () => {
 };
 
 export default BlockchainWeb3 Page;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
@@ -412,22 +328,14 @@ export default function Blockchainweb3() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function Blockchainweb3Page() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Blockchain Web3 - Zion Tech Group</title>
         <meta name="description" content="Professional blockchain web3 services by Zion Tech Group" />
@@ -438,24 +346,9 @@ export default function Blockchainweb3Page() {
           <h1 className="text-4xl font-bold text-white mb-6">Blockchain Web3</h1>
           <p className="text-lg text-gray-300 mb-8">Professional blockchain web3 services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

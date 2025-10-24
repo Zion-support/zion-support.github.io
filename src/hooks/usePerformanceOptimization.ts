@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 'use client';
 interface PerformanceMetrics {
   loadTime: number;
@@ -18,22 +6,11 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-<<<<<<< HEAD
-export const _usePerformanceOptimization = () => {
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return null;
-<<<<<<< HEAD
-    }
-=======
 export 
     ) => {$3};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     const navigation = performance.getEntriesByType(
       'navigation'
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     const metrics: PerformanceMetrics = {
@@ -55,23 +32,14 @@ export
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
     });
-<<<<<<< HEAD
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    // Measure CLS
-<<<<<<< HEAD
-    
-=======
     let clsValue = 0;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
-=======
     lcpObserver.observe({entryTypes: ['largest-contentful-paint']});
     // Measure CLS;
     let clsValue = 0;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           hadRecentInput?: boolean;
           value?: number;
         };
@@ -81,50 +49,25 @@ export
       }
       metrics.cumulativeLayoutShift = clsValue;
     });
-<<<<<<< HEAD
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-    // Measure FID
-    const fidObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const fidEntry = entry as PerformanceEntry & {
-=======
     clsObserver.observe({entryTypes: ['layout-shift']});
     // Measure FID;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           processingStart?: number;
         };
         metrics.firstInputDelay =
           (fidEntry.processingStart || 0) - entry.startTime;
       }
     });
-<<<<<<< HEAD
-    fidObserver.observe({ entryTypes: ['first-input'] });
-    // Cleanup observers after a delay
-    setTimeout(() => {
-=======
     fidObserver.observe({entryTypes: ['first-input']});
     // Cleanup observers after a delay;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       lcpObserver.disconnect();
       clsObserver.disconnect();
       fidObserver.disconnect();
     }, 10000);
     return metrics;
   }, []);
-<<<<<<< HEAD
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-<<<<<<< HEAD
-=======
 
     const images = document.querySelectorAll('img[data-src]');
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
@@ -134,14 +77,7 @@ export
     });
     images.forEach(img => imageObserver.observe(img));
   }, []);
-<<<<<<< HEAD
-  const preloadCriticalResources = useCallback(() => {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
@@ -158,10 +94,6 @@ export
     // Measure performance after page load
     const timer = setTimeout(() => {
       const metrics = measurePerformance();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       if (metrics) {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {
@@ -172,11 +104,9 @@ export
           } 
         }
       }
-=======
         // Send metrics to analytics in production;
           // Track metrics in production;
             console.log('Performance metrics: ', metrics);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     }, 1000);
     // Optimize images
     optimizeImages();
@@ -184,20 +114,11 @@ export
     preloadCriticalResources();
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
-<<<<<<< HEAD
-  return {
-    measurePerformance,
-=======
   return {measurePerformance}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     optimizeImages,
     preloadCriticalResources
   };
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
 
 
 export default _usePerformanceOptimization;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

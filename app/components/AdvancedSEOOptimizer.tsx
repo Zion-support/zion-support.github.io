@@ -1,14 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const AdvancedSEOOptimizer: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="advancedseooptimizer">
-      <h2>AdvancedSEOOptimizer</h2>
-      <p>AdvancedSEOOptimizer component.</p>
-    </div>
-=======
     <React.Fragment>
       <Helmet>
         <title>{title}</title>
@@ -64,8 +55,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
         </div>
       )}
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 interface SEOData {}
   title: string;
   description: string;
@@ -454,7 +443,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></lin>
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></lin>
     </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 

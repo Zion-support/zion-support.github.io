@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-interface FuturisticbackgroundProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
-  return (
-<<<<<<< HEAD
-    <div className={`futuristicbackground-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
     <React.Fragment>
       <Helmet>
         <title>FuturisticBackground - Zion Tech Group</title>
@@ -104,20 +88,16 @@ export default function Futuristicbackground({ className = '', children, ...prop
       </div>
       <Footer />
     </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
-=======
 
 
 'use client';
 
 const FuturisticBackground: React.FC = () => {const canvasRef = useRef<HTMLCanvasElement   />(null);
-=======
 import { useEffect, useRef} from 'react';
 const FuturisticBackground: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -127,31 +107,12 @@ const FuturisticBackground: React.FC = () => {
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-<<<<<<< HEAD
-      canvas.const height = window.innerHeight;};
-=======
       canvas.height = window.innerHeight;
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-<<<<<<< HEAD
-    // Particle system;
-    const particles: Array<{,
-  x: number;,
-  y: number;,
-  vx: number;,
-  vy: number;,
-  size: number;,
-  opacity: number;,
-  color: string;}> = [];
-
-    const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
-    // Create particles;
-    for (let i = 0; i < 100; i++) {particles.push({
-=======
     // Particle system
     const particles: Array<{
       x: number;
@@ -167,7 +128,6 @@ const FuturisticBackground: React.FC = () => {
     // Create particles
     for (let i = 0; i < 100; i++) {
       particles.push({
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
@@ -183,21 +143,12 @@ const FuturisticBackground: React.FC = () => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-<<<<<<< HEAD
-        // Wrap around screen;
-        if (particle.x < 0) particle.const x = canvas.width;
-        if (particle.x > canvas.width) particle.const x = 0;
-        if (particle.y < 0) particle.const y = canvas.height;
-        if (particle.y > canvas.height) particle.const y = 0;
-        // Draw particle;
-=======
         // Wrap around screen
           if (particle.x < 0) particle.x = canvas.width;
           if (particle.x > canvas.width) particle.x = 0;
           if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
         // Draw particle
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
@@ -213,16 +164,10 @@ const FuturisticBackground: React.FC = () => {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-<<<<<<< HEAD
-              ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
-              ctx.const lineWidth = 0.5;
-              ctx.stroke();}
-=======
                 ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
                 ctx.lineWidth = 0.5;
               ctx.stroke();
             }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           }
         });
       });
@@ -235,22 +180,6 @@ const FuturisticBackground: React.FC = () => {
     return () => {window.removeEventListener('resize', resizeCanvas);};
   }, []);
 
-<<<<<<< HEAD
-export default function FuturisticBackground() {return (
-
-      {/* Additional background effects */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Animated grid overlay */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Quantum field effect */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Plasma effect */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
-  );
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 'use client'
 import React from 'react'
 
@@ -312,8 +241,6 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({
 }
 
 export default FuturisticBackground
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 import React from 'react';
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = () => {
@@ -321,7 +248,6 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = () => {
     <div className="futuristicbackground">
       <h2>FuturisticBackground</h2>
       <p>Component content coming soon.</p>
-=======
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
       <canvas
@@ -337,10 +263,8 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = () => {
       <div className="absolute inset-0 quantum-field opacity-30" />
       {/* Plasma effect */}
       <div className="absolute inset-0 plasma-effect opacity-20" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </div>
   );
 };
 
 export default FuturisticBackground;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

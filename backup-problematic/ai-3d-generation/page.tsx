@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content=" solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8"></h1>
-        <div className="prose prose-invert max-w-none">
-          <p>This page is under construction. Please check back later for  solutions.</p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -53,11 +35,6 @@ export default function Ai3dGenerationPage() {
               Try Demo
             </Link>
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-        </div>
-      </div>
-=======
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -228,12 +205,8 @@ export default function Ai3dGenerationPage() {
             </div>
         </div>
       </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 export default function Ai3dGenerationPage() {return (
     <title>AI 3D Generation - Zion Tech Group</title>
       {/* Hero Section */}
@@ -295,7 +268,4 @@ export default function Ai3dGenerationPage() {return (
                 Get Started Today;
                 View All AI Services;
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

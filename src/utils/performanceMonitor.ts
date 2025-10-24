@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-// Performance monitoring script
-export const performanceMonitor = {
-  measurePageLoad: () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0];
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        console.log('Page load time:', loadTime + 'ms');
-        
-        // Send to analytics
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'page_load_time', {
-            value: Math.round(loadTime),
-            event_category: 'performance'
-          });
-        }
-      });
-    }
-  },
-  
-  measureCoreWebVitals: () => {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime + 'ms');
-          }
-          if (entry.entryType === 'first-input') {
-            const processingStart = (entry as any).processingStart || entry.startTime;
-            console.log('FID:', processingStart - entry.startTime + 'ms');
-=======
 
 'use client'
 /**
@@ -306,17 +274,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
             const resourceEntry = entry as PerformanceResourceTiming;
             this.analyzeResource(resourceEntry);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           }
         });
       });
-<<<<<<< HEAD
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-    }
-  }
-};
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['resource'] });
       this.observers.push(observer);
@@ -453,4 +413,3 @@ export default performanceMonitor;`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

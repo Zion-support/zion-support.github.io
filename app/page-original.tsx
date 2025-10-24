@@ -125,13 +125,8 @@ const HomePage: React.FC = memo(() => {
         enableClickjackingProtection={true}
         enableContentTypeSniffingProtection={true}
       />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-        {/* Navigation */}</div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
         {/* Navigation */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         <Navigation />
         {/* Skip to main content for accessibility */}
         <a
@@ -153,23 +148,14 @@ const HomePage: React.FC = memo(() => {
               : 'opacity-0 translate-y-8'
           }`}
           aria-labelledby="hero-heading"
-<<<<<<< HEAD
-        >
-=======
         ></section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           <div className="max-w-6xl mx-auto"></div>
             <h1 
               id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
               data-text="Zion Tech Group"
-<<<<<<< HEAD
-            >
-              Zion Tech Group</h1>
-=======
             ></h1>
               Zion Tech Group
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle"></p>
               Advanced AI and IT Solutions
@@ -328,11 +314,7 @@ const HomePage: React.FC = memo(() => {
           </div>
           {/* Micro SAAS Services Grid */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-=======
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               Micro SAAS Solutions
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
@@ -595,19 +577,11 @@ const HomePage: React.FC = memo(() => {
           </div>
           {/* IT Services & Infrastructure */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-=======
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text"></h3>
               IT Services & Infrastructure
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Migration</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base"></p>
@@ -806,19 +780,11 @@ const HomePage: React.FC = memo(() => {
           </div>
           {/* Advanced AI Services Grid */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced AI Services
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-=======
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text"></h3>
               Advanced AI Services
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base"></p>
@@ -984,19 +950,11 @@ const HomePage: React.FC = memo(() => {
           </div>
           {/* Emerging Technologies Grid */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-=======
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text"></h3>
               Emerging Technologies
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base"></p>
@@ -1052,19 +1010,11 @@ const HomePage: React.FC = memo(() => {
           </div>
           {/* IT Services Grid */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-=======
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text"></h3>
               IT Services & Infrastructure
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base"></p>
@@ -1116,19 +1066,11 @@ const HomePage: React.FC = memo(() => {
           </p>
           {/* Productivity Tools */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-=======
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text"></h3>
               Productivity & Business Tools
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base"></p>
@@ -1236,19 +1178,11 @@ const HomePage: React.FC = memo(() => {
           </div>
           {/* Marketing & Sales Tools */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-=======
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text"></h3>
               Marketing & Sales Tools
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Design Studio</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base"></p>
@@ -1304,19 +1238,11 @@ const HomePage: React.FC = memo(() => {
           </div>
           {/* Developer Tools */}
           <div className="mb-12"></div>
-<<<<<<< HEAD
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Developer Tools
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-=======
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text"></h3>
               Developer Tools
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base"></p>
@@ -1389,28 +1315,17 @@ const HomePage: React.FC = memo(() => {
         </Suspense>
 
         {/* Contact Section */}
-<<<<<<< HEAD
-        <section className="mb-16" aria-labelledby="contact-heading">
-          <div className="max-w-6xl mx-auto"></div>
-            <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
-=======
         <section className="mb-16" aria-labelledby="contact-heading"></section>
           <div className="max-w-6xl mx-auto"></div>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto"></p>
               Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
             </p>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Contact Information */}</div>
-=======
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {/* Contact Information */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
                 <div className="space-y-6"></div>
@@ -1469,15 +1384,9 @@ const HomePage: React.FC = memo(() => {
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
-<<<<<<< HEAD
-                <form className="space-y-6">
-                  <div></div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                 <form className="space-y-6"></form>
                   <div></div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                       Full Name
                     </label>
                     <input
@@ -1491,11 +1400,7 @@ const HomePage: React.FC = memo(() => {
                   </div>
                   
                   <div></div>
-<<<<<<< HEAD
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                       Email Address
                     </label>
                     <input
@@ -1509,11 +1414,7 @@ const HomePage: React.FC = memo(() => {
                   </div>
                   
                   <div></div>
-<<<<<<< HEAD
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                       Phone Number
                     </label>
                     <input
@@ -1526,11 +1427,7 @@ const HomePage: React.FC = memo(() => {
                   </div>
                   
                   <div></div>
-<<<<<<< HEAD
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                       Service Interest
                     </label>
                     <select
@@ -1548,11 +1445,7 @@ const HomePage: React.FC = memo(() => {
                   </div>
                   
                   <div></div>
-<<<<<<< HEAD
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                       Message
                     </label>
                     <textarea

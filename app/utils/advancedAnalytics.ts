@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Advancedanalytics utility functions
-export function advancedanalytics() {
-  // Implementation here
-  return null;
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -31,7 +24,6 @@ const AdvancedAnalyticsPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-=======
 interface UserEvent {}
   id: string
   type: string
@@ -97,23 +89,9 @@ class AdvancedAnalytics {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
 'use client';
 /**
-<<<<<<< HEAD
- * Advanced Analytics System for Zion Tech Group Website;
- * Provides comprehensive user behavior tracking and insights;
-=======
  * Advanced Analytics Utility
  * Provides comprehensive analytics tracking and reporting functionality
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
  */
-<<<<<<< HEAD
-interface UserEvent {/* TODO: Fix JSX expression */}
-}
-interface UserSession {/* TODO: Fix JSX expression */}
-}
-interface AnalyticsConfig {/* TODO: Fix JSX expression */}
-}
-class AdvancedAnalytics {/* TODO: Fix JSX expression */}
-=======
 
 export interface AnalyticsEvent {
   name: string;
@@ -128,14 +106,9 @@ export interface AnalyticsReport {
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-<<<<<<< HEAD
-  topPages: Array<{page: string; views: number}>;
-  userJourney: string[];
-=======
   topPages: string[];
   userEngagement: number;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 export class AdvancedAnalytics {
   private events: AnalyticsEvent[] = [];
@@ -146,50 +119,16 @@ export class AdvancedAnalytics {
       ...event,
       timestamp: Date.now(),
       sessionId: this.getSessionId()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     };
-<<<<<<< HEAD
-    this.currentSession = this.createNewSession();
-    this.initializeTracking();
-  }
-  static getInstance(): AdvancedAnalytics {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    }
-  ];
-
-<<<<<<< HEAD
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AdvancedAnalytics | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedAnalytics services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="advancedAnalytics, AI solutions, IT services, Zion Tech Group, advancedanalytics" />
-      </Helmet>
-=======
   /**
    * Initialize comprehensive analytics tracking;
    */
   private initializeTracking(): void {}
     if (typeof window === 'undefined' || !this.config.enableTracking) return
-=======
       console.log('Analytics Event: ', event);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
     // Track page views
     this.trackPageView()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -257,48 +196,6 @@ export class AdvancedAnalytics {
             </p>
           </div></div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div></div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedanalytics needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div></div></div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AdvancedAnalyticsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
     // Track performance
     if (this.config.enablePerformanceTracking) {}
       this.trackPerformance()
@@ -323,23 +220,6 @@ export default AdvancedAnalyticsPage;
   /**
    * Create new user session;
    */
-<<<<<<< HEAD
-  private createNewSession(): UserSession {}
-    return {}
-      id: this.generateSessionId(),
-      startTime: new Date().toISOString(),
-      pageViews: 0,
-      events: [],
-      userAgent: navigator.userAgent,
-      device: this.detectDevice(),
-      browser: this.detectBrowser(),
-      os: this.detectOS(),
-      referrer: document.referrer;
-    }
-  private createNewSession(): UserSession {/* TODO: Fix JSX expression */}
-    };
-  }
-=======
     const currentPage = page || window.location.pathname;
 
     this.userBehavior.pageViews++;
@@ -352,7 +232,6 @@ export default AdvancedAnalyticsPage;
 
       userAgent: navigator.userAgent;
     });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   /**
    * Track page views;
@@ -552,22 +431,6 @@ export default AdvancedAnalyticsPage;
     });
   }
 
-<<<<<<< HEAD
-  /**
-   * Setup network monitoring;
-   */
-  private setupNetworkMonitoring(): void {}
-    if ('connection' in navigator) {}
-      const connection = (navigator as any).connection
-      this.trackEvent('connection_info', undefined, {)}
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt
-      })
-  private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
-    });
-    window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
-=======
     // Track scroll depth;
     let maxScrollDepth = 0;
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
@@ -585,7 +448,6 @@ export default AdvancedAnalyticsPage;
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', {depth: scrollDepth});
-=======
     
     this.events.push(eventWithTimestamp);
     
@@ -622,58 +484,12 @@ export default AdvancedAnalyticsPage;
       conversionRate: pageViews > 0 ? (conversions / pageViews) * 100 : 0,
       topPages: this.getTopPages(),
       userEngagement: this.calculateEngagement()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     };
   }
 
-<<<<<<< HEAD
-    window.addEventListener('scroll', trackScrollDepth, {passive: true});
-
-  /**
-   * Track form submissions;
-   */
-    if (typeof window === 'undefined') return;
-
-      const form = event.target as HTMLFormElement;
-      this.trackFormSubmission(form);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-    });
-  }
-  /**
-   * Track custom event;
-   */
-  trackEvent(even)
-  t: UserEvent): void {/* TODO: Fix JSX expression */}
-    }
-    // Send to analytics service;
-    if (this.isOnline) {/* TODO: Fix JSX expression */}
-    }
-  }
-
-  /**
-  private addEvent(event: UserEvent): void {}
-    this.eventQueue.push(event)
-    this.currentSession.events.push(event)
-
-    // Send to analytics service (implement based on your needs)
-    this.sendToAnalytics(event)
-   * Send event to analytics service;
-   */
-<<<<<<< HEAD
-  private async sendEvent(even)
-  t: UserEvent): Promise<void> {/* TODO: Fix JSX expression */}
-        },
-        bod,
-  y: JSON.stringify(event)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-=======
     // In a real implementation, this would send to your analytics service;
     // For now, we'll just log it;
       console.log('Sending to analytics: ', event);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   /**
   private sendToAnalytics(event: UserEvent): void {}
@@ -772,35 +588,6 @@ export default AdvancedAnalyticsPage;
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
     return {/* TODO: Fix JSX expression */}
     };
-<<<<<<< HEAD
-  }
-  /**
-   * Send session data to analytics service;
-   */
-  private async sendSessionData(sessio)
-  n: UserSession): Promise<void> {/* TODO: Fix JSX expression */}
-        },
-        bod,
-  y: JSON.stringify(session)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  /**
-   * End current session;
-   */
-  endSession(): void {/* TODO: Fix JSX expression */}
-    }
-    // Create new session;
-    this.currentSession = this.createNewSession();
-  }
-}
-// Export singleton instance;
-export const advancedAnalytics = AdvancedAnalytics.getInstance();
-export default advancedAnalytics;
-`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
     this.performanceMetrics = null;
 
 // Export utility functions;
@@ -811,8 +598,6 @@ export default advancedAnalytics;
 
   console.log('Track page view: ', page);
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
   private getSessionId(): string {
     let sessionId = sessionStorage.getItem('analytics_session_id');
     if (!sessionId) {
@@ -847,4 +632,3 @@ export default advancedAnalytics;
 }
 
 export const advancedAnalytics = new AdvancedAnalytics();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

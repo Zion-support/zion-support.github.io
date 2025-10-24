@@ -1,30 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-=======
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 const Page: React.FC = () => {
 import { ArrowRight, Users, Brain } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 export default function AiSocialMediaManagerZionTechGroup() {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';export default function AiSocialMediaManagerZionTechGroup() {
@@ -42,33 +30,6 @@ import { Link } from 'react-router-dom';export default function AiSocialMediaMan
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai social media manager solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -79,11 +40,9 @@ import { Link } from 'react-router-dom';export default function AiSocialMediaMan
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -188,32 +147,12 @@ const AiSocialMediaManagerPage: React.FC = () => {
     { label: 'Time Saved', value: '80%', icon: Clock }
   ]
 
-<<<<<<< HEAD
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>AI Social Media Manager | Zion Tech Group</title>
-        <meta name="description" content="Professional AI social media manager solutions for modern businesses. Automated posting, analytics, and community management." />
-        <meta name="keywords" content="AI social media manager, social media automation, AI content generation, social media analytics" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              AI Social Media Manager
-=======
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Social Media Manager
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your social media presence with our AI-powered social media management platform. 
@@ -241,8 +180,6 @@ const AiSocialMediaManagerPage: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
                 View Demo
-<<<<<<< HEAD
-=======
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
 export default function Page() {
@@ -273,13 +210,10 @@ export default function Page() {
           <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
         </Link>
               <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </Link>
             </div>
-=======
               </button>
             </div></div></div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </section>
 
@@ -294,14 +228,6 @@ export default function Page() {
                 Our AI social media manager comes equipped with cutting-edge features designed to 
                 maximize your social media impact and efficiency.
               </p>
-<<<<<<< HEAD
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-=======
             </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -311,7 +237,6 @@ export default function Page() {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div></div></div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -338,47 +263,6 @@ export default function Page() {
                 Select the perfect plan for your social media management needs. 
                 All plans include our core AI features with no setup fees.
               </p>
-<<<<<<< HEAD
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' 
-                    : 'border-slate-700 hover:border-cyan-400/50'
-                }`}>
-                  {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
-                      Most Popular
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 text-sm">{plan.description}</p>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-=======
             </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -388,7 +272,6 @@ export default function Page() {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div></div></div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
@@ -396,32 +279,6 @@ export default function Page() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-<<<<<<< HEAD
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Social Media?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI social media manager to 
-              grow their online presence and engage their audience effectively.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Start Your Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
-=======
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -438,26 +295,17 @@ export default function Page() {
                   Learn More
                 </button>
               </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </section>
       </main>
       
       <Footer />
-<<<<<<< HEAD
-    </>
-  )
-}
-=======
     </React.Fragment>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 export default AiSocialMediaManagerPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
@@ -475,8 +323,6 @@ export default function AiSocialMediaManager() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -507,8 +353,6 @@ export default function AisocialmediamanagerPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
         <section className="py-20" />
           <div className="containermx-autopx-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
@@ -528,4 +372,3 @@ export default function AisocialmediamanagerPage() {
       </div>
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

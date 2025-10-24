@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import { Monitor } from 'lucide-react';
-// Monitoring utility functions
-
-export const Monitoring = {
-  init: () => {
-    },
-// Monitoring utility functions
-
-export function monitoring() {
-  // Implementation here
-  return null;
-}
-<<<<<<< HEAD
-}
-export default monitoring;
-=======
 export interface ErrorReport {
   message: string,
   stack?: string;
@@ -189,8 +172,6 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 // Utility file: monitoring
 
 export interface PerformanceMetric {
@@ -260,4 +241,3 @@ export class Monitoring {
 }
 
 export const monitoring = new Monitoring();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

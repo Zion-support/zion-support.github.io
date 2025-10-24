@@ -1,27 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -29,7 +14,6 @@ import { ArrowRight } from 'lucide-react';
 export default function AisolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ai Solutions - Zion Tech Group</title>
         <meta name="description" content="Ai Solutions solutions by Zion Tech Group" />
@@ -41,38 +25,9 @@ export default function AisolutionsPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai solutions solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -83,12 +38,9 @@ export default function AisolutionsPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -197,19 +149,12 @@ const AiSolutionsPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              AI Solutions
-=======
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Solutions
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business with our comprehensive AI solutions. From intelligent chatbots 
@@ -237,13 +182,8 @@ const AiSolutionsPage: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
                 View Demo
-<<<<<<< HEAD
-              </Link>
-            </div>
-=======
               </button>
             </div></div></div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </section>
 
@@ -258,14 +198,6 @@ const AiSolutionsPage: React.FC = () => {
                 Our AI solutions are designed to deliver maximum value with minimal complexity, 
                 helping you stay ahead of the competition.
               </p>
-<<<<<<< HEAD
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-=======
             </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -275,7 +207,6 @@ const AiSolutionsPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div></div></div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -287,7 +218,6 @@ const AiSolutionsPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
-=======
 'use client';
 import React from 'react';
 import { Brain, MessageSquare, Eye, Zap, BarChart, Cube, Mic, FileText, TrendingUp, Target, Shield, Search, CheckCircle, ArrowRight } from 'lucide-react';
@@ -478,47 +408,10 @@ const AISolutionsPage: React.FC = () => {
                   <Shield className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3><p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Solutions Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our AI Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our comprehensive suite of AI solutions designed to address 
-                every aspect of your business needs.
-              </p>
-<<<<<<< HEAD
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <solution.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{solution.name}</h3>
-                  <p className="text-gray-300 mb-4">{solution.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-=======
             </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -528,7 +421,6 @@ const AISolutionsPage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div></div></div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
@@ -537,30 +429,6 @@ const AISolutionsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-<<<<<<< HEAD
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of businesses already using our AI solutions to drive growth, 
-              improve efficiency, and stay competitive in today's digital landscape.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Start Your AI Journey
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
-=======
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -577,8 +445,6 @@ const AISolutionsPage: React.FC = () => {
                   Learn More
                 </button>
               </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
                 <p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
@@ -606,32 +472,18 @@ const AISolutionsPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
                 Call +1 302 464 0950;
               </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
         </section>
       </main>
-<<<<<<< HEAD
-      
-      <Footer />
-<<<<<<< HEAD
-    </>
-  )
-}
-=======
     </React.Fragment>
   );
-=======
 
       <Footer />,
     </div>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 export default AiSolutionsPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -648,8 +500,6 @@ export default function AisolutionsPage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default function AisolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -675,6 +525,3 @@ export default function AisolutionsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

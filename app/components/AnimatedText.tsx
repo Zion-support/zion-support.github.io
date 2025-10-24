@@ -1,48 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-
-export default function AnimatedText() {
-  return (
-    <>
-    
-  </>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-            Service</h1>
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-            Professional service services coming soon.</p>
-          </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
-  r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></Link>
-            Contact Us</Link>
-            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 
 
 'use client';
 
 interface AnimatedTextProps {text: string;
-=======
 import { useEffect, useState} from 'react';
 interface AnimatedTextProps {
   text: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   className?: string;
   delay?: number;
   duration?: number;
@@ -95,8 +58,6 @@ export default function AnimatedText() {return (
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const AnimatedText: React.FC<AnimatedTextProps> = () => {
@@ -109,4 +70,3 @@ const AnimatedText: React.FC<AnimatedTextProps> = () => {
 };
 
 export default AnimatedText;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
@@ -121,43 +112,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function CybersecuritySolutionsPage() {
-
-  const capabilities = [
-    {
-      title: "AI-Powered Security",
-      description: "Advanced threat detection and prevention using artificial intelligence",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "24/7 security monitoring and incident response",
-      icon: <CheckCircle className="w-8 h-8" />
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-=======
 import React  from 'react';
 const CybersecuritySolutionsPage: React.FC = () => {
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional cybersecurity solutions for businesses" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Cybersecurity Solutions
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional cybersecurity solutions coming soon.
-          </p>
-=======
 export default function CybersecuritysolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -171,20 +132,12 @@ export default function CybersecuritysolutionsPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Cybersecurity Solutions</h1>
           <p className="text-lg text-gray-300 mb-8">Professional cybersecurity solutions services coming soon.</p>
           
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           <Link
-<<<<<<< HEAD
-            to="/contact"
-<<<<<<< HEAD
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-=======
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           >
             Contact Us
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         <div className="container mx-autopx-4py-16">
@@ -211,11 +164,8 @@ export default function CybersecuritysolutionsPage() {
         </div>
       </div>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </div>
       </div>
-<<<<<<< HEAD
-=======
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
           >
@@ -224,11 +174,6 @@ export default function CybersecuritysolutionsPage() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
           </div>
         </div>
       </div>
@@ -236,25 +181,10 @@ export default function CybersecuritysolutionsPage() {
       </div>
       </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 }
-=======
 
-<<<<<<< HEAD
-const CybersecuritySolutionsPage: React.FC = () => {return (
-    <>
-      <title>CybersecuritySolutions - Zion Tech Group</title>
-
-      <  />
-  );}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 export default CybersecuritySolutionsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
 
 
 'use client';
@@ -30,46 +17,12 @@ export const _usePerformance = () => {// TODO: Add content;}
 }
   const [metrics, setMetrics] = useState;
           <PerformanceMetrics | null>(null);
-=======
 export 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
-<<<<<<< HEAD
-    const measurePerformance = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      const navigation = performance.getEntriesByType()
-//         'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint')
-      const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-      // Measure CLS (Cumulative Layout Shift)
-<<<<<<< HEAD
-
-      if ('PerformanceObserver' in window) {// TODO: Add content;}
-
-}
-        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
-          for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-            if ()
-              entry.entryType === 'layout-shift' &&
-              !(entry as unknown as {/* TODO: Fix JSX expression */})
-  t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-
-=======
       
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
@@ -78,7 +31,6 @@ export
               entry.entryType === 'layout-shift' &&
               !(entry as unknown as { hadRecentInput: boolean ) => {$3};).hadRecentInput
             ) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
 
             }
@@ -90,31 +42,11 @@ export
   )
       }
       // Measure FID (First Input Delay)
-<<<<<<< HEAD
-
-      if ('PerformanceObserver' in window) {// TODO: Add content;}
-
-}
-        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
-          for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-            if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-
-            if (entry.entryType === 'first-input') {// TODO: Add content;}
-}
-
-=======
       
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'first-input') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
               firstInputDelay =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
   t: number }).processingStart - entry.startTime;
@@ -135,7 +67,6 @@ export
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,
 //         firstInputDelay;
-=======
 
       )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
@@ -157,7 +88,6 @@ export
         observer.observe({entryTypes: ['first-input']});
         domContentLoaded:
         firstInputDelay;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       };
       setMetrics(performanceData);
       setIsMonitoring(false);
@@ -197,9 +127,4 @@ export
 };
 
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 export default _usePerformance;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

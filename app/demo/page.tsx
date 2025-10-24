@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -22,109 +12,6 @@ import { Play } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
-
-export default function Page() {
-
-  const [currentDemo, setCurrentDemo] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const stats = [
-    { number: "500+", label: "Demos Available" },
-    { number: "50K+", label: "Users Trained" },
-    { number: "95%", label: "Success Rate" },
-    { number: "24/7", label: "Support Available" }
-  ];
-
-  const benefits = [
-    {
-      icon: <Play className="w-8 h-8 text-cyan-400" />,
-      title: "Interactive Demos",
-      description: "Hands-on experience with our solutions"
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-400" />,
-      title: "Expert Guidance",
-      description: "Learn from our experienced team"
-    },
-    {
-      icon: <Award className="w-8 h-8 text-purple-400" />,
-      title: "Proven Results",
-      description: "See real-world success stories"
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
-      title: "Data-Driven",
-      description: "Make informed decisions with data"
-  ];
-
-  const demos = [
-    {
-      id: 'ai-analytics',
-      title: 'AI Analytics Dashboard',
-<<<<<<< HEAD
-      description: 'See how our AI-powered analytics platform transforms raw data into actionable insights with real-time dashboards and predictive analytics.',
-      duration: '3:45',
-      category: 'AI Analytics',
-      features: ['Real-time Data Processing', 'Predictive Analytics', 'Interactive Dashboards', 'Automated Reporting'],
-      thumbnail: '/api/placeholder/800/450',
-      videoUrl: '#'
-    },
-    {
-      id: 'ai-customer-support',
-      title: 'AI Customer Support Bot',
-      description: 'Experience our intelligent chatbot in action with natural language processing, sentiment analysis, and seamless human handoff.',
-      duration: '2:30',
-      category: 'AI Customer Service',
-      features: ['Natural Language Processing', 'Sentiment Analysis', 'Multi-language Support', 'Human Handoff'],
-      thumbnail: '/api/placeholder/800/450',
-      videoUrl: '#'
-    },
-    {
-      id: 'ai-content-generation',
-      title: 'AI Content Generation Studio',
-      description: 'Watch our AI create high-quality content including blog posts, social media content, and marketing materials with SEO optimization.',
-      duration: '4:15',
-      category: 'AI Content',
-      features: ['SEO Optimization', 'Brand Voice Training', 'Multi-format Output', 'Content Calendar'],
-      thumbnail: '/api/placeholder/800/450',
-      videoUrl: '#'
-    },
-    {
-      id: 'ai-cybersecurity',
-      title: 'AI Cybersecurity Defense',
-      description: 'See our advanced threat detection system in action with real-time monitoring, automated response, and compliance reporting.',
-      duration: '3:20',
-      category: 'Cybersecurity',
-      features: ['Threat Detection', 'Automated Response', 'Real-time Monitoring', 'Compliance Reports'],
-      thumbnail: '/api/placeholder/800/450',
-      videoUrl: '#'
-    },
-    {
-      id: '5g-solutions',
-      title: '5G Network Solutions',
-      description: 'Explore our 5G network infrastructure solutions with ultra-low latency, massive IoT connectivity, and edge computing capabilities.',
-      duration: '5:00',
-      category: '5G Technology',
-      features: ['Ultra-low Latency', 'IoT Connectivity', 'Edge Computing', 'Smart City Solutions'],
-      thumbnail: '/api/placeholder/800/450',
-      videoUrl: '#'
-    },
-    {
-      id: 'cloud-infrastructure',
-      title: 'Cloud Infrastructure Management',
-      description: 'Discover our comprehensive cloud solutions with automated scaling, backup, disaster recovery, and cost optimization.',
-      duration: '4:30',
-      category: 'Cloud Services',
-      features: ['Auto-scaling', 'Disaster Recovery', 'Cost Optimization', 'Multi-cloud Support'],
-      thumbnail: '/api/placeholder/800/450',
-      videoUrl: '#'
-  ];
-
-  return null;
-=======
       description: 'Experience real-time AI-powered analytics and insights for your business data.',
       features: [
         'Real-time data visualization',
@@ -387,7 +274,6 @@ export default function Page() {
 
       <Footer />
     </div>
-=======
 'use client';
 
 import React from 'react';
@@ -414,8 +300,6 @@ const DemoPage = () => {
 
       <Footer />
     </ErrorBoundary>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 const DemoPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
@@ -432,84 +316,17 @@ const DemoPage: React.FC = () => {
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 };
 
-<<<<<<< HEAD
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  return null;
-};
-
-  const handleNextDemo = () => {
-    setCurrentDemo((prev) => (prev + 1) % demos.length);
-    setIsPlaying(false);
-  };
-
-  return null;
-};
-
-  const handlePrevDemo = () => {
-    setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
-    setIsPlaying(false);
-  };
-
-  return null;
-};
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 export default function DemoPage() {
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Demo - Zion Tech Group</title>
-        <meta name="description" content="Demo solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Demo</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive demo solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -520,11 +337,9 @@ export default function DemoPage() {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
   return null;
-=======
 import React from 'react';
 
 import {Helmet} from 'react-helmet-async';
@@ -544,8 +359,6 @@ export default function Demo() {return (
       <  />
   );}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Demo - Zion Tech Group</title>
@@ -569,7 +382,4 @@ export default function Demo() {return (
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
 export default DemoPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

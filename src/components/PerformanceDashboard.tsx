@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-=======
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceDashboardProps {
@@ -53,11 +42,9 @@ export default function PerformanceDashboard({ className = '' }: PerformanceDash
           <p className="text-2xl font-bold text-purple-600">{metrics.fps}</p>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
     </div>
   );
 }
-=======
 
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
@@ -87,25 +74,11 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 const,
   PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
   });
-<<<<<<< HEAD
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
-=======
   const [isVisible, setIsVisible] = useState(false);
 
       )[0] as PerformanceNavigationTiming;
 
         : 0;
-<<<<<<< HEAD
-      // Measure render time;
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      // Measure memory usage;
-      let memoryUsage = 0;
-        const memory = (performance as {memory?: { usedJSHeapSize: number} }).memory;
-=======
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
@@ -113,20 +86,13 @@ const,
       let memoryUsage = 0;
       if ('memory' in performance) {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
         memoryUsage = memory?.usedJSHeapSize || 0;
       // Measure FPS (simplified)
       let fps = 0;
-<<<<<<< HEAD
-        let lastTime = performance.now();
-        let frameCount = 0;
-
-=======
       if ('requestAnimationFrame' in window) {
         let lastTime = performance.now();
         let frameCount = 0;
         const measureFPS = (currentTime: number) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
           frameCount++;
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
@@ -135,46 +101,20 @@ const,
         };
         requestAnimationFrame(measureFPS);
         fps;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       });
-<<<<<<< HEAD
-    });
-
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
-      return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-=======
     };
     updateMetrics();
     // Update metrics every 5 seconds
     const interval = setInterval(updateMetrics, 5000);
     return () => clearInterval(interval);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
   }, []);
 
-<<<<<<< HEAD
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
-};
-
-export default PerformanceDashboard;
-
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-=======
 const PerformanceDashboard: React.FC = () => {
   return (
     <div className="performance-dashboard">
       <h2>Performance Dashboard</h2>
       <p>Performance monitoring dashboard component.</p>
     </div>
-=======
  setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
         Show Performance;
@@ -192,9 +132,7 @@ const PerformanceDashboard: React.FC = () => {
           <span className="text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
             Last updated: {new Date().toLocaleTimeString()}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 };
 
 export default PerformanceDashboard;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

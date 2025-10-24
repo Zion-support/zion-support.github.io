@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-=======
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
@@ -50,85 +38,6 @@ const EdgeComputingPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const services = [
-    {
-      icon: '⚡',
-      title: 'Edge Analytics',
-      description: 'Real-time data processing and analytics at the edge',
-    },
-    {
-      icon: '🌐',
-      title: 'Edge Networking',
-      description: 'Optimized networking solutions for edge deployments',
-    },
-    {
-      icon: '🔒',
-      title: 'Edge Security',
-      description: 'Comprehensive security solutions for edge environments',
-    },
-    {
-      icon: '📱',
-      title: 'Mobile Edge',
-      description: 'Mobile edge computing for 5G and mobile applications',
-    }
-  ];
-
-  const benefits = [
-    'Ultra-Low Latency',
-    'Reduced Bandwidth Costs',
-    'Improved Reliability',
-    'Enhanced Security',
-    'Real-time Processing',
-    'Global Scalability'
-  ];
-
-  const useCases = [
-    {
-      title: 'Autonomous Vehicles',
-      description: 'Real-time decision making for self-driving cars',
-      icon: '🚗',
-    },
-    {
-      title: 'Smart Cities',
-      description: 'IoT sensors and real-time city management',
-      icon: '🏙️',
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Manufacturing automation and monitoring',
-      icon: '🏭',
-    },
-    {
-      title: 'AR/VR Applications',
-      description: 'Immersive experiences with low latency',
-      icon: '🥽',
-    },
-    {
-      title: 'Healthcare',
-      description: 'Real-time patient monitoring and diagnostics',
-      icon: '🏥',
-    },
-    {
-      title: 'Gaming',
-      description: 'Cloud gaming with minimal latency',
-      icon: '🎮',
-    }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Edge Computing - Zion Tech Group</title>
-        <meta name="description" content="Edge Computing solutions by Zion Tech Group" />
-      </Helmet>
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Edge Computing</h1>
-        <div className="prose prose-invert max-w-none">
-=======
       <Navigation />
 
       {/* Hero Section */}
@@ -140,7 +49,6 @@ const EdgeComputingPage: React.FC = () => {
             Edge Computing
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)
       <Navigation />)
       {/* Hero Section */})
@@ -163,51 +71,12 @@ const EdgeComputingPage: React.FC = () => {
             Edge Computing;
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>
               Solutions;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Bring computing power closer to your data and users with our advanced edge computing solutions.
             Ultra-low latency, real-time processing, and global edge infrastructure.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
-          </div></div></div></div></div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced edge computing capabilities designed for modern applications and IoT solutions
-            </p>
-          </div></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div></div></div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-=======
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"></button>
               Get Started Today;
@@ -245,7 +114,6 @@ const EdgeComputingPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
                     </CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   ))}
                 </ul>
               </div>
@@ -254,26 +122,6 @@ const EdgeComputingPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive edge computing solutions for all your business needs
-            </p>
-          </div></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div></div></div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-=======
       {/* CTA Section */}
 <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></section>
@@ -292,38 +140,13 @@ const EdgeComputingPage: React.FC = () => {
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               Contact Sales;
             </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Edge computing solutions for various industries and applications
-            </p>
-          </div></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
-                <div className="text-4xl mb-4 group-hover: scale-110 transition-transform">{useCase.icon,}</div></div></div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
       <Footer />,
     </div>);
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -352,36 +175,9 @@ const EdgeComputingPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive edge computing solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
@@ -390,10 +186,8 @@ const EdgeComputingPage: React.FC = () => {
               Contact Sales
             </button>
           </div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
         </div>
       </div>
-=======
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -404,11 +198,9 @@ const EdgeComputingPage: React.FC = () => {
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
 }
-=======
 import React from 'react';
 
 import {Link} from 'react-router-dom';
@@ -425,23 +217,15 @@ export default function EdgecomputingPage() {
 
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function EdgecomputingPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Professional edge computing services by Zion Tech Group" />
@@ -452,24 +236,9 @@ export default function EdgecomputingPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Edge Computing</h1>
           <p className="text-lg text-gray-300 mb-8">Professional edge computing services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
           <ArrowRight className="w-5h-5ml-2"  />
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
