@@ -2,8 +2,69 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '@/components/Footer';
+import { ArrowRight, CheckCircle, Search, Users, FileText, Zap, RefreshCw } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/FooterSimple';
+
+export default function AccessibilityPage() {
+  const stats = [
+    { number: '1B+', label: 'People with Disabilities' },
+    { number: '71%', label: 'Websites Not Accessible' },
+    { number: '15%', label: 'Global Population' },
+    { number: '$6.9B', label: 'Annual Legal Costs' }
+  ];
+
+  const features = [
+    {
+      title: 'Automated Testing',
+      description: 'AI-powered accessibility testing that identifies issues in real-time',
+      icon: Search,
+      benefits: [
+        'WCAG 2.1 AA compliance checking',
+        'Screen reader compatibility testing',
+        'Keyboard navigation validation',
+        'Color contrast analysis'
+      ]
+    },
+    {
+      title: 'Manual Audits',
+      description: 'Expert accessibility audits by certified professionals',
+      icon: Users,
+      benefits: [
+        'Comprehensive accessibility review',
+        'Detailed remediation recommendations',
+        'Compliance certification',
+        'Ongoing support and training'
+      ]
+    }
+  ];
+
+  const services = [
+    {
+      title: 'Basic Audit',
+      description: 'Essential accessibility testing',
+      icon: FileText,
+      price: '$299'
+    },
+    {
+      title: 'Comprehensive Review',
+      description: 'Full accessibility assessment',
+      icon: Search,
+      price: '$799'
+    },
+    {
+      title: 'Implementation',
+      description: 'Complete accessibility implementation',
+      icon: Zap,
+      price: '$1,999'
+    },
+    {
+      title: 'Ongoing Support',
+      description: 'Continuous accessibility monitoring',
+      icon: RefreshCw,
+      price: '$199/mo'
+    }
+  ];
 
   return (
     <>
@@ -132,7 +193,5 @@ import Footer from '@/components/Footer';
 
       <Footer />
     </>
-  )
+  );
 }
-
-export default AccessibilityPage

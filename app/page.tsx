@@ -2,8 +2,43 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '@/components/Footer';
+import { ArrowRight, Brain, Cloud, Shield, Zap } from 'lucide-react';
+import Footer from './components/FooterSimple';
+
+const HomePage: React.FC = () => {
+  const features = [
+    {
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence services',
+      icon: Brain,
+      href: '/ai-solutions'
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure solutions',
+      icon: Cloud,
+      href: '/cloud-services'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security protection for your business',
+      icon: Shield,
+      href: '/cybersecurity'
+    },
+    {
+      title: 'Performance',
+      description: 'Optimized solutions for maximum efficiency',
+      icon: Zap,
+      href: '/performance'
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99%', label: 'Client Satisfaction' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '5+', label: 'Years Experience' }
+  ];
 
   return (
     <>
@@ -13,8 +48,8 @@ import Footer from '@/components/Footer';
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1>Zion Tech Group - AI & IT Solutions</h1>
-          <p>Professional zion tech group - ai & it solutions services coming soon.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Zion Tech Group - AI & IT Solutions</h1>
+          <p className="text-xl text-gray-300 mb-8">Professional AI & IT solutions services coming soon.</p>
           <Link href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
@@ -22,7 +57,7 @@ import Footer from '@/components/Footer';
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -90,4 +125,6 @@ import Footer from '@/components/Footer';
       <Footer />
     </>
   );
-}
+};
+
+export default HomePage;

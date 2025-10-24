@@ -39,7 +39,7 @@ const benefits = [
 ];
 
 
-import Footer from '@/components/Footer';const Header: React.FC = ($2) => {
+import Footer from '/FooterSimple';const Header: React.FC = ($2) => {
 $3
 };
         <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
