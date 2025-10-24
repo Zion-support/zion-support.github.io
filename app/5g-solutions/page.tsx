@@ -30,6 +30,7 @@ export default function GsolutionsPage() {
       <Footer />
     </div>
     </div>
+>>>>>>> origin/main
   );
 }
 >>>>>>> origin/main
