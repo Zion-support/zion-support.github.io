@@ -1,5 +1,8 @@
+'use client';
+
 import React, { memo } from 'react';
-import EnhancedSEOHead from '../components/EnhancedSEOHead';
+import Link from 'next/link';
+// import EnhancedSEOHead from '../components/EnhancedSEOHead';
 import { useForm } from '../hooks/useForm';
 
 const ContactPage: React.FC = memo(() => {
@@ -39,11 +42,7 @@ const ContactPage: React.FC = memo(() => {
 
   return (
     <>
-      <EnhancedSEOHead
-        title="Contact Us"
-        description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
-        canonicalUrl="https://ziontechgroup.com/contact"
-      />
+      {/* SEO handled by Next.js metadata API */}
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -305,12 +304,12 @@ const ContactPage: React.FC = memo(() => {
               Let's discuss how our AI and IT solutions can transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Start Your Project
-              </a>
-              <a href="/pricing" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              </Link>
+              <Link href="/pricing" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 View Pricing
-              </a>
+              </Link>
             </div>
             <div className="mt-8 text-sm opacity-75">
               <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>

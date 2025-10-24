@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
 
 interface EnhancedSEOHeadProps {
   title: string;
