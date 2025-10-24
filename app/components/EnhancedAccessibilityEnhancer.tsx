@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from './Navigation';
@@ -9,10 +9,10 @@ import Footer from './Footer';
 export default function EnhancedAccessibilityEnhancerPage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>EnhancedAccessibilityEnhancerPage - Zion Tech Group</title>
         <meta name="description" content="Professional enhancedaccessibilityenhancerpage services by Zion Tech Group." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       

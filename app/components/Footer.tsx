@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               {microSaasServices.slice(0, 6).map((service) => (
                 <li key={service.name}>
                   <Link 
-                    to={service.url} 
+                    href={service.url} 
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {service.name}
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               {additionalServices.map((service) => (
                 <li key={service.name}>
                   <Link 
-                    to={service.url} 
+                    href={service.url} 
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {service.name}

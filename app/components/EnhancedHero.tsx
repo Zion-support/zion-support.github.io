@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from './Navigation';
@@ -9,10 +9,10 @@ import Footer from './Footer';
 export default function EnhancedHeroPage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>EnhancedHeroPage - Zion Tech Group</title>
         <meta name="description" content="Professional enhancedheropage services by Zion Tech Group." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       

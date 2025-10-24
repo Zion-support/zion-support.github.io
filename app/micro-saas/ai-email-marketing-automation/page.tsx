@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from '../../components/Navigation';
@@ -9,10 +9,10 @@ import Footer from '../../components/Footer';
 export default function PagePage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>5G Data Analytics - Zion Tech Group - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered email marketing automation with smart segmentation, content generation, and predictive analytics. Increase open rates by 150%. Starting at $29/month." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       

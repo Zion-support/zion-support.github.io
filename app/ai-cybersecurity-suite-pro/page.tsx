@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -9,10 +9,10 @@ import Footer from '../components/Footer';
 export default function PagePage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       

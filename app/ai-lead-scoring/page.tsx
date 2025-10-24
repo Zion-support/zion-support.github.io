@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -9,10 +9,10 @@ import Footer from '../components/Footer';
 export default function PagePage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>AiLeadScoring - Zion Tech Group - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered lead scoring with intent detection, conversion analytics, and automated workflows. Increase conversion rates by 180% and ROI by 250%." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       

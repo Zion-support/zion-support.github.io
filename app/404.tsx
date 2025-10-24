@@ -1,14 +1,14 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist." />
-      </Helmet>
+      </Head>
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-white mb-4">404</h1>

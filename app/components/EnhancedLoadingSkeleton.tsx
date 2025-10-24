@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from './Navigation';
@@ -9,10 +9,10 @@ import Footer from './Footer';
 export default function EnhancedLoadingSkeletonPage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>EnhancedLoadingSkeleton | Zion Tech Group - Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       

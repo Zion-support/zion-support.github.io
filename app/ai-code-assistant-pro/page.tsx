@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -9,10 +9,10 @@ import Footer from '../components/Footer';
 export default function PagePage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>AI Code Assistant Pro - Zion Tech Group - Zion Tech Group</title>
         <meta name="description" content="Professional AI-powered code generation and assistance tool. Boost productivity with intelligent code completion, debugging, and analysis." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       

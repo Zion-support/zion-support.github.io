@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -9,10 +9,10 @@ import Footer from '../components/Footer';
 export default function PagePage() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Case Studies - Zion Tech Group - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI and IT solution implementations across various industries." />
-      </Helmet>
+      </Head>
       
       <Navigation />
       
