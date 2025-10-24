@@ -8,6 +8,8 @@ export interface StructuredData {
   sameAs?: string[];
   telephone?: string;
   email?: string;
+  openingHours?: string[];
+  priceRange?: string;
   contactPoint?: {
     '@type': string;
     telephone: string;
@@ -21,14 +23,12 @@ export interface StructuredData {
     postalCode: string;
     addressCountry: string;
   };
-  openingHours?: string | string[];
-  priceRange?: string;
 }
 
-export const generateStructuredData = (type: string, data: Partial<StructuredData>): StructuredData => {
+export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
   return {
     '@context': 'https://schema.org',
-    '@type': type,
+    '@type': 'Organization',
     name: 'Zion Tech Group',
     description: 'Leading provider of AI and IT solutions for modern businesses',
     url: 'https://ziontechgroup.com',

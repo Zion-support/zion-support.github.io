@@ -3,16 +3,16 @@ export interface Service {
   title: string;
   description: string;
   features: string[];
-  benefits?: string[];
-  pricing?: {
+  benefits: string[];
+  pricing: {
     basic: string;
-    pro?: string;
-    enterprise?: string;
+    pro: string;
+    enterprise: string;
   };
-  contactInfo?: {
+  contactInfo: {
     website: string;
-    email?: string;
-    phone?: string;
+    email: string;
+    phone: string;
   };
   price?: string;
   icon?: string;
@@ -34,10 +34,10 @@ export const aiServices: Service[] = [
       'Machine learning models'
     ],
     benefits: [
-      'Increased efficiency',
-      'Better decision making',
-      'Cost reduction',
-      'Competitive advantage'
+      'Improved decision making',
+      'Reduced manual analysis time',
+      'Enhanced business intelligence',
+      'Cost savings through automation'
     ],
     pricing: {
       basic: '299',
@@ -45,7 +45,7 @@ export const aiServices: Service[] = [
       enterprise: '999'
     },
     contactInfo: {
-      website: '/ai-analytics',
+      website: 'https://ziontechgroup.com/ai-analytics',
       email: 'ai@ziontechgroup.com',
       phone: '+1-555-0123'
     },
@@ -67,10 +67,10 @@ export const aiServices: Service[] = [
       'Process optimization'
     ],
     benefits: [
-      'Time savings',
-      'Reduced errors',
-      'Scalable processes',
-      'Improved productivity'
+      'Increased productivity',
+      'Reduced human error',
+      'Faster processing times',
+      'Scalable operations'
     ],
     pricing: {
       basic: '199',
@@ -78,13 +78,45 @@ export const aiServices: Service[] = [
       enterprise: '799'
     },
     contactInfo: {
-      website: '/ai-automation',
+      website: 'https://ziontechgroup.com/ai-automation',
       email: 'automation@ziontechgroup.com',
       phone: '+1-555-0124'
     },
     price: '$199/month',
     icon: '🤖',
     href: '/ai-automation',
+    category: 'ai'
+  },
+  {
+    id: 'ai-chatbots',
+    title: 'AI Chatbots',
+    description: 'Intelligent conversational AI solutions for customer service and support.',
+    features: [
+      'Natural language processing',
+      'Multi-language support',
+      '24/7 availability',
+      'Integration with existing systems',
+      'Analytics and insights'
+    ],
+    benefits: [
+      'Improved customer satisfaction',
+      'Reduced support costs',
+      'Instant responses',
+      'Scalable customer service'
+    ],
+    pricing: {
+      basic: '149',
+      pro: '299',
+      enterprise: '599'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/ai-chatbots',
+      email: 'chatbots@ziontechgroup.com',
+      phone: '+1-555-0125'
+    },
+    price: '$149/month',
+    icon: '💬',
+    href: '/ai-chatbots',
     category: 'ai'
   }
 ];
@@ -102,9 +134,9 @@ export const itServices: Service[] = [
       'Mobile-first approach'
     ],
     benefits: [
+      'Increased online presence',
       'Better user experience',
       'Higher conversion rates',
-      'Improved search rankings',
       'Mobile accessibility'
     ],
     pricing: {
@@ -113,14 +145,78 @@ export const itServices: Service[] = [
       enterprise: '9999'
     },
     contactInfo: {
-      website: '/web-development',
-      email: 'web@ziontechgroup.com',
-      phone: '+1-555-0125'
+      website: 'https://ziontechgroup.com/web-development',
+      email: 'webdev@ziontechgroup.com',
+      phone: '+1-555-0126'
     },
     price: '$2,999/project',
     icon: '🌐',
     href: '/web-development',
     popular: true,
+    category: 'it'
+  },
+  {
+    id: 'cloud-infrastructure',
+    title: 'Cloud Infrastructure',
+    description: 'Scalable and secure cloud solutions for modern businesses.',
+    features: [
+      'Cloud migration',
+      'Infrastructure as Code',
+      'Auto-scaling',
+      'Disaster recovery',
+      'Security compliance'
+    ],
+    benefits: [
+      'Reduced infrastructure costs',
+      'Improved scalability',
+      'Enhanced security',
+      'Better reliability'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '999',
+      enterprise: '1999'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/cloud-infrastructure',
+      email: 'cloud@ziontechgroup.com',
+      phone: '+1-555-0127'
+    },
+    price: '$499/month',
+    icon: '☁️',
+    href: '/cloud-infrastructure',
+    category: 'it'
+  },
+  {
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+    description: 'Comprehensive security solutions to protect your digital assets.',
+    features: [
+      'Security audits',
+      'Threat monitoring',
+      'Incident response',
+      'Compliance management',
+      'Security training'
+    ],
+    benefits: [
+      'Protection against threats',
+      'Regulatory compliance',
+      'Reduced risk exposure',
+      'Peace of mind'
+    ],
+    pricing: {
+      basic: '399',
+      pro: '799',
+      enterprise: '1499'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/cybersecurity',
+      email: 'security@ziontechgroup.com',
+      phone: '+1-555-0128'
+    },
+    price: '$399/month',
+    icon: '🔒',
+    href: '/cybersecurity',
     category: 'it'
   }
 ];
