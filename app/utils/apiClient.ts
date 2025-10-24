@@ -2,6 +2,7 @@
 import logger from './logger';
 
 // Extend RequestInit to include our custom options
+// eslint-disable-next-line no-undef
 interface ExtendedRequestInit extends RequestInit {
   timeout?: number;
   retries?: number;

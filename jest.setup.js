@@ -1,65 +1,24 @@
-require("@testing-library/jest-dom");
+/**
+ * Jest setup file for testing environment
+ */
+
+import '@testing-library/jest-dom';
 
 // Polyfill for TextEncoder/TextDecoder
-const { TextEncoder, TextDecoder } = require('util');
+import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock files that exist
-jest.mock('./app/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
-
-jest.mock('./app/utils/errorHandler.ts', () => ({
-  handleError: jest.fn(),
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-jest.mock('./app/utils/performance.ts', () => ({
-  measurePerformance: jest.fn(),
-  trackWebVitals: jest.fn(),
-}));
-
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-    }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
-        },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
-      });
-      return React.createElement(RouterProvider, { router });
-    },
-    RouterProvider: ({ router }) => null,
-  };
-});
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
+    return;
+  }
+  originalConsoleError(...args);
+};
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -72,34 +31,83 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });
 
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+// Mock requestAnimationFrame
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn()
 };
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock window.gtag
-global.gtag = jest.fn();
-
-// Mock window.dataLayer
-global.dataLayer = [];
-
-// Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  writable: true,
-  value: jest.fn(),
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock
 });
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn()
+};
+Object.defineProperty(window, 'sessionStorage', {
+  value: sessionStorageMock
+});
+
+// Mock fetch
+global.fetch = jest.fn();
+
+// Mock console methods for cleaner test output
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
+
+console.warn = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleWarn(...args);
+};
+
+console.info = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleInfo(...args);
+};
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  constructor(public _callback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+};
+
+// Mock window.location
+delete window.location;
+window.location = {
+  href: 'http://localhost:3000',
+  origin: 'http://localhost:3000',
+  protocol: 'http:',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
+  pathname: '/',
+  search: '',
+  hash: '',
+  reload: jest.fn(),
+  assign: jest.fn(),
+  replace: jest.fn()
+};
