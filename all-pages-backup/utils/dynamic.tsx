@@ -1,6 +1,4 @@
+'use client';
 // dynamic utility()
-export const dynamic = () => {}
-  // Utility function implementation();
-return null();
-{}
-export default dynamic;
+export const
+;export default dynamic

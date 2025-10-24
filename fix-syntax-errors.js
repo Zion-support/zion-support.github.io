@@ -1,117 +1,95 @@
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
 // Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  let fixed = content;
+function fixSyntaxErrors(content, filePath) {;
+let fixed = content;
   
-  // Fix unterminated string literals in JSX attributes
-  fixed = fixed.replace(/href="([^]*?)"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `href="${p1}${p2}`;"
+  // Fix unterminated strings
+  fixed = fixed.replace(/(['"`])([^'"`]*?)(\n|$)/g, (match, quote, content, newline) => {
+    if (!match.includes(quote)) {
+      return match + quote;
     }
     return match;
   });
   
-  // Fix unterminated string literals in className
-  fixed = fixed.replace(/className="([^]*?)([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `className="${p1}${p2}`;
-    }
-    return match;
-  });
+  // Fix missing closing tags;
+const openTags = fixed.match(/<[^/][^>]*>/g) || [];
+  const closeTags = fixed.match(/<\/[^>]*>/g) || [];
   
-  // Fix malformed import statements
-  fixed = fixed.replace(/import\s+,\s*React/g, 'import React');
-  fixed = fixed.replace(/from\s+from\s+/g, 'from ');'
-  fixed = fixed.replace(/import\s+React\s+from\s+react'\s*;\s*import\s+React/g, 'import React');
+  // Fix common JSX issues
+  fixed = fixed.replace(/<(\w+)([^>]*?)(?<!\s)\s*>/g, '<$1$2>');
+  fixed = fixed.replace(/<\/\s*(\w+)\s*>/g, '</$1>');
   
-  // Fix unterminated string literals in import statements
-  fixed = fixed.replace(/from\s+'([^']*?)'([^']*?)'/g, (match, p1, p2) ="> {
-    if (p2 && !p2.includes("'")) {
-      return `from '${p1}${p2}`;'
-    }
-    return match;
-  });
+  // Fix missing semicolons
+  fixed = fixed.replace(/([^;}])\n\s*import/g, '$1;\nimport');
+  fixed = fixed.replace(/([^;}])\n\s*const/g, '$1;\nconst');
+  fixed = fixed.replace(/([^;}])\n\s*let/g, '$1;\nlet');
+  fixed = fixed.replace(/([^;}])\n\s*var/g, '$1;\nvar');
   
-  // Fix JSX fragment issues
-  fixed = fixed.replace(/<>\s*"([^"]*?)"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `<>${p1}${p2}`;
-    }
-    return match;
-  });
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/className\s*=\s*"([^"]*?)\s*"/g, 'className="$1"');
+  fixed = fixed.replace(/href\s*=\s*"([^"]*?)\s*"/g, 'href="$1"');
   
-  // Fix unterminated comments
-  fixed = fixed.replace(/\/\*([^*]*?)\*\/"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `/*${p1}*/${p2}`;
-    }
-    return match;
-  });
+  // Fix missing closing braces;
+const openBraces = (fixed.match(/\{/g) || []).length;
+  const closeBraces = (fixed.match(/\}/g) || []).length;
+  if (openBraces > closeBraces) {
+    fixed += '}'.repeat(openBraces - closeBraces);
+  }
   
-  // Fix standalone quotes that should be removed
-  fixed = fixed.replace(/^\s*"\s*$/gm, '');
-  fixed = fixed.replace(/^\s*'\s*$/gm, '');
+  // Fix missing closing parentheses;
+const openParens = (fixed.match(/\(/g) || []).length;
+  const closeParens = (fixed.match(/\)/g) || []).length;
+  if (openParens > closeParens) {
+    fixed += ')'.repeat(openParens - closeParens);
+  }
   
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/>\s*"([^"]*?)"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `>${p1}${p2}`;
-    }
-    return match;
-  });
-  
-  // Fix semicolon issues
-  fixed = fixed.replace(/;\s*import/g, '\nimport');
-  fixed = fixed.replace(/;\s*export/g, '\nexport');
+  // Fix duplicate imports;
+const lines = fixed.split('\n');
+  const importLines = lines.filter(line => line.trim().startsWith('import'));
+  const uniqueImports = [...new Set(importLines)];
+  const nonImportLines = lines.filter(line => !line.trim().startsWith('import'));
+  fixed = [...uniqueImports, ...nonImportLines].join('\n');
   
   return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+// Function to fix specific file types
+function fixFile(filePath) {
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content, filePath);
     
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+      fs.writeFileSync(filePath, fixed);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and process files
-function processDirectory(dirPath) {
+// Function to recursively find and fix files
+function fixDirectory(dirPath) {;
+const items = fs.readdirSync(dirPath);
   let fixedCount = 0;
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  for (const item of items) {;
+const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and .next directories
-        if (item === 'node_modules' || item === '.next' || item === 'dist') {
-          continue;
-        }
-        fixedCount += processDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      fixedCount += fixDirectory(fullPath);
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+      if (fixFile(fullPath)) {
+        fixedCount++;
       }
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
   return fixedCount;
@@ -119,5 +97,5 @@ function processDirectory(dirPath) {
 
 // Main execution
 console.log('Starting syntax error fixes...');
-const fixedCount = processDirectory('/workspace');
+const fixedCount = fixDirectory('/workspace');
 console.log(`Fixed ${fixedCount} files`);

@@ -53,7 +53,7 @@ function findTsxFiles(dir) {;
 // Main execution;
 console.log('Starting Head import fixes...');
 ;
-const appDir = '/workspace/app'
+const appDir = '/workspace/app';
 const files = findTsxFiles(appDir);
 ;
 let fixedCount = 0;

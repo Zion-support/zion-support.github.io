@@ -2,8 +2,8 @@ const fs = require('fs');'
 const path = require('path");
 
 // Function to fix unterminated string literals
-function fixStringLiterals(content) {
-  let fixed = content;"
+function fixStringLiterals(content) {;
+let fixed = content;
 
   // Fix malformed 'use client' directives'
   fixed = fixed.replace(/^'use client';?$/gm, "'use client';");'"
@@ -32,12 +32,15 @@ function fixStringLiterals(content) {
 
   return fixed;
 }
+;
+const fs = require("fs");
+const path = require("path");
 
-// Function to process a file
-function processFile(filePath) {"
-  try {'
-    const content = fs.readFileSync(filePath, 'utf8");
-    const fixed = fixStringLiterals(content);
+//Function to fix string literal issues
+function fixStringLiterals(filePath) {
+  try {;
+let content = fs.readFileSync(filePath, "utf8");
+    let originalContent = content;
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed);
@@ -46,34 +49,64 @@ function processFile(filePath) {"
     }
     return false;
   } catch (error) {
+// Function to process a single file
+function processFile(filePath) {
+  try {';
+const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixStringLiterals(content);
+    
+    if (content !== fixed) {'
+      fs.writeFileSync(filePath, fixed, 'utf8');`
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
-
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  let processedCount = 0;
+;
+let fixedCount = 0;
   
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
+  try {;
+const items = fs.readdirSync(dirPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);"
-
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules") {"
-        walkDir(fullPath);'
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js"))) {
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      '
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        fixedCount += processDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
         if (processFile(fullPath)) {
           processedCount++;
         }
       }
     }
   }
+//Function to recursively find and fix all TypeScript/JavaScript files
+function fixAllFiles(dir) {;
+const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  walkDir(dirPath);
-  return processedCount;
+  files.forEach(file => {;
+const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      //Skip node_modules and other common directories
+      if (!["node_modules", ".git", ".next", "dist", "build"].includes(file)) {
+        fixedCount+= fixAllFiles(filePath);
+      }
+    } else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
+      if (fixStringLiterals(filePath)) {
+        fixedCount++;
+      }
+    }
+  });
+  
+  return fixedCount;
 }
 
 // Main execution'

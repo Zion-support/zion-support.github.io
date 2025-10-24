@@ -1,22 +1,39 @@
-const fs = require('fs");"'"
-const path = require('path");"
-
-function createProperPage(filePath) {"'"
-  const fileName = path.basename(filePath, '.tsx");"'"
-  const pageName = fileName.replace(/-/g, ' ").replace(/\b\w/g, l => l.toUpperCase());"
-  "'"
-  const content = `'use client';'"
-import React from 'react'
-import Head from 'next/head';"
-import Link from 'next/link";"'
-import { ArrowRight } from lucide-react";"
-import Footer from '../components/Footer";"'
-"'"
-export default function ${fileName.replace(/-/g, '")}Page() {
-  return (
-    <div>
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight    } from 'lucide-react';
+import Footer from '../components/Footer'
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
+import { Footer  } from "../components/Footer";
+const fs = require('fs');
+const path = require('path');
+;
+function createProperPage(filePath) {;
+  const fileName = path.basename(filePath, '.tsx');
+  const pageName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+;
+  const content = `'use client';
+;
+export default function ${fileName.replace(/-/g, '')}Page() {;
+  return (<div>
       <Head>
         <title>${pageName} - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group."  />"
+      </Head>";
+const fs = require("fs");
+const path = require("path")
+function createProperPage(filePath) {;
+const fileName = path.basename(filePath, ".tsx");
+const pageName = fileName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+const content = `"use client";
+export default function${fileName.replace(/-/g, "")}Page() {
+  return (<div>
+      <Head>
+        <title>${pageName} - Zion Tech Group</title>
+        
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className=min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20>
@@ -44,15 +61,28 @@ export default function ${fileName.replace(/-/g, '")}Page() {
   console.log(`Rewrote: ${filePath}`)}
 function findAndRewritePages(dir) {;
   const files = fs.readdirSync(dir);
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);"
-    const stat = fs.statSync(filePath);"
-    "'"
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {"
-      findAndRewritePages(filePath);"'"
-    } else if (file.endsWith('page.tsx') && !file.includes('layout') && !file.includes('404")) {
-      createProperPage(filePath);
+          >
+            Get Started <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+      <Footer />
+    </div>
+    </>
+  ) }`
+  fs.writeFileSync(filePath, content)
+  console.log(`Rewrote: ${filePath}`)
+}
+
+function findAndRewritePages(dir) {;
+const files = fs.readdirSync(dir)
+  for (const file of files) {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
+    if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
+      findAndRewritePages(filePath)
+    } else if (file.endsWith("page.tsx") && !file.includes("layout") && !file.includes("404")) {
+      createProperPage(filePath)
     }
   }
 }"
