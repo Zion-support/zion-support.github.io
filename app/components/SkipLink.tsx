@@ -34,6 +34,7 @@ const SkipLinkPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const SkipLink: React.FC<SkipLinkProps> = ({ className = '' }) => {
   return (
     <>
       

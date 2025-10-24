@@ -4,4 +4,4 @@ const usePerformanceMonitor.ts = () => {
   return null;
 };
 
-export default usePerformanceMonitor.ts;
+export default usePerformanceMonitor;

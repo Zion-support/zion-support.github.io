@@ -34,6 +34,7 @@ const ContentPreviewCardPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '' }) => {
   return (
     <>
       

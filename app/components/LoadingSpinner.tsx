@@ -34,6 +34,7 @@ const LoadingSpinnerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '' }) => {
   return (
     <>
       

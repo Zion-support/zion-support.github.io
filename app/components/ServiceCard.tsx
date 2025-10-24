@@ -34,6 +34,7 @@ const ServiceCardPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '' }) => {
   return (
     <>
       

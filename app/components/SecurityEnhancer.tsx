@@ -34,6 +34,7 @@ const SecurityEnhancerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '' }) => {
   return (
     <>
       

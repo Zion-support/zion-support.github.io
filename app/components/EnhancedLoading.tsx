@@ -34,6 +34,7 @@ const EnhancedLoadingPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '' }) => {
   return (
     <>
       

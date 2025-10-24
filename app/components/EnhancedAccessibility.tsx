@@ -34,6 +34,7 @@ const EnhancedAccessibilityPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '' }) => {
   return (
     <>
       

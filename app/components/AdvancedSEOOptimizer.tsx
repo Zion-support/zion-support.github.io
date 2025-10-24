@@ -35,6 +35,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '' }) => {
   return (
     <>
       

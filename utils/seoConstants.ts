@@ -4,4 +4,7 @@ const seoConstants.ts = () => {
   return null;
 };
 
-export default seoConstants.ts;
+export const META_TAGS = {
+  viewport: 'width=device-width, initial-scale=1',
+  charset: 'utf-8',
+};

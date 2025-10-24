@@ -34,6 +34,7 @@ const LoadingStatesPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '' }) => {
   return (
     <>
       

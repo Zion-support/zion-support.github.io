@@ -35,6 +35,7 @@ const PerformanceDashboardPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '' }) => {
   return (
     <>
       

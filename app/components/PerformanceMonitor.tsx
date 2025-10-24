@@ -35,6 +35,7 @@ const PerformanceMonitorPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '' }) => {
   return (
     <>
       

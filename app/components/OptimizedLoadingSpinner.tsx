@@ -34,6 +34,7 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '' }) => {
   return (
     <>
       

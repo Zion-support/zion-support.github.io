@@ -34,6 +34,7 @@ const UserExperienceEnhancerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '' }) => {
   return (
     <>
       

@@ -64,6 +64,7 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
     setCurrentSlide((pr, e, v) => (prev - 1 + slides.length) % slides.length)
   }
 
+const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => {
   return (
     <>
       

@@ -38,6 +38,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
+const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '' }) => {
   return (
     <>
       

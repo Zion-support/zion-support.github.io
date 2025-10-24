@@ -53,6 +53,7 @@ const ContentStatistics: React.FC = () => {
     animateCounters()
   }, [])
 
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '' }) => {
   return (
     <>
       

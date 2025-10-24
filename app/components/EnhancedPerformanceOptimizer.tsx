@@ -35,6 +35,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '' }) => {
   return (
     <>
       

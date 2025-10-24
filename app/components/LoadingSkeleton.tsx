@@ -39,6 +39,7 @@ const LoadingSkeletonPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '' }) => {
   return (
     <>
       
