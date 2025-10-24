@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix the destructuring syntax error
+<<<<<<< HEAD
 function fixDestructuringSyntax(content) {
   // Pattern to match the incorrect destructuring syntax
   const pattern = /const WorkingPage = \(\{ title: "Page", description: "Professional page services by Zion Tech Group\." \}: \{ title: string; description: string \}\) => \{/g;
@@ -20,6 +21,21 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
+=======
+function fixDestructuringSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if the file has the problematic pattern
+    if (content.includes('const WorkingPage = ({ title: "Page"')) {
+      // Fix the destructuring syntax
+      content = content.replace(
+        /const WorkingPage = \(\{ title: "Page", description: "Professional page services by Zion Tech Group\." \}: \{ title: string; description: string \}\)/g,
+        'const WorkingPage = ({ title = "Page", description = "Professional page services by Zion Tech Group." }: { title?: string; description?: string })'
+      );
+      
+      fs.writeFileSync(filePath, content, 'utf8');
+>>>>>>> cursor/fix-errors-and-merge-to-main-09e0
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -30,11 +46,20 @@ function processFile(filePath) {
   }
 }
 
+<<<<<<< HEAD
 // Function to recursively find all .tsx files in the app directory
 function findTsxFiles(dir) {
   const files = [];
   
   function traverse(currentDir) {
+=======
+// Function to recursively find and fix all page.tsx files
+function fixAllPages(dir) {
+  let fixedCount = 0;
+  let totalCount = 0;
+  
+  function processDirectory(currentDir) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-09e0
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
@@ -42,13 +67,23 @@ function findTsxFiles(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
+<<<<<<< HEAD
         traverse(fullPath);
       } else if (item.endsWith('.tsx')) {
         files.push(fullPath);
+=======
+        processDirectory(fullPath);
+      } else if (item === 'page.tsx') {
+        totalCount++;
+        if (fixDestructuringSyntax(fullPath)) {
+          fixedCount++;
+        }
+>>>>>>> cursor/fix-errors-and-merge-to-main-09e0
       }
     }
   }
   
+<<<<<<< HEAD
   traverse(dir);
   return files;
 }
@@ -79,3 +114,19 @@ console.log(`\nProcessing complete!`);
 console.log(`Files fixed: ${fixedCount}`);
 console.log(`Errors: ${errorCount}`);
 console.log(`Total files processed: ${tsxFiles.length}`);
+=======
+  processDirectory(dir);
+  console.log(`\nFixed ${fixedCount} out of ${totalCount} page.tsx files`);
+  return { fixedCount, totalCount };
+}
+
+// Start fixing from the app directory
+const appDir = path.join(__dirname, 'app');
+console.log('Starting to fix destructuring syntax errors...');
+const result = fixAllPages(appDir);
+
+console.log(`\nSummary:`);
+console.log(`- Total page.tsx files processed: ${result.totalCount}`);
+console.log(`- Files fixed: ${result.fixedCount}`);
+console.log(`- Files already correct: ${result.totalCount - result.fixedCount}`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-09e0

@@ -1,0 +1,11 @@
+'use client';
+import React from 'react';
+
+export default function OptimizedLoadingSpinner() {
+  return (
+    <div>
+      <h1>OptimizedLoadingSpinner</h1>
+      <p>OptimizedLoadingSpinner content.</p>
+    </div>
+  );
+}

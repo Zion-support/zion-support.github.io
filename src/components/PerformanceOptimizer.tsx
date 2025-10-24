@@ -1,0 +1,11 @@
+'use client';
+import React from 'react';
+
+export default function PerformanceOptimizer() {
+  return (
+    <div>
+      <h1>PerformanceOptimizer</h1>
+      <p>PerformanceOptimizer content.</p>
+    </div>
+  );
+}
