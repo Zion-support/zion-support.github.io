@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import Footer from '../components/Footer';
 
 const PerformanceDashboard: React.FC = () => {
   return (
@@ -84,8 +84,8 @@ const PerformanceDashboard: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
-
+    </>;
+;
   );
 }  )}
 export default PerformanceDashboard

@@ -4,8 +4,8 @@ import  ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Databas
 
 interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 => 
 3 features     features       color "from-red-500 to-pink-500"
-
-const ContentCarousel: React.FC = () => {
+;
+const ContentCarousel: React.FC = () => {;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [

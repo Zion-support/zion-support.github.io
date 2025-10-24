@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import Footer from '../components/Footer';
 
 const ContentPreviewCard: React.FC = () => {
   return (
@@ -83,8 +83,8 @@ const ContentPreviewCard: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
-    </>
+      <Footer /></Footer>;
+    </>;
   );
 };
 

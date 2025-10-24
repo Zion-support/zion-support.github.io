@@ -1,6 +1,6 @@
-'use client'
-import React from 'react'
-import { ArrowRight } from 'lucide-react'
+'use client';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import Link } from 'next/link'
 
 export default function SearchModal() {
@@ -26,7 +26,6 @@ export default function SearchModal() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
+    
   );
 }

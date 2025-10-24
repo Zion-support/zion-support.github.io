@@ -273,8 +273,8 @@ function App() {
             </Routes>
           </Suspense>
         </BrowserRouter>
-      </ErrorBoundary>
-    </HelmetProvider>
+      </ErrorBoundary>;
+    </HelmetProvider>;
   );
 }
 

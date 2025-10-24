@@ -22,6 +22,6 @@ import { { ArrowRight     } from 'lucide-react'
               </div>
             
           </div>
-        </div>
-      </section>
+        </div>;
+      </section>;
 export default PerformanceEnhancerPage }

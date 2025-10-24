@@ -1,8 +1,8 @@
-'use client'
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
+'use client';
+import React from 'react';
+import Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import Footer from '../components/Footer';
 
 const OptimizedImage: React.FC = () => {
   return (
@@ -83,8 +83,8 @@ const OptimizedImage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
-
+    </>;
+;
   );
 }  )}
 export default OptimizedImage

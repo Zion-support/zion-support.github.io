@@ -23,8 +23,8 @@ export default function NotFound() {
           </Link>,
           <button,
             onClick = {
-() => window.history.back(
-        </div>
+() => window.history.back(;
+        </div>;
         </div>);
         </div>
         </div>

@@ -184,8 +184,8 @@ export default function HomePage() {  return (
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>
               Why Choose Zion Tech Group?</h2>
             </h2>
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              With over 4 years of experience in cutting-edge technology solutions, 
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">;
+              With over 4 years of experience in cutting-edge technology solutions, ;
               we&apos;ve helped businesses across various industries transform their operations </p>
               and achieve unprecedented growth.</p>
             </p>

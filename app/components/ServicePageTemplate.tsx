@@ -50,12 +50,6 @@ const ServicePageTemplatePage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-    </div>
-  );,
-  ),
-}
- ServicePageTemplatePage
-=======
+
 export default ServicePageTemplatePage
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d;

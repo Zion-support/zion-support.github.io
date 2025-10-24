@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 
@@ -183,7 +182,9 @@ export default function Footer() {
               </Link>
             ))}
           </div>
->>>>>>> origin/main
+          <div className="text-gray-400 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>

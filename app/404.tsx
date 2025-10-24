@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from 'react';
 import Head from 'next/head';
@@ -8,13 +8,13 @@ import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
 const NotFound = () => {
   return (
     <div>
-      <Head></Head>
+      <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og:type" content="website" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4"></div>,
-        <div className="max-w-2xlw-fulltext-center">,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+        <div className="max-w-2xl w-full text-center">
           {/* 404 Animation */}
           <div className="relative mb-8">
             <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse">
@@ -34,16 +34,15 @@ const NotFound = () => {
           </p>
           
           {/* Search Suggestion */}
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50rounded-xlp-6mb-8">
-        <div className="flex items-center justify-centermb-4">
-              <Search className="w-6h-6text-cyan-400mr-2" /></Search>
-              <h2 className="text-lgfont-semiboldtext-white">What were you looking for?</h2>
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
+            <div className="flex items-center justify-center mb-4">
+              <Search className="w-6 h-6 text-cyan-400 mr-2" />
+              <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
             </div>
             <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages:</p>
             <div className="flex flex-wrap gap-2 justify-center">
               {[
                 { name: "Home", path: "/" },
-        </div>
                 { name: "About", path: "/about" },
                 { name: "Services", path: "/services" },
                 { name: "Contact", path: "/contact" }
@@ -72,7 +71,7 @@ const NotFound = () => {
               onClick={() => window.history.back()}
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
             >
-              <ArrowLeft className="w-5h-5mr-2" /></ArrowLeft>
+              <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
           </div>
@@ -101,8 +100,8 @@ const NotFound = () => {
           </div>
           
           {/* Fun Fact */}
-          <div className="mt-8p-4bg-slate-800/30rounded-lg"></div>
-            <p className="text-smtext-gray-400"></p>
+          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
+            <p className="text-sm text-gray-400">
               <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
               confused sometimes. That's why we have humans to help when things
               go wrong! 🤖
@@ -110,7 +109,7 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -2,8 +2,8 @@
 import { React  ReactNode     } from 'react'
 
 interface Props {
-  children: ReactNode}
-}
+  children: ReactNode};
+};
 ;
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   return (</Props>

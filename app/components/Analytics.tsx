@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 interface AnalyticsProps {
-
-
+;
+;
   className?: string;
 
 

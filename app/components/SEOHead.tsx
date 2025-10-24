@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
-
-interface SEOHeadProps {
+import Footer from '../components/Footer';
+;
+interface SEOHeadProps {;
   title?: string;
   description?: string;
   keywords?: string;

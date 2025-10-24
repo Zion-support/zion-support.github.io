@@ -98,8 +98,8 @@ const PageFixedPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-      <Footer /></Footer>
+      </div>;
+      <Footer /></Footer>;
 </>;
   );
 };
