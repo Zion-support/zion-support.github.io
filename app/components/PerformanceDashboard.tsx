@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface PerformanceDashboardProps {
-  // Add props here
+  className?: string;
 }
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {

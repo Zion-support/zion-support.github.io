@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
-  // Add props here
+  className?: string;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = (_props) => {

@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface SecurityEnhancerProps {
-  // Add props here
+  className?: string;
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {

@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface EnhancedPerformanceMonitorProps {
-  // Add props here
+  className?: string;
 }
 
 const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {

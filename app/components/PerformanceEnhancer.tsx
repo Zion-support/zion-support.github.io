@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface PerformanceEnhancerProps {
-  // Add props here
+  className?: string;
 }
 
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
