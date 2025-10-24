@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-
-// Basic test structure
-describe('Advanced Components', () => {
-  it('renders without crashing', () => {
-    expect(true).toBe(true);
-=======
-import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 
@@ -100,6 +92,5 @@ describe('AdvancedErrorBoundary', () => {
     expect(screen.getByText('Test content')).toBeInTheDocument();
     
     consoleSpy.mockRestore();
->>>>>>> cursor/fix-errors-and-merge-to-main-0278
   });
 });

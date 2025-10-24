@@ -55,7 +55,7 @@ const DemoPage: React.FC = () => {
                         : 'bg-white/10 hover: bg-white/20 border-2 border-transparent'}`}
                   >
                     <div className="flex items-center mb-4">
-                      {demo.icon}
+                      <demo.icon className="w-8 h-8 text-cyan-400" />
                       <h3 className="text-xl font-bold text-white ml-3">{demo.title}</h3>
                     </div>
                     <p className="text-gray-300 mb-4">{demo.description}</p>
@@ -83,7 +83,7 @@ const DemoPage: React.FC = () => {
                 <div className="bg-black/50 rounded-lg p-8 mb-8">
                   <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg">
                     <div className="text-center">
-                      <Play className="w-8 h-8" />
+                      <Play className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                       <h3 className="text-xl font-bold text-white mb-2">Demo Coming Soon</h3>
                       <p className="text-gray-400">
                         This interactive demo is currently under development. Contact us to schedule a live demonstration.
