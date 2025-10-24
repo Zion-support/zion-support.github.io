@@ -1,82 +1,27 @@
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
+import tseslint from 'typescript-eslint';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
 
 export default [
-  js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'out/**',
-      '*.config.js',
-      '*.config.ts',
-      '*.config.mjs',
-      'add-missing-routes*.jsx',
-      'aggressive-*.js',
-      'aggressive-*.cjs',
-      'batch-*.js',
-      'cleanup-*.js',
-      'cleanup-*.cjs',
-      'comprehensive-*.js',
-      'fix-*.js',
-      'fix-*.cjs',
-      '*.cjs',
-      'create-*.js',
-      'identify-*.js',
-      'merge-*.js',
-      'remove-*.js',
-      'simple-*.js',
-      'website-*.js',
-      'resolve-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'analyze-*.js',
-      '*.broken',
-      '*.backup',
-      'temp-*.js',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'jest.setup.js',
-      'app-broken/**',
-      'app-disabled/**'
-    ],
+    ignores: ['dist', 'node_modules', '*.config.js'],
+  },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: 2020,
       globals: {
-        window: 'readonly',
-        document: 'readonly',
+        ...globals.browser,
+        ...globals.node,
         console: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        HTMLElement: 'readonly',
-        Event: 'readonly',
-        KeyboardEvent: 'readonly',
-        MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        performance: 'readonly',
-        require: 'readonly',
         module: 'readonly',
-        exports: 'readonly',
-        fs: 'readonly'
+        require: 'readonly',
+        process: 'readonly',
       },
-      parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true
@@ -84,25 +29,14 @@ export default [
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
     },
     rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn'
     },
-    settings: {
-      react: {
-        version: 'detect'
-      }
-    }
-  }
+  },
 ];

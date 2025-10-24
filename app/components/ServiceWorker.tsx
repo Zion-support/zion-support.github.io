@@ -1,6 +1,6 @@
 'use client'
+import { Metadata } from 'next';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -42,11 +42,15 @@ const ServiceWorkerPage: React.FC = () => {
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>ServiceWorker - Zion Tech Group</title>
         <meta name="description" content="Advanced serviceworker solutions powered by AI technology." />
         <meta name="keywords" content="AI, artificial intelligence, ServiceWorker, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -144,16 +148,16 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {
 
 export default ServiceWorkerPage;
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
+      navigator.serviceWorker;
         .register('/sw.js')
         .then((registration) => {
           // // console.log('SW registered: ', registration)
         })
-        .catch((registrationError) => {
+        .catch((registrationError) =</ {
           // // console.log('SW registration failed: ', registrationError)
         })
     }
   }, [])
-  return nul l
+  return nul l;
 }
-export default ServiceWorker
+export default ServiceWorker;

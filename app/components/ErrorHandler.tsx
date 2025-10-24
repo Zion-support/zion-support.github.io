@@ -1,7 +1,7 @@
 'use client'
+import { Metadata } from 'next';
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
@@ -45,11 +45,15 @@ const ErrorHandlerPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>ErrorHandler</title>
         <meta name="description" content="Advanced ErrorHandler solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}

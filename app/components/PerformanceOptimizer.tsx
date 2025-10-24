@@ -1,6 +1,6 @@
 'use client'
+import { Metadata } from 'next';
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
 
 import React, { useEffect, useState, useCallback } from 'react'
@@ -8,33 +8,27 @@ import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
 
-interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps {;
   className?: string;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true,
-}) => {
-  const [isOptimizing, setIsOptimizing] = useState(false)
+  enableCodeSplitting = true}) =</ {const [isOptimizing, setIsOptimizing] = useState(false)
   const [optimizationStatus, setOptimizationStatus] = useState<{
-    images: boolean
-    lazyLoading: boolean
-    preloading: boolean
-    codeSplitting: boolean
-  }>({
-    images: false,
+    images: boolean;
+    lazyLoading: boolean;
+    preloading: boolean;
+    codeSplitting: boolean;
+  }>({images: false,
     lazyLoading: false,
     preloading: false,
-    codeSplitting: false,
-  })
+    codeSplitting: false})
 
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return
-
-    // Optimize images
+    if (!enableImageOptimization) return;
+    // Optimize images;
     const images = document.querySelectorAll('img')
     images.forEach((img) => {
   
@@ -42,32 +36,31 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         img.loading = 'lazy'
       }
 
-      // Add WebP support detection
+      // Add WebP support detection;
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
         const webpSrc = img.src.replace('.jpg', '.webp')
         const webpImg = new Image()
         webpImg.onload = () => {
-          img.src = webpSrc
+          img.src = webpSrc;
         }
-        webpImg.src = webpSrc
+        webpImg.src = webpSrc;
       }
     })
 
-    setOptimizationStatus(prev => ({ ...prev, images: true }))
+    setOptimizationStatus(prev => ({...prev, images: true }))
   }, [enableImageOptimization])
 
   const enableLazyLoadingOptimization = useCallback(() => {
-    if (!enableLazyLoading) return
-
+    if (!enableLazyLoading) return;
     // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver(
       (entries) => {
   
         entries.forEach((entry) => {
   
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
-              img.src = img.dataset.src
+              img.src = img.dataset.src;
               img.removeAttribute('data-src')
               observer.unobserve(img)
             }
@@ -151,11 +144,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>PerformanceOptimizer</title>
         <meta name="description" content="Advanced PerformanceOptimizer solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}

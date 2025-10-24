@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
@@ -67,8 +68,15 @@ const ContactPage: React.FC = () => {
     "Consulting",
     "Other"
   ];
+=======
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
 
+const ContactPage = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -79,23 +87,27 @@ const ContactPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Ready to transform your business with AI and technology? Let's start the conversation.
+=======
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      <main className="max-w-7xl mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get in touch with our team to discuss your AI and IT needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
           </p>
         </div>
-      </section>
-
-      {/* Contact Info Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4 mx-auto">
-                  <info.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
-                <p className="text-emerald-600 font-medium mb-2">{info.details}</p>
-                <p className="text-gray-600 text-sm">{info.description}</p>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-gray-900">Phone</h3>
+                <p className="text-gray-600">(302) 600-9898</p>
               </div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -120,136 +132,70 @@ const ContactPage: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
               <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon!</p>
+=======
+              <div>
+                <h3 className="font-semibold text-gray-900">Email</h3>
+                <p className="text-gray-600">info@ziontechgroup.com</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900">Address</h3>
+                <p className="text-gray-600">
+                  Zion Tech Group<br />
+                  Technology Center<br />
+                  United States
+                </p>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
+          </div>
+          
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service}>{service}</option>
-                    ))}
-                  </select>
-                </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
-
-              <div className="mb-6">
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
+                  Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                  placeholder="Tell us about your project or how we can help you..."
-                />
+                  rows={4}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
               </div>
-
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <Send className="mr-2 h-5 w-5" />
                 Send Message
               </button>
             </form>
-          )}
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600">
-              Quick answers to common questions about our services.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">How quickly can you start a project?</h3>
-              <p className="text-gray-600">We typically begin new projects within 1-2 weeks of contract signing, depending on our current workload and project complexity.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you work with small businesses?</h3>
-              <p className="text-gray-600">Absolutely! We work with businesses of all sizes, from startups to enterprise companies. Our solutions are scalable to meet your needs and budget.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">What technologies do you specialize in?</h3>
-              <p className="text-gray-600">We specialize in AI/ML, cloud computing, web development, mobile apps, and data analytics. We stay current with the latest technologies and frameworks.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you provide ongoing support?</h3>
-              <p className="text-gray-600">Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after launch.</p>
-            </div>
           </div>
         </div>
-      </section>
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -12,11 +12,10 @@ interface ErrorReport {
   error: Error;
 }
 
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
+interface State {hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
@@ -43,15 +42,27 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     this.setState({
       error,
       errorInfo,
       errorId: this.generateErrorId()
     })
     // Call custom error handler if provided
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // // console.error('Error caught by boundary:', error, errorInfo)
     }
+    // Log error to external service in production;
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo)
+    }
+<<<<<<< HEAD
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo)
@@ -60,9 +71,11 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)
     }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) =</ {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
       errorId: this.state.errorId,

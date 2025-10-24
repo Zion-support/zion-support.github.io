@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 'use client';
 
@@ -224,3 +225,29 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
+=======
+
+      interface FormData {},
+      name: string,
+      email: string,
+      phone: string,
+      company: string,
+      message: string,
+      service: string
+name: ","
+      email: ","
+      phone: ","
+      company: ","
+      message: ","
+      service: "}),"
+    } catch (error) {};"
+      } finally {}"
+      setIsSubmitting(false)"
+        {isSubmitting ? "Sending..." : "Send Message"}"
+      </button>"
+    </form>"
+  )"
+},"
+      "
+import React from '
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2

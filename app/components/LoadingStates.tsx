@@ -1,6 +1,6 @@
 'use client'
+import { Metadata } from 'next';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -44,11 +44,15 @@ const LoadingStatesPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>LoadingStates</title>
         <meta name="description" content="Advanced LoadingStates solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, LoadingStates, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}

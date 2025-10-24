@@ -1,12 +1,12 @@
 'use client'
+import { Metadata } from 'next';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ServiceCardSkeletonPage: React.FC = () => {
+const ServiceCardSkeletonPage: React.FC = () =>{
   const features = [
     {
       icon: Brain,
@@ -45,11 +45,15 @@ const ServiceCardSkeletonPage: React.FC = () => {
 const ServiceCardSkeleton: React.FC = () => {
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>ServiceCardSkeleton</title>
         <meta name="description" content="Advanced ServiceCardSkeleton solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ServiceCardSkeleton, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}

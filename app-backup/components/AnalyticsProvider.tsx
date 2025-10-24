@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
+declare global {interface Window {
+    gtag: (...args: any[]) => void;
   }
 }
 
 interface AnalyticsContextType {
+<<<<<<< HEAD:app-backup/components/AnalyticsProvider.tsx
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
   trackPageView: (pageName: string) => void
 }
@@ -23,6 +23,12 @@ export const useAnalytics = () => {
   return context
 }
 
+=======
+  track: (event: string, properties?: Record<string, any>) => void
+  identify: (userId: string, traits?: Record<string, any>) => void
+  page: (name: string, properties?: Record<string, any>) => void}
+const AnalyticsContext  = createContext<AnalyticsContextType | undefined>(undefined)
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2:app/components/AnalyticsProvider.tsx
 interface AnalyticsProviderProps {
   children: ReactNode
 }
@@ -35,12 +41,27 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         const script = document.createElement(&quot;script&quot;)
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
         script.async = true
+  
+}
+  return context;
+}
+
+interface AnalyticsProviderProps {children: ReactNode;
+}
+
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() =</ {
+  
+    if (type of windo w !=="undefined") {
+      // Google Analytics;
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
+        script.src = `https: //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+        script.async = true;
         document.head.appendChild(script)
 
         window.gtag =
           window.gtag ||
-          function (...args: any[]) {
-            (window.gtag as any).q = (window.gtag as any).q || []
+          function (...args: any[]) {(window.gtag as any).q = (window.gtag as any).q || []
             (window.gtag as any).q.push(args)
           }
         window.gtag(&quot;js&quot;, new Date())
@@ -61,14 +82,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
       window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
         page_title: pageName,
-        page_location: window.location.href,
-      })
+        page_location: window.location.href})
     }
   }
 
   constvalue: AnalyticsContextType = {trackEvent,
-    trackPageView,
-  }
+    trackPageView}
 
   return (
     <AnalyticsContext.Provider value={value}>

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 "use client"
+=======
+import { Metadata } from 'next';
+&quot;use client&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
 
 const PerformanceOptimizationsPage: React.FC = () => {
   const features = [
@@ -38,11 +43,15 @@ const PerformanceOptimizationsPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>PerformanceOptimizations</title>
         <meta name="description" content="Advanced PerformanceOptimizations solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, PerformanceOptimizations, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}

@@ -1,6 +1,6 @@
 'use client'
+import { Metadata } from 'next';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -44,11 +44,15 @@ const ErrorBoundaryPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>ErrorBoundary</title>
         <meta name="description" content="Advanced ErrorBoundary solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation" />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -146,7 +150,7 @@ const ErrorBoundaryPage: React.FC = () => {
 };
 
 export default ErrorBoundaryPage;
-error?: Error
+error?: Error;
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
 super(props)
@@ -154,20 +158,21 @@ this.state= { hasError: false}
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production;
 if (process.env.NODE_ENV=== 'production') {
-// In production, you would send this to an error reporting service
+// In production, you would send this to an error reporting service;
 // Example: errorReportingService.captureException(error, { extra: errorInfo})
 }
 this.setState({errorerrorInfo})
 }
 handleReload= () => {windo w.location.reload()}
-handleGoHome= () => {windo w.location.href= '/'}
+handleGoHome= () =</ {windo w.location.href= '/'}
 render() {if (this.state.hasError) {
 if (this.props.fallback) {
-return this.props.fallback
+return this.props.fallback;
 }
 return (
+<<<<<<< HEAD
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
 <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center"></div>
 <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
@@ -181,11 +186,27 @@ return (
 Error Details (Development)
 </summary>
 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
+=======
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div />
+<div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center"></div />
+<div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div />
+<AlertTriangle className="w-8 h-8 text-red-400" / />
+</div />
+<h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1 />
+<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p</
+{process.env.NODE_ENV === 'development' && this.state.error && (
+<details className="mb-6 text-left" />
+<summary className="text-sm text-gray-400 cursor-pointer mb-2" />
+Error Details (Development)
+</summary />
+<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
 {this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
-</pre>
-</details>
+</pre />
+</details />
 )}
+<<<<<<< HEAD
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <button
 onClick={this.handleReload}
@@ -213,3 +234,27 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
+=======
+<div className="flex flex-col sm: flex-row gap-4 justify-center"></div />
+<button onClick={this.handleReload}
+className="flex items-center justify-center space-x-2 bg-cyan-600 hover: bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+></button />
+<RefreshCw className="w-4 h-4" / />
+<span>Reload Page</span />
+</button />
+<button onClick={this.handleGoHome}
+className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+></button />
+<Home className="w-4 h-4" / />
+<span>Go Home</span />
+</button />
+</div />
+<div className="mt-6 pt-6 border-t border-white/20"></div />
+<p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team:</p>p</
+<a href="mailto:kleber@ziontechgroup.com"
+className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" />
+<Phone className="w-4 h-4 mr-2" / />kleber@ziontechgroup.com</a />
+</div />
+</div />
+</div />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2

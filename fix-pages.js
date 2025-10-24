@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -154,3 +155,27 @@ console.log(`Fixed ${totalFixed} page files.`);
 =======
 console.log(`Fixed ${totalFixed} page files`);
 >>>>>>> cursor/fix-errors-and-merge-to-main-04fb
+=======
+#!/usr/bin/env node
+import fs from 'fs';'
+import { execSync } from 'child_process';'
+const files  = execSync('find ./app -name "page.tsx" -o -name "*.tsx" | grep -v components', { encoding: 'utf8'
+  .split('\n'
+    let: content = fs.readFileSync(file, 'utf8'
+    // Fix all malformed quote patterns: content = content.replace(/'/g, '
+    content = content.replace(/"/g, '
+    content = content.replace(/"/g, '
+    content = content.replace(/"/g, '
+    content = content.replace(/'
+    content = content.replace(/import\s+([^']*?)"/g, "import $1'
+    content = content.replace(/import\s+([^"]*?)"/g, '
+    content = content.replace(/from\s+'([^']*?)"/g, "from '
+    content = content.replace(/from\s+"([^"]*?)"/g, '
+    // Clean up any remaining malformed patterns: content = content.replace(/"/g, '
+    content = content.replace(/"/g, '
+    content = content.replace(/"/g, '
+    // Fix unterminated strings: content = content.replace(/'([^']*?)\n/g, "$1'
+    content = content.replace(/"([^"]*?)\n/g, "$1"\n'
+    // Clean up extra whitespace: content = content.replace(/\n\s*\n\s*\n/g, '\n\n'
+    content = content.replace(/\s+\n/g, '\n'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2

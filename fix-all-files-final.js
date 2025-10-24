@@ -1,94 +1,31 @@
-const fs = require('fs');
-const path = require('path');
-
-function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
-    let modified = false;
-
-    // Check if file needs "use client" directive
-    if (!content.includes('"use client"') && !content.includes("'use client'")) {
-      content = '"use client";\n' + content;
-      modified = true;
-    }
-
-    // Check if file needs React import
-    if (!content.includes('import React') && content.includes('export default function')) {
-      content = content.replace(/^/, 'import React from "react";\n\n');
-      modified = true;
-    }
-
-    // Fix malformed JSX closing structure
-    if (content.includes('););')) {
-      content = content.replace(/<\/div>\s*\);\s*\);/g, '\n    </div>\n  );\n}');
-      modified = true;
-    }
-
-    // Fix missing closing div tags
-    if (content.includes('</div>\n  );')) {
-      content = content.replace(/<\/div>\s*\);\s*}/g, '\n    </div>\n  );\n}');
-      modified = true;
-    }
-
-    // Fix extra closing div tags pattern
-    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(content)) {
-      content = content.replace(extraDivPattern, '\n    </div>\n  );');
-      modified = true;
-    }
-
-    // Fix incorrect closing tags
-    content = content.replace(/<\s*\/\s*>/g, '</div>');
-    if (content.includes('</>')) {
-      modified = true;
-    }
-
-    // Fix h1/h2/h3 tag mismatches
-    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
-    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
-    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
-
-    // Fix extra closing braces
-    content = content.replace(/}\s*}\s*$/g, '}');
-    if (content.match(/}\s*}\s*$/)) {
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-
-// Get all TypeScript/TSX files in the app directory
-function getAllTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath.replace(__dirname + '/', ''));
-    }
-  }
-  
-  return files;
-}
-
-// Fix all TSX/TS files
-console.log('Starting final comprehensive fixes...');
-const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-allFiles.forEach(fixFile);
-console.log('Final comprehensive fixes completed!');
+#!/usr/bin/env node
+// Get all files that need fixing
+const files  = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v ".git", { encoding: 'utf8'
+  .split('\n'
+    let: content = fs.readFileSync(file, 'utf8'
+    // Fix all malformed quote patterns systematically: content = content.replace(/'
+    content = content.replace(/'
+    content = content.replace(/'
+    content = content.replace(/'
+    content = content.replace(/'
+    content = content.replace(/import\s+([^']*?)';/g, "import $1'
+    content = content.replace(/import\s+([^"]*?)';/g, 'import $1'
+    content = content.replace(/from\s+'([^']*?)';/g, "from '
+    content = content.replace(/from\s+"([^"]*?)';/g, 'from "$1'
+    // Fix JSX attributes: content = content.replace(/className="([^"]*?)'/g, '
+    content = content.replace(/title="([^"]*?)';/g, '
+    content = content.replace(/description="([^"]*?)';/g, '
+    // Fix object properties: content = content.replace(/title:\s*'([^']*?)'/g, "title: '$1'
+    content = content.replace(/description:\s*'([^']*?)';/g, "description: '$1'
+    content = content.replace(/icon:\s*([^,]*?)';/g, 'icon: $1,'
+    // Clean up any remaining malformed patterns: content = content.replace(//g, '
+    content = content.replace(/';/g, '
+    content = content.replace(/;/g, '
+    // Fix unterminated strings: content = content.replace(/'([^']*?)\n/g, "$1'
+    content = content.replace(/"([^"]*?)\n/g, "$1"\n'
+    // Fix malformed JSX: content = content.replace(/<([^>]*?)>$/gm, '<$1>'
+    content = content.replace(/<\/([^>]*?)>$/gm, '</$1>'
+    // Fix missing semicolons: content = content.replace(/}\s*$/gm, '}'
+    content = content.replace(/;\s*$/gm, '
+    // Clean up extra whitespace: content = content.replace(/\n\s*\n\s*\n/g, '\n\n'
+    content = content.replace(/\s+\n/g, '\n'

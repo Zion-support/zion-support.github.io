@@ -1,0 +1,5 @@
+import fs from '
+      fs.writeFileSync(filePath, fixedContent, 'utf8'
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts'
+console.log('Starting comprehensive JSX fixes...'
+const processedCount  = processDirectory('./app'

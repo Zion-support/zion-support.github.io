@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 "use client"
 import React from "react"
 import { Helmet } from "react-helmet-async"
+=======
+&quot;use client&quot;
+import { Metadata } from 'next';
+import React from &quot;react&quot;
+import { Helmet } from &quot;react-helmet-async&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
 
 const PerformanceImagePage: React.FC = () => {
   const features = [
@@ -28,7 +35,7 @@ const PerformanceImagePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -36,10 +43,11 @@ const PerformanceImagePage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>PerformanceImage | Zion Tech Group</title>
         <meta name="description" content="Professional PerformanceImage services by Zion Tech Group." />
@@ -50,13 +58,20 @@ const PerformanceImagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">PerformanceImage</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>p>
+=======
+      
+      <section className=&quot;py-20 px-4&quot;></section>
+        <div className=&quot;container mx-auto max-w-6xl&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>PerformanceImage</h1>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional PerformanceImage services tailored to your business needs.</p>p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
           </div>
         </div>
       </section>
     </div>
   )
-}
+, }
 
-export default PerformanceImagePage
-
+export default PerformanceImagePage;
 export default PerformanceImagePage;

@@ -6,13 +6,14 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-interface EnhancedSEOHeadProps {
+interface EnhancedSEOHeadProps {;
   className?: string;
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps>= ({className = '' }) =</ {
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>{title}</title>
         <meta name="description" content="Zion Tech Group" />
@@ -113,8 +114,17 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => 
     </>
   );
 };
+=======
+      <Helmet />
+        <title>{title}</title />
+        <meta name="description" content="Zion Tech Group" / />
+        <meta name="keywords" content="AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation" / />
+      </Helmet />
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
 
 export default EnhancedSEOHeadPage;
   )
 }
-export default EnhancedSEOHead
+export default EnhancedSEOHead;

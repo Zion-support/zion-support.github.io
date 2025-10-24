@@ -1,17 +1,16 @@
 'use client'
+import { Metadata } from 'next';
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
-interface ContentNewsletterSignupProps {
-  title?: string
-  subtitle?: string
-  placeholder?: string
-  buttonText?: string
+interface ContentNewsletterSignupProps {title?: string;
+  subtitle?: string;
+  placeholder?: string;
+  buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>
     text: string
@@ -62,11 +61,15 @@ interface ContentNewsletterSignupProps {
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
   return (
     <>
+<<<<<<< HEAD:app-backup/components/ContentNewsletterSignup.tsx
       <Helmet>
         <title>ContentNewsletterSignup</title>
         <meta name=&quot;description&quot; content=&quot;Advanced ContentNewsletterSignup solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation&quot; />
       </Helmet>
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2:app/components/ContentNewsletterSignup.tsx
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -188,5 +191,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
     </>
   );
 };
+    icon: React.ComponentType<{ className?: string } />text: string;
+  , }>
+  onSubscribe?: (email: string) =</ void;
+, }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= "Stay Updated with Our LatestInsights",
+  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox.",
+  placeholder= "Enter your emailaddress",
+  buttonText= "Subscribe",
+  features= [
 
 export default ContentNewsletterSignupPage;
