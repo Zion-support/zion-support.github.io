@@ -1,9 +1,18 @@
-"use client";
+"use client"
+
 import React from 'react';
 
-const testRunner = ($2) => {
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-$3};
+const Component: React.FC<Props> = ({ children, className }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
 
-export default testRunner
-;
+export default Component;

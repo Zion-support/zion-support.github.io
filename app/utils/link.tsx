@@ -1,12 +1,18 @@
-'use client';
+"use client"
+
 import React from 'react';
 
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-// link utility;
+const Component: React.FC<Props> = ({ children, className }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
 
-export const link = ($2) => {
-
-$3};
-
-export default link
-;
+export default Component;

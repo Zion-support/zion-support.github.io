@@ -53,7 +53,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         observers.push(lcpObserver)
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
         console.error('Error setting up LCP observer:', error)
       }
     }
@@ -79,7 +79,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] })
         observers.push(fidObserver)
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
         console.error('Error setting up FID observer:', error)
       }
     }
@@ -106,7 +106,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         observers.push(clsObserver)
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
         console.error('Error setting up CLS observer:', error)
       }
     }
@@ -128,7 +128,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         memory
       }))
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
       console.error('Error measuring TTFB:', error)
     }
 
@@ -138,7 +138,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         try {
           observer.disconnect()
         } catch (error) {
-          // eslint-disable-next-line no-console
+           
           console.error('Error disconnecting observer:', error)
         }
       })
@@ -154,7 +154,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     )
 
     if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
+       
       console.log(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({

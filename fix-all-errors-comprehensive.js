@@ -8,8 +8,7 @@ import { glob } from 'glob';
 function fixMergeConflicts(content) {
   // Remove merge conflict markers and keep the HEAD version
   return content
-    .replace(/<<<<<<< HEAD\n/g, '')
-    .replace(/=======.*?\n>>>>>>> [^\n]+\n?/gs, '')
+// Merge conflict resolved - keeping HEAD version
     .replace(/=======.*?\n<<<<<<< [^\n]+\n?/gs, '')
     .replace(/>>>>>>> [^\n]+\n?/g, '');
 }
