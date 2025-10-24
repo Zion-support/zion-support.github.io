@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import, React, { useState, useCallback } from "react"
+import React, { useState, useCallback } from "react"
 interface ImageProps {
 
 

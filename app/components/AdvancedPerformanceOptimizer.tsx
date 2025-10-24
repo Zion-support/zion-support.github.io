@@ -1,5 +1,5 @@
 "use client"
-import, React, { useEffect, useCallback, useState } from "react"
+import React, { useEffect, useCallback, useState } from "react"
 interface PerformanceMetrics {
 lcp: "number
   fid: number

@@ -1,10 +1,8 @@
 "use client"
-import React from "react";
-import { useRouter  } from "next/navigation";
-import, React, { Suspense, lazy } from "react"
-import { BrowserRouter, Routes, Route   } from "react-router-dom";
-import { HelmetProvider  } from "react-helmet-async";
-import { { ErrorBoundary   } from "./components/ErrorBoundary";
+import React, { Suspense, lazy } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { PerformanceMonitor  } from "./components/PerformanceMonitor";
 import { AccessibilityEnhancer  } from "./components/AccessibilityEnhancer"
 import { LoadingSpinner  } from "./components/LoadingSpinner"
@@ -145,8 +143,7 @@ function App() {
   return (<HelmetProvider>
       <ErrorBoundary>
         <BrowserRouter>
-          <Suspense fallback = {<LoadingSpinner />
-}>
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages*/}
               <Route path = "/" element={<HomePage />} />
@@ -275,5 +272,4 @@ function App() {
         </BrowserRouter>
       </ErrorBoundary>
     </HelmetProvider>)
-  )
 }

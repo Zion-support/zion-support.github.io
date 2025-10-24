@@ -35,7 +35,7 @@ export default ImageOptimizerPage
         <meta name="keywords" content="AI, artificial, intelligence, ImageOptimizer, AI, solutions, intelligent automation" />
 
       </Helmet>
-    </div> <section className="py-20 px-4" /> <div className="container mx-auto max-w-6 xl" /> <div className="text-center mb-16" />
+    </div> <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6">ImageOptimizer</h1>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed">Professional ImageOptimizer services tailored to your business needs.</p>p>
 

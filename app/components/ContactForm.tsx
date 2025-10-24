@@ -48,13 +48,13 @@ const services = ["AI Solutions"
 if(isSubmitted) {
 return (</HTMLInputElement> <>
 
-      </HTMLInputElement> <div className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 border border-white/10 text-center" /> <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+      </HTMLInputElement> <div className="[^"]*"> <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
     <h1 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
 )
   )
 
-return (<div className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 border border-white/10" />
+return (<div className="[^"]*">
     <h1 className="text-2 xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6" />
     <div className="grid md: grid-cols-2 gap-6">
@@ -147,7 +147,7 @@ disabled={isSubmitting}
          />
           {isSubmitting?(</button> <>
 
-    </div>,<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
+    </div>,<div className="[^"]*">
 Sending...
               </div>
     </>

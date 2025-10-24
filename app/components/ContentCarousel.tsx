@@ -1,5 +1,5 @@
 "use client"
-import { { { React  useState useEffect  from "react" } from;
+import React  useState useEffect  from "react" } from;
 import ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users, Settings     } from "lucide-react"
 interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 => 
 3 features     features       color "from-red-500 to-pink-500"
@@ -67,12 +67,12 @@ return (<div>
 
       </Helmet>
     </div>
-      <Navigation /> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
-        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" /> <div className="relative max-w-7 xl mx-auto text-center" /> <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" />
+      <Navigation /> <div className="[^"]*">
+        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
 ContentCarousel
-            </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed" />
+            </h1> <p className="[^"]*">
 Advanced ContentCarousel solution for modern businesses.
-            </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />
+            </p>,<div className="[^"]*">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
 Get Started <ArrowRight className="ml-2 h-5 w-5" />
               </button>
@@ -81,10 +81,10 @@ Learn More
               </button>
 
           ,</section>
-        {/* Features Section*/} <section className="py-20 px-4" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
+        {/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
 Powerful AI-driven features designed to transform your business operations
-              </p> <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8" />)
+              </p> <div className="[^"]*">)
               {features.map((feature,index) => (<divkey = {index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
     <h1 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -99,20 +99,20 @@ Powerful AI-driven features designed to transform your business operations
               ))}
 
         </section>
-        {/* Benefits Section*/} <section className="py-20 px-4 bg-white/5" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
-    <h1 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
+        {/* Benefits Section*/} <section className="py-20 px-4 bg-white/5" /> <div className="[^"]*"> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2> <p className="[^"]*">
 Experience the benefits of cutting-edge AI technology
-              </p> <div className="relative" />
+              </p> <div className="[^"]*">
     <div className="overflow-hidden rounded-xl">
-      <divclassName="flex transition-transform duration-500 ease-in-out&quot
+      <divclassName="[^"]*"
 style={{ transform: "`translateX(-${currentSlide*100"};%)`} />
     </div>{slides.map((slide, index) => ("
-<divkey = {index};className="w-full flex-shrink-0" /> <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8" /> <div className="text-center mb-8" /> <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4" />
+<divkey = {index};className="w-full flex-shrink-0" /> <div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*">
                         <slide.icon className="h-10 w-10 text-white" />
     <h1 className="text-2 xl font-bold mb-4">{slide.title}</h3>
-                      <p className="text-purple-100 text-lg max-w-2 xl mx-auto">{slide.description}</p> <div className="grid grid-cols-1 md: grid-cols-2 gap-4" />{slide.features.map((feature,featureIndex) => (<divkey = {featureIndex};className="flex items-center" /> <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-    <span className="text-purple-100">{feature}</span> <div className="flex-1" />
-    <h1 className="text-2 xl font-boldtext-gray-900 mb-4">{slide.title}</h3> <p className="text-gray-600 mb-6" />
+                      <p className="text-purple-100 text-lg max-w-2 xl mx-auto">{slide.description}</p> <div className="[^"]*">{slide.features.map((feature,featureIndex) => (<divkey = {featureIndex};className="flex items-center" /> <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+    <span className="text-purple-100">{feature}</span> <div className="[^"]*">
+    <h1 className="text-2 xl font-boldtext-gray-900 mb-4">{slide.title}</h3> <p className="[^"]*">
             {slide.description}
           </p> <ul className="space-y-2" />
                           {slide.features.map((feature, index) => (<li key = {index};className="flexitems-centertext-gray-700" /> <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
@@ -121,17 +121,17 @@ style={{ transform: "`translateX(-${currentSlide*100"};%)`} />
                           ))}
                         </ul>
 
-              ))} <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4" /> <div className="max-w-7 xl mx-auto" />{/* Header*/} <div className="text-center mb-16" /> <h1 className="text-3 xl md: text-4 xl font-bold text-white mb-6" /></h2>
+              ))} <div className="[^"]*"> <div className="[^"]*">{/* Header*/} <div className="[^"]*"> <h1 className="[^"]*"></h2>
 Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
 
         {/* Carousel Container*/}
-        {/* Carousel*/} <div className="relative" /> <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2 xl p-8 md: p-12 overflow-hidden" />,<div className="flex items-center justify-between mb-8" /> <div className="flex items-center gap-4" /> <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center" />
+        {/* Carousel*/} <div className="[^"]*"> <div className="[^"]*">,<div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*">
                   <currentSlideData.icon className="w-8 h-8 text-slate-900" />
 
-                {/* Features*/} <div className="space-y-4" />
-    <h1 className="text-lg font-semibold text-white mb-4">Key Features: "</h4>",<div className="grid grid-cols-1 sm: grid-cols-2 gap-3" />{currentSlideData.features.map((feature,index) => (<divkey = {index};className="flex items-center space-x-3" /> <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                {/* Features*/} <div className="[^"]*">
+    <h1 className="text-lg font-semibold text-white mb-4">Key Features: "</h4>",<div className="[^"]*">{currentSlideData.features.map((feature,index) => (<divkey = {index};className="flex items-center space-x-3" /> <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
     <span className="text-gray-300">{feature}</span>
     </div>
     </>
@@ -150,11 +150,11 @@ Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r fro
                   </div>
     </>
   )}
-                {/* CTA*/} <div className="flex flex-col sm: flex-row gap-4" /> <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" /> <Zap className="w-5 h-5" />
+                {/* CTA*/} <div className="[^"]*"> <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" /> <Zap className="w-5 h-5" />
 Get Started <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300" /> <ArrowRight className="w-5 h-5" />
 Learn More
                 </div>,</div>
-              {/* Visual Element*/} <div className="relative" /> <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2 xl flex items-center justify-center" /> <div className="text-center" /> <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center" />
+              {/* Visual Element*/} <div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*">
                       <currentSlideData.icon className="w-16 h-16 text-white" />
                     </div>
     <div className="text-4 xl font-bold text-white mb-2">{currentSlideData.title}</div>div>
@@ -334,11 +334,11 @@ index === currentSlide?"bg-cyan-400" : "bg-white/30"
             />
           ))}
         </div>
-{/* Additional Info*/} <div className="mt-16 text-center" /> <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4 xl mx-auto" />,<div className="flex items-center justify-center gap-3 text-white" /> <Star className="w-6 h-6 text-yellow-400" /> <div className="text-left" />
+{/* Additional Info*/} <div className="[^"]*"> <div className="[^"]*">,<div className="[^"]*"> <Star className="w-6 h-6 text-yellow-400" /> <div className="[^"]*">
     <div className="text-2 xl font-bold">4.9/5</div>
     <div className="text-gray-400 text-sm">Customer Rating</div>
               </div>
-            </div> <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8" />
+            </div> <div className="[^"]*">
               {benefits.map((benefit,index) => (<divkey = {index};className="flex items-start space-x-4" /> <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -347,10 +347,10 @@ index === currentSlide?"bg-cyan-400" : "bg-white/30"
             </div>
           </div>
         </section>
-        {/* CTA Section*/} <section className="py-20 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Transform Your Business?</h2> <p className="text-xl text-gray-300 mb-8" />
+        {/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Transform Your Business?</h2> <p className="[^"]*">
 Join thousands of businesses already using our AI solutions
-            </p> <div className="flex flex-col sm: flex-row gap-4 justify-center" />
+            </p> <div className="[^"]*">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 Start Free Trial
               </button>

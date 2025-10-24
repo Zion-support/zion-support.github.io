@@ -32,12 +32,12 @@ return (<div>
 
       </Helmet>
     </div>
-      <Navigation /> <div className="min-h-screen bg-gray-900" />
+      <Navigation /> <div className="[^"]*">
         {/* Hero Section*/}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-7 xl mx-auto" /> <div className="text-center" /> <h1 className="text-4 xl md: text-6 xl font-bold text-white mb-6" />Enhanced SEO Optimizer
-              </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" />Advanced SEO optimization tools powered by AI that maximize your search engine
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">Enhanced SEO Optimizer
+              </h1> <p className="[^"]*">Advanced SEO optimization tools powered by AI that maximize your search engine
 visibility and drive organic traffic to your website.
-              </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />
+              </p>,<div className="[^"]*">
                 <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
 Get Started <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </button>
@@ -48,12 +48,12 @@ Learn More
         </section>
 
         {/* Features Section*/}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
 Key Features
-              </h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />Our enhanced SEO optimizer provides comprehensive tools for maximum visibility.
+              </h2> <p className="[^"]*">Our enhanced SEO optimizer provides comprehensive tools for maximum visibility.
               </p>
-            </div>,<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8" />)
+            </div>,<div className="[^"]*">)
               {features.map((feature,index) => (<divkey = {index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors" />
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />,<h1 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -67,7 +67,7 @@ Key Features
 
             </div>
           </div>
-    <divclassName="flex flex-col sm: flex-row gap-4 justify-center" / //>,<div className="grid grid-cols-1 md: grid-cols-2 gap-6" />
+    <divclassName="flex flex-col sm: flex-row gap-4 justify-center" / //>,<div className="[^"]*">
               {benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
     </div>
@@ -78,10 +78,10 @@ Key Features
         </section>
 
         {/* CTA Section*/}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-4 xl mx-auto text-center" /> <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
-Ready to Optimize Your SEO?</h2> <p className="text-xl text-purple-100 mb-8" />
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="[^"]*"> <div className="[^"]*">,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
+Ready to Optimize Your SEO?</h2> <p className="[^"]*">
 Get started with our enhanced SEO optimizer today.
-              </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />
+              </p>,<div className="[^"]*">
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"> <Phone className="mr-2 h-5 w-5 inline" />
 Call Now
                 </button>

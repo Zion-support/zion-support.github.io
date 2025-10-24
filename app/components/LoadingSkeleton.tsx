@@ -34,12 +34,12 @@ return (<div>
 
       </Helmet>
     </div>
-      <Navigation//> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
-            {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" /> <div className="relative max-w-7 xl mx-auto text-center" /> <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" />
+      <Navigation//> <div className="[^"]*">
+            {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
 LoadingSkeleton</h1>
-            </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed" />
+            </h1> <p className="[^"]*">
 Advanced LoadingSkeleton solution for modern businesses.</p>
-            </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" /> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
 Get Started</button> <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
@@ -48,8 +48,8 @@ Learn More</button>
 
               </button>
 
-        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
+        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
 Powerful AI-driven features designed to transform your business operations</p>
               </p>
     <divclassName="grid md: "grid-cols-2 l","
@@ -67,8 +67,8 @@ g: grid-cols-4 gap-8" />)
                   </ul>
 
         </section>
-        {/* Benefits Section*/} <section className="py-20 px-4 bg-white/5" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
-    <h1 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
+        {/* Benefits Section*/} <section className="py-20 px-4 bg-white/5" /> <div className="[^"]*"> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2> <p className="[^"]*">
 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
@@ -84,10 +84,10 @@ g: grid-cols-3 gap-8" //>
             </div>
           </div>
         </section>
-        {/* CTA Section*/} <section className="py-20 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Transform Your Business?</h2> <p className="text-xl text-gray-300 mb-8" />
+        {/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Transform Your Business?</h2> <p className="[^"]*">
 Join thousands of businesses already using our AI solutions</p>
-            </p> <div className="flex flex-col sm: flex-row gap-4 justify-center" /> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+            </p> <div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Start Free Trial</button>
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","

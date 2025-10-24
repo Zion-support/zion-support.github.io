@@ -1,8 +1,8 @@
 "use client"
-import, React, { Suspense } from "react"
-import { BrowserRouter, as, Router, Routes, Route   } from "react-router-dom";
-import { HelmetProvider  } from "react-helmet-async";
-import { { { "./app/styles/futuristic.css"
+import React, { Suspense } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import "./app/styles/futuristic.css"
 //Components
 import Navigation from "./app/components/Navigation"
 import Footer from "./app/components/Footer"
@@ -77,13 +77,12 @@ function App() {
 
   return (<HelmetProvider>
       <ErrorBoundaryWrapper>
-        <Router>
+        <BrowserRouter>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <FuturisticBackground />
             <Navigation />
             <Breadcrumb />
-            <Suspense fallback={<LoadingSpinner />
-} >
+            <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path = "/" element={<HomePage />} />
                 <Route path = "/about" element={<AboutPage />} />
@@ -155,10 +154,9 @@ function App() {
             </AccessibilityEnhancer>
             <PerformanceMonitor />
           </div>
-        </Router>
+        </BrowserRouter>
       </ErrorBoundaryWrapper>
     </HelmetProvider>)
-  )
 }
 
 export default App
