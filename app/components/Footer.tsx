@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' }
-  ]
+  ];
 
   return (
     <footer className="bg-slate-900 text-white py-12">
