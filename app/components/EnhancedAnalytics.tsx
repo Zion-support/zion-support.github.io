@@ -1,11 +1,11 @@
-&quot;use client&quot;
+"use client"
 
-import React, { createContext, useContext, useEffect } from &quot;react&quot;
+import React, { createContext, useContext, useEffect } from "react"
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void
-  identify: (userId: string, traits?: Record<string, unknown>) => void
-  page: (name: string, properties?: Record<string, unknown>) => void
+  track: (event: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
+  page: (name: string, properties?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
@@ -13,56 +13,58 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 )
 
 export const useAnalytics = () => {
+  return;
   const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
-  }
-  return context
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  
+}
+  return context;
 }
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+, }
 
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
-    // Initialize analytics
-    if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics
-      if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
-        script.async = true
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
+    // Initialize analytics;
+    if (type of windo w !=="undefined") {
+      // Google Analytics;
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
+        script.async = true;
+        script.src = `https: //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID, }`
         document.head.appendChild(script)
 
-        (window as unknown as { dataLayer: unknown[] }).dataLayer =
-          (window as unknown as { dataLayer: unknown[] }).dataLayer || []
+        (window as unknown as { dataLayer: unknown[] , }).dataLayer =
+          (window as unknown as { dataLayer: unknown[] , }).dataLayer || []
         function gtag(...args: unknown[]) {
-          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
+          (window as unknown as { dataLayer: unknown[] , }).dataLayer.push(args)
         }
-        gtag(&quot;js&quot;, new Date())
-        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
+        gtag("js", new Date())
+        gtag("config", process.env.REACT_APP_GA_ID)
       }
     }
   }, [])
 
-  consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics
-      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;event&quot;,
+  consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
+      // Google Analytics;
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void, }).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void, }).gtag(
+         "event",
           event,
           properties,
         )
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   }
 
-  constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics
-      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;config&quot;,
+  constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
+      // Google Analytics;
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void, }).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void, }).gtag(
+         "config",
           process.env.REACT_APP_GA_ID,
           {user_id: userId,
             custom_map: traits,
@@ -70,15 +72,15 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   }
 
-  constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics
-      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;event&quot;,
-         &quot;page_view&quot;,
+  constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !=="undefined") {
+      // Google Analytics;
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void, }).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void, }).gtag(
+         "event",
+         "page_view",
           {page_title: name,
             page_location: windo w.location.href,
             ...properties,
@@ -86,7 +88,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   }
 
@@ -96,18 +98,18 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   }
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value} />
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider />
   )
 }
 
-// Extend Window interface for TypeScript
+// Extend Window interface for TypeScript;
 declare global {
   interface Window {
     dataLayer: unknown[]
-    gtag: (...args: any[]) => void
-  }
+    gtag: (...args: any[]) => void;
+  , }
 }
 'use client'
 import React from 'react'
@@ -154,100 +156,97 @@ const EnhancedAnalyticsPage: React.FC = () => {
   return (
     <>
       
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <Navigation / />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedAnalytics
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <section className="relative py-20 px-4 overflow-hidden" />
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
+          <div className="relative max-w-7xl mx-auto text-center" />
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              EnhancedAnalytics;
+            </h1 />
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" />
               Advanced EnhancedAnalytics solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </p />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+                Get Started;
+                <ArrowRight className="ml-2 h-5 w-5" / />
+              </button />
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+                Learn More;
+              </button />
+            </div />
+          </div />
+        </section />
+        {/* Features Section */, }
+        <section className="py-20 px-4" />
+          <div className="max-w-7xl mx-auto" />
+            <div className="text-center mb-16" />
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2 />
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
+                Powerful AI-driven features designed to transform your business operations;
+              </p />
+            </div />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" />
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" / />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3 />
+                  <p className="text-gray-300 mb-4">{feature.description}</p />
+                  <ul className="space-y-2" />
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-sm text-gray-300" />
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" / />
                         {benefit}
-                      </li>
+                      </li />
                     ))}
-                  </ul>
-                </div>
+                  </ul />
+                </div />
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div />
+          </div />
+        </section />
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-20 px-4 bg-white/5" />
+          <div className="max-w-7xl mx-auto" />
+            <div className="text-center mb-16" />
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2 />
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
+                Experience the benefits of cutting-edge AI technology;
+              </p />
+            </div />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" />
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                <div key={index} className="flex items-start space-x-4" />
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / />
+                  <p className="text-gray-300 text-lg">{benefit}</p />
+                </div />
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div />
+          </div />
+        </section />
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
+        <section className="py-20 px-4" />
+          <div className="max-w-4xl mx-auto text-center" />
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2 />
+            <p className="text-xl text-gray-300 mb-8" />
+              Join thousands of businesses already using our AI solutions;
+            </p />
+            <div className="$1"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+                Start Free Trial;
+              </button />
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+                Contact Sales;
+              </button />
+            </div />
+          </div />
+        </section />
+      </div />
+      <Footer / />
+    </>;
   );
-};
+, };
 
 export default EnhancedAnalyticsPage;

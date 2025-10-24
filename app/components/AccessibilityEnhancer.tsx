@@ -14,18 +14,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true
+  enableFocusManagement = true;
 }) => {
   useEffect(() => {
-    // Only run in browser environment
+    // Only run in browser environment;
     if (typeof window === 'undefined') return;
 
-    // Add keyboard navigation support
+    // Add keyboard navigation support;
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
+        // Skip to main content;
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
+          const mainContent = document.querySelector('main, [role="main"]');
           if (mainContent) {
             (mainContent as HTMLElement).focus();
             event.preventDefault();
@@ -39,16 +39,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation]);
 
   useEffect(() => {
-    // Add screen reader support
+    // Add screen reader support;
     if (enableScreenReaderSupport) {
-      // Add skip links
+      // Add skip links;
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
 
-      // Add ARIA landmarks
+      // Add ARIA landmarks;
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
@@ -67,17 +67,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableScreenReaderSupport]);
 
   useEffect(() => {
-    // Add high contrast support
+    // Add high contrast support;
     if (enableHighContrast) {
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
             border-color: currentColor !important;
-          }
+          , }
           button, a {
             border: 2px solid currentColor !important;
-          }
+          , }
         }
       `;
       document.head.appendChild(style);
@@ -85,9 +85,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableHighContrast]);
 
   useEffect(() => {
-    // Add focus management
+    // Add focus management;
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
       const trapFocus = (element: HTMLElement) => {
         const focusableContent = element.querySelectorAll(focusableElements);
@@ -111,8 +111,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         });
       };
 
-      // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+      // Apply focus trapping to modals;
+      const modals = document.querySelectorAll('[role="dialog"]');
       modals.forEach(trapFocus);
     }
   }, [enableFocusManagement]);

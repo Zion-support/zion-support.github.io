@@ -1,12 +1,12 @@
 "use client";
 
 /**
- * Accessibility Utilities
- * Provides helper functions for accessibility enhancements
+ * Accessibility Utilities;
+ * Provides helper functions for accessibility enhancements;
  */
 
 /**
- * Check if an element is visible to screen readers
+ * Check if an element is visible to screen readers;
  */
 export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
   const style = window.getComputedStyle(element);
@@ -15,42 +15,42 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
     style.visibility !== 'hidden' &&
     element.getAttribute('aria-hidden') !== 'true'
   );
-};
+, };
 
 /**
- * Get accessible name for an element
+ * Get accessible name for an element;
  */
 export const getAccessibleName = (element: HTMLElement): string => {
-  // Check aria-label first
+  // Check aria-label first;
   const ariaLabel = element.getAttribute('aria-label');
   if (ariaLabel) return ariaLabel;
 
-  // Check aria-labelledby
+  // Check aria-labelledby;
   const ariaLabelledBy = element.getAttribute('aria-labelledby');
   if (ariaLabelledBy) {
     const labelElement = document.getElementById(ariaLabelledBy);
     if (labelElement) return labelElement.textContent || '';
-  }
+  , }
 
-  // Check for associated label
+  // Check for associated label;
   if (element.id) {
     const label = document.querySelector(`label[for="${element.id}"]`);
     if (label) return label.textContent || '';
   }
 
-  // Fallback to text content
+  // Fallback to text content;
   return element.textContent || element.getAttribute('alt') || '';
 };
 
 /**
- * Check if element has proper focus management
+ * Check if element has proper focus management;
  */
 export const hasProperFocus = (element: HTMLElement): boolean => {
   return element.tabIndex >= 0 || element.getAttribute('tabindex') !== null;
-};
+, };
 
 /**
- * Get color contrast ratio between two colors
+ * Get color contrast ratio between two colors;
  */
 export const getContrastRatio = (color1: string, color2: string): number => {
   const getLuminance = (color: string): number => {
@@ -74,15 +74,15 @@ export const getContrastRatio = (color1: string, color2: string): number => {
 };
 
 /**
- * Check if color combination meets WCAG standards
+ * Check if color combination meets WCAG standards;
  */
 export const meetsWCAGStandards = (foreground: string, background: string): boolean => {
   const ratio = getContrastRatio(foreground, background);
-  return ratio >= 4.5; // AA standard
+  return ratio >= 4.5; // AA standard;
 };
 
 /**
- * Generate ARIA attributes for better accessibility
+ * Generate ARIA attributes for better accessibility;
  */
 export const generateARIA = (element: HTMLElement, options: {
   role?: string;
@@ -91,7 +91,7 @@ export const generateARIA = (element: HTMLElement, options: {
   expanded?: boolean;
   selected?: boolean;
   hidden?: boolean;
-}) => {
+, }) => {
   if (options.role) element.setAttribute('role', options.role);
   if (options.label) element.setAttribute('aria-label', options.label);
   if (options.describedBy) element.setAttribute('aria-describedby', options.describedBy);
@@ -101,7 +101,7 @@ export const generateARIA = (element: HTMLElement, options: {
 };
 
 /**
- * Announce message to screen readers
+ * Announce message to screen readers;
  */
 export const announceToScreenReader = (message: string): void => {
   const announcement = document.createElement('div');
@@ -118,7 +118,7 @@ export const announceToScreenReader = (message: string): void => {
 };
 
 /**
- * Check if element is keyboard accessible
+ * Check if element is keyboard accessible;
  */
 export const isKeyboardAccessible = (element: HTMLElement): boolean => {
   const tagName = element.tagName.toLowerCase();
@@ -132,7 +132,7 @@ export const isKeyboardAccessible = (element: HTMLElement): boolean => {
 };
 
 /**
- * Focus management utilities
+ * Focus management utilities;
  */
 export const focusManagement = {
   trap: (container: HTMLElement): (() => void) => {
@@ -149,7 +149,7 @@ export const focusManagement = {
         if (document.activeElement === firstElement) {
           lastElement.focus();
           e.preventDefault();
-        }
+        , }
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
@@ -168,7 +168,7 @@ export const focusManagement = {
 
   restore: (element: HTMLElement | null): void => {
     if (element) element.focus();
-  }
+  , }
 };
 
 export default {
@@ -180,5 +180,5 @@ export default {
   generateARIA,
   announceToScreenReader,
   isKeyboardAccessible,
-  focusManagement
+  focusManagement;
 };

@@ -10,7 +10,6 @@ const nextConfig = {
     missingSuspenseWithCSRBailout: false,
   },
   // Disable static optimization to avoid auth errors
-  generateStaticParams: false,
   // Skip problematic pages during build
   async redirects() {
     return [

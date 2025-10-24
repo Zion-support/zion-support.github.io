@@ -1,23 +1,23 @@
 'use client'
 /**
- * Testing Utilities
- * Provides helper functions and utilities for testing
+ * Testing Utilities;
+ * Provides helper functions and utilities for testing;
  */
 
 /**
- * Wait for a specified amount of time
+ * Wait for a specified amount of time;
  */
 export const wait = (ms: number): Promise<void> => {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
 /**
- * Wait for a condition to be true
+ * Wait for a condition to be true;
  */
 export const waitFor = async (
   condition: () => boolean,
   timeout = 5000,
-  interval = 100
+  interval = 100;
 ): Promise<void> => {
   const startTime = Date.now()
   while (!condition()) {
@@ -29,7 +29,7 @@ export const waitFor = async (
 }
 
 /**
- * Mock fetch for testing
+ * Mock fetch for testing;
  */
 export const mockFetch = (
   response: unknown,
@@ -37,26 +37,26 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
+    (global as typeof global & { fetch: typeof fetch , }).fetch = jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
         headers: new Headers(headers),
         json: async () => response,
         text: async () => JSON.stringify(response)
-      } as Response)
-    ) as typeof fetch
+      , } as Response)
+    ) as typeof fetch;
   }
 }
 
 /**
- * Mock local storage
+ * Mock local storage;
  */
 export class MockStorage implements Storage {
   private store: Map<string, string> = new Map()
 
   get length(): number {
-    return this.store.size
+    return this.store.size;
   }
 
   clear(): void {
@@ -64,17 +64,17 @@ export class MockStorage implements Storage {
   }
 
   getItem(key: string): string | null {
-    return this.store.get(key) || null
-  }
+    return this.store.get(key) || null;
+  , }
 
   key(index: number): string | null {
     const keys = Array.from(this.store.keys())
-    return keys[index] || null
-  }
+    return keys[index] || null;
+  , }
 
   removeItem(key: string): void {
     this.store.delete(key)
-  }
+  , }
 
   setItem(key: string, value: string): void {
     this.store.set(key, value)
@@ -82,21 +82,21 @@ export class MockStorage implements Storage {
 }
 
 /**
- * Create a mock localStorage for testing
+ * Create a mock localStorage for testing;
  */
 export const createMockStorage = (): MockStorage => {
   return new MockStorage()
 }
 
 /**
- * Mock window object
+ * Mock window object;
  */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
+export const mockWindow = (overrides: Partial<Window> = {, }): void => {
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {
         ...global.window,
-        ...overrides
+        ...overrides;
       },
       writable: true,
     })
@@ -104,7 +104,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
 }
 
 /**
- * Create a mock performance API
+ * Create a mock performance API;
  */
 export const createMockPerformance = (): Performance => {
   const entries: PerformanceEntry[] = []
@@ -116,7 +116,7 @@ export const createMockPerformance = (): Performance => {
         entryType: 'mark',
         startTime: Date.now(),
         duration: 0,
-        toJSON: () => ({})
+        toJSON: () => ({, })
       } as PerformanceEntry)
     },
     measure: (name: string, startMark?: string, endMark?: string) => {
@@ -125,31 +125,31 @@ export const createMockPerformance = (): Performance => {
         entryType: 'measure',
         startTime: Date.now(),
         duration: 100,
-        toJSON: () => ({})
+        toJSON: () => ({, })
       } as PerformanceEntry)
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
     getEntries: () => entries,
     clearMarks: () => {
-      entries.length = 0
-    },
+      entries.length = 0;
+    , },
     clearMeasures: () => {
-      entries.length = 0
-    },
-    clearResourceTimings: () => {},
-    setResourceTimingBufferSize: () => {},
-    toJSON: () => ({}),
-    addEventListener: () => {},
-    removeEventListener: () => {},
+      entries.length = 0;
+    , },
+    clearResourceTimings: () => {, },
+    setResourceTimingBufferSize: () => {, },
+    toJSON: () => ({, }),
+    addEventListener: () => {, },
+    removeEventListener: () => {, },
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
-  } as unknown as Performance
+  } as unknown as Performance;
 }
 
 /**
- * Generate random test data
+ * Generate random test data;
  */
 export const generateTestData = {
   string: (length = 10): string => {
@@ -158,63 +158,63 @@ export const generateTestData = {
       .substring(2, length + 2)
   },
   number: (min = 0, max = 100): number => {
-    return Math.floor(Math.random() * (max - min + 1)) + min
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   },
   boolean: (): boolean => {
-    return Math.random() > 0.5
-  },
+    return Math.random() > 0.5;
+  , },
   email: (): string => {
-    return `test${generateTestData.string(5)}@example.com`
+    return `test${generateTestData.string(5), }@example.com`
   },
   url: (): string => {
-    return `https://example.com/${generateTestData.string(10)}`
+    return `https://example.com/${generateTestData.string(10), }`
   },
   date: (): Date => {
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
-  },
+  , },
   array: <T>(generator: () => T, length = 5): T[] => {
     return Array.from({ length }, generator)
   }
 }
 
 /**
- * Deep clone an object
+ * Deep clone an object;
  */
 export const deepClone = <T>(obj: T): T => {
   return JSON.parse(JSON.stringify(obj))
-}
+, }
 
 /**
- * Compare objects for equality
+ * Compare objects for equality;
  */
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
   return JSON.stringify(obj1) === JSON.stringify(obj2)
-}
+, }
 
 /**
- * Spy on console methods
+ * Spy on console methods;
  */
 export class ConsoleSpy {
-  private originalConsole: Console
+  private originalConsole: Console;
   private logs: string[] = []
   private errors: string[] = []
   private warnings: string[] = []
 
   constructor() {
-    this.originalConsole = { ...console }
+    this.originalConsole = { ...console , }
     this.mock()
   }
 
   private mock(): void {
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
-    }
+    , }
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
-    }
+    , }
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
-    }
+    , }
   }
 
   getLogs(): string[] {
@@ -241,38 +241,38 @@ export class ConsoleSpy {
 }
 
 /**
- * Create a deferred promise
+ * Create a deferred promise;
  */
 export interface Deferred<T> {
-  promise: Promise<T>
-  resolve: (value: T) => void
-  reject: (reason?: unknown) => void
-}
+  promise: Promise<T />
+  resolve: (value: T) => void;
+  reject: (reason?: unknown) => void;
+, }
 
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (value: T) => void
-  let reject: (reason?: unknown) => void
+  let resolve: (value: T) => void;
+  let reject: (reason?: unknown) => void;
   const promise = new Promise<T>((res, rej) => {
-    resolve = res
-    reject = rej
+    resolve = res;
+    reject = rej;
   })
   return { promise, resolve, reject }
 }
 
 /**
- * Retry a function with exponential backoff
+ * Retry a function with exponential backoff;
  */
 export const retryWithBackoff = async <T>(
   fn: () => Promise<T>,
   maxRetries = 3,
-  initialDelay = 1000
+  initialDelay = 1000;
 ): Promise<T> => {
-  let lastError: Error
+  let lastError: Error;
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn()
-    } catch (error) {
-      lastError = error as Error
+    , } catch (error) {
+      lastError = error as Error;
       if (i < maxRetries - 1) {
         await wait(initialDelay * Math.pow(2, i))
       }
@@ -282,14 +282,14 @@ export const retryWithBackoff = async <T>(
 }
 
 /**
- * Measure execution time of a function
+ * Measure execution time of a function;
  */
 export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> => {
+  fn: () => T | Promise<T />
+): Promise<{ result: T; duration: number , }> => {
   const start = performance.now()
   const result = await fn()
-  const duration = performance.now() - start
+  const duration = performance.now() - start;
   return { result, duration }
 }
 
@@ -306,5 +306,5 @@ export default {
   ConsoleSpy,
   createDeferred,
   retryWithBackoff,
-  measureExecutionTime
+  measureExecutionTime;
 }

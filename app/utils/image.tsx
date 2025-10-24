@@ -3,43 +3,43 @@ import React from 'react'
 'use client'
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
-src: string,
-alt: string;}
+src: string,;
+alt: string;, }
 interface ImageProps {}
 src: string,
-alt: string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
+alt: string;
+width?: number;
+height?: number;
+className?: string;
+priority?: boolean;
+_quality?: number;
 src: string,
 alt: string,
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
+width?: number;
+height?: number;
+className?: string;
+priority?: boolean;
+_quality?: number;
 src: string,
 alt: string,
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
+width?: number;
+height?: number;
+className?: string;
+priority?: boolean;
+_quality?: number;
 _placeholder?: 'blur' | 'empty'
-_blurDataURL?: string
-fill?: boolean
-sizes?: string
-style?: React.CSSProperties
-onLoad?: () => void
+_blurDataURL?: string;
+fill?: boolean;
+sizes?: string;
+style?: React.CSSProperties;
+onLoad?: () => void;
 onError?: () => void;}
 }
-export const Image: React.FC<ImageProps>= ({;}
-export const Image: React.FC<ImageProps> = ({}
+export const Image: React.FC<ImageProps>= ({;, }
+export const Image: React.FC<ImageProps> = ({, }
 src,
 export const Image: React.FC<ImageProps> = ({,
-src
+src;
 alt,
 width,
 height,
@@ -66,12 +66,12 @@ setHasError(true)
 if (onError) onError();}
 }, [onError])
 const imageStyle: React.CSSProperties = {
-...style
+...style;
 ...(fill && {
 position: 'absolute'
 top: 0,
 left: 0,;}
-const imageStyle: React.CSSProperties = {}
+const imageStyle: React.CSSProperties = {, }
 ...style,
 ...(fill && {}
 position: 'absolute',
@@ -79,10 +79,10 @@ top: 0,
 left: 0,
 width: '100%',
 height: '100%',
-objectFit: 'cover'}
+objectFit: 'cover', }
 })
 }
-if (hasError) {</ImageProps>
+if (hasError) {</ImageProps />
 return (</ImageProps>;}
 if (hasError) {}
 return (
@@ -91,34 +91,34 @@ if (hasError) {;}
 return(<div}
 'use client'
 import React, { useState, useCallback } from 'react'
-interface ImageProps {/* TODO: Fix JSX expression */}
+interface ImageProps {/* TODO: Fix JSX expression */, }
 }
 export const,
-Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
-}) => {/* TODO: Fix JSX expression */}
+Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */, })</div />
+}) => {/* TODO: Fix JSX expression */, }
 }, [onLoad])
-const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+const handleError = useCallback(() => {/* TODO: Fix JSX expression */, }
 }, [onError])
 const,
-imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */, }
 })
 }
-if (hasError) {/* TODO: Fix JSX expression */}
+if (hasError) {/* TODO: Fix JSX expression */, }
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style={imageStyle}
 {...props})
->)</div>
+>)</div />
 <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 </div>)
 ),
 {...props}
-></div>
-<span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-</div>
+></div />
+<span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span />
+</div />
 )
-}
-return(<img
-return (<img></img>
+, }
+return(<img;
+return (<img /><//img>
 src={src}
 alt={alt}
 width={width}
@@ -130,6 +130,7 @@ loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
 {...props}
->)</img>
-}</img>
-export default Image</img>
+>)</img />
+}</img />
+export default Image</img />
+;

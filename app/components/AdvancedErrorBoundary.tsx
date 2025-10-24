@@ -3,44 +3,44 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 import { Mail } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-interface AdvancedErrorBoundaryProps {
+interface AdvancedErrorBoundaryProps {;
   className?: string;
 }
 
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
-}
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
+, }
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false , }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now(), }_${Math.random().toString(36).substr(2, 9)}`
     }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo;
     })
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
     }
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       // // console.error('Error caught by boundary:', error, errorInfo)
     }
-    // Log error to external service in production
+    // Log error to external service in production;
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)
     }

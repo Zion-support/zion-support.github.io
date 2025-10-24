@@ -14,19 +14,19 @@ import { ArrowRight } from 'lucide-react'
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-                </div>
+                </div />
               ))}
-            </div>
-          </div>
-          </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
-              <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
-                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-              </div>
+            </div />
+          </div />
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div />
+              <div key={index} className="flex items-start space-x-3"></div />
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" / />
+                <p className="text-gray-300 text-lg">{benefit}</p />
+              </div />
             ))}
-          </div>
-        </div>
-      </section>
+          </div />
+        </div />
+      </section />
 }
-export default PerformanceEnhancerPage
+export default PerformanceEnhancerPage;
