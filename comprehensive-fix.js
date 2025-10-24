@@ -1,187 +1,120 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to create a clean, working component template
-function createCleanComponent(fileName, content) {
-  const baseName = fileName.replace('.tsx', '').replace('.ts', '');
-  
-  // Check if it's a page component
-  if (fileName.includes('page.tsx')) {
-    return `'use client';
-import React from 'react';
-
-export default function ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            ${baseName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional ${baseName.replace(/-/g, ' ')} services and solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}`;
-  }
-  
-  // Check if it's a component
-  if (fileName.includes('Component') || fileName.includes('components/')) {
-    return `'use client';
-import React from 'react';
-
-interface ${baseName}Props {
-  className?: string;
-}
-
-const ${baseName}: React.FC<${baseName}Props> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>${baseName}</h2>
-      <p>${baseName} component for enhanced functionality.</p>
-    </div>
-  );
-};
-
-export default ${baseName};`;
-  }
-  
-  // Default template
-  return `'use client';
-import React from 'react';
-
-export default function ${baseName}() {
-  return (
-    <div>
-      <h1>${baseName}</h1>
-      <p>${baseName} content.</p>
-    </div>
-  );
-}`;
-}
-
-// Function to clean up specific error patterns
-function cleanContent(content, fileName) {
-  // Remove merge conflict markers
-  content = content.replace(/^<<<<<<<.*$/gm, '');
-  content = content.replace(/^=======.*$/gm, '');
-  content = content.replace(/^>>>>>>>.*$/gm, '');
-  
-  // Fix unterminated regular expressions
-  content = content.replace(/\/[^\/\n]*$/gm, '');
-  
-  // Fix malformed imports
-  content = content.replace(/import\s+[^;]+$/gm, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
-    }
-    return match;
-  });
-  
-  // Fix malformed JSX
-  content = content.replace(/<[^>]*$/gm, '');
-  content = content.replace(/[^<]*$/gm, '');
-  
-  // Remove broken syntax
-  content = content.replace(/[{}]{2,}/g, '');
-  content = content.replace(/[()]{2,}/g, '');
-  content = content.replace(/[\[\]]{2,}/g, '');
-  
-  // Clean up extra characters
-  content = content.replace(/[;]{2,}/g, ';');
-  content = content.replace(/[,]{2,}/g, ',');
-  
-  return content;
-}
-
-// Function to determine if file should be completely rewritten
-function shouldRewriteFile(fileName, content) {
-  // Check for severe corruption
-  const corruptionPatterns = [
-    /Error: Parsing error/,
-    /Declaration or statement expected/,
-    /Property or signature expected/,
-    /Expression expected/,
-    /Unterminated regular expression/,
-    /Expected corresponding/,
-    /Identifier expected/,
-    /[{}]{3,}/,
-    /[()]{3,}/,
-    /[\[\]]{3,}/
-  ];
-  
-  return corruptionPatterns.some(pattern => pattern.test(content)) || 
-         content.length < 100 || 
-         content.split('\n').length < 5;
-}
-
-// Main processing function
-function processFiles() {
-  const directories = [
-    path.join(__dirname, 'app'),
-    path.join(__dirname, 'src'),
-    path.join(__dirname, 'components')
-  ];
-  
-  let fixedCount = 0;
-  let rewrittenCount = 0;
-  
-  directories.forEach(dir => {
-    if (fs.existsSync(dir)) {
-      processDirectory(dir);
-    }
-  });
-  
-  function processDirectory(dir) {
-    const files = fs.readdirSync(dir);
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        processDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          const originalContent = content;
-          
-          if (shouldRewriteFile(file, content)) {
-            content = createCleanComponent(file, content);
-            fs.writeFileSync(filePath, content, 'utf8');
-            console.log('Rewritten: ' + filePath);
-            rewrittenCount++;
-          } else {
-            content = cleanContent(content, file);
-            if (content !== originalContent) {
-              fs.writeFileSync(filePath, content, 'utf8');
-              console.log('Fixed: ' + filePath);
-              fixedCount++;
-            }
-          }
-        } catch (error) {
-          console.error('Error processing ' + filePath + ':', error.message);
-          // If there's an error, rewrite the file
-          try {
-            const content = createCleanComponent(file, '');
-            fs.writeFileSync(filePath, content, 'utf8');
-            console.log('Rewritten after error: ' + filePath);
-            rewrittenCount++;
-          } catch (rewriteError) {
-            console.error('Failed to rewrite ' + filePath + ':', rewriteError.message);
-          }
-        }
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
+    content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
+    content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');
+    content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>');
+    content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>');
+    content = content.replace(/<nav([^>]*)>\s*$/gm, '<nav$1></nav>');
+    content = content.replace(/<aside([^>]*)>\s*$/gm, '<aside$1></aside>');
+    
+    // Fix JSX fragments
+    content = content.replace(/<>\s*$/gm, '<>');
+    content = content.replace(/^\s*<\/>/gm, '</>');
+    
+    // Fix missing commas in arrays and objects
+    content = content.replace(/(\w+)\s*$/gm, (match, p1) => {
+      if (match.includes('=') || match.includes(':') || match.includes('{') || match.includes('(')) {
+        return match;
       }
+      return match;
     });
+    
+    // Fix import statements
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s+['"]([^'"]+)['"];?/g, (match, imports, module) => {
+      const cleanImports = imports.replace(/\s+/g, ' ').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    });
+    
+    // Fix function declarations
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
+    
+    // Fix JSX syntax issues
+    content = content.replace(/<(\w+)\s*\/>\s*<\/\1>/g, '<$1 />');
+    
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*$/gm, (match) => {
+      if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('(') && !match.includes(')')) {
+        return match + ';';
+      }
+      return match;
+    });
+    
+    // Fix object property syntax
+    content = content.replace(/(\w+)\s*:\s*(\w+)\s*$/gm, '$1: $2,');
+    
+    // Fix array syntax
+    content = content.replace(/(\w+)\s*$/gm, (match) => {
+      if (match.trim() && !match.includes(',') && !match.includes(';') && !match.includes('{') && !match.includes('}')) {
+        return match + ',';
+      }
+      return match;
+    });
+    
+    // Fix JSX expressions
+    content = content.replace(/\{\s*(\w+)\s*\}\s*$/gm, '{$1}');
+    
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '\n'.repeat(openBraces - closeBraces) + '}';
+    }
+    
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      content += ')'.repeat(openParens - closeParens);
+    }
+    
+    // Fix missing closing brackets
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+    if (openBrackets > closeBrackets) {
+      content += ']'.repeat(openBrackets - closeBrackets);
+    }
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  console.log('Processing complete!');
-  console.log('Fixed files: ' + fixedCount);
-  console.log('Rewritten files: ' + rewrittenCount);
 }
 
-// Run the script
-processFiles();
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
+      fixSyntaxErrors(filePath);
+    }
+  }
+}
+
+// Start fixing from the app directory
+findAndFixFiles('./app');
+findAndFixFiles('./components');
+findAndFixFiles('./src');
+
+console.log('Syntax error fixing completed!');
