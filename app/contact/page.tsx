@@ -38,7 +38,6 @@ export default function ContactPage() {
     name: '',
     email: '',
     company: '',
-    phone: '',
     service: '',
     message: ''
   });

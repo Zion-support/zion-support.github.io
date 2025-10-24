@@ -76,7 +76,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
     } finally {}
       setIsOptimizing(false)
     }
-  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization]);
+  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization])
 
   useEffect(() => {}
     runOptimizations()

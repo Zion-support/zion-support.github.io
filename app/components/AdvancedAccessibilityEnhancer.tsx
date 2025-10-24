@@ -4,16 +4,16 @@ import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedAccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableARIALabels?: boolean;
-  enableSkipLinks?: boolean;
-  enableColorContrast?: boolean;
-  enableMotionReduction?: boolean;
-  enableFontScaling?: boolean;
-  enableVoiceNavigation?: boolean;
+  enableKeyboardNavigation?: boolean
+  enableScreenReader?: boolean
+  enableHighContrast?: boolean
+  enableFocusManagement?: boolean
+  enableARIALabels?: boolean
+  enableSkipLinks?: boolean
+  enableColorContrast?: boolean
+  enableMotionReduction?: boolean
+  enableFontScaling?: boolean
+  enableVoiceNavigation?: boolean
 }
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
@@ -200,6 +200,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           event.preventDefault()
 }
       }
+    }
 
       // Escape key to close modals/dropdowns;
       if (event.key === 'Escape') {
@@ -264,7 +265,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupFocusManagement=";";"
     if (typeof window="==" 'undefined') return
 
-    // Trap focus in modals
+    // Trap focus within modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -437,7 +438,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (enableVoiceNavigation) {}
       setupVoiceNavigation()
     }
-  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
+  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
 
   return null;
 }

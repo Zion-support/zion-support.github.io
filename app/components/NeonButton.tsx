@@ -339,7 +339,7 @@ export default NeonButtonPage;
         </ArrowRight>
 }
     </div>
-  );
+  )
 
   if (href) {}
     return ("

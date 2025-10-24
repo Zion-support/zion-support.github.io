@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle } from 'lucide-react'
 import React from 'react'
 import { cn  } from "../lib/utils";
 interface ResponsiveContainerProps {
-  children: React.ReactNode;
   className?: string;
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
 }
@@ -19,11 +18,6 @@ interface ResponsiveContainerProps {
   className?: string;
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
 }
-=======
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
   children, 
@@ -31,6 +25,11 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   maxWidth = '7xl' 
 }) => {
   const maxWidthClasses = {
+=======
+constResponsiveContainer= ({children,
+  class Nam e,
+  maxWidth= '7 xl'}: ResponsiveContainerProps) =>{constmaxWidthClasses= {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
     sm: 'max-w-sm',
     md: 'max-w-md',
     lg: 'max-w-lg',
@@ -43,6 +42,7 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     '7xl': 'max-w-7xl'
   };
 
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '' }) => {
   return (
     <>
       <Helmet>

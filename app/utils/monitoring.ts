@@ -14,6 +14,7 @@ import Navigation from './Navigation'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
@@ -128,6 +129,7 @@ class MonitoringService {
         // // // console.error('Error setting up performance observers:', error)
       }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
     }
   }
 
@@ -144,6 +146,7 @@ class MonitoringService {
             // })
           }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -183,6 +186,7 @@ class MonitoringService {
         // // // console.error('Error monitoring resources:', _error)
       }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
     }
   }
 
@@ -226,6 +230,7 @@ class MonitoringService {
       // })
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
@@ -244,6 +249,7 @@ class MonitoringService {
 <<<<<<< HEAD:app/utils/monitoring.ts
     // // // console.error('[Error]', error)
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
@@ -271,6 +277,7 @@ class MonitoringService {
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         // })
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
       }
     }
   }
@@ -299,6 +306,7 @@ class MonitoringService {
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         // })
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
       }
     }
   }

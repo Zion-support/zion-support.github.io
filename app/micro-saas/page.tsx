@@ -56,7 +56,7 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: "Starting at $4,000"
     }
-  ];
+  ]
 
   const platforms = [
     "Web Applications",

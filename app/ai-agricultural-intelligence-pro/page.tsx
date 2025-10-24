@@ -168,3 +168,5 @@ export default AiAgriculturalIntelligenceProPage;
 export default AiAgriculturalIntelligenceProPage;
 
 export default AiAgriculturalIntelligenceProPage;
+
+export default AiAgriculturalIntelligenceProPage;

@@ -1,3 +1,6 @@
+import React from "react";
+import Head from "next/head";
+import { ArrowRight, Brain, CheckCircle, Star } from 'lucide-react';
 import React, { useCallback, useState, useEffect, Suspense } from 'react';
 "use client"
 import React from "react"

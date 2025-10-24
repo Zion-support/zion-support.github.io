@@ -39,6 +39,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
       meta.content="keywords.join('," ')}
       document.head.appendChild(meta)
     }
+  ]
 
     // Update canonical URL;"
     let canonicalLink="document.querySelector('link[rel="canonical"]')";

@@ -2,6 +2,8 @@ import React from "react";
 import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
 import React from "react";
 import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
+import React from "react";
+import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
 import React from 'react';
 import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
 import React, { useState, useEffect } from 'react';
@@ -109,7 +111,8 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Values Section */}
         <section className="py-20">

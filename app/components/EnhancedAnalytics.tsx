@@ -6,9 +6,9 @@ import React, { createContext, useContext, useEffect } from &quot;react&quot;
 &quot;use client&quot;
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
+  track: (event: string, properties?: Record<string, unknown>) => void
+  identify: (userId: string, traits?: Record<string, unknown>) => void
+  page: (name: string, properties?: Record<string, unknown>) => void
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
@@ -16,9 +16,9 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 );
 
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
   }
   return context
 }
@@ -45,7 +45,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
       }
     }
-  }, []);
+  }, [])
 
   const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== "undefined") {

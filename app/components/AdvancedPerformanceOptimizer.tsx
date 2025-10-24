@@ -1,11 +1,5 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react'
-=======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 interface AdvancedPerformanceOptimizerProps {enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
@@ -15,6 +9,20 @@ interface AdvancedPerformanceOptimizerProps {enableAdvancedCaching?: boolean;
   enableResourceHints?: boolean;
   enableServiceWorker?: boolean;}
   enableCriticalCSS?: boolean}
+=======
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+
+interface AdvancedPerformanceOptimizerProps {
+  enableAdvancedCaching?: boolean
+  enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
+  enableResourceHints?: boolean
+  enableServiceWorker?: boolean
+  enableCriticalCSS?: boolean
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
   enableWebVitals?: boolean
 }
 ;
@@ -338,8 +346,8 @@ if ('gtag' in window) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
 
     // Report to analytics
-    if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
+    if ('gtag' in windo w) {
+      (windo w as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
@@ -352,7 +360,7 @@ if ('gtag' in window) {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
     }
-  }, [performanceMetrics]);
+  }, [performanceMetrics])
 
   useEffect(() => {if (enableAdvancedCaching) {}
       setupAdvancedCaching()
@@ -369,12 +377,12 @@ if ('gtag' in window) {
     if (enableCriticalCSS) {}
       inlineCriticalCSS()
     }
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS]);
+  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS])
 
   useEffect(() => {if (enableWebVitals && performanceMetrics.lcp > 0) {}
       reportPerformanceMetrics()
     }
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
+  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
 
   return null;
 }

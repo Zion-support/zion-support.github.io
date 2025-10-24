@@ -6,30 +6,26 @@ import React, { createContext, useContext, useEffect, ReactNode } from "react";
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: any[]) => void
   }
 }
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
+  trackPageView: (pageName: string) => void
 }
 
 export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined,
-);
+)
 
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider");
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
   }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
+  return context
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, }) => {
@@ -60,7 +56,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
       }
     }
-  }, []);
+  }, [])
 
   const trackEvent = (
     eventName: string,
@@ -73,13 +69,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, 
       window.gtag("event", eventName, parameters);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
     }
-  };
+  }
 
   const trackPageView = (pageName: string) => {if (typeof window !== "undefined" && window.gtag) {
       window.gtag("config", "GA_MEASUREMENT_ID", {
         page_title: pageName,
         page_location: window.location.href,
-      });
+      })
     }
   }
   return context;
@@ -114,7 +110,7 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-  };
+  }
 
   return (
     <AnalyticsContext.Provider value={value}>

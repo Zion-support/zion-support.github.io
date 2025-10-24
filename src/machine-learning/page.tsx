@@ -73,6 +73,7 @@ const Page = (): JSX.Element => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0e4c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
       </div>
     </>
   ),

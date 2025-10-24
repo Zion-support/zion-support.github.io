@@ -46,7 +46,15 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Connect with customers and partners worldwide.',
       benefits: ['Multi-language support', 'Global deployment', '24/7 availability', 'Worldwide coverage']
     }
-  ];
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   const caseStudies = [
     {

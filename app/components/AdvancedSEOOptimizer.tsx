@@ -189,7 +189,7 @@ return (
       
 {children}
 {process.env.NODE_ENV === 'development' && (
-<div className="seo-debug" style={{
+<div className=&quot;seo-debug&quot; style={{
 position: 'fixed',
 top: '10 px',
 left: '10 px',
