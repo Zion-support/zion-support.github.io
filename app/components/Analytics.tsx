@@ -5,7 +5,10 @@ import Script from 'next/script'
 
 declare global {
   interface Window {
-    gtag: (..._args: unknown[]) => void
+    gtag: {
+      (..._args: unknown[]): void
+      q?: unknown[]
+    }
   }
 }
 

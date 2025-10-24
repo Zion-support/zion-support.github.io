@@ -1,5 +1,11 @@
+import { useEffect, useRef } from 'react';
+
 export const useIntersectionObserver = () => {
-  // Add hook logic here
-  return {}
-}
-}
+  const ref = useRef(null);
+  
+  useEffect(() => {
+    // Intersection observer logic
+  }, []);
+  
+  return ref;
+};

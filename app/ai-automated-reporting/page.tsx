@@ -3,7 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, TrendingUp, FileText, Zap, Brain, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Target } from 'lucide-react';
+import { BarChart, TrendingUp, FileText, Brain, CheckCircle, ArrowRight} from 'lucide-react';
 
 const AIAutomatedReportingPage: React.FC = () => {
   return (
