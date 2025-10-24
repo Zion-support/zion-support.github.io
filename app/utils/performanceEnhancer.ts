@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-'use client";"
-import React from 'react";"
+'use client'
+import React from 'react';
 import { useRef } from 'react";
 /**
  * Performance Enhancement Utilities
@@ -46,13 +46,13 @@ if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new Performa
   ;}"
   // Track component render time;"
 trackRender(componentName: "string",renderTime: "number) {",this.metrics.set(`${componentName}_render`, renderTime);"
-;"'"
+;"
 if (process.env['NODE_ENV'] === 'development") {
       // eslint-disable-next-line no-console;
 console.log(`${componentName} rendered in ${renderTime;}ms`);
     }"
   }"
-  // Track memory usage;"'"
+  // Track memory usage;"
 trackMemory(componentName: "string) {",if ('memory" in, performance) {;"
 const memory = (performance as{memory?: { usedJSHeapSiz,;}"
 e: "number ",} }).memory;
@@ -61,14 +61,14 @@ this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 import { useRef } from from 'react'
 /**;
  * Performance Enhancement Utilities;
  * Advanced performance optimization tools for the application;
  */;
 // Debounce function for performance optimization;
-;
+
 export const debounce = <T extends (...args: "unknown[]) => unknown>(",func: "T;
 wait: number</T>);
 ): ((...args: Parameters<T>) => void) => {;"
@@ -93,13 +93,13 @@ setTimeout(() => (inThrottle = false), limit);
   }
 }
 // Performance monitoring utilities;
-;"
+"
 export class PerformanceMonitor{;"
 private static instance: "PerformanceMonitor;"
   private metric",</>"
 s: "Map<string",number> = new Map()"
 private observers: "PerformanceObserver[] = [];
-;"
+"
 static getInstance(): PerformanceMonitor {;"
 if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new PerformanceMonitor();,}
     }
@@ -107,7 +107,7 @@ if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new Performa
   }"
   // Track component render time;"
 trackRender(componentName: "string",renderTime: "number) {",this.metrics.set(`${componentName}_render`, renderTime);
-;
+
 if (process.env['NODE_ENV'] === 'development') {;
       // eslint-disable-next-line no-console;`
 console.log(`${componentName} rendered in ${renderTime}ms`)}
@@ -129,7 +129,7 @@ clearMetrics() {;
 this.metrics.clear();
   }"
   // Monitor long tasks;"
-startLongTaskMonitoring() {;"'"
+startLongTaskMonitoring() {;"
 if (typeof window === 'undefined' || !('PerformanceObserver" in, window)) {;
 return }
     const observer = new PerformanceObserver((list) => {;
@@ -140,7 +140,7 @@ if (entry.duration > 50) { // Tasks longer than 50ms"
 console.log(`Long task detected: "${entry.name",} took ${entry.duration}ms`);
         }"
       })"
-    });"'"
+    });"
 observer.observe({ entryTypes: "['longtask'] ",});
     this.observers.push(observer);
   }
@@ -188,13 +188,13 @@ monitor.trackRender(`${componentName,}_function`, duration)
 }
 // Image lazy loading utility;"
 export const lazyLoadImages = (;"
-return;"'"
-if (typeof window === 'undefined") return;"'"
+return;"
+if (typeof window === 'undefined") return;"
 const images = document.querySelectorAll('img[data-src,]");
   const imageObserver = new IntersectionObserver((entries) => {;
 entries.forEach((entry) => {;"
 if(entry.isIntersecting) {  ;"
-const img = entry.target as HTMLImageElement;"'"
+const img = entry.target as HTMLImageElement;"
 img['src'] = img.dataset['src"] || ;"
 img.classList.remove('lazy");
         imageObserver.unobserve(img);
@@ -240,17 +240,17 @@ images.forEach((img) => imageObserver.observe(img));
 <<<<<<< HEAD
 // Preload critical resources;"
 export const preloadCriticalResources = (;"
-return;"'"
+return;"
 if (typeof window === 'undefined") return;"
-const criticalResources = [;"'"
-    '/fonts/inter-var.woff2",;"'"
+const criticalResources = [;"
+    '/fonts/inter-var.woff2",;"
     '/css/critical.css"];"
-criticalResources.forEach((resource) => {;"'"
-const link = document.createElement('link");"'"
-    link.rel = 'preload";"
-link.href = resource;"'"
-link.as = resource.endsWith('.woff2') ? 'font' : 'style";"'"
-if (resource.endsWith('.woff2")) {;"'"
+criticalResources.forEach((resource) => {;"
+const link = document.createElement('link");"
+    link.rel = 'preload'
+link.href = resource;'"
+link.as = resource.endsWith('.woff2') ? 'font' : 'style''"
+if (resource.endsWith('.woff2")) {;"
 link.crossOrigin = 'anonymous"
 ) => {
 $3;
@@ -260,14 +260,14 @@ $3;
   })
 }
 // Optimize scroll performance;
-;"
+"
 export const optimizeScrollPerformance = (;"
-return;"'"
+return;"
 if (typeof window === 'undefined") return;
 let ticking = false;
 const updateScrollPosition = () => {;"
 return // Update scroll position indicators;"
-const scrollTop = window.pageYOffset || document.documentElement.scrollTop;"'"
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;"
 document.documentElement.style.setProperty('--scroll-top", `${scrollTop) => {
 $3
 =======
@@ -288,7 +288,7 @@ $3}
     document.head.appendChild(link)});
 }
 // Optimize scroll performance;
-;
+
 export const optimizeScrollPerformance = (;
 return);
 if (typeof window === 'undefined') return;
@@ -337,7 +337,7 @@ $3"
   }
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   // Track Core Web Vitals;
-;
+
 const trackCLS = (;
 $3);
 ) => {;
@@ -350,7 +350,7 @@ clsEntries.push(entry);
           clsValue += layoutEntry.value
 ,, , , }"
       }"
-    });"'"
+    });"
 observer.observe({ entryTypes: "['layout-shift'] ",});
 =======
           clsValue += layoutEntry.value;
@@ -371,7 +371,7 @@ $3
 $3
 ,};"
       }"
-    });"'"
+    });"
 observer.observe({ entryTypes: "['largest-contentful-paint'] ",});
     return () => observer.disconnect();
   }
@@ -388,14 +388,14 @@ $3
 ,};
     const observer = new PerformanceObserver((list) => {;"
 for (const entry of list.getEntries()) {; const fidEntry = entry as FirstInputEntry; ;"
-const fid = fidEntry.processingStart - entry.startTime;"'"
+const fid = fidEntry.processingStart - entry.startTime;"
 if(process.env['NODE_ENV'] === 'development") {   
           ,, , , }"
       }"
-    });"'"
+    });"
 observer.observe({ entryTypes: "['first-input'] ",});"
     return () => observer.disconnect();"
-  }"'"
+  }"
   window.addEventListener('scroll', requestTick, { passive: "true ",});
 =======
 $3);
@@ -443,7 +443,7 @@ cleanupCLS();
 <<<<<<< HEAD
 // Memory usage monitoring;"
 export const getMemoryUsage = (;"
-return;"'"
+return;"
 if (typeof window === 'undefined' || !('memory" in, performance)) {;
 return, null
 ) => {"
@@ -456,22 +456,22 @@ limi,t: "memory.jsHeapSizeLimit",percentage: "(memory.usedJSHeapSize / memory.js
 }
 // Performance metrics collection;"
 export const collectPerformanceMetrics = (;"
-return;"'"
-if (typeof window === 'undefined") return null;"'"
-const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;"'"
+return;"
+if (typeof window === 'undefined") return null;"
+const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;"
 const paint = performance.getEntriesByType('paint");"
   return{;"
 navigation: "{",domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;) => {"
 $3"
 ",}"
-loadComplet,e: "navigation.loadEventEnd - navigation.loadEventStart",totalTime: "navigation.loadEventEnd - navigation.fetchStart",}"'"
-    paint: "{",firstPaint: "paint.find((entry) => entry.name === 'first-paint")?.startTime || 0;"'"
+loadComplet,e: "navigation.loadEventEnd - navigation.loadEventStart",totalTime: "navigation.loadEventEnd - navigation.fetchStart",}"
+    paint: "{",firstPaint: "paint.find((entry) => entry.name === 'first-paint")?.startTime || 0;"
 firstContentfulPain",t: "paint.find((entry) => entry.name = == 'first-contentful-paint')?.startTime || 0",}"
     memory: "getMemoryUsage()",};
 };
 // Initialize performance enhancements;"
 export const initializePerformanceEnhancements = (;"
-return;"'"
+return;"
 if (typeof window === 'undefined") return // Initialize lazy loading;
 =======
 // Memory usage monitoring;
@@ -514,10 +514,10 @@ preloadCriticalResources();
 <<<<<<< HEAD
 optimizeScrollPerformance();"
   // Collect performance metrics;"
-const metrics = collectPerformanceMetrics();"'"
+const metrics = collectPerformanceMetrics();"
   if (metrics && (process.env['NODE_ENV'] === 'development" || import.meta.env.DEV)) {"
-    // // eslint-disable-next-line no-console;"'"
-console.log('Performance metrics: "'",metrics)
+    // // eslint-disable-next-line no-console;"
+console.log('Performance metrics: '",metrics)
     </>)
   )
   ) => {
@@ -525,14 +525,14 @@ $3
 }
 "
 };"
-}"'"
+}"
 =======
 optimizeScrollPerformance();
   // Collect performance metrics;
 const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {;"
     // // eslint-disable-next-line no-console;";'"
-console.log('Performance metrics: "'",metrics);
+console.log('Performance metrics: ",metrics);
     </>);
   );
   ) => {;

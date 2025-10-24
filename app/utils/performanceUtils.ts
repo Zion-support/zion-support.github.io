@@ -1,6 +1,6 @@
 // Performance monitoring utilities;
 export interface PerformanceMetric {;
-;
+
 <<<<<<< HEAD
 name: "string;"
   value: number;"
@@ -52,7 +52,7 @@ if (!this.isEnabled) return;"
 const metri",c: "PerformanceMetric = {;"
 name",value,;}"
 timestamp: "Date.now()",url: "window.location.href",};
-;
+
 this.metrics.push(metric);"
 "
 =======
@@ -61,7 +61,7 @@ if (!this.isEnabled) return null;"
 ;"
 const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
     if (!navigation) return null;
-;"
+"
 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;"
     this.recordMetric("page_load", loadTime);
     return loadTime}
@@ -74,7 +74,7 @@ const metri",c: "PerformanceMetric = {;"
 name",value}"
 timestamp: "Date.now()",url: "window.location.href"}
 this.metrics.push(metric);
-;"
+"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     // Send to analytics in production;"
 if(process.env.NODE_ENV = == "production") {  ;

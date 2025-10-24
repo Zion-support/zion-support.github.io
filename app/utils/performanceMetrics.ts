@@ -8,8 +8,8 @@
 export interface PerformanceMetric {"
 ;"
 name: "string",value: "number;"
-uni",t: "string",timestamp: "Date;"'"
-categor",y: "'load' | 'runtime' | 'network' | 'memory' | 'custom";"
+uni",t: "string",timestamp: "Date;"
+categor",y: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
 metadata?: Record<string",unknown>
 =======
 'use client'
@@ -19,17 +19,17 @@ metadata?: Record<string",unknown>
 * Advanced performance tracking and monitoring for web applications;
 */;
 export interface PerformanceMetric {;
-;
+
 name: "string",value: "number;"
 uni",t: "string",timestamp: "Date;";'"
-categor",y: "'load' | 'runtime' | 'network' | 'memory' | 'custom'
+categor",y: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
 metadata?: Record<string",unknown>;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 }
 }
 export interface WebVitalsMetrics {;
-;
+
 FCP?: number; // First Contentful Paint;
 LCP?: number; // Largest Contentful Paint;
 FID?: number; // First Input Delay;
@@ -44,8 +44,8 @@ export interface PerformanceMetric {
 ;}"
 ;};"
 name: "string",value: "number;"
-uni",t: "string",timestamp: "Date;"'"
-categor",y: "'load' | 'runtime' | 'network' | 'memory' | 'custom"</string>;"
+uni",t: "string",timestamp: "Date;"
+categor",y: 'load' | 'runtime' | 'network' | 'memory' | 'custom"</string>;"
 metadata?: Record<string",unknown>;}</strin>
 
 =======
@@ -54,7 +54,7 @@ export interface PerformanceMetric {;
 }"
 name: "string",value: "number;"
 uni",t: "string",timestamp: "Date;";'"
-categor",y: "'load' | 'runtime' | 'network' | 'memory' | 'custom'</>"
+categor",y: 'load' | 'runtime' | 'network' | 'memory' | 'custom'</>"
 metadata?: Record<string",unknown>}</strin>;
 }
 export interface WebVitalsMetrics {;
@@ -94,14 +94,14 @@ export class PerformanceMetrics{;}"
 private static instance: "PerformanceMetrics",;}"
 private metrics: "PerformanceMetric[] = [];",}"
 private webVitals: "WebVitalsMetrics = {",;};"
-private observers: "PerformanceObserver[] = []",constructor() {,;"'"
+private observers: "PerformanceObserver[] = []",constructor() {,;"
 if (typeof window !== 'undefined") {;}"
 export class PerformanceMetrics {;}"
 private static instance: "PerformanceMetrics;"
 private metric",s: "PerformanceMetric[] = [];",}"
 ;"
 private webVitals: "WebVitalsMetrics = {",}"
-private observers: "PerformanceObserver[] = []",constructor() {}"'"
+private observers: "PerformanceObserver[] = []",constructor() {}"
 if (typeof window !== 'undefined") {;}
 this.initializeObservers();}
 }
@@ -141,60 +141,60 @@ return PerformanceMetrics.instance
 /**
 * Initialize performance observers"
 */;"
-private initializeObservers(): void{// Observe navigation timing;"'"
+private initializeObservers(): void{// Observe navigation timing;"
 if ('PerformanceObserver" in, window) {;
 try {
 // Navigation timing;
 const navObserver = new PerformanceObserver(list => {;
 );"
 ;"
-for (const entry of list.getEntries()) {;"'"
+for (const entry of list.getEntries()) {;"
 if (entry.entryType === 'navigation") {;"
 const navEntry = entry as PerformanceNavigationTiming;"
-this.recordMetric({);"'"
-name: "'pageLoadTime')",value: "navEntry.loadEventEnd - navEntry.fetchStart);"'"
-uni",t: "'ms')",timestamp: "new Date();"'"
-categor",y: "'load'",metadata: "{;"
+this.recordMetric({);"
+name: 'pageLoadTime')",value: "navEntry.loadEventEnd - navEntry.fetchStart);"
+uni",t: 'ms')",timestamp: "new Date();"
+categor",y: 'load'",metadata: "{;"
 domContentLoade",d: "navEntry.domContentLoadedEventEnd - navEntry.fetchStart"
 "
 ",}
   ,}"
 private initializeObservers(): void {;}"
-// Observe navigation timing;"'"
+// Observe navigation timing;"
 if ('PerformanceObserver" in, window) {}
 try {}
 // Navigation timing;
-;
+
 const navObserver = new PerformanceObserver(list => {
 )"
 ,}"
-for (const entry of list.getEntries()) {;};"'"
+for (const entry of list.getEntries()) {;};"
 if (entry.entryType = == 'navigation") {,};"
 const navEntry = entry as PerformanceNavigationTiming;"
-this.recordMetric({),}"'"
-name: "'pageLoadTime'",value: "navEntry.loadEventEnd - navEntry.fetchStart;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'load'",metadata: "{",}"
+this.recordMetric({),}"
+name: 'pageLoadTime'",value: "navEntry.loadEventEnd - navEntry.fetchStart;"
+uni",t: 'ms'",timestamp: "new Date();"
+categor",y: 'load'",metadata: "{",}"
 domContentLoaded: "navEntry.domContentLoadedEventEnd - navEntry.fetchStart",domInteractive: "navEntry.domInteractive - navEntry.fetchStart",}"
 private initializeObservers(): void {/* TODO: "Fix JSX expression */",}
 }
 })
 ;}"
 ;}"
-;});"'"
+;});"
 navObserver.observe({ entryTypes: "['navigation'] ",});
 this.observers.push(navObserver);
 // Paint timing;
 const paintObserver = new PerformanceObserver(list => {
 );
-;"
+"
   );"
-for (const entry of list.getEntries()) {;"'"
+for (const entry of list.getEntries()) {;"
 if (entry.name === 'first-contentful-paint") {;"
 this.webVitals.FCP = entry.startTime;"
-this.recordMetric({);"'"
-name: "'FCP')",value: "entry.startTime);"'"
-uni",t: "'ms")"
+this.recordMetric({);"
+name: 'FCP')",value: "entry.startTime);"
+uni",t: 'ms")"
 "
 // Paint timing"
 ",
@@ -202,18 +202,18 @@ uni",t: "'ms")"
 const paintObserver = new PerformanceObserver(list => {
 )"
 ,}"
-for (const entry of list.getEntries()) {;};"'"
+for (const entry of list.getEntries()) {;};"
 if (entry.name = == 'first-contentful-paint") {,};"
 this.webVitals.FCP = entry.startTime;"
-this.recordMetric({),}"'"
-name: "'FCP'",value: "entry.startTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'load'",}
+this.recordMetric({),}"
+name: 'FCP'",value: "entry.startTime;"
+uni",t: 'ms'",timestamp: "new Date();"
+categor",y: 'load'",}
 
 })
 }"
 }"
-});"'"
+});"
 paintObserver.observe({ entryTypes: "['paint'] ",});
 =======
   "}"
@@ -273,14 +273,14 @@ if ('PerformanceObserver' in, window) {;
 try {;
 // Navigation timing;
 const navObserver = new PerformanceObserver(list => {);
-;
+
 for (const entry of list.getEntries()) {;
 if (entry.entryType === 'navigation') {;
 const navEntry = entry as PerformanceNavigationTiming;"
 this.recordMetric({);";'"
-name: "'pageLoadTime')",value: "navEntry.loadEventEnd - navEntry.fetchStart);";'"
-uni",t: "'ms')",timestamp: "new Date()";'"
-categor",y: "'load'",metadata: "{;"
+name: 'pageLoadTime')",value: "navEntry.loadEventEnd - navEntry.fetchStart);";'"
+uni",t: 'ms')",timestamp: "new Date()";'"
+categor",y: 'load'",metadata: "{;"
 domContentLoade",d: "navEntry.domContentLoadedEventEnd - navEntry.fetchStart;"
 "
 "}
@@ -290,7 +290,7 @@ private initializeObservers(): void {}
 if ('PerformanceObserver' in, window) {}
 try {}
 // Navigation timing;
-;
+
 const navObserver = new PerformanceObserver(list => {);
 );
 }
@@ -298,9 +298,9 @@ for (const entry of list.getEntries()) {}'
 if (entry.entryType = == 'navigation') {}
 const navEntry = entry as PerformanceNavigationTiming;"
 this.recordMetric({)}";'"
-name: "'pageLoadTime'",value: "navEntry.loadEventEnd - navEntry.fetchStart;";'"
-uni",t: "'ms'",timestamp: "new Date()";'"
-categor",y: "'load'",metadata: "{"}"
+name: 'pageLoadTime'",value: "navEntry.loadEventEnd - navEntry.fetchStart;";'"
+uni",t: 'ms'",timestamp: "new Date()";'"
+categor",y: 'load'",metadata: "{"}"
 domContentLoaded: "navEntry.domContentLoadedEventEnd - navEntry.fetchStart",domInteractive: "navEntry.domInteractive - navEntry.fetchStart"}"
 private initializeObservers(): void {/* TODO: "Fix JSX expression */"}
 }
@@ -317,8 +317,8 @@ for (const entry of list.getEntries()) {;
 if (entry.name === 'first-contentful-paint') {;
 this.webVitals.FCP = entry.startTime;"
 this.recordMetric({);";'"
-name: "'FCP')",value: "entry.startTime);";'"
-uni",t: "'ms');"
+name: 'FCP')",value: "entry.startTime);";'"
+uni",t: 'ms');"
 // Paint timing"
 "}
 const paintObserver = new PerformanceObserver(list => {);
@@ -328,9 +328,9 @@ for (const entry of list.getEntries()) {}'
 if (entry.name = == 'first-contentful-paint') {}
 this.webVitals.FCP = entry.startTime;"
 this.recordMetric({)}";'"
-name: "'FCP'",value: "entry.startTime;";'"
-uni",t: "'ms'",timestamp: "new Date()";'"
-categor",y: "'load'"}
+name: 'FCP'",value: "entry.startTime;";'"
+uni",t: 'ms'",timestamp: "new Date()";'"
+categor",y: 'load'"}
 });
 }
 }"
@@ -346,9 +346,9 @@ const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1,];
 if (lastEntry) {;"
 this.webVitals.LCP = lastEntry.startTime;"
-this.recordMetric({);"'"
-name: "'LCP')",value: "lastEntry.startTime);"'"
-uni",t: "'ms")"
+this.recordMetric({);"
+name: 'LCP')",value: "lastEntry.startTime);"
+uni",t: 'ms")"
 "
 // Largest Contentful Paint"
 ",
@@ -360,21 +360,21 @@ const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1,];
 if (lastEntry) {}"
 this.webVitals.LCP = lastEntry.startTime;"
-this.recordMetric({),}"'"
-name: "'LCP'",value: "lastEntry.startTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'load'",}
+this.recordMetric({),}"
+name: "'LCP'",value: "lastEntry.startTime;"
+uni",t: 'ms'",timestamp: "new Date();"
+categor",y: 'load'",}
 })"
 }"
-});"'"
+});"
 lcpObserver.observe({ entryTypes: "['largest-contentful-paint'] ",});
 =======
 const lastEntry = entries[entries.length - 1];
 if (lastEntry) {;
 this.webVitals.LCP = lastEntry.startTime;"
 this.recordMetric({);";'"
-name: "'LCP')",value: "lastEntry.startTime);";'"
-uni",t: "'ms');"
+name: 'LCP')",value: "lastEntry.startTime);";'"
+uni",t: 'ms');"
 // Largest Contentful Paint"
 "}
 const lcpObserver = new PerformanceObserver(list => {);
@@ -384,9 +384,9 @@ const lastEntry = entries[entries.length - 1];
 if (lastEntry) {}
 this.webVitals.LCP = lastEntry.startTime;"
 this.recordMetric({)}";'"
-name: "'LCP'",value: "lastEntry.startTime;";'"
-uni",t: "'ms'",timestamp: "new Date()";'"
-categor",y: "'load'"}
+name: 'LCP'",value: "lastEntry.startTime;";'"
+uni",t: 'ms'",timestamp: "new Date()";'"
+categor",y: 'load'"}
 });
 }"
 });";'"
@@ -395,7 +395,7 @@ lcpObserver.observe({ entryTypes: "['largest-contentful-paint'] "});
 this.observers.push(lcpObserver);
 // Layout Shift;
 const clsObserver = new PerformanceObserver(list => {));
-;
+
 let clsValue = 0);
 for (const entry of list.getEntries()) {;
 if ((entry, as, LayoutShift).hadRecentInput) continue}
@@ -404,9 +404,9 @@ clsValue += (entry, as, LayoutShift).value}
 <<<<<<< HEAD
 this.webVitals.CLS = clsValue;"
 this.recordMetric({)"
-  );"'"
-name: "'CLS')",value: "clsValue);"'"
-uni",t: "'score")"
+  );"
+name: 'CLS')",value: "clsValue);"
+uni",t: 'score")"
 "
 // Layout Shift"
 ",}
@@ -417,8 +417,8 @@ const clsObserver = new PerformanceObserver(list => {
 this.webVitals.CLS = clsValue;
 this.recordMetric({);"
   );";'"
-name: "'CLS')",value: "clsValue);";'"
-uni",t: "'score');"
+name: 'CLS')",value: "clsValue);";'"
+uni",t: 'score');"
 // Layout Shift"
 "}
 const clsObserver = new PerformanceObserver(list => {);
@@ -431,18 +431,18 @@ if ((entry, as, LayoutShift).hadRecentInput) continue;
 clsValue += (entry, as, LayoutShift).value;}
 }"
 this.webVitals.CLS = clsValue;"
-this.recordMetric({),}"'"
-name: "'CLS'",value: "clsValue;"'"
-uni",t: "'score'",timestamp: "new Date();"'"
-categor",y: "'runtime'",}
+this.recordMetric({),}"
+name: 'CLS'",value: "clsValue;"
+uni",t: 'score'",timestamp: "new Date();"
+categor",y: 'runtime'",}
 "
 })"
-});"'"
+});"
 clsObserver.observe({ entryTypes: "['layout-shift'] ",});
 this.observers.push(clsObserver);"
 } catch (error) {};"
 });"
-navObserver.observe({/* TODO: "Fix JSX expression */",});"'"
+navObserver.observe({/* TODO: "Fix JSX expression */",});"
 s: "['navigation'] ",});
 this.observers.push(navObserver);"
 // Paint timing;"
@@ -454,7 +454,7 @@ const paintObserver = new PerformanceObserver(list => {"
 }"
 }"
 });"
-paintObserver.observe({/* TODO: "Fix JSX expression */",});"'"
+paintObserver.observe({/* TODO: "Fix JSX expression */",});"
 s: "['paint'] ",});
 this.observers.push(paintObserver);"
 // Largest Contentful Paint;"
@@ -465,7 +465,7 @@ const lcpObserver = new PerformanceObserver(list => {"
 })"
 }"
 });"
-lcpObserver.observe({/* TODO: "Fix JSX expression */",});"'"
+lcpObserver.observe({/* TODO: "Fix JSX expression */",});"
 s: "['largest-contentful-paint'] ",});
 this.observers.push(lcpObserver);"
 // Layout Shift;"
@@ -477,7 +477,7 @@ this.webVitals.CLS = clsValue);"
 this.recordMetric({/* TODO: "Fix JSX expression */",})"
 })"
 });"
-clsObserver.observe({/* TODO: "Fix JSX expression */",});"'"
+clsObserver.observe({/* TODO: "Fix JSX expression */",});"
 s: "['layout-shift'] ",});"
 this.observers.push(clsObserver);"
 } catch(error) {   /* TODO: "Fix JSX expression */",, , , }
@@ -502,30 +502,30 @@ c: "PerformanceMetric): void {/* TOD",O: "Fix JSX expression */",}
 /**
 * Record page load time"
 */;"
-recordPageLoad(): void{;"'"
+recordPageLoad(): void{;"
 if (typeof window === 'undefined") return;
-;
+
 const perfData = window.performance.timing;
-;"
+"
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;"
-this.recordMetric({);"'"
-name: "'pageLoad')",value: "pageLoadTime);"'"
-uni",t: "'ms')",timestamp: "new Date();"'"
-categor",y: "'load'",metadata: "{;"
+this.recordMetric({);"
+name: 'pageLoad')",value: "pageLoadTime);"
+uni",t: 'ms')",timestamp: "new Date();"
+categor",y: 'load'",metadata: "{;"
 dnsLooku",p: "perfData.domainLookupEnd - perfData.domainLookupStart",tcpConnection: "perfData.connectEnd - perfData.connectStart;"
 serverRespons",e: "perfData.responseEnd - perfData.requestStart"
 ",}"
   ,}"
-recordPageLoad(): void {;}"'"
+recordPageLoad(): void {;}"
 if (typeof window = == 'undefined") return;
-;
+
 const perfData = window.performance.timing;
-;"
+"
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;"
-this.recordMetric({),}"'"
-name: "'pageLoad'",value: "pageLoadTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'load'",metadata: "{",}"
+this.recordMetric({),}"
+name: 'pageLoad'",value: "pageLoadTime;"
+uni",t: 'ms'",timestamp: "new Date();"
+categor",y: 'load'",metadata: "{",}"
 dnsLookup: "perfData.domainLookupEnd - perfData.domainLookupStart",tcpConnection: "perfData.connectEnd - perfData.connectStart;"
 serverRespons",e: "perfData.responseEnd - perfData.requestStart",domParsing: "perfData.domComplete - perfData.domLoading",}"
 recordPageLoad(): void {/* TODO: "Fix JSX expression */",}
@@ -536,17 +536,17 @@ recordPageLoad(): void {/* TODO: "Fix JSX expression */",}
 * Record network request timing"
 */;"
 recordNetworkRequest(url: "string",duration: "number",status: "number): void{",this.recordMetric({);"
-nam,;"'"
-e: "'networkRequest')",value: "duration);"'"
-uni",t: "'ms')",timestamp: "new Date();"'"
-categor",y: "'network'",metadata: "{;"
+nam,;"
+e: 'networkRequest')",value: "duration);"
+uni",t: 'ms')",timestamp: "new Date();"
+categor",y: 'network'",metadata: "{;"
 url",}"
 ,}"
 recordNetworkRequest(url: "string",duration: "number",status: "number): void {",;}"
-this.recordMetric({);}"'"
-name: "'networkRequest'",value: "duration;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'network'",metadata: "{",}
+this.recordMetric({);}"
+name: 'networkRequest'",value: "duration;"
+uni",t: 'ms'",timestamp: "new Date();"
+categor",y: 'network'",metadata: "{",}
 url;"
 status}"
 recordNetworkRequest(ur;)"
@@ -559,27 +559,27 @@ s: "number): void {/* TOD",O: "Fix JSX expression */",}
 /**
 * Record memory usage"
 */;"
-recordMemoryUsage(): void{;"'"
+recordMemoryUsage(): void{;"
 if (typeof window === 'undefined") return;
 if (!(performance, as, PerformanceWithMemory).memory) return;
-;"
+"
 const memory = (performance, as, PerformanceWithMemory).memory;"
-this.recordMetric({);"'"
-name: "'memoryUsage')",value: "memory.usedJSHeapSize);"'"
-uni",t: "'bytes')",timestamp: "new Date();"'"
-categor",y: "'memory'",metadata: "{;"
+this.recordMetric({);"
+name: 'memoryUsage')",value: "memory.usedJSHeapSize);"
+uni",t: 'bytes')",timestamp: "new Date();"
+categor",y: 'memory'",metadata: "{;"
 tota",l: "memory.totalJSHeapSize",limit: "memory.jsHeapSizeLimit"
 ",}"
   ,}"
-recordMemoryUsage(): void {;}"'"
+recordMemoryUsage(): void {;}"
 if (typeof window === 'undefined") return;
 if (!(performance, as, PerformanceWithMemory).memory) return;
-;"
+"
 const memory = (performance, as, PerformanceWithMemory).memory;"
-this.recordMetric({)}"'"
-name: "'memoryUsage'",value: "memory.usedJSHeapSize;"'"
-uni",t: "'bytes'",timestamp: "new Date();"'"
-categor",y: "'memory'",metadata: "{",}"
+this.recordMetric({)}"
+name: 'memoryUsage'",value: "memory.usedJSHeapSize;"
+uni",t: 'bytes'",timestamp: "new Date();"
+categor",y: 'memory'",metadata: "{",}"
 total: "memory.totalJSHeapSize",limit: "memory.jsHeapSizeLimit;"
 percentag",e: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100",}"
 ;"
@@ -594,27 +594,27 @@ measureFunction<T>(name: "string",fn: "() => T): T{;"
 const startTime = performance.now();",const result = fn();,;}"
 const endTime = performance.now(),;};"
 this.recordMetric({});"
-name: "`functio",n: "${name",}`);"'"
-value: "endTime - startTime)",unit: "'ms")</T>;"
+name: "`functio",n: "${name",}`);"
+value: "endTime - startTime)",unit: 'ms")</T>;"
 measureFunction<T>(nam",e: "string",fn: "() => T): T {",}
 ;
 const startTime = performance.now();
 const result = fn();"
 const endTime = performance.now();"
 this.recordMetric({,});"
-name: "`functio",n: "${name",}`;"'"
-value: "endTime - startTime",unit: "'ms'",timestamp: "new Date()",category: "'runtime'",})</T>;"
+name: "`functio",n: "${name",}`;"
+value: "endTime - startTime",unit: "'ms'",timestamp: "new Date()",category: 'runtime'",})</T>;"
 measureFunction<T>(nam;"
 e: "string",f);"
 n: "() => T): T {/* TOD",O: "Fix JSX expression */",}"
 n: "${name",}`;"
 valu;"
 e: "endTime - startTime",uni"
-,;"'"
-t: "'ms'",timestam;"
+,;"
+t: 'ms'",timestam;"
 p: "new Date()",categor"
-,;"'"
-y: "'runtime'",});
+,;"
+y: 'runtime'",});
 return, result
 }
 /**"
@@ -624,8 +624,8 @@ async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> 
 const startTime = performance.now();",const result = await fn();,;"
 const endTime = performance.now(),;};"
 this.recordMetric({`});"
-name: "`asyn",c: "${name",}`);"'"
-value: "endTime - startTime)",unit: "'ms")</T>;"
+name: "`asyn",c: "${name",}`);"
+value: "endTime - startTime)",unit: 'ms")</T>;"
 async measureAsyncFunction<T>(nam",</T>;"
 e: "string",fn: "() => Promise<T>): Promise<T> {",}
 ;
@@ -633,19 +633,19 @@ const startTime = performance.now();
 const result = await fn();"
 const endTime = performance.now();"
 this.recordMetric({`,});"
-name: "`asyn",c: "${name",}`;"'"
-value: "endTime - startTime",unit: "'ms'",timestamp: "new Date()",category: "'runtime'",})</T>;"
+name: "`asyn",c: "${name",}`;"
+value: "endTime - startTime",unit: "'ms'",timestamp: "new Date()",category: 'runtime'",})</T>;"
 async measureAsyncFunction<T>(nam;"
 e: "string",f)</T>;"
 n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */",}`;"
 c: "${name",}`;"
 valu;"
 e: "endTime - startTime",uni"
-,;"'"
-t: "'ms'",timestam;"
+,;"
+t: 'ms'",timestam;"
 p: "new Date()",categor"
-,;"'"
-y: "'runtime'",});
+,;"
+y: 'runtime'",});
 return, result
 }
 /**
@@ -657,11 +657,11 @@ getMetrics(): PerformanceMetric[] {/* TODO: "Fix JSX expression */",}
 }
 /**"
 * Get metrics by category"
-*/;"'"
-getMetricsByCategory(category: "PerformanceMetric['category']): PerformanceMetric[] {",}"'"
+*/;"
+getMetricsByCategory(category: "PerformanceMetric['category']): PerformanceMetric[] {",}"
 getMetricsByCategory(category: "PerformanceMetric['category']): PerformanceMetric[] {",}"
 return this.metrics.filter(m = > m.category === category),;};"
-getMetricsByCategory(categor);"'"
+getMetricsByCategory(categor);"
 y: "PerformanceMetric['category']): PerformanceMetric[] {/* TOD",O: "Fix JSX expression */",}
 }
 /**
@@ -679,9 +679,9 @@ clsValue += (entry, as, LayoutShift).value}
 }
 this.webVitals.CLS = clsValue;"
 this.recordMetric({)}";'"
-name: "'CLS'",value: "clsValue;";'"
-uni",t: "'score'",timestamp: "new Date()";'"
-categor",y: "'runtime'"}
+name: 'CLS'",value: "clsValue;";'"
+uni",t: 'score'",timestamp: "new Date()";'"
+categor",y: 'runtime'"}
 });"
 });";'"
 clsObserver.observe({ entryTypes: "['layout-shift'] "});
@@ -741,28 +741,28 @@ c: "PerformanceMetric): void {/* TOD",O: "Fix JSX expression */"}
 */;
 recordPageLoad(): void{;
 if (typeof window === 'undefined') return;
-;
+
 const perfData = window.performance.timing;
-;
+
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;"
 this.recordMetric({);";'"
-name: "'pageLoad')",value: "pageLoadTime);";'"
-uni",t: "'ms')",timestamp: "new Date()";'"
-categor",y: "'load'",metadata: "{;"
+name: 'pageLoad')",value: "pageLoadTime);";'"
+uni",t: 'ms')",timestamp: "new Date()";'"
+categor",y: 'load'",metadata: "{;"
 dnsLooku",p: "perfData.domainLookupEnd - perfData.domainLookupStart",tcpConnection: "perfData.connectEnd - perfData.connectStart;"
 serverRespons",e: "perfData.responseEnd - perfData.requestStart"
 "}
   }
 recordPageLoad(): void {}'
 if (typeof window = == 'undefined') return;
-;
+
 const perfData = window.performance.timing;
-;
+
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;"
 this.recordMetric({)}";'"
-name: "'pageLoad'",value: "pageLoadTime;";'"
-uni",t: "'ms'",timestamp: "new Date()";'"
-categor",y: "'load'",metadata: "{"}"
+name: 'pageLoad'",value: "pageLoadTime;";'"
+uni",t: 'ms'",timestamp: "new Date()";'"
+categor",y: 'load'",metadata: "{"}"
 dnsLookup: "perfData.domainLookupEnd - perfData.domainLookupStart",tcpConnection: "perfData.connectEnd - perfData.connectStart;"
 serverRespons",e: "perfData.responseEnd - perfData.requestStart",domParsing: "perfData.domComplete - perfData.domLoading"}"
 recordPageLoad(): void {/* TODO: "Fix JSX expression */"}
@@ -774,16 +774,16 @@ recordPageLoad(): void {/* TODO: "Fix JSX expression */"}
 */;"
 recordNetworkRequest(url: "string",duration: "number",status: "number): void{",this.recordMetric({);"
 nam,;";'"
-e: "'networkRequest')",value: "duration);";'"
-uni",t: "'ms')",timestamp: "new Date()";'"
-categor",y: "'network'",metadata: "{;"
+e: 'networkRequest')",value: "duration);";'"
+uni",t: 'ms')",timestamp: "new Date()";'"
+categor",y: 'network'",metadata: "{;"
 url"}"
 }"
 recordNetworkRequest(url: "string",duration: "number",status: "number): void {"}"
 this.recordMetric({)}";'"
-name: "'networkRequest'",value: "duration;";'"
-uni",t: "'ms'",timestamp: "new Date()";'"
-categor",y: "'network'",metadata: "{"}
+name: 'networkRequest'",value: "duration;";'"
+uni",t: 'ms'",timestamp: "new Date()";'"
+categor",y: 'network'",metadata: "{"}
 url;
 status}"
 recordNetworkRequest(ur)"
@@ -799,24 +799,24 @@ s: "number): void {/* TOD",O: "Fix JSX expression */"}
 recordMemoryUsage(): void{;
 if (typeof window === 'undefined') return;
 if (!(performance, as, PerformanceWithMemory).memory) return;
-;
+
 const memory = (performance, as, PerformanceWithMemory).memory;"
 this.recordMetric({);";'"
-name: "'memoryUsage')",value: "memory.usedJSHeapSize);";'"
-uni",t: "'bytes')",timestamp: "new Date()";'"
-categor",y: "'memory'",metadata: "{;"
+name: 'memoryUsage')",value: "memory.usedJSHeapSize);";'"
+uni",t: 'bytes')",timestamp: "new Date()";'"
+categor",y: 'memory'",metadata: "{;"
 tota",l: "memory.totalJSHeapSize",limit: "memory.jsHeapSizeLimit"
 "}
   }
 recordMemoryUsage(): void {}'
 if (typeof window === 'undefined') return;
 if (!(performance, as, PerformanceWithMemory).memory) return;
-;
+
 const memory = (performance, as, PerformanceWithMemory).memory;"
 this.recordMetric({)}";'"
-name: "'memoryUsage'",value: "memory.usedJSHeapSize;";'"
-uni",t: "'bytes'",timestamp: "new Date()";'"
-categor",y: "'memory'",metadata: "{"}"
+name: 'memoryUsage'",value: "memory.usedJSHeapSize;";'"
+uni",t: 'bytes'",timestamp: "new Date()";'"
+categor",y: 'memory'",metadata: "{"}"
 total: "memory.totalJSHeapSize",limit: "memory.jsHeapSizeLimit;"
 percentag",e: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100"}"
 recordMemoryUsage(): void {/* TODO: "Fix JSX expression */"}
@@ -831,14 +831,14 @@ const startTime = performance.now()",const result = fn()}
 const endTime = performance.now()}"
 this.recordMetric({});"
 name: "`functio",n: "${name"}`);";'"
-value: "endTime - startTime)",unit: "'ms')</>"
+value: "endTime - startTime)",unit: 'ms')</>"
 measureFunction<T>(nam",e: "string",fn: "() => T): T {"}
 const startTime = performance.now();
 const result = fn();
 const endTime = performance.now();"
 this.recordMetric({});";`"
 name: "`functio",n: "${name"}`;";'"
-value: "endTime - startTime",unit: "'ms'",timestamp: "new Date()",category: "'runtime'"})</>;"
+value: "endTime - startTime",unit: 'ms'",timestamp: "new Date()",category: 'runtime'"})</>;"
 measureFunction<T>(nam;");"
 e: "string",f);"
 n: "() => T): T {/* TOD",O: "Fix JSX expression */"}";`"
@@ -846,10 +846,10 @@ n: "${name"}`;"
 valu;"
 e: "endTime - startTime",uni;"
 ,;";'"
-t: "'ms'",timestam;"
+t: 'ms'",timestam;"
 p: "new Date()",categor;"
 ,;";'"
-y: "'runtime'"});
+y: 'runtime'"});
 return, result;
 }
 /**;
@@ -860,7 +860,7 @@ const startTime = performance.now()",const result = await fn();,;
 const endTime = performance.now()}`"
 this.recordMetric({`});";`"
 name: "`asyn",c: "${name"}`);";'"
-value: "endTime - startTime)",unit: "'ms')</>"
+value: "endTime - startTime)",unit: 'ms')</>"
 async measureAsyncFunction<T>(nam",</>");"
 e: "string",fn: "() => Promise<T>): Promise<T> {"}
 const startTime = performance.now();
@@ -868,7 +868,7 @@ const result = await fn();
 const endTime = performance.now();`"
 this.recordMetric({`});";`"
 name: "`asyn",c: "${name"}`;";'"
-value: "endTime - startTime",unit: "'ms'",timestamp: "new Date()",category: "'runtime'"})</>;"
+value: "endTime - startTime",unit: 'ms'",timestamp: "new Date()",category: 'runtime'"})</>;"
 async measureAsyncFunction<T>(nam;");"
 e: "string",f)</>";`"
 n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */"}`;";`"
@@ -876,10 +876,10 @@ c: "${name"}`;"
 valu;"
 e: "endTime - startTime",uni;"
 ,;";'"
-t: "'ms'",timestam;"
+t: 'ms'",timestam;"
 p: "new Date()",categor;"
 ,;";'"
-y: "'runtime'"});
+y: 'runtime'"});
 return, result;
 }
 /**;
@@ -990,25 +990,25 @@ return Math.max(0, Math.min(100, score))
 getRecommendations(): string[] {;"
 const recommendations: "string[] = [];"
 if (this.webVitals.FCP && this.webVitals.FCP > 1800) {",recommendations.push();,"
-"'"
+"
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources"}"
 getRecommendations(): string[] {}"
 const recommendations: "string[] = []",if (this.webVitals.FCP && this.webVitals.FCP > 1800) {;}"
-recommendations.push();"'"
+recommendations.push();"
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources",
 )}
 }"
 if (this.webVitals.LCP && this.webVitals.LCP > 2500) {}"
-recommendations.push();"'"
+recommendations.push();"
 'Improve Largest Contentful Paint (LCP) - optimize largest element loading",
 )}
 }"
 if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {}"
-recommendations.push();"'"
+recommendations.push();"
 'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds",
 )}"
 }"
-if (this.webVitals.FID && this.webVitals.FID > 100) {}"'"
+if (this.webVitals.FID && this.webVitals.FID > 100) {}"
 recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution")}"
 getRecommendations(): string[] {/* TODO: "Fix JSX expression */",}"
 }"
@@ -1017,16 +1017,16 @@ if(this.webVitals.LCP && this.webVitals.LCP > 2500) {  /* TODO: "Fix JSX express
 if(this.webVitals.CLS && this.webVitals.CLS > 0.1) {  /* TODO: "Fix JSX expression */",, , }"
 }"
 if(this.webVitals.FID && this.webVitals.FID > 100) {  /* TODO: "Fix JSX expression */",, , }"
-}"'"
+}"
 const networkMetrics = this.getMetricsByCategory('network");
 const avgNetworkTime =;"
 networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;"
-if (avgNetworkTime > 500) {;"'"
+if (avgNetworkTime > 500) {;"
 recommendations.push('Optimize network requests - consider caching and reducing payload sizes");
 networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
 }"
 if (avgNetworkTime > 500) {}"
-recommendations.push();"'"
+recommendations.push();"
 'Optimize network requests - consider caching and reducing payload sizes","
 )}"
 if(avgNetworkTime > 500) {  /* TODO: "Fix JSX expression */",, , }
@@ -1082,7 +1082,7 @@ return, recommendations;
 /**
 * Generate performance report"
 */;"
-generateReport(): PerformanceReport {}"'"
+generateReport(): PerformanceReport {}"
 const loadMetrics = this.getMetricsByCategory('load");"
 const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;"
 return{;"
@@ -1209,10 +1209,10 @@ interface PerformanceWithMemory extends Performance {/* TODO: "Fix JSX expressio
 interface LayoutShift extends PerformanceEntry { /* TODO: "Fix JSX expression */",, ;}
 ;}
 // Export singleton instance;
-;
+
 export const performanceMetrics = PerformanceMetrics.getInstance();"
 `</T>;"
-,}"'"
+,}"
 =======
 }
 // Type for performance.memory;"
@@ -1246,7 +1246,7 @@ interface PerformanceWithMemory extends Performance {/* TODO: "Fix JSX expressio
 interface LayoutShift extends PerformanceEntry { /* TODO: "Fix JSX expression */",}
 }
 // Export singleton instance;
-;
+
 export const performanceMetrics = PerformanceMetrics.getInstance();`
 `</>;"
 }";`'"

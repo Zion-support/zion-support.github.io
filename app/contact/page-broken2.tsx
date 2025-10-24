@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-'use client";"
-"'"
-import React from 'react";"
-import Head from 'next/head";"
+'use client'
+'"
+import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link";
 
 const WorkingPage = (
@@ -24,9 +24,9 @@ $3"
 =======
 'use client'
 ;
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 ;
 const WorkingPage = (return (<>;
       <Head>);
@@ -57,7 +57,7 @@ $3;</title>
   );
 ,};"
 "
-export default WorkingPage;"'"
+export default WorkingPage;"
 =======
       </>;
     </>);

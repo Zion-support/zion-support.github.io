@@ -48,7 +48,7 @@ response: "unknown",status = 200;"
 header,</>"
 s: "Record<string",string> = {});
 ): void = > {;
-;'"
+'"
 if(typeof, global !== 'undefined') {"
     (global as typeof global & { fetch: "typeof fetch "}).fetch = jest.fn(() =>;"
 Promise.resolve({</>"
@@ -69,7 +69,7 @@ response: "unknown",status = 200;"
 header,</void>;"
 s: "Record<string",string> = {}"
 ): void = > {;"
-;"'"
+;"
 if(typeof, global !== 'undefined") {"
     (global as typeof global & { fetch: "typeof fetch ","
 ;}).fetch = jest.fn(() =>;"
@@ -128,7 +128,7 @@ const keys = Array.from(this.store.keys())",return keys[index] || null}"
  * Create a mock localStorage for testing;
  */;
 export const createMockStorage = (): MockStorage => {;
-;
+
 return new MockStorage();
 <<<<<<< HEAD
 
@@ -137,8 +137,8 @@ return new MockStorage();
  * Mock window object"
  */</string>;"
 export const mockWindow = (overrides: "Partial<Window> = {",;}): void => {;"
-;"'"
-if(typeof, global !== 'undefined") {;"'"
+;"
+if(typeof, global !== 'undefined") {;"
 Object.defineProperty(global, 'window", {;"
 value: "{",...global.window
         ...overrides)"
@@ -156,7 +156,7 @@ writable: "true",})
  * Mock window object;"
  */</>"
 export const mockWindow = (overrides: "Partial<Window> = {"}): void => {;
-;
+
 if(typeof, global !== 'undefined') {;'"
 Object.defineProperty(global, 'window', {;"
 value: "{",...global.window);
@@ -176,8 +176,8 @@ no,;"
 <<<<<<< HEAD
 w: "() => Date.now()",mark: "(name: string) => {;"
 entries.push({;"
-name;)"'"
-entryTyp",e: "'mark'",);"
+name;)"
+entryTyp",e: 'mark'",);"
 startTime: "Date.now();"
 ",}"
 duratio,n: "0",toJSON: "() => ({",})"
@@ -185,8 +185,8 @@ duratio,n: "0",toJSON: "() => ({",})"
     }"
     measure: "(nam",e: "string",startMark?: string, endMark?: string) => {;"
 entries.push({;"
-name;)"'"
-entryType: "'measure'",);"
+name;)"
+entryType: 'measure'",);"
 startTime: "Date.now();"
 duratio",n: "100",toJSON: "() => ({",})"
       } as, PerformanceEntry)"
@@ -194,7 +194,7 @@ duratio",n: "100",toJSON: "() => ({",})"
 w: "() => Date.now()",mark: "(name: string) => {;
 entries.push({);"
 name)";'"
-entryTyp",e: "'mark'",);"
+entryTyp",e: 'mark'",);"
 startTime: "Date.now()"}"
 duratio,n: "0",toJSON: "() => ({"});
       } as, PerformanceEntry);"
@@ -202,7 +202,7 @@ duratio,n: "0",toJSON: "() => ({"});
     measure: "(nam",e: "string",startMark?: string, endMark?: string) => {;
 entries.push({);"
 name)";'"
-entryType: "'measure'",);"
+entryType: 'measure'",);"
 startTime: "Date.now()"
 duratio",n: "100",toJSON: "() => ({"});
       } as, PerformanceEntry);"
@@ -253,7 +253,7 @@ return Math.random();",.toString(36);,
 };"
 ;"
 number: "(min = 0",max = 100): number => {;
-;
+
 return Math.floor(Math.random() * (max - min + 1)) + min"
 "
 ,}"
@@ -276,7 +276,7 @@ return `http",s: "//example.com/${generateTestData.string(10)",
 return Math.random()",.toString(36);,;"
       .substring(2, length + 2)}"
 number: "(min = 0",max = 100): number => {;
-;
+
 return Math.floor(Math.random() * (max - min + 1)) + min;"
 }"
   boolean: "(): boolean = > {",return Math.random() > 0.5}"
@@ -323,13 +323,13 @@ this.originalConsole = { ...console ,;}
     this.mock()
   ;};"
   private mock(): void{;"
-    // eslint-disable-next-line no-console;"'"
+    // eslint-disable-next-line no-console;"
 console.log = (...args: "unknown[]) => {",this.logs.push(args.map(String).join(' ")),};"
     };"
-    // eslint-disable-next-line no-console;"'"
+    // eslint-disable-next-line no-console;"
 console.error = (...args: "unknown[]) => {",this.errors.push(args.map(String).join(' ")),;"
     };"
-    // eslint-disable-next-line no-console;"'"
+    // eslint-disable-next-line no-console;"
 console.warn = (...args: "unknown[]) => {",this.warnings.push(args.map(String).join(' ")),
     }
 ;
@@ -340,7 +340,7 @@ console.warn = (...args: "unknown[]) => {",this.warnings.push(args.map(String).j
  * Deep clone an object;"
 */</>"
 export const deepClone = <T>(obj: "T): T => {;
-;"
+"
 return JSON.parse(JSON.stringify(obj))"
 "}
 /**;
@@ -482,7 +482,7 @@ retryWithBackoff;
 <<<<<<< HEAD
 measureExecutionTime}"
 };"
-}"'"
+}"
 =======
 measureExecutionTime}
 }"

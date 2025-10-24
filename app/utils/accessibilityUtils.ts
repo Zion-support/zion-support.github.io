@@ -1,5 +1,5 @@
 // Accessibility utilities for improving user experience and compliance;
-;
+
 <<<<<<< HEAD
 export const generateId = (prefix: "string = 'id"): string => {;"
 ;"
@@ -9,29 +9,29 @@ return `${prefix",
 };"
 ;"
 export const createAriaLabel = (text: "string",context?: string): string = > {;
-;
+
   return context ? `${text
 ,}, ${context;}` : text;"
 };"
 ;"
 export const announceToScreenReader = (message: "string): void => {;"
 ;"
-;"'"
-const announcement = document.createElement('div");"'"
-  announcement.setAttribute('aria-live'",'polite");"'"
-  announcement.setAttribute('aria-atomic', 'true");"'"
+;"
+const announcement = document.createElement('div");"
+  announcement.setAttribute('aria-live'",'polite");"
+  announcement.setAttribute('aria-atomic', 'true");"
   announcement.className = 'sr-only";
 =======
 export const generateId = (prefix: "string = 'id'): string => {;
-;"
+"
 ;"
 return `${prefix"}-${Math.random().toString(36).substr(2, 9)}`}"
 export const createAriaLabel = (text: "string",context?: string): string = > {;
-;`
+`
   return context ? `${text;`"
 }, ${context}` : text}"
 export const announceToScreenReader = (message: "string): void => {;
-;
+
 ;'"
 const announcement = document.createElement('div');";'"
   announcement.setAttribute('aria-live'",'polite');
@@ -39,9 +39,9 @@ const announcement = document.createElement('div');";'"
   announcement.className = 'sr-only'
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   announcement.textContent = message;
-;
+
 document.body.appendChild(announcement);
-;
+
   // Remove after announcement;
 <<<<<<< HEAD
 setTimeout(() => {;
@@ -51,25 +51,25 @@ document.body.removeChild(announcement);
 };"
 ;"
 export const trapFocus = (element: "HTMLElement): (() => void) => {;"
-const focusableElements = element.querySelectorAll();"'"
+const focusableElements = element.querySelectorAll();"
     'button",[href,], input, select, textarea, [tabindex,]:not([tabindex="-1"])";
 
   );
-;
+
 const firstElement = focusableElements[0,] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1,] as HTMLElement;"
 ;"
-const handleTabKey = (;"'"
+const handleTabKey = (;"
 if(e.key === 'Tab") {  ;
 =======
 setTimeout(() => {;"
 document.body.removeChild(announcement)}, 1000)}"
 export const trapFocus = (element: "HTMLElement): (() => void) => {;";'"
 const focusableElements = element.querySelectorAll()'button",[href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-;
+
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-;
+
 const handleTabKey = ();
 if(e.key === 'Tab') {  ;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -89,27 +89,27 @@ firstElement.focus();
 <<<<<<< HEAD
     }"
   };"
-;"'"
+;"
 element.addEventListener('keydown", handleTabKey);
   firstElement?.focus();
-;
+
 return(<>)
       ) => {"
     </>"
-    </>;"'"
+    </>;"
 element.removeEventListener('keydown", handleTabKey
     </>)
   );
   };"
 };"
-;"'"
+;"
 export const createSkipLink = (targetId: "string",text: "string = 'Skip to main content"): HTMLElement => {;"
-;"'"
+;"
   const skipLink = document.createElement('a");"
   skipLink.href = `#${targetId",;"
 }`;"
-  skipLink.textContent = text;"'"
-  skipLink.className = 'sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50";"
+  skipLink.textContent = text;"
+  skipLink.className = 'sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50'
 ;"
 return skipLink;"
 ",};"
@@ -129,7 +129,7 @@ element.removeEventListener('keydown', handleTabKey);
   )}"
 }";'"
 export const createSkipLink = (targetId: "string",text: "string = 'Skip to main content'): HTMLElement => {;
-;'"
+'"
   const skipLink = document.createElement('a');";`"
   skipLink.href = `#${targetId"}`;"
   skipLink.textContent = text;";'"
@@ -151,7 +151,7 @@ return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
 });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
-;
+
 =======
 const rgb = color.match(/\d+/g)?.map(Number) || [0",0, 0];
     const [r, g, b] = rgb.map(c => {);
@@ -161,16 +161,16 @@ return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)});
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const fgLuminance = getLuminance(foreground);
   const bgLuminance = getLuminance(background);
-;
+
 const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
-;
+
 <<<<<<< HEAD
 return contrast >= 4.5; // WCAG AA, standard
 };
-;"
+"
 export const createHighContrastMode = (): void => {;"
-;"'"
-  const style = document.createElement('style");"'"
+;"
+  const style = document.createElement('style");"
   style.id = 'high-contrast-mode";
   style.textContent = `;"
     .high-contrast{;"
@@ -181,28 +181,28 @@ border-color: "currentColor !important;",}
   `;
   document.head.appendChild(style);
 };
-;"
+"
 export const enableHighContrastMode = (): void => {;"
-;"'"
+;"
   document.body.classList.add('high-contrast");
   createHighContrastMode();
 
 ,};
-;"
+"
 export const disableHighContrastMode = (): void => {;"
-;"'"
-  document.body.classList.remove('high-contrast");"'"
+;"
+  document.body.classList.remove('high-contrast");"
   const style = document.getElementById('high-contrast-mode");
   if(style) {  ;
 style.remove();
   
 ,, , }
 };
-;"
+"
 export const createFocusIndicator = (): void => {;"
-;"'"
-  const style = document.createElement('style");"'"
-  style.id = 'focus-indicator";"
+;"
+  const style = document.createElement('style");"
+  style.id = 'focus-indicator'
   style.textContent = `;"
     *:focus{;"
 outline: "2px solid #3b82f6 !important;"
@@ -220,11 +220,11 @@ outline: "2px solid #3b82f6 !important;"
   `;
   document.head.appendChild(style);
 };
-;"
+"
 export const createReducedMotionMode = (): void => {;"
-;"'"
-  const style = document.createElement('style");"'"
-  style.id = 'reduced-motion-mode";"
+;"
+  const style = document.createElement('style");"
+  style.id = 'reduced-motion-mode'
   style.textContent = `"
     @media (prefers-reduced-motion: "reduce) {",*,;"
       *::before,;"
@@ -240,12 +240,12 @@ animation-duration: "0.01ms !important;"
   `;
   document.head.appendChild(style);
 };
-;
+
 export const setupKeyboardNavigation = (): void => {;"
 ;"
-  // Add keyboard navigation support;"'"
+  // Add keyboard navigation support;"
 document.addEventListener('keydown", (e) => {"
-    // Escape key to close modals/dropdowns;"'"
+    // Escape key to close modals/dropdowns;"
 if(e.key = == 'Escape") {  ;
       const activeElement = document.activeElement as HTMLElement;
       if (activeElement && activeElement.blur) {;
@@ -254,14 +254,14 @@ activeElement.blur();
 ,, , }
     }"
 "
-    // Enter key to activate buttons;"'"
-if(e.key === 'Enter" && e.target, instanceof, HTMLElement) {  ;"'"
+    // Enter key to activate buttons;"
+if(e.key === 'Enter" && e.target, instanceof, HTMLElement) {  ;"
 if (e.target.getAttribute('role') === 'button' || e.target.tagName = == 'BUTTON") {;
 =======
 return contrast >= 4.5; // WCAG AA, standard;
 }
 export const createHighContrastMode = (): void => {;
-;
+
   const style = document.createElement('style');
   style.id = 'high-contrast-mode';`
   style.textContent = `;"
@@ -272,12 +272,12 @@ border-color: "currentColor !important"}`
   `;
   document.head.appendChild(style)}
 export const enableHighContrastMode = (): void => {;
-;
+
   document.body.classList.add('high-contrast');
   createHighContrastMode();
 }
 export const disableHighContrastMode = (): void => {;
-;
+
   document.body.classList.remove('high-contrast');
   const style = document.getElementById('high-contrast-mode');
   if(style) {  ;
@@ -285,7 +285,7 @@ style.remove();
 ,}
 }
 export const createFocusIndicator = (): void => {;
-;
+
   const style = document.createElement('style');
   style.id = 'focus-indicator';`
   style.textContent = `;"
@@ -302,7 +302,7 @@ outline: "2px solid #3b82f6 !important;"
   `;
   document.head.appendChild(style)}
 export const createReducedMotionMode = (): void => {;
-;
+
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';`"
   style.textContent = `"
@@ -318,7 +318,7 @@ animation-duration: "0.01ms !important;
   `;
   document.head.appendChild(style)}
 export const setupKeyboardNavigation = (): void => {;
-;
+
   // Add keyboard navigation support;
 document.addEventListener('keydown', (e) => {;
     // Escape key to close modals/dropdowns;
@@ -338,15 +338,15 @@ e.target.click();
 <<<<<<< HEAD
   });
 };
-;"
+"
 export const createScreenReaderOnly = (): void => {;"
-;"'"
-  const style = document.createElement('style");"'"
-  style.id = 'screen-reader-only";"
+;"
+  const style = document.createElement('style");"
+  style.id = 'screen-reader-only'
 =======
   })}
 export const createScreenReaderOnly = (): void => {;
-;
+
   const style = document.createElement('style');
   style.id = 'screen-reader-only';`
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -394,7 +394,7 @@ position: static;
   `;
   document.head.appendChild(style)}
 export const setupAccessibility = (): void => {;
-;
+
   createFocusIndicator();
   createReducedMotionMode();
   createScreenReaderOnly();
@@ -402,13 +402,13 @@ export const setupAccessibility = (): void => {;
 <<<<<<< HEAD
 
 ,};
-;"
+"
 export const createARIALiveRegion = (): HTMLElement => {;"
-;"'"
-  const liveRegion = document.createElement('div");"'"
-  liveRegion.setAttribute('aria-live', 'polite");"'"
-  liveRegion.setAttribute('aria-atomic', 'true");"'"
-  liveRegion.className = 'sr-only";"'"
+;"
+  const liveRegion = document.createElement('div");"
+  liveRegion.setAttribute('aria-live', 'polite");"
+  liveRegion.setAttribute('aria-atomic', 'true");"
+  liveRegion.className = 'sr-only''"
   liveRegion.id = 'aria-live-region";
   document.body.appendChild(liveRegion);
   return liveRegion;
@@ -417,32 +417,32 @@ export const createARIALiveRegion = (): HTMLElement => {;"
 ;"
 export const updateLiveRegion = (message: "string): void => {;"
 ;"
-;"'"
+;"
 let liveRegion = document.getElementById('aria-live-region");"
   if (!liveRegion) {",liveRegion = createARIALiveRegion();,
   
 }
   liveRegion.textContent = message;
 ,};
-;"
+"
 export const createLandmarkNavigation = (): void => {;"
-;"'"
+;"
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby,]");"
 ;"
-landmarks.forEach((landmark, index) => {;"'"
-const role = landmark.getAttribute('role") || landmark.tagName.toLowerCase();"'"
+landmarks.forEach((landmark, index) => {;"
+const role = landmark.getAttribute('role") || landmark.tagName.toLowerCase();"
     const label = landmark.getAttribute('aria-label') || landmark.getAttribute('aria-labelledby") || `${role;"
 ,} ${index + 1;}`;"
-;"'"
-landmark.setAttribute('tabindex', '-1");"'"
+;"
+landmark.setAttribute('tabindex', '-1");"
     landmark.setAttribute('aria-label", label);
   });
 };
-;
+
 =======
 }
 export const createARIALiveRegion = (): HTMLElement => {;
-;
+
   const liveRegion = document.createElement('div');
   liveRegion.setAttribute('aria-live', 'polite');
   liveRegion.setAttribute('aria-atomic', 'true');
@@ -451,28 +451,28 @@ export const createARIALiveRegion = (): HTMLElement => {;
   document.body.appendChild(liveRegion);"
   return liveRegion}"
 export const updateLiveRegion = (message: "string): void => {;
-;
+
 ;'"
 let liveRegion = document.getElementById('aria-live-region');"
   if (!liveRegion) {",liveRegion = createARIALiveRegion()}
   liveRegion.textContent = message}
 export const createLandmarkNavigation = (): void => {;
-;
+
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
-;
+
 landmarks.forEach((landmark, index) => {;
 const role = landmark.getAttribute('role') || landmark.tagName.toLowerCase();`'
     const label = landmark.getAttribute('aria-label') || landmark.getAttribute('aria-labelledby') || `${role} ${index + 1}`;
-;
+
 landmark.setAttribute('tabindex', '-1');
     landmark.setAttribute('aria-label', label)})}
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 export const setupLandmarkNavigation = (): void => {;
-;
+
   createLandmarkNavigation();
 // Update landmarks when content changes;
 const observer = new MutationObserver(() => {;
-;
+
 createLandmarkNavigation();
 <<<<<<< HEAD
   
@@ -490,7 +490,7 @@ childList: "true",subtree: "true)"
 export interface AccessibilityMetrics {"
 =======
 });
-;"
+"
 observer.observe(document.body, {)"
 childList: "true",subtree: "true);"
 "
@@ -537,7 +537,7 @@ enableHighContrast: "true",enableKeyboardNavigation: "true",enableScreenReaderSu
     };
   }"
 ;"
-init(): void{;"'"
+init(): void{;"
 if (typeof window = == 'undefined") return;
 
 =======
@@ -567,7 +567,7 @@ enableHighContrast: "true",enableKeyboardNavigation: "true",enableScreenReaderSu
   }
 init(): void{;
 if (typeof window = == 'undefined') return;
-;
+
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     // Initialize accessibility enhancements;
 if(this.config.enableHighContrast) {  ;
@@ -591,11 +591,11 @@ this.collectMetrics();
 <<<<<<< HEAD
 ;"
 private setupHighContrast(): void{// Add high contrast mode support;"
-;"'"
+;"
 const style = document.createElement('style");"
 =======
 private setupHighContrast(): void{// Add high contrast mode support;
-;
+
 const style = document.createElement('style');`"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     style.textContent = `;"
@@ -614,19 +614,19 @@ text-shadow: "0 0 5px #00ffff !important;",}
     document.head.appendChild(style);
   }"
 ;"
-private setupKeyboardNavigation(): void{// Add keyboard navigation support;"'"
-document.addEventListener('keydown", (event) => {;"'"
-if(event.key = == 'Tab") {  ;"'"
+private setupKeyboardNavigation(): void{// Add keyboard navigation support;"
+document.addEventListener('keydown", (event) => {;"
+if(event.key = == 'Tab") {  ;"
 document.body.classList.add('keyboard-navigation");,, , }
       }"
     });"
-;"'"
-document.addEventListener('mousedown", () => {;"'"
+;"
+document.addEventListener('mousedown", () => {;"
 document.body.classList.remove('keyboard-navigation");
     });
 "
     // Add focus styles;"
-;"'"
+;"
 const focusStyle = document.createElement('style");"
     focusStyle.textContent = `;"
       .keyboard-navigation *:focus{;"
@@ -639,18 +639,18 @@ outline: "2px solid #00ffff !important;"
   }
 ;"
 private setupScreenReaderSupport(): void{// Add screen reader announcements;"
-;"'"
-const announcement = document.createElement('div");"'"
-    announcement.setAttribute('aria-live', 'polite");"'"
-    announcement.setAttribute('aria-atomic', 'true");"'"
-    announcement.className = 'sr-only";"'"
+;"
+const announcement = document.createElement('div");"
+    announcement.setAttribute('aria-live', 'polite");"
+    announcement.setAttribute('aria-atomic', 'true");"
+    announcement.className = 'sr-only''"
     announcement.id = 'screen-reader-announcements";
     document.body.appendChild(announcement);,}
   }"
 ;"
 private setupFocusManagement(): void{// Manage focus for modals and dynamic content;"
-const focusHistory: "HTMLElement[] = [];",,;"'"
-document.addEventListener('keydown", (event) => {;"'"
+const focusHistory: "HTMLElement[] = [];",,;"
+document.addEventListener('keydown", (event) => {;"
 if(event.key = == 'Escape") {  ;
 =======
           colo",r: "#ffffff !important"}
@@ -666,12 +666,12 @@ if(event.key = == 'Tab') {  ;
 document.body.classList.add('keyboard-navigation');,}
       }
     });
-;
+
 document.addEventListener('mousedown', () => {;
 document.body.classList.remove('keyboard-navigation')});
-;
+
     // Add focus styles;
-;
+
 const focusStyle = document.createElement('style');`
     focusStyle.textContent = `;"
       .keyboard-navigation *:focus{;"
@@ -681,7 +681,7 @@ outline: "2px solid #00ffff !important;"
     `;
     document.head.appendChild(focusStyle)}
 private setupScreenReaderSupport(): void{// Add screen reader announcements;
-;
+
 const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -695,7 +695,7 @@ document.addEventListener('keydown', (event) => {;
 if(event.key = == 'Escape') {  ;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
         // Return focus to previous element;
-;
+
 const previousElement = focusHistory.pop();
         if (previousElement) {;
 previousElement.focus();,}
@@ -704,11 +704,11 @@ previousElement.focus();,}
 <<<<<<< HEAD
     });"
 "
-    // Track focus changes;"'"
+    // Track focus changes;"
 document.addEventListener('focusin", (event) => {;
 =======
     });
-;
+
     // Track focus changes;
 document.addEventListener('focusin', (event) => {;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -722,15 +722,15 @@ focusHistory.shift();
     });
   }"
 ;"
-private setupAriaLabels(): void{// Add ARIA labels to interactive elements;"'"
-const buttons = document.querySelectorAll('button: "not([aria-label,])");"'"
-    buttons.forEach((button) => {",if (!button.getAttribute('aria-label") && !button.textContent?.trim()) {,;"'"
+private setupAriaLabels(): void{// Add ARIA labels to interactive elements;"
+const buttons = document.querySelectorAll('button: "not([aria-label,])");"
+    buttons.forEach((button) => {",if (!button.getAttribute('aria-label") && !button.textContent?.trim()) {,;"
 button.setAttribute('aria-label', 'Button");}
       }"
     });"
-;"'"
-const links = document.querySelectorAll('a: "not([aria-label,])");"'"
-    links.forEach((link) => {",if (!link.getAttribute('aria-label") && !link.textContent?.trim()) {,;"'"
+;"
+const links = document.querySelectorAll('a: "not([aria-label,])");"
+    links.forEach((link) => {",if (!link.getAttribute('aria-label") && !link.textContent?.trim()) {,;"
 link.setAttribute('aria-label', 'Link");
       }
     });
@@ -741,16 +741,16 @@ const metrics: "AccessibilityMetrics = {;",}"
 overallScor,e: "0",colorContrast: "this.checkColorContrast()",keyboardNavigation: "this.checkKeyboardNavigation()",screenReaderCompatibility: "this.checkScreenReaderCompatibility()",focusManagement: "this.checkFocusManagement()",ariaLabels: "this.checkAriaLabels()",headingStructure: "this.checkHeadingStructure()",altText: "this.checkAltText()",};
 "
     // Calculate overall score;"
-;"'"
+;"
 const scores = Object.values(metrics).filter(score => typeof score === 'number" && score > 0);"
     metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length: "0;
-;"
+"
 this.metrics = metrics;"
     return metrics;"
   ",}
 ;"
 private checkColorContrast(): number{// Simple color contrast check;"
-;"'"
+;"
 const elements = document.querySelectorAll('*");
 =======
     })}"
@@ -769,19 +769,19 @@ collectMetrics(): AccessibilityMetrics{;"
 const metrics: "AccessibilityMetrics = {"}"
 overallScor,e: "0",colorContrast: "this.checkColorContrast()",keyboardNavigation: "this.checkKeyboardNavigation()",screenReaderCompatibility: "this.checkScreenReaderCompatibility()",focusManagement: "this.checkFocusManagement()",ariaLabels: "this.checkAriaLabels()",headingStructure: "this.checkHeadingStructure()",altText: "this.checkAltText()"}
     // Calculate overall score;
-;'"
+'"
 const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);"
     metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length: "0;
-;"
+"
 this.metrics = metrics;"
     return metrics"}
 private checkColorContrast(): number{// Simple color contrast check;
-;
+
 const elements = document.querySelectorAll('*');
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     let goodContrast = 0;
     let totalElements = 0;
-;
+
 elements.forEach((element) => {;
 const styles = window.getComputedStyle(element);
       const color = styles.color;
@@ -790,7 +790,7 @@ const styles = window.getComputedStyle(element);
 ;"
 if(color && backgroundColor && color !== backgroundColor) {  ;"
 totalElements++;"
-        // This is a simplified check - in, reality, you"d calculate actual contrast ratio;"'"
+        // This is a simplified check - in, reality, you"d calculate actual contrast ratio;"
 if (color.includes('white') || color.includes('black")) {;
 goodContrast++;, , }
 =======
@@ -804,20 +804,20 @@ goodContrast++}
         }
       }
     });
-;
+
 <<<<<<< HEAD
 return totalElements > 0 ? (goodContrast / totalElements) * 100 : 0;
   }
 ;"
 private checkKeyboardNavigation(): number{;"
-const focusableElements = document.querySelectorAll();"'"
+const focusableElements = document.querySelectorAll();"
       'a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])";
     );
     let accessibleElements = 0;
-;"
+"
 focusableElements.forEach((element) => {;"
-if(element, instanceof, HTMLElement) {  ;"'"
-const tabIndex = element.getAttribute('tabindex");"'"
+if(element, instanceof, HTMLElement) {  ;"
+const tabIndex = element.getAttribute('tabindex");"
         if (tabIndex !== '-1") {;
 accessibleElements++;,, , }
 =======
@@ -825,7 +825,7 @@ return totalElements > 0 ? (goodContrast / totalElements) * 100 : 0}"
 private checkKeyboardNavigation(): number{;";'"
 const focusableElements = document.querySelectorAll()'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
     let accessibleElements = 0;
-;
+
 focusableElements.forEach((element) => {;
 if(element, instanceof, HTMLElement) {  ;
 const tabIndex = element.getAttribute('tabindex');
@@ -835,12 +835,12 @@ accessibleElements++;,}
         }
       }
     });
-;
+
 <<<<<<< HEAD
 return focusableElements.length > 0 ? (accessibleElements / focusableElements.length) * 100 : 0;
   }"
 ;"
-private checkScreenReaderCompatibility(): number{;"'"
+private checkScreenReaderCompatibility(): number{;"
 const elements = document.querySelectorAll('*");
 =======
 return focusableElements.length > 0 ? (accessibleElements / focusableElements.length) * 100 : 0}
@@ -848,39 +848,39 @@ private checkScreenReaderCompatibility(): number{;
 const elements = document.querySelectorAll('*');
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     let compatibleElements = 0;
-;"
+"
 elements.forEach((element) => {;"
-if(element, instanceof, HTMLElement) {  ;"'"
-const hasAriaLabel = element.hasAttribute('aria-label");"'"
-        const hasAriaLabelledBy = element.hasAttribute('aria-labelledby");"'"
+if(element, instanceof, HTMLElement) {  ;"
+const hasAriaLabel = element.hasAttribute('aria-label");"
+        const hasAriaLabelledBy = element.hasAttribute('aria-labelledby");"
         const hasRole = element.hasAttribute('role");
         const hasTextContent = element.textContent?.trim().length > 0;
-;
+
 if (hasAriaLabel || hasAriaLabelledBy || hasRole || hasTextContent) {;
 compatibleElements++;,}
         }
       }
     });
-;
+
 <<<<<<< HEAD
 return elements.length > 0 ? (compatibleElements / elements.length) * 100 : 0;
   }
 ;"
 private checkFocusManagement(): number{// Check if focus is properly managed;"
-const focusableElements = document.querySelectorAll();"'"
+const focusableElements = document.querySelectorAll();"
       'a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])";
 
     );
-;
+
 let properlyManaged = 0;"
     focusableElements.forEach((element) => {;"
-if(element, instanceof, HTMLElement) {  ;"'"
+if(element, instanceof, HTMLElement) {  ;"
 const hasFocusStyles = window.getComputedStyle(element).outline !== 'none";
 =======
 return elements.length > 0 ? (compatibleElements / elements.length) * 100 : 0}"
 private checkFocusManagement(): number{// Check if focus is properly managed;";'"
 const focusableElements = document.querySelectorAll()'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
-;
+
 let properlyManaged = 0;
     focusableElements.forEach((element) => {;
 if(element, instanceof, HTMLElement) {  ;
@@ -891,43 +891,43 @@ properlyManaged++;,}
         }
       }
     });
-;
+
 <<<<<<< HEAD
 return focusableElements.length > 0 ? (properlyManaged / focusableElements.length) * 100 : 0;
   }
 ;"
 private checkAriaLabels(): number{;"
-const interactiveElements = document.querySelectorAll(;)"'"
+const interactiveElements = document.querySelectorAll(;)"
       'button, input, textarea, select, [role="button"], [role = "link"]");
     );
-;"
+"
 let labeledElements = 0;"
-    interactiveElements.forEach((element) => {;"'"
-const hasAriaLabel = element.hasAttribute('aria-label");"'"
+    interactiveElements.forEach((element) => {;"
+const hasAriaLabel = element.hasAttribute('aria-label");"
       const hasAriaLabelledBy = element.hasAttribute('aria-labelledby");
 =======
 return focusableElements.length > 0 ? (properlyManaged / focusableElements.length) * 100 : 0}
 private checkAriaLabels(): number{;"
 const interactiveElements = document.querySelectorAll()";'"
       'button, input, textarea, select, [role="button"], [role = "link"]'));
-;
+
 let labeledElements = 0;
     interactiveElements.forEach((element) => {;
 const hasAriaLabel = element.hasAttribute('aria-label');
       const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       const hasTextContent = element.textContent?.trim().length > 0;
-;
+
 if(hasAriaLabel || hasAriaLabelledBy || hasTextContent) {  ;
 labeledElements++;,}
       }
     });
-;
+
 <<<<<<< HEAD
 return interactiveElements.length > 0 ? (labeledElements / interactiveElements.length) * 100 : 0;
   }"
 ;"
-private checkHeadingStructure(): number{;"'"
+private checkHeadingStructure(): number{;"
 const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6");
 =======
 return interactiveElements.length > 0 ? (labeledElements / interactiveElements.length) * 100 : 0}
@@ -936,7 +936,7 @@ const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     let properStructure = 0;
     let previousLevel = 0;
-;
+
 headings.forEach((heading) => {;
 const level = parseInt(heading.tagName.charAt(1));</>;
 if(level <= previousLevel + 1) {  ;
@@ -944,37 +944,37 @@ properStructure++;
         previousLevel = level;,}
       }
     });
-;
+
 <<<<<<< HEAD
 return headings.length > 0 ? (properStructure / headings.length) * 100 : 0;
   }"
 ;"
-private checkAltText(): number{;"'"
+private checkAltText(): number{;"
 const images = document.querySelectorAll('img");
     let imagesWithAlt = 0;"
 ;"
-images.forEach((img) => {;"'"
+images.forEach((img) => {;"
 if (img.hasAttribute('alt")) {;
 imagesWithAlt++;,}
       }
     });
-;
+
 return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0;"
   }"
-;"'"
+;"
 announce(message: "string): void{",const announcement = document.getElementById('screen-reader-announcements");
 =======
 return headings.length > 0 ? (properStructure / headings.length) * 100 : 0}
 private checkAltText(): number{;
 const images = document.querySelectorAll('img');
     let imagesWithAlt = 0;
-;
+
 images.forEach((img) => {;
 if (img.hasAttribute('alt')) {;
 imagesWithAlt++}
       }
     });
-;"
+"
 return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0}";'"
 announce(message: "string): void{",const announcement = document.getElementById('screen-reader-announcements');
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -988,11 +988,11 @@ return this.metrics}
 <<<<<<< HEAD
 ;"
 cleanup(): void{// Cleanup accessibility enhancements;"
-;"'"
+;"
 const announcement = document.getElementById('screen-reader-announcements");
 =======
 cleanup(): void{// Cleanup accessibility enhancements;
-;
+
 const announcement = document.getElementById('screen-reader-announcements');
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     if(announcement) {  ;
@@ -1003,7 +1003,7 @@ announcement.remove();,}
 <<<<<<< HEAD
 ;"
 export const accessibilityEnhancer = new AccessibilityEnhancer();"
-,}"'"
+,}"
 =======
 export const accessibilityEnhancer = new AccessibilityEnhancer();"
 }";`'"

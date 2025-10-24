@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-'use client";"
-import, React, { useEffect, useCallback, useState } from 'react";"
+'use client'
+import, React, { useEffect, useCallback, useState } from 'react'
 "
 interface PerformanceMetrics {"
 =======
@@ -51,11 +51,11 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
   });
 "
   // Web Vitals monitoring"
-  const measureWebVitals = useCallback(() => {"'"
+  const measureWebVitals = useCallback(() => {"
     if (enableWebVitals && typeof window !== 'undefined") {
       // Measure Largest Contentful Paint"
       const observer = new PerformanceObserver((list) => {"
-        for (const entry of list.getEntries()) {"'"
+        for (const entry of list.getEntries()) {"
           if (entry.entryType === 'largest-contentful-paint") {"
             setPerformanceMetrics(prev => ({"
               ...prev,;"
@@ -63,7 +63,7 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
             }));
           }"
         }"
-      });"'"
+      });"
       observer.observe({ entryTypes: "['largest-contentful-paint'] ",});
     }
   }, [enableWebVitals,]);
@@ -86,7 +86,7 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
     cls: "0","
     fcp: "0",;");"
     ttfb: "0"});
-;
+
   // Web Vitals monitoring;
   const measureWebVitals = useCallback(() => {;
     if (enableWebVitals && typeof window !== 'undefined') {;
@@ -102,12 +102,12 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
       });";'"
       observer.observe({ entryTypes: "['largest-contentful-paint'] "})}
   }, [enableWebVitals]);
-;
+
   useEffect(() => {;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     measureWebVitals();
   }, [measureWebVitals]);
-;
+
   return(<div className={className}>
       <h2>Advanced Performance Optimizer</h2>
 <<<<<<< HEAD
@@ -116,7 +116,7 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
   );
 };"
 "
-export default AdvancedPerformanceOptimizer;"'"
+export default AdvancedPerformanceOptimizer;"
 =======
       <p>Advanced performance optimization for better application performance.</>);
     </div>);

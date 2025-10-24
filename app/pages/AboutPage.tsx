@@ -1,34 +1,34 @@
 <<<<<<< HEAD
-'use client";"
-import React from 'react";"
+'use client'
+import React from 'react';
 import Link from 'next/link";
 export default function AboutPage() {
 "
 return const values = ["
-    {"'"
-icon: "Target",title: "'Mission-Driven'",description: "'We are committed to delivering innovative solutions that drive real business value and transformation.'","
+    {"
+icon: "Target",title: 'Mission-Driven'",description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'","
 }"
-  {"'"
-icon: "Users",title: "'Client-Focused'",description: "'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'",}"
-  {"'"
-icon: "Award",title: "'Excellence'",description: "'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'",;}"
-  {"'"
-icon: "Lightbulb",title: "'Innovation'",description: "'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'",;}"
-  {"'"
-icon: "Shield",title: "'Integrity'",description: "'We conduct business with honesty",transparency, and ethical practices in all our interactions."
+  {"
+icon: "Users",title: 'Client-Focused'",description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'",}"
+  {"
+icon: "Award",title: 'Excellence'",description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'",;}"
+  {"
+icon: "Lightbulb",title: 'Innovation'",description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'",;}"
+  {"
+icon: "Shield",title: 'Integrity'",description: 'We conduct business with honesty",transparency, and ethical practices in all our interactions."
 ;}"
-  {"'"
-icon: "Zap",title: "'Agility'",description: "'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'",;}
+  {"
+icon: "Zap",title: "'Agility'",description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'",;}
   ]"
 const team = ["
-    {"'"
-name: "'Kleber Santos'",role: "'CEO & Founder'",description: "'Visionary leader with 15+ years in AI and technology innovation.'",;}"
-    {"'"
-name: "'Sarah Johnson'",role: "'CTO'",description: "'Technical expert specializing in cloud architecture and AI implementation.'",;}"
-    {"'"
-name: "'Michael Chen'",role: "'Head of Security'",description: "'Cybersecurity specialist with expertise in enterprise security solutions.'",;}"
-    {"'"
-name: "'Emily Rodriguez'",role: "'Lead AI Engineer'",description: "'Machine learning expert focused on developing cutting-edge AI solutions.'",;}
+    {"
+name: 'Kleber Santos'",role: 'CEO & Founder'",description: 'Visionary leader with 15+ years in AI and technology innovation.'",;}"
+    {"
+name: 'Sarah Johnson'",role: 'CTO'",description: 'Technical expert specializing in cloud architecture and AI implementation.'",;}"
+    {"
+name: 'Michael Chen'",role: 'Head of Security'",description: 'Cybersecurity specialist with expertise in enterprise security solutions.'",;}"
+    {"
+name: 'Emily Rodriguez'",role: 'Lead AI Engineer'",description: 'Machine learning expert focused on developing cutting-edge AI solutions.'",;}
   ]
 return(<div>
 
@@ -108,7 +108,7 @@ g: grid-cols-4 gap-8" />;"
               {team.map((member,index) => (;"
                 <divkey = {index,};className = "bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center" />,"
     <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center" />,"
-    <span className="text-2 xl font-bold text-white" />"'"
+    <span className="text-2 xl font-bold text-white" />"
                       {member.name.split(' ').map(n => n[0,]).join('")}</span>"
                     </span>,"
     <h1 className = "text-lgfont-semiboldtext-whitemb-2">{member.name,}</h3>"
@@ -124,37 +124,37 @@ g: grid-cols-4 gap-8" />;"
     <h1 className="text-3 xl font-bold text-white text-center mb-8">By the Numbers</h2>,"
 =======
 'use client'
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 export default function AboutPage() {
 return const values = [;
     {;
-icon: "Target",title: "'Mission-Driven'",description: "'We are committed to delivering innovative solutions that drive real business value and transformation.'"}"
+icon: "Target",title: 'Mission-Driven'",description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'"}"
   {";'"
-icon: "Users",title: "'Client-Focused'",description: "'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'"}"
+icon: "Users",title: 'Client-Focused'",description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'"}"
   {";'"
-icon: "Award",title: "'Excellence'",description: "'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'"}"
+icon: "Award",title: 'Excellence'",description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'"}"
   {";'"
-icon: "Lightbulb",title: "'Innovation'",description: "'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'"}"
+icon: "Lightbulb",title: 'Innovation'",description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'"}"
   {";'"
-icon: "Shield",title: "'Integrity'",description: "'We conduct business with honesty",transparency, and ethical practices in all our interactions.'
+icon: "Shield",title: 'Integrity'",description: 'We conduct business with honesty",transparency, and ethical practices in all our interactions.'
 }"
   {";'"
-icon: "Zap",title: "'Agility'",description: "'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'"}
+icon: "Zap",title: 'Agility'",description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'"}
   ];
 const team = [;"
     {";'"
-name: "'Kleber Santos'",role: "'CEO & Founder'",description: "'Visionary leader with 15+ years in AI and technology innovation.'"}"
+name: 'Kleber Santos'",role: 'CEO & Founder'",description: 'Visionary leader with 15+ years in AI and technology innovation.'"}"
     {";'"
-name: "'Sarah Johnson'",role: "'CTO'",description: "'Technical expert specializing in cloud architecture and AI implementation.'"}"
+name: 'Sarah Johnson'",role: 'CTO'",description: 'Technical expert specializing in cloud architecture and AI implementation.'"}"
     {";'"
-name: "'Michael Chen'",role: "'Head of Security'",description: "'Cybersecurity specialist with expertise in enterprise security solutions.'"}"
+name: 'Michael Chen'",role: 'Head of Security'",description: 'Cybersecurity specialist with expertise in enterprise security solutions.'"}"
     {";'"
-name: "'Emily Rodriguez'",role: "'Lead AI Engineer'",description: "'Machine learning expert focused on developing cutting-edge AI solutions.'"}
+name: 'Emily Rodriguez'",role: 'Lead AI Engineer'",description: 'Machine learning expert focused on developing cutting-edge AI solutions.'"}
   ];
 return(<div>
       <Helmet  />;
-;"
+"
         <title>About Us - Zion Tech Group</>"
         <meta name="description" content="Learn about Zion Tech Group&apos;s, mission, values, and expertise in AI and IT solutions. Discover our team and company culture." / />"
         <meta name = "keywords" content="about, us, company, team, mission, values, AI, solutions, IT services" /  />
@@ -648,7 +648,7 @@ View Our Services</Link>
 </div>;
   );"
 ,}"
-}"'"
+}"
 =======
       </>;
 </>;

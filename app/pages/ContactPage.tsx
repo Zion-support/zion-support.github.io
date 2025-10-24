@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 const ContactPage = (
@@ -12,10 +12,10 @@ const ContactPage = (
 $3
 ,};"
 "
-export default ContactPage;"'"
+export default ContactPage;"
 =======
 "use client"
-import React from 'react'
+import React from 'react';
 ;
 const ContactPage = (return(<div>
       <h1>Contact Page</h1>

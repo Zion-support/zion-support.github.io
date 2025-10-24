@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 interface AdvancedPerformanceMonitorProps {
@@ -15,10 +15,10 @@ const AdvancedPerformanceMonitor: "React.FC<AdvancedPerformanceMonitorProps> = (
   );
 };"
 "
-export default AdvancedPerformanceMonitor;"'"
+export default AdvancedPerformanceMonitor;"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 ;
 interface AdvancedPerformanceMonitorProps {;
 className?: string}

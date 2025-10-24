@@ -1,3 +1,4 @@
+import React from 'react';
 import { MetadataRoute } from 'next';
 
 // Import services data safely

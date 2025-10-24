@@ -7,12 +7,12 @@
 */;"
 export interface PerformanceMetric {"
 ;"
-name: "string",value: "number;"'"
-ratin",g: "'good' | 'needs-improvement' | 'poor'","
+name: "string",value: "number;"
+ratin",g: 'good' | 'needs-improvement' | 'poor'","
 }"
 }"
     timestamp: "number",};
-;
+
 export interface WebVitals {
 =======
 'use client'
@@ -22,9 +22,9 @@ export interface WebVitals {
 * Tracks Core Web Vitals and custom performance metrics;
 */;
 export interface PerformanceMetric {;
-;
+
 name: "string",value: "number;";'"
-ratin",g: "'good' | 'needs-improvement' | 'poor'"}"
+ratin",g: 'good' | 'needs-improvement' | 'poor'"}"
 }"
     timestamp: "number"}
 export interface WebVitals {;
@@ -43,8 +43,8 @@ INP?: PerformanceMetric; // Interaction to Next, Paint}
 }"
 export interface CustomMetric {"
 ;"
-name: "string",value: "number;"'"
-uni",t: "'ms' | 'bytes' | 'count' | 'percentage'",rating: "'good' | 'needs-improvement' | 'poor'","
+name: "string",value: "number;"
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",rating: 'good' | 'needs-improvement' | 'poor'","
 }"
 }"
   timestamp: "number",};
@@ -53,13 +53,13 @@ export interface WebVitals {
 
 ;}
 ;};
-;
+
 =======
 }
 export interface CustomMetric {;"
 ;"
 name: "string",value: "number;";'"
-uni",t: "'ms' | 'bytes' | 'count' | 'percentage'",rating: "'good' | 'needs-improvement' | 'poor'"}"
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",rating: 'good' | 'needs-improvement' | 'poor'"}"
 }"
   timestamp: "number"}
 export interface WebVitals {;
@@ -79,8 +79,8 @@ export interface CustomMetric {
 "
 ;}"
 ;};"
-name: "string",value: "number;"'"
-uni",t: "'ms' | 'bytes' | 'count' | 'percentage'",timestamp: "number;",}"
+name: "string",value: "number;"
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",timestamp: "number;",}"
 }"
 class PerformanceMonitoringService {;}"
 private static instance: "PerformanceMonitoringService;",}"
@@ -90,7 +90,7 @@ export interface CustomMetric {;
 }"
 }"
 name: "string",value: "number;";'"
-uni",t: "'ms' | 'bytes' | 'count' | 'percentage'",timestamp: "number"}
+uni",t: 'ms' | 'bytes' | 'count' | 'percentage'",timestamp: "number"}
 }"
 class PerformanceMonitoringService {}"
 private static instance: "PerformanceMonitoringService"}"
@@ -162,20 +162,20 @@ return PerformanceMonitoringService.instance
 /**
 * Initialize performance observers"
 */;"
-private initializeObservers(): void {;}"'"
+private initializeObservers(): void {;}"
 if (typeof window = == 'undefined' || !('PerformanceObserver" in, window)) {;};
 return;}
 }
 try {}
 // Observe paint metrics (FCP);"
 const paintObserver = new PerformanceObserver((list) => {,}"
-list.getEntries().forEach((entry) => {}"'"
-if (entry.name = == 'first-contentful-paint") {,}"'"
+list.getEntries().forEach((entry) => {}"
+if (entry.name = == 'first-contentful-paint") {,}"
 this.recordWebVital('FCP", entry.startTime)}
 ;};"
 });"
-});"'"
-paintObserver.observe({ type: "'paint'",buffered: "true ",});
+});"
+paintObserver.observe({ type: 'paint'",buffered: "true ",});
 this.observers.push(paintObserver);
 // Observe LCP;
 const lcpObserver = new PerformanceObserver((list) => {
@@ -184,12 +184,12 @@ const lcpObserver = new PerformanceObserver((list) => {
 const lcpObserver = new PerformanceObserver((list) => {,;};
 const entries = list.getEntries();"
 const lastEntry = entries[entries.length - 1,];"
-if (lastEntry) {};"'"
+if (lastEntry) {};"
 this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",);"
 e: "number ",}).renderTime || (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",e: "number ",}).loadTime)"
 }"
-});"'"
-lcpObserver.observe({ type: "'largest-contentful-paint'",buffered: "true ",});
+});"
+lcpObserver.observe({ type: 'largest-contentful-paint'",buffered: "true ",});
 =======
 O: "Fix JSX expression */",}"
 }"
@@ -212,7 +212,7 @@ if (entry.name = == 'first-contentful-paint') {}'
 this.recordWebVital('FCP', entry.startTime)}
 }"
 })});";'"
-paintObserver.observe({ type: "'paint'",buffered: "true "});
+paintObserver.observe({ type: 'paint'",buffered: "true "});
 this.observers.push(paintObserver);
 // Observe LCP;
 const lcpObserver = new PerformanceObserver((list) => {;
@@ -226,12 +226,12 @@ this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: "numbe
 e: "number "}).renderTime || (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",e: "number "}).loadTime);
 }"
 });";'"
-lcpObserver.observe({ type: "'largest-contentful-paint'",buffered: "true "});
+lcpObserver.observe({ type: 'largest-contentful-paint'",buffered: "true "});
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 this.observers.push(lcpObserver);
 // Observe CLS;
 let clsValue = 0;
-;
+
 const clsObserver = new PerformanceObserver((list) => {;
   // Observe CLS;
 <<<<<<< HEAD
@@ -240,23 +240,23 @@ let clsValue = 0
 const clsObserver = new PerformanceObserver((list) => {,;}"
 list.getEntries().forEach((entry) => {;};"
 if (!(entry as PerformanceEntry & { hadRecentInput: "boolean ",}).hadRecentInput) {;};"
-clsValue += (entry as PerformanceEntry & { value: "number ",;}).value;"'"
+clsValue += (entry as PerformanceEntry & { value: "number ",;}).value;"
 this.recordWebVital('CLS", clsValue);
 }"
 })"
-});"'"
-clsObserver.observe({ type: "'layout-shift'",buffered: "true ",});
+});"
+clsObserver.observe({ type: 'layout-shift'",buffered: "true ",});
 this.observers.push(clsObserver);
 // Observe FID;
 const fidObserver = new PerformanceObserver((list) => {
   // Observe, FID
 }"
 const fidObserver = new PerformanceObserver((list) => {,}"
-list.getEntries().forEach((entry) => {}"'"
+list.getEntries().forEach((entry) => {}"
 this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: "number ",;}).processingStart - entry.startTime);"
 });"
-});"'"
-fidObserver.observe({ type: "'first-input'",buffered: "true ",});
+});"
+fidObserver.observe({ type: 'first-input'",buffered: "true ",});
 =======
 let clsValue = 0;
 }
@@ -267,7 +267,7 @@ clsValue += (entry as PerformanceEntry & { value: "number "}).value;
 this.recordWebVital('CLS', clsValue)}
 });"
 });";'"
-clsObserver.observe({ type: "'layout-shift'",buffered: "true "});
+clsObserver.observe({ type: 'layout-shift'",buffered: "true "});
 this.observers.push(clsObserver);
 // Observe FID;
 const fidObserver = new PerformanceObserver((list) => {;
@@ -276,7 +276,7 @@ const fidObserver = new PerformanceObserver((list) => {;
 const fidObserver = new PerformanceObserver((list) => {}"
 list.getEntries().forEach((entry) => {}";'"
 this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: "number "}).processingStart - entry.startTime)})});";'"
-fidObserver.observe({ type: "'first-input'",buffered: "true "});
+fidObserver.observe({ type: 'first-input'",buffered: "true "});
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 this.observers.push(fidObserver);
 // Observe navigation timing for TTFB;
@@ -288,13 +288,13 @@ const navEntry = entry as PerformanceNavigationTiming
 ;}
 const navObserver = new PerformanceObserver((list) => {,;};"
 list.getEntries().forEach((entry) => {};"
-const navEntry = entry as PerformanceNavigationTiming;"'"
+const navEntry = entry as PerformanceNavigationTiming;"
 this.recordWebVital('TTFB", navEntry.responseStart - navEntry.requestStart)}"
 })"
-});"'"
-navObserver.observe({ type: "'navigation'",buffered: "true ",});"
+});"
+navObserver.observe({ type: 'navigation'",buffered: "true ",});"
 this.observers.push(navObserver);"
-} catch (error) {}"'"
+} catch (error) {}"
 logger.error('Failed to initialize performance observers", error, as, Error)}"
 private initializeObservers(): void {/* TODO: "Fix JSX expression */",}"
 }"
@@ -319,7 +319,7 @@ let clsValue = 0;"
 ;"
 const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;};"
 t: "boolean ",}).hadRecentInput) {/* TODO: "Fix JSX expression */",};"
-e: "number ",}).value;"'"
+e: "number ",}).value;"
 this.recordWebVital('CLS", clsValue);
 }"
 })"
@@ -351,7 +351,7 @@ this.observers.push(navObserver);"
 private recordWebVital(name: "keyof WebVitals",value: "number): void{",const rating = this.getRating(name, value);"
 const metric: "PerformanceMetric = {"
 ",name,;
-;}"
+}"
 };"
 ;"
 private recordWebVital(name: "keyof WebVitals",value: "number): void {",;}"
@@ -362,7 +362,7 @@ value;"
 rating;"
 timestamp: "Date.now()",}"
 }"
-this.webVitals[name,] = metric;"'"
+this.webVitals[name,] = metric;"
 logger.info(`Web Vital: "${name",}`, 'PerformanceMonitoring", { value, rating });
 // Send to analytics;"
 this.sendToAnalytics(metric);"
@@ -371,7 +371,7 @@ e: "keyof WebVitals",valu);"
 e: "number): void {/* TOD",O: "Fix JSX expression */",;}
 ;}"
 this.webVitals[name,] = metric;"
-logger.info(`Web)`;"'"
+logger.info(`Web)`;"
 Vital: "${name",}`, 'PerformanceMonitoring", { value, rating })
 =======
 const navEntry = entry as PerformanceNavigationTiming;
@@ -383,7 +383,7 @@ const navEntry = entry as PerformanceNavigationTiming;
 this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart)}
 });"
 });";'"
-navObserver.observe({ type: "'navigation'",buffered: "true "});
+navObserver.observe({ type: 'navigation'",buffered: "true "});
 this.observers.push(navObserver)} catch (error) {}'"
 logger.error('Failed to initialize performance observers', error, as, Error)}"
 private initializeObservers(): void {/* TODO: "Fix JSX expression */"}"
@@ -473,7 +473,7 @@ INP: "{ goo",d: "200",poor: "500 "}
 <<<<<<< HEAD
 /**"
 * Get rating for a Web Vital metric"
-*/;"'"
+*/;"
 private getRating(name: "keyof WebVitals",value: "number): 'good' | 'needs-improvement' | 'poor' {",;};"
 const thresholds: "Record<keyof WebVitals",{ good: "number; poo",r: "number ",}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: "1800",poor: "3000 ",}"
 LCP: "{ goo",d: "2500",poor: "4000 ",}"
@@ -482,13 +482,13 @@ CLS: "{ goo",d: "0.1",poor: "0.25 ",}"
 TTFB: "{ goo",d: "800",poor: "1800 ",}"
 INP: "{ goo",d: "200",poor: "500 ",}"
 }"
-const threshold = thresholds[name,];"'"
-if (!threshold) return 'good";"'"
-if (value <= threshold.good) return 'good";"'"
-if (value <= threshold.poor) return 'needs-improvement";"'"
-return 'poor";"
+const threshold = thresholds[name,];"
+if (!threshold) return 'good''"
+if (value <= threshold.good) return 'good''"
+if (value <= threshold.poor) return 'needs-improvement''"
+return 'poor'
 private getRating(nam);"
-e: "keyof WebVitals",valu);"'"
+e: "keyof WebVitals",valu);"
 e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}"
 r: "number ",}> = {/* TODO: "Fix JSX expression */",}"
 r: "3000 ",}"
@@ -508,19 +508,19 @@ IN;"
 P: "{/* TOD",O: "Fix JSX expression */",}"
 r: "500 ",}"
 }"
-const threshold = thresholds[name,];"'"
-if (!threshold) return 'good";"'"
-if (value <= threshold.good) return 'good";"'"
-if (value <= threshold.poor) return 'needs-improvement";"'"
+const threshold = thresholds[name,];"
+if (!threshold) return 'good''"
+if (value <= threshold.good) return 'good''"
+if (value <= threshold.poor) return 'needs-improvement''"
 return 'poor"
 ;}
 /**"
 * Record a custom metric"
-*/;"'"
+*/;"
 recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit"]): void{;"
 const metri",c: "CustomMetric = {;"
 name",}"
-,}"'"
+,}"
 recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void {",;}"
 const metric: "CustomMetric = {",;};
 name;"
@@ -583,43 +583,43 @@ if (this.customMetrics.length > this.maxMetrics) {;
 <<<<<<< HEAD
 if (this.customMetrics.length > this.maxMetrics) {}"
 this.customMetrics.shift();}"
-}"'"
+}"
 logger.debug(`Custom Metric: "${name",}`, 'PerformanceMonitoring", { value, unit });"
 recordCustomMetric(nam;)"
 e: "string",valu);"
-e: "number",uni);"'"
+e: "number",uni);"
 t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression */",;}
 ;}"
 this.customMetrics.push(metric);"
 // Maintain max metrics limit;"
 if(this.customMetrics.length > this.maxMetrics) {  /* TODO: "Fix JSX expression */",, , }"
 }`;"
-logger.debug(`Custom)`;"'"
+logger.debug(`Custom)`;"
 Metric: "${name",}`, 'PerformanceMonitoring", { value, unit })
 }
 /**"
 * Send metric to analytics service"
 */;"
-private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {;"'"
-try{",if (typeof window !== 'undefined' && 'fetch" in, window) {,;}"'"
-await fetch('/api/analytics/performance", {)}"'"
-method: "'POST'",;});"'"
+private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {;"
+try{",if (typeof window !== 'undefined' && 'fetch" in, window) {,;}"
+await fetch('/api/analytics/performance", {)}"
+method: 'POST'",;});"
 headers: "{ 'Content-Type': 'application/json' ",});"
 body: "JSON.stringify(metric);"
 private async sendToAnalytics(metri",)</void>;"
 c: "PerformanceMetric): Promise<void> {",}"
 ;"
-try {}"'"
-if (typeof window !== 'undefined' && 'fetch" in, window) {}"'"
-await fetch('/api/analytics/performance", {)}"'"
-method: "'POST'",}"'"
+try {}"
+if (typeof window !== 'undefined' && 'fetch" in, window) {}"
+await fetch('/api/analytics/performance", {)}"
+method: 'POST'",}"
 headers: "{ 'Content-Type': 'application/json' ",}"
 body: "JSON.stringify(metric)",})"
 }"
-;} catch (error) {;}"'"
+;} catch (error) {;}"
 logger.error('Failed to send metric to analytics", error, as, Error);}"
 private async sendToAnalytics(metri)</void>;"
-c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression */",}"'"
+c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression */",}"
 s: "{ 'Content-Type': 'application/json' ",}"
 bod;"
 y: "JSON.stringify(metric)",})"
@@ -664,7 +664,7 @@ Metric: "${name"}`, 'PerformanceMonitoring', { value, unit });
 private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {;";'"
 try{",if (typeof window !== 'undefined' && 'fetch' in, window) {}'"
 await fetch('/api/analytics/performance', {)}";'"
-method: "'POST'"});";'"
+method: 'POST'"});";'"
 headers: "{ 'Content-Type': 'application/json' "});"
 body: "JSON.stringify(metric);"
 private async sendToAnalytics(metri",)</>"
@@ -672,7 +672,7 @@ c: "PerformanceMetric): Promise<void> {"}
 try {}'
 if (typeof window !== 'undefined' && 'fetch' in, window) {}'"
 await fetch('/api/analytics/performance', {)}";'"
-method: "'POST'"}";'"
+method: 'POST'"}";'"
 headers: "{ 'Content-Type': 'application/json' "}"
 body: "JSON.stringify(metric)"});
 }
@@ -712,11 +712,11 @@ if (vitals.length === 0) return 0;
 <<<<<<< HEAD
 const scores = vitals.map(metric => {
 );
-;"
+"
   );"
-switch (metric.rating) {;"'"
-case 'good": return 100;"'"
-case 'needs-improvement": return 50;"'"
+switch (metric.rating) {;"
+case 'good": return 100;"
+case 'needs-improvement": return 50;"
 case 'poor": return 0;
 if (vitals.length = == 0) return, 0
 
@@ -724,9 +724,9 @@ if (vitals.length = == 0) return, 0
 const scores = vitals.map(metric => {
 )"
 ,;};"
-switch (metric.rating) {};"'"
-case 'good": return 100;"'"
-case 'needs-improvement": return 50;"'"
+switch (metric.rating) {};"
+case 'good": return 100;"
+case 'needs-improvement": return 50;"
 case 'poor": return 0;"
 default: "return 0;",,}"
 getPerformanceScore(): number {/* TODO: "Fix JSX expression */",}"
@@ -746,25 +746,25 @@ customMetric",s: "CustomMetric[]",recommendations: "string[];",}"
 } {}"
 const score = this.getPerformanceScore();"
 const recommendations: "string[] = []"
-// Generate recommendations based on metrics;"'"
+// Generate recommendations based on metrics;"
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {;"
 const recommendation",s: "string[] = []"
 "
 // Generate recommendations based on metrics"
-",}"'"
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {}"'"
+",}"
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {}"
 recommendations.push('Improve First Contentful Paint by optimizing critical rendering path")}"
-}"'"
-if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good") {}"'"
+}"
+if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good") {}"
 recommendations.push('Improve Largest Contentful Paint by optimizing images and server response")}"
-}"'"
-if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good") {}"'"
+}"
+if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good") {}"
 recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content")}"
-}"'"
-if (this.webVitals.FID && this.webVitals.FID.rating !== 'good") {}"'"
+}"
+if (this.webVitals.FID && this.webVitals.FID.rating !== 'good") {}"
 recommendations.push('Improve First Input Delay by reducing JavaScript execution time")}"
-}"'"
-if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good") {}"'"
+}"
+if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good") {}"
 recommendations.push('Improve Time to First Byte by optimizing server response time")}
 ;}"
 return {;}"
@@ -838,7 +838,7 @@ const result = fn(),;}</T>;"
 measureFunction<T>(name: "string",fn: "() => T): T {",}
 const start = performance.now();"
 const result = fn();"
-const duration = performance.now() - start;`,}"'"
+const duration = performance.now() - start;`,}"
 this.recordCustomMetric(`fn_${name}`, duration, 'ms");
 return, result
 }
@@ -851,44 +851,44 @@ const result = await fn()",;}</T>;"
 async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {",;}
 const start = performance.now();"
 const result = await fn();"
-const duration = performance.now() - start;`,}"'"
+const duration = performance.now() - start;`,}"
 this.recordCustomMetric(`async_fn_${name}`, duration, 'ms");
 return, result
 }
 /**"
 * Mark a custom performance mark"
-*/;"'"
+*/;"
 mark(name: "string): void {",if (typeof performance !== 'undefined' && 'mark" in, performance) {}"
-mark(name: "string): void {",}"'"
+mark(name: "string): void {",}"
 if (typeof performance !== 'undefined' && 'mark" in, performance) {;}
 performance.mark(name);}
 ;}
 ;}
 /**"
 * Measure between two marks"
-*/;"'"
+*/;"
 measure(name: "string",startMark: "string",endMark: "string): number | null{",if (typeof performance !== 'undefined' && 'measure" in, performance) {,;}"
 try {}"
-measure(name: "string",startMark: "string",endMark: "string): number | null {",}"'"
+measure(name: "string",startMark: "string",endMark: "string): number | null {",}"
 if (typeof performance !== 'undefined' && 'measure" in, performance) {;}"
 try {;}"
-performance.measure(name, startMark, endMark);"'"
+performance.measure(name, startMark, endMark);"
 const measure = performance.getEntriesByName(name, 'measure")[0,];"
-if (measure) {}"'"
+if (measure) {}"
 this.recordCustomMetric(name, measure.duration, 'ms");
 return measure.duration;}"
 }"
-} catch (error) {}"'"
+} catch (error) {}"
 logger.error('Failed to measure performance", error, as, Error)}"
 getSummary(): {/* TODO: "Fix JSX expression */",}"
 } {/* TODO: "Fix JSX expression */",}"
-}"'"
+}"
 if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"'"
+}"
 if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"'"
+}"
 if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"'"
+}"
 if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
 }"
 return {/* TODO: "Fix JSX expression */",}
@@ -899,7 +899,7 @@ return {/* TODO: "Fix JSX expression */",}
 */</T>;"
 measureFunction<T>(nam;"
 e: "string",f);"
-n: "() => T): T {/* TOD",O: "Fix JSX expression */",}`;"'"
+n: "() => T): T {/* TOD",O: "Fix JSX expression */",}`;"
 this.recordCustomMetric(`fn_${name}`, duration, 'ms");
 return, result
 }
@@ -908,7 +908,7 @@ return, result
 */</T>;"
 async measureAsyncFunction<T>(nam;"
 e: "string",f)</T>;"
-n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */",}`;"'"
+n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */",}`;"
 this.recordCustomMetric(`async_fn_${name}`, duration, 'ms");
 return, result
 }
@@ -1077,14 +1077,14 @@ disconnect(): void {/* TODO: "Fix JSX expression */"}
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService;
 // Export convenience enums and functions;
-;
+
 <<<<<<< HEAD
 export enum MetricUnit{// Export convenience enums and, functions;}"
 ;}"
-export enum MetricUnit {;}"'"
-Milliseconds = 'ms";"'"
-Bytes = 'bytes";"'"
-Count = 'count";"'"
+export enum MetricUnit {;}"
+Milliseconds = 'ms''"
+Bytes = 'bytes''"
+Count = 'count''"
 Percentage = 'percentage",};
 };
 // Simple metrics structure for testing;
@@ -1100,7 +1100,7 @@ interface MetricData {
 ;};"
 values: "number[]",count: "number;"
 averag",e: "number",min: "number;"
-ma",x: "number",unit: "string;"'"
+ma",x: "number",unit: "string;"
 rating?: 'good' | 'needs-improvement' | 'poor';",}
 }</T>;
 =======
@@ -1134,7 +1134,7 @@ export const recordMetric = useCallback((...args) => {;
 export const recordMetric = useCallback((...args) => {}
 // Record in our simple metrics store for testing;
 const existing = simpleMetrics.get(name);
-;
+
 if (existing) {}
 existing.values.push(value);
 existing.count++;
@@ -1173,20 +1173,20 @@ ratin",g: "getRating(name",value)}
 // Also record in the main performance monitoring service;"
 <<<<<<< HEAD
 performanceMonitoring.recordCustomMetric(name, value, unit);"
-}"'"
+}"
 function getRating(name: "string",value: "number): 'good' | 'needs-improvement' | 'poor' {",;}</string>;"
-const thresholds: "Record<string",{ good: "number; poo",r: "number ",}> = {}</strin>"'"
-'FCP': { good: "1800",poor: "3000 ",}"'"
-'LCP': { good: "2500",poor: "4000 ",}"'"
-'FID': { good: "100",poor: "300 ",}"'"
-'CLS': { good: "0.1",poor: "0.25 ",}"'"
-'TTFB': { good: "800",poor: "1800 ",}"'"
+const thresholds: "Record<string",{ good: "number; poo",r: "number ",}> = {}</strin>"
+'FCP': { good: "1800",poor: "3000 ",}"
+'LCP': { good: "2500",poor: "4000 ",}"
+'FID': { good: "100",poor: "300 ",}"
+'CLS': { good: "0.1",poor: "0.25 ",}"
+'TTFB': { good: "800",poor: "1800 ",}"
 'INP': { good: "200",poor: "500 ",}"
 }"
-const threshold = thresholds[name,];"'"
-if (!threshold) return 'good";"'"
-if (value <= threshold.good) return 'good";"'"
-if (value <= threshold.poor) return 'needs-improvement";"'"
+const threshold = thresholds[name,];"
+if (!threshold) return 'good''"
+if (value <= threshold.good) return 'good''"
+if (value <= threshold.poor) return 'needs-improvement''"
 return 'poor"
 =======
 performanceMonitoring.recordCustomMetric(name, value, unit)}";'"
@@ -1273,7 +1273,7 @@ recordMetric(name, duration, MetricUnit.Milliseconds);
 return result;}
 }"
 export const getPerformanceScore = (): number => {,;};"
-const metrics = getMetrics();"'"
+const metrics = getMetrics();"
 const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB"];
 =======
 return result}
@@ -1289,11 +1289,11 @@ if (webVitals.length === 0) return 0;
 <<<<<<< HEAD
 const scores = webVitals.map(metric => {
 );
-;"
+"
   );"
-switch (metric.rating) {;"'"
-case 'good": return 100;"'"
-case 'needs-improvement": return 50;"'"
+switch (metric.rating) {;"
+case 'good": return 100;"
+case 'needs-improvement": return 50;"
 case 'poor": return 0;
 if (webVitals.length = == 0) return, 0
 
@@ -1301,9 +1301,9 @@ if (webVitals.length = == 0) return, 0
 const scores = webVitals.map(metric => {
 )"
 ,;};"
-switch (metric.rating) {};"'"
-case 'good": return 100;"'"
-case 'needs-improvement": return 50;"'"
+switch (metric.rating) {};"
+case 'good": return 100;"
+case 'needs-improvement": return 50;"
 case 'poor": return 0;"
 default: "return 0;",,}"
 }"
@@ -1313,24 +1313,24 @@ return Math.round(sum / scores.length);
 }"
 export const getRecommendations = (): string[] => {,;};"
 const metrics = getMetrics();"
-const recommendations: "string[] = [];"'"
+const recommendations: "string[] = [];"
 if (metrics.FCP && metrics.FCP.rating !== 'good") {;"
 const recommendation",s: "string[] = []"
 "
-  ",}"'"
-if (metrics.FCP && metrics.FCP.rating !== 'good") {}"'"
+  ",}"
+if (metrics.FCP && metrics.FCP.rating !== 'good") {}"
 recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources")}"
-}"'"
-if (metrics.LCP && metrics.LCP.rating !== 'good") {}"'"
+}"
+if (metrics.LCP && metrics.LCP.rating !== 'good") {}"
 recommendations.push('Improve LCP by optimizing largest images and server response time")}"
-}"'"
-if (metrics.FID && metrics.FID.rating !== 'good") {}"'"
+}"
+if (metrics.FID && metrics.FID.rating !== 'good") {}"
 recommendations.push('Improve FID by reducing JavaScript execution time")}"
-}"'"
-if (metrics.CLS && metrics.CLS.rating !== 'good") {}"'"
+}"
+if (metrics.CLS && metrics.CLS.rating !== 'good") {}"
 recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts")}"
-}"'"
-if (metrics.TTFB && metrics.TTFB.rating !== 'good") {}"'"
+}"
+if (metrics.TTFB && metrics.TTFB.rating !== 'good") {}"
 recommendations.push('Improve TTFB by optimizing server response time and using CDN")}
 }"
 return, recommendations"
@@ -1355,25 +1355,25 @@ t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression */"
 performanceMonitoring.recordCustomMetric(name, value, unit);"
 }"
 function getRating(nam);"
-e: "string",valu);"'"
+e: "string",valu);"
 e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}"
 r: "number ",}> = {/* TODO: "Fix JSX expression */",}"
-r: "3000 ",}"'"
+r: "3000 ",}"
 'LCP': {/* TODO: "Fix JSX expression */",}"
-r: "4000 ",}"'"
+r: "4000 ",}"
 'FID': {/* TODO: "Fix JSX expression */",}"
-r: "300 ",}"'"
+r: "300 ",}"
 'CLS': {/* TODO: "Fix JSX expression */",}"
-r: "0.25 ",}"'"
+r: "0.25 ",}"
 'TTFB': {/* TODO: "Fix JSX expression */",}"
-r: "1800 ",}"'"
+r: "1800 ",}"
 'INP': {/* TODO: "Fix JSX expression */",}"
 r: "500 ",}"
 }"
-const threshold = thresholds[name,];"'"
-if (!threshold) return 'good"</string>;"'"
-if (value <= threshold.good) return 'good";"'"
-if (value <= threshold.poor) return 'needs-improvement";"'"
+const threshold = thresholds[name,];"
+if (!threshold) return 'good"</string>;"
+if (value <= threshold.good) return 'good''"
+if (value <= threshold.poor) return 'needs-improvement''"
 return 'poor"
 }"
 export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression */",;}</string>;"
@@ -1404,19 +1404,19 @@ const sum = scores.reduce((a: "number",b: "number) => a + b",0);"
 return Math.round(sum / scores.length);"
 }"
 export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression */",}"
-}"'"
+}"
 if(metrics.LCP && metrics.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"'"
+}"
 if(metrics.FID && metrics.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"'"
+}"
 if(metrics.CLS && metrics.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
-}"'"
+}"
 if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , ;}
 ;}
 return recommendations;
 };"
 `</T>;"
-}"'"
+}"
 =======
 const scores = webVitals.map(metric => {);
 ));

@@ -1,12 +1,13 @@
 'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight    } from 'lucide-react'
-import Footer from '../components/Footer'
-;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight    } from 'lucide-react';
+import Footer from '../components/Footer';
+
 export default function ServicePage() {
-  return (<div>
+  return (
+    <div>
       <Head>
         <title>Devops Advanced | Zion Tech Group</title>
         <meta name="description" content="Professional devops advanced services and solutions for modern businesses." />"

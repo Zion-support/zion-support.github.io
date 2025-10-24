@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-'use client";"
-import React from 'react";"
-import Helmet from 'react-helmet-async";"
-import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe         } from 'lucide-react";"
-import { { Phone, Mail } from 'lucide-react";"
+'use client'
+import React from 'react';
+import Helmet from 'react-helmet-async'
+import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe         } from 'lucide-react'
+import { { Phone, Mail } from 'lucide-react';
     'use client'
       'Gain competitive advantage with advanced technology'"
 const EnhancedHero: "React.FC = () => {"
-const benefits = ["'"
+const benefits = ["
     'Increase efficiency by up to 50%'",'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
@@ -24,7 +24,7 @@ const benefits = ["'"
                     </div>"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 import Helmet  from 'react-helmet-async'
 import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe        } from 'lucide-react'
 import { { Phone, Mail } from from 'lucide-react''use client'
@@ -72,12 +72,12 @@ Start Your Free Trial</button>
 <<<<<<< HEAD
       </div>"
   );"
-,};"'"
+,};"
 export default EnhancedHero;    'Gain competitive advantage with advanced technology",
     <divclassName = quotflex flex-col sm flex-row gap-4 justify-centerquot / / / />
 ,}"
 };"
-;"'"
+;"
 =======
       </div>
   )}'

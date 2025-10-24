@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import Footer from './Footer'
 import Navigation from './Navigation'
 import { Helmet } from from 'react-helmet-async'
@@ -51,7 +51,7 @@ onSubscribe(email), }
       setIsSubscribed(true);
       setEmail('');"
     } catch(error) {";'"
-console.error('Subscription failed: "'",error);
+console.error('Subscription failed: ",error);
     } finally {;
 setIsSubmitting(false)}"
   return(</>"

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import, React, { useState, useCallback } from 'react'
 interface ImageProps {;
 }
@@ -62,12 +62,12 @@ if (onError) onError()}"
 const imageStyle: "React.CSSProperties={;
 ...style;"
 ...(fill && {;";'"
-positio",n: "'absolute'",top: "0;"
+positio",n: 'absolute'",top: "0;"
 lef",t: "0"};const imageStyle: "React.CSSProperties = {"}
 ...style;"
 ...(fill && {}";'"
-position: "'absolute'",top: "0";'"
-lef",t: "0",width: "'100%'",height: "'100%'",objectFit: "'cover'"});
+position: 'absolute'",top: "0";'"
+lef",t: "0",width: '100%'",height: '100%'",objectFit: 'cover'"});
 });
 if (hasError) {</ImageProps>;
   </ImageProps>;

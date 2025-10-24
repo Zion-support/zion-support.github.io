@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 'use client";"
-import, React, { Component, ErrorInfo, ReactNode } from "react";"
+import, React, { Component, ErrorInfo, ReactNode } from "react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react";
 "
 interface AdvancedErrorBoundaryProps {"
@@ -46,9 +46,9 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       url: "window.location.href",;
     };"
 "
-    // Log to console in development"'"
-    if(process.env.NODE_ENV = == 'development") {  ;"'"
-      console.error('Error Boundary caught an error: "'", error, errorInfo);
+    // Log to console in development"
+    if(process.env.NODE_ENV = == 'development") {  ;"
+      console.error('Error Boundary caught an error: '", error, errorInfo);
     , , }"
   };"
 "
@@ -76,7 +76,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       url: "window.location.href"}
     // Log to console in development;'"
     if(process.env.NODE_ENV = == 'development') {  ;";'"
-      console.error('Error Boundary caught an error: "'", error, errorInfo)}"
+      console.error('Error Boundary caught an error: ", error, errorInfo)}"
   }"
   componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {;"
     this.setState({"
@@ -85,14 +85,14 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       errorInfo,);
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     });
-;
+
     // Call custom error handler if provided;
     if (this.props.onError) {;
       this.props.onError(error, errorInfo)}
     // Report error;
     this.reportError(error, errorInfo)}
   private generateErrorId = (): string => {;
-;
+
 <<<<<<< HEAD
     return `error_${Date.now()
 ,}_${Math.random().toString(36).substr(2, 9);}`;
@@ -109,7 +109,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
               <button onClick={() => window.location.reload(),} >"
                 <RefreshCw className = "icon" />"
                 Try Again"
-              </button>"'"
+              </button>"
               <button onClick={() => window.location.href = '/",} >"
                 <Home className = "icon" />
                 Go Home
@@ -124,7 +124,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 }"
 "
-export default AdvancedErrorBoundary;"'"
+export default AdvancedErrorBoundary;"
 =======
     return `error_${Date.now();`
 }_${Math.random().toString(36).substr(2, 9)}`}

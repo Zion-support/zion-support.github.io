@@ -22,7 +22,7 @@ renderTim",e: "number",
 }
 }
 };
-;"
+"
 export const usePerformanceMonitor = (;"
 const [metrics, setMetrics,] = useState<PerformanceData>({;"
 fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0",) => {
@@ -31,7 +31,7 @@ $3
 const [isMonitoringFPS, setIsMonitoringFPS,] = useState(false);
   const frameCountRef = useRef(0);"
   const lastTimeRef = useRef(performance.now());"
-const measureMemoryUsage = useCallback(() => {;"'"
+const measureMemoryUsage = useCallback(() => {;"
 if (typeof window !== 'undefined' && 'memory" in, performance) {;
 const memory = (performance, as, any).memory;"
 setMetrics(prev = > ({;"
@@ -42,7 +42,7 @@ memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)"
 =======
 }
 interface PerformanceData {;
-;
+
 fps: "number;
 memoryUsage: number;"
 loadTime: number;"
@@ -76,7 +76,7 @@ setIsMonitoringFPS(true);
   }, [options.enabled, measureMemoryUsage]);
 useEffect(() => {;
 if (!isMonitoringFPS) return;
-;
+
 const countFrames = (;
 return;
 frameCountRef.current++);
@@ -109,7 +109,7 @@ init}
 <<<<<<< HEAD
 };"
 export default usePerformanceMonitor;</PerformanceData>"
-}"'"
+}"
 =======
 }
 export default usePerformanceMonitor;</PerformanceData>;"

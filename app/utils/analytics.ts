@@ -6,7 +6,7 @@ import React from 'react';
 interface AnalyticsEvent {
 =======
 // Analytics utilities for tracking user interactions and performance;
-import React from 'react'
+import React from 'react';
 ;
 interface AnalyticsEvent {;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -27,7 +27,7 @@ class Analytics {;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   private static instance: Analytics;
   private events: AnalyticsEvent[] = [];
-;
+
   static getInstance(): Analytics {;
     if (!Analytics.instance) {;
       Analytics.instance = new Analytics();
@@ -38,7 +38,7 @@ class Analytics {;
     this.events.push({;
       ...event,);
       timestamp: Date.now()});
-;
+
     // In production, you would send this to your analytics service;
     if (process.env.NODE_ENV === 'production') {;
       this.sendToAnalytics(event)} else {;
@@ -132,5 +132,5 @@ export function withAnalytics<T extends React.ComponentType<any>>(WrappedCompone
     const { trackPageView } = useAnalytics();
     React.useEffect(() => {;
       trackPageView(window.location.pathname, document.title)}, [trackPageView]);
-;
+
     return React.createElement(WrappedComponent, props)}) as T}'

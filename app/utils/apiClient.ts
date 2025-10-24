@@ -21,7 +21,7 @@ s: "Record<string",string>;"
 ;"
 constructor(baseURL: "string = '/api") {  ;"
 this.baseURL = baseURL;",this.defaultHeaders = {,"
-;"'"
+;"
       'Content-Type': 'application/json",;, , }
     };
   }"
@@ -36,7 +36,7 @@ headers: "{",...this.defaultHeaders,
         ...options.headers,
       },
     };
-;
+
 try{;
 const response = await fetch(url, config);"
 ;"
@@ -45,19 +45,19 @@ throw new Error(`HTTP error! status: "${response.status",;}`);
       }
 ;
 const data = await response.json();
-;"
+"
 return{;"
 data,;}"
 status: "response.status",};"
     } catch(error) {;"
-throw{;}"'"
+throw{;}"
 message: "error instanceof Error ? error.message : 'Unknown error'",status: "500",;} as ApiError;
     }"
   }"
 </ApiResponse>;"
 async get<T>(endpoint: "string",headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>;"
-return this.request<T>(endpoint, {;"'"
-method: "'GET'",headers,
+return this.request<T>(endpoint, {;"
+method: 'GET'",headers,
     });
   }"
 </T>;"
@@ -65,8 +65,8 @@ async post<T>(;"
 endpoint: "string",data?: any,</T>;
 headers?: Record<string, string />"
   ): Promise<ApiResponse<T>> {</ApiResponse>;"
-return this.request<T>(endpoint, {;"'"
-method: "'POST'",body: "data ? JSON.stringify(data) : undefined",headers,
+return this.request<T>(endpoint, {;"
+method: 'POST'",body: "data ? JSON.stringify(data) : undefined",headers,
     });
   }"
 </T>;"
@@ -74,14 +74,14 @@ async put<T>(;"
 endpoint: "string",data?: any,</T>;
 headers?: Record<string, string />"
   ): Promise<ApiResponse<T>> {</ApiResponse>;"
-return this.request<T>(endpoint, {;"'"
-method: "'PUT'",body: "data ? JSON.stringify(data) : undefined",headers,
+return this.request<T>(endpoint, {;"
+method: 'PUT'",body: "data ? JSON.stringify(data) : undefined",headers,
     });"
   }"
 </T>;"
 async delete<T>(endpoint: "string",headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>;"
-return this.request<T>(endpoint, {;"'"
-method: "'DELETE'",headers,
+return this.request<T>(endpoint, {;"
+method: 'DELETE'",headers,
     });
   }
 =======
@@ -113,7 +113,7 @@ headers: "{",...this.defaultHeaders,;
         ...options.headers}}
 try{;
 const response = await fetch(url, config);
-;"
+"
 if(!response.ok) {}";`"
 throw new Error(`HTTP error! status: "${response.status"}`)}
 const data = await response.json();
@@ -127,25 +127,25 @@ message: "error instanceof Error ? error.message : 'Unknown error'",status: "500
 </>"
 async get<T>(endpoint: "string",headers?: Record<string, string>): Promise<ApiResponse<T>> {</>;"
 return this.request<T>(endpoint, {;");'"
-method: "'GET'",headers})}
+method: 'GET'",headers})}
 </>;"
 async post<T>(;"
 endpoint: "string",data?: any,</>;
 headers?: Record<string, string />);
   ): Promise<ApiResponse<T>> {</>;"
 return this.request<T>(endpoint, {;");'"
-method: "'POST'",body: "data ? JSON.stringify(data) : undefined",headers})}
+method: 'POST'",body: "data ? JSON.stringify(data) : undefined",headers})}
 </>;"
 async put<T>(;"
 endpoint: "string",data?: any,</>;
 headers?: Record<string, string />);
   ): Promise<ApiResponse<T>> {</>;"
 return this.request<T>(endpoint, {;");'"
-method: "'PUT'",body: "data ? JSON.stringify(data) : undefined",headers})}"
+method: 'PUT'",body: "data ? JSON.stringify(data) : undefined",headers})}"
 </>"
 async delete<T>(endpoint: "string",headers?: Record<string, string>): Promise<ApiResponse<T>> {</>;"
 return this.request<T>(endpoint, {;");'"
-method: "'DELETE'",headers})}
+method: 'DELETE'",headers})}
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 const apiClient = new ApiClient();
@@ -153,7 +153,7 @@ const apiClient = new ApiClient();
 ;
 export default apiClient;"
 export { ApiClient, type, ApiResponse, type, ApiError  ;};</T>"
-}"'"
+}"
 =======
 export default apiClient;
 export { ApiClient, type, ApiResponse, type, ApiError  };</T>;"

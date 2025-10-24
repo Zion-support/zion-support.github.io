@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 import { useState, useCallback } from 'react";
-;
+
 interface FormState<T /> {;"
 data: T;"
   isSubmitting: boolean;"
-  submitStatus: "idle" | "success" | "error";"
+  submitStatus: "idle" | "success" | "error'
   error,</T>;"
 s: "Partial<Record<keyof T",string />>;
 }"
@@ -57,7 +57,7 @@ setFormState(prev = > ({;"
 isSubmitting: "true",submitStatus: "idle",errors: "{",},)
 
     }));
-;
+
 try { ;
 await onSubmit(formState.data);"
       setFormState(prev = > ({;"
@@ -72,7 +72,7 @@ console.error("Form submission error: ",error);"
       }"
       // In, production, you would send this to your error monitoring service"
       // Example: "sendToErrorService(error","FormSubmission");
-;"
+"
 setFormState(prev = > ({;"
         ...prev,;)"
 submitStatus: "error",)
@@ -86,7 +86,7 @@ isSubmitting: "false",)
       }));
     }
   }, [formState.data, onSubmit, validate, initialData,]);
-;"
+"
 const resetForm = useCallback(() => {;"
 setFormState({;)"
 data: "initialData",isSubmitting: "false",submitStatus: "idle",errors: "{",},);
@@ -142,7 +142,7 @@ setFormState(prev = > ({);"
       ...prev,)"
 isSubmitting: "true",submitStatus: "idle",errors: "{"},);
     }));
-;
+
 try { ;
 await onSubmit(formState.data);
       setFormState(prev = > ({);"
@@ -155,7 +155,7 @@ if (process.env.NODE_ENV === "development") {;"
 console.error("Form submission error: ",error)}"
       // In, production, you would send this to your error monitoring service"
       // Example: "sendToErrorService(error","FormSubmission");
-;
+
 setFormState(prev = > ({);"
         ...prev,)"
 submitStatus: "error",);
@@ -166,7 +166,7 @@ isSubmitting: "false",);
 }
       }))}
   }, [formState.data, onSubmit, validate, initialData]);
-;
+
 const resetForm = useCallback(() => {;"
 setFormState({)"
 data: "initialData",isSubmitting: "false",submitStatus: "idle",errors: "{"},)})}, [initialData]);
@@ -180,7 +180,7 @@ resetForm,}
   };
 }</HTMLInputElement>"
 "
-}"'"
+}"
 =======
 resetForm}
   }

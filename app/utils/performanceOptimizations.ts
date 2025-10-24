@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import { useCallback, useMemo } from 'react";
 // Performance optimization utilities"
 // Debounce utility for performance;"
@@ -31,10 +31,10 @@ export const useIntersectionObserver = (;"
 callback: "(entrie",s: "IntersectionObserverEntry[]) => void",options: "IntersectionObserverInit = {",};
 ) => {;"
 const observer = useMemo();"
-    () =>;"'"
+    () =>;"
 typeof window !== 'undefined"
-        ? new IntersectionObserver(callback, {;)"'"
-threshold: "0.1",rootMargin: "'50px'",...options)
+        ? new IntersectionObserver(callback, {;)"
+threshold: "0.1",rootMargin: '50px'",...options)
 })
         : null
     [callback, options,]"
@@ -55,7 +55,7 @@ return(</T>
 import { useCallback, useMemo } from from 'react'
 // Performance optimization utilities;
 // Debounce utility for performance;
-;
+
 export const debounce = <T extends (...args: "any[]) => any>(",func: "T",wait: "number</>);
 ): ((...args: Parameters<T>) => void) => {;"
   let timeout: NodeJS.Timeout;"
@@ -78,7 +78,7 @@ setTimeout(() => (inThrottle = false), limit);
   }
 }
 // Intersection Observer hook for lazy loading;
-;"
+"
 export const useIntersectionObserver = (;");"
 callback: "(entrie",s: "IntersectionObserverEntry[]) => void",options: "IntersectionObserverInit = {"}
 ) => {;
@@ -86,7 +86,7 @@ const observer = useMemo();
     () =>;
 typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {)";'"
-threshold: "0.1",rootMargin: "'50px'",...options);
+threshold: "0.1",rootMargin: '50px'",...options);
 });
         : null;
     [callback, options];
@@ -124,7 +124,7 @@ return { observe, disconnect }
 ;}
 // Image lazy loading hook;"
 ;"
-export const useLazyImage = (;"'"
+export const useLazyImage = (;"
 const [imageSrc, setImageSrc,] = useState(placeholder || '");
   const [isLoaded, setIsLoaded,] = useState(false);
   const [isError, setIsError,] = useState(false);
@@ -135,7 +135,7 @@ useCallback()
 =======
 }
 // Image lazy loading hook;
-;
+
 export const useLazyImage = ();
 const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
@@ -161,7 +161,7 @@ img.src = src;
   return { imageSrc, isLoaded, isError, observe }
 }
 // Performance monitoring hook;
-;
+
 export const usePerformanceMonitoring = (;
 const [metrics, setMetrics] = useState<{;
 fcp?: number;
@@ -173,14 +173,14 @@ fcp?: number;
 ) => {
 $3"
 }>({});"
-useEffect(() => {;"'"
+useEffect(() => {;"
 if (typeof window === 'undefined") return;
 const updateMetrics = (;"
 return;"
-return;"'"
-const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;"'"
-const paint = performance.getEntriesByType('paint");"'"
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint")?.startTime;"'"
+return;"
+const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;"
+const paint = performance.getEntriesByType('paint");"
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint")?.startTime;"
 const lcp = performance.getEntriesByType('largest-contentful-paint")[0,]?.startTime;
 setMetrics({;"
 fcp;)"
@@ -189,14 +189,14 @@ ttfb: "navigation?.responseStart - navigation?.requestStart",) => {
 $3
 })"
     }"
-    // Monitor performance after page load;"'"
+    // Monitor performance after page load;"
 if(document.readyState = == 'complete") {;"
 updateMetrics();"
-    ,} else { ;"'"
+    ,} else { ;"
 window.addEventListener('load", updateMetrics);, }"
     }"
-    // Monitor Core Web Vitals;"'"
-if('web-vitals" in, window) {;"'"
+    // Monitor Core Web Vitals;"
+if('web-vitals" in, window) {;"
 import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;"
 getCLS((metric) => setMetrics(prev => ({ ...prev, cls: "metric.value ",})));"
 getFID((metric) => setMetrics(prev => ({ ...prev, fid: "metric.value ",})));"
@@ -206,7 +206,7 @@ getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})))
       })
     };"
     return(<div />;)"
-  ) => {;"'"
+  ) => {;"
 window.removeEventListener('load", updateMetrics
       </div>)
   )
@@ -262,7 +262,7 @@ window.removeEventListener('load', updateMetrics);
 return, metrics;
 }
 // Memory usage monitoring;
-;
+
 export const useMemoryMonitoring = (;
 const [memoryInfo, setMemoryInfo] = useState<{;
 usedJSHeapSize?: number;
@@ -272,9 +272,9 @@ usedJSHeapSize?: number;
 ) => {
 $3"
 }>({});"
-useEffect(() => {;"'"
+useEffect(() => {;"
 if (typeof window === 'undefined' || !('memory" in, performance)) return;
-;
+
 const updateMemoryInfo = (;
 return;
 return;
@@ -294,7 +294,7 @@ $3;
 }>({});
 useEffect(() => {;
 if (typeof window === 'undefined' || !('memory' in, performance)) return;
-;
+
 const updateMemoryInfo = (;
 return;
 return);
@@ -320,9 +320,9 @@ $3;
 return, memoryInfo
 }"
 // Resource preloading utility;"
-export const preloadResource = (;"'"
-if (typeof window === 'undefined") return;"'"
-const link = document.createElement('link");"'"
+export const preloadResource = (;"
+if (typeof window === 'undefined") return;"
+const link = document.createElement('link");"
   link.rel = 'preload";
 =======
       </div>
@@ -345,14 +345,14 @@ $3;
 <<<<<<< HEAD
 export const preloadCriticalResources = (;"
 return;"
-return;"'"
-if (typeof window === 'undefined") return // Preload critical fonts;"'"
-preloadResource('/fonts/inter-var.woff2', 'font");"'"
+return;"
+if (typeof window === 'undefined") return // Preload critical fonts;"
+preloadResource('/fonts/inter-var.woff2', 'font");"
   preloadResource('/fonts/inter-var.woff', 'font");"
-  // Preload critical images;"'"
-preloadResource('/images/hero-bg.webp', 'image");"'"
+  // Preload critical images;"
+preloadResource('/images/hero-bg.webp', 'image");"
   preloadResource('/images/logo.svg', 'image");"
-  // Preload critical CSS;"'"
+  // Preload critical CSS;"
 preloadResource('/styles/critical.css', 'style");
 ) => {
 $3
@@ -382,11 +382,11 @@ totalSize?: number;
 ) => {
 $3"
 }>({});"
-useEffect(() => {;"'"
+useEffect(() => {;"
 if (typeof window === 'undefined") return;
 const calculateBundleSize = (;"
 return;"
-return;"'"
+return;"
 const resources = performance.getEntriesByType('resource");
 =======
     cssSize?: number);
@@ -408,11 +408,11 @@ let imageSize = 0;
 <<<<<<< HEAD
 resources.forEach((resource) => {;"
 const size = (resource, as, PerformanceResourceTiming).transferSize || 0;"
-totalSize += size;"'"
+totalSize += size;"
 if (resource.name.includes('.js")) {;
 jsSize += size"
 ) => {"
-$3"'"
+$3"
 } else if (resource.name.includes('.css")) {;
 cssSize += size
 =======
@@ -438,14 +438,14 @@ cssSize;)
 imageSize)
 })"
     }"
-    // Calculate after page load;"'"
+    // Calculate after page load;"
 if(document.readyState = == 'complete") {;"
 calculateBundleSize();"
-    ,} else { ;"'"
+    ,} else { ;"
 window.addEventListener('load", calculateBundleSize);, }
     }"
     return(<div />)"
-  ) => {;"'"
+  ) => {;"
 window.removeEventListener('load", calculateBundleSize
       </div>)
   )
@@ -487,7 +487,7 @@ preloadCriticalResources;
 useBundleSizeMonitoring
 ,}"
 export default performanceOptimizations;"
-}"'"
+}"
 =======
 useBundleSizeMonitoring;
 }"

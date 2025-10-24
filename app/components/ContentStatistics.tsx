@@ -1,14 +1,14 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import, React, { useState, useEffect } from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, Users, Globe, Database, Settings, Shield, Zap } from from 'lucide-react'
-import React from 'react'
+import React from 'react';
 import { Helmet } from from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from from 'lucide-react'
-import React from 'react'
+import React from 'react';
 import Helmet  from 'react-helmet-async'
 import ArrowRight Brain BarChart Target TrendingUp  from 'lucide-react'
 import Navigation from '/components/Navigation'
@@ -62,29 +62,29 @@ consttargetCounters={clients: "1000 0",projects: "500 0;"
 satisfactio",n: "9 9",years: "1 5;"
 countrie",s: "5 0",uptime: "99"};conststatistics = ["
 {icon: "Users",value: "counters.clients";'"
-labe",l: "'Happy Clients'",suffix: "'+'",color: "'text-blue-40 0'",description: "'Businesses trust our solutions'"}"
+labe",l: 'Happy Clients'",suffix: '+'",color: 'text-blue-40 0'",description: 'Businesses trust our solutions'"}"
   {"
 icon: "Award",value: "counters.projects";'"
-labe",l: "'Projects Completed'",suffix: "'+'",color: "'text-purple-40 0'",description: "'Successful implementations'"}"
+labe",l: 'Projects Completed'",suffix: '+'",color: 'text-purple-40 0'",description: 'Successful implementations'"}"
   {"
 icon: "TrendingUp",value: "counters.satisfaction";'"
-labe",l: "'Client Satisfaction'",suffix: "'%'",color: "'text-green-40 0'",description: "'Customer satisfaction rate'"}"
+labe",l: 'Client Satisfaction'",suffix: '%'",color: 'text-green-40 0'",description: 'Customer satisfaction rate'"}"
   {"
 icon: "Clock",value: "counters.years";'"
-labe",l: "'Years Experience'",suffix: "'+'",color: "'text-yellow-40 0'",description: "'Industry expertise'"}"
+labe",l: 'Years Experience'",suffix: '+'",color: 'text-yellow-40 0'",description: 'Industry expertise'"}"
   {"
 icon: "Globe",value: "counters.countries";'"
-labe",l: "'Countries Served'",suffix: "'+'",color: "'text-cyan-40 0'",description: "'Global presence'"}"
+labe",l: 'Countries Served'",suffix: '+'",color: 'text-cyan-40 0'",description: 'Global presence'"}"
   {"
 icon: "BarChart3",value: "counters.uptime";'"
-labe",l: "'Uptime Guarantee'",suffix: "'%'",color: "'text-red-40 0'",description: "'Service reliability'"}
+labe",l: 'Uptime Guarantee'",suffix: '%'",color: 'text-red-40 0'",description: 'Service reliability'"}
 ];"
 constachievements= [";'"
-{icon: "Brain",title: "'AI Innovation'",description: "'Leading the industry in AI-powered solutions'"}"
+{icon: "Brain",title: 'AI Innovation'",description: 'Leading the industry in AI-powered solutions'"}"
   {";'"
-icon: "Shield",title: "'Security Excellence'",description: "'Bank-level security for all our solutions'"}"
+icon: "Shield",title: 'Security Excellence'",description: 'Bank-level security for all our solutions'"}"
   {";'"
-icon: "Globe",title: "'Global Reach'",description: "'Worldwide deployment and support for international businesses'",stats: "['5 0+ Countries'",'1 5+ Languages', '2 4/7 Support']}
+icon: "Globe",title: 'Global Reach'",description: 'Worldwide deployment and support for international businesses'",stats: "['5 0+ Countries'",'1 5+ Languages', '2 4/7 Support']}
 ];
 constbenefits= [;
   'Advanced AI technology integration'
@@ -97,11 +97,11 @@ constbenefits= [;
     'Proven track record of success'
   ];"
 constachievements= [";'"
-{icon: "Star",title: "'Industry Recognition'",description: "'Awarded Best AI Solutions Provider2024'",value: "'2 5+'"}"
+{icon: "Star",title: 'Industry Recognition'",description: 'Awarded Best AI Solutions Provider2024'",value: '2 5+'"}"
   {";'"
-icon: "Target",title: "'Success Rate'",description: "'Projects delivered on time and within budget'",value: "'9 8%'"}"
+icon: "Target",title: 'Success Rate'",description: 'Projects delivered on time and within budget'",value: '9 8%'"}"
   {";'"
-icon: "Rocket",title: "'Growth Rate'",description: "'Year-over-year business growth'",value: "'30 0%'"}
+icon: "Rocket",title: 'Growth Rate'",description: 'Year-over-year business growth'",value: '30 0%'"}
 ];
 useEffect(() => {constduration= 300 0; // 3 secondsconststeps = 60 conststepDuration= duration / steps;
 consttimers= Object.keys(targetCounters).map((key) => {;

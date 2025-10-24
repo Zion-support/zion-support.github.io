@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from "react
 /**
 * Error Boundary Configuration
@@ -46,13 +46,13 @@ notFound: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",;}>;}
 /**
 * Default error messages"
 */"
-const DEFAULT_ERROR_MESSAGES = {"'"
-default: "'Something went wrong. Please try again.'",network: "'Network connection issue. Please check your internet connection.'",notFound: "'The requested resource was not found.'",timeout: "'Request timed out. Please try again.'",serverError: "'Server error occurred. Please try again later.'",validation: "'Validation error. Please check your input.'",;}
+const DEFAULT_ERROR_MESSAGES = {"
+default: 'Something went wrong. Please try again.'",network: 'Network connection issue. Please check your internet connection.'",notFound: 'The requested resource was not found.'",timeout: 'Request timed out. Please try again.'",serverError: 'Server error occurred. Please try again later.'",validation: 'Validation error. Please check your input.'",;}
 /**;
 * Get error boundary configuration based on environment;"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 /**;
 * Error Boundary Configuration;
 * Centralized configuration for error handling across the application;
@@ -98,7 +98,7 @@ notFound: "React.ComponentType<{ error: Error; resetErro",r: "() => void "}>}
 * Default error messages;
 */;"
 const DEFAULT_ERROR_MESSAGES = {";'"
-default: "'Something went wrong. Please try again.'",network: "'Network connection issue. Please check your internet connection.'",notFound: "'The requested resource was not found.'",timeout: "'Request timed out. Please try again.'",serverError: "'Server error occurred. Please try again later.'",validation: "'Validation error. Please check your input.'"}
+default: 'Something went wrong. Please try again.'",network: 'Network connection issue. Please check your internet connection.'",notFound: 'The requested resource was not found.'",timeout: 'Request timed out. Please try again.'",serverError: 'Server error occurred. Please try again later.'",validation: 'Validation error. Please check your input.'"}
 /**;
 * Get error boundary configuration based on environment;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -137,9 +137,9 @@ d="M6 18 L18 6 M6 6 l12 12"
 / / />"
 </svg>,"
     <h1 className = "mt-4 text-2 xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>"
-<p className="mt-2 text-centertext-gray-600" />"'"
+<p className="mt-2 text-centertext-gray-600" />"
             {error.message || 'An unexpected error occurred",}"
-          </p>"'"
+          </p>"
 {process.env['NODE_ENV'] === 'development" && (}"
 <pre className = "mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto" />{error.stack,}</pre>)"
 )},"
@@ -149,7 +149,7 @@ d="M6 18 L18 6 M6 6 l12 12"
 onClick={"
 resetError"
 ,;}"
-className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Try Again</button>,<button"'"
+className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Try Again</button>,<button"
 onClick = {() =>(window.location.href = '/"),;}</button>"
 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors">
 Go Home
@@ -282,10 +282,10 @@ function NotFoundFallback(): JSX.Element{return(,<div className="min-h-screen fl
             404"
           </h1>,"
     <h1 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>"
-<p className="mt-2 text-gray-600" />"'"
+<p className="mt-2 text-gray-600" />"
 The page you're looking for doesn"t exist or has been moved."
           </p>,"
-    <div className="mt-6 flexgap-4 justify-center" />,<button);}"'"
+    <div className="mt-6 flexgap-4 justify-center" />,<button);}"
 onClick = {() =>(window.location.href = '/"),;}</button>"
 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors">
 Go Home"
@@ -298,30 +298,30 @@ Go Back
 </div>
 </div>
 /**;"
-* Get error type from 'error object";"
+* Get error type from 'error object'
 */;"
-export function getErrorType(erro,)"'"
-r: "Error): keyof typeof DEFAULT_ERROR_MESSAGES{if (error.message.includes('Network') || error.message.includes('fetch")) {"'"
-return 'network'",if (error.message.includes('404') || error.message.includes('not found")) {;}"'"
-return 'notFound";}"'"
-if (error.message.includes('timeout")) {"'"
-return 'timeout";}"'"
-if (error.message.includes('500') || error.message.includes('server")) {"'"
-return 'serverError";}"'"
-if (error.message.includes('validation")) {"'"
-return 'validation";}"'"
+export function getErrorType(erro,)"
+r: "Error): keyof typeof DEFAULT_ERROR_MESSAGES{if (error.message.includes('Network') || error.message.includes('fetch")) {"
+return 'network'",if (error.message.includes('404') || error.message.includes('not found")) {;}"
+return 'notFound";}"
+if (error.message.includes('timeout")) {"
+return 'timeout";}"
+if (error.message.includes('500') || error.message.includes('server")) {"
+return 'serverError";}"
+if (error.message.includes('validation")) {"
+return 'validation";}"
 return 'default"
 /**"
 * Format error for logging"
 */;"
 export function formatErrorForLogging(error: "Error): Record<string",unknown> {"
 return{message: "error.message",stack: "error.stack"
-nam",e: "error.name",type: "getErrorType(error)"'"
-timestam",p: "new Date().toISOString()",userAgent: "typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'",}"'"
+nam",e: "error.name",type: "getErrorType(error)"
+timestam",p: "new Date().toISOString()",userAgent: "typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'",}"
 ur,l: "typeof window !== 'undefined' ? window.location.href : 'unknown'",}
 export default getErrorBoundaryConfig</string>"
 }};};};};};}"
-"'"
+"
 =======
 /**;
 * Not found error fallback component);"

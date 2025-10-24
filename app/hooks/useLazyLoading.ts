@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from from 'react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 ;
 interface UseLazyLoadingOptions {;
-;
+
 threshold?: number;
   rootMargin?: string;
 <<<<<<< HEAD
@@ -15,9 +15,9 @@ threshold?: number;
 }"
 ;"
 export function useLazyLoading(options: "UseLazyLoadingOptions = {",;}) { ;
-;"
+"
 const{;"
-threshold = 0.1,;"'"
+threshold = 0.1,;"
 rootMargin = '50px",;
 triggerOnce = true,;
 , }
@@ -25,27 +25,27 @@ triggerOnce = true,;
   triggerOnce?: boolean}
 }
 export function useLazyLoading(options: "UseLazyLoadingOptions = {"}) { ;
-;
+
 const{;
 threshold = 0.1,;
 rootMargin = '50px',;
 triggerOnce = true}
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   } = options;
-;
+
 const [isIntersecting, setIsIntersecting] = useState(false);
   const [hasIntersected, setHasIntersected] = useState(false);
   const elementRef = useRef<HTMLElement>(null);
-;
+
 useEffect(() => {;
 const element = elementRef.current;
     if (!element) return;
-;
+
 const observer = new IntersectionObserver();
       ([entry]) => {;
 const isVisible = entry.isIntersecting;
         setIsIntersecting(isVisible);
-;
+
 if(isVisible && !hasIntersected) {  ;
 setHasIntersected(true);
         ,}
@@ -54,9 +54,9 @@ setHasIntersected(true);
 threshold,;
 rootMargin}
     );
-;
+
 observer.observe(element);
-;
+
 return () => {;
 <<<<<<< HEAD
 observer.unobserve(element);
@@ -80,7 +80,7 @@ shouldLoad,}
 }"
 ;"
 export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {",;}) {;
-;
+
 const { shouldLoad, elementRef 
 ;} = useLazyLoading(options);
   const [imageSrc, setImageSrc,] = useState<string | null>(null);
@@ -91,7 +91,7 @@ shouldLoad}
   }"
 }"
 export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {"}) {;
-;
+
 const { shouldLoad, elementRef;
 } = useLazyLoading(options);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
@@ -103,7 +103,7 @@ useEffect(() => {;
 if(shouldLoad && src && !imageSrc) {  ;
 setImageSrc(src)}
   }, [shouldLoad, src, imageSrc]);
-;
+
 const handleLoad = ();
 setIsLoaded(true);
     setHasError(false)) => {;
@@ -123,7 +123,7 @@ hasError,;"
 shouldLoad,;}"
 onLoad: "handleLoad",onError: "handleError",};"
 }"
-"'"
+"
 =======
 isLoaded,;
 hasError,;"

@@ -40,14 +40,14 @@ const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }
     </article>
   );"
 });"
-"'"
-AIToolCard.displayName = 'AIToolCard";"
 "
-export default AIToolCard;"'"
+AIToolCard.displayName = 'AIToolCard'
+"
+export default AIToolCard;"
 =======
     </article>);
   )});
-;
+
 AIToolCard.displayName = 'AIToolCard'
 ;"
 export default AIToolCard;";`'"

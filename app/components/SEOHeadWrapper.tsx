@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 interface SEOHeadWrapperProps {
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 ;
 interface SEOHeadWrapperProps {;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -26,7 +26,7 @@ const SEOHeadWrapper: "React.FC<SEOHeadWrapperProps> = ({ className", title, des
 };
 "
 export default SEOHeadWrapper;"
-"'"
+"
 =======
   children?: React.ReactNode}
 }

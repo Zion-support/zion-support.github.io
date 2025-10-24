@@ -1,6 +1,6 @@
 const Loading: React.FC = () => {;
 return(<div>
-import React from 'react'
+import React from 'react';
 ;
         <title>Loading</title>
         <meta name="description" content="Advanced Loading solution for modern businesses." / />"

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 interface AdvancedSEOOptimizerProps {
@@ -15,10 +15,10 @@ const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className 
   );
 };"
 "
-export default AdvancedSEOOptimizer;"'"
+export default AdvancedSEOOptimizer;"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 ;
 interface AdvancedSEOOptimizerProps {;
 className?: string}

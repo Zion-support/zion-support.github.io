@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 /**
  * Comprehensive Monitoring Utility
@@ -16,7 +16,7 @@ enableMemoryMonitorin",g: "true",sampleRate: "0.1",}"
     inp: "{ goo",d: "200",needsImprovement: "500 ",}
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 /**;
  * Comprehensive Monitoring Utility;
  * Real-time, application, monitoring, performance, tracking, and error reporting;
@@ -34,7 +34,7 @@ enableMemoryMonitorin",g: "true",sampleRate: "0.1"}"
   }
 }
 export interface PerformanceMetrics {;
-;
+
 lcp?: number;
 fid?: number;
 cls?: number;
@@ -59,7 +59,7 @@ class MonitoringService{;}"
 private metrics: "PerformanceMetrics = {",;};"
   private errors: "ErrorReport[] = [];"
 private observe",r: "PerformanceObserver | null = null;"
-constructor() {  ;"'"
+constructor() {  ;"
 if (typeof window !== 'undefined') { ",this.initializeMonitoring();,
     , , , }
 =======
@@ -93,26 +93,26 @@ this.monitorResourceTiming();
 <<<<<<< HEAD
 this.setupErrorHandling();}"
   }"
-  private monitorWebVitals(): void{;"'"
+  private monitorWebVitals(): void{;"
 if ('PerformanceObserver" in, window) {;
 try {
 // Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
-;,}"
+,}"
 const lastEntry = entries[entries.length - 1,] as PerformanceEntry & { renderTime?: number; loadTime?: number }"
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;"'"
+          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;"
 this.reportMetric('lcp", this.metrics.lcp);"
-        });"'"
+        });"
 lcpObserver.observe({ entryTypes: "['largest-contentful-paint'] ",});
         // First Input Delay;"
 const fidObserver = new PerformanceObserver((list) => {;"
 const entries = list.getEntries();"
-          entries.forEach((entry: "PerformanceEntry) => {",this.metrics.fid = (entry, as, any).processingStart - entry.startTime,;"'"
+          entries.forEach((entry: "PerformanceEntry) => {",this.metrics.fid = (entry, as, any).processingStart - entry.startTime,;"
 this.reportMetric('fid", this.metrics.fid);
 "
           })"
-        });"'"
+        });"
 fidObserver.observe({ entryTypes: "['first-input'] ",});
         // Cumulative Layout Shift;
 let clsValue = 0;
@@ -121,40 +121,40 @@ const clsObserver = new PerformanceObserver(list => {;"
 const entries = list.getEntries();"
 entries.forEach((entry: "PerformanceEntry) => {",if (!(entry, as, any).hadRecentInput) {;"
 clsValue += entry.value,;"
-this.metrics.cls = clsValue,;"'"
+this.metrics.cls = clsValue,;"
 this.reportMetric('cls", clsValue);
             
 }"
           })"
-        });"'"
+        });"
 clsObserver.observe({ entryTypes: "['layout-shift'] ",});
         // First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {;
 );
 const entries = list.getEntries();"
 entries.forEach(entry => {;)"
-this.metrics.fcp = entry.startTime);"'"
+this.metrics.fcp = entry.startTime);"
 this.reportMetric('fcp", entry.startTime)
           "
 })"
-        });"'"
+        });"
 fcpObserver.observe({ entryTypes: "['paint'] ",});
       } catch(error) {   
         , , , }
     }"
   }"
-  private monitorLongTasks(): void{;"'"
+  private monitorLongTasks(): void{;"
 if('PerformanceObserver" in window && performanceConfig.monitoring.enableLongTaskDetection) {  ;
 try { ;
 const longTaskObserver = new PerformanceObserver((list) => {;"
 for (const entry of list.getEntries()) {,, , , ;}"
-            ;}"'"
+            ;}"
         ;}); longTaskObserver.observe({ entryTypes: "['longtask'] ",}); } catch(error) {    
   // Long task API might not be, available
 , , , , }
     }"
   }"
-  private monitorResourceTiming(): void{;"'"
+  private monitorResourceTiming(): void{;"
 if('PerformanceObserver" in, window) {  ;
 try { ;"
 const resourceObserver = new PerformanceObserver((list) => {;"
@@ -163,13 +163,13 @@ const entries = list.getEntries();"
 , , , }
               }"
           })"
-        });"'"
+        });"
 resourceObserver.observe({ entryTypes: "['resource'] ",});
       } catch(_error) {   
         , , , }
     }"
   }"
-  private setupErrorHandling(): void{// Global error handler;"'"
+  private setupErrorHandling(): void{// Global error handler;"
 window.addEventListener('error", (event) => {;"
 this.logError({;"
 message: "event.message",stack: "event.error?.stack;)"
@@ -178,7 +178,7 @@ p: "Date.now()",userAgent: "navigator.userAgent;",}"
 ur,l: "window.location.href",})
 "
     })"
-    // Unhandled promise rejection handler;"'"
+    // Unhandled promise rejection handler;"
 window.addEventListener('unhandledrejection", (event) => {;"
 this.logError({;)"
 message: "`Unhandled Promise Rejectio",n: "${event.reason",}`);"
@@ -192,13 +192,13 @@ if (Math.random() > performanceConfig.monitoring.sampleRate) {,;
 return,}
 }"
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals,];"
-if (thresholds) {;"'"
-const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor";"
+if (thresholds) {;"
+const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
 ,};"
-    // Send to analytics (if, configured);"'"
-if (typeof gtag === 'function") {;"'"
-gtag('event", name, {);"'"
-value: "Math.round(name = == 'cls' ? value * 1000 : value)",event_category: "'Web Vitals'",})"
+    // Send to analytics (if, configured);"
+if (typeof gtag === 'function") {;"
+gtag('event", name, {);"
+value: "Math.round(name = == 'cls' ? value * 1000 : value)",event_category: 'Web Vitals'",})"
     };"
   };"
 public logError(error: "ErrorReport): void{;
@@ -301,12 +301,12 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
     // Send to analytics (if, configured);
 if (typeof gtag === 'function') {;'"
 gtag('event', name, {);";'"
-value: "Math.round(name = == 'cls' ? value * 1000 : value)",event_category: "'Web Vitals'"});
+value: "Math.round(name = == 'cls' ? value * 1000 : value)",event_category: 'Web Vitals'"});
     }"
   }"
 public logError(error: "ErrorReport): void{;
 this.errors.push(error);
-;"
+"
     // Keep only last 50 errors;"
 if(this.errors.length > 50) {  ",this.errors = this.errors.slice(-50);,}
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
@@ -323,7 +323,7 @@ return [...this.errors];
 <<<<<<< HEAD
 this.errors = [],;};"
 };"
-  public measureMemory(): void{;"'"
+  public measureMemory(): void{;"
 if ('memory" in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;}"
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: "number; totalJSHeapSize: number; jsHeapSizeLimi",t: "number ",} }).memory;"
 if (memory) {;"
@@ -335,18 +335,18 @@ limit: "`${Math.round(memory.jsHeapSizeLimit / 1048576)",}MB`
       }
     }"
   }"
-  public measureNavigationTiming(): void{;"'"
-if ('performance' in window && 'getEntriesByType" in, performance) {;"'"
+  public measureNavigationTiming(): void{;"
+if ('performance' in window && 'getEntriesByType" in, performance) {;"
 const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;"
 if (navigation) {"
-        // eslint-disable-next-line no-console;"'"
-console.log('Performance metrics: "'",{)}"'"
-          'DNS Lookup": `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`"'"
-          'TCP Connect": `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`"'"
-          'TTFB": `${Math.round(navigation.responseStart - navigation.requestStart)}ms`"'"
-          'Download": `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`"'"
-          'DOM Interactive": `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`"'"
-          'DOM Complete": `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`"'"
+        // eslint-disable-next-line no-console;"
+console.log('Performance metrics: '",{)}"
+          'DNS Lookup": `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`"
+          'TCP Connect": `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`"
+          'TTFB": `${Math.round(navigation.responseStart - navigation.requestStart)}ms`"
+          'Download": `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`"
+          'DOM Interactive": `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`"
+          'DOM Complete": `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`"
           'Load Complete": `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         })
         })
@@ -370,7 +370,7 @@ if ('performance' in window && 'getEntriesByType' in, performance) {;
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 if (navigation) {;"
         // eslint-disable-next-line no-console;";'"
-console.log('Performance metrics: "'",{)}`'
+console.log('Performance metrics: ",{)}`'
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`;`'
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`;`'
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`;`'
@@ -386,11 +386,11 @@ console.log('Performance metrics: "'",{)}`'
   }
 }
 // Singleton instance;
-;
+
 const monitoring = new MonitoringService();"
 <<<<<<< HEAD
 export default monitoring;"
-,}"'"
+,}"
 =======
 export default monitoring}";`'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70

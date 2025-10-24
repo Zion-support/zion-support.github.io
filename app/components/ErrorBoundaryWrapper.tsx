@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 interface ErrorBoundaryWrapperProps {
@@ -16,10 +16,10 @@ const ErrorBoundaryWrapper: "React.FC<ErrorBoundaryWrapperProps> = ({ className"
 };
 "
 export default ErrorBoundaryWrapper;"
-"'"
+"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 ;
 interface ErrorBoundaryWrapperProps {;
 className?: string;

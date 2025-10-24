@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-'use client";"
-"'"
+'use client'
+'"
 import { useEffect } from 'react";
 
 interface AccessibilityEnhancerProps {
@@ -10,13 +10,13 @@ interface AccessibilityEnhancerProps {
 export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   useEffect(() => {"
     // Add skip link functionality"
-    const addSkipLink = () => {"'"
-      const skipLink = document.createElement('a");"'"
-      skipLink.href = '#main-content";"'"
-      skipLink.textContent = 'Skip to main content";"'"
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";"'"
-      skipLink.style.position = 'absolute";"'"
-      skipLink.style.left = '-9999px";"'"
+    const addSkipLink = () => {"
+      const skipLink = document.createElement('a");"
+      skipLink.href = '#main-content''"
+      skipLink.textContent = 'Skip to main content''"
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50''"
+      skipLink.style.position = 'absolute''"
+      skipLink.style.left = '-9999px''"
       skipLink.style.zIndex = '9999";
       
       document.body.insertBefore(skipLink, document.body.firstChild);
@@ -24,7 +24,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
 
     // Enhance focus management"
     const enhanceFocusManagement = () => {"
-      // Add focus indicators for keyboard navigation"'"
+      // Add focus indicators for keyboard navigation"
       const style = document.createElement('style");
       style.textContent = `
         .focus-visible:focus {
@@ -59,35 +59,35 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     };
 "
     // Add ARIA landmarks"
-    const addAriaLandmarks = () => {"'"
-      const main = document.querySelector('main");"'"
-      if (main && !main.getAttribute('role")) {"'"
-        main.setAttribute('role', 'main");"'"
-        main.id = 'main-content";"
+    const addAriaLandmarks = () => {"
+      const main = document.querySelector('main");"
+      if (main && !main.getAttribute('role")) {"
+        main.setAttribute('role', 'main");"
+        main.id = 'main-content'
       }"
-"'"
-      const nav = document.querySelector('nav");"'"
-      if (nav && !nav.getAttribute('role")) {"'"
-        nav.setAttribute('role', 'navigation");"'"
+"
+      const nav = document.querySelector('nav");"
+      if (nav && !nav.getAttribute('role")) {"
+        nav.setAttribute('role', 'navigation");"
         nav.setAttribute('aria-label', 'Main navigation");"
       }"
-"'"
-      const footer = document.querySelector('footer");"'"
-      if (footer && !footer.getAttribute('role")) {"'"
+"
+      const footer = document.querySelector('footer");"
+      if (footer && !footer.getAttribute('role")) {"
         footer.setAttribute('role', 'contentinfo");
       }
     };
 "
     // Enhance form accessibility"
-    const enhanceFormAccessibility = () => {"'"
+    const enhanceFormAccessibility = () => {"
       const forms = document.querySelectorAll('form");"
-      forms.forEach((form) => {"'"
+      forms.forEach((form) => {"
         const inputs = form.querySelectorAll('input, textarea, select");"
         inputs.forEach((input) => {"
-          const inputElement = input as HTMLInputElement;"'"
+          const inputElement = input as HTMLInputElement;"
           if (!inputElement.getAttribute('aria-label') && !inputElement.getAttribute('aria-labelledby")) {"
             const label = form.querySelector(`label[for="${inputElement.id}"]`);"
-            if (label) {"'"
+            if (label) {"
               inputElement.setAttribute('aria-labelledby", label.id || `label-${inputElement.id}`);
             }
           }
@@ -96,18 +96,18 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     };
 "
     // Add high contrast mode support"
-    const addHighContrastSupport = () => {"'"
+    const addHighContrastSupport = () => {"
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)");
       "
       const updateContrast = () => {"
-        if (prefersHighContrast.matches) {"'"
+        if (prefersHighContrast.matches) {"
           document.body.classList.add('high-contrast");"
-        } else {"'"
+        } else {"
           document.body.classList.remove('high-contrast");
         }
       };"
 "
-      updateContrast();"'"
+      updateContrast();"
       prefersHighContrast.addEventListener('change", updateContrast);
     };
 
@@ -119,7 +119,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     addHighContrastSupport();
 "
     // Cleanup"
-    return () => {"'"
+    return () => {"
       const skipLink = document.querySelector('a[href="#main-content"]");
       if (skipLink) {
         skipLink.remove();
@@ -129,10 +129,10 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
 
   return <>{children}</>;"
 }"
-"'"
+"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 ;
 interface AccessibilityEnhancerProps {;
 className?: string;

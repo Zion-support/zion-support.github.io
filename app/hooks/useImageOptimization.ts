@@ -5,7 +5,7 @@ interface UseImageOptimizationOptions {
   src: string;
   placeholder?: string;"
   lazy?: boolean;"
-  quality?: number;"'"
+  quality?: number;"
   format?: 'webp' | 'avif' | 'jpeg' | 'png";
 }
 
@@ -13,12 +13,12 @@ export const useImageOptimization = ({
   src,
   placeholder,"
   lazy = true,"
-  quality = 80,"'"
+  quality = 80,"
   format = 'webp"
-}: UseImageOptimizationOptions) => {"'"
+}: UseImageOptimizationOptions) => {"
   const [imageSrc, setImageSrc] = useState(placeholder || '");
 =======
-import { useState, useEffect    } from 'react'
+import { useState, useEffect    } from 'react';
 ;
 interface UseImageOptimizationOptions {;
   src: string;
@@ -37,7 +37,7 @@ export const useImageOptimization = ({;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(!lazy);
-;
+
   useEffect(() => {;
     if (!lazy || isInView) {;
       const img = new Image();
@@ -46,10 +46,10 @@ export const useImageOptimization = ({;
         setIsLoaded(true)}
       img.src = src}
   }, [src, lazy, isInView]);
-;
+
   useEffect(() => {;
     if (!lazy) return;
-;
+
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry.isIntersecting) {;
@@ -65,7 +65,7 @@ export const useImageOptimization = ({;
       },;
       { threshold: 0.1 }
     );
-;
+
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     const element = document.querySelector(`[data-src="${src}"]`);
     if (element) {;
@@ -80,7 +80,7 @@ export const useImageOptimization = ({;
     isInView,
     shouldLoad: !lazy || isInView"
   };"
-};"'"
+};"
 =======
 ;
   return {;

@@ -20,7 +20,7 @@ export default ErrorBoundary;
 =======
 'use client'
 ;
-import React from 'react'
+import React from 'react';
 ;
 interface ErrorBoundaryProps {;
 className?: string;

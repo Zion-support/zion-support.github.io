@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react"
 interface ServiceTemplateProps {"
 title: "string;",description: "string"
@@ -33,10 +33,10 @@ return(</ServiceTemplateProps>,"
       </div>};
 export default ServiceTemplate;"
   </div>"
-}"'"
+}"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 interface ServiceTemplateProps {;
 title: "string",description: "string;"
   features: string[]"

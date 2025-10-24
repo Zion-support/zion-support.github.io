@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 const AdminPage = (
@@ -12,10 +12,10 @@ const AdminPage = (
 $3
 ,};"
 "
-export default AdminPage;"'"
+export default AdminPage;"
 =======
 "use client"
-import React from 'react'
+import React from 'react';
 ;
 const AdminPage = (return(<div>
       <h1>Admin Page</h1>

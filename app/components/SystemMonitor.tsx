@@ -1,15 +1,15 @@
 
 <<<<<<< HEAD
-import React from 'react";"
-import Helmet from 'react-helmet-async";"
-import Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe           } from 'lucide-react";"
-import { { ArrowRight } from 'lucide-react";"
-  const benefits = "'Increase" efficiency by up to 50'
+import React from 'react';
+import Helmet from 'react-helmet-async'
+import Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe           } from 'lucide-react'
+import { { ArrowRight } from 'lucide-react';
+  const benefits = 'Increase" efficiency by up to 50'
     'Reduce costs by 30 with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
     'Gain competitive advantage with advanced technology"
-  ]"'"
+  ]"
 const SystemMonitor: "React.FC<SystemMonitorProps> = ({ className = '' ",}) => {
 return(<>"
 <Helmet />"
@@ -60,11 +60,11 @@ g: grid-cols-4 gap-8" />);"
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit,}</CheckCircle>
 =======
-import React from 'react'
+import React from 'react';
 import Helmet  from 'react-helmet-async'
 import Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe          } from 'lucide-react'
 import { { ArrowRight } from from 'lucide-react'
-  const benefits = "'Increase" efficiency by up to 50'
+  const benefits = 'Increase" efficiency by up to 50'
     'Reduce costs by 30 with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'

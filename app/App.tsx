@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import { useRouter    } from 'next/navigation'
 ;
 import, React, { Suspense, lazy } from 'react'
@@ -11,7 +11,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import LoadingSpinner from './components/LoadingSpinner'
 ;
 // Lazy load pages for better performance;
-;
+
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -24,9 +24,9 @@ const CareersPage = lazy(() => import('./careers/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
-;
+
 // AI Services;
-;
+
 const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AIAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -65,9 +65,9 @@ const AIVoiceAssistantPage = lazy(() => import('./ai-voice-assistant/page'));
 const AIContentGenerationProPage = lazy(() => import('./ai-content-generation-pro/page'));
 const AIAccountingAssistantPage = lazy(() => import('./ai-accounting-assistant/page'));
 const AICybersecurityMonitorProPage = lazy(() => import('./ai-cybersecurity-monitor-pro/page'));
-;
+
 // IT Services;
-;
+
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecuritySolutionsPage = lazy(() => import('./cybersecurity-solutions/page'));
 const WebDevelopmentPage = lazy(() => import('./web-development/page'));
@@ -102,9 +102,9 @@ const SecurityAutomationPage = lazy(() => import('./security-automation/page'));
 const DataVisualizationPage = lazy(() => import('./data-visualization/page'));
 const WorkflowAutomationPage = lazy(() => import('./workflow-automation/page'));
 const CloudNativeSecurityPage = lazy(() => import('./cloud-native-security/page'));
-;
+
 // Micro SAAS Pages;
-;
+
 const ZionAnalyticsProPage = lazy(() => import('./zion-analytics-pro/page'));
 const ZionChatAIPage = lazy(() => import('./zion-chat-ai/page'));
 const ZionSecurityShieldPage = lazy(() => import('./zion-security-shield/page'));
@@ -136,9 +136,9 @@ const ZionAIAccountingAssistantPage = lazy(() => import('./zion-ai-accounting-as
 const ZionAISEOOptimizerPage = lazy(() => import('./zion-ai-seo-optimizer/page'));
 const ZionAIDataCleanerPage = lazy(() => import('./zion-ai-data-cleaner/page'));
 const ZionCustomerInsightsPage = lazy(() => import('./zion-customer-insights/page'));
-;
+
 // 5G Solutions Pages;
-;
+
 const FiveGDataAnalyticsPage = lazy(() => import('./5g-data-analytics/page'));
 const FiveGEdgeComputingPage = lazy(() => import('./5g-edge-computing/page'));
 const FiveGImplementationPage = lazy(() => import('./5g-implementation/page'));
@@ -148,10 +148,10 @@ const FiveGNetworkInfrastructurePage = lazy(() => import('./5g-network-infrastru
 const FiveGPrivateNetworksPage = lazy(() => import('./5g-private-networks/page'));
 const FiveGSmartCitySolutionsPage = lazy(() => import('./5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
-;
+
 // Test Page - removed as it doesn't exist;
 // Main App Component;
-;
+
 function App() {
   return(<HelmetProvider>;
       <ErrorBoundary>;

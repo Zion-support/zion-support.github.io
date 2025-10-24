@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 interface AccessibilityComponentsProps {
@@ -15,10 +15,10 @@ const AccessibilityComponents: "React.FC<AccessibilityComponentsProps> = ({ clas
   );
 };"
 "
-export default AccessibilityComponents;"'"
+export default AccessibilityComponents;"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 ;
 interface AccessibilityComponentsProps {;
 className?: string}

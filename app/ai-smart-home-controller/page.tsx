@@ -1,12 +1,13 @@
 'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight    } from 'lucide-react'
-import Footer from '../components/Footer'
-;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight    } from 'lucide-react';
+import Footer from '../components/Footer';
+
 export default function ServicePage() {
-  return (<div>
+  return (
+    <div>
       <Head>
         <title>Ai Smart Home Controller | Zion Tech Group</title>
         <meta name="description" content="Professional ai smart home controller services and solutions for modern businesses." />"

@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-'use client";"
-import React from 'react";"
-import Head from 'next/head";"
-import Link from 'next/link";"
+'use client'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react";
 const addHighContrastSupport = (
 return(<div>
@@ -30,15 +30,15 @@ $3"
     <h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" />"
 Page Not Found"
           </h1>"
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed" />"'"
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed" />"
 Oops! The page you're looking for seems to have vanished into the digital void. Don't, worry,even our AI can"t predict everything!
           </p>"
 "
 =======
 "use client"
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from from 'lucide-react'
 const addHighContrastSupport = (return(<div>
       <Head>"
@@ -186,7 +186,7 @@ go wrong! 🤖
 ",;}
 export default addHighContrastSupport"
     </div>;"
-};"'"
+};"
 =======
                 </div>
               </div>

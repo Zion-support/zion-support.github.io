@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-'use client";"
-import React from 'react";"
-import Link from 'next/link";"
+'use client'
+import React from 'react';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react";
 export default function LazyWrapper() {"
 "
@@ -28,11 +28,11 @@ Contact Us</Link>"
     </div>
     </div>"
     </div>;"
-};"'"
+};"
 =======
 'use client'
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 import { ArrowRight } from from 'lucide-react'
 export default function LazyWrapper() {
 return (<>;

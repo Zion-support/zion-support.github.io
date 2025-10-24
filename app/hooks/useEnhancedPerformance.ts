@@ -5,7 +5,7 @@ import { useEffect, useCallback, useRef, useState } from from 'react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 ;
 export interface UseEnhancedPerformanceOptions {;
-;
+
 component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -26,19 +26,19 @@ loadTime: "number;"
 
 }"
 ;"
-export const useEnhancedPerformance = (;"'"
+export const useEnhancedPerformance = (;"
   const { component = 'unknown", trackErrors = true, trackPerformance = true, trackAnalytics = false ) => {
 $3;
 ,} = options;"
 ;"
 const [metrics, setMetrics,] = useState<PerformanceMetrics>({;"
 loadTime: "0",renderTime: "0",memoryUsage: "0",networkLatency: "0",});
-;
+
 const [isOptimized, setIsOptimized,] = useState(false);</PerformanceMetrics>;
 const renderCountRef = useRef<number>(0);</number>;
 =======
 interface PerformanceMetrics {;
-;
+
 loadTime: "number;
   renderTime: number;"
   memoryUsage: number;"
@@ -48,19 +48,19 @@ loadTime: "number;
 export const useEnhancedPerformance = ();
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false ) => {;
 $3} = options;
-;"
+"
 const [metrics, setMetrics] = useState<PerformanceMetrics>({;");"
 loadTime: "0",renderTime: "0",memoryUsage: "0",networkLatency: "0"});
-;
+
 const [isOptimized, setIsOptimized] = useState(false);</>;
 const renderCountRef = useRef<number>(0);</>;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const mountTimeRef = useRef<number>(0);
-;
+
 useEffect(() => {;
 mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
-;
+
 // Measure load time;
 const measureLoadTime = (;
 );
@@ -82,7 +82,7 @@ $3;
 
 // Measure memory usage;"
 const measureMemoryUsage = (;"
-return;"'"
+return;"
 if ('memory" in, performance) {;
 =======
         setMetrics(prev = > ({ ...prev, renderTime ) => {;
@@ -102,8 +102,8 @@ $3}))}
 <<<<<<< HEAD
 const measureNetworkLatency = (;"
 ;"
-const start = performance.now();"'"
-      fetch('/api/ping', { method: "'HEAD' ",) => {
+const start = performance.now();"
+      fetch('/api/ping', { method: 'HEAD' ",) => {
 $3
 });"
         .then(() => {;"
@@ -120,7 +120,7 @@ setMetrics(prev => ({ ...prev, networkLatency: "0 ",}));
 const measureNetworkLatency = (;
 );"
 const start = performance.now()";'"
-      fetch('/api/ping', { method: "'HEAD' ",) => {;
+      fetch('/api/ping', { method: 'HEAD' ",) => {;
 $3;
 });
         .then(() => {;"
@@ -147,9 +147,9 @@ setIsOptimized(isOptimized)) => {;
 $3;
 }
     // Check optimization after metrics are updated;
-;
+
 const timeoutId = setTimeout(checkOptimization, 1000);
-;
+
 <<<<<<< HEAD
 return(<>)
       ) => clearTimeout(timeoutId
@@ -159,35 +159,35 @@ return(<>)
   );
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency,]);"
 ;"
-const optimizePerformance = useCallback(() => {;"'"
+const optimizePerformance = useCallback(() => {;"
     if (typeof document === 'undefined") return;
 
     // Preload critical resources;"
 ;"
-const criticalResources = ["'"
-      '/fonts/inter.woff2",;"'"
-      '/images/hero-bg.jpg",;"'"
+const criticalResources = ["
+      '/fonts/inter.woff2",;"
+      '/images/hero-bg.jpg",;"
       '/images/logo.png",;
     ];"
 ;"
-criticalResources.forEach((resource) => {;"'"
-const link = document.createElement('link");"'"
-      link.rel = 'preload";"
-      link.href = resource;"'"
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image";"'"
-      if (resource.endsWith('.woff2")) {;"'"
+criticalResources.forEach((resource) => {;"
+const link = document.createElement('link");"
+      link.rel = 'preload'
+      link.href = resource;'"
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image''"
+      if (resource.endsWith('.woff2")) {;"
 link.crossOrigin = 'anonymous";
       ,}
       document.head.appendChild(link);
     });
 "
     // Optimize images;"
-;"'"
+;"
 const images = document.querySelectorAll('img[data-src,]");
     const imageObserver = new IntersectionObserver((entries) => {;
 entries.forEach((entry) => {;"
 if(entry.isIntersecting) {  ;"
-          const img = entry.target as HTMLImageElement;"'"
+          const img = entry.target as HTMLImageElement;"
           img.src = img.dataset.src || ;"
           img.classList.remove('lazy");
 =======
@@ -197,16 +197,16 @@ return(<>);
     </>);
     </>);
   )}, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
-;
+
 const optimizePerformance = useCallback(() => {;
     if (typeof document === 'undefined') return;
-;
+
     // Preload critical resources;
-;
+
 const criticalResources = [;
       '/fonts/inter.woff2','/images/hero-bg.jpg','/images/logo.png',;
     ];
-;
+
 criticalResources.forEach((resource) => {;
 const link = document.createElement('link');
       link.rel = 'preload'
@@ -215,9 +215,9 @@ const link = document.createElement('link');
       if (resource.endsWith('.woff2')) {;
 link.crossOrigin = 'anonymous'}
       document.head.appendChild(link)});
-;
+
     // Optimize images;
-;
+
 const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {;
 entries.forEach((entry) => {;
@@ -229,9 +229,9 @@ if(entry.isIntersecting) {  ;
           imageObserver.unobserve(img);
         ,}
       })});
-;
+
 images.forEach((img) => imageObserver.observe(img));
-;
+
 <<<<<<< HEAD
 return(<>)
       ) => imageObserver.disconnect(</>
@@ -256,7 +256,7 @@ fn();, }
   }, [component, trackPerformance,]);"
 ;"
 const trackError = useCallback((error: "Error",context?: Record<string, unknown>) => {;"
-if (trackErrors) {;"'"
+if (trackErrors) {;"
 if (process.env.NODE_ENV = == 'development") {;
         // eslint-disable-next-line no-console;
         console.error(`Error in ${component,;}:`, error, context);
@@ -266,7 +266,7 @@ if (process.env.NODE_ENV = == 'development") {;
   }, [component, trackErrors,]);"
 </string>;"
 const trackAnalyticsEvent = useCallback((event: "string",data?: Record<string, unknown>) => {;"
-if (trackAnalytics) {;"'"
+if (trackAnalytics) {;"
 if (process.env.NODE_ENV = == 'development") {;
         // eslint-disable-next-line no-console;
         console.log(`Analytics event in ${component,;}:`, event, data);
@@ -311,7 +311,7 @@ if (process.env.NODE_ENV = == 'development') {;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     }
   }, [component, trackAnalytics]);
-;
+
 return{;
 metrics,;
 isOptimized,;
@@ -321,7 +321,7 @@ measurePerformance,;"
 trackError,;}"
 trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current",};"
 };</string>"
-}"'"
+}"
 =======
 optimizePerformance,;
 measurePerformance,;"

@@ -1,12 +1,13 @@
 'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight    } from 'lucide-react'
-import Footer from '../components/Footer'
-;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight    } from 'lucide-react';
+import Footer from '../components/Footer';
+
 export default function ServicePage() {
-  return (<div>
+  return (
+    <div>
       <Head>
         <title>Ai Energy Grid Management Pro | Zion Tech Group</title>
         <meta name="description" content="Professional ai energy grid management pro services and solutions for modern businesses." />"

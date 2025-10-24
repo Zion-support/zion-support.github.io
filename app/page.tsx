@@ -84,7 +84,7 @@ export default function HomePage() {
               </div>
             </div>
 =======
-import Link from 'next/link'
+import Link from 'next/link';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { Metadata    } from 'next'

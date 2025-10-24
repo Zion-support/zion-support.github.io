@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet } from from 'lucide-react'
   ];
 const benefits = [;

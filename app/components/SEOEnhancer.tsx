@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-'use client";"
-import Navigation from './Navigation";"
-import React from 'react";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain } from 'lucide-react";"
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"
-import { Phone, Mail, ArrowRight } from 'lucide-react";"
+'use client'
+import Navigation from './Navigation'
+import React from 'react';
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail, ArrowRight } from 'lucide-react';
 const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = '' ",}) => {</SEOEnhancerProps>
 return(</SEOEnhancerProps>
     <>
@@ -78,7 +78,7 @@ r: scale-105" />
 =======
 'use client'
 import Navigation from './Navigation'
-import React from 'react'
+import React from 'react';
 import { Helmet } from from 'react-helmet-async'
 import { ArrowRight, Brain } from from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from from 'lucide-react'
@@ -160,7 +160,7 @@ Learn More</button>
     <h1 className="text-3, xl, m,"
 d: text-4 xl font-bold text-white mb-4">Why Choose Our SEOEnhancer?</h2>"
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Our seoenhancer solutions deliver, unmatched, performance,security, and scalability.</p>p>,"
-    <divclassName="grid grid-cols-1 md: "grid-cols-2 l",";"
+    <divclassName="grid grid-cols-1 md: "grid-cols-2 l",'
 g: grid-cols-4 gap-8" />{features.map((feature,index) => (;"
               <divkey = {index,};className = "bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300" />,<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4" />"
             <feature.icon className="h-6 w-6 text-white" / />

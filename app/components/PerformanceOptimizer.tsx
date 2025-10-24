@@ -1,7 +1,8 @@
+import React from 'react';
 <<<<<<< HEAD
-'use client";"
-"'"
-import { useEffect, useRef } from 'react";"
+'use client'
+'"
+import { useEffect, useRef } from 'react';
 import { usePerformanceMonitor } from '../utils/performance";
 
 interface PerformanceOptimizerProps {
@@ -23,7 +24,7 @@ export default function PerformanceOptimizer({ children, componentName }: Perfor
       const renderTime = performance.now() - renderStartTime.current;
       endTiming(`${componentName}-mount`);"
       "
-      // Log performance metrics in development"'"
+      // Log performance metrics in development"
       if (process.env.NODE_ENV === 'development") {
         console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`);
       }
@@ -31,12 +32,12 @@ export default function PerformanceOptimizer({ children, componentName }: Perfor
   }, [componentName, startTiming, endTiming]);
 "
   // Lazy load images when they come into view"
-  useEffect(() => {"'"
+  useEffect(() => {"
     const images = document.querySelectorAll('img[data-src]");
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {"
         if (entry.isIntersecting) {"
-          const img = entry.target as HTMLImageElement;"'"
+          const img = entry.target as HTMLImageElement;"
           img.src = img.dataset.src || ;"
           img.classList.remove('lazy");
           imageObserver.unobserve(img);
@@ -51,7 +52,7 @@ export default function PerformanceOptimizer({ children, componentName }: Perfor
 
   return <>{children}</>;"
 }"
-"'"
+"
 =======
 const PerformanceOptimizer: React.FC = () => {;
 return(<div>

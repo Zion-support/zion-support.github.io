@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-'use client";"
-import React from 'react";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react";"
+'use client'
+import React from 'react';
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation'"
 const EnhancedPerformanceMonitorPage: "React.FC = () => {"
-const benefits = ["'"
+const benefits = ["
     'Increase efficiency by up to 50%'",'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
@@ -35,7 +35,7 @@ Our enhanced performance monitoring system provides comprehensive insights and o
                       </li>
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 import { Helmet } from from 'react-helmet-async'
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -160,7 +160,7 @@ Email Us;
 ,};
 export default EnhancedPerformanceMonitorPage;"
 }"
-"'"
+"
 =======
   )}
 export default EnhancedPerformanceMonitorPage}"

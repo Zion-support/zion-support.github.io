@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";"
-import, React, { useEffect, useState, useRef } from "react";"
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver";"
+import, React, { useEffect, useState, useRef } from "react'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 interface AnimatedCounterProps {"
 end: "number
   duration?: number"
@@ -13,7 +13,7 @@ end: "number
 }"
 "
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
-end",duration = 2000"'
+end",duration = 2000'
 suffix = ''
 prefix = ''"
 className = '"
@@ -46,7 +46,7 @@ $3
 ,, , }
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 import, React, { useEffect, useState, useRef } from 'react'
 import { useIntersectionObserver } from from '../hooks/useIntersectionObserver'
 interface AnimatedCounterProps {;
@@ -101,7 +101,7 @@ return(,
   );
 };"
 export default AnimatedCounter;"
-}"'"
+}"
 =======
 animationFrame = requestAnimationFrame(animate);
 return () => {;

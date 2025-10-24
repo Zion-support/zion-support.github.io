@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-'use client";"
+'use client'
 import React from 'react";
 
 interface EnhancedAccessibilityWrapperProps {
@@ -16,10 +16,10 @@ const EnhancedAccessibilityWrapper: "React.FC<EnhancedAccessibilityWrapperProps>
 };
 "
 export default EnhancedAccessibilityWrapper;"
-"'"
+"
 =======
 'use client'
-import React from 'react'
+import React from 'react';
 ;
 interface EnhancedAccessibilityWrapperProps {;
 className?: string;

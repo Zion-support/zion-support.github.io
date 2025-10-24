@@ -1,7 +1,7 @@
 // Type definitions for Next.js compatibility;
-;
+
 export interface Metadata {;
-;
+
 title?: string;
 description?: string;
 keywords?: string[]}
@@ -62,8 +62,8 @@ index?: boolean;
 <<<<<<< HEAD
     googleBot?: {;"
 index?: boolean;"
-      follow?: boolean;"'"
-      'max-video-preview"?: number"'
+      follow?: boolean;"
+      'max-video-preview"?: number'
       'max-image-preview'?: 'none' | 'standard' | 'large'"
       'max-snippet"?: number
 =======
@@ -86,14 +86,14 @@ other?: Record<string , string  />;
 export interface MetadataRoute {"
 ;"
 url: "string;"
-lastModified?: string | Date;"'"
-changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never";"
+lastModified?: string | Date;"
+changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
 priority?: number",
 }
 }"
 };"
 export interface MetadataRouteSitemap extends MetadataRoute{;"
-url: "string",lastModified?: string | Date;"'"
+url: "string",lastModified?: string | Date;"
 changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never",;
 priority?: number,}
 }
@@ -158,9 +158,9 @@ export interface ServerComponentProps {;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 // Client components types;
-;
+
 export interface ClientComponentProps {;
-;
+
 children?: React.ReactNode;
 className?: string;
 }
@@ -242,17 +242,17 @@ export interface EdgeRuntime {
 
 "
 ;}"
-;}"'"
-  runtime: "'edge'",;};
+;}"
+  runtime: 'edge'",;};
 // Node.js runtime types;
 export interface NodeRuntime {
 
 "
 ;}"
-;}"'"
-  runtime: "'nodejs'",;};"
+;}"
+  runtime: 'nodejs'",;};"
 "
-// Extend Next.js types;"'"
+// Extend Next.js types;"
 declare module 'next" {;
 interface NextApiRequest {"
 ;"
@@ -263,16 +263,16 @@ name?: string",
 export interface EdgeRuntime {;
 }"
 }";'"
-  runtime: "'edge'"}
+  runtime: 'edge'"}
 // Node.js runtime types;
 export interface NodeRuntime {;
 }"
 }";'"
-  runtime: "'nodejs'"}
+  runtime: 'nodejs'"}
 // Extend Next.js types;
 declare module 'next' {;
 interface NextApiRequest {;
-;"
+"
 user?: {;"
 id: "string",email: "string;"
 name?: string"}
@@ -283,7 +283,7 @@ name?: string"}
 <<<<<<< HEAD
 }"
 export {}</Response>"
-;}"'"
+;}"
 =======
 }
 export {}</Response>;"

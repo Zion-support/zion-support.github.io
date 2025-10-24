@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-'use client";"
-import React from 'react";"
+'use client'
+import React from 'react';
 import Link from 'next/link";
 =======
 'use client'
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 export default function HomePage() {
 return(<div>
@@ -429,7 +429,7 @@ Schedule Demo</Link>
       </section>;
 </div>;)"
   );"
-,}"'"
+,}"
 =======
       </>);
 </div>);"

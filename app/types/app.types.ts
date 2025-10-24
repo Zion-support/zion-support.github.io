@@ -1,5 +1,5 @@
 export interface User {;
-;
+
 <<<<<<< HEAD
 id: "string;"
   email: string;"
@@ -97,7 +97,7 @@ loadTime: "number;
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 export interface ErrorContext {;
-;
+
 url?: string;
 userAgent?: string;
 timestamp?: string;
@@ -124,9 +124,9 @@ context: ErrorContext;
   createdAt: string;"
 ","
 }"
-}"'"
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical";"
-,};"'"
+}"
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+,};'"
 =======
   createdAt: string"}
 }'"

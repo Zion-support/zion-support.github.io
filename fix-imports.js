@@ -1,89 +1,59 @@
-<<<<<<< HEAD
-const fs = require('fs");"'"
-const path = require('path");
-"
-function fixImports(filePath) {"
-  try {"'"
-    let content = fs.readFileSync(filePath, 'utf8");
-    let originalContent = content;"
-    "
-    // Count the depth of the file"'"
-    const relativePath = path.relative('./app", filePath);"'"
-    const depth = relativePath.split('/").length - 1;"
-    "
-    // Create the correct import path"'"
-    const importPath = '../'.repeat(depth) + 'components/Footer";"
-    "
-    // Fix the import"'"
-    content = content.replace(/import Footer from '\.\.\/components\/Footer';/g, `import Footer from '${importPath}";`);
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-=======
 const fs = require('fs');
 const path = require('path');
-;
-function fixImports(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-;
-    // Count the depth of the file;
-    const relativePath = path.relative('./app', filePath);
-    const depth = relativePath.split('/').length - 1;
-;
-    // Create the correct import path;
-    const importPath = '../'.repeat(depth) + 'components/Footer'
-;
-    // Fix the import;
-    content = content.replace(/import Footer from '\.\.\/components\/Footer';/g, `import Footer from '${importPath}';`);
-;
-    // Only write if content changed;
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content);`
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-      console.log(`Fixed imports in: ${filePath}`);
-      return true}
-    return false} catch (error) {;`
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false}
+
+// Function to fix import statements and JSX issues
+function fixImportsAndJSX(content) {
+  // Fix import statements with semicolons
+  content = content.replace(/import ([^;]+);\n;/g, 'import $1;\n');
+  
+  // Fix return statements with malformed parentheses
+  content = content.replace(/return \(<div>/g, 'return (\n    <div>');
+  
+  // Fix missing React import
+  if (content.includes('export default function') && !content.includes("import React")) {
+    content = "import React from 'react';\n" + content;
+  }
+  
+  // Fix missing Head import
+  if (content.includes('<Head>') && !content.includes("import Head")) {
+    content = content.replace(/import React from 'react';\n/, "import React from 'react';\nimport Head from 'next/head';\n");
+  }
+  
+  // Fix missing Footer import
+  if (content.includes('<Footer') && !content.includes("import Footer")) {
+    content = content.replace(/import Head from 'next\/head';\n/, "import Head from 'next/head';\nimport Footer from '../components/Footer';\n");
+  }
+  
+  return content;
 }
-function findAndFixFiles(dir) {;
+
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
   const files = fs.readdirSync(dir);
-<<<<<<< HEAD
   
   for (const file of files) {
-    const filePath = path.join(dir, file);"
-    const stat = fs.statSync(filePath);"
-    "'"
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {"
-      findAndFixFiles(filePath);"'"
-    } else if (file.endsWith('page.tsx")) {
-      fixImports(filePath);
-    }
-  }
-}"
-"
-// Start fixing from the app directory"'"
-findAndFixFiles('./app");"
-"'"
-console.log('Import fixing completed!");"
-"'"
-=======
-;
-  for (const file of files) {;
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-;
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {;
-      findAndFixFiles(filePath)} else if (file.endsWith('page.tsx')) {;
-      fixImports(filePath)}
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fixedContent = fixImportsAndJSX(content);
+        
+        if (content !== fixedContent) {
+          fs.writeFileSync(filePath, fixedContent, 'utf8');
+          console.log(`Fixed: ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
+      }
+    }
   }
 }
-// Start fixing from the app directory;
-findAndFixFiles('./app');
-;
-console.log('Import fixing completed!');
-;`'
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+
+// Start fixing from the app directory
+console.log('Starting import and JSX fixes...');
+fixFilesInDirectory('./app');
+console.log('Import and JSX fixes completed!');

@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errors, setErrors] = useState<FormErrors>({});
-;
+
   const validateForm = useCallback((data: FormData): FormErrors => {;
     const newErrors: FormErrors = {}
     if (!data.name.trim()) {;
@@ -31,14 +31,14 @@ const ContactForm: React.FC = () => {;
       newErrors.message = 'Message is required'} else if (data.message.trim().length < 10) {;
       newErrors.message = 'Message must be at least 10 characters'}
     return newErrors}, []);
-;
+
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;
       [name]: value);
     }));
-;
+
     // Clear error when user starts typing;
     if (errors[name as keyof FormErrors]) {;
       setErrors(prev => ({;
@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {;
         [name]: undefined);
       }))}
   }, [errors]);
-;
+
   const handleSubmit = useCallback(async (e: React.FormEvent) => {;
     e.preventDefault();
     const formErrors = validateForm(formData);
@@ -56,21 +56,21 @@ const ContactForm: React.FC = () => {;
     setIsSubmitting(true);
     setSubmitStatus('idle');
     setErrors({});
-;
+
     try {;
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000));
-;
+
       // Here you would typically send the data to your backend;
       console.log('Form submitted:', formData);
-;
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' })} catch (error) {;
       console.error('Error submitting form:', error);
       setSubmitStatus('error')} finally {;
       setIsSubmitting(false)}
   }, [formData, validateForm]);
-;
+
   return (<div className="max-w-2xl mx-auto">
       <form onSubmit={handleSubmit} className="space-y-6">;"
         <div>"

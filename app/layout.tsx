@@ -1,3 +1,4 @@
+import React from 'react';
 <<<<<<< HEAD
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
@@ -100,7 +101,7 @@ import { Inter    } from 'next/font/google'
 import './globals.css'
 ;
 const inter = Inter({ subsets: ['latin'] });
-;
+
 export const metadata: Metadata = {;
   title: 'Zion Tech Group - Advanced AI & IT Solutions',;
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.'}
