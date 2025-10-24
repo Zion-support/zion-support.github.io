@@ -4,20 +4,20 @@
 * Advanced performance tracking and monitoring for web applications
 */
 export interface PerformanceMetric {
-name: string,
-value: number,
-unit: string,
-timestamp: Date,
-category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-metadata?: Record<string, unknown>
+  name: string;
+  value: number;
+  unit: string;
+  timestamp: Date;
+  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
+  metadata?: Record<string, unknown>;
 }
 export interface WebVitalsMetrics {
-FCP?: number; // First Contentful Paint
-LCP?: number; // Largest Contentful Paint
-FID?: number; // First Input Delay
-CLS?: number; // Cumulative Layout Shift
-TTFB?: number; // Time to First Byte
-export interface PerformanceMetric {}
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+}
 name: string
 value: number
 unit: string
@@ -650,13 +650,21 @@ cleanup(): void {/* TODO: Fix JSX expression */}
 }
 }
 // Type for performance.memory
-interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
+interface PerformanceWithMemory extends Performance {
+  memory?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
 }
-}
+
 // Type for LayoutShift
-interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
 }
+
 // Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
-export default PerformanceMetrics
+export const performanceMetrics = PerformanceMetrics.getInstance();
+export default PerformanceMetrics;
 `
