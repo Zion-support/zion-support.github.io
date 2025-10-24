@@ -4,6 +4,13 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
   
+  // Disable static generation to avoid serialization issues
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+  },
+  
   // Image optimization
   images: {
     unoptimized: true,
@@ -70,12 +77,6 @@ const nextConfig = {
     ];
   },
   
-  // Experimental features for better performance
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-  },
   
   // Webpack optimizations
   webpack: (config, { isServer, dev }) => {

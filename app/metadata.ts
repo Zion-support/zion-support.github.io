@@ -11,4 +11,3 @@ export const metadata: Metadata = {
     type: 'website',
   },
 }
-};

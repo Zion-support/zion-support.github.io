@@ -40,7 +40,7 @@ export const usePerformanceMonitoring = () => {
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // CLS - Cumulative Layout Shift
-      let _clsValue = 0;
+      const _clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
         const _entries = list.getEntries();
         entries.forEach(
