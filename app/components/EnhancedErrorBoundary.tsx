@@ -9,7 +9,7 @@ return (<div>
 
 export const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancederrorboundary ${className}`}>
+    <div className="{`enhancederrorboundary" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

@@ -9,7 +9,7 @@ return (<div>
 
 export const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
   return (
-    <div className={`sidebar ${className}`}>
+    <div className="{`sidebar" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

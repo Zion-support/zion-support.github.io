@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { Head  } from "next/head"
+import { Head  } from "next/head";
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const useAnalytics = () => {
@@ -81,7 +81,7 @@ go wrong! 🤖
             </div>
           </div>
     </div>
-    </>
+</>
   ) "}
 export default useAnalytics
     </div>
@@ -89,7 +89,7 @@ export default useAnalytics
 
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedanalytics ${className}`}>
+    <div className="{`enhancedanalytics" ${className}`}>
       {children}
     </div>
   );

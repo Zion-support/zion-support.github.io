@@ -9,7 +9,7 @@ return (<div>
 
 export const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedloadingstates ${className}`}>
+    <div className="{`enhancedloadingstates" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

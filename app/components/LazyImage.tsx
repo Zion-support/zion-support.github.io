@@ -9,7 +9,7 @@ return (<div>
 
 export const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
   return (
-    <div className={`lazyimage ${className}`}>
+    <div className="{`lazyimage" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

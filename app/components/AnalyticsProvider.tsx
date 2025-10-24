@@ -27,7 +27,7 @@ if(type, of, windo, w !=="undefined") {
       //Google Analytics
 if(process.env.NODE_ENV === "production") {
 const script = document.createElement("script")
-script.src = `https: "//www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID"}`
+script.src = `https: "//www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_MEASUREMENT_ID"}`"
 script.async = true
 document.head.appendChild(script)
         window.gtag = window.gtag || function(...args: any[]) {
@@ -40,7 +40,7 @@ consttrackEvent = ($2) => {
 
   }
 
-  consttrackPageView= (pageName: "string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {",window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)
+  consttrackPageView="(pageName:" "string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {",window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)
 page_title: "pageName",page_location: "window.location.href"})
     }
   }
@@ -49,10 +49,10 @@ page_title: "pageName",page_location: "window.location.href"})
     </AnalyticsContext></AnalyticsContext.Provider>)
   )
 }
-consttrackEvent= (eventName: "string",parameters?: Record<string, unknown />
+consttrackEvent="(eventName:" "string",parameters?: Record<string, unknown />
   ) => {
 if(typeof, window !== "undefined" && window.gtag) { window.gtag("event", eventName, parameters)}
-  consttrackPageView= (pageName: "string) => {if(type",of, windo, w !=="undefined" && windo, w.gtag) { window.gtag("config","GA_MEASUREMENT_ID", {)
+  consttrackPageView="(pageName:" "string) => {if(type",of, windo, w !=="undefined" && windo, w.gtag) { window.gtag("config","GA_MEASUREMENT_ID", {)
 page_title: "pageName",page_location: "window.location.href"})}
   constvalue: "AnalyticsContextType={",trackEvent, trackPageView
 }

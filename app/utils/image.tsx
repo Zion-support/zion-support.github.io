@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import React, { useState, useCallback } from "react"
-interface ImageProps {
+interface ImageProps {;
   className?: string;
   children?: React.ReactNode;
 }
@@ -10,7 +10,7 @@ interface ImageProps {
 
 export const Image: React.FC<ImageProps> = ({ className = '', children }) => {
   return (
-    <div className={`image ${className}`}>
+    <div className="{`image" ${className}`}>
       {children}
     </div>
   );
@@ -107,7 +107,7 @@ imageStyle
 {...props })
 
     <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)",</div>
-    </>
+</>
   )
 
 {...props }

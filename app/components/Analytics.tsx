@@ -36,7 +36,7 @@ export default Analytics
 
 export const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }) => {
   return (
-    <div className={`analytics ${className}`}>
+    <div className="{`analytics" ${className}`}>
       {children}
     </div>
   );

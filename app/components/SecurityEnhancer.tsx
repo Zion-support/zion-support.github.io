@@ -9,7 +9,7 @@ return (<div>
 
 export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={`securityenhancer ${className}`}>
+    <div className="{`securityenhancer" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

@@ -13,7 +13,7 @@ return (<div>
 
 export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
   return (
-    <div className={`performancedashboard ${className}`}>
+    <div className="{`performancedashboard" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -62,7 +62,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

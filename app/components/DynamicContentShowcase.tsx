@@ -9,7 +9,7 @@ return (<div>
 
 export const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ className = '', children }) => {
   return (
-    <div className={`dynamiccontentshowcase ${className}`}>
+    <div className="{`dynamiccontentshowcase" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

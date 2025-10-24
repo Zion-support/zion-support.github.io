@@ -9,7 +9,7 @@ return (<div>
 
 export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '', children }) => {
   return (
-    <div className={`performanceoptimizations ${className}`}>
+    <div className="{`performanceoptimizations" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

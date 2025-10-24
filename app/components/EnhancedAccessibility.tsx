@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { Head  } from "next/head"
+import { Head  } from "next/head";
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const addHighContrastSupport = () => {
@@ -81,7 +81,7 @@ go wrong! 🤖
             </div>
           </div>
     </div>
-    </>
+</>
   ) "}
 export default addHighContrastSupport
     </div>
@@ -89,7 +89,7 @@ export default addHighContrastSupport
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedaccessibility ${className}`}>
+    <div className="{`enhancedaccessibility" ${className}`}>
       {children}
     </div>
   );

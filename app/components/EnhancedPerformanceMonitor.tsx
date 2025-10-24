@@ -38,7 +38,7 @@ const benefits = ["
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology',<div className="flex flex-col sm: flex-row gap-4 justify-center"  />
         </section>
-        {/* Features Section */}<section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-7 xl mx-auto" />,<div className="text-center mb-16" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
+        {/* Features Section */}<section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-7 xl mx-auto" />,<div className="text-center mb-16" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>;
 Key Features;</h2>
               <p className="text-xl text-gray-300 max-w-3 xl mx-auto"  />
 Our enhanced performance monitoring system provides comprehensive insights and optimization.</p>,<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"  />
@@ -52,7 +52,7 @@ Our enhanced performance monitoring system provides comprehensive insights and o
                     ))}
                   </ul>
                   </div>
-    </>
+</>
   ))}
               </div>
             </div>
@@ -68,7 +68,7 @@ Experience the benefits of advanced performance monitoring with our comprehensiv
               {benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                   </div>
-    </>
+</>
   ))
               </div>
             </div>
@@ -91,7 +91,7 @@ Email Us
         </section>
         </div>
       </div>
-    </>
+</>
   )
 
 export default EnhancedPerformanceMonitorPage
@@ -99,7 +99,7 @@ export default EnhancedPerformanceMonitorPage
 
 export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedperformancemonitor ${className}`}>
+    <div className="{`enhancedperformancemonitor" ${className}`}>
       {children}
     </div>
   );

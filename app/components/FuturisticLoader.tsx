@@ -23,7 +23,7 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
 
 export const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ className = '', children }) => {
   return (
-    <div className={`futuristicloader ${className}`}>
+    <div className="{`futuristicloader" ${className}`}>
       {children}
     </div>
   );

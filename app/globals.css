@@ -41,7 +41,6 @@ a {
   background-clip: text;
 }
 
-<<<<<<< HEAD
 /* Performance optimizations */
 .lazy {
   opacity: 0;
@@ -84,19 +83,23 @@ a {
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
+/* Focus styles for accessibility */
+.focus-visible:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
   }
-  50% {
-    opacity: 0.5;
-  }
-=======
+}
+
 .glass-dark {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
->>>>>>> origin/main
 }
 
 .animate-fade-in {
@@ -128,5 +131,14 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
 }

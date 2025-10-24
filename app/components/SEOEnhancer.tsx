@@ -7,7 +7,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail, ArrowRight   } from "lucide-react";
 const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className="" "}) => {</SEOEnhancerProps>
 return (</SEOEnhancerProps> <>
-
       <Helmet />
         <title>SEOEnhancer|Zion Tech Group</title>
         
@@ -28,7 +27,7 @@ Learn More</button>
 
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={`seoenhancer ${className}`}>
+    <div className="{`seoenhancer" ${className}`}>
       {children}
     </div>
   );
@@ -71,7 +70,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail, ArrowRight } from from 'lucide-react'
 const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = ''}) => {</SEOEnhancerProps>
 return (</SEOEnhancerProps>
-    <>
+    <>;
       <Helmet  />;<title>SEOEnhancer | Zion Tech Group</title><meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." / /><meta name="keywords" content="AI, artificial, intelligence, SEOEnhancer, AI, solutions, intelligent automation" /  />
       </Helmet>;<Navigation/ />,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"  />
             {/* Hero Section */}<section className="relative py-20 px-4 overflow-hidden" />,<div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />,<div className="relative max-w-7 xl mx-auto text-center" />,<h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" /  />
@@ -89,7 +88,7 @@ Learn More</button>
         </section>,{/* Features Section */}<section className="py-20 px-4" />,<div className="max-w-7 xl mx-auto" />,<div className="text-center mb-16" />,<h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3 xl mx-auto" /  />
 Powerful AI-driven features designed to transform your business operations</p>
-              </><div className="grid md: "grid-cols-2 l",")
+</><div className="grid md: "grid-cols-2 l",")
 g: grid-cols-4 gap-8" />)"
             {features.map((feature,index) => (;<divkey = {index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" /><feature.icon className="h-12 w-12 text-emerald-400 mb-4" / />,<h1 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -184,7 +183,7 @@ Email Us</Mail>
       </div>
       </Footer>
 </div>
-    </>
+</>
   )
 
 export default SEOEnhancer

@@ -49,7 +49,7 @@ Learn More
 Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
               </div>
-    </>
+</>
   ) <div className="[^"]*">,{features.map((feature, index) => (<divkey = {index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" /> <div className="[^"]*">
                     <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />
     <h1 className="text-xl font-semibold text-white">{feature.title}</h3>
@@ -57,14 +57,14 @@ Discover the powerful features that make Enhanced Accessibility Enhancer the per
           <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">
 featurebenefitsmapbenefit benefitIndex => 
-                      <li key= benefitIndex className="flex items-center text-sm text-gray-300"> <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
-benefit</li>                <divkey= index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" ///><featureicon className="h-12 w-12 text-emerald-400 mb-4" /><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
+                      <li key="benefitIndex" className="flex items-center text-sm text-gray-300"> <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+benefit</li>                <divkey="index" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" ///><featureicon className="h-12 w-12 text-emerald-400 mb-4" /><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
                   <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">featurebenefitsmapbenefit idx => 
-                      </ul><li key= idx className="flex items-center text-sm text-gray-300" /><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5"> <div className="[^"]*"> <div className="[^"]*">{benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                      </ul><li key="idx" className="flex items-center text-sm text-gray-300" /><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5"> <div className="[^"]*"> <div className="[^"]*">{benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
     </div>
-    </>
+</>
   ))
             </div>
         </section>
@@ -79,21 +79,20 @@ Start Your Free Trial</button>
         </section>
         </div>
       </div>
-    </>
+</>
   )
 
 export default EnhancedAccessibilityEnhancerPage; <section className="py-20 px-4 bg-white/5" /><div className="[^"]*">
     <divclassName="text-center mb-16" ///><h2 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <pExperience the benefits of cutting-edge AI technology</p //>  </div> <div className="[^"]*">benefitsmapbenefit index => 
 
-      <divkey= index className= quotflex items-start space-x-3 quot ///>
-    </div><CheckCircleclassName= quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0 quot //><p className= quottext-gray-300 text-lgquot>benefit</p></p>
+      <divkey="index" className="quotflex" items-start space-x-3 quot ///>
+    </div><CheckCircleclassName="quoth-6" w-6 text-purple-400 mt-1 flex-shrink-0 quot //><p className="quottext-gray-300" text-lgquot>benefit</p></p>
                 </div>
             </div>
           </div>
       </section>
-
-  </>
+</>
 
 export default EnhancedAccessibilityEnhancerPage}
 </ul>
@@ -101,7 +100,7 @@ export default EnhancedAccessibilityEnhancerPage}
 
 export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedaccessibilityenhancer ${className}`}>
+    <div className="{`enhancedaccessibilityenhancer" ${className}`}>
       {children}
     </div>
   );

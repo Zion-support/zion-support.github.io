@@ -55,7 +55,7 @@ return (<div>
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div className={`performanceoptimizer ${className}`}>
+    <div className="{`performanceoptimizer" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -102,9 +102,10 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 
 export default PerformanceOptimizer
 }
+;

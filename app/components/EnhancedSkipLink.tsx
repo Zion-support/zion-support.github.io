@@ -9,7 +9,7 @@ return (<div>
 
 export const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedskiplink ${className}`}>
+    <div className="{`enhancedskiplink" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

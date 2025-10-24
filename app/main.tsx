@@ -23,7 +23,7 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
 
 export const Main: React.FC<MainProps> = ({ className = '', children }) => {
   return (
-    <div className={`main ${className}`}>
+    <div className="{`main" ${className}`}>
       {children}
     </div>
   );

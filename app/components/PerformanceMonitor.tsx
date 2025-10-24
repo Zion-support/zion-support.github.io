@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { Head  } from "next/head"
+import { Head  } from "next/head";
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const monitorCoreWebVitals = () => {
@@ -81,7 +81,7 @@ go wrong! 🤖
             </div>
           </div>
     </div>
-    </>
+</>
   ) "}
 export default monitorCoreWebVitals
     </div>
@@ -89,7 +89,7 @@ export default monitorCoreWebVitals
 
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {
   return (
-    <div className={`performancemonitor ${className}`}>
+    <div className="{`performancemonitor" ${className}`}>
       {children}
     </div>
   );

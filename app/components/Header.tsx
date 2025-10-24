@@ -166,7 +166,7 @@ export default HeaderPage
 
 export const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
   return (
-    <div className={`header ${className}`}>
+    <div className="{`header" ${className}`}>
       {children}
     </div>
   );
