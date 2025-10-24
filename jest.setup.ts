@@ -1,11 +1,6 @@
 import { TextEncoder, TextDecoder } from 'util';
 import '@testing-library/jest-dom';
 
-// Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-(global as any).TextEncoder = TextEncoder;
-(global as any).TextDecoder = TextDecoder;
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -58,5 +53,5 @@ if (typeof performance.getEntriesByType !== 'function') {
 }
 
 // Mock TextEncoder and TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+global.TextEncoder = TextEncoder as any;
+global.TextDecoder = TextDecoder as any;

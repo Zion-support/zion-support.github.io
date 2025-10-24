@@ -1,104 +1,77 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-// Simple logger implementation
-const logger = {
-  error: (message: string, context?: unknown) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.error(message, context);
-};
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+import React, { Component, ReactNode } from 'react';
+
+interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
- void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
-  errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  message: string;
-  stack: string | undefined;
-  componentStack: string | null | undefined;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId: string | null;
-  sessionId: string;
-class AdvancedErrorBoundary extends Component;
-  private retryCount = 0;
-  private maxRetries = 3;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: React.ErrorInfo;
+}
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
-      errorId: null;
-    };
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-      errorInfo;
+    this.state = { hasError: false };
+  }
+
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
     });
-    // Log error to console in development;
-        errorInfo;
-      });
-    // Call custom error handler;
-      this.props.onError(error, errorInfo);
-    // Report error to external service;
-      this.reportError(error, errorInfo);
-      sessionId: this.getSessionId()
-    };
-    // Send to error reporting service;
-    this.sendErrorReport(errorReport);
-  };
-    // Try to get user ID from localStorage or other sources;
-      return localStorage.getItem('userId') || null;
-      return null;
-  };
-    // Generate or retrieve session ID;
-      let sessionId = sessionStorage.getItem('sessionId');
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
-      return sessionId;
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-      // Send to your error reporting service;
-          'Content-Type': 'application/json'
-        body: JSON.stringify(errorReport)
-      });
-        error: reportError;
-      });
-  };
-    if (this.retryCount;)
-    window.location.reload();
-  };
-    window.location.href = '/';
-  };
-      // Custom fallback UI;
-        return this.props.fallback;
-      // Default error UI;
-                  Oops! Something went wrong;
-                  We&apos;re sorry, but something unexpected happened. Our team;
-                  has been notified.
-                    Error Details:
-                      <strong>Error ID:</strong> {this.state.errorId}
-                      <strong>Message:</strong> {this.state.error?.message}
-                        Stack Trace;
-                        {this.state.error?.stack}
-                        Component Stack;
-                        {this.state.errorInfo?.componentStack}
-              )}
-                {this.props.enableRetry &&
-                  this.retryCount;
-                      Try Again ({this.maxRetries - this.retryCount} attempts;)
-                      left)
-                  )}
-                
-                  Reload Page;
-                  Go to Homepage;
-                  If this problem persists, please contact our support team;
-                  at&nbsp;
-                  
-                    kleber@ziontechgroup.com;
-  );
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+              <svg
+                className="w-6 h-6 text-red-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
+                />
+              </svg>
+            </div>
+            <div className="mt-4 text-center">
+              <h3 className="text-lg font-medium text-gray-900">
+                Something went wrong
+              </h3>
+              <p className="mt-2 text-sm text-gray-500">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+              <div className="mt-4">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Refresh Page
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return this.props.children;
+  }
+}
+
+export default AdvancedErrorBoundary;

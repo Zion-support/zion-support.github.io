@@ -1,12 +1,12 @@
 'use client';
 
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useLocation, Link } from 'react-router-dom';
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
+  const pathname = usePathname();
+  const pathnames = pathname.split('/').filter((x) => x);
   
   if (pathnames.length === 0) {
     return null;
@@ -17,7 +17,7 @@ const Breadcrumb: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center space-x-2 text-sm">
           <li>
-            <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/" className="text-gray-400 hover:text-white transition-colors">
               Home
             </Link>
           </li>
@@ -44,7 +44,7 @@ const Breadcrumb: React.FC = () => {
                   </span>
                 ) : (
                   <Link
-                    to={routeTo}
+                    href={routeTo}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
@@ -56,7 +56,7 @@ const Breadcrumb: React.FC = () => {
         </ol>
       </div>
     </nav>
-  )
+  );
 };
 
 export default Breadcrumb;
