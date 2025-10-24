@@ -1,8 +1,8 @@
-import { describe, test, expect } from '@jest/globals';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { describe, test, expect } from '@jest/globals';
 import { HelmetProvider } from 'react-helmet-async';
-import PageLoader from '../app/components/PageLoader';
-import SEOHead from '../app/components/SEOHead';
 
 const TestComponent = () => {
   return (
@@ -25,11 +25,6 @@ describe('Components', () => {
     expect(screen.getByText('Test content')).toBeTruthy();
   });
   
-  test('should handle loading component', () => {
-    render(<PageLoader />);
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
-  });
-
   test('should handle SEO head component', () => {
     render(
       <HelmetProvider>

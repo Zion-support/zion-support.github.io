@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
   
 const UltimateBusinessIntelligence2025Banner = () => {
@@ -56,17 +56,14 @@ const UltimateBusinessIntelligence2025Banner = () => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(timer);
-  );
-  }, [content.length])
-  );
+  }, [content.length]);
+
   const handleClose = () => {
-    setIsVisible(false)
-  );
-  }
-  );
-  if (!isVisible) return null
-  );
-  const _currentContent = content[currentSlide];
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+  const currentContent = content[currentSlide];
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -102,7 +99,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
-              to="/services"
+              href="/services"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Get Started Today
@@ -116,7 +113,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               </svg>
             </Link>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
             >
               Schedule Consultation
@@ -219,5 +216,4 @@ const UltimateBusinessIntelligence2025Banner = () => {
     </section>
   );
 }
-export default UltimateBusinessIntelligence2025Banne;r
-  );
+export default UltimateBusinessIntelligence2025Banner;

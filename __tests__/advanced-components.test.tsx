@@ -1,6 +1,8 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
+import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
@@ -10,100 +12,85 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>Test content</div>;
 };
 
-// Test component for error boundary tests
-const TestComponent = () => <div>Test component</div>;
-
 // Mock onError callback
 const onError = jest.fn();
 
-// Mock helmet context
-const helmetContext = {};
-
-// Mock components
-const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>;
-};
-
-const MockSEOOptimizer = ({ title, description }: { title: string; description: string }) => {
-  return <div data-testid="seo-optimizer">{title} - {description}</div>;
-};
-
-const MockPerformanceMonitor = () => {
-  return <div data-testid="performance-monitor">Performance Monitor</div>;
-};
-
-describe('Advanced Components', () => {
-  describe('Error Boundary', () => {
-    it('renders children when there is no error', () => {
-      render(
-        <MemoryRouter>
-          <MockErrorBoundary>
-            <div>Test content</div>
-          </MockErrorBoundary>
-        </MemoryRouter>
-      );
-
-      expect(screen.getByText('Test content')).toBeInTheDocument();
-    });
-
-    it('renders error UI when there is an error', () => {
-      const consoleSpy = jest
-        .spyOn(console, 'error')
-        .mockImplementation(() => {});
-
-      render(
-        <MemoryRouter>
-          <MockErrorBoundary>
-            <ThrowError shouldThrow={true} />
-          </MockErrorBoundary>
-        </MemoryRouter>
-      );
-
-      // The error boundary should catch the error and render the error UI
-      expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
-      consoleSpy.mockRestore();
-    });
+describe('AdvancedErrorBoundary', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
 
-  describe('SEO Optimizer', () => {
-    it('renders with correct title and description', () => {
-      render(
-        <HelmetProvider context={helmetContext}>
-          <MockSEOOptimizer 
-            title="Test Title" 
-            description="Test Description" 
-          />
-        </HelmetProvider>
-      );
+  it('renders children when there is no error', () => {
+    render(
+      <MemoryRouter>
+        <AdvancedErrorBoundary>
+          <div>Test content</div>
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
 
-      expect(screen.getByTestId('seo-optimizer')).toBeInTheDocument();
-      expect(screen.getByText('Test Title - Test Description')).toBeInTheDocument();
-    });
+    expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 
-  describe('Performance Monitor', () => {
-    it('renders performance monitor component', () => {
-      render(<MockPerformanceMonitor />);
-      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
-    });
+  it('renders error UI when there is an error', () => {
+    const consoleSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+
+    render(
+      <MemoryRouter>
+        <AdvancedErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText('Try Again')).toBeInTheDocument();
+    expect(screen.getByText('Go Home')).toBeInTheDocument();
+    
+    consoleSpy.mockRestore();
   });
 
-  describe('General Component Tests', () => {
-    it('renders test component', () => {
-      render(<TestComponent />);
-      expect(screen.getByText('Test component')).toBeInTheDocument();
-    });
+  it('calls onError callback when error occurs', () => {
+    const consoleSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
 
-    it('handles user interactions', () => {
-      const handleClick = jest.fn();
-      render(
-        <button onClick={handleClick} data-testid="test-button">
-          Click me
-        </button>
-      );
+    render(
+      <MemoryRouter>
+        <AdvancedErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
 
-      fireEvent.click(screen.getByTestId('test-button'));
-      expect(handleClick).toHaveBeenCalledTimes(1);
-    });
+    expect(onError).toHaveBeenCalled();
+    consoleSpy.mockRestore();
+  });
+
+  it('handles retry functionality', () => {
+    const consoleSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+
+    render(
+      <MemoryRouter>
+        <AdvancedErrorBoundary>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
+
+    const retryButton = screen.getByText('Try Again');
+    expect(retryButton).toBeInTheDocument();
+    
+    // Click retry button
+    retryButton.click();
+    
+    // Should render children again
+    expect(screen.getByText('Test content')).toBeInTheDocument();
+    
+    consoleSpy.mockRestore();
   });
 });
