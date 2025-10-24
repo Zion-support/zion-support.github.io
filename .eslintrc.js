@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["next/core-web-vitals"],
+  extends: ["next"],
   rules: {
     "no-console": "off",
     "prefer-const": "error",

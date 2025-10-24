@@ -44,7 +44,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
     : undefined;
 
   useEffect(() => {
-    if (lazy && imgRef.current) {
+    if (lazy && imgRef.current && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       lazyLoadImage(imgRef.current);
     }
   }, [lazy]);
