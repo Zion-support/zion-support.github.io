@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
+<<<<<<< HEAD
   track: (event: string, properties?: Record<string, unknown>) => void
   identify: (userId: string, traits?: Record<string, unknown>) => void
   page: (name: string, properties?: Record<string, unknown>) => void
@@ -73,6 +74,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   track: (_event: string, _properties?: Record<string, unknown>) => void
   identify: (_userId: string, _traits?: Record<string, unknown>) => void
   page: (_name: string, _properties?: Record<string, unknown>) => void
+=======
+  track: (event: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
+  page: (name: string, properties?: Record<string, unknown>) => void;
+>>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -101,7 +107,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
+        function gtag(...args: unknown[]) {
           window.dataLayer.push(args);
         }
         gtag('js', new Date());
@@ -110,20 +116,36 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, any>) => {
+  const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
+<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, properties)
+=======
+      if (window.gtag) {
+        window.gtag('event', event, properties);
+      }
+      
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+         
+        console.log('Analytics Event: ', event, properties);
+>>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
       }
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
+<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
+=======
+      if (window.gtag) {
+        window.gtag('config', process.env.REACT_APP_GA_ID, {
+>>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
           user_id: userId,
           custom_map: traits
         });
@@ -131,17 +153,22 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
+         
         console.log('Analytics Identify: ', userId, traits);
       }
     }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
+  const page = (name: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
+<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
+=======
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+>>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
           page_title: name,
           page_location: window.location.href,
           ...properties
@@ -150,7 +177,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
+         
         console.log('Analytics Page: ', name, properties);
       }
     }
@@ -166,7 +193,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+<<<<<<< HEAD
   )
+=======
+  );
+};
+
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
+>>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
 }
 
 export default AnalyticsProvider
