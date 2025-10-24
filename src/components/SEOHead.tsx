@@ -1,8 +1,5 @@
 import React from 'react'
 import { Helmet } from 'lucide-react'
-import React from 'react';
-import { Helmet } from 'lucide-react';
-
 interface SEOHeadProps {
   title?: string
   description?: string
@@ -20,19 +17,19 @@ interface SEOHeadProps {
   canonical?: string
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
+  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.'
+  keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence'
+  image = 'https://ziontechgroup.com/og-image.jpg'
+  url = 'https://ziontechgroup.com'
+  type = 'website'
+  author = 'Zion Tech Group'
+  publishedTime
+  modifiedTime
+  section
+  tags = []
+  noindex = false
+  nofollow = false
   canonical
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
@@ -50,32 +47,33 @@ const SEOHead: React.FC<SEOHeadProps> = ({
          {section&&<metaproperty=&quot;article:section&quot;content={section} />}
           {tags.map((tagindex) => (
          <metakey={index}property=&quot;article:tag&quot; content={tag} />))}
-      </>)}
+</>)}
       {/* Additional SEO MetaTags */}
    <metaname=&quot;theme-color&quot;content=&quot;#4f46e5&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#4f46e5&quot; /><metaname=&quot;apple-mobile-web-app-title&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;application-name&quot;content=&quot;Zion TechGroup&quot; />{/* StructuredData */}
-    <scripttype=&quot;application/ld+json&quot;>{JSON.stringify({
-          '@context': 'https:// schema.org',
-          '@type': type=== 'article' ? 'Article' : 'WebPage',
+    <scripttype=&quot;application/ld+json&quot;>{
+  JSON.stringify({
+          '@context': 'https:// schema.org'
+          '@type': type=== 'article' ? 'Article' : 'WebPage'
           name: fullTitle,
-          description: description,
+    description: description
           url: url,
-          image: image,
+    image: image
           author: {
-            '@type': 'Organization',
+            '@type': 'Organization'
             name : author
-         },
+}
           publisher: {'@type': 'Organization',
-            name: 'Zion Tech Group',
+    name: 'Zion Tech Group'
             logo: {
-              '@type': 'ImageObject',
-              url: 'https:// ziontechgroup.com/logo.png'
-           }
-          },
-          ...(type=== 'article' && {datePublished: publishedTime,
-            dateModified: modifiedTime || publishedTimemainEntityOfPage: {
-              '@type': 'WebPage',
+              '@type': 'ImageObject'
+              url: 'https:// ziontechgroup.com/logo.png'}
+          }
+          ...(type=== 'article' && {
+  datePublished: publishedTime,
+    dateModified: modifiedTime || publishedTimemainEntityOfPage: {
+              '@type': 'WebPage'
               '@id': url
-           }
+}
           })
         })}
       </script>

@@ -1,8 +1,6 @@
-"use client";
-import React from 'react';
-
+import React from 'react'
+"use client"
 const logger.ts = () => {
-  return null;
-};
-
-export default logger.ts;
+  return null
+}
+export default logger.ts

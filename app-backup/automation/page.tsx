@@ -1,86 +1,76 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
+'use client'
 const AutomationPage: React.FC = () => {
   const features = [
     {
       icon: Zap,
-      title: 'Process Automation',
-      description: 'Automate repetitive business processes to increase efficiency and reduce human error.'
-    },
+    title: 'Process Automation',
+      description: 'Automate repetitive business processes to increase efficiency and reduce human error.'}
     {
       icon: Workflow,
-      title: 'Workflow Optimization',
-      description: 'Design and implement optimized workflows that streamline your business operations.'
-    },
+    title: 'Workflow Optimization',
+      description: 'Design and implement optimized workflows that streamline your business operations.'}
     {
       icon: Brain,
-      title: 'AI-Powered Automation',
-      description: 'Leverage AI and machine learning to create intelligent automation solutions.'
-    },
+    title: 'AI-Powered Automation',
+      description: 'Leverage AI and machine learning to create intelligent automation solutions.'}
     {
       icon: Settings,
-      title: 'Custom Integration',
-      description: 'Seamlessly integrate automation solutions with your existing systems and tools.'
-    }
-  ];
-
+    title: 'Custom Integration',
+    description: 'Seamlessly integrate automation solutions with your existing systems and tools.'}
+  ]
   const benefits = [
-    'Reduce operational costs by 60%',
-    'Increase productivity by 40%',
-    'Eliminate human errors in repetitive tasks',
-    'Enable 24/7 automated operations',
+  'Reduce operational costs by 60%'
+    'Increase productivity by 40%'
+    'Eliminate human errors in repetitive tasks'
+    'Enable 24/7 automated operations'
     'Improve process consistency and quality',
     'Free up staff for higher-value activities'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      
-
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Business Process <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with intelligent automation solutions. Streamline processes, reduce costs, and increase efficiency with our automation services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Get Started
               <ArrowRight className="w-8 h-8" />
             </Link>
             <Link
               href="/it-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All IT Services
             </Link>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Comprehensive Automation Solutions
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Our automation services provide end-to-end solutions to streamline your business processes and boost productivity.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
                   {feature.icon}
                 </div>
@@ -91,13 +81,12 @@ const AutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg: grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Why Choose Our Automation Services?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
@@ -128,27 +117,26 @@ const AutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Automate Your Business?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
             Join thousands of businesses already using our automation services to streamline operations and drive growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors duration-300"
             >
               Start Your Automation Journey
               <ArrowRight className="w-8 h-8" />
             </Link>
-            <Link 
-              href="/it-services" 
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
+            <Link
+              href="/it-services"
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All IT Services
             </Link>
@@ -156,7 +144,6 @@ const AutomationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AutomationPage;
+  )
+}
+export default AutomationPage

@@ -1,122 +1,107 @@
-'use client'
 import { Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
 import { CheckSquare } from 'lucide-react'
 import { CheckCircle, Star, Phone } from 'lucide-react'
-
+'use client'
 constTaskManagerProPage: React.FC= () =>{constfeatures= [
     {
       icon: CheckSquare,
-      title: 'AI Task Prioritization',
-      description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
-      benefit: 'Increase productivity by40%'
-   },
+    title: 'AI Task Prioritization',
+      description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.'
+      benefit: 'Increase productivity by40%'}
     {icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
-      benefit: 'Improve team efficiency by60%'
-   },
+    title: 'Team Collaboration',
+      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.'
+      benefit: 'Improve team efficiency by60%'}
     {icon: Brain,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
-      benefit: 'Complete tasks30% faster'
-   },
+    title: 'Smart Scheduling',
+      description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.'
+      benefit: 'Complete tasks30% faster'}
     {icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
-      benefit: 'Reduce manual work by70%'
-   },
+    title: 'Automated Workflows',
+      description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.'
+      benefit: 'Reduce manual work by70%'}
     {icon: Target,
-      title: 'Goal Tracking',
-      description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
-      benefit: 'Achieve85% of your goals'
-   },
+    title: 'Goal Tracking',
+      description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.'
+      benefit: 'Achieve85% of your goals'}
     {icon: BarChart,
-      title: 'Performance Analytics',
+    title: 'Performance Analytics',
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
-      benefit: 'Data-driven improvements'
-    }
+    benefit: 'Data-driven improvements'}
   ]
-
   constpricingPlans= [
-    {name: 'Individual',
-      price: '$1 9',
+  {name: 'Individual',
+    price: '$1 9'
       period: '/month',
-      description: 'Perfect for personal use',
+    description: 'Perfect for personal use'
       features: [
-        'Unlimited personal tasks',
-        'Basic AI prioritization',
-        'Mobile app access',
-        'Basic reporting',
+        'Unlimited personal tasks'
+        'Basic AI prioritization'
+        'Mobile app access'
+        'Basic reporting'
         'Email support',
-        '1 year data retention'
-      ],
-      popular: false
-   },
-    {name: 'Team',
-      price: '$4 9',
-      period: '/month',
-      description: 'Ideal for small teams',
-      features: [
-        'Up to 10team members',
-        'Advanced AI features',
-        'Team collaboration',
-        'Custom workflows',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        '2 years data retention'
-      ],
-      popular: true
-   },
-    {name: 'Enterprise',
-      price: '$14 9',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited team members',
-        'Premium AI features',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options',
-        'Advanced security',
-        'Unlimited data retention',
-        'Custom compliance'
-      ],
-      popular: false
-    }
+    '1 year data retention'
   ]
-
+      popular: false}
+    {name: 'Team',
+    price: '$4 9'
+      period: '/month',
+    description: 'Ideal for small teams'
+      features: [
+        'Up to 10team members'
+        'Advanced AI features'
+        'Team collaboration'
+        'Custom workflows'
+        'Priority support'
+        'Advanced analytics'
+        'API access',
+    '2 years data retention'
+  ]
+      popular: true}
+    {name: 'Enterprise',
+    price: '$14 9'
+      period: '/month',
+    description: 'For large organizations'
+      features: [
+        'Unlimited team members'
+        'Premium AI features'
+        'Custom integrations'
+        'Dedicated support'
+        'White-label options'
+        'Advanced security'
+        'Unlimited data retention',
+    'Custom compliance'
+  ]
+      popular: false}
+  ]
   const integrations = [
-    { name: 'Slack', icon: '💬', description: 'Team communication' },
-    { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
-    { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },
-    { name: 'Jira', icon: '🎯', description: 'Project management' },
-    { name: 'Asana', icon: '📋', description: 'Task management' },
-    { name: 'Trello', icon: '📌', description: 'Visual boards' },
-    { name: 'Notion', icon: '📝', description: 'Documentation' },
+    { name: 'Slack', icon: '💬', description: 'Team communication' }
+    { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' }
+    { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
+    { name: 'Jira', icon: '🎯', description: 'Project management' }
+    { name: 'Asana', icon: '📋', description: 'Task management' }
+    { name: 'Trello', icon: '📌', description: 'Visual boards' }
+    { name: 'Notion', icon: '📝', description: 'Documentation' }
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
   ]
-
   consttestimonials= [
     {name: 'Rachel Green',
-      company: 'Marketing Agency',
+    company: 'Marketing Agency'
       role: 'Project Manager',
-      content: 'Task Manager Pro transformed our team productivity. We complete projects40% faster with better quality.',
-      rating:5},
+    content: 'Task Manager Pro transformed our team productivity. We complete projects40% faster with better quality.'
+      rating:5}
     {name: 'Tom Anderson',
-      company: 'Software Startup',
+    company: 'Software Startup'
       role: 'CEO',
-      content: 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.',
-      rating:5},
+    content: 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.'
+      rating:5}
     {name: 'Lisa Park',
-      company: 'Consulting Firm',
+    company: 'Consulting Firm'
       role: 'Operations Director',
-      content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
-      rating: 5
-    }
+    content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
+    rating: 5}
   ]
-
 const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -126,10 +111,10 @@ const Page = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>
             <CheckSquare className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Task Manager Pro
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl md: text-2xl text-cyan-400 mb-8 font-medium">
             AI-Powered Productivity Platform
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -137,23 +122,23 @@ const Page = () => {
             Get intelligent prioritization, automated workflows, and team collaboration
             tools that help you achieve more in less time.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              href="tel: +13024640950"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <a href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial
             </a>
           </div>
         </div>
         {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16"></div>
+        <div className="grid grid-cols-1 md: grid-cols-4 gap-8 mb-16"></div>
           <div className="text-center"></div>
             <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
             <div className="text-white font-semibold mb-2">More Productive</div>
@@ -177,12 +162,12 @@ const Page = () => {
         </div>
         {/* Features Section */}
         <section className="mb-16"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Task Management Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300"></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover: border-cyan-400/40 transition-all duration-300"></div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
@@ -193,12 +178,12 @@ const Page = () => {
         </section>
         {/* Integrations Section */}
         <section className="mb-16"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Works with Your Tools
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6"></div>
             {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300"></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover: border-cyan-400/40 transition-all duration-300"></div>
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
@@ -208,16 +193,15 @@ const Page = () => {
         </section>
         {/* Pricing Section */}
         <section className="mb-16"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Simple, Transparent Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular
-                  ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}></div>
+                  ? 'border-cyan-400 scale-105'
+                  : 'border-slate-700 hover: border-cyan-500/50'}`}></div>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
                     Most Popular
@@ -239,9 +223,8 @@ const Page = () => {
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
+                    : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white'}`}>
                   Get Started
                 </button>
               </div>
@@ -250,10 +233,10 @@ const Page = () => {
         </section>
         {/* Testimonials */}
         <section className="mb-16"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             What Our Users Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
                 <div className="flex items-center mb-4"></div>
@@ -273,23 +256,23 @@ const Page = () => {
         </section>
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using Task Manager Pro to achieve more,
+            Join thousands of professionals using Task Manager Pro to achieve more
             work smarter, and reach their goals faster.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              href="tel: +13024640950"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <a href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial
             </a>
@@ -300,5 +283,4 @@ const Page = () => {
     </div>
   )
 }
-
-export default Page;
+export default Page

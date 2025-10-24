@@ -1,8 +1,5 @@
 import React from 'react'
 import { Star } from 'lucide-react'
-import React from 'react';
-import { Star } from 'lucide-react';
-
 // import {Metadata} from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026EnterpriseBreakthrough
@@ -24,7 +21,7 @@ AI2026EnterpriseBreakthrough.displayName = "AI2026EnterpriseBreakthrough"() {
           </div>
         </div>
         {/* Content Sections */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16"></div>
+        <div className="grid md: grid-cols-2 gap-12 mb-16"></div>
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"></div>
             <h2 className="text-3xl font-bold text-white mb-6">Key Features</h2>
             <ul className="space-y-4 text-gray-300">
@@ -77,7 +74,7 @@ AI2026EnterpriseBreakthrough.displayName = "AI2026EnterpriseBreakthrough"() {
             <p className="text-gray-300 mb-6">
               Join the AI 2026 revolution and transform your enterprise operations.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
               Get Started Today
             </button>
           </div>

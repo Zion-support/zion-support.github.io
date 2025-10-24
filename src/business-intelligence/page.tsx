@@ -1,56 +1,58 @@
-'use client'
 import { BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
-
-constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
+'use client'
+constBusinessIntelligencePage: React.FC= () =>{
+  constbiServices= [
     {
       id: 'data-analytics',
-      title: 'Advanced Data Analytics',
+    title: 'Advanced Data Analytics',
       description: 'Transform raw data into actionable insights with our comprehensive analytics solutions.',
-      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Better forecasting', 'Competitive advantage'],
-      marketPrice: '$1,20 0-3,50 0/month',
+    features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Data visualization']
+      benefits: ['Data-driven decisions', 'Improved efficiency', 'Better forecasting', 'Competitive advantage']
+      marketPrice: '$1,20 0-3,50 0/month'
       category: 'Data Analytics',
-      technologies: ['Python', 'R', 'SQL', 'Tableau', 'Power BI']
-   },
-    {id: 'business-intelligence',
-      title: 'Business Intelligence Solutions',
+    technologies: ['Python', 'R', 'SQL', 'Tableau', 'Power BI']
+}
+    {
+  id: 'business-intelligence',
+    title: 'Business Intelligence Solutions',
       description: 'Comprehensive BI platforms that provide insights across all business functions.',
-      features: ['Executive dashboards', 'KPI tracking', 'Report automation', 'Data integration'],
-      benefits: ['36 0° business view', 'Faster reporting', 'Improved accuracy', 'Better planning'],
-      marketPrice: '$1,80 0-4,20 0/month',
+    features: ['Executive dashboards', 'KPI tracking', 'Report automation', 'Data integration']
+      benefits: ['36 0° business view', 'Faster reporting', 'Improved accuracy', 'Better planning']
+      marketPrice: '$1,80 0-4,20 0/month'
       category: 'BI Platforms',
-      technologies: ['Microsoft BI', 'QlikView', 'Looker', 'Sisense', 'Domo']
-   },
-    {id: 'data-warehousing',
-      title: 'Data Warehousing & ETL',
+    technologies: ['Microsoft BI', 'QlikView', 'Looker', 'Sisense', 'Domo']
+}
+    {
+  id: 'data-warehousing',
+    title: 'Data Warehousing & ETL',
       description: 'Centralized data storage and processing solutions for enterprise-scale analytics.',
-      features: ['Data warehousing', 'ETL processes', 'Data quality management', 'Scalable architecture'],
-      benefits: ['Unified data source', 'Improved data quality', 'Better performance', 'Cost optimization'],
-      marketPrice: '$2,50 0-6,00 0/month',
+    features: ['Data warehousing', 'ETL processes', 'Data quality management', 'Scalable architecture']
+      benefits: ['Unified data source', 'Improved data quality', 'Better performance', 'Cost optimization']
+      marketPrice: '$2,50 0-6,00 0/month'
       category: 'Data Infrastructure',
-      technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
-    }
+    technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
+}
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"></section>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">
               Business Intelligence Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md: text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Transform your data into strategic insights that drive business growth
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors">
                 Explore BI Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">
                 Schedule Demo
               </button>
             </div>
@@ -59,16 +61,16 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
       </section>
       {/* Key Benefits */}
       <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our BI Solutions?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our business intelligence solutions deliver actionable insights that drive real business value
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
             <div className="text-center p-6"></div>
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <BarChart className="w-8 h-8 text-blue-600" />
@@ -95,22 +97,22 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
       </section>
       {/* Services */}
       <section className="py-16 bg-gray-50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
               Our BI Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive business intelligence services designed to unlock the value in your data
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8"></div>
             {biServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
+              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <div className="mb-6"></div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features: </h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-600">
@@ -121,7 +123,7 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
                   </ul>
                 </div>
                 <div className="mb-6"></div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits: </h4>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, index) => (
                       <li key={index} className="flex items-center text-gray-600">
@@ -144,18 +146,18 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
       </section>
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+          <h2 className="text-3xl md: text-4xl font-bold mb-4">
             Ready to Transform Your Data?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let our BI experts help you unlock the full potential of your business data
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors">
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">
               Learn More
             </button>
           </div>

@@ -1,11 +1,10 @@
+import React from 'react'
+import { Helmet } from 'lucide-react'
 'use client'
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
-import React from 'react'
-import { Helmet } from 'lucide-react'
-
 export interface SEOProps {
   title?: string
   description?: string
@@ -24,71 +23,67 @@ export interface SEOProps {
   alternateLocales?: { locale: string; url: string }[]
 }
 const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.',
+    description:
+    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.'
   keywords: [
-    'AI',
-    'artificial intelligence',
-    'enterprise solutions',
-    'digital transformation',
-    'IT services',
-  ],
+    'AI'
+    'artificial intelligence'
+    'enterprise solutions'
+    'digital transformation'
+    'IT services']
   image: 'https:// ziontechgroup.com/og-image.jpg',
-  url: 'https:// ziontechgroup.com',
-  type: 'website' as const,
+    url: 'https: // ziontechgroup.com',
+    type: 'website' as const
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const
-}
+    twitterCard: 'summary_large_image' as const}
 export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type= default SEO.type,
-  author,
-  publishDate,
-  modifiedDate,
-  canonical,
-  noIndex= false,
-  structuredData,
-  twitterCard= default SEO.twitterCard,
-  locale= default SEO.locale,
+  title
+  description
+  keywords
+  image
+  url
+  type= default SEO.type
+  author
+  publishDate
+  modifiedDate
+  canonical
+  noIndex= false
+  structuredData
+  twitterCard= default SEO.twitterCard
+  locale= default SEO.locale
   alternateLocales= []}) => {constseo= {
     title: title ?`${title} | Zion TechGroup` : default SEO.title,
-    description: description || default SEO.description,
-    keywords: keywords || default SEO.keywords,
+      description: description || default SEO.description,
+    keywords: keywords || default SEO.keywords
     image: image || default SEO.image,
-    url: url || default SEO.url,
-    type,
-    twitterCard,
+    url: url || default SEO.url
+    type
+    twitterCard
     locale
   }
   // Generate structured data
   const generateStructuredData = () => {
-    if (structuredData) {
+  if (structuredData) {
       return structuredData
-    }
+}
     const baseStructuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      '@context': 'https://schema.org'
+      '@type': type === 'article' ? 'Article' : 'WebPage'
       headline: seo.title,
-      description: seo.description,
+    description: seo.description
       url: seo.url,
-      image: seo.image
-    }
+    image: seo.image}
     if (author) {
       baseStructuredData.author = {
-        '@type': 'Person',
-        name: author
-      }
+        '@type': 'Person'
+        name: author}
     }
     if (publishDate) {
-      baseStructuredData.datePublished = publishDate
-    }
+  baseStructuredData.datePublished = publishDate
+}
     if (modifiedDate) {
-      baseStructuredData.dateModified = modifiedDate
-    }
+  baseStructuredData.dateModified = modifiedDate
+}
     return baseStructuredData
   }
   return (
@@ -108,7 +103,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property=&quot;og:url&quot; content={seo.url} />
       <meta property=&quot;og:image&quot; content={seo.image} />
       <meta property=&quot;og:locale&quot; content={seo.locale} />
-      <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
+      <meta property=&quot;og: site_name&quot; content=&quot;Zion Tech Group&quot; />
       {/* Alternate Locales */}
       {alternateLocales.map(({ locale: altLocale, url: altUrl }) => (
         <React.Fragment key={altLocale}>
@@ -121,7 +116,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name=&quot;twitter:title&quot; content={seo.title} />
       <meta name=&quot;twitter:description&quot; content={seo.description} />
       <meta name=&quot;twitter:image&quot; content={seo.image} />
-      <meta name=&quot;twitter:site&quot; content=&quot;@ziontechgroup&quot; />
+      <meta name=&quot;twitter: site&quot; content=&quot;@ziontechgroup&quot; />
       {author && <meta name=&quot;twitter:creator&quot; content={`@${author}`} />}
       {/* Article Meta Tags */}
       {type === 'article' && (
@@ -129,20 +124,20 @@ export const SEO: React.FC<SEOProps> = ({
           {publishDate && <meta property=&quot;article:published_time&quot; content={publishDate} />}
           {modifiedDate && <meta property=&quot;article:modified_time&quot; content={modifiedDate} />}
           {author && <meta property=&quot;article:author&quot; content={author} />}
-        </>
+</>
       )}
       {/* Structured Data */}
       <script type=&quot;application/ld+json&quot;>{JSON.stringify(generateStructuredData())}</script>
       {/* Preconnect to external domains */}
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //fonts.googleapis.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
       {/* DNS Prefetch */}
-      <link rel=&quot;dns-prefetch&quot; href=&quot;https://www.google-analytics.com&quot; />
+      <link rel=&quot;dns-prefetch&quot; href=&quot;https: //www.google-analytics.com&quot; />
       {/* Preload critical resources */}
       <link
-        rel=&quot;preload&quot;
-        href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&quot;
-        as=&quot;style&quot;
+        rel=&quot;preload&quot
+        href=&quot;https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&quot;
+        as=&quot;style&quot
       />
     </Helmet>
   )

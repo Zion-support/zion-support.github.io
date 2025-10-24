@@ -1,62 +1,53 @@
 import React from 'react'
-import React from 'react';
-import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
-
+import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Camera, Zap, Palette } from 'lucide-react'
-
 constAIFashionDesignPage: React.FC= () =>{constfeatures= [
-    'Design Generation',
-    'Trend Analysis',
-    'Color Matching',
-    'Size Optimization',
-    'Market Research',
-    'Style Recommendations',
-    'Fabric Suggestions',
-    'Pattern Creation',
+    'Design Generation'
+    'Trend Analysis'
+    'Color Matching'
+    'Size Optimization'
+    'Market Research'
+    'Style Recommendations'
+    'Fabric Suggestions'
+    'Pattern Creation'
     '3 D Visualization',
     'Cost Estimation'
   ]
-
   constbenefits= [
-    'Faster design cycles',
-    'Trend accuracy',
-    'Cost reduction',
-    'Market insights',
+  'Faster design cycles'
+    'Trend accuracy'
+    'Cost reduction'
+    'Market insights'
     'Creative inspiration',
     'Competitive advantage'
   ]
-
   constpricingPlans= [
     {
       name: 'Starter',
-      price: '$24 9',
+    price: '$24 9'
       period: '/month',
-      features: ['10designs/month', 'Basic trends', 'Email support', 'Standard quality'],
-      popular: false
-   },
+    features: ['10designs/month', 'Basic trends', 'Email support', 'Standard quality']
+      popular: false}
     {name: 'Professional',
-      price: '$34 9',
+    price: '$34 9'
       period: '/month',
-      features: ['Unlimited designs', 'Advanced trends', '3 D visualization', 'API access', 'Priority support'],
-      popular: true
-   },
+    features: ['Unlimited designs', 'Advanced trends', '3 D visualization', 'API access', 'Priority support']
+      popular: true}
     {name: 'Enterprise',
-      price: '$69 9',
+    price: '$69 9'
       period: '/month',
-      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
-      popular: false
-    }
+    features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence']
+      popular: false}
   ]
-
 const Page = () => {
   return (
-  <><SEOOptimizertitle=&quot;AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup&quot;
-        description=&quot;Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month.&quot;
+  <><SEOOptimizertitle=&quot;AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup&quot
+        description=&quot;Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month.&quot
         keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashiontechnology']}
-        canonicalUrl=&quot;https://ziontechgroup.com/ai-fashion-design&quot;
+        canonicalUrl=&quot;https: //ziontechgroup.com/ai-fashion-design&quot;
       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <Navigation />
@@ -68,23 +59,23 @@ const Page = () => {
                 <div className=&quot;w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4&quot;></div>
                   <Palette className=&quot;w-8 h-8 text-white&quot; />
                 </div>
-                <h1 className=&quot;text-4xl md:text-5xl font-bold text-white neon-text&quot;>
+                <h1 className=&quot;text-4xl md: text-5xl font-bold text-white neon-text&quot;>
                   AI Fashion Designer
                 </h1>
               </div>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 AI-powered fashion design and trend prediction for retail businesses
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
                 <a
-                  href=&quot;/contact&quot;
-                  className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
+                  href=&quot;/contact&quot
+                  className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover: scale-105 transition-all duration-300&quot;
                 >
                   Start Free Trial
                 </a>
                 <a
-                  href=&quot;#demo&quot;
-                  className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
+                  href=&quot;#demo&quot
+                  className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
                   <Camera className=&quot;w-5 h-5&quot; />
                   View Gallery
@@ -97,9 +88,9 @@ const Page = () => {
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               AI Fashion Design Features
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;></div>
+            <div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6&quot;></div>
               {features.map((feature, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 hover: scale-105 transition-all duration-300&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
                     <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3&quot; />
                     <h3 className=&quot;text-lg font-semibold text-white&quot;>{feature}</h3>
@@ -113,7 +104,7 @@ const Page = () => {
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               Why Choose AI Fashion Designer?
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;text-center&quot;></div>
                   <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
@@ -129,7 +120,7 @@ const Page = () => {
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               Simple, Transparent Pricing
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
+            <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                   {plan.popular && (
@@ -155,12 +146,11 @@ const Page = () => {
                     ))}
                   </ul>
                   <a
-                    href=&quot;/contact&quot;
+                    href=&quot;/contact&quot
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'}`}
                   >
                     Get Started
                   </a>
@@ -177,16 +167,16 @@ const Page = () => {
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join leading fashion brands using AI design technology
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
                 <a
-                  href=&quot;/contact&quot;
-                  className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
+                  href=&quot;/contact&quot
+                  className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover: scale-105 transition-all duration-300&quot;
                 >
                   Start Your Free Trial
                 </a>
                 <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
+                  href=&quot;tel: +13024640950&quot;
+                  className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
                   <span>Call +1 302 464 0950</span>
                 </a>
@@ -196,8 +186,7 @@ const Page = () => {
         </main>
         <Footer />
       </div>
-    </>
+</>
   )
 }
-
-export default Page;
+export default Page

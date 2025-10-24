@@ -1,6 +1,6 @@
+
 export const useErrorMonitoring = () => {
   // Hook implementation
-  return null;
-};
-
-export default useErrorMonitoring;
+  return null
+}
+export default useErrorMonitoring

@@ -1,13 +1,12 @@
-'use client'
 import Navigation from './Navigation'
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'lucide-react'
-
+'use client'
 interface SEOData {
-  title: string
-  description: string
-  keywords: string[]
-  canonicalUrl: string
+  title: string,
+    description: string,
+  keywords: string[],
+    canonicalUrl: string
   ogTitle?: string
   ogDescription?: string
   ogImage?: string
@@ -32,31 +31,29 @@ interface AdvancedSEOOptimizerProps {
   enableSchemaMarkup?: boolean
 }
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
-  enableStructuredData = true,
-  enableOpenGraph = true,
-  enableTwitterCards = true,
+  seoData
+  enableStructuredData = true
+  enableOpenGraph = true
+  enableTwitterCards = true
   enableSchemaMarkup = true
 }) => {
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null)
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null
     const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
+      '@context': 'https://schema.org'
+      '@type': 'Organization'
       name: 'Zion Tech Group',
-      url: 'https:// ziontechgroup.com',
-      logo: 'https:// ziontechgroup.com/logo.png',
-      description: 'Advanced AI and IT Solutions',
+    url: 'https: // ziontechgroup.com',
+    logo: 'https: // ziontechgroup.com/logo.png',
+    description: 'Advanced AI and IT Solutions'
       address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US'
-     },
+        '@type': 'PostalAddress'
+        addressCountry: 'US'}
       sameAs: [
-        'https:// www.linkedin.com/$1/zion-tech-group',
-        'https:// twitter.com/ziontechgroup',
-        'https:// github.com/Zion-Holdings',
-      ],
+        'https:// www.linkedin.com/$1/zion-tech-group'
+        'https:// twitter.com/ziontechgroup'
+        'https:// github.com/Zion-Holdings']
       ...seoData.structuredData
     }
     return baseStructuredData
@@ -64,46 +61,43 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateBreadcrumbStructuredData = useCallback(() => {
     if (!enableSchemaMarkup) return null
     const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
+      '@context': 'https://schema.org'
+      '@type': 'BreadcrumbList'
       itemListElement: [
         {
-          '@type': 'ListItem',
+          '@type': 'ListItem'
           position: 1,
-          name: 'Home',
-          item: 'https:// ziontechgroup.com'
-       },
-        {'@type': 'ListItem',
+    name: 'Home'
+          item: 'https:// ziontechgroup.com'}
+        {'@type': 'ListItem'
           position: 2,
-          name: seoData.title,
-          item: seoData.canonicalUrl
-       },
-      ]
+    name: seoData.title
+          item: seoData.canonicalUrl}]
     }
     return breadcrumbData
   }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl])
   const generateFAQStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null
+  if (!enableSchemaMarkup) return null
     const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https://schema.org'
+      '@type': 'FAQPage'
       mainEntity: [
         {
-          '@type': 'Question',
+          '@type': 'Question'
           name: 'What services do es Zion Tech Group offer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
+    acceptedAnswer: {
+            '@type': 'Answer'
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
-         }
-        },
-        {'@type': 'Question',
+}
+        }
+        {
+  '@type': 'Question'
           name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
+    acceptedAnswer: {
+            '@type': 'Answer'
             text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'
-         }
-        },
-      ]
+}
+        }]
     }
     return faqData
   }, [enableSchemaMarkup])
@@ -133,19 +127,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData])
   const _addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script')
+  const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
     script.id = 'structured-data'
     document.head.appendChild(script)
     _structuredDataRef.current = script
-  }
+}
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
-        page_location: config.canonicalUrl
-      })
+    page_location: config.canonicalUrl})
     }
   }
   const _trackPerformanceMetrics = () => {
@@ -155,9 +148,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         if (_perfData) {
           (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
-          })
+    event_label: 'Page Load'
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)})
         }
       })
     }
@@ -184,10 +176,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         </script>
       )}
       {/* Preconnect to external domains for performance */}
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://www.google-analytics.com&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://www.googletagmanager.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //fonts.googleapis.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //www.google-analytics.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //www.googletagmanager.com&quot; />
       {/* DNS Prefetch for better performance */}
       <link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.googleapis.com&quot; />
       <link rel=&quot;dns-prefetch&quot; href=&quot;//www.google-analytics.com&quot; />

@@ -1,86 +1,76 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
+'use client'
 const AnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive data analysis and visualization tools for deep business insights.'
-    },
+    title: 'Advanced Analytics',
+      description: 'Comprehensive data analysis and visualization tools for deep business insights.'}
     {
       icon: TrendingUp,
-      title: 'Performance Tracking',
-      description: 'Real-time performance monitoring and trend analysis across all business metrics.'
-    },
+    title: 'Performance Tracking',
+      description: 'Real-time performance monitoring and trend analysis across all business metrics.'}
     {
       icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Machine learning algorithms that identify patterns and predict future trends.'
-    },
+    title: 'AI-Powered Insights',
+      description: 'Machine learning algorithms that identify patterns and predict future trends.'}
     {
       icon: Target,
-      title: 'Custom Dashboards',
-      description: 'Personalized dashboards tailored to your specific business needs and KPIs.'
-    }
-  ];
-
+    title: 'Custom Dashboards',
+    description: 'Personalized dashboards tailored to your specific business needs and KPIs.'}
+  ]
   const benefits = [
-    'Make data-driven decisions with confidence',
-    'Identify growth opportunities and trends',
-    'Optimize business performance in real-time',
-    'Reduce manual reporting by 80%',
+  'Make data-driven decisions with confidence'
+    'Identify growth opportunities and trends'
+    'Optimize business performance in real-time'
+    'Reduce manual reporting by 80%'
     'Predict future outcomes with AI',
     'Custom analytics for your industry'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      
-
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Analytics</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with advanced analytics and business intelligence solutions. Get insights that drive growth and optimize performance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Get Started
               <ArrowRight className="w-8 h-8" />
             </Link>
             <Link
               href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All AI Services
             </Link>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Powerful Analytics Features
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Our analytics platform provides comprehensive tools to transform your data into actionable business insights.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
                   {feature.icon}
                 </div>
@@ -91,13 +81,12 @@ const AnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg: grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Why Choose Our Analytics Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
@@ -128,27 +117,26 @@ const AnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Data into Insights?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
             Join thousands of businesses already using our analytics platform to make better decisions and drive growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors duration-300"
             >
               Start Your Analytics Journey
               <ArrowRight className="w-8 h-8" />
             </Link>
-            <Link 
-              href="/ai-services" 
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
+            <Link
+              href="/ai-services"
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services
             </Link>
@@ -156,7 +144,6 @@ const AnalyticsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AnalyticsPage;
+  )
+}
+export default AnalyticsPage
