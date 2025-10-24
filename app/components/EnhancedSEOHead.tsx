@@ -9,7 +9,7 @@ interface EnhancedSEOHeadProps {}
 }
 ;
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {}</EnhancedSEOHeadProps>
-  return (</EnhancedSEOHeadProps>
+(</EnhancedSEOHeadProps>
     <>
       
       <Navigation />
@@ -112,6 +112,7 @@ Start Your Free Trial</button>
 };
   )
 }
+
 
 
 export default EnhancedSEOHead;"

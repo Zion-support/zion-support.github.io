@@ -35,7 +35,7 @@ const EnhancedErrorBoundaryPage: React.FC = () => {const features = [
   ];
 "
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className="''" }) => {}</EnhancedErrorBoundaryProps>
-  return (</EnhancedErrorBoundaryProps>
+(</EnhancedErrorBoundaryProps>
     <>
       
       <Navigation />
@@ -222,7 +222,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
     </>
   );,
 };
-export default EnhancedErrorBoundaryPag;e;
   error?: Error;
   errorInfo?: ErrorInfo}
 class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {}
@@ -241,7 +240,7 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
       if (this.props.fallback) {}
         return thi s.props.fallback
      }
-      return (
+(
         <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot;></div>
           <div className=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center&quot;></div>
             <div className=&quot;w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto&quot;></div>
@@ -256,3 +255,5 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                 </summary>
                 <pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot;></p>
                   {this.state.error.toString()}
+
+export default EnhancedErrorBoundaryPag;e;

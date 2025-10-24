@@ -67,7 +67,6 @@ const ServiceWorkerRegistrationPage: React.FC = () => {const features = [
     <//>
   );
 };
-export default ServiceWorkerRegistrationPag;e;
                 </div>
 
                 <//div>
@@ -101,3 +100,5 @@ export default ServiceWorkerRegistrationPag;e;
             <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>"
+
+export default ServiceWorkerRegistrationPag;e;

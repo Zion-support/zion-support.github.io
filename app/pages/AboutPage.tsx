@@ -10,7 +10,6 @@ import {
   ArrowRightIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-export default function; AboutPage() {
   const values = [
     {
       icon: Target,
@@ -68,7 +67,7 @@ name: ""Michael Chen"",role: ""Head of Security"",description: ""Cybersecurity s
     {
 name: ""Emily Rodriguez"",role: ""Lead AI Engineer"",description: ""Machine learning expert focused on developing cutting-edge AI solutions.""}
   ]
-return (<div>
+(<div>
       <Helmet />
 
         <title>About Us - Zion Tech Group</title>
@@ -114,7 +113,7 @@ g: grid-cols-3 gap-8" />)
               {values.map((value,index) => {
 const Icon = value.icon
 return (<div>
-      <divkey={index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center" />
+      <divkey={index};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center" />);
     </div> <div className="[^"]*"> <Icon className="w-6 h-6 text-white" />
     <h1 className="text-xlfont-semiboldtext-whitemb-3">{value.title}</h3> <p className="[^"]*">
             {value.description}
@@ -337,3 +336,5 @@ View Our Services</Link> <ArrowRightIcon className="w-5 h-5" />
     </>
   )
 }
+
+export default function; AboutPage() {

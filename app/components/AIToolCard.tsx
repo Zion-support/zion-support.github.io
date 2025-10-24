@@ -5,7 +5,7 @@ interface AIToolCardProps { title: string
 };
 ;
 const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }) => { 
-  return (<article className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">" }
+(<article className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">" }
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm mb-3 leading-relaxed">
         {description}
@@ -21,5 +21,5 @@ const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }
   )
 })
 AIToolCard.displayName = "AIToolCard";
-export default AIToolCard
 "`
+export default AIToolCard

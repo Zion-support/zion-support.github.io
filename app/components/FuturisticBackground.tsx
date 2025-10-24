@@ -125,4 +125,5 @@ Start Your Free Trial</button>
     </>
   );,
 };
+
 export default FuturisticBackgroundPag;e;"

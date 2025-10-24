@@ -35,7 +35,7 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {const features = [
   ];
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`optimizedloadingspinner" ${className}`}>
       {children}
     </div>
@@ -165,12 +165,12 @@ purple: 'border-purple-600bg-purple-60 0',}),
 );"
 constrenderSpinner="useMemo(()" => {switch (variant) {}</OptimizedLoadingSpinnerProp>
 case 'do ts':}</OptimizedLoadingSpinnerProp>;"
-return(<divclassName="'flex" space-x-1' role="'status'" aria-label="'Loading'">{[0, 1, 2].map(i=>(</di><divkey="{i});"
+(<divclassName="'flex" space-x-1' role="'status'" aria-label="'Loading'">{[0, 1, 2].map(i=>(</di><divkey="{i});"
 className="{`w-2" h-2 rounded-full animate-bounce${colorClasses[color].split('')[1]}`}
 style="{{" animationDelay: `${i*0.1}s` }}
 /></di>))}</di>);
 case 'pulse':;"
-return(<divclassName="{`${baseClasses} rounded-fullanimate-pulse`}
+(<divclassName="{`${baseClasses} rounded-fullanimate-pulse`}
 role='status');
 aria-label='Loading'
 /></di>);"
@@ -181,7 +181,7 @@ style="{{" width: '7 5%'}}
 style="{{" width: '5 0%'}}
 /></di>);
 case 'bars':;"
-return(<divclassName="'flex" space-x-1' role="'status'" aria-label="'Loading'">{[0, 1, 2, 3].map(i=>(</di><divkey="{i});"
+(<divclassName="'flex" space-x-1' role="'status'" aria-label="'Loading'">{[0, 1, 2, 3].map(i=>(</di><divkey="{i});"
 className="{`w-1" ${colorClasses[color].split('')[1]}animate-pulse`}
 style="{{;};
 height: `${12+ i*4}px`,
@@ -190,7 +190,7 @@ animationDelay: `${i*0.1}s`,
 /></di>))}</di>);
 case 'spinner':;
 default:;"
-return(<divclassName="{`${baseClasses} rounded-full border-2 border-t-transparentanimate-spin`}
+(<divclassName="{`${baseClasses} rounded-full border-2 border-t-transparentanimate-spin`}
 role='status');
 aria-label='Loading'
 /></di>)
@@ -206,6 +206,7 @@ export const containerClasses=";"
 }
 );"
 OptimizedLoadingSpinner.displayName="'OptimizedLoadingSpinner'";
+
 
 
 export default OptimizedLoadingSpinner;"

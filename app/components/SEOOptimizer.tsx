@@ -111,7 +111,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
 
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 </SEOOptimizerProps>
-  return (</SEOOptimizerProps>
+(</SEOOptimizerProps>
     <Head></Head>
       <title>{title}</title>"
       <meta name=""description"" content="{description} /></meta>"
@@ -149,6 +149,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
   );
 };
+
 
 
 export default SEOOptimizerPag;e;"

@@ -9,7 +9,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SEOHead from "../components/SEOHead";
 import { generateSEOData } from "../utils/seoData";
-import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -88,8 +87,6 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
 
-export default ContactPage;
 
 export default ContactPage;

@@ -42,7 +42,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
   ];
 
 const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -325,4 +325,5 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ cla
     <//>
   );
 };
+
 export default PerformanceOptimizationsPag;e;"

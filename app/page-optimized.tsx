@@ -35,7 +35,7 @@ const PageOptimizedPage: React.FC = ( => {
   ];
 
   return (
-    <React.Fragment>
+    <React.Fragment>);
       <Helmet>
         <title>PageOptimizedPage - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered solution for modern businesses." />

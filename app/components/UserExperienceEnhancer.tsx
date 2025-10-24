@@ -35,7 +35,7 @@ const UserExperienceEnhancerPage: React.FC = () => {const features = [
   ];
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -133,4 +133,5 @@ go wrong! 🤖
     </>
   );,
 };
+
 export default UserExperienceEnhancerPag;e;"

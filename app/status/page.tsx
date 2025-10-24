@@ -3,23 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from "react";
-import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = [
 
-export default function StatusPage() {
   const [lastUpdated, setLastUpdated] = useState(new Date());    {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -93,12 +84,9 @@ export default function StatusPage() {
 
 };
 
-export default Page;
 
-export default PagePage;
 
-export default StatusPage;
 
-export default AiAutomationPage;
+
 
 export default StatusPage;

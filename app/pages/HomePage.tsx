@@ -1,9 +1,7 @@
 "use client"
 import React from "react";
 import Link from "next/link";
-export default function HomePage() {
 
-export default function; HomePage() {  return (
     <>
 
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
@@ -253,3 +251,5 @@ Schedule Demo</Link>
     </>
   )
   )
+
+export default function; HomePage() {  return (

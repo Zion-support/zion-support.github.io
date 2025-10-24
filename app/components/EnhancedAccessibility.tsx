@@ -35,7 +35,7 @@ const EnhancedAccessibilityPage: React.FC = () => {const features = [
   ];
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -133,4 +133,5 @@ go wrong! 🤖
     </>
   );,
 };
+
 export default EnhancedAccessibilityPag;e;"

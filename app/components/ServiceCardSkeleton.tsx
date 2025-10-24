@@ -35,7 +35,7 @@ const ServiceCardSkeletonPage: React.FC = () => {const features = [
   ];
 "
 const ServiceCardSkeleton: React.FC = () => {}
-  return (
+(
     <div className="{`servicecardskeleton" ${className}`}>
       {children}
     </div>
@@ -134,4 +134,5 @@ Start Your Free Trial</button>
     </>
   );,
 };
+
 export default ServiceCardSkeletonPag;e;"

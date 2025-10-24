@@ -162,7 +162,6 @@ const MicroSaasServicesPage: React.FC = () => {
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8f83
-export default MicroSaasServicesPage;
 =======
       description: 'Bank-level security with encryption and compliance standards'
     },
@@ -182,7 +181,7 @@ export default MicroSaasServicesPage;
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  return (
+(
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
 <//div>
 <Helmet><>
@@ -358,5 +357,6 @@ export default MicroSaasServicesPage;
 </div><//div>
   )
 }
-export default MicroSaasServicesPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b
+
+export default MicroSaasServicesPage

@@ -200,6 +200,7 @@ userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',}
 url: typeof window !== 'undefined' ? window.location.href : 'unknown',
 }
 }</string>
-export default getErrorBoundaryConfig;</string>"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+export default getErrorBoundaryConfig;</string>"

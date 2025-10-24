@@ -46,7 +46,7 @@ export default function AboutPage() {
               We are pioneers in AI-driven business solutions, dedicated to transforming how companies operate and grow in the digital age.
             </p>
           </div>
-
+    
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
@@ -62,7 +62,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-
+    
           <div className="text-center">
             <Link
               href="/contact"

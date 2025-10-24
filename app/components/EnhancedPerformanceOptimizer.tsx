@@ -36,7 +36,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {const features = [
   ];
 
 const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -135,7 +135,6 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
     </>
   );,
 };
-export default EnhancedPerformanceOptimizerPag;e;
 {icon: Brain,}
 title: 'AI-Powered Solutions',}
 description: 'Advanced AI technology to transform your business operations and improve efficiency'},
@@ -159,7 +158,7 @@ constbenefits="["
 'Cost-effective pricing plans',
 'Proven track record of success'
 ]
-return (
+(
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
 
 {/* Features Section */}
@@ -237,3 +236,5 @@ const EnhancedPerformanceOptimizer: React.FC = () => {}
 const {trackEvent } = useAnalytics();"
 export const optimizeImages=";";"
 export const images="document.querySelectorAll('img')""
+
+export default EnhancedPerformanceOptimizerPag;e;

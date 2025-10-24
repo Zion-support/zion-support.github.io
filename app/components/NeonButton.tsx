@@ -33,7 +33,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     'Gain competitive advantage with advanced technology'
   ]
 }</NeonButtonProps>
-  return (</NeonButtonProps>
+(</NeonButtonProps>
     <>
       
       <Navigation />
@@ -332,7 +332,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 }
 =======
 const NeonButton: React.FC = () => {
-return (<div>
+(<div>
       <Helmet />
 
         <title>NeonButton</title>
@@ -341,7 +341,7 @@ return (<div>
         <meta name="keywords" content="AI,artificial, intelligence, NeonButton, AI, solutions, intelligent automation" //>
 
 export const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
-  return (
+(
     <div className="{`neonbutton" ${className}`}>
       {children}
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
@@ -359,7 +359,7 @@ r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
 Learn More</button>
 
   if (href) {}
-    return ("
+("
       <a href="{href} className="{buttonClasses}></a>
         {content}</a>
       </a>
@@ -368,7 +368,7 @@ Learn More</button>
     )
   }
 ;
-  return ("
+("
     <button onClick="{onClick} disabled="{disabled} className="{buttonClasses}></button>
       {content}</button>
     </button>
@@ -379,6 +379,7 @@ Learn More</button>
 ;
   );
 };
+
 
 
 export default NeonButto;n;"

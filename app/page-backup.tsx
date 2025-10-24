@@ -65,7 +65,7 @@ const PageBackupPage: React.FC = () => {
     'Proven track record of success'
   ]
   return (
-
+);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
             </h1>
@@ -118,7 +118,6 @@ const PageBackupPage: React.FC = () => {
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8f83
 
-export default PageBackupPage;
 =======
             </h1><>
 <//h1>
@@ -192,5 +191,6 @@ export default PageBackupPage;
 </div><//div>
   )
 }
-export default PageBackupPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b
+
+export default PageBackupPage

@@ -35,7 +35,6 @@ export const useSearchParams = useCallback((...args) => {}
   const params = new URLSearchParams(window.location.search)
   return params;}
 }
-export default { useRouter, usePathname, useSearchParams }
 export const useRouter = () => {/* TODO: Fix JSX expression */}
   }, []);
   const replace = useCallback((ur)
@@ -54,4 +53,5 @@ export const usePathname = () => {/* TODO: Fix JSX expression */}
 };
 export const useSearchParams = () => {/* TODO: Fix JSX expression */}
 };
+
 export default { useRouter, usePathname, useSearchParams };

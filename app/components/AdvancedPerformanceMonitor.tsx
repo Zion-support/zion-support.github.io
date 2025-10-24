@@ -10,7 +10,7 @@ interface AdvancedPerformanceMonitorProps {
 }
 
 const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -199,7 +199,7 @@ ttfb,});
 memory,}))
 } catch (error) {// eslint-disable-next-line no-console}
 // Cleanup observers
-return () => {observers.forEach(observer=> {
+() => {observers.forEach(observer=> {
 ;  }
 try {});
 observer.disconnect()} catch (error) {// eslint-disable-next-line no-console}
@@ -255,7 +255,7 @@ measureCoreWebVitals()"
 // Monitor performanceevery5secondsconstinterval="setInterval(()" => {
   }
 measureResourceTiming()}, 500 0);
-return () => {if (cleanu p) cleanup()}
+() => {if (cleanu p) cleanup()}
 clearInterval(interval)}
 }, [;
 enableRealTimeMonitoring,;
@@ -296,7 +296,7 @@ return recommendations
 }, [metrics]);"
 export const _recommendations=";";"
 if (process.env.NODE_ENV="==" 'development') {}
-return (
+(
 <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
 <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>"
 <div className="'text-xs" space-y-1'></div>
@@ -341,6 +341,7 @@ if (process.env.NODE_ENV="==" 'development') {return(<divclassName="'fixed" bott
 }
 return nul l;
 }
+
 
 
 export default AdvancedPerformanceMonitor;"

@@ -35,7 +35,7 @@ const ServicesPage: React.FC = ( => {
   ];
 
   return (
-    <React.Fragment>
+    <React.Fragment>);
       <Helmet>
         <title>ServicesPage - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered solution for modern businesses." />
@@ -120,4 +120,5 @@ const ServicesPage: React.FC = ( => {
     </div>
   )
 }
+
 export default ServicesPage;

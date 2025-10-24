@@ -5,7 +5,7 @@ interface SEOHeadWrapperProps { className?: string;
 }
 
 const SEOHeadWrapper: "React.FC<SEOHeadWrapperProps> = ({ className", title, description, keywords, children }) => {
-  return (<div className = {className}>
+(<div className = {className}>
       {children}
 
     </div>
@@ -13,5 +13,6 @@ const SEOHeadWrapper: "React.FC<SEOHeadWrapperProps> = ({ className", title, des
   );
   )
 }
+
 
 export default SEOHeadWrapper

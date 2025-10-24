@@ -36,7 +36,7 @@ const PerformanceDashboardPage: React.FC = () => {const features = [
   ];
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`performancedashboard" ${className}`}>
       {children}
     </div>
@@ -158,7 +158,7 @@ checkPerformanceAlerts(newMetrics)
 }
 if (isMonitorin g) {updateMetrics();"}
 constinterval="setInterval(updateMetrics100" 0)}
-return () => clearInterval(interval)}
+() => clearInterval(interval)}
 }, [isMonitoringonMetricsUpdate]);"
 constcheckPerformanceAlerts="(currentMetrics:" PerformanceMetrics) => {constnewAlerts: string[] = [];}
 if (currentMetrics.loadTime > 300 0) {}
@@ -176,7 +176,7 @@ return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
 constgetPerformanceColor="(value:" number, thresholds: {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'}
 if (value <= thresholds.warning) return 'text-yellow-40 0'}
 return 'text-red-40 0'}
-return (
+(
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
 <div className=&quot;flex items-center justify-between mb-6&quot;></div>
 <h3 className=&quot;text-xl font-semibold text-white flex items-center gap-2&quot;></h3>
@@ -257,6 +257,7 @@ isMonitoring ? 'bg-red-600 text-white hover: bg-red-700' : 'bg-green-600 text-wh
 </div>
 )
 }
+
 
 
 export default PerformanceDashboard;"

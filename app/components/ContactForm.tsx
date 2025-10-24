@@ -51,7 +51,7 @@ if(isSubmitted) { return (</HTMLInputElement> <>
 )
   )
 
-return (<div className="[^"]*">
+(<div className="[^"]*">
     <h1 className="text-2 xl font-bold text-white mb-6">Send us a Message</h2>" }
       <form onSubmit={handleSubmit} className="space-y-6" />
     <div className="grid md: grid-cols-2 gap-6">
@@ -156,5 +156,6 @@ Send Message
     </>
   ) }
 }
+
 
 export default ContactFor;m;

@@ -225,9 +225,9 @@ return pre v;
 })
 }, 1 6)
 });
-return () =>{timers.forEach(timer=> clearInterval(timer))}
+() =>{timers.forEach(timer=> clearInterval(timer))}
 }, [])
-return (
+(
 <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8&quot;></div>
 <div className=&quot;max-w-7xl mx-auto&quot;></div>
 <div className=&quot;text-center mb-16&quot;></div>
@@ -354,6 +354,7 @@ View Case Studies
 </div>
 ),
 }
+
 
 
 export default ContentStatistics;"

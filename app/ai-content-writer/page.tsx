@@ -3,11 +3,8 @@ import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
 import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
@@ -86,9 +83,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
   );
 };
 
-export default Page;
 
-export default PagePage;
 
-export default AiContentWriterPage;
 export default AIContentWriterPage;

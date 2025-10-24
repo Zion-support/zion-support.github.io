@@ -23,7 +23,6 @@ const AdminPage = () => {
 
 }
 
-export default function AdminPagePage() {
   return (
     <>
       
@@ -124,5 +123,6 @@ export default function AdminPagePage() {
     </div>
   );,
 };
+
 
 export default AdminPag;e;

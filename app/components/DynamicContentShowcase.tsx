@@ -48,7 +48,7 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
           </h1>"
           <p className=""text-xl" text-gray-300 max-w-3xl mx-auto mb-8"></p>;
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.;
-  return ("
+("
     <div className=""bg-gradient-to-br" from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>"
       <div className=""max-w-7xl" mx-auto"></div>"
         <div className=""text-center" mb-16"></div>"
@@ -302,4 +302,5 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
   ),
 }
 ;"
+
 export default DynamicContentShowcase;

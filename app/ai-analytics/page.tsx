@@ -4,12 +4,7 @@ import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Shield, Brain, BarChart, TrendingUp, Eye } from 'lucide-react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Eye } from 'lucide-react';
 import { CheckCircle, Zap, Shield, Brain, BarChart, TrendingUp, Eye } from 'lucide-react';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Eye } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -88,8 +83,7 @@ const Page: React.FC = () => {
 
 };
 
-export default Page;
 
-export default PagePage;
+
 
 export default AiAnalyticsPage;

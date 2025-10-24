@@ -37,7 +37,7 @@ const NotFoundPagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-  return (
+(
     <>
       
       <section className=&quot;py-20 px-4&quot;></section>
@@ -61,10 +61,11 @@ const NotFoundPagePage: React.FC = () => {
   )
 }
 
-export default function; NotFoundPage({ className }: NotFoundPageProps) {
-  return (
+(
     <div className={className}>
       <h1>Not Found Page</h1>
     </div>
   );
 }
+
+export default function; NotFoundPage({ className }: NotFoundPageProps) {

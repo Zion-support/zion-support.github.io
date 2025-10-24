@@ -35,7 +35,7 @@ const SecurityEnhancerPage: React.FC = () => {const features = [
   ];
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`securityenhancer" ${className}`}>
       {children}
     </div>
@@ -134,4 +134,5 @@ Start Your Free Trial</button>
     </>
   );,
 };
+
 export default SecurityEnhancerPag;e;"

@@ -3,10 +3,7 @@ import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -32,7 +29,7 @@ const Page: React.FC = () => {
   ];
 
   return (
-    <>
+    <>);
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
@@ -82,5 +79,6 @@ const Page: React.FC = () => {
     </>
   ;
 };
+
 
 export default Page;

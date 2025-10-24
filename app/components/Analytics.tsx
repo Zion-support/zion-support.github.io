@@ -42,7 +42,7 @@ declare global {
 
 initAnalytics()
   }, [])
-return (<React.Fragment>
+(<React.Fragment>
     {children}
     
   </React.Fragment>
@@ -55,7 +55,6 @@ declare global{interface Window {
 }
 }
     gtag: "(...arg",s: "any[]) => void;"}
-export default Analytics
 }
 ;
 };
@@ -67,6 +66,7 @@ export default Analytics
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
 
 
 export default AnalyticsPag;e;

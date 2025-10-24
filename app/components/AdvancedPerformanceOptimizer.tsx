@@ -49,7 +49,7 @@ useEffect(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
 <<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
-  return (
+(
     // First Contentful Paint,
 new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
@@ -361,7 +361,6 @@ if ('gtag' in window) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
 
 
-export default AdvancedPerformanceOptimizerPag;e;</AdvancedPerformanceOptimizerProp>"
 =======
 interface AdvancedPerformanceOptimizerProps {
   className?: string;
@@ -403,7 +402,7 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
   useEffect(() => {
     measureWebVitals()
   }, [measureWebVitals,])
-  return (<div className = {className}>
+(<div className = {className}>
       <h2>Advanced Performance Optimizer</h2>
       <p>Advanced performance optimization for better application performance.</p>
     </div>
@@ -412,5 +411,6 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
   )
 }
 
-export default AdvancedPerformanceOptimizer;
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
+
+export default AdvancedPerformanceOptimizer;

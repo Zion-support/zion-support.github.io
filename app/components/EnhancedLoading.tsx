@@ -35,7 +35,7 @@ const EnhancedLoadingPage: React.FC = () => {const features = [
   ];
 
 const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`enhancedloading" ${className}`}>
       {children}
     </div>
@@ -131,8 +131,8 @@ Start Your Free Trial</button>
   )
   )
 
-export default EnhancedLoading
 }
+
 
 
 export default EnhancedLoadingPage;"

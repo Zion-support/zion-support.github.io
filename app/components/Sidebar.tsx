@@ -36,7 +36,7 @@ const SidebarPage: React.FC = () => {const features = [
   ];
 
 const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
-  return (
+(
     <div className="{`sidebar" ${className}`}>
       {children}
     </div>
@@ -135,7 +135,6 @@ Start Your Free Trial</button>
     </>
   );,
 };
-export default SidebarPag;e;
 Menu,
 Home,
 Users,
@@ -162,12 +161,12 @@ if (windo w.innerWidth >=1024) {}
 setIsOpen(false)}
 }
 windo w.addEventListener('resize', handleResize);
-return () => windo w.removeEventListener('resize', handleResize)
+() => windo w.removeEventListener('resize', handleResize)
 }, []);"
 consttoggleSection="(section:" string) => {constnewExpanded="new" Set(expandedSections);}
 if (newExpanded.has(section)) {;) => {
   }
-return (
+(
 $3
 ,)
 }
@@ -256,7 +255,7 @@ email: 'kleber@ziontechgroup.com',}
 address: '364 E Main St STE 1008 Middletown, DE 19709',}
 hours: 'Mon-Fri 9AM-6PM EST'
 }</Set>
-return (</Set>
+(</Set>
 <>
 {/* Mobile Menu Button */}
 <button
@@ -316,3 +315,5 @@ expandedSections.has(section.key) ?
 {section.items.map((item, itemIndex) => (</div>
 <Link}
 key="{itemIndex}"
+
+export default SidebarPag;e;

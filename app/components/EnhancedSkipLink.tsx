@@ -35,7 +35,7 @@ const EnhancedSkipLinkPage: React.FC = () => {const features = [
   ];
 
 const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`enhancedskiplink" ${className}`}>
       {children}
     </div>
@@ -144,6 +144,7 @@ main.scrollIntoView({behavior: 'smooth'})
 Skip to maincontent</a>
 )
 }
+
 
 
 export default EnhancedSkipLink;"

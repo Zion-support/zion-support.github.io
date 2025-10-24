@@ -77,9 +77,7 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
 
-export default PagePage;
 
 export const contactInfo = {
   phone: '+1 302 464 0950',
@@ -88,3 +86,4 @@ export const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
   timezone: 'EST (Eastern Standard Time'};
+export default PagePage;

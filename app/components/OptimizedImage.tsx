@@ -7,7 +7,7 @@ interface OptimizedImageProps {}
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '&apos;, }) => {
-  return (
+(
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       
       {/* Hero Section */}
@@ -111,5 +111,6 @@ Start Your Free Trial</button>
   );,
 };
 
-export default OptimizedImagePag;e;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default OptimizedImagePag;e;

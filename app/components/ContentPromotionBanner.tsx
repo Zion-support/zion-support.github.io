@@ -15,7 +15,7 @@ const ContentPromotionBanner: React.FC = () => {const benefits: ";"
     'Gain competitive advantage with advanced technology'
   ]
 }
-  return (
+(
     <>
       
       <Navigation />
@@ -218,4 +218,5 @@ const ContentPromotionBanner: React.FC = () => {const benefits: ";"
   ),
 }
 ;"
+
 export default ContentPromotionBanner;

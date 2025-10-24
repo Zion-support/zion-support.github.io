@@ -35,7 +35,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {const features = [
   ];
 
 const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`enhancedloadingstates" ${className}`}>
       {children}
     </div>
@@ -134,13 +134,12 @@ Start Your Free Trial</button>
     </>
   );,
 };
-export default EnhancedLoadingStatesPag;e;
 sm: 'w-4 h-4',
 md: 'w-8 h-8',
 lg: 'w-12h-1 2'}
-return(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName=&quot;mt-2text-smtext-gray-500&quot;>{text}</p>)}</di>)
+(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName=&quot;mt-2text-smtext-gray-500&quot;>{text}</p>)}</di>)
 }
-return (
+(
 <div className=&quot;flex flex-col items-center justify-center p-8&quot;></div>
 <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
 {text && (
@@ -193,3 +192,5 @@ export const ContentSkeleton: React.FC = () => (
 </div>
 </div>
 )"
+
+export default EnhancedLoadingStatesPag;e;

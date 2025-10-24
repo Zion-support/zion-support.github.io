@@ -37,7 +37,7 @@ const ImageOptimizerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-  return (
+(
     <>
       
       <section className=&quot;py-20 px-4&quot;></section>
@@ -61,10 +61,11 @@ const ImageOptimizerPage: React.FC = () => {
   )
 }
 
-export default function; ImageOptimizer({ className }: ImageOptimizerProps) {
-  return (
+(
     <div className={className}>
       <h1>Image Optimizer</h1>
     </div>
   );
 }
+
+export default function; ImageOptimizer({ className }: ImageOptimizerProps) {

@@ -35,7 +35,7 @@ const ErrorBoundaryPage: React.FC = () => {const features = [
   ];
 
 const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -142,7 +142,6 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
     </>
   );,
 };
-export default ErrorBoundaryPag;e;
 error?: Error;
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {}
@@ -163,7 +162,7 @@ render() {if (this.state.hasError) {}
 if (this.props.fallback) {}
 return this.props.fallback
 }
-return (
+(
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4&quot;></div>
 <div className=&quot;max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
@@ -210,3 +209,5 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>"
+
+export default ErrorBoundaryPag;e;

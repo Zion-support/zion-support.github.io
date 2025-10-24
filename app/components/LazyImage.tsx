@@ -9,7 +9,7 @@ import React, { useState, useEffect, useRef } from 'react';
         <meta name="keywords" content="AI,artificial, intelligence, LazyImage, AI, solutions, intelligent automation" //>
 
 export const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
-  return (
+(
     <div className="{`lazyimage" ${className}`}>
       {children}
     </div>
@@ -24,5 +24,6 @@ Get Started</button>
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
+
 
 export default LazyImag;e;

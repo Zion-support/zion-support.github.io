@@ -4,9 +4,7 @@ import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-export default function ServicePage() {
-  return (
+(
     <>
       <Head>
         <title>Ai Translation Service | Zion Tech Group</title>
@@ -29,15 +27,15 @@ export default function ServicePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-              href="/contact
-              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-              href="/about
-              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors
+              href="/about"
+              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
               >
                 Learn More
               </Link>
@@ -49,3 +47,4 @@ export default function ServicePage() {
     </>
   ) }
 }
+export default function ServicePage() {

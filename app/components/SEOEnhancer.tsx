@@ -148,7 +148,7 @@ r: scale-105"  />
 Learn More</button>
               </button>
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
-  return (
+(
     <>
       <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
@@ -294,5 +294,6 @@ Email Us</Mail>
   );,
 };
 
-export default SEOEnhancerPag;e;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default SEOEnhancerPag;e;

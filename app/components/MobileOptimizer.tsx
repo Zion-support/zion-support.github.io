@@ -5,7 +5,7 @@ import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const preventZoom = () => {
   return (<div>
-      <Head>
+      <Head>);
         <title>404 - Page Not Found|Zion Tech Group</title>
         <meta name="description" content="noindex, nofollow" />
         <meta property="og: type" content="website" />
@@ -82,8 +82,8 @@ go wrong! 🤖
     </div>
     </>
   ) "}
-export default preventZoom
     </div>
 }
+
 
 export default MobileOptimizer;

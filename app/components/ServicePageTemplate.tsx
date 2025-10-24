@@ -37,7 +37,7 @@ const ServicePageTemplatePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-  return (
+(
     <>
       
       <section className=&quot;py-20 px-4&quot;></section>
@@ -61,10 +61,11 @@ const ServicePageTemplatePage: React.FC = () => {
   )
 }
 
-export default function; ServicePageTemplate({ className }: ServicePageTemplateProps) {
-  return (
+(
     <div className={className}>
       <h1>Service Page Template</h1>
     </div>
   );
 }
+
+export default function; ServicePageTemplate({ className }: ServicePageTemplateProps) {

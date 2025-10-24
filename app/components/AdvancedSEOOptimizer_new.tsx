@@ -37,7 +37,7 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
   ];
 
 const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -134,5 +134,6 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
     </>
   );,
 };
+
 
 export default AdvancedSEOOptimizerNewPag;e;

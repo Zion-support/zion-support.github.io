@@ -35,7 +35,7 @@ const ContentPreviewCardPage: React.FC = () => {const features = [
   ];
 
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`contentpreviewcard" ${className}`}>
       {children}
     </div>
@@ -134,4 +134,5 @@ Start Your Free Trial</button>
     </>
   );,
 };
+
 export default ContentPreviewCardPag;e;"

@@ -9,7 +9,7 @@ import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
     { name: "Contact", path: "/contact" }
   ];
 
-  return (
+(
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
         {/* 404 Error */}
@@ -128,6 +128,7 @@ import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
 
 
 export default NotFoun;d;

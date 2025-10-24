@@ -35,7 +35,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ]
 
-  return (
+(
     <>
       
       <Navigation />
@@ -120,8 +120,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {const features = [
       </section>
 </>
 
-export default EnhancedAccessibilityEnhancerPage}
 </ul>
 }
-export default EnhancedAccessibilityEnhancerPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default EnhancedAccessibilityEnhancerPage;

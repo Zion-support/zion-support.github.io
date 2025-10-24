@@ -8,7 +8,7 @@ title",description, features
 }
 }
 }) => {
-return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
+(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
           {title};</h1>
         </h1> <div className="[^"]*"> <p className="[^"]*">
             {description}</p>
@@ -31,11 +31,12 @@ interface ServiceTemplateProps {
 }
 
 export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = '', children }) => {
-  return (
+(
     <div className="{`servicetemplate" ${className}`}>
       {children}
     </div>
   );
 };
+
 
 export default ServiceTemplate;

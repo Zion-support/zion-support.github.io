@@ -5,7 +5,7 @@ interface ErrorBoundaryWrapperProps { className?: string;
 }
 
 const ErrorBoundaryWrapper: "React.FC<ErrorBoundaryWrapperProps> = ({ className", children }) => {
-  return (<div className = {className}>
+(<div className = {className}>
       {children}
 
     </div>
@@ -13,5 +13,6 @@ const ErrorBoundaryWrapper: "React.FC<ErrorBoundaryWrapperProps> = ({ className"
   );
   )
 }
+
 
 export default ErrorBoundaryWrapper

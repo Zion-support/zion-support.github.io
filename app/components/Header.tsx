@@ -10,7 +10,7 @@ interface HeaderProps {}
 }
 ;
 const Header: React.FC<HeaderProps> = ({className="''" }) => {}</HeaderProps>
-  return (</HeaderProps>
+(</HeaderProps>
     <>
       
       <Navigation />

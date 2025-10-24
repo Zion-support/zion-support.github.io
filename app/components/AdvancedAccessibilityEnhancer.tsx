@@ -50,7 +50,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
 
-    return () => {motionQuery.removeEventListener('change', handleMotionChange)}
+() => {motionQuery.removeEventListener('change', handleMotionChange)}
       contrastQuery.removeEventListener('change', handleContrastChange)
 }
   }, [])
@@ -63,7 +63,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     } else {
       root.classList.remove('high-contrast')
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
-  return (
+(
     <div>
         </div>
         </div>
@@ -215,7 +215,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
 ;
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)
+() => document.removeEventListener('keydown', handleKeyDown)
   }, [])
 
   // Screen reader enhancements;
@@ -282,7 +282,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       element.addEventListener('keydown', handleTabKey)
       firstElement?.focus()
-      return () => element.removeEventListener('keydown', handleTabKey)
+() => element.removeEventListener('keydown', handleTabKey)
     }
 
     // Apply focus trap to modals
@@ -454,6 +454,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
 }}}}}
 };
+
 
 
 export default AdvancedAccessibilityEnhancerPag;e;

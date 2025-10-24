@@ -187,7 +187,7 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <>
+    <>);
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
@@ -428,5 +428,6 @@ const HomePage: React.FC = () => {
     </>
   )
 };
+
 
 export default HomePag;e;

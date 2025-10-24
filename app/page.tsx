@@ -4,18 +4,13 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import React, { useCallback, useState, useEffect, Suspense } from 'react';
-import React from "react";
 import Link from "next/link";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import SEOHead from "./components/SEOHead";
 import Head from "next/head";
-import React from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
@@ -102,10 +97,8 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
 
-export default function ServicePage() {
-  return (
+(
     <>
       <Head>
         <title>App | Zion Tech Group</title>
@@ -126,7 +119,7 @@ export default function ServicePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-                href="/contact
+                href="/contact"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
             >
               Get Started
@@ -250,7 +243,7 @@ export default function ServicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                href="/contact
+                href="/contact"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105
                 >
                   Get Started

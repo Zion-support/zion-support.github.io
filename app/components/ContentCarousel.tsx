@@ -65,7 +65,7 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
   }
 
 const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -359,6 +359,7 @@ Contact Sales
 }
 ;"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
 
 
 export default ContentCarousel;

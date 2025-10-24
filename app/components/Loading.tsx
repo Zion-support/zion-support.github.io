@@ -35,7 +35,7 @@ const LoadingPage: React.FC = () => {const features = [
   ];
 
 const Loading: React.FC<LoadingProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -102,7 +102,6 @@ Start Your Free Trial</button>
   )
   )  )}
 
-export default Loading
 }
 
         {/* CTA Section */}
@@ -127,4 +126,5 @@ export default Loading
     </>
   );,
 };
+
 export default LoadingPag;e;"

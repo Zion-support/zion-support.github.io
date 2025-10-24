@@ -36,7 +36,7 @@ const ErrorHandlerPage: React.FC = () => {const features = [
   ];
 
 export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -112,7 +112,7 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
         return thi s.props.fallback
      }
 
-      return (
+(
         <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50&quot;></div>
           <div className=&quot;max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center&quot;></div>
             <div className=&quot;flex justify-center mb-4&quot;></div>
@@ -454,4 +454,5 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
     <//>
   );
 };
+
 export default ErrorHandlerPag;e;"

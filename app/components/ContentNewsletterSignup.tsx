@@ -59,7 +59,7 @@ interface ContentNewsletterSignupProps {
   ]</ContentNewsletterSignupProp>
 </ContentNewsletterSignupProp>;"
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({className="''" }) => {}</ContentNewsletterSignupProps>
-  return (</ContentNewsletterSignupProps>
+(</ContentNewsletterSignupProps>
     <>
       
       <Navigation />
@@ -184,4 +184,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
     </>
   );,
 };
+
 export default ContentNewsletterSignupPag;e;"

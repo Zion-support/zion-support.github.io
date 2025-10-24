@@ -32,7 +32,7 @@ const PWAInstaller: React.FC = () => {const [deferredPrompt, setDeferredPrompt] 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
 
-    return () => {window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)}
+() => {window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)}
       window.removeEventListener('appinstalled', handleAppInstalled)
     }
   }, []);
@@ -56,7 +56,7 @@ const PWAInstaller: React.FC = () => {const [deferredPrompt, setDeferredPrompt] 
     return null
   }
 ;</BeforeInstallPromptEvent>
-  return (</BeforeInstallPromptEvent>"
+(</BeforeInstallPromptEvent>"
     <div className=""fixed" bottom-4 right-4 z-50 max-w-sm"></div>"
       <div className=""bg-slate-800/95" backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4"></div>"
         <div className=""flex" items-start justify-between mb-3"></div>"
@@ -112,4 +112,5 @@ const PWAInstaller: React.FC = () => {const [deferredPrompt, setDeferredPrompt] 
   )
 }
 ;
+
 export default PWAInstaller;"

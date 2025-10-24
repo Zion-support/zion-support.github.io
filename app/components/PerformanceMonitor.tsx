@@ -42,7 +42,7 @@ const PerformanceMonitorPage: React.FC = () => {const features = [
   ];
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -227,7 +227,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
    }
 
     // Cleanup;
-    return () => {windo w.removeEventListener('load', measurePerformance)
+() => {windo w.removeEventListener('load', measurePerformance)
    }
   }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
   // Service Worker registration for performance monitoring;
@@ -300,6 +300,7 @@ declare global {interface Window {}
     gtag: (...args: any[]) => void
   }
 }
+
 
 
 export default function; PerformanceMonitor;"

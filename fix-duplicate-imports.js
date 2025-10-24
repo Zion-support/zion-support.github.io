@@ -1,61 +1,113 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import { glob } from 'glob';
+// Function to clean up duplicate imports in a file
+function cleanImports(content) {
+  const lines = content.split('\n');
+  const seenImports = new Set();
+  const cleanedLines = [];
+  let inImportBlock = true;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    
+    // Check if we're still in the import block
+    if (inImportBlock && (line.startsWith('import ') || line.startsWith('"use client"') || line === '')) {
+      if (line.startsWith('import ')) {
+        // Extract the import statement
+        const importMatch = line.match(/import\s+(.+?)\s+from\s+['"](.+?)['"]/);
+        if (importMatch) {
+          const [, imports, source] = importMatch;
+          const key = `${source}:${imports}`;
+          
+          if (!seenImports.has(key)) {
+            seenImports.add(key);
+            cleanedLines.push(lines[i]);
+          }
+        } else {
+          cleanedLines.push(lines[i]);
+        }
+      } else {
+        cleanedLines.push(lines[i]);
+      }
+    } else {
+      inImportBlock = false;
+      cleanedLines.push(lines[i]);
+    }
+  }
+  
+  return cleanedLines.join('\n');
+}
 
-// Function to process a file
+// Function to fix duplicate exports
+function cleanExports(content) {
+  // Remove duplicate export default statements, keeping only the last one
+  const lines = content.split('\n');
+  const exportLines = [];
+  const otherLines = [];
+  
+  for (const line of lines) {
+    if (line.trim().startsWith('export default ')) {
+      exportLines.push(line);
+    } else {
+      otherLines.push(line);
+    }
+  }
+  
+  // Keep only the last export default
+  if (exportLines.length > 0) {
+    otherLines.push(exportLines[exportLines.length - 1]);
+  }
+  
+  return otherLines.join('\n');
+}
+
+// Function to process a single file
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
-    // Split content into lines
-    const _lines = content.split('\n');
-    const _newLines = [];
-    let _seenReactImport = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
-
-      // Check if this is a React import
-      if (line.trim().startsWith("import React from 'react';")) {
-        if (!seenReactImport) {
-          newLines.push(line);
-          seenReactImport = true;
-          modified = true;
-        }
-        // Skip duplicate React imports
-      } else {
-        newLines.push(line);
-      }
-    }
-
-    if (modified) {
-      content = newLines.join('\n');
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
-    }
-
-    return false;
+    const content = fs.readFileSync(filePath, 'utf8');
+    let cleanedContent = cleanImports(content);
+    cleanedContent = cleanExports(cleanedContent);
+    
+    // Write back the cleaned content
+    fs.writeFileSync(filePath, cleanedContent);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-// Main execution
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory
-  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-
-  let _fixedCount = 0;
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx')) {
+        files.push(fullPath);
+      }
     }
-  });
-
+  }
+  
+  traverse(dir);
+  return files;
 }
 
-main().catch(console.error);
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} .tsx files to process`);
+
+for (const file of tsxFiles) {
+  processFile(file);
+}
+
+console.log('Done fixing duplicate imports and exports!');

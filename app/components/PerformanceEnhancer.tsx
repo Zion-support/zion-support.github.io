@@ -12,7 +12,7 @@ import { ArrowRight } from 'lucide-react'
     'Gain competitive advantage with advanced technology'
   ]
 
-  return (
+(
     <>
       
       <Navigation />
@@ -89,4 +89,5 @@ import { ArrowRight } from 'lucide-react'
 
       <//section>
 }
+
 export default PerformanceEnhancerPage;"

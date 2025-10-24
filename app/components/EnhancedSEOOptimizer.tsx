@@ -48,7 +48,7 @@ const benefits = ["Increase efficiency by up to 50%"
     "Gain competitive advantage with advanced technology"
   ]
 return (<div>
-      <Helmet>
+      <Helmet>);
 
   const benefits = [
     'Increase efficiency by up to 50%'
@@ -59,7 +59,7 @@ return (<div>
   ]
 
   return (
-    <>
+    <>);
       
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -197,5 +197,6 @@ return (<div>
   ;
 };
 
-export default EnhancedSEOOptimize;r;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default EnhancedSEOOptimize;r;

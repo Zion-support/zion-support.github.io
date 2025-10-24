@@ -82,7 +82,6 @@ go wrong! 🤖
     </div>
     </>
   ) "}
-export default getVariantClasses
     </div>
 }
 
@@ -136,7 +135,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     ${className}
   `.trim();
 
-  return (
+(
     <motion.button
       type={type}
       onClick={onClick}
@@ -194,5 +193,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     </motion.button>
   );
 };
+
 
 export default FuturisticButto;n;

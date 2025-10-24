@@ -77,7 +77,7 @@ const Navigation: React.FC = () => {
     </>
   ) "}
 
-export default Navigation
     </div>
 }
+
 export default Navigation

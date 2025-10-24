@@ -1,178 +1,193 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPa, t, h } from 'url';
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filena, m, e);
-
-function fixSyntaxErrors(filePa, t, h) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix 1: Remove loading="lazy" from non-img elements
-    content = content.replace(/loading="lazy"(?=\s*[^>]*>)/g, '');
-    modified = true;
-
-    // Fix 2: Fix malformed JSX closing tags
-    content = content.replace(/(<[^>]+>)([^<]*?)(<\/[^>]+>)([^<]*?)(<\/[^>]+>)/g, '$1$2$3');
-    
-    // Fix 3: Fix missing semicolons after imports
-    content = content.replace(/import\s+[^;]+$/gm, (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(content) {
+  let lines = content.split('\n');
+  let fixed = false;
+  
+  // Fix 1: Remove return statements that are not inside functions
+  const returnOutsideFunction = /^\s*return\s*\(/;
+  for (let i = 0; i < lines.length; i++) {
+    if (returnOutsideFunction.test(lines[i])) {
+      // Check if this return is inside a function
+      let inFunction = false;
+      let braceCount = 0;
+      
+      for (let j = 0; j < i; j++) {
+        const line = lines[j].trim();
+        if (line.includes('function') || line.includes('=>') || line.includes('const') && line.includes('=')) {
+          inFunction = true;
+        }
+        if (line.includes('{')) braceCount++;
+        if (line.includes('}')) braceCount--;
       }
-      return match;
-    });
-
-    // Fix 4: Fix malformed JSX attributes
-    content = content.replace(/aria-label="[^"]*">/g, (match) => {
-      return match.replace(/>$/, '>');
-    });
-
-    // Fix 5: Fix unescaped quotes in JSX
-    content = content.replace(/(<[^>]*>)([^<]*?)'([^<]*?)(<\/[^>]*>)/g, (match, open, before, after, close) => {
-      return open + before + '&apos;' + after + close;
-    });
-
-    // Fix 6: Fix malformed function declarations
-    content = content.replace(/^(\s*)(const|let|var)\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/gm, (match, indent, decl, name) => {
-      return match;
-    });
-
-    // Fix 7: Fix missing export default
-    if (content.includes('export default function') && !content.includes('export default')) {
-      content = content.replace(/export default function (\w+)/g, 'export default function $1');
+      
+      if (!inFunction || braceCount <= 0) {
+        // This return is not inside a function, remove it
+        lines[i] = lines[i].replace(/^\s*return\s*/, '');
+        fixed = true;
+      }
+    }
+  }
+  
+  // Fix 2: Fix missing closing quotes in href attributes
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].includes('href="/contact') && !lines[i].includes('href="/contact"')) {
+      lines[i] = lines[i].replace('href="/contact', 'href="/contact"');
+      fixed = true;
+    }
+    if (lines[i].includes('href="/about') && !lines[i].includes('href="/about"')) {
+      lines[i] = lines[i].replace('href="/about', 'href="/about"');
+      fixed = true;
+    }
+  }
+  
+  // Fix 3: Fix missing closing quotes in className attributes
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].includes('className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors') && 
+        !lines[i].includes('className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"')) {
+      lines[i] = lines[i].replace('className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors', 
+                                  'className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"');
+      fixed = true;
+    }
+    if (lines[i].includes('className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors') && 
+        !lines[i].includes('className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"')) {
+      lines[i] = lines[i].replace('className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors', 
+                                  'className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"');
+      fixed = true;
+    }
+  }
+  
+  // Fix 4: Fix duplicate ArrowRight imports
+  const arrowRightImports = [];
+  const otherImports = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].includes('import { ArrowRight }')) {
+      arrowRightImports.push(i);
+    } else if (lines[i].includes('import {') && lines[i].includes('ArrowRight')) {
+      otherImports.push(i);
+    }
+  }
+  
+  // Remove duplicate ArrowRight imports, keep only the first one
+  if (arrowRightImports.length > 1) {
+    for (let i = 1; i < arrowRightImports.length; i++) {
+      lines[arrowRightImports[i]] = '';
+    }
+    fixed = true;
+  }
+  
+  // Fix 5: Fix duplicate export default statements
+  const exportLines = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].trim().startsWith('export default ')) {
+      exportLines.push(i);
+    }
+  }
+  
+  // Keep only the last export default
+  if (exportLines.length > 1) {
+    for (let i = 0; i < exportLines.length - 1; i++) {
+      lines[exportLines[i]] = '';
+    }
+    fixed = true;
+  }
+  
+  // Fix 6: Fix missing closing braces and parentheses
+  let braceCount = 0;
+  let parenCount = 0;
+  let inJSX = false;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Count braces and parentheses
+    for (const char of line) {
+      if (char === '{') {
+        braceCount++;
+        if (line.includes('<') && line.includes('>')) {
+          inJSX = true;
+        }
+      }
+      if (char === '}') {
+        braceCount--;
+        if (braceCount === 0) {
+          inJSX = false;
+        }
+      }
+      if (char === '(') parenCount++;
+      if (char === ')') parenCount--;
     }
     
-    console.log(`Fixing syntax errors in: ${ filePa, t, h }`);
-    
-    // Fix common syntax issues
-    let fixedContent = content
-      // Remove trailing semicolons that shouldn't be there
-      .replace(/;\s*$/gm, '')
-      // Fix JSX closing tags that have semicolons
-      .replace(/<\/([^>]+)>;\s*$/gm, '</$1>')
-      // Fix JSX opening tags that have semicolons
-      .replace(/<([^>]+)>;\s*$/gm, '<$1>')
-      // Fix JSX attributes that have semicolons
-      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1='$2'')
-      // Fix JSX expressions that have semicolons
-      .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
-      // Remove standalone semicolons
-      .replace(/^\s*;\s*$/gm, '')
-      // Fix multiple empty lines
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Fix JSX fragments
-      .replace(/<>\s*;\s*$/gm, '<>')
-      .replace(/<\/>\s*;\s*$/gm, '</>')
-      // Fix React.Fragment
-      .replace(/<React\.Fragment>\s*;\s*$/gm, '<React.Fragment>')
-      .replace(/<\/React\.Fragment>\s*;\s*$/gm, '</React.Fragment>')
-      // Fix common JSX syntax issues
-      .replace(/>\s*;\s*</gm, '><')
-      .replace(/>\s*;\s*$/gm, '>')
-      // Fix function declarations
-      .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
-      .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
-      // Fix return statements
-      .replace(/return\s*\(\s*;\s*$/gm, 'return(')
-      // Fix JSX elements that are missing closing tags
-      .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
-      // Clean up extra whitespace
-      .replace(/\s+$/gm, '')
-      .replace(/^\s+/gm, '');
-    
-    // Try to fix incomplete JSX structures
-    const lines = fixedContent.split('\n');
-    const fixedLines = [];
-    let inJSX = false;
-    let jsxDepth = 0;
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      
-      //Fix JSX syntax
-      .replace(/<(\w+)\s*\/\s*>/g, "<$1 />")
-      .replace(/className\s*=\s*[""]([^""]*)\s+([^""]*)[""]/g, "className="$1$2"")
-      .replace(/hover:\s*([^""\s]+)/g, "hover:$1")
-      .replace(/from-(\w+)\s+([^""\s]+)/g, "from-$1$2")
-      .replace(/to-(\w+)\s+([^""\s]+)/g, "to-$1$2")
-      
-      //Fix closing tags and brackets
-      .replace(/\)\s*,\s*}/g, ")")
-      .replace(/\)\s*;\s*}/g, ")")
-      .replace(/\)\s*,\s*\)/g, ")")
-      .replace(/}\s*,\s*\)/g, "}")
-      .replace(/}\s*;\s*\)/g, "}")
-      
-      //Fix malformed strings
-      .replace(/[""]([^""]*)\s+([^""]*)[""]/g, ""$1$2"")
-      .replace(/href\s*=\s*[""]([^""]*)\s+([^""]*)[""]/g, "href="$1$2"")
-      
-      //Fix component syntax
-      .replace(/<(\w+)\s*\/\s*>/g, "<$1 />")
-      .replace(/<\/\s*(\w+)\s*>/g, "</$1>")
-      
-      fixedLines.push(li, n, e);
+    // Fix missing closing parenthesis in return statements
+    if (line.includes('return (') && !line.includes(');') && i < lines.length - 1) {
+      // Look for the matching closing parenthesis
+      let found = false;
+      for (let j = i + 1; j < lines.length; j++) {
+        if (lines[j].includes(');')) {
+          found = true;
+          break;
+        }
+      }
+      if (!found && i < lines.length - 1) {
+        // Add missing closing parenthesis
+        lines[i + 1] = lines[i + 1] + ');';
+        fixed = true;
+      }
     }
+  }
+  
+  return { content: lines.join('\n'), fixed };
+}
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const { content: cleanedContent, fixed } = fixSyntaxErrors(content);
     
-    const finalContent = fixedLines.join('\n');
-    
-    // Only write if content changed
-    if (finalContent !== content) {
-      fs.writeFileSync(filePath, finalContent);
-      return true;
+    if (fixed) {
+      fs.writeFileSync(filePath, cleanedContent);
+      console.log(`Fixed: ${filePath}`);
     }
-    return false;
-  } catch (err, o, r) {
-    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
-    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-function findTsxFiles(d, i, r) {
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
   const files = [];
   
-  function traverse(currentD, i, r) {
-    const items = fs.readdirSync(currentD, i, r);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPa, t, h);
+      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPa, t, h);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPa, t, h);
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx')) {
+        files.push(fullPath);
       }
     }
-  });
+  }
   
-  traverse(d, i, r);
+  traverse(dir);
   return files;
 }
 
 // Main execution
-console.log('Starting syntax error fixes...');
 const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appD, i, r);
+const tsxFiles = findTsxFiles(appDir);
 
-console.log(`Found ${files.length} TypeScript files to check`);
+console.log(`Found ${tsxFiles.length} .tsx files to process`);
 
-let fixedCount = 0;
-for (const file of files) {
-  if (fixSyntaxErrors(fi, l, e)) {
-    fixedCount++;
-  }
+for (const file of tsxFiles) {
+  processFile(file);
 }
 
-console.log(`Fixed syntax errors in ${ fixedCou, n, t } files`);
-
-// Also check the root App.tsx
-if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++;
-  console.log('Fixed syntax errors in App.tsx');
-}
-
-console.log(`Total files fixed: ${ fixedCou, n, t }`);
+console.log('Done fixing syntax errors!');

@@ -3,17 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from "react";
-import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -91,12 +83,8 @@ const Page: React.FC = () => {
 
 };
 
-export default Page;
 
-export default PagePage;
 
-export default QuantumComputingPage;
 
-export default AiAutomationPage;
 
 export default QuantumcomputingPage;

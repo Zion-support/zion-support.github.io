@@ -36,7 +36,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {const features = [
   ];
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '' }) => {
-  return (
+(
     <>
       
       <Navigation />
@@ -183,7 +183,7 @@ return structuredDat a || default StructuredData
 }
 return structuredData || defaultStructuredData
 }
-return (
+(
     <>
       
 {children}
@@ -200,6 +200,7 @@ fontSize: '12 px',
 zIndex:1000,
 maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
 }
+
 
 
 export default AdvancedSEOOptimizer;"

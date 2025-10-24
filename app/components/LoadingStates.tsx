@@ -35,7 +35,7 @@ const LoadingStatesPage: React.FC = () => {const features = [
   ];
 
 const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`loadingstates" ${className}`}>
       {children}
     </div>
@@ -134,4 +134,5 @@ Start Your Free Trial</button>
     </>
   );,
 };
+
 export default LoadingStatesPag;e;"

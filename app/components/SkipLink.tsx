@@ -35,7 +35,7 @@ const SkipLinkPage: React.FC = () => {const features = [
   ];
 
 const SkipLink: React.FC<SkipLinkProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`skiplink" ${className}`}>
       {children}
     </div>
@@ -134,4 +134,5 @@ Start Your Free Trial</button>
     </>
   );,
 };
+
 export default SkipLinkPag;e;"

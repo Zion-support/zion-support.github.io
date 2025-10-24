@@ -35,7 +35,7 @@ const ServiceCardPage: React.FC = () => {const features = [
   ];
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ className = '' }) => {
-  return (
+(
     <div className="{`servicecard" ${className}`}>
       {children}
     </div>
@@ -145,7 +145,7 @@ popular: "false,";}
 onSelect,}
 className="''"
 }) => {}</ServiceCardProp>
-return (</ServiceCardProp>"
+(</ServiceCardProp>"
 <div className="{`bg-white/5" backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${});
 popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 }`}>{popular && (</div>
@@ -182,6 +182,7 @@ Get Started
 </div>
 )
 }
+
 
 
 export default ServiceCard;"

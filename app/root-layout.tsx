@@ -13,7 +13,7 @@ export const metadata: Metadata = {title: 'Zion Tech Group - Advanced AI and IT 
   children: React.ReactNode,
 }) {
   return (
-    <html lang='en'></html>
+    <html lang='en'></html>);
       <body className={inter.className}></body>
         { childr, e, n }
       </body>

@@ -106,7 +106,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     page,
   }
 ;</string>
-  return (</string>"
+(</string>"
     <AnalyticsContext.Provider value="{value}></AnalyticsContext>
       {children}</AnalyticsContext>
     </AnalyticsContext.Provider>
@@ -156,7 +156,7 @@ const EnhancedAnalyticsPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
-  return (
+(
     <>
       
       <Navigation /></Navigation>"
@@ -265,5 +265,6 @@ Oops! The page you"re looking for seems to have vanished into the digital void. 
     </>
   ;);,
 };
-export default EnhancedAnalyticsPag;e;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default EnhancedAnalyticsPag;e;

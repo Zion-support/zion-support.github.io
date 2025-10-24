@@ -3,7 +3,6 @@ import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import React from "react";
 import Link from "next/link";
 import {
   Package,
@@ -105,10 +104,7 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
 
-export default PagePage;
 
-export default ZionAIInventoryOptimizerProPage;
 
 export default ZionAiInventoryOptimizerProPage;

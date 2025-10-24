@@ -82,7 +82,6 @@ go wrong! 🤖
     </div>
     </>
   ) "}
-export default getVariantStyles
     </div>
 }
 
@@ -112,7 +111,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     ${className}
   `.trim();
 
-  return (
+(
     <motion.div
       className={baseClasses}
       onClick={onClick}
@@ -162,5 +161,6 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     </motion.div>
   );
 };
+
 
 export default FuturisticCar;d;

@@ -112,7 +112,7 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     trackPageView,
   }
 
-  return (
+(
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
@@ -123,5 +123,6 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-export default AnalyticsProvide;r;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default AnalyticsProvide;r;

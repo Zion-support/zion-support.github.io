@@ -147,4 +147,5 @@ export const dynamic = (): JSX.Element => {
 
 
 
+
 export default dynami;c;

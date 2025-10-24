@@ -2,9 +2,8 @@
 import React from "react";
 import { Link  } from "next/link";
 import { ArrowRight  } from "lucide-react";
-export default function LazyWrapper() {
 
-return (<div className="[^"]*"> <div className="[^"]*">,<h1 className="[^"]*">
+(<div className="[^"]*"> <div className="[^"]*">,<h1 className="[^"]*">
 Service</h1>
           </h1> <p className="[^"]*">
 Professional service services coming soon.</p>
@@ -22,11 +21,12 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
 }
 
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', children }) => {
-  return (
+(
     <div className="{`lazywrapper" ${className}`}>
       {children}
     </div>
   );
 };
+
 
 export default LazyWrapper;

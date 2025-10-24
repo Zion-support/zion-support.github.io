@@ -37,7 +37,7 @@ const PerformanceImagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-  return (
+(
     <>
       
       <section className=&quot;py-20 px-4&quot;></section>
@@ -61,6 +61,7 @@ const PerformanceImagePage: React.FC = () => {
   )
 }
 ;
+
 
 
 

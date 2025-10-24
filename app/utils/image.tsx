@@ -82,12 +82,12 @@ objectFit: 'cover'}
 })</ImageProps>
 }</ImageProps>;
 if (hasError) {</ImageProps>}
-return (</ImageProps>;});
+(</ImageProps>;});
 if (hasError) {}
-return (
+(
     <div});
 if (hasError) {;}
-return(<div}
+(<div}
 'use client';
 import React, {useState, useCallback } from 'react'
 interface ImageProps {/* TODO: Fix JSX expression */}
@@ -103,6 +103,7 @@ onError="{handleError}
 {...props}
 >)</img>
 }</img>;
-export default Image;</img>"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+export default Image;</img>"

@@ -86,7 +86,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   render() {
     if (this.state.hasError) {
       return (
-        <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>
+        <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>);
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
             <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
@@ -113,5 +113,6 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     return this.props.children
   }
 }
+
 
 export default AdvancedErrorBoundary;

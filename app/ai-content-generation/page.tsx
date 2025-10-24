@@ -4,16 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import React from "react";
-import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -91,13 +84,8 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
   );
 };
 
-export default Page;
 
-export default PagePage;
 
-export default AiContentGenerationPage;
 
-export default AicontentgenerationPage;
 
-export default AiContentGenerationPage;
 export default PagePage;

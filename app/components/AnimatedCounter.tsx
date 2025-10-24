@@ -64,7 +64,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     };
   }, [end, duration]);
 
-  return (
+(
     <span className={className}>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
@@ -109,12 +109,12 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
     animationFrame = requestAnimationFrame(anima, t, e)
 
-    return () => {
+() => {
   if (animationFra, m, e) {
         cancelAnimationFrame(animationFra, m, e)
     }, [isVisible, end, duration])
 
-  return (
+(
     <span ref={ setNo, d, e }className={ classNa, m, e }></span>
       { pref, i, x }{count.toLocaleString()}{ suff, i, x }
     </span>
@@ -124,7 +124,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
 
-export default AnimatedCounterPag;e;
 =======
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({
 end",duration = 2000
@@ -173,16 +172,17 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4)
 if(progress < 1) {
 animationFrame = requestAnimationFrame(animate)
 return () => {
-if(animationFrame) {  
+if(animationFrame) {  );
 cancelAnimationFrame(animationFrame)
       ,}
     }
   }, [isVisible, end, duration,])
 return (<spanclassName="{className}" />
-      {prefix}{count}{suffix}</span>
+      {prefix}{count}{suffix}</span>);
     </span>)
   )
 }
 
-export default AnimatedCounter;
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
+
+export default AnimatedCounter;

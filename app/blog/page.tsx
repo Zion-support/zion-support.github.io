@@ -5,22 +5,14 @@ import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
-import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -46,7 +38,7 @@ const Page: React.FC = () => {
   ];
 
   return (
-    <>
+    <>);
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
@@ -97,8 +89,6 @@ const Page: React.FC = () => {
   ;
 };
 
-export default Page;
 
-export default PagePage;
 
 export default BlogPage;

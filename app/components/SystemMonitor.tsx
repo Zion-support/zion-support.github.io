@@ -4,7 +4,7 @@
 
   const benefits=";";"
 const SystemMonitor: React.FC<SystemMonitorProps> = ({className="''" }) => {}</SystemMonitorProps>
-  return (</SystemMonitorProps>
+(</SystemMonitorProps>
     <>
       
       <Navigation />
@@ -43,7 +43,7 @@ import { ArrowRight   } from "lucide-react";
     "Gain competitive advantage with advanced technology"
   ]
 const SystemMonitor: "React.FC<SystemMonitorProps> = ({ className="" "}) => {
-return (<Helmet />
+(<Helmet />
         <title>SystemMonitor</title>
         
         <meta name="description" content="Advanced SystemMonitor solution for modern businesses." //>
@@ -127,6 +127,7 @@ Contact Sales</button>
     </div>
   )
 }
+
 
 
 export default SystemMonitorPage;"

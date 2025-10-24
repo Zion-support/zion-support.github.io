@@ -18,7 +18,6 @@ const ContactPage = () => {
 
 }
 
-export default function ContactPagePage() {
   return (
     <>
       <Head>
@@ -152,5 +151,6 @@ export default function ContactPagePage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
   );
 };
+
 
 export default ContactPag;e;

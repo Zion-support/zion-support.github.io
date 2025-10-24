@@ -35,7 +35,7 @@ const features = [
     'Cost-effective pricing plans',
     'Proven track record of success',
   ];
-  return (
+(
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" >
       <Helmet>
         <title>MainPage - Zion Tech Group</title>
@@ -118,11 +118,10 @@ const features = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/innovation-labs/page.tsx
 
 
-export default Innovationlab;s;
 =======
     'Proven track record of success'
   ]
-  return (
+(
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><>
 <//div>
 <Helmet><>
@@ -298,5 +297,6 @@ export default Innovationlab;s;
 </div><//div>
   )
 }
-export default MainPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b
+
+export default MainPage

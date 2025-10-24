@@ -18,7 +18,7 @@ import { Phone, Mail } from 'lucide-react'
     'Gain competitive advantage with advanced technology'
   ]
 
-  return (
+(
     <>
       
       <Navigation />
@@ -119,9 +119,10 @@ import { Phone, Mail } from 'lucide-react'
   );
 };
 
-export default EnhancedHeroPag;e;
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
             </div>
           </div>"
+
+export default EnhancedHeroPag;e;

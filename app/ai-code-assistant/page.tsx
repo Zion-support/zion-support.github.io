@@ -3,15 +3,11 @@ import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
-import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
@@ -90,9 +86,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
   );
 };
 
-export default Page;
 
-export default PagePage;
 
-export default AiCodeAssistantPage;
 export default PagePage;
