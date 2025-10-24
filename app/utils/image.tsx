@@ -1,6 +1,5 @@
 import React from 'react'
 import React, { useState, useCallback } from 'react'
-import React, { useState, useCallback } from 'react'
 'use client'
 'use client'
 interface ImageProps {
@@ -104,6 +103,6 @@ onError="{handleError}
 {...props}
 >)</img>
 }</img>;
-export default Image</img>"
+export default Image;</img>"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

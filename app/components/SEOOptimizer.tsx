@@ -147,7 +147,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
-export default SEOOptimizer
   );
 };
-export default SEOOptimizerPage;"
+
+
+export default SEOOptimizerPag;e;"

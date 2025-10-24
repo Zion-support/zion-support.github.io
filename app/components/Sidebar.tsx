@@ -135,7 +135,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
     </>
   );,
 };
-export default SidebarPage;
+export default SidebarPag;e;
 Menu,
 Home,
 Users,

@@ -34,7 +34,6 @@ declare global {
   }
 }
 
-export default Analytics;
     }
     initAnalytics()
   }, []);
@@ -42,16 +41,15 @@ export default Analytics;
   return null; // Analytics component doesn&apos;t render anything
 }
 ;
-export default Analytics
 };
 
-export default AnalyticsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 };
 
-export default AnalyticsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 };
 
-export default AnalyticsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+
+export default AnalyticsPag;e;

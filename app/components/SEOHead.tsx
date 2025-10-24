@@ -135,7 +135,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({ className = '' }) => {
     </>
   );,
 };
-export default SEOHeadPage;
 description?: string;
 keywords?: string;
 canonical?: string;
@@ -172,5 +171,6 @@ return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;d
 {canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl} />}
 {/* Open GraphMetaTags*/}<metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:type&quot; content={ogType} /><metaproperty=&quot;og:url&quot; content={canonicalUrl} /><metaproperty=&quot;og:image&quot; content={ogImage} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter CardMetaTags*/}<metaname=&quot;twitter:card&quot; content={twitterCard} /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEOMetaTags*/}<metaname=&quot;theme-color&quot;content=&quot;#0f172a&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot; /><metaname=&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot; /><metaname=&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot; />{/* StructuredData*/}<scripttype=&quot;application/ld+json&quot;>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
-export default SEOHead
+
+
 export defaultSEOHead</SEOHeadProp>;

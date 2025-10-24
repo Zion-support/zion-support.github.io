@@ -121,7 +121,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '' })
   )
 }
 ;
-export default ContentStatisticsPage;
 clients: 0,
 projects: 0,
 satisfaction: 0,
@@ -355,4 +354,6 @@ View Case Studies
 </div>
 ),
 }
-export default ContentStatistics"
+
+
+export default ContentStatistics;"

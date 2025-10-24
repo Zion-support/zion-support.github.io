@@ -142,7 +142,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
     </>
   );,
 };
-export default ErrorBoundaryPage;
+export default ErrorBoundaryPag;e;
 error?: Error;
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {}

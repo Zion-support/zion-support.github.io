@@ -135,7 +135,6 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className =
     </>
   );,
 };
-export default PerformanceDashboardPage;
 loadTime: 0,
 renderTime: 0,
 memoryUsage: 0,
@@ -277,4 +276,6 @@ isMonitoring ? 'bg-red-600 text-white hover: bg-red-700' : 'bg-green-600 text-wh
 </div>
 )
 }
-export default PerformanceDashboard"
+
+
+export default PerformanceDashboard;"

@@ -66,11 +66,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   )
 }
 
-export default AnimatedCounter
   );
 };
 
-export default AnimatedCounter;
     threshold: 0.5
   });
 
@@ -118,8 +116,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   )
 }
 
-export default AnimatedCounter
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 =======
-export default AnimatedCounterPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
+
+
+export default AnimatedCounterPag;e;

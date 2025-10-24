@@ -1,169 +1,80 @@
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-'use client';
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Shield, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Lock } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const BlockchainPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-cyan-400" />,
-      title: 'Secure Blockchain Development',
-      description: 'Build secure, scalable blockchain solutions with advanced cryptography and smart contract development.'
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: <Lock className="w-8 h-8 text-purple-400" />,
-      title: 'Smart Contracts',
-      description: 'Develop and deploy smart contracts that automate business processes with trust and transparency.'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
-      title: 'DeFi Solutions',
-      description: 'Create decentralized finance applications that revolutionize traditional financial services.'
-    },
-    {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
-      title: 'Custom Integration',
-      description: 'Integrate blockchain technology with your existing systems for enhanced security and transparency.'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
-  const benefits = [
-    'Enhanced security and transparency',
-    'Reduced transaction costs',
-    'Eliminate intermediaries',
-    'Immutable record keeping',
-    'Global accessibility',
-    'Future-proof technology'
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Blockchain</span> Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with blockchain technology. Build secure, transparent, and decentralized solutions with our blockchain development services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              to="/it-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              View All IT Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Blockchain Solutions
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our blockchain services provide cutting-edge solutions to transform your business with decentralized technology.
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced Page solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="mb-6">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our Blockchain Services?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Our blockchain solutions help you leverage the power of decentralized technology to build trust, transparency, and efficiency in your business.
-              </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
-                    <Brain className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Innovation & Security</h3>
-                  <p className="text-gray-300">
-                    Our blockchain solutions combine cutting-edge technology with robust security measures to deliver reliable, scalable, and future-proof applications.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Embrace Blockchain Technology?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join the blockchain revolution and transform your business with secure, transparent, and decentralized solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-            >
-              Start Your Blockchain Journey
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
-              to="/it-services" 
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
-            >
-              Explore All IT Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default BlockchainPage;
-
-export default Blockchain;
-
-export default BlockchainPage;
+export default Page;

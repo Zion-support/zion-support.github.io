@@ -1,81 +1,54 @@
-import React from "react";
-import React from "react";
-'use client';
 import React from 'react';
-import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-export default function AIContentGeneratorPage() {
+const Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Writing',
-      description: 'Advanced AI-powered content generation with high accuracy and human-like quality.',
-      benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: FileText,
-      title: 'Content Templates',
-      description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
-      benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
-    },
-    {
-      icon: MessageCircle,
-      title: 'Social Media Content',
-      description: 'Generate engaging social media posts, captions, and hashtags for all platforms.',
-      benefits: ['Platform-specific content', 'Trending hashtags', 'Engagement optimization', 'Visual content suggestions']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
-      title: 'SEO Optimization',
-      description: 'AI-optimized content that ranks higher in search engines and drives organic traffic.',
-      benefits: ['Keyword research', 'Content optimization', 'Meta descriptions', 'Schema markup']
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Generator</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your content creation with our advanced AI-powered writing assistant. Generate high-quality, engaging content for any platform or purpose.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-              Start Generating
-              <ArrowRight className="w-8 h-8" />
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-              View Examples
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI content generator comes with everything you need to create compelling content at scale.
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced Page solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  {feature.icon}
-                  <h3 className="text-xl font-bold text-white ml-3">{feature.title}</h3>
-                </div>
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-8 h-8" />
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                       {benefit}
                     </li>
                   ))}
@@ -83,33 +56,25 @@ export default function AIContentGeneratorPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Content?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start generating high-quality content with our AI-powered writing assistant today.
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                Get Started Now
-                <ArrowRight className="w-8 h-8" />
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-                Learn More
-              </button>
-            </div>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
-}
+};
 
-export default Aicontentgenerator;
-
-export default AiContentGenerator;
+export default Page;

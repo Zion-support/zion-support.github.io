@@ -116,9 +116,10 @@ const PageBackupPage: React.FC = () => {
 <<<<<<< HEAD:app/page-backup.tsx
   )
 }
-export default PageBackupPage
 =======
   )
 }
-export default PageBackupPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+
+export default PageBackupPage;

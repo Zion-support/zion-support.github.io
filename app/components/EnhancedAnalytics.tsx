@@ -245,5 +245,5 @@ const EnhancedAnalyticsPage: React.FC = () => {const features = [
     </>
   ;);,
 };
-export default EnhancedAnalyticsPage;
+export default EnhancedAnalyticsPag;e;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

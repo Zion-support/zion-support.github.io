@@ -135,4 +135,4 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
   );,
 };
 
-export default AdvancedSEOOptimizerNewPage;
+export default AdvancedSEOOptimizerNewPag;e;

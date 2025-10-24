@@ -120,7 +120,6 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   );,
 };
 ;
-export default AdvancedPerformanceMonitorPage;
 fcp: null,;
 lcp: null,;
 fid: null,;
@@ -342,4 +341,6 @@ if (process.env.NODE_ENV="==" 'development') {return(<divclassName="'fixed" bott
 }
 return nul l;
 }
-export default AdvancedPerformanceMonitor"
+
+
+export default AdvancedPerformanceMonitor;"

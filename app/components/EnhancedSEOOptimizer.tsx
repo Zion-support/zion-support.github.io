@@ -189,5 +189,5 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   );
 };
 
-export default EnhancedSEOOptimizer;
+export default EnhancedSEOOptimize;r;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

@@ -81,7 +81,6 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   );
 };
 
-export default LoadingSkeleton;
               </button>
             </div>
           </div>
@@ -160,5 +159,7 @@ export default LoadingSkeleton;
   );,
 };
 
-export default LoadingSkeletonPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+
+export default LoadingSkeletonPag;e;

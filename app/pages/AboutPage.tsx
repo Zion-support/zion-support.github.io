@@ -10,7 +10,7 @@ import {
   ArrowRightIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-export default function AboutPage() {
+export default function; AboutPage() {
   const values = [
     {
       icon: Target,

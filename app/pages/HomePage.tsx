@@ -12,7 +12,7 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function HomePage() {  return (
+export default function; HomePage() {  return (
     <>
 
       {/* Hero Section */}

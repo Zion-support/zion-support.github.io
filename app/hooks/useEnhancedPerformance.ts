@@ -124,4 +124,4 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   };
 }
 
-export default useEnhancedPerformance;
+export default useEnhancedPerformanc;e;

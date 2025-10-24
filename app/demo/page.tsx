@@ -1,154 +1,80 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Play, Right, Circle, Star } from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const DemoPage: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState('ai-chatbot');
-
-  const demos = [
+const Page: React.FC = () => {
+  const features = [
     {
-      id: 'ai-chatbot',
-      title: 'AI Chatbot Demo',
-      description: 'Experience our intelligent chatbot that can handle customer inquiries 24/7.',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      features: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Integration Ready']
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      id: 'ai-automation',
-      title: 'AI Automation Demo',
-      description: 'See how AI can automate complex business processes and workflows.',
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      features: ['Workflow Automation', 'Smart Decision Making', 'Process Optimization', 'Real-time Monitoring']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      id: 'ai-security',
-      title: 'AI Security Demo',
-      description: 'Discover our AI-powered security solutions for threat detection and prevention.',
-      icon: <Shield className="w-8 h-8 text-green-400" />,
-      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
-        {/* Hero Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Interactive <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Demos</span>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Page
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience our AI and IT solutions firsthand. Try our interactive demos to see how our technology can transform your business.
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced Page solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
-        </section>
-    </>
 
-        {/* Demo Selection */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                {demos.map((demo) => (
-                  <div
-                    key={demo.id}
-                    onClick={() => setActiveDemo(demo.id)}
-                    className={`cursor-pointer p-6 rounded-lg transition-all duration-300 ${
-                      activeDemo === demo.id
-                        ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border-2 border-cyan-400'
-                        : 'bg-white/10 hover:bg-white/20 border-2 border-transparent'
-                    }`}
-                  >
-                    <div className="flex items-center mb-4">
-                      {demo.icon}
-                      <h3 className="text-xl font-bold text-white ml-3">{demo.title}</h3>
-                    </div>
-                    <p className="text-gray-300 mb-4">{demo.description}</p>
-                    <ul className="space-y-2">
-                      {demo.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              {/* Demo Content */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold text-white mb-4">
-                    {demos.find(d => d.id === activeDemo)?.title}
-                  </h2>
-                  <p className="text-gray-300">
-                    {demos.find(d => d.id === activeDemo)?.description}
-                  </p>
-                </div>
-
-                <div className="bg-black/50 rounded-lg p-8 mb-8">
-                  <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg">
-                    <div className="text-center">
-                      <Play className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                      <h3 className="text-xl font-bold text-white mb-2">Demo Coming Soon</h3>
-                      <p className="text-gray-400">
-                        This interactive demo is currently under development. Contact us to schedule a live demonstration.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
-                    Schedule Live Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to See More?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contact our team to schedule a personalized demonstration of our AI and IT solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                  Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-                  Learn More
-                </button>
-              </div>
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
           </div>
-        </section>
+        </div>
       </div>
+      <Footer />
+    </>
   );
 };
 
-export default DemoPage;
-
-export default DemoPage;
-
-export default PagePage;
-
-export default PagePage;
-
-export default PagePage;
-
-export default PagePage;
+export default Page;

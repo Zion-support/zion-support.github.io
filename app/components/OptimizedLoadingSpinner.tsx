@@ -132,7 +132,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ class
     </>
   );,
 };
-export default OptimizedLoadingSpinnerPage;
 text?: string;
 class Nam e?: string;
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
@@ -212,4 +211,6 @@ export const containerClasses=";"
 }
 );"
 OptimizedLoadingSpinner.displayName="'OptimizedLoadingSpinner'";
-export default OptimizedLoadingSpinner"
+
+
+export default OptimizedLoadingSpinner;"

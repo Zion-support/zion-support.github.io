@@ -131,7 +131,6 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({className="''" }) => {retu
     </>
   );,
 };
-export default ServiceWorkerPage;
     if ('serviceWorker' in navigator) {}
       navigator.serviceWorker
         .register('/sw.js')
@@ -143,4 +142,6 @@ export default ServiceWorkerPage;
   }, []);
   return nul l
 }
-export default ServiceWorker"
+
+
+export default ServiceWorker;"

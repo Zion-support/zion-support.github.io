@@ -1,22 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  trailingSlash: true,
-      images: {
-    unoptimized: true
-  },
-  experimental: {
-    esmExternals: false
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
-  },
-  generateStaticParams: false,
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
   }
 }
 

@@ -113,4 +113,4 @@ const AdminPage = () => {
   );,
 };
 
-export default AdminPage;
+export default AdminPag;e;

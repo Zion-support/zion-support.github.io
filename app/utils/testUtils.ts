@@ -7,8 +7,6 @@ const testUtils.ts = () => {
 };
 
 <<<<<<< HEAD:app-broken/app/utils/testUtils.ts
-export default testUtils.ts;
-export default testUtils.ts;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 'use client'
 /**
@@ -305,7 +303,6 @@ export const measureExecutionTime = async <T>(
   return { result, duration }
 }
 
-export default {
   wait,
   waitFor,
   mockFetch,
@@ -327,3 +324,6 @@ export default {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
+
+
+export default {

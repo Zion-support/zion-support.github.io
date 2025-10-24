@@ -135,7 +135,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
     </>
   );,
 };
-export default EnhancedPerformanceOptimizerPage;
+export default EnhancedPerformanceOptimizerPag;e;
 {icon: Brain,}
 title: 'AI-Powered Solutions',}
 description: 'Advanced AI technology to transform your business operations and improve efficiency'},

@@ -134,7 +134,8 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '' }) => 
     </>
   );,
 };
-export default EnhancedLoadingPage;
   )
 }
-export default EnhancedLoadingPage"
+
+
+export default EnhancedLoadingPage;"

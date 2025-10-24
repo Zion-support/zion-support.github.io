@@ -134,4 +134,4 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className
     </>
   );,
 };
-export default EnhancedAccessibilityPage;"
+export default EnhancedAccessibilityPag;e;"

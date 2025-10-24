@@ -64,7 +64,6 @@ const EnhancedSEO: React.FC = () => {
   );
 };
 
-export default EnhancedSEOPage;
                 </div>
               ))}
             </div>
@@ -104,4 +103,6 @@ export default EnhancedSEOPage;
   );
 };
 
-export default EnhancedSEO;
+
+
+export default EnhancedSE;O;

@@ -383,7 +383,7 @@ n: RegExp): boolean {/* TODO: Fix JSX expression */}
 rules = ValidationRulesBuilder
 }
 export const dataValidator = DataValidator.getInstance()
-export default DataValidator
+export default DataValidator;
 // Additional validation functions for tests
 export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field'): { isValid: boolean; error?: string } {
 if (max !== undefined) {

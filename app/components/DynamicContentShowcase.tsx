@@ -302,4 +302,4 @@ const DynamicContentShowcase: React.FC = () => {const [currentTestimonial, setCu
   ),
 }
 ;"
-export default DynamicContentShowcase
+export default DynamicContentShowcase;

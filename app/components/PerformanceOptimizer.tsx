@@ -183,7 +183,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
   ),
 }
 ;
-export default PerformanceOptimizer
   );
 };
-export default PerformanceOptimizerPage;"
+
+
+export default PerformanceOptimizerPag;e;"

@@ -120,5 +120,5 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '&apos;, })
   );,
 };
 
-export default OptimizedImagePage;
+export default OptimizedImagePag;e;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

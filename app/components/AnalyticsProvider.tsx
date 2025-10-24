@@ -123,5 +123,5 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 <<<<<<< HEAD
-export default AnalyticsProvider;
+export default AnalyticsProvide;r;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

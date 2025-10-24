@@ -208,4 +208,4 @@ export class BaseService {
   }
 }
 
-export default BaseService;
+export default BaseServic;e;

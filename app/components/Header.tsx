@@ -109,8 +109,9 @@ const Header: React.FC<HeaderProps> = ({className="''" }) => {}</HeaderProps>
     </>
   );,
 };
-export default HeaderPage;
   )
 }
-export default Header
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+
+export default Header;

@@ -111,4 +111,4 @@ export function isDevelopment(): boolean {
   return config.app.environment === 'development';
 }
 
-export default config;
+export default confi;g;

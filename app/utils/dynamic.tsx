@@ -138,7 +138,6 @@ const DynamicPage: React.FC = () => {
   );
 };
 
-export default DynamicPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 // dynamic utility
 export const dynamic = (): JSX.Element => {
@@ -146,4 +145,6 @@ export const dynamic = (): JSX.Element => {
   return null;
 };
 
-export default dynamic;
+
+
+export default dynami;c;

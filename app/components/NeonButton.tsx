@@ -317,7 +317,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   );
 };
 ;
-export default NeonButtonPage;
   constvariantClasses= {
   primary: "bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl"
     secondary: "bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl"
@@ -360,7 +359,8 @@ export default NeonButtonPage;
   )
 }
 ;
-export default NeonButton
   );
 };
-export default NeonButton;"
+
+
+export default NeonButto;n;"

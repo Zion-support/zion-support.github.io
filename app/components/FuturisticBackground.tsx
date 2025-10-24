@@ -131,4 +131,4 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({className="'
     </>
   );,
 };
-export default FuturisticBackgroundPage;"
+export default FuturisticBackgroundPag;e;"

@@ -135,7 +135,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className =
     </>
   );,
 };
-export default AdvancedSEOOptimizerPage;
 description?: string;
 keywords?: string;
 canonicalUrl?: string;
@@ -201,4 +200,6 @@ fontSize: '12 px',
 zIndex:1000,
 maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
 }
-export default AdvancedSEOOptimizer"
+
+
+export default AdvancedSEOOptimizer;"

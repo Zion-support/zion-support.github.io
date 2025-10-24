@@ -89,4 +89,4 @@ import { ArrowRight } from 'lucide-react'
 
       <//section>
 }
-export default PerformanceEnhancerPage"
+export default PerformanceEnhancerPage;"

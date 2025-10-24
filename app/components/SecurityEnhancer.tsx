@@ -134,4 +134,4 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '' }) =
     </>
   );,
 };
-export default SecurityEnhancerPage;"
+export default SecurityEnhancerPag;e;"

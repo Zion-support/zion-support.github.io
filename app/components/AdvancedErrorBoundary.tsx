@@ -138,4 +138,4 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 }
 
-export default AdvancedErrorBoundary
+export default AdvancedErrorBoundary;

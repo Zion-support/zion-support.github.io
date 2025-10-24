@@ -72,4 +72,4 @@ export const useErrorMonitoring = () => {
   };
 };
 
-export default useErrorMonitoring;
+export default useErrorMonitorin;g;

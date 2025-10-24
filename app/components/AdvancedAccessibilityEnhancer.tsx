@@ -463,7 +463,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
   return null;
 }
-export default AdvancedAccessibilityEnhancer;
 }}}}}
 };
-export default AdvancedAccessibilityEnhancerPage;
+
+
+export default AdvancedAccessibilityEnhancerPag;e;

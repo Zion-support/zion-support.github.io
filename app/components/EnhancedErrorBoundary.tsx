@@ -222,7 +222,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
     </>
   );,
 };
-export default EnhancedErrorBoundaryPage;
+export default EnhancedErrorBoundaryPag;e;
   error?: Error;
   errorInfo?: ErrorInfo}
 class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {}

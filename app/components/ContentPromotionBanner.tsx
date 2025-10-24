@@ -218,4 +218,4 @@ const ContentPromotionBanner: React.FC = () => {const benefits: ";"
   ),
 }
 ;"
-export default ContentPromotionBanner
+export default ContentPromotionBanner;

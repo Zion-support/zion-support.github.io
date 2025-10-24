@@ -221,4 +221,4 @@ const UltimateBusinessIntelligence2025Banner = () => {
   );
 };
 
-export default UltimateBusinessIntelligence2025Banner;
+export default UltimateBusinessIntelligence2025Banne;r;

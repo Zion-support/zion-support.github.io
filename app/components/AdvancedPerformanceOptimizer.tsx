@@ -384,8 +384,9 @@ if ('gtag' in window) {
   return null;
 }
 ;
-export default AdvancedPerformanceOptimizer
 }}}}}
 };</AdvancedPerformanceOptimizerProp>
-export default AdvancedPerformanceOptimizerPage;</AdvancedPerformanceOptimizerProp>"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+
+
+export default AdvancedPerformanceOptimizerPag;e;</AdvancedPerformanceOptimizerProp>"

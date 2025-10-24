@@ -112,4 +112,4 @@ const PWAInstaller: React.FC = () => {const [deferredPrompt, setDeferredPrompt] 
   )
 }
 ;
-export default PWAInstaller"
+export default PWAInstaller;"

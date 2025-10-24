@@ -67,7 +67,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {const features = [
     <//>
   );
 };
-export default ServiceWorkerRegistrationPage;
+export default ServiceWorkerRegistrationPag;e;
                 </div>
 
                 <//div>

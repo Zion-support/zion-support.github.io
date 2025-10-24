@@ -134,7 +134,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ className = '' }) => {
     </>
   );,
 };
-export default ServiceCardPage;
 price?: string;
 popular?: boolean;
 onSelect?: () =>void;
@@ -183,4 +182,6 @@ Get Started
 </div>
 )
 }
-export default ServiceCard"
+
+
+export default ServiceCard;"

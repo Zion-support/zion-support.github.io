@@ -61,7 +61,7 @@ const ImageOptimizerPage: React.FC = () => {
   )
 }
 
-export default function ImageOptimizer({ className }: ImageOptimizerProps) {
+export default function; ImageOptimizer({ className }: ImageOptimizerProps) {
   return (
     <div className={className}>
       <h1>Image Optimizer</h1>

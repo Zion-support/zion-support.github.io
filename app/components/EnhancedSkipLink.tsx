@@ -134,7 +134,6 @@ const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '' }) =
     </>
   );,
 };
-export default EnhancedSkipLinkPage;
 e.preventDefault();"
 constmain="do" cument.querySelector('#main-content');
 if (mai n) {main.focus()}
@@ -145,4 +144,6 @@ main.scrollIntoView({behavior: 'smooth'})
 Skip to maincontent</a>
 )
 }
-export default EnhancedSkipLink"
+
+
+export default EnhancedSkipLink;"

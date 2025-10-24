@@ -1,231 +1,163 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrors(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let hasChanges = false;
+    let fixed = false;
     
-    // Fix common syntax issues
+    // Fix common syntax errors
     const fixes = [
-      // Fix unescaped quotes in JSX
-      {
-        pattern: /(\s*)([^>]*)([^<]*'[^']*'[^<]*)([^>]*)(\s*)/g,
-        replacement: (match, before, start, middle, end, after) => {
-          const fixedMiddle = middle.replace(/'/g, '&apos;');
-          return before + start + fixedMiddle + end + after;
-        }
-      },
+      // Fix missing semicolons after closing braces
+      { pattern: /(\s+)\)\s*}\s*$/, replacement: '$1);\n};' },
       
-      // Fix missing semicolons after variable declarations
-      {
-        pattern: /(const|let|var)\s+(\w+)\s*=\s*[^;]+(?!;)(\s*)(?=\n)/g,
-        replacement: '$1 $2 = $3;'
-      },
+      // Fix missing semicolons after closing parentheses
+      { pattern: /(\s+)\)\s*$/, replacement: '$1);' },
       
-      // Fix missing closing braces
-      {
-        pattern: /(\{[^}]*)(\s*)(?=\n\s*[a-zA-Z])/g,
-        replacement: '$1}$2'
-      },
+      // Fix missing closing tags
+      { pattern: /<Link;\s*$/, replacement: '<Link' },
       
-      // Fix JSX attribute syntax issues
-      {
-        pattern: /(\w+)\s*=\s*([^"'>\s]+)(?=\s|>)/g,
-        replacement: '$1="$2"'
-      },
+      // Fix duplicate imports
+      { pattern: /import React from 'react';\s*import React from 'react'/, replacement: "import React from 'react';" },
       
-      // Fix missing commas in object literals
-      {
-        pattern: /(\w+)\s*:\s*([^,}]+)(\s*)(?=\n\s*\w+\s*:)/g,
-        replacement: '$1: $2,$3'
-      },
+      // Fix export default with wrong name
+      { pattern: /export default PagePage;/, replacement: 'export default AccessibilityPage;' },
       
-      // Fix missing closing parentheses
-      {
-        pattern: /(\w+\s*\([^)]*)(\s*)(?=\n\s*[a-zA-Z])/g,
-        replacement: '$1)$2'
-      },
+      // Fix malformed JSX
+      { pattern: /}\s*,\s*-\s*>\s*/, replacement: '}\n' },
       
-      // Fix malformed JSX expressions
-      {
-        pattern: /\{\s*([^}]*)\s*\}/g,
-        replacement: (match, expr) => {
-          // Fix common JSX expression issues
-          let fixed = expr
-            .replace(/(\w+)\s*=\s*([^,}]+)(?=\s*[,}])/g, '$1: $2')
-            .replace(/(\w+)\s*:\s*([^,}]+)(?=\s*[,}])/g, '$1: $2');
-          return `{${fixed}}`;
-        }
-      },
+      // Fix missing semicolons in export statements
+      { pattern: /export default (\w+)(?!;)/, replacement: 'export default $1;' },
       
-      // Fix missing return statements
-      {
-        pattern: /(const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*)(?!return)([^;{]+)(;?)/g,
-        replacement: '$1return $2$3'
-      },
+      // Fix malformed closing tags
+      { pattern: /}\s*`\s*-\s*>\s*/, replacement: '}\n' },
       
-      // Fix malformed function declarations
-      {
-        pattern: /(function\s+\w+\s*\([^)]*\)\s*)(?!\{)/g,
-        replacement: '$1{'
-      },
-      
-      // Fix missing closing tags in JSX
-      {
-        pattern: /(<(\w+)[^>]*>)([^<]*)(?!<\/\2>)(\s*)(?=\n)/g,
-        replacement: '$1$3$4</$2>'
-      }
+      // Fix missing closing parentheses in JSX
+      { pattern: /(\s+)\}\s*`\s*-\s*>\s*/, replacement: '$1}\n' },
     ];
     
-    // Apply fixes
-    fixes.forEach(fix => {
+    for (const fix of fixes) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        hasChanges = true;
+        fixed = true;
       }
-    });
+    }
     
-    // Additional specific fixes for common patterns
-    const specificFixes = [
-      // Fix missing export statements
-      {
-        pattern: /^(const\s+\w+\s*=)/gm,
-        replacement: 'export $1'
-      },
+    // Remove duplicate function definitions
+    const lines = content.split('\n');
+    const functionLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].includes('const ') && lines[i].includes('= () => {')) {
+        functionLines.push(i);
+      }
+    }
+    
+    if (functionLines.length > 1) {
+      // Keep only the last function definition
+      const lastFunction = functionLines[functionLines.length - 1];
+      const newLines = lines.slice(0, lastFunction);
       
-      // Fix missing React imports
-      {
-        pattern: /^(import.*from\s+['"]react['"];?\s*)?(export\s+default\s+function)/m,
-        replacement: "import React from 'react';\n$2"
-      },
+      // Add the rest of the file after the last function
+      for (let i = lastFunction; i < lines.length; i++) {
+        newLines.push(lines[i]);
+      }
       
-      // Fix missing semicolons at end of statements
-      {
-        pattern: /([^;{}])(\s*)(?=\n\s*[a-zA-Z])/g,
-        replacement: '$1;$2'
-      }
-    ];
+      content = newLines.join('\n');
+      fixed = true;
+    }
     
-    specificFixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        hasChanges = true;
-      }
-    });
+    // Remove duplicate imports
+    const importLines = [];
+    const seenImports = new Set();
     
-    if (hasChanges) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].startsWith('import ')) {
+        const importKey = lines[i].trim();
+        if (!seenImports.has(importKey)) {
+          importLines.push(i);
+          seenImports.add(importKey);
+        }
+      }
+    }
+    
+    if (importLines.length > 0) {
+      const newLines = [];
+      let lastImportLine = importLines[importLines.length - 1];
+      
+      for (let i = 0; i < lines.length; i++) {
+        if (i <= lastImportLine) {
+          if (lines[i].startsWith('import ') && importLines.includes(i)) {
+            newLines.push(lines[i]);
+          } else if (!lines[i].startsWith('import ')) {
+            newLines.push(lines[i]);
+          }
+        } else {
+          newLines.push(lines[i]);
+        }
+      }
+      
+      content = newLines.join('\n');
+      fixed = true;
+    }
+    
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
   }
 }
 
-// Get all files with syntax errors
-const filesWithErrors = [
-  './app/404.tsx',
-  './app/ai-customer-support/page-backup.tsx',
-  './app/ai-customer-support/page-fixed.tsx',
-  './app/case-studies/page.tsx',
-  './app/compliance/page-backup.tsx',
-  './app/compliance/page-fixed.tsx',
-  './app/components/AccessibilityComponents.tsx',
-  './app/components/AccessibilityUtils.tsx',
-  './app/components/AdvancedAccessibilityEnhancer.tsx',
-  './app/components/AdvancedErrorBoundary.tsx',
-  './app/components/AdvancedPerformanceMonitor.tsx',
-  './app/components/AdvancedPerformanceOptimizer.tsx',
-  './app/components/AdvancedSEOOptimizer.tsx',
-  './app/components/AdvancedSEOOptimizer_new.tsx',
-  './app/components/Analytics.tsx',
-  './app/components/AnalyticsProvider.tsx',
-  './app/components/AnimatedCounter.tsx',
-  './app/components/Breadcrumb.tsx',
-  './app/components/ContentCarousel.tsx',
-  './app/components/ContentNewsletterSignup.tsx',
-  './app/components/ContentPreviewCard.tsx',
-  './app/components/ContentPromotionBanner.tsx',
-  './app/components/ContentStatistics.tsx',
-  './app/components/DynamicContentShowcase.tsx',
-  './app/components/EnhancedAccessibility.tsx',
-  './app/components/EnhancedAccessibilityEnhancer.tsx',
-  './app/components/EnhancedAnalytics.tsx',
-  './app/components/EnhancedErrorBoundary.tsx',
-  './app/components/EnhancedHero.tsx',
-  './app/components/EnhancedLoading.tsx',
-  './app/components/EnhancedLoadingStates.tsx',
-  './app/components/EnhancedPerformanceMonitor.tsx',
-  './app/components/EnhancedPerformanceOptimizer.tsx',
-  './app/components/EnhancedSEO.tsx',
-  './app/components/EnhancedSEOHead.tsx',
-  './app/components/EnhancedSEOOptimizer.tsx',
-  './app/components/EnhancedServicesShowcase.tsx',
-  './app/components/EnhancedSkipLink.tsx',
-  './app/components/ErrorBoundary.tsx',
-  './app/components/ErrorHandler.tsx',
-  './app/components/FuturisticBackground.tsx',
-  './app/components/FuturisticHero.tsx',
-  './app/components/FuturisticServiceCard.tsx',
-  './app/components/GlobalErrorBoundary.tsx',
-  './app/components/Header.tsx',
-  './app/components/ImageOptimizer.tsx',
-  './app/components/LazyImage.tsx',
-  './app/components/Loading.tsx',
-  './app/components/LoadingSkeleton.tsx',
-  './app/components/LoadingSpinner.tsx',
-  './app/components/LoadingStates.tsx',
-  './app/components/NeonButton.tsx',
-  './app/components/NotFoundPage.tsx',
-  './app/components/OptimizedImage.tsx',
-  './app/components/OptimizedLoadingSpinner.tsx',
-  './app/components/PWAInstaller.tsx',
-  './app/components/PerformanceDashboard.tsx',
-  './app/components/PerformanceEnhancer.tsx',
-  './app/components/PerformanceImage.tsx',
-  './app/components/PerformanceMonitor.tsx',
-  './app/components/PerformanceOptimizations.tsx',
-  './app/components/PerformanceOptimizer.tsx',
-  './app/components/ResponsiveContainer.tsx',
-  './app/components/SEOEnhancer.tsx',
-  './app/components/SEOHead.tsx',
-  './app/components/SEOOptimizer.tsx',
-  './app/components/SecurityEnhancer.tsx',
-  './app/components/ServiceCard.tsx',
-  './app/components/ServiceCardSkeleton.tsx',
-  './app/components/ServicePageTemplate.tsx',
-  './app/components/ServiceWorker.tsx',
-  './app/components/ServiceWorkerRegistration.tsx',
-  './app/components/Sidebar.tsx',
-  './app/components/SkipLink.tsx',
-  './app/components/SystemMonitor.tsx',
-  './app/components/UserExperienceEnhancer.tsx',
-  './app/components/utils/accessibilityUtils.ts',
-  './app/config/errorBoundaryConfig.tsx',
-  './app/utils/image.tsx',
-  './app/utils/performanceEnhancer.ts',
-  './app/utils/performanceMetrics.ts',
-  './app/utils/performanceMonitoring.ts',
-  './app/utils/securityHeaders.ts',
-  './app/utils/seoEnhancer.ts',
-  './app/utils/sitemapGenerator.ts',
-  './app/utils/testUtils.ts'
-];
+function findFilesWithErrors(dir) {
+  const files = [];
+  
+  function searchDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        searchDirectory(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  searchDirectory(dir);
+  return files;
+}
 
-let fixedCount = 0;
-filesWithErrors.forEach(file => {
-  if (fs.existsSync(file)) {
-    if (fixSyntaxErrors(file)) {
+function main() {
+  console.log('🔍 Fixing syntax errors in files...');
+  
+  const files = findFilesWithErrors('./app');
+  console.log(`Found ${files.length} files to check`);
+  
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixFile(file)) {
       fixedCount++;
     }
   }
-});
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`✅ Fixed: ${fixedCount} files`);
+  console.log(`❌ Failed: ${files.length - fixedCount} files`);
+  
+  console.log('\n🎉 Syntax error fix completed!');
+}
 
-console.log(`\nFixed syntax errors in ${fixedCount} files.`);
+main();

@@ -319,4 +319,4 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ cla
     <//>
   );
 };
-export default PerformanceOptimizationsPage;"
+export default PerformanceOptimizationsPag;e;"

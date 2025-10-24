@@ -135,7 +135,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '' }) => {
     </>
   );,
 };
-export default LoadingSpinnerPage;
 color?: 'primary' | 'secondary' | 'white'
 text?: string}
 const LoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
@@ -163,4 +162,6 @@ return (
 </div>
 )
 }
-export default LoadingSpinner"
+
+
+export default LoadingSpinner;"

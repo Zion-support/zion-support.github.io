@@ -323,7 +323,6 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
   );,
 };
 
-export default ContentCarouselPage;
             <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
       </div>
@@ -331,5 +330,7 @@ export default ContentCarouselPage;
   )
 }
 ;"
-export default ContentCarousel
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+
+export default ContentCarousel;

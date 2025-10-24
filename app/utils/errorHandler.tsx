@@ -138,7 +138,6 @@ const ErrorHandlerPage: React.FC = () => {
   );
 };
 
-export default ErrorHandlerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -147,4 +146,6 @@ const errorHandler = (): JSX.Element => {
   return null;
 };
 
-export default errorHandler;
+
+
+export default errorHandle;r;

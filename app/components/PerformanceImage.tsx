@@ -61,6 +61,7 @@ const PerformanceImagePage: React.FC = () => {
   )
 }
 ;
-export default PerformanceImagePage;
 
-export default PerformanceImagePage;"
+
+
+export default PerformanceImagePag;e;"

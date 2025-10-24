@@ -106,4 +106,4 @@ export const config=";"</string>
 customConfig?: Partial<SecurityHeadersConfig>;}</SecurityHeadersConfig>
 ): Array<{key: string; value: string }> {}
 export const headers=";";"
-export default defaultSecurityHeaders
+export default defaultSecurityHeaders;

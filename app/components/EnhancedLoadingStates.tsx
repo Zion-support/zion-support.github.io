@@ -134,7 +134,7 @@ const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className
     </>
   );,
 };
-export default EnhancedLoadingStatesPage;
+export default EnhancedLoadingStatesPag;e;
 sm: 'w-4 h-4',
 md: 'w-8 h-8',
 lg: 'w-12h-1 2'}

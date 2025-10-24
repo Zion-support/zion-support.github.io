@@ -255,5 +255,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
   );,
 };
 
-export default SEOEnhancerPage;
+export default SEOEnhancerPag;e;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
 
-export default function NotFound() {
   const popularPages = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -121,5 +120,7 @@ export default function NotFound() {
     </div>
   );
 }
-export default NotFound;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+
+export default NotFoun;d;
