@@ -1,35 +1,29 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix JSX structure in a single file
-function fixJsxStructure(filePath) {
+// Function to fix missing closing div in a single file
+function fixMissingClosingDiv(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Check if this is a page component with the standard structure
     if (content.includes('export default function') && content.includes('return (') && content.includes('<div>')) {
-      // Look for the pattern where there are malformed closing divs
-      if (content.includes('      <Footer />\n          </div>\n    </div>')) {
-        content = content.replace('      <Footer />\n          </div>\n    </div>', '      <Footer />\n    </div>');
-        modified = true;
-      }
-
-      // Fix other malformed closing patterns
-      if (content.includes('      <Footer />\n        </div>\n      </div>')) {
-        content = content.replace('      <Footer />\n        </div>\n      </div>', '      </div>\n      <Footer />\n    </div>');
-        modified = true;
-      }
-
-      // Fix missing closing div before Footer
+      // Look for the pattern where there's a missing closing div before Footer
       if (content.includes('        </div>\n      <Footer />')) {
         content = content.replace('        </div>\n      <Footer />', '        </div>\n      </div>\n      <Footer />');
         modified = true;
       }
 
-      // Fix extra closing divs
-      if (content.includes('      </div>\n      </div>\n      <Footer />')) {
-        content = content.replace('      </div>\n      </div>\n      <Footer />', '      </div>\n      <Footer />');
+      // Fix other missing closing div patterns
+      if (content.includes('          </div>\n      <Footer />')) {
+        content = content.replace('          </div>\n      <Footer />', '          </div>\n        </div>\n      </div>\n      <Footer />');
+        modified = true;
+      }
+
+      // Fix missing closing div for the main content wrapper
+      if (content.includes('        </div>\n    </div>\n  );\n}') && !content.includes('      </div>')) {
+        content = content.replace('        </div>\n    </div>\n  );\n}', '        </div>\n      </div>\n    </div>\n  );\n}');
         modified = true;
       }
     }
@@ -65,7 +59,7 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Starting JSX structure fix...');
+console.log('Starting missing closing div fix...');
 const appDir = path.join(__dirname, 'app');
 const tsxFiles = findTsxFiles(appDir);
 
@@ -73,10 +67,10 @@ console.log(`Found ${tsxFiles.length} .tsx files`);
 
 let fixedCount = 0;
 for (const file of tsxFiles) {
-  if (fixJsxStructure(file)) {
+  if (fixMissingClosingDiv(file)) {
     fixedCount++;
   }
 }
 
 console.log(`Fixed ${fixedCount} files`);
-console.log('JSX structure fix complete!');
+console.log('Missing closing div fix complete!');

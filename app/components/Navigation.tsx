@@ -107,7 +107,7 @@ const Navigation = () => {
               go wrong! 🤖
             </p>
           </div>
-        </div>
+      </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -127,7 +127,7 @@ const Navigation = () => {
           </div>
         )}
       </div>
-    </>
+    
   );
 };
 

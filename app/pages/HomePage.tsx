@@ -1,12 +1,12 @@
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import Link  } from 'next/link'
-import  ArrowRightIcon ShieldCheckIcon CloudIcon CpuChipIcon ChartBarIcon GlobeAltIcon PhoneIcon EnvelopeIcon MapPinIcon } from 'heroicons/react/24/outline'  
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import Link  } from 'next/link';
+import  ArrowRightIcon ShieldCheckIcon CloudIcon CpuChipIcon ChartBarIcon GlobeAltIcon PhoneIcon EnvelopeIcon MapPinIcon } from 'heroicons/react/24/outline'  ;
 
 export default function HomePage() {  return (
     <>
     
-  </>
+  
       <Helmet></Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." /></meta>
@@ -75,7 +75,7 @@ export default function HomePage() {  return (
                 <CpuChipIcon className="w-8 h-8 text-white" /></CpuChipIcon>
               </div>
         <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
-                </div><CpuChipIcon className="w-8 h-8 text-white" /> </CpuChipIcon></div></>
+                </div><CpuChipIcon className="w-8 h-8 text-white" /> </CpuChipIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
               <p className="text-gray-300 mb-6">
                 Advanced artificial intelligence services including machine learning</p>
@@ -175,7 +175,7 @@ export default function HomePage() {  return (
               </Link>
             </div>
           </div>
-        </div>,
+      </div>,
       </section>,
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>

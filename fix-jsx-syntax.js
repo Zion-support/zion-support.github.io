@@ -1,68 +1,85 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix JSX syntax issues
-function fixJsxSyntax(content) {
-  // Fix malformed JSX attributes with mixed quotes
-  content = content.replace(/className="([^"]*)"\n/g, 'className="$1"\n');
-  content = content.replace(/className='([^']*)'\n/g, "className='$1'\n");
-  
-  // Fix unterminated JSX attributes
-  content = content.replace(/className="([^"]*)\n/g, 'className="$1"\n');
-  content = content.replace(/className='([^']*)\n/g, "className='$1'\n");
-  
-  // Fix malformed JSX closing tags
-  content = content.replace(/<\/h1>''\n/g, '</h1>\n');
-  content = content.replace(/<\/h1>""\n/g, '</h1>\n');
-  content = content.replace(/<\/div>''\n/g, '</div>\n');
-  content = content.replace(/<\/div>""\n/g, '</div>\n');
-  content = content.replace(/<\/p>''\n/g, '</p>\n');
-  content = content.replace(/<\/p>""\n/g, '</p>\n');
-  
-  // Fix malformed JSX text content
-  content = content.replace(/>([^<]*);''\n/g, '>$1\n');
-  content = content.replace(/>([^<]*);""\n/g, '>$1\n');
-  
-  // Fix stray quotes in JSX
-  content = content.replace(/>''\n/g, '>\n');
-  content = content.replace(/>""\n/g, '>\n');
-  
-  // Fix malformed object properties in JSX
-  content = content.replace(/(\w+):\s*"([^"]*)',/g, '$1: "$2",');
-  content = content.replace(/(\w+):\s*'([^']*)",/g, "$1: '$2',");
-  
-  return content;
-}
+// Function to fix JSX syntax in a single file
+function fixJsxSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-// Function to recursively find and fix files
-function fixFilesInDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  
-  files.forEach(file => {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixFilesInDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        const originalContent = content;
-        
-        content = fixJsxSyntax(content);
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content, 'utf8');
-          console.log(`Fixed: ${filePath}`);
-        }
-      } catch (error) {
-        console.error(`Error processing ${filePath}:`, error.message);
-      }
+    // Fix malformed closing div tags
+    if (content.includes('        </div>\n        </div>')) {
+      content = content.replace('        </div>\n        </div>', '        </div>\n      </div>');
+      modified = true;
     }
-  });
+
+    // Fix extra closing braces
+    if (content.includes('  );\n}\n}')) {
+      content = content.replace('  );\n}\n}', '  );\n}');
+      modified = true;
+    }
+
+    // Fix malformed closing div with extra closing brace
+    if (content.includes('      <Footer />\n          </div>\n    </div>\n  );\n}\n}')) {
+      content = content.replace('      <Footer />\n          </div>\n    </div>\n  );\n}\n}', '      <Footer />\n    </div>\n  );\n}');
+      modified = true;
+    }
+
+    // Fix missing closing div tags
+    if (content.includes('</div>);') && !content.includes('      </div>')) {
+      content = content.replace('</div>);', '      </div>\n    </div>\n  );\n}');
+      modified = true;
+    }
+
+    // Fix malformed function endings
+    if (content.includes(');}') && !content.includes('  );')) {
+      content = content.replace(/\);}/g, '\n  );\n}');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+  return false;
 }
 
-// Start fixing from the workspace root
-console.log('Starting JSX syntax fixes...');
-fixFilesInDirectory('/workspace');
-console.log('JSX syntax fixes completed!');
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Main execution
+console.log('Starting JSX syntax fix...');
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} .tsx files`);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixJsxSyntax(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);
+console.log('JSX syntax fix complete!');
