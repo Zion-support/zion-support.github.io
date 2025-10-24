@@ -38,8 +38,6 @@
     ]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
     ".next/types/**/*.ts",
     "app/**/*.tsx",
     "app/**/*.ts",
@@ -53,7 +51,6 @@
     "types",
     "temp-files",
     "corrupted-src-backup",
-    "corrupted-pages-backup",
     "problematic-files-backup",
     "problematic-pages",
     "**/ai-pages-backup/**",

@@ -37,7 +37,7 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
+    (global as typeof global & { fetch: typeof fetch }).fetch = (global as any).jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
@@ -206,12 +206,15 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
+     
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
+     
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
     }
+     
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
     }

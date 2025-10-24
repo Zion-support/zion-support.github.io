@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface EnhancedLoadingProps {
-  // Add props here;
+  className?: string;
 }
 
 const _EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
@@ -13,3 +13,4 @@ const _EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
 };
 
 export default _EnhancedLoading;
+
