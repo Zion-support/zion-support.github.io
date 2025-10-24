@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
-import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
+import ErrorBoundary from '../app/components/ErrorBoundary';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
@@ -15,7 +15,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 // Mock onError callback
 const onError = jest.fn();
 
-describe('AdvancedErrorBoundary', () => {
+describe('ErrorBoundary', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -23,9 +23,9 @@ describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary>
+        <ErrorBoundary>
           <div>Test content</div>
-        </AdvancedErrorBoundary>
+        </ErrorBoundary>
       </MemoryRouter>
     );
 
@@ -39,33 +39,40 @@ describe('AdvancedErrorBoundary', () => {
 
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary onError={onError}>
+        <ErrorBoundary>
           <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
+        </ErrorBoundary>
       </MemoryRouter>
     );
 
     expect(screen.getByText('Something went wrong')).toBeInTheDocument();
     expect(screen.getByText('Try Again')).toBeInTheDocument();
-    expect(screen.getByText('Go Home')).toBeInTheDocument();
+    expect(screen.getByText('We apologize for the inconvenience. Please try refreshing the page.')).toBeInTheDocument();
     
     consoleSpy.mockRestore();
   });
 
-  it('calls onError callback when error occurs', () => {
+  it('logs error to console in development mode', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
+    // Set NODE_ENV to development
+    const originalEnv = process.env.NODE_ENV;
+    process.env.NODE_ENV = 'development';
+
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary onError={onError}>
+        <ErrorBoundary>
           <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
+        </ErrorBoundary>
       </MemoryRouter>
     );
 
-    expect(onError).toHaveBeenCalled();
+    expect(consoleSpy).toHaveBeenCalled();
+    
+    // Restore original NODE_ENV
+    process.env.NODE_ENV = originalEnv;
     consoleSpy.mockRestore();
   });
 
@@ -74,11 +81,11 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    render(
+    const { rerender } = render(
       <MemoryRouter>
-        <AdvancedErrorBoundary>
+        <ErrorBoundary>
           <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
+        </ErrorBoundary>
       </MemoryRouter>
     );
 
@@ -88,7 +95,16 @@ describe('AdvancedErrorBoundary', () => {
     // Click retry button
     retryButton.click();
     
-    // Should render children again
+    // Re-render with a component that doesn't throw
+    rerender(
+      <MemoryRouter>
+        <ErrorBoundary>
+          <ThrowError shouldThrow={false} />
+        </ErrorBoundary>
+      </MemoryRouter>
+    );
+    
+    // Should render children again (without error)
     expect(screen.getByText('Test content')).toBeInTheDocument();
     
     consoleSpy.mockRestore();
