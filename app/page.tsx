@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Users, Zap, Shield } from 'lucide-react'
+import { Shield } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const features = [

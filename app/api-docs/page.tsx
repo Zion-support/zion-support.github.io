@@ -6,8 +6,8 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [_copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [searchQuery, _setSearchQuery] = useState('');
 
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);

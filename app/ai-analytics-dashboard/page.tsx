@@ -3,25 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import {
-  BarChart3,
-  TrendingUp,
-  PieChart,
-  Activity,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Users,
-  Zap,
-  Star as StarIcon,
-  CheckCircle as Check,
-  ArrowRight as Arrow,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as Location
-} from 'lucide-react'
+import { BarChart3, PieChart, Activity, CheckCircle, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
