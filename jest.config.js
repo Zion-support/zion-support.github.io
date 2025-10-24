@@ -33,17 +33,29 @@ const customJestConfig = {
   transformIgnorePatterns: [
     '/node_modules/',
     '^.+\\\\.module\\\\.(css|sass|scss)$',
+<<<<<<< HEAD
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+=======
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testMatch: [
+    '<rootDir>/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '<rootDir>/**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+  ],
+>>>>>>> ccdd793f83f956daa600fba7f9424f13ae1ffb73
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
+<<<<<<< HEAD
   ],
   testMatch: [
     '<rootDir>/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
     '<rootDir>/**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+=======
+>>>>>>> ccdd793f83f956daa600fba7f9424f13ae1ffb73
   ],
 }
 
