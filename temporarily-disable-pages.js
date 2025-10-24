@@ -35,8 +35,7 @@ const fullPath = path.join(dir, item);
 const content = fs.readFileSync(fullPath, 'utf8');
         if (content.includes(';\nexport default function ServicePage()') || 
             content.includes('return (<div>') ||
-            content.includes('<<<<<<< HEAD')) {
-          disablePage(fullPath);
+            content.includes('          disablePage(fullPath);
         }
       } catch (error) {
         // If we can't read the file, disable it
