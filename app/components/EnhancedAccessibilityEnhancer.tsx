@@ -1,16 +1,15 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
 
 interface EnhancedAccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableVoiceNavigation?: boolean
-
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableVoiceNavigation?: boolean;
+}
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   children,
@@ -18,134 +17,137 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   enableScreenReaderSupport: _enableScreenReaderSupport = true,
   enableHighContrast: _enableHighContrast = false,
   enableFocusManagement: _enableFocusManagement = true,
-  enableVoiceNavigation = false,
+  enableVoiceNavigation: _enableVoiceNavigation = false,
 }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false)
-  const [_fontSize, setFontSize] = useState('medium')
-  const [isReducedMotion, setIsReducedMotion] = useState(false)
-  const [isVoiceEnabled, setIsVoiceEnabled] = useState(false)
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [_fontSize, setFontSize] = useState('medium');
+  const [isVoiceEnabled, setIsVoiceEnabled] = useState(false);
 
   useEffect(() => {
-    // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setIsReducedMotion(mediaQuery.matches)
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
 
     // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
-    setIsHighContrast(highContrastQuery.matches)
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(highContrastQuery.matches);
 
     // Apply accessibility enhancements
-    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
+    document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
     
     if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast')
-    
+      document.documentElement.classList.add('high-contrast');
+    }
     
     if (isReducedMotion) {
-      document.documentElement.classList.add('reduced-motion')
-    
+      document.documentElement.classList.add('reduced-motion');
+    }
 
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation')
-      
+        document.body.classList.add('keyboard-navigation');
+      }
       
       // Add skip links functionality
       if (event.key === 'Enter' && event.target instanceof HTMLElement) {
         if (event.target.getAttribute('data-skip-link')) {
-          const targetId = event.target.getAttribute('data-skip-link')
-          const target = document.getElementById(targetId || '')
+          const targetId = event.target.getAttribute('data-skip-link');
+          const target = document.getElementById(targetId || '');
           if (target) {
-            target.focus()
-            target.scrollIntoView({ behavior: 'smooth' })
-          
-        
-      
-    }
+            target.focus();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+    };
 
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation')
-    }
+      document.body.classList.remove('keyboard-navigation');
+    };
 
-    document.addEventListener('keydown', handleKeyDown)
-    document.addEventListener('mousedown', handleMouseDown)
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.removeEventListener('mousedown', handleMouseDown)
-    }
-  }, [isHighContrast, isReducedMotion])
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, [isHighContrast, isReducedMotion]);
 
   const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast)
-    document.documentElement.classList.toggle('high-contrast')
-  }
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast');
+  };
 
   const changeFontSize = (size: string) => {
-    setFontSize(size)
-    document.documentElement.setAttribute('data-font-size', size)
-  }
+    setFontSize(size);
+    document.documentElement.setAttribute('data-font-size', size);
+  };
 
-  const toggleVoiceNavigation = () => {
-    if (enableVoiceNavigation && 'speechSynthesis' in window) {
-      setIsVoiceEnabled(!isVoiceEnabled)
-    
-  }
+  const toggleVoice = () => {
+    setIsVoiceEnabled(!isVoiceEnabled);
+    if (!isVoiceEnabled) {
+      // Enable voice navigation
+      document.documentElement.setAttribute('data-voice-enabled', 'true');
+    } else {
+      // Disable voice navigation
+      document.documentElement.removeAttribute('data-voice-enabled');
+    }
+  };
 
   return (
-    <div className="accessibility-enhanced"></div>
+    <div className="accessibility-enhanced">
       <div 
         className="accessibility-controls" 
-        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }
-      ></div>
+        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
+      >
         <button
-          onClick={toggleHighContrast
+          onClick={toggleHighContrast}
           className="accessibility-button"
           aria-label="Toggle high contrast"
         >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
         
-        <div className="font-size-controls"></div>
+        <div className="font-size-controls">
           <button
-            onClick={() => changeFontSize('small')
+            onClick={() => changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
             A
           </button>
           <button
-            onClick={() => changeFontSize('medium')
+            onClick={() => changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
             A
           </button>
           <button
-            onClick={() => changeFontSize('large')
+            onClick={() => changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"
           >
             A
           </button>
         </div>
-
-        {enableVoiceNavigation && (
+        
+        {_enableVoiceNavigation && (
           <button
-            onClick={toggleVoiceNavigation
+            onClick={toggleVoice}
             className="accessibility-button"
             aria-label="Toggle voice navigation"
           >
-            {isVoiceEnabled ? '🔊' : '🔇'
+            {isVoiceEnabled ? '🔊' : '🔇'}
           </button>
-        )
+        )}
       </div>
-      {children
+      {children}
     </div>
-  )
-}
+  );
+};
 
-}
-
-export default EnhancedAccessibilityEnhancer;}
+export default EnhancedAccessibilityEnhancer;

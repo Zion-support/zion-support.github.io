@@ -1,4 +1,4 @@
-'use client'
+'use client';
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing
@@ -8,8 +8,8 @@
  * Wait for a specified amount of time
  */
 export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms))
-}
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
 
 /**
  * Wait for a condition to be true
@@ -19,14 +19,14 @@ export const waitFor = async (
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
-  const startTime = Date.now()
+  const startTime = Date.now();
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
     }
-    await wait(interval)
+    await wait(interval);
   }
-}
+};
 
 /**
  * Mock fetch for testing
@@ -37,7 +37,7 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
+    (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
@@ -45,271 +45,300 @@ export const mockFetch = (
         json: async () => response,
         text: async () => JSON.stringify(response)
       } as Response)
-    ) as typeof fetch
+    ) as typeof fetch;
   }
-}
+};
 
 /**
- * Mock local storage
+ * Create a mock function
  */
-export class MockStorage implements Storage {
-  private store: Map<string, string> = new Map()
-
-  get length(): number {
-    return this.store.size
-  }
-
-  clear(): void {
-    this.store.clear()
-  }
-
-  getItem(key: string): string | null {
-    return this.store.get(key) || null
-  }
-
-  key(index: number): string | null {
-    const keys = Array.from(this.store.keys())
-    return keys[index] || null
-  }
-
-  removeItem(key: string): void {
-    this.store.delete(key)
-  }
-
-  setItem(key: string, value: string): void {
-    this.store.set(key, value)
-  }
-}
+export const createMockFunction = <T extends (..._args: unknown[]) => unknown>(
+  implementation?: T
+): T => {
+  return (implementation || (() => {})) as T;
+};
 
 /**
- * Create a mock localStorage for testing
+ * Mock console methods for testing
  */
-export const createMockStorage = (): MockStorage => {
-  return new MockStorage()
-}
+export const mockConsole = {
+  log: createMockFunction<typeof console.log>(),
+  error: createMockFunction<typeof console.error>(),
+  warn: createMockFunction<typeof console.warn>(),
+  info: createMockFunction<typeof console.info>(),
+};
 
 /**
- * Mock window object
+ * Restore console methods
  */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
-    Object.defineProperty(global, 'window', {
-      value: {
-        ...global.window,
-        ...overrides
+export const restoreConsole = (): void => {
+  // In a real test environment, you would restore the original console methods
+  // This is a placeholder for the actual implementation
+};
+
+/**
+ * Create a mock element for testing
+ */
+export const createMockElement = (tagName: string, attributes: Record<string, string> = {}): HTMLElement => {
+  const element = document.createElement(tagName);
+  Object.entries(attributes).forEach(([key, value]) => {
+    element.setAttribute(key, value);
+  });
+  return element;
+};
+
+/**
+ * Simulate user interaction
+ */
+export const simulateClick = (element: HTMLElement): void => {
+  const event = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+    view: window
+  });
+  element.dispatchEvent(event);
+};
+
+/**
+ * Simulate keyboard input
+ */
+export const simulateKeyPress = (element: HTMLElement, key: string): void => {
+  const event = new KeyboardEvent('keydown', {
+    key,
+    bubbles: true,
+    cancelable: true
+  });
+  element.dispatchEvent(event);
+};
+
+/**
+ * Simulate form input
+ */
+export const simulateInput = (element: HTMLInputElement, value: string): void => {
+  element.value = value;
+  const event = new Event('input', { bubbles: true });
+  element.dispatchEvent(event);
+};
+
+/**
+ * Get element by test id
+ */
+export const getByTestId = (testId: string): HTMLElement | null => {
+  return document.querySelector(`[data-testid="${testId}"]`);
+};
+
+/**
+ * Get all elements by test id
+ */
+export const getAllByTestId = (testId: string): HTMLElement[] => {
+  return Array.from(document.querySelectorAll(`[data-testid="${testId}"]`));
+};
+
+/**
+ * Check if element is visible
+ */
+export const isVisible = (element: HTMLElement): boolean => {
+  const style = window.getComputedStyle(element);
+  return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
+};
+
+/**
+ * Check if element is in viewport
+ */
+export const isInViewport = (element: HTMLElement): boolean => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+/**
+ * Wait for element to appear
+ */
+export const waitForElement = async (
+  selector: string,
+  timeout = 5000
+): Promise<HTMLElement> => {
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    const checkElement = () => {
+      const element = document.querySelector(selector) as HTMLElement;
+      if (element) {
+        resolve(element);
+      } else if (Date.now() - startTime > timeout) {
+        reject(new Error(`Element with selector "${selector}" not found within ${timeout}ms`));
+      } else {
+        setTimeout(checkElement, 100);
+      }
+    };
+    checkElement();
+  });
+};
+
+/**
+ * Wait for element to disappear
+ */
+export const waitForElementToDisappear = async (
+  selector: string,
+  timeout = 5000
+): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    const checkElement = () => {
+      const element = document.querySelector(selector);
+      if (!element) {
+        resolve();
+      } else if (Date.now() - startTime > timeout) {
+        reject(new Error(`Element with selector "${selector}" still present after ${timeout}ms`));
+      } else {
+        setTimeout(checkElement, 100);
+      }
+    };
+    checkElement();
+  });
+};
+
+/**
+ * Mock localStorage for testing
+ */
+export const mockLocalStorage = (): void => {
+  const store: Record<string, string> = {};
+  
+  Object.defineProperty(window, 'localStorage', {
+    value: {
+      getItem: (key: string) => store[key] || null,
+      setItem: (key: string, value: string) => {
+        store[key] = value;
       },
-      writable: true
-    })
-  }
-}
+      removeItem: (key: string) => {
+        delete store[key];
+      },
+      clear: () => {
+        Object.keys(store).forEach(key => delete store[key]);
+      },
+      length: Object.keys(store).length,
+      key: (index: number) => Object.keys(store)[index] || null
+    },
+    writable: true
+  });
+};
 
 /**
- * Create a mock performance API
+ * Mock sessionStorage for testing
  */
-export const createMockPerformance = (): Performance => {
-  const entries: PerformanceEntry[] = []
-  return {
-    now: () => Date.now(),
-    mark: (name: string) => {
-      entries.push({
-        name,
-        entryType: 'mark',
-        startTime: Date.now(),
-        duration: 0,
-        toJSON: () => ({})
-      } as PerformanceEntry)
+export const mockSessionStorage = (): void => {
+  const store: Record<string, string> = {};
+  
+  Object.defineProperty(window, 'sessionStorage', {
+    value: {
+      getItem: (key: string) => store[key] || null,
+      setItem: (key: string, value: string) => {
+        store[key] = value;
+      },
+      removeItem: (key: string) => {
+        delete store[key];
+      },
+      clear: () => {
+        Object.keys(store).forEach(key => delete store[key]);
+      },
+      length: Object.keys(store).length,
+      key: (index: number) => Object.keys(store)[index] || null
     },
-    measure: (name: string, _startMark?: string, _endMark?: string) => {
-      entries.push({
-        name,
-        entryType: 'measure',
-        startTime: Date.now(),
-        duration: 100,
-        toJSON: () => ({})
-      } as PerformanceEntry)
+    writable: true
+  });
+};
+
+/**
+ * Mock window.location for testing
+ */
+export const mockLocation = (url: string): void => {
+  Object.defineProperty(window, 'location', {
+    value: {
+      href: url,
+      origin: new URL(url).origin,
+      pathname: new URL(url).pathname,
+      search: new URL(url).search,
+      hash: new URL(url).hash,
+      assign: () => {},
+      replace: () => {},
+      reload: () => {}
     },
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries,
-    clearMarks: () => {
-      entries.length = 0
-    },
-    clearMeasures: () => {
-      entries.length = 0
-    },
-    clearResourceTimings: () => {},
-    setResourceTimingBufferSize: () => {},
-    toJSON: () => ({}),
-    addEventListener: () => {},
-    removeEventListener: () => {},
-    dispatchEvent: () => true,
-    onresourcetimingbufferfull: null,
-    timeOrigin: Date.now()
-  } as unknown as Performance
-}
+    writable: true
+  });
+};
+
+/**
+ * Create a mock promise that resolves after a delay
+ */
+export const createDelayedPromise = <T>(
+  value: T,
+  delay = 100
+): Promise<T> => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(value), delay);
+  });
+};
+
+/**
+ * Create a mock promise that rejects after a delay
+ */
+export const createRejectedPromise = (
+  error: Error,
+  delay = 100
+): Promise<never> => {
+  return new Promise((_, reject) => {
+    setTimeout(() => reject(error), delay);
+  });
+};
 
 /**
  * Generate random test data
  */
 export const generateTestData = {
-  string: (length = 10): string => {
-    return Math.random()
-      .toString(36)
-      .substring(2, length + 2)
-  },
-  number: (min = 0, max = 100): number => {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  },
-  boolean: (): boolean => {
-    return Math.random() > 0.5
-  },
-  email: (): string => {
-    return `test${generateTestData.string(5)}@example.com`
-  },
-  url: (): string => {
-    return `https://example.com/${generateTestData.string(10)}`
-  },
-  date: (): Date => {
-    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
-  },
-  array: <T>(generator: () => T, length = 5): T[] => {
-    return Array.from({ length }, generator)
-  }
-}
-
-/**
- * Deep clone an object
- */
-export const deepClone = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj))
-}
-
-/**
- * Compare objects for equality
- */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
-  return JSON.stringify(obj1) === JSON.stringify(obj2)
-}
-
-/**
- * Spy on console methods
- */
-export class ConsoleSpy {
-  private originalConsole: Console
-  private logs: string[] = []
-  private errors: string[] = []
-  private warnings: string[] = []
-
-  constructor() {
-    this.originalConsole = { ...console }
-    this.mock()
-  }
-
-  private mock(): void {
-     
-    console.log = (...args: unknown[]) => {
-      this.logs.push(args.map(String).join(' '))
+  string: (length = 10) => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
-     
-    console.error = (...args: unknown[]) => {
-      this.errors.push(args.map(String).join(' '))
-    }
-     
-    console.warn = (...args: unknown[]) => {
-      this.warnings.push(args.map(String).join(' '))
+    return result;
+  },
+  
+  number: (min = 0, max = 100) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+  
+  email: () => {
+    return `${generateTestData.string(8)}@example.com`;
+  },
+  
+  url: () => {
+    return `https://example.com/${generateTestData.string(8)}`;
+  }
+};
+
+/**
+ * Clean up after tests
+ */
+export const cleanup = (): void => {
+  // Clear all timers
+  if (typeof global !== 'undefined') {
+    const timers = (global as typeof global & { timers: Set<number> }).timers;
+    if (timers) {
+      timers.forEach(timer => clearTimeout(timer));
+      timers.clear();
     }
   }
-
-  getLogs(): string[] {
-    return [...this.logs]
+  
+  // Clear DOM
+  document.body.innerHTML = '';
+  
+  // Clear storage
+  if (typeof window !== 'undefined') {
+    localStorage.clear();
+    sessionStorage.clear();
   }
-
-  getErrors(): string[] {
-    return [...this.errors]
-  }
-
-  getWarnings(): string[] {
-    return [...this.warnings]
-  }
-
-  restore(): void {
-    Object.assign(console, this.originalConsole)
-  }
-
-  clear(): void {
-    this.logs = []
-    this.errors = []
-    this.warnings = []
-  }
-}
-
-/**
- * Create a deferred promise
- */
-export interface Deferred<T> {
-  promise: Promise<T>
-  resolve: (value: T) => void
-  reject: (reason?: unknown) => void
-}
-
-export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (value: T) => void
-  let reject: (reason?: unknown) => void
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res
-    reject = rej
-  })
-  return { promise, resolve, reject }
-}
-
-/**
- * Retry a function with exponential backoff
- */
-export const retryWithBackoff = async <T>(
-  fn: () => Promise<T>,
-  maxRetries = 3,
-  initialDelay = 1000
-): Promise<T> => {
-  let lastError: Error
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      return await fn()
-    } catch (error) {
-      lastError = error as Error
-      if (i < maxRetries - 1) {
-        await wait(initialDelay * Math.pow(2, i))
-      }
-    }
-  }
-  throw lastError!
-}
-
-/**
- * Measure execution time of a function
- */
-export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> => {
-  const start = performance.now()
-  const result = await fn()
-  const duration = performance.now() - start
-  return { result, duration }
-}
-
-const testUtils = {
-  wait,
-  waitFor,
-  mockFetch,
-  createMockStorage,
-  mockWindow,
-  createMockPerformance,
-  generateTestData,
-  deepClone,
-  deepEqual,
-  ConsoleSpy,
-  createDeferred,
-  retryWithBackoff,
-  measureExecutionTime
-}
-
-export default testUtils
+};
