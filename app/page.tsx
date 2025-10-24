@@ -34,20 +34,16 @@ const HomePage: React.FC = () => {
     {
       icon: Brain
       ,
-      title: 'AI Solutions'
-      ,
-      description: 'Machine learning, natural language processing, and computer vision applications.'
+      title: 'AI Solutions',
+      description: 'Machine learning, natural language processing, and computer vision applications.',
       features: ['Predictive Analytics', 'Chatbots & NLP', 'Computer Vision', 'Automation']
-    }
-    ,
+    },
     { icon: Cloud
       ,
-      title: 'Cloud Services'
-      ,
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.'
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
       features: ['AWS/Azure/GCP', 'Migration', 'DevOps', 'Monitoring']
-    }
-    ,
+    },
     { icon: Code
       ,
       title: 'Development'

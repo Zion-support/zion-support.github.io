@@ -5,13 +5,13 @@ import {Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, Arro
 const ApiPage: React.FC = () => {
   const apiEndpoints = [
     {
-      category: 'AI Services'
+      category: 'AI Services',
       endpoints: [
         {
-          method: 'POST'
-          path: '/api/ai/chat'
-          description: 'AI-powered chat completion'
-          parameters: ['message', 'model', 'temperature']
+          method: 'POST',
+          path: '/api/ai/chat',
+          description: 'AI-powered chat completion',
+          parameters: ['message', 'model', 'temperature'],
           example: {
             request: {
               message: "Hello, how can I help you?"
