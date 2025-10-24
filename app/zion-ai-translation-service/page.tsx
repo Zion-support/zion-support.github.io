@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaitranslationservicePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Translation Zion Ai Translation Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZionaitranslationservicePage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

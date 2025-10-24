@@ -1,4 +1,7 @@
-import React, { createContext, useContext, useEffect, ReactNode } from "react";
+
+'use client';
+import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+
 declare global {
   interface Window {
 
@@ -60,12 +63,6 @@ trackEvent,
     <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-  )
-}
- AnalyticsProvider
-  )
-}
-=======
+
 export default AnalyticsProvider
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+

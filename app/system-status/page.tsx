@@ -31,5 +31,9 @@ export default function SystemstatusPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

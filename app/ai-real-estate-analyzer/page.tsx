@@ -31,5 +31,9 @@ export default function AirealestateanalyzerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

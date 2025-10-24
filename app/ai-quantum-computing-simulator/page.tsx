@@ -31,5 +31,9 @@ export default function AiquantumcomputingsimulatorPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

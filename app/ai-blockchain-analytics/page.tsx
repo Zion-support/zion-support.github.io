@@ -31,5 +31,9 @@ export default function AiblockchainanalyticsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

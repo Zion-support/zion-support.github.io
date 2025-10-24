@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function Ai3dmodelgeneratorPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai 3d Model Generator - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function Ai3dmodelgeneratorPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

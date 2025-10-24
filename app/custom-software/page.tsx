@@ -31,5 +31,9 @@ export default function CustomsoftwarePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

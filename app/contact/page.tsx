@@ -31,5 +31,9 @@ export default function ContactPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

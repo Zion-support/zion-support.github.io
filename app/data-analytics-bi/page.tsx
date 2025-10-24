@@ -31,5 +31,9 @@ export default function DataanalyticsbiPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

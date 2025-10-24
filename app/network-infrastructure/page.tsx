@@ -31,5 +31,9 @@ export default function NetworkinfrastructurePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

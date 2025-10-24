@@ -31,5 +31,9 @@ export default function ComplianceautomationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

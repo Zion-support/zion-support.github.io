@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZioncybersecurityauditPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Cybersecurity Audit - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZioncybersecurityauditPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

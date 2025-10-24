@@ -31,5 +31,9 @@ export default function DataengineeringPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

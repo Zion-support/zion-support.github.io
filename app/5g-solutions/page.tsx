@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function GsolutionsPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>5g Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function GsolutionsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

@@ -31,5 +31,9 @@ export default function ZionaiemailoptimizerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

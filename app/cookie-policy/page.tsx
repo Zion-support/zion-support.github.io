@@ -31,5 +31,9 @@ export default function CookiepolicyPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

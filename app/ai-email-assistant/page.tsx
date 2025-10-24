@@ -31,5 +31,9 @@ export default function AiemailassistantPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

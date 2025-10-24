@@ -31,5 +31,9 @@ export default function ZionaicustomerchurnpredictorPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

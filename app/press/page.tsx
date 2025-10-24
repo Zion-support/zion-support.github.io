@@ -31,5 +31,9 @@ export default function PressPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

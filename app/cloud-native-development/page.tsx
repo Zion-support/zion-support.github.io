@@ -31,5 +31,9 @@ export default function CloudnativedevelopmentPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

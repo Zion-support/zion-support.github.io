@@ -1,5 +1,4 @@
-"use client";
-
+'use client';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -109,7 +108,7 @@ const testRunner = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

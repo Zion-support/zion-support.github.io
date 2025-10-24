@@ -31,5 +31,9 @@ export default function FinancialitPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

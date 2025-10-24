@@ -31,5 +31,9 @@ export default function AilearningplatformPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

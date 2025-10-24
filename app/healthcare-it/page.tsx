@@ -31,5 +31,9 @@ export default function HealthcareitPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

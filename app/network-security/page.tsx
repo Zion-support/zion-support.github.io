@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function NetworksecurityPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Network Security - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function NetworksecurityPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

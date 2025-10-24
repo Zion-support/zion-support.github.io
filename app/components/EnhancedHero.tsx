@@ -53,7 +53,11 @@ const EnhancedHero: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+
+    </div>
+  );
+};
+
 
 export default EnhancedHero    'Gain competitive advantage with advanced technology'
             <div className=quotflex flex-col sm flex-row gap-4 justify-centerquot>

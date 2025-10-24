@@ -31,5 +31,9 @@ export default function ZionaifrauddetectorPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

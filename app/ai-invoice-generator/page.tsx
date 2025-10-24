@@ -31,5 +31,12 @@ export default function AiinvoicegeneratorPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
-}
+};
+
+
+export default AiInvoiceGeneratorPage;

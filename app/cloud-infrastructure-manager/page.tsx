@@ -31,5 +31,9 @@ export default function CloudinfrastructuremanagerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

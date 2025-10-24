@@ -8,7 +8,7 @@ const OptimizedImage: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>OptimizedImage</title>
         <meta name="description" content="Advanced OptimizedImage solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const OptimizedImage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

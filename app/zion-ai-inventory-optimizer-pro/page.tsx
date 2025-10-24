@@ -31,5 +31,9 @@ export default function ZionaiinventoryoptimizerproPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

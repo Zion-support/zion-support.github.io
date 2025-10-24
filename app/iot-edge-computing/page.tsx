@@ -31,5 +31,9 @@ export default function IotedgecomputingPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

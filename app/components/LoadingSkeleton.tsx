@@ -42,7 +42,7 @@ const LoadingSkeletonPage: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>Loading Skeleton - Zion Tech Group</title>
         <meta name="description" content="Advanced LoadingSkeleton solution for modern businesses." /></meta>
@@ -145,7 +145,7 @@ const LoadingSkeletonPage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-</>;
+</div>;
   );
 };
 

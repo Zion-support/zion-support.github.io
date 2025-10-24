@@ -18,7 +18,7 @@ export default function AichatbotbuilderPage() {
             Ai Chatbot Builder
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            ai-chatbot-builder services Transform your business with our expert solutions. services coming soon.
+            Professional ai chatbot builder services coming soon.
           </p>
           <Link
             href="/contact"

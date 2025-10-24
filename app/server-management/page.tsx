@@ -31,5 +31,9 @@ export default function ServermanagementPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

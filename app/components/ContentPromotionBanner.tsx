@@ -8,7 +8,7 @@ const ContentPromotionBanner: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ContentPromotionBanner</title>
         <meta name="description" content="Advanced ContentPromotionBanner solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const ContentPromotionBanner: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
   );
 };
 

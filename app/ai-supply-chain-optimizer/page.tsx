@@ -31,5 +31,9 @@ export default function AisupplychainoptimizerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

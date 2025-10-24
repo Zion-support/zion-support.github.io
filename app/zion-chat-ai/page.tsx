@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionchataiPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Chat Ai - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZionchataiPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

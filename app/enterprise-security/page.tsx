@@ -31,5 +31,9 @@ export default function EnterprisesecurityPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

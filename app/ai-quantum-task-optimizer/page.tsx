@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AiquantumtaskoptimizerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Quantum Task Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function AiquantumtaskoptimizerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

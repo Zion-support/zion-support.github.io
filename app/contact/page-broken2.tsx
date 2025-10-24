@@ -115,7 +115,7 @@ const ContactPageBroken2 = () => {
           <pThis is a backup contact page Please refer to the main contact page for current information</p>
         </p></div>
       </div>
-    </>
+    </div>
   );
 };
 

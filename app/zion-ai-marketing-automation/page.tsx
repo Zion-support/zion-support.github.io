@@ -31,5 +31,9 @@ export default function ZionaimarketingautomationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

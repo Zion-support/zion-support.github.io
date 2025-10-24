@@ -31,5 +31,9 @@ export default function GdprcompliancePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

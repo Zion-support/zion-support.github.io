@@ -8,7 +8,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>EnhancedPerformanceOptimizer</title>
         <meta name="description" content="Advanced EnhancedPerformanceOptimizer solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 };

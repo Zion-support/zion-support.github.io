@@ -32,5 +32,9 @@ export default function GdataanalyticsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

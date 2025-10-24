@@ -31,5 +31,9 @@ export default function ZionaileadscoringPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

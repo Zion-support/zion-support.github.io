@@ -31,5 +31,9 @@ export default function DataanalyticsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

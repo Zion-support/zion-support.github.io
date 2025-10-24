@@ -31,5 +31,9 @@ export default function AileadgenerationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

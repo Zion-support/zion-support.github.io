@@ -31,5 +31,9 @@ export default function ProcessautomationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

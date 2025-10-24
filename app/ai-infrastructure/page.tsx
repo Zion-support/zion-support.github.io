@@ -31,5 +31,9 @@ export default function AiinfrastructurePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

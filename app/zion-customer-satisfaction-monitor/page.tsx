@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZioncustomersatisfactionmonitorPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Customer Satisfaction Monitor - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZioncustomersatisfactionmonitorPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

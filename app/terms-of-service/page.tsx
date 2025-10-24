@@ -31,5 +31,9 @@ export default function TermsofservicePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

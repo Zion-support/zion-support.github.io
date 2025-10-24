@@ -8,7 +8,7 @@ const EnhancedErrorBoundary: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>EnhancedErrorBoundary</title>
         <meta name="description" content="Advanced EnhancedErrorBoundary solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const EnhancedErrorBoundary: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
   );
 };
 

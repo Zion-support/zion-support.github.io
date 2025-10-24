@@ -31,5 +31,9 @@ export default function PricingPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

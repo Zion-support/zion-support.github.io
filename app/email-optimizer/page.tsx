@@ -31,5 +31,9 @@ export default function EmailoptimizerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

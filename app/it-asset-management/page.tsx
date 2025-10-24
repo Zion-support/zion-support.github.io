@@ -31,5 +31,9 @@ export default function ItassetmanagementPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

@@ -31,5 +31,9 @@ export default function NotfoundPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

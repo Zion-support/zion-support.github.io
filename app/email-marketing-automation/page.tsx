@@ -31,5 +31,9 @@ export default function EmailmarketingautomationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaitaskschedulerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Task Scheduler - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZionaitaskschedulerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

@@ -8,7 +8,7 @@ const ServiceCardSkeleton: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ServiceCardSkeleton</title>
         <meta name="description" content="Advanced ServiceCardSkeleton solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const ServiceCardSkeleton: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

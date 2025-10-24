@@ -31,5 +31,9 @@ export default function DocsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

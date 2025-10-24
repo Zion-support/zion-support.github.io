@@ -31,5 +31,9 @@ export default function InventorymanagerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

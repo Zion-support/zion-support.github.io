@@ -31,5 +31,9 @@ export default function GprivatenetworksPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

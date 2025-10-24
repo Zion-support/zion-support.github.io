@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function MicrosaasPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Micro Saas - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -31,5 +31,7 @@ export default function MicrosaasPage() {
       </div>
       <Footer />
     </div>
-  );
+
+  )
+
 }

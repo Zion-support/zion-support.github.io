@@ -31,5 +31,9 @@ export default function CloudmigrationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

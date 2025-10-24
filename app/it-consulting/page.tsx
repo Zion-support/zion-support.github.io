@@ -31,5 +31,9 @@ export default function ItconsultingPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

@@ -31,5 +31,9 @@ export default function CustomdevelopmentPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

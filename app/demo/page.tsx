@@ -3,11 +3,10 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
 
 export default function DemoPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -29,7 +28,8 @@ export default function DemoPage() {
           </Link>
         </div>
       </div>
-      <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

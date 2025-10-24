@@ -31,5 +31,9 @@ export default function SupportPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

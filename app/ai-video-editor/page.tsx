@@ -31,5 +31,12 @@ export default function AivideoeditorPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
-}
+};
+
+
+export default AiVideoEditorPage;

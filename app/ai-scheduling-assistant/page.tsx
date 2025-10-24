@@ -31,5 +31,9 @@ export default function AischedulingassistantPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

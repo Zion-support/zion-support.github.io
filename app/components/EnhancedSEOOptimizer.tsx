@@ -140,7 +140,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

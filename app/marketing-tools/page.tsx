@@ -31,5 +31,9 @@ export default function MarketingtoolsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

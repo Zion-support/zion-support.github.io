@@ -31,5 +31,12 @@ export default function AiexpensetrackerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
-}
+};
+
+
+export default AiExpenseTrackerPage;

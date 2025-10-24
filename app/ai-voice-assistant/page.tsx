@@ -31,5 +31,12 @@ export default function AivoiceassistantPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
-}
+};
+
+
+export default AiVoiceAssistantPage;

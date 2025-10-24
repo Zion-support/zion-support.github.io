@@ -31,5 +31,9 @@ export default function ComputervisionPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

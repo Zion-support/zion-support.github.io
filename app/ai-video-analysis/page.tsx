@@ -31,5 +31,9 @@ export default function AivideoanalysisPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

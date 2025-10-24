@@ -109,7 +109,7 @@ const addHighContrastSupport = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

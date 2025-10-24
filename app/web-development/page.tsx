@@ -31,5 +31,9 @@ export default function WebdevelopmentPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

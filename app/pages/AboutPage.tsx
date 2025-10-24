@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';
-import  Helmet  from 'react-helmet-async';
-import Link  } from 'next/link';
-import  CheckCircleIcon UserGroupIcon LightBulbIcon ShieldCheckIcon RocketLaunchIcon HeartIcon ArrowRightIcon StarIcon } from 'heroicons/react/24/outline'  ;
+
+import Link from 'next/link';
+
 
 export default function AboutPage() {
   const values = [
@@ -52,7 +53,7 @@ export default function AboutPage() {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>;
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." /></meta>
@@ -129,7 +130,7 @@ export default function AboutPage() {
             {value.description}
           </p>
                   </div>
-    </>
+    </div>
   );
               })}
             </div>

@@ -31,5 +31,9 @@ export default function IotintegrationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

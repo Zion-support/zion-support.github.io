@@ -8,7 +8,7 @@ const LoadingStates: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>LoadingStates</title>
         <meta name="description" content="Advanced LoadingStates solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const LoadingStates: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

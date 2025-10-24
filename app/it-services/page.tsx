@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ItservicesPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>It It Servicess - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -31,5 +31,7 @@ export default function ItservicesPage() {
       </div>
       <Footer />
     </div>
-  );
+
+  )
+
 }

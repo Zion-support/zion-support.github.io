@@ -8,7 +8,7 @@ const LazyImage: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>LazyImage</title>
         <meta name="description" content="Advanced LazyImage solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const LazyImage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

@@ -8,7 +8,7 @@ const ErrorHandler: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ErrorHandler</title>
         <meta name="description" content="Advanced ErrorHandler solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const ErrorHandler: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 };

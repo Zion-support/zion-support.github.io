@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaiworkflowautomatorproPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Workflow Automator Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZionaiworkflowautomatorproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

@@ -31,5 +31,9 @@ export default function AidevopsautomationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

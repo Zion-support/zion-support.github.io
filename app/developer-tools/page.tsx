@@ -31,5 +31,9 @@ export default function DevelopertoolsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

@@ -3,11 +3,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Footer from '../../components/Footer';
+import Footer from '../components/Footer';
 
 export default function MarketingautomationPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Marketing Automation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function MarketingautomationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

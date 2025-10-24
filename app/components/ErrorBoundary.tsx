@@ -1,4 +1,7 @@
-import { React  Component ReactNode ErrorInfo  from 'react';
+
+'use client';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+
 
 interface Props {
   children: ReactNode;
@@ -164,7 +167,7 @@ class ErrorBoundary extends Component<Props, State> {
         </section>
       </div>
       <Footer />
-</>
+</div>
 
     return this.props.children;
   }

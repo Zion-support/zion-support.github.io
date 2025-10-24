@@ -31,5 +31,9 @@ export default function EcommercedevelopmentPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

@@ -31,5 +31,9 @@ export default function SecuritymonitoringsuitePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

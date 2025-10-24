@@ -31,5 +31,9 @@ export default function ArvrsolutionsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

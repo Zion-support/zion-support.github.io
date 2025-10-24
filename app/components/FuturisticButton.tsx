@@ -109,7 +109,7 @@ const getVariantClasses = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

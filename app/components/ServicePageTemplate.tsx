@@ -1,6 +1,9 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-"use client&quot
+
+'use client';
+import React from &quot;react&quot;
+import { Helmet } from &quot;react-helmet-async&quot;
+&quot;use client&quot
+
 const ServicePageTemplatePage: React.FC = () => {
   const features = [,
     {,
@@ -50,12 +53,6 @@ const ServicePageTemplatePage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-    </div>
-  );,
-  ),
-}
- ServicePageTemplatePage
-=======
+
 export default ServicePageTemplatePage
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+

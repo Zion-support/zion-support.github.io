@@ -31,5 +31,9 @@ export default function ContainerorchestrationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

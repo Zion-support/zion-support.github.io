@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function TeamPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Team - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -31,5 +31,7 @@ export default function TeamPage() {
       </div>
       <Footer />
     </div>
-  );
+
+  )
+
 }

@@ -8,7 +8,7 @@ const EnhancedLoadingStates: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>EnhancedLoadingStates</title>
         <meta name="description" content="Advanced EnhancedLoadingStates solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const EnhancedLoadingStates: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 };

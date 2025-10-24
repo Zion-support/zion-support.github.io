@@ -31,5 +31,9 @@ export default function EnterprisePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

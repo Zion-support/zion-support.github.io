@@ -31,5 +31,9 @@ export default function DataprotectionPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

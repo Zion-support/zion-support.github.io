@@ -31,5 +31,9 @@ export default function CloudsecurityPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

@@ -31,5 +31,9 @@ export default function RoboticsintegrationPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

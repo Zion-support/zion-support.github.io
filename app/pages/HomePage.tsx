@@ -1,12 +1,14 @@
+'use client';
 import React from 'react';
-import  Helmet  from 'react-helmet-async';
-import Link  } from 'next/link';
-import  ArrowRightIcon ShieldCheckIcon CloudIcon CpuChipIcon ChartBarIcon GlobeAltIcon PhoneIcon EnvelopeIcon MapPinIcon } from 'heroicons/react/24/outline'  ;
 
-export default function HomePage() {  return (
+import Link from 'next/link';
+
+
+export default function HomePage() {
+  return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." /></meta>

@@ -31,5 +31,9 @@ export default function AiclimatepredictionenginePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

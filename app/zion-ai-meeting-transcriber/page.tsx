@@ -31,5 +31,9 @@ export default function ZionaimeetingtranscriberPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

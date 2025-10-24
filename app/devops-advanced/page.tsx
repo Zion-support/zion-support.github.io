@@ -31,5 +31,9 @@ export default function DevopsadvancedPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

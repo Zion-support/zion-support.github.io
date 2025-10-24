@@ -31,5 +31,9 @@ export default function ZionaidatavisualizerPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

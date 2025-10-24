@@ -8,7 +8,7 @@ const ServiceCard: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ServiceCard</title>
         <meta name="description" content="Advanced ServiceCard solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const ServiceCard: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

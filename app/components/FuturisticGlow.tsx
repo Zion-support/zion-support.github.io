@@ -109,7 +109,7 @@ const getIntensityValue = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

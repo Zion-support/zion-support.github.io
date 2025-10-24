@@ -33,7 +33,7 @@ const PageFixedPage: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>Page Fixed - Zion Tech Group</title>
         <meta name="description" content="Advanced page fixed solutions powered by AI technology." /></meta>
@@ -100,7 +100,7 @@ const PageFixedPage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-</>;
+</div>;
   );
 };
 

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function QuantumcomputingPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Quantum Computing - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function QuantumcomputingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

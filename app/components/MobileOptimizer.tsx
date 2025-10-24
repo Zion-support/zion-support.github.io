@@ -109,7 +109,7 @@ const preventZoom = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

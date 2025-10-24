@@ -31,5 +31,9 @@ export default function MachinelearningopsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

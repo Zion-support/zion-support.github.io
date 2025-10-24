@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaivoiceassistantPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Voice Assistant - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZionaivoiceassistantPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

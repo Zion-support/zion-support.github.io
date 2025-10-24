@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionblockchainsolutionsPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Blockchain Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function ZionblockchainsolutionsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

@@ -31,5 +31,9 @@ export default function CloudnativesecurityPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AilogodesignerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Logo Designer - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function AilogodesignerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

@@ -31,5 +31,9 @@ export default function CustomersupporthubPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

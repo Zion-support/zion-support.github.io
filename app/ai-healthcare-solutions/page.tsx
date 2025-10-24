@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AihealthcaresolutionsPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Healthcare Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function AihealthcaresolutionsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function GimplementationPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>5g Implementation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -30,6 +30,8 @@ export default function GimplementationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+
+</div>
+  )
+
 }

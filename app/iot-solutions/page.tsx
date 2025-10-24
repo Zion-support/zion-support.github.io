@@ -31,5 +31,9 @@ export default function IotsolutionsPage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }

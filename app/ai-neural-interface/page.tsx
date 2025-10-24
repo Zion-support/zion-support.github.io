@@ -31,5 +31,9 @@ export default function AineuralinterfacePage() {
       </div>
       <Footer />
     </div>
+
+    </div>
+    </div>
+
   );
 }
