@@ -1,8 +1,13 @@
-"use client";
-import React from 'react';
+// SEO utilities
 
-const seoUtils.ts = () => {
-  return null;
+export const seoUtils = {
+  generateMetaTags: (title: string, description: string) => {
+    return {
+      title,
+      description,
+      keywords: 'technology, solutions, consulting'
+    };
+  }
 };
 
-export default seoUtils.ts;
+export default seoUtils;

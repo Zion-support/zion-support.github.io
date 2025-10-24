@@ -1,9 +1,17 @@
-          <div className ="mt-12">"
-            <button className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-            </button>;"
-          </div>"
-        </div>"
-      </div>"
-    </div>"
-  )"
-import React from '
+'use client'
+import React from 'react';
+
+interface AdSchedulerProps {
+  className?: string;
+}
+
+const AdScheduler: React.FC<AdSchedulerProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Ad Scheduler</h2>
+      <p className="text-gray-600">This is a placeholder component for Ad Scheduler.</p>
+    </div>
+  );
+};
+
+export default AdScheduler;

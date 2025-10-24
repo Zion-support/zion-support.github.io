@@ -1,14 +1,7 @@
+// dataValidator - Utility functions
 
-interface DataValidatorOptions {
-  })
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [
-  ])
-  return {
-    // Return your hook values here
-  }
-}
-export default DataValidator"
-"
+export const dataValidator = {
+  // Utility functions will be implemented here
+};
+
+export default dataValidator;

@@ -1,46 +1,17 @@
+'use client'
+import React from 'react';
 
-interface SEOHeadProps {}
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  noIndex?: boolean
-  structuredData?: Record<string>
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  [key: string]: unknown
+interface UnifiedSEOHeadProps {
+  className?: string;
+}
 
-const UnifiedSEOHead= React.FC<SEOHeadProps> = ({},)
-      title = "Zion Tech Group - Advanced AI and IT Solutions","
-      description = "Transform your business with Zion Tech Group'
-interface StructuredData {}'@context': string"@type'
-      description = "Transform your business with Zion Tech Group'
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('
-        '@type': '
-          '@type': '
-      name: '
-          '@type': '
-      availability: '
-      priceCurrency: '
-      category: '
-      validFrom: '
-      validThrough: '
-          '@type': '
-      name: '
-      serviceType: '
-      serviceType: '
-        '@type': 'Question'
-      acceptedAnswer: {}'@type': 'Answer'
-      '@context': '
-      '@type': '
-      const  pathSegments = location.pathname.split('/'
-        '@type': 'ListItem'
-      name: 'Home'
-      item: '
-        .split('-'
-        .join(' '
-        '@type': 'ListItem'
-      return {}'@context': 'https://schema.org"@type': 'BreadcrumbList'
+const UnifiedSEOHead: React.FC<UnifiedSEOHeadProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Unified S E O Head</h2>
+      <p className="text-gray-600">This is a placeholder component for Unified S E O Head.</p>
+    </div>
+  );
+};
+
+export default UnifiedSEOHead;

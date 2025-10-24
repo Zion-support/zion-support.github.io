@@ -1,19 +1,17 @@
+'use client'
+import React from 'react';
 
+interface LazyWrapperProps {
+  className?: string;
+}
+
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Lazy Wrapper</h2>
+      <p className="text-gray-600">This is a placeholder component for Lazy Wrapper.</p>
     </div>
-  </div>
-)
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({};)
-  fallback = <DefaultFallback>
-  children
-}) => {}
-  return ()
-    <fallback={fallback}></>
-      {children}
-    </>
-export const createLazyComponent  = <P extends Record<string, unknown>>()
-  importFunc: () => Promise<{ default: ComponentType<P> }>
-) => {},
-      const LazyComponent  = lazy(importFunc),
-      const WrappedComponent  = (props: P) => ()
-    <LazyWrapper></LazyWrapper>
+  );
+};
 
+export default LazyWrapper;

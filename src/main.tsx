@@ -1,26 +1,21 @@
+'use client'
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './globals.css';
 
-// Register service worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(() => {
-        // Service Worker registered successfully
-      })
-      .catch(() => {
-        // Service Worker registration failed - handled silently
-      });
-  });
-}
-
-const root = document.getElementById('root');
-if (root) {
-  ReactDOM.createRoot(root).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+const main: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          Main
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This is a placeholder page for Main.
+          </p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default main;

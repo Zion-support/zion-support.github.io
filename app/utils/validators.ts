@@ -1,14 +1,13 @@
+// Validators utility
 
-interface ValidatorsOptions {
-  })
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [
-  ])
-  return {
-    // Return your hook values here
+export const validators = {
+  email: (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  },
+  
+  required: (value: any) => {
+    return value !== null && value !== undefined && value !== '';
   }
-}
-export default Validators"
-"
+};
+
+export default validators;

@@ -1,14 +1,7 @@
+// apiClient - Utility functions
 
-interface ApiClientOptions {
-  })
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [
-  ])
-  return {
-    // Return your hook values here
-  }
-}
-export default ApiClient"
-"
+export const apiClient = {
+  // Utility functions will be implemented here
+};
+
+export default apiClient;

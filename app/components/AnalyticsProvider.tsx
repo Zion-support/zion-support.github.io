@@ -1,103 +1,17 @@
-import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+'use client'
+import React from 'react';
 
-declare global {interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
-
-interface AnalyticsContextType {
-<<<<<<< HEAD:app-backup/components/AnalyticsProvider.tsx
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined,
-)
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
-  }
-  return context
-}
-
-=======
-  track: (event: string, properties?: Record<string, any>) => void
-  identify: (userId: string, traits?: Record<string, any>) => void
-  page: (name: string, properties?: Record<string, any>) => void}
-const AnalyticsContext  = createContext<AnalyticsContextType | undefined>(undefined)
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2:app/components/AnalyticsProvider.tsx
 interface AnalyticsProviderProps {
-  children: ReactNode
+  className?: string;
 }
 
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
-  
-    if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics
-      if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
-  
-}
-  return context;
-}
-
-interface AnalyticsProviderProps {children: ReactNode;
-}
-
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() =</ {
-  
-    if (type of windo w !=="undefined") {
-      // Google Analytics;
-      if (process.env.NODE_ENV === "production") {
-        const script = document.createElement("script")
-        script.src = `https: //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true;
-        document.head.appendChild(script)
-
-        window.gtag =
-          window.gtag ||
-          function (...args: any[]) {(window.gtag as any).q = (window.gtag as any).q || []
-            (window.gtag as any).q.push(args)
-          }
-        window.gtag(&quot;js&quot;, new Date())
-        window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
-      }
-    }
-  }, [])
-
-  consttrackEvent= (
-    eventName: string,
-    parameters?: Record<string, unknown>,
-  ) => {
-    if (typeof window !== &quot;undefined&quot; && window.gtag) {
-      window.gtag(&quot;event&quot;, eventName, parameters)
-    }
-  }
-
-  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
-      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
-        page_title: pageName,
-        page_location: window.location.href})
-    }
-  }
-
-  constvalue: AnalyticsContextType = {trackEvent,
-    trackPageView}
-
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className }) => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  )
-}
-
-export default AnalyticsProvider
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Analytics Provider</h2>
+      <p className="text-gray-600">This is a placeholder component for Analytics Provider.</p>
+    </div>
   );
 };
 
-export default AnalyticsProviderPage;
+export default AnalyticsProvider;

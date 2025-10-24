@@ -1,15 +1,17 @@
+'use client'
+import React from 'react';
 
-const ComponentsPage: React.FC = () => {
-  return null
+interface StructuredDataProps {
+  className?: string;
 }
-      <SEOHead>
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>"
-    </>;,"
-  ),"
-"
+
+const StructuredData: React.FC<StructuredDataProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Structured Data</h2>
+      <p className="text-gray-600">This is a placeholder component for Structured Data.</p>
+    </div>
+  );
+};
+
+export default StructuredData;

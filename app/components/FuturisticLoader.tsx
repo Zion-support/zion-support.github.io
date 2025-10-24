@@ -1,14 +1,17 @@
-  return null
+'use client'
+import React from 'react';
+
+interface FuturisticLoaderProps {
+  className?: string;
 }
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page"
-          </h1>"
-          <p className="text-xl text-gray-600">"
-      </div>"
-    </div>"
-  )"
-import React from '
-import SEOHead from '
+
+const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Futuristic Loader</h2>
+      <p className="text-gray-600">This is a placeholder component for Futuristic Loader.</p>
+    </div>
+  );
+};
+
+export default FuturisticLoader;

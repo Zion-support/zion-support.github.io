@@ -1,8 +1,12 @@
-"use client";
-import React from 'react';
+// Vite optimized configuration
 
-const vite.config.optimized.ts = () => {
-  return null;
-};
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-export default vite.config.optimized.ts;
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    minify: true,
+    sourcemap: false
+  }
+});

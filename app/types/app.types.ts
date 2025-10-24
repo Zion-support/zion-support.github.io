@@ -1,72 +1,26 @@
-/**
- * Application Types
- * Core type definitions for the Zion Tech Group website
- */
+// App types - Type definitions
 
-/**
- * Performance Metrics Interface
- * Web Vitals and performance measurement types
- */
-/**
- * Performance Report Interface
- */
-  usedJSHeapSize: "number"
-  totalJSHeapSiz","
-/**;"
- * Layout Shift Interface"
- */"
-    totalJSHeapSiz","
-    jsHeapSizeLimi,"
-    t: number"
-  }"
-    startin","
-    currenc,"
-    y: string"
-  }"
-  id: "string"
-  updatedAt: string;"
-  tags: string[]"
-  category: string"
-    descriptio","
-    keyword,"
-    s: string[]"
-  }"
-  messag","
- */;"
-export interface ApiResponse<T = any> {"
-  success: boolean"
-  title: "string"
-  descriptio","
-  external?: boolean;"
-  children?: NavigationItem[]"
-"
-  ratin","
-  avatar?: string;"
-  feature,"
-    d: boolean"
-  id: "string"
-  slug: string"
-  client: string"
-  industry: string"
-  avata","
-  };"
-  expertise: string[]"
-  featured: boolean"
-  subscribedA","
-    hasError: boolean;"
-  error?: Error"
-"
-  fontFamil","
-  label?: string;"
-  value?: number"
-  custom_parameters?: Record<string, unknown>"
-    marketin","
-"
-  }"
-/**"
-    errorReportin","
-    g: boolean"
-    pw,"
-    a: boolean"
-  }"
-}"
+export interface AppConfig {
+  id: string;
+  name: string;
+  description?: string;
+}
+
+export type AppStatus = 'active' | 'inactive' | 'pending';
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  price?: number;
+  category: string;
+}
+
+export default AppConfig;

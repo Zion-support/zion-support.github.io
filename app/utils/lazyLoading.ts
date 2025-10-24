@@ -1,5 +1,10 @@
+// lazyLoading - Placeholder file
+export interface lazyLoadingConfig {
+  enabled: boolean;
+  options?: Record<string, unknown>;
+}
 
-// Lazy loading helper function
-  importFunc: () => Promise<{ default: ComponentType<T> }>
-}"
-"
+export const defaultlazyLoadingConfig: lazyLoadingConfig = {
+  enabled: true,
+  options: {}
+};

@@ -1,22 +1,17 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+'use client'
+import React from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description: 'Advanced AI and IT solutions for modern businesses',
+interface layoutProps {
+  className?: string;
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const layout: React.FC<layoutProps> = ({ className }) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
-}
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Layout</h2>
+      <p className="text-gray-600">This is a placeholder component for Layout.</p>
+    </div>
+  );
+};
+
+export default layout;

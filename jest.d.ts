@@ -1,8 +1,11 @@
-"use client";
-import React from 'react';
+// Jest type definitions
 
-const jest.d.ts = () => {
-  return null;
-};
+declare global {
+  namespace jest {
+    interface Matchers<R> {
+      toBeInTheDocument(): R;
+    }
+  }
+}
 
-export default jest.d.ts;
+export {};

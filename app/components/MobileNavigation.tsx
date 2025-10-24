@@ -1,11 +1,17 @@
-      const MobileNavigation: React.FC = () => {},
-      const [isOpen, setIsOpen] = useState(false): value,
-      const  toggleMenu = () => {}: value,
-      setIsOpen(!isOpen)
+'use client'
+import React from 'react';
 
+interface MobileNavigationProps {
+  className?: string;
+}
 
-  const  closeMenu = () => {}: value,
-      setIsOpen(false)
+const MobileNavigation: React.FC<MobileNavigationProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Mobile Navigation</h2>
+      <p className="text-gray-600">This is a placeholder component for Mobile Navigation.</p>
+    </div>
+  );
+};
 
-import React, { useState } from '
-import React, { useState } from '
+export default MobileNavigation;

@@ -1,13 +1,15 @@
-interface LoggerOptions {
-  })
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [
-  ])
-  return {
-    // Return your hook values here
+// Logger utility functions
+
+export const logger = {
+  info: (message: string, data?: any) => {
+    console.log(`[INFO] ${message}`, data);
+  },
+  error: (message: string, error?: any) => {
+    console.error(`[ERROR] ${message}`, error);
+  },
+  warn: (message: string, data?: any) => {
+    console.warn(`[WARN] ${message}`, data);
   }
-}
-export default Logger"
-"
+};
+
+export default logger;

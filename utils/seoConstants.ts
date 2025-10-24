@@ -1,8 +1,9 @@
-"use client";
-import React from 'react';
+// SEO constants
 
-const seoConstants.ts = () => {
-  return null;
+export const SEO_CONSTANTS = {
+  DEFAULT_TITLE: 'Zion Tech Group',
+  DEFAULT_DESCRIPTION: 'Professional technology solutions',
+  DEFAULT_KEYWORDS: 'technology, solutions, consulting'
 };
 
-export default seoConstants.ts;
+export default SEO_CONSTANTS;

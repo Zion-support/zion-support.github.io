@@ -1,8 +1,11 @@
-"use client";
-import React from 'react';
+import { useState, useEffect } from 'react';
 
-const usePerformanceMonitor.ts = () => {
-  return null;
+export const usePerformanceMonitor = () => {
+  const [isMonitoring, setIsMonitoring] = useState(false);
+
+  useEffect(() => {
+    // Performance monitoring logic
+  }, []);
+
+  return { isMonitoring, setIsMonitoring };
 };
-
-export default usePerformanceMonitor.ts;

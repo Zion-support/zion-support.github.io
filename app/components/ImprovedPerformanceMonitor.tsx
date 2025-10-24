@@ -1,38 +1,17 @@
+'use client'
+import React from 'react';
 
-interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  fcp?: number}
-  ttfb?: number;}
-  memory?: number;}
-  connection?: string;}
-interface PerformanceMonitorProps {
-  showDetails?: boolean
-  logMetrics?: boolean
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
-const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({,
-    showDetails = false,
-  logMetrics = false,
-  onMetricsUpdate
-  }) => {
-    const [metrics, setMetrics] = useState<PerformanceMetrics>({
-  })
-  const [isVisible, setIsVisible] = useState(false)
-        updateMetrics({
-          memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+interface ImprovedPerformanceMonitorProps {
+  className?: string;
+}
 
-        updateMetrics({
-          connection: `${connection.effectiveType,
-    })
-    // Initialize monitoring
-loadWebVitals()
-    monitorMemory()
-    monitorConnection()
-    // Monitor memory every 5 seconds"
-    const memoryInterval = setInterval(monitorMemory, 5000)"
-    // Monitor connection changes"
-    if ('connection'
-      connection.addEventListener('change'
-      if ('connection'
-        connection.removeEventListener('change'
+const ImprovedPerformanceMonitor: React.FC<ImprovedPerformanceMonitorProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Improved Performance Monitor</h2>
+      <p className="text-gray-600">This is a placeholder component for Improved Performance Monitor.</p>
+    </div>
+  );
+};
+
+export default ImprovedPerformanceMonitor;

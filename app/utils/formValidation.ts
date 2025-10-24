@@ -1,14 +1,7 @@
+// formValidation - Utility functions
 
-interface FormValidationOptions {
-  })
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [
-  ])
-  return {
-    // Return your hook values here
-  }
-}
-export default FormValidation"
-"
+export const formValidation = {
+  // Utility functions will be implemented here
+};
+
+export default formValidation;

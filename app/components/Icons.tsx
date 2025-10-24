@@ -1,9 +1,17 @@
+'use client'
+import React from 'react';
 
-export const Icon  = ({},)
+interface IconsProps {
+  className?: string;
+}
 
-      name,
-      className=": value"
-"
-export const Icon  = ({}: value,"
-      name,"
-      className=": value"
+const Icons: React.FC<IconsProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Icons</h2>
+      <p className="text-gray-600">This is a placeholder component for Icons.</p>
+    </div>
+  );
+};
+
+export default Icons;

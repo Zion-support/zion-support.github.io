@@ -1,16 +1,17 @@
+import { useState, useEffect } from 'react';
 
-export function useIntersectionObserver(
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-      ...options
-  })
+export const useIntersectionObserver = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+
   return {
-    state,
-    init
-  }
-}
-    return () => {"
-      observer.unobserve(element)"
-    }"
-export default useIntersectionObserver"
-"
+    data,
+    loading,
+    error
+  };
+};

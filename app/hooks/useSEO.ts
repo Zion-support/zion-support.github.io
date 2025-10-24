@@ -1,7 +1,17 @@
-import React from "react"
-import { Helmet } from "
-export const useSEO  = (structuredData?: unknown) => {"
-  useEffect(() => {// Add structured data to the page"
-    if (structuredData) {"
-      const script  = document.createElement('script'
-      script.type = '
+import { useState, useEffect } from 'react';
+
+export const useSEO = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+
+  return {
+    data,
+    loading,
+    error
+  };
+};

@@ -1,75 +1,17 @@
+'use client'
+import React from 'react';
 
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Zap,
-  Cloud,
-  Shield,
-  Database,
-  Code,
-  Brain,
-  BarChart3,
-  Star,
-  ArrowRight,
-  Globe,
-  Cpu,
-  Link as LinkIcon,
-  Sidebar as SidebarIcon,
-  Video,
-  Users,
-  Target,
-  Settings,
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const: location = useLocation()
-  const: toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen)
+interface NavigationEnhancedProps {
+  className?: string;
+}
 
-    setIsSearchOpen(!isSearchOpen)
-  }, [
-    isSearchOpen
-  
-  ])
-  // Close all dropdowns when route changes
-useEffect(() => {
-    setIsServicesOpen(false)
-                Get Quote
-              </FuturisticButton>
-            </div>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
+const NavigationEnhanced: React.FC<NavigationEnhancedProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Navigation Enhanced</h2>
+      <p className="text-gray-600">This is a placeholder component for Navigation Enhanced.</p>
+    </div>
+  );
+};
 
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                ></Link>
-
-    item.name
-  })
-                </Link>)
-
-                      </Link>
-)}
-                  </div>
-                )}
-              </div>
-                        onClick={() => {
-                          setIsItServicesOpen(false)
-                          toggleMenu(),
-                        {service.icon}
-                        <span>{service.name}</span>
-                      </Link>
-)}
-                  </div>
-                )}
-              </div>
-
-              </FuturisticButton>
-            </div>
-          </div>
-        )}
-      </div>
-import React from 'react';'
+export default NavigationEnhanced;

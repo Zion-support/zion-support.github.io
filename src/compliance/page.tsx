@@ -1,26 +1,21 @@
 'use client'
-import React from 'react'
-import { ArrowLeft, FileText, Lock } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Shield, Users } from 'lucide-react'
-import { Award } from 'lucide-react'
+import React from 'react';
 
-const CompliancePage: React.FC = () => {
-  const certifications = [
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR', status: 'Compliant' },
-    { name: 'HIPAA', status: 'Compliant' },
-    { name: 'PCI DSS', status: 'Compliant' }
-  ]
-
-const Page = () => {
+const page: React.FC = () => {
   return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          Page
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This is a placeholder page for Page.
+          </p>
+        </div>
       </div>
-      <Footer />
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Page;
+export default page;

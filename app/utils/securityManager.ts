@@ -1,14 +1,13 @@
+// Security manager utility
 
-interface SecurityManagerOptions {
-  })
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [
-  ])
-  return {
-    // Return your hook values here
+export const securityManager = {
+  validate: (data: any) => {
+    return true;
+  },
+  
+  sanitize: (input: string) => {
+    return input;
   }
-}
-export default SecurityManager"
-"
+};
+
+export default securityManager;

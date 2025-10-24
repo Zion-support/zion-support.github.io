@@ -1,8 +1,11 @@
-"use client";
-import React from 'react';
+import { useState, useEffect } from 'react';
 
-const usePerformanceMetrics.ts = () => {
-  return null;
+export const usePerformanceMetrics = () => {
+  const [metrics, setMetrics] = useState<any[]>([]);
+
+  useEffect(() => {
+    // Performance metrics logic
+  }, []);
+
+  return { metrics };
 };
-
-export default usePerformanceMetrics.ts;

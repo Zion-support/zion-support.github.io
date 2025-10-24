@@ -1,23 +1,17 @@
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );}
+'use client'
+import React from 'react';
 
-interface WebVitalsData {},
-      name: string
-value: number
-delta: number
-id: string
-navigationType: string
-    // Track Core Web Vitals
-onCLS(sendToAnalytics)
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-onFCP(sendToAnalytics)
-  }, [
-  ])
-  return null"
-},"
-      "
-import React from '
-import SEOHead from '
+interface WebVitalsTrackerProps {
+  className?: string;
+}
+
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Web Vitals Tracker</h2>
+      <p className="text-gray-600">This is a placeholder component for Web Vitals Tracker.</p>
+    </div>
+  );
+};
+
+export default WebVitalsTracker;

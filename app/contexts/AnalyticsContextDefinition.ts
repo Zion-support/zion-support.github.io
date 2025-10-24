@@ -1,11 +1,10 @@
-// Analytics Context Definition
-export interface AnalyticsContextType {}
-  trackEvent: (event: AnalyticsEvent) => void;}
-  trackPageView: (page: string) => void;}
-  setUserProperties: (properties: Record<string, any>) => void;}
+// AnalyticsContextDefinition - Placeholder file
+export interface AnalyticsContextDefinitionConfig {
+  enabled: boolean;
+  options?: Record<string, unknown>;
 }
-export const defaultAnalyticsContext: AnalyticsContextType = {}
-    trackEvent: () => {,}"
-  },"
-  trackPageView: () => {},"
-}'
+
+export const defaultAnalyticsContextDefinitionConfig: AnalyticsContextDefinitionConfig = {
+  enabled: true,
+  options: {}
+};

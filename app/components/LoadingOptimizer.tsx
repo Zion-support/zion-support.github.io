@@ -1,25 +1,17 @@
-import { Helmet } from "
-      <Helmet></Helmet>"
-        <title>Loading Optimizer - Zion Tech Group</title>"
-      </Helmet>"
-      <div  className ="loading-optimizer-container"></div>"
-        <div  className ="loading-spinner"></div>"
-          <div  className ="spinner"></div>"
-    </>"
-        </div>"
-      </div>"
-    </>;,"
-  ),"
-}"
-"
-"
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>"
-"
-"
-"
+'use client'
+import React from 'react';
+
+interface LoadingOptimizerProps {
+  className?: string;
+}
+
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2 className="text-xl font-semibold mb-4">Loading Optimizer</h2>
+      <p className="text-gray-600">This is a placeholder component for Loading Optimizer.</p>
+    </div>
+  );
+};
+
+export default LoadingOptimizer;
