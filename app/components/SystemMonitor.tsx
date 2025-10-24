@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface SystemMonitorProps {
@@ -7,7 +6,8 @@ interface SystemMonitorProps {
 
 const SystemMonitor: React.FC<SystemMonitorProps> = (_props) => {
   return (
-
+    <div>
+      {/* Component content */}
     </div>
   );
 };

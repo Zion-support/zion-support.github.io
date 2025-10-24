@@ -1,5 +1,7 @@
 
 
+import React from 'react';
+
 interface FuturisticHeroProps {
   // Add props here
 }

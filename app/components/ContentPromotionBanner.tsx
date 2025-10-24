@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ContentPromotionBannerProps {
@@ -7,7 +6,8 @@ interface ContentPromotionBannerProps {
 
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (_props) => {
   return (
-
+    <div>
+      {/* Component content */}
     </div>
   );
 };
