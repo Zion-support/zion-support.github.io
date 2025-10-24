@@ -1,17 +1,5 @@
 'use client';
 import React from 'react';
-import { Metadata } from 'next';
-export const metadata: Metadata = {
-  title: 'SEOOptimizer - Zion Tech Group',
-  description: 'Comprehensive seooptimizer solutions for modern businesses.',
-  keywords: 'seooptimizer, AI solutions, technology services',
-  openGraph: {
-    title: 'SEOOptimizer - Zion Tech Group',
-    description: 'Comprehensive seooptimizer solutions for modern businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/components',
-  },
-};
 const SEOOptimizerPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

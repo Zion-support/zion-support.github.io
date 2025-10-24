@@ -1,17 +1,5 @@
 'use client';
 import React from 'react';
-import { Metadata } from 'next';
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
-  openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/accessibility',
-  },
-};
 const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -1,4 +1,4 @@
-import React from "'react';"
+import React from 'react';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '404 - Zion Tech Group',

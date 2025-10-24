@@ -1,4 +1,5 @@
-import React, { memo } from "'react';"
+'use client';
+import React, { memo } from 'react';
 import EnhancedSEOHead from '../components/EnhancedSEOHead';
 import { useForm } from '../hooks/useForm';
 const ContactPage: React.FC = memo(() => {
