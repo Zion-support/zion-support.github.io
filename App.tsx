@@ -202,14 +202,15 @@ function App() {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
-            <Navigation onSidebarToggle={() => setSidebarOpen(!sidebarOpen)} />
+            <Navigation />
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <SEOOptimizer />
+                <AccessibilityEnhancer>
+                  <SEOOptimizer />
+                </AccessibilityEnhancer>
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>

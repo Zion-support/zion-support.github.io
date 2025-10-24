@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
 
 const HomePage: React.FC = memo(() => {
   const structuredData = useMemo(() => ({
@@ -32,7 +32,7 @@ const HomePage: React.FC = memo(() => {
 
   return (
     <>
-      <SEOHead
+      <EnhancedSEOHead
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation."
         keywords="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence"

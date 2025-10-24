@@ -56,8 +56,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     if (!enableWebVitals || typeof window === 'undefined') return;
 
     // Load web-vitals library dynamically
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onFID, onTTFB }) => {
-      onCLS((metric) => {
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+      onCLS((metric: any) => {
         updateMetrics({ cls: metric.value });
       });
 
@@ -69,9 +69,6 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
         updateMetrics({ lcp: metric.value });
       });
 
-      onFID((metric) => {
-        updateMetrics({ fid: metric.value });
-      });
 
       onTTFB((metric) => {
         updateMetrics({ ttfb: metric.value });

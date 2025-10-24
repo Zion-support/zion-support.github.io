@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
+import EnhancedSEOHead from '../components/EnhancedSEOHead';
 import { useForm } from '../hooks/useForm';
 
 const ContactPage: React.FC = memo(() => {
@@ -39,7 +39,7 @@ const ContactPage: React.FC = memo(() => {
 
   return (
     <>
-      <SEOHead
+      <EnhancedSEOHead
         title="Contact Us"
         description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
         canonicalUrl="https://ziontechgroup.com/contact"

@@ -35,8 +35,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   const optimizedSrc = optimizeImageUrl(src, {
     quality,
     format,
-    width,
-    height
+    width: width || 0,
+    height: height || 0
   });
 
   const placeholderSrc = placeholder && (width && height) 
