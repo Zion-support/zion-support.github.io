@@ -43,8 +43,3 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-<<<<<<< HEAD
-export default OptimizedImage
-=======
-export default OptimizedImage;
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
