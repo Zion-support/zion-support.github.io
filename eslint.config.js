@@ -150,6 +150,12 @@ export default [
     },
   },
   {
+    files: ['**/AnalyticsProvider.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off'
+    }
+  },
+  {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', '**/setupTests.{js,ts,jsx,tsx}', '**/jest.setup.js'],
     languageOptions: {
       globals: {

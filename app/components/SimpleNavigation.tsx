@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 
 const SimpleNavigation: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const SimpleNavigation: React.FC = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default SimpleNavigation;
+export default SimpleNavigation

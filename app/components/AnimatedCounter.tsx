@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from 'react'
 
 interface AnimatedCounterProps {
   // Add props here
@@ -10,8 +9,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )
+}
 
-export default AnimatedCounter;
-
+export default AnimatedCounter

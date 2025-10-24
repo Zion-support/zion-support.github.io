@@ -1,4 +1,7 @@
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, Shield, Brain, BarChart, Users, Settings } from 'lucide-react'
 
 const AIApiManagementPage: React.FC = () => {
   const features = [
@@ -25,9 +28,6 @@ const AIApiManagementPage: React.FC = () => {
       title: 'Developer Portal',
       description: 'Self-service developer portal with documentation, testing tools, and API keys.',
       benefits: ['Interactive docs', 'API testing', 'SDK generation', 'Developer support']
-    },
-    {
-
     },
     {
       icon: Brain,

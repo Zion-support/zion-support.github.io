@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
+import React, { memo } from 'react'
 
 interface AIToolCardProps {
-  title: string;
-  description: string;
-  link: string;
+  title: string
+  description: string
+  link: string
 }
 
 const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }) => {
@@ -21,9 +21,9 @@ const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }
         Try Now →
       </a>
     </article>
-  );
-});
+  )
+})
 
-AIToolCard.displayName = 'AIToolCard';
+AIToolCard.displayName = 'AIToolCard'
 
-export default AIToolCard;
+export default AIToolCard

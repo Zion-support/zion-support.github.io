@@ -1,13 +1,11 @@
-import Fastify from 'fastify',
-import cors from '@fastify/cors',
-import Fastify from 'fastify'
-import cors from '@fastify/cors'
-import rateLimit from '@fastify/rate-limit'
-import { createOpenAIClient, generateJobPost  } from './openai'
-import { withUser  } from './pg'
-import dotenv from 'dotenv'
-dotenv && dotenv.config()
-import rateLimit from '@fastify/rate-limit'
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import rateLimit from '@fastify/rate-limit';
+import { createOpenAIClient, generateJobPost } from './openai';
+import { withUser } from './pg';
+import dotenv from 'dotenv';
+
+dotenv && dotenv.config();
 import Fastify from 'fastify'
 import cors from '@fastify/cors'
 import rateLimit from '@fastify/rate-limit'

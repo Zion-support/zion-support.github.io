@@ -41,7 +41,11 @@ const Ai3dModelGeneratorPage: React.FC = () => {
   ]
   return (
     <>
-      <Navigation />
+      <Head>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced page solution for modern businesses" />
+        <meta name="keywords" content="AI, artificial intelligence, page, AI solutions, intelligent automation" />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -129,7 +133,7 @@ const Ai3dModelGeneratorPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
       <Footer />
 </>

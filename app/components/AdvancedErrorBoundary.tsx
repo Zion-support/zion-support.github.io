@@ -1,53 +1,52 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
+import React, { Component, ReactNode, ErrorInfo } from 'react'
+import { AlertTriangle, Home, RefreshCw } from 'lucide-react'
 
 interface AdvancedErrorBoundaryProps {
-  children: ReactNode;
-  className?: string;
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  className?: string
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void
 }
 
-
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
   constructor(props: AdvancedErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+      console.error('Error Boundary caught an error:', error, errorInfo)
     }
-  };
+  }
 
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     this.setState({
       hasError: true,
       error: _error,
       errorInfo: _errorInfo
-    });
+    })
     
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(_error, _errorInfo);
+      this.props.onError(_error, _errorInfo)
     }
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', _error, _errorInfo);
+      console.error('Error caught by boundary:', _error, _errorInfo)
     }
     
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(_error, _errorInfo);
+      this.logErrorToService(_error, _errorInfo)
     }
   }
 
@@ -59,19 +58,19 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString()
-    };
+    }
     
     // Send to external service (implement as needed)
-    console.error('Error logged to service:', errorData);
-  };
+    console.error('Error logged to service:', errorData)
+  }
 
   generateErrorId = (): string => {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  }
 
   render() {
     if (this.state.hasError) {
@@ -101,12 +100,11 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default AdvancedErrorBoundary;
-  
+export default AdvancedErrorBoundary

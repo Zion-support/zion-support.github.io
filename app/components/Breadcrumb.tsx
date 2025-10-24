@@ -1,11 +1,12 @@
-'use client';
-import React from 'react';
+'use client'
+
+import React from 'react'
 
 interface BreadcrumbProps {
   items: Array<{
-    label: string;
-    href?: string;
-  }>;
+    label: string
+    href?: string
+  }>
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
@@ -24,8 +25,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
         </React.Fragment>
       ))}
     </nav>
-  );
-};
+  )
+}
 
-export default Breadcrumb;
-
+export default Breadcrumb

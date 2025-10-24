@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const PageLoader: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const PageLoader: React.FC = () => {
         <p className="text-white text-lg">Loading...</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PageLoader;
+export default PageLoader

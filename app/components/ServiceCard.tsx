@@ -1,6 +1,4 @@
-
-import React from 'react';
-
+import React from 'react'
 
 interface ServiceCardProps {
   // Add props here
@@ -11,7 +9,7 @@ const ServiceCard: React.FC<ServiceCardProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )
+}
 
-export default ServiceCard;
+export default ServiceCard
