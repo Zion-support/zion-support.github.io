@@ -36,6 +36,7 @@ const SidebarPage: React.FC="()" => {const features: ";",;
     'Gain competitive advantage with advanced technology'
   ];
 
+const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
   return (
     <>
       

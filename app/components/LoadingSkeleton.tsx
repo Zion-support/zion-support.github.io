@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
@@ -162,8 +161,4 @@ export default LoadingSkeleton;
 };
 
 export default LoadingSkeletonPage;
-=======
-;
-export default LoadingSkeletonPage;"
->>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

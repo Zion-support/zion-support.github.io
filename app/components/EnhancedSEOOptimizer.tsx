@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
@@ -46,8 +45,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>
-=======
->>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>

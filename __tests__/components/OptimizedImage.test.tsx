@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor, act } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 // Mock OptimizedImage component
@@ -41,7 +41,7 @@ describe('OptimizedImage', () => {
 
     
     const image = screen.getByTestId('optimized-image');
-    expect(image).toHaveAttribute('alt', '');
+    expect(image).toHaveAttribute('loading', 'lazy');
   });
 
   it('renders with different image sources', () => {

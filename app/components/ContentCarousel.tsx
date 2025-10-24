@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
@@ -338,6 +337,4 @@ export default ContentCarouselPage;
 }
 ;"
 export default ContentCarousel
-=======
->>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

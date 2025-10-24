@@ -100,22 +100,10 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     trackEvent,
     trackPageView,
   };
-<<<<<<< HEAD
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-=======
-  }
-;"
-  constvalue: AnalyticsContextType="{trackEvent,}";
-    trackPageView,
-  }
-;</string>
-  return (</string>"
-    <AnalyticsContext.Provider value="{value}"></AnalyticsContext>
-      {children}</AnalyticsContext>
->>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
     </AnalyticsContext.Provider>
   );
 };

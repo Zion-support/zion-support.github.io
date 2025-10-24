@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
@@ -152,8 +151,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEn
 };
 
 export default SEOEnhancerPage;
-=======
-;
-export default SEOEnhancerPage;"
->>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
