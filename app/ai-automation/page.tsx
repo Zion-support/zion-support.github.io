@@ -106,11 +106,7 @@ const AIAutomationPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-<<<<<<< HEAD
-                  <stat.icon className="w-8 h-8 text-white" />
-=======
-                  <stat.icon className="w-6 h-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-5202
+                  <stat.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
