@@ -8,22 +8,18 @@ export default async function handler(req, res) {
 
   try {
     const { name, email, phone, details, country, service } = req.body || {};
-
-    if (!name || !email || !phone || !details) {
-      res.statusCode = 400;
-      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
-
-    // Process quote submission logic here
+    
+    // Process the quote request
     const quote = {
       id: Date.now().toString(),
-      name,
-      email,
-      phone,
-      details,
-      country,
-      service,
-      timestamp: new Date().toISOString(),
-
+      name: name || '',
+      email: email || '',
+      phone: phone || '',
+      details: details || '',
+      country: country || '',
+      service: service || '',
+      timestamp: new Date().toISOString()
+    };
 
     // In a real application, you would save this to a database
     // For now, we'll just log it
@@ -38,5 +34,7 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Quote submission error:', error);
-    res.statusCode = 500;
-
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}

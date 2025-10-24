@@ -1,51 +1,46 @@
-'use client';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const TeamPage: React.FC = () => {
+export default function TeamPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Navigation />
-      
-      <main>
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Team</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
-          </div>
-        </section>
-
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
-              <p className="text-xl text-gray-300">Advanced AI solutions</p>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Meet the experts behind our innovative solutions.
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h2>
+              <p className="text-gray-600 mb-6">
+                Our team consists of experienced professionals in AI, cloud computing, 
+                cybersecurity, and software development.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4"></div>
+                  <h3 className="font-semibold text-gray-900">AI Specialists</h3>
+                  <p className="text-gray-600">Machine Learning & AI Experts</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-green-100 rounded-full mx-auto mb-4"></div>
+                  <h3 className="font-semibold text-gray-900">Cloud Engineers</h3>
+                  <p className="text-gray-600">Cloud Infrastructure & DevOps</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-purple-100 rounded-full mx-auto mb-4"></div>
+                  <h3 className="font-semibold text-gray-900">Security Experts</h3>
+                  <p className="text-gray-600">Cybersecurity & Compliance</p>
+                </div>
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
-                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
-                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
-              </div>
-            </div>
           </div>
-        </section>
-      </main>
-
+        </div>
+      </div>
       <Footer />
-    </div>
-  );
-};
-
-export default TeamPage;
+    </>
+  )
+}

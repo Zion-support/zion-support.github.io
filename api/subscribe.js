@@ -10,52 +10,43 @@ async function handler(req, res) {
     return;
   }
 
-  const { email, name, source = 'website' } = req.body || {};
-
+  const { email, name, interests } = req.body;
   if (!email) {
     res.statusCode = 400;
     res.end(JSON.stringify({ error: 'Email is required' }));
 
   try {
     if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));
 
-    // Create subscription record
-    const subscription = {
+    const subscriber = {
+      id: Date.now().toString(),
       email,
-      name: name || '',
+      name,
       source,
       subscribedAt: new Date().toISOString(),
-      status: 'active',
-      id: `sub_${Date.now()}`
+      status: 'active'
     };
 
     // In a real application, you would save this to a database
     // For now, we'll just log it
-    console.log('New subscription:', subscription);
+    console.log('New subscriber:', subscriber);
 
-    // Optional: Save to file for backup (not recommended for production)
-    const dataDir = path.join(process.cwd(), 'data');
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-
-    const subscribersFile = path.join(dataDir, 'subscribers.json');
-    let subscribers = [];
-    
-    if (fs.existsSync(subscribersFile)) {
-        const data = fs.readFileSync(subscribersFile, 'utf8');
-        subscribers = JSON.parse(data);
-      } catch (err) {
-        console.error('Error reading subscribers file:', err);
-
-
-      message: 'Successfully subscribed to newsletter',
-      subscription
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Successfully subscribed to newsletter' 
     }));
 
   } catch (error) {
     console.error('Subscription error:', error);
     res.statusCode = 500;
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to process subscription' }));
+  }
+}
 
-module.exports = handler;
+module.exports = withSentry(handler);

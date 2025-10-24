@@ -91,46 +91,34 @@ const ContentCarousel: React.FC = () => {
   }
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
-      <div className="overflow-hidden rounded-2xl">
-        <div
+    <div className="relative w-full">
+      <div className="overflow-hidden">
+        <div 
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {slides.map((slide) => (
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-white`}>
-                <div className="max-w-4xl mx-auto">
-                  <div className="flex items-center justify-center mb-6">
-                    <div className="bg-white/20 p-4 rounded-full">
-                      <slide.icon className="h-12 w-12" />
-                    </div>
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-                    {slide.title}
-                  </h2>
-                  <p className="text-xl text-center mb-8 text-white/90">
-                    {slide.description}
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {slide.features.map((feature, _index) => (
-                      <div key={_index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                        <span className="text-white/90">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  {slide.stats && (
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {slide.stats.map((stat, _index) => (
-                        <div key={_index} className="text-center">
-                          <div className="text-2xl font-bold text-white">{stat.value}</div>
-                          <div className="text-white/80">{stat.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+          {items.map((item, _index) => (
+            <div key={item.id} className="w-full flex-shrink-0">
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                )}
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{item.description}</p>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Learn More →
+                  </a>
+                )}
               </div>
             </div>
           ))}
