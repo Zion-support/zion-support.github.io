@@ -1,5 +1,8 @@
-import React from 'react';
-
+"use client";
+import React from "react";
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 export default function HomePage() {
   return (
     <div className="min-h-screen flex items-center justify-center">
