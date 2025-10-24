@@ -147,7 +147,10 @@ const App: React.FC = () => {
             <AccessibilityEnhancer>
               <div></div>
             </AccessibilityEnhancer>
-            <SEOOptimizer>
+            <SEOOptimizer 
+              title="ZionTechGroup - Advanced Technology Solutions"
+              description="Leading provider of AI, IT, and 5G technology solutions for modern businesses"
+            >
               <div></div>
             </SEOOptimizer>
           </div>
