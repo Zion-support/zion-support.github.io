@@ -20,27 +20,15 @@
       {
         "name": "next"
       }
-<<<<<<< HEAD
-    ]
-=======
     ],
     "target": "ES2017"
->>>>>>> origin/main
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-<<<<<<< HEAD
     "types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "corrupted-src-backup",
-    "problematic-files-backup",
-    "problematic-pages"
-=======
+    "**/*.tsx",
     "app/**/*.ts",
     "app/**/*.tsx",
     "components/**/*.ts",
@@ -48,12 +36,14 @@
   ],
   "exclude": [
     "node_modules",
+    "corrupted-src-backup",
+    "problematic-files-backup",
+    "problematic-pages",
     "**/ai-pages-backup/**",
     "**/all-pages-backup/**",
     "**/backup*/**",
     "**/*.backup.*",
     "**/*.bak",
     "**/backup/**"
->>>>>>> origin/main
   ]
 }
