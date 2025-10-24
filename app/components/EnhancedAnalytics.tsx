@@ -34,8 +34,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: unknown[]) {
-          window.dataLayer.push(args);
+        function gtag(..._args: unknown[]) {
+          window.dataLayer.push(_args);
         }
         gtag('js', new Date());
         gtag('config', process.env.REACT_APP_GA_ID);
