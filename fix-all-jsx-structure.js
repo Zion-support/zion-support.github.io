@@ -1,0 +1,16 @@
+import fs from \"fs\";"
+  // Pattern: </div> followed by </> without proper nesting""
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>'
+  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>'
+}const content  = fs.readFileSync(filePath, 'utf8'
+      fs.writeFileSync(filePath, fixed, 'utf8'
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'
