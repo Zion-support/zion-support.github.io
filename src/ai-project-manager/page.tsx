@@ -1,65 +1,43 @@
-import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+'use client';
 
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Ai Project Manager - Zion Tech Group',
+  description: 'Professional Ai Project Manager solutions for modern businesses.',
+  keywords: 'AI solutions, IT services, technology services',
+  openGraph: {
+    title: 'Ai Project Manager - Zion Tech Group',
+    description: 'Professional Ai Project Manager solutions for modern businesses.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/',
+  },
+};
 
 const Page: React.FC = () => {
-  const feature,
-      s = []
-    'AI-powered project planning and resource allocation'
-    'Intelligent timeline prediction and risk assessment'
-    'Smart task management with priority optimization'
-    'Real-time collaboration and team coordination'
-    'Predictive analytics for project success'
-    'Automated progress tracking and reporting'
-    'Budget optimization and cost forecasting'
-    'Integration with popular project management tools'
-  ]
-
-  const benefits = [];
-    '40% increase in project delivery speed',
-    '70% reduction in project delays',
-    '85% improvement in planning accuracy',
-    '30% cost reduction through optimization',
-    '95% team productivity boost',
-    '50% faster decision making'
-  ]
-
-  constpricin,
-      g = [
-    {
-      plan: 'Starter'
-      price: '$19 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support']
-      popular: false
-   }
-    {plan: 'Professional'
-      price: '$39 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations']
-      popular: true
-   }
-    {plan: 'Enterprise'
-      price: 'Custom'
-      perio,
-      d: ''
-      feature,
-      s: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee']
-      popular: false
-    }
-  ]
-
-const Page = () => {};
   return (
-</>
-  )
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Ai Project Manager
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional Ai Project Manager solutions for modern businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </a>
+            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
-;
+
 export default Page;
