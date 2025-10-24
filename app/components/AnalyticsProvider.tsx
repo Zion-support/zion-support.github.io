@@ -38,9 +38,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script)
 
         window.gtag = function() {
-          // eslint-disable-next-line prefer-rest-params
+           
           window.dataLayer = window.dataLayer || []
-          // eslint-disable-next-line prefer-rest-params
+           
           window.dataLayer.push(arguments)
         }
 

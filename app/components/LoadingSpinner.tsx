@@ -1,61 +1,39 @@
+'use client';
 import React from 'react';
-'use client'
-import React from 'react'
-import { Helmet} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import { motion } from 'framer-motion';
 
-const LoadingSpinner: React.FC = ($2) => {
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'primary' | 'secondary' | 'white';
+  className?: string;
+}
 
-$3};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
-              LoadingSpinner
-            </h1>
-            <p>Advanced LoadingSpinner solution for modern businesses.</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Learn More
-              </button>
-            
-          
-        </section>,
-,
-        {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Discover the powerful features that make LoadingSpinner the perfect solution for your business.</p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-                </div>
-              </div>
-        </div>
-      </section>,
-,
-        {/* CTA Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p>Join thousands of businesses already using LoadingSpinner to transform their operations.</p>
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              Start Your Free Trial
-            
-            </button>
-          </div>
-        </section>
-        </div>
-      </Footer>
-      </div>
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'primary',
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
 
-  )}  )}
-export default LoadingSpinner};
+  const colorClasses = {
+    primary: 'text-cyan-400',
+    secondary: 'text-purple-400',
+    white: 'text-white'
+  };
+
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <motion.div
+        className={`${sizeClasses[size]} border-2 border-current border-t-transparent rounded-full ${colorClasses[color]}`}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+      />
+    </div>
+  );
+};
+
+export default LoadingSpinner;

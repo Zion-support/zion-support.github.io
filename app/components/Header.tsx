@@ -35,7 +35,7 @@ const benefits = [
   "Scale your business with cloud solutions",
   "Make data-driven decisions with analytics",
   "Enhance security with advanced monitoring",
-  "Improve customer experience with AI";
+  "Improve customer experience with AI"
 ];
 
 

@@ -1,78 +1,59 @@
-"use client";
+'use client';
 import React from 'react';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
+
 interface FuturisticCardProps {
-children: React.ReactNode,
-  variant?: 'default' | 'service' | 'testimonial' | 'feature'
+  children: React.ReactNode;
+  variant?: 'default' | 'service' | 'testimonial' | 'feature';
   className?: string;
   onClick?: () => void;
 }
+
 const FuturisticCard: React.FC<FuturisticCardProps> = ({
-
-  children;
-  variant = 'default';
-  className = ''
-  onClick}) => {
-
-  const getVariantStyles = ($2) => {
-
-$3}}
+  children,
+  variant = 'default',
+  className = '',
+  onClick
+}) => {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'service':
+        return 'bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-cyan-400/50';
+      case 'testimonial':
+        return 'bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-600';
+      case 'feature':
+        return 'bg-gradient-to-br from-cyan-500/10 to-purple-500/10 backdrop-blur-sm border border-cyan-400/30';
+      default:
+        return 'bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600';
+    }
+  };
 
   const baseClasses = `
-    relative overflow-hidden rounded-2xl p-6 transition-all duration-300;
-    hover: scale-105 hover:-translate-y-1,
+    relative overflow-hidden rounded-2xl p-6 transition-all duration-300
+    hover:scale-105 hover:-translate-y-1
     ${getVariantStyles()}
-    ${className;
-}
-  `.trim()
+    ${className}
+  `.trim();
+
   return (
-    
-    <motion.div;
-      className={baseClasses;
-}
-      onClick={onClick;
-}
-;
-      whileHover={{ scale: 1.05, y: -4}}
-      whileTap={{ scale: 0.95}}
-      initial={{ opacity: 0, y: 20}}
-      animate={{ opacity: 1, y: 0}}
-      transition={{ duration: 0.5}}
-    >{/* Animated background gradient */}
-      </motion><motion.div;
-;
-        className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5";
-        animate={{;
-          background: [,
-            'linear-gradient(45deg, rgba(6, 182, 212, 0.05) 0%, rgba(147, 51, 234, 0.05) 50%, rgba(6, 182, 212, 0.05) 100%)',
-            'linear-gradient(45deg, rgba(147, 51, 234, 0.05) 0%, rgba(6, 182, 212, 0.05) 50%, rgba(147, 51, 234, 0.05) 100%)',
-            'linear-gradient(45deg, rgba(6, 182, 212, 0.05) 0%, rgba(147, 51, 234, 0.05) 50%, rgba(6, 182, 212, 0.05) 100%)']}
-        transition={{;
-          duration: 3,;
-
-    repeat: Infinity,;
-          ease: 'easeInOut'}}
-      />{/* Content */}
-      </motion><div className="relative z-10">{children;
-}
-      </div></div>
-
+    <motion.div
+      className={baseClasses}
+      onClick={onClick}
+      whileHover={{ y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       {/* Glow effect */}
-      <motion.div;
-        className="absolute inset-0 rounded-2xl";
-        style={{;
-          background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%)',;
-          transform: 'translateX(-100%)'}
-        whileHover={{;
-          transform: 'translateX(100%)'}
-        transition={{;
-          duration: 0.6,;
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </motion.div>
+  );
+};
 
-    ease: 'easeInOut'}}
-      /> </motion></motion.div>
-  )
-}
-
-
-export default FuturisticCard
-;
+export default FuturisticCard;

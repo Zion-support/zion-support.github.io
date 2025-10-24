@@ -1,55 +1,61 @@
-
 'use client';
 import React from 'react';
-import React from &quot;react&quot;
-import { Helmet} from &quot;react-helmet-async&quot;
-&quot;use client&quot;
+import Link from 'next/link';
+import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
 
-const NotFoundPagePage: React.FC = () => {
-
-  const features = [
-    {;
-      icon: Brain,;
-    title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {;
-    icon: BarChart,;
-    title: 'Advanced Analytics',;
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',;
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {;
-    icon: Target,;
-    title: 'Precision Targeting',;
-      description: 'Target specific goals and objectives with precision and accuracy.',;
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {;
-    icon: TrendingUp,;
-    title: 'Growth Optimization',;
-      description: 'Optimize your business growth with data-driven strategies.',;
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  ]
-  const benefits = [
-  'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+const NotFoundPage: React.FC = () => {
   return (
-    
-    <></>
-      <Helmet> </Helmet><title>NotFoundPage | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional NotFoundPage services by Zion Tech Group.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, NotFoundPage, AI solutions, intelligent automation&quot; /> </meta></Helmet>
-      <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;container mx-auto max-w-6xl&quot;><div className=&quot;text-center mb-16&quot;> </div><h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>NotFoundPage</h1>,
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional NotFoundPage services tailored to your business needs.</p>p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+      <div className="max-w-md w-full text-center">
+        <div className="mb-8">
+          <AlertTriangle className="w-24 h-24 text-red-400 mx-auto mb-6" />
+          <h1 className="text-6xl font-bold text-white mb-4">404</h1>
+          <h2 className="text-2xl font-semibold text-gray-300 mb-4">
+            Page Not Found
+          </h2>
+          <p className="text-gray-400 mb-8">
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            <Home className="w-5 h-5" />
+            <span>Go Home</span>
+          </Link>
+
+          <button
+            onClick={() => window.history.back()}
+            className="inline-flex items-center justify-center space-x-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 ml-4"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span>Go Back</span>
+          </button>
+        </div>
+
+        <div className="mt-12">
+          <p className="text-gray-500 text-sm mb-4">Or try searching:</p>
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search for something..."
+              className="w-full px-4 py-3 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+            />
+            <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
           </div>
         </div>
-      </section>
-    </div>
 
-export default NotFoundPagePage
-;
+        <div className="mt-8 text-center">
+          <p className="text-gray-500 text-sm">
+            Need help? <Link href="/contact" className="text-cyan-400 hover:text-cyan-300">Contact us</Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NotFoundPage;
