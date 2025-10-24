@@ -49,16 +49,16 @@ export class ApiClient {
         throw new Error(`HTTP error! status: ${response.status}`)
       
 
-      const data = await response.json()
+      const data = await response.json();
       return {
         data,
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries()),
-      }
+      };
     } catch (error) {
-      clearTimeout(timeoutId)
-      throw error
+      clearTimeout(timeoutId);
+      throw error;
     }
   }
 

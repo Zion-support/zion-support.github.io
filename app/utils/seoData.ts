@@ -17,11 +17,12 @@ export interface SEOData {
   ogDescription?: string
   ogImage?: string
   ogUrl?: string
-  twitterCard?: string
-  twitterTitle?: string
-  twitterDescription?: string
-  twitterImage?: string
-  structuredData?: StructuredData
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: StructuredData;
+};
 
 export const defaultSEOData: SEOData = {
   title: 'Zion Tech Group - AI & Technology Solutions',
