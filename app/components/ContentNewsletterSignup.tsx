@@ -1,105 +1,131 @@
-'use client';
-
-import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import { CheckCircle, ArrowRight, Mail } from 'lucide-react'
 
 interface ContentNewsletterSignupProps {
-  title?: string;
-  description?: string;
-  placeholder?: string;
-  buttonText?: string;
-  onSubscribe?: (email: string) => Promise<void>;
-}
+  title?: string
+  subtitle?: string
+  placeholder?: string
+  buttonText?: string
+  onSubscribe?: (email: string) => Promise<void>
+
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  title = 'Stay Updated',
-  description = 'Get the latest news and updates delivered to your inbox.',
-  placeholder = 'Enter your email address',
-  buttonText = 'Subscribe',
-  onSubscribe,
+  title = "Stay Updated",
+  subtitle = "Get the latest insights and updates delivered to your inbox.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe",
+  onSubscribe
 }) => {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
+    if (!email) return
+
+    setIsSubmitting(true)
     
-    if (!email) {
-      setStatus('error');
-      setMessage('Please enter your email address');
-      return;
-    }
-
-    setStatus('loading');
-    setMessage('Subscribing...');
-
     try {
       if (onSubscribe) {
-        await onSubscribe(email);
+        await onSubscribe(email)
       } else {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      }
+        await new Promise(resolve => setTimeout(resolve, 1000))
       
-      setStatus('success');
-      setMessage('Successfully subscribed!');
-      setEmail('');
+      
+      setIsSubscribed(true)
+      setEmail('')
     } catch (error) {
-      setStatus('error');
-      setMessage('Failed to subscribe. Please try again.');
-    }
-  };
+      console.error('Subscription failed:', error)
+    } finally {
+      setIsSubmitting(false)
+    
+  }
 
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4 text-blue-200" />
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-blue-100">{description}</p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        <div className="flex flex-col sm:flex-row gap-2">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={placeholder}
-            className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            disabled={status === 'loading'}
-          />
+  if (isSubscribed) {
+    return (
+      <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4"></div>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <CheckCircle className="w-8 h-8 text-white" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Welcome to Our Community!
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Thank you for subscribing. You'll receive our latest insights and updates soon.
+          </p>
           <button
-            type="submit"
-            disabled={status === 'loading'}
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            onClick={() => setIsSubscribed(false)
+            className="text-white underline hover:text-blue-200 transition-colors"
           >
-            {status === 'loading' ? (
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-            ) : (
-              buttonText
-            )}
+            Subscribe another email
           </button>
         </div>
+      </div>
+    )
+  
 
-        {message && (
-          <div className={`mt-4 p-3 rounded-lg flex items-center space-x-2 ${
-            status === 'success' ? 'bg-green-100 text-green-800' :
-            status === 'error' ? 'bg-red-100 text-red-800' :
-            'bg-blue-100 text-blue-800'
-          }`}>
-            {status === 'success' && <CheckCircle className="w-5 h-5" />}
-            {status === 'error' && <AlertCircle className="w-5 h-5" />}
-            <span className="text-sm">{message}</span>
+  return (
+    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
+      <div className="max-w-6xl mx-auto"></div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
+          {/* Content */
+          <div></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {title
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              {subtitle
+            </p>
           </div>
-        )}
-      </form>
 
-      <p className="text-center text-blue-200 text-sm mt-4">
-        We respect your privacy. Unsubscribe at any time.
-      </p>
+          {/* Newsletter Form */
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"></div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div></div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email
+                  onChange={(e) => setEmail(e.target.value)
+                  placeholder={placeholder
+                  required
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
+                />
+              </div>
+              
+              <button
+                type="submit"
+                disabled={isSubmitting || !email
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
+              >
+                {isSubmitting ? (
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
+                    Subscribing...
+                ) : (
+                    {buttonText}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                )}
+              </button>
+              
+              <p className="text-sm text-blue-200 text-center">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContentNewsletterSignup;
+}
+
+export default ContentNewsletterSignup
+}

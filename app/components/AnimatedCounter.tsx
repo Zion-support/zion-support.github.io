@@ -1,17 +1,43 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AnimatedCounterProps {
-  // Add props here
+  end: number;
+  duration?: number;
+  className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ end, duration = 2000, className = '' }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      setCount(Math.floor(progress * end));
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [end, duration]);
+
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <span className={className}>
+      {count.toLocaleString()}
+    </span>
   );
 };
 
 export default AnimatedCounter;
-

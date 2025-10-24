@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Menu, X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
+import { X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   menuItems = [
     { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> },
     { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> },
-    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> },
+    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> }
   ],
   user,
   onLogout,
@@ -129,14 +129,14 @@ const Sidebar: React.FC<SidebarProps> = ({
             ))}
           </nav>
 
-          {/* Logout */}
+          {/* Logout Button */}
           {onLogout && (
             <div className="p-4 border-t">
               <button
                 onClick={onLogout}
                 className="flex items-center w-full px-3 py-2 text-sm font-medium text-red-600 rounded-md hover:bg-red-50"
               >
-                <LogOut className="w-5 h-5 mr-3" />
+                <LogOut className="w-4 h-4 mr-3" />
                 Logout
               </button>
             </div>

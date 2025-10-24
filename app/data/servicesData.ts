@@ -1,22 +1,22 @@
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  features: string[];
-  benefits: string[];
+  id: string
+  title: string
+  description: string
+  features: string[]
+  benefits: string[]
   pricing: {
-    basic: string;
-    pro: string;
-    enterprise: string};
+    basic: string
+    pro: string
+    enterprise: string}
   contactInfo: {
-    website: string;
-    email: string;
-    phone: string};
-  price?: string;
-  icon?: string;
-  href: string;
-  popular?: boolean;
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"}
+    website: string
+    email: string
+    phone: string}
+  price?: string
+  icon?: string
+  href: string
+  popular?: boolean
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"
 
 export const aiServices: Service[] = [
   {
@@ -29,13 +29,13 @@ export const aiServices: Service[] = [
       "Custom dashboards",
       "Automated reporting",
       "Machine learning models"
-    ],
+  ],
     benefits: [
       "Improved decision making",
       "Reduced manual analysis time",
       "Better business insights",
       "Cost savings"
-    ],
+  ],
     pricing: {
       basic: "$999/month",
       pro: "$2,999/month",
@@ -62,13 +62,13 @@ export const aiServices: Service[] = [
       "Customer service bots",
       "Data entry automation",
       "Smart scheduling"
-    ],
+  ],
     benefits: [
       "Increased efficiency",
       "Reduced human error",
       "24/7 operation",
       "Scalable solutions"
-    ],
+  ],
     pricing: {
       basic: "$1,499/month",
       pro: "$3,999/month",
@@ -95,13 +95,13 @@ export const aiServices: Service[] = [
       "Integration with CRM",
       "Voice recognition",
       "Custom training"
-    ],
+  ],
     benefits: [
       "24/7 customer support",
       "Reduced support costs",
       "Improved customer satisfaction",
       "Scalable support"
-    ],
+  ],
     pricing: {
       basic: "$799/month",
       pro: "$2,499/month",
@@ -117,8 +117,7 @@ export const aiServices: Service[] = [
     href: "/services/ai-chatbots",
     popular: false,
     category: "ai"
-  }
-];
+  ]
 
 export const itServices: Service[] = [
   {
@@ -131,13 +130,13 @@ export const itServices: Service[] = [
       "Application modernization",
       "Security compliance",
       "Performance optimization"
-    ],
+  ],
     benefits: [
       "Reduced infrastructure costs",
       "Improved scalability",
       "Enhanced security",
       "Better performance"
-    ],
+  ],
     pricing: {
       basic: "$5,000/project",
       pro: "$15,000/project",
@@ -164,13 +163,13 @@ export const itServices: Service[] = [
       "Incident response",
       "Compliance auditing",
       "Security training"
-    ],
+  ],
     benefits: [
       "Enhanced security posture",
       "Reduced risk of breaches",
       "Compliance assurance",
       "Peace of mind"
-    ],
+  ],
     pricing: {
       basic: "$2,999/month",
       pro: "$7,999/month",
@@ -186,9 +185,10 @@ export const itServices: Service[] = [
     href: "/services/cybersecurity",
     popular: true,
     category: "security"
-  }
-];
+  ]
 
-export const allServices: Service[] = [...aiServices, ...itServices];
+export const allServices: Service[] = [...aiServices, ...itServices]
 
-export default allServices;
+}
+
+export default allServices;}
