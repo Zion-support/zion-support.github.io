@@ -44,7 +44,7 @@ const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
       inputs.forEach((input) => {
         const label = document.querySelector(`label[for="${input.id}"]`);
         if (!label && !input.getAttribute('aria-label')) {
-          input.setAttribute('aria-label', input.placeholder || 'Input field');
+          input.setAttribute('aria-label', (input as HTMLInputElement).placeholder || 'Input field');
         }
       });
     };

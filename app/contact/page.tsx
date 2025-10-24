@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';;
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({

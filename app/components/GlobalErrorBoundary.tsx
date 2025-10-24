@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Phone, Mail } from 'lucide-react';
+import { CheckCircle, Check } from 'lucide-react';;
 
 const GlobalErrorBoundary: React.FC = () => {
   const benefits = [

@@ -1,6 +1,7 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Sun, Moon } from "lucide-react";
+import { useState, useEffect } from 'react';
+import { Sun, Moon, ArrowRight } from 'lucide-react';;
+import { ArrowRight } from 'lucide-react';
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');

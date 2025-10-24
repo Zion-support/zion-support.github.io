@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -14,6 +14,7 @@ import {
   AcademicCapIcon,
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
+import { X } from 'lucide-react';;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

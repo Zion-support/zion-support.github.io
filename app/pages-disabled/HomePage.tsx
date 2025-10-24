@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {
+import { import { Globe, Shield, Cloud, ArrowRight, Globe, Cpu } from 'lucide-react';;
 
   ArrowRightIcon, 
   ShieldCheckIcon, 

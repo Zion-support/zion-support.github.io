@@ -5,6 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
+import { Database } from 'lucide-react';;
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));

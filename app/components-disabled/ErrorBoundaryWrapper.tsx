@@ -1,5 +1,5 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import ErrorBoundary from './ErrorBoundary';
 
 interface Props {
@@ -19,14 +19,14 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(_error: Error): State {
     return { 
       hasError: true, 
       error 
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(_error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by wrapper:', error, errorInfo);
   }
 

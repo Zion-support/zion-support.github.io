@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight, Zap, Brain, Globe, Shield } from 'lucide-react';;
 
 const features = [
   {

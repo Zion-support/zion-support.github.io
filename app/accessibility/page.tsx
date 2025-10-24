@@ -1,8 +1,5 @@
 'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Check } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -17,7 +14,7 @@ const features = [
   {
     title: 'AI-Powered Audits',
     description: 'Automated accessibility testing using advanced AI algorithms to identify issues quickly and accurately.',
-    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
+    icon: 'ai-audit',
     benefits: [
       'Comprehensive WCAG 2.1 AA compliance checking',
       'Real-time issue detection and reporting',
@@ -28,7 +25,7 @@ const features = [
   {
     title: 'Manual Testing',
     description: 'Expert human testing to catch issues that automated tools might miss.',
-    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
+    icon: 'manual-test',
     benefits: [
       'Screen reader compatibility testing',
       'Keyboard navigation verification',
@@ -42,25 +39,21 @@ const services = [
   {
     title: 'Accessibility Audit',
     description: 'Comprehensive evaluation of your digital assets',
-    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
     price: 'Starting at $500'
   },
   {
     title: 'Implementation',
     description: 'Fix identified accessibility issues',
-    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
     price: 'Starting at $1,000'
   },
   {
     title: 'Training',
     description: 'Team training on accessibility best practices',
-    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
     price: 'Starting at $300'
   },
   {
     title: 'Ongoing Support',
     description: 'Continuous monitoring and maintenance',
-    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
     price: 'Starting at $200/mo'
   }
 ];
@@ -127,7 +120,7 @@ export default function AccessibilityPage() {
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                    <feature.icon className="h-6 w-6 text-emerald-600" />
+                    <div className="h-6 w-6 bg-emerald-600 rounded" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
                 </div>
@@ -159,7 +152,7 @@ export default function AccessibilityPage() {
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="h-8 w-8 text-emerald-600" />
+                  <div className="h-8 w-8 bg-emerald-600 rounded" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>

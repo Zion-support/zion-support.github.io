@@ -73,7 +73,7 @@ const EnhancedErrorBoundary: React.FC = () => {
 interface Props {;
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
   showErrorDetails?: boolean}
 
 export default EnhancedErrorBoundary}

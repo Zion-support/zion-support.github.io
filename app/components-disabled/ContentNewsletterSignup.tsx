@@ -2,7 +2,7 @@
 import Footer from './Footer'
 import Navigation from './Navigation'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Mail, CheckCircle, Star, Users, Globe, Zap } from 'lucide-react'
+import { ArrowRight, Mail, CheckCircle, Star, Users, Globe, Zap, Check } from 'lucide-react';;
 import React, { useState } from 'react'
 
 interface ContentNewsletterSignupProps {

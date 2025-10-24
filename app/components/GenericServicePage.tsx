@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Check } from 'lucide-react';;
 import Link from 'next/link';
 
 interface GenericServicePageProps {

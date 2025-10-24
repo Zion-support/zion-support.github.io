@@ -3,7 +3,7 @@ import React from 'react';
 
 interface ErrorBoundaryState {
   hasError: boolean;
-  error: Error | undefined;
+  _error: Error | undefined;
 }
 
 interface ErrorBoundaryProps {
@@ -14,28 +14,28 @@ interface ErrorBoundaryProps {
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false, error: undefined };
+    this.state = { hasError: false, _error: undefined };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
+  static getDerivedStateFromError(_error: Error): ErrorBoundaryState {
+    return { hasError: true, _error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', _error, errorInfo);
     }
   }
 
   resetError = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, _error: undefined });
   };
 
   override render() {
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback;
       if (FallbackComponent) {
-        return <FallbackComponent error={this.state.error} resetError={this.resetError} />;
+        return <FallbackComponent error={this.state._error} resetError={this.resetError} />;
       }
 
       return (

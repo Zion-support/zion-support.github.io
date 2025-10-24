@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState, createContext, useContext } from 'react';
 import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
+import { Settings } from 'lucide-react';;
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 

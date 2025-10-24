@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {
+import { import { Shield, Star, ArrowRight, Shield, Users } from 'lucide-react';;
 
   UserGroupIcon,
   LightBulbIcon,

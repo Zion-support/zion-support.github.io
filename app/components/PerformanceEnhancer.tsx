@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Shield, Globe, CheckCircle } from 'lucide-react';
+import { CheckCircle, Check } from 'lucide-react';;
 
 const PerformanceEnhancer: React.FC = () => {
   useEffect(() => {

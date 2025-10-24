@@ -4,7 +4,7 @@ export const useErrorMonitoring = () => {
 
   useEffect(() => {
 
-    const handleError = (error: ErrorEvent) => {
+    const handleError = (_error: ErrorEvent) => {
 
       console.error('Error caught:', error)
     }
