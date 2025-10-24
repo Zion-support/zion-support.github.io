@@ -1,7 +1,6 @@
-'use client';
 import React from 'react';
 import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
-
+export const dynamic = 'force-dynamic';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
+export const dynamic = 'force-dynamic';
 
 const AIServicesPage: React.FC = () => {
   const services = [

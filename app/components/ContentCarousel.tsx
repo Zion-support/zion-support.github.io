@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 'use client'
+import { Metadata } from 'next';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -71,11 +71,7 @@ const ContentCarousel: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ContentCarousel</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

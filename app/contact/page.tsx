@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+export const dynamic = 'force-dynamic';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({

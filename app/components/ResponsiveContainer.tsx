@@ -1,7 +1,7 @@
 'use client'
+import { Metadata } from 'next';
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import React from 'react'
 import { cn } from '../lib/utils'
@@ -28,11 +28,7 @@ constResponsiveContainer= ({children,
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '' }) => {
   return (
     <>
-      <Helmet>
-        <title>ResponsiveContainer</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ResponsiveContainer solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

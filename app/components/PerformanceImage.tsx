@@ -1,4 +1,5 @@
 &quot;use client&quot;
+import { Metadata } from 'next';
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
 
@@ -40,11 +41,7 @@ const PerformanceImagePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>PerformanceImage | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;container mx-auto max-w-6xl&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>

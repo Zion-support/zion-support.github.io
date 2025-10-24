@@ -1,6 +1,6 @@
 'use client'
+import { Metadata } from 'next';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -42,11 +42,7 @@ const ServiceWorkerPage: React.FC = () => {
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {
   return (
     <>
-      <Helmet>
-        <title>ServiceWorker - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced serviceworker solutions powered by AI technology.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceWorker, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>

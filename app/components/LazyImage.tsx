@@ -1,8 +1,8 @@
 'use client'
+import { Metadata } from 'next';
 import Footer from './Footer'
 import Navigation from './Navigation'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
@@ -21,11 +21,7 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
 const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
   return (
     <>
-      <Helmet>
-        <title>LazyImage</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced LazyImage solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, LazyImage, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}

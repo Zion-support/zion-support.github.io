@@ -1,7 +1,6 @@
-'use client';
 import React from 'react';
 import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe } from 'lucide-react';
-
+export const dynamic = 'force-dynamic';
 export default function AIContentGeneratorPage() {
   const features = [
     {

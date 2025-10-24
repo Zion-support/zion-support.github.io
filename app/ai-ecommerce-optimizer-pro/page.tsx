@@ -1,9 +1,17 @@
-'use client';
+import { Metadata } from 'next';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users } from 'lucide-react';
-
+export const dynamic = 'force-dynamic';
+export const metadata: Metadata = {
+  title: 'Zion Tech Group | AI & IT Solutions',
+  description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+  openGraph: {
+    title: 'Zion Tech Group | AI & IT Solutions',
+    description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+    type: 'website',
+  },
+};
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
     {
@@ -71,11 +79,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered e-commerce optimization solutions. Boost sales, improve conversion rates, and maximize your online store performance." />
-        <meta name="keywords" content="AI e-commerce, e-commerce optimization, AI solutions, online store optimization, Zion Tech Group" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -90,14 +94,14 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
-                to="/ai-services" 
+                href="/ai-services" 
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 View All Services
@@ -163,7 +167,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center block"
                 >
                   Get Started
@@ -185,14 +189,14 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Optimization
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services

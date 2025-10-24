@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+export const dynamic = 'force-dynamic';
 
 const MicroSaasPage: React.FC = () => {
   const services = [

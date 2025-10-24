@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Brain, Globe, Shield, Zap } from 'lucide-react'
+export const dynamic = 'force-dynamic';
 
 const teamMembers = [
   {
