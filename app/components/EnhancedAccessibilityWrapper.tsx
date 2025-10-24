@@ -3,13 +3,13 @@ import React from 'react';
 
 interface EnhancedAccessibilityWrapperProps {
   className?: string;
+  children: React.ReactNode;
 }
 
-const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ className }) => {
+const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> = ({ className, children }) => {
   return (
     <div className={className}>
-      <h2>EnhancedAccessibilityWrapper</h2>
-      <p>This component is being rebuilt.</p>
+      {children}
     </div>
   );
 };

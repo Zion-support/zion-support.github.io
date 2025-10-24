@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 
-
-// dynamic utility;
-
-export const dynamic = ($2) => {
-$3
+// dynamic utility
+export const dynamic = (component: React.ComponentType) => {
+  return component;
 };
-
-export default dynamic

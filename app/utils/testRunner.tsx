@@ -1,8 +1,7 @@
-"use client";
+'use client';
 import React from 'react';
 
-const testRunner = ($2) => {
-$3
+// test runner utility
+export const testRunner = (tests: any[]) => {
+  return tests;
 };
-
-export default testRunner

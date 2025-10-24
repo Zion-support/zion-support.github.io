@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
 
-const TestComponent = () => {;
+const TestComponent = () => {
   return <div>Test content</div>;
 };
 
-describe("Advanced Components", () => {
+describe("Loading Spinner Component", () => {
   it("should render without errors", () => {
     expect(true).toBe(true);
   });
@@ -17,9 +17,9 @@ describe("Advanced Components", () => {
   
   it("should handle console errors", () => {
     const consoleSpy = jest
-      .spyOn(console, "error");
+      .spyOn(console, "error")
       .mockImplementation(() => {});
     // Test implementation
     consoleSpy.mockRestore();
   });
-});</TestComponent>
+});
