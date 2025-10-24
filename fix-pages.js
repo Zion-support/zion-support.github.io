@@ -1,43 +1,44 @@
 const fs = require('fs');
 const path = require('path');
 
+// Function to fix a single page file
 function fixPageFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix the broken features map section
-    const brokenPattern = /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">\s*<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">\s*<feature\.icon className="w-8 h-8 text-white" \/>\s*<\/div>\s*<h3 className="text-xl font-semibold text-white mb-3">\s*{feature\.title}\s*<\/h3>\s*<p className="text-gray-300">{feature\.description}<\/p>\s*<\/div>\s*\)\)}/gs;
-    
-    const fixedContent = `{features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}`;
-    
-    if (brokenPattern.test(content)) {
-      content = content.replace(brokenPattern, fixedContent);
+    // Check if file has the problematic pattern
+    if (content.includes('return (\n    <div>') && content.includes('<Head>')) {
+      // Fix the JSX structure
+      content = content.replace(
+        /return \(\s*<div>\s*<Head>/g,
+        'return (\n    <>\n      <Head>'
+      );
+      
+      // Fix the closing tags
+      content = content.replace(
+        /<\/Head>\s*<div className=/g,
+        '</Head>\n      <div className='
+      );
+      
+      // Fix the final closing
+      content = content.replace(
+        /<\/div>\s*\);\s*}/g,
+        '</div>\n    </>\n  );\n}'
+      );
+      
+      // Write the fixed content back
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
-    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
+  return false;
 }
 
-function findAndFixPages(dir) {
+// Function to recursively find and fix all page.tsx files
+function fixAllPages(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
@@ -46,7 +47,7 @@ function findAndFixPages(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      fixedCount += findAndFixPages(filePath);
+      fixedCount += fixAllPages(filePath);
     } else if (file === 'page.tsx') {
       if (fixPageFile(filePath)) {
         fixedCount++;
@@ -57,6 +58,8 @@ function findAndFixPages(dir) {
   return fixedCount;
 }
 
+// Start fixing from the app directory
 const appDir = path.join(__dirname, 'app');
-const fixedCount = findAndFixPages(appDir);
-console.log(`Fixed ${fixedCount} page files`);
+console.log('Starting to fix page files...');
+const totalFixed = fixAllPages(appDir);
+console.log(`Fixed ${totalFixed} page files.`);
