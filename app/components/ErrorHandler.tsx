@@ -63,9 +63,12 @@ const Page: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             </div>
           ))}
 =======
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
             ))}
