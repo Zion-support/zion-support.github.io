@@ -18,12 +18,12 @@ interface PerformanceMonitorProps {
   logToConsole?: boolean;
 }
 
-interface LayoutShift extends PerformanceEntry {
+interface _LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
 
-interface PerformanceEventTiming extends PerformanceEntry {
+interface _PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
 }
 
