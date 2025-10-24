@@ -1,16 +1,136 @@
-import { Mail, Menu, Phone, X, Zap } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon,
+  GlobeAltIcon,
+  CloudIcon,
+  CpuChipIcon,
+  SignalIcon,
+  UserGroupIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  EyeIcon,
+  CircleStackIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  UserPlusIcon,
+  CheckCircleIcon,
+  MicrophoneIcon,
+  CubeIcon,
+  HeartIcon
+} from '@heroicons/react/24/outline';
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    {
+      name: 'AI Services',
+      href: '/ai-solutions',
+      icon: CpuChipIcon,
+      submenu: [
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon },
+        { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: ShieldCheckIcon },
+        { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: EyeIcon },
+        { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: ChartBarIcon },
+        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: CogIcon },
+        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
+        { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: CogIcon },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: UserGroupIcon },
+        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon },
+        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
+        { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: CubeIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: HeartIcon },
+        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
+      ]
+    },
+    {
+      name: 'Micro SaaS',
+      href: '/micro-saas-solutions',
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
+        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
+        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+      ]
+    },
+    {
+      name: 'IT Solutions',
+      href: '/it-solutions',
+      icon: CogIcon,
+      submenu: [
+        { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
+        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: ShieldCheckIcon },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: SignalIcon },
+        { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
+        { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
+        { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
+        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
+        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
+        { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
+        { name: 'VR Solutions', href: '/virtual-reality-solutions', icon: EyeIcon },
+        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
+        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
+      ]
+    },
+    {
+      name: 'Resources',
       href: '#',
       children: [
         { name: 'AI Services', href: '/ai-services' },

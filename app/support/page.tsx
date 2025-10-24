@@ -14,92 +14,49 @@ interface FAQ {
 }
 
 const SupportPage: React.FC = () => {
-  const faqs: FAQ[] = [
-    {
-      question: "How do I get started with your AI solutions?",
-      answer:
-        "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.",
-      category: "general",
-    },
-    {
-      question: "What AI technologies do you specialize in?",
-      answer: "We specialize in a wide range of AI technologies including machine learning, natural language processing, computer vision, predictive analytics, automation, and custom AI model development.",
-      category: "Technology"
-    },
-    {
-      question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes! We offer comprehensive support and maintenance packages to ensure your AI solutions continue to perform optimally. This includes monitoring, updates, and technical support.",
-      category: "Support"
-    },
-    {
-      question: "How long does it take to implement an AI solution?",
-      answer: "Implementation time varies depending on the complexity of the solution. Simple automations can be deployed in weeks, while complex AI systems may take several months. We'll provide a detailed timeline during consultation.",
-      category: "Implementation"
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, and more. Our AI solutions are tailored to meet industry-specific requirements.",
-      category: "Industries"
-    },
-    {
-      question: "Do you offer custom AI development?",
-      answer: "Absolutely! We specialize in custom AI development tailored to your specific business needs. Our team will work closely with you to design and implement solutions that address your unique challenges.",
-      category: "Custom Development"
-    }
-  ];
-
-  const supportChannels = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Phone Support",
-      description: "Call us for immediate assistance",
-      contact: "+1 (302) 464-0950",
-      availability: "Mon-Fri 9AM-6PM EST"
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Support",
-      description: "Send us your questions via email",
-      contact: "kleber@ziontechgroup.com",
-      availability: "24/7 response within 24 hours"
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Live Chat",
-      description: "Chat with our support team",
-      contact: "Available on website",
-      availability: "Mon-Fri 9AM-6PM EST"
-    }
-  ];
-
   return (
     <>
-      <Helmet>
-        <title>Support | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for your AI and IT solutions. Contact our expert support team for assistance with your projects." />
-        <meta name="keywords" content="support, help, AI support, IT support, customer service, technical support" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <SEOHead
+        title="Support Center - Zion Tech Group"
+        description="Get help and support for all our AI and IT solutions. 24/7 customer support available."
+        keywords="support, help, customer service, technical support, contact support"
+        canonicalUrl="https://ziontechgroup.com/support"
+      />
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Support Center
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              We're here to help you succeed with your AI and IT solutions
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We're here to help you succeed with our AI and IT solutions. Get the support you need, when you need it.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
-                Contact Support
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </button>
-              <button className="px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300">
-                Browse FAQ
-              </button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-4 text-white">24/7 Support</h3>
+              <p className="text-gray-400 mb-4">
+                Round-the-clock technical support for all our services.
+              </p>
+              <p className="text-sm text-purple-400">Available 24/7</p>
+            </div>
+            
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-4 text-white">Live Chat</h3>
+              <p className="text-gray-400 mb-4">
+                Get instant help through our live chat support.
+              </p>
+              <p className="text-sm text-cyan-400">Online Now</p>
+            </div>
+            
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-4 text-white">Phone Support</h3>
+              <p className="text-gray-400 mb-4">
+                Speak directly with our technical experts.
+              </p>
+              <p className="text-sm text-green-400">+1 (302) 464-0950</p>
             </div>
           </div>
         </section>
@@ -160,7 +117,25 @@ const SupportPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+                <div className="space-y-2">
+                  <a href="/help" className="block text-purple-400 hover:text-purple-300 transition-colors">
+                    Help Center
+                  </a>
+                  <a href="/api-docs" className="block text-purple-400 hover:text-purple-300 transition-colors">
+                    API Documentation
+                  </a>
+                  <a href="/tutorials" className="block text-purple-400 hover:text-purple-300 transition-colors">
+                    Tutorials
+                  </a>
+                  <a href="/contact" className="block text-purple-400 hover:text-purple-300 transition-colors">
+                    Contact Form
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
