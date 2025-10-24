@@ -6,37 +6,41 @@ import {BookOpen, Users, BarChart, Zap, Shield, CheckCircle} from 'lucide-react'
 const OnlineLearningPlatformPage: React.FC = () => {
   const features = [
     { icon: BookOpen, title: 'Course Management', description: 'Create, organize, and manage educational content with AI-powered course recommendations.'},
-    {icon: Users, title: 'Student Analytics', description: 'Track student progress and engagement with detailed analytics and insights.' },
-    {icon: BarChart, title: 'Performance Tracking', description: 'Monitor learning outcomes and identify areas for improvement.' },
-    {icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
-    {icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.'},
-    {icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }]
+    {
+      icon: Users, title: 'Student Analytics', description: 'Track student progress and engagement with detailed analytics and insights.' },
+    {
+      icon: BarChart, title: 'Performance Tracking', description: 'Monitor learning outcomes and identify areas for improvement.' },
+    {
+      icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
+    {
+      icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.'},
+    {
+      icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }]
   return (<React.Fragment>
       <Helmet />
     <>
       <Helmet>
         <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
-    <React.Fragment>
-      </React><Helmet>
+    <Helmet>
         </Helmet>
       <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
         <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
         <meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring" />
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">Online Learning Platform</h1>,
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.</p>
+              <h1 className="text-4 xlmd:text-6 xlfont-bold text-white mb-6">Online Learning Platform</h1>,
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">Create engaging online learning experiences with AI-powered education platform.</p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">,</div>
+            <div>
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5backdrop-blur-lgrounded-2xlp-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">,</div>
-                  <div className="w-16h-16bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                <div>
+                  <div className="w-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                     <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   </div>
                   <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
                 <div className="bg-white/5 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
@@ -53,15 +57,15 @@ const OnlineLearningPlatformPage: React.FC = () => {
   )
 }
 export default OnlineLearningPlatformPage
-        <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Online Learning Platform
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
+              <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">Online Learning Platform
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">Create engaging online learning experiences with AI-powered education platform.
+            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5backdrop-blur-lgrounded-2xlp-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16h-16bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                <div key={index} className="bg-white/5 backdrop-blur-lgrounded-2 xlp-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                     <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}
                   <p className="text-gray-300">{feature.description}

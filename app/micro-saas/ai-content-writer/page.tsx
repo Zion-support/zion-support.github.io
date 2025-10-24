@@ -34,7 +34,7 @@ const AiContentWriterPage: React.FC = () => {
       
     {icon: BarChart},
     {
-    icon: BarChart,
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       
@@ -86,23 +86,23 @@ return (
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Page
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -113,42 +113,42 @@ return (
       </section>
 
       {/* Features Section */}
-      <section className="py-20px-4sm:px-6lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Why Choose Our Page?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-        {/* Hero Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-        <section$1>
-        <div$2>
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relativemax-w-7xl mx-autotext-center">
-            <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+        <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relativemax-w-7 xl mx-autotext-center">
+            <h1 className="text-5 xlmd:text-7 xlfont-boldtext-white mb-6 leading-tight">
               Ai Content Writer
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="relativemax-w-7xl mx-autotext-center"></div>
+          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
+          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relativemax-w-7 xl mx-autotext-center"></div>
             <h1>Ai Content Writer;</h1>
             </h1>
             <p>Advanced AI-powered ai content writer solution for modern businesses.</p>
@@ -163,31 +163,32 @@ return (
       </section>
 
         {/* Features Section */}
-        <section className="py-20px-4">
+        <section className="py-20 px-4">
         </section>
-        {/* Features Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-        <section className="relativepy-20px-4overflow-hidden">
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relativemax-w-7xl mx-autotext-center">
-            <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">Ai Content Writer
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+        <section className="relativepy-20 px-4 overflow-hidden">
+          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
+          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relativemax-w-7 xl mx-autotext-center">
+            <h1 className="text-5 xlmd:text-7 xlfont-boldtext-white mb-6 leading-tight">Ai Content Writer
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
               Advanced AI-powered ai content writer solution for modern businesses.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-rfrom-green-500to-blue-600hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
-              <button className="borderborder-green-400text-green-400hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
+              <button className="bg-gradient-to-rfrom-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
+              <button className="borderborder-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
         {/* Features Section */}
-        <section className="py-20px-4">
-          </section>< className="$2/><divclass Name="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+        <section className="py-20 px-4">
+          </section>
+        <div className="text-center mb-16">
+              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-          <div className="max-w-7xl mx-auto"></div>
+          <div className="max-w-7 xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Why Choose Our Cloud Migration?</h2>
               <p>Advanced AI technology that drives results;</p>
@@ -195,11 +196,11 @@ return (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5backdrop-blur-smrounded-2xlp-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16h-16bg-gradient-to-brfrom-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-smrounded-2 xlp-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-brfrom-green-500 to-blue-600 rounded-2 xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
                     <feature />
                   <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300mb-4">{feature.description</p>}</p>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (;
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
@@ -215,39 +216,39 @@ return (
             </div>
         </div>
       </section>
-        {/* Benefits Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">Key Features
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
+              <h2 className="text-4 xlmd:text-5 xlfont-boldtext-white mb-6">Key Features
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Advanced AI technology that drives results
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5backdrop-blur-smrounded-2xlp-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16h-16bg-gradient-to-brfrom-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-white/5 backdrop-blur-smrounded-2 xlp-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-brfrom-green-500 to-blue-600 rounded-2 xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}
-                  <p className="text-gray-300mb-4">{feature.description}
+                  <p className="text-gray-300 mb-4">{feature.description}
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flexitems-centertext-smtext-gray-400">
-                          <CheckCircle className="w-4h-4text-green-400mr-2" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                       ))}
                     </ul>
                   </div>
-          <div className="max-w-7xl mx-auto"></div>
+          <div className="max-w-7 xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Why Choose Our Cloud Migration?</h2>
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8"></div>,
+            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5backdrop-blur-smrounded-2xlp-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16h-16bg-gradient-to-brfrom-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-smrounded-2 xlp-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-brfrom-green-500 to-blue-600 rounded-2 xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
                     <CheckCircle />
-                  <p className="text-lgtext-whitefont-medium">{benefit</p>}</p>
+                  <p className="text-lgtext-whitefont-medium">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -255,36 +256,37 @@ return (
       </section>
 
         {/* Benefits Section */}
-        <section$1>
-        <div$2>
+        <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto" / /></div>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+          <div className="max-w-7 xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2>Why Choose Our Cloud Migration?</h2>
               <p></p>
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8" / /></div>
+            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
               ))}
         {/* CTA Section */}
-        <section className="py-20px-4">
-          </section>< className="$2/><divclass Name="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+        <section className="py-20 px-4">
+          </section>
+        <div className="text-center mb-16">
+              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
           ))
         </section>
 
         {/* CTA Section */}
-        <section$1>
-        <div$2>
-            <div className="bg-white/5backdrop-blur-smrounded-3xlp-12">
-              <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">
-          <div className="max-w-4xlmx-autotext-center"></div>
-            <div className="bg-white/5backdrop-blur-smrounded-3xlp-12"></div>
+        <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-smrounded-3 xlp-12">
+              <h2 className="text-4 xlmd:text-5 xlfont-boldtext-white mb-6">
+          <div className="max-w-4 xlmx-autotext-center"></div>
+            <div className="bg-white/5 backdrop-blur-smrounded-3 xlp-12"></div>
               <h2>Why Choose Our Cloud Migration?</h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>

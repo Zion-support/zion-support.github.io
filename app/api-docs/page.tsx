@@ -113,20 +113,20 @@ export default function APIDocsPage() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="relative max-w-7 xl mx-auto text-center">
+          <h1 className="text-5 xl md:text-7 xl font-bold text-white mb-6 leading-tight">
             API
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Documentation
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
             Integrate with our powerful AI and IT solutions through our comprehensive REST API. 
             Build amazing applications with our developer-friendly endpoints.
           </p>
           
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-8">
+          <div className="max-w-2 xl mx-auto mb-8">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -143,8 +143,8 @@ export default function APIDocsPage() {
 
       {/* Quick Start */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -182,17 +182,17 @@ export default function APIDocsPage() {
 
       {/* API Endpoints */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
             {filteredEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
+                    <h3 className="text-2 xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
@@ -242,8 +242,8 @@ export default function APIDocsPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">

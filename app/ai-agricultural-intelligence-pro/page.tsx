@@ -51,14 +51,14 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="relative max-w-7 xl mx-auto text-center">
+          <h1 className="text-5 xl md:text-7 xl font-bold text-white mb-6 leading-tight">
             AI Agricultural
             <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Intelligence Pro
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
             Transform your farming operations with advanced AI-powered agricultural intelligence. 
             Optimize yields, reduce costs, and make data-driven decisions for sustainable agriculture.
           </p>
@@ -75,12 +75,12 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4 xl font-bold text-white mb-4">
               Advanced Agricultural Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our AI-powered agricultural intelligence platform provides comprehensive solutions for modern farming.
             </p>
           </div>
@@ -109,8 +109,8 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-4 xl font-bold text-white mb-6">
             Ready to Revolutionize Your Farming?
           </h2>
           <p className="text-xl text-gray-300 mb-8">

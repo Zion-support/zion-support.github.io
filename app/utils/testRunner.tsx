@@ -1403,20 +1403,20 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         ${this.results;
           .map(result => `}
         ${this.results}
-        <h3 id="heading-summary">Summary<p>Total: ${this.results.length,</p>}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}<p>Failed: ${this.results.filter(r => r.status === 'failed').length,</p>}</p>
+        <h3 id="heading-summary">Summary<p>Total: ${this.results.length,}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}<p>Failed: ${this.results.filter(r => r.status === 'failed').length,}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,</p>}<p>Duration: ${Date.now() - this.startTime,</p>}ms<div class="tests">${this.results</div>
-    <div class="summary"></div>} <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length,</p>}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length,</p>}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,</p>}</p><p>Duration: ${Date.now() - this.startTime,</p>}ms</p><div class="tests">${this.results</div>
+    <div class="summary"></div>} <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length,}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length,}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,}</p><p>Duration: ${Date.now() - this.startTime,</p>}ms</p><div class="tests">${this.results</div>
           .map()</div>}result => `}</div>
             <div class="test ${result.status}"></div>
-                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status,</p>}</p><p>Duration: ${result.duration,</p>}ms</p>
-                ${result.error ? `<p>Error: ${result.error.message,</p>}</p>` : ''}
+                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status,}</p><p>Duration: ${result.duration,</p>}ms</p>
+                ${result.error ? `<p>Error: ${result.error.message,}</p>` : ''}
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4 xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
+              <h2 className="text-2 xl font-bold text-white mb-4">Our Services</h2>
               <p className="text-gray-300 mb-6">
                 We provide comprehensive TestRunner solutions tailored to your business needs.
               </p>
@@ -1432,10 +1432,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
               </div>
             </div>
         <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length,</p>}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length,</p>}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,</p>}</p>
+        <p>Total: ${this.results.length,}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,}</p>
+        <p>Failed: ${this.results.filter(r => r.status === 'failed').length,}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,}</p>
         <p>Duration: ${Date.now() - this.startTime,</p>}ms</p>
     </div>
     <div class="tests"></div>
@@ -1446,9 +1446,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             result => `}</div>
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>
-                <p>Status: ${result.status,</p>}</p>);
+                <p>Status: ${result.status,}</p>);
                 <p>Duration: ${result.duration,</p>}ms</p>);
-                ${result.error ? `<p>Error: ${result.error.message,</p>}</p>` : ''})
+                ${result.error ? `<p>Error: ${result.error.message,}</p>` : ''})
             </div>);
 );
           );

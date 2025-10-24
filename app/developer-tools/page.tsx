@@ -35,8 +35,7 @@ const DeveloperToolsPage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+      ];;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -47,16 +46,16 @@ const DeveloperToolsPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Developer
               </span>
               <br />
               <span className="text-white">Tools</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               Transform your development workflow with our advanced developer tools. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -75,12 +74,12 @@ const DeveloperToolsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Our Developer Tools
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Comprehensive developer tools tailored to your development needs.
             </p>
           </div>
@@ -99,12 +98,12 @@ const DeveloperToolsPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Experience the power of our developer tools for your development workflow.
             </p>
           </div>
@@ -122,9 +121,9 @@ const DeveloperToolsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4 xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">

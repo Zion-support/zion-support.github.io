@@ -80,12 +80,12 @@ const AIAnalyticsPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-6 xl">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5 xl md:text-6 xl font-bold text-gray-900 mb-6">
                 AI Analytics Solutions
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 mb-8 max-w-3 xl mx-auto">
                 Transform your data into actionable insights with our advanced AI Analytics solutions. 
                 Get intelligent recommendations, predictive modeling, and real-time processing for better business decisions.
               </p>
@@ -103,12 +103,12 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-6 xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">
                 Powerful AI Analytics Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-2 xl mx-auto">
                 Our AI Analytics solutions provide comprehensive tools for data analysis and business intelligence
               </p>
             </div>
@@ -141,9 +141,9 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Pricing Section */}
         <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-6 xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">
                 AI Analytics Pricing
               </h2>
               <p className="text-xl text-gray-600">
@@ -159,14 +159,14 @@ const AIAnalyticsPage: React.FC = () => {
                       Most Popular
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2 xl font-bold text-gray-900 mb-2">
                     {plan.name}
                   </h3>
                   <p className="text-gray-600 mb-4">
                     {plan.description}
                   </p>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">
+                    <span className="text-4 xl font-bold text-gray-900">
                       {plan.price}
                     </span>
                     <span className="text-gray-600">
@@ -196,8 +196,8 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-purple-600">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+          <div className="container mx-auto max-w-4 xl text-center">
+            <h2 className="text-4 xl font-bold text-white mb-6">
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-purple-100 mb-8">

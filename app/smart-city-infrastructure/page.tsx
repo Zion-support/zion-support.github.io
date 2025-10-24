@@ -12,15 +12,18 @@ const SmartCityInfrastructurePage: React.FC = () => {
       title: 'AI-Powered Solutions',
 
       description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'},
-    {icon: Zap,
+    {
+      icon: Zap,
       title: 'High Performance',
 
       description: 'Lightning-fast processing and real-time analytics for optimal city management'},
-    {icon: Shield,
+    {
+      icon: Shield,
       title: 'Enterprise Security',
 
       description: 'Bank-level security with advanced encryption and compliance standards'},
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Reach',
 const PagePage: React.FC = () => {
   const features = [
@@ -28,13 +31,16 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'},
-    {icon: Zap,
+    {
+      icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'},
-    {icon: Shield,
+    {
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'},
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'}description: 'Worldwide deployment and support for international smart city projects'}
   ]
@@ -43,17 +49,20 @@ const PagePage: React.FC = () => {
       title: 'Smart Buildings',
       description: 'Intelligent building management systems with IoT integration',
       features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']},
-    {icon: Wifi},
+    {
+      icon: Wifi},
     {
       icon: Wifi,
       title: 'IoT Networks',
       description: 'Comprehensive IoT infrastructure for city-wide connectivity',
       features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']},
-    {icon: Cpu,
+    {
+      icon: Cpu,
       title: 'Data Analytics',
       description: 'Advanced analytics platform for city data processing',
       features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']},
-    {icon: Database,
+    {
+      icon: Database,
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']}]
@@ -63,7 +72,7 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20px-4">
+      {/* Benefits Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -72,7 +81,7 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto"></div>
+        <div className="max-w-7 xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Cloud Migration?</h2>
             <p>Experience the power of our page solutions for your business.,</p>
@@ -83,7 +92,7 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20px-4">
+      {/* CTA Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -92,8 +101,8 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-        <div className="max-w-4xlmx-autotext-center"></div>
-          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md: p-12"></div>,
+        <div className="max-w-4 xlmx-autotext-center"></div>
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12"></div>,
             <h2>Why Choose Our Cloud Migration?</h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
@@ -123,59 +132,58 @@ export default PagePage;
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+      ];
 
   return(<>)
       <Helmet><title>Smart City Infrastructure - Zion Tech Group</title>
-    'Proven track record of success'
-  ]
+      ];
   return (
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Page
               <br />
               <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
       {/* Features Section */}
-      <section className="py-20px-4sm:px-6lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Why Choose Our Page?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}
                 <p className="text-gray-300">{feature.description}
             ))}
       {/* Benefits Section */}
-      <section className="py-20px-4sm:px-6lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">Key Benefits
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Experience the power of our page solutions for your business.
             ))}
       {/* CTA Section */}
-      <section className="py-20px-4">
-          </section>< className="$2/><divclass Name="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+      <section className="py-20 px-4">
+          </section>
+        <div className="text-center mb-16">
+              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-4xlmx-autotext-center" / /></div>
-          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12" / /></div>
+        <div className="max-w-4 xlmx-autotext-center" / /></div>
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12" / /></div>
             <h2>Why Choose Our Cloud Migration?</h2>
             <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
@@ -204,8 +212,7 @@ export default PagePage
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+      ];
 
   return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -216,24 +223,24 @@ export default PagePage
       </Helmet>
 
       {/* Hero Section */}
-      <section$1>
-        <div$2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Page
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -241,22 +248,22 @@ export default PagePage
     <>
 
       <Navigation />
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */</div>} <section className="relativepy-20px-4sm: px-6 lg:px-8">,</section>
-          <div className="max-w-7xl mx-auto">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */</div>} <section className="relativepy-20 px-4 sm: px-6 lg:px-8">,</section>
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">,</h1>
+              <h1>
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Smart City;</span>
                 </span>
                 <br />
                 <span className="text-white">Infrastructure</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your city with our advanced smart infrastructure solutions.</p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">Transform your city with our advanced smart infrastructure solutions.</p>
                 Powered by cutting-edge AI technology and industry expertise.
               </p>
-              <div className="flexflex-colsm:flex-row gap-4 justify-center">,</div>
-                <button className="bg-gradient-to-rfrom-purple-500to-blue-600text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
+              <div>
+                <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
                   Get Started;
-                  <ArrowRight className="ml-2h-5w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
                 <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
                   Learn More;
@@ -267,36 +274,36 @@ export default PagePage
       </section>
 
       {/* Features Section */}
-      <section$1>
-        <div$2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Why Choose Our Page?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-        {/* Features Section */} <section className="py-20px-4sm:px-6 lg:px-8">,<section>
+        {/* Features Section */} <section className="py-20 px-4 sm:px-6 lg:px-8">,<section>
         <div>
           <div>
             <h2>Why Choose Our Cloud Migration?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our smart city solutions deliver unmatched performance, security, and scalability.</p>
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Our smart city solutions deliver unmatched performance, security, and scalability.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300">,</div>
+                <div>
                   <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   </div>
                   <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
                 <div className="bg-white/5 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
@@ -308,13 +315,13 @@ export default PagePage
       </section>
 
       {/* Benefits Section */}
-      <section$1>
-        <div$2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
@@ -322,31 +329,31 @@ export default PagePage
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3">
-                <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
-        {/* Services Section */} <section className="py-20px-4sm:px-6 lg:px-8 bg-white/5">,<section>
+        {/* Services Section */} <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">,<section>
         <div>
           <div>
             <h2>Why Choose Our Cloud Migration?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive solutions for modern smart city infrastructure.</p>
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Comprehensive solutions for modern smart city infrastructure.</p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2gap-8">,</div>
+            <div>
               {smartCityServices.map((service, index) => (
-                <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-8 border border-white/20 hover: bg-white/20 transition-all duration-300">,</div>
+                <div>
                   <div className="flexitems-centermb-6">
-                    <div className="w-16h-16bg-gradient-to-rfrom-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="h-8w-8text-white" />
+                    <div className="w-16 h-16 bg-gradient-to-rfrom-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xlfont-boldtext-whitemb-2">{service.title}</h3>
-                      <p className="text-gray-300">{service.description</p>}</p>
+                      <h3 className="text-2 xlfont-boldtext-whitemb-2">{service.title}</h3>
+                      <p className="text-gray-300">{service.description}</p>
                     </div>
                   </div>
                   <div className="space-y-2">{service.features.map((feature, featureIndex) => (</div>
                       <div key={featureIndex}className="flexitems-centertext-gray-300">
-                        <CheckCircle className="w-4h-4text-green-400mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature} </div>
                     ))}
                   </div>
@@ -357,41 +364,41 @@ export default PagePage
       </main>
 
       {/* CTA Section */}
-      <section$1>
-        <div$2>
-          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Ready to Get Started?
             </h2>
-        {/* Benefits Section */} <section className="py-20px-4sm:px-6 lg:px-8">,<section>
+        {/* Benefits Section */} <section className="py-20 px-4 sm:px-6 lg:px-8">,<section>
         <div>
           <div>
             <h2>Why Choose Our Cloud Migration?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our smart city solutions for your community.</p>
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Experience the power of our smart city solutions for your community.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,</div>
+            <div>
               {benefits.map((benefit, index) => (
                 <div key={index}className="flexitems-startspace-x-3">
-                  <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
-                  <p className="text-gray-300text-lg">{benefit</p>}</p>
+                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
         </div>
       </section>
 
-        {/* CTA Section */} <section className="py-20px-4sm:px-6 lg:px-8">,</section>
-          <div className="max-w-4xlmx-autotext-center">
-            <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md: p-12">,</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Smart City?</h2>
-              <p className="text-xltext-purple-100mb-8">Contact our experts to discuss your smart city infrastructure needs and get a customized solution.</p>
-              <div className="flexflex-colsm:flex-row gap-4 justify-center">,</div>
-                <button className="bg-whitetext-purple-600px-8py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
-                  <Phone className="mr-2h-5w-5" />
+        {/* CTA Section */} <section className="py-20 px-4 sm:px-6 lg:px-8">,</section>
+          <div className="max-w-4 xlmx-autotext-center">
+            <div>
+              <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">Ready to Build Your Smart City?</h2>
+              <p className="text-xltext-purple-100 mb-8">Contact our experts to discuss your smart city infrastructure needs and get a customized solution.</p>
+              <div>
+                <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
+                  <Phone className="mr-2 h-5 w-5" />
                   Call Now;
                 </button>
                 <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
-                  <Mail className="mr-2h-5w-5" />
+                  <Mail className="mr-2 h-5 w-5" />
                   Email Us;
                 </button>
               </div>
@@ -403,14 +410,14 @@ export default PagePage
     </>
   )}
 export default SmartCityInfrastructurePage
-            <p className="text-xltext-purple-100mb-8">
+            <p className="text-xltext-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-whitetext-purple-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2h-5w-5" />
+              <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
                 Call Now
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2h-5w-5" />
+                <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
             </div>

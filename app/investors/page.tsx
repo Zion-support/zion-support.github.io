@@ -24,7 +24,7 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
             </p>
                 </div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
 
@@ -52,8 +52,7 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+      ];;
 
   return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -63,23 +62,23 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Page
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -90,19 +89,19 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
       </section>
 
       {/* Features Section */}
-      <section className="py-20px-4sm:px-6lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Why Choose Our Page?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
@@ -115,13 +114,13 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20px-4sm:px-6lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
@@ -129,8 +128,8 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3">
-                <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
@@ -138,22 +137,22 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
       </section>
 
       {/* CTA Section */}
-      <section className="py-20px-4sm:px-6lg:px-8">
-        <div className="max-w-4xlmx-autotext-center">
-          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4 xlmx-autotext-center">
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xltext-purple-100mb-8">
+            <p className="text-xltext-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-whitetext-purple-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2h-5w-5" />
+              <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2h-5w-5" />
+                <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
             </div>

@@ -17,39 +17,40 @@ const SocialMediaManagerPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section$1>
-        <div$2></div>
-            <div className="inline-flexitems-centerspace-x-2bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-              <Share2 className="w-4h-4" />
+        <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto"></div>
+            <div className="inline-flexitems-centerspace-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+              <Share2 className="w-4 h-4" />
               <span>Social Media Manager</span>
             </li>
-            <h1 className="text-5xlmd:text-6xlfont-boldtext-white mb-6 cyber-text">
+            <h1 className="text-5 xlmd:text-6 xlfont-boldtext-white mb-6 cyber-text">
               AI Social Media </h1>
               <span className="text-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400 to-green-400"> Automation</span>
             </h1>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto mb-8">
+            <p className="text-xltext-gray-300 max-w-3 xlmx-auto mb-8">
               AI-powered social media management and automation. Schedule posts, analyze engagement, 
               and grow your social presence with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-rfrom-cyan-500to-blue-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
+              <button className="bg-gradient-to-rfrom-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
-                <ArrowRight className="w-5h-5" />
+                <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="borderborder-cyan-400text-cyan-400px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
+              <button className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                 View Demo
         <link>
       </Helmet>
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="py-20px-4">
-          </section>< className="$2/><divclass Name="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+        <section className="py-20 px-4">
+          </section>
+        <div className="text-center mb-16">
+              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-          <div className="max-w-7xl mx-autotext-center"></div>
-            <div className="inline-flexitems-centerspace-x-2bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+          <div className="max-w-7 xl mx-autotext-center"></div>
+            <div className="inline-flexitems-centerspace-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Share2>
               </Share2><span>Social Media Manager</span>
             </div>
@@ -70,11 +71,11 @@ const SocialMediaManagerPage: React.FC = () => {
             </li>
         </section>
 
-        <section$1>
-        <div$2></div>
+        <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-boldtext-whitemb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Coming Soon</h2>
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
                 We're developing powerful social media management solutions. Stay tuned for updates!
               </p>
             </li>
@@ -93,27 +94,27 @@ export default SocialMediaManagerPage
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/social-manager" />
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="pt-24pb-16px-4">
-          <div className="max-w-7xl mx-autotext-center">
-            <div className="inline-flexitems-centerspace-x-2bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Share2 className="w-4h-4" />
+        <section className="pt-24 pb-16 px-4">
+          <div className="max-w-7 xl mx-autotext-center">
+            <div className="inline-flexitems-centerspace-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Share2 className="w-4 h-4" />
               <span>Social Media Manager
-            <h1 className="text-5xlmd:text-6xlfont-boldtext-white mb-6 cyber-text">
+            <h1 className="text-5 xlmd:text-6 xlfont-boldtext-white mb-6 cyber-text">
               AI Social Media
               <span className="text-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400 to-green-400"> Automation
-            <p className="text-xltext-gray-300max-w-3xlmx-auto mb-8">
+            <p className="text-xltext-gray-300 max-w-3 xlmx-auto mb-8">
               AI-powered social media management and automation. Schedule posts, analyze engagement, 
               and grow your social presence with intelligent automation.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-rfrom-cyan-500to-blue-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
+              <button className="bg-gradient-to-rfrom-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started
-                <ArrowRight className="w-5h-5" />
-              <button className="borderborder-cyan-400text-cyan-400px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo
-        <section className="py-16px-4">
-          <div className="max-w-7xl mx-auto">
+                <ArrowRight className="w-5 h-5" />
+              <button className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo
+        <section className="py-16 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Coming Soon
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Coming Soon
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
                 We're developing powerful social media management solutions. Stay tuned for updates!
   )
 }

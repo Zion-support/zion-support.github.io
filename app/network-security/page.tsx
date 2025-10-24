@@ -9,13 +9,16 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'},
-    {icon: Zap,
+    {
+      icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'},
-    {icon: Shield,
+    {
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'},
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Reach',
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
     }
@@ -34,8 +37,7 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-    'Proven track record of success'
-  ]
+      ];
 return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
 
@@ -43,8 +45,7 @@ return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-9
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
+      ];
 return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -56,9 +57,9 @@ return (
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Page
               </span>
@@ -71,7 +72,7 @@ return (
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -82,10 +83,10 @@ return (
       </section>
 
       {/* Features Section */}
-      <section className="py-20px-4sm:px-6lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Why Choose Our Page?
             </h2>
             <p>Experience the power of our page solutions for your business.</p>
@@ -94,7 +95,7 @@ return (
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
@@ -107,13 +108,13 @@ return (
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20px-4sm:px-6lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
@@ -121,8 +122,8 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3">
-                <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
@@ -130,10 +131,10 @@ return (
       </section>
 
       {/* CTA Section */}
-      <section className="py-20px-4sm:px-6lg:px-8">
-        <div className="max-w-4xlmx-autotext-center">
-          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4 xlmx-autotext-center">
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               Ready to Get Started?
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>

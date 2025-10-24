@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const SimpleNavigation: React.FC = () => {
   return (
-    <nav className="bg-gray-900text-whitep-4">
-      <div className="max-w-7xl mx-autoflexjustify-between items-center">
+    <nav className="bg-gray-900 text-whitep-4">
+      <div className="max-w-7 xl mx-autoflexjustify-between items-center">
         <Link href="/" className="text-xlfont-bold">
           Zion Tech Group
         </Link>

@@ -51,20 +51,20 @@ const DocsPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Documentation
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               Comprehensive documentation for our AI and IT solutions. 
               Find guides, tutorials, and API references.
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
+            <div className="max-w-2 xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -82,12 +82,12 @@ const DocsPage: React.FC = () => {
 
       {/* Categories Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Browse by Category
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Find documentation organized by service category.
             </p>
           </div>
@@ -106,12 +106,12 @@ const DocsPage: React.FC = () => {
 
       {/* Documentation List */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Popular Documentation
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Most frequently accessed documentation and guides.
             </p>
           </div>
@@ -140,9 +140,9 @@ const DocsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4 xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Need Help?
             </h2>
             <p className="text-xl text-purple-100 mb-8">

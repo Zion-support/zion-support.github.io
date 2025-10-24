@@ -13,10 +13,10 @@ const EnterprisePage: React.FC = () => {
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
     },
-      
-    {icon: Cloud},
     {
-    icon: Cloud,
+      icon: Cloud},
+    {
+      icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']
@@ -169,7 +169,7 @@ return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>
       <Navigation />
-      {/* Hero Section */} <section className="py-20px-4">
+      {/* Hero Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -178,9 +178,9 @@ return (
           </div>
         </div>
       </section>
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7xl mx-autotext-center"></div>
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relativemax-w-7 xl mx-autotext-center"></div>
           <h1>
             Enterprise</h1>
             <span>Solutions;</span>
@@ -199,7 +199,7 @@ return (
         </div>
       </section>
 
-      {/* Stats Section */} <section className="py-20px-4">
+      {/* Stats Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -208,23 +208,23 @@ return (
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="gridgrid-cols-2md:grid-cols-4 gap-8"></div>,
+        <div className="max-w-7 xl mx-auto"></div>
+          <div className="gridgrid-cols-2 md:grid-cols-4 gap-8"></div>,
             {stats.map((stat, index) => (} <div key={index}className="text-center"></div>
                 <div className="flexjustify-centermb-4"></div>
                   <stat />
-                <div className="text-3xlfont-boldtext-whitemb-2">{stat.number</div>}</div>
-                <div className="text-gray-300text-sm">{stat.label</div>}</div>
+                <div className="text-3 xlfont-boldtext-whitemb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
 
           </div>
         </div>
       </section>
-      {/* Features Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
@@ -233,26 +233,26 @@ return (
       />
       <Navigation />
       {/* Hero Section */}
-      <section$1>
-        <div$2></div>
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7xl mx-autotext-center"></div>
-          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto"></div>
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relativemax-w-7 xl mx-autotext-center"></div>
+          <h1 className="text-5 xlmd:text-7 xlfont-boldtext-white mb-6 leading-tight">
             Enterprise</h1>
-            <span className="blockbg-gradient-to-rfrom-purple-400via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="blockbg-gradient-to-rfrom-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+            <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Enterprise Consultation
-              <ArrowRight className="inline-blockml-2w-5h-5" />
+              <ArrowRight className="inline-blockml-2 w-5 h-5" />
             </button>
-            <button className="borderborder-purple-400text-purple-400hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Case Studies
             </button>
           </div>
@@ -260,16 +260,16 @@ return (
       </section>
 
       {/* Stats Section */}
-      <section$1>
-        <div$2>
-          <div className="gridgrid-cols-2md:grid-cols-4gap-8">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <div className="gridgrid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flexjustify-centermb-4">
-                  <stat.icon className="w-12h-12text-purple-400" />
+                  <stat.icon className="w-12 h-12 text-purple-400" />
                 </div>
-                <div className="text-3xlfont-boldtext-whitemb-2">{stat.number}</div>
-                <div className="text-gray-300text-sm">{stat.label}</div>
+                <div className="text-3 xlfont-boldtext-whitemb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -277,18 +277,18 @@ return (
       </section>
 
       {/* Features Section */}
-      <section$1>
-        <div$2></div>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-boldtext-whitemb-4">
+            <h2 className="text-4 xl font-boldtext-whitemb-4">
               Enterprise-Grade Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto"></div>
+        <div className="max-w-7 xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Cloud Migration?</h2>
             <p>Built for scale, security, and performance to meet the demands of large organizations.</p>
@@ -296,24 +296,24 @@ return (
             </p>
           </div>
           
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="flexitems-centermb-4">
                   <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xlfont-semiboldtext-white">{feature.title}</h3>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8"></div>,
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
                   <feature>
                   </feature><h3 className="text-xlfont-semiboldtext-white">{feature.title}</h3>
                 </div>
-                <p className="text-gray-300mb-4">{feature.description</p>}</p>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul>
                   {feature.benefits.map((benefit, idx) => (} <li>
                       <CheckCircle />
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flexitems-centertext-smtext-gray-400">
-                      <CheckCircle className="w-4h-4text-green-400mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
 
@@ -327,13 +327,13 @@ return (
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-boldtext-whitemb-4">
+            <h2 className="text-4 xl font-boldtext-whitemb-4">
               Comprehensive Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
 
           </div>
         </div>
@@ -344,18 +344,18 @@ return (
             </p>
           </div>
           
-          <div className="gridgrid-cols-1md:grid-cols-2gap-8">
+          <div className="gridgrid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
                 <div className="flexitems-centermb-6">
-                  <solution.icon className="w-12h-12text-purple-400mr-4" />
-                  <h3 className="text-2xlfont-semiboldtext-white">{solution.title}</h3>
+                  <solution.icon className="w-12 h-12 text-purple-400 mr-4" />
+                  <h3 className="text-2 xlfont-semiboldtext-white">{solution.title}</h3>
                 </div>
-                <p className="text-gray-300mb-6">{solution.description}</p>
+                <p className="text-gray-300 mb-6">{solution.description}</p>
                 <ul className="space-y-3">
                   {solution.benefits.map((benefit, idx) => (
                     <li key={idx} className="flexitems-centertext-gray-300">
-                      <CheckCircle className="w-5h-5text-green-400mr-3" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {benefit}
                     </li>
 
@@ -367,38 +367,38 @@ return (
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-        <div className="max-w-7xl mx-auto">
-          <div className="gridgrid-cols-1lg:grid-cols-2gap-12 items-center">
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+        <div className="max-w-7 xl mx-auto">
+          <div className="gridgrid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-boldtext-whitemb-6">Why Choose Our Enterprise Solutions?</h2>
-              <p className="text-xltext-gray-300mb-8">
+              <h2 className="text-4 xl font-boldtext-whitemb-6">Why Choose Our Enterprise Solutions?</h2>
+              <p className="text-xltext-gray-300 mb-8">
                 Our enterprise solutions are designed to meet the unique challenges of large organizations, 
                 providing the scalability, security, and performance you need to succeed.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flexitems-start">
-                    <CheckCircle className="w-6h-6text-green-400mr-3 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-8">
-              <h3 className="text-2xlfont-boldtext-whitemb-6">Get Started Today</h3>
-              <p className="text-gray-300mb-6">
+            <div className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-8">
+              <h3 className="text-2 xlfont-boldtext-whitemb-6">Get Started Today</h3>
+              <p className="text-gray-300 mb-6">
                 Ready to transform your enterprise? Contact our experts to discuss your requirements 
                 and get a customized solution that fits your business needs.
               </p>
               <div className="space-y-4">
-                <button className="w-fullbg-gradient-to-rfrom-purple-500to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                <button className="w-fullbg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Schedule Consultation
                 </button>
-                <button className="w-fullborderborder-purple-400text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                <button className="w-fullborderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Download Brochure
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -410,25 +410,25 @@ return (
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
         </section>
-        <div className="max-w-4xlmx-autotext-center"></div>
-          <h2 className="text-4xl font-boldtext-whitemb-6">
+        <div className="max-w-4 xlmx-autotext-center"></div>
+          <h2 className="text-4 xl font-boldtext-whitemb-6">
             Ready to Transform Your Enterprise?
           </h2>
-          <p className="text-xltext-gray-300mb-8">
+          <p className="text-xltext-gray-300 mb-8">
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-4xlmx-autotext-center"></div>
+        <div className="max-w-4 xlmx-autotext-center"></div>
           <h2>Why Choose Our Cloud Migration?</h2>
           <p>Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
           </p>
@@ -440,7 +440,7 @@ return (
               Contact Enterprise Sales
               </button><ArrowRight>
             </button>
-            <button className="borderborder-purple-400text-purple-400hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
           </div>
@@ -449,16 +449,16 @@ return (
       <Footer /></Footer>
   )}
 export default EnterprisePage
-        <div className="max-w-4xlmx-autotext-center">
-          <h2 className="text-4xl font-boldtext-whitemb-6">
+        <div className="max-w-4 xlmx-autotext-center">
+          <h2 className="text-4 xl font-boldtext-whitemb-6">
             Ready to Transform Your Enterprise?
-          <p className="text-xltext-gray-300mb-8">
+          <p className="text-xltext-gray-300 mb-8">
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Contact Enterprise Sales
-              <ArrowRight className="inline-blockml-2w-5h-5" />
-            <button className="borderborder-purple-400text-purple-400hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
+              <ArrowRight className="inline-blockml-2 w-5 h-5" />
+            <button className="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
       <Footer />
     </div>
   )};

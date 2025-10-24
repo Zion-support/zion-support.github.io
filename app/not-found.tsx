@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import {Home, ArrowLeft, RefreshCw} from 'lucide-react';
 export default function NotFound() {return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>)
-      <div className="max-w-mdw-fullbg-gray-800rounded-xl shadow-2xl p-8 text-center"></div>
+      <div className="max-w-mdw-fullbg-gray-800 rounded-xl shadow-2 xl p-8 text-center"></div>
         <div className="flexjustify-centermb-6"></div>
-          <div className="w-16h-16bg-red-500/20rounded-full flex items-center justify-center"></div>
-            <span className="text-4xl">404</span>
+          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center"></div>
+            <span className="text-4 xl">404</span>
           </div>
         </div>
         <h1>Page Not Found;</h1>
@@ -22,7 +22,7 @@ export default function NotFound() {return(<div className="min-h-screenbg-gradie
             Go Back,
           </button>
         </div>
-        <div className="mt-6text-smtext-gray-400" / /></div>
+        <div className="mt-6 text-smtext-gray-400" / /></div>
           If you believe this is an error, please contact our support team.
         </div>
       </div>
@@ -38,27 +38,27 @@ import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
 export default function NotFound() {
   return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      <div className="max-w-mdw-fullbg-gray-800rounded-xl shadow-2xl p-8 text-center">
+      <div className="max-w-mdw-fullbg-gray-800 rounded-xl shadow-2 xl p-8 text-center">
         <div className="flexjustify-centermb-6">
-          <div className="w-16h-16bg-red-500/20rounded-full flex items-center justify-center">
-            <span className="text-4xl">404
-        <h1 className="text-2xlfont-boldtext-whitemb-4">Page Not Found
-        <p className="text-gray-300mb-6">
+          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
+            <span className="text-4 xl">404
+        <h1 className="text-2 xlfont-boldtext-whitemb-4">Page Not Found
+        <p className="text-gray-300 mb-6">
           Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
         <div className="flexflex-colsm:flex-rowgap-3">
           <$2 />
             href="/"
             className="flexitems-centerjustify-centerpx-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">
-            <Home className="w-4h-4mr-2" />
+            <Home className="w-4 h-4 mr-2" />
             Go Home
           </Link>
           <button
             onClick={() => window.history.back(</div>
             className="flexitems-centerjustify-centerpx-6 py-3 border-2 border-gray-600 text-gray-300 hover:bg-gray-700 font-medium rounded-lg transition-colors"
           >
-            <ArrowLeft className="w-4h-4mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2" />
             Go Back
-        <div className="mt-6text-smtext-gray-400">
+        <div className="mt-6 text-smtext-gray-400">
           If you believe this is an error, please contact our support team.
   )
 }</div></div></div></span></p></h1>

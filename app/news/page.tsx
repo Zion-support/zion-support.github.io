@@ -9,13 +9,16 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'},
-    {icon: Zap,
+    {
+      icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'},
-    {icon: Shield,
+    {
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'},
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Reach',
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
     }
@@ -41,33 +44,32 @@ const benefits = [
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-    'Proven track record of success'
-  ]
-{/* Hero Section */} <section className="py-20px-4">
+      ];
+{/* Hero Section */} <section className="py-20 px-4">
 
 
       {/* Hero Section */}
-      <section$1>
-        <div$2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
 {/* Hero Section */}
-      <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-    'Proven track record of success'
-  ]
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+      ];
 {/* Hero Section */}
-      <section className="py-20px-4">
-          </section>< className="$2/><divclass Name="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+      <section className="py-20 px-4">
+          </section>
+        <div className="text-center mb-16">
+              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto"></div>
+        <div className="max-w-7 xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
               <span>Page;</span>
@@ -89,7 +91,7 @@ const benefits = [
           </div>
         </div>
       </section>
-      {/* Features Section */} <section className="py-20px-4">
+      {/* Features Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -98,7 +100,7 @@ const benefits = [
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto"></div>
+        <div className="max-w-7 xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Cloud Migration?</h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
@@ -106,33 +108,34 @@ const benefits = [
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {features.map((feature, index) => (
-                <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                <div key={index}className="bg-white/10 backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature />
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
           </div>
         ))
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20px-4">
-          </section>< className="$2/><divclass Name="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+      <section className="py-20 px-4">
+          </section>
+        <div className="text-center mb-16">
+              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto"></div>
+        <div className="max-w-7 xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Cloud Migration?</h2>
             <p>Experience the power of our page solutions for your business.,</p>
@@ -142,39 +145,39 @@ const benefits = [
             {benefits.map((benefit, index) => (
                 <div key={index}className="flexitems-startspace-x-3"></div>
                 <CheckCircle />
-                <p className="text-gray-300text-lg">{benefit</p>}</p>
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-      <section$1>
-        <div$2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">Key Benefits
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Experience the power of our page solutions for your business.
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3">
-                <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}
             ))}
           ))
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
       {/* CTA Section */}
-      <section$1>
-        <div$2>
-          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12">
+            <h2 className="text-3 xlmd:text-4 xl font-boldtext-white mb-4">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-4xlmx-autotext-center"></div>
-          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md: p-12"></div>,
+        <div className="max-w-4 xlmx-autotext-center"></div>
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12"></div>,
             <h2>Why Choose Our Cloud Migration?</h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
               Ready to Get Started?
@@ -198,14 +201,14 @@ const benefits = [
     </div>
   )}
 export default PagePage
-            <p className="text-xltext-purple-100mb-8">
+            <p className="text-xltext-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-whitetext-purple-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2h-5w-5" />
+              <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
                 Call Now
               <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2h-5w-5" />
+                <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
             </div>

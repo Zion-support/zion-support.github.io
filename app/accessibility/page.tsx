@@ -77,23 +77,23 @@ const AccessibilityPage: React.FC = () => {
     <>
       <Navigation />
       
-      <main className="min-h-screenbg-gradient-to-brfrom-green-50to-blue-100">
+      <main className="min-h-screenbg-gradient-to-brfrom-green-50 to-blue-100">
         {/* Hero Section */}
-        <section className="pt-20pb-16px-4">
-          <div className="containermx-automax-w-6xl">
+        <section className="pt-20 pb-16 px-4">
+          <div className="containermx-automax-w-6 xl">
             <div className="text-center mb-16">
-              <h1 className="text-5xlmd:text-6xlfont-boldtext-gray-900 mb-6">
+              <h1 className="text-5 xlmd:text-6 xlfont-boldtext-gray-900 mb-6">
                 Accessibility Solutions
               </h1>
-              <p className="text-xltext-gray-600mb-8max-w-3xl mx-auto">
+              <p className="text-xltext-gray-600 mb-8 max-w-3 xl mx-auto">
                 Making technology accessible to everyone. Our comprehensive accessibility 
                 solutions ensure your digital products work for users of all abilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-green-600text-whitepx-8py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors">
+                <button className="bg-green-600 text-whitepx-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors">
                   Start Free Trial
                 </button>
-                <button className="borderborder-green-600text-green-600px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-50 transition-colors">
+                <button className="borderborder-green-600 text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-50 transition-colors">
                   View Demo
                 </button>
               </div>
@@ -102,33 +102,33 @@ const AccessibilityPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-16px-4bg-white">
-          <div className="containermx-automax-w-6xl">
+        <section className="py-16 px-4 bg-white">
+          <div className="containermx-automax-w-6 xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-gray-900mb-4">
+              <h2 className="text-4 xl font-boldtext-gray-900 mb-4">
                 Comprehensive Accessibility Features
               </h2>
-              <p className="text-xltext-gray-600max-w-2xlmx-auto">
+              <p className="text-xltext-gray-600 max-w-2 xlmx-auto">
                 Our solutions cover all aspects of digital accessibility
               </p>
             </div>
 
-            <div className="gridmd:grid-cols-2lg:grid-cols-3gap-8">
+            <div className="gridmd:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gray-50p-6rounded-xlhover:shadow-lg transition-shadow">
-                  <div className="w-12h-12bg-green-100rounded-lg flex items-center justify-center mb-4">
+                <div key={index} className="bg-gray-50 p-6 rounded-xlhover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   </div>
-                  <h3 className="text-xlfont-semiboldtext-gray-900mb-3">
+                  <h3 className="text-xlfont-semiboldtext-gray-900 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600mb-4">
+                  <p className="text-gray-600 mb-4">
                     {feature.description}
                   </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flexitems-centertext-smtext-gray-600">
-                        <CheckCircle className="w-4h-4text-green-500mr-2" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
                       </li>
                     ))}
@@ -140,10 +140,10 @@ const AccessibilityPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16px-4bg-gray-50">
-          <div className="containermx-automax-w-6xl">
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="containermx-automax-w-6 xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-gray-900mb-4">
+              <h2 className="text-4 xl font-boldtext-gray-900 mb-4">
                 Accessibility Pricing
               </h2>
               <p className="text-xltext-gray-600">
@@ -151,32 +151,32 @@ const AccessibilityPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="gridmd:grid-cols-3gap-8">
+            <div className="gridmd:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white p-8 rounded-xl shadow-lg ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>
                   {plan.popular && (
-                    <div className="bg-green-500text-whitetext-smfont-semibold px-3 py-1 rounded-full inline-block mb-4">
+                    <div className="bg-green-500 text-whitetext-smfont-semibold px-3 py-1 rounded-full inline-block mb-4">
                       Most Popular
                     </div>
                   )}
-                  <h3 className="text-2xlfont-boldtext-gray-900mb-2">
+                  <h3 className="text-2 xlfont-boldtext-gray-900 mb-2">
                     {plan.name}
                   </h3>
-                  <p className="text-gray-600mb-4">
+                  <p className="text-gray-600 mb-4">
                     {plan.description}
                   </p>
                   <div className="mb-6">
-                    <span className="text-4xl font-boldtext-gray-900">
+                    <span className="text-4 xl font-boldtext-gray-900">
                       {plan.price}
                     </span>
                     <span className="text-gray-600">
                       {plan.period}
                     </span>
                   </div>
-                  <ul className="space-y-3mb-8">
+                  <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flexitems-centertext-gray-600">
-                        <CheckCircle className="w-5h-5text-green-500mr-3" />
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -195,16 +195,16 @@ const AccessibilityPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16px-4bg-green-600">
-          <div className="containermx-automax-w-4xltext-center">
-            <h2 className="text-4xl font-boldtext-whitemb-6">
+        <section className="py-16 px-4 bg-green-600">
+          <div className="containermx-automax-w-4 xltext-center">
+            <h2 className="text-4 xl font-boldtext-whitemb-6">
               Ready to Make Your Products Accessible?
             </h2>
-            <p className="text-xltext-green-100mb-8">
+            <p className="text-xltext-green-100 mb-8">
               Join thousands of businesses already providing inclusive digital experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-whitetext-green-600px-8py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-whitetext-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
                 Start Free Trial
               </button>
               <button className="borderborder-whitetext-whitepx-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors">

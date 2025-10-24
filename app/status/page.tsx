@@ -129,17 +129,17 @@ const overallStatus = services.every(service => service.status === 'operational'
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relativepy-20px-4overflow-hidden">
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relativemax-w-7xl mx-autotext-center">
-          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
+      <section className="relativepy-20 px-4 overflow-hidden">
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relativemax-w-7 xl mx-autotext-center">
+          <h1 className="text-5 xlmd:text-7 xlfont-boldtext-white mb-6 leading-tight">
             System
-            <span className="blockbg-gradient-to-rfrom-purple-400via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="blockbg-gradient-to-rfrom-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Status
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
           </p>
@@ -158,17 +158,17 @@ const overallStatus = services.every(service => service.status === 'operational'
             </button>
           </div>
           
-          <p className="text-gray-400text-sm">
+          <p className="text-gray-400 text-sm">
             Last updated: {lastUpdated.toLocaleString(</div>
           </p>
         </div>
       </section>
 
       {/* Services Status */}
-      <section$1>
-        <div$2>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flexitems-centerjustify-betweenmb-4">
@@ -178,9 +178,9 @@ const overallStatus = services.every(service => service.status === 'operational'
             </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6"></div>,
+        <div className="max-w-7 xl mx-auto" / /></div>
+          <h2 className="text-3 xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>,
             {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div>,
                 <div className="flexitems-centerjustify-betweenmb-4"></div>
                   <div className="flexitems-centergap-3"></div>
@@ -188,8 +188,8 @@ const overallStatus = services.every(service => service.status === 'operational'
                   </div>
                   <span>{service.status</span>} </span>
                 </div>
-                <p className="text-gray-300text-smmb-4">{service.description</p>}</p>
-                <div className="space-y-2text-sm"></div>
+                <p className="text-gray-300 text-smmb-4">{service.description}</p>
+                <div className="space-y-2 text-sm"></div>
                   <div className="flexjustify-between"></div>
                     <span className="text-gray-400">Uptime: </span>,
                     <span className="text-white">{service.uptime</span>}</span>
@@ -209,8 +209,8 @@ const overallStatus = services.every(service => service.status === 'operational'
                   </span>
                 ))
                 
-                <p className="text-gray-300text-smmb-4">{service.description}</p>
-                <div className="space-y-2text-sm" / /></div>
+                <p className="text-gray-300 text-smmb-4">{service.description}</p>
+                <div className="space-y-2 text-sm" / /></div>
                   <div className="flexjustify-between" / /></div>
                     <span className="text-gray-400">Uptime:</span>
                     <span className="text-white">{service.uptime}</span>
@@ -230,24 +230,24 @@ const overallStatus = services.every(service => service.status === 'operational'
         </div>
       </section>
 
-      {/* Recent Incidents */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* Recent Incidents */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-      <section$1>
-        <div$2>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Recent Incidents</h2>
+        <div className="max-w-7 xl mx-auto" / /></div>
+          <h2 className="text-3 xlfont-boldtext-whitemb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6"></div>
             {incidents.map((incident) => (} <div key={incident.id}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
                 <div className="flexitems-startjustify-betweenmb-4"></div>
                   <div />
                     <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
-                    <div className="flexitems-centergap-4text-sm text-gray-400"></div>
+                    <div className="flexitems-centergap-4 text-sm text-gray-400"></div>
                       <span>Started: {new Date(incident.startTime).toLocaleString(),</span>}</span>
                       <span>Ended: {new Date(incident.endTime).toLocaleString(),</span>}</span>
                     </div>
@@ -257,9 +257,9 @@ const overallStatus = services.every(service => service.status === 'operational'
                     <span>{incident.status</span>} </span>
                   </div>
                 </div>
-                <p className="text-gray-300mb-4">{incident.description</p>}</p>
+                <p className="text-gray-300 mb-4">{incident.description}</p>
                 <div />
-                  <span className="text-gray-400text-sm">Affected Services: </span>,
+                  <span className="text-gray-400 text-sm">Affected Services: </span>,
                   <span className="text-whitetext-sm">{incident.affectedServices.join(', ')</span>}</span>
                   ))
                   <div className="flexitems-centergap-2">
@@ -272,9 +272,9 @@ const overallStatus = services.every(service => service.status === 'operational'
                     </span>
                   ))
                 </div>
-                <p className="text-gray-300mb-4">{incident.description}</p>
+                <p className="text-gray-300 mb-4">{incident.description}</p>
                 <div /></div>
-                  <span className="text-gray-400text-sm">Affected Services: </span>
+                  <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-whitetext-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
@@ -282,13 +282,13 @@ const overallStatus = services.every(service => service.status === 'operational'
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
-        return <CheckCircle className="w-5h-5text-green-400" />
+        return <CheckCircle className="w-5 h-5 text-green-400" />
       case 'degraded':
-        return <AlertTriangle className="w-5h-5text-yellow-400" />
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />
       case 'outage':
-        return <XCircle className="w-5h-5text-red-400" />
+        return <XCircle className="w-5 h-5 text-red-400" />
       default:
-        return <Clock className="w-5h-5text-gray-400" />
+        return <Clock className="w-5 h-5 text-gray-400" />
     }
   }
   const getStatusColor = (status: string) => {
@@ -321,7 +321,7 @@ const overallStatus = services.every(service => service.status === 'operational'
       ? 'outage' 
       : 'degraded'
   return (
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
           <div className="flexitems-centerjustify-centergap-4 mb-8">
@@ -333,16 +333,16 @@ const overallStatus = services.every(service => service.status === 'operational'
             <$2 />
               onClick={refreshStatus}
               disabled={isRefreshing}
-              className="flexitems-centergap-2text-gray-400 hover:text-white transition-colors disabled:opacity-50">
+              className="flexitems-centergap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
-          <p className="text-gray-400text-sm">
+          <p className="text-gray-400 text-sm">
             Last updated: {lastUpdated.toLocaleString()}
       {/* Services Status */}
-      <section className="py-16px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
+      <section className="py-16 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xlfont-boldtext-whitemb-12 text-center">Service Status
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flexitems-centerjustify-betweenmb-4">
@@ -351,8 +351,8 @@ const overallStatus = services.every(service => service.status === 'operational'
                     <h3 className="text-lgfont-semiboldtext-white">{service.name}
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
                     {service.status}
-                <p className="text-gray-300text-smmb-4">{service.description}
-                <div className="space-y-2text-sm">
+                <p className="text-gray-300 text-smmb-4">{service.description}
+                <div className="space-y-2 text-sm">
                   <div className="flexjustify-between">
                     <span className="text-gray-400">Uptime:
                     <span className="text-white">{service.uptime}
@@ -364,16 +364,16 @@ const overallStatus = services.every(service => service.status === 'operational'
                     <span className="text-white">{service.lastIncident}
             ))}
       {/* Recent Incidents */}
-      <section className="py-16px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Recent Incidents
+      <section className="py-16 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xlfont-boldtext-whitemb-12 text-center">Recent Incidents
           <div className="space-y-6">
             {incidents.map((incident) => (}
               <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="flexitems-startjustify-betweenmb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">{incident.title}
-                    <div className="flexitems-centergap-4text-sm text-gray-400">
+                    <div className="flexitems-centergap-4 text-sm text-gray-400">
                       <span>Started: {new Date(incident.startTime).toLocaleString()}
                       <span>Ended: {new Date(incident.endTime).toLocaleString()}
                   <div className="flexitems-centergap-2">
@@ -385,66 +385,66 @@ const overallStatus = services.every(service => service.status === 'operational'
                         : 'bg-yellow-500/20 text-yellow-400'}
                     }`}>
                       {incident.status}
-                <p className="text-gray-300mb-4">{incident.description}
+                <p className="text-gray-300 mb-4">{incident.description}
                 <div>
-                  <span className="text-gray-400text-sm">Affected Services:
+                  <span className="text-gray-400 text-sm">Affected Services:
                   <span className="text-whitetext-sm">{incident.affectedServices.join(', ')}
             ))}
           </div>
         </div>
       </section>
-      {/* Performance Metrics */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* Performance Metrics */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-      <section$1>
-        <div$2>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Performance Metrics</h2>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-6"></div>,
+        <div className="max-w-7 xl mx-auto" / /></div>
+          <h2 className="text-3 xlfont-boldtext-whitemb-12 text-center">Performance Metrics</h2>
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>,
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+              <div className="w-12 h-12 bg-gradient-to-rfrom-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <TrendingUp />
-              <div className="text-3xlfont-boldtext-whitemb-2">99.9%</div>
+              <div className="text-3 xlfont-boldtext-whitemb-2">99.9%</div>
               <div className="text-gray-400">Overall Uptime</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
+              <div className="w-12 h-12 bg-gradient-to-rfrom-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
                 <Zap /></Zap>
-              <div className="text-3xlfont-boldtext-whitemb-2">45ms</div>
+              <div className="text-3 xlfont-boldtext-whitemb-2">45ms</div>
               <div className="text-gray-400">Avg Response Time</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
+              <div className="w-12 h-12 bg-gradient-to-rfrom-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
                 <Users /></Users>
-              <div className="text-3xlfont-boldtext-whitemb-2">50K+</div>
+              <div className="text-3 xlfont-boldtext-whitemb-2">50K+</div>
               <div className="text-gray-400">Active Users</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
+              <div className="w-12 h-12 bg-gradient-to-rfrom-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
                 <Activity /></Activity>
-              <div className="text-3xlfont-boldtext-whitemb-2">1.2M</div>
+              <div className="text-3 xlfont-boldtext-whitemb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
             </div>
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-      <section$1>
-        <div$2>
-          <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-4 xlmd:text-5 xlfont-boldtext-white mb-6">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-4xlmx-autotext-center"></div>
+        <div className="max-w-4 xlmx-autotext-center"></div>
           <h2>Why Choose Our Cloud Migration?</h2>
           <p>Subscribe to status updates or contact our support team for more details.</p>
           </p>

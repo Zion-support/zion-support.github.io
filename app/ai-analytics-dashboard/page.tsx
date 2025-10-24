@@ -96,12 +96,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-6 xl">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5 xl md:text-6 xl font-bold text-gray-900 mb-6">
                 AI Analytics Dashboard
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 mb-8 max-w-3 xl mx-auto">
                 Transform your data into actionable insights with our powerful AI Analytics Dashboard. 
                 Get real-time analytics, predictive modeling, and custom dashboards for better business decisions.
               </p>
@@ -119,12 +119,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-6 xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">
                 Powerful Analytics Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-2 xl mx-auto">
                 Our AI Analytics Dashboard provides comprehensive tools for data analysis and business intelligence
               </p>
             </div>
@@ -157,9 +157,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-6 xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">
                 Use Cases
               </h2>
               <p className="text-xl text-gray-600">
@@ -170,7 +170,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <div className="text-4 xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {useCase.title}
                   </h3>
@@ -185,9 +185,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-6 xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">
                 Why Choose Our Analytics Dashboard?
               </h2>
               <p className="text-xl text-gray-600">
@@ -218,8 +218,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-blue-600">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+          <div className="container mx-auto max-w-4 xl text-center">
+            <h2 className="text-4 xl font-bold text-white mb-6">
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-blue-100 mb-8">

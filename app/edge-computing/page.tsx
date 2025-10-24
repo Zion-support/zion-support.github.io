@@ -31,18 +31,20 @@ title: 'IoT Integration',
       description: 'Seamlessly integrate with IoT devices and sensors for comprehensive edge solutions.',
       benefits: ['IoT connectivity', 'Sensor integration', 'Device management']
     },
-      
-    {icon: Globe},
     {
-    icon: Globe,
+      icon: Globe},
+    {
+      icon: Globe,
       title: 'Global Distribution',
       description: 'Deploy edge nodes worldwide for optimal performance and coverage.',
-      
-    {icon: Shield,
+    },
+    {
+      icon: Shield,
       title: 'Edge Security',
       description: 'Advanced security measures designed specifically for edge computing environments.',
-      
-    {icon: Database,
+    },
+    {
+      icon: Database,
       title: 'Edge Storage',
       description: 'Distributed storage solutions optimized for edge computing workloads.',
       
@@ -86,13 +88,16 @@ const services = [
     icon: '⚡',
       title: 'Edge Analytics',
       description: 'Real-time data processing and analytics at the edge'},
-    {icon: '🌐',
+    {
+      icon: '🌐',
       title: 'Edge Networking',
       description: 'Optimized networking solutions for edge deployments'},
-    {icon: '🔒',
+    {
+      icon: '🔒',
       title: 'Edge Security',
       description: 'Comprehensive security solutions for edge environments'},
-    {icon: '📱',
+    {
+      icon: '📱',
       title: 'Mobile Edge',
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
     }
@@ -128,16 +133,16 @@ const useCases = [
       description: 'Cloud gaming with minimal latency',
       icon: '🎮'}}
   ]
-return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 to-slate-900"></div>)
+return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900 via-blue-900 to-slate-900"></div>)
       <Helmet><title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
-      {/* Hero Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+              <h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
         </Helmet>
       <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -145,16 +150,17 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
       </Helmet>
       <Navigation>
       {/* Hero Section */}
-      </Navigation><section className="py-20px-4">
-          </section>< className="$2/><divclass Name="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+      </Navigation><section className="py-20 px-4">
+          </section>
+        <div className="text-center mb-16">
+              </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7xl mx-autotext-center"></div>
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" /></div>
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relativemax-w-7 xl mx-autotext-center"></div>
           <h1>Edge Computing;</h1>
             <span>Solutions;</span>
             </span>
@@ -171,7 +177,7 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-      {/* Features Section */} <section className="py-20px-4">
+      {/* Features Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -180,19 +186,19 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto" / /></div>
+        <div className="max-w-7 xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
-            <h2 className="text-4xl font-boldtext-whitemb-4">Edge Computing Features</h2>
+            <h2 className="text-4 xl font-boldtext-whitemb-4">Edge Computing Features</h2>
             <p>Advanced edge computing capabilities designed for modern applications and IoT solutions;</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8"></div>,
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
             {features.map((feature, index) => (
-                <div key={index}className="bg-slate-800/50backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group"></div>,
-                <div className="w-12h-12bg-gradient-to-rfrom-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300"></div>,
+                <div key={index}className="bg-slate-800/50 backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group"></div>,
+                <div className="w-12 h-12 bg-gradient-to-rfrom-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300"></div>,
                   <feature />
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                <p className="text-gray-300mb-4">{feature.description</p>}</p>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul>
                   {feature.benefits.map((benefit, benefitIndex) => (} <li>
                       <CheckCircle />
@@ -206,7 +212,7 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-      {/* Services Section */} <section className="py-20px-4">
+      {/* Services Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -215,23 +221,23 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto" / /></div>
+        <div className="max-w-7 xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
-            <h2 className="text-4xl font-boldtext-whitemb-4">Edge Computing Services</h2>
+            <h2 className="text-4 xl font-boldtext-whitemb-4">Edge Computing Services</h2>
             <p>Comprehensive edge computing solutions for all your business needs;</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
-                <div className="text-4xlmb-4">{service.icon</div>}</div>
+            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
+                <div className="text-4 xlmb-4">{service.icon}</div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description</p>}</p>
+                <p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Use Cases Section */} <section className="py-20px-4">
+      {/* Use Cases Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -240,23 +246,23 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto" / /></div>
+        <div className="max-w-7 xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
-            <h2 className="text-4xl font-boldtext-whitemb-4">Use Cases</h2>
+            <h2 className="text-4 xl font-boldtext-whitemb-4">Use Cases</h2>
             <p>Edge computing solutions for various industries and applications;</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8"></div>,
-            {useCases.map((useCase, index) => (} <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300 group"></div>,
-                <div className="text-4xlmb-4group-hover:scale-110 transition-transform">{useCase.icon,</div>}</div>
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            {useCases.map((useCase, index) => (} <div key={index}className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300 group"></div>,
+                <div className="text-4 xlmb-4 group-hover:scale-110 transition-transform">{useCase.icon,}</div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description</p>}</p>
+                <p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20px-4">
+      {/* Benefits Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -265,16 +271,16 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto" / /></div>
+        <div className="max-w-7 xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
-            <h2 className="text-4xl font-boldtext-whitemb-4">Why Choose Edge Computing?</h2>
+            <h2 className="text-4 xl font-boldtext-whitemb-4">Why Choose Edge Computing?</h2>
             <p>Experience the benefits of edge computing with our proven solutions;</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6"></div>,
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>,
             {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center"></div>
-                <div className="w-16h-16bg-gradient-to-rfrom-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
+                <div key={index}className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-rfrom-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                   <CheckCircle />
                 <h3 className="text-lgfont-semiboldtext-white">{benefit}</h3>
               </div>
@@ -282,7 +288,7 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20px-4">
+      {/* CTA Section */} <section className="py-20 px-4">
           <section>
         <div>
           <div>
@@ -291,8 +297,8 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           </div>
         </div>
       </section>
-        <div className="max-w-4xlmx-autotext-center" / /></div>
-          <h2 className="text-4xl font-boldtext-whitemb-6">Ready to Deploy Edge Computing?</h2>
+        <div className="max-w-4 xlmx-autotext-center" / /></div>
+          <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Deploy Edge Computing?</h2>
           <p>Transform your applications with ultra-low latency edge computing solutions;</p>
           </p>
           <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
@@ -345,25 +351,25 @@ export default EdgeComputingPage
       
       <Navigation />
       {/* Hero Section */}
-      <section$1>
-        <div$2>
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relativemax-w-7xl mx-autotext-center">
-          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
+        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relativemax-w-7 xl mx-autotext-center">
+          <h1 className="text-5 xlmd:text-7 xlfont-boldtext-white mb-6 leading-tight">
             Edge Computing
-            <span className="blockbg-gradient-to-rfrom-purple-400via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="blockbg-gradient-to-rfrom-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
             Bring computing power closer to your data and users with our edge computing solutions. 
             Reduce latency, improve performance, and enable real-time applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+            <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Edge Computing Demo
             </button>
-            <button className="borderborder-purple-400text-purple-400hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
 </div>
@@ -371,27 +377,27 @@ export default EdgeComputingPage
       </section>
 
       {/* Features Section */}
-      <section className="py-20px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-boldtext-whitemb-4">Advanced Edge Computing Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-4 xl font-boldtext-whitemb-4">Advanced Edge Computing Features</h2>
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Comprehensive edge computing solution designed for modern applications and IoT deployments.
             </p>
           </div>
           
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12h-12bg-gradient-to-rfrom-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-rfrom-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                <p className="text-gray-300mb-4">{feature.description}</p>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flexitems-centertext-smtext-gray-400">
-                      <CheckCircle className="w-4h-4text-green-400mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                   ))}
             ))}
@@ -400,15 +406,15 @@ export default EdgeComputingPage
       </section>
 
       {/* Use Cases Section */}
-      <section$1>
-        <div$2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-boldtext-whitemb-4">Use Cases
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Edge computing solutions for various industries and applications
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
+            <h2 className="text-4 xl font-boldtext-whitemb-4">Use Cases
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Edge computing solutions for various industries and applications
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
-                <div className="text-4xlmb-4group-hover:scale-110transition-transform">{useCase.icon}
+              <div key={index} className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
+                <div className="text-4 xlmb-4 group-hover:scale-110 transition-transform">{useCase.icon}
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{useCase.title}
                 <p className="text-gray-300">{useCase.description}
             ))}
@@ -417,16 +423,16 @@ export default EdgeComputingPage
       </section>
 
       {/* Benefits Section */}
-      <section$1>
-        <div$2>
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-boldtext-whitemb-4">Why Choose Edge Computing?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of edge computing with our proven solutions
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
+            <h2 className="text-4 xl font-boldtext-whitemb-4">Why Choose Edge Computing?
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Experience the benefits of edge computing with our proven solutions
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center">
-                <div className="w-16h-16bg-gradient-to-rfrom-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8h-8text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-rfrom-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
                 <h3 className="text-lgfont-semiboldtext-white">{benefit}
             ))}
           ))
@@ -434,15 +440,15 @@ export default EdgeComputingPage
       </section>
 
       {/* CTA Section */}
-      <section className="py-20px-4">
-        <div className="max-w-4xlmx-autotext-center">
-          <h2 className="text-4xl font-boldtext-whitemb-6">Ready to Deploy Edge Computing?</h2>
-          <p className="text-xltext-gray-300mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
+      <section className="py-20 px-4">
+        <div className="max-w-4 xlmx-autotext-center">
+          <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Deploy Edge Computing?</h2>
+          <p className="text-xltext-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-rfrom-blue-500to-purple-600hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-rfrom-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
-            <button className="borderborder-blue-400text-blue-400hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="borderborder-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
             </button>
           ))
