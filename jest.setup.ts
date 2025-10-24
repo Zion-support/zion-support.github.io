@@ -36,10 +36,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   unobserve: jest.fn(),
   disconnect: jest.fn()
 }))
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 // Polyfill for URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
   URL.revokeObjectURL = jest.fn()
@@ -51,21 +47,20 @@ if (typeof window.scrollTo === 'undefined') {
 }
 
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
-if (typeof window.IntersectionObserver === 'undefined') {
-  class MockIntersectionObserver {
-    constructor() {}
-    observe() {}
-    unobserve() {}
-    disconnect() {}
-    takeRecords() {
-      return []
-    }
+class MockIntersectionObserver {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+  takeRecords() {
+    return []
   }
-  // @ts-expect-error - Mock implementation for testing
-  window.IntersectionObserver = MockIntersectionObserver
-  // @ts-expect-error - Mock implementation for testing
-  global.IntersectionObserver = MockIntersectionObserver
 }
+
+// @ts-expect-error - Mock implementation for testing
+window.IntersectionObserver = MockIntersectionObserver
+// @ts-expect-error - Mock implementation for testing
+global.IntersectionObserver = MockIntersectionObserver
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
