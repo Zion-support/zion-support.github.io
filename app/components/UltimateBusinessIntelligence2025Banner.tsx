@@ -58,18 +58,12 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(timer);
   }, [content.length]);
 
-<<<<<<< HEAD
   // const handleClose = () => {
   //   setIsVisible(false);
   // };
-=======
-  const handleClose = () => {
-    setIsVisible(false);
-  };
->>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
 
   if (!isVisible) return null;
-  const _currentContent = content[currentSlide];
+  const currentContent = content[currentSlide];
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}

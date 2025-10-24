@@ -1,4 +1,4 @@
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
     }
   ]
   const benefits = [
@@ -7,7 +7,7 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">

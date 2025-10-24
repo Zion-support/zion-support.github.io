@@ -25,8 +25,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
+  ];
     
-    focusableElements[nextIndex]?.focus();
+  focusableElements[nextIndex]?.focus();
     event.preventDefault();
   }
   
