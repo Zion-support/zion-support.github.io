@@ -2,8 +2,7 @@
 import React from 'react';
 
 interface SecurityEnhancerProps {
-  className?: string;
-  enableSecurityFeatures?: boolean;
+  // Add props here
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
