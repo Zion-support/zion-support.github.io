@@ -44,7 +44,7 @@ const ErrorHandlerPage: React.FC = () => {
   return (
     <>
       
-      <Navigation />
+      <Navigation  />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -59,7 +59,7 @@ const ErrorHandlerPage: React.FC = () => {
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot;  />
     // Log error in development
     if (process.env.NODE_ENV=== 'development') {// Error caught by handler
    }
@@ -104,7 +104,7 @@ const ErrorHandlerPage: React.FC = () => {
         <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50&quot;></div>
           <div className=&quot;max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center&quot;></div>
             <div className=&quot;flex justify-center mb-4&quot;></div>
-              <AlertTriangle className=&quot;w-16 h-16 text-red-500&quot; />
+              <AlertTriangle className=&quot;w-16 h-16 text-red-500&quot;  />
             </div>
             <h1 className=&quot;text-2xl font-bold text-gray-900 mb-4&quot;>
               Oops! Something went wrong
@@ -141,7 +141,7 @@ const ErrorHandlerPage: React.FC = () => {
                 onClick={this.handleGoHome}
                 className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot;
               ></button>
-                <Home className=&quot;w-4 h-4 mr-2&quot; />
+                <Home className=&quot;w-4 h-4 mr-2&quot;  />
                 Go Home
               </button>
             </div>
@@ -160,13 +160,13 @@ const ErrorHandlerPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot;  />
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot;  />
                         {benefit}
                       </li>
                     ))}
@@ -180,14 +180,14 @@ const ErrorHandlerPage: React.FC = () => {
               ></
                 onClick={this.handleRetry}
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
-              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again
+              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot;  />Try Again
             </butto><
                 onClick={this.handleGoHome}
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
               ></
                 onClick={this.handleGoHome}
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
-              ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home
+              ><HomeclassName=&quot;w-4h-4mr-2&quot;  />Go Home
             </butto></di></di></di>
       )
     }
@@ -208,7 +208,7 @@ const ErrorHandlerPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot;  />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -234,7 +234,7 @@ const ErrorHandlerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };

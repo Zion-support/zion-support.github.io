@@ -1,12 +1,13 @@
-'use client'
+
+'use client';
 import { Brain, TrendingUp } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
-
 import { BarChart3 } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone } from 'lucide-react'
+
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -21,15 +22,15 @@ const Page = () => {
         description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
         keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'datainsights']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-analytics-dashboard&quot;
-      />
+       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg&quot;></div>
-        <Navigation />
+        <Navigation  />
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4&quot;></section>
           <div className=&quot;container mx-auto max-w-7xl&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
               <div className=&quot;inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6&quot;></div>
-                <BarChart3 className=&quot;w-4 h-4&quot; />
+                <BarChart3 className=&quot;w-4 h-4&quot;  />
                 AI-Powered Business Intelligence
               </div>
               <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse&quot;>
@@ -90,14 +91,14 @@ const Page = () => {
               {features.map((feature, index) => (
                 <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
                   <div className=&quot;w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6&quot;></div>
-                    <feature.icon className=&quot;w-8 h-8 text-white&quot; />
+                    <feature.icon className=&quot;w-8 h-8 text-white&quot;  />
                   </div>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className=&quot;flex items-center text-sm text-blue-400&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 mr-2 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-4 h-4 mr-2 flex-shrink-0&quot;  />
                         {benefit}
                       </li>
                     ))}
@@ -159,7 +160,7 @@ const Page = () => {
                   <ul className=&quot;space-y-4 mb-8&quot;>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot;  />
                         {feature}
                       </li>
                     ))}
@@ -195,7 +196,7 @@ const Page = () => {
                 <div key={index} className=&quot;cyber-card p-6&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
+                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot;  />
                     ))}
                   </div>
                   <p className=&quot;text-gray-300 mb-6 italic&quot;>&quot;{testimonial.content}&quot;</p>
@@ -228,7 +229,7 @@ const Page = () => {
                 href=&quot;tel:+13024640950&quot;
                 className=&quot;flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all&quot;
               >
-                <Phone className=&quot;w-5 h-5&quot; />
+                <Phone className=&quot;w-5 h-5&quot;  />
                 +1 302 464 0950
               </a>
             </div>
@@ -237,7 +238,7 @@ const Page = () => {
             </div>
           </div>
         </section>
-        <Footer />
+        <Footer  />
       </div>
     </>
   )

@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import React from 'react'
 import { ArrowLeft, FileText, Lock } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -18,7 +19,7 @@ const CompliancePage: React.FC = () => {
 const Page = () => {
   return (
       </div>
-      <Footer />
+      <Footer  />
     </>
   )
 }

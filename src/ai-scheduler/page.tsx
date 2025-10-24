@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain, Target } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, Phone, Calendar } from 'lucide-react'

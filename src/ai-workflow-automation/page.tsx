@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'

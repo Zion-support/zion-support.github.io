@@ -1,9 +1,10 @@
 'use client';
 import { useState } from 'react';
+
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
   onClose?: () => void;
-}
+;}
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -91,8 +92,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       </form>
       <div className="mt-6 text-center text-sm text-white/80">
         <p>
-          ✓ No spam, unsubscribe anytime<br />
-          ✓ Weekly updates on latest tech trends<br />
+          ✓ No spam, unsubscribe anytime<br  />
+          ✓ Weekly updates on latest tech trends<br  />
           ✓ Exclusive content and early access
         </p>
       </div>
@@ -102,7 +103,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     return (
       <div className="fixed inset-0 z-50 overflow-y-auto">
         <div className="flex min-h-screen items-center justify-center px-4 py-6">
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose}  />
           <div className="relative w-full max-w-md">
             {content}
           </div>

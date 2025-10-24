@@ -127,7 +127,7 @@ const AIEmailAutomationPage: React.FC = () => {
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             AI Email
-            <br />
+            <br  />
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Automation Pro
             </span>
@@ -307,7 +307,7 @@ const AIEmailAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Ready to Revolutionize Your
-            <br />
+            <br  />
             <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
               Email Marketing?
             </span>

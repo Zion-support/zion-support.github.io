@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import React, { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 import { Download } from 'lucide-react'
@@ -79,7 +80,7 @@ const PWAInstaller: React.FC = () => {
         <div className=&quot;flex items-start justify-between mb-3&quot;></div>
           <div className=&quot;flex items-center space-x-2&quot;></div>
             <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;></div>
-              <Download className=&quot;w-4 h-4 text-white&quot; />
+              <Download className=&quot;w-4 h-4 text-white&quot;  />
             </div>
             <div></div>
               <h3 className=&quot;text-white text-sm font-medium&quot;>Install App</h3>
@@ -91,7 +92,7 @@ const PWAInstaller: React.FC = () => {
             className=&quot;text-gray-400 hover:text-white transition-colors&quot;
             aria-label=&quot;Dismiss install prompt&quot;
           >
-            <X className=&quot;w-4 h-4&quot; />
+            <X className=&quot;w-4 h-4&quot;  />
           </button>
         </div>
         <div className=&quot;space-y-2&quot;></div>

@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain } from 'lucide-react'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
@@ -73,9 +74,9 @@ const Page = () => {
         description=&quot;Schedule a personalized demo of our AI and IT services. See how we can transform your business withcutting-edgetechnology.&quot;
         keywords={['demo', 'AI demo', 'IT demo', 'business consultation', 'technologydemonstration']}
         canonicalUrl=&quot;https://ziontechgroup.com/demo&quot;
-      />
+       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <Navigation />
+        <Navigation  />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
           <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
@@ -100,7 +101,7 @@ const Page = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {demoFeatures.map((feature, index) => (
                 <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
-                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
+                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot;  />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300&quot;>{feature.description}</p>
                 </div>
@@ -128,7 +129,7 @@ const Page = () => {
                         onChange={handleInputChange}
                        className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                        placeholder=&quot;Enter your fullname&quot;
-                      /></di><di v><labelhtmlFor=&quot;email&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Email Address *
+                       /></di><di v><labelhtmlFor=&quot;email&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Email Address *
                     </labe><inputtype=&quot;email&quot;
                        id=&quot;email&quot;
                        name=&quot;email&quot;
@@ -136,7 +137,7 @@ const Page = () => {
                         onChange={handleInputChange}
                        className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                        placeholder=&quot;Enter youremail&quot;
-                      /></di><di v><labelhtmlFor=&quot;company&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Company Name *
+                       /></di><di v><labelhtmlFor=&quot;company&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Company Name *
                     </labe><inputtype=&quot;text&quot;
                        id=&quot;company&quot;
                        name=&quot;company&quot;
@@ -144,7 +145,7 @@ const Page = () => {
                         onChange={handleInputChange}
                        className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                        placeholder=&quot;Enter your companyname&quot;
-                      /></di><di v><labelhtmlFor=&quot;phone&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Phone Number
+                       /></di><di v><labelhtmlFor=&quot;phone&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Phone Number
                     </labe><inputtype=&quot;tel&quot;
                        id=&quot;phone&quot;
                        name=&quot;phone&quot;
@@ -152,7 +153,7 @@ const Page = () => {
                         onChange={handleInputChange}
                        className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                        placeholder=&quot;Enter your phonenumber&quot;
-                      /></di><di v><labelhtmlFor=&quot;service&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Service of Interest
+                       /></di><di v><labelhtmlFor=&quot;service&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Service of Interest
                     </labe><selectid=&quot;service&quot;
                        name=&quot;service&quot;
                         value={formData.service}
@@ -166,7 +167,7 @@ const Page = () => {
                         onChange={handleInputChange}
                         className=&quot;w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400&quot;
                         placeholder=&quot;Tell us about your specific needs or questions&quot;
-                      />
+                       />
                     </div>
                     <button
                       type=&quot;submit&quot;
@@ -182,19 +183,19 @@ const Page = () => {
                     <h3 className=&quot;text-xl font-bold text-white mb-6&quot;>Why Choose Our Demo?</h3>
                     <ul className=&quot;space-y-4&quot;>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>Personalized to your business needs</span>
                       </li>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>Live demonstration of our solutions</span>
                       </li>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>Expert consultation and Q&A</span>
                       </li>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>No obligation, completely free</span>
                       </li>
                     </ul>
@@ -203,19 +204,19 @@ const Page = () => {
                     <h3 className=&quot;text-xl font-bold text-white mb-6&quot;>Contact Information</h3>
                     <div className=&quot;space-y-4&quot;></div>
                       <div className=&quot;flex items-center&quot;></div>
-                        <Phone className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
+                        <Phone className=&quot;w-5 h-5 text-cyan-400 mr-3&quot;  />
                         <a href=&quot;tel:+13024640950&quot; className=&quot;text-gray-300 hover:text-cyan-400&quot;>
                           (302) 464-0950
                         </a>
                       </div>
                       <div className=&quot;flex items-center&quot;></div>
-                        <Mail className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
+                        <Mail className=&quot;w-5 h-5 text-cyan-400 mr-3&quot;  />
                         <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-gray-300 hover:text-cyan-400&quot;>
                           kleber@ziontechgroup.com
                         </a>
                       </div>
                       <div className=&quot;flex items-center&quot;></div>
-                        <Clock className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
+                        <Clock className=&quot;w-5 h-5 text-cyan-400 mr-3&quot;  />
                         <span className=&quot;text-gray-300&quot;>Mon-Fri: 9AM-6PM EST</span>
                       </div>
                     </div>
@@ -234,7 +235,7 @@ const Page = () => {
                 <div key={index} className=&quot;cyber-card p-6&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
+                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot;  />
                     ))}
                   </div>
                   <p className=&quot;text-gray-300 mb-4&quot;>&quot;{testimonial.text}&quot;</p>
@@ -247,7 +248,7 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer  />
       </div>
     </>
   )

@@ -8,7 +8,7 @@ interface LazyImageProps {
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
-}
+;}
 
 const LazyImage: React.FC<LazyImageProps> = ({ 
   src, 
@@ -72,8 +72,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
             className={`transition-opacity duration-300 ${
               isLoaded ? 'opacity-100' : 'opacity-0'
             }`}
-            loading="lazy"
-          />
+            loading="lazy" />
         </>
       )}
     </div>

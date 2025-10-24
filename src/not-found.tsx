@@ -89,13 +89,13 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
           <a href=&quot;/&quot;
             className=&quot;inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300&quot;
           >
-            <Home className=&quot;w-4 h-4 mr-2&quot; />
+            <Home className=&quot;w-4 h-4 mr-2&quot;  />
             Go Home
           </a>
           <a href=&quot;/contact&quot;
             className=&quot;inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300&quot;
           >
-            <Phone className=&quot;w-4 h-4 mr-2&quot; />
+            <Phone className=&quot;w-4 h-4 mr-2&quot;  />
             Contact Support
           </a>
         </div>

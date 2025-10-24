@@ -1,9 +1,9 @@
 import React from 'react'
-
-export const dynamic = 'force-dynamic'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+
+export const dynamic = 'force-dynamic'
 
 const AccessibilityPagePage: React.FC = () => {
   const features = [
@@ -44,7 +44,7 @@ const AccessibilityPagePage: React.FC = () => {
   return (
     <>
       
-      <Navigation />
+      <Navigation  />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -135,7 +135,7 @@ const AccessibilityPagePage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };

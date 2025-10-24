@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 interface AnimatedCounterProps {
   className?: string;
-}
+;}
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,

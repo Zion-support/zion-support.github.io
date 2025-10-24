@@ -232,7 +232,7 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </div>
   );
 };

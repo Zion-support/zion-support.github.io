@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { TrendingUp } from 'lucide-react'
 import React, { useState } from 'react'
 import { Send } from 'lucide-react'
@@ -68,7 +69,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
 const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+      <Navigation  />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16"></section>
@@ -107,8 +108,7 @@ const Page = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                      requiredclassName="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
-                     placeholder="Your fullname"
-                    /></di><di v><labelhtmlFor="email"className="block text-sm font-medium text-gray-300mb-2">Email Address *
+                     placeholder="Your fullname" /></di><di v><labelhtmlFor="email"className="block text-sm font-medium text-gray-300mb-2">Email Address *
                   </labe><inputtype="email"
                      id="email"
                      name="email"
@@ -116,8 +116,7 @@ const Page = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="your@email.com"
-                    />
+                      placeholder="your@email.com" />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
@@ -132,16 +131,14 @@ const Page = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                      className="w-full px-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
-                     placeholder="Your companyname"
-                    /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number
+                     placeholder="Your companyname" /></di><di v><labelhtmlFor="phone"className="block text-sm font-medium text-gray-300mb-2">Phone Number
                   </labe><inputtype="tel"
                      id="phone"
                      name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="(555) 123-4567"
-                    />
+                      placeholder="(555) 123-4567" />
                   </div>
                 </div>
                 <div></div>
@@ -173,8 +170,7 @@ const Page = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
-                    placeholder="Tell us about your project and how we can help..."
-                  />
+                    placeholder="Tell us about your project and how we can help..." />
                 </div>
                 <button
                   type="submit"
@@ -223,8 +219,8 @@ const Page = () => {
                   <div></div>
                     <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
                     <p className="text-gray-300"></p>
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709<br />
+                      364 E Main St STE 1008<br  />
+                      Middletown, DE 19709<br  />
                       United States
                     </p>
                   </div>
@@ -236,8 +232,8 @@ const Page = () => {
                   <div></div>
                     <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
                     <p className="text-gray-300"></p>
-                      Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                      Saturday: 10:00 AM - 4:00 PM EST<br />
+                      Monday - Friday: 9:00 AM - 6:00 PM EST<br  />
+                      Saturday: 10:00 AM - 4:00 PM EST<br  />
                       Sunday: Closed
                     </p>
                   </div>

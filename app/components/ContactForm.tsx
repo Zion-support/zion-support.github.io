@@ -1,8 +1,9 @@
 'use client';
-'use client';
-
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
+
+'use client';
+
 
 interface FormData {
   name: string;
@@ -11,7 +12,7 @@ interface FormData {
   company: string;
   message: string;
   service: string;
-}
+;}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -96,8 +97,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="Your full name"
-            />
+              placeholder="Your full name" />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -111,8 +111,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="your@email.com"
-            />
+              placeholder="your@email.com" />
           </div>
         </div>
 
@@ -128,8 +127,7 @@ const ContactForm: React.FC = () => {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="+1 (555) 123-4567"
-            />
+              placeholder="+1 (555) 123-4567" />
           </div>
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -142,8 +140,7 @@ const ContactForm: React.FC = () => {
               value={formData.company}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="Your company name"
-            />
+              placeholder="Your company name" />
           </div>
         </div>
 
@@ -179,8 +176,7 @@ const ContactForm: React.FC = () => {
             required
             rows={6}
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-            placeholder="Tell us about your project or how we can help..."
-          />
+            placeholder="Tell us about your project or how we can help..." />
         </div>
 
         <button

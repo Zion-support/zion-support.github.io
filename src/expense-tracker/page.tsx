@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { X, Brain, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { Receipt } from 'lucide-react'

@@ -24,7 +24,7 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };

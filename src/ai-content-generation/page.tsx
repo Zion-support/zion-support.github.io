@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -58,7 +59,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+      <Navigation  />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16"></section>
@@ -157,7 +158,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer  />
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )

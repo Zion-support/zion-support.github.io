@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 const Page: React.FC = () => {
   return (
     <>
-      <Navigation />
+      <Navigation  />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <main className="container mx-auto px-4 py-16 pt-24">
           <section className="text-center mb-16">
@@ -37,7 +37,7 @@ const Page: React.FC = () => {
           </section>
         </main>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };

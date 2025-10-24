@@ -1,23 +1,23 @@
-'use client'
+'use client';
+
 /**
 * Performance Metrics Utility
 * Advanced performance tracking and monitoring for web applications
 */
 export interface PerformanceMetric {
-name: string,
-value: number,
-unit: string,
-timestamp: Date,
-category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-metadata?: Record<string, unknown>
-}
+name: string,;
+value: number,;
+unit: string,;
+timestamp: Date,;
+category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
+metadata?: Record<string, unknown>;}
 export interface WebVitalsMetrics {
-FCP?: number; // First Contentful Paint
-LCP?: number; // Largest Contentful Paint
-FID?: number; // First Input Delay
-CLS?: number; // Cumulative Layout Shift
-TTFB?: number; // Time to First Byte
-export interface PerformanceMetric {}
+FCP?: number; // First Contentful Paint;
+LCP?: number; // Largest Contentful Paint;
+FID?: number; // First Input Delay;
+CLS?: number; // Cumulative Layout Shift;
+TTFB?: number; // Time to First Byte;
+export interface PerformanceMetric {;}
 name: string
 value: number
 unit: string
@@ -69,11 +69,11 @@ this.initializeObservers();}
 static getInstance(): PerformanceMetrics {}
 if (!PerformanceMetrics.instance) {}
 PerformanceMetrics.instance = new PerformanceMetrics();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */}
+export interface PerformanceMetric {/* TODO: Fix JSX expression */;}
 }
-export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
+export interface WebVitalsMetrics {/* TODO: Fix JSX expression */;}
 }
-export interface PerformanceReport {/* TODO: Fix JSX expression */}
+export interface PerformanceReport {/* TODO: Fix JSX expression */;}
 }
 timestam,
 p: Date,

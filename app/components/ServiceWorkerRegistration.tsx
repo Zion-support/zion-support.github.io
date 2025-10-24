@@ -49,7 +49,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };

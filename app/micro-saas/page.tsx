@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from "react";
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
 

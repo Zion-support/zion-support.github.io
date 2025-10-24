@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
 import { CheckSquare } from 'lucide-react'

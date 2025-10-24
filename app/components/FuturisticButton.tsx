@@ -1,7 +1,8 @@
 'use client';
-'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+
+'use client';
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
@@ -12,7 +13,7 @@ interface FuturisticButtonProps {
   loading?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
-}
+;}
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
@@ -81,7 +82,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-      />
+       />
       
       {/* Loading spinner */}
       {loading && (
@@ -118,7 +119,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
           duration: 0.6,
           ease: 'easeInOut',
         }}
-      />
+       />
     </motion.button>
   );
 };

@@ -1,10 +1,10 @@
 import React from 'react'
 import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
+
 
 constAISocialMediaManagerPage: React.FC= () =>{constfeatures= [
     'AI-powered content creation and curation',

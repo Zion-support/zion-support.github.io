@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -61,9 +62,9 @@ const AICustomerSupportPage: React.FC = () => {
         description=&quot;Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by95% and reduce costs by60%.&quot;
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AIhelpdesk']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-customer-support&quot;
-      />
+       />
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg&quot;></div>
-      <Navigation />
+      <Navigation  />
       <main className=&quot;pt-24 pb-16 px-4&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           {/* Hero Section */}
@@ -80,7 +81,7 @@ const AICustomerSupportPage: React.FC = () => {
                 href=&quot;tel:+13024640950&quot;
                 className=&quot;cyber-button inline-flex items-center space-x-2&quot;
               >
-                <MessageCircle className=&quot;w-4 h-4&quot; />
+                <MessageCircle className=&quot;w-4 h-4&quot;  />
                 <span>Get Started</span>
               </a>
               <a
@@ -99,13 +100,13 @@ const AICustomerSupportPage: React.FC = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
-                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
+                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot;  />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot;  />
                         {benefit}
                       </li>
                     ))}
@@ -140,7 +141,7 @@ const AICustomerSupportPage: React.FC = () => {
                   <ul className=&quot;space-y-3 mb-8&quot;>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot;  />
                         {feature}
                       </li>
                     ))}
@@ -169,7 +170,7 @@ const AICustomerSupportPage: React.FC = () => {
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                 >
-                  <Phone className=&quot;w-5 h-5&quot; />
+                  <Phone className=&quot;w-5 h-5&quot;  />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -177,7 +178,7 @@ const AICustomerSupportPage: React.FC = () => {
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+                  <Mail className=&quot;w-5 h-5&quot;  />
                   <span>Schedule Demo</span>
                 </a>
               </div>

@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { ArrowRight, X, Target } from 'lucide-react'
 import React from 'react'
 import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react'
@@ -7,9 +8,9 @@ import Footer from '../components/Footer'
 import { CheckCircle, Star, ArrowRight } from 'lucide-react'
 
 interface ITService {
-  title: string
-  description: string
-  icon: React.ComponentType<{ className?: string }>
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string;}>
   features: string[]
   price: string
   category: string
@@ -307,7 +308,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
 const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+      <Navigation  />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16"></section>
@@ -531,7 +532,7 @@ const Page = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer  />
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )

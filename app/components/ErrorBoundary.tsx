@@ -43,7 +43,7 @@ const ErrorBoundaryPage: React.FC = () => {
   return (
     <>
       
-      <Navigation />
+      <Navigation  />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -58,7 +58,7 @@ const ErrorBoundaryPage: React.FC = () => {
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot;  />
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
@@ -79,13 +79,13 @@ const ErrorBoundaryPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot;  />
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot;  />
                         {benefit}
                       </li>
                     ))}
@@ -108,7 +108,7 @@ const ErrorBoundaryPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot;  />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -134,7 +134,7 @@ const ErrorBoundaryPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };
@@ -165,7 +165,7 @@ return (
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4&quot;></div>
 <div className=&quot;max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
-<AlertTriangle className=&quot;w-8 h-8 text-red-400&quot; />
+<AlertTriangle className=&quot;w-8 h-8 text-red-400&quot;  />
 </div>
 <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
 <p className=&quot;text-gray-300 mb-6&quot;>We&apos;re sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p>
@@ -185,14 +185,14 @@ Error Details (Development)
 onClick={this.handleReload}
 className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
-<RefreshCw className=&quot;w-4 h-4&quot; />
+<RefreshCw className=&quot;w-4 h-4&quot;  />
 <span>Reload Page</span>
 </button>
 <button
 onClick={this.handleGoHome}
 className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
-<Home className=&quot;w-4 h-4&quot; />
+<Home className=&quot;w-4 h-4&quot;  />
 <span>Go Home</span>
 </button>
 </div>
@@ -201,7 +201,7 @@ className=&quot;flex items-center justify-center space-x-2 border border-cyan-60
 <a
 href=&quot;mailto:kleber@ziontechgroup.com&quot;
 className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
-<Phone className=&quot;w-4 h-4 mr-2&quot; />
+<Phone className=&quot;w-4 h-4 mr-2&quot;  />
 kleber@ziontechgroup.com
 </a>
 </div>

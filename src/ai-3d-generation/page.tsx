@@ -55,16 +55,16 @@ const Page = () => {
         description=&quot;Create professional 3 D models, animations, and virtual environments with AI3D Generation Studio. No3D skills needed, starting at$299/month.&quot;
         keywords={['AI3D generation', '3 D models', '3 D animation', 'VR AR content', '3 D automation', 'AI 3D']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-3d-generation&quot;
-      />
+       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <Navigation />
+        <Navigation  />
         <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
           {/* Hero Section */}
           <section className=&quot;text-center mb-16&quot;></section>
             <div className=&quot;max-w-4xl mx-auto&quot;></div>
               <div className=&quot;flex items-center justify-center mb-6&quot;></div>
                 <div className=&quot;w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4&quot;></div>
-                  <Camera className=&quot;w-8 h-8 text-white&quot; />
+                  <Camera className=&quot;w-8 h-8 text-white&quot;  />
                 </div>
                 <h1 className=&quot;text-4xl md:text-5xl font-bold text-white neon-text&quot;>
                   AI 3D Generation Studio
@@ -84,7 +84,7 @@ const Page = () => {
                   href=&quot;#demo&quot;
                   className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
-                  <Play className=&quot;w-5 h-5&quot; />
+                  <Play className=&quot;w-5 h-5&quot;  />
                   View Gallery
                 </a>
               </div>
@@ -99,7 +99,7 @@ const Page = () => {
               {features.map((feature, index) => (
                 <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
-                    <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3&quot; />
+                    <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3&quot;  />
                     <h3 className=&quot;text-lg font-semibold text-white&quot;>{feature}</h3>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ const Page = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;text-center&quot;></div>
                   <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
-                    <Zap className=&quot;w-8 h-8 text-white&quot; />
+                    <Zap className=&quot;w-8 h-8 text-white&quot;  />
                   </div>
                   <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{benefit}</h3>
                 </div>
@@ -147,7 +147,7 @@ const Page = () => {
                   <ul className=&quot;space-y-3 mb-8&quot;>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-3 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-3 flex-shrink-0&quot;  />
                         {feature}
                       </li>
                     ))}
@@ -192,7 +192,7 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer  />
       </div>
     </>
   )

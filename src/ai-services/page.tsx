@@ -1,10 +1,11 @@
-'use client'
+
+'use client';
 import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
-
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react'
+
 
 constAIServicesPage: React.FC= () =>{constservices= [
     {
@@ -74,7 +75,7 @@ constAIServicesPage: React.FC= () =>{constservices= [
 const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+      <Navigation  />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16"></section>
@@ -109,7 +110,7 @@ const Page = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105"></div>
                 <div className="flex items-center mb-4"></div>
-                  <service.icon className={`w-8 h-8 ${service.color} mr-3`} />
+                  <service.icon className={`w-8 h-8 ${service.color} mr-3`}  />
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
@@ -178,7 +179,7 @@ const Page = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer  />
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )

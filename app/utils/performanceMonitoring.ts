@@ -1,29 +1,28 @@
-'use client'
+'use client';
+
 /**
 * Advanced Performance Monitoring System
 * Tracks Core Web Vitals and custom performance metrics
 */
 export interface PerformanceMetric {
-name: string,
-value: number,
-rating: 'good' | 'needs-improvement' | 'poor',
-timestamp: number
-}
+name: string,;
+value: number,;
+rating: 'good' | 'needs-improvement' | 'poor',;
+timestamp: number;}
 export interface WebVitals {
-FCP?: PerformanceMetric; // First Contentful Paint
-LCP?: PerformanceMetric; // Largest Contentful Paint
-FID?: PerformanceMetric; // First Input Delay
-CLS?: PerformanceMetric; // Cumulative Layout Shift
+FCP?: PerformanceMetric; // First Contentful Paint;
+LCP?: PerformanceMetric; // Largest Contentful Paint;
+FID?: PerformanceMetric; // First Input Delay;
+CLS?: PerformanceMetric; // Cumulative Layout Shift;
 TTFB?: PerformanceMetric; // Time to First Byte;}
 INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {
-  name: string
-  value: number
-  unit: 'ms' | 'bytes' | 'count' | 'percentage'
-  rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number
-}
+  name: string;
+  value: number;
+  unit: 'ms' | 'bytes' | 'count' | 'percentage';
+  rating: 'good' | 'needs-improvement' | 'poor';
+  timestamp: number;}
 export interface WebVitals {}
 FCP?: PerformanceMetric; // First Contentful Paint
 LCP?: PerformanceMetric; // Largest Contentful Paint
@@ -54,11 +53,11 @@ this.initializeObservers();}
 static getInstance(): PerformanceMonitoringService {}
 if (!PerformanceMonitoringService.instance) {}
 PerformanceMonitoringService.instance = new PerformanceMonitoringService();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */}
+export interface PerformanceMetric {/* TODO: Fix JSX expression */;}
 }
-export interface WebVitals {/* TODO: Fix JSX expression */}
+export interface WebVitals {/* TODO: Fix JSX expression */;}
 }
-export interface CustomMetric {/* TODO: Fix JSX expression */}
+export interface CustomMetric {/* TODO: Fix JSX expression */;}
 }
 class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
 webVitals: WebVitals = {}
@@ -685,7 +684,7 @@ return recommendations
 export enum MetricUnit {/* TODO: Fix JSX expression */}
 }
 // Simple metrics structure for testing
-interface MetricData {/* TODO: Fix JSX expression */}
+interface MetricData {/* TODO: Fix JSX expression */;}
 }
 const simpleMetrics = new Map<string, MetricData>()
 export const recordMetric = (nam,

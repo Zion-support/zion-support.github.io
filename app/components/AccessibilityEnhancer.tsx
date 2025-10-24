@@ -1,6 +1,5 @@
 'use client';
 import Navigation from './Navigation';
-
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -8,7 +7,7 @@ interface AccessibilityEnhancerProps {
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
-}
+;}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,

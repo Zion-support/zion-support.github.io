@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -100,9 +101,9 @@ const Page = () => {
         description=&quot;Transparent pricing for AI and IT services. Choose the perfect plan for your business needs. Starting at$299/month.&quot;
         keywords={['pricing', 'AI services pricing', 'IT services pricing', 'business plans', 'enterprisepricing']}
         canonicalUrl=&quot;https://ziontechgroup.com/pricing&quot;
-      />
+       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <Navigation />
+        <Navigation  />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
           <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
@@ -132,7 +133,7 @@ const Page = () => {
                   <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>{plan.cta}
                     </spa></di>)}
                 <divclassName=&quot;text-centermb-8&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-300mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-5 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-2&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-4mb-8&quot;>{plan.features.map((featurefeatureIndex) => (
-                   <likey={featureIndex}className=&quot;flex items-centertext-gray-300&quot;><CheckCircleclassName=&quot;w-5 h-5text-green-400mr-3flex-shrink-0&quot; />{feature}
+                   <likey={featureIndex}className=&quot;flex items-centertext-gray-300&quot;><CheckCircleclassName=&quot;w-5 h-5text-green-400mr-3flex-shrink-0&quot;  />{feature}
                     </l>))}
                 </u><ahref={plan.popular ?&quot;mailto:kleber@ziontechgroup.com&quot; :&quot;tel:+13024640950&quot;}
                     className={`w-full text-center block py-3 px-6 rounded-lg font-medium transition-all ${
@@ -190,7 +191,7 @@ const Page = () => {
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                 >
-                  <Phone className=&quot;w-5 h-5&quot; />
+                  <Phone className=&quot;w-5 h-5&quot;  />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -198,14 +199,14 @@ const Page = () => {
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+                  <Mail className=&quot;w-5 h-5&quot;  />
                   <span>Get Free Quote</span>
                 </a>
               </div>
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer  />
       </div>
     </>
   )

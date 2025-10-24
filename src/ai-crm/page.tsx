@@ -1,10 +1,11 @@
-'use client'
+
+'use client';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
-
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Star } from 'lucide-react'
+
 
 constAICRMPage: React.FC= () =>{constfeatures= [
     {
@@ -124,7 +125,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
 const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+      <Navigation  />
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>

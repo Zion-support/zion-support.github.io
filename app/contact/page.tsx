@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
@@ -136,8 +136,7 @@ const ContactPage: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
+                    placeholder="Your full name" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -151,8 +150,7 @@ const ContactPage: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
+                    placeholder="your.email@company.com" />
                 </div>
               </div>
 
@@ -168,8 +166,7 @@ const ContactPage: React.FC = () => {
                     value={formData.company}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
+                    placeholder="Your company name" />
                 </div>
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
@@ -202,8 +199,7 @@ const ContactPage: React.FC = () => {
                   required
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                  placeholder="Tell us about your project or how we can help you..."
-                />
+                  placeholder="Tell us about your project or how we can help you..." />
               </div>
 
               <button

@@ -4,13 +4,12 @@ import React from 'react';
 import { Code, Helmet } from 'lucide-react';
 
 interface SEOEnhancerProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  children: React.ReactNode
-}
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  children: React.ReactNode;}
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;,
   description = &quot;Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.&quot;,
@@ -84,30 +83,30 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <Helmet>
         {/* Primary meta tags */}
         <title>{title}</title>
-        <meta name=&quot;description&quot; content={description} />
-        <meta name=&quot;keywords&quot; content={keywords} />
-        <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
-        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
-        <meta name=&quot;googlebot&quot; content=&quot;index, follow&quot; />
+        <meta name=&quot;description&quot; content={description}  />
+        <meta name=&quot;keywords&quot; content={keywords}  />
+        <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot;  />
+        <meta name=&quot;robots&quot; content=&quot;index, follow&quot;  />
+        <meta name=&quot;googlebot&quot; content=&quot;index, follow&quot;  />
         {/* Open Graph / Facebook */}
-        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
-        <meta property=&quot;og:url&quot; content={url} />
-        <meta property=&quot;og:title&quot; content={title} />
-        <meta property=&quot;og:description&quot; content={description} />
-        <meta property=&quot;og:image&quot; content={image} />
-        <meta property=&quot;og:image:width&quot; content=&quot;1200&quot; />
-        <meta property=&quot;og:image:height&quot; content=&quot;630&quot; />
-        <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot;  />
+        <meta property=&quot;og:url&quot; content={url}  />
+        <meta property=&quot;og:title&quot; content={title}  />
+        <meta property=&quot;og:description&quot; content={description}  />
+        <meta property=&quot;og:image&quot; content={image}  />
+        <meta property=&quot;og:image:width&quot; content=&quot;1200&quot;  />
+        <meta property=&quot;og:image:height&quot; content=&quot;630&quot;  />
+        <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot;  />
         {/* Twitter */}
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
-        <meta name=&quot;twitter:url&quot; content={url} />
-        <meta name=&quot;twitter:title&quot; content={title} />
-        <meta name=&quot;twitter:description&quot; content={description} />
-        <meta name=&quot;twitter:image&quot; content={image} />
-        <meta name=&quot;twitter:site&quot; content=&quot;@ziontechgroup&quot; />
-        <meta name=&quot;twitter:creator&quot; content=&quot;@ziontechgroup&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;  />
+        <meta name=&quot;twitter:url&quot; content={url}  />
+        <meta name=&quot;twitter:title&quot; content={title}  />
+        <meta name=&quot;twitter:description&quot; content={description}  />
+        <meta name=&quot;twitter:image&quot; content={image}  />
+        <meta name=&quot;twitter:site&quot; content=&quot;@ziontechgroup&quot;  />
+        <meta name=&quot;twitter:creator&quot; content=&quot;@ziontechgroup&quot;  />
         {/* Canonical URL */}
-        <link rel=&quot;canonical&quot; href={url} />
+        <link rel=&quot;canonical&quot; href={url}  />
         {/* Structured Data */}
         <script type=&quot;application/ld+json&quot;>
           {JSON.stringify(structuredData)}

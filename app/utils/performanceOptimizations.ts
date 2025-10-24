@@ -1,6 +1,8 @@
 'use client';
-// Performance optimization utilities
 import { useCallback, useMemo } from 'react';
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+
+// Performance optimization utilities
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
@@ -119,7 +121,6 @@ export const usePerformanceMonitoring = () => {
     }
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));

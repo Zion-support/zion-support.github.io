@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain } from 'lucide-react'
 import React from 'react'
 import { Atom, Lock } from 'lucide-react'

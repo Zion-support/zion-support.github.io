@@ -44,7 +44,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
   return (
     <>
       
-      <Navigation />
+      <Navigation  />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -59,7 +59,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot;  />
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
@@ -74,10 +74,10 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
-                <Phone className=&quot;mr-2 h-5 w-5&quot; />
+                <Phone className=&quot;mr-2 h-5 w-5&quot;  />
                 Call Now
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
-                <Mail className=&quot;mr-2 h-5 w-5&quot; />
+                <Mail className=&quot;mr-2 h-5 w-5&quot;  />
                 Email Us
             </div>
           </div>
@@ -95,13 +95,13 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot;  />
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot;  />
                         {benefit}
                       </li>
                     ))}
@@ -124,7 +124,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot;  />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -150,7 +150,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };
@@ -178,7 +178,7 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
         <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot;></div>
           <div className=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center&quot;></div>
             <div className=&quot;w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto&quot;></div>
-              <AlertTriangle className=&quot;w-8 h-8 text-red-400&quot; />
+              <AlertTriangle className=&quot;w-8 h-8 text-red-400&quot;  />
             </div>
             <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
             <p className=&quot;text-gray-300 mb-6&quot;>We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>

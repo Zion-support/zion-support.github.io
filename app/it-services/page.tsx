@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from "react";
 import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
 

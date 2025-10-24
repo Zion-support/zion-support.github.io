@@ -7,7 +7,7 @@ interface FuturisticCardProps {
   variant?: 'default' | 'service' | 'testimonial' | 'feature';
   className?: string;
   onClick?: () => void;
-}
+;}
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({
   children, 
@@ -60,7 +60,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-      />
+       />
       
       {/* Content */}
       <div className="relative z-10">
@@ -81,7 +81,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
           duration: 0.6,
           ease: 'easeInOut',
         }}
-      />
+       />
     </motion.div>
   );
 };

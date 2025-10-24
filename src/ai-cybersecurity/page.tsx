@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -122,9 +123,9 @@ const AICybersecurityPage: React.FC = () => {
         description=&quot;Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats.&quot;
         keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-cybersecurity&quot;
-      />
+       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <Navigation />
+        <Navigation  />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
           <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
@@ -144,7 +145,7 @@ const AICybersecurityPage: React.FC = () => {
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                 >
-                  <Phone className=&quot;w-5 h-5&quot; />
+                  <Phone className=&quot;w-5 h-5&quot;  />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -152,7 +153,7 @@ const AICybersecurityPage: React.FC = () => {
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+                  <Mail className=&quot;w-5 h-5&quot;  />
                   <span>Get Security Audit</span>
                 </a>
               </div>
@@ -177,13 +178,13 @@ const AICybersecurityPage: React.FC = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
-                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
+                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot;  />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className=&quot;flex items-center space-x-2 text-sm text-cyan-400&quot;>
-                        <CheckCircle className=&quot;w-4 h-4&quot; />
+                        <CheckCircle className=&quot;w-4 h-4&quot;  />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -200,7 +201,7 @@ const AICybersecurityPage: React.FC = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
               {threats.map((threat, index) => (
                 <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
-                  <threat.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
+                  <threat.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot;  />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{threat.title}</h3>
                   <p className=&quot;text-gray-300&quot;>{threat.description}</p>
                 </div>
@@ -223,7 +224,7 @@ const AICybersecurityPage: React.FC = () => {
                   <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>Most Popular
                     </spa></di>)}
                 <divclassName=&quot;text-centermb-6&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => (
-                   <likey={idx}className=&quot;flexitems-centerspace-x-3&quot;><CheckCircleclassName=&quot;w-5 h-5 text-cyan-400flex-shrink-0&quot; /><spanclassName=&quot;text-gray-300&quot;>{feature}</spa></l>))}
+                   <likey={idx}className=&quot;flexitems-centerspace-x-3&quot;><CheckCircleclassName=&quot;w-5 h-5 text-cyan-400flex-shrink-0&quot;  /><spanclassName=&quot;text-gray-300&quot;>{feature}</spa></l>))}
                 </u><ahref=&quot;tel:+13024640950&quot;
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular
@@ -251,7 +252,7 @@ const AICybersecurityPage: React.FC = () => {
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                 >
-                  <Phone className=&quot;w-5 h-5&quot; />
+                  <Phone className=&quot;w-5 h-5&quot;  />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -259,14 +260,14 @@ const AICybersecurityPage: React.FC = () => {
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+                  <Mail className=&quot;w-5 h-5&quot;  />
                   <span>Get Security Audit</span>
                 </a>
               </div>
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer  />
       </div>
     </>
   )

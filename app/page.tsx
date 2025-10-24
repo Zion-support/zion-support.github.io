@@ -1,4 +1,5 @@
-"use client"
+
+'use client';
 import React from "react"
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -62,7 +63,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Navigation />
+      <Navigation  />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -157,7 +158,7 @@ export default function HomePage() {
         </div>
       </section>
       
-      <Footer />
+      <Footer  />
     </div>
   )
 }

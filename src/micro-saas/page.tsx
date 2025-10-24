@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react'
@@ -110,7 +111,7 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
 const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+      <Navigation  />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16"></section>
@@ -146,7 +147,7 @@ const Page = () => {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
                 <div className="flex items-center mb-6"></div>
                   <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}></div>
-                    <category.icon className={`w-6 h-6 ${category.color}`} />
+                    <category.icon className={`w-6 h-6 ${category.color}`}  />
                   </div>
                   <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
@@ -303,7 +304,7 @@ const Page = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer  />
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )

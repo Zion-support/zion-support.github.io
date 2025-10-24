@@ -8,8 +8,8 @@ const InnovationLabsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.&quot; />
-        <meta property=&quot;og:url&quot; content=&quot;/og/ai-innovation-labs-2025.jpg&quot; />
+        <meta name=&quot;description&quot; content=&quot;Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.&quot;  />
+        <meta property=&quot;og:url&quot; content=&quot;/og/ai-innovation-labs-2025.jpg&quot;  />
       </Helmet>
       <div className=&quot;min-h-screen bg-gray-50&quot;></div>
       <div className=&quot;max-w-4xl mx-auto px-4 py-8&quot;></div>

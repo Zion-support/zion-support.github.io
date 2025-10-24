@@ -44,7 +44,7 @@ const PerformanceDashboardPage: React.FC = () => {
   return (
     <>
       
-      <Navigation />
+      <Navigation  />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -59,7 +59,7 @@ const PerformanceDashboardPage: React.FC = () => {
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot;  />
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
@@ -80,13 +80,13 @@ const PerformanceDashboardPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot;  />
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot;  />
                         {benefit}
                       </li>
                     ))}
@@ -109,7 +109,7 @@ const PerformanceDashboardPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot;  />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -135,7 +135,7 @@ const PerformanceDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };
@@ -205,7 +205,7 @@ return (
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
 <div className=&quot;flex items-center justify-between mb-6&quot;></div>
 <h3 className=&quot;text-xl font-semibold text-white flex items-center gap-2&quot;></h3>
-<Activity className=&quot;w-5 h-5&quot; />
+<Activity className=&quot;w-5 h-5&quot;  />
 Performance Dashboard
 <button
 onClick={toggleMonitoring}
@@ -219,7 +219,7 @@ isMonitoring
 {alerts.length > 0 && (
 <div className=&quot;mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<AlertTriangle className=&quot;w-5 h-5 text-red-400&quot; />
+<AlertTriangle className=&quot;w-5 h-5 text-red-400&quot;  />
 <h4 className=&quot;text-red-400 font-semibold&quot;>Performance Alerts</h4>
 </div>
 <ul className=&quot;space-y-1&quot;>
@@ -232,7 +232,7 @@ isMonitoring
 <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;></div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<Zap className=&quot;w-4 h-4 text-blue-400&quot; />
+<Zap className=&quot;w-4 h-4 text-blue-400&quot;  />
 <span className=&quot;text-gray-300 text-sm&quot;>Load Time</span>
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}></div>
@@ -240,7 +240,7 @@ isMonitoring
 </div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<Cpu className=&quot;w-4 h-4 text-green-400&quot; />
+<Cpu className=&quot;w-4 h-4 text-green-400&quot;  />
 <span className=&quot;text-gray-300 text-sm&quot;>Render Time</span>
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
@@ -248,14 +248,14 @@ isMonitoring
 </div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<MemoryStick className=&quot;w-4 h-4 text-purple-400&quot; />
+<MemoryStick className=&quot;w-4 h-4 text-purple-400&quot;  />
 <span className=&quot;text-gray-300 text-sm&quot;>Memory Usage</span>
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
 </div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<TrendingUp className=&quot;w-4 h-4 text-orange-400&quot; />
+<TrendingUp className=&quot;w-4 h-4 text-orange-400&quot;  />
 <span className=&quot;text-gray-300 text-sm&quot;>FPS</span>
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>

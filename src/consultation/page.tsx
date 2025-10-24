@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { Brain, Target, TrendingUp } from 'lucide-react'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
@@ -97,9 +98,9 @@ const Page = () => {
         description=&quot;Get a free30-minute consultation with our technology experts. Discover how AI and IT solutions can transformyourbusiness.&quot;
         keywords={['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'ITconsultation']}
         canonicalUrl=&quot;https://ziontechgroup.com/consultation&quot;
-      />
+       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <Navigation />
+        <Navigation  />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
           <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
@@ -119,7 +120,7 @@ const Page = () => {
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                 >
-                  <Phone className=&quot;w-5 h-5&quot; />
+                  <Phone className=&quot;w-5 h-5&quot;  />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -127,7 +128,7 @@ const Page = () => {
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+                  <Mail className=&quot;w-5 h-5&quot;  />
                   <span>Schedule Now</span>
                 </a>
               </div>
@@ -141,7 +142,7 @@ const Page = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {consultationBenefits.map((benefit, index) => (
                 <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
-                  <benefit.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
+                  <benefit.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot;  />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{benefit.title}</h3>
                   <p className=&quot;text-gray-300&quot;>{benefit.description}</p>
                 </div>
@@ -187,7 +188,7 @@ const Page = () => {
                           onChange={handleInputChange}
                          className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                          placeholder=&quot;Enter your fullname&quot;
-                        /></di><di v><labelhtmlFor=&quot;email&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Email Address *
+                         /></di><di v><labelhtmlFor=&quot;email&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Email Address *
                       </labe><inputtype=&quot;email&quot;
                          id=&quot;email&quot;
                          name=&quot;email&quot;
@@ -195,7 +196,7 @@ const Page = () => {
                           onChange={handleInputChange}
                          className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                          placeholder=&quot;Enter youremail&quot;
-                        /></di></di><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-4&quot;><di v><labelhtmlFor=&quot;company&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Company Name *
+                         /></di></di><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-4&quot;><di v><labelhtmlFor=&quot;company&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Company Name *
                       </labe><inputtype=&quot;text&quot;
                          id=&quot;company&quot;
                          name=&quot;company&quot;
@@ -203,7 +204,7 @@ const Page = () => {
                           onChange={handleInputChange}
                          className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                          placeholder=&quot;Enter your companyname&quot;
-                        /></di><di v><labelhtmlFor=&quot;phone&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Phone Number
+                         /></di><di v><labelhtmlFor=&quot;phone&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Phone Number
                       </labe><inputtype=&quot;tel&quot;
                          id=&quot;phone&quot;
                          name=&quot;phone&quot;
@@ -211,7 +212,7 @@ const Page = () => {
                           onChange={handleInputChange}
                          className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                          placeholder=&quot;Enter your phonenumber&quot;
-                        /></di></di><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-4&quot;><di v><labelhtmlFor=&quot;industry&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Industry
+                         /></di></di><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-4&quot;><di v><labelhtmlFor=&quot;industry&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Industry
                       </labe><selectid=&quot;industry&quot;
                          name=&quot;industry&quot;
                           value={formData.industry}
@@ -231,7 +232,7 @@ const Page = () => {
                         onChange={handleInputChange}
                        className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                        placeholder=&quot;Describe your current technologychallenges&quot;
-                      /></di><di v><labelhtmlFor=&quot;goals&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Business Goals
+                       /></di><di v><labelhtmlFor=&quot;goals&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Business Goals
                     </labe><textareaid=&quot;goals&quot;
                        name=&quot;goals&quot;
                         rows={3}
@@ -239,7 +240,7 @@ const Page = () => {
                         onChange={handleInputChange}
                        className=&quot;w-full px-4 py-3 bg-slate-800border border-gray-600rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-400&quot;
                        placeholder=&quot;What are your main businessobjectives?&quot;
-                      /></di><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-4&quot;><di v><labelhtmlFor=&quot;timeline&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Implementation Timeline
+                       /></di><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-4&quot;><di v><labelhtmlFor=&quot;timeline&quot;className=&quot;block text-sm font-medium text-gray-300mb-2&quot;>Implementation Timeline
                       </labe><selectid=&quot;timeline&quot;
                          name=&quot;timeline&quot;
                           value={formData.timeline}
@@ -259,7 +260,7 @@ const Page = () => {
                         onChange={handleInputChange}
                         className=&quot;w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400&quot;
                         placeholder=&quot;Any additional information you'd like to share&quot;
-                      />
+                       />
                     </div>
                     <button
                       type=&quot;submit&quot;
@@ -275,23 +276,23 @@ const Page = () => {
                     <h3 className=&quot;text-xl font-bold text-white mb-6&quot;>Why Choose Our Consultation?</h3>
                     <ul className=&quot;space-y-4&quot;>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>Completely free with no obligations</span>
                       </li>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>Expert analysis of your current setup</span>
                       </li>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>Actionable recommendations</span>
                       </li>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>Customized technology roadmap</span>
                       </li>
                       <li className=&quot;flex items-start&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0&quot;  />
                         <span className=&quot;text-gray-300&quot;>30-minute focused session</span>
                       </li>
                     </ul>
@@ -300,19 +301,19 @@ const Page = () => {
                     <h3 className=&quot;text-xl font-bold text-white mb-6&quot;>Contact Information</h3>
                     <div className=&quot;space-y-4&quot;></div>
                       <div className=&quot;flex items-center&quot;></div>
-                        <Phone className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
+                        <Phone className=&quot;w-5 h-5 text-cyan-400 mr-3&quot;  />
                         <a href=&quot;tel:+13024640950&quot; className=&quot;text-gray-300 hover:text-cyan-400&quot;>
                           (302) 464-0950
                         </a>
                       </div>
                       <div className=&quot;flex items-center&quot;></div>
-                        <Mail className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
+                        <Mail className=&quot;w-5 h-5 text-cyan-400 mr-3&quot;  />
                         <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-gray-300 hover:text-cyan-400&quot;>
                           kleber@ziontechgroup.com
                         </a>
                       </div>
                       <div className=&quot;flex items-center&quot;></div>
-                        <Clock className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
+                        <Clock className=&quot;w-5 h-5 text-cyan-400 mr-3&quot;  />
                         <span className=&quot;text-gray-300&quot;>Mon-Fri: 9AM-6PM EST</span>
                       </div>
                     </div>
@@ -331,7 +332,7 @@ const Page = () => {
                 <div key={index} className=&quot;cyber-card p-6&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
+                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot;  />
                     ))}
                   </div>
                   <p className=&quot;text-gray-300 mb-4&quot;>&quot;{testimonial.text}&quot;</p>
@@ -344,7 +345,7 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer  />
       </div>
     </>
   )

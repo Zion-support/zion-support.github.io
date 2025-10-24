@@ -1,9 +1,9 @@
-"use client";
+'use client';
 import React from "react";
 
 interface AccessibilityComponentsProps {
   className?: string;
-}
+;}
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
   return (

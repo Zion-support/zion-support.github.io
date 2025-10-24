@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { X, Brain, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -131,7 +132,7 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
   const categories = [...new Set(aiFintechServices.map(service => service.category))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
+      <Navigation  />
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20"></section>
@@ -342,7 +343,7 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer  />
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )

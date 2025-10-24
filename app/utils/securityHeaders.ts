@@ -3,13 +3,12 @@
 * Comprehensive security headers for production applications
 */
 export interface SecurityHeadersConfig {
-contentSecurityPolicy?: string
-strictTransportSecurity?: string
-xFrameOptions?: string
-xContentTypeOptions?: string
-referrerPolicy?: string
-permissionsPolicy?: string
-}
+contentSecurityPolicy?: string;
+strictTransportSecurity?: string;
+xFrameOptions?: string;
+xContentTypeOptions?: string;
+referrerPolicy?: string;
+permissionsPolicy?: string;}
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
 // Content Security Policy
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
@@ -75,7 +74,7 @@ headers['Referrer-Policy'] = config.referrerPolicy;}
 }
 if (config.permissionsPolicy) {}
 headers['Permissions-Policy'] = config.permissionsPolicy;}
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
+export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */;}
 }
 export const,
 defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}

@@ -43,7 +43,7 @@ const SEOHeadPage: React.FC = () => {
   return (
     <>
       
-      <Navigation />
+      <Navigation  />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -58,7 +58,7 @@ const SEOHeadPage: React.FC = () => {
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot;  />
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
@@ -79,13 +79,13 @@ const SEOHeadPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot;  />
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot;  />
                         {benefit}
                       </li>
                     ))}
@@ -108,7 +108,7 @@ const SEOHeadPage: React.FC = () => {
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot;  />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -134,7 +134,7 @@ const SEOHeadPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };
@@ -160,8 +160,8 @@ constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.locat
 const defaultStructuredData= {&quot;@context&quot;:&quot;https:// schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https:// ziontechgroup.com&quot;,&quot;logo&quot;:&quot;https:// ziontechgroup.com/logo.png&quot;,&quot;description&quot;:&quot;Advanced AI and IT Solutions company providing cutting-edge technology services&quot;,&quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;,&quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;,&quot;addressLocality&quot;:&quot;Middletown&quot;,&quot;addressRegion&quot;:&quot;DE&quot;,&quot;postalCode&quot;:&quot;1970 9&quot;,&quot;addressCountry&quot;:&quot;US&quot;},&quot;contactPoint&quot;: {&quot;@type&quot;:&quot;ContactPoint&quot;,&quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;,&quot;contactType&quot;:&quot;customer service&quot;,&quot;email&quot;:&quot;kleber@ziontechgroup.com&quot;},&quot;sameAs&quot;: [&quot;https:// www.linkedin.com/$1/zion-tech-group&quot;,&quot;https:// twitter.com/ziontechgroup&quot;
 ]
 }
-return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;robots&quot;content=&quot;index,follow&quot; /><metaname=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0&quot; />{/* CanonicalURL */}
-{canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl} />}
-{/* Open GraphMetaTags*/}<metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:type&quot; content={ogType} /><metaproperty=&quot;og:url&quot; content={canonicalUrl} /><metaproperty=&quot;og:image&quot; content={ogImage} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter CardMetaTags*/}<metaname=&quot;twitter:card&quot; content={twitterCard} /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEOMetaTags*/}<metaname=&quot;theme-color&quot;content=&quot;#0f172a&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot; /><metaname=&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot; /><metaname=&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot; />{/* StructuredData*/}<scripttype=&quot;application/ld+json&quot;>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
+return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description}  /><metaname=&quot;keywords&quot; content={keywords}  /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot;  /><metaname=&quot;robots&quot;content=&quot;index,follow&quot;  /><metaname=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0&quot;  />{/* CanonicalURL */}
+{canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl}  />}
+{/* Open GraphMetaTags*/}<metaproperty=&quot;og:title&quot; content={fullTitle}  /><metaproperty=&quot;og:description&quot; content={description}  /><metaproperty=&quot;og:type&quot; content={ogType}  /><metaproperty=&quot;og:url&quot; content={canonicalUrl}  /><metaproperty=&quot;og:image&quot; content={ogImage}  /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot;  /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot;  />{/* Twitter CardMetaTags*/}<metaname=&quot;twitter:card&quot; content={twitterCard}  /><metaname=&quot;twitter:title&quot; content={fullTitle}  /><metaname=&quot;twitter:description&quot; content={description}  /><metaname=&quot;twitter:image&quot; content={ogImage}  />{/* Additional SEOMetaTags*/}<metaname=&quot;theme-color&quot;content=&quot;#0f172a&quot;  /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot;  /><metaname=&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot;  /><metaname=&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot;  />{/* StructuredData*/}<scripttype=&quot;application/ld+json&quot;>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
 export default SEOHead

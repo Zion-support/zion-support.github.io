@@ -64,7 +64,7 @@ Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`;}
 }
-export interface SitemapEntry {/* TODO: Fix JSX expression */}
+export interface SitemapEntry {/* TODO: Fix JSX expression */;}
 }
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
 l: `${baseUrl}/`,

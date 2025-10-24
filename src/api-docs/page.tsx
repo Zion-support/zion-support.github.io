@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 import { X } from 'lucide-react'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
@@ -49,7 +50,7 @@ const Page = () => {
   return (
     <>
       <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900&quot;></div>
-        <Navigation />
+        <Navigation  />
         <div className=&quot;container mx-auto px-4 py-8&quot;></div>
           {/* Hero Section */}
           <section className=&quot;text-center mb-16 relative overflow-hidden&quot;></section>
@@ -84,7 +85,7 @@ const Page = () => {
                       onClick={() =></button> copyToClipboard(endpoint.example, endpoint.id)}
                       className=&quot;flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors&quot;
                     >
-                      {copiedCode === endpoint.id ? <Check className=&quot;w-4 h-4&quot; /> : <Copy className=&quot;w-4 h-4&quot; />}
+                      {copiedCode === endpoint.id ? <Check className=&quot;w-4 h-4&quot;  /> : <Copy className=&quot;w-4 h-4&quot;  />}
                       <span>{copiedCode === endpoint.id ? 'Copied!' : 'Copy'}</span>
                     </button>
                   </div>
@@ -109,14 +110,14 @@ const Page = () => {
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105&quot;
                 >
-                  <Key className=&quot;w-5 h-5&quot; />
+                  <Key className=&quot;w-5 h-5&quot;  />
                   +1 302 464 0950
                 </a>
                 <a
                   href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   className=&quot;flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105&quot;
                 >
-                  <Code className=&quot;w-5 h-5&quot; />
+                  <Code className=&quot;w-5 h-5&quot;  />
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -124,7 +125,7 @@ const Page = () => {
           </section>
         </div>
       </div>
-      <Footer />
+      <Footer  />
     </>
   )
 }
