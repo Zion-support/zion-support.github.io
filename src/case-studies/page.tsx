@@ -77,29 +77,29 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions.&quot; />
+        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&quot;></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         {/* Header */}
-        <header className=&quot;bg-white shadow-sm border-b&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4&quot;></div>
-            <a href=&quot;/&quot; className=&quot;inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200&quot;>
-              <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"></div>
+            <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+              <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </a>
           </div>
         </header>
         {/* Hero Section */}
-        <section className=&quot;py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
-            <div className=&quot;text-center&quot;></div>
-              <h1 className=&quot;text-4xl md:text-6xl font-bold mb-6&quot;>
+        <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center"></div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Success Stories
               </h1>
-              <p className=&quot;text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto&quot;>
+              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
                 Real results from real companies using our AI solutions
               </p>
-              <p className=&quot;text-lg mb-8 text-gray-300 max-w-4xl mx-auto&quot;>
+              <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
                 Discover how leading companies across industries have transformed their operations
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
@@ -107,55 +107,55 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
           </div>
         </section>
         {/* Case Studies Grid */}
-        <section className=&quot;py-16&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
-            <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;></div>
+        <section className="py-16"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {caseStudies.map((study) => (
-                <div key={study.id} className=&quot;bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200&quot;></div>
-                  <div className=&quot;p-8&quot;></div>
-                    <div className=&quot;flex items-center mb-4&quot;></div>
-                      <div className=&quot;text-4xl mr-4&quot;>{study.image}</div>
+                <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200"></div>
+                  <div className="p-8"></div>
+                    <div className="flex items-center mb-4"></div>
+                      <div className="text-4xl mr-4">{study.image}</div>
                       <div></div>
-                        <h3 className=&quot;text-2xl font-bold text-gray-900 mb-1&quot;>{study.title}</h3>
-                        <p className=&quot;text-blue-600 font-semibold&quot;>{study.company}</p>
-                        <p className=&quot;text-gray-500 text-sm&quot;>{study.industry}</p>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-1">{study.title}</h3>
+                        <p className="text-blue-600 font-semibold">{study.company}</p>
+                        <p className="text-gray-500 text-sm">{study.industry}</p>
                       </div>
                     </div>
-                    <p className=&quot;text-gray-600 mb-6&quot;>{study.description}</p>
-                    <div className=&quot;mb-6&quot;></div>
-                      <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Challenge:</h4>
-                      <p className=&quot;text-gray-600 text-sm&quot;>{study.challenge}</p>
+                    <p className="text-gray-600 mb-6">{study.description}</p>
+                    <div className="mb-6"></div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                      <p className="text-gray-600 text-sm">{study.challenge}</p>
                     </div>
-                    <div className=&quot;mb-6&quot;></div>
-                      <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Solution:</h4>
-                      <p className=&quot;text-gray-600 text-sm&quot;>{study.solution}</p>
+                    <div className="mb-6"></div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                      <p className="text-gray-600 text-sm">{study.solution}</p>
                     </div>
-                    <div className=&quot;mb-6&quot;></div>
-                      <h4 className=&quot;font-semibold text-gray-900 mb-4&quot;>Results:</h4>
-                      <div className=&quot;grid grid-cols-2 gap-4&quot;></div>
-                        <div className=&quot;text-center p-3 bg-green-50 rounded-lg&quot;></div>
-                          <div className=&quot;text-2xl font-bold text-green-600&quot;>{study.results.roi}</div>
-                          <div className=&quot;text-sm text-gray-600&quot;>ROI</div>
+                    <div className="mb-6"></div>
+                      <h4 className="font-semibold text-gray-900 mb-4">Results:</h4>
+                      <div className="grid grid-cols-2 gap-4"></div>
+                        <div className="text-center p-3 bg-green-50 rounded-lg"></div>
+                          <div className="text-2xl font-bold text-green-600">{study.results.roi}</div>
+                          <div className="text-sm text-gray-600">ROI</div>
                         </div>
-                        <div className=&quot;text-center p-3 bg-blue-50 rounded-lg&quot;></div>
-                          <div className=&quot;text-2xl font-bold text-blue-600&quot;></div>
+                        <div className="text-center p-3 bg-blue-50 rounded-lg"></div>
+                          <div className="text-2xl font-bold text-blue-600"></div>
                             {Object.values(study.results)[1]}
                           </div>
-                          <div className=&quot;text-sm text-gray-600&quot;></div>
+                          <div className="text-sm text-gray-600"></div>
                             {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className=&quot;flex items-center justify-between&quot;></div>
-                      <a href=&quot;/contact&quot;
-                        className=&quot;bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200&quot;
+                    <div className="flex items-center justify-between"></div>
+                      <a href="/contact"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                       >
                         Learn More
                       </a>
-                      <div className=&quot;flex items-center text-green-600&quot;></div>
-                        <CheckCircle className=&quot;w-4 h-4 mr-1&quot; />
-                        <span className=&quot;text-sm font-semibold&quot;>Verified Results</span>
+                      <div className="flex items-center text-green-600"></div>
+                        <CheckCircle className="w-4 h-4 mr-1" />
+                        <span className="text-sm font-semibold">Verified Results</span>
                       </div>
                     </div>
                   </div>
@@ -165,54 +165,54 @@ constCaseStudiesPage: React.FC= () =>{constcaseStudies= [
           </div>
         </section>
         {/* Stats Section */}
-        <section className=&quot;py-16 bg-white&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;></div>
-            <div className=&quot;text-center mb-12&quot;></div>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-gray-900 mb-4&quot;>
+        <section className="py-16 bg-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Proven Track Record
               </h2>
-              <p className=&quot;text-xl text-gray-600&quot;>
+              <p className="text-xl text-gray-600">
                 Our AI solutions deliver consistent, measurable results
               </p>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-8&quot;></div>
-              <div className=&quot;text-center&quot;></div>
-                <div className=&quot;text-4xl font-bold text-blue-600 mb-2&quot;>300%+</div>
-                <div className=&quot;text-gray-600&quot;>Average ROI</div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8"></div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">300%+</div>
+                <div className="text-gray-600">Average ROI</div>
               </div>
-              <div className=&quot;text-center&quot;></div>
-                <div className=&quot;text-4xl font-bold text-green-600 mb-2&quot;>150+</div>
-                <div className=&quot;text-gray-600&quot;>Projects Completed</div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-green-600 mb-2">150+</div>
+                <div className="text-gray-600">Projects Completed</div>
               </div>
-              <div className=&quot;text-center&quot;></div>
-                <div className=&quot;text-4xl font-bold text-purple-600 mb-2&quot;>95%</div>
-                <div className=&quot;text-gray-600&quot;>Client Satisfaction</div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
+                <div className="text-gray-600">Client Satisfaction</div>
               </div>
-              <div className=&quot;text-center&quot;></div>
-                <div className=&quot;text-4xl font-bold text-orange-600 mb-2&quot;>$50M+</div>
-                <div className=&quot;text-gray-600&quot;>Cost Savings Generated</div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">$50M+</div>
+                <div className="text-gray-600">Cost Savings Generated</div>
               </div>
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;></div>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold mb-4&quot;>
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Create Your Success Story?
             </h2>
-            <p className=&quot;text-xl mb-8 text-blue-100&quot;>
+            <p className="text-xl mb-8 text-blue-100">
               Join the companies that have transformed their business with our AI solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <a href=&quot;/contact&quot;
-                className=&quot;bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center&quot;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a href="/contact"
+                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
                 Start Your Project
-                <TrendingUp className=&quot;w-4 h-4 ml-2&quot; />
+                <TrendingUp className="w-4 h-4 ml-2" />
               </a>
-              <a href=&quot;/services&quot;
-                className=&quot;border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200&quot;
+              <a href="/services"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
                 View Our Services
               </a>
