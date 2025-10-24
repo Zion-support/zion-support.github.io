@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 "use client"
 interface MetaTagsProps {
@@ -12,3 +13,20 @@ const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   )
 };
 export default MetaTags
+=======
+import React from 'react';
+
+interface MetaTagsProps {
+  className?: string;
+}
+
+const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
+  return (
+    <div className={className}>
+      {/* Meta tags component content */}
+    </div>
+  );
+};
+
+export default MetaTags;
+>>>>>>> origin/main

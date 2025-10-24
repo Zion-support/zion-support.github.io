@@ -1,51 +1,46 @@
-import React from 'react'
-import '@testing-library/jest-dom'
+import React from 'react';
+import '@testing-library/jest-dom';
 
 // Mock react-router-dom
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom')
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-      key: 'default'
-    }),
-    Link: ({ to, children, ...props }) => {
-      const mockReact = jest.requireActual('react')
-      return mockReact.createElement('a', { href: to, ...props }, children)
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => children,
-    Routes: ({ children }) => children,
-    Route: ({ element }) => element,
-    useParams: () => ({}),
-    useSearchParams: () => [new URLSearchParams(), jest.fn()],
-    createBrowserRouter: () => {
-      const mockReact = jest.requireActual('react')
-      return {
-        path: '/',
-        element: mockReact.createElement('div')
-      }
-    }
-  }
-})
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({ pathname: '/' }),
+  Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
+  BrowserRouter: ({ children }) => <div>{children}</div>,
+  Routes: ({ children }) => <div>{children}</div>,
+  Route: ({ element }) => element,
+}));
 
-// Suppress console warnings for tests
-const originalError = console.error
-beforeAll(() => {
-  // eslint-disable-next-line no-console
-  console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
-      return
-    }
-    originalError.call(console, ...args)
-  }
-})
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter: () => ({
+    push: jest.fn(),
+    pathname: '/',
+    query: {},
+    asPath: '/',
+  }),
+}));
 
-afterAll(() => {
-  console.error = originalError
-})
+// Mock Next.js Link
+jest.mock('next/link', () => {
+  return ({ children, href, ...props }) => {
+    return <a href={href} {...props}>{children}</a>;
+  };
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};

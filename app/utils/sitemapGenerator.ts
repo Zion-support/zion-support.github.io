@@ -2,18 +2,21 @@
  * Sitemap Generator
  * Generates sitemap and robots.txt for SEO optimization
  */
-
 export interface SitemapEntry {
-  loc: string,
-  lastmod: string,
-  changefreq: string,
-  priority: number
+  loc: string;
+  lastmod: string;
+  changefreq: string;
+  priority: number;
 }
-
 export const generateSitemap = (): SitemapEntry[] => {
+<<<<<<< HEAD
   const baseUrl = 'https://ziontechgroup.com'
   const currentDate = new Date().toISOString()
 
+=======
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
+>>>>>>> origin/main
   return [
     {
       loc: `${baseUrl}/`,
@@ -52,39 +55,15 @@ export const generateSitemap = (): SitemapEntry[] => {
       priority: 0.9
     },
     {
-      loc: `${baseUrl}/autonomous-systems`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      loc: `${baseUrl}/micro-saas`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      loc: `${baseUrl}/enterprise`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
       loc: `${baseUrl}/contact`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      loc: `${baseUrl}/team`,
       lastmod: currentDate,
       changefreq: 'monthly',
       priority: 0.7
     },
     {
-      loc: `${baseUrl}/case-studies`,
+      loc: `${baseUrl}/pricing`,
       lastmod: currentDate,
-      changefreq: 'weekly',
+      changefreq: 'monthly',
       priority: 0.8
     },
     {
@@ -92,33 +71,38 @@ export const generateSitemap = (): SitemapEntry[] => {
       lastmod: currentDate,
       changefreq: 'daily',
       priority: 0.8
-    },
-    {
-      loc: `${baseUrl}/privacy`,
-      lastmod: currentDate,
-      changefreq: 'yearly',
-      priority: 0.3
-    },
-    {
-      loc: `${baseUrl}/terms`,
-      lastmod: currentDate,
-      changefreq: 'yearly',
-      priority: 0.3
     }
-  ]
-}
-
+  ];
+};
 export const generateRobotsTxt = (): string => {
+  const baseUrl = 'https://ziontechgroup.com';
   return `User-agent: *
 Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
+Sitemap: ${baseUrl}/sitemap.xml
+Sitemap: ${baseUrl}/sitemap-pages.xml
+Sitemap: ${baseUrl}/sitemap-blog.xml
 # Crawl-delay for better server performance
 Crawl-delay: 1
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 Disallow: /private/`
 }
+=======
+Disallow: /private/`;
+};
+export const generateSitemapXml = (entries: SitemapEntry[]): string => {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries.map(entry => `  <url>
+    <loc>${entry.loc}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+  return xml;
+};
+>>>>>>> origin/main
