@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 "use client"
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const PerformanceOptimizationsPage: React.FC = () => {
   return (
     <div>
+<<<<<<< HEAD
         </div>
         </div>
     </div>

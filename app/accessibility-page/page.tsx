@@ -90,3 +90,5 @@ export default function ServicePage() {
 export default Page;
 
 export default PagePage;
+
+export default AccessibilityPagePage;

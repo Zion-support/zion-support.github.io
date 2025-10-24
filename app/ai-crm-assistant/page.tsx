@@ -81,10 +81,12 @@ const Page: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
 export default Page;
 
 export default PagePage;
+
+export default AICrmAssistantPage;

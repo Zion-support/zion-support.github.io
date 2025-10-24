@@ -83,6 +83,7 @@ const Page: React.FC = () => {
       <Footer />
     </>
   );
+
 };
 
 export default Page;
@@ -90,3 +91,5 @@ export default Page;
 export default PagePage;
 
 export default AiDataVisualizationPage;
+
+export default AiAutomationPage;

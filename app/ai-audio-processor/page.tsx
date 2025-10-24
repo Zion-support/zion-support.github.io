@@ -94,3 +94,5 @@ export default Page;
 export default PagePage;
 
 export default AIAudioProcessorPage;
+
+export default AiAudioProcessorPage;

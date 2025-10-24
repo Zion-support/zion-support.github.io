@@ -92,3 +92,5 @@ export default Page;
 export default PagePage;
 
 export default AIChatbotBuilderPage;
+
+export default AiChatbotBuilderPage;

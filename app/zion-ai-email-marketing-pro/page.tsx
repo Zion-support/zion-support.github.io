@@ -109,3 +109,5 @@ export default Page;
 export default PagePage;
 
 export default ZionAIEmailMarketingProPage;
+
+export default ZionAiEmailMarketingProPage;

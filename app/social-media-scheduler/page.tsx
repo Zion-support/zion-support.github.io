@@ -93,3 +93,5 @@ export default Page;
 export default PagePage;
 
 export default SocialMediaSchedulerPage;
+
+export default SocialMediaSchedulerPage;

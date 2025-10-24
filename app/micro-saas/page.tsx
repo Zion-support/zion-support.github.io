@@ -83,8 +83,11 @@ const Page: React.FC = () => {
       <Footer />
     </>
   );
+
 };
 
 export default Page;
 
 export default MicroSaasPage;
+
+export default AiAutomationPage;

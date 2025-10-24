@@ -86,8 +86,8 @@ const Page: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
 export default Page;

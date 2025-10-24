@@ -82,6 +82,7 @@ const Page: React.FC = () => {
       <Footer />
     </>
   );
+
 };
 
 export default Page;
@@ -89,3 +90,5 @@ export default Page;
 export default PagePage;
 
 export default AiHealthcarePage;
+
+export default AiAutomationPage;

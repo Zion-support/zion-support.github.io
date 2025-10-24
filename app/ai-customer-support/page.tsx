@@ -1,3 +1,6 @@
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 'use client';
 import React from 'react';
 'use client';
@@ -42,8 +45,11 @@ const AiCustomerSupportPage: React.FC = () => {
       </div>
     </>
   );
+
 };
 
 export default AiCustomerSupportPage;
 
 export default AiCustomerSupportPage;
+
+export default AiAutomationPage;

@@ -108,3 +108,5 @@ export default Page;
 export default PagePage;
 
 export default ZionAICustomerChurnPredictorProPage;
+
+export default ZionAiCustomerChurnPredictorProPage;

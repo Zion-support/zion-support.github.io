@@ -270,3 +270,5 @@ export default function ServicePage() {
       </div>
     </>
   );
+
+export default AppPage;
