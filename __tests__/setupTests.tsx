@@ -4,14 +4,21 @@
 
 import '@testing-library/jest-dom';
 
+// Jest types
+declare global {
+  const jest: typeof import('jest');
+  const FrameRequestCallback: typeof import('dom').FrameRequestCallback;
+  const PerformanceObserverCallback: typeof import('dom').PerformanceObserverCallback;
+}
+
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder as any;
-global.TextDecoder = TextDecoder as any;
+global.TextEncoder = TextEncoder as unknown as typeof globalThis.TextEncoder;
+global.TextDecoder = TextDecoder as unknown as typeof globalThis.TextDecoder;
 
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
-console.error = (...args: any[]) => {
+console.error = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -68,7 +75,7 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
-console.warn = (...args: any[]) => {
+console.warn = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
@@ -76,7 +83,7 @@ console.warn = (...args: any[]) => {
   originalConsoleWarn(...args);
 };
 
-console.info = (...args: any[]) => {
+console.info = (...args: unknown[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
@@ -87,7 +94,7 @@ console.info = (...args: any[]) => {
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  constructor(public callback: PerformanceObserverCallback) {}
+  constructor(public _callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() {
@@ -95,7 +102,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   }
 };
 // Suppress JSDOM navigation warnings
-console.error = (...args: any[]) => {
+console.error = (...args: unknown[]) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return;
   }
