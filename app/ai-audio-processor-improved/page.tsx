@@ -82,10 +82,8 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
   );
 }
 export default Page;
-export default PagePage;
 export default AiAudioProcessorImprovedPage;
   
