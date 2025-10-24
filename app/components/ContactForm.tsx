@@ -22,10 +22,10 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  setFormData({
-      ...formData
+    setFormData({
+      ...formData,
       [e.target.name]: e.target.value
-})
+    })
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -39,20 +39,21 @@ const ContactForm: React.FC = () => {
       setIsSubmitted(false)
       setFormData({
         name: '',
-    email: ''
+        email: '',
         phone: '',
-    company: ''
+        company: '',
         message: '',
-    service: ''})
+        service: ''
+      })
     }, 3000)
   }
   const services = [
-  'AI Solutions'
-    'Web Development'
-    'Mobile Development'
-    'Cloud Migration'
-    'Cybersecurity'
-    'Data Analytics'
+    'AI Solutions',
+    'Web Development',
+    'Mobile Development',
+    'Cloud Migration',
+    'Cybersecurity',
+    'Data Analytics',
     'DevOps',
     'Consulting'
   ]
@@ -69,7 +70,7 @@ const ContactForm: React.FC = () => {
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md: grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
@@ -81,7 +82,7 @@ const ContactForm: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Your full name"
             />
           </div>
@@ -96,12 +97,12 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="your@email.com"
             />
           </div>
         </div>
-        <div className="grid md: grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number
@@ -112,7 +113,7 @@ const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -126,7 +127,7 @@ const ContactForm: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Your company name"
             />
           </div>
