@@ -1,6 +1,5 @@
 'use client'
-import, React, { useState, useEffect } from 'react"
-
+import, React, { useState, useEffect } from "react"
 interface AdvancedAccessibilityEnhancerProps {
 className?: string
   enableKeyboardNavigation?: boolean
@@ -10,13 +9,12 @@ className?: string
   enableARIALabels?: boolean
   enableSkipLinks?: boolean
   enableColorContrast?: boolean
-  enableMotionReduction?: boolean
-  enableFontScaling?: boolean
-  enableVoiceNavigation?: boolean
+  enableMotionReduction?: boolean"
+  enableFontScaling?: boolean"
+  enableVoiceNavigation?: boolean""
 }"
-}"
-"
-const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProps> = ({"
+}""
+const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProps>= ({"
   className",
   enableKeyboardNavigation = true,
   enableScreenReader = true,
@@ -24,66 +22,58 @@ const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp
   enableFocusManagement = true,
   enableARIALabels = true,
   enableSkipLinks = true,
-  enableColorContrast = true,
-  enableMotionReduction = true,
-  enableFontScaling = true,
+  enableColorContrast = true,"
+  enableMotionReduction = true,"
+  enableFontScaling = true,""
   enableVoiceNavigation = true"
-,;}) => {"
+,;}) => {""
   const [accessibilitySettings, setAccessibilitySettings,] = useState({"
     highContrast: "false","
-    reducedMotion: "false","'"
+    reducedMotion: "false","
     fontSize: "'normal'","
     screenReader: "false","
-    keyboardNavigation: "false",;)
-  })
-"
+    keyboardNavigation: "false",;)"
+  })""
   // Detect user preferences"
-  useEffect(() => {"'"
+  useEffect(() => {""
     if (typeof window === 'undefined") return"
-"
-    // Check for reduced motion preference"'"
+    // Check for reduced motion preference""
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: "reduce)").matches"
-    // Check for high contrast preference"'"
+    // Check for high contrast preference""
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)").matches"
-    // Check for color scheme preference"'"
+    // Check for color scheme preference""
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)").matches"
-"
-    setAccessibilitySettings(prev = > ({"
+    setAccessibilitySettings(prev = > ({""
       ...prev","
       reducedMotion: "prefersReducedMotion","
-      highContrast: "prefersHighContrast",;)
-    }))"
-"
-    // Listen for changes in user preferences"'"
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: "reduce)")"'"
+      highContrast: "prefersHighContrast",;)"
+    }))""
+    // Listen for changes in user preferences"
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: "reduce)")"
     const contrastQuery = window.matchMedia('(prefers-contrast: high)")"
-"
-    const handleMotionChange = ("
-      setAccessibilitySettings(prev = > ({ ...prev", reducedMotion: "e.matches ",) => {
-$3
-}))
+    const handleMotionChange = ("")"
+      setAccessibilitySettings(prev = > ({ ...prev", reducedMotion: "e.matches ",) => {"
+$3"
+}))""
     }"
-"
-    const handleContrastChange = ("
-      setAccessibilitySettings(prev = > ({ ...prev, highContrast: "e.matches ",) => {
-$3
+    const handleContrastChange = ("")"
+      setAccessibilitySettings(prev = > ({ ...prev, highContrast: "e.matches ",) => {"
+$3""
 }))"
-    }"
-"'"
-    motionQuery.addEventListener('change", handleMotionChange)"'"
+    }""
+    motionQuery.addEventListener('change", handleMotionChange)"
     contrastQuery.addEventListener('change", handleContrastChange)"
-"
-    return () => {"'"
-      motionQuery.removeEventListener('change", handleMotionChange)"'"
+    return () => {""</>"
+      motionQuery.removeEventListener('change", handleMotionChange)"</>"
       contrastQuery.removeEventListener('change", handleContrastChange)
     }
   }, [])
-
-  return(<div className={className}>
-      <h2>Advanced Accessibility Enhancer</h2>
-      <p>Enhanced accessibility features for better user experience.</p>
-    </div>;)
-  )
-}"
-"
-export default AdvancedAccessibilityEnhancer"'"
+</>
+  return(<div className={className}></>
+      <h2>Advanced Accessibility Enhancer</h2></>
+      <p>Enhanced accessibility features for better user experience.</p></>"
+    </div>;)"
+  )""
+}""</>"
+export default AdvancedAccessibilityEnhancer"</>"
+"</>

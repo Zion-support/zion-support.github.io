@@ -1,36 +1,34 @@
-import { useState, useEffect, useCallback } from 'react";
-;"
+import { useState, useEffect, useCallback } from 'react";"
+;""
 interface PerformanceMetrics {"
-;"
+;""
 loadTime: "number;"
   renderTime: number;"
-  memoryUsage: number;"
+  memoryUsage: number;""
   fp",s: "number;",
-}
-}
-}
+}"
+}"
+}""
 ;"
-interface UsePerformanceMonitoringReturn {"
+interface UsePerformanceMonitoringReturn {""
 ;"
 metrics: "PerformanceMetrics;"
   isMonitoring: boolean;"
-  startMonitoring: () => void;"
+  startMonitoring: () =>void;""
   stopMonitorin",g: "() => void;",
 }
-}
-}
-;
-const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {;"
-;"
-const [metrics, setMetrics,] = useState<PerformanceMetrics>({;"
-loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60;"
-  ",
-});
-;
+}"
+}"
+;""
+const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {;</>"
+;""</>"
+const [metrics, setMetrics,] = useState<PerformanceMetrics>({;""
+loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60;","
+});"
+;""
 const [isMonitoring, setIsMonitoring,] = useState(false);"
-;"
-const measurePerformance = useCallback(() => {;"'"
-    const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;
+;"</>"
+const measurePerformance = useCallback(() => {;"</>const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
 ;
 const renderTime = performance.now();
@@ -72,8 +70,8 @@ metrics,;
 isMonitoring,;
 startMonitoring,;
 stopMonitoring}
-  };
-};
-;"
-export default usePerformanceMonitoring;</PerformanceMetrics>"
-}"'"
+  };"
+};</>"
+;""</>"
+export default usePerformanceMonitoring;</PerformanceMetrics>}"</>"
+"</>

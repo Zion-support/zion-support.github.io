@@ -1,22 +1,22 @@
-import React from 'react';
+import React from 'react";
 
 // Performance monitoring utilities
 
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
-  private metrics: Map<string, number> = new Map();
+  private metrics: Map<string, number>= new Map();
   static getInstance(): PerformanceMonitor {;
     if (!PerformanceMonitor.instance) {;
       PerformanceMonitor.instance = new PerformanceMonitor();
     }
-    return PerformanceMonitor.instance}
-  startTiming(label: string): void {;
-    if (typeof window !== 'undefined' && 'performance' in window) {;
+    return PerformanceMonitor.instance}"
+  startTiming(label: string): void {;</>"
+    if (typeof window !== 'undefined' && 'performance" in window) {;
       performance.mark(`${label}-start`)}
   }
-  endTiming(label: string): number {;
-    if (typeof window !== 'undefined' && 'performance' in window) {;`
-      performance.mark(`${label}-end`);`
+  endTiming(label: string): number {;````
+    if (typeof window !== 'undefined' && 'performance" in window) {;``
+      performance.mark(`${label}-end`);``
       performance.measure(label, `${label}-start`, `${label}-end`);
 ;
       const measure = performance.getEntriesByName(label)[0];
@@ -26,31 +26,31 @@ export class PerformanceMonitor {
       return duration}
     return 0}
   getMetric(label: string): number | undefined {;
-    return this.metrics.get(label)}
-  getAllMetrics(): Record<string, number> {;
+    return this.metrics.get(label)}</>
+  getAllMetrics(): Record<string, number>{;
     return Object.fromEntries(this.metrics)}
   clearMetrics(): void {;
     this.metrics.clear();
-  }
-  // Web Vitals monitoring;
-  measureWebVitals(): void {;
-    if (typeof window === 'undefined') return;
+  }"
+  // Web Vitals monitoring;"
+  measureWebVitals(): void {;""
+    if (typeof window === 'undefined") return;
 ;
     // Largest Contentful Paint;
-    new PerformanceObserver((entryList) => {;
-      const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.metrics.set('LCP', lastEntry.startTime)}).observe({ entryTypes: ['largest-contentful-paint'] });
+    new PerformanceObserver((entryList) => {;"
+      const entries = entryList.getEntries();"`
+      const lastEntry = entries[entries.length - 1];`
+      this.metrics.set('LCP', lastEntry.startTime)}).observe({ entryTypes: ['largest-contentful-paint"] });
 ;
     // First Input Delay;
     new PerformanceObserver((entryList) => {;
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as any;
-        const fid = fidEntry.processingStart ? fidEntry.processingStart - fidEntry.startTime : 0;
-        this.metrics.set('FID', fid);
-      });
-    }).observe({ entryTypes: ['first-input'] });
+        const fidEntry = entry as any;`
+        const fid = fidEntry.processingStart ? fidEntry.processingStart - fidEntry.startTime : 0;``
+        this.metrics.set('FID", fid);
+      });</>``
+    }).observe({ entryTypes: ['first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
@@ -59,8 +59,8 @@ export class PerformanceMonitor {
       entries.forEach((entry) => {;
         if (!(entry as any).hadRecentInput) {;
           clsValue += (entry as any).value}
-      });
-      this.metrics.set('CLS', clsValue)}).observe({ entryTypes: ['layout-shift'] })}
+      });```
+      this.metrics.set('CLS', clsValue)}).observe({ entryTypes: ['layout-shift"] })}
 }
 // Hook for React components;
 export function usePerformanceMonitor() {
@@ -72,15 +72,15 @@ export function usePerformanceMonitor() {
     getAllMetrics: monitor.getAllMetrics.bind(monitor)}
 }
 // Utility function to measure component render time;
-export function measureComponentRender(componentName: string) {;
+export function measureComponentRender(componentName: string) {;</>
   return function <T extends React.ComponentType<any>>(WrappedComponent: T): T {;
     return ((props: any) => {;
-      const monitor = PerformanceMonitor.getInstance();
-      React.useEffect(() => {;`
-        monitor.startTiming(`${componentName}-render`);
-        return () => {;`
+      const monitor = PerformanceMonitor.getInstance();`
+      React.useEffect(() => {;``
+        monitor.startTiming(`${componentName}-render`);`
+        return () => {;``
           monitor.endTiming(`${componentName}-render`)}
       });
 ;
-      return React.createElement(WrappedComponent, props)}) as T}
-}`'
+      return React.createElement(WrappedComponent, props)}) as T}````
+}`"`"</>

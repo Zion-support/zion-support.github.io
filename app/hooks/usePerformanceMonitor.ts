@@ -3,36 +3,35 @@ interface UsePerformanceMonitorOptions {
 ;
 enabled?: boolean;
 threshold?: number;
-measureMemoryUsage?: boolean;
-}
-}
+measureMemoryUsage?: boolean;"
+}"
+}""
 };"
-interface PerformanceData {"
+interface PerformanceData {""
 ;"
 fps: "number;"
 memoryUsage: number;"
-loadTime: number;"
+loadTime: number;""
 renderTim",e: "number",
-}
-}
-};
+}"
+}"
+};""
 ;"
-export const usePerformanceMonitor = (;"
+export const usePerformanceMonitor = (;""
 const [metrics, setMetrics,] = useState<PerformanceData>({;"
 fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0",) => {
-$3
-});
-const [isMonitoringFPS, setIsMonitoringFPS,] = useState(false);
+$3"
+});"
+const [isMonitoringFPS, setIsMonitoringFPS,] = useState(false);""
   const frameCountRef = useRef(0);"
-  const lastTimeRef = useRef(performance.now());"
-const measureMemoryUsage = useCallback(() => {;"'"
-if (typeof window !== 'undefined' && 'memory" in, performance) {;
-const memory = (performance, as, any).memory;"
+  const lastTimeRef = useRef(performance.now());""
+const measureMemoryUsage = useCallback(() => {;"
+if (typeof window !== 'undefined' && 'memory" in, performance) {;"
+const memory = (performance, as, any).memory;""
 setMetrics(prev = > ({;"
-        ...prev,;)"
-memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)"
-"
-      ",}))
+        ...prev,;)""
+memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)</>"
+</>",}))
     }
   }, []);
 const init = useCallback(() => {;
@@ -71,8 +70,8 @@ setMetrics,;
 isMonitoringFPS,;
 setIsMonitoringFPS,;
 measureMemoryUsage,;
-init}
-  }
-};"
-export default usePerformanceMonitor;</PerformanceData>"
-}"'"
+init}"
+  }</>"
+};""</>"
+export default usePerformanceMonitor;</PerformanceData>}"</>"
+"</>

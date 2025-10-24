@@ -1,13 +1,12 @@
 'use client";
-/**
- * Performance Metrics Utility
- * Advanced performance tracking and monitoring for web applications
+/**"
+ * Performance Metrics Utility"
+ * Advanced performance tracking and monitoring for web applications""
  */;"
-export interface PerformanceMetric {"
-;"'"
+export interface PerformanceMetric {""
+;"
   name: "string",value: "number",unit: "string",timestamp: "Date",category: "'load' | 'runtime' | 'network' | 'memory' | 'custom";"
-metadata?: Record<string",unknown>
-}
+metadata?: Record<string",unknown>}
 }
 }
 export interface WebVitalsMetrics {;
@@ -18,27 +17,26 @@ FID?: number // First Input Delay;
 CLS?: number // Cumulative Layout Shift;
 TTFB?: number // Time to First Byte;
 INP?: number // Interaction to Next, Paint;
-}
-}
-}
+}"
+}"
+}""
 ;"
-export interface PerformanceReport {"
+export interface PerformanceReport {""
 ;"
   metrics: "PerformanceMetric[];"
 webVital",s: "WebVitalsMetrics",summary: "{;"
-avgLoadTim",e: "number",totalMetrics: "number",performanceScore: "number",recommendations: "string[]",
+avgLoadTim",e: "number",totalMetrics: "number",performanceScore: "number",recommendations: "string[]","
+}""
 }"
-}"
-  };"
-  timestamp: "Date"
-",}"
-;"
+  };""
+  timestamp: "Date",}"
+;""
 export class PerformanceMetrics{;"
   private static instance: "PerformanceMetrics;"
 private metrics: PerformanceMetric[] = [];",}"
 private, webVital,s: "WebVitalsMetrics = {",};"
   private observers: "PerformanceObserver[] = [];"
-constructor() {  ;"'"
+constructor() {  ;"
 if (typeof",window !== 'undefined") { ,;
 this.initializeObservers();,
     , , , }
@@ -48,225 +46,209 @@ if(!PerformanceMetrics.instance) {  ;
 PerformanceMetrics.instance = new PerformanceMetrics();,}
     }
     return PerformanceMetrics.instance
-  ;}
-
-  /**
-   * Initialize performance observers"
+  ;}"
+  /**"
+   * Initialize performance observers""
    */;"
-private initializeObservers(): void{// Observe navigation timing;"'"
-if('PerformanceObserver" in, window) {;
-try {
-        // Navigation timing;
+private initializeObservers(): void{// Observe navigation timing;""
+if('PerformanceObserver" in, window) {;"
+try {"
+        // Navigation timing;""
 const navObserver = new PerformanceObserver(list => {;"
-;);"
-for (const entry of list.getEntries()) {;"'"
-if(entry.entryType === 'navigation") {;
-const navEntry = entry as PerformanceNavigationTiming;"
+;);""
+for (const entry of list.getEntries()) {;"
+if(entry.entryType === 'navigation") {;"
+const navEntry = entry as PerformanceNavigationTiming;""
 this.recordMetric({"
-:all-pages-backup/utils/performanceMetrics.ts;)"
+:all-pages-backup/utils/performanceMetrics.ts;)""
 name: "name",value: "navEntry.loadEventEnd - navEntry.fetchStart",unit: "unit",);"
 timestamp: "new Date();"
 categor",y: "category",metadata: "{;"
-domContentLoade",d: "navEntry.domContentLoadedEventEnd - navEntry.fetchStart",domInteractive: "navEntry.domInteractive - navEntry.fetchStart;"'"
-nam",e: "'pageLoadTime'",value: "navEntry.loadEventEnd - navEntry.fetchStart;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
+domContentLoade",d: "navEntry.domContentLoadedEventEnd - navEntry.fetchStart",domInteractive: "navEntry.domInteractive - navEntry.fetchStart;"
+nam",e: "'pageLoadTime'",value: "navEntry.loadEventEnd - navEntry.fetchStart;"
+uni",t: "'ms'",timestamp: "new Date();"
 categor",y: "'load'",metadata: "{",domContentLoaded: "navEntry.domContentLoadedEventEnd - navEntry.fetchStart;"
-domInteractiv",e: "navEntry.domInteractive - navEntry.fetchStart"
-",}
-                ,}
-              })
+domInteractiv",e: "navEntry.domInteractive - navEntry.fetchStart",}"
+                ,}"
+              })""
             }"
-          }"
-        });"'"
+          }""
+        });"
 navObserver.observe({ entryTypes: "['navigation'] ",});
-this.observers.push(navObserver)
-
-        // Paint timing;
-        const paintObserver = new PerformanceObserver(list => {;"
+this.observers.push(navObserver)"
+        // Paint timing;"
+        const paintObserver = new PerformanceObserver(list => {;""
 ;);"
-for (const entry of list.getEntries()) {;"'"
-if(entry.name === 'first-contentful-paint") {;
-this.webVitals.FCP = entry.startTime;"
+for (const entry of list.getEntries()) {;""
+if(entry.name === 'first-contentful-paint") {;"
+this.webVitals.FCP = entry.startTime;""
 this.recordMetric({"
-:all-pages-backup/utils/performanceMetrics.ts;)"
+:all-pages-backup/utils/performanceMetrics.ts;)""
 name: "name",value: "entry.startTime",unit: "unit",);"
-timestamp: "new Date();"'"
-nam",e: "'FCP'",value: "entry.startTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'load'"
-              ",
-})
+timestamp: "new Date();"
+nam",e: "'FCP'",value: "entry.startTime;"
+uni",t: "'ms'",timestamp: "new Date();"
+categor",y: ""load","
+})""
             }"
-          }"
-        });"'"
+          }""
+        });"
 paintObserver.observe({ entryTypes: "['paint'] ",});
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {);
-const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          if(lastEntry) {;
+const entries = list.getEntries();"
+          const lastEntry = entries[entries.length - 1];"
+          if(lastEntry) {;""
 this.webVitals.LCP = lastEntry.startTime;"
-this.recordMetric({"
+this.recordMetric({""
 :all-pages-backup/utils/performanceMetrics.ts;)"
 name: "name",value: "lastEntry.startTime",unit: "unit",);"
-timestamp: "new Date();"'"
-nam",e: "'LCP'",value: "lastEntry.startTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'load'"
-            ",
-})"
+timestamp: "new Date();"
+nam",e: "'LCP'",value: "lastEntry.startTime;"
+uni",t: "'ms'",timestamp: "new Date();"
+categor",y: ""load","
+})""
           }"
-        });"'"
+        });""
 lcpObserver.observe({ entryTypes: "['largest-contentful-paint'] ",});
         this.observers.push(lcpObserver);
         // Layout Shift;
 const clsObserver = new PerformanceObserver(list => {);
           let clsValue = 0);
 for (const entry of list.getEntries()) {;
-if ((entry, as, LayoutShift).hadRecentInput) continue;
-clsValue += (entry, as, LayoutShift).value;
-}
+if ((entry, as, LayoutShift).hadRecentInput) continue;"
+clsValue += (entry, as, LayoutShift).value;"
+}""
           this.webVitals.CLS = clsValue;"
-this.recordMetric({"
+this.recordMetric({""
 :all-pages-backup/utils/performanceMetrics.ts;)"
 name: "name",value: "clsValue",unit: "unit",);"
-timestamp: "new Date();"'"
-nam",e: "'CLS'",value: "clsValue;"'"
-uni",t: "'score'",timestamp: "new Date();"'"
-categor",y: "'runtime'"
-          ",})"
-        });"'"
-clsObserver.observe({ entryTypes: "['layout-shift'] ",});
-        this.observers.push(clsObserver);"
+timestamp: "new Date();"
+nam",e: "'CLS'",value: "clsValue;"
+uni",t: "'score'",timestamp: "new Date();"
+categor",y: ""runtime",})"
+        });""
+clsObserver.observe({ entryTypes: "['layout-shift'] ",});"
+        this.observers.push(clsObserver);""
       } catch(error) {   "
-        // eslint-disable-next-line no-console;"'"
+        // eslint-disable-next-line no-console;""
 console.error('Failed to initialize performance observers: "'",error);
       , }
-    }
-  }
-
-  /**"
+    }"
+  }"
+  /**""
    * Record a custom performance metric"
-   */;"
+   */;""
 recordMetric(metric: "PerformanceMetric): void{;"
 this.metrics.push(metric);"
-    // Keep only last 1000 metrics;"
+    // Keep only last 1000 metrics;""
 if(this.metrics.length > 1000) {  ",this.metrics.shift();,, , }
     }
-  }
-
-  /**
-   * Record page load time"
+  }"
+  /**"
+   * Record page load time""
    */;"
-recordPageLoad(): void{;"'"
-if (typeof window === 'undefined") return;
-const perfData = window.performance.timing;
+recordPageLoad(): void{;""
+if (typeof window === 'undefined") return;"
+const perfData = window.performance.timing;""
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;"
-this.recordMetric({"
+this.recordMetric({""
 :all-pages-backup/utils/performanceMetrics.ts;)"
 name: "name",value: "pageLoadTime",unit: "unit",);"
 timestamp: "new Date();"
 categor",y: "category",metadata: "{;"
-dnsLooku",p: "perfData.domainLookupEnd - perfData.domainLookupStart",tcpConnection: "perfData.connectEnd - perfData.connectStart",serverResponse: "perfData.responseEnd - perfData.requestStart",domParsing: "perfData.domComplete - perfData.domLoading;"'"
-nam",e: "'pageLoad'",value: "pageLoadTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
+dnsLooku",p: "perfData.domainLookupEnd - perfData.domainLookupStart",tcpConnection: "perfData.connectEnd - perfData.connectStart",serverResponse: "perfData.responseEnd - perfData.requestStart",domParsing: "perfData.domComplete - perfData.domLoading;"
+nam",e: "'pageLoad'",value: "pageLoadTime;"
+uni",t: "'ms'",timestamp: "new Date();"
 categor",y: "'load'",metadata: "{",dnsLookup: "perfData.domainLookupEnd - perfData.domainLookupStart;"
 tcpConnection: perfData.connectEnd - perfData.connectStart",serverResponse: "perfData.responseEnd - perfData.requestStart;"
 domParsin",g: "perfData.domComplete - perfData.domLoading",}
       ,}
-    })
-  }
-
-  /**"
+    })"
+  }"
+  /**""
    * Record network request timing"
-   */;"
+   */;""
 recordNetworkRequest(url: "string",duration: "number",status: "number): void{;"
 this.recordMetric({"
-:all-pages-backup/utils/performanceMetrics.ts;)"
+:all-pages-backup/utils/performanceMetrics.ts;)""
 nam",e: "name",value: "duration",unit: "unit",);"
 timestamp: "new Date();"
-categor",y: "category",metadata: "{;"'"
-nam",e: "'networkRequest'",value: "duration;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
+categor",y: "category",metadata: "{;"
+nam",e: "'networkRequest'",value: "duration;"
+uni",t: "'ms'",timestamp: "new Date();"
 categor",y: "'network'",metadata: "{;"
 url",status,}
       }
     });
-  }
-
-  /**
-   * Record memory usage"
+  }"
+  /**"
+   * Record memory usage""
    */;"
-recordMemoryUsage(): void{;"'"
-if (typeof window === 'undefined") return;
-if (!(performance, as, PerformanceWithMemory).memory) return;
+recordMemoryUsage(): void{;""
+if (typeof window === 'undefined") return;"
+if (!(performance, as, PerformanceWithMemory).memory) return;""
 const memory = (performance, as, PerformanceWithMemory).memory;"
-this.recordMetric({"
+this.recordMetric({""
 :all-pages-backup/utils/performanceMetrics.ts;)"
 name: "name",value: "memory.usedJSHeapSize",unit: "unit",);"
 timestamp: "new Date();"
 categor",y: "category",metadata: "{;"
-tota",l: "memory.totalJSHeapSize",limit: "memory.jsHeapSizeLimit",percentage: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;"'"
-nam",e: "'memoryUsage'",value: "memory.usedJSHeapSize;"'"
-uni",t: "'bytes'",timestamp: "new Date();"'"
-categor",y: "'memory'",metadata: "{",total: "memory.totalJSHeapSize;"
-limit: memory.jsHeapSizeLimit;"
-percentag",e: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100",}
+tota",l: "memory.totalJSHeapSize",limit: "memory.jsHeapSizeLimit",percentage: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;"
+nam",e: "'memoryUsage'",value: "memory.usedJSHeapSize;"
+uni",t: "'bytes'",timestamp: "new Date();"
+categor",y: "'memory'",metadata: "{",total: "memory.totalJSHeapSize;</>"
+limit: memory.jsHeapSizeLimit;</>percentag",e: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100",}
       ,}
-    })
-  }
-
-  /**"
-   * Measure function execution time"
-   */</string>;"
-measureFunction<T>(name: "string",fn: "() => T): T{;
-    const startTime = performance.now();
-    const result = fn();
+    })"
+  }"
+  /**</>""
+   * Measure function execution time""</>"
+   */</string>;""</>"
+measureFunction<T>(name: "string",fn: "() => T): T{;"
+    const startTime = performance.now();"
+    const result = fn();""
     const endTime = performance.now();"
-    this.recordMetric({"
+    this.recordMetric({""
 :all-pages-backup/utils/performanceMetrics.ts;)"
 nam",e: "name",value: "endTime - startTime",unit: "unit",);}"
 timestamp: "new Date()",name: "`functio",n: "${name",}`;"
-value: "endTime - startTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'runtime'"
-    ",});
-return, result
-  }
-
-  /**"
-   * Measure async function execution time"
-   */</T>;"
-async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {;
-const startTime = performance.now();
-    const result = await fn();
-    const endTime = performance.now();"
-    this.recordMetric({"
-:all-pages-backup/utils/performanceMetrics.ts;)"
-nam",e: "name",value: "endTime - startTime",unit: "unit",);"
+value: "endTime - startTime;"
+uni",t: "'ms'",timestamp: "new Date();""</>"
+categor",y: "'runtime</>",});
+return, result"
+  }"
+  /**</>""
+   * Measure async function execution time""</>"
+   */</T>;""</>"`
+async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T>{;`
+const startTime = performance.now();"`
+    const result = await fn();`
+    const endTime = performance.now();`
+    this.recordMetric({`
+:all-pages-backup/utils/performanceMetrics.ts;)```
+nam",e: "name",value: "endTime - startTime",unit: "unit",);"````
 timestamp: "new Date()",name: "`asyn",c: "${name",}`;"
-value: "endTime - startTime;"'"
-uni",t: "'ms'",timestamp: "new Date();"'"
-categor",y: "'runtime'"
-    ",});
+value: "endTime - startTime;"
+uni",t: "'ms'",timestamp: "new Date();"
+categor",y: ""runtime",});
 return, result
   }
   /**;
    * Get all metrics;
    */;
 getMetrics(): PerformanceMetric[] {;
-return [...this.metrics,]
-  ;}
-
-  /**"
+return [...this.metrics,]"
+  ;}"
+  /**""
    * Get metrics by category"
-   */;"'"
-getMetricsByCategory(category: "PerformanceMetric['category']): PerformanceMetric[] {",return this.metrics.filter(m => m.category === category);,
-  }
-  /**;
+   */;""
+getMetricsByCategory(category: "PerformanceMetric['category']): PerformanceMetric[] {",return this.metrics.filter(m => m.category === category);,"
+  }"
+  /**;""
    * Get metrics by category;"
-   */;";'"
+   */;";"
 getMetricsByCategory(category: "PerformanceMetric['category']): PerformanceMetric[] {",return this.metrics.filter(m => m.category === category)}
   /**;
    * Get Web Vitals;
@@ -299,38 +281,36 @@ if (this.webVitals.FID > 300) score -= 15;
 else if (this.webVitals.FID > 100) score -= 8
     }
     return Math.max(0, Math.min(100, score))
-  ;}
-
-  /**
-   * Get performance recommendations"
+  ;}"
+  /**"
+   * Get performance recommendations""
    */;"
-getRecommendations(): string[] {;"
-    const recommendations: "string[] = [];"'"
+getRecommendations(): string[] {;""
+    const recommendations: "string[] = [];"
     if(this.webVitals.FCP && this.webVitals.FCP > 1800) {",recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources"),"
-    }"
-    if(this.webVitals.LCP && this.webVitals.LCP > 2500) {;"'"
+    }""
+    if(this.webVitals.LCP && this.webVitals.LCP > 2500) {;"
 recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading")"
-    }"
-    if(this.webVitals.CLS && this.webVitals.CLS > 0.1) {;"'"
+    }""
+    if(this.webVitals.CLS && this.webVitals.CLS > 0.1) {;"
 recommendations.push('Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds")"
-    }"
-    if(this.webVitals.FID && this.webVitals.FID > 100) {;"'"
+    }""
+    if(this.webVitals.FID && this.webVitals.FID > 100) {;"
 recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution")"
-    }"'"
+    }""
     const networkMetrics = this.getMetricsByCategory('network");"
-    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;"
-if(avgNetworkTime > 500) {;"'"
+    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;""
+if(avgNetworkTime > 500) {;"
 recommendations.push('Optimize network requests - consider caching and reducing payload sizes");
     }
     return, recommendations
-  }
-
-  /**
-   * Generate performance report"
+  }"
+  /**"
+   * Generate performance report""
    */;"
-generateReport(): PerformanceReport{;"'"
+generateReport(): PerformanceReport{;""
     const loadMetrics = this.getMetricsByCategory('load");"
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;"
+    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;""
 return {;"
 metrics: "this.getMetrics()",webVitals: "this.getWebVitals();"
 summar",y: "{"
@@ -339,7 +319,7 @@ avgLoadTime",totalMetrics: "this.metrics.length",performanceScore: "this.calcula
         avgLoadTime;"
 totalMetrics: this.metrics.length",performanceScore: "this.calculatePerformanceScore();"
 recommendation",s: "this.getRecommendations()",}"
-      ,}"
+      ,}""
       timestamp: "new Date();",}
   }
   /**;
@@ -361,23 +341,22 @@ this.webVitals = {}
 cleanup(): void{;
 this.observers.forEach(observer = > observer.disconnect());
 this.observers = [],}
-  ;}
-;};
-;
+  ;}"
+;};"
+;""
 // Type for performance.memory;"
-interface PerformanceWithMemory extends Performance{;"
+interface PerformanceWithMemory extends Performance{;""
 memory?: {;}"
-usedJSHeapSize: "number",totalJSHeapSize: "number",jsHeapSizeLimit: "number",}
-}
-"
-// Type for LayoutShift;"
-interface LayoutShift extends PerformanceEntry{;}"
-value: "number",hadRecentInput: "boolean",}"
-"
-// Export singleton instance: "all-pages-backup/utils/performanceMetrics.ts;
-export const performanceMetrics = PerformanceMetrics.getInstance();
+usedJSHeapSize: "number",totalJSHeapSize: "number",jsHeapSizeLimit: "number",}"`
+}`
+// Type for LayoutShift;"`
+interface LayoutShift extends PerformanceEntry{;}`"
+value: "number",hadRecentInput: "boolean",}</>"`
+</>// Export singleton instance: "all-pages-backup/utils/performanceMetrics.ts;`
+export const performanceMetrics = PerformanceMetrics.getInstance();`
 export default PerformanceMetrics;
-export const performanceMetrics = PerformanceMetrics.getInstance();"
-export default PerformanceMetrics;"
-</T>"
-",}"'"
+export const performanceMetrics = PerformanceMetrics.getInstance();</>``
+export default PerformanceMetrics;""</>
+</T>```
+",}"```
+`"</>

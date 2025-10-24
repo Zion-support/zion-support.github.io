@@ -1,121 +1,139 @@
-const fs = require('fs");"'"
-const path = require('path");
+const fs = require('fs');
+const path = require('path');
 
-// Function to completely rewrite malformed files;
-function fixMalformedFile(filePath) {"
-;"
-try{;"'"
-let content = fs.readFileSync(filePath, 'utf8");
-
-    // Extract the function name and basic structure;
-const functionMatch = content.match(/export default function (\w+)\(\)/);
-    if (!functionMatch) return false;
-;
-const functionName = functionMatch[1,];
-"
-    // Extract title from the content;"
-const titleMatch = content.match(/<title>([^<]+)<\/title>/);"'"
-    const title = titleMatch ? titleMatch[1,] : 'Page";"
-"
-    // Extract description;"
-const descMatch = content.match(/content="([^"]+)"/);"'"
-    const description = descMatch ? descMatch[1,] : 'Professional services by Zion Tech Group";
-
-  // Fix missing semicolons in const declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');
-
-    // Extract the paragraph content;
-const paragraphMatch = content.match(/<p[^ />]*>([^<]+)<\/p>/);
-,}
-    const paragraph = paragraphMatch ? paragraphMatch[1,] : `${title;} services. Transform your business with our expert solutions.`;"
-"
-    // Create, a, clean, properly formatted file;"'"
-const cleanContent = `'use client';'"
-import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";"
-import Footer from '../components/Footer";
-;
-export default function ${functionName;}() {;
-return(<div />"
-      <Head>"
-        <title>${title}</title>"
-        <meta name = "description" content="${description,}" />"
-      </Head>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />;"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />;"
-          <h1 className="text-4xl font-bold text-white mb-6" />;"
-${heading,}"
-          </h1>"
-          <p className="text-lg text-gray-300 mb-8" />;"
-${paragraph,}"
-          </p>"
-          <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">;"
-Contact Us"
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-      <Footer />;
-    </div>;)
-  );"
-,}`;"
-;"'"
-fs.writeFileSync(filePath, cleanContent, 'utf8");"
-    console.log(`Fixed malformed file: "${filePath",}`);
-    return true;
-  } catch (error) {;
-console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+// Function to fix all remaining syntax issues
+function fixRemainingSyntaxIssues(content) {
+  let fixed = content;
+  
+  // Fix 'use client' directive - handle all variations
+  fixed = fixed.replace(/^'use client\"\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^"use client\"\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^'use client\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^"use client\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^'use client\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^"use client\"\s*$/m, "'use client'");
+  
+  // Fix import statements - handle all malformed patterns
+  fixed = fixed.replace(/import\s+([^'"]*)\s+from\s+['"]([^'"]*)\"\"\s*$/gm, 'import $1 from "$2"');
+  fixed = fixed.replace(/import\s+([^'"]*)\s+from\s+['"]([^'"]*)\"\s*$/gm, 'import $1 from "$2"');
+  fixed = fixed.replace(/import\s+([^'"]*)\s+from\s+['"]([^'"]*)\n/gm, 'import $1 from "$2"\n');
+  
+  // Fix export statements
+  fixed = fixed.replace(/export\s+default\s+([^'"]*)\"\"\s*$/gm, 'export default $1');
+  fixed = fixed.replace(/export\s+default\s+([^'"]*)\"\s*$/gm, 'export default $1');
+  
+  // Fix JSX attributes
+  fixed = fixed.replace(/className\s*=\s*['"]([^'"]*)\"\"\s*$/gm, 'className="$1"');
+  fixed = fixed.replace(/title\s*=\s*['"]([^'"]*)\"\"\s*$/gm, 'title="$1"');
+  fixed = fixed.replace(/alt\s*=\s*['"]([^'"]*)\"\"\s*$/gm, 'alt="$1"');
+  
+  // Fix string literals - handle all patterns
+  fixed = fixed.replace(/['"]([^'"]*)\"\"\s*$/gm, '"$1"');
+  fixed = fixed.replace(/['"]([^'"]*)\"\s*$/gm, '"$1"');
+  fixed = fixed.replace(/['"]([^'"]*)\n/gm, '"$1"\n');
+  
+  // Fix template literals
+  fixed = fixed.replace(/`([^`]*)\"\"\s*$/gm, '`$1`');
+  fixed = fixed.replace(/`([^`]*)\"\s*$/gm, '`$1`');
+  
+  // Fix object properties
+  fixed = fixed.replace(/(\w+)\s*:\s*['"]([^'"]*)\"\"\s*$/gm, '$1: "$2"');
+  fixed = fixed.replace(/(\w+)\s*:\s*['"]([^'"]*)\"\s*$/gm, '$1: "$2"');
+  
+  // Fix function parameters
+  fixed = fixed.replace(/\(\s*['"]([^'"]*)\"\"\s*$/gm, '("$1")');
+  fixed = fixed.replace(/\(\s*['"]([^'"]*)\"\s*$/gm, '("$1")');
+  
+  // Fix return statements
+  fixed = fixed.replace(/return\s+['"]([^'"]*)\"\"\s*$/gm, 'return "$1"');
+  fixed = fixed.replace(/return\s+['"]([^'"]*)\"\s*$/gm, 'return "$1"');
+  
+  // Fix console.log statements
+  fixed = fixed.replace(/console\.log\(\s*['"]([^'"]*)\"\"\s*$/gm, 'console.log("$1")');
+  fixed = fixed.replace(/console\.log\(\s*['"]([^'"]*)\"\s*$/gm, 'console.log("$1")');
+  
+  // Fix variable declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*['"]([^'"]*)\"\"\s*$/gm, 'const $1 = "$2"');
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*['"]([^'"]*)\"\s*$/gm, 'const $1 = "$2"');
+  fixed = fixed.replace(/let\s+(\w+)\s*=\s*['"]([^'"]*)\"\"\s*$/gm, 'let $1 = "$2"');
+  fixed = fixed.replace(/let\s+(\w+)\s*=\s*['"]([^'"]*)\"\s*$/gm, 'let $1 = "$2"');
+  fixed = fixed.replace(/var\s+(\w+)\s*=\s*['"]([^'"]*)\"\"\s*$/gm, 'var $1 = "$2"');
+  fixed = fixed.replace(/var\s+(\w+)\s*=\s*['"]([^'"]*)\"\s*$/gm, 'var $1 = "$2"');
+  
+  // Fix JSX syntax issues
+  fixed = fixed.replace(/return\s*\(\s*<\/>\s*$/gm, 'return (');
+  fixed = fixed.replace(/return\s*\(\s*<>\s*$/gm, 'return (');
+  fixed = fixed.replace(/<>\s*$/gm, '<>');
+  fixed = fixed.replace(/<\/>\s*$/gm, '</>');
+  
+  // Fix malformed JSX tags
+  fixed = fixed.replace(/<Head><\/>\s*$/gm, '<Head>');
+  fixed = fixed.replace(/<title><\/>\s*$/gm, '<title>');
+  fixed = fixed.replace(/<meta[^>]*><\/>\s*$/gm, (match) => match.replace('</>', '>'));
+  
+  // Fix function declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, 'const $1 = () => {');
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, 'const $1 = () => {');
+  
+  // Fix multiline strings that might be broken
+  fixed = fixed.replace(/['"]([^'"]*)\n\s*['"]([^'"]*)\"\"\s*$/gm, '"$1$2"');
+  fixed = fixed.replace(/['"]([^'"]*)\n\s*['"]([^'"]*)\"\s*$/gm, '"$1$2"');
+  
+  // Fix array elements
+  fixed = fixed.replace(/['"]([^'"]*)\"\"\s*$/gm, '"$1"');
+  fixed = fixed.replace(/['"]([^'"]*)\"\s*$/gm, '"$1"');
+  
+  // Fix specific patterns that are common
+  fixed = fixed.replace(/^\"\s*$/gm, '');
+  fixed = fixed.replace(/^\"\s*$/gm, '');
+  
+  // Fix broken JSX fragments
+  fixed = fixed.replace(/<>\s*<\/>\s*$/gm, '<></>');
+  fixed = fixed.replace(/<>\s*$/gm, '<>');
+  fixed = fixed.replace(/<\/>\s*$/gm, '</>');
+  
+  // Fix broken component declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*<\/>\s*$/gm, 'const $1 = () => {\n  return (');
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*<>\s*$/gm, 'const $1 = () => {\n  return (');
+  
+  // Additional fixes for common patterns
+  fixed = fixed.replace(/^'use client\"\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^"use client\"\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^'use client\"\s*$/m, "'use client'");
+  fixed = fixed.replace(/^"use client\"\s*$/m, "'use client'");
+  
+  return fixed;
 }
 
-// Function to find and fix all malformed page files;"
-function fixAllPageFiles() { "
-;"'"
-const appDir = './app";
-  const files = fs.readdirSync(appDir);
-  let fixedCount = 0;
-;"
-files.forEach(file = > {;"
-;)"'"
-if (file.startsWith('5g-') || file.startsWith('ai-') || file.startsWith('src/")) {;"'"
-const filePath = path.join(appDir, file, 'page.tsx");
-      if (fs.existsSync(filePath)) {;
-if (fixMalformedFile(filePath)) {;
-fixedCount++;
+// Function to recursively process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  
+  files.forEach(file => {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fixed = fixRemainingSyntaxIssues(content);
         
-
-, }
-      }
-    }
-  });"
-"
-  // Also check src directory;"'"
-if (fs.existsSync('./src")) {;"'"
-const srcFiles = fs.readdirSync('./src");"
-    srcFiles.forEach(file = > {;"
-;)"'"
-if (file.startsWith('5g-') || file.startsWith('ai-")) {;"'"
-const filePath = path.join('./src', file, 'page.tsx");
-        if (fs.existsSync(filePath)) {;
-if (fixMalformedFile(filePath)) {;
-fixedCount++;
-          
-}
+        if (content !== fixed) {
+          fs.writeFileSync(filePath, fixed, 'utf8');
+          console.log(`Fixed: ${filePath}`);
         }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
       }
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-;
-return fixedCount;
-}"
-"
-// Main execution;"'"
-console.log('Starting final syntax fix...");"
-const fixedCount = fixAllPageFiles();"
-console.log(`Fixed ${fixedCount,} malformed page files.`);"'"
-console.log('Final syntax fix completed.");"'"
+  });
+}
+
+// Start processing from the app directory
+console.log('Starting final syntax fixes...');
+processDirectory('./app');
+processDirectory('./src');
+processDirectory('./components');
+console.log('Final syntax fixes completed!');

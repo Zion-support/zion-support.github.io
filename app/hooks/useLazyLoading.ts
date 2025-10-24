@@ -1,18 +1,14 @@
-import { useEffect, useRef, useState } from 'react"
-
+import { useEffect, useRef, useState } from "react"
 interface UseLazyLoadingOptions {
 
 threshold?: number
-  rootMargin?: string
-  triggerOnce?: boolean
-
+  rootMargin?: string"
+  triggerOnce?: boolean"
+}""
 }"
-}"
-"
-export function useLazyLoading(options: "UseLazyLoadingOptions = {",;}) { 
-"
-const{"
-threshold = 0.1,"'"
+export function useLazyLoading(options: "UseLazyLoadingOptions = {",;}) { "
+const{""
+threshold = 0.1,"
 rootMargin = '50px",
 triggerOnce = true,
 , }
@@ -41,25 +37,21 @@ rootMargin}
     )
 
 observer.observe(element)
-
-return () => {
-observer.unobserve(element)
-    }"
-  }, [threshold, rootMargin, hasIntersected,])"
-"
+return () => {"
+observer.unobserve(element)"
+    }""
+  }, [threshold, rootMargin, hasIntersected,])""
 const shouldLoad = triggerOnce ? hasIntersected: "isIntersecting"
-"
 return{"
-elementRef",isIntersecting,
-hasIntersected,
-shouldLoad,}
-  }"
-}"
-"
+elementRef",isIntersecting,"
+hasIntersected,"
+shouldLoad,}"
+  }</>"
+}</></>"
 export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {",;}) {
 
 const { shouldLoad, elementRef 
-;} = useLazyLoading(options)
+;} = useLazyLoading(options)</>
   const [imageSrc, setImageSrc,] = useState<string | null>(null)
   const [isLoaded, setIsLoaded,] = useState(false)
   const [hasError, setHasError,] = useState(false)
@@ -79,12 +71,12 @@ setHasError(true)
     setIsLoaded(false)) => {
 $3
 }
-return{
-elementRef,
-imageSrc,
+return{"
+elementRef,"
+imageSrc,""
 isLoaded,"
-hasError,"
+hasError,""
 shouldLoad,;}"
 onLoad: "handleLoad",onError: "handleError",}"
-}"
-"'"
+}"</>"</>"
+"</>
