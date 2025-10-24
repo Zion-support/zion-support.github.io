@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const features = [
@@ -30,10 +29,6 @@ const features = [
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Advanced Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Advanced accessibility solutions for modern web applications" />
-      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

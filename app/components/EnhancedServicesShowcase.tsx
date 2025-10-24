@@ -35,6 +35,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       color: 'text-yellow-400',
       features: ['Code Optimization', 'Database Tuning', 'Caching Strategies', 'Load Balancing'],
       stats: '10x Faster'
+    }
   ]
 
   return (

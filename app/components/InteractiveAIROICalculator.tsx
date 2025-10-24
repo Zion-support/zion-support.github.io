@@ -27,8 +27,8 @@ const InteractiveAIROICalculator: React.FC = () => {
                 </label>
                 <input
                   type='number'
-                  value={currentCost
-                  onChange={e => setCurrentCost(Number(e.target.value))
+                  value={currentCost}
+                  onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
               </div>

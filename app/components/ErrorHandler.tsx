@@ -22,6 +22,7 @@ const Page: React.FC = () => {
       title: 'Precision Targeting',
       description: 'Target the right audience with AI-driven precision and accuracy.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
   ]
 
   return (

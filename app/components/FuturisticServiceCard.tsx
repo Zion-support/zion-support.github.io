@@ -3,6 +3,12 @@ interface FuturisticServiceCardProps {
   title: string;
   description: string;
   features: string[];
+  price?: string;
+  priceDescription?: string;
+  icon?: React.ComponentType<any>;
+  gradient?: string;
+  onClick?: () => void;
+  isPopular?: boolean;
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({

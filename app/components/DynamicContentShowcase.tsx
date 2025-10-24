@@ -29,6 +29,7 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
       color: 'from-orange-500 to-red-600'
+    }
   ]
 
   useEffect(() => {

@@ -1,7 +1,6 @@
 'use client';
-import { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -70,8 +69,7 @@ const AppLoadingSpinner = () => (
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
+      <BrowserRouter>
           <div className="App">
             <PerformanceOptimizer>
               <PerformanceMonitor />
@@ -130,7 +128,6 @@ const App: React.FC = () => {
             </PerformanceOptimizer>
           </div>
         </BrowserRouter>
-      </HelmetProvider>
     </ErrorBoundary>
   );
 };
