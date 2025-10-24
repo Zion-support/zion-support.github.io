@@ -4,8 +4,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
         <title>Blockchain Solutions Pro|Zion Tech Group</title>
         
@@ -48,7 +48,6 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
-  )
+    </>
+  );
 }

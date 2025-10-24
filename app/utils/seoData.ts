@@ -1,5 +1,3 @@
-export interface StructuredData {'@context": string"
-  '@type": string
 export interface StructuredData {
   "@context": string
   "@type": string
@@ -26,8 +24,8 @@ export interface StructuredData {
     postalCode: string
     addressCountry: string
   }
-
 }
+
 export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
   return {
     "@context": "https://schema.org",
@@ -36,7 +34,8 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
     description: "Leading provider of AI and IT solutions for modern businesses",
     url: "https://ziontechgroup.com",
     logo: "https://ziontechgroup.com/logo.png",
-    sameAs: ["https://twitter.com/ziontechgroup",
+    sameAs: [
+      "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://github.com/ziontechgroup"
     ],
@@ -53,8 +52,8 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
       postalCode: "94105",
       addressCountry: "US"
     },
-    ...data }
-
+    ...data
+  }
 }
 
 export const defaultSEOData = {

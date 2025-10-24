@@ -1,249 +1,174 @@
 export interface Service {
-  id: string
-  title: string
-  description: string
-  features: string[]
-  benefits: string[]
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  benefits: string[];
   pricing: {
-    basic: string
-    pro: string
-    enterprise: string
-  }
+    basic: string;
+    pro: string;
+    enterprise: string;
+  };
   contactInfo: {
-    website: string
-    email: string
-    phone: string
-  }
-
-  price?: string
-  icon?: string
-  href: string
-  popular?: boolean
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"
+    website: string;
+    email: string;
+    phone: string;
+  };
+  price?: string;
+  icon?: string;
+  href: string;
+  popular?: boolean;
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation";
 }
 
-export const aiServices: Service[] = [{
-    id: "ai-analytics"
-    title: "AI Analytics & BI"
-    description: "Transform your data into actionable insights with our advanced AI analytics platform."
+export const aiServices: Service[] = [
+  {
+    id: "ai-analytics",
+    title: "AI Analytics & BI",
+    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
     features: [
-      "Real-time data processing"
-      "Predictive analytics"
-      "Custom dashboards"
-      "Automated reporting"
+      "Real-time data processing",
+      "Predictive analytics",
+      "Custom dashboards",
+      "Automated reporting",
       "Machine learning models"
-    ]
-    benefits: ["Improved decision making"
-      "Reduced manual analysis time"
-      "Enhanced business intelligence"
+    ],
+    benefits: [
+      "Improved decision making",
+      "Reduced manual analysis time",
+      "Enhanced business intelligence",
       "Cost savings through automation"
-    ]
+    ],
     pricing: {
-      basic: "299"
-      pro: "599"
+      basic: "299",
+      pro: "599",
       enterprise: "999"
-    }
-
+    },
     contactInfo: {
-      website: "https://ziontechgroup.com/ai-analytics"
-      email: "ai@ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-analytics",
+      email: "ai@ziontechgroup.com",
       phone: "+1-555-0123"
-    }
-
-    price: "$299/month"
-    icon: "📊"
-    href: "/ai-analytics"
-    popular: true
+    },
+    price: "$299/month",
+    icon: "📊",
+    href: "/ai-analytics",
+    popular: true,
     category: "ai"
   }
 ];
 
+export const itServices: Service[] = [
   {
-    id: "ai-automation"
-    title: "AI Automation"
-    description: "Streamline your business processes with intelligent automation solutions."
-    features: ["Workflow automation"
-      "Document processing"
-      "Email automation"
-      "Task scheduling"
-      "Process optimization"
-    ]
-    benefits: ["Increased productivity"
-      "Reduced human error"
-      "Faster processing times"
-      "Scalable operations"
-    ]
-    pricing: {
-      basic: "199"
-      pro: "399"
-      enterprise: "799"
-    }
-
-    contactInfo: {
-      website: "https://ziontechgroup.com/ai-automation"
-      email: "automation@ziontechgroup.com"
-      phone: "+1-555-0124"
-    }
-
-    price: "$199/month"
-    icon: "🤖"
-    href: "/ai-automation"
-    category: "ai"
-  }
-
-  {
-    id: "ai-chatbots"
-    title: "AI Chatbots"
-    description: "Intelligent conversational AI solutions for customer service and support."
-    features: ["Natural language processing"
-      "Multi-language support"
-      "24/7 availability"
-      "Integration with existing systems"
-      "Analytics and insights"
-    ]
-    benefits: ["Improved customer satisfaction"
-      "Reduced support costs"
-      "Instant responses"
-      "Scalable customer service"
-    ]
-    pricing: {
-      basic: "149"
-      pro: "299"
-      enterprise: "599"
-    }
-
-    contactInfo: {
-      website: "https://ziontechgroup.com/ai-chatbots"
-      email: "chatbots@ziontechgroup.com"
-      phone: "+1-555-0125"
-    }
-
-    price: "$149/month"
-    icon: "💬"
-    href: "/ai-chatbots"
-    category: "ai"
-  }
-]
-export const itServices: Service[] = [{
-    id: "web-development"
-    title: "Web Development"
-    description: "Build modern, responsive websites and web applications that drive results."
+    id: "cloud-migration",
+    title: "Cloud Migration",
+    description: "Seamlessly migrate your infrastructure to the cloud with our expert services.",
     features: [
-      "Responsive design"
-      "SEO optimization"
+      "Infrastructure assessment",
+      "Migration planning",
+      "Data transfer",
+      "Security implementation",
       "Performance optimization"
-      "Cross-browser compatibility"
-      "Mobile-first approach"
-    ]
-    benefits: ["Increased online presence"
-      "Better user experience"
-      "Higher conversion rates"
-      "Mobile accessibility"
-    ]
+    ],
+    benefits: [
+      "Reduced infrastructure costs",
+      "Improved scalability",
+      "Enhanced security",
+      "Better performance"
+    ],
     pricing: {
-      basic: "2999"
-      pro: "5999"
-      enterprise: "9999"
-    }
-
+      basic: "199",
+      pro: "399",
+      enterprise: "799"
+    },
     contactInfo: {
-      website: "https://ziontechgroup.com/web-development"
-      email: "webdev@ziontechgroup.com"
-      phone: "+1-555-0126"
-    }
-
-    price: "$2,999/project"
-    icon: "🌐"
-    href: "/web-development"
-    popular: true
-    category: "it"
+      website: "https://ziontechgroup.com/cloud-migration",
+      email: "cloud@ziontechgroup.com",
+      phone: "+1-555-0124"
+    },
+    price: "$199/month",
+    icon: "☁️",
+    href: "/cloud-migration",
+    popular: true,
+    category: "cloud"
   }
 ];
 
+export const g5Services: Service[] = [
   {
-    id: "cloud-infrastructure"
-    title: "Cloud Infrastructure"
-    description: "Scalable and secure cloud solutions for modern businesses."
-    features: ["Cloud migration"
-      "Infrastructure as Code"
-      "Auto-scaling"
-      "Disaster recovery"
-      "Security compliance"
-    ]
-    benefits: ["Reduced infrastructure costs"
-      "Improved scalability"
-      "Enhanced security"
-      "Better reliability"
-    ]
+    id: "5g-network-infrastructure",
+    title: "5G Network Infrastructure",
+    description: "Build robust 5G networks with our comprehensive infrastructure solutions.",
+    features: [
+      "Network design",
+      "Infrastructure deployment",
+      "Performance optimization",
+      "Security implementation",
+      "Monitoring and maintenance"
+    ],
+    benefits: [
+      "Ultra-fast connectivity",
+      "Low latency",
+      "High reliability",
+      "Future-proof technology"
+    ],
     pricing: {
-      basic: "499"
-      pro: "999"
+      basic: "499",
+      pro: "999",
       enterprise: "1999"
-    }
-
+    },
     contactInfo: {
-      website: "https://ziontechgroup.com/cloud-infrastructure"
-      email: "cloud@ziontechgroup.com"
-      phone: "+1-555-0127"
-    }
-
-    price: "$499/month"
-    icon: "☁️"
-    href: "/cloud-infrastructure"
-    category: "it"
+      website: "https://ziontechgroup.com/5g-network-infrastructure",
+      email: "5g@ziontechgroup.com",
+      phone: "+1-555-0125"
+    },
+    price: "$499/month",
+    icon: "📡",
+    href: "/5g-network-infrastructure",
+    popular: true,
+    category: "data"
   }
+];
 
+export const aiServicesSubcategories: Service[] = [
   {
-    id: "cybersecurity"
-    title: "Cybersecurity"
-    description: "Comprehensive security solutions to protect your digital assets."
-    features: ["Security audits"
-      "Threat monitoring"
-      "Incident response"
-      "Compliance management"
-      "Security training"
-    ]
-    benefits: ["Protection against threats"
-      "Regulatory compliance"
-      "Reduced risk exposure"
-      "Peace of mind"
-    ]
+    id: "business-intelligence",
+    title: "Business Intelligence",
+    description: "Advanced BI solutions powered by AI for better business insights.",
+    features: [
+      "Data visualization",
+      "Predictive analytics",
+      "Custom reports",
+      "Real-time dashboards",
+      "AI-powered insights"
+    ],
+    benefits: [
+      "Better decision making",
+      "Improved efficiency",
+      "Cost reduction",
+      "Competitive advantage"
+    ],
     pricing: {
-      basic: "399"
-      pro: "799"
-      enterprise: "1499"
-    }
-
+      basic: "199",
+      pro: "399",
+      enterprise: "799"
+    },
     contactInfo: {
-      website: "https://ziontechgroup.com/cybersecurity"
-      email: "security@ziontechgroup.com"
-      phone: "+1-555-0128"
-    }
-
-    price: "99/month"
-    icon: "🔒"
-    href: "/cybersecurity"
-    category: "it"
+      website: "https://ziontechgroup.com/ai-services/business-intelligence",
+      email: "bi@ziontechgroup.com",
+      phone: "+1-555-0126"
+    },
+    price: "$199/month",
+    icon: "📈",
+    href: "/ai-services/business-intelligence",
+    popular: false,
+    category: "ai"
   }
-]
-export const itSolutions = itServices
-export const allServices: Service[] = [...aiServices, ...itServices]
-//Export as servicesData for backward compatibility
+];
+
+// Export all services data
 export const servicesData = {
-  aiServices
-  itServices
-  itSolutions: itServices, //Add alias for itSolutions
-  allServices
-};
-
-export const getServiceById = (id: string): Service|undefined => {
-  return allServices.find(service => service.id === id)
-}
-
-export const getServicesByCategory = (category: Service["category"]): Service[] => {
-  return allServices.filter(service => service.category === category)
-}
-
-export const getPopularServices = (): Service[] => {
-  return allServices.filter(service => service.popular);
+  aiServices,
+  itServices,
+  g5Services,
+  aiServicesSubcategories
 };

@@ -3,9 +3,10 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-export default function ServicePage() {
 
-  return (<>
+export default function ServicePage() {
+  return (
+    <>
       <Head>
         <title>Accessibility Page|Zion Tech Group</title>
         
@@ -48,7 +49,6 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
-  )
+    </>
+  );
 }
