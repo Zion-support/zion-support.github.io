@@ -1,7 +1,22 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import './globals.css';
+import React, { useState, useEffect, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import Navigation from "./app/components/Navigation";
+import Sidebar from "./app/components/Sidebar";
+import Footer from "./app/components/Footer";
+import LoadingPage from "./app/components/Loading";
+import HomePage from "./app/page";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 
 // Components
 import Header from './app/components/Header';

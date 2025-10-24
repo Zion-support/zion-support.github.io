@@ -25,8 +25,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 4096, // Increased for better performance
+    chunkSizeWarningLimit: 150, // Reduced threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
     // Target modern browsers for smaller bundles
@@ -57,10 +57,45 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+          // Core React libraries - keep smaller
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor'
+          }
+          // Router - separate chunk
+          if (id.includes('react-router')) {
+            return 'router'
+          }
+          // UI libraries - split further
+          if (id.includes('framer-motion')) {
+            return 'ui-animations'
+          }
+          if (id.includes('lucide-react')) {
+            return 'ui-icons'
+          }
+          // SEO and meta - separate chunk
+          if (id.includes('react-helmet')) {
+            return 'seo'
+          }
+          // Charts and data visualization
+          if (id.includes('recharts')) {
+            return 'charts'
+          }
+          // Utility libraries - group small utilities
+          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            return 'utils'
+          }
+          // Performance monitoring - separate chunk
+          if (id.includes('web-vitals')) {
+            return 'performance'
+          }
+          // Error handling - separate chunk
+          if (id.includes('react-error-boundary')) {
+            return 'error-handling'
+          }
+          // Components - split by functionality
+          if (id.includes('/components/')) {
+            if (id.includes('Enhanced') || id.includes('Advanced')) {
+              return 'enhanced-components'
             }
             if (id.includes('react-router')) {
               return 'vendor-router'
@@ -68,8 +103,25 @@ export default defineConfig({
             if (id.includes('framer-motion')) {
               return 'vendor-framer';
             }
-            if (id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-icons';
+            return 'base-components'
+          }
+          // AI service pages - group by category with smaller chunks
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            return 'ai-services'
+          }
+          // Group all Zion service pages
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            return 'zion-services'
+          }
+          // Group all 5G service pages
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            return '5g-services'
+          }
+          // Main pages - split further
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            if (id.includes('about') || id.includes('contact') || id.includes('services')) {
+              return 'core-pages'
             }
             if (id.includes('recharts')) {
               return 'vendor-charts'
