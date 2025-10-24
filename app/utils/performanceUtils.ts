@@ -1,19 +1,21 @@
 // Performance monitoring utilities;
 
-export interface PerformanceMetric {;
-  name: string;,;
-  value: number;,;
-  timestamp: number;,;
-  url: string}
-
+export interface PerformanceMetric {
+name: string,;
+  value: number,;
+  timestamp: number,;
+  url: string;
+}
 class PerformanceMonitor {
-  private metrics: PerformanceMetric[] = [];,
-  private isEnabled: boolean;,
-  constructor() {
-    this.isEnabled = typeof window !== "undefined" && "performance" in window}
 
+  private metrics: PerformanceMetric[] = [],
+  private isEnabled: boolean,
+  constructor() {
+    this.isEnabled = typeof window !== "undefined" && "performance" in window;
+}
   // Measure page load time
   measurePageLoad(): number | null {
+
     if (!this.isEnabled) return null;
 
     const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
@@ -21,10 +23,11 @@ class PerformanceMonitor {
 
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     this.recordMetric("page_load", loadTime);
-    return loadTime}
-
+    return loadTime;
+}
   // Record a custom metric
   recordMetric(name: string, value: number): void {
+
     if (!this.isEnabled) return;
 
     const metric: PerformanceMetric = {
@@ -46,6 +49,7 @@ class PerformanceMonitor {
 
   // Send metrics to analytics service
   private sendToAnalytics(metric: PerformanceMetric): void {
+
     // Example: Send to Google Analytics,
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", metric.name, {;

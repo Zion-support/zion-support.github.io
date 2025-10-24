@@ -1,11 +1,13 @@
 export interface User {
+
   id: string;
   email: string;
   name: string;
-  role: "admin" | "user" | "guest";
+  role: "admin" | "user" | "guest"
 }
 
 export interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -15,20 +17,19 @@ export interface Service {
   pricing: {
     basic: number;
     pro: number;
-    enterprise: number;
-  };
+    enterprise: number};
   benefits: string[];
   useCases: string[];
   marketPrice: string;
   contactInfo: {
-    phone: string;
+  phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   link: string;
 }
 
 export interface ContactFormData {
+
   name: string;
   email: string;
   company: string;
@@ -36,24 +37,25 @@ export interface ContactFormData {
   service: string;
   phone?: string;
   budget?: string;
-  timeline?: string;
-}
+  timeline?: string}
 
 export interface AnalyticsEvent {
+
   name: string;
   timestamp: number;
   properties?: Record<string, string | number | boolean | null>;
 }
 
 export interface PerformanceMetrics {
+
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
+  firstInputDelay: number}
 
 export interface ErrorContext {
+
   url?: string;
   userAgent?: string;
   timestamp?: string;
@@ -64,28 +66,28 @@ export interface ErrorContext {
 }
 
 export interface ErrorReport {
+
   id: string;
   message: string;
   stack?: string;
   context: ErrorContext;
   severity: ErrorSeverity;
   resolved: boolean;
-  createdAt: string;
-}
+  createdAt: string}
 
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";
-
 export interface Testimonial {
+
   id: string;
   name: string;
   company: string;
   role: string;
   content: string;
   rating: number;
-  avatar?: string;
-}
+  avatar?: string}
 
 export interface BlogPost {
+
   id: string;
   title: string;
   excerpt: string;
@@ -93,17 +95,17 @@ export interface BlogPost {
   author: string;
   publishedAt: string;
   tags: string[];
-  featuredImage?: string;
-}
+  featuredImage?: string}
 
 export interface FAQ {
+
   id: string;
   question: string;
   answer: string;
-  category: string;
-}
+  category: string}
 
 export interface TeamMember {
+
   id: string;
   name: string;
   role: string;
@@ -112,11 +114,11 @@ export interface TeamMember {
   social: {
     linkedin?: string;
     twitter?: string;
-    github?: string;
-  };
+    github?: string};
 }
 
 export interface Project {
+
   id: string;
   title: string;
   description: string;
@@ -124,12 +126,11 @@ export interface Project {
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
-  featured: boolean;
-}
+  featured: boolean}
 
 export interface Analytics {
+
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
-  avgSessionDuration: number;
-}
+  avgSessionDuration: number}

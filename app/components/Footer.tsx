@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Facebook} from 'lucide-react';
 const Footer: React.FC = () => {
+
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -111,7 +112,7 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    href={item.url} 
+                    href={item.url}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {item.name}
@@ -128,7 +129,7 @@ const Footer: React.FC = () => {
               {support.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    href={item.url} 
+                    href={item.url}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {item.name}

@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
+import { Helmet} from 'react-helmet-async';
+import { Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
+import { ArrowRight} from 'lucide-react';
   ]
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -24,6 +24,7 @@ import { ArrowRight } from 'lucide-react';
       </section>
 
 interface PerformanceEnhancerProps {
+
   enableOptimizations?: boolean;
   onOptimizationComplete?: () => void;
 }

@@ -1,5 +1,6 @@
 // Analytics utilities for tracking user interactions and performance
 interface AnalyticsEvent {
+
   category: string;
   action: string;
   label?: string;
@@ -9,10 +10,12 @@ interface AnalyticsEvent {
 }
 
 class Analytics {
+
   private static instance: Analytics;
   private events: AnalyticsEvent[] = [];
 
   static getInstance(): Analytics {
+
     if (!Analytics.instance) {
       Analytics.instance = new Analytics();
     }
@@ -21,6 +24,7 @@ class Analytics {
 
   // Track custom events
   track(event: AnalyticsEvent): void {
+
     this.events.push({
       ...event,
       timestamp: Date.now()
@@ -32,13 +36,13 @@ class Analytics {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
-        ...event.custom_parameters
-      });
+        ...event.custom_parameters});
     }
   }
 
   // Track page views
   trackPageView(page: string, title?: string): void {
+
     this.track({
       category: "Page",
       action: "View",
@@ -52,6 +56,7 @@ class Analytics {
 
   // Track user interactions
   trackClick(element: string, location?: string): void {
+
     this.track({
       category: "Interaction",
       action: "Click",
@@ -64,16 +69,17 @@ class Analytics {
 
   // Track form submissions
   trackFormSubmit(formName: string, success: boolean): void {
+
     this.track({
       category: "Form",
       action: "Submit",
       label: formName,
-      value: success ? 1 : 0
-    });
+      value: success ? 1 : 0});
   }
 
   // Track performance metrics
   trackPerformance(metric: string, value: number): void {
+
     this.track({
       category: "Performance",
       action: "Metric",
@@ -84,6 +90,7 @@ class Analytics {
 
   // Track errors
   trackError(error: Error, context?: string): void {
+
     this.track({
       category: "Error",
       action: "Occurred",
@@ -103,6 +110,7 @@ class Analytics {
 
   // Clear events
   clearEvents(): void {
+
     this.events = [];
   }
 }

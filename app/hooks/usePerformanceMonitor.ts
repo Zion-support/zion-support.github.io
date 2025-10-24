@@ -1,13 +1,16 @@
-import { useCallback, useEffect, useState, useRef } from 'react'
+import { useCallback, useEffect, useState, useRef} from 'react'
 interface UsePerformanceMonitorOptions {
+
   enabled?: boolean;
   threshold?: number;
-  measureMemoryUsage?: boolean}
-interface PerformanceData {;
-  fps: number,;
+  measureMemoryUsage?: boolean;
+}
+interface PerformanceData {
+fps: number,;
   memoryUsage: number,;
   loadTime: number,;
-  renderTime: number}
+  renderTime: number;
+}
 export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
   const [metrics, setMetrics] = useState<PerformanceData>({;
     fps: 0,;
@@ -48,8 +51,8 @@ const countFrames = () => {
           fps,)
         }))
         frameCountRef.current = 0
-        lastTimeRef.current = currentTime
-      }
+        lastTimeRef.current = currentTime;
+}
       requestAnimationFrame(countFrames)}
     requestAnimationFrame(countFrames)}, [isMonitoringFPS])
   useEffect(() => {
@@ -58,13 +61,14 @@ const countFrames = () => {
       measureMemoryUsage()}
   }, [measureMemoryUsage, options.measureMemoryUsage])
   return {
+
     metrics,
     setMetrics,
     isMonitoringFPS,
     setIsMonitoringFPS,
     measureMemoryUsage,
-    init
-  }
+    init;
+}
 };
 export default usePerformanceMonitor;</PerformanceData>
 }

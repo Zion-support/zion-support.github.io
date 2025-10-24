@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface StructuredDataProps {
+
   data: Record<string, any>;
   type?: string;
 }

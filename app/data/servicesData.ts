@@ -1,4 +1,5 @@
 export interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -7,13 +8,11 @@ export interface Service {
   pricing: {
     basic: string;
     pro: string;
-    enterprise: string;
-  };
+    enterprise: string};
   contactInfo: {
-    website: string;
+  website: string;
     email: string;
-    phone: string;
-  };
+    phone: string};
   price?: string;
   icon?: string;
   href: string;

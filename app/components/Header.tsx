@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import { ArrowRight, CheckCircle  } from "lucide-react";
+import { ArrowRight, CheckCircle} from "lucide-react";
 const features = [
   {
     icon: CheckCircle,
@@ -40,8 +40,7 @@ const benefits = [
 
 
 import Footer from '../components/Footer';const Header: React.FC = ($2) => {
-$3
-};
+$3};
         <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Header
@@ -68,7 +67,8 @@ $3
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div><feature.icon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit}
+                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit;
+}
                       </CheckCircle></li>
                     ))}
                   </ul>

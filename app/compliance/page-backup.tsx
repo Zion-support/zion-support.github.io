@@ -3,7 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight } from 'lucide-react';
+import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight} from 'lucide-react';
 
 const CompliancePageBackup: React.FC = () => {
 
@@ -29,9 +29,10 @@ const CompliancePageBackup: React.FC = () => {
   ];
 
   const stats = [
-    { label: 'Data Protected', value: '99.9%', icon: Shield },
-    { label: 'Backup Success Rate', value: '100%', icon: CheckCircle },
-    { label: 'Recovery Time', value: '< 1 min', icon: Clock }
+    { label: 'Data Protected', value: '99.9%', icon: Shield},
+    { label: 'Backup Success Rate', value: '100%', icon: CheckCircle},
+    { label: 'Recovery Time', value: '< 1 min', icon: Clock;
+}
   ];
 
   return (
@@ -42,8 +43,7 @@ const CompliancePageBackup: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="..."></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
           <div className="..."></div>
             <h1 className="...">
               Page Backup
@@ -66,11 +66,9 @@ const CompliancePageBackup: React.FC = () => {
 
         {/* Stats Section */}
         <section className="py-16 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>,
+          <div className="max-w-7xl mx-auto"><div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>,
               {stats.map((stat, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4"></div>
+                <div key={index} className="text-center"><div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4"></div>
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -83,8 +81,7 @@ const CompliancePageBackup: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto"><div className="text-center mb-16"></div>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
                 Advanced Backup Features
               </h2>
@@ -105,7 +102,8 @@ const CompliancePageBackup: React.FC = () => {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                        {benefit}
+                        {benefit;
+}
                       </li>
                     ))}
                   </ul>

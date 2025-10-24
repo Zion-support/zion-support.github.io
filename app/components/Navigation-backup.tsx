@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { X, Menu } from 'lucide-react';
+import React, { useState} from 'react';
+import { X, Menu} from 'lucide-react';
 
 interface NavigationBackupProps {
+
   logo?: string;
   logoText?: string;
   menuItems?: Array<{
-    label: string;
+  label: string;
     href: string;
     submenu?: Array<{
       label: string;
-      href: string;
-    }>;
+      href: string}>;
   }>;
   ctaText?: string;
   ctaHref?: string;
@@ -56,19 +56,24 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
             {menuItems.map((item, index) => (
               <div key={index} className="...">
                 <a
-                  href={item.href}
+                  href={item.href;
+}
                   className="...">
-                  {item.label}
+                  {item.label;
+}
                 </a>
                 {item.submenu && (
                   <div className="...">
                     <div className="...">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
-                          key={subIndex}
-                          href={subItem.href}
+                          key={subIndex;
+}
+                          href={subItem.href;
+}
                           className="...">
-                          {subItem.label}
+                          {subItem.label;
+}
                         </a>
                       ))}
                     </div>
@@ -81,16 +86,19 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
           {/* CTA Button */}
           <div className="...">
             <a
-              href={ctaHref}
+              href={ctaHref;
+}
               className="...">
-              {ctaText}
+              {ctaText;
+}
             </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="...">
             <button
-              onClick={toggleMenu}
+              onClick={toggleMenu;
+}
               className="...">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -104,18 +112,23 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               {menuItems.map((item, index) => (
                 <div key={index}>
                   <a
-                    href={item.href}
+                    href={item.href;
+}
                     className="...">
-                    {item.label}
+                    {item.label;
+}
                   </a>
                   {item.submenu && (
                     <div className="...">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
-                          key={subIndex}
-                          href={subItem.href}
+                          key={subIndex;
+}
+                          href={subItem.href;
+}
                           className="...">
-                          {subItem.label}
+                          {subItem.label;
+}
                         </a>
                       ))}
                     </div>
@@ -124,9 +137,11 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
               ))}
               <div className="...">
                 <a
-                  href={ctaHref}
+                  href={ctaHref;
+}
                   className="...">
-                  {ctaText}
+                  {ctaText;
+}
                 </a>
               </div>
             </div>

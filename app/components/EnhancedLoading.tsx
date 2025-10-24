@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface EnhancedLoadingProps {
+
   size?: 'sm' | 'md' | 'lg';
   text?: string;
 }

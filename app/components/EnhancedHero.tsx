@@ -1,10 +1,11 @@
 'use client'
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet} from 'react-helmet-async'
+import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe} from 'lucide-react'
 
 const EnhancedHero: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
@@ -65,13 +66,7 @@ const EnhancedHero: React.FC = () => {
               Transform your business with our advanced enhanced hero solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
-            <div className="...">
-              <button className="...">
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>

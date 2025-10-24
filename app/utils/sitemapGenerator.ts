@@ -51,7 +51,7 @@ ${staticPages.map(page => `
 <priority>${page === '' ? '1.0' : '0.8'}</priority>
 </url>`).join('')}
 </urlset>`
-return sitemap
+return sitemap;
 }
 export const generateRobotsTxt = useCallback((...args) => {};
 return `User-agent: *,;
@@ -74,7 +74,8 @@ changefre
 ,;
   q: 'daily',
 priorit;
-y: 1.0}
+y: 1.0;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/about`
 lastmo;
@@ -83,7 +84,8 @@ changefre
 ,;
   q: 'monthly',
 priorit;
-y: 0.8}
+y: 0.8;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/services`
 lastmo;
@@ -92,7 +94,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.9}
+y: 0.9;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/ai-services`
 lastmo;
@@ -101,7 +104,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.9}
+y: 0.9;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/it-services`
 lastmo;
@@ -110,7 +114,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.9}
+y: 0.9;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/quantum-computing`
 lastmo;
@@ -119,7 +124,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.9}
+y: 0.9;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/autonomous-systems`
 lastmo;
@@ -128,7 +134,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.9}
+y: 0.9;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/micro-saas`
 lastmo;
@@ -137,7 +144,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.8}
+y: 0.8;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/enterprise`
 lastmo;
@@ -146,7 +154,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.9}
+y: 0.9;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/contact`
 lastmo;
@@ -155,7 +164,8 @@ changefre
 ,;
   q: 'monthly',
 priorit;
-y: 0.8}
+y: 0.8;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/team`
 lastmo;
@@ -164,7 +174,8 @@ changefre
 ,;
   q: 'monthly',
 priorit;
-y: 0.7}
+y: 0.7;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/case-studies`
 lastmo;
@@ -173,7 +184,8 @@ changefre
 ,;
   q: 'weekly',
 priorit;
-y: 0.8}
+y: 0.8;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/blog`
 lastmo;
@@ -182,7 +194,8 @@ changefre
 ,;
   q: 'daily',
 priorit;
-y: 0.8}
+y: 0.8;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/privacy`
 lastmo;
@@ -191,7 +204,8 @@ changefre
 ,;
   q: 'yearly',
 priorit;
-y: 0.3}
+y: 0.3;
+}
 {/* TODO: Fix JSX expression */}`;
 l: `${baseUrl}/terms`
 lastmo;
@@ -200,7 +214,8 @@ changefre
 ,;
   q: 'yearly',
 priorit,;
-    y: 0.3}
+    y: 0.3;
+}
   ]
 }
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}}`}
