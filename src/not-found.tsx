@@ -1,2 +1,2 @@
-import { Phone } from 'lucide-react'';
-import { Home } from 'lucide-react''
+import { Phone } from 'lucide-react';
+import { Home } from 'lucide-react'

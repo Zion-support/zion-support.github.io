@@ -31,11 +31,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);
+      }
     };
   }, []);
 
   return (
-    <div id="main-content" className="min-h-screen">
+    <div className="accessibility-enhanced">
       {children}
     </div>
   );

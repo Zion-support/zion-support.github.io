@@ -1,15 +1,15 @@
-import fs from 'fs''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  const lines = content.split('\n''
-  return resolved.join('\n''
-    console.error('"Error": '',
-    const content = fs.readFileSync(filePath, 'utf8''
+import fs from 'fs'
+
+
+
+
+
+
+
+
+  const lines = content.split('\n'
+  return resolved.join('\n'
+    console.error('Error": ",'
+    const content = fs.readFileSync(filePath, 'utf8';
     console.log('Fixing API files merge conflicts...'';
-    console.log('API files merge conflict resolution completed!''
+    console.log('API files merge conflict resolution completed!'

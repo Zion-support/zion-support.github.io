@@ -8,8 +8,8 @@ export default function AccessibilityPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Accessibility
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            We are committed to making our website accessible to all users.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We are committed to making our website accessible to all users, including those with disabilities.
           </p>
         </div>
       </div>

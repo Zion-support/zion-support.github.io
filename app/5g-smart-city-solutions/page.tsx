@@ -7,25 +7,25 @@ import { Wifi, Smartphone, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-r
 
 const features = [
   {
-    icon: Wifi,
+    icon: "Wifi",
     title: 'Smart Infrastructure',
-    description: 'Connect and manage city infrastructure with 5G-powered IoT solutions.',
+    description: 'Connect and manage city infrastructure with 5G-powered IoT solutions.'
   },
   {
-    icon: Smartphone,
-    title: 'Citizen Services',
-    description: 'Enhanced mobile services and real-time communication for residents.',
+    icon: "Smartphone",
+    title: 'Mobile Connectivity',
+    description: 'Ultra-fast mobile internet for citizens and visitors.'
   },
   {
-    icon: Shield,
-    title: 'Security & Safety',
-    description: 'Advanced monitoring and emergency response systems powered by 5G.',
+    icon: "Shield",
+    title: 'Security Systems',
+    description: 'Advanced surveillance and security monitoring with 5G.'
   },
   {
-    icon: Zap,
+    icon: "Zap",
     title: 'Energy Management',
-    description: 'Smart grid solutions for efficient energy distribution and consumption.',
-  },
+    description: 'Smart grid and energy optimization systems.'
+  }
 ];
 
 export default function FiveGSmartCitySolutionsPage() {
@@ -33,69 +33,53 @@ export default function FiveGSmartCitySolutionsPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
         title="5G Smart City Solutions - ZionTechGroup"
-        description="Transform your city with 5G-powered smart city solutions. IoT infrastructure, citizen services, and sustainable urban development."
-        keywords="5G smart city, IoT solutions, smart infrastructure, urban technology"
+        description="Transform your city with cutting-edge 5G smart city solutions. IoT, connectivity, and infrastructure management."
       />
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            5G Smart City <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Solutions</span>
+            5G <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Smart City</span> Solutions
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your city into a smart, connected, and sustainable urban environment with our comprehensive 5G smart city solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Transform your city with cutting-edge 5G technology. Connect infrastructure, 
+            enhance citizen services, and build the smart cities of tomorrow.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              Learn More
-            </button>
-          </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Smart City Features</h2>
-            <p className="text-xl text-gray-300">Comprehensive solutions for modern urban development</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
-                  <feature.icon className="h-8 w-8 text-white" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon as any;
+            return (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <IconComponent className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            );
+          })}
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Build Your Smart City?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let our 5G experts help you design and implement smart city solutions 
+            that will transform your urban environment.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center text-lg">
+              Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 text-lg">
+              Learn More
+            </button>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build Your Smart City?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how 5G smart city solutions can transform your urban environment.
-          </p>
-          <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-            Start Your Smart City Journey
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
-        </div>
-      </section>
-
+      </div>
+      
       <Footer />
     </div>
   );

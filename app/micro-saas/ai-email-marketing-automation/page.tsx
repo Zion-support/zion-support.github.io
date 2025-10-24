@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AiEmailMarketingAutomationPage() {
+export default function MicroSaas() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
@@ -8,8 +8,8 @@ export default function AiEmailMarketingAutomationPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Ai Email Marketing Automation
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Learn more about our ai email marketing automation solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our ai email marketing automation solution designed to streamline your business processes.
           </p>
         </div>
       </div>

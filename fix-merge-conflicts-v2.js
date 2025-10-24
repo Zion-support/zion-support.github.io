@@ -1,21 +1,21 @@
-import fs from 'fs''
-import path from 'path''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  const lines = content.split('\n''
-  return resolved.join('\n''
-    console.error('"Error": '',
-    const content = fs.readFileSync(filePath, 'utf8''
+import fs from 'fs'
+import path from 'path'
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const lines = content.split('\n'
+  return resolved.join('\n'
+    console.error('Error": ",'
+    const content = fs.readFileSync(filePath, 'utf8';
     console.log('Starting merge conflict resolution...'';
-    console.log('Merge conflict resolution completed!''
+    console.log('Merge conflict resolution completed!'

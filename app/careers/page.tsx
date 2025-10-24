@@ -8,8 +8,8 @@ export default function CareersPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Careers
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Learn more about our careers solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Join our team and help shape the future of technology.
           </p>
         </div>
       </div>

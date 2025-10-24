@@ -1,2 +1,2 @@
-import React from 'react'';
-const "MetaTags": React.FC<MetaTagsProps> = ({ className = '''
+import React from 'react';
+const 'MetaTags': React.FC<MetaTagsProps> = ({ className = '

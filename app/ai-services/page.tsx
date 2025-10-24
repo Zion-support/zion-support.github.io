@@ -6,10 +6,10 @@ export default function AiServicesPage() {
       <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Services
+            AI Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Learn more about our ai services solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI solutions to transform your business operations.
           </p>
         </div>
       </div>

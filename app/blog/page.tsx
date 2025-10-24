@@ -8,8 +8,8 @@ export default function BlogPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Blog
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Learn more about our blog solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Latest insights and updates from our team.
           </p>
         </div>
       </div>

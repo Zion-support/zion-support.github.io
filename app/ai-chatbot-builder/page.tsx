@@ -5,112 +5,102 @@ import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Ta
 
 const features = [
   {
-    icon: Workflow,
+    icon: "Workflow",
     title: 'No-Code Builder',
     description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
-    color: 'from-cyan-500 to-blue-500',
+    color: 'from-cyan-500 to-blue-500'
   },
   {
-    icon: Globe,
+    icon: "Globe",
     title: 'Multi-Language Support',
     description: 'Build chatbots that communicate in multiple languages for global reach',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-green-500 to-teal-500'
   },
   {
-    icon: Brain,
-    title: 'AI-Powered Responses',
-    description: 'Leverage advanced AI to provide intelligent and contextual responses',
-    color: 'from-green-500 to-teal-500',
+    icon: "Brain",
+    title: 'AI-Powered Intelligence',
+    description: 'Advanced natural language processing for human-like conversations',
+    color: 'from-purple-500 to-pink-500'
   },
   {
-    icon: BarChart,
+    icon: "Users",
+    title: 'User Management',
+    description: 'Comprehensive user management and conversation history tracking',
+    color: 'from-orange-500 to-red-500'
+  },
+  {
+    icon: "BarChart",
     title: 'Analytics Dashboard',
-    description: 'Track performance and optimize your chatbot with comprehensive analytics',
-    color: 'from-orange-500 to-red-500',
+    description: 'Real-time analytics and insights into chatbot performance',
+    color: 'from-blue-500 to-indigo-500'
   },
   {
-    icon: Settings,
+    icon: "Settings",
     title: 'Custom Integrations',
-    description: 'Integrate with your existing systems and third-party applications',
-    color: 'from-indigo-500 to-purple-500',
-  },
-  {
-    icon: Users,
-    title: 'Team Collaboration',
-    description: 'Collaborate with your team to build and manage chatbots effectively',
-    color: 'from-pink-500 to-rose-500',
-  },
+    description: 'Seamlessly integrate with your existing systems and platforms',
+    color: 'from-gray-500 to-slate-500'
+  }
 ];
 
-export default function AIChatbotBuilderPage() {
+export default function AiChatbotBuilderPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div className="text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Chatbot Builder</span>
+            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Chatbot Builder</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create intelligent, conversational chatbots that engage your customers and automate support with our no-code platform.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Create intelligent, conversational chatbots that engage your customers and automate 
+            support with our powerful no-code platform powered by advanced AI technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-            >
-              Start Building
-              <ArrowRight className="ml-2 h-5 w-5" />
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center">
+              Start Building <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-            >
-              View All Services
+            <Link href="/demo" className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Try Demo
             </Link>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2>
-            <p className="text-xl text-gray-300">Everything you need to build powerful chatbots</p>
-          </div>
+        {/* Features Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-full mb-4`}>
-                  <feature.icon className="h-8 w-8 text-white" />
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon as any;
+              return (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+                  <div className={`w-12 h-12 mb-4 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center`}>
+                    <IconComponent className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build Your Chatbot?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start creating intelligent chatbots that will transform your customer experience.
+        {/* CTA Section */}
+        <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Your Chatbot?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already using our AI chatbot builder to enhance 
+            customer experience and streamline operations.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-          >
-            Get Started Today
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center text-lg">
+              Start Building Now <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link href="/pricing" className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 text-lg">
+              View Pricing
+            </Link>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -1,18 +1,18 @@
-'use client''
-import { Brain, BarChart, Target } from 'lucide-react''
-import React from 'react''
-import { CheckSquare } from 'lucide-react''
-import { CheckCircle, Star, Phone } from 'lucide-react''
-    { "name": 'GitHub', "icon": '💻', "description": 'Development workflow'',
-    {"name": 'Rachel Green'',
-      "company": 'Marketing Agency'',
-      "role": 'Project Manager'',
-      "t": 'Task Manager Pro transformed our team productivity. We complete projects40% faster with better quality.''
-    {"name": 'Tom Anderson'',
-      "company": 'Software Startup'',
-      "role": 'CEO'',
-      "t": 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.''
-    {"name": 'Lisa Park'',
-      "company": 'Consulting Firm'',
-      "role": 'Operations Director'';,
-      "t": 'The automation features saved us 15 hours per week. We can now focus on high-value work.''
+'use client'
+import { Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
+import { CheckSquare } from 'lucide-react'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+    { 'name": "GitHub', 'icon": "💻', 'description": "Development workflow',''''
+    {'name": "Rachel Green',''''
+      'company": "Marketing Agency',''''
+      'role": "Project Manager',''''
+      't": "Task Manager Pro transformed our team productivity. We complete projects40% faster with better quality.'''''
+    {'name": "Tom Anderson',''''
+      'company": "Software Startup',''''
+      'role": "CEO',''''
+      't": "The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.'''''
+    {'name": "Lisa Park',''''
+      'company": "Consulting Firm','''';
+      'role": "Operations Director'''';,''''
+      't": "The automation features saved us 15 hours per week. We can now focus on high-value work."

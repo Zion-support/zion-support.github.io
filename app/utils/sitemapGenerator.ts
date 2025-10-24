@@ -14,25 +14,25 @@ export const generateSitemap = (): SitemapEntry[] => {
       url: baseUrl,
       lastmod: currentDate,
       changefreq: 'daily',
-      priority: 1.0,
+      priority: 1.0
     },
     {
       url: `${baseUrl}/about`,
       lastmod: currentDate,
       changefreq: 'monthly',
-      priority: 0.8,
+      priority: 0.8
     },
     {
       url: `${baseUrl}/services`,
       lastmod: currentDate,
       changefreq: 'weekly',
-      priority: 0.9,
+      priority: 0.9
     },
     {
       url: `${baseUrl}/contact`,
       lastmod: currentDate,
       changefreq: 'monthly',
-      priority: 0.7,
-    },
+      priority: 0.7
+    }
   ];
 };

@@ -6,7 +6,7 @@ const PerformanceMonitor: React.FC = () => {
     const initPerformanceMonitoring = async () => {
       try {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
+
         if (typeof window !== 'undefined') {
           getCLS(console.log);
           getFID(console.log);
@@ -15,9 +15,7 @@ const PerformanceMonitor: React.FC = () => {
           getTTFB(console.log);
         }
       } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance monitoring not available:', error);
-        }
+        console.error('Failed to initialize performance monitoring:', error);
       }
     };
 

@@ -8,8 +8,8 @@ export default function AdvancedSecuritySuitePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Advanced Security Suite
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Learn more about our advanced security suite solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive security solutions to protect your business from cyber threats.
           </p>
         </div>
       </div>

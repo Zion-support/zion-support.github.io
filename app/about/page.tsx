@@ -11,118 +11,118 @@ export const metadata: Metadata = {
     title: 'About Us - Zion Tech Group',
     description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.',
     type: 'website',
-    url: 'https://ziontechgroup.com/about'}};
+    url: 'https://ziontechgroup.com/about'
+  }
+};
 
 const values = [
   {
-    icon: Brain,
+    icon: "Brain",
     title: 'Innovation',
-    description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'},
+    description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
+  },
   {
-    icon: Shield,
+    icon: "Shield",
     title: 'Security',
-    description: 'Your data and systems are protected with enterprise-grade security measures.'},
+    description: 'Your data and systems are protected with enterprise-grade security measures.'
+  },
   {
-    icon: Users,
+    icon: "Users",
     title: 'Collaboration',
-    description: 'We work closely with our clients to understand their unique needs.'},
+    description: 'We work closely with our clients to understand their unique needs.'
+  },
   {
-    icon: Globe,
+    icon: "Globe",
     title: 'Global Reach',
-    description: 'Serving clients worldwide with localized expertise and support.'}];
+    description: 'Serving clients worldwide with localized expertise and support.'
+  }
+];
 
 const stats = [
-  { icon: Users, value: '500+', label: 'Happy Clients' },
-  { icon: Award, value: '50+', label: 'Awards Won' },
-  { icon: Globe, value: '25+', label: 'Countries Served' },
-  { icon: Star, value: '99%', label: 'Client Satisfaction' }];
+  { number: '500+', label: 'Projects Completed' },
+  { number: '50+', label: 'Happy Clients' },
+  { number: '5+', label: 'Years Experience' },
+  { number: '24/7', label: 'Support Available' }
+];
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div className="text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Zion Tech Group</span>
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Zion Tech Group</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We are a leading technology company dedicated to transforming businesses through innovative AI and IT solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            We are a leading technology company specializing in AI solutions, IT services, and digital transformation. 
+            Our mission is to empower businesses with cutting-edge technology that drives growth and innovation.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-          >
-            Get in Touch
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
-                  <stat.icon className="h-8 w-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center">
+              Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link href="/services" className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Our Services
+            </Link>
           </div>
         </div>
-      </section>
 
-      {/* Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Values</h2>
-            <p className="text-xl text-gray-300">The principles that guide everything we do</p>
-          </div>
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-gray-400">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Values Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
-                  <value.icon className="h-8 w-8 text-white" />
+            {values.map((value, index) => {
+              const IconComponent = value.icon as any;
+              return (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <IconComponent className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's work together to create innovative solutions that drive your success.
+        {/* Mission Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Our Mission</h2>
+          <p className="text-xl text-gray-300 text-center max-w-4xl mx-auto">
+            To revolutionize the way businesses operate by providing innovative AI solutions and IT services 
+            that drive digital transformation, enhance efficiency, and create sustainable competitive advantages 
+            in an ever-evolving technological landscape.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-            >
-              Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5" />
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's work together to build the future of your business with cutting-edge AI and IT solutions.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center text-lg">
+              Start Your Project <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-            >
-              View Our Services
+            <Link href="/pricing" className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 text-lg">
+              View Pricing
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

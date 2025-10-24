@@ -21,35 +21,35 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsLoaded(true);
-    }
-  }, []);
+  const [analytics, setAnalytics] = useState({
+    pageViews: 0,
+    events: 0,
+    sessions: 0,
+  });
 
   const trackEvent = (event: string, properties?: Record<string, any>) => {
-    if (isLoaded && typeof window !== 'undefined') {
-      // Track event with analytics service
-      console.log('Analytics Event:', event, properties);
-    }
+    console.log('Analytics Event:', event, properties);
+    setAnalytics(prev => ({
+      ...prev,
+      events: prev.events + 1,
+    }));
   };
 
   const trackPageView = (page: string) => {
-    if (isLoaded && typeof window !== 'undefined') {
-      // Track page view
-      console.log('Page View:', page);
-    }
+    console.log('Page View:', page);
+    setAnalytics(prev => ({
+      ...prev,
+      pageViews: prev.pageViews + 1,
+    }));
   };
 
-  const value = {
-    trackEvent,
-    trackPageView,
-  };
+  useEffect(() => {
+    // Initialize analytics
+    trackPageView(window.location.pathname);
+  }, []);
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={{ trackEvent, trackPageView }}>
       {children}
     </AnalyticsContext.Provider>
   );
