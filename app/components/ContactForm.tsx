@@ -23,7 +23,7 @@ const ContactForm: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   setFormData({
-      ...formData
+      ...formData,
       [e.target.name]: e.target.value
 })
   }
@@ -39,20 +39,21 @@ const ContactForm: React.FC = () => {
       setIsSubmitted(false)
       setFormData({
         name: '',
-    email: ''
+        email: '',
         phone: '',
-    company: ''
+        company: '',
         message: '',
-    service: ''})
+        service: ''
+      })
     }, 3000)
   }
   const services = [
-  'AI Solutions'
-    'Web Development'
-    'Mobile Development'
-    'Cloud Migration'
-    'Cybersecurity'
-    'Data Analytics'
+    'AI Solutions',
+    'Web Development',
+    'Mobile Development',
+    'Cloud Migration',
+    'Cybersecurity',
+    'Data Analytics',
     'DevOps',
     'Consulting'
   ]
