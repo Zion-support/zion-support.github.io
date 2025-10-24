@@ -47,7 +47,7 @@ const ContentStatistics: React.FC = () => {
       })
     }, stepDuration)
     return (
-    <>
+    <div>
     ) => clearInterval(interval)
   </div>
   }, []
@@ -91,7 +91,7 @@ const ContentStatistics: React.FC = () => {
     color: "from-red-500 to-pink-500"}
   ]</Zap>
   return (</Zap>
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>

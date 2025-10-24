@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function SmartcontractsecurityauditPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Smart Contract Security Audit - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

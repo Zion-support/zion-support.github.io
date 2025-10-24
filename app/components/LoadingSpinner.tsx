@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const LoadingSpinner: React.FC = () => {
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AidataanalyticsPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

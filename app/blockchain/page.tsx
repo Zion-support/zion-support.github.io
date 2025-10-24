@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function BlockchainPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Blockchain - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

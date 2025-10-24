@@ -31,7 +31,7 @@ const PageBackupPage: React.FC = () => {
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>

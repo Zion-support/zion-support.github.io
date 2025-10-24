@@ -20,6 +20,10 @@ const nextConfig = {
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
+  compiler: {
+    // Use the new JSX transform
+    reactRemoveProperties: false,
+  },
   // Disable static generation to avoid prerendering errors
   staticPageGenerationTimeout: 1000,
   // Disable static optimization

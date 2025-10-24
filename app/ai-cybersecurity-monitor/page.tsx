@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AicybersecuritymonitorPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Cybersecurity Monitor - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

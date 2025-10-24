@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AiinventorymanagerPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Inventory Manager - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

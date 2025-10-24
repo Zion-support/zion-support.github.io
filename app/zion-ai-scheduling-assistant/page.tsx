@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaischedulingassistantPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Ai Scheduling Assistant - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

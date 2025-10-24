@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const SkipLink: React.FC = () => {
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>

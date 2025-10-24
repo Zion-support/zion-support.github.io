@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AianalyticsdashboardPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -28,6 +28,6 @@ export default function AianalyticsdashboardPage() {
         </div>
       </div>
       <Footer />
-</div>
-  )
+    </div>
+  );
 }

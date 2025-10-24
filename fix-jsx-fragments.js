@@ -1,58 +1,80 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix JSX fragments in a single page file
-function fixJSXFragments(filePath) {
+// Find all files with JSX fragment issues
+function findFilesWithJSXIssues() {
+  try {
+    const result = execSync('find ./app -name "*.tsx" | head -20', { 
+      encoding: 'utf8',
+      cwd: '/workspace'
+    });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.log('Error finding files:', error.message);
+    return [];
+  }
+}
+
+// Fix JSX fragments in a file
+function fixJSXInFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has JSX fragments
-    if (content.includes('return (\n    <>') && content.includes('</>')) {
-      // Replace JSX fragments with div elements
-      content = content.replace(
-        /return \(\s*<>/g,
-        'return (\n    <div>'
-      );
-      
-      content = content.replace(
-        /<\/>\s*\);/g,
-        '</div>\n  );'
-      );
-      
-      // Write the fixed content back
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed JSX fragments: ${filePath}`);
+    let modified = false;
+
+    // Fix JSX fragments by replacing with div
+    if (content.includes('<>') && content.includes('</>')) {
+      content = content.replace(/<>/g, '<div>');
+      content = content.replace(/<\/>/g, '</div>');
+      modified = true;
+    }
+
+    // Fix missing React import if needed
+    if (content.includes('export default function') && !content.includes("import React from 'react'")) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+
+    // Fix missing Head import if needed
+    if (content.includes('<Head>') && !content.includes("import Head from 'next/head'")) {
+      content = content.replace(/import React from 'react';/, "import React from 'react';\nimport Head from 'next/head';");
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed JSX in: ${filePath}`);
       return true;
     }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing file ${filePath}:`, error.message);
+    return false;
   }
-  return false;
 }
 
-// Function to recursively find and fix all page.tsx files
-function fixAllPages(dir) {
-  const files = fs.readdirSync(dir);
+// Main execution
+function main() {
+  console.log('Finding files with JSX issues...');
+  const files = findFilesWithJSXIssues();
+  
+  if (files.length === 0) {
+    console.log('No files found.');
+    return;
+  }
+
+  console.log(`Found ${files.length} files to check.`);
+  
   let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += fixAllPages(filePath);
-    } else if (file === 'page.tsx') {
-      if (fixJSXFragments(filePath)) {
-        fixedCount++;
-      }
+  files.forEach(file => {
+    if (fixJSXInFile(file)) {
+      fixedCount++;
     }
-  }
-  
-  return fixedCount;
+  });
+
+  console.log(`Fixed JSX in ${fixedCount} files.`);
 }
 
-// Start fixing from the app directory
-const appDir = path.join(__dirname, 'app');
-console.log('Starting to fix JSX fragments...');
-const totalFixed = fixAllPages(appDir);
-console.log(`Fixed ${totalFixed} page files.`);
+main();

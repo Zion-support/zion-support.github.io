@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaisupplychainoptimizerPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Ai Supply Chain Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function Ai3dgenerationPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

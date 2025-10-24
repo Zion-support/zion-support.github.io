@@ -62,14 +62,14 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   d:cursor-not-allowed flex items-center justify-center"
           ></button>
             {status === 'loading' ? (</button>
-              <>
+              <div>
     
   </div>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>
                 Subscribing...
 </div>
             ) : (
-              <>
+              <div>
     
   </div>
                 <Send className="w-4 h-4 mr-2" /></Send>

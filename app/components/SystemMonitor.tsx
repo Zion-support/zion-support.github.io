@@ -16,7 +16,7 @@ import { ArrowRight } from 'lucide-react';
   ]
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</SystemMonitorProps>
   return (</SystemMonitorProps>
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>

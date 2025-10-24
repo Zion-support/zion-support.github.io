@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AiholographicworkspacePage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Holographic Workspace - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionsmartcrmautomationPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Smart Crm Automation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
