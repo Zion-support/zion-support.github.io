@@ -22,7 +22,8 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global error caught:', error, errorInfo)
+    // Error logging can be implemented here for production monitoring
+    // console.error('Global error caught:', error, errorInfo)
   }
 
   render() {

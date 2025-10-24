@@ -22,7 +22,8 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    // Error logging can be implemented here for production monitoring
+    // console.error('Error caught by boundary:', error, errorInfo)
   }
 
   render() {

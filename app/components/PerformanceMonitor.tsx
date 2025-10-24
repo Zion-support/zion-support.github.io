@@ -9,14 +9,16 @@ export default function PerformanceMonitor() {
       // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('Performance entry:', entry)
+          // Performance monitoring can be implemented here
+          // console.log('Performance entry:', entry)
         }
       })
 
       try {
         observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] })
       } catch (error) {
-        console.warn('Performance observer not supported:', error)
+        // Performance observer not supported in this environment
+        // console.warn('Performance observer not supported:', error)
       }
 
       return () => {
