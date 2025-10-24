@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { loginUser } from '@/services/authService'
+=======
+import { describe, it, expect, vi, beforeEach } from 'vitest'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
 import { NextApiRequest, NextApiResponse } from 'next'
 
 const mockSignInWithPassword = vi.fn()
@@ -55,7 +59,11 @@ describe('/api/auth/login API Handler', () => {
     const mockAuthToken = 'mock-access-token'
     const mockSessionData = {
       access_token: mockAuthToken,
+<<<<<<< HEAD
       refresh_token: 'mock-refresh-token',
+=======
+      refresh_token: 'mock-refresh-token'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
     }
     const mockUserData = { id: 'user-123', email: testEmail }
 
@@ -67,7 +75,14 @@ describe('/api/auth/login API Handler', () => {
       error: null
     })
 
+<<<<<<< HEAD
     const req = mockApiReq({ email: testEmail, password: testPassword })
+=======
+    const req = mockApiReq({
+      email: testEmail,
+      password: testPassword
+    })
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
     const res = mockApiRes()
 
     await loginHandler(req, res)
@@ -75,8 +90,12 @@ describe('/api/auth/login API Handler', () => {
     expect(res.status).toHaveBeenCalledWith(200)
     expect(res.json).toHaveBeenCalledWith({
       success: true,
+<<<<<<< HEAD
       user: mockUserData,
       message: 'Login successful'
+=======
+      user: mockUserData
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
     })
     expect(res.setHeader).toHaveBeenCalledWith(
       'Set-Cookie',
@@ -87,16 +106,27 @@ describe('/api/auth/login API Handler', () => {
   it('should return 400 for invalid credentials', async () => {
     mockSignInWithPassword.mockResolvedValueOnce({
       data: { user: null, session: null },
+<<<<<<< HEAD
       error: { message: 'Invalid login credentials' }
     })
 
     const req = mockApiReq({ email: 'wrong@example.com', password: 'wrong' })
+=======
+      error: { message: 'Invalid credentials' }
+    })
+
+    const req = mockApiReq({
+      email: 'invalid@example.com',
+      password: 'wrongpassword'
+    })
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
     const res = mockApiRes()
 
     await loginHandler(req, res)
 
     expect(res.status).toHaveBeenCalledWith(400)
     expect(res.json).toHaveBeenCalledWith({
+<<<<<<< HEAD
       success: false,
       error: 'Invalid login credentials'
     })
@@ -128,5 +158,21 @@ describe('/api/auth/login API Handler', () => {
       success: false,
       error: 'Internal server error'
     })
+=======
+      error: 'Invalid credentials'
+    })
+  })
+
+  it('should return 400 for missing email or password', async () => {
+    const req = mockApiReq({ email: 'test@example.com' }) // missing password
+    const res = mockApiRes()
+
+    await loginHandler(req, res)
+
+    expect(res.status).toHaveBeenCalledWith(400)
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Email and password are required'
+    })
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
   })
 })

@@ -68,7 +68,11 @@ const EnhancedFooter: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -83,7 +87,11 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
@@ -98,7 +106,11 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -114,7 +126,11 @@ const EnhancedFooter: React.FC = () => {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
@@ -140,7 +156,11 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> cursor/fix-errors-and-merge-to-main-2480
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
