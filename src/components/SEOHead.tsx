@@ -38,20 +38,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
   return (
   <Helme t>{/* Basic MetaTags */}
-    <titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot; content={author} /><metaname=&quot;robots&quot; content={robotsContent} /><linkrel=&quot;canonical&quot; href={canonicalUrl} />{/* Open Graph MetaTags */}
-   <metaproperty=&quot;og:type&quot; content={type} /><metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:image&quot; content={image} /><metaproperty=&quot;og:url&quot; content={url} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter Card MetaTags */}
-   <metaname=&quot;twitter:card&quot;content=&quot;summary_large_image&quot; /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={image} /><metaname=&quot;twitter:site&quot;content=&quot;@ziontechgroup&quot; /><metaname=&quot;twitter:creator&quot;content=&quot;@ziontechgroup&quot; />{/* Article specific metatags */}
+    <titl e>{fullTitle}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author" content={author} /><metaname="robots" content={robotsContent} /><linkrel="canonical" href={canonicalUrl} />{/* Open Graph MetaTags */}
+   <metaproperty="og:type" content={type} /><metaproperty="og:title" content={fullTitle} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={image} /><metaproperty="og:url" content={url} /><metaproperty="og:site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" />{/* Twitter Card MetaTags */}
+   <metaname="twitter:card"content="summary_large_image" /><metaname="twitter:title" content={fullTitle} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={image} /><metaname="twitter:site"content="@ziontechgroup" /><metaname="twitter:creator"content="@ziontechgroup" />{/* Article specific metatags */}
       {type=== 'article' && (
-      <>{publishedTime&&<metaproperty=&quot;article:published_time&quot;content={publishedTime} />}
-         {modifiedTime&&<metaproperty=&quot;article:modified_time&quot;content={modifiedTime} />}
-         {author&&<metaproperty=&quot;article:author&quot;content={author} />}
-         {section&&<metaproperty=&quot;article:section&quot;content={section} />}
+      <>{publishedTime&&<metaproperty="article:published_time"content={publishedTime} />}
+         {modifiedTime&&<metaproperty="article:modified_time"content={modifiedTime} />}
+         {author&&<metaproperty="article:author"content={author} />}
+         {section&&<metaproperty="article:section"content={section} />}
           {tags.map((tagindex) => (
-         <metakey={index}property=&quot;article:tag&quot; content={tag} />))}
+         <metakey={index}property="article:tag" content={tag} />))}
       </>)}
       {/* Additional SEO MetaTags */}
-   <metaname=&quot;theme-color&quot;content=&quot;#4f46e5&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#4f46e5&quot; /><metaname=&quot;apple-mobile-web-app-title&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;application-name&quot;content=&quot;Zion TechGroup&quot; />{/* StructuredData */}
-    <scripttype=&quot;application/ld+json&quot;>{JSON.stringify({
+   <metaname="theme-color"content="#4f46e5" /><metaname="msapplication-TileColor"content="#4f46e5" /><metaname="apple-mobile-web-app-title"content="Zion TechGroup" /><metaname="application-name"content="Zion TechGroup" />{/* StructuredData */}
+    <scripttype="application/ld+json">{JSON.stringify({
           '@context': 'https:// schema.org',
           '@type': type=== 'article' ? 'Article' : 'WebPage',
           name: fullTitle,

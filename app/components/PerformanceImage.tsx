@@ -1,5 +1,6 @@
-import React from &quot;react&quot;
-import { Helmet } from &quot;react-helmet-async&quot;
+"use client"
+import React from "react"
+import { Helmet } from "react-helmet-async"
 
 &quot;use client&quot;
 const PerformanceImagePage: React.FC = () => {
@@ -42,14 +43,14 @@ const PerformanceImagePage: React.FC = () => {
     <>
       <Helmet>
         <title>PerformanceImage | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; />
+        <meta name="description" content="Professional PerformanceImage services by Zion Tech Group." />
+        <meta name="keywords" content="AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation" />
       </Helmet>
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+        <div className="container mx-auto max-w-6xl"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">PerformanceImage</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>p>
           </div>
         </div>
       </section>

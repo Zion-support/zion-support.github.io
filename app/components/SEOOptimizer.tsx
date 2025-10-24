@@ -20,7 +20,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     document.title = title
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
@@ -32,7 +32,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ]
 
     // Update keywords
-    const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
+    const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
     } else {
@@ -43,7 +43,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
+    let canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
     } else {
@@ -55,7 +55,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {
-      let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
+      let ogTag = document.querySelector(`meta[property="${property}"]`)
       if (ogTag) {
         ogTag.setAttribute('content', content)
       } else {
@@ -74,7 +74,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Update Twitter Card tags
     const updateTwitterTag = (name: string, content: string) => {
-      let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`)
+      let twitterTag = document.querySelector(`meta[name="${name}"]`)
       if (twitterTag) {
         twitterTag.setAttribute('content', content)
       } else {
@@ -99,7 +99,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Add viewport meta tag if not present
-    let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
+    let viewport = document.querySelector('meta[name="viewport"]')
     if (!viewport) {
       viewport = document.createElement('meta')
       viewport.setAttribute('name', 'viewport')
@@ -120,29 +120,29 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return (
     <Head>
       <title>{title}</title>
-      <meta name=&quot;description&quot; content={description} />
-      <meta name=&quot;keywords&quot; content={keywords.join(', ')} />
-      <link rel=&quot;canonical&quot; href={canonicalUrl} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph */}
-      <meta property=&quot;og:title&quot; content={title} />
-      <meta property=&quot;og:description&quot; content={description} />
-      <meta property=&quot;og:image&quot; content={ogImage} />
-      <meta property=&quot;og:url&quot; content={canonicalUrl} />
-      <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
       {/* Twitter Card */}
-      <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
-      <meta name=&quot;twitter:title&quot; content={title} />
-      <meta name=&quot;twitter:description&quot; content={description} />
-      <meta name=&quot;twitter:image&quot; content={ogImage} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
       {/* Additional SEO meta tags */}
-      <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
-      <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
-      <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
-      <meta charSet=&quot;UTF-8&quot; />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="UTF-8" />
       {/* Structured Data */}
       {structuredData && (
         <script
-          type=&quot;application/ld+json&quot;
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
