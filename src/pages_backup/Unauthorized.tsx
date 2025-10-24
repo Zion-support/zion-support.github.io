@@ -1,19 +1,20 @@
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default UnauthorizedPage;
-'use client'
+'use client';
 
-        <title>Unauthorized - Zion Tech Group<>
-    </title>
-    <h1 className="text-4xl font-bold text-white mb-4">
-</>Unauthorized<>
-    </h1>
-    <p className="text-gray-300 mb-8">
-</>This page is under construction.</p>
-              Learn More;
+import React from 'react';
+
+const UnauthorizedPage = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+          Unauthorized
+        </h1>
+        <p className="text-gray-600 mb-8">
+          You are not authorized to access this page.
+        </p>
+      </div>
+    </div>
   );
 };
 
+export default UnauthorizedPage;

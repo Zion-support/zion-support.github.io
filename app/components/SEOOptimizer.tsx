@@ -1,34 +1,48 @@
 'use client';
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Navigation from './Navigation';
-import Footer from './Footer';
 
-export default function SEOOptimizerPage() {
-  return (
-    <>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            5G Data Analytics - Zion Tech Group
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional 5g data analytics - zion tech group services by Zion Tech Group.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-      
-      <Footer />
-    </>
-  );
+import React, { useEffect } from 'react';
+
+interface SEOOptimizerProps {
+  children: React.ReactNode;
 }
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
+  useEffect(() => {
+    // Optimize page for SEO
+    const optimizeSEO = () => {
+      // Add meta tags if not present
+      if (!document.querySelector('meta[name="description"]')) {
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.';
+        document.head.appendChild(meta);
+      }
+
+      // Add structured data
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "description": "Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms",
+        "url": window.location.origin,
+        "logo": `${window.location.origin}/images/logo.png`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-555-0123",
+          "contactType": "customer service"
+        }
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    };
+
+    optimizeSEO();
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default SEOOptimizer;
