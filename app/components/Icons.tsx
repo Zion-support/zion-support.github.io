@@ -1,9 +1,16 @@
+import React from 'react';
 
-export const Icon  = ({},)
+interface IconsProps {
+  // Add props here
+}
 
-      name,
-      className=": value"
-"
-export const Icon  = ({}: value,"
-      name,"
-      className=": value"
+const Icons: React.FC<IconsProps> = () => {
+  return (
+    <div>
+      <h1>Icons</h1>
+      <p>Component content goes here</p>
+    </div>
+  );
+};
+
+export default Icons;

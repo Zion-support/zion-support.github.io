@@ -1,1 +1,4 @@
-import React from 'react'
+// useEnhancedPerformance utility file
+export const useEnhancedPerformance = {
+  // Add functionality here
+};

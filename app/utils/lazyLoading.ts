@@ -1,5 +1,4 @@
-
-// Lazy loading helper function
-  importFunc: () => Promise<{ default: ComponentType<T> }>
-}"
-"
+// lazyLoading utility file
+export const lazyLoading = {
+  // Add functionality here
+};

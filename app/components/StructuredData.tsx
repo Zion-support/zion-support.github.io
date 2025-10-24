@@ -1,17 +1,16 @@
 import React from 'react';
 
-const ComponentsPage: React.FC = () => {
-  return null
-  };
+interface StructuredDataProps {
+  // Add props here
 }
-      <SEOHead>
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>"
-    </>;,"
-  ),"
-"
+
+const StructuredData: React.FC<StructuredDataProps> = () => {
+  return (
+    <div>
+      <h1>StructuredData</h1>
+      <p>Component content goes here</p>
+    </div>
+  );
+};
+
+export default StructuredData;

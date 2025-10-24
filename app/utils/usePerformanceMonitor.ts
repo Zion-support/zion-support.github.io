@@ -1,1 +1,4 @@
-import { useEffect, useState } from 'react'
+// usePerformanceMonitor utility file
+export const usePerformanceMonitor = {
+  // Add functionality here
+};

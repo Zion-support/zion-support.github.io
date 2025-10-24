@@ -1,1 +1,4 @@
-import React from 'react';'
+// useAnalyticsContext utility file
+export const useAnalyticsContext = {
+  // Add functionality here
+};

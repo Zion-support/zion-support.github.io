@@ -1,15 +1,16 @@
-  UsersIcon,
-  TrophyIcon, "
-  LightBulbIcon } from '
-  const stats  = ['
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients'
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won'
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed'
-      title: 'Innovation'
-      description: '
-      title: 'Excellence'
-      description: '
-      title: 'Partnership'
-      description: '
-      title: 'Integrity'
-      description: '
+import React from 'react';
+
+interface AboutProps {
+  // Add props here
+}
+
+const About: React.FC<AboutProps> = () => {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>Component content goes here</p>
+    </div>
+  );
+};
+
+export default About;

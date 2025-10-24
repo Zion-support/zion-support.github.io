@@ -1,10 +1,16 @@
-    // Log error to console in development
-if ($1) {}"
-  // If body"
-}"
-      console.error('
-    if (process.env.NODE_ENV === '
-      fetch('
-      method: '
-      headers: { 'Content-Type': '
-                onClick={() => window.location.href = '/'
+import React from 'react';
+
+interface LightweightErrorBoundaryProps {
+  // Add props here
+}
+
+const LightweightErrorBoundary: React.FC<LightweightErrorBoundaryProps> = () => {
+  return (
+    <div>
+      <h1>LightweightErrorBoundary</h1>
+      <p>Component content goes here</p>
+    </div>
+  );
+};
+
+export default LightweightErrorBoundary;

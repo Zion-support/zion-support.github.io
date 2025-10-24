@@ -1,1 +1,4 @@
-import React from 'react'
+// performanceUtils utility file
+export const performanceUtils = {
+  // Add functionality here
+};

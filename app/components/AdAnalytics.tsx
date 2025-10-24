@@ -1,9 +1,16 @@
-          <div className ="mt-12">"
-            <button className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-            </button>;"
-          </div>"
-        </div>"
-      </div>"
-    </div>"
-  )"
-import React from '
+import React from 'react';
+
+interface AdAnalyticsProps {
+  // Add props here
+}
+
+const AdAnalytics: React.FC<AdAnalyticsProps> = () => {
+  return (
+    <div>
+      <h1>AdAnalytics</h1>
+      <p>Component content goes here</p>
+    </div>
+  );
+};
+
+export default AdAnalytics;

@@ -1,24 +1,16 @@
-import { Helmet } from "
-      <Helmet></Helmet>"
-        <title>Mobile Optimizer - Zion Tech Group</title>"
-      </Helmet>"
-      <div  className ="mobile-optimizer-container"></div>"
-        <div  className ="mobile-optimization-content"></div>"
-    </>"
-        </div>"
-      </div>"
-    </>;,"
-  ),"
-}"
-"
-"
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>"
-"
-"
-"
+import React from 'react';
+
+interface MobileOptimizerProps {
+  // Add props here
+}
+
+const MobileOptimizer: React.FC<MobileOptimizerProps> = () => {
+  return (
+    <div>
+      <h1>MobileOptimizer</h1>
+      <p>Component content goes here</p>
+    </div>
+  );
+};
+
+export default MobileOptimizer;
