@@ -1,54 +1,34 @@
 'use client'
+import React, { useEffect } from 'react'
 
-import { useEffect } from 'react'
-
-export default function PerformanceMonitor() {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Measure page load time
-      const measurePageLoad = () => {
+    if (typeof window !== 'undefined') {
+      // Monitor performance metrics
+      const monitorPerformance = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        
         if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.navigationStart
-          console.log('Page load time:', loadTime + 'ms')
-          
-          // Track Core Web Vitals
-          if ('web-vitals' in window) {
-            import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-              getCLS((metric) => {
-                console.log('CLS:', metric)
-              })
-              getFID((metric) => {
-                console.log('FID:', metric)
-              })
-              getFCP((metric) => {
-                console.log('FCP:', metric)
-              })
-              getLCP((metric) => {
-                console.log('LCP:', metric)
-              })
-              getTTFB((metric) => {
-                console.log('TTFB:', metric)
-              })
-            })
-          }
+          const loadTime = navigation.loadEventEnd - navigation.fetchStart
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart
+          const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0
+          const firstContentfulPaint = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
+
+          // Performance metrics collected - could be sent to analytics service
+          // Metrics: loadTime, domContentLoaded, firstPaint, firstContentfulPaint
         }
       }
 
-      // Run after page load
-      if (document.readyState === 'complete') {
-        measurePageLoad()
-      } else {
-        window.addEventListener('load', measurePageLoad)
-      }
+      // Monitor after page load
+      window.addEventListener('load', monitorPerformance)
 
-      // Cleanup
       return () => {
-        window.removeEventListener('load', measurePageLoad)
+        window.removeEventListener('load', monitorPerformance)
       }
     }
   }, [])
 
   return null
 }
+
+export default PerformanceMonitor
