@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Brain, CheckCircle, Globe, Shield, Zap } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';
@@ -80,7 +81,7 @@ export default function ServicePage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
-        </div>
+        </section>
       </div>
       <Footer />
     </>

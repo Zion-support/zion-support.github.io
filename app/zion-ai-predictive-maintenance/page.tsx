@@ -1,6 +1,7 @@
 import React from 'react';
 import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 import React from "react";
 import React from "react";
@@ -18,9 +19,8 @@ const Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and AI.'
     },
     {
       icon: BarChart,

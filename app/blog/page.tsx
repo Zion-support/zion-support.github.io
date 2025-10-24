@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';
