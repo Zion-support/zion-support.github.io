@@ -1,7 +1,7 @@
-import Head from 'next/head';
+import Head as _Head from 'next/head';
 
 import Link from 'next/link';
-import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send, Clock } from 'lucide-react';
+import { ArrowRight, Calculator, Building2, Wallet, PiggyBank as _PiggyBank, BarChart as _BarChart, TrendingUp as _TrendingUp, CheckCircle, Brain, Settings as _Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send as _Send, Clock as _Clock } from 'lucide-react';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform',

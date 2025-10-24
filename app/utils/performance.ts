@@ -58,7 +58,7 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         // Use processingStart if available, otherwise calculate from startTime
-        const processingStart = (entry as PerformanceEntry & { processingStart?: number }).processingStart || entry.startTime;
+        const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime;
         this.metrics.set("FID", processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ["first-input"] });
@@ -68,8 +68,8 @@ export class PerformanceMonitor {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as PerformanceEntry & { value?: number }).value || 0;
+        if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
+          clsValue += (entry as { value?: number }).value || 0;
         }
       });
       this.metrics.set("CLS", clsValue);
@@ -90,8 +90,8 @@ export function usePerformanceMonitor() {
 
 // Utility function to measure component render time
 export function measureComponentRender(componentName: string) {
-  return function <T extends React.ComponentType<Record<string, unknown>>>(WrappedComponent: T): T {
-    return ((props: Record<string, unknown>) => {
+  return function <T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
+    return ((props: unknown) => {
       const monitor = PerformanceMonitor.getInstance();
       React.useEffect(() => {
         monitor.startTiming(`${componentName}-render`);
