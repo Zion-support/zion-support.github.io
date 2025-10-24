@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD:app-backup/ai-email-automation/page.tsx
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star, Target, Globe, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
@@ -11,6 +12,25 @@ export const metadata: Metadata = {,
       description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week.'
     type: 'website',
     url: 'https://ziontechgroup.com/ai-email-automation'}}
+=======
+import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react'
+import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group',
+  description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week.',
+  keywords: 'AI email automation, email marketing, email generation, lead scoring, email analytics, marketing automation, AI content creation',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group',
+    description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/ai-email-automation',
+  },
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-email-automation/page.tsx
 const AIEmailAutomationPage: React.FC = () => {
   const features = [
     {
@@ -121,6 +141,10 @@ const AIEmailAutomationPage: React.FC = () => {
   ]
   return (
     <>
+<<<<<<< HEAD:app-backup/ai-email-automation/page.tsx
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-email-automation/page.tsx
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]" />
@@ -141,17 +165,31 @@ const AIEmailAutomationPage: React.FC = () => {
             Transform your email marketing with AI-powered automation
             content generation, and performance optimization that increases revenue by 300%.
           </p>
+<<<<<<< HEAD:app-backup/ai-email-automation/page.tsx
           <div className="flex flex-col sm: flex-row gap-6 justify-center mb-16">
             <Link
               href="/contact"
               className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover: from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transform hover:scale-105"
+=======
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Link 
+              href="/contact" 
+              className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transform hover:scale-105"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-email-automation/page.tsx
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-8 h-8" />
             </Link>
+<<<<<<< HEAD:app-backup/ai-email-automation/page.tsx
             <Link
               href="#demo"
               className="group border-2 border-blue-400 text-blue-400 px-10 py-4 rounded-xl font-semibold hover: bg-blue-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
+=======
+            <Link 
+              href="#demo" 
+              className="group border-2 border-blue-400 text-blue-400 px-10 py-4 rounded-xl font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-email-automation/page.tsx
             >
               <span>Watch Demo</span>
               <ArrowRight className="w-8 h-8" />
@@ -257,8 +295,14 @@ const AIEmailAutomationPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD:app-backup/ai-email-automation/page.tsx
                 <Link
                   href="/contact"
+=======
+                
+                <Link 
+                  href="/contact" 
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-email-automation/page.tsx
                   className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover: from-blue-600 hover:to-cyan-700 shadow-lg shadow-blue-500/25'
@@ -299,7 +343,7 @@ const AIEmailAutomationPage: React.FC = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                <p className="text-gray-300 italic">&quot;{testimonial.content}&quot;</p>
               </div>
             ))}
           </div>
@@ -327,9 +371,15 @@ const AIEmailAutomationPage: React.FC = () => {
               <span>Start Free Trial</span>
               <ArrowRight className="w-8 h-8" />
             </Link>
+<<<<<<< HEAD:app-backup/ai-email-automation/page.tsx
             <Link
               href="/pricing"
               className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover: bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
+=======
+            <Link 
+              href="/pricing" 
+              className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-email-automation/page.tsx
             >
               <span>View All Plans</span>
               <ArrowRight className="w-8 h-8" />

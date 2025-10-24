@@ -89,14 +89,22 @@ const AIProjectManagementProPage: React.FC = () => {
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/contact"
+<<<<<<< HEAD:app-backup/ai-project-management-pro/page.tsx
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300"
+=======
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-project-management-pro/page.tsx
             >
               Get Started
               <ArrowRight className="w-8 h-8" />
             </Link>
             <Link
               href="/ai-services"
+<<<<<<< HEAD:app-backup/ai-project-management-pro/page.tsx
               className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-white transition-all duration-300"
+=======
+              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-project-management-pro/page.tsx
             >
               View All AI Services
             </Link>
@@ -195,7 +203,11 @@ const AIProjectManagementProPage: React.FC = () => {
                 </ul>
                 <Link
                   href="/contact"
+<<<<<<< HEAD:app-backup/ai-project-management-pro/page.tsx
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300"
+=======
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-project-management-pro/page.tsx
                 >
                   {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   <ArrowRight className="w-8 h-8" />
@@ -214,17 +226,30 @@ const AIProjectManagementProPage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8">
             Join thousands of teams already using our AI project management to deliver better projects faster.
           </p>
+<<<<<<< HEAD:app-backup/ai-project-management-pro/page.tsx
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors duration-300"
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-project-management-pro/page.tsx
             >
               Start Free Trial
               <ArrowRight className="w-8 h-8" />
             </Link>
+<<<<<<< HEAD:app-backup/ai-project-management-pro/page.tsx
             <Link
               href="/ai-services"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-cyan-600 transition-colors duration-300"
+=======
+            <Link 
+              href="/ai-services" 
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-project-management-pro/page.tsx
             >
               Explore All AI Services
             </Link>
