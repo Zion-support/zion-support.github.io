@@ -1,137 +1,46 @@
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const EnhancedAccessibilityPage: React.FC = () => {const features = [
-      title: 'AI-Powered Intelligence',}
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {icon: BarChart,
-      title: 'Advanced Analytics',}
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {icon: Target,
-      title: 'Precision Targeting',}
-      description: 'Target specific goals and objectives with precision and accuracy.',}
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {icon: TrendingUp,
-      title: 'Growth Optimization',}
-      description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-"
-  const benefits=";"
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '' }) => {
-(
+export default function ServicePage() {
+  return (
     <>
+      <Head>
+        <title>EnhancedAccessibility | Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedAccessibility services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       
-      <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
               EnhancedAccessibility
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
-              Advanced EnhancedAccessibility solution for modern businesses.
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional EnhancedAccessibility services designed to help your business grow and succeed.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
-        </section>
-    </>
-
-} <div className="[^"]*"> <div className="[^"]*">
-              404 <div className="[^"]*"> <AlertTriangle className="w-6 h-6 text-red-400" />
-                </div>
-              </div>
-          {/* Error Message*/} <h1 className="[^"]*">
-Page Not Found
-          </h1> <p className="[^"]*">
-Oops! The page you"re looking for seems to have vanished into the digital void. Don"t, worry,even our AI can"t predict everything!
-          </p>
-
-          {/* Search Suggestion*/} <div className="[^"]*"> <div className="[^"]*"> <Search className="w-6 h-6 text-cyan-400 mr-2" />
-    <h1 className="text-lg font-semibold text-white">What were you looking for?</h2>
-                </div>
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: "</p>",<div className="[^"]*">
-              {[{ name: "Home",path: "/" }
-                { name: "About",path: "/about" }
-                { name: "Services",path: "/services" }
-                { name: "Contact",path: "/contact" })
-              ].map((item, index) => (<Link key = {index} href = {item.path} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
-                  {item.name}
-                </Link>
-              ))}
-                </div>
-              </div>
-          {/* Action Buttons*/}
-
-    <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
-      <Link href="/" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"> <Home className="w-5 h-5 mr-2" />
-Go Home
-
-      </Link>
-    </div>
-            <button
-onClick={() => window.history.back()
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"> <ArrowLeft className="w-5 h-5 mr-2" />
-Go Back
-            </button>
-              </div>
-          {/* Help Section*/} <div className="[^"]*">
-    <h1 className="text-lg font-semibold text-white mb-3">Need Help?</h3> <p className="[^"]*">
-Our support team is here to help you navigate our services and find exactly what you"re looking for.
-            </p>
-    <div className="flex flex-col sm: flex-row gap-3 justify-center">
-      <Link href="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"> <RefreshCw className="w-4 h-4 mr-2" />
-Contact Support
-      </Link>
-    </div>
-              <a href="mailto:support@ziontechgroup.com" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
-Send Email
-              </a>
-                </div></div>
-          {/* Fun Fact */,},<div className="mt-8 p-4 bg-slate-800/30 rounded-lg" /><p className="text-sm text-gray-400" />,<span className="text-cyan-400">Fun Fact: </span> Even our AI gets"
-confused sometimes. That"s why we have humans to help when things
-go wrong! 🤖
-            </p>
-              </div>
-          {/* Fun Fact*/} <div className="[^"]*"> <p className="[^"]*">
-    <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets
-confused sometimes. That"s why we have humans to help when things
-go wrong! 🤖
-            </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-      <Footer /></Footer>
     </>
-  );,
-};
-
-export default EnhancedAccessibilityPag;e;"
+  );
+}

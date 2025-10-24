@@ -1,139 +1,46 @@
-'use client'
-import { useEffect } from 'react'
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const CacheManager = () => {
-  useEffect(() => {
-    // Service Worker registration for caching
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered:', registration);
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
-        }
-      }
-    }
-
-    // Cache API for dynamic caching
-    const setupCacheStrategy = () => {
-      const CACHE_NAME = 'zion-tech-cache-v1'
-      const CACHE_URLS = [
-        '/',
-        '/about',
-        '/services',
-        '/contact',
-        '/styles/main.css',
-        '/scripts/main.js'
-      ]
-
-      // Cache static assets
-      const cacheStaticAssets = async () => {
-        try {
-          const cache = await caches.open(CACHE_NAME);
-          await cache.addAll(CACHE_URLS);
-          console.log('Static assets cached successfully');
-        } catch (error) {
-          console.error('Failed to cache static assets:', error);
-        }
-      }
-
-      // Cache API responses
-      const cacheAPIResponses = async (request: Request) => {
-        try {
-          const cache = await caches.open(CACHE_NAME)
-          const response = await fetch(request)
-          
-          if (response.ok) {
-            cache.put(request, response.clone())
-          }
-          
-          return response
-        } catch (error) {
-          console.error('Failed to cache API response:', error);
-          return fetch(request);
-        }
-      }
-
-      // Initialize caching
-      cacheStaticAssets()
-
-      // Intercept fetch requests for caching
-      const originalFetch = window.fetch
-      window.fetch = async (input, init) => {
-        const request = new Request(input, init)
-        
-        // Check if request should be cached
-        if (request.url.includes('/api/') || request.url.includes('/data/')) {
-          return cacheAPIResponses(request)
-        }
-        
-        return originalFetch(input, init)
-      }
-    }
-
-    // Memory management for large objects
-    const setupMemoryManagement = () => {
-      // Clean up unused objects periodically
-      const cleanupInterval = setInterval(() => {
-        if ((performance as any).memory) {
-          const memoryInfo = (performance as any).memory
-          const usedMemory = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize
-          
-          // If memory usage is high, trigger garbage collection
-          if (usedMemory > 0.8) {
-            // Force garbage collection if available
-            if ((window as any).gc) {
-              (window as any).gc()
-            }
-          }
-        }
-      }, 30000) // Check every 30 seconds
-
-      // Cleanup on page unload
-      window.addEventListener('beforeunload', () => {
-        clearInterval(cleanupInterval)
-      })
-    }
-
-    // Image lazy loading with intersection observer
-    const setupLazyLoading = () => {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
-            if (img.dataset.src) {
-              img.src = img.dataset.src
-              img.classList.remove('lazy')
-              imageObserver.unobserve(img)
-            }
-          }
-        })
-      }, {
-        rootMargin: '50px 0px',
-        threshold: 0.01
-      })
-
-      // Observe all lazy images
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img)
-      })
-    }
-
-    // Initialize all caching strategies
-    registerServiceWorker()
-    setupCacheStrategy()
-    setupMemoryManagement()
-    setupLazyLoading()
-
-    // Cleanup function
-    return () => {
-      // Cleanup any intervals or observers
-      console.log('CacheManager cleanup completed');
-    }
-  }, [])
-
-  return null
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>CacheManager | Zion Tech Group</title>
+        <meta name="description" content="Professional CacheManager services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              CacheManager
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional CacheManager services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-
-export default CacheManager

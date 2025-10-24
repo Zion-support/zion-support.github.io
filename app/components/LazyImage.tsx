@@ -1,29 +1,46 @@
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-        <title>LazyImage</title>
-        
-        <meta name="description" content="Advanced LazyImage solution for modern businesses." //>
-        <meta name="keywords" content="AI,artificial, intelligence, LazyImage, AI, solutions, intelligent automation" //>
-
-export const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
-(
-    <div className="{`lazyimage" ${className}`}>
-      {children}
-    </div>
-      <Navigation//> <div className="[^"]*">
-        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
-LazyImage</h1>
-            </h1> <p className="[^"]*">
-Advanced LazyImage solution for modern businesses.</p>
-            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
-Get Started</button>
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
-r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
-Learn More</button>
-
-
-export default LazyImag;e;
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>LazyImage | Zion Tech Group</title>
+        <meta name="description" content="Professional LazyImage services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              LazyImage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional LazyImage services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

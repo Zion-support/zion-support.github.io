@@ -1,116 +1,46 @@
-'use client';
-import React, { useState, useEffect } from 'react'
-import { X  } from "lucide-react";
-import { Downlo, a, d } from "lucide-react";
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void >
-        </void>
-        </void>
-        </void>
-</void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
-</{ outcome: 'accepted' | 'dismissed' }>
-}
-;
-const PWAInstaller: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-  useEffect(() => {
-    // Check if app is already installed;"
-    const checkInstalled=";";}
-      if (window.matchMedia('(display-mode: standalone)').matches) {}
-        setIsInstalled(true)
-    </div>
-  ),
-}
-    }
-    checkInstalled()
-
-    // Listen for beforeinstallprompt event;"
-    const handleBeforeInstallPrompt=";";
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
-
-() => {window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)}
-      window.removeEventListener('appinstalled', handleAppInstalled)
-    }
-  }, []);
-"
-  const handleInstallClick=";";"
-      if (outcome="==" 'accepted') {// Installation successful
-      } else {// Installation dismissed
-      }
-      setDeferredPrompt(null);
-      setShowInstallPrompt(false)
-    } catch (error) {// console.error('Installation failed: ', error)
-    }
-  };
-  const handleDismiss=";"
-    // Don't show again for this session;
-    sessionStorage.setItem('pwa-install-dismissed', 'true')
-  }
-
-  // Don't show if already installed or dismissed this session;
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {}
-    return null
-  }
-;</BeforeInstallPromptEvent>
-(</BeforeInstallPromptEvent>"
-    <div className=""fixed" bottom-4 right-4 z-50 max-w-sm"></div>"
-      <div className=""bg-slate-800/95" backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4"></div>"
-        <div className=""flex" items-start justify-between mb-3"></div>"
-          <div className=""flex" items-center space-x-2"></div>"
-            <div className=""w-8" h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center"></div>"
-              <Download className=""w-4" h-4 text-white" /></Download>
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>PWAInstaller | Zion Tech Group</title>
+        <meta name="description" content="Professional PWAInstaller services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              PWAInstaller
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional PWAInstaller services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
             </div>
-            <div></div>"
-              <h3 className=""text-white" text-sm font-medium">Install App</h3>"
-              <p className=""text-gray-300" text-xs">Get quick access to Zion Tech Group</p>
-            </div>
-
-            <//div>
           </div>
-          <button;"
-            onClick="{handleDismiss};
-            className=""text-gray-400" hover:text-white transition-colors""
-            aria-label=""Dismiss" install prompt"
-          ></button>"
-            <X className=""w-4" h-4" /></X>
-          </button>
-        </div>"
-        <div className=""space-y-2""></div>
-          <button;"
-            onClick="{handleInstallClick};
-            className=""w-full" bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
-          >;</button>
-            Install Now</button>
-          </button>
-          <button;"
-            onClick="{handleDismiss};
-            className=""w-full" bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
-          >);</button>
-            Not Now</button>
-          </button>
-        </div>"
-        <div className=""mt-3" text-xs text-gray-400"></div>
-          <p>• Faster loading</p>
-<//p>
-          <p>• Offline access</p>
-<//p>
-          <p>• Native app experience</p>
-<//p>
         </div>
-
-        <//div>
       </div>
-
-      <//div>
-    </div>
-
-    <//div>)
-  )
+    </>
+  );
 }
-;
-
-export default PWAInstaller;"

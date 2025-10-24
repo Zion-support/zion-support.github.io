@@ -1,134 +1,46 @@
-import React from 'react';
-import Link from 'next/link';
-import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-  const popularPages = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" }
-  ];
-
-(
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-      <div className="max-w-2xl mx-auto text-center">
-        {/* 404 Error */}
-        <div className="mb-8">
-          <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-4">
-            404
-          </h1>
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Page Not Found
-          </h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2b3c
-            </div>
-          </div>
-
-          {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
-          </p>
-        </div>
-
-        {/* Search Suggestion */}
-        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
-          <div className="flex items-center justify-center mb-4">
-            <Search className="w-6 h-6 text-cyan-400 mr-2" />
-            <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
-          </div>
-
-          {/* Action Buttons */}
-          <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'></div>
-            <Link
-              href='/' className='bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'></Link>
-              <Home className='w-5 h-5 mr-2' /></Home>
-              Go Home
-            </Link>
-            
-            <button
-              onClick={() => window.history.back(,)}className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center'
-            >
-              <ArrowLeft className='w-5 h-5 mr-2' /></ArrowLeft>
-              Go Back
-            </button>
-
-          {/* Help Section */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Our support team is here to help you navigate our services and find exactly what you're looking for.
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>404 | Zion Tech Group</title>
+        <meta name="description" content="Professional 404 services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              404
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional 404 services designed to help your business grow and succeed.
             </p>
-            <div className='flex flex-col sm: flex-row gap-3 justify-center'></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                key={index}
-                href={page.path}
-                className="bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 hover:text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300 border border-purple-500/30"
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                {page.name}
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href='mailto:support@ziontechgroup.com' className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center'></a>
-                Send Email
-              </a>
-            </div>
-          </div>
-          
-          <div className="mt-12">
-            <p className="text-gray-400 mb-6">Popular pages:</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Services
-              </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/about"
                 className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
               >
-                Contact Us
+                Learn More
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/"
-            className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center justify-center"
-          >
-            <Home className="w-5 h-5 mr-2" />
-            Go Home
-          </Link>
-          <button
-            onClick={() => window.history.back()}
-            className="border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center justify-center"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Go Back
-          </button>
-        </div>
-
-        {/* Additional Help */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-400 text-sm mb-4">
-            Still can't find what you're looking for?
-          </p>
-          <Link
-            href="/contact"
-            className="text-purple-400 hover:text-purple-300 font-medium transition-colors duration-300 flex items-center justify-center"
-          >
-            <Mail className="w-4 h-4 mr-2" />
-            Contact Support
-          </Link>
-        </div>
       </div>
-    </div>
+    </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-
-
-
-export default NotFoun;d;

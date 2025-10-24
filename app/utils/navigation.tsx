@@ -1,57 +1,46 @@
-'use client';
-export const useRouter = () => {
-  const push = useCallback((url: string => {,
-    window.location.href = url;}
-  }, [])
-  const replace = useCallback((url: string => {,
-export const useRouter = () => {}
-  const push = useCallback((url: string => {}
-    window.location.href = url;}
-  }, [])
-  const replace = useCallback((url: string => {}
-    window.location.replace(url);}
-  }, [])
-  const back = useCallback(() => {}
-    window.history.back();}
-  }, [])
-  const forward = useCallback(() => {}
-    window.history.forward();}
-  }, [])
-  const refresh = useCallback(() => {}
-    window.location.reload();}
-  }, [])
-  return {}
-    push,
-    replace,
-    back,
-    forward,
-    refresh}
-  }
-}
-export const usePathname = useCallback((...args) => {}
-  return window.location.pathname;}
-}
-export const useSearchParams = useCallback((...args) => {}
-  const params = new URLSearchParams(window.location.search)
-  return params;}
-}
-export const useRouter = () => {/* TODO: Fix JSX expression */}
-  }, []);
-  const replace = useCallback((ur)
-  l: string => {/* TODO: Fix JSX expression */}
-  }, []);
-  const back = useCallback(() => {/* TODO: Fix JSX expression */}
-  }, []);
-  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
-  }, []);
-  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
-  }, []);
-  return {/* TODO: Fix JSX expression */}
-  };
-};
-export const usePathname = () => {/* TODO: Fix JSX expression */}
-};
-export const useSearchParams = () => {/* TODO: Fix JSX expression */}
-};
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default { useRouter, usePathname, useSearchParams };
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>Navigation | Zion Tech Group</title>
+        <meta name="description" content="Professional navigation services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Navigation
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional navigation services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

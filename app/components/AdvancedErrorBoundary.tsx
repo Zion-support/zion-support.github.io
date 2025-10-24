@@ -1,118 +1,46 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-interface AdvancedErrorBoundaryProps {
-  children: ReactNode;
-  className?: string;
-  children: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
-interface ErrorReport {
-  errorId: string;
-  error: Error;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-}
-
-class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
-  constructor(props: "AdvancedErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false "}
-
-  }
-
-  private reportError = (error: "Error", errorInfo: "ErrorInfo) => {
-    const errorReport = {
-      errorId: this.state.errorId || this.generateErrorId()"
-      error
-      errorInfo
-      timestamp: "new Date().toISOString()",
-    userAgent: "navigator.userAgent"
-      url: "window.location.href"
-    }
-
-    //Log to console in development
-    if(process.env.NODE_ENV = == "development") {  
-      console.error("Error Boundary caught an error: """, error, errorInfo)
-  }
-
-  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {
-    this.setState({
-      hasError: true"
-      error
-      errorInfo)
-    })
-    // Call custom error handler if provided;
-    if (this.props.onError) {}
-      this.props.onError(error, errorInfo)
-    }
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)
-    }
-    // Log error to external service in production;"
-    if (process.env.NODE_ENV="==" 'production') {}
-      this.logErrorToService(error, errorInfo)
-    }
-  }
-
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {
-      errorId: this.state.errorId,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString()
-    }
-    
-    // Send to external service (implement as needed)
-    console.error('Error logged to service:', errorData)
-  }
-
-    return`error_${Date.now()_${Math.random().toString(36).substr(2, 9)`
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>);
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-            <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>AdvancedErrorBoundary | Zion Tech Group</title>
+        <meta name="description" content="Professional AdvancedErrorBoundary services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              AdvancedErrorBoundary
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional AdvancedErrorBoundary services designed to help your business grow and succeed.
             </p>
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <RefreshCw className="h-4 w-4 mr-2" />
-                Try Again
-              </button>
-              <button onClick={() => window.location.href="/"} > <Home className="icon" />
-                Go Home
-              </button>
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
-      )
-   , }
-
-    return this.props.children
-  }
+      </div>
+    </>
+  );
 }
-
-
-export default AdvancedErrorBoundary;

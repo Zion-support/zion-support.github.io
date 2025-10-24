@@ -1,47 +1,46 @@
 "use client"
 import React from "react";
-import { Helmet  } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe   } from "lucide-react";
-import { Navigation  } from "../components/Navigation";
-const EnhancedPerformanceMonitorPage: "React.FC = () => {
-const benefits = [
-    "Increase efficiency by up to 50%"","Reduce costs by 30% with automation"
-    "Improve decision-making with AI insights"
-    "Scale operations without proportional staff increases"
-    "Gain competitive advantage with advanced technology" <div className="[^"]*">
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-        </section>
-
-        {/* Features Section*/}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="[^"]*"> <div className="[^"]*">
-    <h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
-Key Features
-              </h2> <p className="[^"]*">
-Our enhanced performance monitoring system provides comprehensive insights and optimization.
-              </p>,<div className="[^"]*">
-              {features.map((feature,index) => (<divkey = {index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors" />
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />,<h1 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (<li key = {idx} className="flex items-center text-sm text-gray-400"> <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-'use client'
-import React from 'react'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail } from 'lucide-react'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-
-    };
-  ];
-
-  const benefits=";"
-    'Gain competitive advantage with advanced technology'"
-            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>EnhancedPerformanceMonitor | Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedPerformanceMonitor services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              EnhancedPerformanceMonitor
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional EnhancedPerformanceMonitor services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
             </div>
-          </div>"
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

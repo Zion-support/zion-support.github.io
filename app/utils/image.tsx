@@ -1,109 +1,46 @@
-import React from 'react'
-import React, { useState, useCallback } from 'react'
-'use client'
-'use client'
-interface ImageProps {
-src: strin,
-      g,
-alt: string,;}
-interface ImageProps {}
-src: string,
-alt: string;
-width?: number;
-height?: number;
-className?: string;
-priority?: boolean
-_quality?: number,
-src: string,
-alt: string,
-width?: number;
-height?: number;
-className?: string;
-priority?: boolean
-_quality?: number;
-src: string,
-alt: string,
-width?: number;
-height?: number;
-className?: string;
-priority?: boolean
-_quality?: number
-_placeholder?: 'blur' | 'empty'
-_blurDataURL?: string;
-fill?: boolean;
-sizes?: string;
-style?: React.CSSProperties;
-onLoad?: () => void;
-onError?: () => void;}
-}
-export const Image: React.FC<ImageProps>= ({;}</ImageProps>;
-export const Image: React.FC<ImageProps> = ({}</ImageProps>
-src,</ImageProps>;
-export const Image: React.FC<ImageProps> = ({,
-src;
-alt,
-width,
-height,
-className,
-priority: "false,";"
-quality: "75,";"
-placeholder: "'empty',";
-blurDataURL,"
-fill: "false,";
-sizes,
-style,}
-onLoad,}
-onError,}
-...props}
-}) => {}
-const [, setIsLoaded] = useState(false);
-const [hasError, setHasError] = useState(false);"
-export const handleLoad=";";
-if (onLoad) onLoad();}
-}, [onLoad]);"
-export const handleError=";";
-if (onError) onError();}
-}, [onError]);"
-const imageStyle: React.CSSProperties="{"
-...style
-...(fill && {
-position: 'absolute',}
-top: 0,}
-left: 0,}
-const imageStyle: React.CSSProperties="{}
-...style,
-...(fill && {}
-position: 'absolute',
-top: 0,
-left: 0,
-width: '100%',
-height: '100%',
-objectFit: 'cover'}
-})</ImageProps>
-}</ImageProps>;
-if (hasError) {</ImageProps>}
-(</ImageProps>;});
-if (hasError) {}
-(
-    <div});
-if (hasError) {;}
-(<div}
-'use client';
-import React, {useState, useCallback } from 'react'
-interface ImageProps {/* TODO: Fix JSX expression */}
-}
-export const,);
-Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
-}) => {/* TODO: Fix JSX expression */}
-}, [onLoad]);"
-export const handleError=";";"
-loading="{priority" ? 'eager' : 'lazy'}
-onLoad="{handleLoad};
-onError="{handleError}
-{...props}
->)</img>
-}</img>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default Image;</img>"
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>Image | Zion Tech Group</title>
+        <meta name="description" content="Professional image services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Image
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional image services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

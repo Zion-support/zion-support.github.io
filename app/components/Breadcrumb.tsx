@@ -1,66 +1,46 @@
-import React from 'react'
-import { Home, ChevronRight } from 'lucide-react'
-import { useLocation } from 'react-router-dom'
+"use client"
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-interface BreadcrumbItem {
-  name: string
-  path: string
-  icon?: React.ComponentType<{ className?: string }>
-}
-
-const Breadcrumb: React.FC = () => { const pathname = usePathname();
-  const pathnames = pathname.split("/").filter((x) => x);
-  
-  if (pathnames.length === 0) {
-    return null; }
-  }
-
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
-  const breadcrumbItems: BreadcrumbItem[] = [
-    { name: 'Home', path: '/', icon: Home }
-  ]
-
-  pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/')
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
-    breadcrumbItems.push({ name, path, icon: null })
-  })
-
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
-(
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-              Home
-            </Link>
-          </li>
-          { pathnames.map((name, index) => {" }
-            const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
-            const isLast = index === pathnames.length - 1;
-(
-              <li key={name} className="flex items-center">
-                <svg className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                { isLast ? (
-                  <span className="text-white font-medium">" }
-                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, " ")}
-                  </span>
-                ) : (
-                  <Link href={routeTo} className="text-gray-400 hover:text-white transition-colors">
-                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, " ")}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ol>
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>Breadcrumb | Zion Tech Group</title>
+        <meta name="description" content="Professional Breadcrumb services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Breadcrumb
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional Breadcrumb services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </>
   );
-};
-
-"`
-export default Breadcrumb;
+}
