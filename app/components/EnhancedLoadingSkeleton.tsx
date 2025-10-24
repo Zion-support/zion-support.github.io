@@ -1,11 +1,11 @@
 import React from 'react';
 
 interface EnhancedLoadingSkeletonProps {
-  lines?: number;
-  showAvatar?: boolean;
-  showImage?: boolean;
-  height?: string;
-  className?: string;
+  lines?: number
+  showAvatar?: boolean
+  showImage?: boolean
+  height?: string
+  className?: string
 }
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
@@ -16,35 +16,37 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   className = '',
 }) => {
   return (
-    <div className={`animate-pulse ${className}`} style={{ height }}>
-      <div className="space-y-4">
+    <div className={`animate-pulse ${className}`} style={{ height }}></div>
+      <div className="space-y-4"></div>
         {showAvatar && (
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4"></div>
             <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
-            <div className="space-y-2 flex-1">
+            <div className="space-y-2 flex-1"></div>
               <div className="h-4 bg-gray-300 rounded w-1/4"></div>
               <div className="h-3 bg-gray-300 rounded w-1/2"></div>
             </div>
           </div>
-        )}
+        )
         
         {showImage && (
           <div className="w-full h-48 bg-gray-300 rounded-lg"></div>
-        )}
+        )
         
-        <div className="space-y-2">
+        <div className="space-y-2"></div>
           {Array.from({ length: lines }).map((_, index) => (
             <div
-              key={index}
+              key={index
               className={`h-4 bg-gray-300 rounded ${
                 index === lines - 1 ? 'w-3/4' : 'w-full'
-              }`}
+              }`
             ></div>
-          ))}
+          ))
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default EnhancedLoadingSkeleton;
+}
+
+export default EnhancedLoadingSkeleton;}
