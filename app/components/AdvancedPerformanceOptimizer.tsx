@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
@@ -29,10 +30,43 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     lcp: 0,
     fid: 0,
     cls: 0,
+=======
+import React, { useEffect, useCallback, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number
+  fid: number
+  cls: number
+  fcp: number
+  ttfb: number
+}
+
+interface AdvancedPerformanceOptimizerProps {
+  enableWebVitals?: boolean
+  enableAdvancedCaching?: boolean
+  enableImageOptimization?: boolean
+  enablePreloading?: boolean
+  enableServiceWorker?: boolean
+}
+
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({;
+  enableWebVitals = true,
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enablePreloading = true,
+  enableServiceWorker = true
+}) => {
+  const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({;
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     ttfb: 0
   })
 
   // Web Vitals monitoring
+<<<<<<< HEAD
   useEffect(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
@@ -75,10 +109,66 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       }
 
       measureWebVitals()
+=======
+  const measureWebVitals = useCallback(() => {;
+    if (enableWebVitals && typeof window !== 'undefined') {
+      // Measure Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
+        setPerformanceMetrics(prev => ({
+          ...prev,
+          lcp: lastEntry.renderTime || lastEntry.loadTime || 0
+        }))
+      })
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+
+      // Measure First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries();
+        entries.forEach((entry: PerformanceEntry) => {
+          const fid = (entry as any).processingStart - entry.startTime;
+          setPerformanceMetrics(prev => ({
+            ...prev,
+            fid
+          }))
+        })
+      })
+      fidObserver.observe({ entryTypes: ['first-input'] })
+
+      // Measure Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries();
+        entries.forEach((entry: PerformanceEntry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += entry.value
+            setPerformanceMetrics(prev => ({
+              ...prev,
+              cls: clsValue
+            }))
+          }
+        })
+      })
+      clsObserver.observe({ entryTypes: ['layout-shift'] })
+
+      // Measure First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          setPerformanceMetrics(prev => ({
+            ...prev,
+            fcp: entry.startTime
+          }))
+        })
+      })
+      fcpObserver.observe({ entryTypes: ['paint'] })
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     }
   }, [enableWebVitals])
 
   // Advanced caching strategies
+<<<<<<< HEAD
   const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return
 
@@ -90,10 +180,24 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         })
         .catch((registrationError) => {
           // Service Worker registration failed
+=======
+  const setupAdvancedCaching = useCallback(() => {;
+    if (typeof window === 'undefined') return
+
+    // Service Worker registration
+    if ('serviceWorker' in navigator && enableServiceWorker) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered:', registration)
+        })
+        .catch((registrationError) => {
+          console.error('Service Worker registration failed:', registrationError)
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         })
     }
 
     // Memory-based caching for API responses
+<<<<<<< HEAD
     const cache = new Map()
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
@@ -109,10 +213,28 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         cache.set(cacheKey, response.clone())
       }
 
+=======
+    const cache = new Map();
+    const originalFetch = window.fetch;
+    window.fetch = async (input, init) => {
+      const url = typeof input === 'string' ? input : input.url;
+      const cacheKey = `${url}-${JSON.stringify(init)}`;
+      
+      if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+      }
+      
+      const response = await originalFetch(input, init);
+      if (response.ok) {
+        cache.set(cacheKey, response.clone())
+      }
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
       return response
     }
   }, [enableServiceWorker])
 
+<<<<<<< HEAD
   // Image optimization with WebP and lazy loading
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return
@@ -146,10 +268,30 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   // Critical resource preloading
   const preloadCriticalResources = useCallback(() => {
+=======
+  // Image optimization
+  const optimizeImages = useCallback(() => {;
+    if (typeof window === 'undefined') return
+
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy'
+      }
+      if (!img.decoding) {
+        img.decoding = 'async'
+      }
+    })
+  }, [])
+
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     if (typeof window === 'undefined') return
 
     const criticalResources = [
       '/fonts/inter-var.woff2',
+<<<<<<< HEAD
       '/css/critical.css',
       '/js/main.js'
     ]
@@ -179,12 +321,24 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       link.rel = hint.rel
       link.href = hint.href
       if (hint.rel === 'preconnect') {
+=======
+      '/css/critical.css'
+    ]
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload'
+      link.href = resource
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
+      if (resource.endsWith('.woff2')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         link.crossOrigin = 'anonymous'
       }
       document.head.appendChild(link)
     })
   }, [])
 
+<<<<<<< HEAD
   // Critical CSS inlining
   const inlineCriticalCSS = useCallback(() => {
     if (typeof window === 'undefined') return
@@ -203,6 +357,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   // Performance monitoring and reporting
   const reportPerformanceMetrics = useCallback(() => {
+=======
+  // Performance monitoring and reporting
+  const reportPerformanceMetrics = useCallback(() => {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     if (typeof window === 'undefined') return
 
     // Report to analytics
@@ -231,6 +389,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if (enablePreloading) {
       preloadCriticalResources()
     }
+<<<<<<< HEAD
     if (enableResourceHints) {
       addResourceHints()
     }
@@ -238,6 +397,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       inlineCriticalCSS()
     }
   }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS])
+=======
+    if (enableWebVitals) {
+      measureWebVitals()
+    }
+  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 
   useEffect(() => {
     if (enableWebVitals && performanceMetrics.lcp > 0) {
@@ -248,4 +413,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   return null
 }
 
+<<<<<<< HEAD
 export default AdvancedPerformanceOptimizer
+=======
+export default AdvancedPerformanceOptimizer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d

@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 export default function AIContentGeneratorPage() {
   const features = [
@@ -26,27 +26,33 @@ export default function AIContentGeneratorPage() {
       benefits: ['Keyword research', 'Content optimization', 'Meta descriptions', 'Schema markup']
     }
   ];
+=======
+
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+export default function AiContentGeneratorPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Generator</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your content creation with our advanced AI-powered writing assistant. Generate high-quality, engaging content for any platform or purpose.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-              Start Generating
-              <ArrowRight className="w-8 h-8" />
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-              View Examples
-            </button>
-          </div>
+    <>
+      <title>AiContentGenerator - Zion Tech Group</title>
+        <meta name="description" content="Professional aicontentgenerator services by Zion Tech Group." />
+      
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">AiContentGenerator</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional aicontentgenerator services by Zion Tech Group.</p>
+          
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </div>
+<<<<<<< HEAD
       </section>
       {/* Features Section */}
       <section className="py-20">
@@ -101,5 +107,9 @@ export default function AIContentGeneratorPage() {
         </div>
       </section>
     </div>
+=======
+      </div>
+</>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   );
 }

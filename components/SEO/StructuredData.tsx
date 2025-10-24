@@ -9,6 +9,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
       <h2>StructuredData</h2>
       <p>This component is under construction.</p>
     </div>
-  )
-}
+  );
+};
 export default StructuredData
