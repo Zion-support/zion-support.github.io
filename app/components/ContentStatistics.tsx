@@ -24,7 +24,7 @@ const Page: React.FC = () => {
       years: 10,
       countries: 25,
       uptime: 99.9
-    };
+    }
 
     const duration = 2000
     const steps = 60

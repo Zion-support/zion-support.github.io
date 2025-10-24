@@ -6,7 +6,7 @@
 
 // Declare gtag function for Google Analytics
 declare global {
-  function gtag(...args: any[]): void
+  function gtag(...args: any[]): void;
 }
 
 const performanceConfig = {
@@ -121,7 +121,6 @@ class MonitoringService {
           }
         })
         ttfbObserver.observe({ entryTypes: ['navigation'] })
-
       } catch (error) {
         // eslint-disable-next-line no-console
         console.warn('Web Vitals monitoring failed:', error)
@@ -197,9 +196,21 @@ class MonitoringService {
   }
 
   private reportMetric(name: string, value: number | object): void {
+    // Sample rate
+    if (Math.random() > performanceConfig.monitoring.sampleRate) {
+      return
+    }
+
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.log(`[Performance] ${name}:`, value)
+    }
+
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+    if (thresholds && typeof value === 'number') {
+      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
+      // eslint-disable-next-line no-console
+      console.log(`Web Vital ${name}:`, value, `(${rating})`)
     }
 
     // Send to analytics
@@ -239,6 +250,38 @@ class MonitoringService {
   public clearErrors(): void {
     this.errors = []
   }
+
+  public measureMemory(): void {
+    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      if (memory) {
+        // eslint-disable-next-line no-console
+        console.log('Memory usage:', {
+          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
+          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+        })
+      }
+    }
+  }
+
+  public measureNavigationTiming(): void {
+    if ('performance' in window && 'getEntriesByType' in performance) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (navigation) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', {
+          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
+          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
+          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
+          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
+          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
+          'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
+        })
+      }
+    }
+  }
 }
 
 // Export singleton instance
@@ -258,3 +301,7 @@ export const trackPageView = (pagePath: string) => {
     })
   }
 }
+
+// Singleton instance
+const monitoring = new MonitoringService()
+export default monitoring;
