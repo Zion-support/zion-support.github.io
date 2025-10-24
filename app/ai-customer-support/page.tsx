@@ -1,158 +1,143 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MessageCircle, Clock, Users, Shield } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+export const dynamic = 'force-dynamic';
 
-const AICustomerSupportPage: React.FC = () => {
-  const _features = [
+const AiCustomerSupportPage: React.FC = () => {
+  const features = [
     {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: '24/7 AI Chat Support',
-      description: 'Provide instant, intelligent customer support with our advanced AI chatbot that understands context and resolves issues automatically.',
-      benefits: ['Instant responses', 'Context awareness', 'Multi-language support', 'Escalation to humans']
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Response Time Optimization',
-      description: 'Reduce average response time from hours to seconds with intelligent routing and automated responses.',
-      benefits: ['90% faster responses', 'Smart routing', 'Priority queuing', 'Auto-escalation']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Human-AI Collaboration',
-      description: 'Seamlessly blend AI automation with human expertise for complex issues that require personal touch.',
-      benefits: ['Smart handoffs', 'Context preservation', 'Agent assistance', 'Quality assurance']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and SOC 2 certification.',
-      benefits: ['Data encryption', 'Compliance ready', 'Access controls', 'Audit trails']
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
-  const _pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small businesses with basic support needs',
-      features: [
-        '1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email integration',
-        'Standard analytics',
-        'Email support',
-        '5 team members'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for growing businesses with moderate support volume',
-      features: [
-        '5,000 conversations/month',
-        'Advanced AI chatbot',
-        'Multi-channel support',
-        'Advanced analytics',
-        'Priority support',
-        '25 team members',
-        'Custom integrations',
-        'Knowledge base'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations with high support volume',
-      features: [
-        'Unlimited conversations',
-        'Premium AI chatbot',
-        'All channels supported',
-        'Custom analytics',
-        '24/7 phone support',
-        'Unlimited team members',
-        'Custom integrations',
-        'Advanced knowledge base',
-        'API access',
-        'White-label options'
-      ],
-      popular: false
-    }
-  ];
-
-  const _testimonials = [
-    {
-      name: 'Jennifer Martinez',
-      role: 'Customer Success Manager',
-      company: 'E-commerce Plus',
-      content: 'Our customer satisfaction increased by 40% after implementing Zion Tech Group\'s AI support. Response times went from 2 hours to 30 seconds.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      role: 'VP of Operations',
-      company: 'TechStart Inc.',
-      content: 'The AI handles 80% of our support tickets automatically, allowing our team to focus on complex issues. It\'s been a game-changer.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Thompson',
-      role: 'Head of Customer Experience',
-      company: 'Global Services',
-      content: 'The multilingual support capability helped us expand to 15 new markets without hiring additional support staff.',
-      rating: 5
-    }
-  ];
-
-  const _stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '90%', label: 'Faster Response Time' },
-    { number: '80%', label: 'Issues Resolved Automatically' },
-    { number: '24/7', label: 'Always Available' }
-  ];
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   return (
     <>
-      <Helmet>
-        <title>AI Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Enhance customer experience with AI-powered support solutions including chatbots and automated assistance." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Customer Support
+      
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Customer Support
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Deliver exceptional customer support with AI-powered chatbots, automated responses, and intelligent assistance.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai customer support solution for modern businesses.
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Intelligent Chatbots</h3>
-              <p className="text-gray-600">AI-powered chatbots that understand and respond to customer queries.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Ticket Routing</h3>
-              <p className="text-gray-600">Automated ticket classification and routing to appropriate agents.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Sentiment Analysis</h3>
-              <p className="text-gray-600">Real-time customer sentiment analysis and response optimization.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
+      <Footer />
     </>
   );
 };
 
-export default AICustomerSupportPage;
+export default AiCustomerSupportPage;

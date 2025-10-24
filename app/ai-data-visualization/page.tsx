@@ -1,162 +1,143 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+export const dynamic = 'force-dynamic';
 
-const AIDataVisualizationPage: React.FC = () => {
-  const _features = [
+const AiDataVisualizationPage: React.FC = () => {
+  const features = [
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that automatically update with real-time data and provide deep insights.',
-      benefits: ['Real-time updates', 'Interactive charts', 'Custom layouts', 'Mobile responsive']
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: <PieChart className="w-6 h-6" />,
-      title: 'AI-Powered Insights',
-      description: 'Let AI analyze your data and automatically generate insights, trends, and recommendations.',
-      benefits: ['Automatic insights', 'Trend detection', 'Anomaly detection', 'Predictive analytics']
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: BarChart,
       title: 'Advanced Analytics',
-      description: 'Perform complex statistical analysis, forecasting, and predictive modeling with built-in AI algorithms.',
-      benefits: ['Statistical analysis', 'Forecasting', 'Predictive modeling', 'Machine learning']
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: 'Visual Storytelling',
-      description: 'Transform complex data into compelling visual stories that engage and inform your audience.',
-      benefits: ['Story templates', 'Auto-narration', 'Export options', 'Presentation mode']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
-  const _pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$149',
-      period: '/month',
-      description: 'Perfect for small teams and individual users',
-      features: [
-        '5 dashboards',
-        'Basic charts',
-        'Standard data sources',
-        'Email support',
-        '1 user',
-        '1GB data storage'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing businesses with moderate data needs',
-      features: [
-        '25 dashboards',
-        'Advanced charts',
-        'All data sources',
-        'Priority support',
-        '10 users',
-        '10GB data storage',
-        'AI insights',
-        'Custom branding',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'For large organizations with complex data requirements',
-      features: [
-        'Unlimited dashboards',
-        'All chart types',
-        'All data sources',
-        '24/7 phone support',
-        'Unlimited users',
-        'Unlimited storage',
-        'Advanced AI features',
-        'White-label options',
-        'Full API access',
-        'Custom integrations',
-        'Dedicated support'
-      ],
-      popular: false
-    }
-  ];
-
-  const _testimonials = [
-    {
-      name: 'Alex Thompson',
-      role: 'Data Analyst',
-      company: 'Analytics Corp',
-      content: 'Zion Tech Group\'s AI data visualization platform has revolutionized how we present data. The AI insights are incredibly accurate and save us hours of analysis.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Davis',
-      role: 'Marketing Director',
-      company: 'Growth Marketing',
-      content: 'The interactive dashboards have transformed our reporting. Our clients love the real-time updates and the visual storytelling capabilities.',
-      rating: 5
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'CEO',
-      company: 'Data Insights Inc.',
-      content: 'The predictive analytics feature helped us identify market trends 3 months ahead of our competitors. It\'s been a game-changer for our business.',
-      rating: 5
-    }
-  ];
-
-  const _stats = [
-    { number: '85%', label: 'Faster Insights' },
-    { number: '60%', label: 'Time Saved' },
-    { number: '95%', label: 'Accuracy Rate' },
-    { number: '24/7', label: 'Real-time Updates' }
-  ];
-
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   return (
     <>
-      <Helmet>
-        <title>AI Data Visualization - Zion Tech Group</title>
-        <meta name="description" content="Transform complex data into actionable insights with AI-powered visualization tools and interactive dashboards." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Data Visualization
+      
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Data Visualization
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform complex data into clear, actionable insights with AI-powered visualization tools and interactive dashboards.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai data visualization solution for modern businesses.
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Interactive Dashboards</h3>
-              <p className="text-gray-600">Dynamic, interactive dashboards that adapt to your data.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Automated Insights</h3>
-              <p className="text-gray-600">AI-generated insights and pattern recognition in your data.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
-              <p className="text-gray-600">Live data visualization and real-time monitoring capabilities.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
+      <Footer />
     </>
   );
 };
 
-
-export default AIDataVisualizationPage;
+export default AiDataVisualizationPage;

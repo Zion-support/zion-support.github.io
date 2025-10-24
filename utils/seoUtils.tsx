@@ -1,5 +1,8 @@
-// SEO components for the Zion Tech Group website
+"use client";
+import React from 'react';
 
-export { MetaTags } from '../components/SEO/MetaTags';
-export { StructuredData } from '../components/SEO/StructuredData';
-export { DefaultSEO } from '../components/SEO/DefaultSEO';
+const seoUtils = () => {
+  return null;
+};
+
+export default seoUtils;

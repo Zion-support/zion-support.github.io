@@ -1,53 +1,24 @@
 #!/bin/bash
 
-# Function to clean merge conflicts from a file
-clean_conflicts() {
-    local file="$1"
-    # Skip if file doesn't exist or is a directory
-    [[ ! -f "$file" ]] && return
-    
-    # Create temp file
-    local tmp=$(mktemp)
-    
-    # Process file: remove conflict markers and keep the code
-    awk '
-        /^<<<<<<</ { in_conflict=1; next }
+# Script to resolve merge conflicts by keeping HEAD version
+echo "Resolving merge conflicts..."
 
-        /^/ { in_ours=0; next }
-        /^>>>>>>>/ { in_conflict=0; in_ours=0; next }
-ursor/comprehensive-app-audit-and-update-8a56
-        !in_conflict || in_ours { print }
-        in_conflict && !in_ours { in_ours=1 }
-    ' "$file" > "$tmp"
+# Find all files with merge conflicts
+files_with_conflicts=$(find app -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
+
+for file in $files_with_conflicts; do
+    echo "Resolving conflicts in: $file"
     
-    # Only update if different
-    if ! cmp -s "$file" "$tmp"; then
-        mv "$tmp" "$file"
-        echo "Fixed: $file"
-    else
-        rm "$tmp"
+    # Use git checkout to get the HEAD version (current main branch)
+    git checkout --ours "$file"
+    
+    # If the file still has conflicts, manually clean it up
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Manual cleanup needed for: $file"
+        # Remove conflict markers and keep only the HEAD version
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
     fi
-}
-
-# Main source files to fix (non-backup files)
-for file in \
-    "api/subscribe.js" \
-    "api/wallet.js" \
-    "app/App.tsx" \
-    "components/LoadingComponents.tsx" \
-    "src/hooks/usePerformance.ts" \
-    "lib/error-handler.ts" \
-    "lib/security.js" \
-    "lib/performance.ts" \
-    "src/utils/performanceOptimizer.ts" \
-    "lib/integrations/connectors.ts" \
-    "lib/integrations/fileStore.ts" \
-    "lib/integrations/registry.ts" \
-    "lib/integrations/types.ts" \
-    "src.disabled/utils/analytics.ts" \
-    "corrupted-src-backup/utils/imageOptimization.ts"
-do
-    [[ -f "$file" ]] && clean_conflicts "$file"
 done
 
-echo "Conflict resolution complete!"
+echo "Merge conflicts resolved!"

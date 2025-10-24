@@ -1,169 +1,129 @@
 #!/usr/bin/env python3
-"""
-Comprehensive script to fix all remaining parsing errors.
-"""
-
 import os
-import glob
 import re
+import glob
 
-def fix_parsing_errors(file_path):
-    """Fix common parsing errors in a file."""
+def fix_imports_and_syntax(file_path):
+    """Fix common import and syntax issues"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix missing closing parentheses in lazy imports
-        content = re.sub(r"lazy\(\(\) => import\('([^']+)'\);", r"lazy(() => import('\1'));", content)
+        # Fix missing imports for common components
+        if 'Helmet' in content and 'import { Helmet }' not in content:
+            content = content.replace(
+                "'use client'",
+                "'use client'\nimport { Helmet } from 'react-helmet-async'"
+            )
         
-        # Fix malformed JSX structure
-        content = re.sub(r'<([^>]+)>\s*<([^>]+)>\s*</\2>\s*</\1>', r'<\1><\2></\2></\1>', content)
+        if 'Navigation' in content and 'import Navigation' not in content:
+            content = content.replace(
+                "'use client'",
+                "'use client'\nimport Navigation from './Navigation'"
+            )
         
-        # Fix incomplete function declarations
-        content = re.sub(r'export default function\s+(\w+)\s*\(\s*\)\s*{\s*$', r'export default function \1() {\n  return (\n    <div>Component content</div>\n  );\n}', content, flags=re.MULTILINE)
+        if 'Footer' in content and 'import Footer' not in content:
+            content = content.replace(
+                "'use client'",
+                "'use client'\nimport Footer from './Footer'"
+            )
         
-        # Fix malformed const declarations
-        content = re.sub(r'const\s+(\w+)\s*=\s*([^;]+);\s*const\s+(\w+)\s*=\s*([^;]+);', r'const \1 = \2;\nconst \3 = \4;', content)
+        # Fix missing lucide-react imports
+        lucide_icons = ['ArrowRight', 'CheckCircle', 'Download', 'X', 'Brain', 'BarChart', 'Target', 'TrendingUp']
+        missing_icons = [icon for icon in lucide_icons if icon in content and f'import {{ {icon}' not in content]
+        if missing_icons:
+            import_line = f"import {{ {', '.join(missing_icons)} }} from 'lucide-react'"
+            if 'import { Helmet }' in content:
+                content = content.replace("import { Helmet } from 'react-helmet-async'", f"import {{ Helmet }} from 'react-helmet-async'\n{import_line}")
+            else:
+                content = content.replace("'use client'", f"'use client'\n{import_line}")
         
-        # Fix incomplete JSX elements
-        content = re.sub(r'<(\w+)\s*([^>]*?)\s*>\s*$', r'<\1 \2>', content, flags=re.MULTILINE)
+        # Fix unescaped entities
+        content = re.sub(r"Let's", "Let&apos;s", content)
+        content = re.sub(r"Don't", "Don&apos;t", content)
+        content = re.sub(r"can't", "can&apos;t", content)
+        content = re.sub(r"won't", "won&apos;t", content)
+        content = re.sub(r"it's", "it&apos;s", content)
+        content = re.sub(r"we're", "we&apos;re", content)
+        content = re.sub(r"you're", "you&apos;re", content)
+        content = re.sub(r"they're", "they&apos;re", content)
+        content = re.sub(r"isn't", "isn&apos;t", content)
+        content = re.sub(r"aren't", "aren&apos;t", content)
+        content = re.sub(r"wasn't", "wasn&apos;t", content)
+        content = re.sub(r"weren't", "weren&apos;t", content)
+        content = re.sub(r"hasn't", "hasn&apos;t", content)
+        content = re.sub(r"haven't", "haven&apos;t", content)
+        content = re.sub(r"hadn't", "hadn&apos;t", content)
+        content = re.sub(r"wouldn't", "wouldn&apos;t", content)
+        content = re.sub(r"shouldn't", "shouldn&apos;t", content)
+        content = re.sub(r"couldn't", "couldn&apos;t", content)
+        content = re.sub(r"didn't", "didn&apos;t", content)
+        content = re.sub(r"doesn't", "doesn&apos;t", content)
+        content = re.sub(r"do n't", "don&apos;t", content)
         
-        # Fix missing semicolons
-        content = re.sub(r'(\w+)\s*=\s*([^;]+)\s*$', r'\1 = \2;', content, flags=re.MULTILINE)
+        # Fix quotes
+        content = re.sub(r'"([^"]*)"', r'&quot;\1&quot;', content)
         
-        # Fix malformed return statements
-        content = re.sub(r'return\s*\(\s*$', r'return (\n    <div>Content</div>\n  );', content, flags=re.MULTILINE)
+        # Fix console statements (comment them out)
+        content = re.sub(r'console\.(log|warn|error)\([^)]*\);?', r'// \g<0>', content)
         
-        # Only write if content changed
+        # Fix missing display names for components
+        if 'export default function' in content and 'displayName' not in content:
+            # Find the function name
+            match = re.search(r'export default function (\w+)', content)
+            if match:
+                func_name = match.group(1)
+                content = content.replace(
+                    f'export default function {func_name}',
+                    f'export default function {func_name}\n{func_name}.displayName = "{func_name}"'
+                )
+        
+        # Fix const vs let issues
+        content = re.sub(r'let clsEntries', 'const clsEntries', content)
+        
+        # Fix missing closing tags (basic fixes)
+        content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
+        content = re.sub(r'<section([^>]*)>\s*$', r'<section\1></section>', content, flags=re.MULTILINE)
+        
+        # Fix merge conflict markers that might have been missed
+        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed {file_path}")
+            print(f"Fixed issues in: {file_path}")
             return True
-        
         return False
-        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
-def fix_specific_files():
-    """Fix specific known problematic files."""
-    fixes = {
-        '/workspace/app/accessibility-page/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AccessibilityPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Accessibility services and solutions for inclusive web development." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
-          <p className="text-lg text-gray-300">Accessibility services coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}''',
-        '/workspace/app/accessibility/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Accessibility() {
-  return (
-    <>
-      <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Accessibility services and solutions for inclusive web development." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
-          <p className="text-lg text-gray-300">Accessibility services coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}''',
-        '/workspace/app/advanced-security-suite/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AdvancedSecuritySuite() {
-  return (
-    <>
-      <Helmet>
-        <title>Advanced Security Suite - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive security solutions for enterprise protection." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Advanced Security Suite</h1>
-          <p className="text-lg text-gray-300">Advanced security solutions coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}''',
-        '/workspace/app/ai-3d-generation/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AI3DGeneration() {
-  return (
-    <>
-      <Helmet>
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="AI-powered 3D content generation and modeling solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI 3D Generation</h1>
-          <p className="text-lg text-gray-300">AI 3D generation services coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}'''
-    }
-    
-    for file_path, content in fixes.items():
-        try:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed {file_path}")
-        except Exception as e:
-            print(f"Error fixing {file_path}: {e}")
-
 def main():
-    """Main function to fix all parsing errors."""
-    print("Fixing parsing errors...")
-    
-    # Fix specific problematic files first
-    fix_specific_files()
-    
-    # Find all TypeScript/JavaScript files
-    files = glob.glob('**/*.tsx', recursive=True) + glob.glob('**/*.ts', recursive=True) + glob.glob('**/*.js', recursive=True) + glob.glob('**/*.jsx', recursive=True)
-    
-    # Filter out node_modules
-    files = [f for f in files if 'node_modules' not in f]
+    # Find all TypeScript/TSX files
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'src/**/*.tsx',
+        'src/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
+    ]
     
     fixed_count = 0
-    error_count = 0
+    total_files = 0
     
-    for file_path in files:
-        try:
-            if fix_parsing_errors(file_path):
-                fixed_count += 1
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
-            error_count += 1
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            if os.path.isfile(file_path):
+                total_files += 1
+                if fix_imports_and_syntax(file_path):
+                    fixed_count += 1
     
-    print(f"Fixed {fixed_count} files")
-    print(f"Errors: {error_count} files")
+    print(f"\nFixed issues in {fixed_count} out of {total_files} files")
 
 if __name__ == "__main__":
     main()

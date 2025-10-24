@@ -1,38 +1,8 @@
-import '@testing-library/jest-dom';
+"use client";
+import React from 'react';
 
-// Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextEncoder = TextEncoder;
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextDecoder = TextDecoder;
+const setupTests.ts = () => {
+  return null;
+};
 
-// Mock console methods to reduce noise in tests
-const originalError = console.error;
-const originalWarn = console.warn;
-
-beforeAll(() => {
-  console.error = (...args: unknown[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
-      return;
-    }
-    originalError.call(console, ...args);
-  };
-
-  console.warn = (...args: unknown[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('componentWillReceiveProps') ||
-        args[0].includes('componentWillMount'))
-    ) {
-      return;
-    }
-    originalWarn.call(console, ...args);
-  };
-});
-
-afterAll(() => {
-  console.error = originalError;
-  console.warn = originalWarn;
-});
+export default setupTests.ts;

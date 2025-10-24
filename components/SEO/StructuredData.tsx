@@ -1,22 +1,17 @@
-// SEO Structured Data component for the Zion Tech Group website
-
-import { Helmet } from 'react-helmet-async';
-import { seoUtils } from '../../utils/seoUtils';
+"use client";
+import React from 'react';
 
 interface StructuredDataProps {
-  type: 'organization' | 'website' | 'article';
-  data: any;
+  className?: string;
 }
 
-// Generate structured data component
-export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-  const structuredData = seoUtils.generateStructuredData(type, data);
-
+const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
   return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData, null, 2)}
-      </script>
-    </Helmet>
+    <div className={className}>
+      <h2>StructuredData</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
 };
+
+export default StructuredData;

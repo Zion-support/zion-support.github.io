@@ -1,91 +1,123 @@
 'use client'
-import React, { useEffect } from 'react'
+import Navigation from './Navigation';
+
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
-  enableHighContrast = false,
+  enableHighContrast = true,
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-    // Keyboard navigation support
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
+
+    // Add keyboard navigation support
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
-        // Handle keyboard navigation
-        if (event.key === 'Tab') {
-          // Ensure focus is visible
-          document.body.classList.add('keyboard-navigation')
+        // Skip to main content
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
+          if (mainContent) {
+            (mainContent as HTMLElement).focus();
+            event.preventDefault();
+          }
         }
-      }
+      };
 
-      document.addEventListener('keydown', handleKeyDown)
-      return () => document.removeEventListener('keydown', handleKeyDown)
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
     }
+  }, [enableKeyboardNavigation]);
 
+  useEffect(() => {
     // Add screen reader support
     if (enableScreenReaderSupport) {
       // Add skip links
-      const skipLinks = document.createElement('div')
-      skipLinks.className = 'sr-only'
-      skipLinks.innerHTML = `
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-        <a href="#navigation" class="skip-link">Skip to navigation</a>
-      `
-      document.body.insertBefore(skipLinks, document.body.firstChild)
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
 
-      return () => {
-        if (skipLinks.parentNode) {
-          skipLinks.parentNode.removeChild(skipLinks)
-        }
+      // Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
       }
     }
+  }, [enableScreenReaderSupport]);
 
-    // High contrast mode
+  useEffect(() => {
+    // Add high contrast support
     if (enableHighContrast) {
-      document.body.classList.add('high-contrast')
-      return () => document.body.classList.remove('high-contrast')
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (prefers-contrast: high) {
+          * {
+            border-color: currentColor !important;
+          }
+          button, a {
+            border: 2px solid currentColor !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
     }
+  }, [enableHighContrast]);
 
-    // Focus management
+  useEffect(() => {
+    // Add focus management
     if (enableFocusManagement) {
-      const handleFocusIn = (event: FocusEvent) => {
-        const target = event.target as HTMLElement
-        if (target) {
-          target.classList.add('focused')
-        }
-      }
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
+      
+      const trapFocus = (element: HTMLElement) => {
+        const focusableContent = element.querySelectorAll(focusableElements);
+        const firstFocusableElement = focusableContent[0] as HTMLElement;
+        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-      const handleFocusOut = (event: FocusEvent) => {
-        const target = event.target as HTMLElement
-        if (target) {
-          target.classList.remove('focused')
-        }
-      }
+        element.addEventListener('keydown', (e) => {
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        });
+      };
 
-      document.addEventListener('focusin', handleFocusIn)
-      document.addEventListener('focusout', handleFocusOut)
-
-      return () => {
-        document.removeEventListener('focusin', handleFocusIn)
-        document.removeEventListener('focusout', handleFocusOut)
-      }
+      // Apply focus trapping to modals
+      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+      modals.forEach(trapFocus);
     }
+  }, [enableFocusManagement]);
 
-    return () => {
-      // Cleanup function
-    }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
+  return null;
+};
 
-  return <>{children}</>
-}
-
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer;
