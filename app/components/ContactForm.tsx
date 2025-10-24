@@ -1,70 +1,91 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+'use client';
+'use client';
+
+import { useState } from 'react';
+import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
 interface FormData {
   name: string;
   email: string;
-  company: string;
   phone: string;
+  company: string;
+  message: string;
   service: string;
-  message: string;
-}
-
-interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error';
-  message: string;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    company: '',
     phone: '',
-    service: '',
-    message: ''
+    company: '',
+    message: '',
+    service: ''
   });
-  const [status, setStatus] = useState<FormStatus>({
-    type: 'idle',
-    message: ''
-  });
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  }
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus({ type: 'loading', message: 'Sending message...' })
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setStatus({ type: 'success', message: 'Message sent successfully!' })
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
       setFormData({
         name: '',
         email: '',
-        company: '',
         phone: '',
-        service: '',
-        message: ''
+        company: '',
+        message: '',
+        service: ''
       });
-    } catch (_error) {
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
-    }
-  }
-  return (
-    <div className="...">
-      <div className="...">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-        <p className="text-gray-600">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-      </div>
+    }, 3000);
+  };
 
-      <form onSubmit={handleSubmit} className="...">
-        <div className="...">
+  const services = [
+    'AI Solutions',
+    'Web Development',
+    'Mobile Development',
+    'Cloud Migration',
+    'Cybersecurity',
+    'Data Analytics',
+    'DevOps',
+    'Consulting'
+  ];
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
+        <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+      <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+      
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="...">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
             </label>
             <input
@@ -72,15 +93,14 @@ const ContactForm: React.FC = () => {
               id="name"
               name="name"
               value={formData.name}
-              onChange={handleInputChange}
+              onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Your full name"
             />
           </div>
-
           <div>
-            <label htmlFor="email" className="...">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
             </label>
             <input
@@ -88,32 +108,17 @@ const ContactForm: React.FC = () => {
               id="email"
               name="email"
               value={formData.email}
-              onChange={handleInputChange}
+              onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="your.email@example.com"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              placeholder="your@email.com"
             />
           </div>
         </div>
 
-        <div className="...">
+        <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="...">
-              Company
-            </label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              value={formData.company}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your company name"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="phone" className="...">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number
             </label>
             <input
@@ -121,93 +126,96 @@ const ContactForm: React.FC = () => {
               id="phone"
               name="phone"
               value={formData.phone}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              onChange={handleChange}
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="+1 (555) 123-4567"
+            />
+          </div>
+          <div>
+            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+              Company
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              placeholder="Your company name"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="service" className="...">
+          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
             Service Interest
           </label>
           <select
             id="service"
             name="service"
             value={formData.service}
-            onChange={handleInputChange}
-            className="...">
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          >
             <option value="">Select a service</option>
-            <option value="ai-services">AI Services</option>
-            <option value="it-services">IT Services</option>
-            <option value="consulting">Consulting</option>
-            <option value="other">Other</option>
+            {services.map((service, index) => (
+              <option key={index} value={service} className="bg-gray-800">
+                {service}
+              </option>
+            ))}
           </select>
         </div>
 
         <div>
-          <label htmlFor="message" className="...">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *
           </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
-            onChange={handleInputChange}
+            onChange={handleChange}
             required
             rows={6}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="Tell us about your project or question..."
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+            placeholder="Tell us about your project or how we can help..."
           />
         </div>
 
-        {status.message && (
-          <div className={`p-4 rounded-lg flex items-center space-x-2 ${
-            status.type === 'success' ? 'bg-green-50 text-green-800' :
-            status.type === 'error' ? 'bg-red-50 text-red-800' :
-            'bg-blue-50 text-blue-800'
-          }`}>
-            {status.type === 'success' && <CheckCircle className="w-5 h-5" />}
-            {status.type === 'error' && <AlertCircle className="w-5 h-5" />}
-            <span>{status.message}</span>
-          </div>
-        )}
-
         <button
           type="submit"
-          disabled={status.type === 'loading'}
-          className="...">
-          {status.type === 'loading' ? (
+          disabled={isSubmitting}
+          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? (
             <>
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-              <span>Sending...</span>
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+              Sending...
             </>
           ) : (
             <>
-              <Send className="w-5 h-5" />
-              <span>Send Message</span>
+              <Send className="w-5 h-5 mr-2" />
+              Send Message
             </>
           )}
         </button>
       </form>
 
-      <div className="...">
-        <div className="...">
-          <div className="...">
-            <Mail className="w-8 h-8 text-blue-600 mb-2" />
-            <h3 className="font-semibold text-gray-900">Email</h3>
-            <p className="text-gray-600">contact@ziontechgroup.com</p>
+      <div className="mt-8 pt-8 border-t border-white/10">
+        <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
+        <div className="space-y-3">
+          <div className="flex items-center justify-center">
+            <Mail className="w-5 h-5 text-cyan-400 mr-2" />
+            <span className="text-gray-300">kleber@ziontechgroup.com</span>
           </div>
-          <div className="...">
-            <Phone className="w-8 h-8 text-blue-600 mb-2" />
-            <h3 className="font-semibold text-gray-900">Phone</h3>
-            <p className="text-gray-600">+1 (555) 123-4567</p>
+          <div className="flex items-center justify-center">
+            <Phone className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-gray-300">+1 (302) 464-0950</span>
           </div>
-          <div className="...">
-            <MapPin className="w-8 h-8 text-blue-600 mb-2" />
-            <h3 className="font-semibold text-gray-900">Office</h3>
-            <p className="text-gray-600">San Francisco, CA</p>
+          <div className="flex items-center justify-center">
+            <MessageSquare className="w-5 h-5 text-green-400 mr-2" />
+            <span className="text-gray-300">24/7 Support</span>
           </div>
         </div>
       </div>
