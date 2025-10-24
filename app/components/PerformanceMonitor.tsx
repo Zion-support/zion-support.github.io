@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 
@@ -257,3 +258,12 @@ declare global {
     gtag: (..._args: unknown[]) => void;
   }
 }
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return null;
+};
+
+export default PerformanceMonitor;
+>>>>>>> cursor/delete-records-acd8

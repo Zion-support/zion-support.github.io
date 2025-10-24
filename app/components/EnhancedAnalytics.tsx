@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 
 import React, { createContext, useContext, useEffect } from 'react';
@@ -145,10 +146,21 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   return (
     <AnalyticsContext.Provider value={value}>
+=======
+'use client';
+import React, { createContext, useContext } from 'react';
+
+const AnalyticsContext = createContext({});
+
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <AnalyticsContext.Provider value={{}}>
+>>>>>>> cursor/delete-records-acd8
       {children}
     </AnalyticsContext.Provider>
   );
 };
+<<<<<<< HEAD
 
 // Extend Window interface for TypeScript
 declare global {
@@ -163,3 +175,7 @@ export default AnalyticsProvider;
 =======
 export default AnalyticsProvider;
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+
+export const useAnalytics = () => useContext(AnalyticsContext);
+>>>>>>> cursor/delete-records-acd8

@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
@@ -59,4 +60,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
+=======
+import React from 'react';
+import ErrorBoundary from './ErrorBoundary';
+
+const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <ErrorBoundary>{children}</ErrorBoundary>;
+};
+
+>>>>>>> cursor/delete-records-acd8
 export default EnhancedErrorBoundary;

@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
+=======
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+>>>>>>> cursor/delete-records-acd8
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+=======
+>>>>>>> cursor/delete-records-acd8
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
+<<<<<<< HEAD
   errorInfo?: ErrorInfo;
+=======
+>>>>>>> cursor/delete-records-acd8
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -24,6 +35,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     // Log error for monitoring in production
     if (process.env.NODE_ENV === 'production') {
       // In production, you would send this to an error reporting service
@@ -51,6 +63,10 @@ class ErrorBoundary extends Component<Props, State> {
   handleGoHome = () => {
     window.location.href = '/';
   };
+=======
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+>>>>>>> cursor/delete-records-acd8
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +84,7 @@ class ErrorBoundary extends Component<Props, State> {
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d59
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       if (this.props.fallback) {
         return this.props.fallback;
       }
@@ -165,6 +182,19 @@ class ErrorBoundary extends Component<Props, State> {
                 kleber@ziontechgroup.com
               </a>
             </div>
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-colors"
+            >
+              Reload Page
+            </button>
+>>>>>>> cursor/delete-records-acd8
           </div>
         </div>
       );
@@ -176,6 +206,9 @@ class ErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
 export default ErrorBoundary;
+<<<<<<< HEAD
 =======
 export default ErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d59
+=======
+>>>>>>> cursor/delete-records-acd8
