@@ -18,11 +18,11 @@ const nextConfig = {
   generateStaticParams: false,
   
   // Disable linting and type checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
 }
 
