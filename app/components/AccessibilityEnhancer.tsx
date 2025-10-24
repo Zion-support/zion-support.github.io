@@ -1,17 +1,17 @@
 'use client';
-import React, { ReactNode } from 'react'
-interface Props {
+import React from 'react';
 
-children: ReactNode
-,}
+interface AccessibilityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-const AccessibilityEnhancer: React.FC<Props> = ({ children ,}) => {
-return (,
-    <div className="accessibility-enhanced" role="main"></div>
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className, children }) => {
+  return (
+    <div className={className}>
       {children}
-      </div>
-  )
-}
+    </div>
+  );
+};
+
 export default AccessibilityEnhancer;
-</Props>
-}
