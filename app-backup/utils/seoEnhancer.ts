@@ -1,1 +1,5 @@
-// Conflict resolved: taking HEAD version
+
+'use client';'
+      '@type': "ContactPoint;
+  "changeFrequency": 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | "never;
+}}}}}}}}}}}}}}}}'"

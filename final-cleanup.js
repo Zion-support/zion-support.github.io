@@ -159,22 +159,30 @@ const directories = [;
         processDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {;
         try {;
           let content = fs.readFileSync(filePath, 'utf8');
-;
-          // Check if file is corrupted or has parsing errors;
-          if (content.length < 50 || );
-              content.includes('Error: Parsing error') ||;
-              content.split('\n').length < 3 ||;
-              content.match(/[{}]{3}/) ||;
-              content.match(/[()]{3}/) ||;
-              content.match(/[\[\]]{3}/)) {;
-            let newContent = ''
-;
-            if (file.includes('page.tsx')) {;
-              newContent = createCleanPage(file)} else if (file.includes('Component') || file.includes('components/')) {;
-              newContent = createCleanComponent(file)} else if (file.includes('utils/') || file.includes('utility')) {;
-              newContent = createCleanUtility(file)} else if (file.includes('types/') || file.includes('type')) {;
-              newContent = createCleanType(file)} else {;
-              newContent = createCleanComponent(file)}'
+          
+          // Check if file is corrupted or has parsing errors
+          if (content.length < 50 || 
+              content.includes('Error: Parsing error') ||
+              content.split('\n').length < 3 ||
+              content.includes('<<<<<<<') ||
+              content.match(/[{}]{3,}/) ||
+              content.match(/[()]{3,}/) ||
+              content.match(/[\[\]]{3,}/)) {
+            
+            let newContent = '';
+            
+            if (file.includes('page.tsx')) {
+              newContent = createCleanPage(file);
+            } else if (file.includes('Component') || file.includes('components/')) {
+              newContent = createCleanComponent(file);
+            } else if (file.includes('utils/') || file.includes('utility')) {
+              newContent = createCleanUtility(file);
+            } else if (file.includes('types/') || file.includes('type')) {
+              newContent = createCleanType(file);
+            } else {
+              newContent = createCleanComponent(file);
+            }
+            
             fs.writeFileSync(filePath, newContent, 'utf8');
             console.log('Rewritten: ' + filePath);
             processedCount++}
