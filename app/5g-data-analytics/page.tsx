@@ -1,36 +1,30 @@
-'use client'
 import React from 'react'
+import { Metadata } from 'next'
 
-export default function FiveGDataAnalyticsPage() {
+export const metadata: Metadata = {
+  title: '5G Data Analytics - Zion Tech Group',
+  description: 'Advanced 5G data analytics solutions for real-time insights and intelligent decision making. Harness the power of 5G networks for data-driven business growth.',
+}
+
+export default function FiveGDataAnalytics() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             5G Data Analytics
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Leverage the power of 5G networks for real-time data analytics and insights.
+            Harness the power of 5G networks for real-time data analytics and intelligent insights.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Real-time Processing</h3>
-              <p className="text-gray-300">Process massive amounts of data in real-time with 5G's ultra-low latency.</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Edge Computing</h3>
-              <p className="text-gray-300">Deploy analytics at the edge for faster decision making and reduced bandwidth usage.</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">AI Integration</h3>
-              <p className="text-gray-300">Combine 5G with AI for intelligent data processing and predictive analytics.</p>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              Our 5G data analytics solutions are currently under development. Contact us to learn more about our upcoming services.
+            </p>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

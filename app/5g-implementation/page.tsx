@@ -1,36 +1,30 @@
-'use client'
 import React from 'react'
+import { Metadata } from 'next'
 
-export default function FiveGImplementationPage() {
+export const metadata: Metadata = {
+  title: '5G Implementation - Zion Tech Group',
+  description: 'Complete 5G implementation services for businesses. From planning to deployment, we help you leverage 5G technology for maximum impact.',
+}
+
+export default function FiveGImplementation() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             5G Implementation
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Complete 5G network implementation services for businesses of all sizes.
+            Complete 5G implementation services from planning to deployment and optimization.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Network Planning</h3>
-              <p className="text-gray-300">Comprehensive 5G network design and planning for optimal coverage and performance.</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Infrastructure Setup</h3>
-              <p className="text-gray-300">Complete infrastructure deployment including base stations, antennas, and core network components.</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Testing & Optimization</h3>
-              <p className="text-gray-300">Rigorous testing and optimization to ensure peak performance and reliability.</p>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              Our 5G implementation services are currently under development. Contact us to learn more about our upcoming services.
+            </p>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }
