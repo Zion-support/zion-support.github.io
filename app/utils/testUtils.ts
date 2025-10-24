@@ -101,7 +101,7 @@ export const mockWindow = (overrides: Partial<Window>= {, }): void => {
 /**
  * Create a mock performance API;
  */
-export const createMockPerformance = (): Performance => {const entries: PerformanceEntry[] = []
+export const createMockPerformance = (): Performance => {const entries: PerformanceEntry[] = [];
   return {
     now: () => Date.now(),
     mark: (name: string) => {
@@ -135,14 +135,8 @@ export const createMockPerformance = (): Performance => {const entries: Performa
     removeEventListener: () => {, },
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
-<<<<<<< HEAD
     timeOrigin: Date.now()
-  } as unknown as Performance
-=======
-    timeOrigin: Date.now(),
-  } as unknown as Performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-}
+  } as unknown as Performance}
 
 /**
  * Generate random test data;
@@ -194,7 +188,6 @@ export class ConsoleSpy {private originalConsole: Console;
     this.mock()
   }
 
-<<<<<<< HEAD
   private mock(): void {
     // eslint-disable-next-line no-console
     console.log = (...args: unknown[]) => {
@@ -206,16 +199,7 @@ export class ConsoleSpy {private originalConsole: Console;
     }
     // eslint-disable-next-line no-console
     console.warn = (...args: unknown[]) => {
-      this.warnings.push(args.map(String).join(' '))
-=======
-  private mock(): void {console.log = (...args: unknown[]) => {
-      this.logs.push(args.map(String).join(' '))
-    }
-    console.error = (...args: unknown[]) => {this.errors.push(args.map(String).join(' '))
-    }
-    console.warn = (...args: unknown[]) =</ {this.warnings.push(args.map(String).join(' '))
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-    }
+      this.warnings.push(args.map(String).join(' '))    }
   }
 
   getLogs(): string[] {

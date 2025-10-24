@@ -40,6 +40,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>=
 if (!enableCompression) return
     // Enable gzip compression for text content
 
+  };
     })
   }, [enableCompression])
   // Performance monitoring
@@ -48,11 +49,9 @@ if (!enableCompression) return
   useEffect(() => {}
     // Run optimizations on mount
 
-<<<<<<< HEAD
-  // Resource hints for better performance
+  // Resource hints for better performance;
   const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
@@ -71,10 +70,9 @@ if (!enableCompression) return
 
   }, [])
 
-  // Critical CSS inlining
+  // Critical CSS inlining;
   const inlineCriticalCSS = useCallback(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window === 'undefined') return;
     const criticalCSS = `
       .cyber-grid { background-image: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
       .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
@@ -87,7 +85,7 @@ if (!enableCompression) return
     document.head.insertBefore(style, document.head.firstChild)
   }, [])
 
-  // Performance monitoring and reporting
+  // Performance monitoring and reporting;
   const reportPerformanceMetrics = useCallback(() => {
     if (typeof window === 'undefined') return
 
@@ -129,18 +127,10 @@ if (!enableCompression) return
       reportPerformanceMetrics()
     }
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
-
-=======
-const ComponentsPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
   return null
 }
 
 export default AdvancedPerformanceOptimizer
-<<<<<<< HEAD
 }}}}}
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
 export default AdvancedPerformanceOptimizerPage;

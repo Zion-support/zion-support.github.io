@@ -29,14 +29,14 @@ interface AdvancedSEOOptimizerProps {}
   seoData: SEOData
   enableStructuredData?: boolean
   enableSocialMeta?: boolean
-  enableAdvancedFeatures?: boolean
+  enableAdvancedFeatures?: boolean;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>  =  ({)}
   seoData,
   enableStructuredData = true,
   enableSocialMeta = true,
-  enableAdvancedFeatures = true
-
-
+  enableAdvancedFeatures = true;
+const Component = () => {
+  
   return (
     <>
       
@@ -176,11 +176,11 @@ setRecommendations(newRecommendations)
 }, [title, description, keywords])
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
 constgenerateStructuredData= () =</ {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https: // linkedin.com/$1/ziontechgroup"
-]}
+]};
 return structuredDat a || default StructuredData;
-}
+};
 return structuredData || defaultStructuredData;
-}
+};
 return (
     <>
       
@@ -215,3 +215,4 @@ position: 'fixed',
 )
 }
 export default AdvancedSEOOptimizer;
+};

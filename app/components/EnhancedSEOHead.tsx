@@ -11,9 +11,10 @@ interface EnhancedSEOHeadProps {;
 }
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps>= ({className = '' }) =</ {
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>{title}</title>
         <meta name="description" content="Zion Tech Group" />
@@ -114,17 +115,8 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps>= ({className = '' }) =</ {
     </>
   );
 };
-=======
-      <Helmet />
-        <title>{title}</title />
-        <meta name="description" content="Zion Tech Group" / />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation" / />
-      </Helmet />
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
 export default EnhancedSEOHeadPage;
   )
 }
 export default EnhancedSEOHead;
+};

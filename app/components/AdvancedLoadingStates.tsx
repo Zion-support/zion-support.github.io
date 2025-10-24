@@ -1,5 +1,6 @@
+import React from 'react';
   fullScreen?: boolean
-  message?: string
+  message?: string;
 const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({
   type = 'spinner'
     switch (type) {case 'pulse'

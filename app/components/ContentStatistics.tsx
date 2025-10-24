@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-'use client';
-=======
-'use client'
-import { Metadata } from 'next';
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-import React from 'react'
+'use client';import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -56,31 +50,22 @@ const ContentStatistics: React.FC = () =>{const [counters, setCounters] = useSta
       })
     }, stepDuration)
 
+const Component = () => {
+  
     return () => clearInterval(interval)
   }, [])
 
   const stats = [
-<<<<<<< HEAD
     {
-      icon: Users,
-=======
-    {icon: <Users className="h-8 w-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      value: Math.round(counters.clients),
+      icon: Users,      value: Math.round(counters.clients),
       label: "Happy Clients",
       color: "from-blue-500 to-cyan-500"
     },
-<<<<<<< HEAD
     {
-      icon: Target,
-=======
-    {icon: <Target className="h-8 w-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      value: Math.round(counters.projects),
+      icon: Target,      value: Math.round(counters.projects),
       label: "Projects Completed",
       color: "from-green-500 to-emerald-500"
     },
-<<<<<<< HEAD
     {
       icon: Star,
       value: `${Math.round(counters.satisfaction)}%`,
@@ -88,36 +73,17 @@ const ContentStatistics: React.FC = () =>{const [counters, setCounters] = useSta
       color: "from-yellow-500 to-orange-500"
     },
     {
-      icon: Clock,
-=======
-    {icon: <Star className="h-8 w-8" />,
-      value: `${Math.round(counters.satisfaction)}%`,
-      label: "Client Satisfaction",
-      color: "from-yellow-500 to-orange-500"
-    , },
-    {icon: <Clock className="h-8 w-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      value: Math.round(counters.years),
+      icon: Clock,      value: Math.round(counters.years),
       label: "Years Experience",
       color: "from-purple-500 to-pink-500"
     },
-<<<<<<< HEAD
     {
-      icon: Globe,
-=======
-    {icon: <Globe className="h-8 w-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      value: Math.round(counters.countries),
+      icon: Globe,      value: Math.round(counters.countries),
       label: "Countries Served",
       color: "from-indigo-500 to-blue-500"
     },
-<<<<<<< HEAD
     {
-      icon: Zap,
-=======
-    {icon: <Zap className="h-8 w-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      value: `${Math.round(counters.uptime * 10) / 10}%`,
+      icon: Zap,      value: `${Math.round(counters.uptime * 10) / 10}%`,
       label: "Uptime Guarantee",
       color: "from-red-500 to-pink-500"
     , }
@@ -302,7 +268,7 @@ if(current< target) {
 return {
 ...prev,
 [key]: Math.min(current + increment, target)}
-}
+};
 return pre v;
 })
 }, 1 6)
@@ -430,3 +396,4 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 )
 , }
 export default ContentStatistics;
+};

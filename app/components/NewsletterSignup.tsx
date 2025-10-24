@@ -1,14 +1,14 @@
-<<<<<<< HEAD
 'use client';
 import { useState } from 'react';
 import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-
   // Function body
 
-    // Handle newsletter signup
-      return (<>{}</>)
+    // Handle newsletter signup;
+const Component = () => {
+  
+const Component = () => {
+  
+  return (<>{}</>)
       <Helmet></Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>
@@ -31,3 +31,5 @@ import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
     </>"
   )"
 import React from '
+
+};

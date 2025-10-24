@@ -1,4 +1,4 @@
-// Analytics Context Definition
+// Analytics Context Definition;
 export interface AnalyticsContextType {}
   trackEvent: (event: AnalyticsEvent) => void;}
   trackPageView: (page: string) => void;}

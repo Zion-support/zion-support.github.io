@@ -1,5 +1,7 @@
 
-const ImprovedNavigation: React.FC = () => {}
+const ImprovedNavigation: React.FC = () => {};
+const Component = () => {
+  
   return ()
     <div  className ="min-h-screen bg-white">"
       <Helmet>"
@@ -47,3 +49,4 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
             Let'
 import React from '
+};

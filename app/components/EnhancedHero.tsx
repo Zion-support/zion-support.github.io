@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =======
 'use client'
 import { Metadata } from 'next';
@@ -20,9 +19,3 @@ import { Phone, Mail } from 'lucide-react'
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>
-=======
-    'Gain competitive advantage with advanced technology';
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div />
-            </div />
-          </div />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2

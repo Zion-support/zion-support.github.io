@@ -60,18 +60,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   ]
 
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>EnhancedErrorBoundary | Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="AI, artificial intelligence, EnhancedErrorBoundary, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      <Navigation />
+      </Helmet>      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -238,7 +235,7 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
-    }
+    };
     return sessionId;
   };
 
@@ -264,14 +261,13 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
+;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center"></div>
             <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto"></div>
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-<<<<<<< HEAD
             <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
             <p className="text-gray-300 mb-6">We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -279,31 +275,6 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
                   Error Details (Development)
                 </summary>
-                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto"></p>
-=======
+                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto"></p>                  {this.state.error.toString()}
 
-            <div className="space-y-4">
-              <button
-                onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                {this.state.isRetrying ? 'Retrying...' : 'Try Again'}
-              </button>
-
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                Go Home
-              </button>
-            </div>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-gray-300">
-                  Error Details (Development)
-                </summary />
-                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto"></p />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-                  {this.state.error.toString()}
+};

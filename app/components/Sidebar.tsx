@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-=======
-'use client';
-import Link from 'next/link';
->>>>>>> cursor/fix-errors-and-merge-to-main-5202
-import {Phone, Mail, Brain} from 'lucide-react';
+'use client'import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-=======
-'use client'
-import { Metadata } from 'next';
-import {Phone, Mail, Brain} from 'lucide-react';
-import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -54,10 +40,11 @@ const SidebarPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
+;
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>Sidebar</title>
         <meta name="description" content="Advanced Sidebar solution for modern businesses." />
@@ -80,33 +67,10 @@ const SidebarPage: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-=======
-      
-      <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
-              Sidebar
-            </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
-              Advanced Sidebar solution for modern businesses.
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-                Learn More
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">                Learn More
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -127,30 +91,7 @@ const SidebarPage: React.FC = () => {
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-=======
-
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-                        {benefit}
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -161,7 +102,6 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -174,30 +114,13 @@ const SidebarPage: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-=======
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-                </div>
+                  <p className="text-gray-300 text-lg">{benefit}</p>                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -208,29 +131,13 @@ const SidebarPage: React.FC = () => {
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-=======
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-                Contact Sales
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">                Contact Sales
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-    </>
-  );
+      <Footer />  );
 };
 
 export default SidebarPage;
@@ -249,12 +156,7 @@ Phone,
 Mail,
 MapPin,Clock;}
 } from 'lucide-react'
-<<<<<<< HEAD
-constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
-=======
-constSidebar: React.FC= () =</{const [isOpensetIsOpen] = useState(false)
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
+constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 constlocation= useLocation()
 useEffect(() => {
   
@@ -267,18 +169,10 @@ windo w.addEventListener('resize', handleResize)
 return () => windo w.removeEventListener('resize', handleResize)
 }, [])
 consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSections)
-<<<<<<< HEAD
 if (newExpanded.has(section)) {;) => {
   
 return (
-$3
-=======
-if (newExpanded.has(section)) {;) =</ {
-  
-return (
-$3;
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-)}
+$3)}
 newExpanded.delete(section);}
 } else {newExpanded.add(section);}
 }
@@ -366,11 +260,10 @@ constcontactInfo= {phone: '(30 2) 46 4-095 0',
 email: 'kleber@ziontechgroup.com',
 address: '364 E Main St STE 1008 Middletown, DE 19709',
 hours: 'Mon-Fri 9AM-6PM EST'
-}
+};
 return (
 <>
 {/* Mobile Menu Button */}
-<<<<<<< HEAD
 <button
 onClick={() =></button> setIsOpen(true)}
 className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
@@ -398,39 +291,10 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 </div>
 <div></div>
 <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-<p className="text-xs text-cyan-400">AI & IT Solutions</p>
-=======
-<button onClick={() =></button>setIsOpen(true)}
-className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-aria-label="Open sidebar"
-</
-<Menu className="w-6 h-6" / />
-</button />
-{/* Sidebar Overlay  */
-{isOpen && (
-<div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden" }
-onClick={() =>setIsOpen(false)}</div />/</
-)}
-{/* Sidebar */}</div />
-<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
-isOpen ? 'translate-x-0' : '-translate-x-full'
-} lg:translate-x-0 lg:static lg:z-auto`}>
-<div className=&quot;flex flex-col h-full&quot;></div>
-{/* Header */}</div>
-<div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot;></div>
-<Link href=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick={() => setIsOpen(false)}>
-<div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>
-<Brain className=&quot;w-6 h-6 text-white&quot; />
-</div>
-<div></div>
-<h2 className=&quot;text-xl font-bold text-white cyber-text&quot;>Zion Tech Group</h2>
-<p className=&quot;text-xs text-cyan-400&quot;>AI & IT Solutions</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-</div>
+<p className="text-xs text-cyan-400">AI & IT Solutions</p></div>
 </Link>
 <button
 onClick={() =></button> setIsOpen(false)}
-<<<<<<< HEAD
 className="lg:hidden text-gray-400 hover:text-white transition-colors"
 aria-label="Close sidebar"
 >
@@ -444,28 +308,10 @@ aria-label="Close sidebar"
 <div key={sectionIndex} className="space-y-1"></div>
 <button
 onClick={() =></button> section.key && toggleSection(section.key)}
-className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-=======
-className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot;
-aria-label=&quot;Close sidebar&quot;
->
-<X className=&quot;w-6 h-6&quot; />
-</button>
-</div>
-{/* Navigation */}
-<div className=&quot;flex-1 overflow-y-auto py-6&quot;></div>
-<nav className=&quot;space-y-2 px-4&quot;>
-{navigationSections.map((section, sectionIndex) => (;}
-<div key={sectionIndex} className=&quot;space-y-1&quot;></div>
-<button
-onClick={() =></button> section.key && toggleSection(section.key)}
-className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-<span>{section.title}</span>
+className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"><span>{section.title}</span>
 {section.key && (
 expandedSections.has(section.key) ?
 <ChevronDown className="w-4 h-4" /> :
-<<<<<<< HEAD
 <ChevronRight className="w-4 h-4" />
 )}
 </button>
@@ -474,11 +320,4 @@ expandedSections.has(section.key) ?
 {section.items.map((item, itemIndex) => (</div>
 <Link
 key={itemIndex}
-=======
-<ChevronRight className="w-4 h-4" / />
-)}
-</button />
-{(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1"></div />{section.items.map((item, itemIndex) =</ (</div />
-<Link key={itemIndex}
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
+};

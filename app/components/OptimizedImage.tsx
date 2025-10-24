@@ -11,19 +11,15 @@ interface OptimizedImageProps {;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps>= ({className = '' }) =</ {
+const Component = () => {
+  
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>OptimizedImage | Zion Tech Group</title>
         <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage" />
-      </Helmet>
-=======
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      {/* Hero Section */}
+      </Helmet>      {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
@@ -128,3 +124,5 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({className = '' }) =</ {
 };
 
 export default OptimizedImagePage;
+
+};

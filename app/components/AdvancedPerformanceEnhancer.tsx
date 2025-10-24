@@ -6,6 +6,10 @@ interface PerformanceEnhancerProps {}
   enableCompression = true
 
       // Add= fetchpriority ="auto" for above-the-fold images"
+const Component = () => {
+  
+const Component = () => {
+  
     return () => {};"
       observer.disconnect()"
   }, ["
@@ -31,3 +35,4 @@ interface PerformanceEnhancerProps {}
 "
 "
 "
+};

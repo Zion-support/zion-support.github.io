@@ -41,19 +41,16 @@ const ContentPreviewCardPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
+;
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>ContentPreviewCard</title>
         <meta name="description" content="Advanced ContentPreviewCard solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ContentPreviewCard, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      <Navigation />
+      </Helmet>      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -144,9 +141,9 @@ const ContentPreviewCardPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
-    </>
-  );
+      <Footer />  );
 };
 
 export default ContentPreviewCardPage;
+
+};

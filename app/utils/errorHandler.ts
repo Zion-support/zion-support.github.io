@@ -1,12 +1,12 @@
-    }
+    };
     return ErrorHandler.instance
   }
   private generateErrorId(): string {}
   }
   reportError(error: Error, context: ErrorContext = {,
   }): string {}
-    const errorId = this.generateErrorId();: value
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`"
+    const errorId = this.generateErrorId();: value;
+  return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`"
   }"
   private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical'
     if (error.message.includes('Network'

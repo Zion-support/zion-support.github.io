@@ -8,9 +8,12 @@ export function useIntersectionObserver(
     state,
     init
   }
-}
+};
+const Component = () => {
+  
     return () => {"
       observer.unobserve(element)"
     }"
 export default useIntersectionObserver"
 "
+};

@@ -11,7 +11,7 @@ interface AccessibilityManagerProps {}
   options?: Partial<AccessibilityOptions>
   enableAutoDetection?: boolean
   enableUserPreferences?: boolean
-  onAccessibilityChange?: (options: AccessibilityOptions) => void
+  onAccessibilityChange?: (options: AccessibilityOptions) => void;
 const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   options = {}
   enableAutoDetection = true
@@ -31,7 +31,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   const [isInitialized, setIsInitialized] = useState(false)
   // Detect system preferences
 if (!enableAutoDetection) return
-    // Detect reduced motion preference
+    // Detect reduced motion preference;
 const prefersReducedMotion  = window.matchMedia('(prefers-reduced-motion: reduce)'
 const prefersHighContrast  = window.matchMedia('(prefers-contrast: high)'
 const prefersDarkScheme  = window.matchMedia('(prefers-color-scheme: dark)'

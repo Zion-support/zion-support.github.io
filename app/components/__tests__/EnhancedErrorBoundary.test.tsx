@@ -3,11 +3,11 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
-// Mock component that throws an error
+// Mock component that throws an error;
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error');
-  }
+  };
   return <div>No error</div>;
 };
 

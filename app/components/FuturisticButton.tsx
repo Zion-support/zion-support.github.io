@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React from 'react';
 'use client';
 'use client';
 import { useState } from 'react';
@@ -22,16 +22,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   size = 'md',
   disabled = false,
   loading = false,
-  className = '',
-=======
-  icon?: React.ReactNode
-  onClick?: () => void"
-  type?: 'button' | 'submit' | '
-  className = '
-  variant = 'primary'
-  size = 'md'
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-  type = 'button'
+  className = '',  type = 'button'
   const baseClasses  = '
     primary: 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 focus:ring-blue-500'
     secondary: 'bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50'

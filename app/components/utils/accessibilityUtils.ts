@@ -9,6 +9,8 @@
  * Check if an element is visible to screen readers;
  */
 export const isVisibleToScreenReader = (element: HTMLElement): boolean =>{const style = window.getComputedStyle(element);
+const Component = () => {
+  
   return (
     style.display !== 'none' &&
     style.visibility !== 'hidden' &&

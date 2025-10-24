@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
 const NotFound = () => {
+const Component = () => {
+  
   return (
     <>
       <Head>
@@ -104,9 +106,8 @@ const NotFound = () => {
             </p>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </div>  );
 };
 
 export default NotFound;
+};

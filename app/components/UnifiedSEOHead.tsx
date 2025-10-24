@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface SEOHeadProps {}
   title?: string
@@ -11,8 +12,7 @@ interface SEOHeadProps {}
   publishedTime?: string
   modifiedTime?: string
   section?: string
-  [key: string]: unknown
-
+  [key: string]: unknown;
 const UnifiedSEOHead= React.FC<SEOHeadProps> = ({},)
       title = "Zion Tech Group - Advanced AI and IT Solutions","
       description = "Transform your business with Zion Tech Group'

@@ -67,6 +67,8 @@ export default function AboutPage() {
     }
   ];
 
+const Page = () => {
+  
   return (
     <>
 
@@ -405,3 +407,4 @@ export default function AboutPage() {
     </>
   );
 }
+};

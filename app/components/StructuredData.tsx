@@ -1,6 +1,8 @@
+import React from 'react';
 
 const ComponentsPage: React.FC = () => {
   return null
+  };
 }
       <SEOHead>
         title="Components - Zion Tech Group"

@@ -41,19 +41,16 @@ const ServiceCardPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
+;
+const Component = () => {
+  
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>ServiceCard</title>
         <meta name="description" content="Advanced ServiceCard solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, ServiceCard, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-      <Navigation />
+      </Helmet>      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -144,9 +141,7 @@ const ServiceCardPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
-    </>
-  );
+      <Footer />  );
 };
 
 export default ServiceCardPage;
@@ -163,7 +158,6 @@ className = ''
 }) =</ {return (
 <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300 group ${className} ${
 popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
-<<<<<<< HEAD
 }`}>{popular && (</div>
 <div className="flex items-center gap-2 mb-4"></div>
 <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
@@ -178,28 +172,9 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
 <div key={index} className="flex items-center gap-2"></div>
 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
 <span className="text-gray-300 text-sm">{feature}</span>
-</div>
-=======
-}`}>{popular && (</div />
-<div className="flex items-center gap-2 mb-4"></div />
-<div className="w-2 h-2 bg-purple-400 rounded-full"></div />
-<span className="text-purple-400 text-sm font-semibold">Most Popular</span />
-</div />
-)}
-<div className="mb-4"></div />
-<h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors">$3</h3 />
-<p className="text-gray-300 text-sm">{description}</p />
-</div />
-<div className="space-y-2 mb-6">{features.map((feature, index) =</ (</div />
-<div key={index} className="flex items-center gap-2"></div />
-<CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" / />
-<span className="text-gray-300 text-sm">{feature}</span />
-</div />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-))}
+</div>))}
 </div />
 {price && (
-<<<<<<< HEAD
 <div className="mb-6"></div>
 <div className="text-3xl font-bold text-white mb-1">{price}</div>
 <div className="text-gray-400 text-sm">per month</div>
@@ -213,22 +188,7 @@ Get Started
 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 </button>
 )}
-</div>
-=======
-<div className="mb-6"></div />
-<div className="text-3xl font-bold text-white mb-1">{price}</div />
-<div className="text-gray-400 text-sm">per month</div />
-</div />
-)}
-{onSelect && (
-<button onClick={onSelect}
-className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"></button />
-Get Started;
-<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" / />
-</button />
-), }
-</div />
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2
-)
+</div>)
 }
 export default ServiceCard;
+};

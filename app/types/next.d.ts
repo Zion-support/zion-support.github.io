@@ -1,3 +1,4 @@
+import React from 'react';
 // Type definitions for Next.js compatibility;
 export interface Metadata {title?: string;
   description?: string;
