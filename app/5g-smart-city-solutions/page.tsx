@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+
+import Link from 'next/link';
 import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react';
 
 export default function FiveGSmartCitySolutions() {
@@ -116,10 +116,10 @@ export default function FiveGSmartCitySolutions() {
 
   return (
     <>
-      <Helmet>
+      
         <title>5G Smart City Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions." />
-      </Helmet>
+      
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -127,7 +127,7 @@ export default function FiveGSmartCitySolutions() {
           <p className="text-lg text-gray-300 mb-8">Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions.</p>
           
           <Link 
-            to="/contact" 
+            href="/contact" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Contact Us

@@ -1,15 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function ZionAiCodeReviewerPage() {
   return (
     <>
-      <Helmet>
+      
         <title>ZionAiCodeReviewer - Zion Tech Group</title>
         <meta name="description" content="Professional zionaicodereviewer services by Zion Tech Group." />
-      </Helmet>
+      
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -17,7 +17,7 @@ export default function ZionAiCodeReviewerPage() {
           <p className="text-lg text-gray-300 mb-8">Professional zionaicodereviewer services by Zion Tech Group.</p>
           
           <Link 
-            to="/contact" 
+            href="/contact" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Contact Us

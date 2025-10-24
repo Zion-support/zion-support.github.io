@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const usePerformanceMonitor = () => {
-  return null
-}
-
-export default usePerformanceMonitor
-=======
 import { useState, useEffect } from 'react';
 
 interface PerformanceData {
@@ -72,10 +63,10 @@ export const usePerformanceMonitor = () => {
           limit: Math.round(memory.jsHeapSizeLimit / 1048576),
         };
         
-        setPerformanceData(prev => ({
+        setPerformanceData(prev => prev ? {
           ...prev,
           memoryUsage: memoryData,
-        }));
+        } : null);
         
         console.log('Memory Usage:', memoryData);
       }
@@ -97,4 +88,3 @@ export const usePerformanceMonitor = () => {
 
   return { performanceData };
 };
->>>>>>> 0037f0079afd7c1df869836a2655008c935027f4

@@ -5,7 +5,6 @@ const nextConfig = {
     unoptimized: true,
   },
   eslint: {
-<<<<<<< HEAD
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
@@ -28,16 +27,6 @@ const nextConfig = {
   //   return []
   // },
   // Skip problematic pages during build
-=======
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-c682
 }
 
 module.exports = nextConfig;

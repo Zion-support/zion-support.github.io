@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -54,7 +53,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
-    <Helmet>
+    <>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -81,10 +80,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
-    </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData || defaultStructuredData)
+        }}
+      />
+    </>
   );
 };
 

@@ -1,15 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+
+import Link from 'next/link';
 import { ArrowRight, Users, Award, Target, Lightbulb } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <>
-      <Helmet>
+      
         <title>About - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading technology company dedicated to transforming businesses through innovative AI and IT solutions." />
-      </Helmet>
+      
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -20,14 +20,14 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Work With Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link 
-                to="/team" 
+                href="/team" 
                 className="inline-flex items-center px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
               >
                 Meet Our Team

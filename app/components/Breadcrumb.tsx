@@ -1,12 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 
 export default function Breadcrumb() {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
+  const pathname = usePathname();
+  const pathnames = pathname.split('/').filter((x) => x);
   
   if (pathnames.length === 0) {
     return null;
@@ -17,7 +18,7 @@ export default function Breadcrumb() {
       <div className="container mx-auto">
         <ol className="flex items-center space-x-2 text-sm">
           <li>
-            <Link to="/" className="flex items-center hover:text-blue-400 transition-colors">
+            <Link href="/" className="flex items-center hover:text-blue-400 transition-colors">
               <Home className="w-4 h-4 mr-1" />
               Home
             </Link>
@@ -33,7 +34,7 @@ export default function Breadcrumb() {
                   <span className="text-gray-300 capitalize">{name.replace(/-/g, ' ')}</span>
                 ) : (
                   <Link 
-                    to={routeTo} 
+                    href={routeTo} 
                     className="hover:text-blue-400 transition-colors capitalize"
                   >
                     {name.replace(/-/g, ' ')}

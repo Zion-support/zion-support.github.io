@@ -14,7 +14,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     mediaQuery.addEventListener('change', handleContrastChange);
-    handleContrastChange(mediaQuery);
+    // Call with the MediaQueryList directly
+    handleContrastChange(mediaQuery as any);
 
     return () => {
       mediaQuery.removeEventListener('change', handleContrastChange);
@@ -33,7 +34,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     mediaQuery.addEventListener('change', handleMotionChange);
-    handleMotionChange(mediaQuery);
+    // Call with the MediaQueryList directly
+    handleMotionChange(mediaQuery as any);
 
     return () => {
       mediaQuery.removeEventListener('change', handleMotionChange);
@@ -58,19 +60,18 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   useEffect(() => {
-    // Add keyboard navigation enhancements
+    // Add keyboard navigation support
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         const mainContent = document.querySelector('main');
         if (mainContent) {
-          mainContent.focus();
+          (mainContent as HTMLElement).focus();
         }
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
