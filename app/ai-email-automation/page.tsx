@@ -1,6 +1,6 @@
 import React from 'react'
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const AIEmailAutomationPage: React.FC = () => {
   const features = [

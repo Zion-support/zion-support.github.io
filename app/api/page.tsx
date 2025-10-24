@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart } from 'lucide-react';
 
 const APIPage: React.FC = () => {

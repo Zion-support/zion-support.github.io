@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {

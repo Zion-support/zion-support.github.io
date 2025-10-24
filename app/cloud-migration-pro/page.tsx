@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Cloud, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Shield } from 'lucide-react';
 
 const CloudMigrationProPage: React.FC = () => {

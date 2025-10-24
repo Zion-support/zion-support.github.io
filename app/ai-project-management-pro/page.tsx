@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Users, BarChart, CheckCircle, Brain, Settings, Target, TrendingUp, Calendar, Zap } from 'lucide-react';
 
 const AIProjectManagementProPage: React.FC = () => {

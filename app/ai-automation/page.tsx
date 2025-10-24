@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle,
   Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu

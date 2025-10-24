@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow } from 'lucide-react';
 
 const AutomationPage: React.FC = () => {

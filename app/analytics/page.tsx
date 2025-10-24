@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap } from 'lucide-react';
 
 const AnalyticsPage: React.FC = () => {
