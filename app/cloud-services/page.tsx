@@ -1,100 +1,40 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const CloudServicesPage: React.FC = () => {
+  return (
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name ="description" content="Professional page services by Zion Tech Group." />"
-      </Helmet>"
-      <div className ="container mx-auto px-4 py-16">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold text-gray-900 mb-8">"
-            Page"
-          </h1>"
-          <p className ="text-xl text-gray-600 mb-8">"
-            Professional page solutions tailored to your business needs."
-          </p>"
-          <div className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
-            <div className ="bg-blue-50 border border-blue-200 rounded-lg p-6">"
-              <h3 className ="text-lg font-semibold text-blue-900 mb-2">"
-                Expert Solutions"
-              </h3>"
-              <p className ="text-blue-700">"
-const CloudServicesPage: React.FC = () => {}"
-  const  services = ["
-"
-      name: "Cloud Migration","
-      description: "Seamless migration of your applications and data to the cloud with zero downtime.","
-      features: ["Application migration", "Data migration", "Infrastructure setup", "Performance optimization", "Security implementation", "Training & support"],"
-      price: "From $4,999","
-      marketPrice: "$9,999-39,999","
-      popular: true,"
-      icon: <Cloud= className ="w-8 h-8" />,"
-      benefits: "Reduce infrastructure costs by 40%"
-"
-      name: "Cloud Infrastructure","
-      description: "Scalable and secure cloud infrastructure designed for your specific needs.","
-      features: ["Architecture design", "Auto-scaling", "Load balancing", "ing", "Backup solutions", "Disaster recovery"],"
-      price: "From $3,999","
-      marketPrice: "$7,999-29,999","
-      popular: false,"
-      icon: <Server className ="w-8 h-8" />,"
-      benefits: "Achieve 99.9% uptime with our infrastructure"
-"
-      name: "Cloud Security","
-      description: "Comprehensive security solutions to protect your cloud environment and data.","
-      features: ["Security assessment", "Access control", "Data encryption", "Compliance", "Threat monitoring", "Incident response"],"
-      price: "From $5,999","
-      marketPrice: "$11,999-44,999","
-      popular: true,"
-      icon: <className="w-8 h-8" />,"
-      benefits: "Protect against 99.9% of cyber threats"
-  ]"
-  const  features = ["
-"
-      icon: <Cloud= className ="w-12 h-12" />,"
-      title: "Multi-Cloud Support","
-      description: "Work with AWS, Azure, Google Cloud, and other major cloud providers"
-"
-      icon: <className="w-12 h-12" />,"
-      title: "Auto-Scaling","
-      description: "Automatically scale resources based on demand to optimize costs"
-"
-      icon: <className="w-12 h-12" />,"
-      title: "Enterprise Security","
-      description: "Bank-level security with encryption, monitoring, and compliance"
-"
-      icon: <className="w-12 h-12" />,"
-      title: "Data Management","
-      description: "Efficient data storage, backup, and recovery solutions"
-"
-  ]"
-  return ()"
-    <div  className ="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">"
-      <Helmet>"
-        <title>Cloud Services - Zion Tech Group</title>"
-        <meta name ="description" content="Comprehensive cloud services including migration, infrastructure, and security solutions for modern businesses." />"
-        <metaname="keywords">"
-          content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
-        />"
-      </Helmet>"
-"
-      <div  className ="container mx-auto px-4 py-16">"
-        <div  className ="text-center mb-16">"
-          <h1  className ="text-4xl md=text-6xl font-bold text-gray-900 mb-6">"
-            Cloud Services"
-          </h1>"
-          <p  className ="text-xl text-gray-600 max-w-3xl mx-auto">"
-        </div>"
-"
-        {/* Features Grid */}"
-        <div  className ="grid md=grid-cols-2 lg:grid-cols-4 gap-8 mb-16">"
-          {features.map((feature, index) => ()}"
-            <div  key ={index} className="bg-white rounded-2xl shadow-lg p-8 text-center">"
-              <div  className ="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">"
-                {feature.icon}"
-              </div>"
-              <h3  className ="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>"
-              <p  className ="text-gray-600">{feature.description}</p>"
-        </div>"
-"
-        {/* Services Grid */}"
-        <div  className ="grid md=grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
-          {services.map((service, index) => ()}"
-            <div  key ={index} className={`bg-white rounded-2xl shadow-xl p-8 relative ${service.popular ? 'ring-2 ring-blue-500'
+        <title>Cloud Services - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Cloud Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional cloud services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default CloudServicesPage;

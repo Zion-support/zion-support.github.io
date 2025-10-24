@@ -1,55 +1,40 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
 const OperationalTrustScorecardsPage: React.FC = () => {
   return (
-      <main className ="min-h-screen bg-slate-950 text-white">"
-      <section className ="py-16 border-b border-white/10">"
-        <div className ="max-w-3 xl mx-auto px-4">"
-          <div className ="mb-6 inline-flex items-center gap-2">"
-            <span className ="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">"
-              GUIDE"
-            </span>"
-            <span className ="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs">"
-              Sep 30, 2025"
-            </span>"
-          </div>"
-          <h1 className ="text-4xl md:text-5xl font-extrabold mb-4">"
-            Operational Trust Scorecards v3"
-          </h1>"
-          <p className ="text-gray-300 text-lg">"
-          </p>"
-        </div>"
-      </section>"
-      <section className ="py-12">"
-        <div className ="max-w-3 xl mx-auto px-4 space-y-10">"
-          <div>"
-            <h2 className ="text-2xl font-bold mb-3">Why Operational Trust</h2>"
-            </p>"
-          </div>"
-          <div>"
-            <h2 className ="text-2 xl font-bold mb-3">Scorecard    Structure</h2>"
-            <ul className ="list-disc pl-6 text-gray-300 space-y-2">"
-              <li>"
-                <strong className ="text-white">Reliability   :</strong> pass rates,"
-                hallucination rate, grounding success, latency SLO."
-              </li>"
-              <li>"
-                <strong className ="text-white">Safety   :</strong> policy blocks,"
-                red‑team strikes, jailbreak resistance, PII leaks."
-              </li>"
-              <li>"
-                <strong className ="text-white">Cost   :</strong> per‑task spend,"
-                model tier mix, cache hit rate, budget headroom."
-              </li>"
-              <li>"
-                <strong className ="text-white">Value   :</strong> conversion"
-            </ul>"
-          </div>"
-          <div>"
-            <h2 className ="text-2 xl font-bold mb-3">Operational    Guardrails</h2>"
-            <p className ="text-gray-300">"
-        </div>"
-      </section>}"
-    </main>}"
-    </>}"
-  );}"
-}"
-"
+    <>
+      <Helmet>
+        <title>Operational Trust Scorecards V3 - Zion Tech Group</title>
+        <meta name="description" content="Professional operational trust scorecards v3 services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Operational Trust Scorecards V3
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional operational trust scorecards v3 services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default OperationalTrustScorecardsPage;
