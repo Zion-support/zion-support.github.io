@@ -2,8 +2,7 @@
 import React from 'react';
 
 interface StructuredDataProps {
-  data: any;
-  type?: string;
+  // Add props here
 }
 
 const StructuredData: React.FC<StructuredDataProps> = (_props) => {

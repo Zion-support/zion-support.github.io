@@ -1,13 +1,13 @@
-'use client'
-import React, { useState } from 'react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+'use client';
+import React, { useState } from 'react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
-  title?: string
-  subtitle?: string
-  placeholder?: string
-  buttonText?: string
-  onSubscribe?: (_email: string) => Promise<void>
+  title?: string;
+  subtitle?: string;
+  placeholder?: string;
+  buttonText?: string;
+  onSubscribe?: (_email: string) => Promise<void>;
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
@@ -17,15 +17,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   buttonText = "Subscribe",
   onSubscribe
 }) => {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
+    e.preventDefault();
+    if (!email) return;
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     
     try {
       if (onSubscribe) {
@@ -35,14 +35,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         await new Promise(resolve => setTimeout(resolve, 1000))
       }
       
-      setIsSubscribed(true)
-      setEmail('')
+      setIsSubscribed(true);
+      setEmail('');
     } catch (error) {
-      console.error('Subscription failed:', error)
+      console.error('Subscription failed:', error);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   if (isSubscribed) {
     return (
@@ -65,7 +65,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           </button>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -126,7 +126,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default ContentNewsletterSignup

@@ -1,50 +1,45 @@
-'use client';
-
-import React, { useEffect } from 'react';
-
+'use client'
+import React, { useEffect } from 'react'
 interface ServiceWorkerRegistrationProps {
   onUpdateAvailable?: () => void;
   onUpdateInstalled?: () => void;
-  onError?: (error: Error) => void;
+  onError?: (_error: Error) => void;
 }
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
   onUpdateInstalled,
-  onError: _onError,
+  onError: _onError = () => {},
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-      return;
+      return
     }
 
     const registerServiceWorker = async () => {
       try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
-        
+        const registration = await navigator.serviceWorker.register('/sw.js')
         // Check for updates
         registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
+          const newWorker = registration.installing
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed') {
                 if (navigator.serviceWorker.controller) {
                   // New content is available
-                  onUpdateAvailable?.();
+                  onUpdateAvailable?.()
                 } else {
                   // Content is cached for the first time
-                  onUpdateInstalled?.();
+                  onUpdateInstalled?.()
                 }
               }
-            });
+            })
           }
-        });
-
+        })
         // Handle controller change
         navigator.serviceWorker.addEventListener('controllerchange', () => {
-          window.location.reload();
-        });
-
+          window.location.reload()
+        })
       } catch (error) {
         _onError?.(error as Error);
       }
