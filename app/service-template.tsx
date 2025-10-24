@@ -6,7 +6,6 @@ interface ServiceTemplateProps {
   title: string;
   description: string;
   features: string[];
-}
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
   title,
@@ -37,8 +36,5 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
+    </div>}
 export default ServiceTemplate;

@@ -6,20 +6,15 @@ interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void
   identify: (userId: string, traits?: Record<string, unknown>) => void
   page: (name: string, properties?: Record<string, unknown>) => void
-}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
-)
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
-  }
   return context
-}
 interface AnalyticsProviderProps {
   children: React.ReactNode
-}
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
@@ -36,11 +31,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
         function gtag(...args: unknown[]) {
           ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
-        }
-        gtag('js', new Date())
-        gtag('config', process.env.REACT_APP_GA_ID)
-      }
-    }
+        gtag('js', new Date()
+        gtag('config', process.env.REACT_APP_GA_ID)}
   }, [])
 
   const track = (event: string, properties?: Record<string, unknown>) => {
@@ -51,13 +43,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
           'event',
           event,
           properties,
-        )
-      }
       // Custom analytics
-      console.log('Analytics Event:', event, properties)
-    }
-  }
-
+      console.log('Analytics Event:', event, properties)}
   const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
@@ -69,13 +56,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
             user_id: userId,
             custom_map: traits,
           },
-        )
-      }
       // Custom analytics
-      console.log('Analytics Identify:', userId, traits)
-    }
-  }
-
+      console.log('Analytics Identify:', userId, traits)}
   const page = (name: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
@@ -88,24 +70,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
             page_location: window.location.href,
             ...properties,
           },
-        )
-      }
       // Custom analytics
-      console.log('Analytics Page:', name, properties)
-    }
-  }
-
+      console.log('Analytics Page:', name, properties)}
   const value: AnalyticsContextType = {
     track,
     identify,
     page,
-  }
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  )
-}
 
 export default AnalyticsProvider

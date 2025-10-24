@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
   className?: string
-}
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
@@ -24,18 +23,16 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       meta.name = 'description'
       meta.content = description
       document.head.appendChild(meta),
-    }
   ]
     // Update keywords
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '))
+      metaKeywords.setAttribute('content', keywords.join(', ')
     } else {
       const meta = document.createElement('meta')
       meta.name = 'keywords'
       meta.content = keywords.join(', ')
       document.head.appendChild(meta)
-    }
     // Update canonical URL
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
     if (canonicalLink) {
@@ -45,7 +42,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       canonicalLink.rel = 'canonical'
       canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)
-    }
     // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
@@ -55,9 +51,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         ogTag = document.createElement('meta')
         ogTag.setAttribute('property', property)
         ogTag.setAttribute('content', content)
-        document.head.appendChild(ogTag)
-      }
-    }
+        document.head.appendChild(ogTag)}
     updateOGTag('og:title', title)
     updateOGTag('og:description', description)
     updateOGTag('og:image', ogImage)
@@ -72,9 +66,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         twitterTag = document.createElement('meta')
         twitterTag.setAttribute('name', name)
         twitterTag.setAttribute('content', content)
-        document.head.appendChild(twitterTag)
-      }
-    }
+        document.head.appendChild(twitterTag)}
     updateTwitterTag('twitter:card', 'summary_large_image')
     updateTwitterTag('twitter:title', title)
     updateTwitterTag('twitter:description', description)
@@ -85,7 +77,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       script.type = 'application/ld+json'
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)
-    }
     // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
     if (!viewport) {
@@ -93,14 +84,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       viewport.setAttribute('name', 'viewport')
       viewport.setAttribute('content', 'width=device-width, initial-scale=1')
       document.head.appendChild(viewport)
-    }
     // Add charset if not present
     let charset = document.querySelector('meta[charset]')
     if (!charset) {
       charset = document.createElement('meta')
       charset.setAttribute('charset', 'UTF-8')
       document.head.insertBefore(charset, document.head.firstChild)
-    }
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   return (
     <Head>
@@ -128,12 +117,16 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {structuredData && (
         <script
           type=&quot;application/ld+json&quot
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}
         />
       )}
     </Head>
+<<<<<<< HEAD
   )
 }
  SEOOptimizer
   )
 }
+=======
+export default SEOOptimizer
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d

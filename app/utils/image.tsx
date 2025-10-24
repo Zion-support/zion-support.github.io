@@ -4,7 +4,6 @@ import React, { useState, useCallback } from 'react';
 interface ImageProps {
   src: string,
     alt: string
-  }
 interface ImageProps {}
 src: string,
     alt: string
@@ -34,7 +33,6 @@ sizes?: string
 style?: React.CSSProperties
 onLoad?: () => void
 onError?: () => void;}
-}
 export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
 src
@@ -81,18 +79,15 @@ left: 0,
 height: '100%',
     objectFit: 'cover'}
 })
-}
 if (hasError) {
   </ImageProps>
 return (</ImageProps>
-}
 if (hasError) {}
 return (
     <div}
 if (hasError) {}
 return(<div}
 interface ImageProps {/* TODO: Fix JSX expression */}
-}
 export const
 Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
@@ -102,21 +97,22 @@ const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 const
 imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
 })
-}
 if (hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style={imageStyle}
 {...props})
 >)</div>
 <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+<<<<<<< HEAD
 </div>
   );
+=======
+</div>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d
 {...props}
 ></div>
 <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
 </div>
-)
-}
 return(<img
 return (<img></img>
 src={src}

@@ -80,7 +80,7 @@ const EnhancedSEOHead: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default EnhancedSEOHead

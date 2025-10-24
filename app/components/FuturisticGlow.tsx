@@ -7,7 +7,6 @@ interface FuturisticGlowProps {
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
-}
 
 export default function FuturisticGlow({ 
   children, 
@@ -25,10 +24,7 @@ export default function FuturisticGlow({
       switch (intensity) {
         case 'low': return '0.3';
         case 'high': return '0.8';
-        default: return '0.5';
-      }
-    };
-
+        default: return '0.5';}
     const getColorValue = () => {
       switch (color) {
         case 'cyan': return '0, 255, 255';
@@ -37,10 +33,7 @@ export default function FuturisticGlow({
         case 'green': return '34, 197, 94';
         case 'blue': return '59, 130, 246';
         case 'red': return '239, 68, 68';
-        default: return '0, 255, 255';
-      }
-    };
-
+        default: return '0, 255, 255';}
     const rgb = getColorValue();
     const opacity = getIntensityValue();
     // Apply CSS custom properties for dynamic glow
@@ -77,5 +70,4 @@ export default function FuturisticGlow({
     >
       {children}
     </div>
-  );
 }

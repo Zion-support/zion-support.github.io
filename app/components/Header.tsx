@@ -95,8 +95,12 @@ const Header: React.FC = () => {
       </div>
       <Footer />
 </>
+<<<<<<< HEAD
   )
 }
  HeaderPage
   )
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d
 }

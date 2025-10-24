@@ -54,10 +54,8 @@ const ContentCarousel: React.FC = () => {
   ]
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
   return (
     <>
       <Helmet>
@@ -129,7 +127,7 @@ const ContentCarousel: React.FC = () => {
 <div className=&quot;overflow-hidden rounded-xl&quot;></div>
             <div
               className=&quot;flex transition-transform duration-500 ease-in-out&quot
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              style={{ transform: `translateX(-${currentSlide * 100}%)`}
             >{slides.map((slide, index) => (</div>
 <div key={index} className=&quot;w-full flex-shrink-0&quot;></div>
                   <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
@@ -317,6 +315,7 @@ const ContentCarousel: React.FC = () => {
       </div>
       <Footer />
 </>
+<<<<<<< HEAD
   )
 }
  ContentCarouselPage
@@ -326,4 +325,7 @@ const ContentCarousel: React.FC = () => {
       </div>
     </div>
   )
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d
 }

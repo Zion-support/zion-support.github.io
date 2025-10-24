@@ -80,7 +80,7 @@ const PerformanceOptimizer: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default PerformanceOptimizer

@@ -45,7 +45,6 @@
     "corrupted-src-backup/**/*",
     "problematic-files-backup/**/*",
     "src/**/*",
-    "components/**/*",
     "hooks/**/*",
     "types/**/*",
     "utils/**/*",

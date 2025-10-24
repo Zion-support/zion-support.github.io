@@ -80,7 +80,7 @@ const ErrorHandler: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default ErrorHandler

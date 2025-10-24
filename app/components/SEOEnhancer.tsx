@@ -148,6 +148,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
       </div>
       <Footer />
 </>
-  )
+  );
 }
-export default SEOEnhancerPage

@@ -8,10 +8,7 @@ const MobileOptimizer: React.FC = () => {
     const preventZoom = () => {
       const viewport = document.querySelector('meta[name="viewport"]');
       if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-      }
-    };
-
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');}
     // Add touch-friendly classes
     const addTouchClasses = () => {
       if (typeof document !== 'undefined') {
@@ -19,11 +16,7 @@ const MobileOptimizer: React.FC = () => {
         buttons.forEach((button) => {
           if (!button.classList.contains('touch-manipulation')) {
             button.classList.add('touch-manipulation');
-          }
-        });
-      }
-    };
-
+        });}
     // Optimize images for mobile
     const optimizeImagesForMobile = () => {
       const images = document.querySelectorAll('img');
@@ -31,13 +24,9 @@ const MobileOptimizer: React.FC = () => {
         const imageElement = img as HTMLImageElement;
         if (!imageElement.loading) {
           imageElement.loading = 'lazy';
-        }
         if (!imageElement.decoding) {
           imageElement.decoding = 'async';
-        }
-      });
-    };
-
+      });}
     // Add mobile-specific event listeners
     const addMobileEventListeners = () => {
       // Prevent double-tap zoom
@@ -46,7 +35,6 @@ const MobileOptimizer: React.FC = () => {
         const now = new Date().getTime();
         if (now - lastTouchEnd <= 300) {
           event.preventDefault();
-        }
         lastTouchEnd = now;
       }, false);
 
@@ -55,32 +43,20 @@ const MobileOptimizer: React.FC = () => {
         element.addEventListener('touchstart', () => {
           if ('vibrate' in navigator) {
             navigator.vibrate(10); // Short vibration
-          }
-        });
-      };
-
+        });}
       const interactiveElements = document.querySelectorAll('button, a, [role="button"]');
-      interactiveElements.forEach(addHapticFeedback);
-    };
-
+      interactiveElements.forEach(addHapticFeedback);}
     // Optimize scroll performance
     const optimizeScrollPerformance = () => {
       let ticking = false;
       const updateScrollPosition = () => {
         // Add scroll-based optimizations here
-        ticking = false;
-      };
-      
+        ticking = false;}
       const requestTick = () => {
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition);
-          ticking = true;
-        }
-      };
-      
-      window.addEventListener('scroll', requestTick, { passive: true });
-    };
-
+          ticking = true;}
+      window.addEventListener('scroll', requestTick, { passive: true });}
     // Initialize mobile optimizations
     preventZoom();
     addTouchClasses();
@@ -90,11 +66,8 @@ const MobileOptimizer: React.FC = () => {
 
     // Cleanup
     return () => {
-      // Cleanup if needed
-    };
+      // Cleanup if needed}
   }, []);
 
-  return null;
-};
-
+  return null;}
 export default MobileOptimizer;

@@ -80,7 +80,7 @@ const DynamicContentShowcase: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default DynamicContentShowcase

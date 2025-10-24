@@ -80,7 +80,7 @@ const NeonButton: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default NeonButton

@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
   className?: string
-}
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end
   duration = 2000
@@ -16,7 +15,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   useEffect(() => {
     if (entry?.isIntersecting && !isVisible) {
       setIsVisible(true)
-    }
   }, [entry, isVisible])
   useEffect(() => {
     if (!isVisible) return
@@ -30,24 +28,14 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const currentCount = Math.floor(easeOutQuart * end)
       setCount(currentCount)
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate)
-      }
-    }
+        animationFrame = requestAnimationFrame(animate)}
     animationFrame = requestAnimationFrame(animate)
     return (
     <>
       ) => {
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame)
-      }
-    }
+        cancelAnimationFrame(animationFrame)}
   }, [isVisible, end, duration]
     </>
-  )
-  return (
-    <span ref={setNode} className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>
-  )
+  );
 }
-export default AnimatedCounter

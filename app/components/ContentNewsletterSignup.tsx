@@ -29,7 +29,6 @@ interface ContentNewsletterSignupProps {
   },
   {
     icon: Zap, text: &quot;Early access&quot,
-    }
   ]
   onSubscribe
 }) => {
@@ -43,19 +42,15 @@ interface ContentNewsletterSignupProps {
     if (!email) return setIsLoadin g(true)
     try {
       // Simulate API call
-      await new Promise(resolve=> setTimeout(resolve100 0))
+      await new Promise(resolve=> setTimeout(resolve100 0)
       if (onSubscrib e) {
         onSubscribe(email)
-      }
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
       // console.error('Subscription error:', error)
     } finally {
-      setIsSubmitting(false),
-    }
-  }
-
+      setIsSubmitting(false),}
   return (
     <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -102,7 +97,5 @@ interface ContentNewsletterSignupProps {
         </div>
       </div>
     </div>
-  )
-}
 
 export default ContentNewsletterSignup

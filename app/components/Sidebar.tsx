@@ -80,7 +80,7 @@ const Sidebar: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default Sidebar

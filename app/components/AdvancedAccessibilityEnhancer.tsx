@@ -13,7 +13,6 @@ interface AdvancedAccessibilityEnhancerProps {
   enableMotionReduction?: boolean
   enableFontScaling?: boolean
   enableVoiceNavigation?: boolean
-}
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true,
   enableScreenReader= true,
@@ -42,16 +41,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     setAccessibilitySettings(prev => ({
       ...prev
       reducedMotion: prefersReducedMotion,
-    highContrast: prefersHighContrast}))
+    highContrast: prefersHighContrast})
     // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
     const handleMotionChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
-    }
+      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches })
     const handleContrastChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
-    }
+      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches })
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
     return (
@@ -59,7 +56,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       ) => {
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
-    }
   }, [])
   // Apply accessibility styles
   useEffect(() => {
@@ -95,14 +91,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-}
   ]
     // Apply reduced motion
     if (accessibilitySettings.reducedMotion) {
       root.classList.add('reduced-motion')
     } else {
       root.classList.remove('reduced-motion')
-    }
     // Apply font scaling
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
   }, [accessibilitySettings])
@@ -115,16 +109,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
         if (skipLink) {
           skipLink.focus()
-          event.preventDefault()
-        }
-      }
+          event.preventDefault()}
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
-          activeElement.click()
-        }
-      }
+          activeElement.click()}
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
@@ -135,10 +125,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
             : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
-          menuItems[nextIndex]?.focus()
-        }
-      }
-    }
+          menuItems[nextIndex]?.focus()}
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
@@ -156,20 +143,16 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region')
       if (liveRegion) {
-        liveRegion.textContent = message
-}
-    }
+        liveRegion.textContent = message}
     // Listen for route changes (if using client-side routing)
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
     history.pushState = function(...args) {
       originalPushState.apply(history, args)
       announcePageChange('Page changed')
-    }
     history.replaceState = function(...args) {
       originalReplaceState.apply(history, args)
       announcePageChange('Page updated')
-    }
   }, [])
   // Focus management
   const setupFocusManagement = useCallback(() => {
@@ -179,6 +162,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',
     </>
+<<<<<<< HEAD
   ) as NodeListOf<HTMLElement>
       const firstElement = focusableElements[0]
       const lastElement = focusableElements[focusableElements.length - 1]
@@ -338,4 +322,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
  AdvancedAccessibilityEnhancer
 }}}}}
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d
 }

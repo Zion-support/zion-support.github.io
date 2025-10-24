@@ -80,7 +80,7 @@ const OptimizedImage: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default OptimizedImage

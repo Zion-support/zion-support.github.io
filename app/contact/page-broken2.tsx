@@ -16,8 +16,5 @@ const ContactPageBroken2 = () => {
           </p>
         </div>
       </div>
-    </div>
-  );
-};
-
+    </div>}
 export default ContactPageBroken2;

@@ -80,7 +80,7 @@ const ServiceCard: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default ServiceCard

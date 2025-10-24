@@ -80,7 +80,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default EnhancedPerformanceOptimizer

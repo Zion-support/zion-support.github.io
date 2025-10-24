@@ -26,7 +26,6 @@ const NotFoundPagePage: React.FC = () => {
     title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-}
   ]
   const benefits = [
   'Increase efficiency by up to 50%',
@@ -51,8 +50,12 @@ const NotFoundPagePage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
     </>
   );
   )
 }
  NotFoundPagePage
+=======
+export default NotFoundPagePage
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d

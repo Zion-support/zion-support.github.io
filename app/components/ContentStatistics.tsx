@@ -36,13 +36,10 @@ const ContentStatistics: React.FC = () => {
             newCounters[key as keyof typeof newCounters] = Math.min(
               current + increment
               target
-            )
             allComplete = false
-}
         })
         if (allComplete) {
           clearInterval(interval)
-        }
         return newCounters
       })
     }, stepDuration)
@@ -51,6 +48,7 @@ const ContentStatistics: React.FC = () => {
       ) => clearInterval(interval)
   }, []
     </>
+<<<<<<< HEAD
   )
   const stats = [
     {
@@ -418,4 +416,7 @@ View Case Studies
 </div>
 </div>
 )
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-996d
 }
