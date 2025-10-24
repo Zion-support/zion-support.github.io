@@ -1,19 +1,21 @@
 'use client';
 
-export const dynamic = 'force-dynamic';
-
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
+import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
-  // Set document title for SEO
-  React.useEffect(() => {
-    document.title = 'Micro Saas Services - Zion Tech Group';
-  }, []);
-
   return (
     <>
+      <Head>
+        <title>Micro Saas Services - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas services services and solutions from Zion Tech Group." />
+      </Head>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
@@ -22,84 +24,76 @@ const Page: React.FC = () => {
               Micro Saas Services
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Professional micro saas services services and solutions from Zion Tech Group.
+              Advanced micro saas services solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">🧠</span>
-              </div>
+              <Brain className="w-12 h-12 text-emerald-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Intelligence</h3>
               <p className="text-gray-300 mb-4">Advanced AI algorithms that provide intelligent insights and recommendations.</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Smart recommendations
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Predictive analytics
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Automated insights
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Real-time analysis
                 </li>
               </ul>
             </div>
-
             <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">📊</span>
-              </div>
+              <BarChart className="w-12 h-12 text-emerald-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Advanced Analytics</h3>
               <p className="text-gray-300 mb-4">Comprehensive analytics dashboard with real-time data visualization.</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Real-time monitoring
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Custom dashboards
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Data visualization
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Performance metrics
                 </li>
               </ul>
             </div>
-
             <div className="bg-slate-800 p-6 rounded-lg">
-              <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
-                <span className="text-2xl">🎯</span>
-              </div>
+              <Target className="w-12 h-12 text-emerald-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Precision Targeting</h3>
               <p className="text-gray-300 mb-4">Target the right audience with AI-driven precision and accuracy.</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Audience segmentation
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Behavioral analysis
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   Conversion optimization
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <span className="w-4 h-4 text-emerald-400 mr-2">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                   ROI tracking
                 </li>
               </ul>
@@ -116,7 +110,7 @@ const Page: React.FC = () => {
               className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
             >
               Get Started
-              <span className="ml-2">→</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
         </div>
