@@ -2,20 +2,22 @@
 import os
 import re
 
-def fix_jsx_comprehensive(file_path):
+def fix_jsx_final(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix unclosed section tags
-        content = re.sub(r'<section([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*?)(?=</div>|$)', r'<section\1>\2</section>', content, flags=re.DOTALL)
+        # Fix malformed JSX fragments and closing tags
+        # Remove duplicate closing tags
+        content = re.sub(r'</div></div>', '</div>', content)
+        content = re.sub(r'</section></div>', '</section>', content)
         
-        # Fix unclosed div tags
-        content = re.sub(r'<div([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*?)(?=</div>|$)', r'<div\1>\2</div>', content, flags=re.DOTALL)
+        # Fix JSX fragment issues
+        content = re.sub(r'<>\s*<div([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*?)</div>\s*</>', r'<div\1>\2</div>', content, flags=re.DOTALL)
         
-        # Fix property assignment issues - look for object properties that need colons
+        # Fix property assignment issues
         content = re.sub(r'(\w+)\s*=\s*(\w+)(?=\s*[,}])', r'\1: \2', content)
         
         # Fix arrow function syntax
@@ -45,7 +47,6 @@ def fix_jsx_comprehensive(file_path):
         content = re.sub(r'(\s*)(<[A-Z][^>]*>.*?</[A-Z][^>]*>)\s*(<[A-Z][^>]*>.*?</[A-Z][^>]*>)', r'\1<>\2\3</>', content, flags=re.DOTALL)
         
         # Fix unclosed tags by adding proper closing tags
-        # This is a more aggressive approach to fix remaining issues
         lines = content.split('\n')
         fixed_lines = []
         tag_stack = []
@@ -119,7 +120,7 @@ def main():
     fixed_count = 0
     for file_path in error_files:
         if os.path.exists(file_path):
-            if fix_jsx_comprehensive(file_path):
+            if fix_jsx_final(file_path):
                 print(f"Fixed JSX syntax errors in {file_path}")
                 fixed_count += 1
         else:

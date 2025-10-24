@@ -34,15 +34,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       // Track event with analytics service
       // In production, this would send to analytics service
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Analytics Event:', event, properties);
+        // console.log('Analytics Event:', event, properties);
       }
     }
   };
 
   const trackPageView = (page: string) => {
     if (isLoaded && typeof window !== 'undefined') {
-      // Track page view
       // Track page view
       // console.log('Page View:', page);
     }

@@ -29,8 +29,7 @@ export class PerformanceMonitor {
     this.metrics[name] = value;
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.log(`Performance Metric - ${name}:`, value);
+      // console.log(`Performance Metric - ${name}:`, value);
     }
   }
 

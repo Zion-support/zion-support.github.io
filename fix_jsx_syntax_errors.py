@@ -1,75 +1,49 @@
 #!/usr/bin/env python3
 import os
 import re
+import glob
 
-def fix_jsx_comprehensive(file_path):
+def fix_jsx_syntax_errors(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix unclosed section tags
-        content = re.sub(r'<section([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*?)(?=</div>|$)', r'<section\1>\2</section>', content, flags=re.DOTALL)
+        # Fix unclosed JSX elements - add missing closing tags
+        # Pattern for self-closing divs that should be closed
+        content = re.sub(r'<div([^>]*?)(?<!/)>([^<]*?)(?=<)', r'<div\1>\2</div>', content)
         
-        # Fix unclosed div tags
-        content = re.sub(r'<div([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*?)(?=</div>|$)', r'<div\1>\2</div>', content, flags=re.DOTALL)
+        # Fix unclosed h1 tags
+        content = re.sub(r'<h1([^>]*?)(?<!/)>([^<]*?)(?=<)', r'<h1\1>\2</h1>', content)
         
-        # Fix property assignment issues - look for object properties that need colons
-        content = re.sub(r'(\w+)\s*=\s*(\w+)(?=\s*[,}])', r'\1: \2', content)
+        # Fix JSX expressions with missing parent elements
+        # Look for multiple adjacent JSX elements without a parent
+        content = re.sub(r'(\s*)(<[A-Z][^>]*>.*?</[A-Z][^>]*>)\s*(<[A-Z][^>]*>.*?</[A-Z][^>]*>)', r'\1<>\2\3</>', content, flags=re.DOTALL)
         
-        # Fix arrow function syntax
-        content = re.sub(r'(\w+)\s*=\s*(\w+)\s*=>', r'\1: \2 =>', content)
-        
-        # Fix reserved word issues
-        content = re.sub(r':\s*true(?=\s*[,}])', r': true', content)
-        
-        # Fix missing colons in type definitions
-        content = re.sub(r'(\w+)\s*=\s*(\w+)(?=\s*[;,)])', r'\1: \2', content)
+        # Fix missing closing braces in JSX
+        content = re.sub(r'(\{[^}]*?)(?=\s*</)', r'\1}', content)
         
         # Fix unexpected tokens in JSX
         content = re.sub(r'(\{[^}]*?)([<>])(?=[^}]*\})', r'\1{\2}', content)
         
-        # Fix missing closing braces
-        content = re.sub(r'(\{[^}]*?)(?=\s*</)', r'\1}', content)
+        # Fix missing colons in type definitions
+        content = re.sub(r'(\w+)\s*=\s*(\w+)', r'\1: \2', content)
         
-        # Fix declaration or statement expected - add return statements where needed
+        # Fix declaration or statement expected errors
+        # Look for JSX elements that are not properly wrapped
+        content = re.sub(r'^(\s*)(<[A-Z][^>]*>.*?</[A-Z][^>]*>)(?=\s*$)', r'\1return \2;', content, flags=re.MULTILINE)
+        
+        # Fix specific patterns for common errors
+        # Fix unclosed div tags in common patterns
+        content = re.sub(r'<div([^>]*?)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
+        
+        # Fix missing return statements in React components
         if 'export default function' in content and 'return' not in content:
             # Find the function body and add return
             content = re.sub(r'(export default function[^{]*\{)([^}]+)(\})', 
                            lambda m: m.group(1) + 'return ' + m.group(2) + m.group(3), 
                            content, flags=re.DOTALL)
-        
-        # Fix specific JSX structure issues
-        # Look for multiple adjacent JSX elements without a parent
-        content = re.sub(r'(\s*)(<[A-Z][^>]*>.*?</[A-Z][^>]*>)\s*(<[A-Z][^>]*>.*?</[A-Z][^>]*>)', r'\1<>\2\3</>', content, flags=re.DOTALL)
-        
-        # Fix unclosed tags by adding proper closing tags
-        # This is a more aggressive approach to fix remaining issues
-        lines = content.split('\n')
-        fixed_lines = []
-        tag_stack = []
-        
-        for line in lines:
-            # Track opening tags
-            open_tags = re.findall(r'<([a-zA-Z][a-zA-Z0-9]*)(?:[^>]*?)(?<!/)>', line)
-            for tag in open_tags:
-                tag_stack.append(tag)
-            
-            # Track closing tags
-            close_tags = re.findall(r'</([a-zA-Z][a-zA-Z0-9]*)>', line)
-            for tag in close_tags:
-                if tag in tag_stack:
-                    tag_stack.remove(tag)
-            
-            fixed_lines.append(line)
-        
-        # Add any remaining unclosed tags at the end
-        while tag_stack:
-            tag = tag_stack.pop()
-            fixed_lines.append(f'</{tag}>')
-        
-        content = '\n'.join(fixed_lines)
         
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
@@ -81,6 +55,7 @@ def fix_jsx_comprehensive(file_path):
         return False
 
 def main():
+    # Get list of files with JSX syntax errors
     error_files = [
         'app/components/ContentPreviewCard.tsx',
         'app/components/ContentPromotionBanner.tsx',
@@ -119,7 +94,7 @@ def main():
     fixed_count = 0
     for file_path in error_files:
         if os.path.exists(file_path):
-            if fix_jsx_comprehensive(file_path):
+            if fix_jsx_syntax_errors(file_path):
                 print(f"Fixed JSX syntax errors in {file_path}")
                 fixed_count += 1
         else:
