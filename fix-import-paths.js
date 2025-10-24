@@ -1,59 +1,127 @@
 const fs = require('fs');
 const path = require('path');
-
-// Function to fix import paths
-function fixImportPaths(content) {
-  let fixed = content;
-  
-  // Fix @/components imports to relative paths
-  fixed = fixed.replace(/import { Navigation } from '@\/components\/Navigation';/g, "import { Navigation } from '../components/Navigation';");
-  fixed = fixed.replace(/import { Footer } from '@\/components\/Footer';/g, "import { Footer } from '../components/Footer';");
-  fixed = fixed.replace(/import { Navigation } from '@\/components\/Navigation';/g, "import { Navigation } from '../../components/Navigation';");
-  fixed = fixed.replace(/import { Footer } from '@\/components\/Footer';/g, "import { Footer } from '../../components/Footer';");
-  
-  return fixed;
+;
+// Function to fix import paths in a file;
+function fixImportPaths(filePath) {;
+;
+try { ;
+let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+;
+    // Fix double slash imports;
+if (content.includes("import Footer from '//components/Footer'")) {;";'"
+content = content.replace("import Footer from '//components/Footer'","import Footer from '../../components/Footer'");
+      );
+      modified = true;
+,}
+    }"
+    // Fix missing semicolons;";'"
+if (content.includes("import React from 'react'\nimport Head")) {;";'"
+content = content.replace("import React from 'react'\nimport Head","import React from 'react';\nimport Head");
+      );
+      modified = true}
+if (modified) {;'"
+fs.writeFileSync(filePath, content, 'utf8');"
+      console.log(`Fixed: "${filePath"}`);
+      return true}
+    return false} catch (error) {;`
+console.error(`Error fixing ${filePath}:`, error.message);
+    return false}
 }
-
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixImportPaths(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed imports in: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
-
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
+// Function to recursively find all .tsx files;
+function findTsxFiles(dir) {;
+;
+const files = [];
   const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+;
+for (const item, of, items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
+;
+if (stat.isDirectory()) {;
+files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx')) {;
+files.push(fullPath)}
   }
-  
-  return files;
-}
-
-// Main execution
+return files}
+// Main execution;
 const appDir = path.join(__dirname, 'app');
 const tsxFiles = findTsxFiles(appDir);
+;`
+console.log(`Found ${tsxFiles.length} .tsx files to check`);
+;
+let fixedCount = 0;
+for(const file, of, tsxFiles) { ;
+if (fixImportPaths(file)) {;
+fixedCount++}
+}`"
+console.log(`Fixed ${fixedCount} files`);";`'"
+const fs = require("fs")
+const path = require("path")
+//Function to fix import paths in a file;
+function fixImportPaths(filePath) { 
 
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
+try { 
+let content = fs.readFileSync(filePath, "utf8")
+    let modified = false
+    //Fix double slash imports
+if (content.includes("import Footer from "//components/Footer"")) {
+content = content.replace("import Footer from "//components/Footer"";
+        "import Footer from "../../components/Footer"")
+      )
+      modified = true
+,}
+    }
 
-tsxFiles.forEach(processFile);
+    //Fix missing semicolons
+if (content.includes("import React from "react"\nimport Head")) {
+content = content.replace("import React from "react"\nimport Head";
+        "import React from "react";\nimport Head")
+      )
+      modified = true
+    }
 
-console.log('Import path fixing completed!');
+if (modified) {
+fs.writeFileSync(filePath, content, "utf8")
+      console.log(`Fixed: "${filePath"}`)
+      return true
+    }
+    return false
+  } catch (error) {
+console.error(`Error fixing${filePath}:`, error.message)
+    return false
+  }
+}
+;
+//Function to recursively find all .tsx files;
+function findTsxFiles(dir) {
+
+const files = []
+  const items = fs.readdirSync(dir)
+
+for (const item, of, items) {
+const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
+
+if (stat.isDirectory()) {
+files.push(...findTsxFiles(fullPath)) else if (item.endsWith(".tsx")) {
+files.push(fullPath)
+    }
+  }
+
+return files
+}
+
+//Main execution
+const appDir = path.join(__dirname, "app");
+const tsxFiles = findTsxFiles(appDir)
+
+console.log(`Found${tsxFiles.length} .tsx files to check`)
+
+let fixedCount = 0
+for(const file, of, tsxFiles) { 
+if (fixImportPaths(file)) {
+fixedCount++
+  }
+}
+
+console.log(`Fixed${fixedCount} files`)

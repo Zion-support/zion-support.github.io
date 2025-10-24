@@ -1,72 +1,34 @@
-'use client';
+"use client"
+import React from "react";
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe   } from "lucide-react";
+import { Navigation  } from "../components/Navigation";
+const EnhancedSEOPage: "React.FC = () => {
+const benefits = [
 
-import React from 'react';
-import Head from 'next/head';
+    "Advanced AI technology integration"","Real-time processing and analytics"
+    "Enterprise-grade security and compliance"
+    "Scalable and flexible solutions"
+    "24/7 technical support"
+    "Easy integration with existing systems"
+    "Cost-effective pricing plans"
+    "Proven track record of success" <div className="[^"]*"> <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /> <Phone className="mr-2 h-5 w-5" />
+Call Now <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /> <Mail className="mr-2 h-5 w-5" />
+Email Us
+        </section>
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
+  )
+
+export default EnhancedSEOPage
+              ))} <div className="[^"]*">{benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+
+            ))}
+          </div>
+      </section>
+      {/* CTA Section*/} <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="[^"]*"> <div className="[^"]*"> <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="[^"]*"> <div className="[^"]*">,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>,<divclassName="flex flex-col sm: flex-row gap-4 justify-center" / //>
+            </div>
 }
-
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
-  canonical,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-
-  return (
-    <Head>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Robots Meta Tags */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
-        />
-      )}
-    </Head>
-  );
-};
 
 export default EnhancedSEO;

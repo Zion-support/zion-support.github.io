@@ -44,12 +44,10 @@
     "backup-problematic/**/*",
     "corrupted-src-backup/**/*",
     "problematic-files-backup/**/*",
-    "src/**/*",
-    "components/**/*",
-    "hooks/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "app/App.tsx",
-    "app/root-layout.tsx"
+    "problematic-pages/**/*",
+    "temp-pages/**/*",
+    "temp-all-problematic/**/*",
+    "temp-backup/**/*",
+    "temp-problematic/**/*"
   ]
 }

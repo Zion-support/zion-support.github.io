@@ -1,12 +1,16 @@
 import Footer from './Footer'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
-'use client';
-<<<<<<< HEAD
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '''
-=======
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+import { Helmet } from from 'react-helmet-async'
+import { ArrowRight, Brain } from from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from from 'lucide-react'
+import { Phone, Mail, ArrowRight } from from 'lucide-react''use client'
+</>;
+export default OptimizedImage;
+import { Footer  } from "./Footer";
+import { React  } from "react";
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain  } from "lucide-react";
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from "lucide-react";
+import { Phone, Mail, ArrowRight   } from "lucide-react"; "use client"
+</OptimizedImageProps>
+export default OptimizedImage

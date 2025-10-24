@@ -1,51 +1,42 @@
-const fs = require('fs');
-const path = require('path');
-
-// Function to fix import paths
-function fixImports(content, filePath) {
-  let fixed = content;
-  
-  // Fix @/components imports to relative paths
-  fixed = fixed.replace(/from ['"]@\/components\/([^'"]+)['"]/g, (match, componentName) => {
-    const relativePath = getRelativePath(filePath, `./app/components/${componentName}`);
-    return `from '${relativePath}'`;
-  });
-  
-  return fixed;
-}
-
-// Function to calculate relative path
-function getRelativePath(from, to) {
-  const fromDir = path.dirname(from);
-  const relativePath = path.relative(fromDir, to);
-  return relativePath.startsWith('.') ? relativePath : './' + relativePath;
-}
-
-// Function to process all TSX files
-function processAllTSXFiles(dir) {
-  const files = fs.readdirSync(dir, { withFileTypes: true });
-  
-  for (const file of files) {
-    const fullPath = path.join(dir, file.name);
+const fs = require("fs")
+const path = require("path")
+function fixImports(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8")
+    let originalContent = content
+    //Count the depth of the file
+    const relativePath = path.relative("./app", filePath)
+    const depth = relativePath.split("/").length - 1
+    //Create the correct import path;
+   ;
+const importPath = "../".repeat(depth) + "components/Footer"
+    //Fix the import
+    content = content.replace(/import Footer from "\.\.\/components\/Footer";/g, `import Footer from "${importPath}";`)
+    //Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content)
+      console.log(`Fixed imports in: ${filePath}`)
+      return true
+    }
     
-    if (file.isDirectory()) {
-      processAllTSXFiles(fullPath);
-    } else if (file.name.endsWith('.tsx')) {
-      try {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        const fixed = fixImports(content, fullPath);
-        
-        if (content !== fixed) {
-          fs.writeFileSync(fullPath, fixed);
-          console.log(`Fixed imports in: ${fullPath}`);
-        }
-      } catch (error) {
-        console.error(`Error processing ${fullPath}:`, error.message);
-      }
+    return false
+  } catch (error) {
+    console.error(`Error fixing${filePath}:`, error.message)
+    return false
+  }
+}
+
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir)
+  for (const file of files) {
+    const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
+    if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
+      findAndFixFiles(filePath)
+    } else if (file.endsWith("page.tsx")) {
+      fixImports(filePath)
     }
   }
 }
 
-// Process the app directory
-processAllTSXFiles('./app');
-console.log('Import path fixing completed!');
+//Start fixing from the app directory findAndFixFiles("./app") console.log("Import fixing completed!")

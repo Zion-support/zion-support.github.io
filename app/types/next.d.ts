@@ -1,98 +1,205 @@
-// import { MetadataRoute } from 'next' // Unused import removed
+//Type definitions for Next.js compatibility
 
-// Extend Next.js types
-declare module 'next' {
-  interface NextConfig {
-    experimental?: {
-      appDir?: boolean
-      serverComponentsExternalPackages?: string[]
-    }
-    images?: {
-      domains?: string[]
-      remotePatterns?: Array<{
-        protocol: 'http' | 'https'
-        hostname: string
-        port?: string
-        pathname?: string
-      }>
-    }
-  }
+import { NextRequest, NextResponse } from 'next/server';
+
+title?: string
+description?: string
+keywords?: string[]
+}
+authors?: Array<{ name: "string; url?: string "}> | string[]
+creator?: string
+  publisher?: string
+  formatDetection?: {
+email?: boolean
+    address?: boolean
+    telephone?: boolean}
+  metadataBase?: URL
+  alternates?: {
+canonical?: string
+languages?: Record<string , string  />
 }
 
-// Extend Next.js metadata types
-declare module 'next/metadata' {
-  interface Metadata {
+authors?: Array<{ name: "string; url?: string "}> | string[]
+creator?: string
+  publisher?: string
+  formatDetection?: {
+email?: boolean
+    address?: boolean
+    telephone?: boolean
+}
+  metadataBase?: URL
+  alternates?: {
+canonical?: string
+languages?: Record<string, string />
+}
+  openGraph?: {
+title?: string
+description?: string
+url?: string
+siteName?: string</string>
+images?: Array<{
+url: "string
+width?: number
+height?: number",alt?: string
+}>
+locale?: string
+    type?: string
+    authors?: Array<{ name: "string; url?: string "}> | string[]
+publishedTime?: string
+  }
+  twitter?: {
+card?: "summary" | "summary_large_image" | "app" | "player"
+site?: string
+    creator?: string
     title?: string
     description?: string
-    keywords?: string[]
-    authors?: Array<{ name: string; url?: string }>
-    creator?: string
-    publisher?: string
-    robots?: string
-    openGraph?: {
-      title?: string
-      description?: string
-      url?: string
-      siteName?: string
-      images?: Array<{
-        url: string
-        width?: number
-        height?: number
-        alt?: string
-      }>
-      locale?: string
-      type?: string
-    }
-    twitter?: {
-      card?: 'summary' | 'summary_large_image' | 'app' | 'player'
-      title?: string
-      description?: string
-      images?: string[]
-      creator?: string
-      site?: string
-    }
-    verification?: {
-      google?: string
-      yandex?: string
-      yahoo?: string
-      other?: Record<string, string>
-    }
+    images?: string[]
+}
+  robots?: {
+index?: boolean
+    follow?: boolean
+    googleBot?: {
+index?: boolean
+      follow?: boolean
+      "max-video-preview"?: number
+      "max-image-preview"?: "none" | "standard" | "large"
+      "max-snippet"?: number
+}
   }
+  verification?: {
+google?: string
+yandex?: string
+yahoo?: string
+other?: Record<string, string />
+}
+}
+export interface MetadataRoute {
+
+url: "string
+lastModified?: string|Date
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
+priority?: number"
+}
+}
 }
 
-// Custom page props
-export interface CustomPageProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+export interface MetadataRouteSitemap extends MetadataRoute{
+url: "string",lastModified?: string|Date
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
+priority?: number}
 }
+//Custom Next.js types
+export interface NextPageProps {
 
-// API route types
+
+}
+}
+  params: "{ [ke",y: "string,]: string "}
+
+  searchParams: "{ [ke",y: "string,]: string|string[] | undefined "}
+}
+//API route types
 export interface ApiRouteHandler {
-  GET?: (request: Request) => Promise<Response>
-  POST?: (request: Request) => Promise<Response>
-  PUT?: (request: Request) => Promise<Response>
-  DELETE?: (request: Request) => Promise<Response>
-  PATCH?: (request: Request) => Promise<Response>
+
+
+}
+}</string>
+  (req: "Request): Promise<Response>"}
+
+//Server components types
+export interface ServerComponentProps {
+
+
+}
+}
+  params: "{ [ke",y: "string,]: string "}
+
+  searchParams: "{ [ke",y: "string,]: string|string[] | undefined "}
+
+}
+//Client components types
+
+export interface ClientComponentProps {
+
+children?: React.ReactNode
+className?: string
+}
+}
 }
 
-// Middleware types
-export interface MiddlewareRequest extends Request {
-  nextUrl: URL
-  geo?: {
-    country?: string
-    region?: string
-    city?: string
-    latitude?: string
-    longitude?: string
-  }
-  ip?: string
-  ua?: string
+//Route handlers
+export interface RouteHandler {
+</Response>
+GET?: (req: "Request) => Promise<Response />
+POST?: (req: Request) => Promise<Response />
+PUT?: (req: Request) => Promise<Response>
+DELETE?: (re",</Response>
+q: "Request) => Promise<Response>"
+}
+}</Response>
+PATCH?: (req: "Request) => Promise<Response>"}
+
+//Dynamic route types
+export interface DynamicRoute {
+
+
+}
+}
+  params: "{ [ke",y: "string,]: string "}
+
+}
+//Static generation types
+export interface StaticProps {
+
+
+}
+}
+  props: "{ [ke",y: "string,]: any "}
+
+  revalidate?: number
+notFound?: boolean
+}
+//ISR types
+
+export interface ISRConfig {
+
+revalidate: "number
+tags?: string[]"
+}
+}
 }
 
-export interface MiddlewareResponse extends Response {
-  cookies: {
-    get: (name: string) => { name: string; value: string } | undefined
-    set: (name: string, value: string, options?: any) => void
-    delete: (name: string) => void
+//Edge runtime types
+export interface EdgeRuntime {
+
+
+}
+}
+  runtime: ""edge""}
+
+//Node.js runtime types
+export interface NodeRuntime {
+
+
+}
+}
+  runtime: ""nodejs""}
+
+//Extend Next.js types
+declare module "next" {
+interface NextApiRequest {
+
+user?: {
+id: "string",email: "string
+name?: string"
+}
+}
+}
+
   }
+}"
+export {}</Response>
+}"
+}
+export {}</Response>
 }

@@ -1,17 +1,27 @@
-interface SecurityConfig {
-  enableCSP: boolean;
   enableHSTS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  allowedOrigins: string[];
+  enableXSSProtection: boolean;"
+  enableCSRFProtection: boolean;"
+  allowedOrigin",s: "string[]"}
+}"
+}"
+const securityConfig: "SecurityConfig = {;"
+enableCS",P: "true",enableHSTS: "true",enableXSSProtection: "true",enableCSRFProtection: "true",allowedOrigins: "['http",s: "//ziontechgroup.com'",'https: "//www.ziontechgroup.com']"
+"}"
+export default securityConfig}";'"
+// Configuration for security
+
+enableCSP: "boolean
+  enableHSTS: boolean
+  enableXSSProtection: boolean
+  enableCSRFProtection: boolean
+  allowedOrigin",s: "string[];"
+}
+}
 }
 
-const securityConfig: SecurityConfig = {
-  enableCSP: true,
-  enableHSTS: true,
-  enableXSSProtection: true,
-  enableCSRFProtection: true,
-  allowedOrigins: ['https://ziontechgroup.com', 'https://www.ziontechgroup.com']
-};
+const securityConfig: "SecurityConfig = {
+enableCS",P: "true",enableHSTS: "true",enableXSSProtection: "true",enableCSRFProtection: "true",allowedOrigins: "["http",s: "//ziontechgroup.com"","https: "//www.ziontechgroup.com"] "}
 
-export default securityConfig;
+
+export default securityConfig
+}

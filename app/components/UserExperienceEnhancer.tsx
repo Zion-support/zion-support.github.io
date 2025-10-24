@@ -1,86 +1,90 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+"use client"
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+const enhanceUserExperience = () => {
+return (<div>
+      <Head>
+        <title>404 - Page Not Found|Zion Tech Group</title>
+        
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og: type" content="website" />
 
-const UserExperienceEnhancer: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>UserExperienceEnhancer</title>
-        <meta name="description" content="Advanced UserExperienceEnhancer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, UserExperienceEnhancer, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              UserExperienceEnhancer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced UserExperienceEnhancer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
+      
+      </Head>
+    </div>,<div className="[^"]*"> <div className="[^"]*">
+          {/* 404 Animation*/) => {
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the powerful features that make UserExperienceEnhancer the perfect solution for your business.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
+} <div className="[^"]*"> <div className="[^"]*">
+              404 <div className="[^"]*"> <AlertTriangle className="w-6 h-6 text-red-400" />
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+          {/* Error Message*/} <h1 className="[^"]*">
+Page Not Found
+          </h1> <p className="[^"]*">
+Oops! The page you"re looking for seems to have vanished into the digital void. Don"t, worry,even our AI can"t predict everything!
+          </p>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using UserExperienceEnhancer to transform their operations.
-            </p>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              Start Your Free Trial
+          {/* Search Suggestion*/} <div className="[^"]*"> <div className="[^"]*"> <Search className="w-6 h-6 text-cyan-400 mr-2" />
+    <h1 className="text-lg font-semibold text-white">What were you looking for?</h2>
+                </div>
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: "</p>",<div className="[^"]*">
+              {[{ name: "Home",path: "/" }
+                { name: "About",path: "/about" }
+                { name: "Services",path: "/services" }
+                { name: "Contact",path: "/contact" })
+              ].map((item, index) => (<Link key = {index} href = {item.path} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
+                  {item.name}
+                </Link>
+              ))}
+                </div>
+              </div>
+          {/* Action Buttons*/}
+
+    <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
+      <Link href="/" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"> <Home className="w-5 h-5 mr-2" />
+Go Home
+
+      </Link>
+    </div>
+            <button
+onClick={() => window.history.back()
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"> <ArrowLeft className="w-5 h-5 mr-2" />
+Go Back
             </button>
+              </div>
+          {/* Help Section*/} <div className="[^"]*">
+    <h1 className="text-lg font-semibold text-white mb-3">Need Help?</h3> <p className="[^"]*">
+Our support team is here to help you navigate our services and find exactly what you"re looking for.
+            </p>
+    <div className="flex flex-col sm: flex-row gap-3 justify-center">
+      <Link href="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"> <RefreshCw className="w-4 h-4 mr-2" />
+Contact Support
+      </Link>
+    </div>
+              <a href="mailto:support@ziontechgroup.com" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+Send Email
+              </a>
+                </div></div>
+          {/* Fun Fact */,},<div className="mt-8 p-4 bg-slate-800/30 rounded-lg" /><p className="text-sm text-gray-400" />,<span className="text-cyan-400">Fun Fact: </span> Even our AI gets"
+confused sometimes. That"s why we have humans to help when things
+go wrong! 🤖
+            </p>
+              </div>
+          {/* Fun Fact*/} <div className="[^"]*"> <p className="[^"]*">
+    <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets
+confused sometimes. That"s why we have humans to help when things
+go wrong! 🤖
+            </p>
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
-      <Footer />
+    </div>
     </>
-  )
+  ) "}
+export default enhanceUserExperience
+    </div>
 }
 
-export default UserExperienceEnhancer
+export default UserExperienceEnhancer;

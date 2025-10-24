@@ -18,4 +18,3 @@ export default function handler(req: any, res: any) {
     return res.status(500).json({ message: 'Internal server error' });
   }
 }
-

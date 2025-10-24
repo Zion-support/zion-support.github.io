@@ -4,9 +4,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import '@testing-library/jest-dom';
 import Loading from '../app/components/Loading';
 import SEOHeadWrapper from '../app/components/SEOHeadWrapper';
-
 describe('Loading Component', () => {
-  test('renders service text', () => {
+  test('renders loading text', () => {
     render(
       <HelmetProvider>
         <Loading />
@@ -15,18 +14,15 @@ describe('Loading Component', () => {
     expect(screen.getByText('Loading')).toBeTruthy();
   });
 });
-
-describe('SEOHead Component', () => {
+describe('SEOHeadWrapper Component', () => {
   test('renders without crashing', () => {
-    render(
+    const { container } = render(
       <HelmetProvider>
-        <SEOHeadWrapper 
-          title="Test Title"
-          description="Test Description"
-          keywords={['test', 'keywords']}
-        />
+        <SEOHeadWrapper>
+          <div>Test Content</div>
+        </SEOHeadWrapper>
       </HelmetProvider>
     );
-    expect(document.head).toBeTruthy();
+    expect(container).toBeTruthy();
   });
 });
