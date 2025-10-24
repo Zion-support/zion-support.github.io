@@ -1,5 +1,4 @@
-'use client'
-<<<<<<< HEAD
+'use client';
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
@@ -14,15 +13,18 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean
 }
 
-constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching= true,
-  enableImageOptimization= true,
-  enableLazyLoading= true,
-  enablePreloading= true,
-  enableCodeSplitting= true,
-  enableResourceHints= true,
-  enableServiceWorker= true,
-  enableCriticalCSS= true,
-  enableWebVitals= true}) => {const [performanceMetricssetPerformanceMetrics] = useState({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
+  enableServiceWorker = true,
+  enableCriticalCSS = true,
+  enableWebVitals = true
+}) => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -31,8 +33,9 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   })
 
   // Web Vitals monitoring
-  useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
-      constmeasureWebVitals= () => {
+  useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
   
         // First Contentful Paint
         new PerformanceObserver((list) => {
@@ -82,9 +85,11 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // })
+          console.log('Service Worker registered:', registration);
+        })
         .catch((registrationError) => {
-          // })
+          console.error('Service Worker registration failed:', registrationError);
+        });
     }
 
     // Memory-based caching for API responses
@@ -199,8 +204,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     if (typeof window === 'undefined') return
 
     // Report to analytics
-    if ('gtag' in windo w) {
-      (windo w as any).gtag('event', 'web_vitals', {
+    if ('gtag' in window) {
+      (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
@@ -245,6 +250,3 @@ export default AdvancedPerformanceOptimizer
 };
 
 export default AdvancedPerformanceOptimizerPage;
-=======
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

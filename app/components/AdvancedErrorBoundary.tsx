@@ -1,13 +1,15 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
-import { Mail } from 'lucide-react'
-import { Home } from 'lucide-react'
 
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+interface AdvancedErrorBoundaryProps {
+  className?: string;
+  children: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface ErrorReport {
+  errorId: string;
+  error: Error;
 }
 
 interface State {
@@ -16,27 +18,35 @@ interface State {
   errorInfo?: ErrorInfo
   errorId?: string
 }
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+
+class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
+  constructor(props: AdvancedErrorBoundaryProps) {
     super(props)
     this.state = { hasError: false }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
+  }
+
+  private generateErrorId = (): string => {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
-      error,
-<<<<<<< HEAD
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      error
     }
+    // Report error to external service
+    console.error('Error reported:', errorReport)
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
+      errorId: this.generateErrorId()
     })
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -44,7 +54,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo)
+      console.error('Error caught by boundary:', error, errorInfo)
     }
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
@@ -55,124 +65,72 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
-=======
-      message: error.message,
+      errorId: this.state.errorId,
+      error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString()
+    }
+    
+    // Send to external service (implement as needed)
+    console.error('Error logged to service:', errorData)
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  }
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback
-      }
-
-      // Default error UI
       return (
-                </p>
-              </div>
-
-              {process.env.NODE_ENV === 'development' && (
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>Error Details:</h3>h3>
-                  <div className='mt-2 text-sm text-red-700'>
-                    <p>
-                      <strong>Error ID:</strong> {this.state.errorId}
-                    </p>
-                    <p>
-                      <strong>Message:</strong> {this.state.error?.message}
-                    </p>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
-                        Stack Trace
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.error?.stack}</p>pre>
-                    </details>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
-                        Component Stack
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>{this.state.errorInfo?.componentStack}</p>pre>
-                    </details>
-                  </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
+        <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+            <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try again.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
+            <div className="space-y-3">
+              <button
+                onClick={this.handleRetry}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+              >
+                <RefreshCw className="h-4 w-4 mr-2" />
+                Try Again
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
+              <button
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+              >
+                <Home className="h-4 w-4 mr-2" />
+                Go Home
+              </button>
+              <button
+                onClick={() => window.location.href = 'mailto:support@example.com'}
+                className="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+              >
+                <Mail className="h-4 w-4 mr-2" />
+                Contact Support
               </button>
             </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
+        </div>
+      )
+    }
 
-export default AdvancedErrorBoundaryPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
+    return this.props.children
+  }
+}
+
+export default AdvancedErrorBoundary

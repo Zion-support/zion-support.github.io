@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 "use client"
 import React from "react"
 import { Helmet } from "react-helmet-async"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 const ImageOptimizerPage: React.FC = () => {
   const features = [
@@ -48,13 +45,12 @@ const ImageOptimizerPage: React.FC = () => {
         <meta name="description" content="Professional ImageOptimizer services by Zion Tech Group." />
         <meta name="keywords" content="AI, artificial intelligence, ImageOptimizer, AI solutions, intelligent automation" />
       </Helmet>
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4"></section>
+        <div className="container mx-auto max-w-6xl"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">ImageOptimizer</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional ImageOptimizer services tailored to your business needs.</p>p>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
@@ -64,5 +60,3 @@ const ImageOptimizerPage: React.FC = () => {
 export default ImageOptimizerPage
 
 export default ImageOptimizerPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8

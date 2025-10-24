@@ -75,50 +75,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }));
     }
   };
-  private getUserId = (): string | null => {
-    // Get user ID from localStorage, cookies, or context
-    return localStorage.getItem('userId') || null;
-  };
-  
-  private getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
 
   private handleReload = () => {
     window.location.reload();
   };
+
   private handleGoHome = () => {
     window.location.href = '/';
-  };
-  private copyErrorDetails = () => {
-    const errorDetails = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-      url: window.location.href,
-    };
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {
-        // Show success message
-        const button = document.getElementById('copy-error-details');
-        if (button) {
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-          setTimeout(() => {
-            button.textContent = originalText;
-          }, 2000);
-        }
-      })
-      .catch(() => {
-        console.warn('Failed to copy error details');
-      });
   };
 
   render() {
@@ -127,28 +90,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
+      const { retryCount, error, errorId } = this.state;
+      const canRetry = retryCount < this.maxRetries;
+
       return (
-        <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>Error ID: {this.state.errorId}</p>
-          {this.state.retryCount < this.maxRetries && (
-            <button onClick={this.handleRetry}>
-              Retry ({this.maxRetries - this.state.retryCount} attempts left)
-            </button>
-          )}
-        </div>
-      );
-    }
-
-    // Custom fallback UI
-    if (this.props.fallback) {
-      return this.props.fallback;
-    }
-    
-    const { retryCount, error, errorId } = this.state;
-    const canRetry = retryCount < this.maxRetries;
-
-    return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">⚠️</div>
@@ -171,7 +116,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 onClick={this.handleReload}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
-                Try Again
+                Reload Page
               </button>
               <button
                 onClick={this.handleGoHome}
@@ -189,13 +134,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   {error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
-                <button
-                  id="copy-error-details"
-                  onClick={this.copyErrorDetails}
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
-                  Copy Error Details
-                </button>
               </details>
             )}
           </div>

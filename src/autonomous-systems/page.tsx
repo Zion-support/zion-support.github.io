@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 'use client'
+import { BarChart } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, BarChart } from 'lucide-react'
 import { Bot, Cpu } from 'lucide-react'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 
 constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
     {
@@ -37,19 +35,19 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+      <section className="relative py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white"></section>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Autonomous Systems Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
               Transform your operations with intelligent autonomous systems that work 24/7
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
                 Explore Autonomous Solutions
               </button>
@@ -61,9 +59,9 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
         </div>
       </section>
       {/* Key Benefits */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-16 bg-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Autonomous Systems?
             </h2>
@@ -71,23 +69,23 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               Our autonomous systems deliver unprecedented efficiency, reliability, and cost savings
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="text-center p-6"></div>
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Bot className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Operation</h3>
               <p className="text-gray-600">Systems that never sleep, continuously monitoring and optimizing your operations</p>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6"></div>
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Cpu className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Healing</h3>
               <p className="text-gray-600">Automatically detect and resolve issues before they impact your business</p>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6"></div>
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <BarChart className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning</h3>
@@ -97,9 +95,9 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
         </div>
       </section>
       {/* Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-16 bg-gray-50"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Autonomous Solutions
             </h2>
@@ -107,12 +105,12 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               Comprehensive autonomous systems designed to transform your business operations
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
             {autonomousServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
@@ -123,7 +121,7 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
                     ))}
                   </ul>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, index) => (
@@ -134,8 +132,8 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
                     ))}
                   </ul>
                 </div>
-                <div className="border-t pt-4">
-                  <div className="flex justify-between items-center">
+                <div className="border-t pt-4"></div>
+                  <div className="flex justify-between items-center"></div>
                     <span className="text-2xl font-bold text-green-600">{service.marketPrice}</span>
                     <span className="text-sm text-gray-500">{service.category}</span>
                   </div>
@@ -146,15 +144,15 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16 bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-green-600 text-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Automate Your Operations?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let our autonomous systems transform your business with intelligent automation
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
               Get Started Today
             </button>
@@ -162,8 +160,9 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               Learn More
             </button>
           </div>
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
-      </section>
+      </div>
     </div>
   )
 }

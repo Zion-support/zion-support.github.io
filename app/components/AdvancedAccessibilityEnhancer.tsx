@@ -1,5 +1,6 @@
-'use client'
-<<<<<<< HEAD
+'use client';
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedAccessibilityEnhancerProps {
@@ -15,15 +16,16 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
-  enableScreenReader= true,
-  enableHighContrast= true,
-  enableFocusManagement= true,
-  enableARIALabels= true,
-  enableSkipLinks= true,
-  enableColorContrast= true,
-  enableMotionReduction= true,
-  enableFontScaling= true,
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableARIALabels = true,
+  enableSkipLinks = true,
+  enableColorContrast = true,
+  enableMotionReduction = true,
+  enableFontScaling = true,
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
@@ -398,9 +400,3 @@ export default AdvancedAccessibilityEnhancer
 };
 
 export default AdvancedAccessibilityEnhancerPage;
-=======
-    }
-  ]
-
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
