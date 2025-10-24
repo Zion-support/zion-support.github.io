@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from 'Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -182,7 +182,7 @@ const ContentStatistics: React.FC = () => {
     </section>
   )
 }
-export default ContentStatisticsPage
+ ContentStatisticsPage
 clients: 0,
     projects: 0
 satisfaction: 0,
@@ -419,4 +419,3 @@ View Case Studies
 </div>
 )
 }
-export default ContentStatistics

@@ -543,7 +543,6 @@ export const performanceMonitoring = PerformanceMonitoringService.getInstance()
 export default PerformanceMonitoringService
 // Export convenience enums and functions
 export enum MetricUnit {
-  export default PerformanceMonitoringService
 // Export convenience enums and functions
 }
 export enum MetricUnit {}

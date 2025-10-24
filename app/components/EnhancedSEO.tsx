@@ -1,5 +1,5 @@
 'use client';
-import Footer from './Footer';
+import Footer from 'Footer';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain } from 'lucide-react';

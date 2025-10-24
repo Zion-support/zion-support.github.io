@@ -1,5 +1,5 @@
 'use client';
-import Footer from './Footer';
+import Footer from 'Footer';
 import Navigation from './Navigation';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -115,10 +115,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
 </>
   )
 }
-export default SystemMonitorPage
+ SystemMonitorPage
             </div>
         </div>
     </div>
   )
 }
-export default SystemMonitorPage

@@ -134,7 +134,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Head>
   )
 }
-export default SEOOptimizer
+ SEOOptimizer
   )
 }
-export default SEOOptimizerPage

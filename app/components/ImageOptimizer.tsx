@@ -51,7 +51,8 @@ const ImageOptimizerPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
+  );
   )
 }
-export default ImageOptimizerPage
-export default ImageOptimizerPage
+ ImageOptimizerPage

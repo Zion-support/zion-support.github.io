@@ -51,7 +51,8 @@ const NotFoundPagePage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
+  );
   )
 }
-export default NotFoundPagePage
-export default NotFoundPagePage
+ NotFoundPagePage

@@ -51,7 +51,8 @@ const PerformanceImagePage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
+  );
   )
 }
-export default PerformanceImagePage
-export default PerformanceImagePage
+ PerformanceImagePage

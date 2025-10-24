@@ -1,4 +1,4 @@
-import Footer from './Footer';
+import Footer from 'Footer';
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';

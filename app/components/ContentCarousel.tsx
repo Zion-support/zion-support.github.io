@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from 'Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 interface Slide {
   id: number,
@@ -319,7 +319,7 @@ const ContentCarousel: React.FC = () => {
 </>
   )
 }
-export default ContentCarouselPage
+ ContentCarouselPage
             <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
         </div>
@@ -327,4 +327,3 @@ export default ContentCarouselPage
     </div>
   )
 }
-export default ContentCarousel

@@ -51,7 +51,8 @@ const ServicePageTemplatePage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
+  );
   )
 }
-export default ServicePageTemplatePage
-export default ServicePageTemplatePage
+ ServicePageTemplatePage
