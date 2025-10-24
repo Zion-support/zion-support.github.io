@@ -1,6 +1,5 @@
-'use client';
-import Link from 'next/link';
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
+import Link from 'next/link'
+import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
 
 export default function NotFound() {
   return (
@@ -34,5 +33,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }

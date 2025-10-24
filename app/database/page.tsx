@@ -24,7 +24,6 @@ export default function DatabasePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

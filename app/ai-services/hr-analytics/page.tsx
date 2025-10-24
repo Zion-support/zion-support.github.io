@@ -24,7 +24,6 @@ export default function HrAnalyticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

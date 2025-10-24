@@ -24,7 +24,6 @@ export default function CybersecurityPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

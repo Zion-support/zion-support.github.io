@@ -24,7 +24,6 @@ export default function AiRecommendationEnginePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

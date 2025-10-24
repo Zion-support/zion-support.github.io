@@ -19,12 +19,12 @@ import React, { useEffect, useCallback, useState } from 'react'
   '/fonts/inter-var.woff2'
     '/css/critical.css'}
       const link = document.createElement('link'
-      link.rel = 'preload'
+      link.rel = 'preload')
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
       if (resource.endsWith('.woff2'
         link.crossOrigin = 'anonymous'
     if (typeof window === 'undefined'
-    if ('gtag'
-      (window as any).gtag('event', 'web_vitals'
+    if ('gtag')
+      (window as any).gtag('event', 'web_vitals';
         "event_category": 'Performance';,
-    "event_label": 'Core Web Vitals'
+    "event_label": 'Core Web Vitals')

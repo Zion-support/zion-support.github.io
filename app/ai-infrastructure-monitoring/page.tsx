@@ -24,7 +24,6 @@ export default function AiInfrastructureMonitoringPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

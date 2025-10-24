@@ -24,7 +24,6 @@ export default function QuantumAiPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

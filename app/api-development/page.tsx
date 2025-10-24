@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function ApidevelopmentPage() {
+export default function ApiDevelopmentPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function ApidevelopmentPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -9,8 +9,9 @@ const AdvancedSEOOptimizerPage: React.FC = () => {,
 
   const features = [
     {
-      icon: Search,
-      title: 'Advanced SEO Analysis',
+      ico,
+  n: Search,
+    title: 'Advanced SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization recommendations.',
       benefits: ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights']
     },
@@ -55,8 +56,8 @@ const AdvancedSEOOptimizerPage: React.FC = () => {,
                 Learn More
               </button>
             </div>
-          </div>
-        </section>
+          </div>,
+        </section>,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>

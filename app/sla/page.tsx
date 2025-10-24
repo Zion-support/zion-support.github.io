@@ -24,7 +24,6 @@ export default function SlaPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

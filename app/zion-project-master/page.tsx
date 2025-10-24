@@ -24,7 +24,6 @@ export default function ZionProjectMasterPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

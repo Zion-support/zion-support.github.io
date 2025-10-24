@@ -24,7 +24,6 @@ export default function AiCrmPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

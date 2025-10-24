@@ -8,6 +8,10 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
 'use client';
 <<<<<<< HEAD
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '''
-=======
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</SEOEnhancerProps>
+const SEOEnhance,</SEOEnhancerProps>
+  r: React.FC<SEOEnhancerProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</SEOEnhancerProps>
+</SEOEnhancerProps>
+
+export default SEOEnhancer;

@@ -24,7 +24,6 @@ export default function AiCybersecurityPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

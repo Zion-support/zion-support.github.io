@@ -24,7 +24,6 @@ export default function ZionAiImageGeneratorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

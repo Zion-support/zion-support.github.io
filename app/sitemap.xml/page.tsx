@@ -24,7 +24,6 @@ export default function SitemapXmlPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

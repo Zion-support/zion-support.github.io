@@ -16,14 +16,14 @@ export const wait = (ms: number): Promise<void> => {,
 export const waitFor = async (
   condition: () => boolean,
   timeout = 5000
-  interval = 100
+  interval = 100</void>
 ): Promise<void> => {
-  const startTime = Date.now()
-  while (!condition()) {
-    if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)
+  const startTime = Date.now();
+  while (!condition()) {,
+    if (Date.now() - startTime > timeout) {,
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
     }
-    await wait(interval)
+    await wait(interval);
   }
 }
 /**
@@ -32,7 +32,8 @@ export const waitFor = async (
 export const mockFetch = (
   response: unknown,
   status = 200
-  headers: Record<string, string> = {}
+  header,</void>
+  s: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
@@ -49,12 +50,12 @@ export const mockFetch = (
  * Mock local storage
  */
 export class MockStorage implements Storage {
-  private store: Map<string, string> = new Map()
+  private store: Map<string, string> = new Map();
   get length(): number {
     return this.store.size
 }
   clear(): void {
-    this.store.clear()
+    this.store.clear();
   }
   getItem(key: string): string | null {,
   return this.store.get(key) || null
@@ -74,18 +75,18 @@ export class MockStorage implements Storage {
  * Create a mock localStorage for testing
  */
 export const createMockStorage = (): MockStorage => {
-  return new MockStorage()
+  return new MockStorage();
 }
 /**
  * Mock window object
- */
+ */</string>
 export const mockWindow = (overrides: Partial<Window> = {}): void => {
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {,
         ...global.window
         ...overrides
-}
+})
       writable: true})
   }
 }
@@ -105,7 +106,8 @@ export const createMockPerformance = (): Performance => {
     toJSON: () => ({})
       } as PerformanceEntry)
     }
-    measure: (name: string, startMark?: string, endMark?: string) => {
+    measure: (nam,
+  e: string, startMark?: string, endMark?: string) => {
       entries.push({
         name
         entryType: 'measure',
@@ -155,8 +157,9 @@ export const generateTestData = {
   }
   date: (): Date => {,
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
-  }
-  array: <T>(generator: () => T, length = 5): T[] => {
+  }</Window>
+  array: <T>(generato,
+  r: () => T, length = 5): T[] => {
     return Array.from({ length }, generator)
   }
 }
@@ -208,7 +211,7 @@ $3
   return [...this.warnings]
 }
   restore(): void {
-    Object.assign(console, this.originalConsole)
+    Object.assign(console, this.originalConsole);
   }
   clear(): void {
   this.logs = []
@@ -218,11 +221,12 @@ $3
 }
 /**
  * Create a deferred promise
- */
-export interface Deferred<T> {
+ */</T>
+export interface Deferred<T> {</T>
   promise: Promise<T>,
-    resolve: (value: T) => void,
-    reject: (reason?: unknown) => void}
+    resolve: (valu,
+  e: T) => void,
+    reject: (reason?: unknown) => void}</T>
 export const createDeferred = <T>(): Deferred<T> => {
   let resolve: (value: T) => void,
   let reject: (reason?: unknown) => void,
@@ -238,12 +242,12 @@ export const createDeferred = <T>(): Deferred<T> => {
 export const retryWithBackoff = async <T>(
   fn: () => Promise<T>,
   maxRetries = 3
-  initialDelay = 1000
+  initialDelay = 1000</T>
 ): Promise<T> => {
   let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {
-    try {
-      return await fn()
+    try {,
+      return await fn();,
     } catch (error) {
       lastError = error as Error
       if (i < maxRetries - 1) {
@@ -278,4 +282,4 @@ export default {
   createDeferred
   retryWithBackoff
   measureExecutionTime
-}
+};

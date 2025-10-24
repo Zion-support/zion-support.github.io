@@ -24,7 +24,6 @@ export default function StatusPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

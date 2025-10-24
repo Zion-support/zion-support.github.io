@@ -24,7 +24,6 @@ export default function AnalyticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -24,7 +24,6 @@ export default function AiCloudInfrastructurePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

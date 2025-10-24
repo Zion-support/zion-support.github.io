@@ -24,7 +24,6 @@ export default function ZionWorkflowAutomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

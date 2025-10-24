@@ -24,7 +24,6 @@ export default function AutomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

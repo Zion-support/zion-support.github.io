@@ -24,7 +24,6 @@ export default function FaqPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

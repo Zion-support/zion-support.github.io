@@ -24,7 +24,6 @@ export default function AiEcommerceSolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

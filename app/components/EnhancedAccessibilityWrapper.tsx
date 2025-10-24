@@ -6,7 +6,6 @@ interface Props {
   children: ReactNode,
 
 }
-
 const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
   return (
 

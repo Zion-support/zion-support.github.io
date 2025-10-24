@@ -24,7 +24,6 @@ export default function AiInventoryManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

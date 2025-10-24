@@ -1,5 +1,8 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
 function fixJSXStructure(filePath) {
   try {
@@ -63,6 +66,13 @@ function fixJSXStructure(filePath) {
       console.log(`Fixed JSX structure in: ${filePath}`);
       return true;
     }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }

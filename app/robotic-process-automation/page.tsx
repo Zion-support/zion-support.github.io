@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function RoboticprocessautomationPage() {
+export default function RoboticProcessAutomationPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function RoboticprocessautomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

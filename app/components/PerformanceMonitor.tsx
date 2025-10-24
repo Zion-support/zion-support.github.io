@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
@@ -99,6 +99,7 @@ const observer = new PerformanceObserver((list) => {
     </>
   );
 
+const monitorCoreWebVitals = () => {
   return (
     <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50"> </div><h3 className="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>
       <div className="space-y-1 text-xs">
@@ -144,4 +145,4 @@ const observer = new PerformanceObserver((list) => {
   );
 };
 
-export default PerformanceMonitor;
+export default monitorCoreWebVitals;

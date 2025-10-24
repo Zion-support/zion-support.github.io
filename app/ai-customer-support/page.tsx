@@ -24,7 +24,6 @@ export default function AiCustomerSupportPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

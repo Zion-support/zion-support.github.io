@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function FuturisticLoader() {
   return (
@@ -21,6 +21,7 @@ export default function FuturisticLoader() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
+    </div>
   );
 }

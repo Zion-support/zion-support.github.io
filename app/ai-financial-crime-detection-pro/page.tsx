@@ -24,7 +24,6 @@ export default function AiFinancialCrimeDetectionProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

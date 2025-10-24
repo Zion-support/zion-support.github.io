@@ -24,7 +24,6 @@ export default function AiVoiceAssistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

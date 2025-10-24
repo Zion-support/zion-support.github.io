@@ -24,7 +24,6 @@ export default function SmartContractSecurityAuditPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

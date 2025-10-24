@@ -24,7 +24,6 @@ export default function ZionDevopsAutomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

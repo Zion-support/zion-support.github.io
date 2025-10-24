@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect } from &quot;react&quot;
 interface AnalyticsProps {
 
@@ -23,7 +24,9 @@ const initAnalytics = () => {
     initAnalytics();
   }, []);
 
-  return <React.Fragment>{children}</React.Fragment>;}
+  return (
+    <React.Fragment>{children}</React.Fragment>
+  );}
 // Extend Window interface for gtag
 declare global {
   interface Window {

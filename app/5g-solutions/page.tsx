@@ -24,7 +24,6 @@ export default function G5gSolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

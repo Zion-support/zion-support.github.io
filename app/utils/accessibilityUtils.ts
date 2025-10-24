@@ -4,7 +4,7 @@ export const generateId = (prefix: string = 'id'): string => {,
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
-export const createAriaLabel = (text: string, context?: string): string => {
+export const createAriaLabel = (text: string, context?: string): string => {;
   return context ? `${text}, ${context}` : text;
 };
 
@@ -71,7 +71,7 @@ export const validateColorContrast = (foreground: string, background: string): b
 const getLuminance = (color: string): number => {,
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
-      c = c / 255;
+      c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -85,7 +85,7 @@ const getLuminance = (color: string): number => {,
   return contrast >= 4.5; // WCAG AA standard
 };
 
-export const createHighContrastMode = (): void => {
+export const createHighContrastMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'high-contrast-mode';
   style.textContent = `
@@ -99,12 +99,12 @@ export const createHighContrastMode = (): void => {
   document.head.appendChild(style);
 };
 
-export const enableHighContrastMode = (): void => {
+export const enableHighContrastMode = (): void => {;
   document.body.classList.add('high-contrast');
   createHighContrastMode();
 };
 
-export const disableHighContrastMode = (): void => {
+export const disableHighContrastMode = (): void => {;
   document.body.classList.remove('high-contrast');
   const style = document.getElementById('high-contrast-mode');
   if (style) {
@@ -112,7 +112,7 @@ export const disableHighContrastMode = (): void => {
   }
 };
 
-export const createFocusIndicator = (): void => {
+export const createFocusIndicator = (): void => {;
   const style = document.createElement('style');
   style.id = 'focus-indicator';
   style.textContent = `
@@ -131,7 +131,7 @@ export const createFocusIndicator = (): void => {
   document.head.appendChild(style);
 };
 
-export const createReducedMotionMode = (): void => {
+export const createReducedMotionMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';
   style.textContent = `
@@ -153,7 +153,7 @@ export const setupKeyboardNavigation = (): void => {
   // Add keyboard navigation support
   document.addEventListener('keydown', (e) => {
     // Escape key to close modals/dropdowns
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape') {;
       const activeElement = document.activeElement as HTMLElement;
       if (activeElement && activeElement.blur) {
         activeElement.blur();
@@ -169,7 +169,7 @@ export const setupKeyboardNavigation = (): void => {
   });
 };
 
-export const createScreenReaderOnly = (): void => {
+export const createScreenReaderOnly = (): void => {;
   const style = document.createElement('style');
   style.id = 'screen-reader-only';
   style.textContent = `
@@ -198,14 +198,14 @@ export const createScreenReaderOnly = (): void => {
   document.head.appendChild(style);
 };
 
-export const setupAccessibility = (): void => {
+export const setupAccessibility = (): void => {;
   createFocusIndicator();
   createReducedMotionMode();
   createScreenReaderOnly();
   setupKeyboardNavigation();
 };
 
-export const createARIALiveRegion = (): HTMLElement => {
+export const createARIALiveRegion = (): HTMLElement => {;
   const liveRegion = document.createElement('div');
   liveRegion.setAttribute('aria-live', 'polite');
   liveRegion.setAttribute('aria-atomic', 'true');
@@ -217,13 +217,13 @@ export const createARIALiveRegion = (): HTMLElement => {
 
 export const updateLiveRegion = (message: string): void => {,
   let liveRegion = document.getElementById('aria-live-region');
-  if (!liveRegion) {
-    liveRegion = createARIALiveRegion();
+  if (!liveRegion) {,
+    liveRegion = createARIALiveRegion();,
   }
   liveRegion.textContent = message;
 };
 
-export const createLandmarkNavigation = (): void => {
+export const createLandmarkNavigation = (): void => {;
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
   
   landmarks.forEach((landmark, index) => {
@@ -235,7 +235,7 @@ export const createLandmarkNavigation = (): void => {
   });
 };
 
-export const setupLandmarkNavigation = (): void => {
+export const setupLandmarkNavigation = (): void => {;
   createLandmarkNavigation();
   
   // Update landmarks when content changes;
@@ -264,7 +264,7 @@ export interface AccessibilityMetrics {
   headingStructure: number;,
   altText: number;,
 }
-
+;
 export interface AccessibilityConfig {
   enableHighContrast: boolean;,
   enableKeyboardNavigation: boolean;,
@@ -272,7 +272,7 @@ export interface AccessibilityConfig {
   enableFocusManagement: boolean;,
   enableAriaLabels: boolean;,
 }
-
+;
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;,
   private metrics: AccessibilityMetrics | null = null;,
@@ -460,8 +460,8 @@ const elements = document.querySelectorAll('*');
   }
 
   private checkKeyboardNavigation(): number {
-    const focusableElements = document.querySelectorAll(
-      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    const focusableElements = document.querySelectorAll()
+      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     let accessibleElements = 0;
 
@@ -519,7 +519,7 @@ const focusableElements = document.querySelectorAll(
 
   private checkAriaLabels(): number {
     const interactiveElements = document.querySelectorAll(
-      'button, input, textarea, select, [role="button"], [role="link"]'
+      'button, input, textarea, select, [role="button"], [role="link"]');
     );
     
     let labeledElements = 0;
@@ -542,7 +542,7 @@ const focusableElements = document.querySelectorAll(
     let previousLevel = 0;
 
     headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));
+      const level = parseInt(heading.tagName.charAt(1));</AccessibilityConfig>
       if (level <= previousLevel + 1) {
         properStructure++;
         previousLevel = level;
@@ -567,8 +567,8 @@ const focusableElements = document.querySelectorAll(
 
   announce(message: string): void {,
     const announcement = document.getElementById('screen-reader-announcements');
-    if (announcement) {
-      announcement.textContent = message;
+    if (announcement) {,
+      announcement.textContent = message;,
     }
   }
 

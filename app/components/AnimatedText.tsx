@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function AnimatedText() {
   return (
@@ -21,6 +21,6 @@ export default function AnimatedText() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }

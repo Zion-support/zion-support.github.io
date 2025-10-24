@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from 'react';
 
@@ -46,6 +46,7 @@ const buttons = document.querySelectorAll('button');
     enhanceUserExperience();
   }, []);
 
+const enhanceUserExperience = () => {
   return (
 
     <div className={className}>{children}

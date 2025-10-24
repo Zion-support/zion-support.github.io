@@ -21,8 +21,8 @@ $3
               </button>
             </div>
           </div>
-        </section>
-
+        </section>,
+,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
@@ -43,8 +43,8 @@ $3
               </div>
             </div>
           </div>
-        </section>
-
+        </section>,
+,
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p>Join thousands of businesses already using LoadingStates to transform their operations.</p>

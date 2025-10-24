@@ -24,7 +24,6 @@ export default function CustomerExperiencePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

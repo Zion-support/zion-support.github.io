@@ -24,7 +24,6 @@ export default function ServicesAdvertisingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

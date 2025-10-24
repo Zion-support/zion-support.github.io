@@ -89,6 +89,8 @@ export interface ServerComponentProps {
 // Client components types;
 
 export interface ClientComponentProps {
+
+
   children?: React.ReactNode
   className?: string;
 }
@@ -129,6 +131,8 @@ export interface NodeRuntime {
 // Extend Next.js types
 declare module 'next' {
   interface NextApiRequest {
+
+
     user?: {
       id: string,
     email: string,
@@ -136,4 +140,4 @@ declare module 'next' {
 }
   }
 }
-export {}
+export {}</Response>

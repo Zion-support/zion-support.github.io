@@ -24,7 +24,6 @@ export default function AiVisionPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

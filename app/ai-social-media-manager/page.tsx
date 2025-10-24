@@ -24,7 +24,6 @@ export default function AiSocialMediaManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

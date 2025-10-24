@@ -24,7 +24,6 @@ export default function ZionAiWorkflowAutomatorProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

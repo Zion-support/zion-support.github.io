@@ -24,7 +24,6 @@ export default function ZionSmartAnalyticsDashboardPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

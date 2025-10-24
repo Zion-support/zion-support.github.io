@@ -24,7 +24,6 @@ export default function AiAutomatedTestingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

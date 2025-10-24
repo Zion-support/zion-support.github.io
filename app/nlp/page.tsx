@@ -24,7 +24,6 @@ export default function NlpPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

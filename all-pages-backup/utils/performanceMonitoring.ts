@@ -14,13 +14,13 @@
       fidObserver.observe({ "type": 'first-input'',
           this.recordWebVital('TTFB''
       navObserver.observe({ "type": 'navigation'',
-      console.error('Failed to initialize performance observers''
+      console.error('Failed to initialize performance observers'')
   private getRating("name": keyof WebVitals, "value": number): 'good' | 'needs-improvement' | 'poor'',
     if (!threshold) return 'good''
     if (value <= threshold.good) return 'good''
     if (value <= threshold.poor) return 'needs-improvement''
     return 'poor''
-  recordCustomMetric("name": string, "value": number, "unit": CustomMetric['unit'',
+  recordCustomMetric("name": string, "value": number, "unit": CustomMetric['unit'',)
   private getCustomRating("value": number, "unit": string): 'good' | 'needs-improvement' | 'poor'',
     if (unit === 'ms''
       if (value < 100) return 'good''
@@ -55,7 +55,7 @@
   Bytes = 'bytes''
   Count = 'count''
   Percentage = 'percentage''
-  rating?: 'good' | 'needs-improvement' | 'poor''
+  rating?: 'good' | 'needs-improvement' | 'poor'')
 function getRating("name": string, "value": number): 'good' | 'needs-improvement' | 'poor'',
     'FCP''
     'LCP''
@@ -80,4 +80,4 @@ function getRating("name": string, "value": number): 'good' | 'needs-improvement
   if (metrics.CLS && metrics.CLS.rating !== 'good''
     recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts''
   if (metrics.TTFB && metrics.TTFB.rating !== 'good''
-    recommendations.push('Improve TTFB by optimizing server response time and using CDN''
+    recommendations.push('Improve TTFB by optimizing server response time and using CDN'');

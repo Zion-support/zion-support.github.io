@@ -24,7 +24,6 @@ export default function AiHrPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

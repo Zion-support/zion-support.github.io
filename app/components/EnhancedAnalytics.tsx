@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { createContext, useContext, useEffect } from 'react';
 
@@ -92,6 +92,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     page
   };
 
+const useAnalytics = () => {
   return (
 
     <AnalyticsContext.Provider value={value}>{children}
@@ -100,4 +101,4 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 }
 
 
-export default AnalyticsProvider;
+export default useAnalytics;

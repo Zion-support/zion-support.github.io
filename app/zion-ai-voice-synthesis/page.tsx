@@ -24,7 +24,6 @@ export default function ZionAiVoiceSynthesisPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

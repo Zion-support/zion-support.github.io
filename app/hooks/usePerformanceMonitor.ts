@@ -17,8 +17,8 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     loadTime: 0,
     renderTime: 0,
   })
-  const [isMonitoringFPS, setIsMonitoringFPS] = useState(false)
-  const frameCountRef = useRef(0)
+  const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
+  const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now())
   const measureMemoryUsage = useCallback(() => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
@@ -31,8 +31,8 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   }, [])
   const init = useCallback(() => {
     if (options.enabled !== false) {
-      setIsMonitoringFPS(true)
-      measureMemoryUsage()
+      setIsMonitoringFPS(true);
+      measureMemoryUsage();
     }
   }, [options.enabled, measureMemoryUsage])
   useEffect(() => {
@@ -40,23 +40,23 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
 
 const countFrames = () => {
       frameCountRef.current++
-      const currentTime = performance.now()
+      const currentTime = performance.now();
       if (currentTime - lastTimeRef.current >= 1000) {
         const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current))
         setMetrics(prev => ({
           ...prev,
-          fps,
+          fps,)
         }))
         frameCountRef.current = 0
         lastTimeRef.current = currentTime
       }
-      requestAnimationFrame(countFrames)
+      requestAnimationFrame(countFrames);
     }
-    requestAnimationFrame(countFrames)
+    requestAnimationFrame(countFrames);
   }, [isMonitoringFPS])
   useEffect(() => {
     if (options.measureMemoryUsage) {
-      measureMemoryUsage()
+      measureMemoryUsage();
     }
   }, [measureMemoryUsage, options.measureMemoryUsage])
   return {
@@ -67,5 +67,5 @@ const countFrames = () => {
     measureMemoryUsage,
     init
   }
-}
-export default usePerformanceMonitor;
+};
+export default usePerformanceMonitor;</PerformanceData>

@@ -24,7 +24,6 @@ export default function AiStockPortfolioManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

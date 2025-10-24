@@ -1,6 +1,5 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+'use client';
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,8 +8,10 @@ export const metadata: Metadata = {,
   description: 'Leading provider of AI solutions, IT services, quantum computing, and autonomous systems for enterprise technology transformation.',
   keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology'}
 export default function RootLayout({
-  children}: {
-  children: React.ReactNode}) {
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en"> </html><body className={inter.className}>{children}
       </body></body>

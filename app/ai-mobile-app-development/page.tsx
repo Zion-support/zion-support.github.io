@@ -24,7 +24,6 @@ export default function AiMobileAppDevelopmentPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -26,8 +26,8 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
   let inThrottle: boolean;,
   return (...args: Parameters<T>) => {,
     if (!inThrottle) {
-      func(...args)
-      inThrottle = true
+      func(...args);,
+      inThrottle = true,
       setTimeout(() => (inThrottle = false), limit)
     }
   }
@@ -39,8 +39,8 @@ export class PerformanceMonitor {
   private metrics: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];,
   static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor()
+    if (!PerformanceMonitor.instance) {,
+      PerformanceMonitor.instance = new PerformanceMonitor();,
     }
     return PerformanceMonitor.instance
   }
@@ -49,25 +49,26 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
       // eslint-disable-next-line no-console
-    console.log(`${componentName} rendered in ${renderTime}ms`)
+    console.log(`${componentName} rendered in ${renderTime}ms`);
     }
   }
   // Track memory usage
   trackMemory(componentName: string) {,
     if ('memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+      const memory = (performance as { memory?: { usedJSHeapSiz,
+  e: number } }).memory
       if (memory) {
-        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)
+        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
     }
   }
   // Get performance metrics
   getMetrics() {
-    return Object.fromEntries(this.metrics)
+    return Object.fromEntries(this.metrics);
   }
   // Clear metrics
   clearMetrics() {
-    this.metrics.clear()
+    this.metrics.clear();
   }
   // Monitor long tasks
   startLongTaskMonitoring() {
@@ -78,12 +79,12 @@ export class PerformanceMonitor {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
           // eslint-disable-next-line no-console
-    console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
+    console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
         }
       })
     })
-    observer.observe({ entryTypes: ['longtask'] })
-    this.observers.push(observer)
+    observer.observe({ entryTypes: ['longtask'] });
+    this.observers.push(observer);
   }
   // Cleanup observers
   cleanup() {
@@ -149,7 +150,7 @@ $3
   for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
         if (!layoutEntry.hadRecentInput) {
-          clsEntries.push(entry)
+          clsEntries.push(entry);
           clsValue += layoutEntry.value
 }
       }

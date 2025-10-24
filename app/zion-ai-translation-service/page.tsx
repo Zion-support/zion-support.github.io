@@ -24,7 +24,6 @@ export default function ZionAiTranslationServicePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

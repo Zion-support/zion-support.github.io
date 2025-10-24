@@ -24,7 +24,6 @@ export default function AiEcommerceOptimizerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

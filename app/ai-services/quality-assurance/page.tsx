@@ -24,7 +24,6 @@ export default function QualityAssurancePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -24,7 +24,6 @@ export default function AiLeadGenerationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

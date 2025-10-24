@@ -204,8 +204,7 @@ $3
         </div>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {slides.map((_, index) => (
+        <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
             <button
               key={index}
               onClick={() => goToSlide(index)}

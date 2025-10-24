@@ -67,7 +67,7 @@ const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
     return (
-    <>
+    <div>
       ) => {
     </>
     </>
@@ -81,7 +81,7 @@ const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
 const root = document.documentElement
     // Apply high contrast mode
     if (accessibilitySettings.highContrast) {
-      root.classList.add('high-contrast')
+      root.classList.add('high-contrast');
     } else {
   root.classList.remove('high-contrast')
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {,
@@ -112,11 +112,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {,
   ]
     // Apply reduced motion
     if (accessibilitySettings.reducedMotion) {
-      root.classList.add('reduced-motion')
+      root.classList.add('reduced-motion');
     } else {
-      root.classList.remove('reduced-motion')
+      root.classList.remove('reduced-motion');
     // Apply font scaling
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
+    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1');
   }, [accessibilitySettings])
 
   // Keyboard navigation enhancement;
@@ -137,10 +137,10 @@ $3
           activeElement.click()}
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
+        const menu = document.querySelector('[role="menu"]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
-          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[]
+          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
           const currentIndex = menuItems.indexOf(event.target as HTMLElement)
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
@@ -180,11 +180,11 @@ $3
 
 const originalReplaceState = history.replaceState
     history.pushState = function(...args) {
-      originalPushState.apply(history, args)
-      announcePageChange('Page changed')
+      originalPushState.apply(history, args);
+      announcePageChange('Page changed');
     history.replaceState = function(...args) {
-      originalReplaceState.apply(history, args)
-      announcePageChange('Page updated')
+      originalReplaceState.apply(history, args);
+      announcePageChange('Page updated');
   }, [])
   // Focus management;
 
@@ -199,14 +199,14 @@ $3
 
           } else {
             if (document.activeElement === lastElement) {
-              firstElement.focus()
-              e.preventDefault()
+              firstElement.focus();
+              e.preventDefault();
             }
           }
         }
       }
-      element.addEventListener('keydown', handleTabKey)
-      firstElement?.focus()
+      element.addEventListener('keydown', handleTabKey);
+      firstElement?.focus();
       return (
     <>
       ) => element.removeEventListener('keydown', handleTabKey)
@@ -217,7 +217,7 @@ $3
 
 const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
     modals.forEach(modal => {
-  const cleanup = trapFocus(modal as HTMLElement)
+  const cleanup = trapFocus(modal as HTMLElement);
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup
 }, [])
@@ -229,11 +229,11 @@ const enhanceARIALabels = useCallback(() => {
 
 const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])'),
     buttons.forEach((button, index) => {
-      const text = button.textContent?.trim()
+      const text = button.textContent?.trim();
       if (text && text.length > 0) {
-        button.setAttribute('aria-label', text)
+        button.setAttribute('aria-label', text);
       } else {
-        button.setAttribute('aria-label', `Button ${index + 1}`)
+        button.setAttribute('aria-label', `Button ${index + 1}`);
       }
     // Add ARIA labels to images;
 
@@ -244,14 +244,14 @@ const images = document.querySelectorAll('img: not([alt])'),
 
 const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
     inputs.forEach((input, index) => {
-      const placeholder = input.getAttribute('placeholder')
-      const label = input.getAttribute('name')
+      const placeholder = input.getAttribute('placeholder');
+      const label = input.getAttribute('name');
       if (placeholder) {
-        input.setAttribute('aria-label', placeholder)
+        input.setAttribute('aria-label', placeholder);
       } else if (label) {
-        input.setAttribute('aria-label', label)
+        input.setAttribute('aria-label', label);
       } else {
-        input.setAttribute('aria-label', `Input ${index + 1}`)
+        input.setAttribute('aria-label', `Input ${index + 1}`);
       }
   }, [])
   // Skip links;
@@ -264,17 +264,17 @@ const skipLinks = [
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
     ]
-    const skipLinksContainer = document.createElement('div')
+    const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links'
-    skipLinksContainer.setAttribute('aria-label', 'Skip links')
+    skipLinksContainer.setAttribute('aria-label', 'Skip links');
     skipLinks.forEach(({ href, text }) => {
-      const link = document.createElement('a')
+      const link = document.createElement('a');
       link.href = href
       link.textContent = text
       link.className = 'skip-link'
-      link.setAttribute('data-skip-link', 'true')
-      skipLinksContainer.appendChild(link)
-    document.body.insertBefore(skipLinksContainer, document.body.firstChild)
+      link.setAttribute('data-skip-link', 'true');
+      skipLinksContainer.appendChild(link);
+    document.body.insertBefore(skipLinksContainer, document.body.firstChild);
   }, [])
   // Color contrast checking;
 
@@ -286,7 +286,7 @@ $3
   </>
 };
     }
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div')
+    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
     elements.forEach(element => checkElementContrast(element as HTMLElement))
   }, [])
   // Voice navigation support;
@@ -301,8 +301,8 @@ const recognition = new (window as any).webkitSpeechRecognition()
     recognition.onresult = (event: any) => {,
       const command = event.results[0][0].transcript.toLowerCase()
       // Voice commands
-      if (command.includes('go to home')) {
-        window.location.href = '/'
+      if (command.includes('go to home')) {,
+        window.location.href = '/',
 } else if (command.includes('go to about')) {
   window.location.href = '/about'
 } else if (command.includes('go to contact')) {
@@ -318,38 +318,38 @@ const recognition = new (window as any).webkitSpeechRecognition()
 const voiceButton = document.createElement('button')
     voiceButton.textContent = 'Voice Navigation'
     voiceButton.className = 'voice-navigation-button'
-    voiceButton.setAttribute('aria-label', 'Start voice navigation')
-    voiceButton.onclick = () => recognition.start()
-    const header = document.querySelector('header') || document.querySelector('nav')
+    voiceButton.setAttribute('aria-label', 'Start voice navigation');
+    voiceButton.onclick = () => recognition.start();
+    const header = document.querySelector('header') || document.querySelector('nav');
     if (header) {
-      header.appendChild(voiceButton)
+      header.appendChild(voiceButton);
     }
   }, [])
   // Initialize all accessibility features
   useEffect(() => {
     if (enableKeyboardNavigation) {
-      setupKeyboardNavigation()
+      setupKeyboardNavigation();
     }
     if (enableScreenReader) {
-      setupScreenReaderSupport()
+      setupScreenReaderSupport();
     }
     if (enableFocusManagement) {
-      setupFocusManagement()
+      setupFocusManagement();
     }
     if (enableARIALabels) {
-      enhanceARIALabels()
+      enhanceARIALabels();
     }
     if (enableSkipLinks) {
-      addSkipLinks()
+      addSkipLinks();
     }
     if (enableColorContrast) {
-      checkColorContrast()
+      checkColorContrast();
     }
     if (enableVoiceNavigation) {
-      setupVoiceNavigation()
+      setupVoiceNavigation();
     }
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]
-    </>
+    </div>
   )
   return null
 }

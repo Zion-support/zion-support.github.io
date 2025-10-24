@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function SmartcityinfrastructurePage() {
+export default function SmartCityInfrastructurePage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function SmartcityinfrastructurePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

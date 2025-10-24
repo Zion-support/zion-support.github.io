@@ -24,7 +24,6 @@ export default function SearchPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

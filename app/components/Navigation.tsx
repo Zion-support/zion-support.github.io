@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -116,7 +117,8 @@ $3
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover: text-white p-2",
             >
-              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Go Back
             </button>
           </div>
         </div>
@@ -160,7 +162,16 @@ $3
               </div>
             </div>
           </div>
-        )}
+          
+          {/* Fun Fact */}
+          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
+            <p className="text-sm text-gray-400">
+              <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
+              confused sometimes. That's why we have humans to help when things
+              go wrong! 🤖
+            </p>
+          </div>
+        </div>
       </div>
     </nav>
 

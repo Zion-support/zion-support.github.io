@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function BusinessappsPage() {
+export default function BusinessAppsPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function BusinessappsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

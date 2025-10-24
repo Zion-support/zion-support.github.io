@@ -24,7 +24,6 @@ export default function ZionLeadMagnetPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

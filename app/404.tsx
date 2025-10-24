@@ -1,5 +1,4 @@
-"use client";
-
+'use client';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -7,7 +6,7 @@ import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
 
 const NotFound = () => {
   return (
-    <>
+    <div>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />

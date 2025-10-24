@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
@@ -37,23 +38,23 @@ const ContactForm: React.FC = () => {,
     e.preventDefault()
     setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      setIsSubmitted(false);
       setFormData({
         name: '',
         email: '',
         phone: '',
         company: '',
         message: '',
-        service: ''
-      })
-    }, 3000)
-  }
-  
+        service: '')
+      });
+    }, 3000);
+  };
+
   const services = [
     'AI Solutions',
     'Web Development',
@@ -62,17 +63,18 @@ const ContactForm: React.FC = () => {,
     'Cybersecurity',
     'Data Analytics',
     'DevOps',
-    'Consulting'
-  ]
-  
+    'Consulting';
+  ];
+
   if (isSubmitted) {
     return (
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"> </div><CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> </CheckCircle><h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
-    )
+    </div>
+  );
   }
-  
+
   return (
 
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"> </div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
@@ -82,10 +84,14 @@ const ContactForm: React.FC = () => {,
 
             <input
               type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
+              id="name",
+              name="name",
+              value = {
+formData.name
+};
+              onChange = {
+handleChange
+};
               required
 
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
@@ -96,10 +102,14 @@ const ContactForm: React.FC = () => {,
             </label></label>
             <input
               type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
+              id="email",
+              name="email",
+              value = {
+formData.email
+};
+              onChange = {
+handleChange
+};
               required
 
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
@@ -159,8 +169,12 @@ const ContactForm: React.FC = () => {,
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
+            value = {
+formData.message
+};
+            onChange = {
+handleChange
+};
             required
             rows={6}
 
@@ -200,7 +214,7 @@ const ContactForm: React.FC = () => {,
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

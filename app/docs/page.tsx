@@ -24,7 +24,6 @@ export default function DocsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

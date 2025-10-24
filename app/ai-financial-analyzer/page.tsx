@@ -24,7 +24,6 @@ export default function AiFinancialAnalyzerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

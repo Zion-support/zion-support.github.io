@@ -24,7 +24,6 @@ export default function AiSpaceTechnologyProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

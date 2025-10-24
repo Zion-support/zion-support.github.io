@@ -24,7 +24,6 @@ export default function SupportPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

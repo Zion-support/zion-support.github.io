@@ -24,7 +24,6 @@ export default function ContactPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

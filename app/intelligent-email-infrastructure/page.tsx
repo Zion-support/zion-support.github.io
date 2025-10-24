@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function IntelligentemailinfrastructurePage() {
+export default function IntelligentEmailInfrastructurePage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function IntelligentemailinfrastructurePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,5 @@
-'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
 
@@ -28,7 +28,8 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
-      console.log('Error caught by boundary:', error, errorInfo)}
+      console.log('Error caught by boundar,)
+  y:', error, errorInfo)}
   render() {
     if (this.state.hasError) {
       return (
@@ -39,10 +40,15 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
               onClick={() => window.location.reload()}
               className="bg-emerald-600 hover: bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200",
             >
-              Try Again
+              Try Again</button>
             </button>
           </div>
         </div>
+      );
+    }
 
-    return this.props.children}
-export default ErrorBoundaryWrapper
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundaryWrapper;

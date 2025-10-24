@@ -1,6 +1,9 @@
-'use client';
+"use client";
 
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
 const ContactPageBroken2 = () => {
   return (
@@ -10,5 +13,8 @@ const ContactPageBroken2 = () => {
         <div className="bg-white rounded-lg shadow p-6"> </div><p>This is a backup contact page. Please refer to the main contact page for current information.</p>
         </div>
       </div>
-    </div>}
+    </div>
+  );
+};
+
 export default ContactPageBroken2;

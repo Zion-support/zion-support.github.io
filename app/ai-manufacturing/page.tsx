@@ -24,7 +24,6 @@ export default function AiManufacturingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

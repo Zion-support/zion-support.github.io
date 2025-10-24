@@ -22,7 +22,7 @@ export default function Ai3dGenerationPage() {
       icon: "🎯",
       title: "High Quality Output",
       description: "Get professional-grade 3D models suitable for games, VR, and AR applications."
-    }
+    };
   ];
 
   const useCases = [
@@ -31,31 +31,34 @@ export default function Ai3dGenerationPage() {
     "Product Design",
     "Medical Imaging",
     "Education",
-    "Entertainment"
+    "Entertainment";
   ];
 
   return (
     <>
-      <Helmet>
+    
+  </>
+      <Helmet></Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Transform your ideas into stunning 3D models with our advanced AI-powered generation technology." />
+        <meta name="description" content="Transform your ideas into stunning 3D models with our advanced AI-powered generation technology." /></meta>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center">
+      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20"></section>
+        <div className="max-w-7xl mx-auto px-4"></div>
+          <div className="text-center"></div>
             <h1 className="text-5xl font-bold mb-6">AI 3D Generation</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
-              Create detailed 3D assets from text descriptions or 2D images in seconds.
+              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.</p>
+              Create detailed 3D assets from text descriptions or 2D images in seconds.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button>
+                Get Started</button>
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Try Demo
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
+  r:text-gray-900 transition-all duration-300"></button>
+                Try Demo</button>
               </button>
             </div>
           </div>
@@ -63,23 +66,24 @@ export default function Ai3dGenerationPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-gray-50"></section>
+        <div className="max-w-7xl mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful 3D Generation Features</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to create professional 3D models with AI assistance.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+              Everything you need to create professional 3D models with AI assistance.</p>
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+          <div className="grid md:grid-cols-2 l,
+  g:grid-cols-4 gap-8"></div>
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg"></div>
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  {feature.title}
+                <h3 className="text-xl font-semibold text-gray-900 mb-4"></h3>
+                  {feature.title}</h3>
                 </h3>
-                <p className="text-gray-600">
-                  {feature.description}
+                <p className="text-gray-600"></p>
+                  {feature.description}</p>
                 </p>
               </div>
             ))}
@@ -88,18 +92,18 @@ export default function Ai3dGenerationPage() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-white"></section>
+        <div className="max-w-7xl mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Perfect For</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI 3D generation technology excels in various industries and applications.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+              Our AI 3D generation technology excels in various industries and applications.</p>
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {useCases.map((useCase, index) => (
-              <span key={index} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold">
-                {useCase}
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            {useCases.map((useCase, index) => (</div>
+              <span key={index} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold"></span>
+                {useCase}</span>
               </span>
             ))}
           </div>
@@ -107,18 +111,19 @@ export default function Ai3dGenerationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white"></section>
+        <div className="max-w-7xl mx-auto px-4 text-center"></div>
           <h2 className="text-4xl font-bold mb-6">Ready to Create Amazing 3D Models?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Start generating professional 3D models with our AI-powered technology today.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            Start generating professional 3D models with our AI-powered technology today.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Get Started Today
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"></button>
+              Get Started Today</button>
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300">
-              View All AI Services
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
+  r:text-purple-900 transition-all duration-300"></button>
+              View All AI Services</button>
             </button>
           </div>
         </div>

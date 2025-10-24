@@ -24,7 +24,6 @@ export default function AiProjectManagementPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

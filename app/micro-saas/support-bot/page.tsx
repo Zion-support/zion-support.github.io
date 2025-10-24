@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function SupportbotPage() {
+export default function SupportBotPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function SupportbotPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

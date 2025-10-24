@@ -29,6 +29,6 @@ import React from 'react''
           'TCP Connect''
           'TTFB''
           'Download''
-          'DOM Interactive''
+          'DOM Interactive'';
           'DOM Complete'';
-          'Load Complete''
+          'Load Complete'')

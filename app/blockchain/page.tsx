@@ -24,7 +24,6 @@ export default function BlockchainPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

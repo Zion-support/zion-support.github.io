@@ -24,7 +24,6 @@ export default function AiSmartCalendarPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

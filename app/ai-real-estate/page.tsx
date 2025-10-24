@@ -24,7 +24,6 @@ export default function AiRealEstatePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

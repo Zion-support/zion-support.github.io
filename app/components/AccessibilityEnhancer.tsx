@@ -1,5 +1,5 @@
-'use client'
-import React, { ReactNode } from 'react'
+'use client';
+import React, { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode,
@@ -12,4 +12,4 @@ const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   )
 }
 
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer;

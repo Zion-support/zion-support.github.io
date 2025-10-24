@@ -24,7 +24,6 @@ export default function ZionAiTaskSchedulerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

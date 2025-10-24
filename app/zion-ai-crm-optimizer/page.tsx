@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function ZionaicrmoptimizerPage() {
+export default function ZionAiCrmOptimizerPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function ZionaicrmoptimizerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

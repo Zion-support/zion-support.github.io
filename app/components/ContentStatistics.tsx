@@ -10,22 +10,23 @@ const ContentStatistics: React.FC = () => {,
 
   const [counters, setCounters] = useState({
     clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0,
-    countries: 0,
-    uptime: 0
-  });
-
+    projects: 0;
+    satisfactio,
+  n: 0,
+    years: 0;
+    countrie,
+  s: 0,)
+    uptime: 0})
   const targetCounters = {
-    clients: 1000,
-    projects: 500,
-    satisfaction: 99,
-    years: 10,
-    countries: 25,
-    uptime: 99.9
-  };
 
+    clients: 1000,
+    projects: 500;
+    satisfactio,
+  n: 99,
+    years: 10;
+    countrie,
+  s: 25,
+    uptime: 99.9}
   useEffect(() => {
     const duration = 2000;
 
@@ -37,23 +38,18 @@ const stepDuration = duration / steps;
 const interval = setInterval(() => {
 
       setCounters(prev => {
-        const newCounters = { ...prev };
-        let allComplete = true;
-        
+        const newCounters = { ...prev }
+        let allComplete = true)
         Object.keys(targetCounters).forEach(key => {
-          const target = targetCounters[key as keyof typeof targetCounters];
-          const current = prev[key as keyof typeof prev];
-          const increment = target / steps;
-          
+  const target = targetCounters[key as keyof typeof targetCounters]
+          const current = prev[key as keyof typeof prev]
+          const increment = target / steps)
           if (current < target) {
             newCounters[key as keyof typeof newCounters] = Math.min(
               current + increment,
               target
-            );
-            allComplete = false;
-          }
-        });
-        
+            allComplete = false)
+        })
         if (allComplete) {
           clearInterval(interval);
         }

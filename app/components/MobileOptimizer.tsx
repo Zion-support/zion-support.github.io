@@ -1,6 +1,9 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
 
 const MobileOptimizer: React.FC = ($2) => {

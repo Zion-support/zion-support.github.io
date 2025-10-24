@@ -24,7 +24,6 @@ export default function AiMlPlatformPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

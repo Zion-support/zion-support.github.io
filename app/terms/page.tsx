@@ -24,7 +24,6 @@ export default function TermsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

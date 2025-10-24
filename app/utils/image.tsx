@@ -2,6 +2,8 @@
 import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
+
+
   src: string,
 
     alt: string,
@@ -36,7 +38,7 @@ sizes?: string;
 style?: React.CSSProperties
 onLoad?: () => void
 onError?: () => void;}
-export const Image: React.FC<ImageProps>= ({}
+export const Image: React.FC<ImageProps>= ({}</ImageProps>
 export const Image: React.FC<ImageProps> = ({}
 src;
 
@@ -52,19 +54,19 @@ placeholder = 'empty'
 blurDataURL
 fill = false
 sizes
-style
-onLoad
+style,
+onLoad,
 onError}
 ...props}
-}) => {}
+}) => {};
 const [ setIsLoaded] = useState(false)
 const [hasError, setHasError] = useState(false)
 const handleLoad = useCallback(() => {}
-setIsLoaded(true)
+setIsLoaded(true);
 if (onLoad) onLoad()}
 }, [onLoad])
 const handleError = useCallback(() => {}
-setHasError(true)
+setHasError(true);
 if (onError) onError()}
 }, [onError])
 const imageStyle: React.CSSProperties = {,
@@ -83,27 +85,33 @@ left: 0,
 height: '100%',
     objectFit: 'cover'}
 })
-if (hasError) {
+if (hasError) {</ImageProps>
   </ImageProps>
-return (</ImageProps>
+return (
+    </ImageProps>
+  );
 if (hasError) {}
 return (
     <div}
 if (hasError) {}
-return(<div}
-interface ImageProps {/* TODO: Fix JSX expression */}
+return(<div};
+interface ImageProps {/* TODO: Fix JSX expression */};
 export const
-Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
+Image: React.FC<ImageProps>= ({/* TOD,)</div>
+  O: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 }, [onError])
 const
-imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+imageStyle: React.CSSProperties = {/* TOD,
+  O: Fix JSX expression */}
 })
 if (hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
-style={imageStyle}
+style = {
+imageStyle
+};
 {...props})
 >)</div>
 

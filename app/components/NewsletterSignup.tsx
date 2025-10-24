@@ -1,38 +1,39 @@
 'use client';
+import React from 'react';
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal'
-  onClose?: () => void
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {
-  const [email, setEmail] = useState('')
+  onClose?: () => void}
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {</NewsletterSignupProps>
+  const [email, setEmail] = useState('')</NewsletterSignupProps>
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault()
     if (!email) {
-      setStatus('error')
-      setMessage('Please enter your email address')
+      setStatus('error');
+      setMessage('Please enter your email address');
       return
     if (!/\S+@\S+\.\S+/.test(email)) {
-  setStatus('error')
-      setMessage('Please enter a valid email address')
+  setStatus('error');
+      setMessage('Please enter a valid email address');
       return
-    setStatus('loading')
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000)
+    setStatus('loading');
+    try {,
+      // Simulate API call,
+      await new Promise(resolve => setTimeout(resolve, 1000);
       // In a real app, you would make an API call here
-      setStatus('success')
-      setMessage('Thank you for subscribing! Check your email for confirmation.')
-      setEmail('')
+      setStatus('success');
+      setMessage('Thank you for subscribing! Check your email for confirmation.');
+      setEmail('');
       // Close modal after success if it's a modal variant
       if (variant === 'modal' && onClose) {
         setTimeout(() => {
-          onClose()
+          onClose();
         }, 2000)
     } catch (error) {
-      setStatus('error')
+      setStatus('error');
       setMessage('Something went wrong. Please try again.')}
   const content = (
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">

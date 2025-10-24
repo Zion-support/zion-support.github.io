@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function ZionaiaccountingassistantPage() {
+export default function ZionAiAccountingAssistantPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function ZionaiaccountingassistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

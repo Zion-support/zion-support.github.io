@@ -8,7 +8,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const LoadingSkeletonPage: React.FC = () => {,
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -59,8 +60,8 @@ const LoadingSkeletonPage: React.FC = () => {,
                 Learn More
               </button>
             </div>
-          </div>
-        </section>
+          </div>,
+        </section>,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>

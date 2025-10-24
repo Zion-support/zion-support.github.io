@@ -33,4 +33,4 @@ constcolorClasses= {"primary": 'text-indigo-60 0',
 "white": 'text-white',
 "primary": 'text-indigo-600',
     "secondary": 'text-gray-600';,
-"white": 'text-white'
+"white": 'text-white'</LoadingSpinnerProp>

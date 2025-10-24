@@ -24,7 +24,6 @@ export default function AiComputerVisionPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

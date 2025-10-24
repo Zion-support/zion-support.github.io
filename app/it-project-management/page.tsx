@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function ItprojectmanagementPage() {
+export default function ItProjectManagementPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function ItprojectmanagementPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

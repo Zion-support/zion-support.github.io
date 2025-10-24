@@ -1,15 +1,6 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
-import { CheckCircleIcon;
-  UserGroupIcon
-  LightBulbIcon
-  ShieldCheckIcon
-  RocketLaunchIcon
-  HeartIcon
-  ArrowRightIcon
-  StarIcon
-} from '@heroicons/react/24/outline'  );
 
 export default function AboutPage() {
   const values = [
@@ -103,7 +94,8 @@ export default function AboutPage() {
                     <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                     <p className="text-gray-300 text-sm">{value.description}</p>
                   </div>
-                )
+    </div>
+  );
               })}
             </div>
           </div>
@@ -115,9 +107,13 @@ export default function AboutPage() {
         <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center"> </div><span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}
                     </span></span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{member.name}</h3>
-                  <p className="text-cyan-400 text-sm mb-3">{member.role}</p>
-                  <p className="text-gray-300 text-sm">{member.description}</p>
+                  <h3 className="text-lgfont-semiboldtext-whitemb-2">{member.name}</h3>
+                  <p className="text-cyan-400text-smmb-3">
+            {member.role}
+          </p>
+                  <p className="text-gray-300text-sm">
+            {member.description}
+          </p>
                 </div>
               ))}
             </div>
@@ -139,8 +135,8 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </div>,
+      </section>,
       {/* Mission & Vision */}
       <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4"> </div><div className="grid md: grid-cols-2 gap-12 max-w-6xl mx-auto">,
             <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
@@ -257,8 +253,8 @@ export default function AboutPage() {
               <div className="text-gray-300 text-lg">Years Experience</div>
             </div>
           </div>
-        </div>
-      </section>
+        </div>,
+      </section>,
       {/* CTA Section */}
       <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
@@ -285,6 +281,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-</>
-  );
+</div>,
+  );,
 }

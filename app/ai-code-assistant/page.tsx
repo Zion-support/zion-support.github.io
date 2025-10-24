@@ -24,7 +24,6 @@ export default function AiCodeAssistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

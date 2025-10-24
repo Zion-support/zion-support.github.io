@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function EdgecomputingPage() {
+export default function EdgeComputingPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function EdgecomputingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -24,7 +24,6 @@ export default function AiQuantumOptimizationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

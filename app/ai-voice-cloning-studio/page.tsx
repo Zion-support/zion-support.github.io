@@ -24,7 +24,6 @@ export default function AiVoiceCloningStudioPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -24,7 +24,6 @@ export default function AiApiManagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -28,15 +28,24 @@ export const generateMetaTags = (data: {,
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'author', content: 'Zion Tech Group' },
     { name: 'canonical', content: data.canonical || '' },
-    { property: 'og:title', content: data.ogTitle || data.title },
-    { property: 'og:description', content: data.ogDescription || data.description },
-    { property: 'og:image', content: data.ogImage || '/og-image.webp' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: 'Zion Tech Group' },
-    { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
-    { name: 'twitter:title', content: data.twitterTitle || data.title },
-    { name: 'twitter:description', content: data.twitterDescription || data.description },
-    { name: 'twitter:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
+    { property: 'o,
+  g:title', content: data.ogTitle || data.title },
+    { property: 'o,
+  g:description', content: data.ogDescription || data.description },
+    { property: 'o,
+  g:image', content: data.ogImage || '/og-image.webp' },
+    { property: 'o,
+  g:type', content: 'website' },
+    { property: 'o,
+  g:site_name', content: 'Zion Tech Group' },
+    { name: 'twitte,
+  r:card', content: data.twitterCard || 'summary_large_image' },
+    { name: 'twitte,
+  r:title', content: data.twitterTitle || data.title },
+    { name: 'twitte,
+  r:description', content: data.twitterDescription || data.description },
+    { name: 'twitte,
+  r:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
   ]
 
   return tags
@@ -101,7 +110,7 @@ export const generateSitemap = (pages: Array<{,
 ${pages.map(page => `  <url> </url><loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
+    <priority>${page.priority}</priority>)
   </url>`).join('\n')}
 </urlset>`
 
@@ -121,4 +130,4 @@ export default {
   generateStructuredData,
   generateSitemap,
   generateRobotsTxt
-}
+};

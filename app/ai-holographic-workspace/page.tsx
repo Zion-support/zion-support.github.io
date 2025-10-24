@@ -24,7 +24,6 @@ export default function AiHolographicWorkspacePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

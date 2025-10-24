@@ -24,7 +24,6 @@ export default function AiEducationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

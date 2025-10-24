@@ -27,8 +27,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
                 Learn More
               </button>
             </div>
-          </div>
-        </section>
+          </div>,
+        </section>,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
@@ -45,7 +45,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
                   </ul>
               <br /> </br><span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced seoenhancer solutions.</p>
+            <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">
+            Transform your business with our advanced seoenhancer solutions.
+          </p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -57,8 +59,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </div>,
+      </section>,
       {/* Features Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">

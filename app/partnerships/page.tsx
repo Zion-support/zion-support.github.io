@@ -24,7 +24,6 @@ export default function PartnershipsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

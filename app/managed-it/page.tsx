@@ -24,7 +24,6 @@ export default function ManagedItPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -12,6 +12,6 @@ import React, { createContext, useContext, useEffect } from 'react'
     if (typeof window !== 'undefined'
           'config'
       console.log('Analytics "Identify": ',
-    if (typeof window !== 'undefined'
+    if (typeof window !== 'undefined';
           'config';
-      console.log('Analytics "Page": '
+      console.log('Analytics "Page": ')

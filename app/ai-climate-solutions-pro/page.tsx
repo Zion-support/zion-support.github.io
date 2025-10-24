@@ -24,7 +24,6 @@ export default function AiClimateSolutionsProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

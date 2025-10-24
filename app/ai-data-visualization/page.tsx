@@ -24,7 +24,6 @@ export default function AiDataVisualizationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

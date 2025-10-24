@@ -24,7 +24,6 @@ export default function ZionSecurityShieldPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

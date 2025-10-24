@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useRef, useEffect } from 'react';
 
@@ -39,6 +39,7 @@ $3
     container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
   }, [intensity, color]);
 
+const getIntensityValue = () => {
   return (
     <div
       ref={containerRef}

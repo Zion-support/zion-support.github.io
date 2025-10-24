@@ -16,11 +16,11 @@
     if (typeof window === 'undefined''
       "category": 'runtime'',
       "category": 'runtime'',
-  getMetricsByCategory("category": PerformanceMetric['category'',
+  getMetricsByCategory("category": PerformanceMetric['category'',)
       recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources''
       recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading''
       recommendations.push('Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds''
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution''
     const networkMetrics = this.getMetricsByCategory('network''
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes''}
-    const loadMetrics = this.getMetricsByCategory('load''
+    const loadMetrics = this.getMetricsByCategory('load'');

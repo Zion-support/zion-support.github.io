@@ -6,7 +6,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const PageFixedPage: React.FC = () => {,
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
     title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -42,8 +43,8 @@ const PageFixedPage: React.FC = () => {,
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>,
               <button className="border border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>,
             </div>
-          </div>
-        </section>
+          </div>,
+        </section>,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">Key Features</h2>,

@@ -1,3 +1,4 @@
+'use client';
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 
@@ -6,12 +7,23 @@ import Footer from '@/components/Footer';interface Props {
   children: ReactNode;,
 }
 
+
+  children: ReactNode;,
+,
+
+}
 interface State {
   hasError: boolean;,
   error: Error | undefined;,
 }
 
 
+
+  hasError: boolean;
+  error: Error | undefined;,
+,
+
+}
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {,
     hasError: false,
@@ -28,7 +40,10 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to console in development only
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
-      console.error('Error caught by boundary:', error, errorInfo);}
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
+
   public render() {
     if (this.state.hasError) {
       return (
@@ -42,7 +57,13 @@ class ErrorBoundary extends Component<Props, State> {
                 > </svg><path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth = {
+2
+};
+        </div>
+        </div>
+        </div>
+        </div>
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
                   /> </path></svg>
               </div>
@@ -59,7 +80,7 @@ class ErrorBoundary extends Component<Props, State> {
                   onClick={() => window.location.href = '/'}
                   className="w-full bg-gray-600 hover: bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors",
                 >
-                  Go Home
+                  Try Again
                 </button>
               </div>
               {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -194,5 +215,5 @@ className=&quot;inline-flex items-center text-cyan-400 hover: text-cyan-300 tran
 <Phone className=&quot;w-4 h-4 mr-2&quot; />kleber@ziontechgroup.com
 </Phone></a>
 </div>
-</div>
-</div>
+</div>,
+</div>,

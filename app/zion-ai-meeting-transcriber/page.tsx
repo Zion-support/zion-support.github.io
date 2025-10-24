@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function ZionaimeetingtranscriberPage() {
+export default function ZionAiMeetingTranscriberPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function ZionaimeetingtranscriberPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

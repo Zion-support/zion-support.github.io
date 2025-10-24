@@ -24,7 +24,6 @@ export default function ApiPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

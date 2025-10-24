@@ -24,7 +24,6 @@ export default function AiTimeTrackerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

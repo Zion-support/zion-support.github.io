@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function AiblockchainanalyticsPage() {
+export default function AiBlockchainAnalyticsPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function AiblockchainanalyticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

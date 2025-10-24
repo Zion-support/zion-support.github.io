@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function AineuralinterfacePage() {
+export default function AiNeuralInterfacePage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function AineuralinterfacePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

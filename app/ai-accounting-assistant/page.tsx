@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 
 export default function AiAccountingAssistantPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -20,11 +20,11 @@ export default function AiAccountingAssistantPage() {
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

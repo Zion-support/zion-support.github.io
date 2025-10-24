@@ -24,7 +24,6 @@ export default function ItInfrastructureSolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

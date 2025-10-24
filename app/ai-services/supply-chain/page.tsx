@@ -24,7 +24,6 @@ export default function SupplyChainPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

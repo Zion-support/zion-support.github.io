@@ -24,7 +24,6 @@ export default function AiFintechPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

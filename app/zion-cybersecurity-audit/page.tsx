@@ -24,7 +24,6 @@ export default function ZionCybersecurityAuditPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

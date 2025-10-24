@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function VirtualrealitysolutionsPage() {
+export default function VirtualRealitySolutionsPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function VirtualrealitysolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

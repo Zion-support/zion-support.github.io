@@ -24,7 +24,6 @@ export default function AiQualityAssurancePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

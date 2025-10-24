@@ -24,7 +24,6 @@ export default function AiVideoGeneratorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

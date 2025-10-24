@@ -113,4 +113,5 @@ interface ContentNewsletterSignupProps {
   );
 };
 
-export default ContentNewsletterSignup;
+export default ContentNewsletterSignup
+;

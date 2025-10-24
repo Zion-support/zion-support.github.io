@@ -11,4 +11,4 @@ import { Download } from 'lucide-react'
       if (outcome === 'accepted'
       // console.error('Installation "failed": ',
     sessionStorage.setItem('pwa-install-dismissed', 'true';
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed'
+  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')

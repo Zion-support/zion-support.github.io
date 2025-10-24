@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState, useRef } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
@@ -15,15 +16,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [setNode, entry] = useIntersectionObserver({
-    threshold: 0.5
-  })
-  
+    threshold: 0.5)
+  });
+
   useEffect(() => {
     if (entry?.isIntersecting && !isVisible) {
-      setIsVisible(true)
+      setIsVisible(true);
     }
-  }, [entry, isVisible])
-  
+  }, [entry, isVisible]);
+
   useEffect(() => {
     if (!isVisible) return
     let startTime: number,
@@ -41,10 +42,10 @@ $3
     </>
 
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame)
+        cancelAnimationFrame(animationFrame);
       }
-    }
-  }, [isVisible, end, duration])
+    };
+  }, [isVisible, end, duration]);
 
   return (
 
@@ -54,4 +55,4 @@ $3
   )
 }
 
-export default AnimatedCounter
+export default AnimatedCounter;

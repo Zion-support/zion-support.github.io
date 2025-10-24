@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function AipriceoptimizerproPage() {
+export default function AiPriceOptimizerProPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function AipriceoptimizerproPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

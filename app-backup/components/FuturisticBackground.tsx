@@ -24,6 +24,10 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Gain competitive advantage with advanced technology';
 <<<<<<< HEAD
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '''
-=======
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</FuturisticBackgroundProps>
+const FuturisticBackgroun,</FuturisticBackgroundProps>
+  d: React.FC<FuturisticBackgroundProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</FuturisticBackgroundProps>
+</FuturisticBackgroundProps>
+
+export default FuturisticBackground;

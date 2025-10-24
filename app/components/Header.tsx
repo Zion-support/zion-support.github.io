@@ -1,6 +1,44 @@
+'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import Footer from 'Footer';
+import Footer from './Footer';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+
+const features = [
+  {
+    icon: CheckCircle,
+    title: "Advanced AI",
+    description: "Cutting-edge artificial intelligence solutions",
+    benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
+  },
+  {
+    icon: CheckCircle,
+    title: "Cloud Infrastructure",
+    description: "Scalable and secure cloud solutions",
+    benefits: ["Auto-scaling", "High Availability", "Security"]
+  },
+  {
+    icon: CheckCircle,
+    title: "Data Analytics",
+    description: "Powerful data analysis and visualization",
+    benefits: ["Real-time Analytics", "Predictive Modeling", "Business Intelligence"]
+  },
+  {
+    icon: CheckCircle,
+    title: "Automation",
+    description: "Streamline your business processes",
+    benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
+  }
+];
+
+const benefits = [
+  "Reduce operational costs by up to 40%",
+  "Increase productivity with AI automation",
+  "Scale your business with cloud solutions",
+  "Make data-driven decisions with analytics",
+  "Enhance security with advanced monitoring",
+  "Improve customer experience with AI"
+];
 
 
 import Footer from '@/components/Footer';const Header: React.FC = ($2) => {
@@ -20,8 +58,8 @@ $3
                 Learn More
               </button>
             </div>
-          </div>
-        </section>
+          </div>,
+        </section>,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>

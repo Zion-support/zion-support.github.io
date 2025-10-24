@@ -24,7 +24,6 @@ export default function PricingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

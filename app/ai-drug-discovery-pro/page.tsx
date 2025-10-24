@@ -24,7 +24,6 @@ export default function AiDrugDiscoveryProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

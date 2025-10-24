@@ -63,8 +63,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {,
               </button>
             </div>
           </div>
-        </section>
-
+        </section>,
+,
         {/* Features Section */}
 
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">

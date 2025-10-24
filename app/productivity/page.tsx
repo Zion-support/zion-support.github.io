@@ -24,7 +24,6 @@ export default function ProductivityPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

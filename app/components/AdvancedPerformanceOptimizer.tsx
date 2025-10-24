@@ -1,6 +1,8 @@
 'use client';
 import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
+
+
   lcp: number,
     fid: number,
   cls: number,
@@ -20,8 +22,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableAdvancedCaching = true
   enableImageOptimization = true
   enablePreloading = true
-  enableServiceWorker = true
-}) => {
+  enableServiceWorker = true}
+}) => {</AdvancedPerformanceOptimizerProps>
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
     lcp: 0,
     fid: 0,
@@ -38,7 +40,7 @@ const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
-          ...prev
+          ...prev)
           lcp: lastEntry.renderTime || lastEntry.loadTime || 0})
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -50,11 +52,11 @@ const fidObserver = new PerformanceObserver((list) => {
           const fid = (entry as any).processingStart - entry.startTime
           setPerformanceMetrics(prev => ({
             ...prev
-            fid
+            fid)
 })
         })
       })
-      fidObserver.observe({ entryTypes: ['first-input'] })
+      fidObserver.observe({ entryTypes: ['first-input'] });
       // Measure Cumulative Layout Shift
       let clsValue = 0;
 
@@ -65,7 +67,8 @@ const clsObserver = new PerformanceObserver((list) => {
             clsValue += entry.value
             setPerformanceMetrics(prev => ({
               ...prev
-              cls: clsValue})
+              cl,)
+  s: clsValue})
         })
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] })
@@ -75,11 +78,11 @@ const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
-            ...prev
+            ...prev)
             fcp: entry.startTime})
         })
       })
-      fcpObserver.observe({ entryTypes: ['paint'] })
+      fcpObserver.observe({ entryTypes: ['paint'] });
   }, [enableWebVitals])
   // Advanced caching strategies;
 
@@ -87,14 +90,14 @@ const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return
     // Service Worker registration
     if ('serviceWorker' in navigator && enableServiceWorker) {
-      navigator.serviceWorker.register('/sw.js')
+      navigator.serviceWorker.register('/sw.js');
         .then((registration) => {
           // eslint-disable-next-line no-console
-    console.log('Service Worker registered:', registration)
+    console.log('Service Worker registered:', registration);
         })
         .catch((registrationError) => {
           // eslint-disable-next-line no-console
-    console.error('Service Worker registration failed:', registrationError)
+    console.error('Service Worker registration failed:', registrationError);
         })
 
     }
@@ -108,10 +111,10 @@ const cache = new Map()
 
 const cacheKey = `${url}-${JSON.stringify(init)}`
       if (cache.has(cacheKey)) {
-        return cache.get(cacheKey)
-      const response = await originalFetch(input, init)
+        return cache.get(cacheKey);
+      const response = await originalFetch(input, init);
       if (response.ok) {
-        cache.set(cacheKey, response.clone()
+        cache.set(cacheKey, response.clone();
       return response
   }, [enableServiceWorker])
   // Image optimization;
@@ -136,14 +139,14 @@ const criticalResources = [
   '/fonts/inter-var.woff2',
     '/css/critical.css'
   ]
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {)
       const link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous'
-      document.head.appendChild(link)
+      document.head.appendChild(link);
     })
   }, [])
   // Performance monitoring and reporting;
@@ -154,7 +157,7 @@ const reportPerformanceMetrics = useCallback(() => {
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
-    event_label: 'Core Web Vitals',
+    event_label: 'Core Web Vitals',)
         value: Math.round(performanceMetrics.lcp),
     custom_map: {,
           fcp: Math.round(performanceMetrics.fcp),
@@ -165,17 +168,17 @@ const reportPerformanceMetrics = useCallback(() => {
   }, [performanceMetrics])
   useEffect(() => {
     if (enableAdvancedCaching) {
-      setupAdvancedCaching()
+      setupAdvancedCaching();
     if (enableImageOptimization) {
-      optimizeImages()
+      optimizeImages();
     if (enablePreloading) {
-      preloadCriticalResources()
+      preloadCriticalResources();
     if (enableWebVitals) {
-      measureWebVitals()
+      measureWebVitals();
   }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
   useEffect(() => {
     if (enableWebVitals && performanceMetrics.lcp > 0) {
-      reportPerformanceMetrics()
+      reportPerformanceMetrics();
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
 

@@ -24,7 +24,6 @@ export default function AiDataAnalyticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

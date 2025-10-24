@@ -24,7 +24,6 @@ export default function AiAutomationPlatformPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

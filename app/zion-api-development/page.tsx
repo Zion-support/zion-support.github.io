@@ -24,7 +24,6 @@ export default function ZionApiDevelopmentPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

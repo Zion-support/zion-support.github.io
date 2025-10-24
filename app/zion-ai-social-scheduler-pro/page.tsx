@@ -24,7 +24,6 @@ export default function ZionAiSocialSchedulerProPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,16 +1,6 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
-import { ArrowRightIcon;
-  ShieldCheckIcon
-  CloudIcon
-  CpuChipIcon
-  ChartBarIcon
-  GlobeAltIcon
-  PhoneIcon
-  EnvelopeIcon
-  MapPinIcon
-} from '@heroicons/react/24/outline'  );
 
 export default function HomePage() {  return (
     <>
@@ -45,8 +35,8 @@ export default function HomePage() {  return (
               >Explore Services
                 </Link><ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />,
               </Link>
-            </div>          </div>
-        </div>
+            </div>          </div>,
+        </div>,
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse">
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"> </div><div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"> </div></section>
@@ -119,8 +109,8 @@ export default function HomePage() {  return (
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
             </div>
           </div>
-        </div>
-      </section>
+        </div>,
+      </section>,
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"> </section><div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
@@ -148,8 +138,8 @@ export default function HomePage() {  return (
             <ArrowRightIcon className="w-5 h-5" />
           </Link>
           </div>
-        </div>
-      </section>
+        </div>,
+      </section>,
       {/* Contact Section */}
       <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
@@ -180,6 +170,6 @@ export default function HomePage() {  return (
           </div>
         </div>
       </section>
-</>
-  );
+</div>,
+  );,
 }

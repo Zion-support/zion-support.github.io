@@ -24,7 +24,6 @@ export default function AiChatbotEnterprisePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

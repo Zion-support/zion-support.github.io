@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-export default function AiwebsiteanalyzerPage() {
+export default function AiWebsiteAnalyzerPage() {
   return (
     <>
       <Head>
@@ -24,7 +24,6 @@ export default function AiwebsiteanalyzerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

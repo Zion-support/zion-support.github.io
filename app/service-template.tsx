@@ -13,7 +13,7 @@ interface ServiceTemplateProps {
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({,
   title,
   description,
-  features
+  features}
 }) => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

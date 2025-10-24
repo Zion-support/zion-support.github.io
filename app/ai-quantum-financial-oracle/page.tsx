@@ -24,7 +24,6 @@ export default function AiQuantumFinancialOraclePage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
