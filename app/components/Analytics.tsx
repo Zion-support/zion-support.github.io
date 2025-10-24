@@ -1,6 +1,13 @@
 'use client'
 import React, { useEffect } from 'react'
 
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (..._args: unknown[]) => void
+  }
+}
+
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean
   enablePerformanceMonitoring?: boolean
@@ -34,8 +41,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
   const initializeGoogleAnalytics = () => {
     // Load Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID')
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID')
     }
   }
 

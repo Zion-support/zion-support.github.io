@@ -2,6 +2,27 @@
 
 import React, { useState, useEffect } from 'react';
 
+// Extend interfaces for browser APIs
+declare global {
+  interface Performance {
+    memory?: {
+      usedJSHeapSize: number
+    }
+  }
+  
+  interface Navigator {
+    connection?: {
+      effectiveType: string
+    }
+    mozConnection?: {
+      effectiveType: string
+    }
+    webkitConnection?: {
+      effectiveType: string
+    }
+  }
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -26,10 +47,10 @@ const PerformanceOptimizer: React.FC = () => {
       const renderTime = performance.now() - startTime;
 
       // Check memory usage (if available)
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      const memoryUsage = performance.memory?.usedJSHeapSize || 0;
 
       // Check connection speed
-      const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
       const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
 
       setMetrics({

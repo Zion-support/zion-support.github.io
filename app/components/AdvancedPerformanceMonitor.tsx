@@ -40,7 +40,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry) => {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
           }
@@ -56,7 +56,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry) => {
           if (entry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           }
@@ -73,9 +73,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+            clsValue += entry.value || 0;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         });
@@ -100,7 +100,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = performance.memory;
         setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
       }
     } catch (error) {
