@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import Head as _Head from 'next/head';
-import Link as _Link from 'next/link';
+import _Head from 'next/head';
+import _Link from 'next/link';
 import Navigation from '../components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp as _TrendingUp } from 'lucide-react';
 

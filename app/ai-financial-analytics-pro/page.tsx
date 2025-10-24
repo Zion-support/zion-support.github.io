@@ -1,4 +1,4 @@
-import Head as _Head from 'next/head';
+import _Head from 'next/head';
 
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank as _PiggyBank, BarChart as _BarChart, TrendingUp as _TrendingUp, CheckCircle, Brain, Settings as _Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send as _Send, Clock as _Clock } from 'lucide-react';
@@ -87,7 +87,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Investment Analytics',
-      icon: TrendingUp,
+      icon: _TrendingUp,
       items: [
         'Portfolio performance',
         'Risk-return analysis',
@@ -212,7 +212,7 @@ export default function AiFinancialAnalyticsProPage() {
     { name: 'Xero', icon: FileText, category: 'Accounting' },
     { name: 'SAP', icon: Database, category: 'ERP' },
     { name: 'Oracle', icon: Building2, category: 'ERP' },
-    { name: 'Salesforce', icon: TrendingUp, category: 'CRM' },
+    { name: 'Salesforce', icon: _TrendingUp, category: 'CRM' },
     { name: 'HubSpot', icon: Target, category: 'CRM' },
     { name: 'Stripe', icon: CreditCard, category: 'Payments' },
     { name: 'PayPal', icon: Wallet, category: 'Payments' }
