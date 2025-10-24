@@ -110,7 +110,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle key down events
    */
-  private handleKeyDown(event: KeyboardEvent): void {
+  private handleKeyDown(_event: KeyboardEvent): void {
     switch (event.key) {
       case 'Tab':
         this.handleTabNavigation(event);
@@ -211,7 +211,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key
    */
-  private handleEscape(event: KeyboardEvent): void {
+  private handleEscape(_event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
     modals.forEach(modal => {

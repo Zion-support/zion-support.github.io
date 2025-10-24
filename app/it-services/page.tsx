@@ -2,7 +2,7 @@
 
 
 import React from "react";
-import { CheckCircle, ArrowRight, Cloud, Server, Database, Shield, Zap, Target, BarChart, TrendingUp, Brain, Users } from "lucide-react";
+import { CheckCircle, ArrowRight, Cloud, Server, Database, Shield } from "lucide-react";
 const ITServicesPage: React.FC = () => {
   const services = [
   {

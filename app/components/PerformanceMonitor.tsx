@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number | null;
@@ -13,7 +13,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
   logToConsole?: boolean;
 }
@@ -180,7 +180,7 @@ export default function PerformanceMonitor({
 // Global performance monitoring utilities
 export const performanceUtils = {
   // Measure custom performance marks
-  mark: (name: string) => {
+  mark: (_name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name);
     }
@@ -240,6 +240,6 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (..._args: unknown[]) => void;
   }
 }
