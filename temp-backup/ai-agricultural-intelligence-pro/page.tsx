@@ -11,7 +11,7 @@ export default function Page() {
 
       <Head>
         <title>Ai Agricultural Intelligence Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
+        <meta name="description" content="Professional ai agricultural intelligence pro services and solutions by Zion Tech Group." />
       </Head>
 <<<<<<< HEAD:app/ai-agricultural-intelligence-pro/page.tsx
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,7 +25,11 @@ export default function Page() {
             Ai Agricultural Intelligence Pro
           </h1>
           <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD:app/ai-agricultural-intelligence-pro/page.tsx
+            Professional ai agricultural intelligence pro services and solutions by Zion Tech Group.
+=======
             Professional services by Zion Tech Group.
+>>>>>>> origin/main:temp-backup/ai-agricultural-intelligence-pro/page.tsx
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
 
@@ -36,6 +40,12 @@ export default function Page() {
           </div>
         </div>
         <Footer />
+<<<<<<< HEAD:app/ai-agricultural-intelligence-pro/page.tsx
+      </div>
+    </div>
+  )
+}
+=======
       </main>
     </div>
   )
@@ -44,4 +54,5 @@ export default function Page() {
 =======
 };
   </div>
+>>>>>>> origin/main:temp-backup/ai-agricultural-intelligence-pro/page.tsx
 >>>>>>> origin/main:temp-backup/ai-agricultural-intelligence-pro/page.tsx
