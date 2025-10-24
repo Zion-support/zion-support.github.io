@@ -6,7 +6,6 @@ interface SEOHeadProps {
   keywords?: string;
   image?: string;
   url?: string;
-  canonical?: string;
   type?: string;
   canonical?: string;
   structuredData?: any;
