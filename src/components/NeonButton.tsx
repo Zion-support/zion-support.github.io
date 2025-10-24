@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &quot;react&quot;
 import { ArrowRight } from &quot;lucide-react&quot
 interface NeonButtonProps {
@@ -144,3 +145,41 @@ export default NeonButton;
 export default NeonButton;
 </spanclassName>/di>
 }
+=======
+
+const NeonButton: React.FC<
+const NeonButton: React.FC<
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+  <di v>{icon&&<spanclassName=&quot;mr-2&quot;><
+      {!icon && <
+    <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const DynamicContentShowcase: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using DynamicContentShowcase to transform t
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default DynamicContentShowcase;
+=======
+import React from 'react';
+
+interface DynamicContentShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'dynamiccontentshowcase ' + className}>
+      {children || <p>DynamicContentShowcase component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default DynamicContentShowcase;

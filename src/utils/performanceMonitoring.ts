@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 /**
  * Advanced Performance Monitoring System
  * Tracks Core Web Vitals and custom performance metrics
@@ -457,3 +458,15 @@ recommendations.push('Improve TTFB by optimizing server response time and using 
   return recommendations
 }</T>
 }}};
+=======
+import React from 'react';
+
+export default function performanceMonitoring() {
+  return (
+    <div>
+      <h1>performanceMonitoring</h1>
+      <p>performanceMonitoring content.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

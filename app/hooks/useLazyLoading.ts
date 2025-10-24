@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useRef, useState } from 'react';
 ;
 interface UseLazyLoadingOptions {
@@ -83,3 +84,16 @@ hasError,;
 shouldLoad,;
 onLoad: handleLoad,onError: handleError,};
 }
+=======
+import { useState, useEffect } from 'react';
+
+export const useuseLazyLoading = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

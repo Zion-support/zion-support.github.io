@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 interface DataCleanupManagerProps {
 className?: string
@@ -10,3 +11,10 @@ return (</DataCleanupManagerProps>,
 }
 export default DataCleanupManager;
 }
+=======
+
+const DataCleanupManager: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

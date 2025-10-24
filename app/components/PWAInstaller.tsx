@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -71,4 +71,23 @@ go wrong! 🤖
 ,}
 export default checkInstalled
     </div>
+=======
+
+interface PWAInstallerProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }
+
+const PWAInstaller: React.FC<PWAInstallerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'pwainstaller ' + className}>
+      {children || <p>PWAInstaller component</p>}
+    </div>
+  );
+};
+
+export default PWAInstaller;

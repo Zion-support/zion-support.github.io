@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -22,3 +23,22 @@ export default function RootLayout({
     </html>
   );
 }
+=======
+'use client';
+import React from 'react';
+
+interface layoutProps {
+  className?: string;
+}
+
+const layout: React.FC<layoutProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>layout</h2>
+      <p>layout component for enhanced functionality.</p>
+    </div>
+  );
+};
+
+export default layout;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

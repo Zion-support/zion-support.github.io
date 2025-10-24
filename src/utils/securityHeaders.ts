@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Security Headers Configuration
  * Comprehensive security headers for production applications
@@ -100,3 +101,11 @@ value
 export default defaultSecurityHeaders;
 export default defaultSecurityHeaders;
 }
+=======
+
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<
+const headers: Record<
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<
+  const headers: Record<
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Head from 'next/head';
@@ -20,3 +21,13 @@ const WorkingPage = ({ title: "Page Broken2", description: "Professional page br
   );
 };
 export default WorkingPage;
+=======
+
+    <
+      <
+        <
+      <
+        <
+          <
+          <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import  Helmet  from 'react-helmet-async';
 import  ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react';
 import { { Phone Mail     } from 'lucide-react';
@@ -28,4 +28,23 @@ Start Your Free Trial</button>/div>/section>/div>/div>
 export default EnhancedHero;    'Gain competitive advantage with advanced technology',
     <div, className = quotflex flex-col sm flex-row gap-4 justify-centerquot / / /></div>
 }
+=======
+
+interface EnhancedHeroProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedhero ' + className}>
+      {children || <p>EnhancedHero component</p>}
+    </div>
+  );
+};
+
+export default EnhancedHero;

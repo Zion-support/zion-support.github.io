@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/Header.tsx;
 import React from 'react';
@@ -91,3 +92,35 @@ export default HeaderPage;
 }
 export default Header;
 }
+=======
+
+const Header: React.FC<
+    <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

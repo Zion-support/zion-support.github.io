@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode     } from 'react';
 interface Props {
 children: ReactNode,}
@@ -150,3 +151,53 @@ kleber@ziontechgroup.com</Phone>/a>/div>/div>/div>,return this.props.children
 export default ErrorBoundary;
 export default ErrorBoundary;
 }
+=======
+
+class ErrorBoundary extends Component<
+return (<
+    <
+    <
+            <
+          <
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+class ErrorBoundary extends Component<
+return (<
+    <
+    <
+    <
+<
+<
+    <
+<
+<
+  </div>,<
+<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

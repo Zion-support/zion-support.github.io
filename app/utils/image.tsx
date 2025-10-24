@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
 src: string,alt: string,}
@@ -124,3 +124,23 @@ src={src,};alt={alt};width={width};height={height};className={className};style={
 }</img>;
 export default Image;</img>
 }
+=======
+
+interface imageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const image: React.FC<imageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'image ' + className}>
+      {children || <p>image component</p>}
+    </div>
+  );
+};
+
+export default image;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

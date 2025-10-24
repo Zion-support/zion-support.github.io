@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const SkipLink: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using SkipLink to transform their operation
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default SkipLink;
+=======
+import React from 'react';
+
+interface SkipLinkProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const SkipLink: React.FC<SkipLinkProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'skiplink ' + className}>
+      {children || <p>SkipLink component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default SkipLink;

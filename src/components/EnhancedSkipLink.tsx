@@ -1,6 +1,6 @@
-'use client'
-:all-pages-backup/components/EnhancedSkipLink.tsx;
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -127,4 +127,14 @@ Skip to maincontent</a>
 )
 {}
 export default EnhancedSkipLink;
+=======
+
+export default function EnhancedSkipLink() {
+  return (
+    <div>
+      <h1>EnhancedSkipLink</h1>
+      <p>EnhancedSkipLink content.</p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }

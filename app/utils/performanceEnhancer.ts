@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { useRef } from 'react';
@@ -275,3 +276,16 @@ console.log('Performance metrics: ',metrics
   }
 };
 }
+=======
+import { useState, useEffect } from 'react';
+
+export const useperformanceEnhancer = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

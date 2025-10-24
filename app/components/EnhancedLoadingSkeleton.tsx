@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check     } from 'lucide-react';
 import Navigation from '../components/Navigation'
@@ -19,3 +19,23 @@ icon: TrendingUp, title: 'Growth Optimization', description: 'Optimize your busi
   ];
 export default EnhancedLoadingSkeletonPage;
 }}
+=======
+
+interface EnhancedLoadingSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedloadingskeleton ' + className}>
+      {children || <p>EnhancedLoadingSkeleton component</p>}
+    </div>
+  );
+};
+
+export default EnhancedLoadingSkeleton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

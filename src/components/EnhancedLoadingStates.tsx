@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/EnhancedLoadingStates.tsx;
 import React from 'react';
@@ -165,3 +166,62 @@ export const ContentSkeleton: React.FC = () => (,<div className=&quot;space-y-6 
     <div className=&quot;h-4 bg-gray-600 rounded w-2/3&quot; / /></div>/div>,)
 </pclassName>/divclassName>
 }
+=======
+
+    <
+      <
+    <
+      <
+        <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+return(<
+        {text &&(<pclassName=&quot;mt-2 text-smtext-gray-500&quot;>{text}<
+    <
+<
+export const PageLoader: React.FC =  => (,<
+    <
+    <
+    <
+<
+export const ServiceCardSkeleton: React.FC =  => (,<
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+export const StatsSkeleton: React.FC =  => (,<
+    <
+    <
+export const ContentSkeleton: React.FC =  => (,<
+    <
+    <
+    <
+    <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

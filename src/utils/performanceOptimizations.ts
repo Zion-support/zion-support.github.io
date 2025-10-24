@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import { useCallback, useMemo, useState, useEffect } from 'react';
 // Performance optimization utilities
 // Debounce utility for performance: all-pages-backup/utils/performanceOptimizations.ts;
@@ -258,3 +259,15 @@ export default performanceOptimizations
 ;
 export default performanceOptimizations;
 }}
+=======
+import React from 'react';
+
+export default function performanceOptimizations() {
+  return (
+    <div>
+      <h1>performanceOptimizations</h1>
+      <p>performanceOptimizations content.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

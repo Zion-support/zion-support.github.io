@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ResponsiveContainer: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using ResponsiveContainer to transform thei
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default ResponsiveContainer;
+=======
+import React from 'react';
+
+interface ResponsiveContainerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'responsivecontainer ' + className}>
+      {children || <p>ResponsiveContainer component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default ResponsiveContainer;

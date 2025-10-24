@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/Loading.tsx;
 import React from 'react';
@@ -116,3 +117,37 @@ export default LoadingPage;
 }
 export default LoadingPage;
 }
+=======
+
+    <
+      <
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

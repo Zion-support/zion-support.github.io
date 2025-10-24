@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const PerformanceOptimizations: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using PerformanceOptimizations to transform
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default PerformanceOptimizations;
+=======
+import React from 'react';
+
+interface PerformanceOptimizationsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'performanceoptimizations ' + className}>
+      {children || <p>PerformanceOptimizations component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default PerformanceOptimizations;

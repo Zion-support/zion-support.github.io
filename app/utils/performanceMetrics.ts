@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
 * Performance Metrics Utility
@@ -634,3 +635,16 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}
 export const performanceMetrics = PerformanceMetrics.getInstance()
 `</T>;
 }
+=======
+import { useState, useEffect } from 'react';
+
+export const useperformanceMetrics = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

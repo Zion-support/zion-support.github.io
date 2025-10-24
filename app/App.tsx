@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -263,3 +264,24 @@ function App() {
   );
 };
 export default App;
+=======
+import React from 'react';
+
+interface AppProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const App: React.FC<AppProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'app ' + className}>
+      {children || <p>App component</p>}
+    </div>
+  );
+};
+
+export default App;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

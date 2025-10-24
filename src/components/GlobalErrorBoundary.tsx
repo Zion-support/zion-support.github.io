@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
@@ -58,3 +59,15 @@ const benefits = [
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology',
     <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / /></div>/div>,}
+=======
+
+export default class GlobalErrorBoundary extends Component<
+return (<
+    <
+    <
+          <
+    <
+    <
+              <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

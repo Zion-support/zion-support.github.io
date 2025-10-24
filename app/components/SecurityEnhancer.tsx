@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const SecurityEnhancer: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using SecurityEnhancer to transform their o
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default SecurityEnhancer;
+=======
+import React from 'react';
+
+interface SecurityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'securityenhancer ' + className}>
+      {children || <p>SecurityEnhancer component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default SecurityEnhancer;

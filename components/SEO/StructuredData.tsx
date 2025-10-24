@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 "use client"
 interface StructuredDataProps {
@@ -11,3 +12,10 @@ return (</StructuredDataProps>,
 }
 ;
 export default StructuredData;
+=======
+
+const StructuredData: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

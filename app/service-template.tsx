@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react'
 interface ServiceTemplateProps {
@@ -6,8 +7,20 @@ title: string;, description: string
 const ServiceTemplat,e: React.FC<ServiceTemplateProps> = ({
 title,description
 features
+=======
+import React from 'react';
+
+interface ServiceTemplateProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }
+
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ 
+  className = '', 
+  children 
 }) => {
+<<<<<<< HEAD
 return (</ServiceTemplateProps>,
     <div className="min-h-screen bg-gray-50 py-12"></div>,
     <div className="max-w-4 xl mx-auto px-4"></div>,
@@ -22,6 +35,13 @@ return (</ServiceTemplateProps>,
     <span className="text-gray-700">{feature}</span>/div>
             ))}
             </div>/div>/div>}
+=======
+  return (
+    <div className={'service-template ' + className}>
+      {children || <p>Service Template component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 export default ServiceTemplate;
-  </div>
-}

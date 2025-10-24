@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react'
 /**
@@ -161,3 +162,30 @@ timestam,p: new Date().toISOString(),userAgent: typeof navigator !== 'undefined'
 ur,l: typeof window !== 'undefined' ? window.location.href : 'unknown',}
 export default getErrorBoundaryConfig</string>
 }}}}}}}
+=======
+
+customMessage,s: Record<
+default: React.ComponentType<
+network: React.ComponentType<
+notFound: React.ComponentType<
+    <
+    <
+    <
+    <
+<
+<pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto"><
+    <
+    <
+    <
+    <
+    <
+<
+    <
+return (<
+    <
+    <
+    <
+<
+    <
+export function formatErrorForLogging(error: Error): Record<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

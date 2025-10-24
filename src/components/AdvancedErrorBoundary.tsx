@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail     } from 'lucide-react';
 import { Mail     } from 'lucide-react';
@@ -51,3 +52,10 @@ logErrorToService = (error: Error,errorInfo: ErrorInfo) => {,// You can integrat
 const errorData={
 </Props>
 }}
+=======
+
+class AdvancedErrorBoundary extends Component<
+        <
+          <
+          <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

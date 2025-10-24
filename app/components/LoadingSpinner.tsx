@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const LoadingSpinner: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using LoadingSpinner to transform their ope
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default LoadingSpinner;
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'loadingspinner ' + className}>
+      {children || <p>LoadingSpinner component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default LoadingSpinner;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/SystemMonitor.tsx;
 import Footer from './Footer';
@@ -93,3 +94,36 @@ export default SystemMonitorPage;
 {}
 export default SystemMonitorPage;
 }
+=======
+
+const SystemMonitor: React.FC<
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

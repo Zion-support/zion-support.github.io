@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
@@ -279,3 +280,16 @@ useBundleSizeMonitoring
 }
 export default performanceOptimizations;
 }
+=======
+import { useState, useEffect } from 'react';
+
+export const useperformanceOptimizations = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

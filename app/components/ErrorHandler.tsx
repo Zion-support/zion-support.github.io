@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ErrorHandler: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using ErrorHandler to transform their opera
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default ErrorHandler;
+=======
+import React from 'react';
+
+interface ErrorHandlerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ErrorHandler: React.FC<ErrorHandlerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'errorhandler ' + className}>
+      {children || <p>ErrorHandler component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default ErrorHandler;

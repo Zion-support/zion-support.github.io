@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Type definitions for Next.js compatibility;
 export interface Metadata {
 ;
@@ -154,3 +155,12 @@ name?: string,
 };
 export {};</Response>
 }
+=======
+
+  authors?: Array<
+authors?: Array<
+  (req: Request): Promise<
+PUT?: (req: Request) => Promise<
+q: Request) => Promise<
+PATCH?: (req: Request) => Promise<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

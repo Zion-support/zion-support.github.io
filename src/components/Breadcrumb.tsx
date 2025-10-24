@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Home, ChevronRight     } from 'lucide-react';
@@ -71,3 +72,16 @@ return (
 ;
 export default Breadcrumb;
 }
+=======
+
+  icon?: React.ComponentType<
+    <
+        <
+            <
+              <
+                {item.icon && <
+                <
+    <
+    <
+                  <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

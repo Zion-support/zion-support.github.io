@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { useState     } from 'react';
 import { MessageSquare, Mail, Phone, S,end, CheckCircle     } from 'lucide-react';
 interface FormData {
@@ -146,5 +146,23 @@ Send Message
         </button>/form>/div>
   )
 }
-export default ContactForm;
+=======
+
+interface ContactFormProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ContactForm: React.FC<ContactFormProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'contactform ' + className}>
+      {children || <p>ContactForm component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default ContactForm;

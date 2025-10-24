@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useCallback, useRef, useState } from 'react';
 ;
 export interface UseEnhancedPerformanceOptions {
@@ -141,50 +142,16 @@ return (
     </>
     </>
   );
+=======
+import { useState, useEffect } from 'react';
+
+export const useuseEnhancedPerformance = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
   }, []);
-;
-const measurePerformance = useCallback((name: string,fn: () => void) => {;
-if (trackPerformance) {;
-;
-performance.mark(`${component,}-${name}-start`);
-      fn();
-      performance.mark(`${component}-${name}-end`);
-      performance.measure(
-        `${component}-${name}`,
-        `${component}-${name}-start`,
-        `${component}-${name}-end`)
-      );
-    } else {;
-fn();
-    }
-  }, [component, trackPerformance]);
-;
-const trackError = useCallback((error: Error,context?: Record<string, unknown>) => {;
-if (trackErrors) {;
-if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console;
-        console.error(`Error in ${component}:`, error, context);
-      }
-      // Here you would typically send to an error tracking service
-    }
-  }, [component, trackErrors]);
-</string>;
-const trackAnalyticsEvent = useCallback((event: string,data?: Record<string, unknown>) => {;
-if (trackAnalytics) {;
-if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console;
-        console.log(`Analytics event in ${component}:`, event, data);
-      }
-      // Here you would typically send to an analytics service
-    }
-  }, [component, trackAnalytics]);
-;
-return {;
-metrics,;
-isOptimized,;
-optimizePerformance,;
-measurePerformance,;
-trackError,;
-trackAnalytics: trackAnalyticsEvent,renderCount: renderCountRef.current,mountTime: mountTimeRef.current,};
-};</string>
-}
+  
+  return { state, setState };
+};

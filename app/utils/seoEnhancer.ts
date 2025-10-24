@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
 * SEO Enhancement Utilities
@@ -77,14 +78,16 @@ ${allowAll ? 'Allow: /' : 'Disallo,w: /',}
 ;
 export const generateRobotsTxt = ($2) => {;
 $3
+=======
+import { useState, useEffect } from 'react';
+
+export const useseoEnhancer = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 };
-Sitemap: ${sitemapUrl,}`
-}
-;
-export default {;
-generateMetaTags,;
-generateStructuredData,;
-generateSitemap,;
-generateRobotsTxt
-};
-}

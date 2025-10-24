@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function CookieConsent() {
@@ -17,3 +17,23 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
+=======
+
+interface CookieConsentProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const CookieConsent: React.FC<CookieConsentProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'cookieconsent ' + className}>
+      {children || <p>CookieConsent component</p>}
+    </div>
+  );
+};
+
+export default CookieConsent;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

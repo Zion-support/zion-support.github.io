@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Head from "next/head";
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
@@ -17,3 +19,26 @@ return (
 Contact Us</Link>ArrowRightclassNam e="ml-2 h-4 w-4" / />
           </Link>/div>/div>/div>;
   ),}
+=======
+
+function Pageahe3oinqw() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional  services and solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+Pageahe3oinqw.displayName = '';
+
+export default Pageahe3oinqw;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/ErrorHandler.tsx;
 import Footer from './Footer';
@@ -205,3 +206,50 @@ export default ErrorHandlerPage;
 }
 export default ErrorHandlerPage;
 }
+=======
+
+    <
+      <
+    <
+      <
+        <
+    <
+            <
+            <
+    <
+    <
+    <
+    <
+            <
+                </summary>,<
+    <
+                    <
+                    <
+                      <strong>Stack: </strong>,<pre className=&quot;whitespace-pre-wrap&quot; /><
+                    <
+                      <strong>Component Stack: </strong>,<pre className=&quot;whitespace-pre-wrap&quot; /><
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+              ><
+              ><
+              ><
+            </butto></di><
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 interface AdvancedSEOOptimizerProps {
 className?: string
@@ -10,3 +11,10 @@ return (</AdvancedSEOOptimizerProps>,
 }
 export default AdvancedSEOOptimizer;
 }
+=======
+
+const AdvancedSEOOptimizer: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
 declare global {
 interface Window {
@@ -83,4 +84,16 @@ export default AnalyticsProvider;
 export default AnalyticsProviderPage;
 }
 export default AnalyticsProviderPage;
+=======
+'use client';
+import React from 'react';
+
+export default function AnalyticsProvider() {
+  return (
+    <div>
+      <h1>AnalyticsProvider</h1>
+      <p>AnalyticsProvider content.</p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }

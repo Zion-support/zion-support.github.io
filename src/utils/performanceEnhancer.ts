@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useRef, useEffect } from 'react';
 /**
  * Performance Enhancement Utilities
@@ -278,3 +279,15 @@ const metrics = collectPerformanceMetrics();
     // eslint-disable-next-line no-console;
 console.log('Performance metrics: ',metrics)}}</number>
 }}}
+=======
+import React from 'react';
+
+export default function performanceEnhancer() {
+  return (
+    <div>
+      <h1>performanceEnhancer</h1>
+      <p>performanceEnhancer content.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud     } from 'lucide-react';
 const Footer: React.FC = () => {
@@ -132,5 +132,23 @@ IT Services
             ))}
             </div>/div>/div>/footer>
   )
+=======
+
+interface FooterProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }
+
+const Footer: React.FC<FooterProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'footer ' + className}>
+      {children || <p>Footer component</p>}
+    </div>
+  );
+};
+
 export default Footer;

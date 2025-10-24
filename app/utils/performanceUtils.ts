@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance monitoring utilities;
 export interface PerformanceMetric {
 ;
@@ -56,3 +57,16 @@ value: Math.round(metric.value),});
 // Export singleton instance;
 export const performanceMonitor = new PerformanceMonitor();
 }
+=======
+import { useState, useEffect } from 'react';
+
+export const useperformanceUtils = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

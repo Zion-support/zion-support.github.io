@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Play     } from 'lucide-react';
 import Navigation from "../components/Navigation";
@@ -135,3 +136,28 @@ className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 p
 }
 ;
 export default AI3; DGenerationPage}
+=======
+'use client';
+import React from 'react';
+
+function Pagees30oxlv6() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional  services and solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+Pagees30oxlv6.displayName = '';
+
+export default Pagees30oxlv6;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 interface MicroSAASCardProps {
 className?: string
@@ -10,3 +11,10 @@ return (</MicroSAASCardProps>,
 }
 export default MicroSAASCard;
 }
+=======
+
+const MicroSAASCard: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

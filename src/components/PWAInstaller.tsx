@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 interface PWAInstallerProps {
 className?: string
@@ -10,3 +11,10 @@ return (</PWAInstallerProps>,
 }
 export default PWAInstaller;
 }
+=======
+
+const PWAInstaller: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

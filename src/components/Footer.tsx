@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 interface FooterProps {
 className?: string
@@ -10,3 +11,10 @@ return (</FooterProps>,
 }
 export default Footer;
 }
+=======
+
+const Footer: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

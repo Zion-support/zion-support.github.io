@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import React, { useEffect } from "react"
 interface AnalyticsProps {
 className?: string};
@@ -24,5 +24,23 @@ declare global {
 interface Window {
 }
     gtag: (...arg,s: any[]) => void;,}
-export default Analytics;
+=======
+
+interface AnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const Analytics: React.FC<AnalyticsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'analytics ' + className}>
+      {children || <p>Analytics component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default Analytics;

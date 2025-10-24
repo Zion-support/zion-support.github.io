@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState, useRef } from 'react';
 ;
 interface UseIntersectionObserverOptions {
@@ -30,5 +31,16 @@ observer.current.disconnect();
   }, [node, options.threshold, options.root, options.rootMargin]);
 ;
 return [setNode, entry] as const;
+=======
+import { useState, useEffect } from 'react';
+
+export const useuseIntersectionObserver = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 };
-}

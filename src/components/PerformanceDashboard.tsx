@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/PerformanceDashboard.tsx;
 import React from 'react';
@@ -23,3 +24,10 @@ return (</PerformanceDashboardProps>,
 }
 export default PerformanceDashboard;
 }
+=======
+
+const PerformanceDashboard: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

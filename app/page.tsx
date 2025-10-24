@@ -1,9 +1,7 @@
 'use client';
-
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 
+<<<<<<< HEAD
 const HomePage = () => {
   return (
     <>
@@ -23,10 +21,29 @@ const HomePage = () => {
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">
             Contact Us
           </Link>
+=======
+function Page30k5brde4() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional  services and solutions.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
         </div>
       </div>
-    </>
+    </div>
   );
-};
+}
 
+<<<<<<< HEAD
 export default HomePage;
+=======
+Page30k5brde4.displayName = '';
+
+export default Page30k5brde4;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

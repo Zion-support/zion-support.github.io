@@ -1,8 +1,19 @@
-'use client';
 import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe     } from 'lucide-react';
-import Navigation from '../components/Navigation'
-const EnhancedServicesShowcase: React.FC = () => {
-const services = [;
+
+interface EnhancedServicesShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedservicesshowcase ' + className}>
+      {children || <p>EnhancedServicesShowcase component</p>}
+    </div>
+  );
+};
+
 export default EnhancedServicesShowcase;
-,}

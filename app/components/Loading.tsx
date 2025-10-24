@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const Loading: React.FC = () => {
 return (
     <div>Helmet />
@@ -37,4 +38,24 @@ Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
 export default Loading;
+=======
+import React from 'react';
+
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }
+
+const Loading: React.FC<LoadingProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'loading ' + className}>
+      {children || <p>Loading component</p>}
+    </div>
+  );
+};
+
+export default Loading;

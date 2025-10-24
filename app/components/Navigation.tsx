@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -71,6 +71,23 @@ go wrong! 🤖
             </p>/div>/div>/div>/div>
   )
 ,}
-export default Navigation;
-    </div>
+=======
+
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const Navigation: React.FC<NavigationProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'navigation ' + className}>
+      {children || <p>Navigation component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default Navigation;

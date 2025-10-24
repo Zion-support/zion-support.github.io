@@ -1,8 +1,7 @@
-'use client';
 import React from 'react';
-import { useState     } from 'react';
-import { AlertCircle     } from 'lucide-react';
+
 interface NewsletterSignupProps {
+<<<<<<< HEAD
 variant?: 'inline' | 'modal'
 onClose?: () => void};
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',onClose }) => {</NewsletterSignupProps>
@@ -78,7 +77,21 @@ return (,
             {content}</div>/div>/div>/div>
 return content
 }
+=======
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'newslettersignup ' + className}>
+      {children || <p>NewsletterSignup component</p>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
     </div>
   );
+};
+
 export default NewsletterSignup;
-}}}}}}

@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function LazyWrapper() {
@@ -17,3 +17,23 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
+=======
+
+interface LazyWrapperProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'lazywrapper ' + className}>
+      {children || <p>LazyWrapper component</p>}
+    </div>
+  );
+};
+
+export default LazyWrapper;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

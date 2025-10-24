@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 /**
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics
@@ -108,4 +109,15 @@ measureOperation
   };
 }
 export default useEnhancedPerformance;</string>
+=======
+import React from 'react';
+
+export default function useEnhancedPerformance() {
+  return (
+    <div>
+      <h1>useEnhancedPerformance</h1>
+      <p>useEnhancedPerformance content.</p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }

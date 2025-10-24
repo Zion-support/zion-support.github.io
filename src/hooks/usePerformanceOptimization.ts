@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useEffect, useCallback, useRef } from 'react';
 ;
@@ -222,4 +223,16 @@ optimizeImages;
 registerServiceWorker,;
 setupPerformanceMonitoring
   }}</IntersectionObserver>;
+=======
+'use client';
+import React from 'react';
+
+export default function usePerformanceOptimization() {
+  return (
+    <div>
+      <h1>usePerformanceOptimization</h1>
+      <p>usePerformanceOptimization content.</p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }

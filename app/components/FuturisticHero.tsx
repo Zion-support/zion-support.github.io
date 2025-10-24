@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react';
 import Navigation from '../components/Navigation'
@@ -26,3 +26,23 @@ const benefits = [
     'Gain competitive advantage with advanced technology';
 export default FuturisticHeroPage;
 }
+=======
+
+interface FuturisticHeroProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const FuturisticHero: React.FC<FuturisticHeroProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'futuristichero ' + className}>
+      {children || <p>FuturisticHero component</p>}
+    </div>
+  );
+};
+
+export default FuturisticHero;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

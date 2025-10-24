@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/EnhancedSEOHead.tsx;
 import { Helmet     } from 'lucide-react';
@@ -165,3 +166,36 @@ export default SEOHead;
 }
 export default SEOHead;
 }
+=======
+
+const SEOHead: React.FC<
+d: React.FC<
+    <
+        <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

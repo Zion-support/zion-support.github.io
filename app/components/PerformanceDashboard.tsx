@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using PerformanceDashboard to transform the
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default PerformanceDashboard;
+=======
+import React from 'react';
+
+interface PerformanceDashboardProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'performancedashboard ' + className}>
+      {children || <p>PerformanceDashboard component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default PerformanceDashboard;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const LoadingStates: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using LoadingStates to transform their oper
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default LoadingStates;
+=======
+import React from 'react';
+
+interface LoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const LoadingStates: React.FC<LoadingStatesProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'loadingstates ' + className}>
+      {children || <p>LoadingStates component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default LoadingStates;

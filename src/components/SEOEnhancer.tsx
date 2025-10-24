@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/SEOEnhancer.tsx;
 import Footer from './Footer';
@@ -14,3 +15,10 @@ return (</SEOEnhancerProps>,
 }
 export default SEOEnhancer;
 }
+=======
+
+const SEOEnhancer: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

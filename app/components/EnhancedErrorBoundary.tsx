@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const EnhancedErrorBoundary: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using EnhancedErrorBoundary to transform th
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedErrorBoundary;
+=======
+import React from 'react';
+
+interface EnhancedErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancederrorboundary ' + className}>
+      {children || <p>EnhancedErrorBoundary component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default EnhancedErrorBoundary;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ContentPromotionBanner: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using ContentPromotionBanner to transform t
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default ContentPromotionBanner;
+=======
+import React from 'react';
+
+interface ContentPromotionBannerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'contentpromotionbanner ' + className}>
+      {children || <p>ContentPromotionBanner component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default ContentPromotionBanner;

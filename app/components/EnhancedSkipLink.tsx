@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const EnhancedSkipLink: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using EnhancedSkipLink to transform their o
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedSkipLink;
+=======
+import React from 'react';
+
+interface EnhancedSkipLinkProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedskiplink ' + className}>
+      {children || <p>EnhancedSkipLink component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default EnhancedSkipLink;

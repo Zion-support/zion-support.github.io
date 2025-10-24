@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
 * Advanced Performance Monitoring System
@@ -769,3 +770,16 @@ return recommendations
 }
 `</T>;
 }
+=======
+import { useState, useEffect } from 'react';
+
+export const useperformanceMonitoring = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

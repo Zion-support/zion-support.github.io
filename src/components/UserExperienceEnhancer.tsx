@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/UserExperienceEnhancer.tsx;
 import React from 'react';
@@ -116,3 +117,37 @@ export default UserExperienceEnhancerPage;
 }
 export default UserExperienceEnhancerPage;
 }
+=======
+
+    <
+      <
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

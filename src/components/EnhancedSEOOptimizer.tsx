@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet     } from 'react-helmet-async';
@@ -83,3 +84,36 @@ Start Your Journey</button>ArrowRightclassNam e="w-8 h-8" / />
 ;
 export default EnhancedSEOOptimizerPage;
 }
+=======
+
+    <
+    <
+    <
+    <h1 className="text-4 xl md: text-6 xl font-bold text-gray-900 mb-6" /></h1>,<
+          <
+    <
+            <
+            <
+      <
+    <
+    <
+    <
+            <
+            </div>,<
+    <
+    <
+                <
+                <
+    <
+      <
+    <
+    <
+    <
+            <
+            </div>,<
+                <
+    <
+    <
+          <
+          <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

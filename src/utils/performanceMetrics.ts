@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 /**
  * Performance Metrics Utility
  * Advanced performance tracking and monitoring for web applications
@@ -359,3 +360,15 @@ export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 </T>
 ,}
+=======
+import React from 'react';
+
+export default function performanceMetrics() {
+  return (
+    <div>
+      <h1>performanceMetrics</h1>
+      <p>performanceMetrics content.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

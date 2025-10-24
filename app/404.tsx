@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
@@ -62,3 +62,23 @@ const NotFound = () => {
   );
 };
 export default NotFound;
+=======
+
+interface NotFound404Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NotFound404: React.FC<NotFound404Props> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'not-found-404 ' + className}>
+      {children || <p>404 - Page Not Found</p>}
+    </div>
+  );
+};
+
+export default NotFound404;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

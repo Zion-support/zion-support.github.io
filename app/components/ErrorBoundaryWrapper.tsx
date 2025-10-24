@@ -1,13 +1,20 @@
-'use client';
 import React from 'react';
 interface ErrorBoundaryWrapperProps {
   className?: string;
   children?: React.ReactNode;
 }
+<<<<<<< HEAD
 const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className, children }) => {
+=======
+
+const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ 
+  className = '', 
+  children 
+}) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
   return (
-    <div className={className}>
-      {children}
+    <div className={'errorboundarywrapper ' + className}>
+      {children || <p>ErrorBoundaryWrapper component</p>}
     </div>
   );
 };

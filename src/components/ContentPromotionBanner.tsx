@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/ContentPromotionBanner.tsx;
 import Navigation from './Navigation';
@@ -162,3 +163,70 @@ Get Started Now
 ;
 export default ContentPromotionBanner;
 }
+=======
+
+    <
+      <
+    <
+      <
+        <
+    <
+    <
+    <
+            <
+            </div>,<
+    <
+    <
+    <
+    <
+    <
+    </div>,<
+    <
+    <
+    <
+    <
+          <
+    <
+    <
+              <
+    <
+    <
+    <
+            <
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+            <
+    <
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+                <
+          </div>,<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

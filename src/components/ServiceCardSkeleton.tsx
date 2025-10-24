@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/ServiceCardSkeleton.tsx;
 import React from 'react';
@@ -117,3 +118,37 @@ export default ServiceCardSkeletonPage;
 }
 export default ServiceCardSkeletonPage;
 }
+=======
+
+    <
+      <
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

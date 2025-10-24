@@ -1,6 +1,5 @@
-'use client';
-import Navigation from './Navigation';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain     } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
@@ -92,5 +91,23 @@ r: scale-105" />
 Email Us</Mail>/div>/div>/section>/div>/Footer>/div>
   )
 ,}
+=======
+
+interface SEOEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'seoenhancer ' + className}>
+      {children || <p>SEOEnhancer component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 export default SEOEnhancer;
-}}}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/ServiceWorker.tsx;
 import React from 'react';
@@ -131,3 +132,35 @@ return nul l
 {}
 export default ServiceWorker;
 }
+=======
+
+const ServiceWorker: React.FC<
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+    <
+    <
+    <
+              <
+              </div>,<
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

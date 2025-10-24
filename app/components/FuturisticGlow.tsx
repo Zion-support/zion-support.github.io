@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -72,3 +72,23 @@ go wrong! 🤖
 export default getIntensityValue
     </div>
 }
+=======
+
+interface FuturisticGlowProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'futuristicglow ' + className}>
+      {children || <p>FuturisticGlow component</p>}
+    </div>
+  );
+};
+
+export default FuturisticGlow;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

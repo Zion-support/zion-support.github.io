@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -71,4 +71,23 @@ go wrong! 🤖
 ,}
 export default getVariantStyles
     </div>
+=======
+
+interface FuturisticCardProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }
+
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'futuristiccard ' + className}>
+      {children || <p>FuturisticCard component</p>}
+    </div>
+  );
+};
+
+export default FuturisticCard;

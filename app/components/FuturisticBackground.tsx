@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const FuturisticBackground: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using FuturisticBackground to transform the
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default FuturisticBackground;
+=======
+import React from 'react';
+
+interface FuturisticBackgroundProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'futuristicbackground ' + className}>
+      {children || <p>FuturisticBackground component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default FuturisticBackground;

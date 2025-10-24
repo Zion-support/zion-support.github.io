@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/EnhancedErrorBoundary.tsx;
 import React from 'react';
@@ -155,3 +156,45 @@ return (;</Props>,
 Error Details (Development)</summary>/summary>pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot; /></p>
                   {this.state.error.toString()}
 }}}
+=======
+
+const EnhancedErrorBoundary: React.FC<
+    <
+      <
+        <
+    <
+    <
+    <
+            <
+                <
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot; />,<
+    <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12&quot; /></div>,<
+            <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.</p>p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+class EnhancedErrorBoundaryextendsComponent<
+    <
+    <
+    <
+    <
+            <
+                <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

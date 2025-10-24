@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function AnimatedText() {
@@ -18,3 +18,23 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
+=======
+
+interface AnimatedTextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AnimatedText: React.FC<AnimatedTextProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'animatedtext ' + className}>
+      {children || <p>AnimatedText component</p>}
+    </div>
+  );
+};
+
+export default AnimatedText;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

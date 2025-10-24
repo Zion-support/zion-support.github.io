@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 import Head from 'next/head';
@@ -72,3 +73,26 @@ go wrong! 🤖
   )
 ,}
 export default errorHandler}
+=======
+
+      <
+      <
+        <
+    <
+    <
+    <
+    <
+    <
+          <
+    <
+    <
+    <
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
+    <
+    <
+            <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

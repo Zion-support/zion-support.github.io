@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 "use client"
 interface DefaultSEOProps {
@@ -11,3 +12,10 @@ return (</DefaultSEOProps>,
 }
 ;
 export default DefaultSEO;
+=======
+
+const DefaultSEO: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

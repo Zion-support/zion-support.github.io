@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function services() {
@@ -17,3 +17,23 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
+=======
+
+interface servicesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const services: React.FC<servicesProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'services ' + className}>
+      {children || <p>services component</p>}
+    </div>
+  );
+};
+
+export default services;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

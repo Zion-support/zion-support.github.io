@@ -1,9 +1,15 @@
-// Accessibility utilities for improving user experience and compliance;
-;
-export const generateId = (prefix: string = 'id'): string => {;
-;
-return `${prefix,}-${Math.random().toString(36).substr(2, 9)}`;
+import { useState, useEffect } from 'react';
+
+export const useaccessibilityUtils = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
 };
+<<<<<<< HEAD
 ;
 export const createAriaLabel = (text: string,context?: string): string => {;
   return context ? `${text}, ${context}` : text;
@@ -566,3 +572,5 @@ announcement.remove();
 ;
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

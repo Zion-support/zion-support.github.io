@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 "use client";
 import React from 'react'
@@ -165,3 +166,48 @@ return (,
 export default LoadingSpinner;
 </divclassName>/divclassName>
 }
+=======
+
+      <
+    <
+      <
+      <
+      <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+constLoadingSpinner: React.FC<
+return(<
+    </div>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}<
+constLoadingSpinner: React.FC<
+return(<
+    </div>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}<
+    <
+    <
+<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

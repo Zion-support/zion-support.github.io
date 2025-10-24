@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from "react";
 import { useIntersectionObserver     } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
@@ -53,5 +53,23 @@ return (,
       {prefix}{count}{suffix}</span>/span>
   )
 }
-export default AnimatedCounter;
+=======
+
+interface AnimatedCounterProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'animatedcounter ' + className}>
+      {children || <p>AnimatedCounter component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default AnimatedCounter;

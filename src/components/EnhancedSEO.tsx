@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/EnhancedSEO.tsx;
 import Footer from './Footer';
@@ -50,3 +51,11 @@ export default EnhancedSEOPage;
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot; />,<div className=&quot;max-w-4 xl mx-auto text-center&quot; /></div>,
     <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12&quot; /></div>,<h1 className=&quot;text-3 xl md: text-4 xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>h2>p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>,<div className=&quot;flex flex-col s,m: flex-row gap-4 justify-center&quot; / /></div>/div>
 ,}
+=======
+
+    <
+                <
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot; />,<
+    <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12&quot; /></div>,<
+            <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>,<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

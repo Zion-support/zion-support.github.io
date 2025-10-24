@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCallback, useEffect, useState, useRef } from 'react';
 interface UsePerformanceMonitorOptions {
 ;
@@ -29,46 +30,16 @@ setMetrics(prev => ({
 memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB)
       ,}))
     }
+=======
+import { useState, useEffect } from 'react';
+
+export const useusePerformanceMonitor = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
   }, []);
-const init = useCallback(() => {;
-if (options.enabled !== false) {;
-setIsMonitoringFPS(true);
-      measureMemoryUsage();
-    }
-  }, [options.enabled, measureMemoryUsage]);
-useEffect(() => {;
-if (!isMonitoringFPS) return;
-;
-const countFrames = () => {;
-return;
-frameCountRef.current++;
-const currentTime = performance.now();
-      if (currentTime - lastTimeRef.current >= 1000) {;
-const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
-setMetrics(prev => ({
-          ...prev,;
-fps,)
-        }));
-frameCountRef.current = 0;
-lastTimeRef.current = currentTime
-      }
-      requestAnimationFrame(countFrames);
-    }
-    requestAnimationFrame(countFrames);
-  }, [isMonitoringFPS]);
-useEffect(() => {;
-if (options.measureMemoryUsage) {;
-measureMemoryUsage();
-    }
-  }, [measureMemoryUsage, options.measureMemoryUsage]);
-return {;
-metrics,;
-setMetrics,;
-isMonitoringFPS,;
-setIsMonitoringFPS,;
-measureMemoryUsage,;
-init
-  }
+  
+  return { state, setState };
 };
-export default usePerformanceMonitor;</PerformanceData>
-}

@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -85,3 +85,23 @@ Contact Sales</button>/button>/div>/div>/section>/div>/Footer>/div>/>
 ,}
 export default LoadingSkeletonPage;
 }}}
+=======
+
+interface LoadingSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'loadingskeleton ' + className}>
+      {children || <p>LoadingSkeleton component</p>}
+    </div>
+  );
+};
+
+export default LoadingSkeleton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface User {
 ;
 id: string;
@@ -76,4 +77,10 @@ context: ErrorContext;
 ,
 }
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+=======
+// app.types type definitions
+
+export interface AppTypes {
+  // Add type definitions here
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }

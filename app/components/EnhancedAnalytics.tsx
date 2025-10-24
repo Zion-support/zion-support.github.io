@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -72,3 +72,23 @@ go wrong! 🤖
 export default useAnalytics
     </div>
 }
+=======
+
+interface EnhancedAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'enhancedanalytics ' + className}>
+      {children || <p>EnhancedAnalytics component</p>}
+    </div>
+  );
+};
+
+export default EnhancedAnalytics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/SEOHead.tsx;
 import React from 'react'
@@ -12,3 +13,10 @@ return (</SEOHeadProps>,
 }
 export default SEOHead;
 }
+=======
+
+const SEOHead: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

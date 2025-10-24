@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const OptimizedLoadingSpinner: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using OptimizedLoadingSpinner to transform 
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default OptimizedLoadingSpinner;
+=======
+import React from 'react';
+
+interface OptimizedLoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'optimizedloadingspinner ' + className}>
+      {children || <p>OptimizedLoadingSpinner component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default OptimizedLoadingSpinner;

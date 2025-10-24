@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ServiceCardSkeleton: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,24 @@ Join thousands of businesses already using ServiceCardSkeleton to transform thei
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default ServiceCardSkeleton;
+=======
+import React from 'react';
+
+interface ServiceCardSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'servicecardskeleton ' + className}>
+      {children || <p>ServiceCardSkeleton component</p>}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+export default ServiceCardSkeleton;

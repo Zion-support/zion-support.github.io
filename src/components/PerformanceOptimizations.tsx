@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 &quot;use client&quot
 const PerformanceOptimizationsPage: React.FC = () => {
 const features = [
@@ -103,3 +104,35 @@ export default PerformanceOptimizationsPage;
 }
 export default PerformanceOptimizationsPage;
 }
+=======
+
+    <
+      <
+        <
+    <
+    <
+    <
+    <
+            <
+            </p>,<
+        <
+    <
+    <
+    <
+              <
+    <
+                <
+    <
+                  <
+    <
+    <
+    <
+              <
+    <
+                <
+                  <
+    <
+    <
+            <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

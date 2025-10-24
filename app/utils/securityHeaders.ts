@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * Security Headers Configuration
 * Comprehensive security headers for production applications
@@ -49,13 +50,43 @@ const config = { ...defaultSecurityHeaders, ...customConfig }</string>;
 const headers: Record<string,string> = {};
 'X-XSS-Protection': '1; mode=block'
 'X-DNS-Prefetch-Control': 'on'}
+=======
+export function getSecurityHeaders(customConfig?: Partial<SecurityConfig>): Record<string, string> {
+  const config = {
+    ...defaultSecurityConfig,
+    ...customConfig,
+  };
+
+  const headers: Record<string, string> = {
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+  };
+
+  if (config.strictTransportSecurity) {
+    headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains; preload';
+  }
+
+  if (config.contentSecurityPolicy) {
+    headers['Content-Security-Policy'] = config.contentSecurityPolicy;
+  }
+
+  return headers;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
 }
-if(config.contentSecurityPolicy) {}
-headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
+
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityConfig>): Array<{ key: string; value: string }> {
+  const headers = getSecurityHeaders(customConfig);
+  return Object.entries(headers).map(([key, value]) => ({ key, value }));
 }
-if(config.strictTransportSecurity) {}
-headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
+
+interface SecurityConfig {
+  strictTransportSecurity: boolean;
+  contentSecurityPolicy?: string;
 }
+<<<<<<< HEAD
 if(config.xFrameOptions) {}
 headers['X-Frame-Options'] = config.xFrameOptions;}
 }
@@ -121,3 +152,10 @@ e: string ,}> {/* TODO: Fix JSX expression */,}
 }
 export default defaultSecurityHeaders;
 }
+=======
+
+const defaultSecurityConfig: SecurityConfig = {
+  strictTransportSecurity: true,
+  contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';",
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

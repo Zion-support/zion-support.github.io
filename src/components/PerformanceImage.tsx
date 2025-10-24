@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 &quot;use client&quot;
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot
@@ -39,3 +40,13 @@ return (
 export default PerformanceImagePage;
 export default PerformanceImagePage;
 }
+=======
+
+    <
+      <
+        <
+    <
+    <
+    <
+            <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

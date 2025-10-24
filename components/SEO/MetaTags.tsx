@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 "use client"
 interface MetaTagsProps {
@@ -11,3 +12,10 @@ return (</MetaTagsProps>,
 }
 ;
 export default MetaTags;
+=======
+
+const MetaTags: React.FC<
+return (<
+      <
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

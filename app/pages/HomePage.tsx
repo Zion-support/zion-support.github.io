@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 export default function HomePage() {
 return (
@@ -137,5 +137,23 @@ Get In Touch
 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove,"
 r: text-white transition-all duration-300" />
 Schedule Demo</Link>/Link>/div>/div>/div>/section>/div>
+=======
+
+interface HomePageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={'homepage ' + className}>
+      {children || <p>HomePage component</p>}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
   );
-,}
+};
+
+export default HomePage;

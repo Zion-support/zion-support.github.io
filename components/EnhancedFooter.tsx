@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Mail, Phone, MapPin     } from 'lucide-react';
@@ -37,3 +38,37 @@ Contact</Link>/Link>/li>/ul>;
   )
 }
 export default EnhancedFooter;
+=======
+
+    <
+    <
+      <
+    </div>,<
+            <
+              <
+      <
+    </div>,<
+            <
+              <
+              <
+              <
+              <
+      <
+    </div>,<
+            <
+              <
+              <
+              <
+              <
+      <
+    </div>,<
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+    <
+          <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

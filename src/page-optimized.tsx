@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -21,3 +22,13 @@ This page is under development. Please check back soon for more information abou
 }
 export default Page;
 }
+=======
+
+    <
+      /></SEOOptimizer>,<
+    <
+    <
+            <
+            </p>,<
+              <
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

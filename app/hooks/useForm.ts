@@ -1,42 +1,12 @@
-import { useState, useCallback } from 'react';
-;
-interface FormState<T /> {;
-data: T;
-  isSubmitting: boolean;
-  submitStatus: "idle" | "success" | "error";
-  error,</T>;
-s: Partial<Record<keyof T,string />>;
-}
-</Record>;
-interface UseFormOptions<T /> {;
-initialData: T;</T>;
-onSubmit: (data: T) => Promise<void />;
-validate?: (dat,</void>;
-a: T) => Partial<Record<keyof T,string />>;
-}
-</Record>;
-export function useForm<TextendsRecord<string, any />>({;
-initialData,;
-onSubmit,;
-validate,</T>
-}: UseFormOptions<T />) {</T>;
-const [formState, setFormState] = useState<FormState<T />>({;
-data: initialData,isSubmitting: false,submitStatus: "idle",errors: {,},
-  });
-</FormState>;
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement| HTMLTextAreaElement />) => {;
-;
-const { name,value } = e.target;
-    setFormState(prev => ({
-      ...prev,;
-data: {,...prev.data,
-        [name]: value,
-      },;
-errors: {,...prev.errors,
-        [name]: "", // Clear error when user starts typing
-},)
-    }));
+import { useState, useEffect } from 'react';
+
+export const useuseForm = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
   }, []);
+<<<<<<< HEAD
 ;
 const handleSubmit = useCallback(async (e: React.FormEvent) => {;
     e.preventDefault();
@@ -95,3 +65,8 @@ resetForm,
   };
 }</HTMLInputElement>
 }
+=======
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

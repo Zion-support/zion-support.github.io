@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * Error Boundary Configuration
 * Centralized configuration for error handling across the application
@@ -199,3 +200,38 @@ ur,l: typeof window !== 'undefined' ? window.location.href : 'unknown',}
 export default getErrorBoundaryConfig</string>
 ;</string>/>
 }
+=======
+
+customMessage,s: Record<
+default: React.ComponentType<
+network: React.ComponentType<
+notFound: React.ComponentType<
+    <
+    <
+    <
+    <
+<
+<
+    <
+<
+<pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto"><
+    <
+<button,<
+<
+<pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto"><
+    <
+    <
+    <
+    <
+<
+    <
+<
+    <
+    <
+    <
+    <
+    <
+<
+    <
+export function formatErrorForLogging(error: Error): Record<
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

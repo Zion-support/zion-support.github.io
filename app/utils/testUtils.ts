@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Testing Utilities
@@ -256,3 +257,16 @@ retryWithBackoff;
 measureExecutionTime
 };
 }
+=======
+import { useState, useEffect } from 'react';
+
+export const usetestUtils = () => {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Hook implementation
+  }, []);
+  
+  return { state, setState };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
