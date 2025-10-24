@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -61,6 +62,15 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       }
     }
   }, [title, description, keywords, canonicalUrl]);
+=======
+'use client'
+import Footer from './Footer'
+import Navigation from './Navigation'
+import React from 'react'
+import { ArrowRight, Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail, ArrowRight } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2da3
 
   return (
     <>
@@ -104,4 +114,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default SEOEnhancer;
+=======
+export default SEOEnhancerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2da3
