@@ -1,84 +1,83 @@
-'use client'
-import React, { useEffect } from 'react'
+'use client';
 
-<<<<<<< HEAD
-interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean
-  enablePerformanceMonitoring?: boolean
-  enableErrorTracking?: boolean
-  enableUserBehaviorTracking?: boolean
-=======
+import React, { useEffect } from 'react';
+
 declare global {
   interface Window {
-    gtag: (..._args: unknown[]) => void
+    gtag: (...args: unknown[]) => void;
   }
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
+}
+
+interface AnalyticsProps {
+  enableGoogleAnalytics?: boolean;
+  enablePerformanceMonitoring?: boolean;
+  enableErrorTracking?: boolean;
+  enableUserBehaviorTracking?: boolean;
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
-  enableUserBehaviorTracking = true,
+  enableUserBehaviorTracking = true
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
-    if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
-=======
-    if (!GA_TRACKING_ID) return
+    // Initialize Google Analytics
+    if (enableGoogleAnalytics && typeof window !== 'undefined') {
+      if (process.env.NODE_ENV === 'production') {
+        const script = document.createElement('script');
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+        script.async = true;
+        document.head.appendChild(script);
 
-    // Initialize gtag
-    window.gtag = window.gtag || function() {
-      (window.gtag as any).q = (window.gtag as any).q || []
-      ;(window.gtag as any).q.push(arguments)
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
-    }
-    
-    if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring()
-    }
-    
-    if (enableErrorTracking) {
-      initializeErrorTracking()
-    }
-    
-    if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking()
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
+        window.gtag = function() {
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).dataLayer.push(arguments);
+        };
 
-  const initializeGoogleAnalytics = () => {
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID')
+        window.gtag('js', new Date());
+        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+      }
     }
-  }
 
-  const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Performance monitoring logic
+    // Performance monitoring
+    if (enablePerformanceMonitoring && typeof window !== 'undefined') {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
     }
-  }
 
-  const initializeErrorTracking = () => {
-    // Initialize error tracking
-    if (typeof window !== 'undefined') {
+    // Error tracking
+    if (enableErrorTracking && typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
-        console.error('Error tracked:', event.error)
-      })
+        console.error('Global error:', event.error);
+      });
+
+      window.addEventListener('unhandledrejection', (event) => {
+        console.error('Unhandled promise rejection:', event.reason);
+      });
     }
-  }
 
-  const initializeUserBehaviorTracking = () => {
-    // Initialize user behavior tracking
-    if (typeof window !== 'undefined') {
-      // User behavior tracking logic
+    // User behavior tracking
+    if (enableUserBehaviorTracking && typeof window !== 'undefined') {
+      const trackClick = (event: Event) => {
+        const target = event.target as HTMLElement;
+        if (target.tagName === 'BUTTON' || target.tagName === 'A') {
+          console.log('User clicked:', target.textContent);
+        }
+      };
+
+      document.addEventListener('click', trackClick);
+      return () => document.removeEventListener('click', trackClick);
     }
-  }
+  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
-  return null; // This component doesn't render anything visible
-}
+  return null;
+};
 
-export default Analytics
+export default Analytics;
