@@ -1,60 +1,82 @@
 #!/bin/bash
 
-# Batch merge script to efficiently merge cursor branches
-set -e
+# Script to batch merge multiple branches with conflict resolution
+# This will attempt to merge branches and resolve conflicts automatically
 
 echo "Starting batch merge process..."
 
-# Get all cursor branches with commits not in main
-branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | while read branch; do 
-    commits=$(git log --oneline main..$branch | wc -l)
-    if [ $commits -gt 0 ]; then 
-        echo "$branch"
-    fi
-done | head -50)  # Limit to first 50 branches for now
+# List of branches to merge (most recent first)
+branches=(
+    "origin/cursor/fix-errors-and-merge-to-main-2aaa"
+    "origin/cursor/fix-errors-and-merge-to-main-7574"
+    "origin/cursor/fix-errors-and-merge-to-main-8fd9"
+    "origin/cursor/fix-errors-and-merge-to-main-0fa2"
+    "origin/cursor/fix-errors-and-merge-to-main-52d9"
+    "origin/cursor/fix-errors-and-merge-to-main-bb88"
+    "origin/cursor/fix-errors-and-merge-to-main-8836"
+)
 
-echo "Found $(echo "$branches" | wc -l) branches to merge"
+successful_merges=0
+failed_merges=0
 
-# Merge branches in batches
-batch_size=10
-count=0
-for branch in $branches; do
-    if [ $((count % batch_size)) -eq 0 ]; then
-        echo "Processing batch $((count / batch_size + 1))..."
-    fi
+for branch in "${branches[@]}"; do
+    echo "Attempting to merge $branch..."
     
-    echo "Merging $branch..."
-    
-    # Try to merge with strategy to prefer the incoming changes
-    if git merge $branch --strategy-option=theirs --no-edit 2>/dev/null; then
-        echo "✓ Successfully merged $branch"
+    # Try to merge the branch
+    if git merge "$branch" --no-commit; then
+        echo "✅ Successfully merged $branch (no conflicts)"
+        git commit -m "Merge branch '$branch' - no conflicts"
+        ((successful_merges++))
     else
-        echo "⚠ Conflict in $branch, resolving automatically..."
+        echo "⚠️  Conflicts detected in $branch, attempting to resolve..."
         
-        # Resolve conflicts by choosing the incoming version (theirs)
-        git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- | while read file; do
-            if [ -f "$file" ]; then
-                echo "  Resolving conflict in $file"
-                git checkout --theirs "$file" 2>/dev/null || true
-                git add "$file"
-            elif [ -d "$file" ]; then
-                echo "  Adding directory $file"
-                git add "$file"
+        # Get list of conflicted files
+        conflicted_files=$(git diff --name-only --diff-filter=U)
+        
+        if [ -n "$conflicted_files" ]; then
+            echo "Resolving conflicts in: $conflicted_files"
+            
+            # For each conflicted file, accept the incoming version (theirs)
+            for file in $conflicted_files; do
+                echo "  Resolving $file..."
+                git checkout --theirs "$file" 2>/dev/null || echo "    Could not resolve $file"
+                git add "$file" 2>/dev/null || echo "    Could not add $file"
+            done
+            
+            # Handle deleted files
+            deleted_files=$(git diff --name-only --diff-filter=D)
+            for file in $deleted_files; do
+                echo "  Removing deleted file: $file"
+                git rm "$file" 2>/dev/null || echo "    Could not remove $file"
+            done
+            
+            # Commit the merge
+            if git commit -m "Merge branch '$branch' with automatic conflict resolution"; then
+                echo "✅ Successfully merged $branch (conflicts resolved)"
+                ((successful_merges++))
             else
-                echo "  Removing $file"
-                git rm "$file" 2>/dev/null || true
+                echo "❌ Failed to commit merge for $branch"
+                git merge --abort
+                ((failed_merges++))
             fi
-        done
-        
-        # Complete the merge
-        if git commit --no-edit 2>/dev/null; then
-            echo "✓ Resolved conflicts for $branch"
         else
-            echo "⚠ No changes to commit for $branch"
+            echo "❌ No conflicted files found, aborting merge for $branch"
+            git merge --abort
+            ((failed_merges++))
         fi
     fi
     
-    count=$((count + 1))
+    echo "---"
 done
 
-echo "Batch merge completed! Merged $count branches."
+echo "Batch merge completed!"
+echo "✅ Successful merges: $successful_merges"
+echo "❌ Failed merges: $failed_merges"
+
+# Verify build still works
+echo "Verifying build..."
+if npm run build; then
+    echo "✅ Build successful after merges"
+else
+    echo "❌ Build failed after merges"
+fi

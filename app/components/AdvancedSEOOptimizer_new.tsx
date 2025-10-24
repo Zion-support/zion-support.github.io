@@ -1,10 +1,15 @@
-import React from "react";
+'use client';
 
-const AdvancedSEOOptimizer_new = () => {
+import React from 'react';
+
+interface AdvancedSEOOptimizer_newProps {
+  className?: string;
+}
+
+const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = (_props) => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdvancedSEOOptimizer_new</h2>
-      <p>This component is under construction.</p>
+    <div>
+      {/* Component content */}
     </div>
   );
 };

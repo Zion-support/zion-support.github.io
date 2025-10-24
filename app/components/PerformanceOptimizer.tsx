@@ -1,137 +1,76 @@
-"use client";
-import React, { useEffect } from "react";
+'use client';
+import React, { useEffect, useState } from 'react';
+import { performanceUtils } from '../utils/performanceUtils';
 
 interface PerformanceOptimizerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
+  enableMonitoring?: boolean;
   enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enableCodeSplitting?: boolean;
-  enablePrefetching?: boolean;
-  enableCriticalCSS?: boolean;
-  enableResourceHints?: boolean;
+  enableFontOptimization?: boolean;
+  enableThirdPartyOptimization?: boolean;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
+  enableMonitoring = true,
   enableImageOptimization = true,
-  enableLazyLoading = true,
-  enableCodeSplitting = true,
-  enablePrefetching = true,
-  enableCriticalCSS = true,
-  enableResourceHints = true,
+  enableFontOptimization = true,
+  enableThirdPartyOptimization = true
 }) => {
+  const [isOptimized, setIsOptimized] = useState(false);
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    const optimize = () => {
+      if (enableMonitoring) {
+        performanceUtils.monitorWebVitals();
+      }
 
-    // Image optimization
-    if (enableImageOptimization) {
-      const images = document.querySelectorAll("img");
-      images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = "lazy";
-        }
-        if (!img.decoding) {
-          img.decoding = "async";
-        }
-        // Add fetchpriority for above-the-fold images
-        if (img.getBoundingClientRect().top < window.innerHeight) {
-          img.setAttribute("fetchpriority", "high");
-        }
-      });
-    }
+      if (enableImageOptimization) {
+        performanceUtils.optimizeImages();
+      }
 
-    // Prefetch critical resources
-    if (enablePrefetching) {
-      const prefetchLinks = [
-        "/services",
-        "/contact",
-        "/ai-solutions",
-        "/it-services",
-        "/about",
-        "/blog",
-      ];
+      if (enableFontOptimization) {
+        performanceUtils.optimizeFonts();
+      }
 
-      prefetchLinks.forEach((href) => {
-        const existingLink = document.querySelector(`link[href="${href}"]`);
-        if (!existingLink) {
-          const link = document.createElement("link");
-          link.rel = "prefetch";
-          link.href = href;
-          document.head.appendChild(link);
-        }
-      });
-    }
+      if (enableThirdPartyOptimization) {
+        performanceUtils.optimizeThirdPartyScripts();
+      }
 
-    // Add resource hints
-    if (enableResourceHints) {
-      const dnsPrefetchDomains = [
-        "fonts.googleapis.com",
-        "fonts.gstatic.com",
-        "cdnjs.cloudflare.com",
-      ];
+      setIsOptimized(true);
+    };
 
-      dnsPrefetchDomains.forEach((domain) => {
-        const existingLink = document.querySelector(`link[href="//${domain}"]`);
-        if (!existingLink) {
-          const link = document.createElement("link");
-          link.rel = "dns-prefetch";
-          link.href = `//${domain}`;
-          document.head.appendChild(link);
-        }
-      });
-    }
+    // Run optimizations after component mount
+    const timer = setTimeout(optimize, 100);
 
-    // Preload critical fonts
-    if (enableCriticalCSS) {
-      const fontPreloads = [
-        {
-          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
-          as: "style",
-        },
-      ];
+    return () => {
+      clearTimeout(timer);
+      performanceUtils.cleanup();
+    };
+  }, [enableMonitoring, enableImageOptimization, enableFontOptimization, enableThirdPartyOptimization]);
 
-      fontPreloads.forEach((font) => {
-        const existingLink = document.querySelector(
-          `link[href="${font.href}"]`,
-        );
-        if (!existingLink) {
-          const link = document.createElement("link");
-          link.rel = "preload";
-          link.href = font.href;
-          link.as = font.as;
-          document.head.appendChild(link);
-        }
-      });
-    }
+  // Preload critical resources
+  useEffect(() => {
+    const criticalResources = [
+      { href: '/fonts/inter-var.woff2', as: 'font' },
+      { href: '/css/critical.css', as: 'style' }
+    ];
 
-    // Performance monitoring
-    if (typeof window !== "undefined" && "performance" in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === "largest-contentful-paint") {
-            console.log("LCP:", entry.startTime);
-          }
-          if (entry.entryType === "first-input") {
-            const fidEntry = entry as PerformanceEventTiming;
-            console.log("FID:", fidEntry.processingStart - fidEntry.startTime);
-          }
-        });
-      });
+    criticalResources.forEach(resource => {
+      performanceUtils.preloadResource(resource.href, resource.as);
+    });
+  }, []);
 
-      observer.observe({
-        entryTypes: ["largest-contentful-paint", "first-input"],
-      });
-    }
-  }, [
-    enableImageOptimization,
-    enableLazyLoading,
-    enableCodeSplitting,
-    enablePrefetching,
-    enableCriticalCSS,
-    enableResourceHints,
-  ]);
-
-  return <>{children}</>;
+  return (
+    <div className="performance-optimizer">
+      {children}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white text-xs p-2 rounded">
+          Performance: {isOptimized ? 'Optimized' : 'Loading...'}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default PerformanceOptimizer;

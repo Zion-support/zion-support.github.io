@@ -1,4 +1,3 @@
-/* global process */
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -11,7 +10,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-
   images: {
     domains: [
       "images.unsplash.com",
@@ -25,7 +23,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-
   async headers() {
     return [
       {
@@ -84,7 +81,6 @@ const nextConfig = {
       },
     ];
   },
-
   async redirects() {
     return [
       {
@@ -94,12 +90,12 @@ const nextConfig = {
       },
     ];
   },
-
   experimental: {
     optimizeCss: false,
     optimizePackageImports: ["lucide-react", "@heroicons/react"],
   },
-
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production"
@@ -109,5 +105,4 @@ const nextConfig = {
         : false,
   },
 };
-
 export default nextConfig;

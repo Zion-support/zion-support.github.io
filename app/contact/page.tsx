@@ -1,26 +1,41 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Metadata} from 'next';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const ContactPage = () => {
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group.',
+  keywords: 'page, services, technology, AI, IT solutions'
+};
+
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Contact - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Contact Zion Tech Group for AI and IT solutions"
-        />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
-          <p className="text-gray-300 text-lg">
-            Get in touch with our team for AI and IT solutions.
+      <Navigation />
+      
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional page services by Zion Tech Group.
           </p>
+          <div className="space-y-4">
+            <p className="text-gray-400">
+              Our page solutions are designed to help your business grow and succeed.
+            </p>
+            <p className="text-gray-400">
+              Contact us to learn more about how we can help you achieve your goals.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
 
-export default ContactPage;
+export default PagePage;

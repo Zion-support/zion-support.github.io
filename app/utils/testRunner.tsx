@@ -1,10 +1,18 @@
-import React from "react";
+"use client"
 
-export default function TestRunner() {
+import React from 'react';
+
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+const Component: React.FC<Props> = ({ children, className }) => {
   return (
-    <div>
-      <h1>TestRunner</h1>
-      <p>This component is under development.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-}
+};
+
+export default Component;

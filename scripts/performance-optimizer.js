@@ -1,34 +1,71 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-export default function performance-optimizer.js() {
-  return (}
-    <>
-      <Helmet>
-        <title>performance-optimizer.js - Zion Tech Group</title>
-        <meta name="description" content="Professional performance-optimizer.js services by Zion Tech Group." />"
-      <div className="min-h-screen bg-white">"
-        <div className="container mx-auto px-4 py-16">"
-          <div className="text-center">"
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-              performance-optimizer.js
-            <p className="text-xl text-gray-600 mb-8">"
-              Professional performance-optimizer.js services by Zion Tech Group.
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">"
-                  Expert Solutions
-                <p className="text-blue-700">"
-                  Our team of experts delivers cutting-edge solutions.
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
-                <h3 className="text-lg font-semibold text-green-900 mb-2">"
-                  Custom Implementation
-                <p className="text-green-700">"
-                  Tailored implementations for your specific requirements.
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">"
-                  24/7 Support
-                <p className="text-purple-700">"
-                  Round-the-clock support for all your needs.
-    </>
-  )
+#!/usr/bin/env node
+/**
+ * Performance Optimizer for Zion Tech Group Website
+ * 
+ * This script optimizes the built website for better performance
+ * by adding preload hints, optimizing images, and other enhancements.
+ */
+
+import fs from 'fs';
+import path from 'path';
+
+const distPath = path.join(process.cwd(), 'dist');
+
+// Optimize HTML files
+function optimizeHTML(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Add preload hints for critical resources
+    const preloadHints = `
+    <link rel="preload" href="/assets/index.css" as="style">
+    <link rel="preload" href="/assets/index.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    `;
+    
+    content = content.replace('</head>', `${preloadHints}</head>`);
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`✅ Optimized ${filePath}`);
+  } catch (error) {
+    console.error(`❌ Error optimizing ${filePath}:`, error.message);
+  }
 }
+
+// Main optimization function
+function optimizePerformance() {
+  console.log('🚀 Starting performance optimization...');
+  
+  // Find all HTML files in dist
+  const htmlFiles = [];
+  
+  function findHTMLFiles(dir) {
+    const files = fs.readdirSync(dir);
+    
+    files.forEach(file => {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        findHTMLFiles(filePath);
+      } else if (file.endsWith('.html')) {
+        htmlFiles.push(filePath);
+      }
+    });
+  }
+  
+  if (fs.existsSync(distPath)) {
+    findHTMLFiles(distPath);
+    
+    // Optimize each HTML file
+    htmlFiles.forEach(optimizeHTML);
+    
+    console.log(`✅ Performance optimization completed!`);
+    console.log(`📊 Optimized ${htmlFiles.length} HTML files`);
+  } else {
+    console.log('❌ Dist directory not found. Please run build first.');
+  }
+}
+
+// Run optimization
+optimizePerformance();

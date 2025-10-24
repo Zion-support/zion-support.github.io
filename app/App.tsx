@@ -1,23 +1,24 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+'use client';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
-const AppPage = () => {
+const ErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
+
+const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="App - Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">App</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <div className="App">
+            {/* App content goes here */}
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
 
-export default AppPage;
+export default App;

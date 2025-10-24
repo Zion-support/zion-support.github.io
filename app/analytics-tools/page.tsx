@@ -1,44 +1,41 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Metadata} from 'next';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-export default function Page() {
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group.',
+  keywords: 'page, services, technology, AI, IT solutions'
+};
+
+const PagePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Learn more about page" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about page</p>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Coming Soon
-              </h2>
-              <p className="text-gray-300 mb-6">
-                This page is currently under development. We're working hard to
-                bring you the best experience.
-              </p>
-              <div className="flex justify-center space-x-4">
-                <a
-                  href="/"
-                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
-                >
-                  Go Home
-                </a>
-                <a
-                  href="/contact"
-                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
+    <div className="min-h-screen bg-white">
+      <Navigation />
+      
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional page services by Zion Tech Group.
+          </p>
+          <div className="space-y-4">
+            <p className="text-gray-400">
+              Our page solutions are designed to help your business grow and succeed.
+            </p>
+            <p className="text-gray-400">
+              Contact us to learn more about how we can help you achieve your goals.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
-}
+};
+
+export default PagePage;
