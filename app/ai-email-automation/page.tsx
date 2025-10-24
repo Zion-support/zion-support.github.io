@@ -101,7 +101,7 @@ const AIEmailAutomationPage: React.FC = () => {
     <div className="min-h-s creenbg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <section className="rel ativepy-20 px-4 overflow-hidden">
-        <div className="abs oluteinset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></div>
+        <div className="abs oluteinset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20" />
         <div className="rel ativemax-w-7xl mx-auto text-center">
           <h1 className="tex t-4xlmd: text-6xl font-bold text-gray-900 mb-6">
             <span className="tex t-transparentbg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600">
