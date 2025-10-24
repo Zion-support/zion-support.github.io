@@ -57,16 +57,16 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-2xlmx-auto bg-white rounded-lg shadow-lg p-8">
+    <div className="max-w-2xlmx-autobg-whiterounded-lg shadow-lg p-8">
       <div className="text-centermb-8">
-        <h2 className="text-3xlfont-bold text-gray-900 mb-4">Get In Touch</h2>
+        <h2 className="text-3xlfont-boldtext-gray-900mb-4">Get In Touch</h2>
         <p className="text-gray-600">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
+        <div className="gridgrid-cols-1md:grid-cols-2gap-6">
           <div>
-            <label htmlFor="name" className="blocktext-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="blocktext-smfont-mediumtext-gray-700 mb-2">
               Full Name *
             </label>
             <input
@@ -76,13 +76,13 @@ const ContactForm: React.FC = () => {
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="w-fullpx-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-fullpx-4py-3border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Your full name"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="blocktext-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="blocktext-smfont-mediumtext-gray-700 mb-2">
               Email Address *
             </label>
             <input
@@ -92,15 +92,15 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-fullpx-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-fullpx-4py-3border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="your.email@example.com"
             />
           </div>
         </div>
 
-        <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
+        <div className="gridgrid-cols-1md:grid-cols-2gap-6">
           <div>
-            <label htmlFor="company" className="blocktext-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="company" className="blocktext-smfont-mediumtext-gray-700 mb-2">
               Company
             </label>
             <input
@@ -109,13 +109,13 @@ const ContactForm: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleInputChange}
-              className="w-fullpx-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-fullpx-4py-3border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Your company name"
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="blocktext-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="phone" className="blocktext-smfont-mediumtext-gray-700 mb-2">
               Phone Number
             </label>
             <input
@@ -124,14 +124,14 @@ const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-fullpx-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-fullpx-4py-3border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="+1 (555) 123-4567"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="service" className="blocktext-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="service" className="blocktext-smfont-mediumtext-gray-700 mb-2">
             Service Interest
           </label>
           <select
@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
             name="service"
             value={formData.service}
             onChange={handleInputChange}
-            className="w-fullpx-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-fullpx-4py-3border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="">Select a service</option>
             <option value="ai-services">AI Services</option>
@@ -150,7 +150,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="message" className="blocktext-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="blocktext-smfont-mediumtext-gray-700 mb-2">
             Message *
           </label>
           <textarea
@@ -160,7 +160,7 @@ const ContactForm: React.FC = () => {
             onChange={handleInputChange}
             required
             rows={6}
-            className="w-fullpx-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-fullpx-4py-3border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Tell us about your project or question..."
           />
         </div>
@@ -180,11 +180,11 @@ const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={status.type === 'loading'}
-          className="w-fullbg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          className="w-fullbg-blue-600text-whitepy-3 px-6 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {status.type === 'loading' ? (
             <>
-              <div className="animate-spinrounded-full h-5 w-5 border-b-2 border-white"></div>
+              <div className="animate-spinrounded-fullh-5w-5 border-b-2 border-white"></div>
               <span>Sending...</span>
             </>
           ) : (
@@ -196,20 +196,20 @@ const ContactForm: React.FC = () => {
         </button>
       </form>
 
-      <div className="mt-8pt-8 border-t border-gray-200">
-        <div className="gridgrid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="flexflex-col items-center">
-            <Mail className="w-8h-8 text-blue-600 mb-2" />
+      <div className="mt-8pt-8border-tborder-gray-200">
+        <div className="gridgrid-cols-1md:grid-cols-3gap-6 text-center">
+          <div className="flexflex-colitems-center">
+            <Mail className="w-8h-8text-blue-600mb-2" />
             <h3 className="font-semiboldtext-gray-900">Email</h3>
             <p className="text-gray-600">contact@ziontechgroup.com</p>
           </div>
-          <div className="flexflex-col items-center">
-            <Phone className="w-8h-8 text-blue-600 mb-2" />
+          <div className="flexflex-colitems-center">
+            <Phone className="w-8h-8text-blue-600mb-2" />
             <h3 className="font-semiboldtext-gray-900">Phone</h3>
             <p className="text-gray-600">+1 (555) 123-4567</p>
           </div>
-          <div className="flexflex-col items-center">
-            <MapPin className="w-8h-8 text-blue-600 mb-2" />
+          <div className="flexflex-colitems-center">
+            <MapPin className="w-8h-8text-blue-600mb-2" />
             <h3 className="font-semiboldtext-gray-900">Office</h3>
             <p className="text-gray-600">San Francisco, CA</p>
           </div>

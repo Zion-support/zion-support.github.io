@@ -146,7 +146,7 @@ export default function PerformanceMonitor({
   // Performance monitoring dashboard (only in development)
   if (process.env.NODE_ENV === 'development') {
     return (
-      <div className="fixedbottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono max-w-xs">
+      <div className="fixedbottom-4right-4bg-black/80 text-white p-4 rounded-lg text-xs font-mono max-w-xs">
         <h3 className="font-boldmb-2">Performance Metrics</h3>
         <div className="space-y-1">
           <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}</div>

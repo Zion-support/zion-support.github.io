@@ -64,7 +64,7 @@ return(<>)
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section$1>
         <section>
@@ -75,14 +75,14 @@ return(<>)
           </div>
         </div>
       </section>
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h1>Data Analytics Services;</h1>
               </h1>
               <p>Transform your data into actionable insights with our advanced analytics solutions.;</p>
                 Make smarter decisions and drive business growth with AI-powered data analysis.
               </p>
-              <div className="flexflex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
                 <button>
                   <BarChart>
                   Get Analytics Now;
@@ -106,19 +106,19 @@ return(<>)
           </div>
         </div>
       </section>
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2>Our Analytics Solutions;</h2>
               </h2>
               <p>We provide comprehensive data analytics services to help you unlock the power of your data.,</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
-                  <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                  <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
-                  <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
                 </div>
               ))}
@@ -136,16 +136,16 @@ return(<>)
           </div>
         </div>
       </section>
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2>Key Benefits;</h2>
               </h2>
               <p>Drive business success with our comprehensive data analytics services.,</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-2 gap-6"></div>,
+            <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
               {benefits.map((benefit, index) => (
-                <div key={index}className="flexitems-start space-x-3"></div>
+                <div key={index}className="flexitems-startspace-x-3"></div>
                   <CheckCircle />
                   <p className="text-gray-300text-lg">{benefit</p>}</p>
                 </div>
@@ -157,13 +157,13 @@ return(<>)
         {/* CTA Section */}
         <section$1>
         <div$2>
-            <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+            <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
                 Ready to Unlock Your Data?
               </h2>
               <p>Contact our analytics experts to discuss your data needs and get a customized solution.</p>
               </p>
-              <div className="flexflex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
                 <button>
                   <Phone>
                   Call (302) 464-0950;
@@ -180,26 +180,26 @@ return(<>)
 
   )};
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xlmx-auto">
+      <section className="pt-20pb-16px-4sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
-              Data Analytics <span className="bg-gradient-to-rfrom-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+            <h1 className="text-4xlmd:text-6xlfont-boldtext-white mb-6">
+              Data Analytics <span className="bg-gradient-to-rfrom-cyan-400to-blue-500bg-clip-text text-transparent">Services</span>
             </h1>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">
               Transform your data into actionable insights with our advanced analytics solutions. Make smarter decisions and drive business growth.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                <BarChart className="mr-2h-5 w-5" />
+            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <button className="bg-gradient-to-rfrom-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                <BarChart className="mr-2h-5w-5" />
                 Get Analytics Now
               </button>
-              <button className="borderborder-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2h-5 w-5" />
+              <button className="borderborder-white/20text-whitepx-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2h-5w-5" />
                 Call (302) 464-0950
               </button>
             </div>
@@ -208,23 +208,23 @@ return(<>)
       </section>
 
       {/* Features Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+      <section className="py-20px-4sm:px-6lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
               Our Analytics Solutions
             </h2>
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               We provide comprehensive data analytics services to help you unlock the power of your data.
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6w-6 text-white" />
+              <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6w-6text-white" />
                 </div>
-                <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -233,20 +233,20 @@ return(<>)
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+      <section className="py-20px-4sm:px-6lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               Drive business success with our comprehensive data analytics services.
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
+          <div className="gridgrid-cols-1md:grid-cols-2gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-start space-x-3">
-                <CheckCircle className="h-6w-6 text-purple-400 mt-1 flex-shrink-0" />
+              <div key={index} className="flexitems-startspace-x-3">
+                <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>
             ))}
@@ -255,22 +255,22 @@ return(<>)
       </section>
 
       {/* CTA Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xlmx-auto text-center">
-          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6">
+      <section className="py-20px-4sm:px-6lg:px-8">
+        <div className="max-w-4xlmx-autotext-center">
+          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-6">
               Ready to Unlock Your Data?
             </h2>
-            <p className="text-xltext-purple-100 mb-8">
+            <p className="text-xltext-purple-100mb-8">
               Contact our analytics experts to discuss your data needs and get a customized solution.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2h-5 w-5" />
+            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <button className="bg-whitetext-purple-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2h-5w-5" />
                 Call (302) 464-0950
               </button>
-              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2h-5 w-5" />
+              <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2h-5w-5" />
                 Email Us
               </button>
             </div>

@@ -67,25 +67,25 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     if (this.state.hasError) {
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>
-          <div className="max-w-mdw-full bg-white shadow-lg rounded-lg p-6 text-center">
-            <AlertTriangle className="h-16w-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xlfont-bold text-gray-900 mb-2">Something went wrong</h1>
+          <div className="max-w-mdw-fullbg-whiteshadow-lg rounded-lg p-6 text-center">
+            <AlertTriangle className="h-16w-16text-red-500mx-auto mb-4" />
+            <h1 className="text-2xlfont-boldtext-gray-900mb-2">Something went wrong</h1>
             <p className="text-gray-600mb-6">
               We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-fullbg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+                className="w-fullbg-blue-600hover:bg-blue-700text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
               >
-                <RefreshCw className="h-4w-4 mr-2" />
+                <RefreshCw className="h-4w-4mr-2" />
                 Try Again
               </button>
               <button 
                 onClick={() => window.location.href = "/"}
-                className="w-fullbg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+                className="w-fullbg-gray-600hover:bg-gray-700text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
               >
-                <Home className="h-4w-4 mr-2" />
+                <Home className="h-4w-4mr-2" />
                 Go Home
               </button>
             </div>

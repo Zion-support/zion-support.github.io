@@ -36,7 +36,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         quality={quality}
         placeholder={placeholder}
         blurDataURL={blurDataURL}
-        className="w-fullh-auto object-cover transition-transform duration-300 hover:scale-105"
+        className="w-fullh-autoobject-covertransition-transform duration-300 hover:scale-105"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
 

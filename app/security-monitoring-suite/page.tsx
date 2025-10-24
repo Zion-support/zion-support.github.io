@@ -71,31 +71,30 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20pb-16 px-4">
+        <section className="pt-20pb-16px-4">
         </section>
         {/* Hero Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
         {/* Hero Section */}
         <section className="py-20px-4">
-          </section>< className="$2/>
-            <div className="text-center mb-16">
-              </div><h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2/><divclassName="text-center mb-16">
+              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h1>Security Monitoring Suite;</h1>
               </h1>
               <p>Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection,</p>
                 and automated response capabilities to protect your business 24/7.
               </p>
-              <div className="flexflex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
                 <button>
                   <Shield>
                   Start Free Trial;
@@ -117,19 +116,19 @@ return (
           </div>
         </div>
       </section>
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2>Platform Features;</h2>
               </h2>
               <p>Our security monitoring suite provides everything you need to protect your business from cyber threats.,</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
-                  <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                  <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature />
-                  <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
                 </div>
               ))}
@@ -137,39 +136,38 @@ return (
         </div>
       </section>
         {/* Benefits Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h1 className="text-5xlmd:text-6xl font-bold text-white mb-6">Security Monitoring Suite
-              <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xlmd:text-6xlfont-boldtext-white mb-6">Security Monitoring Suite
+              <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">
                 Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection, 
                 and automated response capabilities to protect your business 24/7.
-              <div className="flexflex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  <Shield className="mr-2h-5 w-5" />
+              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+                <button className="bg-gradient-to-rfrom-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  <Shield className="mr-2h-5w-5" />
                   Start Free Trial
-                <button className="borderborder-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2h-5 w-5" />
+                <button className="borderborder-white/20text-whitepx-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
+                  <Phone className="mr-2h-5w-5" />
                   Call (302) 464-0950
         {/* Features Section */}
         <section$1>
         <div$2>
-            <div className="text-centermb-16">
-              <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">Platform Features
-              <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">Platform Features
+              <p className="text-xltext-gray-300max-w-3xlmx-auto">
                 Our security monitoring suite provides everything you need to protect your business from cyber threats.
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                    <feature.icon className="h-6w-6 text-white" />
-                  <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}
+                <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                    <feature.icon className="h-6w-6text-white" />
+                  <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}
                   <p className="text-gray-300">{feature.description}
               ))}
         {/* Benefits Section */}
         <section className="py-20px-4">
-          </section>< className="$2/>
-            <div className="text-center mb-16">
-              </div><h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2/><divclassName="text-center mb-16">
+              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
@@ -178,10 +176,10 @@ return (
         {/* Benefits Section */}
         <section$1>
         <div$2>
-            <div className="text-centermb-16">
-              <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
+            <div className="text-center mb-16">
+              <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2>Why Choose Our Suite?</h2>
               </h2>
               <p>Experience comprehensive security protection with our all-in-one monitoring platform.,</p>
@@ -191,37 +189,37 @@ return (
                 Experience comprehensive security protection with our all-in-one monitoring platform.,
               </p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-2 gap-6"></div>,
+            <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
               {benefits.map((benefit, index) => (
-                <div key={index}className="flexitems-start space-x-3"></div>
+                <div key={index}className="flexitems-startspace-x-3"></div>
                   <CheckCircle />
                   <p className="text-gray-300text-lg">{benefit</p>}</p>
                 </div>
-              <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+              <p className="text-xltext-gray-300max-w-3xlmx-auto">
                 Experience comprehensive security protection with our all-in-one monitoring platform.
-            <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
+            <div className="gridgrid-cols-1md:grid-cols-2gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flexitems-start space-x-3">
-                  <CheckCircle className="h-6w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <div key={index} className="flexitems-startspace-x-3">
+                  <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
                   <p className="text-gray-300text-lg">{benefit}
               ))}
             </div>
           ))
         </section>
         {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
         <section$1>
         <div$2>
-            <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+            <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-          <div className="max-w-4xlmx-auto text-center"></div>
-            <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+          <div className="max-w-4xlmx-autotext-center"></div>
+            <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md: p-12"></div>,
               <h2>Ready to Secure Your Business?</h2>
               </h2>
               <p>Start your free trial today and experience the power of our security monitoring suite.</p>
@@ -230,7 +228,7 @@ return (
               <p></p>
                 Start your free trial today and experience the power of our security monitoring suite.
               </p>
-              <div className="flexflex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
                 <button>
                   <Phone>
                   Call (302) 464-0950;

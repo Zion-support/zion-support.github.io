@@ -20,20 +20,20 @@ const OnlineLearningPlatformPage: React.FC = () => {
         </Helmet><title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
         <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
         <meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring" />
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
         <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h1 className="text-4xlmd: text-6xl font-bold text-white mb-6">Online Learning Platform</h1>,
-              <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.</p>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">Online Learning Platform</h1>,
+              <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.</p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">,</div>
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">,</div>
-                  <div className="w-16h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8h-8 text-white" />
+                <div key={index}className="bg-white/5backdrop-blur-lgrounded-2xlp-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">,</div>
+                  <div className="w-16h-16bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                    <feature.icon className="w-8h-8text-white" />
                   </div>
-                  <h3 className="text-xlfont-bold text-white mb-4">{feature.title}</h3>
+                  <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
                 </div>
               ))}
@@ -46,16 +46,16 @@ const OnlineLearningPlatformPage: React.FC = () => {
 }
 export default OnlineLearningPlatformPage
         <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">Online Learning Platform
-              <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xlmd:text-6xlfont-boldtext-white mb-6">Online Learning Platform
+              <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.
+            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8h-8 text-white" />
-                  <h3 className="text-xlfont-bold text-white mb-4">{feature.title}
+                <div key={index} className="bg-white/5backdrop-blur-lgrounded-2xlp-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-16h-16bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                    <feature.icon className="w-8h-8text-white" />
+                  <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}
                   <p className="text-gray-300">{feature.description}
               ))}
   )

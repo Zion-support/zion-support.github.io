@@ -56,12 +56,12 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="containermx-auto px-4">
-        <div className="flexitems-center justify-between h-16">
+      <div className="containermx-autopx-4">
+        <div className="flexitems-centerjustify-betweenh-16">
           {/* Logo */}
-          <Link href="/" className="flexitems-center space-x-2">
-            <div className="w-8h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5h-5 text-white" />
+          <Link href="/" className="flexitems-centerspace-x-2">
+            <div className="w-8h-8bg-gradient-to-rfrom-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5h-5text-white" />
             </div>
             <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               Zion Tech Group
@@ -69,7 +69,7 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hiddenlg:flex items-center space-x-8">
+          <div className="hiddenlg:flexitems-centerspace-x-8">
             <Link 
               href="/" 
               className={`${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'} transition-colors`}>
@@ -82,17 +82,17 @@ const Navigation: React.FC = () => {
                 <span>AI Services</span>
                 <ChevronDown className="w-4h-4" />
               </button>
-              <div className="absolutetop-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolutetop-fullleft-0mt-2 w-80 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="p-6">
-                  <h3 className="text-lgfont-semibold mb-4">AI Services</h3>
-                  <div className="gridgrid-cols-1 gap-3">
+                  <h3 className="text-lgfont-semiboldmb-4">AI Services</h3>
+                  <div className="gridgrid-cols-1gap-3">
                     {aiServices.map(service => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flexitems-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="flexitems-centerspace-x-3p-2 rounded-lg hover:bg-gray-50 transition-colors"
                         onClick={closeAllMenus}>
-                        <service.icon className="w-5h-5 text-blue-600" />
+                        <service.icon className="w-5h-5text-blue-600" />
                         <div>
                           <div className="font-mediumtext-gray-900">{service.name}</div>
                           <div className="text-smtext-gray-500">{service.description}</div>
@@ -110,17 +110,17 @@ const Navigation: React.FC = () => {
                 <span>IT Services</span>
                 <ChevronDown className="w-4h-4" />
               </button>
-              <div className="absolutetop-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolutetop-fullleft-0mt-2 w-80 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="p-6">
-                  <h3 className="text-lgfont-semibold mb-4">IT Services</h3>
-                  <div className="gridgrid-cols-1 gap-3">
+                  <h3 className="text-lgfont-semiboldmb-4">IT Services</h3>
+                  <div className="gridgrid-cols-1gap-3">
                     {itServices.map(service => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flexitems-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="flexitems-centerspace-x-3p-2 rounded-lg hover:bg-gray-50 transition-colors"
                         onClick={closeAllMenus}>
-                        <service.icon className="w-5h-5 text-blue-600" />
+                        <service.icon className="w-5h-5text-blue-600" />
                         <div>
                           <div className="font-mediumtext-gray-900">{service.name}</div>
                           <div className="text-smtext-gray-500">{service.description}</div>
@@ -145,10 +145,10 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hiddenlg:flex items-center space-x-4">
+          <div className="hiddenlg:flexitems-centerspace-x-4">
             <Link
               href="/contact"
-              className="bg-blue-600text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              className="bg-blue-600text-whitepx-6py-2 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started
             </Link>
           </div>
@@ -163,30 +163,30 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hiddenbg-white border-t border-gray-200">
-            <div className="px-4py-6 space-y-4">
+          <div className="lg:hiddenbg-whiteborder-tborder-gray-200">
+            <div className="px-4py-6space-y-4">
               <Link
                 href="/"
-                className="blocktext-gray-700 hover:text-blue-600 transition-colors"
+                className="blocktext-gray-700hover:text-blue-600transition-colors"
                 onClick={closeAllMenus}>
                 Home
               </Link>
               <Link
                 href="/about"
-                className="blocktext-gray-700 hover:text-blue-600 transition-colors"
+                className="blocktext-gray-700hover:text-blue-600transition-colors"
                 onClick={closeAllMenus}>
                 About
               </Link>
               <Link
                 href="/contact"
-                className="blocktext-gray-700 hover:text-blue-600 transition-colors"
+                className="blocktext-gray-700hover:text-blue-600transition-colors"
                 onClick={closeAllMenus}>
                 Contact
               </Link>
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="blockbg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition-colors"
+                  className="blockbg-blue-600text-whitepx-6 py-2 rounded-lg text-center hover:bg-blue-700 transition-colors"
                   onClick={closeAllMenus}>
                   Get Started
                 </Link>

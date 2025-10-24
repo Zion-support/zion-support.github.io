@@ -52,49 +52,49 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-brfrom-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-      <div className="absoluteinset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
-      <div className="absoluteinset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
+    <footer className="bg-gradient-to-brfrom-slate-900via-slate-800to-slate-900 text-white relative overflow-hidden">
+      <div className="absoluteinset-0bg-gradient-to-rfrom-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="absoluteinset-0bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]from-cyan-500/10 via-transparent to-transparent"></div>
       
-      <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+      <div className="max-w-7xl mx-autopx-4sm:px-6 lg:px-8 py-16 relative z-10">
+        <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2space-y-6">
-            <div className="flexitems-center space-x-3 group">
-              <div className="w-12h-12 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                <Brain className="w-7h-7 text-white" />
+            <div className="flexitems-centerspace-x-3group">
+              <div className="w-12h-12bg-gradient-to-rfrom-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+                <Brain className="w-7h-7text-white" />
               </div>
               <div className="flexflex-col">
                 <span className="text-2xlfont-bold">Zion Tech Group</span>
-                <span className="text-smtext-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
+                <span className="text-smtext-cyan-400font-mediumtracking-wider">AI & IT SOLUTIONS</span>
               </div>
             </div>
-            <p className="text-gray-300text-sm leading-relaxed">
+            <p className="text-gray-300text-smleading-relaxed">
               Leading provider of AI and IT solutions for modern businesses.
               We help companies transform their operations with cutting-edge technology, 
               delivering measurable results and exceptional value.
             </p>
             <div className="space-y-4">
-              <div className="flexitems-center text-sm text-gray-300 group">
-                <div className="w-8h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                  <Phone className="w-4h-4 text-white" />
+              <div className="flexitems-centertext-smtext-gray-300 group">
+                <div className="w-8h-8bg-gradient-to-rfrom-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                  <Phone className="w-4h-4text-white" />
                 </div>
-                <a href="tel:+13024640950" className="hover:text-cyan-400transition-colors font-medium">+1 302 464 0950</a>
+                <a href="tel:+13024640950" className="hover:text-cyan-400transition-colorsfont-medium">+1 302 464 0950</a>
               </div>
-              <div className="flexitems-center text-sm text-gray-300 group">
-                <div className="w-8h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                  <Mail className="w-4h-4 text-white" />
+              <div className="flexitems-centertext-smtext-gray-300 group">
+                <div className="w-8h-8bg-gradient-to-rfrom-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                  <Mail className="w-4h-4text-white" />
                 </div>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400transition-colors font-medium">kleber@ziontechgroup.com</a>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400transition-colorsfont-medium">kleber@ziontechgroup.com</a>
               </div>
-              <div className="flexitems-start text-sm text-gray-300 group">
-                <div className="w-8h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-4h-4 text-white" />
+              <div className="flexitems-starttext-smtext-gray-300 group">
+                <div className="w-8h-8bg-gradient-to-rfrom-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-4h-4text-white" />
                 </div>
                 <span className="font-medium">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
-              <div className="flexitems-center text-sm text-gray-300 group">
-                <div className="w-8h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                  <Clock className="w-4h-4 text-white" />
+              <div className="flexitems-centertext-smtext-gray-300 group">
+                <div className="w-8h-8bg-gradient-to-rfrom-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                  <Clock className="w-4h-4text-white" />
                 </div>
                 <span className="font-medium">Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support</span>
               </div>
@@ -102,8 +102,8 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-lgfont-semibold mb-4 text-cyan-400 flex items-center">
-              <Brain className="w-5h-5 mr-2" />
+            <h3 className="text-lgfont-semiboldmb-4text-cyan-400 flex items-center">
+              <Brain className="w-5h-5mr-2" />
               AI Services
             </h3>
             <ul className="space-y-2">
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     href={service.url}
-                    className="text-gray-300hover:text-cyan-400 text-sm transition-colors block">
+                    className="text-gray-300hover:text-cyan-400text-smtransition-colors block">
                     {service.name}
                   </Link>
                 </li>
@@ -120,13 +120,13 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-lgfont-semibold mb-4 text-cyan-400">IT Services</h3>
+            <h3 className="text-lgfont-semiboldmb-4text-cyan-400">IT Services</h3>
             <ul className="space-y-2">
               {itServices.map(service => (
                 <li key={service.name}>
                   <Link
                     href={service.url}
-                    className="text-gray-300hover:text-cyan-400 text-sm transition-colors block">
+                    className="text-gray-300hover:text-cyan-400text-smtransition-colors block">
                     {service.name}
                   </Link>
                 </li>
@@ -135,13 +135,13 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-lgfont-semibold mb-4 text-cyan-400">Company</h3>
+            <h3 className="text-lgfont-semiboldmb-4text-cyan-400">Company</h3>
             <ul className="space-y-2">
               {company.map(item => (
                 <li key={item.name}>
                   <Link
                     href={item.url}
-                    className="text-gray-300hover:text-cyan-400 text-sm transition-colors block">
+                    className="text-gray-300hover:text-cyan-400text-smtransition-colors block">
                     {item.name}
                   </Link>
                 </li>
@@ -150,13 +150,13 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-lgfont-semibold mb-4 text-cyan-400">Resources</h3>
+            <h3 className="text-lgfont-semiboldmb-4text-cyan-400">Resources</h3>
             <ul className="space-y-2">
               {resources.map(item => (
                 <li key={item.name}>
                   <Link
                     href={item.url}
-                    className="text-gray-300hover:text-cyan-400 text-sm transition-colors block">
+                    className="text-gray-300hover:text-cyan-400text-smtransition-colors block">
                     {item.name}
                   </Link>
                 </li>
@@ -165,16 +165,16 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-tborder-gray-700 mt-8 pt-8 text-center">
+        <div className="border-tborder-gray-700mt-8pt-8 text-center">
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
-          <div className="flexspace-x-6 justify-center mt-4">
+          <div className="flexspace-x-6justify-centermt-4">
             {legal.map(item => (
               <Link
                 key={item.name}
                 href={item.url}
-                className="text-gray-400hover:text-cyan-400 transition-colors duration-200 text-sm">
+                className="text-gray-400hover:text-cyan-400transition-colorsduration-200 text-sm">
                 {item.name}
               </Link>
             ))}

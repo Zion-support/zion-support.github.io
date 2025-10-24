@@ -117,17 +117,17 @@ const contactInfo = [
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
       </Helmet>
 
-<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="containermx-auto px-4">
+<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900 py-20">
+        <div className="containermx-autopx-4">
           {/* Header */}
-          <div className="text-centermb-16">
-            <h1 className="text-5xllg:text-7xl font-bold text-white mb-6">
+          <div className="text-center mb-16">
+            <h1 className="text-5xllg:text-7xlfont-boldtext-white mb-6">
               Get in
-              <span className="bg-gradient-to-rfrom-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-rfrom-cyan-400to-purple-500bg-clip-text text-transparent">
                 {' '}Touch
               </span>
             </h1>
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               Ready to transform your business? Let's discuss your project and explore 
       description: 'Eastern Time'}}
   ]
@@ -137,9 +137,9 @@ return(<>)
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
-        <div className="containermx-auto px-4"></div>
-          {/* Header */} <div className="text-centermb-16"></div>
+<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900 py-20"></div>
+        <div className="containermx-autopx-4"></div>
+          {/* Header */} <div className="text-center mb-16"></div>
             <h1>Get in;</h1>
               <span>{' '</span>}Touch;
               </span>
@@ -150,37 +150,37 @@ return(<>)
           </div>
         </section>
 
-<div className="gridgrid-cols-1 lg:grid-cols-2 gap-12">
+<div className="gridgrid-cols-1lg:grid-cols-2gap-12">
             {/* Contact Form */}
-            <div className="bg-white/5backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xlfont-bold text-white mb-6">Send us a Message</h2>
+            <div className="bg-white/5backdrop-blur-lgrounded-2xlp-8 border border-white/10">
+              <h2 className="text-3xlfont-boldtext-whitemb-6">Send us a Message</h2>
               
               {submitStatus === 'success' && (
-                <div className="mb-6p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
-                  <CheckCircle className="w-5h-5 text-green-400" />
+                <div className="mb-6p-4bg-green-500/20border border-green-500/50 rounded-lg flex items-center gap-3">
+                  <CheckCircle className="w-5h-5text-green-400" />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
               </div>
               {submitStatus === 'error' && (
-                <div className="mb-6p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
+                <div className="mb-6p-4bg-red-500/20border border-red-500/50 rounded-lg flex items-center gap-3">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
+                <div className="gridgrid-cols-1md:grid-cols-2gap-6">
                   <div>
-                    <label className="blocktext-sm font-medium text-gray-300 mb-2">
+                    <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                       Full Name *
                     </label>
               {submitStatus === 'success' && (;
-                <div className="mb-6p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
+                <div className="mb-6p-4bg-green-500/20border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>})}
 {submitStatus === 'error' && (;
               {
     submitStatus === 'success' && (
-                <div className="mb-6p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
+                <div className="mb-6p-4bg-green-500/20border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle>
                   </CheckCircle><span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
@@ -188,11 +188,11 @@ return(<>)
               )}
 {
     submitStatus === 'error' && (
-                <div className="mb-6p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
+                <div className="mb-6p-4bg-red-500/20border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>})}
 <form>
-                <div className="gridgrid-cols-1 md:grid-cols-2 gap-6"></div>,
+                <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
                   <div />
                     <label>
                       Full Name *
@@ -210,7 +210,7 @@ return(<>)
                       </Mail><input />
                   </div>
                 </div>
-                <div className="gridgrid-cols-1 md:grid-cols-2 gap-6"></div>,
+                <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
                   <div />
                     <label>
                       Company;
@@ -254,7 +254,7 @@ return(<>)
                 </div>
                 <button>{isSubmitting ? (;</button>
                     <>
-                      <div className="w-5h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-5h-5border-2border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
                   ) : (
@@ -267,20 +267,20 @@ return(<>)
             </div>
             {/* Contact Information */} <div className="space-y-8"></div>
               <div />
-                <h2 className="text-3xlfont-bold text-white mb-6">Contact Information</h2>
+                <h2 className="text-3xlfont-boldtext-whitemb-6">Contact Information</h2>
                 <p>We're here to help! Reach out to us through any of these channels;</p>
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
               {/* Contact Information */} <div className="space-y-8"></div>
                 <div />
-                  <h2 className="text-3xlfont-bold text-white mb-6">Get in Touch</h2>
+                  <h2 className="text-3xlfont-boldtext-whitemb-6">Get in Touch</h2>
                   <p>We're here to help you transform your business with cutting-edge AI and technology solutions.</p>
                   </p>
                 </div>
                 <div className="space-y-6"></div>
                   <div className="flexitems-center"></div>
-                    <div className="w-12h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
+                    <div className="w-12h-12bg-cyan-500rounded-lg flex items-center justify-center mr-4"></div>
                       <Phone />
                     <div />
 <h3>
@@ -289,68 +289,68 @@ return(<>)
                       <p>{info.details</p>} </p>
                       <p>{info.description</p>} </p>
                     <div className="relative">
-                      <User className="absoluteleft-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <User className="absoluteleft-3top-1/2transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-fullpl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        className="w-fullpl-10pr-4py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your full name"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="blocktext-sm font-medium text-gray-300 mb-2">
+                    <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                       Email Address *
                     </label>
                     <div className="relative">
-                      <Mail className="absoluteleft-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <Mail className="absoluteleft-3top-1/2transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-fullpl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        className="w-fullpl-10pr-4py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
+                <div className="gridgrid-cols-1md:grid-cols-2gap-6">
                   <div>
-                    <label className="blocktext-sm font-medium text-gray-300 mb-2">
+                    <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                       Company
                     </label>
                     <div className="relative">
-                      <Building className="absoluteleft-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <Building className="absoluteleft-3top-1/2transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="text"
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-fullpl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        className="w-fullpl-10pr-4py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your company"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="blocktext-sm font-medium text-gray-300 mb-2">
+                    <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                       Phone Number
                     </label>
                     <div className="relative">
-                      <Phone className="absoluteleft-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <Phone className="absoluteleft-3top-1/2transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-fullpl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        className="w-fullpl-10pr-4py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
@@ -358,16 +358,16 @@ return(<>)
                 </div>
 
                 <div>
-                  <label className="blocktext-sm font-medium text-gray-300 mb-2">
+                  <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                     Service Interest
                   </label>
                   <div className="relative">
-                    <Globe className="absoluteleft-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <Globe className="absoluteleft-3top-1/2transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-fullpl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                      className="w-fullpl-10pr-4py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -380,28 +380,28 @@ return(<>)
                 </div>
 
                 <div>
-                  <label className="blocktext-sm font-medium text-gray-300 mb-2">
+                  <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                     Message *
                   </label>
                   <div className="relative">
-                    <MessageCircle className="absoluteleft-3 top-3 w-5 h-5 text-gray-400" />
+                    <MessageCircle className="absoluteleft-3top-3w-5 h-5 text-gray-400" />
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-fullpl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
+                      className="w-fullpl-10pr-4py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
                 <$2 />
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-fullbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  className="w-fullbg-gradient-to-rfrom-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-5h-5border-2border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
 
                   ) : (
@@ -418,14 +418,14 @@ return(<>)
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xlfont-bold text-white mb-6">Contact Information</h2>
-                <p className="text-lgtext-gray-300 mb-8">
+                <h2 className="text-3xlfont-boldtext-whitemb-6">Contact Information</h2>
+                <p className="text-lgtext-gray-300mb-8">
                   We're here to help! Reach out to us through any of these channels 
                   and we'll get back to you as soon as possible.
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xlfont-bold text-white mb-6">Get in Touch</h2>
+                  <h2 className="text-3xlfont-boldtext-whitemb-6">Get in Touch</h2>
                   <p className="text-gray-300mb-8">
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
@@ -433,14 +433,14 @@ return(<>)
 
                 <div className="space-y-6">
                   <div className="flexitems-center">
-                    <div className="w-12h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
-                      <Phone className="w-6h-6 text-white" />
+                    <div className="w-12h-12bg-cyan-500rounded-lg flex items-center justify-center mr-4">
+                      <Phone className="w-6h-6text-white" />
                     </div>
                     <div>
-<h3 className="text-lgfont-semibold text-white mb-1">
+<h3 className="text-lgfont-semiboldtext-whitemb-1">
                         {info.title}
                       </h3>
-                      <p className="text-cyan-400font-medium mb-1">
+                      <p className="text-cyan-400font-mediummb-1">
                         {info.details}
                       </p>
                       <p className="text-gray-300text-sm">
@@ -451,31 +451,31 @@ return(<>)
                   </div>
 
                   <div className="flexitems-center">
-                    <div className="w-12h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
-                      <Mail className="w-6h-6 text-white" />
+                    <div className="w-12h-12bg-purple-500rounded-lg flex items-center justify-center mr-4">
+                      <Mail className="w-6h-6text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lgfont-semibold text-white">Email</h3>
+                      <h3 className="text-lgfont-semiboldtext-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
                   </div>
 
                   <div className="flexitems-center">
-                    <div className="w-12h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
-                      <MapPin className="w-6h-6 text-white" />
+                    <div className="w-12h-12bg-pink-500rounded-lg flex items-center justify-center mr-4">
+                      <MapPin className="w-6h-6text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lgfont-semibold text-white">Address</h3>
+                      <h3 className="text-lgfont-semiboldtext-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
                   </div>
 
                   <div className="flexitems-center">
-                    <div className="w-12h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
-                      <Clock className="w-6h-6 text-white" />
+                    <div className="w-12h-12bg-green-500rounded-lg flex items-center justify-center mr-4">
+                      <Clock className="w-6h-6text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lgfont-semibold text-white">Business Hours</h3>
+                      <h3 className="text-lgfont-semiboldtext-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>,
                     </div>

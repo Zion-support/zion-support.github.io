@@ -75,13 +75,13 @@ const FAQPage: React.FC = () => {
         <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
       </Helmet>
       
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="containermx-auto px-4">
-          <div className="text-centermb-16">
-            <h1 className="text-5xlfont-bold text-white mb-6">
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900 py-20">
+        <div className="containermx-autopx-4">
+          <div className="text-center mb-16">
+            <h1 className="text-5xlfont-boldtext-whitemb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               Find answers to common questions about our AI and IT solutions, 
               services, and how we can help transform your business.
             </p>
@@ -92,9 +92,9 @@ const FAQPage: React.FC = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white/10backdrop-blur-lg rounded-lg p-6 border border-white/20"
+                  className="bg-white/10backdrop-blur-lgrounded-lgp-6 border border-white/20"
                 >
-                  <h3 className="text-xlfont-semibold text-white mb-3">
+                  <h3 className="text-xlfont-semiboldtext-whitemb-3">
                     {faq.question}
                   </h3>
                   <p className="text-gray-300leading-relaxed">
@@ -107,26 +107,26 @@ const FAQPage: React.FC = () => {
         </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
         <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto text-center">
-            <h1 className="text-4xlmd: text-6xl font-bold text-white mb-6">,</h1>
+          <div className="max-w-7xl mx-autotext-center">
+            <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">,</h1>
               Frequently Asked <span className="text-cyan-400">Questions</span>
             </h1>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
+            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
           </div>
         </section>
         <section className="py-16px-4">
           <div className="max-w-4xlmx-auto">
             <div className="space-y-4">{faqs.map((faq, index) => (</div>
-                <div key={index}className="bg-slate-800/50backdrop-blur-sm rounded-lg border border-cyan-500/20">
+                <div key={index}className="bg-slate-800/50backdrop-blur-smrounded-lgborder border-cyan-500/20">
                   <button;
-                    onClick={() =>toggleItem(index)</button>}className="w-fullpx-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
-                    <h3 className="text-lgfont-semibold text-white pr-4">{faq.question}</h3>
+                    onClick={() =>toggleItem(index)</button>}className="w-fullpx-6py-4text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
+                    <h3 className="text-lgfont-semiboldtext-whitepr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
-                      <ChevronUp className="w-5h-5 text-cyan-400 flex-shrink-0" />
+                      <ChevronUp className="w-5h-5text-cyan-400flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="w-5h-5 text-cyan-400 flex-shrink-0" />
+                      <ChevronDown className="w-5h-5text-cyan-400flex-shrink-0" />
                     )} </button>
                   {openItems.includes(index) && (
                     <div className="px-6pb-4">
@@ -138,22 +138,22 @@ const FAQPage: React.FC = () => {
             </div>
 
             <div className="mt-16text-center">
-              <h2 className="text-3xlfont-bold text-white mb-6">
+              <h2 className="text-3xlfont-boldtext-whitemb-6">
                 Still have questions?
               </h2>
-              <p className="text-xltext-gray-300 mb-8">
+              <p className="text-xltext-gray-300mb-8">
                 Our team is here to help. Contact us for personalized assistance.
               </p>
-              <div className="flexflex-col sm:flex-row gap-4 justify-center">
+              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-cyan-600text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
+                  className="bg-cyan-600text-whitepx-8py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
                 >
                   Contact Us
                 </a>
                 <a
                   href="/consultation"
-                  className="bg-purple-600text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  className="bg-purple-600text-whitepx-8py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                 >
                   Free Consultation
                 </a>

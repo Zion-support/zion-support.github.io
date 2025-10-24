@@ -10,17 +10,17 @@ const PageBackupPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+      
     {icon: BarChart},
     {
     icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+      
     {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
+      
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
@@ -30,17 +30,17 @@ return(<>)
         <meta />
       </Helmet>
       <Navigation />
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
         {/* Hero Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+      
     {
     icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
+      
     {
     icon: TrendingUp,
       title: 'Growth Optimization',
@@ -54,26 +54,26 @@ return (
         <meta>
       </Helmet>
       <Navigation />
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section$1>
         <div$2>
-          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relativemax-w-7xl mx-auto text-center">
-            <h1 className="text-5xlmd:text-7xl font-bold text-white mb-6 leading-tight">
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relativemax-w-7xl mx-autotext-center">
+            <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
               Page Backup
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="relativemax-w-7xl mx-auto text-center"></div>
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relativemax-w-7xl mx-autotext-center"></div>
             <h1>Page Backup;</h1>
             </h1>
             <p>Advanced page backup solutions powered by AI technology.</p>
             </p>
-            <div className="flexflex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
               </button>
               <button>Learn More,</button>
@@ -86,41 +86,40 @@ return (
         <section className="py-20px-4">
         </section>
         {/* Features Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
-        <section className="relativepy-20 px-4 overflow-hidden">
-          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relativemax-w-7xl mx-auto text-center">
-            <h1 className="text-5xlmd:text-7xl font-bold text-white mb-6 leading-tight">Page Backup
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
+        <section className="relativepy-20px-4overflow-hidden">
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relativemax-w-7xl mx-autotext-center">
+            <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">Page Backup
+            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
               Advanced page backup solutions powered by AI technology.
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
-              <button className="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
+            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
+              <button className="borderborder-purple-400text-purple-400hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
         {/* Features Section */}
         <section className="py-20px-4">
-          </section>< className="$2/>
-            <div className="text-center mb-16">
-              </div><h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2/><divclassName="text-center mb-16">
+              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2>Key Features;</h2>
               </h2>
               <p>Powerful AI technology that drives results;</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5backdrop-blur-smrounded-2xlp-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16h-16bg-gradient-to-brfrom-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
                     <feature />
-                  <h3 className="text-xlfont-bold text-white mb-4">{feature.title}</h3>
+                  <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}</h3>
                   <p className="text-gray-300mb-4">{feature.description</p>}</p>
                   {feature.benefits && (;
                     <ul>
@@ -138,22 +137,22 @@ return (
         </div>
       </section>
         {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">Key Features
-              <p className="text-xltext-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">Key Features
+              <p className="text-xltext-gray-300max-w-3xlmx-auto">Powerful AI technology that drives results
+            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8h-8 text-white" />
-                  <h3 className="text-xlfont-bold text-white mb-4">{feature.title}
+                <div key={index} className="bg-white/5backdrop-blur-smrounded-2xlp-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16h-16bg-gradient-to-brfrom-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8h-8text-white" />
+                  <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}
                   <p className="text-gray-300mb-4">{feature.description}
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flexitems-center text-sm text-gray-400">
-                          <CheckCircle className="w-4h-4 text-green-400 mr-2" />
+                        <li key={idx} className="flexitems-centertext-smtext-gray-400">
+                          <CheckCircle className="w-4h-4text-green-400mr-2" />
                           {benefit}
                       ))}
                     </ul>
@@ -162,9 +161,8 @@ return (
               ))}
         {/* CTA Section */}
         <section className="py-20px-4">
-          </section>< className="$2/>
-            <div className="text-center mb-16">
-              </div><h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2/><divclassName="text-center mb-16">
+              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
@@ -173,15 +171,15 @@ return (
         {/* CTA Section */}
         <section$1>
         <div$2>
-            <div className="bg-white/5backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
-          <div className="max-w-4xlmx-auto text-center"></div>
-            <div className="bg-white/5backdrop-blur-sm rounded-3xl p-12"></div>
+            <div className="bg-white/5backdrop-blur-smrounded-3xlp-12">
+              <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">
+          <div className="max-w-4xlmx-autotext-center"></div>
+            <div className="bg-white/5backdrop-blur-smrounded-3xlp-12"></div>
               <h2>Ready to Get Started?</h2>
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
-              <div className="flexflex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
                 <button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
@@ -190,7 +188,7 @@ return (
               <p></p>
                 Contact our experts to discuss your requirements and get started today.
               </p>
-              <div className="flexflex-col sm: flex-row gap-4 justify-center" / /></div>
+              <div className="flexflex-colsm:flex-row gap-4 justify-center" / /></div>
                 <button></button>
                   Contact Us
                 </button>

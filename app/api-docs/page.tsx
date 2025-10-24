@@ -78,59 +78,59 @@ export default function APIDocsPage() {
   })).filter(category => category.endpoints.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+      <div className="containermx-autopx-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">API Documentation</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <h1 className="text-5xlfont-boldtext-white mb-6">API Documentation</h1>
+          <p className="text-xltext-gray-300max-w-3xl mx-auto">
             Comprehensive API documentation for all our services. Get started with our powerful APIs today.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xlmx-auto">
           <div className="mb-8">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absoluteleft-3top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search APIs..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-fullpl-10pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
           </div>
 
           {filteredEndpoints.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-12">
-              <div className="flex items-center mb-6">
-                <category.icon className="w-8 h-8 text-purple-400 mr-3" />
+              <div className="flexitems-centermb-6">
+                <category.icon className="w-8h-8text-purple-400 mr-3" />
                 <div>
-                  <h2 className="text-2xl font-bold text-white">{category.title}</h2>
+                  <h2 className="text-2xlfont-boldtext-white">{category.title}</h2>
                   <p className="text-gray-400">{category.description}</p>
                 </div>
               </div>
 
               <div className="space-y-6">
                 {category.endpoints.map((endpoint, endpointIndex) => (
-                  <div key={endpointIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-3">
+                  <div key={endpointIndex} className="bg-slate-800/50backdrop-blur-smrounded-lg p-6 border border-slate-700">
+                    <div className="flexitems-centerjustify-between mb-4">
+                      <div className="flexitems-centerspace-x-3">
                         <span className={`px-2 py-1 rounded text-xs font-semibold ${
                           endpoint.method === 'POST' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
                         }`}>
                           {endpoint.method}
                         </span>
-                        <code className="text-cyan-400 font-mono">{endpoint.path}</code>
+                        <code className="text-cyan-400font-mono">{endpoint.path}</code>
                       </div>
                       <button
                         onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                        className="flex items-center space-x-2 px-3 py-1 bg-purple-600/20 text-purple-400 rounded hover:bg-purple-600/30 transition-colors"
+                        className="flexitems-centerspace-x-2 px-3 py-1 bg-purple-600/20 text-purple-400 rounded hover:bg-purple-600/30 transition-colors"
                       >
                         {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                          <Check className="w-4 h-4" />
+                          <Check className="w-4h-4" />
                         ) : (
-                          <Copy className="w-4 h-4" />
+                          <Copy className="w-4h-4" />
                         )}
                         <span className="text-sm">
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? 'Copied!' : 'Copy'}
@@ -138,10 +138,10 @@ export default function APIDocsPage() {
                       </button>
                     </div>
 
-                    <p className="text-gray-300 mb-4">{endpoint.description}</p>
+                    <p className="text-gray-300mb-4">{endpoint.description}</p>
 
-                    <div className="bg-slate-900/50 rounded-lg p-4 overflow-x-auto">
-                      <pre className="text-sm text-gray-300 whitespace-pre-wrap">{endpoint.code}</pre>
+                    <div className="bg-slate-900/50rounded-lgp-4 overflow-x-auto">
+                      <pre className="text-smtext-gray-300whitespace-pre-wrap">{endpoint.code}</pre>
                     </div>
                   </div>
                 ))}

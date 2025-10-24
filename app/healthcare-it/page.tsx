@@ -13,30 +13,30 @@ export default function HealthcareITPage() {
 icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
-      benefits: ['Automated compliance', 'Audit trails', 'Risk management']},
+      
     {icon: Zap,
       title: 'Patient Data Security',
       description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
-      benefits: ['Data encryption', 'Access controls', 'Security monitoring']},
+      
     {icon: Clock,
       title: '24/7 System Monitoring',
       description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
-      benefits: ['Always-on monitoring', 'Instant alerts', 'System health']},
+      
     {icon: Users,
       title: 'Interoperability',
       description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',
-      benefits: ['EHR integration', 'Device connectivity', 'Data exchange']},
+      
     {icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
-      benefits: ['Threat detection', 'Incident response', 'Security training']},
+      
     {icon: BarChart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']}]
-return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>)
+return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-red-900 to-slate-900"></div>)
 return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
+    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-red-900 to-slate-900"></div>
       <SEOOptimizer>
       <Navigation />
       {/* Hero Section */} <section className="py-20px-4">
@@ -48,9 +48,9 @@ return (
           </div>
         </div>
       </section>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7xl mx-auto text-center"></div>
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)]animate-pulse" /></div>
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relativemax-w-7xl mx-autotext-center"></div>
           <h1>Healthcare;</h1>
             <span>IT Solutions;</span>
             </span>
@@ -66,9 +66,9 @@ return (
         </div>
       </section>
 {/* Features Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
   ];
 
   const stats = [
@@ -78,22 +78,22 @@ return (
     { number: '24/7', label: 'Support Available', icon: Heart }
   ];
   return (
-<div className="min-h-screenbg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
+<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-red-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="relativepy-20 px-4 overflow-hidden">
-  return (<div className="min-h-screenbg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+      </Navigation><section className="relativepy-20px-4overflow-hidden">
+  return (<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-red-900 to-slate-900">
       <Navigation />)
       {/* Hero Section */})
-      <section className="relativepy-20 px-4 overflow-hidden">)
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relativemax-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xlmd:text-7xl font-bold text-white mb-6 leading-tight">Healthcare<span className="blockbg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></section>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+      <section className="relativepy-20px-4overflow-hidden">)
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)]animate-pulse" /></div>
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relativemax-w-7xl mx-autotext-center"></div>
+          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">Healthcare<span className="blockbg-gradient-to-rfrom-red-400via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)]animate-pulse" /></section>
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
 
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-red-900 to-slate-900">
       <SEOOptimizer 
         title="Healthcare IT Solutions - Zion Tech Group"
         description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations."
@@ -103,22 +103,22 @@ return (
       {/* Hero Section */}
       <section$1>
         <div$2>
-        <div className="absoluteinset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relativemax-w-7xl mx-auto text-center">
-          <h1 className="text-5xlmd:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relativemax-w-7xl mx-autotext-center">
+          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
             Healthcare
-            <span className="blockbg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">IT Solutions
-          <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <span className="blockbg-gradient-to-rfrom-red-400via-pink-400 to-purple-400 bg-clip-text text-transparent">IT Solutions
+          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
             Protect patient data while improving operational efficiency.
           </p>
           
-          <div className="flexflex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-rfrom-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
+          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <button className="bg-gradient-to-rfrom-red-500to-pink-600hover:from-red-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
               Get Started
-              <ArrowRight className="inline-blockml-2 w-5 h-5" />
+              <ArrowRight className="inline-blockml-2w-5h-5" />
             </button>
-            <button className="borderborder-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="borderborder-red-400text-red-400hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
 </div>
@@ -128,14 +128,14 @@ return (
 {/* Features Section */}
       <section className="py-20px-4">
 
-        <div className="max-w-7xlmx-auto">
-          <div className="gridgrid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="gridgrid-cols-2md:grid-cols-4gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flexitems-center justify-center w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mb-4">
-                  <stat.icon className="w-8h-8 text-white" />
+                <div className="inline-flexitems-centerjustify-centerw-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mb-4">
+                  <stat.icon className="w-8h-8text-white" />
                 </div>
-                <div className="text-3xlfont-bold text-white mb-2">{stat.number}</div>
+                <div className="text-3xlfont-boldtext-whitemb-2">{stat.number}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </div>
             ))}
@@ -145,27 +145,27 @@ return (
 
       {/* Features Grid */}
       <section className="py-16px-4">
-        <div className="max-w-7xlmx-auto">
-<h2 className="text-4xlfont-bold text-white mb-12 text-center">Our Healthcare IT Solutions</h2>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto">
+<h2 className="text-4xl font-boldtext-whitemb-12 text-center">Our Healthcare IT Solutions</h2>
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-300 group">
-                <div className="w-16h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-8h-8 text-white" />
+              <div key={index} className="bg-white/5backdrop-blur-smrounded-2xlp-8 border border-white/10 hover:border-red-500/50 transition-all duration-300 group">
+                <div className="w-16h-16bg-gradient-to-rfrom-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <feature.icon className="w-8h-8text-white" />
                 </div>
                 
-                <h3 className="text-2xlfont-bold text-white mb-4 group-hover:text-red-400 transition-colors">
+                <h3 className="text-2xlfont-boldtext-whitemb-4 group-hover:text-red-400 transition-colors">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-300mb-6 leading-relaxed">
+                <p className="text-gray-300mb-6leading-relaxed">
                   {feature.description}
                 </p>
                 
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flexitems-center gap-2 text-gray-300 text-sm">
-                      <CheckCircle className="w-4h-4 text-green-400 flex-shrink-0" />
+                    <li key={benefitIndex} className="flexitems-centergap-2text-gray-300 text-sm">
+                      <CheckCircle className="w-4h-4text-green-400flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -179,16 +179,16 @@ return (
 
       {/* Services Section */}
       <section className="py-20px-4">
-        <div className="max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xlfont-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-boldtext-whitemb-4">
               Healthcare Services
             </h2>
-            <h2 className="text-4xlfont-bold text-white mb-4">Healthcare Services</h2>
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-boldtext-whitemb-4">Healthcare Services</h2>
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               Comprehensive healthcare technology solutions for every medical need
         </section>
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
@@ -196,10 +196,10 @@ return (
             <p>Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+            {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
                 <div className="text-4xlmb-4">{service.icon</div>}</div>
-                <h3 className="text-xlfont-semibold text-white mb-3">{service.title}</h3>
+                <h3 className="text-xlfont-semiboldtext-whitemb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description</p>}</p>
               </div>
             ))}
@@ -207,14 +207,14 @@ return (
         </div>
       </section>
       {/* Benefits Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
             <p></p>
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8" / /></div>
             {
     services.map((service, index) => ()
             ))}
@@ -225,25 +225,25 @@ return (
       {/* Benefits Section */}
       <section$1>
         <div$2>
-          <div className="text-centermb-16">
-            <h2 className="text-4xlfont-bold text-white mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-boldtext-whitemb-4">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2>Why Choose Our Healthcare IT Solutions?</h2>
             </h2>
             <p>Experience the benefits of modern healthcare technology with our proven solutions.</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>,
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6"></div>,
             {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
-                <div className="w-16h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
+                <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center"></div>
+                <div className="w-16h-16bg-gradient-to-rfrom-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                   <CheckCircle />
-                <h3 className="text-lgfont-semibold text-white">{benefit}</h3>
+                <h3 className="text-lgfont-semiboldtext-white">{benefit}</h3>
               </div>
               Why Choose Our Healthcare IT Solutions?
             </h2>
@@ -252,13 +252,13 @@ return (
             </p>
           </div>
           
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8h-8 text-white" />
+              <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center">
+                <div className="w-16h-16bg-gradient-to-rfrom-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8h-8text-white" />
                 </div>
-                <h3 className="text-lgfont-semibold text-white">{benefit}</h3>
+                <h3 className="text-lgfont-semiboldtext-white">{benefit}</h3>
 
               </div>
             ))}
@@ -269,30 +269,29 @@ return (
       {/* CTA Section */}
 <section className="py-20px-4">
 
-        <div className="max-w-4xlmx-auto text-center">
-          <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
+        <div className="max-w-4xlmx-autotext-center">
+          <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">
             Ready to Transform Your Healthcare IT?
           </h2>
-          <p className="text-xltext-red-100 mb-8">
+          <p className="text-xltext-red-100mb-8">
             Let's discuss how our healthcare IT solutions can improve your operations and patient care.
           </p>
-          <div className="flexflex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-whitetext-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <button className="bg-whitetext-red-600px-8py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Schedule Consultation
             </button>
-            <button className="border-2border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
+            <button className="border-2border-whitetext-whitepx-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
               View Case Studies
       {/* CTA Section */}
 <section className="py-20px-4">
-          </section>< className="$2/>
-            <div className="text-center mb-16">
-              </div><h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2/><divclassName="text-center mb-16">
+              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
             </button>
-            <button className="borderborder-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="borderborder-whitetext-whitehover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
             <button>View Case Studies;</button>
             </button>
@@ -302,7 +301,7 @@ return (
       <Footer / /></Footer>
   )
 }
-            <button className="border-2border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">View Case Studies
+            <button className="border-2border-whitetext-whitepx-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">View Case Studies
       <Footer />
   )
 }</div></div></div></div></div></div></span></button></button></p></p></p></p></h1></h2></h3></h3></section></section></section></section>

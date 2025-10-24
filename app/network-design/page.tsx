@@ -34,23 +34,23 @@ const benefits = [
     'Cost-effective pricing plans',
 
       {/* Hero Section */}
-      <section className="relativepy-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xlmx-auto">
+      <section className="relativepy-20px-4sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-4xlmd:text-6xlfont-boldtext-white mb-6">
+              <span className="bg-gradient-to-rfrom-purple-400to-blue-400bg-clip-text text-transparent">
                 Page
               </span>
               <br />
               <span className="text-white">Solutions</span>
     'Proven track record of success'
   ]
-return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>)
       <Helmet><title>Page | Zion Tech Group</title>
     'Proven track record of success'
   ]
 return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
       <Helmet>
         </Helmet><title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -60,12 +60,12 @@ return (
             <p>Transform your business with our advanced page solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <button className="bg-gradient-to-rfrom-purple-500to-blue-600text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5 w-5" />
+                <ArrowRight className="ml-2h-5w-5" />
               </button>
-              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="borderborder-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -73,49 +73,48 @@ return (
         </div>
       </section>
       {/* Features Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
             <p>
               Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
       {/* Features Section */}
       <section className="py-20px-4">
-          </section>< className="$2/>
-            <div className="text-center mb-16">
-              </div><h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2/><divclassName="text-center mb-16">
+              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2>Why Choose Our Page?,</h2>
             </h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
             {features.map((feature, index) => (
-                <div key={index}className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
-                <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature />
-                <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
       <section$1>
         <div$2>
-          <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
               Why Choose Our Page?
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6w-6 text-white" />
-                <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}
+              <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6w-6text-white" />
+                <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}
                 <p className="text-gray-300">{feature.description}
             ))}
           </div>
@@ -130,29 +129,29 @@ return (
           </div>
         </div>
       </section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
             </h2>
             <p>Experience the power of our page solutions for your business.,</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 gap-6"></div>,
+          <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
             {benefits.map((benefit, index) => (
-                <div key={index}className="flexitems-start space-x-3"></div>
+                <div key={index}className="flexitems-startspace-x-3"></div>
                 <CheckCircle />
                 <p className="text-gray-300text-lg">{benefit</p>}</p>
               </div>
       <section$1>
         <div$2>
-          <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">Key Benefits
+            <p className="text-xltext-gray-300max-w-3xlmx-auto">
               Experience the power of our page solutions for your business.
-          <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
+          <div className="gridgrid-cols-1md:grid-cols-2gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-start space-x-3">
-                <CheckCircle className="h-6w-6 text-purple-400 mt-1 flex-shrink-0" />
+              <div key={index} className="flexitems-startspace-x-3">
+                <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
                 <p className="text-gray-300text-lg">{benefit}</p>
               ))
             ))}
@@ -160,19 +159,19 @@ return (
         </div>
       </section>
       {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xlfont-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
       <section$1>
         <div$2>
-          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
       </section>
-        <div className="max-w-4xlmx-auto text-center"></div>
-          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+        <div className="max-w-4xlmx-autotext-center"></div>
+          <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md: p-12"></div>,
             <h2>Ready to Get Started?</h2>
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
@@ -181,7 +180,7 @@ return (
             <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flexflex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
               <button>
                 <Phone>
                 Call Now;
