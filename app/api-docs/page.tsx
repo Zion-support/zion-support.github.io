@@ -1,82 +1,265 @@
 'use client';
-
 import React, { useState } from 'react';
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/AdvancedSEOOptimizer';
 
 export default function APIDocsPage() {
-  const [_copiedCode, _setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, _setSearchQuery] = useState('');
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
+  const copyToClipboard = (code: string, id: string) => {
+    navigator.clipboard.writeText(code);
+    setCopiedCode(id);
+    setTimeout(() => setCopiedCode(null), 2000);
+  };
 
   const apiEndpoints = [
     {
-      name: 'AI Chat',
-      method: 'POST',
-      path: '/api/ai/chat',
-      description: 'AI-powered chat completion',
-      parameters: ['message', 'model', 'temperature'],
-      example: {
-        request: {
-          message: "Hello, how can I help you?",
-          model: "gpt-4",
-          temperature: 0.7
+      title: 'AI Services',
+      description: 'Artificial Intelligence and Machine Learning APIs',
+      icon: Brain,
+      endpoints: [
+        {
+          name: 'Text Analysis',
+          method: 'POST',
+          path: '/api/ai/text-analysis',
+          description: 'Analyze text sentiment, entities, and key phrases',
+          code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "text": "Your text to analyze",
+    "features": ["sentiment", "entities", "key_phrases"]
+  }'`
         },
-        response: {
-          response: "Hello! I'm here to help you with any questions or tasks you might have.",
-          confidence: 0.95,
-          tokens_used: 25
+        {
+          name: 'Image Recognition',
+          method: 'POST',
+          path: '/api/ai/image-recognition',
+          description: 'Identify objects, faces, and scenes in images',
+          code: `curl -X POST "https://api.ziontechgroup.com/ai/image-recognition" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "image_url": "https://example.com/image.jpg",
+    "features": ["objects", "faces", "text"]
+  }'`
         }
-      }
+      ]
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and deployment APIs',
+      icon: Cloud,
+      endpoints: [
+        {
+          name: 'Deploy Application',
+          method: 'POST',
+          path: '/api/cloud/deploy',
+          description: 'Deploy applications to cloud infrastructure',
+          code: `curl -X POST "https://api.ziontechgroup.com/cloud/deploy" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "app_name": "my-app",
+    "environment": "production",
+    "config": {
+      "cpu": "2",
+      "memory": "4GB",
+      "instances": 3
+    }
+  }'`
+        }
+      ]
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Data processing and analytics APIs',
+      icon: Database,
+      endpoints: [
+        {
+          name: 'Process Data',
+          method: 'POST',
+          path: '/api/analytics/process',
+          description: 'Process and analyze large datasets',
+          code: `curl -X POST "https://api.ziontechgroup.com/analytics/process" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "dataset_id": "dataset_123",
+    "operations": ["aggregate", "filter", "transform"],
+    "output_format": "json"
+  }'`
+        }
+      ]
     }
   ];
 
-  const filteredEndpoints = apiEndpoints.filter(endpoint =>
-    endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredEndpoints = apiEndpoints.map(category => ({
+    ...category,
+    endpoints: category.endpoints.filter(endpoint =>
+      endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.endpoints.length > 0);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
-        title="API Documentation - Zion Tech Group"
-        description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
-        keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
-      />
       <Navigation />
       
-      <main className="pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              API Documentation
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete API documentation for Zion Tech Group's AI and IT solutions.
-            </p>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            API
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Documentation
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Integrate with our powerful AI and IT solutions through our comprehensive REST API. 
+            Build amazing applications with our developer-friendly endpoints.
+          </p>
+          
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search API endpoints..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="max-w-4xl mx-auto">
-            {filteredEndpoints.map((endpoint, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 mb-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-white">{endpoint.name}</h3>
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {endpoint.method}
-                  </span>
+      {/* Quick Start */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <Key className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
+              <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
+              <button className="text-purple-400 hover:text-purple-300 font-medium">
+                Get API Key →
+              </button>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <Code className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
+              <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
+              <button className="text-purple-400 hover:text-purple-300 font-medium">
+                View Examples →
+              </button>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
+              <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
+              <button className="text-purple-400 hover:text-purple-300 font-medium">
+                Start Building →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* API Endpoints */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
+          <div className="space-y-8">
+            {filteredEndpoints.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <category.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
+                    <p className="text-gray-300">{category.description}</p>
+                  </div>
                 </div>
-                <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                <code className="bg-gray-800 text-green-400 px-3 py-2 rounded text-sm">
-                  {endpoint.path}
-                </code>
+                <div className="space-y-6">
+                  {category.endpoints.map((endpoint, endpointIndex) => (
+                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-4">
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                            endpoint.method === 'POST' 
+                              ? 'bg-green-500/20 text-green-400' 
+                              : 'bg-blue-500/20 text-blue-400'
+                          }`}>{endpoint.method}</span>
+                          <code className="text-purple-400 font-mono">{endpoint.path}</code>
+                        </div>
+                        <button
+                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
+                            <>
+                              <Check className="w-4 h-4" />
+                              Copied!
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-4 h-4" />
+                              Copy
+                            </>
+                          )}
+                        </button>
+                      </div>
+                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
+                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
+                        <pre className="text-gray-300 text-sm">
+                          <code>{endpoint.code}</code>
+                        </pre>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </main>
+      </section>
 
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Start building with our APIs today and create amazing applications.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+              Get API Key
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+              View SDKs
+            </button>
+          </div>
+        </div>
+      </section>
+      
       <Footer />
     </div>
   );

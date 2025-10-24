@@ -1,8 +1,8 @@
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Shield, Target, Globe } from 'lucide-react';
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Target, Shield, Globe, Users } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -18,10 +18,15 @@ const AboutPage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Excellence',
-      description: 'We strive for perfection in every project, ensuring the highest quality standards.'
+      title: 'Global Reach',
+      description: 'Serving clients worldwide with localized support and expertise.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients to understand their unique needs.'
     }
-  ]
+  ];
 
   return (
     <>
@@ -66,7 +71,7 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {values.map((value, index) => (
                   <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center">
                     <value.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -86,7 +91,7 @@ const AboutPage: React.FC = () => {
       
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

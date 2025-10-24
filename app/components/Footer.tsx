@@ -1,9 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
@@ -14,7 +15,7 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
     { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
-  ]
+  ];
 
   const itServices = [
     { name: 'Web Development', url: '/web-development', description: 'Custom websites' },
@@ -25,7 +26,7 @@ const Footer: React.FC = () => {
     { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' },
     { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
     { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
-  ]
+  ];
 
   const company = [
     { name: 'About Us', url: '/about' },
@@ -33,7 +34,7 @@ const Footer: React.FC = () => {
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
-  ]
+  ];
 
   const resources = [
     { name: 'Documentation', url: '/docs' },
@@ -41,14 +42,14 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Blog', url: '/blog' },
     { name: 'Support', url: '/support' }
-  ]
+  ];
 
   const legal = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' }
-  ]
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -202,7 +203,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

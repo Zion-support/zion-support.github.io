@@ -1,24 +1,39 @@
-'use client'
-import React, { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
-import { ChevronDown, Menu, X, Cloud, BarChart, Smartphone, Lock, Settings, MessageCircle, Mic, Eye, Zap, TrendingUp, Globe } from 'lucide-react';
+'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import { 
+  ChevronDown, 
+  Menu, 
+  X, 
+  Cloud, 
+  BarChart, 
+  Zap, 
+  Globe, 
+  Smartphone, 
+  Lock, 
+  TrendingUp, 
+  Settings, 
+  MessageCircle, 
+  Mic, 
+  Eye
+} from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const closeAllMenus = useCallback(() => {
-    setIsOpen(false)
-  }, [])
+    setIsOpen(false);
+  }, []);
 
   // Service data
   const aiServices = [
@@ -28,7 +43,7 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image recognition' },
     { name: 'Predictive Analytics', href: '/ai-predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
     { name: 'Voice AI', href: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
-  ]
+  ];
 
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/cloud-architecture', icon: Cloud, description: 'Scalable cloud solutions' },
@@ -37,7 +52,7 @@ const Navigation: React.FC = () => {
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
     { name: 'DevOps', href: '/devops', icon: Settings, description: 'Development operations' },
     { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Data insights' }
-  ]
+  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -175,7 +190,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
