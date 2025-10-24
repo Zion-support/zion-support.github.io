@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Briefcase } from 'lucide-react';
+import { MapPin, Clock, Users, Briefcase, Star } from 'lucide-react';
 
 interface JobPosition {
   // Add properties here
@@ -258,7 +258,7 @@ import { Right, Circle, Star} from 'lucide-react'
                 {departments.map((dept) => ()
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
+Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
 Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
           {/* Why Work With Us */}
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16&quot;></div>

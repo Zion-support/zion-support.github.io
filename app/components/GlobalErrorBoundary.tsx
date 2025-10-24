@@ -1,21 +1,13 @@
-"use client";
-import React from 'react';
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
+    }
+  ]
 
-interface GlobalErrorBoundaryProps {
-  className?: string;
-}
-
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '' }) => {
-  return (
-    <div className={`p-4 ${className}`}>
-      <h2 className="text-xl font-semibold text-gray-800">
-        GlobalErrorBoundary
-      </h2>
-      <p className="text-gray-600">
-        This component is under construction.
-      </p>
-    </div>
-  );
-};
-
-export default GlobalErrorBoundary;
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </div>
+          </div>

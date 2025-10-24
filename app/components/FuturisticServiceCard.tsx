@@ -1,21 +1,16 @@
-"use client";
-import React from 'react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
-interface FuturisticServiceCardProps {
-  className?: string;
-}
-
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ className = '' }) => {
-  return (
-    <div className={`p-4 ${className}`}>
-      <h2 className="text-xl font-semibold text-gray-800">
-        FuturisticServiceCard
-      </h2>
-      <p className="text-gray-600">
-        This component is under construction.
-      </p>
-    </div>
-  );
-};
-
-export default FuturisticServiceCard;
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '2 4/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
