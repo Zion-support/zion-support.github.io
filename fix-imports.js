@@ -1,5 +1,4 @@
-const fs = require('fs');
-const path = require('path');
+import React from 'react';
 
 // Function to fix import statements
 function fixImports(content) {

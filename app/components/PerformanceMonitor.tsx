@@ -20,7 +20,7 @@ const PerformanceMonitor: React.FC = () => {
           event_category: 'Web Vitals',
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
+          non_interaction: true
         });
       }
       
@@ -45,7 +45,7 @@ const PerformanceMonitor: React.FC = () => {
         onINP(sendToAnalytics);
       }).catch((error) => {
         if (process.env.NODE_ENV === 'development') {
-          console.warn('Failed to load web-vitals:', error);
+          console.warn('Failed to load web-vitals: ', error);
         }
       });
     }

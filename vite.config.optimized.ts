@@ -1,4 +1,4 @@
-// Vite configuration for optimization
+// Vite configuration for optimization()
 export default {
-  // Add Vite configuration here
+  // Add Vite configuration here()
 }
