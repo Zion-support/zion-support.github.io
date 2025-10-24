@@ -31,6 +31,7 @@ const PerformanceMonitorPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
+<<<<<<< HEAD
   ]
   const benefits = [
   'Increase efficiency by up to 50%',
@@ -39,6 +40,71 @@ const PerformanceMonitorPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+=======
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
+  enabled?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  enabled = true
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined' || !enabled) return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    
+    const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+    const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+    
+    // These would need to be measured with specific APIs
+    const firstInputDelay = 0; // Would need to measure with PerformanceObserver
+    const cumulativeLayoutShift = 0; // Would need to measure with PerformanceObserver
+    const timeToInteractive = navigation.domContentLoadedEventEnd - navigation.navigationStart;
+
+    const performanceMetrics: PerformanceMetrics = {
+      loadTime,
+      firstContentfulPaint,
+      largestContentfulPaint,
+      firstInputDelay,
+      cumulativeLayoutShift,
+      timeToInteractive
+    };
+
+    setMetrics(performanceMetrics);
+    onMetricsUpdate?.(performanceMetrics);
+  }, [onMetricsUpdate, enabled]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+      return () => window.removeEventListener('load', measurePerformance);
+    }
+  }, [measurePerformance]);
+
+  // Log performance metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && metrics) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  if (!enabled || !metrics) {
+    return null;
+  }
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d47f
   return (
     <>
       <Helmet>
