@@ -7,16 +7,16 @@ interface BreadcrumbItem {
   name: string
   path: string}
   icon?: React.ComponentType<{ className?: string }>
-}
+};
 
 const Breadcrumb: React.FC = () => {;
   const location = useLocation();
 
   if (location.pathname === '/') {
     return null
-  }
+  };
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   const breadcrumbItems: BreadcrumbItem[] = [;
     { nam
   e: 'Home', path: '/', icon: Home }

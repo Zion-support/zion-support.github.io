@@ -27,14 +27,15 @@ const Analytics: React.FC = () => {
   return (
     null
   ); // Analytics component doesn&apos;t render anything
-}
+};
 
 export default Analytics
 :all-pages-backup/components/Analytics.tsx
 {};
 
 export default AnalyticsPage
-}
+};
+
 export default AnalyticsPage
 }
 }

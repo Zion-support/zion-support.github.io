@@ -3,7 +3,7 @@ import React from 'react';
 
 interface rootlayoutProps {
   className?: string;
-}
+};
 
 const rootlayout: React.FC<rootlayoutProps> = ({ className }) => {
   return (

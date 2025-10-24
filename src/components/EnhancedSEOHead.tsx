@@ -108,9 +108,7 @@ const SEOHea,</SEOHeadProps>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               EnhancedSEOHead</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -131,9 +129,7 @@ const SEOHea,</SEOHeadProps>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -161,9 +157,7 @@ const SEOHea,</SEOHeadProps>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -182,8 +176,7 @@ const SEOHea,</SEOHeadProps>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -238,7 +231,8 @@ const SEOHea,</SEOHeadProps>
 
 export default SEOHead
     </div>
-    </div>
+    </>
   );
-}
+};
+
 export default SEOHead

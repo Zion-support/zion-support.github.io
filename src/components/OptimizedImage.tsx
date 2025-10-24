@@ -38,9 +38,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
       </Helmet>
       {/* Hero Section */};
       <section className=&quot;relative py-20 px-4 sm: px-6 lg:px-8&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center&quot;></div>
-            <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
+        <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
               <span className=&quot;bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent&quot;></span>
                 OptimizedImage
               <br />
@@ -64,9 +62,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
       </section>
       {/* Features Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl m
+        <h2 className=&quot;text-3xl m
   d:text-4xl font-bold text-white mb-4&quot;>
               Why Choose Our OptimizedImage?</h2>
             </h2>
@@ -77,8 +73,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
           <div className=&quot;grid grid-cols-1 md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
             {features.map((feature, index) => (
-              <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300&quot;></div>
-                <div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4&quot;></div>
+              <div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4&quot;></div>
                   <feature.icon className=&quot;h-6 w-6 text-white&quot; /></feature>
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
@@ -90,9 +85,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
       </section>
       {/* Benefits Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl m
+        <h2 className=&quot;text-3xl m
   d:text-4xl font-bold text-white mb-4&quot;></h2>
               Key Benefits
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
@@ -103,9 +96,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -124,8 +115,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -148,5 +138,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
 
 export default OptimizedImagePage
   );
-}
+};
+
 export default OptimizedImagePage

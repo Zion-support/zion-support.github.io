@@ -14,14 +14,11 @@ const ServiceTemplat
   features}
 }) => {
   return (</ServiceTemplateProps>
-    <div className="min-h-screen bg-gray-50 py-12"></div>
-      <div className="max-w-4xl mx-auto px-4"></div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+    <h1 className="text-3xl font-bold text-gray-900 mb-8">
           {title};</h1>
         </h1>
         
-        <div className="bg-white rounded-lg shadow p-6"></div>
-          <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6">
             {description}</p>
           </p>
           
@@ -36,5 +33,6 @@ const ServiceTemplat
             ))}
           </div>
         </div>
-      </div>}
+      </div>};
+
 export default ServiceTemplate;)

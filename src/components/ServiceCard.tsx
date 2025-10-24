@@ -101,9 +101,7 @@ const ServiceCardPage: React.FC = () => {
     </div>
     </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               ServiceCard</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -124,9 +122,7 @@ const ServiceCardPage: React.FC = () => {
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -154,9 +150,7 @@ const ServiceCardPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -175,8 +169,7 @@ const ServiceCardPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -199,7 +192,8 @@ const ServiceCardPage: React.FC = () => {
 
 export default ServiceCardPage
   );
-}
+};
+
 export default ServiceCardPage
 price?: string
 popular?: boolean
@@ -218,12 +212,9 @@ return (</ServiceCardProp>
 <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${></div>
 popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''</div>
 }`}>{popular && (</div>;
-<div className=&quot;flex items-center gap-2 mb-4&quot;></div>
-<div className=&quot;w-2 h-2 bg-purple-400 rounded-full&quot;></div>
 <span className=&quot;text-purple-400 text-sm font-semibold&quot;>Most Popular</span>
 </div>
 )}
-<div className=&quot;mb-4&quot;></div>
 <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors&quot;>$3</h3>
 <p className=&quot;text-gray-300 text-sm&quot;>{description}</p>
 </div>
@@ -235,11 +226,10 @@ popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''</div>
 ))}
 </div>
 {price && (
-<div className=&quot;mb-6&quot;></div>
 <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{price}</div>
 <div className=&quot;text-gray-400 text-sm&quot;>per month</div>
-</div>
-)}
+    </>
+  )}
 {onSelect && (
 <button onClick = {onSelect};></button>
 className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group&quot;></button>
@@ -250,5 +240,6 @@ Get Started
 )}
 </div>
 )
-{}
+{};
+
 export default ServiceCard

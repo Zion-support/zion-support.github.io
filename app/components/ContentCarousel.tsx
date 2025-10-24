@@ -91,9 +91,7 @@ const ContentCarousel: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               ContentCarousel
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -112,9 +110,7 @@ const ContentCarousel: React.FC = () => {
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
@@ -140,23 +136,16 @@ const ContentCarousel: React.FC = () => {
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
         
-        <div className="relative"></div>
-<div className="overflow-hidden rounded-xl"></div>
-            <div
+        <div
               className="flex transition-transform duration-500 ease-in-out&quot
               style={{ transform: `translateX(-${currentSlide * 100}%)`}
             >{slides.map((slide, index) => (
-<div key={index} className="w-full flex-shrink-0"></div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8"></div>
-                    <div className="text-center mb-8"></div>
-                      <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+<div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                         <slide.icon className="h-10 w-10 text-white" />
                       
                       <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
@@ -168,8 +157,7 @@ const ContentCarousel: React.FC = () => {
                           <span className="text-purple-100">{feature}</span>
                         
                       
-                      <div className="flex-1"></div>
-                        <h3 className="text-2xl font-boldtext-gray-900mb-4">{slide.title}</h3>
+                      <h3 className="text-2xl font-boldtext-gray-900mb-4">{slide.title}</h3>
                         <p className="text-gray-600mb-6">
             {slide.description}
           </p>
@@ -186,26 +174,20 @@ const ContentCarousel: React.FC = () => {
                   
                 
               ))}
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
-      <div className="max-w-7xl mx-auto">{/* Header */}
-        <div className="text-center mb-16"></div>
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
+    <div className="max-w-7xl mx-auto">{/* Header */}
+        <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
             Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
         
         {/* Carousel Container */}
         {/* Carousel */}
-        <div className="relative"></div>
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md: p-12 overflow-hidden"></div>
-            <div className="flex items-center justify-between mb-8"></div>
-              <div className="flex items-center gap-4"></div>
+        <div className="flex items-center gap-4"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center"></div>
                   <currentSlideData.icon className="w-8 h-8 text-slate-900" />
                 
                 {/* Features */}
-                <div className="space-y-4"></div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Key Features: </h4>
+                <h4 className="text-lg font-semibold text-white mb-4">Key Features: </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{currentSlideData.features.map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3"></div>
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -217,11 +199,10 @@ const ContentCarousel: React.FC = () => {
                 {/* Stats */}
                 {currentSlideData.stats && (
                   <div className="grid grid-cols-3 gap-6">{currentSlideData.stats.map((stat, index) => (</div>
-                      <div key={index} className="text-center"></div>
-                        <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
-                      </div>
-                    ))}
+    </>
+  ))}
                   </div>
                 )}
                 {/* CTA */}
@@ -235,10 +216,7 @@ const ContentCarousel: React.FC = () => {
                 </div>
               </div>
               {/* Visual Element */}
-              <div className="relative"></div>
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center"></div>
-                  <div className="text-center"></div>
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center"></div>
+              <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center"></div>
                       <currentSlideData.icon className="w-16 h-16 text-white" />
                     </div>
                     <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}</div>div>
@@ -257,11 +235,10 @@ const ContentCarousel: React.FC = () => {
             {/* Stats */}
             {currentSlideData.stats && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">{currentSlideData.stats.map((stat, index) => (</div>
-                  <div key={index} className="text-center"></div>
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-400">{stat.label}</div>
-                  </div>
-                ))}
+    </>
+  ))}
               </div>
             )}
           </div>
@@ -288,12 +265,11 @@ const ContentCarousel: React.FC = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
-        <div className=quotrelative max-w-7xl mx-auto text-centerquot> </div></div>
+        </div>
           <h1 className=quottext-5xl md text-7xl font-bold text-white mb-6 leading-tightquot>
               ContentCarousel</h1>
             <pAdvanced ContentCarousel solution for modern businesses</p>
-            </p><div className=quotflex flex-col sm flex-row gap-4 justify-centerquot></div>
-              </div></div><button className=quotbg-emerald-600 hover bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-centerquot>
+            </p></div></div><button className=quotbg-emerald-600 hover bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-centerquot>
                 Get Started  <ArrowRight className=quotml-2 h-5 w-5quot />
               </button>
               <button className=quotborder border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200quot>
@@ -302,14 +278,13 @@ const ContentCarousel: React.FC = () => {
           </div>
         </section>
         / Features Section /
-        <section className=quotpy-20 px-4quot> </section><div className=quotmax-w-7xl mx-autoquot></div>
-        </div>
-        <div className=quottext-center mb-16quot> </div></div><h2 className=quottext-4xl font-bold text-white mb-4quot>Key Features</h2>
+        <section className=quotpy-20 px-4quot> </section></div>
+        </div><h2 className=quottext-4xl font-bold text-white mb-4quot>Key Features</h2>
               <pPowerful AI-driven features designed to transform your business operations</p>
             </p></div>
         <div className=quotgrid md grid-cols-2 lggrid-cols-4 gap-8quot></div>
               featuresmapfeature index => 
-                </div></div><><div key=index className=quotbg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20quot> </div></div><featureicon className=quoth-12 w-12 text-emerald-400 mb-4quot /> </feature><h3 className=quottext-xl font-semibold text-white mb-3quot>featuretitle</h3>
+                </div></div><></div><featureicon className=quoth-12 w-12 text-emerald-400 mb-4quot /> </feature><h3 className=quottext-xl font-semibold text-white mb-3quot>featuretitle</h3>
                   <p className=quottext-gray-300 mb-4quot>featuredescription</p></p>
                   <ul className=quotspace-y-2quot>featurebenefitsmapbenefit idx => 
                       </ul><li key=idx className=quotflex items-center text-sm text-gray-300quot> </li><CheckCircle className=quoth-4 w-4 text-emerald-400 mr-2 flex-shrink-0quot />benefit</CheckCircle></li>
@@ -321,28 +296,24 @@ const ContentCarousel: React.FC = () => {
           </div>
         </section>
         / Benefits Section /
-        <section className=quotpy-20 px-4 bg-white/5quot> </section><div className=quotmax-w-7xl mx-autoquot></div>
-        </div>
-        <div className=quottext-center mb-16quot> </div></div><h2 className=quottext-4xl font-bold text-white mb-4quot>Why Choose Our Solution</h2>
+        <section className=quotpy-20 px-4 bg-white/5quot> </section></div>
+        </div><h2 className=quottext-4xl font-bold text-white mb-4quot>Why Choose Our Solution</h2>
               <pExperience the benefits of cutting-edge AI technology</p>
         </p></div>
-        <div className=quotrelativequot></div>
         </div>
-        <divslidesmapslide index =></div></div>
-<><div key=index className=quotw-full flex-shrink-0quot></div>
         </div>
-        <div className=quotbg-white/10 backdrop-blur-sm rounded-xl p-8quot> </div></div>
-        <div className=quottext-center mb-8quot></div>
+<></div>
         </div>
-        <div className=quotbg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4quot> </div></div><slideicon className=quoth-10 w-10 text-whitequot /> </slide></div>
+        </div>
+        </div><slideicon className=quoth-10 w-10 text-whitequot /> </slide></div>
                       <h3 className=quottext-2xl font-bold mb-4quot>slidetitle</h3>
                       <p className=quottext-purple-100 text-lg max-w-2xl mx-autoquot>slidedescription</p></p>
                     </div>
                     <><div className=quotgrid grid-cols-1 mdgrid-cols-2 gap-4quot>slidefeaturesmapfeature featureIndex => </div></div>
-        <div key=featureIndex className=quotflex items-centerquot> </div></div><CheckCircle className=quoth-5 w-5 text-green-400 mr-3 flex-shrink-0quot /> </CheckCircle><span className=quottext-purple-100quot>feature</span>
+        </div><CheckCircle className=quoth-5 w-5 text-green-400 mr-3 flex-shrink-0quot /> </CheckCircle><span className=quottext-purple-100quot>feature</span>
                         </div>
                       </div>
-                      <><div className="flex-1"> </div></div><h3 className="text-2xl font-bold text-gray-900 mb-4">slidetitle</h3>
+                      <></div><h3 className="text-2xl font-bold text-gray-900 mb-4">slidetitle</h3>
                         <p className="text-gray-600 mb-6">slidedescription</p></p>
                         <ul className="space-y-2">slidefeaturesmapfeature index => 
                             </ul><li key=index className="flex items-center text-gray-700"> </li><CheckCircle className="h-5 w-5 text-green-500 mr-2" />feature</CheckCircle></li>
@@ -352,52 +323,44 @@ const ContentCarousel: React.FC = () => {
                     </div>
                   </div>
                 </div>
-        <div/ Header /</div></div>
-        <div className=quottext-center mb-16quot> </div></div><h2 className=quottext-3xl md text-4xl font-bold text-white mb-6quot>
+        </div><h2 className=quottext-3xl md text-4xl font-bold text-white mb-6quot>
             Discover Our </h2><span className=quottext-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400quot>Solutions</span>
           </h2>
           <p className=quottext-xl text-gray-300 max-w-3xl mx-autoquot>Explore our comprehensive suite of AI and IT solutions designed to transform your business</p></p>p>
         </div>
         / Carousel Container /
         / Carousel /
-        <><div className=quotrelativequot></div>
+        <></div>
+        </div></div>
         </div>
-        <div className=quotbg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md p-12 overflow-hiddenquot></div>
-            </div></div>
-        <div className=quotflex items-center justify-between mb-8quot></div>
-        </div>
-        <div className=quotflex items-center gap-4quot> </div></div><><div className=quotw-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-centerquot> </div></div><currentSlideDataicon className=quotw-8 h-8 text-slate-900quot /> </currentSlideData></div>
+        </div><></div><currentSlideDataicon className=quotw-8 h-8 text-slate-900quot /> </currentSlideData></div>
                 / Features /
-                <div className=quotspace-y-4quot> </div></div><h4 className=quottext-lg font-semibold text-white mb-4quot>Key Features </h4>
+                </div><h4 className=quottext-lg font-semibold text-white mb-4quot>Key Features </h4>
                   <div className=quotgrid grid-cols-1 smgrid-cols-2 gap-3quot>currentSlideDatafeaturesmapfeature index => </div></div>
-        <div key=index className=quotflex items-center space-x-3quot> </div></div><CheckCircle className=quotw-5 h-5 text-green-400 flex-shrink-0quot /> </CheckCircle><span className=quottext-gray-300quot>feature</span>
+        </div><CheckCircle className=quotw-5 h-5 text-green-400 flex-shrink-0quot /> </CheckCircle><span className=quottext-gray-300quot>feature</span>
                       </div>
                     
                   </div>
                 </div>
                 / Stats /
                 currentSlideDatastats  <><div className=quotgrid grid-cols-3 gap-6quot>currentSlideDatastatsmapstat index => </div></div>
-        <divstatvalue</div></div>
-                        </div>
+        </div>
         <div className=quottext-gray-400 text-smquot>statlabel</div></div>
                       </div>
                     
                   </div>
                 
                 / CTA /
-                <><div className=quotflex flex-col sm flex-row gap-4quot></div>
-                  </div></div><button className=quotinline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover from-purple-600 hoverto-blue-600 transition-all duration-300 transform hoverscale-105quot>
+                <></div></div><button className=quotinline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover from-purple-600 hoverto-blue-600 transition-all duration-300 transform hoverscale-105quot>
                     </button><Zap className=quotw-5 h-5quot />Get Started</Zap><button className=quotinline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover bg-white/20 transition-all duration-300quot>
                     </button><ArrowRight className=quotw-5 h-5quot />
                     Learn More</div>
               </div>
               / Visual Element /
-              <div className=quotrelativequot></div>
+              </div>
         </div>
-        <div className=quotaspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-centerquot> </div></div>
-        <div className=quottext-centerquot></div>
         </div>
-        <div className=quotw-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-centerquot> </div></div><currentSlideDataicon className=quotw-16 h-16 text-whitequot /> </currentSlideData></div>
+        </div><currentSlideDataicon className=quotw-16 h-16 text-whitequot /> </currentSlideData></div>
                     <><div className=quottext-4xl font-bold text-white mb-2quot>currentSlideDatatitle</div></div>div>
                     <div className=quottext-gray-300quot>Slide currentSlide  1 of slideslength</div></div>div>
                   </div>
@@ -405,14 +368,13 @@ const ContentCarousel: React.FC = () => {
               </div>
             </div>
         <div className=quotgrid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-6quot>currentSlideDatafeaturesmapfeature index => </div></div>
-                <><div key=index className=quotflex items-center gap-3quot> </div></div><CheckCircle className=quotw-5 h-5 text-cyan-400 flex-shrink-0quot /> </CheckCircle><span className=quottext-gray-300quot>feature</span>
+                <></div><CheckCircle className=quotw-5 h-5 text-cyan-400 flex-shrink-0quot /> </CheckCircle><span className=quottext-gray-300quot>feature</span>
                 </div>
               
             </div>
             / Stats /
             currentSlideDatastats  <div className=quotgrid grid-cols-1 mdgrid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700quot>currentSlideDatastatsmapstat index => </div></div>
-        <divstatvalue</div></div>
-                    </div>
+        </div>
         <div className=quottext-sm text-gray-400quot>statlabel</div></div>
                   </div>
                 
@@ -441,12 +403,9 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
         {/* Additional Info */}
-        <div className="mt-16 text-center"></div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
-            <div className="flex items-center justify-center gap-3 text-white"></div>
+        <div className="flex items-center justify-center gap-3 text-white"></div>
               <Star className="w-6 h-6 text-yellow-400" />
-              <div className="text-left"></div>
-                <div className="text-2xl font-bold">4.9/5</div>
+              <div className="text-2xl font-bold">4.9/5</div>
                 <div className="text-gray-400 text-sm">Customer Rating</div>
               </div>
             </div>
@@ -462,8 +421,7 @@ const ContentCarousel: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
@@ -487,7 +445,9 @@ const ContentCarousel: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </div>
-      </div>
+    </>
+  );
+};
 
 export default ContentCarousel }
 

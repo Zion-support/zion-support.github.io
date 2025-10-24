@@ -46,9 +46,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
       {/* Hero Section */}</div>
       <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"></h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"></h1>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
               Enhanced SEO Optimizer</span>
             </span>
@@ -71,9 +69,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our SEO Features</h2>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -83,8 +79,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (</div>
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4"></div>
+              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" /></feature>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
@@ -100,7 +95,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               </div>;
             ))};
           </div>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
         </div>
@@ -108,9 +102,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our SEO Optimizer?</h2>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -131,8 +123,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Ready to Boost Your SEO Rankings?</h2>
           </h2>
           <p className="text-xl text-gray-600 mb-8">
@@ -147,6 +138,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 
 export default EnhancedSEOOptimizerPage

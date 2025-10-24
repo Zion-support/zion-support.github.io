@@ -75,9 +75,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         {/* Hero Section */}
     </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               PerformanceMonitor</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -98,9 +96,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -128,9 +124,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -149,8 +143,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -173,7 +166,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
 export default PerformanceMonitorPage
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void
   enableRealTimeMonitoring?: boolean
-  logToConsole?: boolean}
+  logToConsole?: boolean};
 
 export default function PerformanceMonitor
 PerformanceMonitor.displayName = "PerformanceMonitor"({
@@ -301,8 +294,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   if (process.env.NODE_ENV=== 'development') {return (;</PerformanceMetrics>
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;><h3className=&quot;font-boldmb-2&quot;>PerformanceMetrics</h><divclassName=&quot;space-y-1&quot;><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
         </div>
-        </div>
-    )
+    </>
+  )
   }
 
   return nul l

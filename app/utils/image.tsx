@@ -5,7 +5,8 @@ interface ImageProps {
 
 
   src: string
-    alt: string}
+    alt: string};
+
 interface ImageProps {};
 src: string
     alt: string
@@ -36,7 +37,8 @@ fill?: boolean
 sizes?: string
 style?: React.CSSProperties
 onLoad?: () => void
-onError?: () => void;}
+onError?: () => void;};
+
 export const Image: React.FC<ImageProps>= ({}</ImageProps>
 export const Image: React.FC<ImageProps> = ({}
 src</ImageProps>
@@ -74,7 +76,8 @@ positio
   n: 'absolute'
     top: 0
 lef
-  t: 0}
+  t: 0};
+
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}

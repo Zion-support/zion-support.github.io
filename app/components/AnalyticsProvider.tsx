@@ -6,13 +6,15 @@ declare global {
 
 
     gtag: (...args: any[]) => void
-}
+};
+
 interface AnalyticsContextType {
 
 
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
   trackPageView: (pageName: string) => void
-}
+};
+
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 export const useAnalytics = () => {

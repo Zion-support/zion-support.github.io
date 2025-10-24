@@ -1,118 +1,207 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixJSXComprehensive(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix the main JSX structure issue - replace malformed return statements
-    content = content.replace(
-      /return \(\s*<div><\/div>\s*<Head>/g,
-      'return (\n    <div>\n      <Head>'
+// Function to fix JSX syntax issues comprehensively
+function fixJSXSyntax(content) {
+  let fixed = content;
+  
+  // 1. Fix malformed component declarations
+  fixed = fixed.replace(
+    /interface\s+(\w+)Props\s*{\s*([^}]*)\s*}\s*const\s+(\w+):\s*React\.FC<(\w+)Props>\s*=\s*\(\s*{\s*([^}]*)\s*}\s*\)\s*=>\s*{\s*return\s*\(\s*<\/\w+>/g,
+    'interface $1Props {\n  $2\n}\n\nconst $3: React.FC<$1Props> = ({ $5 }) => {\n  return (\n    <div>'
+  );
+  
+  // 2. Fix missing closing tags and fragments
+  fixed = fixed.replace(/<\/div>\s*export\s+default\s+(\w+)/g, '</div>\n  );\n};\n\nexport default $1');
+  
+  // 3. Fix malformed JSX returns
+  fixed = fixed.replace(/return\s*\(\s*<div[^>]*>\s*<\/div>\s*<div/g, 'return (\n    <>\n      <div');
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*\)/g, '</div>\n    </>\n  )');
+  
+  // 4. Fix missing React fragments
+  fixed = fixed.replace(/return\s*\(\s*<div[^>]*>\s*<\/div>\s*<Head/g, 'return (\n    <>\n      <div>\n        <Head');
+  fixed = fixed.replace(/<\/Head>\s*<div[^>]*>\s*<\/div>\s*<\/div>\s*\)/g, '</Head>\n      </div>\n    </>\n  )');
+  
+  // 5. Fix malformed JSX expressions
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<h/g, '<h');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<p/g, '<p');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<span/g, '<span');
+  
+  // 6. Fix missing closing tags
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/div>/g, '</div>');
+  
+  // 7. Fix malformed JSX fragments
+  fixed = fixed.replace(/<>\s*<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/>/g, '</div>');
+  
+  // 8. Fix missing semicolons and commas
+  fixed = fixed.replace(/}\s*const\s+/g, '};\n\nconst ');
+  fixed = fixed.replace(/}\s*export\s+/g, '};\n\nexport ');
+  fixed = fixed.replace(/}\s*interface\s+/g, '};\n\ninterface ');
+  fixed = fixed.replace(/}\s*type\s+/g, '};\n\ntype ');
+  
+  // 9. Fix malformed interface declarations
+  fixed = fixed.replace(/interface\s+(\w+)\s*{\s*([^}]*)\s*}\s*const/g, 'interface $1 {\n  $2\n}\n\nconst');
+  
+  // 10. Fix missing closing braces
+  fixed = fixed.replace(/}\s*export\s+default\s+(\w+)/g, '};\n\nexport default $1');
+  
+  // 11. Fix malformed JSX attributes
+  fixed = fixed.replace(/className=\{[^}]*\}\s*>\s*<\/div>\s*<div/g, 'className={$1}>\n        <div');
+  
+  // 12. Fix missing closing tags in arrays
+  fixed = fixed.replace(/\[\s*{\s*name:\s*"([^"]*)",\s*path:\s*"([^"]*)"\s*}\s*{\s*name:\s*"([^"]*)",\s*path:\s*"([^"]*)"\s*}\s*{\s*name:\s*"([^"]*)",\s*path:\s*"([^"]*)"\s*}\s*{\s*name:\s*"([^"]*)",\s*path:\s*"([^"]*)"\s*}\s*\]/g, 
+    '[\n                { name: "$1", path: "$2" },\n                { name: "$3", path: "$4" },\n                { name: "$5", path: "$6" },\n                { name: "$7", path: "$8" }\n              ]');
+  
+  // 13. Fix specific component patterns
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*{\s*([^}]*)\s*}\s*\)\s*=>\s*{\s*return\s*\(\s*<\/\w+>/g, 'const $1 = ({ $2 }) => {\n  return (\n    <div>');
+  
+  // 14. Fix missing closing tags for components
+  fixed = fixed.replace(/<\/div>\s*export\s+default\s+(\w+)/g, '</div>\n  );\n};\n\nexport default $1');
+  
+  // 15. Fix malformed JSX expressions with fragments
+  fixed = fixed.replace(/<>\s*<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/>/g, '</div>');
+  
+  // 16. Fix missing closing tags for JSX fragments
+  fixed = fixed.replace(/<>\s*<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/>/g, '</div>');
+  
+  // 17. Fix malformed JSX expressions with multiple elements
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<\/div>/g, '</div>');
+  
+  // 18. Fix missing closing tags for JSX fragments
+  fixed = fixed.replace(/<>\s*<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<\/>/g, '</div>');
+  
+  // 19. Fix malformed JSX expressions with multiple elements
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<\/div>/g, '</div>');
+  
+  // 20. Fix missing closing tags for JSX fragments
+  fixed = fixed.replace(/<>\s*<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div/g, '<div');
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<div[^>]*>\s*<\/div>\s*<\/>/g, '</div>');
+  
+  return fixed;
+}
+
+// Function to fix specific file patterns
+function fixSpecificFile(content, filePath) {
+  let fixed = content;
+  
+  // Fix 404.tsx specific issues
+  if (filePath.includes('404.tsx')) {
+    // Fix the main structure
+    fixed = fixed.replace(
+      /return\s*\(\s*<div><\/div>\s*<Head>/g,
+      'return (\n    <>\n      <Head>'
     );
-    
-    // Fix other malformed JSX structures
-    content = content.replace(
-      /<div><\/div>\s*<Head>/g,
-      '<div>\n      <Head>'
+    fixed = fixed.replace(
+      /<\/Head>\s*<div[^>]*><\/div>\s*<div[^>]*><\/div>/g,
+      '</Head>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">\n        <div className="max-w-2xl w-full text-center">'
     );
-    
-    content = content.replace(
-      /<div><\/div>\s*<div/g,
-      '<div>\n      <div'
+    fixed = fixed.replace(
+      /<\/div>\s*<\/div>\s*<\/div>\s*\)/g,
+      '</div>\n      </div>\n    </>\n  )'
     );
-    
-    content = content.replace(
-      /<div><\/div>\s*<section/g,
-      '<div>\n      <section'
-    );
-    
-    content = content.replace(
-      /<div><\/div>\s*<main/g,
-      '<div>\n      <main'
-    );
-    
-    content = content.replace(
-      /<div><\/div>\s*<header/g,
-      '<div>\n      <header'
-    );
-    
-    content = content.replace(
-      /<div><\/div>\s*<footer/g,
-      '<div>\n      <footer'
+  }
+  
+  // Fix component files
+  if (filePath.includes('components/')) {
+    // Fix malformed component declarations
+    fixed = fixed.replace(
+      /interface\s+(\w+)Props\s*{\s*([^}]*)\s*}\s*const\s+(\w+):\s*React\.FC<(\w+)Props>\s*=\s*\(\s*{\s*([^}]*)\s*}\s*\)\s*=>\s*{\s*return\s*\(\s*<\/\w+>/g,
+      'interface $1Props {\n  $2\n}\n\nconst $3: React.FC<$1Props> = ({ $5 }) => {\n  return (\n    <div>'
     );
     
     // Fix missing closing tags
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
-    content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
-    content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');
-    content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>');
-    content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>');
-    content = content.replace(/<nav([^>]*)>\s*$/gm, '<nav$1></nav>');
-    content = content.replace(/<aside([^>]*)>\s*$/gm, '<aside$1></aside>');
+    fixed = fixed.replace(/<\/div>\s*export\s+default\s+(\w+)/g, '</div>\n  );\n};\n\nexport default $1');
+  }
+  
+  // Fix page files
+  if (filePath.includes('page.tsx')) {
+    // Fix malformed page components
+    fixed = fixed.replace(
+      /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<div[^>]*>\s*<\/div>\s*<div/g,
+      'export default function $1() {\n  return (\n    <>\n      <div'
+    );
+    fixed = fixed.replace(
+      /<\/div>\s*<\/div>\s*\)/g,
+      '</div>\n    </>\n  )'
+    );
+  }
+  
+  return fixed;
+}
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixed = fixJSXSyntax(content);
+    fixed = fixSpecificFile(fixed, filePath);
     
-    // Fix JSX fragments
-    content = content.replace(/<>\s*$/gm, '<>');
-    content = content.replace(/^\s*<\/>/gm, '</>');
-    
-    // Fix missing semicolons in JSX
-    content = content.replace(/(\w+);\s*$/gm, '$1');
-    
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      content += '\n'.repeat(openBraces - closeBraces) + '}';
-    }
-    
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    if (openParens > closeParens) {
-      content += ')'.repeat(openParens - closeParens);
-    }
-    
-    // Fix missing closing brackets
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
-    if (openBrackets > closeBrackets) {
-      content += ']'.repeat(openBrackets - closeBrackets);
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
+    // Write the fixed content back
+    fs.writeFileSync(filePath, fixed, 'utf8');
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function findAndFixFiles(dir) {
-  const files = fs.readdirSync(dir);
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let processedCount = 0;
   
   for (const file of files) {
-    const filePath = path.join(dir, file);
+    const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
     
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      findAndFixFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
-      fixJSXComprehensive(filePath);
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories
+      if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {
+        processedCount += processDirectory(filePath);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+      if (processFile(filePath)) {
+        processedCount++;
+      }
     }
+  }
+  
+  return processedCount;
+}
+
+// Main execution
+console.log('Starting comprehensive JSX syntax fixes...');
+const processedCount = processDirectory('/workspace');
+console.log(`Processed ${processedCount} files`);
+
+// Also process specific problematic files mentioned in the lint output
+const problematicFiles = [
+  '/workspace/app/404.tsx',
+  '/workspace/app/components/AccessibilityComponents.tsx',
+  '/workspace/app/components/AnimatedText.tsx',
+  '/workspace/app/components/ContactForm.tsx',
+  '/workspace/app/components/ErrorBoundary.tsx',
+  '/workspace/app/components/Header.tsx',
+  '/workspace/app/components/Navigation.tsx',
+  '/workspace/app/components/ServiceCard.tsx',
+  '/workspace/app/pages/HomePage.tsx',
+  '/workspace/app/pages/AboutPage.tsx',
+  '/workspace/app/pages/ContactPage.tsx'
+];
+
+console.log('Processing specific problematic files...');
+for (const file of problematicFiles) {
+  if (fs.existsSync(file)) {
+    processFile(file);
   }
 }
 
-// Start fixing from the app directory
-findAndFixFiles('./app');
-findAndFixFiles('./components');
-findAndFixFiles('./src');
-
-console.log('Comprehensive JSX fixing completed!');
+console.log('Comprehensive JSX syntax fixes completed!');

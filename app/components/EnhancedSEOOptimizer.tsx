@@ -50,9 +50,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       <div className="min-h-screen bg-gray-900"></div>
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Enhanced SEO Optimizer
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -74,9 +72,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -101,7 +97,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               
             </div>
           </div>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
@@ -116,9 +111,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Optimize Your SEO?
               </h2>
               <p className="text-xl text-purple-100 mb-8">
@@ -138,8 +131,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      
-    </div>
+    </>
   );
 };
 

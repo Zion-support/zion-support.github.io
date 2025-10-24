@@ -96,13 +96,13 @@ const AccessibilityEnhancer: React.FC<{ childre
         outline: 2px solid #8b5cf6 !important
         outline-offse
   t: 2px !important
-      }
+      };
 
-      const nav = document.querySelector('nav');
+const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation')}
+        nav.setAttribute('role', 'navigation')};
 
-      const footer = document.querySelector('footer');
+const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo')}
     }
@@ -174,13 +174,13 @@ const AccessibilityEnhancer: React.FC<{ childre
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main')}
-    }
+    };
 
-    const nav = document.querySelector('nav');
+const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {
-      nav.setAttribute('role', 'navigation')}
+      nav.setAttribute('role', 'navigation')};
 
-    const footer = document.querySelector('footer');
+const footer = document.querySelector('footer');
     if (footer && !footer.getAttribute('role')) {
       footer.setAttribute('role', 'contentinfo')}
   }, []);
@@ -190,5 +190,6 @@ const AccessibilityEnhancer: React.FC<{ childre
 
 export default AccessibilityEnhancer
   return <div>{children}</div>
-}
+};
+
 export default AccessibilityEnhancer

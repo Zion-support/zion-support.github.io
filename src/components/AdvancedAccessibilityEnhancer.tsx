@@ -79,9 +79,9 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
     const handleMotionChange = (,;
   e: MediaQueryListEvent) => {;
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
-    }
+    };
 
-    const handleContrastChange = (e: MediaQueryListEvent) => {;
+const handleContrastChange = (e: MediaQueryListEvent) => {;
       setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
     }
 
@@ -449,7 +449,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
 
   return null
-}
+};
 
 export default AdvancedAccessibilityEnhancer
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
@@ -457,6 +457,7 @@ export default AdvancedAccessibilityEnhancer
 
 export default AdvancedAccessibilityEnhancerPage
 }}}}}
-}
+};
+
 export default AdvancedAccessibilityEnhancerPage
 </HTMLElement>
