@@ -12,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void
   enableRealTimeMonitoring?: boolean
 }
 
@@ -20,7 +20,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [_metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -116,7 +116,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     const cleanup = measureWebVitals()
 
-    // Update metrics every 5 seconds
+    // Update _metrics every 5 seconds
     const interval = setInterval(() => {
       measureWebVitals()
     }, 5000)
@@ -129,28 +129,28 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     if (onMetricsUpdate) {
-      onMetricsUpdate(metrics)
+      onMetricsUpdate(_metrics)
     }
-  }, [metrics, onMetricsUpdate])
+  }, [_metrics, onMetricsUpdate])
 
   return (
     <div className="performance-monitor">
-      <div className="metrics-display">
+      <div className="_metrics-display">
         <h3>Performance Metrics</h3>
         <div className="metric">
-          <span>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</span>
+          <span>FCP: {_metrics.fcp ? `${_metrics.fcp.toFixed(2)}ms` : 'N/A'}</span>
         </div>
         <div className="metric">
-          <span>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</span>
+          <span>FID: {_metrics.fid ? `${_metrics.fid.toFixed(2)}ms` : 'N/A'}</span>
         </div>
         <div className="metric">
-          <span>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</span>
+          <span>CLS: {_metrics.cls ? _metrics.cls.toFixed(4) : 'N/A'}</span>
         </div>
         <div className="metric">
-          <span>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</span>
+          <span>TTFB: {_metrics.ttfb ? `${_metrics.ttfb.toFixed(2)}ms` : 'N/A'}</span>
         </div>
         <div className="metric">
-          <span>Memory: {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(2)}MB` : 'N/A'}</span>
+          <span>Memory: {_metrics.memory ? `${(_metrics.memory / 1024 / 1024).toFixed(2)}MB` : 'N/A'}</span>
         </div>
       </div>
     </div>
