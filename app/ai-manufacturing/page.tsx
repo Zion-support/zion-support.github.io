@@ -4,7 +4,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const WorkingPage = ({ title: "Page", description: "Professional page services by Zion Tech Group." }: { title: string; description: string }) => {
+const WorkingPage = ({ title = "Page", description = "Professional page services by Zion Tech Group." }: { title: string; description: string }) => {
   return (
     <>
       <Head>
