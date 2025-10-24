@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const EnhancedHero: React.FC = () => {
@@ -26,7 +25,11 @@ const EnhancedHero: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
+<<<<<<< HEAD:app/components-disabled/EnhancedHero.tsx
   ];
+=======
+  ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-155f:app/components/EnhancedHero.tsx
 
   const benefits = [
     'Advanced AI technology integration',

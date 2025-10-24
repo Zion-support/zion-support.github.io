@@ -1,52 +1,61 @@
 'use client';
-import React from 'react';
-import React, { Component, ErrorInfo, ReactNode} from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import ErrorBoundary from './ErrorBoundary';
 
 interface Props {
-children: ReactNode;
+  children: ReactNode;
 }
+
 interface State {
-hasError: boolean,
+  hasError: boolean;
   error?: Error;
 }
+
 class ErrorBoundaryWrapper extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-
+    super(props);
     this.state = {
-  hasError: false}
+      hasError: false
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-
-    return { hasError: true, error;
-}
+    return { 
+      hasError: true, 
+      error 
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error for debugging in development
-    if(process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.log('Error caught by boundar,);
-  y:', error, errorInfo)}
+    console.error('Error caught by wrapper:', error, errorInfo);
+  }
+
   render() {
     if (this.state.hasError) {
       return (
-    
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"><div className="text-center p-8"> </div><h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-emerald-600 hover: bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200",
-            >
-              Try Again</button>
-            </button>
+        <ErrorBoundary>
+          <div className="min-h-screen flex items-center justify-center bg-gray-900">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-white mb-4">
+                Something went wrong
+              </h1>
+              <p className="text-gray-300 mb-6">
+                We're working to fix this issue. Please try again later.
+              </p>
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
+                Reload Page
+              </button>
+            </div>
           </div>
-        </div>;
-      )}
+        </ErrorBoundary>
+      );
+    }
 
     return this.props.children;
-}
+  }
 }
 
-export default ErrorBoundaryWrapper}}}
+export default ErrorBoundaryWrapper;

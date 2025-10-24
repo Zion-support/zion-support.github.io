@@ -29,7 +29,7 @@ export const performanceUtils = {
 
   optimizeImages: () => {
     if (typeof window !== 'undefined') {
-      // Lazy load images
+      // Lazy load images with intersection observer
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -43,6 +43,14 @@ export const performanceUtils = {
       });
 
       images.forEach(img => imageObserver.observe(img));
+      
+      // Also set loading="lazy" for regular images
+      const regularImages = document.querySelectorAll('img:not([data-src])');
+      regularImages.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+      });
     }
   },
 
@@ -73,6 +81,14 @@ export const performanceUtils = {
       scripts.forEach(script => {
         script.setAttribute('defer', '');
       });
+      
+      // Also optimize regular scripts
+      const regularScripts = document.querySelectorAll('script[src]:not([data-defer])');
+      regularScripts.forEach(script => {
+        if (!script.async && !script.defer) {
+          script.async = true;
+        }
+      });
     }
   },
 
@@ -92,6 +108,7 @@ export const performanceUtils = {
       // Remove any performance observers or timers
       const observers = document.querySelectorAll('[data-performance-observer]');
       observers.forEach(observer => observer.remove());
+      console.log('Performance utilities cleanup');
     }
   }
 };

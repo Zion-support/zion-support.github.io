@@ -17,8 +17,9 @@ export const announceToScreenReader = (message: string): void => {
   
   // Remove after announcement
   setTimeout(() => {
-
-    document.body.removeChild(announcement)}, 1000)};
+    document.body.removeChild(announcement);
+  }, 1000);
+};
 
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(

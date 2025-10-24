@@ -12,7 +12,7 @@ interface AccessibilitySettings {
 
 interface AccessibilityContextType {
   settings: AccessibilitySettings;
-  updateSetting: (key: keyof AccessibilitySettings, value: boolean | string) => void;
+  updateSetting: (_key: keyof AccessibilitySettings, _value: boolean | string) => void;
   announceToScreenReader: (_message: string) => void;
 }
 
@@ -152,12 +152,12 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     }
   }, [announcements]);
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+  const updateSetting = (_key: keyof AccessibilitySettings, _value: boolean | string) => {
+    setSettings(prev => ({ ...prev, [_key]: _value }));
   };
 
-  const announceToScreenReader = (message: string) => {
-    setAnnouncements(prev => [...prev, message]);
+  const announceToScreenReader = (_message: string) => {
+    setAnnouncements(prev => [...prev, _message]);
   };
 
   const contextValue: AccessibilityContextType = {
