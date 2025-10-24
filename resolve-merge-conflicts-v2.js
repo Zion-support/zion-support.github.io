@@ -21,15 +21,11 @@ function resolveMergeConflicts() {
         // Strategy: Keep the main branch version (HEAD) for most conflicts
         // This is a simple strategy - in practice, you might want more sophisticated logic
         
-        if (content.includes('<<<<<<< HEAD')) {
-          // Remove conflict markers and keep HEAD version
-          content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
-          
+        if (content.includes('          // Remove conflict markers and keep HEAD version
+          content = content.replace(/          
           // Clean up any remaining conflict markers
-          content = content.replace(/<<<<<<< HEAD\n?/g, '');
-          content = content.replace(/=======\n?/g, '');
-          content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-          
+          content = content.replace(/          content = content.replace(/\n?/g, '');
+          content = content.replace(/          
           fs.writeFileSync(file, content);
           console.log(`✓ Resolved conflicts in ${file}`);
         }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -60,20 +59,3 @@ function walkDirectory(dir) {
 // Start from the app directory
 walkDirectory('./app');
 console.log('HTML entities fix completed!');
-=======
-#!/usr/bin/env node
-function fixHtmlEntities() {}
-  // Function body
-}try {}
-} catch (error) {}
-  console.error(error)"
-}let: content = fs.readFileSync(filePath, 'utf8'
-    const fixes  = []'
-      { from: /&lt;/g, to: '<'
-      { from: /&gt/g, to: '>'
-      { from: /&amp;/g, to: '&'
-{ from: /&rbrace/g, to: '}'
-      { from: /&lbrace;/g, to: '{'
-      fs.writeFileSync(filePath, content, 'utf8'
-const appDir  = path.join(__dirname, 'app'
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2

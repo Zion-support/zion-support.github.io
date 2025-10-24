@@ -4,14 +4,12 @@ const path = require('path');
 function resolveConflicts(content) {
   // Remove all merge conflict markers and keep the HEAD version
   return content
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n/g, '')
-    .replace(/=======\n([\s\S]*?)    .replace(/}
+    .replace(/    .replace(/\n([\s\S]*?)    .replace(/}
 
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    if (content.includes('<<<<<<< HEAD')) {
-      console.log(`Resolving conflicts in: ${filePath}`);
+    if (content.includes('      console.log(`Resolving conflicts in: ${filePath}`);
       const resolved = resolveConflicts(content);
       fs.writeFileSync(filePath, resolved);
       return true;

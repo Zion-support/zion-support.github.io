@@ -59,9 +59,7 @@ function fixMissingImports(content) {
 // Function to fix merge conflict markers
 function fixMergeConflicts(content) {
   // Remove merge conflict markers and keep the HEAD version
-  content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======[\s\S]*?>>>>>>> [^\n]+/g, '$1');
-  content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  
+  content = content.replace(/  content = content.replace(/[\s\S]*?  
   return content;
 }
 

@@ -6,7 +6,6 @@ declare global {interface Window {
 }
 
 interface AnalyticsContextType {
-<<<<<<< HEAD:app-backup/components/AnalyticsProvider.tsx
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
   trackPageView: (pageName: string) => void
 }
@@ -23,12 +22,10 @@ export const useAnalytics = () => {
   return context
 }
 
-=======
   track: (event: string, properties?: Record<string, any>) => void
   identify: (userId: string, traits?: Record<string, any>) => void
   page: (name: string, properties?: Record<string, any>) => void}
 const AnalyticsContext  = createContext<AnalyticsContextType | undefined>(undefined)
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2:app/components/AnalyticsProvider.tsx
 interface AnalyticsProviderProps {
   children: ReactNode
 }

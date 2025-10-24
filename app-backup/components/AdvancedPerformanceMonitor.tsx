@@ -43,15 +43,12 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD:app-backup/components/AdvancedPerformanceMonitor.tsx
       <Helmet>
         <title>Advanced Performance Monitor</title>
         <meta name="description" content="Advanced Performance Monitor solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" />
       </Helmet>
-=======
       
->>>>>>> cursor/fix-errors-and-merge-to-main-f6f2:app/components/AdvancedSEOOptimizer_new.tsx
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
