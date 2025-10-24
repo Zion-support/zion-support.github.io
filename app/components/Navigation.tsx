@@ -16,11 +16,14 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  Brain,
+  ArrowRight,
+  Mail
 } from '@heroicons/react/24/outline';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(fal, s, e);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -44,7 +47,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navigation.map((it, e, m) => (
+              {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -65,6 +68,7 @@ const Navigation: React.FC = () => {
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -72,7 +76,7 @@ const Navigation: React.FC = () => {
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
             >
-              <Phone className="w-4 h-4" />
+              <PhoneIcon className="w-4 h-4" />
               <span className="text-sm">(302) 464-0950</span>
             </a>
             <a
@@ -90,7 +94,7 @@ const Navigation: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -106,9 +110,10 @@ const Navigation: React.FC = () => {
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.name}}</Link>
+                  {item.name}
+                </Link>
               ))}
-              <Link;
+              <Link
                 href="/contact"
                 className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 mt-4"
                 onClick={() => setIsOpen(false)}
@@ -116,6 +121,7 @@ const Navigation: React.FC = () => {
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
           </div>
         )}
       </div>

@@ -1,98 +1,89 @@
-import Link from 'next/link'
-import { Brain, Globe, Shield, Zap  } from "lucide-react";
-import React from "react";
-import Link from "next/link";
-import { Brain, Globe, Shield, Zap } from "lucide-react";
 import React from 'react'
 import Link from 'next/link'
-import { Brain, Globe, Shield, Zap, Send, BarChart3, Target, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react'
+import { Brain, Globe, Shield, Zap } from 'lucide-react'
 
 const teamMembers = [
   {
-    id:  ,1,
-    name: 'Dr. Sarah Chen,',
-      role: 'Chief Executive Officer,',
-    bio: 'Leading AI research and strategic vision with 15+ years in enterprise technology.,',
-    expertise: ['AI Strategy,', "Leadership", "Innovation"],
+    id: 1,
+    name: 'Dr. Sarah Chen',
+    role: 'Chief Executive Officer',
+    bio: 'Leading AI research and strategic vision with 15+ years in enterprise technology.',
+    expertise: ['AI Strategy', "Leadership", "Innovation"],
     image: '/api/placeholder/300/300'
- , },
+  },
   {
-    id:  ,2,
-    name: 'Michael Rodriguez,',
-      role: 'Chief Technology Officer,',
-    bio: 'Expert in scalable architecture and cutting-edge AI implementation.,',
-    expertise: ['System Architecture,', "AI Development", "Cloud Computing"],
+    id: 2,
+    name: 'Michael Rodriguez',
+    role: 'Chief Technology Officer',
+    bio: 'Expert in scalable architecture and cutting-edge AI implementation.',
+    expertise: ['System Architecture', "AI Development", "Cloud Computing"],
     image: '/api/placeholder/300/300'
- , },
+  },
   {
-    id:  ,3,
-    name: 'Dr. Emily Watson,',
-      role: 'Head of AI Research,',
-    bio: 'Pioneering machine learning algorithms and neural network optimization.,',
-    expertise: ['Machine Learning,', "Deep Learning", "Research"],
+    id: 3,
+    name: 'Dr. Emily Watson',
+    role: 'Head of AI Research',
+    bio: 'Pioneering machine learning algorithms and neural network optimization.',
+    expertise: ['Machine Learning', "Deep Learning", "Research"],
     image: '/api/placeholder/300/300'
- , },
+  },
   {
-    id:  ,4,
-    name: 'James Thompson,',
-      role: 'VP of Engineering,',
-    bio: 'Building robus,t, scalable solutions that power the future of business.',
-    expertise: ['Software Engineering,', "DevOps", "Team Leadership"],
+    id: 4,
+    name: 'James Thompson',
+    role: 'VP of Engineering',
+    bio: 'Building robust, scalable solutions that power the future of business.',
+    expertise: ['Software Engineering', "DevOps", "Team Leadership"],
     image: '/api/placeholder/300/300'
- , },
+  },
   {
-    id:  ,5,
-    name: 'Lisa Park,',
-      role: 'Head of Data Science,',
-    bio: 'Transforming raw data into actionable insights and business intelligence.,',
-    expertise: ['Data Analytics,', "Business Intelligence", "Statistics"],
+    id: 5,
+    name: 'Lisa Park',
+    role: 'Head of Data Science',
+    bio: 'Transforming raw data into actionable insights and business intelligence.',
+    expertise: ['Data Analytics', "Business Intelligence", "Statistics"],
     image: '/api/placeholder/300/300'
- , },
+  },
   {
-    id:  ,6,
-    name: 'David Kumar,',
-      role: 'Lead AI Engineer,',
-    bio: 'Specializing in natural language processing and computer vision applications.,',
-    expertise: ['NLP,', "Computer Vision", "AI Implementation"],
+    id: 6,
+    name: 'David Kumar',
+    role: 'Lead AI Engineer',
+    bio: 'Specializing in natural language processing and computer vision applications.',
+    expertise: ['NLP', "Computer Vision", "AI Implementation"],
     image: '/api/placeholder/300/300'
- , }
+  }
 ]
 
 export const values = [
   {
-    icon: Brai,
-    title: 'Innovation,',
-    description: 'We constantly push the boundaries of what's possible with AI and technology."
- , },
+    icon: Brain,
+    title: 'Innovation',
+    description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+  },
   {
-    icon: Glob,
-    title: 'Global Impact,',
+    icon: Globe,
+    title: 'Global Impact',
     description: 'Our solutions create positive change for businesses and communities worldwide.'
- , },
+  },
   {
-    icon: Shiel,
-    title: 'Trust & Security,',
+    icon: Shield,
+    title: 'Trust & Security',
     description: 'We prioritize data security and ethical AI practices in everything we do.'
- , },
+  },
   {
-    icon: Za,
-    title: 'Excellence,',
+    icon: Zap,
+    title: 'Excellence',
     description: 'We deliver exceptional results through meticulous attention to detail.'
- , }
+  }
 ]
 
 export const stats = [
-  { label: 'Years Combined Experience,',
-      value: '150+', },
-  { label: 'AI Projects Delivered,',
-      value: '1000+', },
-  { label: 'Team Members,',
-      value: '25+', },
-  { label: 'Client Satisfaction,',
-      value: '99%', }
+  { label: 'Years Combined Experience', value: '150+' },
+  { label: 'AI Projects Delivered', value: '1000+' },
+  { label: 'Team Members', value: '25+' },
+  { label: 'Client Satisfaction', value: '99%' }
 ]
 
-const TeamPage: React.FC  = () => {
+const TeamPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -147,13 +138,13 @@ const TeamPage: React.FC  = () => {
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
-                  <h3 className='text-xl font-semibold text-white mb-2'></h3>
+                  <h3 className='text-xl font-semibold text-white mb-2'>
                     {member.name}
                   </h3>
                   <p className="text-purple-400 mb-4">
                     {member.role}
                   </p>
-                  <p className='text-gray-300 text-sm mb-4'></p>
+                  <p className='text-gray-300 text-sm mb-4'>
                     {member.bio}
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
@@ -220,7 +211,7 @@ const TeamPage: React.FC  = () => {
         </div>
       </section>
     </div>
-  ),
+  )
 }
 
 export default TeamPage

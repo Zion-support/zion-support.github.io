@@ -1,54 +1,46 @@
-import React from "react";
-import Head from "next/head";
-import { ArrowRight, Brain, CheckCircle, Star } from "lucide-react";
-import React from "react";
-import Head from "next/head";
-import { ArrowRight, Brain, CheckCircle, Star } from 'lucide-react';
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
 "use client"
 import React from "react"
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle  } from "lucide-react";
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Send, BarChart3, Shield, Zap, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
 
 export default function Home() {
   const features = [
     {
-      title: 'AI-Powered Solutions,',
-      description: 'Cutting-edge artificial intelligence to transform your business operations with machine learnin,g, natural language processing, and predictive analytics',
-      icon: Brai,
-      benefits: ['Machine Learning Implementation,',
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics',
+      icon: Brain,
+      benefits: ['Machine Learning Implementation',
         "Natural Language Processing",
         "Predictive Analytics",
         "Automated Decision Making"
       ]
     },
     {
-      title: 'IT Services,',
-      description: 'Comprehensive technology solutions including cloud infrastructur,e, cybersecurity, and digital transformation for modern businesses',
-      icon: BarChar,
-      benefits: ['Cloud Infrastructure Setup,',
+      title: 'IT Services',
+      description: 'Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses',
+      icon: BarChart,
+      benefits: ['Cloud Infrastructure Setup',
         "Cybersecurity Solutions",
         "Digital Transformation",
         "24/7 Technical Support"
       ]
     },
     {
-      title: 'Micro SaaS,',
-      description: 'Scalable software-as-a-service solutions designed for rapid deployment and growt,h, perfect for startups and enterprises',
-      icon: Targe,
-      benefits: ['Rapid Deployment,',
+      title: 'Micro SaaS',
+      description: 'Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises',
+      icon: Target,
+      benefits: ['Rapid Deployment',
         "Scalable Architecture",
         "Custom Development",
         "Ongoing Maintenance"
       ]
     },
     {
-      title: 'Business Intelligence,',
+      title: 'Business Intelligence',
       description: 'Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance',
-      icon: TrendingU,
-      benefits: ['Data Visualization,',
+      icon: TrendingUp,
+      benefits: ['Data Visualization',
         "Performance Analytics",
         "Custom Dashboards",
         "Real-time Reporting"
@@ -64,62 +56,57 @@ export default function Home() {
   ]
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'></div>
-      <Navigation /></Navigation>
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'>
+      <Navigation />
       {/* Hero Section */}
-      <section className='relative py-20 px-4 overflow-hidden'></section>
+      <section className='relative py-20 px-4 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20'></div>
-        <div className='relative max-w-7xl mx-auto text-center'></div>
-          <h1 className='text-4xl md: text-6xl font-bold text-gray-900 mb-6'></h1>
+        <div className='relative max-w-7xl mx-auto text-center'>
+          <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600'>Zion Tech Group</span>
           </h1>
-          <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'></p>
+          <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
             Advanced AI and IT solutions for modern businesses. We help you leverage cutting-edge technology to drive growth and innovation.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'></div>
-            <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'></button>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <button className='bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center'>
               Get Started
               <ArrowRight className="w-8 h-8" />
             </button>
-            <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
+            <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
               Learn More
-            </a>
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Features Section *,/}
-      <section className='py-20 px-4'></section>
-        <div className='max-w-7xl mx-auto'></div>
-          <div className='text-center mb-16'></div>
-            <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
+      {/* Features Section */}
+      <section className='py-20 px-4'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Our Solutions
             </h2>
-            <p className='text-xl text-gray-600 max-w-2xl mx-auto'></p>
+            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
               Comprehensive AI and IT solutions designed to transform your business.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'></div>
-            {features.map((featur, e, index) => (
-              <div key={ ind, e, x }className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300'></div>
-                <div className='flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4'></div>
-                  <feature.icon className='h-6 w-6 text-white' /></feature>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {features.map((feature, index) => (
+              <div key={index} className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300'>
+                <div className='flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4'>
+                  <feature.icon className='h-6 w-6 text-white' />
                 </div>
-                <h3 className='text-xl font-semibold text-gray-900 mb-2'>{feature.titl,e}</h3>
+                <h3 className='text-xl font-semibold text-gray-900 mb-2'>{feature.title}</h3>
                 <p className='text-gray-600 mb-4'>{feature.description}</p>
-                <ul className='space-y-2'></ul>
+                <ul className='space-y-2'>
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-8 h-8" />
+                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-500" />
                       {benefit}
                     </li>
                   ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="text-white font-semibold">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                </div>
+                </ul>
               </div>
             ))}
           </div>
@@ -127,20 +114,20 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className='py-20 px-4 bg-white/5'></section>
-        <div className='max-w-7xl mx-auto'></div>
-          <div className='text-center mb-16'></div>
-            <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
+      <section className='py-20 px-4 bg-white/5'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Why Choose Zion Tech Group?
             </h2>
-            <p className='text-xl text-gray-600 max-w-2xl mx-auto'></p>
+            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
               Our proven track record and innovative approach deliver measurable results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-8 h-8" />
+                <CheckCircle className="w-6 h-6 text-emerald-500 mt-1" />
                 <p className="text-gray-700 text-lg">{benefit}</p>
               </div>
             ))}
@@ -149,22 +136,22 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className='py-20 px-4'></section>
-        <div className='max-w-4xl mx-auto text-center'></div>
-          <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
+      <section className='py-20 px-4'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             Let's discuss how our AI and IT solutions can help you achieve your goals.
           </p>
-          <button className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto'></button>
+          <button className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto'>
             Start Your Journey
             <ArrowRight className="w-8 h-8" />
           </button>
         </div>
       </section>
       
-      <Footer /></Footer>
+      <Footer />
     </div>
-  ),
+  )
 }
