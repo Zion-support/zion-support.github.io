@@ -1,30 +1,36 @@
+'use client';
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
+  fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '', 
-  text 
+  text, 
+  fullScreen = false 
 }) => {
   const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
   };
 
+  const containerClasses = fullScreen 
+    ? 'fixed inset-0 flex items-center justify-center bg-white/80 backdrop-blur-sm z-50'
+    : `flex items-center justify-center ${className}`;
+
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className="flex flex-col items-center space-y-2">
-        <div
-          className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}
-        />
+    <div className={containerClasses} role="status" aria-label="Loading">
+      <div className="flex flex-col items-center space-y-4">
+        <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
         {text && (
-          <p className="text-sm text-gray-600 animate-pulse">{text}</p>
+          <p className="text-gray-600 font-medium">{text}</p>
         )}
       </div>
     </div>

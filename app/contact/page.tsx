@@ -1,172 +1,175 @@
-import React, { memo } from 'react';
-import SEOHead from '../components/SEOHead';
-import { useForm } from '../hooks/useForm';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Mail, Phone, MapPin, Clock } from 'lucide-react'
 
-const ContactPage: React.FC = memo(() => {
-  const {
-    data: formData,
-    isSubmitting,
-    submitStatus,
-    errors,
-    handleInputChange,
-    handleSubmit,
-  } = useForm({
-    initialData: {
-      name: '',
-      email: '',
-      message: ''
-    },
-    onSubmit: async (data) => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Here you would typically send the data to your backend
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Form submitted:', data);
-      }
-    },
-    validate: (data) => {
-      const errors: Record<string, string> = {};
-      if (!data.name.trim()) errors.name = 'Name is required';
-      if (!data.email.trim()) errors.email = 'Email is required';
-      else if (!/\S+@\S+\.\S+/.test(data.email)) errors.email = 'Email is invalid';
-      if (!data.message.trim()) errors.message = 'Message is required';
-      return errors;
-    },
-  });
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+    // Add form submission logic here
+  }
 
   return (
     <>
-      <SEOHead
-        title="Contact Us"
-        description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
-        canonicalUrl="https://ziontechgroup.com/contact"
-      />
+      <Helmet>
+        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts to discuss your project requirements and get started today." />
+        <meta name="keywords" content="contact us, AI solutions, IT services, project consultation, business inquiry" />
+      </Helmet>
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business with our AI and IT solutions? Get in touch with our team today.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Us</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
-              <div className="space-y-4">
+        </section>
+
+        {/* Contact Form Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Your company"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={5}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Tell us about your project..."
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                  >
+                    Send Message
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
+                </form>
+              </div>
+
+              {/* Contact Information */}
+              <div className="space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                  <h2 className="text-2xl font-bold text-white mb-6">Get in touch</h2>
+                  <p className="text-gray-300 mb-8">
+                    We're here to help you transform your business with cutting-edge AI and IT solutions. 
+                    Reach out to us and let's start your digital transformation journey.
+                  </p>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+1 (302) 464-0950</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Address</h3>
-                  <p className="text-gray-600">364 E Main St STE 1008, Middletown DE 19709</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Website</h3>
-                  <p className="text-gray-600">https://ziontechgroup.com</p>
+
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <Mail className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
+                      <p className="text-gray-300">contact@ziontechgroup.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Phone className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
+                      <p className="text-gray-300">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <MapPin className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
+                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Clock className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
-              
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
-                  <p className="text-green-800">Thank you for your message! We'll get back to you soon.</p>
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
-                  <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
-                </div>
-              )}
-              
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.name ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="Your full name"
-                  />
-                  {errors.name && (
-                    <p className="mt-1 text-sm text-red-600">{errors.name}</p>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.email ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="your.email@example.com"
-                  />
-                  {errors.email && (
-                    <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.message ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="Tell us about your project or how we can help..."
-                  ></textarea>
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-600">{errors.message}</p>
-                  )}
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
-            </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
-  );
-});
+  )
+}
 
-ContactPage.displayName = 'ContactPage';
-
-export default ContactPage;
+export default ContactPage

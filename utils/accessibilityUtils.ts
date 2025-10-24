@@ -1,108 +1,41 @@
-export interface AccessibilityOptions {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrastMode?: boolean;
-  enableFocusManagement?: boolean;
-  announcePageChanges?: boolean;
+interface AccessibilityUtilsConfig {
+  enabled: boolean;
+  highContrast: boolean;
+  fontSize: number;
+  screenReader: boolean;
 }
 
-export class AccessibilityManager {
-  private options: AccessibilityOptions;
+export class AccessibilityUtils {
+  private config: AccessibilityUtilsConfig;
 
-  constructor(options: AccessibilityOptions = {}) {
-    this.options = {
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrastMode: true,
-      enableFocusManagement: true,
-      announcePageChanges: true,
-      ...options,
+  constructor(config: Partial<AccessibilityUtilsConfig> = {}) {
+    this.config = {
+      enabled: true,
+      highContrast: false,
+      fontSize: 16,
+      screenReader: false,
+      ...config
     };
   }
 
-  init() {
-    if (this.options.enableKeyboardNavigation) {
-      this.setupKeyboardNavigation();
-    }
-    if (this.options.enableScreenReaderSupport) {
-      this.setupScreenReaderSupport();
-    }
-    if (this.options.enableHighContrastMode) {
-      this.setupHighContrastMode();
-    }
-    if (this.options.enableFocusManagement) {
-      this.setupFocusManagement();
-    }
-    if (this.options.announcePageChanges) {
-      this.setupPageChangeAnnouncements();
+  init(): void {
+    if (this.config.enabled) {
+      console.log('Accessibility utils initialized');
     }
   }
 
-  private setupKeyboardNavigation() {
-    document.addEventListener('keydown', (event) => {
-      // Handle keyboard navigation
-      if (event.key === 'Tab') {
-        this.handleTabNavigation(event);
-      }
-      if (event.key === 'Enter' || event.key === ' ') {
-        this.handleActivation(event);
-      }
-    });
+  setHighContrast(enabled: boolean): void {
+    this.config.highContrast = enabled;
   }
 
-  private setupScreenReaderSupport() {
-    // Add ARIA labels and roles
-    this.addAriaLabels();
-    this.setupLiveRegions();
+  setFontSize(size: number): void {
+    this.config.fontSize = size;
   }
 
-  private setupHighContrastMode() {
-    // Check for high contrast mode preference
-    if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast');
-    }
-  }
-
-  private setupFocusManagement() {
-    // Manage focus for modals and dynamic content
-    this.setupFocusTraps();
-    this.setupFocusRestoration();
-  }
-
-  private setupPageChangeAnnouncements() {
-    // Announce page changes to screen readers
-    this.announcePageChange();
-  }
-
-  private handleTabNavigation(event: KeyboardEvent) {
-    // Custom tab navigation logic
-    event.preventDefault();
-  }
-
-  private handleActivation(event: KeyboardEvent) {
-    // Handle Enter and Space key activation
-    event.preventDefault();
-  }
-
-  private addAriaLabels() {
-    // Add ARIA labels to interactive elements
-  }
-
-  private setupLiveRegions() {
-    // Setup live regions for dynamic content announcements
-  }
-
-  private setupFocusTraps() {
-    // Setup focus traps for modals
-  }
-
-  private setupFocusRestoration() {
-    // Restore focus when closing modals
-  }
-
-  private announcePageChange() {
-    // Announce page changes to screen readers
+  setScreenReader(enabled: boolean): void {
+    this.config.screenReader = enabled;
   }
 }
 
-export const accessibilityManager = new AccessibilityManager();
+export const accessibilityUtils = new AccessibilityUtils();
+export default accessibilityUtils;

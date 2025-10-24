@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "WebWorker"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -17,12 +17,25 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/components/*": ["./app/components/*"],
+      "@/hooks/*": ["./app/hooks/*"],
+      "@/utils/*": ["./app/utils/*"],
+      "@/types/*": ["./app/types/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "types/**/*.d.ts"],
   "exclude": [
     "node_modules",
     "dist",
@@ -36,6 +49,6 @@
     "src/**",
     "scripts/**",
     "**/*.cjs",
-    "**/*.js"
+    "__tests__/**"
   ]
 }
