@@ -1,10 +1,7 @@
-import { execSync } from from 'child_process';
+import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path'
-import { execSync  } from "child_process";
-import { fs  } from "fs";
-import { path  } from "path"
-#!/usr/bin/env node;
+import path from 'path';
+#!/usr/bin/env node
 console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n');
 // Function to execute git commands safely;
     console.log(`📝 ${description}...`);

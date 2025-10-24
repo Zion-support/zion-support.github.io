@@ -1,34 +1,204 @@
-'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+  renderTime: number;
+  loadTime: number;
+  memoryUsage: number;
+}
 
 const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Monitor performance metrics
-      const monitorPerformance = () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.fetchStart
-          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart
-          const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0
-          const firstContentfulPaint = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null,
+    renderTime: 0,
+    loadTime: 0,
+    memoryUsage: 0,
+  });
 
-          // Performance metrics collected - could be sent to analytics service
-          // Metrics: loadTime, domContentLoaded, firstPaint, firstContentfulPaint
+  const [, setPerformanceScore] = useState(0);
+
+  useEffect(() => {
+    const updateMetrics = () => {
+      const currentMetrics: PerformanceMetrics = {
+        lcp: null,
+        fid: null,
+        cls: null,
+        fcp: null,
+        ttfb: null,
+        renderTime: 0,
+        loadTime: 0,
+        memoryUsage: 0,
+      };
+
+      // Monitor Core Web Vitals
+      const navigation = performance.getEntriesByType('navigation')[0] as
+        | PerformanceNavigationTiming
+        | undefined;
+      const memory = (
+        performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }
+      ).memory;
+
+      if (navigation) {
+        currentMetrics.renderTime = navigation.domContentLoadedEventEnd - navigation.fetchStart;
+        currentMetrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
+        currentMetrics.ttfb = navigation.responseStart - navigation.fetchStart;
+      }
+
+      if (memory) {
+        currentMetrics.memoryUsage = (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100;
+      }
+
+      setMetrics(currentMetrics);
+
+      const score = getPerformanceScore(currentMetrics);
+      setPerformanceScore(score);
+    };
+
+    const getPerformanceScore = (currentMetrics: PerformanceMetrics): number => {
+      let score = 100;
+      if (currentMetrics.renderTime > 1500) score -= 15;
+      if (currentMetrics.loadTime > 3000) score -= 20;
+      if (currentMetrics.memoryUsage > 50) score -= 10;
+      return Math.max(0, score);
+    };
+
+    // Measure Core Web Vitals
+    const measureWebVitals = () => {
+      // LCP - Largest Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        
+        try {
+          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        } catch {
+          // LCP observer not supported
+        }
+
+        // FID - First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: PerformanceEntry & { processingStart: number; startTime: number }) => {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          });
+        });
+        
+        try {
+          fidObserver.observe({ entryTypes: ['first-input'] });
+        } catch {
+          // FID observer not supported
+        }
+
+        // CLS - Cumulative Layout Shift
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: PerformanceEntry & { hadRecentInput: boolean; value: number }) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        });
+        
+        try {
+          clsObserver.observe({ entryTypes: ['layout-shift'] });
+        } catch {
+          // CLS observer not supported
+        }
+
+        // FCP - First Contentful Paint
+        const fcpObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          });
+        });
+        
+        try {
+          fcpObserver.observe({ entryTypes: ['paint'] });
+        } catch {
+          // FCP observer not supported
         }
       }
 
-      // Monitor after page load
-      window.addEventListener('load', monitorPerformance)
+      // Send metrics to analytics after page load
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          // Send to Google Analytics if available
+          if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, event: string, data: Record<string, unknown>) => void }).gtag) {
+            const gtag = (window as unknown as { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag;
+            if (metrics.lcp !== null) {
+              gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'LCP',
+                value: Math.round(metrics.lcp)
+              });
+            }
+            if (metrics.fid !== null) {
+              gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'FID',
+                value: Math.round(metrics.fid)
+              });
+            }
+            if (metrics.cls !== null) {
+              gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'CLS',
+                value: Math.round(metrics.cls * 1000) / 1000
+              });
+            }
+          }
+        }, 2000);
+      });
+    };
 
-      return () => {
-        window.removeEventListener('load', monitorPerformance)
+    measureWebVitals();
+
+    // Monitor resource loading
+    const monitorResources = () => {
+      if ('PerformanceObserver' in window) {
+        const resourceObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.duration > 1000) { // Track slow resources
+              // Could send to analytics or error reporting service
+            }
+          });
+        });
+        
+        try {
+          resourceObserver.observe({ entryTypes: ['resource'] });
+        } catch {
+          // Resource observer not supported
+        }
       }
-    }
-  }, [])
+    };
 
-  return null
-}
+    monitorResources();
 
-export default PerformanceMonitor
+    // Initial metrics update
+    updateMetrics();
+
+    // Set up interval for continuous monitoring
+    const interval = setInterval(updateMetrics, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [metrics.cls, metrics.fid, metrics.lcp]);
+  return null;
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/main

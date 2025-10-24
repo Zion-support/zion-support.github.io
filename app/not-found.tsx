@@ -1,12 +1,13 @@
-'use client';
-
+'use client'
 import Link from 'next/link'
 import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+
       <div className="text-center">
+
         <span className="text-8xl font-bold text-white mb-4">404</span>
         <h1 className="text-2xl font-semibold text-white mb-4">
           Page Not Found
@@ -15,6 +16,7 @@ export default function NotFound() {
           Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
           <Link href="/" 
             className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">
             <Home className="w-5 h-5 mr-2" />
@@ -33,5 +35,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  )
+  );
 }
