@@ -7,7 +7,7 @@ let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Replace React.Fragment with a simple div wrapper;
-content = content.replace(/<React\.Fragment>/g, '<div></div>');
+content = content.replace(/<React\.Fragment>/g, '<div />');
     content = content.replace(/<\/React\.Fragment>/g, '</div>');
 ;
 if (content !== fs.readFileSync(filePath, 'utf8')) {;

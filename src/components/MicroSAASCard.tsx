@@ -5,12 +5,12 @@ interface MicroSAASCardProps {
 }
 ;
 const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '' }) => {
-  return (</MicroSAASCardProps>
-    <div className={className}></div>
-      <h2>MicroSAASCard</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>MicroSAASCard
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default MicroSAASCard
+export default MicroSAASCard</p>

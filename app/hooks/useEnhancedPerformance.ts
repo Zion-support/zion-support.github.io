@@ -139,9 +139,6 @@ const images = document.querySelectorAll('img[data-src]');
     return (
     <>
       ) => imageObserver.disconnect(
-</>
-</>
-</>
   );
   }, []);
 
@@ -169,7 +166,6 @@ const images = document.querySelectorAll('img[data-src]');
       // Here you would typically send to an error tracking service
     }
   }, [component, trackErrors]);
-</string>
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
       if (process.env.NODE_ENV === 'development') {

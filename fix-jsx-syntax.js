@@ -6,7 +6,7 @@ function fixJSXSyntax(content) {
   let fixed = content;
 
   // Fix malformed Head tags
-  fixed = fixed.replace(/<Head>title>/g, '<Head>\n        <title>');
+  fixed = fixed.replace(/<Head>title>/g, '<Head>\n        <title>');</title>
   fixed = fixed.replace(/title>meta name=/g, '</title>\n        <meta name=');
   fixed = fixed.replace(/content=\"([^"]*)\" \/>/g, 'content="$1" />');
   fixed = fixed.replace(/<\/Head>div className=/g, '</Head>\n      <div className=');
@@ -82,7 +82,8 @@ function processFiles(dir) {
       }
     }
   });
-}
+</div>
+      </div></div>}
 
 // Process app directory
 console.log('Fixing JSX syntax errors in app directory...');
@@ -97,3 +98,7 @@ console.log('Fixing JSX syntax errors in components directory...');
 processFiles('./components');
 
 console.log('JSX syntax fixes completed!');
+      </Head>
+      </Head>
+      </div>
+      </Head>

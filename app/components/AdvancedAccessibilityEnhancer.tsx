@@ -38,7 +38,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
     return (
-    <div></div>
+    <div />
       ) => {
       motionQuery.removeEventListener('change', handleMotionChange,
     ;

@@ -241,7 +241,6 @@ const App = () => {
     <div>
       <h1>Zion Tech Group</h1>
       <p>Welcome to our application</p>
-    </div>
   );
 };
 
@@ -287,10 +286,7 @@ const MicroSaasServices: React.FC = () => {
             <h3>{service.name}</h3>
             <p>{service.description}</p>
             <p className="price">${service.price}/month</p>
-          </div>
         ))}
-      </div>
-    </div>
   );
 };
 
@@ -305,7 +301,6 @@ const Services: React.FC = () => {
     <div className="services">
       <h1>Our Services</h1>
       <p>Comprehensive technology solutions for your business.</p>
-    </div>
   );
 };
 
@@ -320,7 +315,6 @@ const AboutPage: React.FC = () => {
     <div className="about-page">
       <h1>About Zion Tech Group</h1>
       <p>We are a leading technology company specializing in AI, blockchain, and 5G solutions.</p>
-    </div>
   );
 };
 
@@ -335,7 +329,6 @@ const HomePage: React.FC = () => {
     <div className="home-page">
       <h1>Welcome to Zion Tech Group</h1>
       <p>Innovative technology solutions for the future.</p>
-    </div>
   );
 };
 
@@ -364,8 +357,6 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
-      </ul>
-    </div>
   );
 };
 

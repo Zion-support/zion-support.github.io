@@ -57,7 +57,7 @@ function findAndFixFiles(dir) {
       fixMergeConflicts(filePath);
     }
   }
-}
+</div>}
 
 // Start fixing from the app directory
 findAndFixFiles('./app');

@@ -35,3 +35,17 @@ transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$))'
   ]
 ,};
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>
+      </rootDir>

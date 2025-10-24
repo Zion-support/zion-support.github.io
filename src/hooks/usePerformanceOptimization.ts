@@ -254,4 +254,4 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     optimizeImages
     registerServiceWorker
     setupPerformanceMonitoring
-  }}</IntersectionObserver>;
+  }}

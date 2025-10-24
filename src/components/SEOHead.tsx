@@ -7,12 +7,12 @@ interface SEOHeadProps {
 }
 ;
 const SEOHead: React.FC<SEOHeadProps> = ({ className = '' }) => {
-  return (</SEOHeadProps>
-    <div className={className}></div>
-      <h2>SEOHead</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>SEOHead
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default SEOHead
+export default SEOHead</p>

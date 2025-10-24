@@ -90,3 +90,4 @@ console.log('Starting className space fixes...');
 walkDir('./app');
 walkDir('./src');
 console.log('ClassName space fixes completed!');
+      </Footer>

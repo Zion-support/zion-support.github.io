@@ -44,7 +44,6 @@ function fixJSXComprehensive(filePath) {
     );
     
     // Fix missing closing tags
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
     content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
     content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
     content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');

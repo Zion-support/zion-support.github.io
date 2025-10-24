@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../../../../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -18,12 +18,12 @@ interface PerformanceDashboardProps {
 }
 ;
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '' }) => {
-  return (</PerformanceDashboardProps>
-    <div className={className}></div>
-      <h2>PerformanceDashboard</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>PerformanceDashboard
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default PerformanceDashboard
+export default PerformanceDashboard</p>

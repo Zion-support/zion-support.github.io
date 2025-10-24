@@ -16,13 +16,13 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Key Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our enhanced performance monitoring system provides comprehensive insights and optimization.
+              <p className="text-lg text-gray-300 mb-8">
+                Our enhanced performance monitoring system provides comprehensive insights and optimization.</p>
               </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -42,18 +42,17 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our Performance Monitor?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of advanced performance monitoring with our comprehensive solution.
+              <p className="text-lg text-gray-300 mb-8">
+                Experience the benefits of advanced performance monitoring with our comprehensive solution.</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
@@ -64,18 +63,17 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
+          <div className="max-w-4xl mx-auto text-center">
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Optimize Your Performance?
               </h2>
-              <p className="text-xl text-purple-100 mb-8">
-                Get started with our enhanced performance monitoring solution today.
+              <p className="text-lg text-gray-300 mb-8">
+                Get started with our enhanced performance monitoring solution today.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -87,13 +85,20 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
                   Email Us
                 </button>
               </div>
-            </div>
-          </div>
+      </div>
         </section>
       </div>
-      
-    </div>
   );
 };
 
 export default EnhancedPerformanceMonitorPage;]
+      </Mail>
+      </button>
+      </Phone>
+      </button>
+      </div>
+      </CheckCircle>
+      </CheckCircle>
+      </li>
+      </ul>
+      </div>

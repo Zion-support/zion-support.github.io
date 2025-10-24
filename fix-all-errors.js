@@ -14,7 +14,7 @@ const importMatch = content.match(/import.*from ['"]next\/link['"];?\s*\n/);
 const insertPoint = importMatch.index + importMatch[0].length;
         const relativePath = getRelativePath(filePath, 'app/components/Footer.tsx');
         content = content.slice(0, insertPoint) + 
-                 `import Footer from '${relativePath}';\n` +;
+                 `import Footer from '../../components/Footer';\n` +;
 content.slice(insertPoint);
         modified = true;
       }
@@ -119,3 +119,4 @@ fixedCount++;
 ;
 console.log(`\nFixed ${fixedCount} out of ${totalFiles} files`);
 console.log('Error fixing completed!');
+      </Footer>

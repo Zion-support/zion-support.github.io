@@ -89,3 +89,5 @@ export default AnalyticsProvider
 
 
 }
+      </AnalyticsProviderProp>
+      </AnalyticsContextType>

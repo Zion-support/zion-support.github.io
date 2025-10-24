@@ -11,7 +11,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout
-  return (...arg,</T>
+  return (...arg,
   s: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
@@ -275,7 +275,6 @@ export const initializePerformanceEnhancements = () => {
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics
-</>)
   )
   }
 };

@@ -102,7 +102,7 @@ const ${baseName}: React.FC<${baseName}Props> = ({ className = '', children }) =
   return (
     <div className={\`\${className}\`}>
       {children}
-    </div>
+    
   );
 };
 
@@ -148,7 +148,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         <div className="error-boundary">
           <h2>Something went wrong.</h2>
           <p>Please refresh the page and try again.</p>
-        </div>
       );
     }
 
@@ -172,26 +171,45 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
     <header className={\`bg-white shadow-sm \${className}\`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-xl font-bold text-gray-900">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
             Zion Tech Group
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               Home
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900">
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               About
-            </Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-900">
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               Services
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900">
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               Contact
-            </Link>
-          </nav>
-        </div>
-      </div>
-    </header>
   );
 };
 
@@ -206,6 +224,8 @@ interface FooterProps {
   className?: string;
 }
 
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   return (
     <footer className={\`bg-gray-900 text-white \${className}\`}>
@@ -213,37 +233,26 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400">
-              Leading technology solutions for modern businesses.
-            </p>
-          </div>
+            <p className="text-lg text-gray-300 mb-8">
+              Leading technology solutions for modern businesses.</p>
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
-              <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-white">Blockchain</Link></li>
-              <li><Link href="/5g-solutions" className="text-gray-400 hover:text-white">5G Solutions</Link></li>
-            </ul>
-          </div>
+              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link>
+              <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-white">Blockchain</Link>
+              <li><Link href="/5g-solutions" className="text-gray-400 hover:text-white">5G Solutions</Link>
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-            </ul>
-          </div>
+              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link>
+              <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
           <div>
             <h4 className="text-md font-semibold mb-4">Contact</h4>
             <p className="text-gray-400">info@ziontechgroup.com</p>
             <p className="text-gray-400">+1 (555) 123-4567</p>
-          </div>
-        </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
   );
 };
 
@@ -269,8 +278,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]} \${className}\`}>
-    </div>
   );
 };
 
@@ -299,7 +306,6 @@ export default LoadingSpinner;
       return `import React from 'react';
 
 export const errorBoundaryConfig = {
-  fallback: <div>Something went wrong. Please refresh the page.</div>,
   onError: (error: Error, errorInfo: any) => {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -451,7 +457,6 @@ const PageOriginal: React.FC = () => {
     <div className="page-original">
       <h1>Original Page</h1>
       <p>This is the original page content.</p>
-    </div>
   );
 };
 
@@ -477,17 +482,14 @@ const NotFound: React.FC = () => {
       <div className="max-w-md w-full text-center">
         <h1 className="text-9xl font-bold text-gray-300">404</h1>
         <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-        <p className="text-gray-600 mb-8">
-          Sorry, we couldn't find the page you're looking for.
-        </p>
+        <p className="text-lg text-gray-300 mb-8">
+          Sorry, we couldn't find the page you're looking for.</p>
         <Link
-          href="/"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-        >
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
           Go Back Home
-        </Link>
-      </div>
-    </div>
   );
 };
 
@@ -499,10 +501,11 @@ export default NotFound;
 
 const PageOptimized: React.FC = () => {
   return (
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
     <div className="page-optimized">
       <h1>Optimized Page</h1>
       <p>This page has been optimized for performance.</p>
-    </div>
   );
 };
 
@@ -517,7 +520,6 @@ const ProjectDetails: React.FC = () => {
     <div className="project-details">
       <h1>Project Details</h1>
       <p>Detailed information about the project.</p>
-    </div>
   );
 };
 
@@ -532,7 +534,6 @@ const Unauthorized: React.FC = () => {
     <div className="unauthorized">
       <h1>Unauthorized Access</h1>
       <p>You don't have permission to access this resource.</p>
-    </div>
   );
 };
 
@@ -547,7 +548,6 @@ const Ecommerce: React.FC = () => {
     <div className="ecommerce">
       <h1>E-commerce Features</h1>
       <p>Advanced e-commerce functionality.</p>
-    </div>
   );
 };
 
@@ -562,7 +562,6 @@ const InstantMessaging: React.FC = () => {
     <div className="instant-messaging">
       <h1>Instant Messaging</h1>
       <p>Real-time messaging capabilities.</p>
-    </div>
   );
 };
 
@@ -577,7 +576,6 @@ const Internationalization: React.FC = () => {
     <div className="internationalization">
       <h1>Internationalization</h1>
       <p>Multi-language support features.</p>
-    </div>
   );
 };
 
@@ -592,7 +590,6 @@ const Search: React.FC = () => {
     <div className="search">
       <h1>Search Features</h1>
       <p>Advanced search functionality.</p>
-    </div>
   );
 };
 
@@ -607,7 +604,6 @@ const TalentMarketplace: React.FC = () => {
     <div className="talent-marketplace">
       <h1>Talent Marketplace</h1>
       <p>Connect with top talent worldwide.</p>
-    </div>
   );
 };
 
@@ -654,7 +650,6 @@ const ErrorHandler: React.FC<ErrorHandlerProps> = ({ error, resetError }) => {
       <h2>An error occurred</h2>
       <p>{error.message}</p>
       <button onClick={resetError}>Try again</button>
-    </div>
   );
 };
 
@@ -753,7 +748,6 @@ const TestRunner: React.FC = () => {
     <div className="test-runner">
       <h1>Test Runner</h1>
       <p>Automated testing utilities.</p>
-    </div>
   );
 };
 

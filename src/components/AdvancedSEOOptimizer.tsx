@@ -5,12 +5,12 @@ interface AdvancedSEOOptimizerProps {
 }
 ;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '' }) => {
-  return (</AdvancedSEOOptimizerProps>
-    <div className={className}></div>
-      <h2>AdvancedSEOOptimizer</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>AdvancedSEOOptimizer
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer</p>

@@ -14,7 +14,7 @@ content = content.replace(/<\/div>;\s*\);/g, '</div>\n  );\n}');
     content = content.replace(/<\/>;\s*$/gm, '</>');
 
     // Fix malformed JSX structure;
-content = content.replace(/(\s*)<div></div>\s*$/gm, '$1  <div></div>');
+content = content.replace(/(\s*)<div />\s*$/gm, '$1  <div />');
     content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>');
 
     // Fix missing closing braces;
@@ -72,3 +72,4 @@ console.log('Starting JSX semicolon fixes...');
 const fixedCount = fixAllPageFiles();
 console.log(`Fixed ${fixedCount} files with JSX semicolon issues.`);
 console.log('JSX semicolon fixes completed.');
+      </div>

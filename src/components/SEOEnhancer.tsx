@@ -1,6 +1,6 @@
 'use client';
 :all-pages-backup/components/SEOEnhancer.tsx
-import Footer from './Footer';
+import Footer from '../../../../components/Footer';
 import Navigation from './Navigation';
 import React from 'react';
 
@@ -9,12 +9,12 @@ interface SEOEnhancerProps {
 }
 ;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
-  return (</SEOEnhancerProps>
-    <div className={className}></div>
-      <h2>SEOEnhancer</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>SEOEnhancer
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default SEOEnhancer
+export default SEOEnhancer</p>

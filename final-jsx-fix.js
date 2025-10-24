@@ -22,9 +22,6 @@ function fixJSXSyntax(content) {
   });
 
   // Fix missing semicolons and commas
-  fixed = fixed.replace(/([^,;])\s*\n\s*<\/div>\s*<div/g, '$1;\n    </div>\n    <div');
-  fixed = fixed.replace(/([^,;])\s*\n\s*<\/div>\s*<span/g, '$1;\n    </div>\n    <span');
-  fixed = fixed.replace(/([^,;])\s*\n\s*<\/div>\s*<h[1-6]/g, '$1;\n    </div>\n    <h$2');
 
   // Fix JSX attribute syntax
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*{([^}]+)}/g, '$1={$2}');
@@ -41,7 +38,6 @@ function fixJSXSyntax(content) {
   });
 
   // Fix missing closing tags
-  fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)([\s\S]*?)<\/div>/g, '<div$1>$2</div>');
   fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)([\s\S]*?)<\/span>/g, '<span$1>$2</span>');
   fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)([\s\S]*?)<\/p>/g, '<p$1>$2</p>');
   fixed = fixed.replace(/<h[1-6]([^>]*)>(?!.*<\/h[1-6]>)([\s\S]*?)<\/h[1-6]>/g, (match, attrs, content) => {

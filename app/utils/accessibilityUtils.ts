@@ -50,10 +50,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   return (
     <>
       ) => {
-</>
-</>
     element.removeEventListener('keydown', handleTabKey
-</>
   );
   };
 };

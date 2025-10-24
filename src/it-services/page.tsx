@@ -4,13 +4,13 @@ interface pageProps {
   className?: string;}
 }
 ;
-const page: React.FC<pageProps> = ({ className = '' }) => {
-  return (</pageProps>
-    <div className={className}></div>
-      <h2>page</h2>
-      <p>This component is under construction.</p>
-    </div>
+const page: React.FC<p className="text-lg text-gray-300 mb-8"> = ({ className = '' }) => {
+  return (</p>
+    <div className={className}>
+      <h2>page
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default page
+export default page</p>

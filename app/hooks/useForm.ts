@@ -105,3 +105,6 @@ export function useForm<T extends Record<string, any />>({
     resetForm
   };
 }</HTMLInputElement>
+      </T>
+      </keyof>
+      </keyof>

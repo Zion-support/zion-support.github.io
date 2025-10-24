@@ -5,12 +5,12 @@ interface DataCleanupManagerProps {
 }
 ;
 const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ className = '' }) => {
-  return (</DataCleanupManagerProps>
-    <div className={className}></div>
-      <h2>DataCleanupManager</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>DataCleanupManager
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default DataCleanupManager
+export default DataCleanupManager</p>

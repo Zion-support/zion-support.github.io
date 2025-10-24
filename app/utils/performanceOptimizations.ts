@@ -7,7 +7,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout
-  return (...arg,</T>
+  return (...arg,
   s: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
@@ -52,18 +52,12 @@ export const useIntersectionObserver = (
         return (</T>
     <>
       ) => observer.unobserve(element)
-</>
-</>
       }
       return (
     <>
       ) => {}
-</>
-</>
     }
     [observer]
-    </div>
-    </div>
   );
   )
   const disconnect = useCallback(() => {
@@ -105,7 +99,6 @@ export const useLazyImage = (src: string, placeholder?: string) => {
 }
 // Performance monitoring hook
 export const usePerformanceMonitoring = (
-    </div>
   ) => {
   const [metrics, setMetrics] = useState<{
     fcp?: number
@@ -143,12 +136,10 @@ export const usePerformanceMonitoring = (
       })
     }
     return (
-    <div></div>
+    <div />
       ) => {
       window.removeEventListener('load', updateMetrics
-    </div>
   )
-    </div>
   );
     }
   }, [])
@@ -156,7 +147,6 @@ export const usePerformanceMonitoring = (
 }
 // Memory usage monitoring
 export const useMemoryMonitoring = (
-    </div>
   ) => {
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number
@@ -178,11 +168,9 @@ const updateMemoryInfo = () => {
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return (
-    <div></div>
+    <div />
       ) => clearInterval(interval
-    </div>
   )
-    </div>
   );
   }, [])
   return memoryInfo
@@ -210,7 +198,6 @@ export const preloadCriticalResources = () => {
 }
 // Bundle size monitoring
 export const useBundleSizeMonitoring = (
-    </div>
   ) => {
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number
@@ -251,16 +238,13 @@ export const useBundleSizeMonitoring = (
       window.addEventListener('load', calculateBundleSize);
     }
     return (
-    <div></div>
+    <div />
       ) => {
       window.removeEventListener('load', calculateBundleSize
-    </div>
   )
-    </div>
   );
     }
   }, []
-    </div>
   )
   return bundleSize
 }

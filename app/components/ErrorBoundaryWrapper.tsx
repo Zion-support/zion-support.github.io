@@ -25,21 +25,20 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
   y:', error, errorInfo)}
   render() {
     if (this.state.hasError) {
-      return (</Props>
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
-          <div className="text-center p-8"></div>
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+        <div className="text-center p-8">
+            <h1 className="text-4xl font-bold text-white mb-6">Something went wrong</h1>
+            <p className="text-lg text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
             <button
               onClick = {
 () => window.location.reload();
 };
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semiboldtransition-colorsduration-200"
             >
-              Try Again</button>
-            </button>
-          </div>
-        </div>
+              Try Again
+            
+          
       );
     }
 

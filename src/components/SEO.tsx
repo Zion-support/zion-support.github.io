@@ -5,12 +5,12 @@ interface SEOProps {
 }
 ;
 const SEO: React.FC<SEOProps> = ({ className = '' }) => {
-  return (</SEOProps>
-    <div className={className}></div>
-      <h2>SEO</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>SEO
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default SEO
+export default SEO</p>

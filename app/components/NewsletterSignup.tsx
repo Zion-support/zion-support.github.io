@@ -36,8 +36,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setStatus('error');
       setMessage('Something went wrong. Please try again.')}
   const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
-      <div className="text-center mb-6"></div>
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+        <div className="text-center mb-6"></div>
         <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" /></Mail>
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90"></p>
@@ -88,7 +88,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
       </form>
       <div className="mt-6 text-center text-sm text-white/80"></div>
-        <p></p>
+        <p />
           ✓ No spam, unsubscribe anytime<br />
           ✓ Weekly updates on latest tech trends<br />
           ✓ Exclusive content and early access</br>
@@ -97,17 +97,15 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   if (variant === 'modal') {
     return (
     
-      <div className="fixed inset-0 z-50 overflow-y-auto"></div>
-        <div className="flex min-h-screen items-center justify-center px-4 py-6"></div>
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} /></div>
-          <div className="relative w-full max-w-md"></div>
-            {content}</div>
-          </div>
-        </div>
-      </div>
+      <div className="fixed inset-0 z-50 overflow-y-auto">
+        <div className="flex min-h-screen items-center justify-center px-4 py-6">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+        <div className="relative w-full max-w-md">
+            {content}
+      
   return content
 }
-    </div>
+    
   );
 export default NewsletterSignup
 })))

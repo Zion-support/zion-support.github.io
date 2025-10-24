@@ -481,7 +481,7 @@ export const measureFunction = <T>(name: string, fn: () => T): T => {;
   recordMetric(name, duration, MetricUnit.Milliseconds);
   return result
 }
-</T>;
+
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {;
   const start = performance.now();
   const result = await fn();
@@ -535,3 +535,8 @@ export const getRecommendations = (): string[] => {;
 
 }
 }
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>

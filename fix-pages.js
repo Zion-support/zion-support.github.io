@@ -7,23 +7,21 @@ try {;
 let content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has the problematic pattern;
-if (content.includes('return (\n    <div></div>') && content.includes('<Head>')) {
+if (content.includes('return (\n    <div />') && content.includes('<Head>')) {
       // Fix the JSX structure;
 content = content.replace(
-        /return \(\s*<div></div>\s*<Head>/g,
+        /return \(\s*<div />\s*<Head>/g,
         'return (\n    <>\n      <Head>'
       );
 
       // Fix the closing tags;
 content = content.replace(
         /<\/Head>\s*<div className=/g,
-        '</Head></div>\n      <div className='
+        '</Head>\n      <div className='
       );
 
       // Fix the final closing;
 content = content.replace(
-        /<\/div></div>\s*\);\s*}/g,
-        '</div>\n    </>\n  );\n}'
       );
 
       // Write the fixed content back;

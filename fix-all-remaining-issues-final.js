@@ -55,7 +55,7 @@ const upLevels = '../'.repeat(depth - 1);
         footerPath = upLevels + 'components/Footer';
       }
 ;
-importLines.push(`import Footer from '${footerPath}';`);
+importLines.push(`import Footer from '../../components/Footer';`);
     }
 
     // Extract the JSX content between the function declaration and the last closing brace;

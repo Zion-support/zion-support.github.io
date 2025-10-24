@@ -1,181 +1,135 @@
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-;
-function fixBrokenJsx(filePath) {;
-try {;
-let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
 
-    // Fix broken JSX structure - this is a complex pattern
-    // Look for files that have malformed JSX with missing closing tags and broken structure
-
-    // First, let's check if this is a Next.js page component;
-if (content.includes('"use client"') || content.includes("'use client'")) {
-      // Extract the component name;
-const componentNameMatch = content.match(/const\s+(\w+)\s*=\s*\(\)\s*=>/);
-      if (componentNameMatch) {;
-const componentName = componentNameMatch[1];
-
-        // Create a basic working structure;
-const basicStructure = `"use client";
-;
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
-;
-const ${componentName} = () => {;
-return (
-    <>
-      <Head>
-        <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta property="og: type" content="website" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
-        <div className="max-w-2xl w-full text-center"></div>
-          {/* 404 Animation */,}
-          <div className="relative mb-8"></div>
-            <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse"></div>
-              404
-            </div>
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce"></div>
-              <AlertTriangleclassName="w-6 h-6 text-red-400" />
-            </div>
-          </div>
-
-          {/* Error Message */}
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6"></h1>;
-Page Not Found
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>;
-Oops! The page you're looking for seems to have vanished into the digital void. Don't worry,even our AI can't predict everything!
-          </p>
-
-          {/* Search Suggestion */}
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8"></div>
-            <div className="flex items-center justify-center mb-4"></div>
-              <SearchclassName="w-6 h-6 text-cyan-400 mr-2" />
-              <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>
-            <div className="flex flex-wrap gap-2 justify-center"></div>
-              {[
-                { name: "Home",path: "/" ,},
-                { name: "About",path: "/about" ,},
-                { name: "Services",path: "/services" ,},
-                { name: "Contact",path: "/contact" ,}
-              ].map((item, index) => (
-                <Link key={index} href={item.path} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
-                  {item.name,}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8"></div>
-            <Link href="/" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <HomeclassName="w-5 h-5 mr-2" />;
-Go Home
-            </Link>
-            <button;
-onClick={() => window.history.back(),}
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
-            >
-              <ArrowLeftclassName="w-5 h-5 mr-2" />;
-Go Back
-            </button>
-          </div>
-
-          {/* Help Section */,}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6"></div>
-            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
-            <p className="text-gray-300 text-sm mb-4"></p>;
-Our support team is here to help you navigate our services and find exactly what you're looking for.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-3 justify-center"></div>
-              <Link href="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                <RefreshCwclassName="w-4 h-4 mr-2" />;
-Contact Support
-              </Link>
-              <a;
-href="mailto:support@ziontechgroup.com";
-className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >;
-Send Email
-              </a>
-            </div>
-          </div>
-
-          {/* Fun Fact */,}
-          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg"></div>
-            <p className="text-sm text-gray-400"></p>
-              <span className="text-cyan-400">Fun Fact: </span> Even our AI gets;
-confused sometimes. That's why we have humans to help when things;
-go wrong! 🤖
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-,};
-;
-export default ${componentName};`;
-;
-content = basicStructure;
-        modified = true;
+// Function to fix completely broken JSX files
+function fixBrokenJSX(content) {
+  let fixed = content;
+  
+  // Remove all the extra closing tags that are outside the return statement
+  const lines = fixed.split('\n');
+  let inReturn = false;
+  let returnStart = -1;
+  let returnEnd = -1;
+  let braceCount = 0;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    if (line.includes('return (')) {
+      inReturn = true;
+      returnStart = i;
+      braceCount = 0;
+    }
+    
+    if (inReturn) {
+      // Count braces to find the end of return statement
+      for (const char of line) {
+        if (char === '(') braceCount++;
+        if (char === ')') braceCount--;
+      }
+      
+      // If we've closed all braces, we're done with return
+      if (braceCount === 0 && line.includes(')')) {
+        returnEnd = i;
+        inReturn = false;
+        break;
       }
     }
-;
-if (modified) {;
-fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed broken JSX in: ${filePath,}`);
+  }
+  
+  // If we found a return statement, clean it up
+  if (returnStart !== -1 && returnEnd !== -1) {
+    const beforeReturn = lines.slice(0, returnStart);
+    const returnLines = lines.slice(returnStart, returnEnd + 1);
+    const afterReturn = lines.slice(returnEnd + 1);
+    
+    // Clean up the return statement
+    let cleanedReturn = returnLines.join('\n');
+    
+    // Remove any extra closing tags that shouldn't be there
+    cleanedReturn = cleanedReturn.replace(/<\/\w+>\s*$/gm, '');
+    
+    // Ensure proper JSX structure
+    // Find the main div and ensure it's properly closed
+    const mainDivMatch = cleanedReturn.match(/<div[^>]*>/);
+    if (mainDivMatch) {
+      // Count opening and closing divs in the return statement
+      const openDivs = (cleanedReturn.match(/<div[^>]*>/g) || []).length;
+      const closeDivs = (cleanedReturn.match(/<\/div>/g) || []).length;
+      
+      // If there are more opening divs than closing divs, add the missing ones
+      const missingDivs = openDivs - closeDivs;
+      if (missingDivs > 0) {
+        // Add missing closing divs before the closing parenthesis
+        if (lastClosingDiv !== -1) {
+          const beforeLastDiv = cleanedReturn.substring(0, lastClosingDiv);
+          const afterLastDiv = cleanedReturn.substring(lastClosingDiv);
+          
+          // Add missing closing divs
+          cleanedReturn = beforeLastDiv + missingClosingDivs + afterLastDiv;
+        } else {
+          // If no closing div found, add them before the closing parenthesis
+        }
+      }
+    }
+    
+    // Reconstruct the file
+    const result = [...beforeReturn, cleanedReturn, ...afterReturn.filter(line => 
+      !line.trim().startsWith('</')
+    )].join('\n');
+    
+    return result;
+  }
+  
+  return fixed;
+}
+
+// Function to fix a specific file
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixBrokenJSX(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-;
-return false;
-  } catch (error) {;
-console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-;
-function findTsxFiles(dir) {;
-const files = [];
-;
-function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir);
-;
-for (const item of items) {;
-const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-;
-if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-traverse(fullPath);
-      } else if (item.endsWith('.tsx')) {;
-files.push(fullPath);
+
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories
+      if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {
+        fixedCount += fixFilesInDirectory(filePath);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
       }
     }
   }
-;
-traverse(dir);
-  return files;
+
+  return fixedCount;
 }
 
-// Main execution;
-const workspaceDir = process.cwd();
-const tsxFiles = findTsxFiles(workspaceDir);
-;
-console.log(`Checking ${tsxFiles.length} TSX files for broken JSX...`);
-;
-let fixedCount = 0;
-for (const file of tsxFiles) {;
-if (fixBrokenJsx(file)) {;
-fixedCount++;
-  }
-}
-;
-console.log(`Fixed broken JSX in ${fixedCount} files.`);
+// Main execution
+console.log('Starting broken JSX fixes...');
+const fixedCount = fixFilesInDirectory('/workspace');
+console.log(`Fixed ${fixedCount} files`);

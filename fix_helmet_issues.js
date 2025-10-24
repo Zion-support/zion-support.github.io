@@ -73,3 +73,8 @@ findPageFiles(appDir);
 pageFiles.forEach(fixHelmetIssues);
 ;
 console.log(`Processed ${pageFiles.length} page files`);
+
+      </title>
+      </title>
+      </Helmet>
+      </Helmet>

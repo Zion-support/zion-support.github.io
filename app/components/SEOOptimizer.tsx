@@ -92,7 +92,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.insertBefore(charset, document.head.firstChild);
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   return (
-    <Head></Head>
+    <Head />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
@@ -160,3 +160,4 @@ export default SEOOptimizer }
 
 
 }
+      </SEOOptimizerProps>

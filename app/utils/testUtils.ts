@@ -260,7 +260,7 @@ export const retryWithBackoff = async <T>(</T>
   initialDelay = 1000</T>
 ): Promise<T> => {
   let lastErro
-  r: Error</T>;
+  r: Error
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn();
@@ -277,7 +277,7 @@ export const retryWithBackoff = async <T>(</T>
  * Measure execution time of a function
  */
 export const measureExecutionTime = async <T>(</T>
-  fn: () => T | Promise<T></T>;
+  fn: () => T | Promise<T>
 ): Promise<{ result: T; duratio
   n: number }> => {
   const start = performance.now()
@@ -300,3 +300,6 @@ export default {
   retryWithBackoff
   measureExecutionTime
 };
+      </T>
+      </T>
+      </T>

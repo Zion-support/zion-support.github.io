@@ -1,82 +1,112 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix final JSX syntax errors
-function fixFinalJSX(content) {
+// Function to fix malformed JSX patterns
+function fixMalformedJSX(content) {
   let fixed = content;
-
-  // Fix malformed Head tags with title and meta - more specific pattern
-  fixed = fixed.replace(/<Head>title>([^<]*)<\/title>meta name="([^"]*)" content="([^"]*)" \/>/g, 
-    '<Head>\n        <title>$1</title>\n        <meta name="$2" content="$3" />');
   
-  // Fix malformed closing Head tag followed by div
-  fixed = fixed.replace(/<\/Head>\s*<div className="([^"]*)"\s*>/g, 
-    '</Head>\n      <div className="$1">');
+  // Fix malformed closing tags like </div> and <Footer />
+  fixed = fixed.replace(/<\/div>\s*<\/div>/g, '</div>');
+  fixed = fixed.replace(/<(\w+) \/><\/\1>/g, '<$1 />');
+  fixed = fixed.replace(/<(\w+)><\/\1>/g, '<$1 />');
   
-  // Fix malformed JSX elements with missing spaces
-  fixed = fixed.replace(/(\w+)><(\w+)/g, '$1> <$2');
-  fixed = fixed.replace(/(\w+)><\/(\w+)/g, '$1></$2');
+  // Fix specific patterns
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<(\w+) \/><\/\1>/g, '</div>\n      <$1 />');
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<(\w+)><\/\1>/g, '</div>\n      <$1 />');
   
-  // Fix missing opening tags
-  fixed = fixed.replace(/(<div className="[^"]*">)/g, (match) => {
-    if (!match.includes('<div')) {
-      return '<div ' + match;
-    }
-    return match;
-  });
+  // Fix extra closing divs
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>/g, '</div>\n      </div>');
   
-  // Fix malformed closing tags
-  fixed = fixed.replace(/(\w+)>\s*<\/(\w+)>/g, '$1></$2>');
+  // Fix broken JSX elements
+  fixed = fixed.replace(/<(\w+)\s*;\s*>/g, '<$1>');
+  fixed = fixed.replace(/<\/\w+>\s*;\s*$/gm, '');
   
-  // Fix missing spaces in JSX attributes
-  fixed = fixed.replace(/(\w+)="([^"]*)"(\w+)/g, '$1="$2" $3');
+  // Ensure proper JSX structure
+  // Remove any extra closing tags that don't have matching opening tags
+  const lines = fixed.split('\n');
+  let openTags = [];
+  let fixedLines = [];
   
-  // Fix malformed JSX fragments
-  fixed = fixed.replace(/<>\s*<Head>/g, '<>\n      <Head>');
-  fixed = fixed.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
-  
-  // Fix missing closing brackets
-  fixed = fixed.replace(/(\w+)\s*}\s*$/g, '$1}');
-  
-  return fixed;
-}
-
-// Function to process all TypeScript/TSX files
-function processFiles(dir) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    if (stat.isDirectory()) {
-      processFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const fixed = fixFinalJSX(content);
-        
-        if (content !== fixed) {
-          fs.writeFileSync(filePath, fixed);
-          console.log(`Fixed final JSX: ${filePath}`);
-        }
-      } catch (error) {
-        console.error(`Error processing ${filePath}:`, error.message);
+    // Count opening tags
+    const openMatches = line.match(/<(\w+)(?:\s[^>]*)?>/g) || [];
+    const closeMatches = line.match(/<\/(\w+)>/g) || [];
+    
+    for (const match of openMatches) {
+      const tagName = match.match(/<(\w+)/)[1];
+      if (tagName !== 'br' && tagName !== 'hr' && tagName !== 'img' && tagName !== 'input' && tagName !== 'meta' && tagName !== 'link') {
+        openTags.push(tagName);
       }
     }
-  });
+    
+    for (const match of closeMatches) {
+      const tagName = match.match(/<\/(\w+)>/)[1];
+      if (openTags.length > 0 && openTags[openTags.length - 1] === tagName) {
+        openTags.pop();
+      }
+    }
+    
+    fixedLines.push(line);
+  }
+  
+  // If there are unclosed tags, add them
+  while (openTags.length > 0) {
+    const tag = openTags.pop();
+    fixedLines.push(`      </${tag}>`);
+  }
+  
+  return fixedLines.join('\n');
 }
 
-// Process app directory
-console.log('Fixing final JSX syntax errors in app directory...');
-processFiles('./app');
+// Function to fix a specific file
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixMalformedJSX(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
 
-// Process src directory
-console.log('Fixing final JSX syntax errors in src directory...');
-processFiles('./src');
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
 
-// Process components directory
-console.log('Fixing final JSX syntax errors in components directory...');
-processFiles('./components');
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
 
-console.log('Final JSX syntax fixes completed!');
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories
+      if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {
+        fixedCount += fixFilesInDirectory(filePath);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+
+  return fixedCount;
+}
+
+// Main execution
+console.log('Starting final JSX fixes...');
+const fixedCount = fixFilesInDirectory('/workspace');
+console.log(`Fixed ${fixedCount} files`);
+      </Footer>

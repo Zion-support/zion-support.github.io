@@ -16,7 +16,7 @@ content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>');
     content = content.replace(/(\s*)<\/>\s*$/gm, '$1  </>');
 
     // Fix missing opening tags;
-content = content.replace(/(\s*)<div></div>\s*$/gm, '$1  <div></div>');
+content = content.replace(/(\s*)<div />\s*$/gm, '$1  <div />');
     content = content.replace(/(\s*)<>\s*$/gm, '$1  <>');
 ;
 if (modified) {;
@@ -67,3 +67,5 @@ srcFixed = fixAllFiles('./src');
 }
 ;
 console.log(`Extra braces fixes completed. Total files fixed: ${appFixed + srcFixed,}`);
+      </div>
+      </div>

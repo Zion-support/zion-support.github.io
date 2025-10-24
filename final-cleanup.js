@@ -19,15 +19,14 @@ export default function ${baseName.split('/').pop().replace(/-/g, '')}() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+          <h1 className="text-4xl font-bold text-white mb-6">
             ${displayName}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8">
             Professional ${displayName.toLowerCase()} services and solutions.
-          </p>
-        </div>
-      </div>
-    </div>
+          
+        
+      
   );
 }`;
 }
@@ -43,13 +42,12 @@ import React from 'react';
 interface ${componentName}Props {
   className?: string;
 }
-
+</p>
 const ${componentName}: React.FC<${componentName}Props> = ({ className }) => {
   return (
     <div className={className}>
       <h2>${componentName}</h2>
       <p>${componentName} component for enhanced functionality.</p>
-    </div>
   );
 };
 

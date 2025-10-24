@@ -5,12 +5,12 @@ interface FooterProps {
 }
 ;
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
-  return (</FooterProps>
-    <div className={className}></div>
-      <h2>Footer</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>Footer
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default Footer
+export default Footer</p>

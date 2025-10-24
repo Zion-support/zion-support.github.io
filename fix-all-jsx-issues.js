@@ -46,7 +46,7 @@ newContent += "import Link from 'next/link';\n";
 newContent += "import { ArrowRight } from 'lucide-react';\n";
         }
         if (content.includes('Footer') && !content.includes("import Footer from")) {;
-newContent += "import Footer from '../components/Footer';\n";
+newContent += "import Footer from '../../components/Footer';\n";
         }
 ;
 newContent += "\n";
@@ -63,9 +63,7 @@ let cleanFunctionBody = functionBody
 
         // Fix JSX structure;
 cleanFunctionBody = cleanFunctionBody
-          .replace(/<div>\s*<\/>/g, '<div></div>')
-          .replace(/<\/div>\s*<\/>/g, '</div>')
-          .replace(/<>(\s*<div[^></div>]*>)/g, '$1')
+          .replace(/<div>\s*<\/>/g, '<div />')
           .replace(/(<\/div>)\s*<\/>/g, '$1');
 ;
 newContent += cleanFunctionBody;

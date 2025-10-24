@@ -37,14 +37,11 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
 
   return (
     <>
-</>
-      <Helmet></Helmet>
+      <Helmet />
         <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>
         <meta name="theme-color" content="#059669" /></meta>
         <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} /></link>
-      </Helmet>
       {children}
-</>
   );
 };
 ;
@@ -184,15 +181,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
-</SEOOptimizerProps>
   return (</SEOOptimizerProps>
-    <Head></Head>
+    <Head />
 :all-pages-backup/components/SEOOptimizer.tsx</Head>
-      <title>{title}</title>;
+      <title>{title}</title>
       <meta name=&quot;description&quot; content={description} /></meta>
       <meta name=&quot;keywords&quot; content={keywords.join(', ')} /></meta>
       <link rel=&quot;canonical&quot; href={canonicalUrl} /></link>
-        <title>{title}</title>;
+        <title>{title}</title>
       <meta name=&quot;description&quot; content={description} />;</meta>
       <meta name=&quot;keywords&quot; content={keywords.join(', ')} />;</meta>
       <link rel=&quot;canonical&quot; href={canonicalUrl} /></link>
@@ -223,7 +219,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           dangerouslySetInnerHTML = {{ __html: JSON.stringify(structuredData) }}
         /></script>
       )}</script>
-    </Head>
   )
 }
 

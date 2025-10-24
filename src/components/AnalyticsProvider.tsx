@@ -87,9 +87,9 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
     trackPageView
   }
 
-  return (</string>
+  return (
     <AnalyticsContext.Provider value={value}>
-      {children}</AnalyticsContext>
+      {children}
     </AnalyticsContext.Provider>
   )
 }

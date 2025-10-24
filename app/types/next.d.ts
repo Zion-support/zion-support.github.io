@@ -99,8 +99,8 @@ export interface ClientComponentProps {
 };
 // Route handlers
 export interface RouteHandler {</Response>
-  GET?: (req: Request) => Promise<Response></Response>
-  POST?: (req: Request) => Promise<Response></Response>
+  GET?: (req: Request) => Promise<Response />
+  POST?: (req: Request) => Promise<Response />
   PUT?: (req: Request) => Promise<Response>
   DELETE?: (re,</Response>
   q: Request) => Promise<Response>}</Response>
@@ -143,3 +143,5 @@ declare module 'next' {
   }
 }
 export {}</Response>
+      </Response>
+      </Response>

@@ -39,15 +39,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       this.logErrorToService(error, errorInfo)}
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {</Props>;
-
-
-
-
-
-
-
-
+    const errorData = {
 }
 
 

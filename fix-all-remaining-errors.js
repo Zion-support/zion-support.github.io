@@ -16,12 +16,10 @@ content = content.replace(/return\s*\n\s*return\s*\(/g, 'return (');
     // Fix semicolons in JSX where there should be commas;
 content = content.replace(/<\/div>;\s*\);/g, '</div>\n  );\n}');
     content = content.replace(/<\/>;\s*\);/g, '</>\n  );\n}');
-    content = content.replace(/<\/div>;\s*$/gm, '</div>');
     content = content.replace(/<\/>;\s*$/gm, '</>');
 
     // Fix malformed JSX structure;
-content = content.replace(/(\s*)<div></div>\s*$/gm, '$1  <div></div>');
-    content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>');
+content = content.replace(/(\s*)<div />\s*$/gm, '$1  <div />');
 
     // Fix missing closing braces;
 if (!content.trim().endsWith('}')) {;

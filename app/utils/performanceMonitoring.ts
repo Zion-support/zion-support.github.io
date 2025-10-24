@@ -246,7 +246,7 @@ this.sendToAnalytics(metric);
 */
 private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {};
 const thresholds: Record<keyof WebVitals, { good: number; poo
-  r: number }> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: 1800, poor: 3000 }
+  r: number }> = {}</keyof></<<<keyof>FCP</keyof>: { good: 1800, poor: 3000 }
 LCP: { goo
   d: 2500, poor: 4000 }
 FID: { goo
@@ -658,7 +658,7 @@ if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
 }
-export const getMetrics = (): Record<string, MetricData> => {}</string></<<<string>const</string></<<string>result</string>: Record<string, MetricData> = {}</string></<<<string>simpleMetrics</string></string>.forEach((value, key) => {}
+export const getMetrics = (): Record<string, MetricData> => {}</string></<<<string>const</string></<<string>result</string>: Record<string, MetricData> = {}</string></<<<string>simpleMetrics</string>.forEach((value, key) => {}
 result[key] = { ...value }
 })
 return result
@@ -820,4 +820,15 @@ if (metrics.TTFB && metrics.TTFB.rating !== 'good') {/* TODO: Fix JSX expression
 }
 return recommendations
 }
-`</T>;
+`
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>
+      </T>

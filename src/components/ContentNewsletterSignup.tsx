@@ -5,12 +5,12 @@ interface ContentNewsletterSignupProps {
 }
 ;
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
-  return (</ContentNewsletterSignupProps>
-    <div className={className}></div>
-      <h2>ContentNewsletterSignup</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>ContentNewsletterSignup
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    
   );
 };
 
-export default ContentNewsletterSignup
+export default ContentNewsletterSignup</p>

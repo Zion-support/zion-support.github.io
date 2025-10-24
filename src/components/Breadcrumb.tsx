@@ -29,29 +29,30 @@ const Breadcrumb: React.FC = () => {;
   })
 
   return (
-    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700"></nav>
-      <div className="max-w-7x lmx-auto px-4 py-3"></div>
+    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7x lmx-auto px-4 py-3">
         <ol className="fle xitems-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (</ol>
+          {breadcrumbItems.map((item, index) => (
             <li key={item.path} className="fle xitems-center">
-              {index > 0 && (</li>
+              {index > 0 && (
                 <ChevronRight className="w-4h-4te x t-gray-400 mx-2" />
-              )}</ChevronRight>
+              )}
               <a href={item.path}>
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
                   index === breadcrumbItems.length - 1
                     ? 'text-cyan-400 font-medium'
                     : 'text-gray-300 hover: text-cyan-400'
                 }`}
-              ></a>
-                {item.icon && <item.icon className="w-4h-4" />}</item>
-                <span>{item.name}</span>
-              </a>
-            </li>
+              >
+                {item.icon && <item.icon className="w-4h-4" />}
+                <span>{item.name}
+              
+            
           ))}
-        </ol>
-      </div>
-    </nav>
+        
+      
+    
+  </div>
   )
 }
 :all-pages-backup/components/Breadcrumb.tsx
@@ -72,14 +73,11 @@ export default function Breadcrumb() {;
 
   return (
     <nav className="bg-gray-800 text-white py-2 px-4"></nav>
-      <div className="container mx-auto"></div>
         <ol className="flex items-center space-x-2 text-sm"></ol>
-          <li></li>
+          <li />
             <Link href="/" className="flex items-center hover:text-blue-400 transition-colors"></Link>
               <Home className="w-4 h-4 mr-1" />
               Home</Home>
-            </Link>
-          </li>
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1
@@ -94,13 +92,8 @@ export default function Breadcrumb() {;
                     className="hover:text-blue-400 transition-colors capitalize"
                   >
                     {name.replace(/-/g, ' ')}</Link>
-                  </Link>
                 )}
-              </li>
             )})}
-        </ol>
-      </div>
-    </nav>
   )}
 ;
 export default Breadcrumb

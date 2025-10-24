@@ -16,7 +16,10 @@ function fixJSXFinal(filePath) {
     content = content.replace(/<div>\s*<footer/g, '<div>\n      <footer');
     
     // Fix missing closing tags
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>
+      </div>
+      </div>
+      </div></div></div>');
     content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
     content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
     content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');
@@ -88,3 +91,16 @@ findAndFixFiles('./components');
 findAndFixFiles('./src');
 
 console.log('Final JSX fixing completed!');
+
+      </div>
+      </div>
+      </div>
+      </div>
+      </Head>
+      </div>
+      </Head>
+      </div>
+      </Head>
+      </div>
+      </Head>
+      </div>

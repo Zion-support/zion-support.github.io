@@ -107,7 +107,7 @@ export const generateSitemap = (pages: Array<{
 }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
-${pages.map(page => `  <url></url>
+${pages.map(page => `  <url />
     <loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>

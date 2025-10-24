@@ -8,10 +8,10 @@ interface rootlayoutProps {
 const rootlayout: React.FC<rootlayoutProps> = ({ className }) => {
   return (
     <div className={className}>
-      <h2>rootlayout</h2>
-      <p>rootlayout component for enhanced functionality.</p>
-    </div>
+      <h2>rootlayout
+      <p className="text-lg text-gray-300 mb-8">rootlayout component for enhanced functionality.
+    
   );
 };
 
-export default rootlayout;
+export default rootlayout;</p>

@@ -9,9 +9,9 @@ interface Props {
 
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   return (
-    <div className="accessibility-enhanced" role="main"></div>
+    <div className="accessibility-enhanced" role="main">
       {children}
-    </div>
+    
   );
 };
 

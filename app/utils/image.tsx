@@ -89,7 +89,7 @@ height: '100%'
 if (hasError) {</ImageProps>
   </ImageProps>
 return (
-    </ImageProps>
+    
   );
 if (hasError) {}
 return (
@@ -118,11 +118,9 @@ imageStyle
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 
 {...props}
-></div>
 <span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-</div>
 return(<img
-return (<img></img>
+return (<img />
 src={src}
 alt={alt}
 width={width}

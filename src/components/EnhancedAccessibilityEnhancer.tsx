@@ -43,8 +43,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>;
-          </div>;
+          
+          
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
                 <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
@@ -52,7 +52,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 {}
 export default EnhancedAccessibilityEnhancerPage;]

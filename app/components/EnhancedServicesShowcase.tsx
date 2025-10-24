@@ -8,11 +8,11 @@ interface EnhancedServicesShowcaseProps {
 const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className }) => {
   return (
     <div className={className}>
-      <h2>EnhancedServicesShowcase</h2>
-      <p>EnhancedServicesShowcase component for enhanced functionality.</p>
-    </div>
+      <h2>EnhancedServicesShowcase
+      <p className="text-lg text-gray-300 mb-8">EnhancedServicesShowcase component for enhanced functionality.
+    
   );
 };
 
 export default EnhancedServicesShowcase
-}]
+}]</p>

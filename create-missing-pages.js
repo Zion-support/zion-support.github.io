@@ -36,11 +36,11 @@ const missingPages = [;
 // Template for page components;
  `'use client';
   return()
-        <title>${title} - Zion Tech Group</title>;
+        <title>${title} - Zion Tech Group
 ${title});
 Professional ${title.toLowerCase()} services by Zion Tech Group.
-
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>;
+</title>
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon
 We're working on bringing you comprehensive ${title.toLowerCase()} solutions.;
 Contact us to learn more about our services.;
 Contact Us;
@@ -65,3 +65,5 @@ fs.writeFileSync(pageFile, pageTemplate(pageName, title));
 });
 ;
 console.log('Missing pages creation completed!');
+      </h2>
+      </title>

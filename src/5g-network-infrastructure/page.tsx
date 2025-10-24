@@ -10,25 +10,26 @@ export default function NetworkInfrastructure5GPage() {
     :all-pages-backup/5g-network-infrastructure/page.tsx
 </>
       <title>5G Network Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G network infrastructure services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-      </meta>
-        <Head></Head>
+        <meta name="description" content="Professional 5G network infrastructure services by Zion Tech Group. Transform your business with our expert solutions." />
+      
+        <Head />
         <title>5G Network Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       
-      
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="con tainermx-auto px-4 py-16"></div>
-          <h1 className="tex t-4xlfont-bold text-white mb-6">5G Network Infrastructure</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional 5G network infrastructure services by Zion Tech Group. Transform your business with our expert solutions.</p>
-          
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
-            Contact Us</Link>
-            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="con tainermx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">5G Network Infrastructure</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional 5G network infrastructure services by Zion Tech Group. Transform your business with our expert solutions.</p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </div>
-      </div>
-</div>;
+            <ArrowRight className="ml-2h-4w-4" />
+          
+        
   )}
 

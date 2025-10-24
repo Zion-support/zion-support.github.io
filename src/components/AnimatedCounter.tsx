@@ -64,7 +64,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   return (
     <span ref={setNode} className={className}>
       {prefix}{count.toLocaleString()}{suffix}</span>
-    </span>
   )
 }
 

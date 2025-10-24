@@ -119,7 +119,7 @@ analysis.recommendations = recommendations;
 ;
 function generateHTMLReport(analysis) {;
 const html = `;
-    <title>Bundle Analysis Report - Zion Tech Group</title>;
+    <title>Bundle Analysis Report - Zion Tech Group
 body {;
 font-family: -apple-system,BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
@@ -181,8 +181,8 @@ margin: 0;
             padding-left: 20px;
         .recommendations li {;
 margin-bottom: 8px;
-            color: #e2e8f0;
-        <h1></h1>📊 Bundle Analysis Report<>
+            color: #e2e8f0;</title>
+        <h1 />📊 Bundle Analysis Report<>
     </h1>
     <div class="stat-value"></div>
 </>${analysis.totalFiles,}<>
@@ -214,7 +214,7 @@ margin-bottom: 8px;
 </>${file.sizeFormatted}</td>
                     `).join('')}
 
-            <h3>💡 Optimization Recommendations</h3>;
+            <h3>💡 Optimization Recommendations
 ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}
   `;
 ;
@@ -223,3 +223,5 @@ const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html');
 
 // Run analysis;
 analyzeBundle();
+      </h3>
+      </title>

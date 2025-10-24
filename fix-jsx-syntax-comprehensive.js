@@ -37,18 +37,17 @@ for (let i = 0; i < lines.length; i++) {;
 const line = lines[i];
         newLines.push(line);
 ;
-if (line.includes('return (') && line.includes('<div></div>')) {;
+if (line.includes('return (') && line.includes('<div />')) {;
 inJSX = true;
           divCount = 1;
         } else if (inJSX) {;
-if (line.includes('<div></div>')) {;
+if (line.includes('<div />')) {;
 divCount++;
-          } else if (line.includes('</div>')) {;
+          } else if (line.includes('</div></div>')) {;
 divCount--;
           } else if (line.includes(');') && divCount > 0) {
             // Add missing closing divs;
 for (let j = 0; j < divCount; j++) {;
-newLines.push('    </div>');
             }
             divCount = 0;
             inJSX = false;

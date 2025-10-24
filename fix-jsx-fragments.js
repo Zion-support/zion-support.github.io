@@ -5,13 +5,13 @@ try {;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix malformed JSX fragments - replace <> with <div></div>;
+    // Fix malformed JSX fragments - replace <> with <div>
 if (content.includes('return (\n    <>')) {;
-content = content.replace(/return \(\n\s*<>/g, 'return (\n    <div></div>');
+content = content.replace(/return \(\n\s*<>/g, 'return (\n    <div />');
       modified = true;
     }
 
-    // Fix closing fragments - replace </> with </div>;
+    // Fix closing fragments - replace </> with 
 if (content.includes('</>')) {;
 content = content.replace(/<\/>/g, '</div>');
       modified = true;

@@ -14,7 +14,7 @@ function fixImports(filePath) {
     const importPath = '../'.repeat(depth) + 'components/Footer';
     
     // Fix the import
-    content = content.replace(/import Footer from '\.\.\/components\/Footer';/g, `import Footer from '${importPath}';`);
+    content = content.replace(/import Footer from '../../components/Footer';/g, `import Footer from '${importPath}';`);
     
     // Only write if content changed
     if (content !== originalContent) {

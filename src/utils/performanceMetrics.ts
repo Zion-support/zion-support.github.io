@@ -499,3 +499,5 @@ export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics
 </T>
 }
+      </T>
+      </T>

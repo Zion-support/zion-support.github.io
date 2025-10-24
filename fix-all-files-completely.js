@@ -42,7 +42,7 @@ hasFooterImport = true;
     }
 ;
 if (!hasFooterImport) {;
-importLines.push("import Footer from '../components/Footer';");
+importLines.push("import Footer from '../../components/Footer';");
     }
 
     // Extract the JSX content between the function declaration and the closing brace;

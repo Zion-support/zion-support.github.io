@@ -86,7 +86,7 @@ const ${baseName}: React.FC<${baseName}Props> = ({ className = '', children }) =
   return (
     <div className={\`\${className}\`}>
       {children}
-    </div>
+    
   );
 };
 
@@ -114,7 +114,6 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({
   return (
     <div className={\`accessibility-components \${className}\`} role="region" aria-label="Accessibility Components">
       {children}
-    </div>
   );
 };
 
@@ -154,7 +153,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         <div className="error-boundary">
           <h2>Something went wrong.</h2>
           <p>Please refresh the page and try again.</p>
-        </div>
       );
     }
 
@@ -184,8 +182,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]} \${className}\`}>
-    </div>
   );
 };
 
@@ -205,26 +201,45 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
     <header className={\`bg-white shadow-sm \${className}\`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-xl font-bold text-gray-900">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
             Zion Tech Group
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               Home
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900">
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               About
-            </Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-900">
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               Services
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900">
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               Contact
-            </Link>
-          </nav>
-        </div>
-      </div>
-    </header>
   );
 };
 
@@ -239,6 +254,8 @@ interface FooterProps {
   className?: string;
 }
 
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   return (
     <footer className={\`bg-gray-900 text-white \${className}\`}>
@@ -246,37 +263,26 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400">
-              Leading technology solutions for modern businesses.
-            </p>
-          </div>
+            <p className="text-lg text-gray-300 mb-8">
+              Leading technology solutions for modern businesses.</p>
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
-              <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-white">Blockchain</Link></li>
-              <li><Link href="/5g-solutions" className="text-gray-400 hover:text-white">5G Solutions</Link></li>
-            </ul>
-          </div>
+              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link>
+              <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-white">Blockchain</Link>
+              <li><Link href="/5g-solutions" className="text-gray-400 hover:text-white">5G Solutions</Link>
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-            </ul>
-          </div>
+              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link>
+              <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
           <div>
             <h4 className="text-md font-semibold mb-4">Contact</h4>
             <p className="text-gray-400">info@ziontechgroup.com</p>
             <p className="text-gray-400">+1 (555) 123-4567</p>
-          </div>
-        </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
   );
 };
 

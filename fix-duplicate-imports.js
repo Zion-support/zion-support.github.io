@@ -11,7 +11,7 @@ let content = fs.readFileSync(filePath, 'utf8');
 if (content.includes("import Footer from '../components/Footer'\n\nimport Footer from '/components/Footer'")) {;
 content = content.replace(
         /import Footer from '\.\.\/components\/Footer'\n\nimport Footer from '\/components\/Footer'\n/g,
-        "import Footer from '../components/Footer';\n"
+        "import Footer from '../../components/Footer';\n"
       );
       modified = true;
     }

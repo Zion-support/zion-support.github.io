@@ -61,7 +61,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   return (
     <span className={className}>
       {prefix}{count}{suffix}</span>
-    </span>
   );
 };
 

@@ -68,27 +68,23 @@ const ContactForm: React.FC = () => {
   ];
 
   if (isSubmitted) {
-    return (</HTMLInputElement>
+    return (
     <>
-      </HTMLInputElement>
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"></div>
-        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /></CheckCircle>
-        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       
-    
+      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!
+        <p className="text-lg text-gray-300 mb-8">Thank you for reaching out. We&apos;ll get back to you soon.
   );
   }
 
-  return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
+  return (</p>
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6"></form>
-        <div className="grid md:grid-cols-2 gap-6"></div>
-          <div></div>
+        <div className="grid md:grid-cols-2 gap-6">
+        <div />
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Full Name *</label>
-            </label>
             <input
               type="text"
               id="name"
@@ -105,10 +101,9 @@ handleChange
               placeholder="Your full name"
             /></input>
           
-          <div></div>
+          <div />
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Email Address *</label>
-            </label>
             <input
               type="email"
               id="email"
@@ -126,11 +121,10 @@ handleChange
           
         
         <div className="grid m
-  d:grid-cols-2 gap-6"></div>
-          <div></div>
+  d:grid-cols-2 gap-6">
+        <div />
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Phone Number</label>
-            </label>
             <input
               type="tel"
               id="phone"
@@ -142,10 +136,9 @@ handleChange
               placeholder="+1 (555) 123-4567"
             /></input>
           
-          <div></div>
+          <div />
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Company</label>
-            </label>
             <input
               type="text"
               id="company"
@@ -157,11 +150,9 @@ handleChange
               placeholder="Your company name"
             /></input>
           
-        </div>
-        <div></div>
+        <div />
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
             Service Interest</label>
-          </label>
           <select
             id="service"
             name="service"
@@ -174,14 +165,10 @@ handleChange
             {services.map((service, index) => (
               <option key={index} value={service} className="bg-gray-800"></option>
                 {service}</option>
-              </option>
             ))}
-          </select>
-        </div>
-        <div></div>
+        <div />
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
             Message *</label>
-          </label>
           <textarea
             id="message"
             name="message"
@@ -197,7 +184,6 @@ handleChange
   s:border-transparent resize-none"
             placeholder="Tell us about your project or how we can help..."
           /></textarea>
-        </div>
         <button
           type="submit"
           disabled={isSubmitting}
@@ -206,20 +192,12 @@ handleChange
         ></button>
           {isSubmitting ? (</button>
             <>
-  </div>
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
               Sending...
-            </div>
           ) : (
             <>
-  </div>
               <Send className="w-5 h-5 mr-2" /></Send>
               Send Message</Send>
-            </div>
           )}
-        </button>
-      </form>
-    </div>
   );
 };
 

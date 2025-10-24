@@ -27,7 +27,6 @@ function fixJSXErrors(content) {
   });
 
   // Fix missing closing tags in JSX
-  fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)([\s\S]*?)<\/div>/g, '<div$1>$2</div>');
   fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)([\s\S]*?)<\/span>/g, '<span$1>$2</span>');
   fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)([\s\S]*?)<\/p>/g, '<p$1>$2</p>');
 

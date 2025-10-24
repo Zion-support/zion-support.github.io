@@ -7,11 +7,12 @@ interface DefaultSEOProps {
 }
 ;
 const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
-  return (</DefaultSEOProps>
-    <div className={className}></div>
-      <h2>DefaultSEO</h2>
-      <p>This component is under construction.</p>
-    </div>
+  return (
+    <div className={className}>
+      <h2>DefaultSEO
+      <p className="text-lg text-gray-300 mb-8">This component is under construction.
+    </p>
+  </div>
   )
 }
 

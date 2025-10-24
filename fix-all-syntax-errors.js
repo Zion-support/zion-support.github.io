@@ -19,7 +19,7 @@ content = content.replace(
     }
 
     // Fix missing React import for files without 'use client' but with JSX;
-if (!content.includes("'use client';") && !content.includes('import React') && content.includes('<div></div>')) {;
+if (!content.includes("'use client';") && !content.includes('import React') && content.includes('<div />')) {;
 content = "import React from 'react';\n" + content;
       modified = true;
     }
@@ -38,38 +38,11 @@ content = "import React from 'react';\nimport Head from 'next/head';\n" + conten
     }
 
     // Fix Link import issues;
-if (content.includes('<Link') && !content.includes("import Link from 'next/link'")) {;
-if (content.includes("import React from 'react';")) {;
-content = content.replace(
-          "import React from 'react';",
-          "import React from 'react';\nimport Link from 'next/link';"
-        );
-      } else {;
-content = "import React from 'react';\nimport Link from 'next/link';\n" + content;
-      }
-      modified = true;
-    }
-;
-if (modified) {;
-fs.writeFileSync(filePath, content, 'utf8');
-      return true;
-    }
-;
-return false;
-  } catch (error) {;
-console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Find all TSX files in the app directory;
-const pattern = 'app/**/*.tsx';
-const files = glob.sync(pattern);
-;
-console.log(`Found ${files.length} TSX files to process`);
-;
-let fixedCount = 0;
-files.forEach(file => {;
+if (content.includes('<Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+             {;
 if (fixSyntaxErrors(file)) {;
 fixedCount++;
     console.log(`Fixed: ${file,}`);
@@ -77,3 +50,7 @@ fixedCount++;
 });
 ;
 console.log(`Fixed ${fixedCount} files`);
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+      </Head>
+      </div>

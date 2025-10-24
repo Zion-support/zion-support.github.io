@@ -16,8 +16,14 @@ const Breadcrumb: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-3"></div>
         <ol className="flex items-center space-x-2 text-sm">
           <li>
-            <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+            <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
               Home
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
             </Link>
           </li>
           {pathnames.map((name, index) => {
@@ -42,10 +48,13 @@ const Breadcrumb: React.FC = () => {
                   </span>
                 ) : (
                   <Link
-                    href={routeTo}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
                   </Link>
                 )}
               </li>

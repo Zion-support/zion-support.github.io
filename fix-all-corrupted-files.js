@@ -23,22 +23,21 @@ const ContentNewsletterSignup: React.FC = () => {
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
         <h3 className="text-lg font-semibold text-green-800 mb-2">
           Thank you for subscribing!
-        </h3>
-        <p className="text-green-600">
+        
+        <p className="text-lg text-gray-300 mb-8">
           You'll receive our latest updates and insights.
-        </p>
-      </div>
-    )
+        
+      </p>
+    </div>
+  )
   }
 
   return (
     <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-2">
         Stay Updated
-      </h3>
-      <p className="text-gray-600 mb-4">
-        Get the latest insights and updates delivered to your inbox.
-      </p>
+      <p className="text-lg text-gray-300 mb-8">
+        Get the latest insights and updates delivered to your inbox.</p>
       <form onSubmit={handleSubmit} className="flex gap-2">
         <input
           type="email"
@@ -53,9 +52,6 @@ const ContentNewsletterSignup: React.FC = () => {
           className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
         >
           Subscribe
-        </button>
-      </form>
-    </div>
   )
 }
 
@@ -91,38 +87,35 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             src={image}
             alt={title}
             className="w-full h-full object-cover"
-          />
-        </div>
+          /></img>
       )}
       <div className="p-6">
         {category && (
           <span className="inline-block px-2 py-1 text-xs font-medium text-blue-600 bg-blue-100 rounded-full mb-2">
             {category}
-          </span>
         )}
         <h3 className="text-xl font-semibold text-gray-900 mb-2">
-          <Link href={href} className="hover:text-blue-600">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
             {title}
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </h3>
-        <p className="text-gray-600 mb-4 line-clamp-3">
-          {excerpt}
-        </p>
+        <p className="text-lg text-gray-300 mb-8">
+          {excerpt}</p>
         <div className="flex items-center justify-between">
           {date && (
             <time className="text-sm text-gray-500">
               {new Date(date).toLocaleDateString()}
-            </time>
           )}
           <Link
-            href={href}
-            className="text-blue-600 hover:text-blue-800 font-medium"
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
           >
+            
             Read more →
-          </Link>
-        </div>
-      </div>
-    </article>
   )
 }
 
@@ -141,6 +134,8 @@ interface ContentPromotionBannerProps {
   variant?: 'primary' | 'secondary'
 }
 
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
   title,
   description,
@@ -158,16 +153,11 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="mb-4 opacity-90">{description}</p>
       <Link
-        href={ctaHref}
-        className={\`inline-block px-6 py-2 rounded-md font-medium transition-colors \${
-          variant === 'primary'
-            ? 'bg-white text-blue-600 hover:bg-gray-100'
-            : 'bg-blue-600 text-white hover:bg-blue-700'
-        }\`}
-      >
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            
         {ctaText}
-      </Link>
-    </div>
   )
 }
 
@@ -200,29 +190,24 @@ const CookieConsent: React.FC = () => {
   if (!showConsent) return null
 
   return (
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
     <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50">
       <div className="max-w-4xl mx-auto flex items-center justify-between">
         <div className="flex-1 mr-4">
-          <p className="text-sm">
-            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-          </p>
-        </div>
+          <p className="text-lg text-gray-300 mb-8">
+            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
         <div className="flex space-x-2">
           <button
             onClick={handleDecline}
             className="px-4 py-2 text-sm border border-gray-600 rounded hover:bg-gray-800"
           >
             Decline
-          </button>
           <button
             onClick={handleAccept}
             className="px-4 py-2 text-sm bg-blue-600 rounded hover:bg-blue-700"
           >
             Accept
-          </button>
-        </div>
-      </div>
-    </div>
   )
 }
 
@@ -281,8 +266,6 @@ const DynamicContentShowcase: React.FC = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-      </div>
     )
   }
 
@@ -300,9 +283,7 @@ const DynamicContentShowcase: React.FC = () => {
             }\`}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
-          </button>
         ))}
-      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredContent.map(item => (
@@ -312,19 +293,13 @@ const DynamicContentShowcase: React.FC = () => {
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover"
-              />
-            </div>
+              /></img>
             <div className="p-4">
               <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
                 {item.category}
-              </span>
               <h3 className="text-lg font-semibold mt-2 mb-1">{item.title}</h3>
               <p className="text-gray-600 text-sm">{item.description}</p>
-            </div>
-          </div>
         ))}
-      </div>
-    </div>
   )
 }
 
@@ -351,12 +326,9 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50"
         >
           Skip to main content
-        </a>
       )}
       <div className="accessibility-enhanced">
         {children}
-      </div>
-    </>
   )
 }
 

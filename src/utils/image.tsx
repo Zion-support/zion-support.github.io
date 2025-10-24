@@ -108,7 +108,7 @@ position: position
 {objectFit: 'cover'}
 {})
 {}</ImageProps>
-if (hasError) {</ImageProps>;
+if (hasError) {
 return (</ImageProps>}
 if (hasError) {}
 return ()
@@ -148,20 +148,14 @@ widt
 height: '100%'
 objectFit: 'cover'}
 })
-}</div>
-if (hasError) {</ImageProps>;
+if (hasError) {
 return (</ImageProps>;}
 if (hasError) {}
 return ()
-    <div }></div>
-if (hasError) {;}</div>
-return(<div }></div>
 interface ImageProps {/* TODO: Fix JSX expression */};
 :all-pages-backup/utils/image.tsx
 {}
-export const,</div>
 Image: React.FC<ImageProps>= ({/* TOD)</ImageProps>
-  O: Fix JSX expression */})</div>
 {}) => {/* TODO: Fix JSX expression */}
 {}, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
@@ -174,7 +168,6 @@ const
 }
 export const
 Image: React.FC<ImageProps>= ({/* TOD,</ImageProps>
-  O: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -190,14 +183,10 @@ style = {
 imageStyle
 };
 {...props})
->)</div>
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-</div>)
 )
 {...props}
-></div>
 <span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-</div>
 )
 :all-pages-backup/utils/image.tsx
 {}
@@ -236,9 +225,9 @@ onError = {
 handleError
 };
 {...props}
-:all-pages-backup/utils/image.tsx</img>;
->)</img>;
-{}</img>;
+:all-pages-backup/utils/image.tsx
+>)
+{}
 >)</img>
 }</img>
-export default Image</img>;
+export default Image

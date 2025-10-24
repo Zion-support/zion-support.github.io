@@ -276,11 +276,11 @@ function App() {
               <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
               <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
-      </ErrorBoundary>
-    </HelmetProvider>
+            
+          
+        
+      
+    
   );
 }
 

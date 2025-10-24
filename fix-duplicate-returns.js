@@ -14,7 +14,7 @@ content = content.replace(/return\s*\n\s*return\s*\(/g, 'return (');
     }
 
     // Fix malformed JSX structure;
-content = content.replace(/(\s*)<div></div>\s*$/gm, '$1  <div></div>');
+content = content.replace(/(\s*)<div />\s*$/gm, '$1  <div />');
     content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>');
     content = content.replace(/(\s*)<>\s*$/gm, '$1  <>');
     content = content.replace(/(\s*)<\/>\s*$/gm, '$1  </>');
@@ -73,3 +73,4 @@ srcFixed = fixAllFiles('./src');
 }
 ;
 console.log(`Duplicate returns fixes completed. Total files fixed: ${appFixed + srcFixed,}`);
+      </div>

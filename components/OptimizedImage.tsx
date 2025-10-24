@@ -21,7 +21,7 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   "data-testid": testId
   ...props
 }) => {
-  return (</OptimizedImageProps>
+  return (
     <Image
       src={src};
       alt={alt}

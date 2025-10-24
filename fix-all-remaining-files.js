@@ -38,13 +38,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
   return (
     <div className="performance-monitor">
-      <h3>Performance Metrics</h3>
-      <p>Load Time: {metrics.loadTime.toFixed(2)}ms</p>
-      <p>Render Time: {metrics.renderTime.toFixed(2)}ms</p>
-      {metrics.memoryUsage && (
-        <p>Memory Usage: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</p>
+      <h3>Performance Metrics
+      <p className="text-lg text-gray-300 mb-8">Load Time: {metrics.loadTime.toFixed(2)}ms</p>
+      <p className="text-lg text-gray-300 mb-8">Render Time: {metrics.renderTime.toFixed(2)}ms
+      {metrics.memoryUsage && (</p>
+        <p className="text-lg text-gray-300 mb-8">Memory Usage: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
       )}
-    </div>
+    </p>
+  </div>
   )
 }
 
@@ -62,7 +63,6 @@ const EnhancedAccessibilityWrapper: React.FC<EnhancedAccessibilityWrapperProps> 
   return (
     <div className="accessibility-wrapper">
       {children}
-    </div>
   )
 }
 
@@ -118,8 +118,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           <h2>Something went wrong.</h2>
           <details>
             {this.state.error && this.state.error.toString()}
-          </details>
-        </div>
       )
     }
 
@@ -145,7 +143,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ title, subtitle, children }
       <h1>{title}</h1>
       {subtitle && <p>{subtitle}</p>}
       {children}
-    </section>
   )
 }
 
@@ -158,9 +155,7 @@ import React from 'react'
 const EnhancedLoading: React.FC = () => {
   return (
     <div className="loading-container">
-      <div className="spinner"></div>
       <p>Loading...</p>
-    </div>
   )
 }
 
@@ -179,9 +174,7 @@ const EnhancedLoadingStates: React.FC<LoadingStateProps> = ({ isLoading, childre
   if (isLoading) {
     return (
       <div className="loading-container">
-        <div className="spinner"></div>
         <p>Loading...</p>
-      </div>
     )
   }
 
@@ -231,7 +224,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       {metrics.memoryUsage && (
         <p>Memory Usage: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</p>
       )}
-    </div>
   )
 }
 
@@ -266,7 +258,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({ title, description }) => {
     <>
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
-    </>
   )
 }
 
@@ -289,7 +280,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({ title, description, keywords 
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
       {keywords && <meta name="keywords" content={keywords} />}
-    </Head>
   )
 }
 
@@ -325,7 +315,6 @@ const ErrorHandler: React.FC<ErrorHandlerProps> = ({ error, children }) => {
       <div className="error-handler">
         <h2>An error occurred</h2>
         <p>{error.message}</p>
-      </div>
     )
   }
 
@@ -343,8 +332,6 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="container">
         <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </footer>
   )
 }
 
@@ -357,8 +344,6 @@ import React from 'react'
 const FuturisticBackground: React.FC = () => {
   return (
     <div className="futuristic-background">
-      <div className="grid-overlay"></div>
-    </div>
   )
 }
 
@@ -385,7 +370,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       onClick={onClick}
     >
       {children}
-    </button>
   )
 }
 
@@ -404,7 +388,6 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({ children, className = '
   return (
     <div className={\`futuristic-card \${className}\`}>
       {children}
-    </div>
   )
 }
 
@@ -417,8 +400,6 @@ import React from 'react'
 const FuturisticGlow: React.FC = () => {
   return (
     <div className="futuristic-glow">
-      <div className="glow-effect"></div>
-    </div>
   )
 }
 
@@ -431,8 +412,6 @@ import React from 'react'
 const FuturisticLoader: React.FC = () => {
   return (
     <div className="futuristic-loader">
-      <div className="loader-ring"></div>
-    </div>
   )
 }
 
@@ -458,7 +437,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
       <h1>{title}</h1>
       <p>{description}</p>
       {children}
-    </div>
   )
 }
 
@@ -477,9 +455,6 @@ const Header: React.FC = () => {
           <a href="/">Home</a>
           <a href="/services">Services</a>
           <a href="/about">About</a>
-        </nav>
-      </div>
-    </header>
   )
 }
 
@@ -521,12 +496,10 @@ interface LazyWrapperProps {
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
   children, 
-  fallback = <div>Loading...</div> 
 }) => {
   return (
     <Suspense fallback={fallback}>
       {children}
-    </Suspense>
   )
 }
 
@@ -539,8 +512,6 @@ import React from 'react'
 const Loading: React.FC = () => {
   return (
     <div className="loading">
-      <div className="spinner"></div>
-    </div>
   )
 }
 
@@ -553,8 +524,6 @@ import React from 'react'
 const LoadingOptimizer: React.FC = () => {
   return (
     <div className="loading-optimizer">
-      <div className="optimized-spinner"></div>
-    </div>
   )
 }
 
@@ -567,10 +536,8 @@ import React from 'react'
 const LoadingSkeleton: React.FC = () => {
   return (
     <div className="loading-skeleton">
-      <div className="skeleton-line"></div>
-      <div className="skeleton-line"></div>
-      <div className="skeleton-line"></div>
-    </div>
+      <div className="skeleton-line">
+        <div className="skeleton-line">
   )
 }
 
@@ -583,8 +550,6 @@ import React from 'react'
 const LoadingSpinner: React.FC = () => {
   return (
     <div className="loading-spinner">
-      <div className="spinner"></div>
-    </div>
   )
 }
 
@@ -603,8 +568,6 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({ isLoading, children }) =>
   if (isLoading) {
     return (
       <div className="loading-states">
-        <div className="spinner"></div>
-      </div>
     )
   }
 
@@ -641,7 +604,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({ children, onClick }) => {
   return (
     <button className="neon-button" onClick={onClick}>
       {children}
-    </button>
   )
 }
 
@@ -659,7 +621,6 @@ const Navigation: React.FC = () => {
       <Link href="/services">Services</Link>
       <Link href="/about">About</Link>
       <Link href="/contact">Contact</Link>
-    </nav>
   )
 }
 
@@ -695,8 +656,6 @@ import React from 'react'
 const OptimizedLoading: React.FC = () => {
   return (
     <div className="optimized-loading">
-      <div className="spinner"></div>
-    </div>
   )
 }
 
@@ -709,8 +668,6 @@ import React from 'react'
 const OptimizedLoadingSpinner: React.FC = () => {
   return (
     <div className="optimized-loading-spinner">
-      <div className="spinner"></div>
-    </div>
   )
 }
 
@@ -728,13 +685,9 @@ const PerformanceDashboard: React.FC = () => {
         <div className="metric">
           <span>Load Time</span>
           <span>1.2s</span>
-        </div>
         <div className="metric">
           <span>Memory Usage</span>
           <span>45MB</span>
-        </div>
-      </div>
-    </div>
   )
 }
 
@@ -818,7 +771,6 @@ const PWAInstaller: React.FC = () => {
   return (
     <button onClick={handleInstall} className="pwa-installer">
       Install App
-    </button>
   )
 }
 
@@ -840,7 +792,6 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   return (
     <div className={\`responsive-container \${className}\`}>
       {children}
-    </div>
   )
 }
 
@@ -868,7 +819,6 @@ const SearchBar: React.FC = () => {
         placeholder="Search..."
       />
       <button type="submit">Search</button>
-    </form>
   )
 }
 
@@ -892,8 +842,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
         <h2>Search</h2>
         <input type="text" placeholder="Search..." />
         <button onClick={onClose}>Close</button>
-      </div>
-    </div>
   )
 }
 
@@ -944,7 +892,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description }) => {
     <Head>
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
-    </Head>
   )
 }
 
@@ -963,10 +910,8 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
   return (
     <div className="service-card">
-      {icon && <div className="service-icon">{icon}</div>}
       <h3>{title}</h3>
       <p>{description}</p>
-    </div>
   )
 }
 
@@ -979,10 +924,8 @@ import React from 'react'
 const ServiceCardSkeleton: React.FC = () => {
   return (
     <div className="service-card-skeleton">
-      <div className="skeleton-icon"></div>
-      <div className="skeleton-title"></div>
-      <div className="skeleton-description"></div>
-    </div>
+      <div className="skeleton-icon">
+        <div className="skeleton-title">
   )
 }
 
@@ -1049,8 +992,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <a href="/">Home</a>
         <a href="/services">Services</a>
         <a href="/about">About</a>
-      </nav>
-    </div>
   )
 }
 
@@ -1064,7 +1005,6 @@ const SkipLink: React.FC = () => {
   return (
     <a href="#main-content" className="skip-link">
       Skip to main content
-    </a>
   )
 }
 
@@ -1078,7 +1018,6 @@ const EnhancedSkipLink: React.FC = () => {
   return (
     <a href="#main-content" className="enhanced-skip-link">
       Skip to main content
-    </a>
   )
 }
 
@@ -1124,7 +1063,6 @@ const ThemeToggle: React.FC = () => {
   return (
     <button onClick={toggleTheme} className="theme-toggle">
       {theme === 'light' ? '🌙' : '☀️'}
-    </button>
   )
 }
 

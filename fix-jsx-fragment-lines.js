@@ -11,7 +11,8 @@ let content = fs.readFileSync(filePath, 'utf8');
 content = content.replace(/return\s*\(\s*<>\s*\n\s*\n\s*<Head>/g,'return (\n    <>\n      <Head>');
 
     // Fix the specific pattern: return ( <> \n \n <div
-    // This should be: return ( <></div> <div;
+    // This should be: return ( <>
+        <div;
 content = content.replace(/return\s*\(\s*<></div>\s*\n\s*\n\s*<div/g,'return (\n    <></div>\n      <div');
 
     // Fix any remaining empty lines after JSX fragment opening;
@@ -48,3 +49,9 @@ console.log('Starting JSX fragment lines fixes...');
 walkDir('./app');
 walkDir('./src');
 console.log('JSX fragment lines fixes completed!');
+      </Head>
+      </Head>
+      </Head>
+      </Head>
+      </Head>
+      </Head>

@@ -55,7 +55,7 @@ permissionsPolicy: [
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 export function getSecurityHeaders()</SecurityHeadersConfig>
-customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
+customConfig?: Partial<SecurityHeadersConfig />
 ): Record<string, string> {}
 const config = { ...defaultSecurityHeaders, ...customConfig }</string>
 const headers: Record<string, string> = {};
@@ -88,7 +88,7 @@ defaultSecurityHeaders: SecurityHeadersConfig = {/* TOD
 /**
 * Get security headers as key-value pairs
 */</string>
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
 ): Record<string, string> {/* TODO: Fix JSX expression */}
 const config = { ...defaultSecurityHeaders, ...customConfig }
 const</string>
@@ -111,7 +111,7 @@ return headers
 /**
 * Get security headers in Next.js format
 */</string>
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)</SecurityHeadersConfig>;
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; valu
   e: string }> {
   export function getNextSecurityHeaders()
@@ -124,9 +124,13 @@ return Object.entries(headers).map(([key, value]) => ({}
 key
 value}
 }))
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>);
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */}
 e: string }> {/* TODO: Fix JSX expression */}
 }))
 }
 export default defaultSecurityHeaders
+      </SecurityHeadersConfig>
+      </SecurityHeadersConfig>
+      </SecurityHeadersConfig>
+      </SecurityHeadersConfig>

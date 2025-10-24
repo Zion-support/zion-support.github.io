@@ -57,3 +57,4 @@ const appDir = path.join(__dirname, 'app');
 console.log('Removing Footer imports...');
 const totalFixed = removeAllFooterImports(appDir);
 console.log(`Removed Footer from ${totalFixed} files`);
+      </Footer>

@@ -69,7 +69,8 @@ function processFiles(dir) {
       }
     }
   });
-}
+</div>
+      </div>}
 
 // Process app directory
 console.log('Fixing all JSX syntax errors in app directory...');
@@ -84,3 +85,11 @@ console.log('Fixing all JSX syntax errors in components directory...');
 processFiles('./components');
 
 console.log('All JSX syntax fixes completed!');
+      </Head>
+      </div>
+      </div>
+      </div>
+      </Head>
+      </Head>
+      </Head>
+      </Head>
