@@ -4,28 +4,30 @@ interface FormState<T /> {
   data: T;
   isSubmitting: boolean;
   submitStatus: "idle" | "success" | "error";
-  errors: Partial<Record<keyof T, string />>;
+  error,</T>
+  s: Partial<Record<keyof T, string />>;
 }
-
+</Record>
 interface UseFormOptions<T /> {
-  initialData: T;
+  initialData: T;</T>
   onSubmit: (data: T) => Promise<void />
-  validate?: (data: T) => Partial<Record<keyof T, string />>;
+  validate?: (dat,</void>
+  a: T) => Partial<Record<keyof T, string />>;
 }
-
+</Record>
 export function useForm<T extends Record<string, any />>({
   initialData,
   onSubmit,
-  validate,
-}: UseFormOptions<T />) {
+  validate,</T>
+}: UseFormOptions<T />) {</T>
   const [formState, setFormState] = useState<FormState<T />>({
     data: initialData,
     isSubmitting: false,
     submitStatus: "idle",
     errors: {},
   });
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {
+</FormState>
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {;
     const { name, value } = e.target;
     setFormState(prev => ({
       ...prev,
@@ -36,11 +38,11 @@ export function useForm<T extends Record<string, any />>({
       errors: {
         ...prev.errors,
         [name]: "", // Clear error when user starts typing
-      },
+      },)
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {;
     e.preventDefault();
     
     // Validate form
@@ -48,7 +50,7 @@ export function useForm<T extends Record<string, any />>({
     if (Object.keys(validationErrors).length > 0) {
       setFormState(prev => ({
         ...prev,
-        errors: validationErrors,
+        errors: validationErrors,)
       }));
       return;
     }
@@ -57,7 +59,7 @@ export function useForm<T extends Record<string, any />>({
       ...prev,
       isSubmitting: true,
       submitStatus: "idle",
-      errors: {},
+      errors: {},)
     }));
 
     try {
@@ -65,7 +67,7 @@ export function useForm<T extends Record<string, any />>({
       setFormState(prev => ({
         ...prev,
         submitStatus: "success",
-        data: initialData, // Reset form
+        data: initialData, // Reset form)
       }));
     } catch (error) {
       // Log error in development, send to error service in production
@@ -77,12 +79,12 @@ export function useForm<T extends Record<string, any />>({
       
       setFormState(prev => ({
         ...prev,
-        submitStatus: "error",
+        submitStatus: "error",)
       }));
     } finally {
       setFormState(prev => ({
         ...prev,
-        isSubmitting: false,
+        isSubmitting: false,)
       }));
     }
   }, [formState.data, onSubmit, validate, initialData]);
@@ -92,7 +94,7 @@ export function useForm<T extends Record<string, any />>({
       data: initialData,
       isSubmitting: false,
       submitStatus: "idle",
-      errors: {},
+      errors: {},);
     });
   }, [initialData]);
 
@@ -102,4 +104,4 @@ export function useForm<T extends Record<string, any />>({
     handleSubmit,
     resetForm,
   };
-}
+}</HTMLInputElement>

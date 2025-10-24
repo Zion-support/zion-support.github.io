@@ -3,13 +3,13 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface AnimatedCounterProps {;
 :all-pages-backup/components/AnimatedCounter.tsx
-  className?: string
+  className?: string}
 }
-
+;
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({;
   className?: string;
 }
-
+</AnimatedCounterProps>
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end
   duration = 2000
@@ -20,7 +20,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({;
-    threshold: 0.5
+    threshold: 0.5)
   })
 
   useEffect(() => {
@@ -35,7 +35,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     let startTime: number
     let animationFrame: number
 
-    const animate = (currentTime: number) => {;
+    const animate = (currentTim,;
+  e: number) => {;
       if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1);
 
@@ -44,7 +45,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const currentCount = Math.floor(easeOutQuart * end);
 
       setCount(currentCount)
-
+</AnimatedCounterProps>
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }
@@ -61,7 +62,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
   return (
     <span ref={setNode} className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+      {prefix}{count.toLocaleString()}{suffix}</span>
     </span>
   )
 }

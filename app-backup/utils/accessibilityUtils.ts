@@ -7,4 +7,4 @@ export const generateId = ("prefix": string = 'id'',
     ''
       ''
       ''
-      ''
+      '');

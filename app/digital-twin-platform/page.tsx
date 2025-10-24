@@ -18,7 +18,7 @@ export default function DigitaltwinplatformPage() {
             Digital Twin Platform
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional digital-twin-platform services coming soon.
+            digital-twin-platform services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

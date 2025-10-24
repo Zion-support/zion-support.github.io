@@ -18,7 +18,7 @@ export default function DatabasePage() {
             Database
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional database services coming soon.
+            database services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

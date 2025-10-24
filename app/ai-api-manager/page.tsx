@@ -18,7 +18,7 @@ export default function AiapimanagerPage() {
             Ai Api Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-api-manager services coming soon.
+            ai-api-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

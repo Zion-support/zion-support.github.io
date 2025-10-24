@@ -18,7 +18,7 @@ export default function ZionaisocialschedulerproPage() {
             Zion Ai Social Scheduler Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-social-scheduler-pro services coming soon.
+            zion-ai-social-scheduler-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

@@ -18,7 +18,7 @@ export default function AianalyticsdashboardproPage() {
             Ai Analytics Dashboard Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-analytics-dashboard-pro services coming soon.
+            ai-analytics-dashboard-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

@@ -18,7 +18,7 @@ export default function ZionsmartanalyticsdashboardPage() {
             Zion Smart Analytics Dashboard
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-smart-analytics-dashboard services coming soon.
+            zion-smart-analytics-dashboard services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

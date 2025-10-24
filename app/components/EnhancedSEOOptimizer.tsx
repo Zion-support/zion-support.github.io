@@ -7,7 +7,8 @@ import { Phone, Mail, ArrowRight } from 'lucide-react';
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -39,7 +40,9 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div>;
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
+
+export default EnhancedSEOOptimizerPage;

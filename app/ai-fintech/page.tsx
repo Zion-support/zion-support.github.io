@@ -18,7 +18,7 @@ export default function AifintechPage() {
             Ai Fintech
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-fintech services coming soon.
+            ai-fintech services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

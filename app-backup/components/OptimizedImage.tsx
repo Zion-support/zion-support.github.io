@@ -7,6 +7,10 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
 'use client';
 <<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '''
-=======
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</OptimizedImageProps>
+const OptimizedImag,</OptimizedImageProps>
+  e: React.FC<OptimizedImageProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</OptimizedImageProps>
+</OptimizedImageProps>
+
+export default OptimizedImage;

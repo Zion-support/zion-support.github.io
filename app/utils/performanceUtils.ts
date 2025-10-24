@@ -3,12 +3,14 @@ export interface PerformanceMetric {
   name: string;
   value: number;
   timestamp: number;
-  url: string;
+  ur,
+  l: string;}
 }
-
+;
 class PerformanceMonitor {
   private metrics: PerformanceMetric[] = [];
-  private isEnabled: boolean;
+  private isEnable,
+  d: boolean;
 
   constructor() {
     this.isEnabled = typeof window !== "undefined" && "performance" in window;
@@ -30,7 +32,8 @@ class PerformanceMonitor {
   recordMetric(name: string, value: number): void {
     if (!this.isEnabled) return;
 
-    const metric: PerformanceMetric = {
+    const metri,
+  c: PerformanceMetric = {
       name,
       value,
       timestamp: Date.now(),
@@ -52,10 +55,11 @@ class PerformanceMonitor {
 
   // Send metrics to analytics service
   private sendToAnalytics(metric: PerformanceMetric): void {
-    // Example: Send to Google Analytics
+    // Exampl,
+  e: Send to Google Analytics
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", metric.name, {
-        event_category: "Performance",
+        event_category: "Performance",)
         value: Math.round(metric.value),
       });
     }

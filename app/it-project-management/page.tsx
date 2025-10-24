@@ -18,7 +18,7 @@ export default function ItprojectmanagementPage() {
             It Project Management
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional it-project-management services coming soon.
+            it-project-management services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

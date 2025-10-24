@@ -18,7 +18,7 @@ export default function AimlplatformPage() {
             Ai Ml Platform
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-ml-platform services coming soon.
+            ai-ml-platform services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

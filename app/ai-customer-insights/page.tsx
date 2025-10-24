@@ -18,7 +18,7 @@ export default function AicustomerinsightsPage() {
             Ai Customer Insights
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-customer-insights services coming soon.
+            ai-customer-insights services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

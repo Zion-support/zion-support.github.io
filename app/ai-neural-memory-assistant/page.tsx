@@ -18,7 +18,7 @@ export default function AineuralmemoryassistantPage() {
             Ai Neural Memory Assistant
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-neural-memory-assistant services coming soon.
+            ai-neural-memory-assistant services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

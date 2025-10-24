@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react'
   variant?: 'inline' | 'modal'
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',</NewsletterSignupProps>
 <<<<<<< HEAD
   const [email, setEmail] = useState('''
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle'}
@@ -17,8 +17,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setStatus('error'
       setMessage('Please enter a valid email address'
     setStatus('loading'
-      setStatus('success'
-      setMessage('Thank you for subscribing! Check your email for confirmation.'
+      setStatus('success'</idle>
+      setMessage('Thank you for subscribing! Check your email for confirmation.'</idle>
 <<<<<<< HEAD
       setEmail('''
       // Close modal after success if it'
@@ -28,4 +28,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 >>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
       if (variant === 'modal'
       setStatus('error';
-      setMessage('Something went wrong. Please try again.'
+      setMessage('Something went wrong. Please try again.')
+
+export default NewsletterSignup;

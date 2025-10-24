@@ -18,7 +18,7 @@ export default function ZionairecruitmentproPage() {
             Zion Ai Recruitment Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-recruitment-pro services coming soon.
+            zion-ai-recruitment-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

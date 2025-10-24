@@ -22,13 +22,15 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableSkipLinks= true,
   enableColorContrast= true,
   enableMotionReduction= true,
-  enableFontScaling= true,
+  enableFontScaling= true,}
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false
-    fontSize: 'normal',
+    fontSiz,
+  e: 'normal',
     screenReader: false
-    keyboardNavigation: false})
+    keyboardNavigatio,)
+  n: false})
   // Detect user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -40,20 +42,23 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
     setAccessibilitySettings(prev => ({
       ...prev
-      reducedMotion: prefersReducedMotion,
+      reducedMotio,
+  n: prefersReducedMotion,)
     highContrast: prefersHighContrast})
     // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
-    const handleMotionChange = (e: MediaQueryListEvent) => {
+    const handleMotionChange = (,
+  e: MediaQueryListEvent) => {
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches })
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches })
     motionQuery.addEventListener('change', handleMotionChange)
-    contrastQuery.addEventListener('change', handleContrastChange)
-    return (
+    contrastQuery.addEventListener('change', handleContrastChange)</AdvancedAccessibilityEnhancerProps>
+    return (</AdvancedAccessibilityEnhancerProps>
     <>
-      ) => {
+    ) => {
+  </>
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
   }, [])
@@ -69,7 +74,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -116,7 +122,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
           activeElement.click()}
       // Arrow keys for menu navigation
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
         const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
@@ -159,7 +165,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (typeof window === 'undefined') return
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(
+      const focusableElements = element.querySelectorAll();
         'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',
     </>
 <<<<<<< HEAD
@@ -182,14 +188,15 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         }
       }
       element.addEventListener('keydown', handleTabKey)
-      firstElement?.focus()
-      return (
+      firstElement?.focus()</HTMLElement>
+      return (</HTMLElement>
     <>
-      ) => element.removeEventListener('keydown', handleTabKey)
+    ) => element.removeEventListener('keydown', handleTabKey)
+  </>
     }
-    // Apply focus trap to modals
+    // Apply focus trap to modals;
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
-    modals.forEach(modal => {
+    modals.forEach(modal => {)
   const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup
@@ -322,7 +329,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
  AdvancedAccessibilityEnhancer
 }}}}}
-=======
+=======;
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-996d
-}
+};
+
+export default AdvancedAccessibilityEnhancer;

@@ -18,7 +18,7 @@ export default function AiprojectmanagerproPage() {
             Ai Project Manager Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-project-manager-pro services coming soon.
+            ai-project-manager-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

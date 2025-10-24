@@ -18,7 +18,7 @@ export default function Ai3dmodelgeneratorPage() {
             Ai 3d Model Generator
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-3d-model-generator services coming soon.
+            ai-3d-model-generator services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

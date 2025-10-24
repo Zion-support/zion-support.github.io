@@ -1,17 +1,20 @@
 interface ApiResponse<T = any> {
   data: T;
-  status: number;
+  statu,
+  s: number;
   message?: string;
 }
 
 interface ApiError {
   message: string;
-  status: number;
+  statu,
+  s: number;}
 }
-
+;
 class ApiClient {
   private baseURL: string;
-  private defaultHeaders: Record<string, string>;
+  private defaultHeader,</T>
+  s: Record<string, string>;
 
   constructor(baseURL: string = '/api') {
     this.baseURL = baseURL;
@@ -19,10 +22,10 @@ class ApiClient {
       'Content-Type': 'application/json',
     };
   }
-
+</string>
   private async request<T>(
     endpoint: string,
-    options: RequestInit = {}
+    options: RequestInit = {}</T>
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
     
@@ -54,39 +57,39 @@ class ApiClient {
       } as ApiError;
     }
   }
-
-  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+</ApiResponse>
+  async get<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'GET',
       headers,
     });
   }
-
+</T>
   async post<T>(
     endpoint: string,
-    data?: any,
-    headers?: Record<string, string>
-  ): Promise<ApiResponse<T>> {
+    data?: any,</T>
+    headers?: Record<string, string></string>
+  ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
       headers,
     });
   }
-
+</T>
   async put<T>(
     endpoint: string,
-    data?: any,
-    headers?: Record<string, string>
-  ): Promise<ApiResponse<T>> {
+    data?: any,</T>
+    headers?: Record<string, string></string>
+  ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
       headers,
     });
   }
-
-  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {
+</T>
+  async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'DELETE',
       headers,
@@ -97,4 +100,4 @@ class ApiClient {
 const apiClient = new ApiClient();
 
 export default apiClient;
-export { ApiClient, type ApiResponse, type ApiError };
+export { ApiClient, type ApiResponse, type ApiError };</T>

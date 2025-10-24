@@ -4,7 +4,8 @@ import { Helmet } from &quot;react-helmet-async&quot;
 const ServicePageTemplatePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -36,10 +37,12 @@ const ServicePageTemplatePage: React.FC = () => {
   ]
   return (
     <>
-      <Helmet>
-        <title>ServicePageTemplate | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; />
+    
+  </>
+      <Helmet></Helmet>
+        <title>ServicePageTemplate | Zion Tech Group</title>;
+        <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; /></meta>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; /></meta>
       </Helmet>
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;container mx-auto max-w-6xl&quot;></div>

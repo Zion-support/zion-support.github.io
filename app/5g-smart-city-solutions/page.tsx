@@ -18,7 +18,7 @@ export default function GsmartcitysolutionsPage() {
             5g Smart City Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional 5g-smart-city-solutions services coming soon.
+            5g-smart-city-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

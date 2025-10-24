@@ -1,5 +1,5 @@
 import React, { useEffect } from &quot;react&quot()
-interface AnalyticsProps {}
+interface AnalyticsProps {};
   className?: string()
 }
 
@@ -10,7 +10,7 @@ const Analytics: React.FC = () => {,
       if (typeof window !== &quot;undefined&quot; && window.gtag) {
         window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           "page_title": document.title,
-  "page_location": window.location.href,
+  "page_location": window.location.href,)
 :app/components/Analytics.tsx()
         })
       }
@@ -18,7 +18,9 @@ const Analytics: React.FC = () => {,
     initAnalytics()
   }, [])
 
-  return null; // Analytics component doesn&apos;t render anything()
+  return (
+    null
+  ); // Analytics component doesn&apos;t render anything()
 }
 
 export default Analytics()

@@ -18,7 +18,7 @@ export default function AilogodesignerPage() {
             Ai Logo Designer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-logo-designer services coming soon.
+            ai-logo-designer services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

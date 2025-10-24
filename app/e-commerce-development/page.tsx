@@ -18,7 +18,7 @@ export default function EcommercedevelopmentPage() {
             E Commerce Development
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional e-commerce-development services coming soon.
+            e-commerce-development services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

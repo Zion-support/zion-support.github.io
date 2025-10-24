@@ -9,9 +9,9 @@ export interface SecurityHeadersConfig {;
   xFrameOptions?: string()
   xContentTypeOptions?: string()
   referrerPolicy?: string()
-  permissionsPolicy?: string()
+  permissionsPolicy?: string()}
 }
-
+;
 export const "defaultSecurityHeaders": SecurityHeadersConfig = {;,
   // Content Security Policy,
   "contentSecurityPolicy": [,

@@ -18,7 +18,7 @@ export default function AidatavisualizationPage() {
             Ai Data Visualization
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-data-visualization services coming soon.
+            ai-data-visualization services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

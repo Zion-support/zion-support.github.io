@@ -8,7 +8,8 @@ import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      ico,
+  n: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -36,19 +37,20 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
+    'Gain competitive advantage with advanced technology',;
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Phone className=&quot;mr-2 h-5 w-5&quot; />
-                Call Now
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                Call Now</Phone>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove,
+  r:scale-105&quot;></button>
                 <Mail className=&quot;mr-2 h-5 w-5&quot; />
-                Email Us
+                Email Us</Mail>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
 </>
 }  );
 
@@ -60,7 +62,7 @@ export default ServiceWorkerRegistrationPage
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
@@ -73,6 +75,7 @@ export default ServiceWorkerRegistrationPage
           <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12&quot;></div>
             <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>h2>
             <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+            <div className=&quot;flex flex-col s,
+  m: flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>

@@ -18,7 +18,7 @@ export default function InvestorsPage() {
             Investors
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional investors services coming soon.
+            investors services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

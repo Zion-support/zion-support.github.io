@@ -18,7 +18,7 @@ export default function CareersPage() {
             Careers
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional careers services coming soon.
+            careers services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

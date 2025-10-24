@@ -18,7 +18,7 @@ export default function SecuritymonitoringsuitePage() {
             Security Monitoring Suite
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional security-monitoring-suite services coming soon.
+            security-monitoring-suite services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

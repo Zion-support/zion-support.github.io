@@ -3,7 +3,7 @@
 export interface Metadata {;
   title?: string()
   description?: string()
-  keywords?: string[];
+  keywords?: string[];}
   authors?: Array<{ "name": string; url?: string }> | string[]
   creator?: string()
   publisher?: string()
@@ -21,7 +21,7 @@ export interface Metadata {;
   title?: string()
     description?: string()
     url?: string()
-    siteName?: string()
+    siteName?: string()</string>
     images?: Array<{
       "url": string,
       width?: number()

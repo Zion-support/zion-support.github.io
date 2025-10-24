@@ -18,7 +18,7 @@ export default function AiautomatedreportingPage() {
             Ai Automated Reporting
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-automated-reporting services coming soon.
+            ai-automated-reporting services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

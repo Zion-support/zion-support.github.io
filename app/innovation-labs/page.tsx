@@ -18,7 +18,7 @@ export default function InnovationlabsPage() {
             Innovation Labs
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional innovation-labs services coming soon.
+            innovation-labs services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

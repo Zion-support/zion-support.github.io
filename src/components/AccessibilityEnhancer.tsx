@@ -5,9 +5,9 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode
+  children: React.ReactNode}
 }
-
+;
 export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   useEffect(() => {
     // Accessibility enhancements
@@ -16,7 +16,8 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       const skipLink = document.createElement('a')
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu,
+  s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
       document.body.insertBefore(skipLink, document.body.firstChild)
 
       // Add main content ID
@@ -32,24 +33,26 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         }
       }
     }
-  }, [])
+  }, []);
 ;
   return <>{children}</>};
 import { useEffect } from 'react';
 import Navigation from './Navigation';
 
-const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<{ childre,
+  n: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
 :all-pages-backup/components/AccessibilityEnhancer.tsx
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content with Alt + M
+      // Skip to main content with Alt + M;
       if (e.altKey && e.key === 'm') {;
         e.preventDefault();
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
           mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' })}
+          mainContent.scrollIntoView({ behavio,)
+  r: 'smooth' })}
       }
 
       // Skip to navigation with Alt + N
@@ -62,7 +65,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
             firstLink.focus()}
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
+        // Skip to main content;
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
           const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
           if (mainContent) {
@@ -91,7 +94,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         outline-offset: 2px !important
       *:focus {;
         outline: 2px solid #8b5cf6 !important;
-        outline-offset: 2px !important;
+        outline-offse,
+  t: 2px !important;
       }
 
       const nav = document.querySelector('nav');
@@ -114,7 +118,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
           * {
             border-color: currentColor !important
           * {;
-            border-color: currentColor !important;
+            border-colo,
+  r: currentColor !important;
           }
           button, a {
             border: 2px solid currentColor !important
@@ -147,7 +152,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       .reduce-motion * {
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important
+        transition-duratio,
+  n: 0.01ms !important
       }
     `;
     document.head.appendChild(style);

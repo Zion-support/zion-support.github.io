@@ -13,6 +13,10 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
     'Gain competitive advantage with advanced technology';
 <<<<<<< HEAD
 const LazyImage: React.FC<LazyImageProps> = ({ className = '''
-=======
-const LazyImage: React.FC<LazyImageProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</LazyImageProps>
+const LazyImag,</LazyImageProps>
+  e: React.FC<LazyImageProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</LazyImageProps>
+</LazyImageProps>
+
+export default LazyImage;

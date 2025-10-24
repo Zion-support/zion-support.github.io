@@ -18,7 +18,7 @@ export default function AiinventorymanagementPage() {
             Ai Inventory Management
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-inventory-management services coming soon.
+            ai-inventory-management services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

@@ -18,7 +18,7 @@ export default function AidesignstudioPage() {
             Ai Design Studio
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-design-studio services coming soon.
+            ai-design-studio services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

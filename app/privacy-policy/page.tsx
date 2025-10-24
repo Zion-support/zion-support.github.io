@@ -18,7 +18,7 @@ export default function PrivacypolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional privacy-policy services coming soon.
+            privacy-policy services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"
