@@ -1,76 +1,101 @@
-import fs from 'fs';
-#!/usr/bin/env node;
-// Function to fix JSX structure issues;
-function fixJSXStructure(content) {
-  let fixed = content;
-  
-  // Fix remaining className spacing issues;
-  fixed = fixed.replace(/text-whitemb-/g, 'text-white mb-');
-  fixed = fixed.replace(/text-gray-300mb-/g, 'text-gray-300 mb-');
-  fixed = fixed.replace(/flexspace-/g, 'flex space-');
-  fixed = fixed.replace(/flexitems-/g, 'flex items-');
-  fixed = fixed.replace(/w-4 h-4ml-/g, 'w-4 h-4 ml-');
-  fixed = fixed.replace(/w-5 h-5ml-/g, 'w-5 h-5 ml-');
-  fixed = fixed.replace(/text-whitemb-/g, 'text-white mb-');
-  fixed = fixed.replace(/hover:text-cyan-400transition-colors/g, 'hover:text-cyan-400 transition-colors');
-  fixed = fixed.replace(/items-centertext-gray-300/g, 'items-center text-gray-300');
-  fixed = fixed.replace(/w-4 h-4mr-/g, 'w-4 h-4 mr-');
-  fixed = fixed.replace(/pt-8text-center/g, 'pt-8 text-center');
-  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');
-  fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center');
-  
-  // Fix self-closing divs that should be opening tags;
-  fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');
-  fixed = fixed.replace(/<footer className="([^"]*)" \/>\s*<div/g, '<footer className="$1">\n      <div');
-  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1">\n              <li');
-  fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)/g, '<p className="$1">\n              $2');
-  
-  // Fix missing closing tags;
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
-  
-  // Fix Link components that should be self-closing;
-  fixed = fixed.replace(/<Link\s+([^>]+)\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, '<Link $1>\n          $2\n          <$3 />\n        </Link>');
-  
-  // Fix specific patterns;
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g, )
-    '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
-  
-  // Fix malformed p tags;
-  fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
-  
-  return fixed;
+const fs = require('fs');
+const path = require('path');
 
-// Function to process a single file;
+// Function to fix JSX structure issues
+function fixJSXStructure(content) {
+  // Check if this is a Next.js page component
+  const isNextPage = content.includes('export default') && content.includes('function');
+  
+  if (!isNextPage) return content;
+
+  // Fix the main structural issues
+  let fixed = content
+    // Fix return statements that have malformed JSX
+    .replace(/return \(\s*<>\s*<title>/g, 'return (\n    <>\n      <Head>\n        <title>')
+    .replace(/<\/title>\s*<h1/g, '</title>\n      </Head>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\n        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">\n          <h1')
+    .replace(/<\/h1>\s*<p/g, '</h1>\n          <p')
+    .replace(/<\/p>\s*<\/>/g, '</p>\n        </div>\n      </div>\n    </>')
+    
+    // Add missing imports
+    .replace(/import React from 'react';/g, `import React from 'react';\nimport Head from 'next/head';\nimport Link from 'next/link';\nimport { ArrowRight } from 'lucide-react';`)
+    
+    // Fix malformed closing tags
+    .replace(/\)\s*\);\s*$/gm, ');')
+    .replace(/\)\s*\)\s*$/gm, ')')
+    
+    // Clean up any remaining malformed JSX
+    .replace(/<>\s*<>\s*/g, '<>')
+    .replace(/\s*<>\s*<\/>/g, '')
+    .replace(/<>\s*<\/>\s*/g, '')
+    
+    // Fix malformed function exports
+    .replace(/export default (\w+);\s*const \1: React\.FC = \(\) => \{/g, 'const $1: React.FC = () => {')
+    .replace(/export default (\w+);\s*const \1: React\.FC = \(\) => \{/g, 'const $1: React.FC = () => {');
+
+  // If the file doesn't have proper JSX structure, create a basic one
+  if (fixed.includes('<title>') && !fixed.includes('<Head>')) {
+    fixed = fixed
+      .replace(/return \(\s*<>\s*<title>/g, 'return (\n    <>\n      <Head>\n        <title>')
+      .replace(/<\/title>\s*<h1/g, '</title>\n      </Head>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\n        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">\n          <h1')
+      .replace(/<\/h1>\s*<p/g, '</h1>\n          <p')
+      .replace(/<\/p>\s*<\/>/g, '</p>\n        </div>\n      </div>\n    </>');
+  }
+
+  return fixed;
+}
+
+// Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixJSXStructure(content);
     
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed JSX structure: ${filePath}`);
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed structure: ${filePath}`);
       return true;
+    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
+  }
+}
 
-// Main function;
-async function main() {
-  console.log('Starting to fix JSX structure issues...');
+// Function to find all page.tsx files
+function findPageFiles(dir) {
+  const files = [];
   
-  // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'])
-  });
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (item === 'page.tsx') {
+        files.push(fullPath);
+      }
+    }
+  }
   
-  let fixedCount = 0;
-  
-    if (processFile(file)) {
-      fixedCount++;
-  });
-  
-  console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);
+  traverse(dir);
+  return files;
+}
 
-main().catch(console.error);
+// Main execution
+const appDir = '/workspace/app';
+const pageFiles = findPageFiles(appDir);
+
+console.log(`Found ${pageFiles.length} page.tsx files`);
+
+let fixedCount = 0;
+for (const file of pageFiles) {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed structure in ${fixedCount} files`);
