@@ -2,6 +2,12 @@
 
 import React, { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface AnalyticsProps {
   children: React.ReactNode;
 }
@@ -10,8 +16,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Initialize gtag
-      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag = (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag || function() {
-        ((window as unknown as { gtag: { q: unknown[] } }).gtag.q = (window as unknown as { gtag: { q: unknown[] } }).gtag.q || []).push(arguments);
+      window.gtag = window.gtag || function() {
+        (window as any).gtag.q = (window as any).gtag.q || [];
+        (window as any).gtag.q.push(arguments);
       };
 
       // Load GA script
@@ -21,8 +28,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
       document.head.appendChild(script);
 
       // Initialize GA
-      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('js', new Date());
-      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', 'GA_MEASUREMENT_ID');
+      window.gtag('js', new Date());
+      window.gtag('config', 'GA_MEASUREMENT_ID');
     }
   }, []);
 

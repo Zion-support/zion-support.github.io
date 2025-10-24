@@ -33,43 +33,101 @@ export interface Service {
 export interface ContactFormData {
   name: string;
   email: string;
-  company: string;
+  company?: string;
+  phone?: string;
   message: string;
-  service: string;
+  service?: string;
+  budget?: string;
+  timeline?: string;
 }
 
-export interface AnalyticsEvent {
-  name: string;
-  timestamp: number;
-  properties?: Record<string, string | number | boolean | null>;
-}
-
-export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
-
-export interface ErrorContext {
-  url?: string;
-  userAgent?: string;
-  timestamp?: string;
-  userId?: string;
-  sessionId?: string;
-  component?: string;
-  action?: string;
-}
-
-export interface ErrorReport {
+export interface BlogPost {
   id: string;
-  message: string;
-  stack?: string;
-  context: ErrorContext;
-  severity: ErrorSeverity;
-  resolved: boolean;
-  createdAt: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishedAt: string;
+  tags: string[];
+  featuredImage?: string;
+  readTime: number;
 }
 
-export type ErrorSeverity = "low" | "medium" | "high" | "critical";
+export interface Testimonial {
+  id: string;
+  name: string;
+  company: string;
+  position: string;
+  content: string;
+  avatar?: string;
+  rating: number;
+  featured: boolean;
+}
+
+export interface CaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  technologies: string[];
+  duration: string;
+  teamSize: number;
+  featuredImage: string;
+  gallery?: string[];
+  testimonial?: Testimonial;
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  position: string;
+  bio: string;
+  avatar: string;
+  social: {
+    linkedin?: string;
+    twitter?: string;
+    github?: string;
+  };
+  skills: string[];
+  experience: number;
+}
+
+export interface PricingPlan {
+  id: string;
+  name: string;
+  price: number;
+  period: 'monthly' | 'yearly';
+  features: string[];
+  limitations?: string[];
+  popular: boolean;
+  cta: string;
+  description: string;
+}
+
+export interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+  order: number;
+}
+
+export interface NavigationItem {
+  label: string;
+  href: string;
+  children?: NavigationItem[];
+  external?: boolean;
+}
+
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  structuredData?: object;
+}

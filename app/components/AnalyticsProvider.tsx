@@ -51,8 +51,8 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (_eventName: string, _parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', _eventName, _parameters);
+      if (window.gtag) {
+        window.gtag('event', _eventName, _parameters);
       }
       
       // Custom analytics - only log in development
@@ -65,8 +65,8 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackPageView = (_pageName: string, _pagePath: string) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
           page_title: _pageName,
           page_location: window.location.href,
           page_path: _pagePath
@@ -96,7 +96,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag: (..._args: unknown[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }
 

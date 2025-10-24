@@ -1,8 +1,4 @@
 
-'use client';
-
-import React from 'react';
-
 interface EnhancedSEOHeadProps {
   // Add props here
 }
