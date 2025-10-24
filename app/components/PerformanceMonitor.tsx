@@ -10,7 +10,8 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+   
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enabled?: boolean;
 }
 

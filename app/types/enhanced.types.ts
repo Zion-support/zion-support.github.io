@@ -179,7 +179,8 @@ export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search'
   placeholder?: string
   value?: string
-  onChange?: (val: string) => void
+   
+  onChange?: (_val: string) => void
   onBlur?: () => void
   onFocus?: () => void
   disabled?: boolean

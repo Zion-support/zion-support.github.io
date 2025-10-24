@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+   
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -31,20 +32,20 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
+      error: _error,
+      errorInfo: _errorInfo
     });
 
     // Log error to monitoring service
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(_error, _errorInfo);
     }
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', _error, _errorInfo);
     }
   }
 

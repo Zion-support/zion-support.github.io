@@ -3,7 +3,8 @@ import React, { Component, ReactNode, ErrorInfo } from 'react';
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+   
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
   resetOnPropsChange?: boolean;
   resetKeys?: Array<string | number>;
 }
@@ -39,24 +40,24 @@ class OptimizedErrorBoundary extends Component<
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo,
+      error: _error,
+      errorInfo: _errorInfo,
     });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', _error, _errorInfo);
     }
 
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(_error, _errorInfo);
     }
 
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-      this.reportError(error, errorInfo);
+      this.reportError(_error, _errorInfo);
     }
   }
 
@@ -89,11 +90,12 @@ class OptimizedErrorBoundary extends Component<
     }
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = (_error: Error, _errorInfo: ErrorInfo) => {
     // Report to error monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (
         window as unknown as {
+           
           gtag: (
             _command: string,
             _action: string,
@@ -102,11 +104,11 @@ class OptimizedErrorBoundary extends Component<
         }
       ).gtag;
       gtag('event', 'exception', {
-        description: error.message,
+        description: _error.message,
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack,
+          component_stack: _errorInfo.componentStack,
         },
       });
     }
