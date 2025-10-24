@@ -51,20 +51,11 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyDown)
       document.addEventListener('mousedown', handleMouseDown)
       return () => {
-<<<<<<< HEAD
-        document.removeEventListener('keydown', handleKeyDown)
-        document.removeEventListener('mousedown', handleMouseDown)
-      }
-    }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
-=======
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);
       };
     }
   }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   // Add CSS classes for enhanced UX
   useEffect(() => {
     const style = document.createElement('style')
