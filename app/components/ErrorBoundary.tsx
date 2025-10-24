@@ -20,7 +20,19 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
   }
 
   render() {

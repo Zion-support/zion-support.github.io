@@ -4,18 +4,24 @@ import { Helmet } from 'react-helmet-async';
 
 const App_minimalPage: React.FC = () => {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>App_minimal - Zion Tech Group</title>
-        <meta name="description" content="Professional App_minimal services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">App_minimal</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
+    <HelmetProvider>
+      <Router>
+<<<<<<< HEAD
+        <div className="App">
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+=======
+        <div className="min-h-screen bg-white">
+          <Navigation />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe66
+          <Footer />
         </div>
       </div>
     </React.Fragment>

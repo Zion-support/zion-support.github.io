@@ -11,19 +11,31 @@ interface AccessibilityEnhancerProps {}
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
-  enableHighContrast = true,
+  enableHighContrast = false,
   enableFocusManagement = true
-}) => {}
-  useEffect(() => {}
-    // Keyboard navigation enhancements
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {}
-      const handleKeyDown = (event: KeyboardEvent) => {}
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {}
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {}
-            skipLink.focus();
-            event.preventDefault();
+}) => {
+  useEffect(() => {
+    // Enable keyboard navigation
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Skip links for better keyboard navigation
+        if (event.key === 'Tab') {
+          const focusableElements = document.querySelectorAll(
+            'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+          );
+          const firstElement = focusableElements[0] as HTMLElement;
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+          if (event.shiftKey) {
+            if (document.activeElement === firstElement) {
+              event.preventDefault();
+              lastElement?.focus();
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              event.preventDefault();
+              firstElement?.focus();
+            }
           }
         }
 
@@ -37,6 +49,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
       };
 
       document.addEventListener('keydown', handleKeyDown);
+      
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
 

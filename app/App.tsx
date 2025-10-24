@@ -104,23 +104,55 @@ const App: React.FC = () => {}
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                
-                {/* Emerging Technologies */}
-                <Route path="/blockchain" element={<BlockchainPage />} />
-                <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-                <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-                <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
-                <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-                
-                {/* Micro SaaS */}
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-                {/* Support Pages */}
-                <Route path="/docs" element={<DocsPage />} />
-                <Route path="/api-docs" element={<ApiDocsPage />} />
-                <Route path="/support" element={<SupportPage />} />
-                <Route path="/status" element={<StatusPage />} />
-                <Route path="/consultation" element={<ConsultationPage />} />
+                <Route path="/blockchain-development" element={<BlockchainDevelopmentPage />} />
+                <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                <Route path="/ar-vr-development" element={<ARVRDevelopmentPage />} />
+                <Route path="/devops-solutions" element={<DevOpsSolutionsPage />} />
+                <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                <Route path="/web-development" element={<WebDevelopmentPage />} />
+                <Route path="/it-support" element={<ITSupportPage />} />
+                <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                <Route path="/it-consulting" element={<ITConsultingPage />} />
+                <Route path="/cybersecurity-audit" element={<CybersecurityAuditPage />} />
+                <Route path="/data-center-services" element={<DataCenterServicesPage />} />
+                <Route path="/asset-management" element={<AssetManagementPage />} />
+
+                {/* Micro SAAS Routes */}
+                <Route path="/micro-saas" element={<MicroSAASPage />} />
+                <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                <Route path="/zion-ai-inventory-manager" element={<ZionAIInventoryManagerPage />} />
+                <Route path="/zion-hr-assistant-pro" element={<ZionHRAssistantProPage />} />
+                <Route path="/zion-ai-accounting-suite" element={<ZionAIAccountingSuitePage />} />
+                <Route path="/zion-ecommerce-optimizer" element={<ZionEcommerceOptimizerPage />} />
+                <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
+                <Route path="/zion-ai-lead-scoring" element={<ZionAILeadScoringPage />} />
+                <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
+                <Route path="/zion-ai-social-listener" element={<ZionAISocialListenerPage />} />
+                <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
+                <Route path="/zion-ai-meeting-assistant" element={<ZionAIMeetingAssistantPage />} />
+                <Route path="/zion-ai-expense-tracker" element={<ZionAIExpenseTrackerPage />} />
+                <Route path="/zion-ai-survey-builder" element={<ZionAISurveyBuilderPage />} />
+                <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
+                <Route path="/zion-ai-workflow-automation" element={<ZionAIWorkflowAutomationPage />} />
+                <Route path="/zion-ai-seo-optimizer" element={<ZionAISEOOptimizerPage />} />
+                <Route path="/zion-ai-data-warehouse" element={<ZionAIDataWarehousePage />} />
+                <Route path="/zion-ai-mobile-app-builder" element={<ZionAIMobileAppBuilderPage />} />
+                <Route path="/zion-ai-api-manager" element={<ZionAIAPIManagerPage />} />
+                <Route path="/zion-ai-backup-manager" element={<ZionAIBackupManagerPage />} />
+                <Route path="/zion-ai-testing-automation" element={<ZionAITestingAutomationPage />} />
+
+                {/* 5G Solutions Routes */}
+                <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
               </Routes>
             </Suspense>
           </div>

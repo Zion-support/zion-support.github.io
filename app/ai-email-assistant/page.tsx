@@ -1,4 +1,5 @@
-'use client';
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -84,4 +85,5 @@ const PagePage: React.FC = () => {}
   );
 };
 
-export default Page;
+export default AIEmailAssistantPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe66
