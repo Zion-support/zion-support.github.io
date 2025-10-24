@@ -34,8 +34,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
   const initializeGoogleAnalytics = () => {
     // Load Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID')
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: (command: string, id: string) => void }).gtag) {
+      (window as Window & { gtag: (command: string, id: string) => void }).gtag('config', 'GA_MEASUREMENT_ID')
     }
   }
 
