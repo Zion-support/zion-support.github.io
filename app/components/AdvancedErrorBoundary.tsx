@@ -1,52 +1,150 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail , Mail  } from 'lucide-react';
-import { Home } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+
 interface AdvancedErrorBoundaryProps {
-
-  className?: string;
+  children: ReactNode
+  className?: string
 }
+
 interface State {
-  hasError: boolean,
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
 }
 
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
-    super(props)
+interface ErrorReport {
+  errorId: string
+  error: Error
+  errorInfo: ErrorInfo
+  timestamp: string
+  userAgent: string
+  url: string
+}
 
+class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
+  constructor(props: AdvancedErrorBoundaryProps) {
+    super(props)
     this.state = { hasError: false }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
 
-    const errorReport: ErrorReport = {,
-    errorId: this.state.errorId || this.generateErrorId(),
-      error
-
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport: ErrorReport = {
+      errorId: this.state.errorId || this.generateErrorId(),
+      error,
+      errorInfo,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
     }
+
+    // Send error report to monitoring service
+    console.error('Error Report:', errorReport)
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
 
-  this.setState({
-      error
-      errorInfo
-})
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // // // eslint-disable-next-line no-console
-    console.error('Error caught by boundary:', error, errorInfo)
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+  private generateErrorId = (): string => {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  }
 
-      this.logErrorToService(error, errorInfo)
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      hasError: true,
+      error,
+      errorInfo,
+      errorId: this.generateErrorId()
+    })
+
+    this.reportError(error, errorInfo)
+  }
+
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  }
+
+  private handleGoHome = () => {
+    window.location.href = '/'
+  }
+
+  private handleReportIssue = () => {
+    const subject = `Error Report - ${this.state.errorId}`
+    const body = `Error ID: ${this.state.errorId}\n\nError: ${this.state.error?.message}\n\nStack Trace:\n${this.state.error?.stack}`
+    window.open(`mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className={`min-h-screen bg-gray-50 flex items-center justify-center p-4 ${this.props.className || ''}`}>
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <AlertTriangle className="h-16 w-16 text-red-500" />
+            </div>
+            
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified.
+            </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left">
+                <h3 className="font-semibold text-red-800 mb-2">Error Details:</h3>
+                <p className="text-sm text-red-700 font-mono">
+                  {this.state.error.message}
+                </p>
+                {this.state.error.stack && (
+                  <details className="mt-2">
+                    <summary className="text-sm text-red-600 cursor-pointer">
+                      Stack Trace
+                    </summary>
+                    <pre className="text-xs text-red-600 mt-2 whitespace-pre-wrap">
+                      {this.state.error.stack}
+                    </pre>
+                  </details>
+                )}
+              </div>
+            )}
+
+            <div className="space-y-3">
+              <button
+                onClick={this.handleRetry}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+              >
+                <RefreshCw className="h-4 w-4 mr-2" />
+                Try Again
+              </button>
+              
+              <button
+                onClick={this.handleGoHome}
+                className="w-full bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
+              >
+                <Home className="h-4 w-4 mr-2" />
+                Go Home
+              </button>
+              
+              <button
+                onClick={this.handleReportIssue}
+                className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
+              >
+                <Mail className="h-4 w-4 mr-2" />
+                Report Issue
+              </button>
+            </div>
+
+            {this.state.errorId && (
+              <p className="text-xs text-gray-500 mt-4">
+                Error ID: {this.state.errorId}
+              </p>
+            )}
+          </div>
+        </div>
+      )
     }
-  }
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
 
-    // You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {
+    return this.props.children
+  }
+}
+
+export default AdvancedErrorBoundary

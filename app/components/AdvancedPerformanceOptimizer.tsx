@@ -1,25 +1,29 @@
-'use client';
-import React, { useEffect, useCallback, useState } from 'react';
+'use client'
+import React, { useEffect, useCallback, useState } from 'react'
+
 interface PerformanceMetrics {
-  lcp: number,
-    fid: number,
-  cls: number,
-    fcp: number,
-  ttfb: number}
-interface AdvancedPerformanceOptimizerProps {
-
-  enableWebVitals?: boolean;
-  enableAdvancedCaching?: boolean;
-  enableImageOptimization?: boolean;
-  enablePreloading?: boolean;
-  enableServiceWorker?: boolean;
+  lcp: number
+  fid: number
+  cls: number
+  fcp: number
+  ttfb: number
 }
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({,
 
-  enableWebVitals = true
-  enableAdvancedCaching = true
-  enableImageOptimization = true
-  enablePreloading = true
+interface AdvancedPerformanceOptimizerProps {
+  children: React.ReactNode
+  enableWebVitals?: boolean
+  enableAdvancedCaching?: boolean
+  enableImageOptimization?: boolean
+  enablePreloading?: boolean
+  enableServiceWorker?: boolean
+}
+
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+  children,
+  enableWebVitals = true,
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enablePreloading = true,
   enableServiceWorker = true
 }) => {
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
@@ -27,159 +31,183 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fid: 0,
     cls: 0,
     fcp: 0,
-    ttfb: 0})
-  // Web Vitals monitoring;
+    ttfb: 0
+  })
 
-const measureWebVitals = useCallback(() => {
+  // Web Vitals monitoring
+  const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
-      // Measure Largest Contentful Paint;
-
-const lcpObserver = new PerformanceObserver((list) => {
+      // Measure Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
-          ...prev
-          lcp: lastEntry.renderTime || lastEntry.loadTime || 0})
+          ...prev,
+          lcp: lastEntry.renderTime || lastEntry.loadTime || 0
+        }))
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-      // Measure First Input Delay;
 
-const fidObserver = new PerformanceObserver((list) => {
-  const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
+      // Measure First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {
           const fid = (entry as any).processingStart - entry.startTime
           setPerformanceMetrics(prev => ({
-            ...prev
-            fid
-})
+            ...prev,
+            fid: fid || 0
+          }))
         })
       })
       fidObserver.observe({ entryTypes: ['first-input'] })
-      // Measure Cumulative Layout Shift
-      let clsValue = 0;
 
-const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
+      // Measure Cumulative Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0
+        for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
-            clsValue += entry.value
-            setPerformanceMetrics(prev => ({
-              ...prev
-              cls: clsValue})
-        })
+            clsValue += (entry as any).value
+          }
+        }
+        setPerformanceMetrics(prev => ({
+          ...prev,
+          cls: clsValue
+        }))
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] })
-      // Measure First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver((list) => {
+      // Measure First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach(entry => {
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
+        if (fcpEntry) {
           setPerformanceMetrics(prev => ({
-            ...prev
-            fcp: entry.startTime})
-        })
+            ...prev,
+            fcp: fcpEntry.startTime
+          }))
+        }
       })
       fcpObserver.observe({ entryTypes: ['paint'] })
-  }, [enableWebVitals])
-  // Advanced caching strategies;
 
-const setupAdvancedCaching = useCallback(() => {
-    if (typeof window === 'undefined') return
-    // Service Worker registration
-    if ('serviceWorker' in navigator && enableServiceWorker) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          // eslint-disable-next-line no-console
-    console.log('Service Worker registered:', registration)
-        })
-        .catch((registrationError) => {
-          // eslint-disable-next-line no-console
-    console.error('Service Worker registration failed:', registrationError)
-        })
+      // Measure Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (navigationEntry) {
+        setPerformanceMetrics(prev => ({
+          ...prev,
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart
+        }))
+      }
 
+      return () => {
+        lcpObserver.disconnect()
+        fidObserver.disconnect()
+        clsObserver.disconnect()
+        fcpObserver.disconnect()
+      }
     }
-    // Memory-based caching for API responses;
+  }, [enableWebVitals])
 
-const cache = new Map()
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization || typeof window === 'undefined') return
 
-    const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url;
+    const images = document.querySelectorAll('img')
+    images.forEach((img) => {
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy')
+      }
 
-const cacheKey = `${url}-${JSON.stringify(init)}`
-      if (cache.has(cacheKey)) {
-        return cache.get(cacheKey)
-      const response = await originalFetch(input, init)
-      if (response.ok) {
-        cache.set(cacheKey, response.clone()
-      return response
-  }, [enableServiceWorker])
-  // Image optimization;
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async')
+      }
 
-const optimizeImages = useCallback(() => {
-  if (typeof window === 'undefined') return;
-
-const images = document.querySelectorAll('img')
-    images.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy'
-      if (!img.decoding) {
-  img.decoding = 'async'
+      // Add proper alt text if missing
+      if (!img.hasAttribute('alt')) {
+        img.setAttribute('alt', '')
+      }
     })
-  }, [])
-  // Preload critical resources;
+  }, [enableImageOptimization])
 
-const preloadCriticalResources = useCallback(() => {
-  if (typeof window === 'undefined') return;
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    if (!enablePreloading || typeof window === 'undefined') return
 
-const criticalResources = [
-  '/fonts/inter-var.woff2',
-    '/css/critical.css'
-  ]
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
-      document.head.appendChild(link)
+    // Preload critical CSS
+    const criticalCSS = document.querySelector('link[rel="stylesheet"][data-critical]')
+    if (criticalCSS) {
+      criticalCSS.setAttribute('rel', 'preload')
+      criticalCSS.setAttribute('as', 'style')
+      criticalCSS.setAttribute('onload', "this.onload=null;this.rel='stylesheet'")
+    }
+
+    // Preload critical fonts
+    const criticalFonts = document.querySelectorAll('link[rel="preload"][as="font"]')
+    criticalFonts.forEach((font) => {
+      font.setAttribute('crossorigin', 'anonymous')
     })
-  }, [])
-  // Performance monitoring and reporting;
+  }, [enablePreloading])
 
-const reportPerformanceMetrics = useCallback(() => {
-    if (typeof window === 'undefined') return
-    // Report to analytics
-    if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-    event_label: 'Core Web Vitals',
-        value: Math.round(performanceMetrics.lcp),
-    custom_map: {,
-          fcp: Math.round(performanceMetrics.fcp),
-    lcp: Math.round(performanceMetrics.lcp),
-          fid: Math.round(performanceMetrics.fid),
-    cls: Math.round(performanceMetrics.cls * 1000) / 1000}
+  // Advanced caching strategies
+  const setupAdvancedCaching = useCallback(() => {
+    if (!enableAdvancedCaching || typeof window === 'undefined') return
+
+    // Set cache headers for static assets
+    const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src], img[src]')
+    staticAssets.forEach((asset) => {
+      if (asset instanceof HTMLLinkElement || asset instanceof HTMLScriptElement || asset instanceof HTMLImageElement) {
+        // Add cache control headers via meta tags
+        const meta = document.createElement('meta')
+        meta.setAttribute('http-equiv', 'Cache-Control')
+        meta.setAttribute('content', 'public, max-age=31536000')
+        document.head.appendChild(meta)
+      }
+    })
+  }, [enableAdvancedCaching])
+
+  // Service Worker registration
+  const registerServiceWorker = useCallback(() => {
+    if (!enableServiceWorker || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
+
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('Service Worker registered successfully:', registration)
       })
-  }, [performanceMetrics])
-  useEffect(() => {
-    if (enableAdvancedCaching) {
-      setupAdvancedCaching()
-    if (enableImageOptimization) {
-      optimizeImages()
-    if (enablePreloading) {
-      preloadCriticalResources()
-    if (enableWebVitals) {
-      measureWebVitals()
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
-  useEffect(() => {
-    if (enableWebVitals && performanceMetrics.lcp > 0) {
-      reportPerformanceMetrics()
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
-  return null
+      .catch((error) => {
+        console.log('Service Worker registration failed:', error)
+      })
+  }, [enableServiceWorker])
 
+  // Initialize performance optimizations
+  useEffect(() => {
+    const cleanup = measureWebVitals()
+    optimizeImages()
+    preloadCriticalResources()
+    setupAdvancedCaching()
+    registerServiceWorker()
+
+    return cleanup
+  }, [measureWebVitals, optimizeImages, preloadCriticalResources, setupAdvancedCaching, registerServiceWorker])
+
+  // Performance monitoring dashboard (development only)
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className="performance-optimizer">
+        <div className="performance-metrics fixed bottom-4 left-4 bg-black text-white p-4 rounded-lg text-xs font-mono z-50">
+          <div className="mb-2 font-bold">Performance Metrics</div>
+          <div>LCP: {performanceMetrics.lcp.toFixed(2)}ms</div>
+          <div>FID: {performanceMetrics.fid.toFixed(2)}ms</div>
+          <div>CLS: {performanceMetrics.cls.toFixed(4)}</div>
+          <div>FCP: {performanceMetrics.fcp.toFixed(2)}ms</div>
+          <div>TTFB: {performanceMetrics.ttfb.toFixed(2)}ms</div>
+        </div>
+        {children}
+      </div>
+    )
+  }
+
+  return <>{children}</>
 }
-
 
 export default AdvancedPerformanceOptimizer

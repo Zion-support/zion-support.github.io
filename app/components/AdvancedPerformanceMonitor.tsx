@@ -1,79 +1,103 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-import Footer from '../components/Footer';
-const AdvancedPerformanceMonitorPage: React.FC = () => {,
-
+const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-    title: 'AI-Powered Intelligence',
+      title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: BarChart,
-    title: 'Advanced Analytics',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {
-    icon: Target,
-    title: 'Precision Targeting',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {
-    icon: TrendingUp,
-    title: 'Growth Optimization',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
   ]
+
   const benefits = [
-  'Increase efficiency by up to 50%',
+    'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+
   return (
     <>
-      
-    </>
-      <Helmet> </Helmet><title>Advanced Performance Monitor</title>
-        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /> </meta><meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" /> </meta></Helmet>
-      <Navigation /> </Navigation><div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">{/* Hero Section */}
-        </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
-        <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
-              Advanced SEO Optimizer New
+      <Helmet>
+        <title>Advanced Performance Monitor</title>
+        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Advanced Performance
+              <span className="block bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                Monitor
+              </span>
             </h1>
-            <p>Advanced Performance Monitor solution for modern businesses.</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Monitor, analyze, and optimize your business performance with our advanced AI-powered monitoring solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
           </div>
         </section>
+
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Powerful AI-driven features designed to transform your business operations</p>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive performance monitoring with AI-powered insights and real-time analytics.
+              </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div><feature.icon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit}
-                      </CheckCircle></li>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                        {benefit}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -81,40 +105,48 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
             </div>
           </div>
         </section>
+
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
-              <p>Experience the power of AI-driven performance monitoring</p>
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transform your business with our advanced performance monitoring capabilities.
+              </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"> </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?
-            </h2></h2>
-            <p>Join thousands of businesses already using our AI-powered solutions</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Contact Sales
-              </button>
-            </div>
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Optimize Your Performance?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our advanced performance monitoring solution today.
+            </p>
+            <button className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Start Your Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
         </section>
       </div>
       <Footer />
-
-</Footer></>
+    </>
   )
 }
 
 export default AdvancedPerformanceMonitorPage
-

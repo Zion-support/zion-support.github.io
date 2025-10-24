@@ -1,24 +1,39 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react'
 
 interface Slide {
+  id: number
+  title: string
+  description: string
+  features: string[]
+  icon: React.ReactNode
+  color: string
+}
 
-  id: number,
-    title: string,
-      description: string,
-    features: string[],
-  icon: React.ReactNode,
-    color: string}
-const ContentCarousel: React.FC = ($2) => {
-$3
-};
+const ContentCarousel: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
+  const slides: Slide[] = [
+    {
+      id: 1,
+      title: "AI-Powered Analytics",
+      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+      features: [
+        "Real-time data processing",
+        "Predictive analytics",
+        "Custom dashboards",
+        "Automated reporting"
+      ],
+      icon: <Brain className="h-12 w-12" />,
+      color: "from-blue-500 to-purple-500"
+    },
     {
       id: 2,
       title: "Cloud Infrastructure",
       description: "Scalable, secure, and reliable cloud solutions for your business needs.",
-      features: [,
+      features: [
         "99.9% uptime guarantee",
         "Auto-scaling capabilities",
         "Advanced security",
@@ -30,234 +45,190 @@ $3
     {
       id: 3,
       title: "Cybersecurity Solutions",
-      description: "Protect your business with our comprehensive cybersecurity services.",
-
-    features: [,
-
+      description: "Protect your business with enterprise-grade security solutions.",
+      features: [
         "Threat detection",
         "Vulnerability assessment",
-        "Incident response",
-        "Security training"
+        "Compliance management",
+        "Incident response"
       ],
       icon: <Shield className="h-12 w-12" />,
-
-    color: "from-red-500 to-pink-500"}
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      id: 4,
+      title: "Digital Transformation",
+      description: "Modernize your business processes with cutting-edge technology solutions.",
+      features: [
+        "Process automation",
+        "Legacy system integration",
+        "Workflow optimization",
+        "Change management"
+      ],
+      icon: <Settings className="h-12 w-12" />,
+      color: "from-orange-500 to-yellow-500"
+    }
   ]
-  const nextSlide = ($2) => {
-$3
-};
-  const prevSlide = ($2) => {
-$3
-};
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+
+    return () => clearInterval(timer)
+  }, [slides.length])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
   return (
-    <>
-      
-    </>
-      <Helmet> </Helmet><title>ContentCarousel</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; /> </meta></Helmet>
-      <Navigation /> </Navigation><div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;>{/* Hero Section */}
-        </div><section className=&quot;relative py-20 px-4 overflow-hidden&quot;> </section><div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;>
-        <div className=&quot;relative max-w-7xl mx-auto text-center&quot;> </div><h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>,
-              ContentCarousel
-            </h1>
-            <p>Advanced ContentCarousel solution for modern businesses.</p>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-              </div><button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>,
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
-                Learn More
-              </button>
-            </div>
+    <div className="relative w-full max-w-6xl mx-auto">
+      {/* Main Carousel */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-8">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-2">Our Solutions</h2>
+            <p className="text-gray-300">Discover how we can transform your business</p>
           </div>
-        </section>
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
-        <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p>Powerful AI-driven features designed to transform your business operations</p>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;>,
-              {features.map((feature, index) => (
-                </div><div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;> </div><feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /> </feature><h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;> </li><CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />{benefit}
-                      </CheckCircle></li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
-        <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p>Experience the benefits of cutting-edge AI technology</p>
+          <button
+            onClick={openModal}
+            className="flex items-center space-x-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+          >
+            <span>View All</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
-        <div className=&quot;relative&quot;>
-        <div{slides.map((slide, index) =>(</div>
-<div key={index} className=&quot;w-full flex-shrink-0&quot;>
-        <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;> </div><div className=&quot;text-center mb-8&quot;>
-        <div className=&quot;bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4&quot;> </div><slide.icon className=&quot;h-10 w-10 text-white&quot; /> </slide></div>
-                      <h3 className=&quot;text-2xl font-bold mb-4&quot;>{slide.title}</h3>
-                      <p className=&quot;text-purple-100 text-lg max-w-2xl mx-auto&quot;>{slide.description}</p>
+
+        <div className="relative">
+          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            {slides.map((slide) => (
+              <div key={slide.id} className="w-full flex-shrink-0">
+                <div className="flex items-center space-x-8">
+                  <div className="flex-1">
+                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${slide.color} mb-6`}>
+                      {slide.icon}
                     </div>
-                    <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>{slide.features.map((feature, featureIndex) => (</div>
-                        <div key={featureIndex} className=&quot;flex items-center&quot;> </div><CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; /> </CheckCircle><span className=&quot;text-purple-100&quot;>{feature}</span>
+                    <h3 className="text-2xl font-bold text-white mb-4">{slide.title}</h3>
+                    <p className="text-gray-300 text-lg mb-6">{slide.description}</p>
+                    <ul className="space-y-2">
+                      {slide.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-gray-300">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="flex-1">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                          <div className="text-gray-300 text-sm">Uptime</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                          <div className="text-gray-300 text-sm">Support</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-white mb-2">500+</div>
+                          <div className="text-gray-300 text-sm">Clients</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-white mb-2">5★</div>
+                          <div className="text-gray-300 text-sm">Rating</div>
                         </div>
                       </div>
-                      <div className="flex-1"> </div><h3 className="text-2xl font-bold text-gray-900 mb-4">{slide.title}</h3>
-                        <p className="text-gray-600 mb-6">{slide.description}</p>
-                        <ul className="space-y-2">{slide.features.map((feature, index) => (
-                            </ul><li key={index} className="flex items-center text-gray-700"> </li><CheckCircle className="h-5 w-5 text-green-500 mr-2" />{feature}
-                            </CheckCircle></li>
-                          ))}
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
-    <div{/* Header */}</div>
-        <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;>,
-            Discover Our </h2><span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Solutions</span>
-          </h2>
-          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
+              </div>
+            ))}
+          </div>
         </div>
-        {/* Carousel Container */},
-        {/* Carousel */}
-        <div className=&quot;relative&quot;>
-        <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md: p-12 overflow-hidden&quot;>,
-            </div><div className=&quot;flex items-center justify-between mb-8&quot;>
-        <div className=&quot;flex items-center gap-4&quot;> </div><div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center&quot;> </div><currentSlideData.icon className=&quot;w-8 h-8 text-slate-900&quot; /> </currentSlideData></div>
-                {/* Features */}
-                <div className=&quot;space-y-4&quot;> </div><h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Key Features: </h4>,
-                  <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-3&quot;>{currentSlideData.features.map((feature, index) => (</div>
-                      <div key={index} className=&quot;flex items-center space-x-3&quot;> </div><CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; /> </CheckCircle><span className=&quot;text-gray-300&quot;>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                {/* Stats */}
-                {currentSlideData.stats && (
-                  <div className=&quot;grid grid-cols-3 gap-6&quot;>{currentSlideData.stats.map((stat, index) => (</div>
-                      <div{stat.value}</div>
-                        <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {/* CTA */}
-                <div className=&quot;flex flex-col sm: flex-row gap-4&quot;>,
-                  </div><button className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;>,
-                    </button><Zap className=&quot;w-5 h-5&quot; />Get Started
-                  </Zap><button className=&quot;inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300&quot;>,
-                    </button><ArrowRight className=&quot;w-5 h-5&quot; />
-                    Learn More
-                </div>
-              </div>
-              {/* Visual Element */}
-              <div className=&quot;relative&quot;>
-        <div className=&quot;aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center&quot;> </div><div className=&quot;text-center&quot;>
-        <div className=&quot;w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center&quot;> </div><currentSlideData.icon className=&quot;w-16 h-16 text-white&quot; /> </currentSlideData></div>
-                    <div className=&quot;text-4xl font-bold text-white mb-2&quot;>{currentSlideData.title}</div>div>
-                    <div className=&quot;text-gray-300&quot;>Slide {currentSlide + 1} of {slides.length}</div>div>
-                  </div>
-                </div>
-              </div>
+
+        {/* Navigation */}
+        <div className="flex items-center justify-between mt-8">
+          <div className="flex space-x-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+          <div className="flex space-x-4">
+            <button
+              onClick={prevSlide}
+              className="p-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors"
+            >
+              <ArrowRight className="w-5 h-5 rotate-180" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="p-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6 border-b border-gray-200 flex items-center justify-between">
+              <h3 className="text-2xl font-bold text-gray-900">All Solutions</h3>
+              <button
+                onClick={closeModal}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>{currentSlideData.features.map((feature, index) => (</div>
-                <div key={index} className=&quot;flex items-center gap-3&quot;> </div><CheckCircle className=&quot;w-5 h-5 text-cyan-400 flex-shrink-0&quot; /> </CheckCircle><span className=&quot;text-gray-300&quot;>{feature}</span>
-                </div>
-              ))}
-            </div>
-            {/* Stats */}
-            {currentSlideData.stats && (
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700&quot;>{currentSlideData.stats.map((stat, index) => (</div>
-                  <div{stat.value}</div>
-                    <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>
+            <div className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {slides.map((slide) => (
+                  <div key={slide.id} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${slide.color} mb-4`}>
+                      {slide.icon}
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">{slide.title}</h4>
+                    <p className="text-gray-600 mb-4">{slide.description}</p>
+                    <ul className="space-y-1">
+                      {slide.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-600">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
-            )}
-          </div>
-          <button
-            onClick={prevSlide}
-            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;>,
-            </button><ChevronLeft className=&quot;h-6 w-6&quot; /> </ChevronLeft></button>
-          <button
-            onClick={nextSlide}
-            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;>,
-            </button><ChevronRight className=&quot;h-6 w-6&quot; /> </ChevronRight></button>
-        </div>
-{/* Slide Indicators */}
-            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;,
-          >
-            <ChevronLeft className=&quot;w-6 h-6&quot; /> </ChevronLeft></button>
-          <button
-            onClick={nextSlide}
-            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;,
-          > </button><ChevronRight className=&quot;w-6 h-6&quot; /> </ChevronRight></button>
-
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Additional Info */}
-        <div className=&quot;mt-16 text-center&quot;>
-        <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto&quot;>,
-            </div><div className=&quot;flex items-center justify-center gap-3 text-white&quot;> </div><Star className=&quot;w-6 h-6 text-yellow-400&quot; /> </Star><div4.9/5</div>
-                <div className=&quot;text-gray-400 text-sm&quot;>Customer Rating</div>
-              </div>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;>,
-              {benefits.map((benefit, index) => (
-                </div><div key={index} className=&quot;flex items-start space-x-4&quot;> </div><CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /> </CheckCircle><p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
             </div>
           </div>
-        </section>
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-4xl mx-auto text-center&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p>Join thousands of businesses already using our AI solutions</p>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-              </div><button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-</Footer></>
-  )
-}
-
-export default ContentCarouselPage
-            <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
-          </button>
         </div>
-      </div>
+      )}
     </div>
   )
 }
 
 export default ContentCarousel
-
