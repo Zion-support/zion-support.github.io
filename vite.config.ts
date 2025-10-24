@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig ;} from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve ;} from 'path';
@@ -31,43 +32,49 @@ return 'react-dom';
             ",}
             if (id.includes('react/') && !id.includes('react-dom')) {;
 return 'react-core';
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+>>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
             }
-            if (id.includes('react-router')) {;
-return 'router';
+            if (id.includes('react-router')) {
+              return 'router-vendor';
             }
-            if (id.includes('@heroicons') || id.includes('lucide-react')) {;
-return 'icons';
+            if (id.includes('framer-motion') || id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'ui-vendor';
             }
-            if (id.includes('framer-motion')) {;
-return 'motion';
-            }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {;
-return 'utils';
-            }
-            if (id.includes('web-vitals')) {;
-return 'analytics';
-            }
-            if (id.includes('react-helmet-async')) {;
-return 'seo';
-            }
-            if (id.includes('recharts')) {;
-return 'charts';
-            }
-            if (id.includes('axios')) {;
-return 'http';
+            if (id.includes('web-vitals') || id.includes('react-helmet')) {
+              return 'analytics-vendor';
             }
             return 'vendor';
           }
-          // Split app code by feature;
-if (id.includes('/app/components/')) {;
-return 'components';
+          
+          // App chunks
+          if (id.includes('servicesData')) {
+            return 'services-data';
           }
-          if (id.includes('/app/hooks/')) {;
-return 'hooks';
+          if (id.includes('components/SEOHead')) {
+            return 'seo';
           }
-          if (id.includes('/app/utils/')) {;
-return 'utils';
+          if (id.includes('components/PerformanceMonitor') || id.includes('components/AccessibilityEnhancer')) {
+            return 'monitoring';
           }
+<<<<<<< HEAD
           if (id.includes('/app/data/')) {;
 return 'data';
           }
@@ -133,3 +140,34 @@ include: [
 css: "{;
 devSourcemap: true",},
 });
+=======
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000,
+  },
+  server: {
+    port: 3000,
+    open: true,
+    hmr: {
+      overlay: false
+    }
+  },
+  optimizeDeps: {
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      '@heroicons/react',
+      'framer-motion',
+      'lucide-react'
+    ]
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
+  css: {
+    devSourcemap: true,
+  }
+})
+>>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81

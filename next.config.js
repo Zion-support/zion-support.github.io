@@ -20,13 +20,20 @@ const nextConfig = {
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
-  // Disable static generation to avoid prerendering errors
-  staticPageGenerationTimeout: 1000,
-  // Disable static optimization
-  swcMinify: false,
-  // Force all pages to be dynamic
+  // Optimize static generation
+  staticPageGenerationTimeout: 60,
+  // Enable SWC minification for better performance
+  swcMinify: true,
+  // Generate build ID for better caching
   generateBuildId: async () => {
     return 'build-' + Date.now()
+  },
+  // Enable compression
+  compress: true,
+  // Enable experimental features for better performance
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react'],
   },
   // Exclude problematic files temporarily
   webpack: (config, { isServer }) => {

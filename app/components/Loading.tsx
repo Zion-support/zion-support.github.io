@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 const Loading: React.FC = () => {
 return(<div>
+=======
+'use client';
+>>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 
-      <Helmet />
+import React from 'react';
 
+<<<<<<< HEAD
         <title>Loading</title>
         <meta name="description" content="Advanced Loading solution for modern businesses." / />
         <meta name="keywords" content="AI,artificial, intelligence, Loading, AI, solutions, intelligent automation" / />
@@ -73,4 +78,27 @@ Start Your Free Trial</button>
   );
 ,}  )};
 export default Loading;
+=======
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+>>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 }
+
+const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <div
+        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
+      />
+    </div>
+  );
+};
+
+export default Loading;
