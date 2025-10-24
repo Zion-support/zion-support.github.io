@@ -110,10 +110,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
 // Extend Window interface for TypeScript
 declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag?: (..._args: unknown[]) => void;
+    interface Window {
+      dataLayer: unknown[];
+      gtag: any;
+    }
   }
-}
 
 export default AnalyticsProvider;

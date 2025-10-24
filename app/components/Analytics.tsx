@@ -10,8 +10,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Initialize gtag
-      (window as Window & { gtag: Function }).gtag = (window as Window & { gtag: Function }).gtag || function() {
-        ((window as Window & { gtag: Function }).gtag.q = (window as Window & { gtag: Function }).gtag.q || []).push(arguments);
+      (window as any).gtag = (window as any).gtag || function() {
+        ((window as any).gtag.q = (window as any).gtag.q || []).push(arguments);
       };
 
       // Load GA script

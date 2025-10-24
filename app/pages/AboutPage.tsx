@@ -7,43 +7,43 @@ import {
   RocketLaunchIcon,
   HeartIcon,
   ArrowRightIcon,
-  Target,
-  Users,
-  Award,
-  Lightbulb,
-  Shield,
-  Zap,
+  TagIcon as TargetIcon,
+  UsersIcon,
+  BackwardIcon as AwardIcon,
+  LightBulbIcon as LightbulbIcon,
+  ShieldCheckIcon as ShieldIcon,
+  MapIcon as ZapIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
 export default function AboutPage() {
   const values = [
     {
-      icon: Target,
+      icon: TargetIcon,
       title: 'Mission-Driven',
       description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'
     },
     {
-      icon: Users,
+      icon: UsersIcon,
       title: 'Client-Focused',
       description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'
     },
     {
-      icon: Award,
+      icon: AwardIcon,
       title: 'Excellence',
       description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'
     },
     {
-      icon: Lightbulb,
+      icon: LightbulbIcon,
       title: 'Innovation',
       description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
     },
     {
-      icon: Shield,
+      icon: ShieldIcon,
       title: 'Integrity',
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
     },
     {
-      icon: Zap,
+      icon: ZapIcon,
       title: 'Agility',
       description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
     }
@@ -390,14 +390,14 @@ export default function AboutPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link 
-                to="/services" 
+                href="/services" 
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 View Our Services
