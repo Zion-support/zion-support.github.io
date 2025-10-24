@@ -151,7 +151,6 @@ const AIAutomationPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-    const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',

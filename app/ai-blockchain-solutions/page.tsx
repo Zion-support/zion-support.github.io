@@ -27,13 +27,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
-  ]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-      icon: Users,
-      title: 'DAO Governance AI',
-      description: 'AI systems that assist in decentralized autonomous organization governance and decision-making.',
-      benefits: ['Automated governance', 'Voting optimization', 'Proposal analysis', 'Community management']
+  ];
     }
   ];
 

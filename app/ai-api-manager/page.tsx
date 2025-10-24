@@ -8,8 +8,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react';
 
 const AIApiManagerPage: React.FC = () => {
-import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react'
-const AIApiManagerPage: React.FC = () => {
 
   const features = [
     {
