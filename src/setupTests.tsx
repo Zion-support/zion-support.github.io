@@ -78,8 +78,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return []
   }
 }
-<<<<<<< HEAD
-=======
  }))
 });
 // Mock requestAnimationFrame

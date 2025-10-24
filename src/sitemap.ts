@@ -4,9 +4,6 @@ export const sitemap = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default sitemap;
-=======
 export default function sitemap
 sitemap.displayName = "sitemap"(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'

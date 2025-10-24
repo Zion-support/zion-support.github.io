@@ -105,17 +105,6 @@ const Footer: React.FC = () => {
 
 const Footer = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          Footer
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
-            This page is under construction. Please check back later.
-          </p>
-=======
     <footer className=&quot;bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20&quot;>
       <div className=&quot;container mx-auto px-4 py-12&quot;></div>
         <div className=&quot;grid grid-cols-1 lg:grid-cols-5 gap-8&quot;></div>
