@@ -9,29 +9,28 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
+  const context = useContext(AnalyticsContext);
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider')
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
   return context
 interface AnalyticsProviderProps {
-  children: React.ReactNode
-
+  children: React.ReactNode,
+,
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (process.env.NODE_ENV === 'production') {
-        const script = document.createElement('script')
+        const script = document.createElement('script');
         script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
-        document.head.appendChild(script)
-
+        document.head.appendChild(script);
         ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {
-          ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
-        gtag('js', new Date()
+        function gtag(...args: unknown[]) {,
+          ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
+        gtag('js', new Date();
         gtag('config', process.env.REACT_APP_GA_ID)}
   }, [])
 
@@ -72,13 +71,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
           },
       // Custom analytics
       console.log('Analytics Page:', name, properties)}
-  const value: AnalyticsContextType = {
+  const value: AnalyticsContextType = {,
     track,
     identify,
     page,
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
 

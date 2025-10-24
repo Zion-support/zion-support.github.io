@@ -6,8 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from 'Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 const EnhancedLoadingSkeletonPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',

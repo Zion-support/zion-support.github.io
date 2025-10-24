@@ -6,8 +6,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail } from 'lucide-react';
 
 const FuturisticHeroPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
   title: title,
   description: description,

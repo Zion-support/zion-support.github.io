@@ -148,11 +148,11 @@ const TestPage = lazy(() => import('./test/page'));
 // Main App Component
 function App() {
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <BrowserRouter>
+    <HelmetProvider></HelmetProvider>
+      <ErrorBoundary></ErrorBoundary>
+        <BrowserRouter></BrowserRouter>
           <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+            <Routes></Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/test" element={<TestPage />} />
@@ -281,5 +281,7 @@ function App() {
         </BrowserRouter>
       </ErrorBoundary>
     </HelmetProvider>
+  );
+}
 
 export default App;

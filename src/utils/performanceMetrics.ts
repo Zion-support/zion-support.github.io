@@ -4,51 +4,60 @@
  * Advanced performance tracking and monitoring for web applications
  */
 
-export interface PerformanceMetric {;
+export interface PerformanceMetric {
+
+;
   name: string,
   value: number,
   unit: string,
   timestamp: Date,
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-  metadata?: Record<string, unknown>
-}
+  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
+  metadata?: Record<string, unknown></string>
 
-export interface WebVitalsMetrics {;
+}
+export interface WebVitalsMetrics {
+
+;
   FCP?: number // First Contentful Paint
   LCP?: number // Largest Contentful Paint
   FID?: number // First Input Delay
   CLS?: number // Cumulative Layout Shift
   TTFB?: number // Time to First Byte
   INP?: number // Interaction to Next Paint
-}
 
-export interface PerformanceReport {;
-  metrics: PerformanceMetric[]
+
+}
+export interface PerformanceReport {
+
+;
+  metrics: PerformanceMetric[],
   webVitals: WebVitalsMetrics,
-  summary: {
+  summary: {,
     avgLoadTime: number,
   totalMetrics: number,
   performanceScore: number,
-  recommendations: string[]
-  }
-  timestamp: Date
+  recommendations: string[],
+  ,
+
+}
+  timestamp: Date,
 }
 
 export class PerformanceMetrics {;
-  private static instance: PerformanceMetrics
-  private metrics: PerformanceMetric[] = []
+  private static instance: PerformanceMetrics,
+  private metrics: PerformanceMetric[] = [],
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = []
 
   constructor() {
-    if (typeof window !== 'undefined') {
-      this.initializeObservers()
+    if (typeof window !== 'undefined') {,
+      this.initializeObservers();,
     }
   }
 
   static getInstance(): PerformanceMetrics {
     if (!PerformanceMetrics.instance) {
-      PerformanceMetrics.instance = new PerformanceMetrics()
+      PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance
   }
@@ -70,27 +79,26 @@ export class PerformanceMetrics {;
                 name: name,
   value: navEntry.loadEventEnd - navEntry.fetchStart,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
                 category: category,
-  metadata: {
+  metadata: {,
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
-  domInteractive: navEntry.domInteractive - navEntry.fetchStart
+  domInteractive: navEntry.domInteractive - navEntry.fetchStart,
                 name: 'pageLoadTime',
-                value: navEntry.loadEventEnd - navEntry.fetchStart
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
                 unit: 'ms',
-                timestamp: new Date()
+                timestamp: new Date();,
                 category: 'load',
                 metadata: {
-                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
-                  domInteractive: navEntry.domInteractive - navEntry.fetchStart
+                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart,
                 }
               })
             }
           }
         })
-        navObserver.observe({ entryTypes: ['navigation'] })
-        this.observers.push(navObserver)
-
+        navObserver.observe({ entryTypes: ['navigation'] });
+        this.observers.push(navObserver);
         // Paint timing
         const paintObserver = new PerformanceObserver(list => {;
           for (const entry of list.getEntries()) {
@@ -101,19 +109,18 @@ export class PerformanceMetrics {;
                 name: name,
   value: entry.startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
                 name: 'FCP',
-                value: entry.startTime
+                value: entry.startTime,
                 unit: 'ms',
-                timestamp: new Date()
-                category: 'load'
+                timestamp: new Date();,
+                category: 'load',
               })
             }
           }
         })
-        paintObserver.observe({ entryTypes: ['paint'] })
-        this.observers.push(paintObserver)
-
+        paintObserver.observe({ entryTypes: ['paint'] });
+        this.observers.push(paintObserver);
         // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver(list => {;
           const entries = list.getEntries();
@@ -125,18 +132,17 @@ export class PerformanceMetrics {;
               name: name,
   value: lastEntry.startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
               name: 'LCP',
-              value: lastEntry.startTime
+              value: lastEntry.startTime,
               unit: 'ms',
-              timestamp: new Date()
-              category: 'load'
+              timestamp: new Date();,
+              category: 'load',
             })
           }
         })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-        this.observers.push(lcpObserver)
-
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        this.observers.push(lcpObserver);
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {;
           let clsValue = 0
@@ -150,19 +156,19 @@ export class PerformanceMetrics {;
             name: name,
   value: clsValue,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
             name: 'CLS',
-            value: clsValue
+            value: clsValue,
             unit: 'score',
-            timestamp: new Date()
-            category: 'runtime'
+            timestamp: new Date();,
+            category: 'runtime',
           })
         })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-        this.observers.push(clsObserver)
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        this.observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.error('Failed to initialize performance observers:', error)
+        console.error('Failed to initialize performance observers:', error);
       }
     }
   }
@@ -171,10 +177,10 @@ export class PerformanceMetrics {;
    * Record a custom performance metric
    */
   recordMetric(metric: PerformanceMetric): void {
-    this.metrics.push(metric)
+    this.metrics.push(metric);
     // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {
-      this.metrics.shift()
+    if (this.metrics.length > 1000) {,
+      this.metrics.shift();,
     }
   }
 
@@ -190,23 +196,23 @@ export class PerformanceMetrics {;
       name: name,
   value: pageLoadTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
       category: category,
-  metadata: {
+  metadata: {,
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
   tcpConnection: perfData.connectEnd - perfData.connectStart,
   serverResponse: perfData.responseEnd - perfData.requestStart,
-  domParsing: perfData.domComplete - perfData.domLoading
+  domParsing: perfData.domComplete - perfData.domLoading,
       name: 'pageLoad',
-      value: pageLoadTime
+      value: pageLoadTime,
       unit: 'ms',
-      timestamp: new Date()
+      timestamp: new Date();,
       category: 'load',
       metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart
         tcpConnection: perfData.connectEnd - perfData.connectStart
-        serverResponse: perfData.responseEnd - perfData.requestStart
-        domParsing: perfData.domComplete - perfData.domLoading
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading,
       }
     })
   }
@@ -215,22 +221,22 @@ export class PerformanceMetrics {;
    * Record network request timing
    */
   recordNetworkRequest(url: string, duration: number, status: number): void {
-    this.recordMetric({
-:all-pages-backup/utils/performanceMetrics.ts
+    this.recordMetric({,
+:all-pages-backup/utils/performanceMetrics.ts,
       name: name,
   value: duration,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
       category: category,
-  metadata: {
+  metadata: {,
       name: 'networkRequest',
-      value: duration
+      value: duration,
       unit: 'ms',
-      timestamp: new Date()
+      timestamp: new Date();,
       category: 'network',
       metadata: {
-        url
-        status
+        url,
+        status,
       }
     })
   }
@@ -247,21 +253,21 @@ export class PerformanceMetrics {;
       name: name,
   value: memory.usedJSHeapSize,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
       category: category,
-  metadata: {
+  metadata: {,
         total: memory.totalJSHeapSize,
   limit: memory.jsHeapSizeLimit,
-  percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+  percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
       name: 'memoryUsage',
-      value: memory.usedJSHeapSize
+      value: memory.usedJSHeapSize,
       unit: 'bytes',
-      timestamp: new Date()
+      timestamp: new Date();,
       category: 'memory',
       metadata: {
         total: memory.totalJSHeapSize
-        limit: memory.jsHeapSizeLimit
-        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
       }
     })
   }
@@ -273,17 +279,17 @@ export class PerformanceMetrics {;
     const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
-    this.recordMetric({
-:all-pages-backup/utils/performanceMetrics.ts
+    this.recordMetric({,
+:all-pages-backup/utils/performanceMetrics.ts,
       name: name,
   value: endTime - startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
       name: `function:${name}`
-      value: endTime - startTime
+      value: endTime - startTime,
       unit: 'ms',
-      timestamp: new Date()
-      category: 'runtime'
+      timestamp: new Date();,
+      category: 'runtime',
     })
     return result
   }
@@ -295,17 +301,17 @@ export class PerformanceMetrics {;
     const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
-    this.recordMetric({
-:all-pages-backup/utils/performanceMetrics.ts
+    this.recordMetric({,
+:all-pages-backup/utils/performanceMetrics.ts,
       name: name,
   value: endTime - startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();,
       name: `async:${name}`
-      value: endTime - startTime
+      value: endTime - startTime,
       unit: 'ms',
-      timestamp: new Date()
-      category: 'runtime'
+      timestamp: new Date();,
+      category: 'runtime',
     })
     return result
   }
@@ -320,8 +326,8 @@ export class PerformanceMetrics {;
   /**
    * Get metrics by category
    */
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
-    return this.metrics.filter(m => m.category === category)
+  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,
+    return this.metrics.filter(m => m.category === category);,
   }
 
   /**
@@ -364,8 +370,8 @@ export class PerformanceMetrics {;
    */
   getRecommendations(): string[] {
     const recommendations: string[] = [];
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
-      recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources')
+    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
+      recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'),
     }
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
       recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading')
@@ -379,7 +385,7 @@ export class PerformanceMetrics {;
     const networkMetrics = this.getMetricsByCategory('network');
     const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
     if (avgNetworkTime > 500) {
-      recommendations.push('Optimize network requests - consider caching and reducing payload sizes')
+      recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
     }
     return recommendations
   }
@@ -391,19 +397,19 @@ export class PerformanceMetrics {;
     const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
     return {
-      metrics: this.getMetrics()
-      webVitals: this.getWebVitals()
-      summary: {
-:all-pages-backup/utils/performanceMetrics.ts
+      metrics: this.getMetrics();
+      webVitals: this.getWebVitals();
+      summary: {,
+:all-pages-backup/utils/performanceMetrics.ts,
         avgLoadTime,
   totalMetrics: this.metrics.length,
-  performanceScore: this.calculatePerformanceScore()
+  performanceScore: this.calculatePerformanceScore();
         avgLoadTime
         totalMetrics: this.metrics.length
-        performanceScore: this.calculatePerformanceScore()
-        recommendations: this.getRecommendations()
+        performanceScore: this.calculatePerformanceScore();,
+        recommendations: this.getRecommendations();,
       }
-      timestamp: new Date()
+      timestamp: new Date();,
     }
   }
 
@@ -436,19 +442,19 @@ interface PerformanceWithMemory extends Performance {
   memory?: {
     usedJSHeapSize: number,
   totalJSHeapSize: number,
-  jsHeapSizeLimit: number
+  jsHeapSizeLimit: number,
   }
 }
 
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
   value: number,
-  hadRecentInput: boolean
+  hadRecentInput: boolean,
 }
 
 // Export singleton instance
 :all-pages-backup/utils/performanceMetrics.ts
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics
-export const performanceMetrics = PerformanceMetrics.getInstance()
+export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;

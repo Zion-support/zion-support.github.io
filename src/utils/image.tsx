@@ -7,8 +7,8 @@ src: string,
 {alt: string}
 interface ImageProps {}
   src: string,
-  alt: string
-src: string;
+  alt: string,
+src: string;,
 alt: string;}
 interface ImageProps {}
   src: string
@@ -16,8 +16,8 @@ alt: string
 width?: number
 height?: number
 className?: string
-priority?: boolean
-:all-pages-backup/utils/image.tsx
+priority?: boolean,
+:all-pages-backup/utils/image.tsx,
 _quality?: number,
   src: string,
   alt: string
@@ -27,8 +27,8 @@ alt: string
 width?: number
 height?: number
 className?: string
-priority?: boolean
-:all-pages-backup/utils/image.tsx
+priority?: boolean,
+:all-pages-backup/utils/image.tsx,
 _quality?: number,
   src: string,
   alt: string
@@ -45,8 +45,8 @@ _blurDataURL?: string
 fill?: boolean
 sizes?: string
 style?: React.CSSProperties
-onLoad?: () => void
-:all-pages-backup/utils/image.tsx
+onLoad?: () => void,
+:all-pages-backup/utils/image.tsx,
 {onError?: () => void},
 {}
 export const Image: React.FC<ImageProps>= ({}
@@ -70,8 +70,8 @@ quality = 75
 placeholder = 'empty'
 blurDataURL
 fill = false
-sizes
-:all-pages-backup/utils/image.tsx
+sizes,
+:all-pages-backup/utils/image.tsx,
 style,
 onLoad,
 onError,}
@@ -116,8 +116,8 @@ onLoad;
 onError,;}
 ...props}
 }) => {}
-const [, setIsLoaded] = useState(false)
-const [hasError, setHasError] = useState(false)
+const [, setIsLoaded] = useState(false);
+const [hasError, setHasError] = useState(false);
 const handleLoad = useCallback(() => {}
 setIsLoaded(true);
 if (onLoad) onLoad();}
@@ -130,14 +130,14 @@ const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
-top: 0;
+top: 0;,
 left: 0,;}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
-top: 0
-left: 0
+top: 0,
+left: 0,
 width: '100%',
 height: '100%',
 objectFit: 'cover'}
@@ -147,10 +147,14 @@ if (hasError) {</ImageProps>;
 return (</ImageProps>;}
 if (hasError) {}
 return ()
-    <div }>
+    <div }></div>
 if (hasError) {;}
-return(<div }>
-interface ImageProps {/* TODO: Fix JSX expression */}
+return(<div }></div>
+interface ImageProps {
+
+/* TODO: Fix JSX expression */,
+
+}
 :all-pages-backup/utils/image.tsx
 {}
 export const,
@@ -160,7 +164,9 @@ Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
 {}, [onError])
 const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+  imageStyle: React.CSSProperties = {
+/* TODO: Fix JSX expression */,
+};
 {})
 {}
 }
@@ -171,38 +177,62 @@ Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 }, [onError])
 const
-imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+imageStyle: React.CSSProperties = {
+/* TODO: Fix JSX expression */,
+};
 })
 }
 if (hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
-style={imageStyle}
+style = {
+imageStyle
+};
 {...props})
 >)</div>
-<span className="tex t-gray-500text-sm"><span className="sr-on ly">Screen reader: </span>Failed to load image</span>)
-</div>)
-)
+<span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+</div>),
+),
 {...props}
 ></div>
-<span className="tex t-gray-500text-sm"></span><span className="sr-on ly">Screen reader: </span>Failed to load image</span>
+<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
 </div>
-)
-:all-pages-backup/utils/image.tsx
+),
+:all-pages-backup/utils/image.tsx,
 {}
 return(<img
-return ()
+return ();
 }
-return(<img return ()>
-src={src}
-alt={alt}
-width={width}
-height={height}
-className={className}
-style={imageStyle}
-sizes={sizes}
-loading={priority ? 'eager' : 'lazy'}
-onLoad={handleLoad}
-onError={handleError}
+return(<img return ()></img>
+src = {
+src
+};
+alt = {
+alt
+};
+width = {
+width
+};
+height = {
+height
+};
+className = {
+className
+};
+style = {
+imageStyle
+};
+sizes = {
+sizes
+};
+loading = {
+priority ? 'eager' : 'lazy'
+};
+onLoad = {
+handleLoad
+};
+onError = {
+handleError
+};
 {...props}
 :all-pages-backup/utils/image.tsx
 >)</img>;

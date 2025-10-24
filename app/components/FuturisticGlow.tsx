@@ -7,8 +7,8 @@ interface FuturisticGlowProps {
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
-
-export default function FuturisticGlow({ 
+,
+export default function FuturisticGlow({ ,
   children, 
   intensity = 'medium',
   color = 'cyan',
@@ -43,8 +43,11 @@ export default function FuturisticGlow({
 
   return (
     <div
-      ref={containerRef}
-      className={`
+      ref = {
+containerRef
+};
+      className = {
+`
         relative
         before:absolute
         before:inset-0 
@@ -63,11 +66,12 @@ export default function FuturisticGlow({
         after:shadow-[0_0_20px_var(--glow-color)]
         after:opacity-0 
         after:transition-opacity 
-        after:duration-500
-        hover:after:opacity-100
-        ${className}
+        after:duration-500,
+        hover:after:opacity-100,
+        ${className
+};
       `}
-    >
+    ></div>
       {children}
     </div>
 }

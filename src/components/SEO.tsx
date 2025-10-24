@@ -1,12 +1,15 @@
 import React from 'react';
 
 interface SEOProps {
-  className?: string;
-}
 
+
+  className?: string;
+
+
+}
 const SEO: React.FC<SEOProps> = ({ className = '' }) => {
   return (
-    <div className={className}>
+    <div className={className}></div>
       <h2>SEO</h2>
       <p>This component is under construction.</p>
     </div>

@@ -2,11 +2,14 @@
 <&quot;use client&quot
 import React, { createContext, useContext, useEffect } from &quot;react&quot;
 interface AnalyticsContextType {
+
+
   track: (event: string, properties?: Record<string, unknown>) => void,
   identify: (userId: string, traits?: Record<string, unknown>) => void,
   page: (name: string, properties?: Record<string, unknown>) => void
-}
 
+
+}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined
 )
@@ -14,15 +17,18 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
 export const useAnalytics = () => {;
   const context = useContext(AnalyticsContext);
   if (!context) {;
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
+    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;);
   }
   return context
 }
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode
-}
 
+
+  children: React.ReactNode,
+,
+
+}
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     // Initialize analytics
@@ -32,15 +38,14 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         const script = document.createElement(&quot;script&quot;);
         script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
-        document.head.appendChild(script)
-
+        document.head.appendChild(script);
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {
-          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
+        function gtag(...args: unknown[]) {,
+          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
         }
         gtag(&quot;js&quot;, new Date())
-        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
+        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID);
       }
     }
   }, [])
@@ -51,7 +56,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
          &quot;event&quot;
           event
           properties
-        )
+        );
       }
 
       // Custom analytics
@@ -64,9 +69,9 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
          &quot;config&quot;
           process.env.REACT_APP_GA_ID
           {user_id: userId,
-  custom_map: traits
+  custom_map: traits,
           }
-        )
+        );
       }
 
       // Custom analytics
@@ -79,29 +84,33 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
          &quot;event&quot;
          &quot;page_view&quot;
           {page_title: name,
-  page_location: windo w.location.href
-            ...properties
+  page_location: windo w.location.href,
+            ...properties,
           }
-        )
+        );
       }
 
       // Custom analytics
       }
   }
 
-  constvalue: AnalyticsContextType = {track
-    identify
-    page
-  }
-
+  constvalue: AnalyticsContextType = {
+track
+    identify,
+    page,
+  
+};
 import { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
+
+
   track: (event: string, properties?: Record<string, any>) => void,
   identify: (userId: string, traits?: Record<string, any>) => void,
   page: (name: string, properties?: Record<string, any>) => void
-}
 
+
+}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const useAnalytics = () => {;
@@ -113,9 +122,12 @@ export const useAnalytics = () => {;
 };
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode
-}
 
+
+  children: React.ReactNode,
+,
+
+}
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   // Initialize analytics
   useEffect(() => {
@@ -134,7 +146,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
+        function gtag(...args: any[]) {,
           window.dataLayer.push(args)}
         gtag('js', new Date());
         gtag('config', process.env.REACT_APP_GA_ID)}
@@ -171,7 +183,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       if (window.gtag) {
         window.gtag('config', process.env.REACT_APP_GA_ID, {
           user_id: userId,
-  custom_map: traits
+  custom_map: traits,
         })}
       
       // Custom analytics - only log in development
@@ -182,7 +194,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {;
-          custom_map: traits
+          custom_map: traits,
         })}
       
       // Custom analytics
@@ -195,8 +207,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       if (window.gtag) {
         window.gtag('event', 'page_view', {
           page_title: name,
-  page_location: window.location.href
-          ...properties
+  page_location: window.location.href,
+          ...properties,
         })}
       
       // Custom analytics - only log in development
@@ -209,8 +221,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const value: AnalyticsContextType = {
     track
     identify
-    page
-          ...properties
+    page,
+          ...properties,
         })}
       
       // Custom analytics
@@ -219,12 +231,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   const value: AnalyticsContextType = {;
     track
-    identify
-    page
+    identify,
+    page,
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
   )
@@ -234,12 +246,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
+
+
     dataLayer: any[];
-    gtag: (...args: any[]) => void
-  }
+    gtag: (...args: any[]) => void,
+  ,
+
 }
-    dataLayer: unknown[]
-    gtag: (...args: any[]) => void
+}
+    dataLayer: unknown[],
+    gtag: (...args: any[]) => void,
 {  },
 {}
 import React from 'react';
@@ -248,8 +264,8 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const EnhancedAnalyticsPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
   title: title,
   description: description,
@@ -290,49 +306,60 @@ export default function AiCrmPage() {
   return (
     <>
       
-<      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+<      <Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              EnhancedAnalytics
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced EnhancedAnalytics solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+    </>
+        <section className="relativepy-20px-4overflow-hidden"></section>
+          <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
+        <div className="relativemax-w-7xlmx-autotext-center">
+            <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
+            EnhancedAnalytics
+            
+          
+          </h1>
+            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
+            Advanced EnhancedAnalytics solution for modern businesses.
+            
+          
+          </p>
+            <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Learn More
               </button>
             </div>
           </div>
-        </section>
-
+        </section>,
+,
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+        <section className="py-20px-4"></section>
+          <div className="max-w-7xlmx-auto">
+        <div className="text-centermb-16">
+              <h2 className="text-4xlfont-boldtext-whitemb-4">Key Features</h2>
+              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            Powerful AI-driven features designed to transform your business operations
+              
+          
+          </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">,
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xlp-6borderborder-white/20"></div>
+        </div>
+        </div>
+                  <feature.icon className="h-12w-12text-emerald-400mb-4" /></feature>
+                  <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
+                  <p className="text-gray-300mb-4">
+            {feature.description}
+          </p>
+                  <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flexitems-centertext-smtext-gray-300"></li>
+                        <CheckCircle className="h-4 w-4text-emerald-400mr-2flex-shrink-0" /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -344,19 +371,25 @@ export default function AiCrmPage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+        <section className="py-20px-4bg-white/5"></section>
+          <div className="max-w-7xlmx-auto">
+        <div className="text-centermb-16">
+              <h2 className="text-4xlfont-boldtext-whitemb-4">Why Choose Our Solution</h2>
+              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            Experience the benefits of cutting-edge AI technology
+              
+          
+          </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="gridmd:grid-cols-2lg:grid-cols-3gap-8">,
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                <div key={index} className="flexitems-startspace-x-4"></div>
+        </div>
+        </div>
+                  <CheckCircle className="h-6 w-6text-emerald-400mt-1flex-shrink-0" /></CheckCircle>
+                  <p className="text-gray-300text-lg">
+            {benefit}
+          </p>
                 </div>
               ))}
             </div>
@@ -364,47 +397,49 @@ export default function AiCrmPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20px-4"></section>
+          <div className="max-w-4xlmx-autotext-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <p className="text-xltext-gray-300mb-8">
+            Join thousands of businesses already using our AI solutions
+            
+          
+          </p>
+            <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Contact Sales
               </button>
             </div>
           </div>
         </section>
         <title>AiCrm - Zion Tech Group</title>
-        <meta name="description" content="Professional aicrm services by Zion Tech Group." />
-      
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-6">AiCrm</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional aicrm services by Zion Tech Group.</p>
+        <meta name="description" content="Professional aicrm services by Zion Tech Group." /></meta>
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900">
+        <div className="containermx-autopx-4py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            AiCrm
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional aicrm services by Zion Tech Group.
+          </p>
           
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <LinkContact Us
+            >
+            $2
+            <ArrowRight$3 />
           </Link>
         </div>
 >      </div>
-</>;
-  );
+</>;,
+  );,
 <};
 
 export default EnhancedAnalyticsPage
 }
->    dataLayer: any[];
-    gtag: (...args: any[]) => void
+>    dataLayer: any[];,
+    gtag: (...args: any[]) => void,
 {  },
 {}

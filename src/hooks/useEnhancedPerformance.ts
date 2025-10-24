@@ -7,10 +7,14 @@ import { useEffect, useCallback, useRef } from 'react';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 export interface UseEnhancedPerformanceOptions {
+
+
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
+
+
 }
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
@@ -38,7 +42,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             'Performance',
             'Long Component Lifetime',
             component,
-            Math.round(duration)
+            Math.round(duration);
           );
         }
       }
@@ -86,8 +90,8 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       return {
         end: () => {
           const duration = performance.now() - startTime;
-          if (trackPerformance) {
-            analytics.trackPerformance(
+          if (trackPerformance) {,
+            analytics.trackPerformance(,
               `${component}-${operationName}`,
               duration,
               duration > 1000 ? 'slow' : 'fast'

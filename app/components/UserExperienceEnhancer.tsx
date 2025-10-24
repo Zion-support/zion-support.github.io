@@ -10,8 +10,8 @@ interface FeedbackState {
   rating: number;
   comment: string;
   submitted: boolean;
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
+,
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({,
   children,
   className = ''
 }) => {
@@ -42,7 +42,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   }, []);
 
   return (
-    <div className={className}>
+    <div className={className}></div>
       {children}
     </div>}
 export default UserExperienceEnhancer;

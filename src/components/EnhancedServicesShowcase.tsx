@@ -5,4 +5,5 @@ import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, U
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
-  const services = [;
+  const services = [;,
+,

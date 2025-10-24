@@ -7,25 +7,34 @@ const Page: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Sitemap Page"
-        description="Professional sitemap page services and solutions for your business needs."
-        keywords={["sitemap page","AI solutions","business automation","technology services"]}
+        title="Sitemap Page",
+        description="Professional sitemap page services and solutions for your business needs.",
+        keywords = {
+["sitemap page","AI solutions","business automation","technology services"]
+};
+    </>
         canonicalUrl="https://ziontechgroup.com/sitemap-page"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 neon-text">
-              Sitemap Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional sitemap page services and solutions for your business needs.
-            </p>
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
+      /></SEOOptimizer>
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
+        <Navigation /></Navigation>
+        <main className="container mx-autopx-4py-16pt-24"></main>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-5xl font-boldtext-whitemb-8neon-text">
+            Sitemap Page
+            
+          
+          </h1>
+            <p className="text-xltext-gray-300mb-8">
+            Professional sitemap page services and solutions for your business needs.
+            
+          
+          </p>
+            <div className="cyber-cardp-8max-w-4xlmx-auto"></div>
               <p className="text-gray-300">
-                This page is under development. Please check back soon for more information about our sitemap page services.
-              </p>
+            This page is under development. Please check back soon for more information about our sitemap page services.
+              
+          
+          </p>
             </div>
           </div>
         </main>

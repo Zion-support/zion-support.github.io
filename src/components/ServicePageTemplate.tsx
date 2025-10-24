@@ -2,8 +2,8 @@
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
 const ServicePageTemplatePage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
   title: title,
   description: description,
@@ -41,8 +41,8 @@ const ServicePageTemplatePage: React.FC = () => {
     <>
       <Helmet>;
         <title>ServicePageTemplate | Zion Tech Group</title>;
-        <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; />
+        <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; /></meta>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; /></meta>
       </Helmet>
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;container mx-auto max-w-6xl&quot;></div>
@@ -52,8 +52,9 @@ const ServicePageTemplatePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  )
+    </div>,
+  ),
+    </>
 }
 
 export default ServicePageTemplatePage

@@ -1,21 +1,24 @@
 interface ApiResponse<T = any> {
   data: T;
-  status: number;
-  message?: string;
+  status: number;,
+  message?: string;,
 }
 
 interface ApiError {
-  message: string;
-  status: number;
-}
 
+
+  message: string;
+  status: number;,
+,
+
+}
 class ApiClient {
-  private baseURL: string;
+  private baseURL: string;,
   private defaultHeaders: Record<string, string>;
 
   constructor(baseURL: string = '/api') {
-    this.baseURL = baseURL;
-    this.defaultHeaders = {
+    this.baseURL = baseURL;,
+    this.defaultHeaders = {,
       'Content-Type': 'application/json',
     };
   }
@@ -26,9 +29,9 @@ class ApiClient {
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
     
-    const config: RequestInit = {
+    const config: RequestInit = {,
       ...options,
-      headers: {
+      headers: {,
         ...this.defaultHeaders,
         ...options.headers,
       },
@@ -65,7 +68,7 @@ class ApiClient {
   async post<T>(
     endpoint: string,
     data?: any,
-    headers?: Record<string, string>
+    headers?: Record<string, string></string>
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'POST',
@@ -77,7 +80,7 @@ class ApiClient {
   async put<T>(
     endpoint: string,
     data?: any,
-    headers?: Record<string, string>
+    headers?: Record<string, string></string>
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PUT',

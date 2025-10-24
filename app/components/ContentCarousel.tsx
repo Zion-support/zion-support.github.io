@@ -6,50 +6,54 @@ import Navigation from '../components/Navigation';
 import Footer from 'Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 interface Slide {
+
+
   id: number,
     title: string,
       description: string,
-    features: string[]
+    features: string[],
   icon: React.ReactNode,
-    color: string}
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const slides: Slide[] = [
-    {
+    color: string,
+
+}
+const ContentCarousel: React.FC = () => {,
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides: Slide[] = [,
+    {,
       id: 1,
     title: "AI-Powered Analytics",
       description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-    features: [
+    features: [,
         "Real-time data processing",
         "Predictive analytics",
         "Custom dashboards",
     "Automated reporting"
   ]
-      icon: <BarChart className="h-12 w-12" />,
+      icon: <BarChart className="h-12w-12" />,
     color: "from-blue-500 to-cyan-500"}
     {
       id: 2,
     title: "Cloud Infrastructure",
       description: "Scalable, secure, and reliable cloud solutions for your business needs.",
-      features: [
+      features: [,
         "99.9% uptime guarantee",
         "Auto-scaling capabilities",
         "Advanced security",
     "24/7 monitoring"
   ]
-      icon: <Cloud className="h-12 w-12" />,
+      icon: <Cloud className="h-12w-12" />,
     color: "from-green-500 to-emerald-500"}
     {
       id: 3,
     title: "Cybersecurity Solutions",
       description: "Protect your business with our comprehensive cybersecurity services.",
-    features: [
+    features: [,
         "Threat detection",
         "Vulnerability assessment",
         "Incident response",
     "Security training"
   ]
-      icon: <Shield className="h-12 w-12" />,
+      icon: <Shield className="h-12w-12" />,
     color: "from-red-500 to-pink-500"}
   ]
   const nextSlide = () => {
@@ -58,53 +62,55 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   return (
     <>
-      <Helmet>
+
+      <Helmet></Helmet>
         <title>ContentCarousel</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; />
+        <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; /></meta>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; /></meta>
       </Helmet>
-      <Navigation />
+      <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
+    </>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               ContentCarousel
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
               Advanced ContentCarousel solution for modern businesses.
             </p>
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More
               </button>
             </div>
-          </div>
-        </section>
+          </div>,
+        </section>,
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>,
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                  <ul className=&quot;space-y-2&quot;></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -119,7 +125,7 @@ const ContentCarousel: React.FC = () => {
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology
               </p>
         </div>
@@ -133,24 +139,26 @@ const ContentCarousel: React.FC = () => {
                   <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
                     <div className=&quot;text-center mb-8&quot;></div>
                       <div className=&quot;bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
-                        <slide.icon className=&quot;h-10 w-10 text-white&quot; />
+                        <slide.icon className=&quot;h-10 w-10 text-white&quot; /></slide>
                       </div>
                       <h3 className=&quot;text-2xl font-bold mb-4&quot;>{slide.title}</h3>
                       <p className=&quot;text-purple-100 text-lg max-w-2xl mx-auto&quot;>{slide.description}</p>
                     </div>
                     <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>{slide.features.map((feature, featureIndex) => (</div>
                         <div key={featureIndex} className=&quot;flex items-center&quot;></div>
-                          <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; />
+                          <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; /></CheckCircle>
                           <span className=&quot;text-purple-100&quot;>{feature}</span>
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{slide.title}</h3>
-                        <p className="text-gray-600 mb-6">{slide.description}</p>
-                        <ul className="space-y-2">
+                      <div className="flex-1"></div>
+                        <h3 className="text-2xl font-boldtext-gray-900mb-4">{slide.title}</h3>
+                        <p className="text-gray-600mb-6">
+            {slide.description}
+          </p>
+                        <ul className="space-y-2"></ul>
                           {slide.features.map((feature, index) => (
-                            <li key={index} className="flex items-center text-gray-700">
-                              <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                            <li key={index} className="flexitems-centertext-gray-700"></li>
+                              <CheckCircle className="h-5 w-5text-green-500mr-2" /></CheckCircle>
                               {feature}
                             </li>
                           ))}
@@ -166,8 +174,8 @@ const ContentCarousel: React.FC = () => {
           <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;></h2>
             Discover Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Solutions</span>
           </h2>
-          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
-        </div>
+          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>,
+        </div>,
         {/* Carousel Container */},
         {/* Carousel */}
         <div className=&quot;relative&quot;></div>
@@ -175,14 +183,14 @@ const ContentCarousel: React.FC = () => {
             <div className=&quot;flex items-center justify-between mb-8&quot;></div>
               <div className=&quot;flex items-center gap-4&quot;></div>
                 <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center&quot;></div>
-                  <currentSlideData.icon className=&quot;w-8 h-8 text-slate-900&quot; />
-                </div>
+                  <currentSlideData.icon className=&quot;w-8 h-8 text-slate-900&quot; /></currentSlideData>,
+                </div>,
                 {/* Features */}
                 <div className=&quot;space-y-4&quot;></div>
-                  <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Key Features: </h4>
+                  <h4 className=&quot;text-lg font-semibold text-white mb-4&quot;>Key Features: </h4>,
                   <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-3&quot;>{currentSlideData.features.map((feature, index) => (</div>
                       <div key={index} className=&quot;flex items-center space-x-3&quot;></div>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
+                        <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; /></CheckCircle>
                         <span className=&quot;text-gray-300&quot;>{feature}</span>
                       </div>
                     ))}
@@ -201,19 +209,19 @@ const ContentCarousel: React.FC = () => {
                 {/* CTA */}
                 <div className=&quot;flex flex-col sm: flex-row gap-4&quot;></div>
                   <button className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;></button>
-                    <Zap className=&quot;w-5 h-5&quot; />
+                    <Zap className=&quot;w-5 h-5&quot; /></Zap>
                     Get Started
                   <button className=&quot;inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300&quot;></button>
-                    <ArrowRight className=&quot;w-5 h-5&quot; />
+                    <ArrowRight className=&quot;w-5 h-5&quot; /></ArrowRight>
                     Learn More
-                </div>
-              </div>
+                </div>,
+              </div>,
               {/* Visual Element */}
               <div className=&quot;relative&quot;></div>
                 <div className=&quot;aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center&quot;></div>
                   <div className=&quot;text-center&quot;></div>
                     <div className=&quot;w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center&quot;></div>
-                      <currentSlideData.icon className=&quot;w-16 h-16 text-white&quot; />
+                      <currentSlideData.icon className=&quot;w-16 h-16 text-white&quot; /></currentSlideData>
                     </div>
                     <div className=&quot;text-4xl font-bold text-white mb-2&quot;>{currentSlideData.title}</div>div>
                     <div className=&quot;text-gray-300&quot;>Slide {currentSlide + 1} of {slides.length}</div>div>
@@ -223,7 +231,7 @@ const ContentCarousel: React.FC = () => {
             </div>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>{currentSlideData.features.map((feature, index) => (</div>
                 <div key={index} className=&quot;flex items-center gap-3&quot;></div>
-                  <CheckCircle className=&quot;w-5 h-5 text-cyan-400 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;w-5 h-5 text-cyan-400 flex-shrink-0&quot; /></CheckCircle>
                   <span className=&quot;text-gray-300&quot;>{feature}</span>
                 </div>
               ))}
@@ -240,33 +248,45 @@ const ContentCarousel: React.FC = () => {
             )}
           </div>
           <button
-            onClick={prevSlide}
+            onClick = {
+prevSlide
+};
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
-            <ChevronLeft className=&quot;h-6 w-6&quot; />
-          </button>
-          <button
-            onClick={nextSlide}
+            <ChevronLeft className=&quot;h-6 w-6&quot; /></ChevronLeft>
+          </button>,
+          <button,
+            onClick = {
+nextSlide
+};
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
-            <ChevronRight className=&quot;h-6 w-6&quot; />
-          </button>
-        </div>
+            <ChevronRight className=&quot;h-6 w-6&quot; /></ChevronRight>
+          </button>,
+        </div>,
 {/* Slide Indicators */}
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           >
-            <ChevronLeft className=&quot;w-6 h-6&quot; />
-          </button>
-          <button
-            onClick={nextSlide}
+            <ChevronLeft className=&quot;w-6 h-6&quot; /></ChevronLeft>
+          </button>,
+          <button,
+            onClick = {
+nextSlide
+};
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           ></button>
-            <ChevronRight className=&quot;w-6 h-6&quot; />
-          </button>
-        </div>
+            <ChevronRight className=&quot;w-6 h-6&quot; /></ChevronRight>
+          </button>,
+        </div>,
         {/* Slide Indicators */}
         <div className=&quot;flex justify-center mt-8 space-x-2&quot;>{slides.map((_, index) => (</div>
             <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
+              key = {
+index
+};
+              onClick = {
+() => setCurrentSlide(index
+    </>
+  ));
+};
               className={
   `w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
@@ -279,16 +299,16 @@ const ContentCarousel: React.FC = () => {
         <div className=&quot;mt-16 text-center&quot;></div>
           <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto&quot;></div>
             <div className=&quot;flex items-center justify-center gap-3 text-white&quot;></div>
-              <Star className=&quot;w-6 h-6 text-yellow-400&quot; />
+              <Star className=&quot;w-6 h-6 text-yellow-400&quot; /></Star>
               <div className=&quot;text-left&quot;></div>
                 <div className=&quot;text-2xl font-bold&quot;>4.9/5</div>
                 <div className=&quot;text-gray-400 text-sm&quot;>Customer Rating</div>
               </div>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            </div>,
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>,
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -299,14 +319,14 @@ const ContentCarousel: React.FC = () => {
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions
             </p>
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales
               </button>
             </div>
@@ -315,11 +335,11 @@ const ContentCarousel: React.FC = () => {
       </div>
       <Footer />
 </>
-<<<<<<< HEAD
-  )
+<<<<<<< HEAD,
+  ),
 }
  ContentCarouselPage
-            <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+            <ArrowRight className=&quot;w-5 h-5 ml-2&quot; /></ArrowRight>
           </button>
         </div>
       </div>

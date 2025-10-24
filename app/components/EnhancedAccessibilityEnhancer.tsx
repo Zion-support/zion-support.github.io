@@ -5,8 +5,8 @@ import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -40,53 +40,64 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
-        <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, enhanced accessibility enhancer, AI solutions, intelligent automation" />
+        <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, enhanced accessibility enhancer, AI solutions, intelligent automation" /></meta>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Enhanced Accessibility Enhancer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced Enhanced Accessibility Enhancer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+    </>
+        <section className="relativepy-20px-4overflow-hidden"></section>
+          <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
+        <div className="relativemax-w-7xlmx-autotext-center">
+            <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
+            Enhanced Accessibility Enhancer
+            
+          
+          </h1>
+            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
+            Advanced Enhanced Accessibility Enhancer solution for modern businesses.
+            
+          
+          </p>
+            <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Learn More
               </button>
             </div>
           </div>
-        </section>
-
+        </section>,
+,
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+        <section className="py-20px-4"></section>
+          <div className="max-w-7xlmx-auto">
+        <div className="text-centermb-16">
+              <h2 className="text-4xlfont-boldtext-whitemb-4">Key Features</h2>
+              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            Powerful AI-driven features designed to transform your business operations
+              
+          
+          </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">,
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xlp-6borderborder-white/20"></div>
+        </div>
+        </div>
+                  <feature.icon className="h-12w-12text-emerald-400mb-4" /></feature>
+                  <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
+                  <p className="text-gray-300mb-4">
+            {feature.description}
+          </p>
+                  <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flexitems-centertext-smtext-gray-300"></li>
+                        <CheckCircle className="h-4 w-4text-emerald-400mr-2flex-shrink-0" /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -98,17 +109,21 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+        <section className="py-20px-4bg-white/5"></section>
+          <div className="max-w-7xlmx-auto">
+        <div className="text-centermb-16">
+              <h2 className="text-4xlfont-boldtext-whitemb-4">Why Choose Our Solution</h2>
+              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            Experience the benefits of cutting-edge AI technology
+              
+          
+          </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
+            <div className="gridgrid-cols-1md:grid-cols-2gap-6">{benefits.map((benefit, index) => (
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
+        </div>
+        </div>
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}

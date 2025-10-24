@@ -15,7 +15,7 @@ export interface Metadata {;
   metadataBase?: URL
   alternates?: {
   canonical?: string
-    languages?: Record<string, string>
+    languages?: Record<string, string></string>
 }
   openGraph?: {
   title?: string
@@ -25,8 +25,8 @@ export interface Metadata {;
     images?: Array<{
       url: string
       width?: number
-      height?: number
-      alt?: string
+      height?: number,
+      alt?: string,
 }>
     locale?: string
     type?: string
@@ -56,77 +56,125 @@ export interface Metadata {;
   google?: string
     yandex?: string
     yahoo?: string
-    other?: Record<string, string>
+    other?: Record<string, string></string>
 }
 }
-export interface MetadataRoute {;
+export interface MetadataRoute {
+
+;
   url: string
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
+  priority?: number,
+,
+
 }
 export interface MetadataRouteSitemap extends MetadataRoute {;
   url: string
   lastModified?: string | Date
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
+  priority?: number,
 }
 // Custom Next.js types
-export interface NextPageProps {;
-  params: { [key: string]: string }
+export interface NextPageProps {
+
+;
+  params: { [key: string]: string ,
+
+}
   searchParams: { [key: string]: string | string[] | undefined }
 }
 // API route types
-export interface ApiRouteHandler {;
-  (req: Request): Promise<Response>}
+export interface ApiRouteHandler {
+
+;
+  (req: Request): Promise<Response>,
+
+}
 // Server components types
-export interface ServerComponentProps {;
-  params: { [key: string]: string }
+export interface ServerComponentProps {
+
+;
+  params: { [key: string]: string ,
+
+}
   searchParams: { [key: string]: string | string[] | undefined }
 }
 // Client components types
-export interface ClientComponentProps {;
+export interface ClientComponentProps {
+
+;
   children?: React.ReactNode
   className?: string
+
+
 }
 // Route handlers
-export interface RouteHandler {;
-  GET?: (req: Request) => Promise<Response>
-  POST?: (req: Request) => Promise<Response>
-  PUT?: (req: Request) => Promise<Response>
-  DELETE?: (req: Request) => Promise<Response>
-  PATCH?: (req: Request) => Promise<Response>}
+export interface RouteHandler {
+
+;
+  GET?: (req: Request) => Promise<Response></Response>
+  POST?: (req: Request) => Promise<Response></Response>
+  PUT?: (req: Request) => Promise<Response></Response>
+  DELETE?: (req: Request) => Promise<Response></Response>,
+  PATCH?: (req: Request) => Promise<Response>,
+
+}
 // Dynamic route types
-export interface DynamicRoute {;
-  params: { [key: string]: string }
+export interface DynamicRoute {
+
+;
+  params: { [key: string]: string ,
+
+}
 }
 // Static generation types
-export interface StaticProps {;
-  props: { [key: string]: any }
+export interface StaticProps {
+
+;
+  props: { [key: string]: any ,
+
+}
   revalidate?: number
   notFound?: boolean
 }
 // ISR types
-export interface ISRConfig {;
+export interface ISRConfig {
+
+;
   revalidate: number
-  tags?: string[]
+  tags?: string[],
+,
+
 }
 // Edge runtime types
-export interface EdgeRuntime {;
-  runtime: 'edge'}
+export interface EdgeRuntime {
+
+;
+  runtime: 'edge',
+
+}
 // Node.js runtime types
-export interface NodeRuntime {;
-  runtime: 'nodejs'}
+export interface NodeRuntime {
+
+;
+  runtime: 'nodejs',
+
+}
 // Extend Next.js types
 declare module 'next' {
   interface NextApiRequest {
+
+
     user?: {
 :all-pages-backup/types/next.d.ts
       id: string,
   email: string
       id: string
     email: string
-      name?: string
+      name?: string,
+,
+
 }
   }
 };

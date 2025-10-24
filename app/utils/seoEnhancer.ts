@@ -16,8 +16,8 @@ export const generateMetaTags = (data: {,
   ogImage?: string
   twitterCard?: string
   twitterTitle?: string
-  twitterDescription?: string
-  twitterImage?: string
+  twitterDescription?: string,
+  twitterImage?: string,
 }) => {
   const tags = [
     { name: 'title', content: data.title },
@@ -51,13 +51,13 @@ export const generateStructuredData = (data: {
     streetAddress: string
     addressLocality: string
     addressRegion: string
-    postalCode: string
-    addressCountry: string
+    postalCode: string,
+    addressCountry: string,
   }
   contactPoint?: {
     telephone: string
-    contactType: string
-    email: string
+    contactType: string,
+    email: string,
   }
   sameAs?: string[]
 }) => {
@@ -68,21 +68,21 @@ export const generateStructuredData = (data: {
     description: data.description,
     url: data.url,
     logo: data.logo || '/logo.png',
-    address: data.address ? {
+    address: data.address ? {,
       '@type': 'PostalAddress',
       streetAddress: data.address.streetAddress,
       addressLocality: data.address.addressLocality,
       addressRegion: data.address.addressRegion,
       postalCode: data.address.postalCode,
-      addressCountry: data.address.addressCountry
+      addressCountry: data.address.addressCountry,
     } : undefined,
-    contactPoint: data.contactPoint ? {
+    contactPoint: data.contactPoint ? {,
       '@type': 'ContactPoint',
       telephone: data.contactPoint.telephone,
       contactType: data.contactPoint.contactType,
-      email: data.contactPoint.email
+      email: data.contactPoint.email,
     } : undefined,
-    sameAs: data.sameAs || []
+    sameAs: data.sameAs || [],
   }
 }
 
@@ -90,12 +90,12 @@ export const generateStructuredData = (data: {
 export const generateSitemap = (pages: Array<{
   url: string
   lastModified: string
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority: number
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
+  priority: number,
 }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>,
+${pages.map(page => `  <url>,
     <loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
@@ -107,8 +107,8 @@ ${pages.map(page => `  <url>
 }
 
 // Generate robots.txt
-export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
-  return `User-agent: *
+export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {,
+  return `User-agent: *,
 ${allowAll ? 'Allow: /' : 'Disallow: /'}
 
 Sitemap: ${sitemapUrl}`

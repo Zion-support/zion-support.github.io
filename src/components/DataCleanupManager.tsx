@@ -1,12 +1,15 @@
 import React from 'react';
 
 interface DataCleanupManagerProps {
-  className?: string;
-}
 
+
+  className?: string;
+
+
+}
 const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ className = '' }) => {
   return (
-    <div className={className}>
+    <div className={className}></div>
       <h2>DataCleanupManager</h2>
       <p>This component is under construction.</p>
     </div>

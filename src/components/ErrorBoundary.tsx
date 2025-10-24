@@ -1,47 +1,63 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode
-}
 
+
+  children: ReactNode,
+,
+
+}
 interface State {
-  hasError: boolean
-  error?: Error
-}
 
+
+  hasError: boolean
+  error?: Error,
+,
+
+}
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
+  public state: State = {,
+    hasError: false,
   };
 
-  public static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error }}
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     // Log error in development, send to error reporting service in production
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error: ', error, errorInfo)}
-    // TODO: Send error to error reporting service in production
+    // TODO: Send error to error reporting service in production,
     console.error('ErrorBoundary caught an error: ', error, errorInfo)}
 
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
+        <div className="min-h-screen flex items-center justify-centerbg-gray-900">
+        <div className="text-center">
+            <h1 className="text-4xlfont-boldtext-whitemb-4">
+            Something went wrong
+          </h1>
+            <p className="text-gray-300mb-8">
+            We're sorry, but something unexpected happened. Please try refreshing the page.
+            
+          
+          </p>
             <button
-              onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              onClick = {
+() => window.location.reload(
+        </div>
+        </div>);
+        </div>
+        </div>
+};
+              className="px-6 py-3 bg-blue-600 text-whiterounded-lghover:bg-blue-700transition-colors"
             >
               Refresh Page
             </button>
-          </div>
-        </div>
+          </div>,
+        </div>,
       )}
 
   const benefits = [
@@ -56,52 +72,53 @@ class ErrorBoundary extends Component<Props, State> {
     <>
       <Helmet>;
         <title>ErrorBoundary</title>;
-        <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation&quot; />
+        <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; /></meta>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation&quot; /></meta>
       </Helmet>
-      <Navigation />
+      <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
+    </>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               ErrorBoundary
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
               Advanced ErrorBoundary solution for modern businesses.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More
               </button>
             </div>
           </div>
-        </section>
-
+        </section>,
+,
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>,
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                  <ul className=&quot;space-y-2&quot;></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -117,14 +134,14 @@ class ErrorBoundary extends Component<Props, State> {
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>,
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -136,39 +153,41 @@ class ErrorBoundary extends Component<Props, State> {
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-    </>
+      <Footer />,
+    </>,
   )};
 
 export default ErrorBoundaryPage
 error?: Error
 errorInfo?: ErrorInfo}
-class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
-super(props)
-this.state= { hasError: false}
+class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,
+super(props);,
+this.state = {
+ hasError: false,
+};
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
-if (process.env.NODE_ENV=== 'production') {
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
+if (process.env.NODE_ENV=== 'production') {,
 // In production, you would send this to an error reporting service
-// Example: errorReportingService.captureException(error, { extra: errorInfo})
+// Example: errorReportingService.captureException(error, { extra: errorInfo});
 }
-this.setState({errorerrorInfo})
+this.setState({errorerrorInfo});
 }
 handleReload= () => {windo w.location.reload()}
 handleGoHome= () => {windo w.location.href= '/'}
@@ -180,13 +199,13 @@ return (
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4&quot;></div>
 <div className=&quot;max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
-<AlertTriangle className=&quot;w-8 h-8 text-red-400&quot; />
+<AlertTriangle className=&quot;w-8 h-8 text-red-400&quot; /></AlertTriangle>
 </div>
 <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
 <p className=&quot;text-gray-300 mb-6&quot;>We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p>
 {process.env.NODE_ENV === 'development' && this.state.error && (
-<details className=&quot;mb-6 text-left&quot;>
-<summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;>
+<details className=&quot;mb-6 text-left&quot;></details>
+<summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;></summary>
 Error Details (Development)
 </summary>
 <pre className=&quot;text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto&quot;></p>
@@ -195,19 +214,23 @@ Error Details (Development)
 </pre>
 </details>
 )}
-<div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-<button
-onClick={this.handleReload}
+<div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>,
+<button,
+onClick = {
+this.handleReload
+};
 className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
 ></button>
-<RefreshCw className=&quot;w-4 h-4&quot; />
+<RefreshCw className=&quot;w-4 h-4&quot; /></RefreshCw>
 <span>Reload Page</span>
-</button>
-<button
-onClick={this.handleGoHome}
+</button>,
+<button,
+onClick = {
+this.handleGoHome
+};
 className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
 ></button>
-<Home className=&quot;w-4 h-4&quot; />
+<Home className=&quot;w-4 h-4&quot; /></Home>
 <span>Go Home</span>
 </button>
 </div>
@@ -215,14 +238,14 @@ className=&quot;flex items-center justify-center space-x-2 border border-cyan-60
 <p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team:</p>p>
 <a
 href=&quot;mailto:kleber@ziontechgroup.com&quot
-className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
-<Phone className=&quot;w-4 h-4 mr-2&quot; />
+className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;></a>
+<Phone className=&quot;w-4 h-4 mr-2&quot; /></Phone>
 kleber@ziontechgroup.com
 </a>
 </div>
 </div>
-</div>
-    return this.props.children
+</div>,
+    return this.props.children,
   }
 }
 

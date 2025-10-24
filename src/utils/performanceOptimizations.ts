@@ -4,7 +4,7 @@ import { useCallback, useMemo, useState, useEffect } from 'react';
 
 // Debounce utility for performance
 :all-pages-backup/utils/performanceOptimizations.ts
-export const debounce = <T extends (...args: any[]) => any>(;
+export const debounce = <T extends (...args: any[]) => any>(;,
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {;
@@ -14,15 +14,15 @@ export const debounce = <T extends (...args: any[]) => any>(
   wait: number;
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout)
+  return (...args: Parameters<T>) => {,
+    clearTimeout(timeout);,
     timeout = setTimeout(() => func(...args), wait)
   }
 }
 
 // Throttle utility for performance
 :all-pages-backup/utils/performanceOptimizations.ts
-export const throttle = <T extends (...args: any[]) => any>(;
+export const throttle = <T extends (...args: any[]) => any>(;,
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {;
@@ -34,8 +34,8 @@ export const throttle = <T extends (...args: any[]) => any>(
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
-      func(...args)
-      inThrottle = true
+      func(...args);,
+      inThrottle = true,
       setTimeout(() => (inThrottle = false), limit)
     }
   }
@@ -46,7 +46,7 @@ export const throttle = <T extends (...args: any[]) => any>(
 export const useIntersectionObserver = (;
   callback: (entries: IntersectionObserverEntry[]) => void,
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void
+  callback: (entries: IntersectionObserverEntry[]) => void,
   options: IntersectionObserverInit = {}
 ) => {
   const observer = useMemo(;
@@ -56,10 +56,10 @@ export const useIntersectionObserver = (
 :all-pages-backup/utils/performanceOptimizations.ts
             threshold: 0.1,
   rootMargin: '50px',
-            threshold: 0.1
+            threshold: 0.1,
             rootMargin: '50px',
             ...options
-          })
+          });
         : null
     [callback, options]
   )
@@ -67,8 +67,8 @@ export const useIntersectionObserver = (
   const observe = useCallback(;
     (element: Element | null) => {
       if (observer && element) {
-        observer.observe(element)
-        return () => observer.unobserve(element)
+        observer.observe(element);,
+        return () => observer.unobserve(element);,
       }
       return () => {}
     }
@@ -77,12 +77,12 @@ export const useIntersectionObserver = (
 
   const disconnect = useCallback(() => {;
     if (observer) {
-      observer.disconnect()
+      observer.disconnect();
     }
   }, [observer])
 
   useEffect(() => {
-    return () => disconnect()
+    return () => disconnect();
   }, [disconnect])
 
   return { observe, disconnect }
@@ -101,11 +101,11 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
           if (entry.isIntersecting && !isLoaded && !isError) {
             const img = new Image();
             img.onload = () => {
-              setImageSrc(src)
-              setIsLoaded(true)
+              setImageSrc(src);
+              setIsLoaded(true);
             }
             img.onerror = () => {
-              setIsError(true)
+              setIsError(true);
             }
             img.src = src
           }
@@ -141,16 +141,16 @@ export const usePerformanceMonitoring = () => {;
 :all-pages-backup/utils/performanceOptimizations.ts
         lcp,
   ttfb: navigation?.responseStart - navigation?.requestStart
-        lcp
-        ttfb: navigation?.responseStart - navigation?.requestStart
-      })
+        lcp,
+        ttfb: navigation?.responseStart - navigation?.requestStart,
+      });
     }
 
     // Monitor performance after page load
     if (document.readyState === 'complete') {
-      updateMetrics()
+      updateMetrics();
     } else {
-      window.addEventListener('load', updateMetrics)
+      window.addEventListener('load', updateMetrics);
     }
 
     // Monitor Core Web Vitals
@@ -165,7 +165,7 @@ export const usePerformanceMonitoring = () => {;
     }
 
     return () => {
-      window.removeEventListener('load', updateMetrics)
+      window.removeEventListener('load', updateMetrics);
     }
   }, [])
 
@@ -192,15 +192,15 @@ export const useMemoryMonitoring = () => {;
   totalJSHeapSize: memory.totalJSHeapSize,
   jsHeapSizeLimit: memory.jsHeapSizeLimit
           usedJSHeapSize: memory.usedJSHeapSize
-          totalJSHeapSize: memory.totalJSHeapSize
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
-        })
+          totalJSHeapSize: memory.totalJSHeapSize,
+          jsHeapSizeLimit: memory.jsHeapSizeLimit,
+        });
       }
     }
 
-    updateMemoryInfo()
+    updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, [])
 
   return memoryInfo
@@ -212,21 +212,21 @@ export const preloadResource = (href: string, as: string) => {;
   const link = document.createElement('link');
   link.rel = 'preload'
   link.href = href
-  link.as = as
-  document.head.appendChild(link)
+  link.as = as,
+  document.head.appendChild(link);,
 }
 
 // Critical resource preloading
 export const preloadCriticalResources = () => {;
   if (typeof window === 'undefined') return
   // Preload critical fonts
-  preloadResource('/fonts/inter-var.woff2', 'font')
-  preloadResource('/fonts/inter-var.woff', 'font')
+  preloadResource('/fonts/inter-var.woff2', 'font');
+  preloadResource('/fonts/inter-var.woff', 'font');
   // Preload critical images
-  preloadResource('/images/hero-bg.webp', 'image')
-  preloadResource('/images/logo.svg', 'image')
+  preloadResource('/images/hero-bg.webp', 'image');
+  preloadResource('/images/logo.svg', 'image');
   // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style')
+  preloadResource('/styles/critical.css', 'style');
 }
 
 // Bundle size monitoring
@@ -264,18 +264,18 @@ export const useBundleSizeMonitoring = () => {;
         jsSize
         cssSize
         imageSize
-      })
+      });
     }
 
     // Calculate after page load
     if (document.readyState === 'complete') {
-      calculateBundleSize()
+      calculateBundleSize();
     } else {
-      window.addEventListener('load', calculateBundleSize)
+      window.addEventListener('load', calculateBundleSize);
     }
 
     return () => {
-      window.removeEventListener('load', calculateBundleSize)
+      window.removeEventListener('load', calculateBundleSize);
     }
   }, [])
 

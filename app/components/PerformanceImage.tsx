@@ -2,8 +2,8 @@ import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
 &quot;use client&quot
 const PerformanceImagePage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -36,10 +36,10 @@ const PerformanceImagePage: React.FC = () => {
   ]
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>PerformanceImage | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; />
+        <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; /></meta>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; /></meta>
       </Helmet>
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;container mx-auto max-w-6xl&quot;></div>
@@ -52,8 +52,8 @@ const PerformanceImagePage: React.FC = () => {
     </div>
 <<<<<<< HEAD
     </>
-  );
-  )
+  );,
+  ),
 }
  PerformanceImagePage
 =======

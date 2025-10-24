@@ -9,8 +9,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         const mediaQuery = window.matchMedia('(prefers-contrast: high)');
         const handleContrastChange = (e: MediaQueryListEvent) => {
-          if (e.matches) {
-            document.documentElement.classList.add('high-contrast');
+          if (e.matches) {,
+            document.documentElement.classList.add('high-contrast');,
           } else {
             document.documentElement.classList.remove('high-contrast');}
         mediaQuery.addEventListener('change', handleContrastChange);
@@ -23,8 +23,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
         const handleMotionChange = (e: MediaQueryListEvent) => {
-          if (e.matches) {
-            document.documentElement.classList.add('reduce-motion');
+          if (e.matches) {,
+            document.documentElement.classList.add('reduce-motion');,
           } else {
             document.documentElement.classList.remove('reduce-motion');}
         mediaQuery.addEventListener('change', handleMotionChange);

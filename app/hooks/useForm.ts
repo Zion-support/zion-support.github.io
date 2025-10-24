@@ -2,14 +2,14 @@ import { useState, useCallback } from "react";
 
 interface FormState<T /> {
   data: T;
-  isSubmitting: boolean;
-  submitStatus: "idle" | "success" | "error";
+  isSubmitting: boolean;,
+  submitStatus: "idle" | "success" | "error";,
   errors: Partial<Record<keyof T, string />>;
 }
 
 interface UseFormOptions<T /> {
-  initialData: T;
-  onSubmit: (data: T) => Promise<void />
+  initialData: T;,
+  onSubmit: (data: T) => Promise<void />,
   validate?: (data: T) => Partial<Record<keyof T, string />>;
 }
 
@@ -25,15 +25,15 @@ export function useForm<T extends Record<string, any />>({
     errors: {},
   });
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {,
     const { name, value } = e.target;
     setFormState(prev => ({
       ...prev,
-      data: {
+      data: {,
         ...prev.data,
         [name]: value,
       },
-      errors: {
+      errors: {,
         ...prev.errors,
         [name]: "", // Clear error when user starts typing
       },
@@ -42,8 +42,8 @@ export function useForm<T extends Record<string, any />>({
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate form
+    ,
+    // Validate form,
     const validationErrors = validate ? validate(formState.data) : {};
     if (Object.keys(validationErrors).length > 0) {
       setFormState(prev => ({

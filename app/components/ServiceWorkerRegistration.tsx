@@ -6,8 +6,8 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';
 const ServiceWorkerRegistrationPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -39,17 +39,17 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     'Gain competitive advantage with advanced technology',
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
-                <Phone className=&quot;mr-2 h-5 w-5&quot; />
+                <Phone className=&quot;mr-2 h-5 w-5&quot; /></Phone>
                 Call Now
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
-                <Mail className=&quot;mr-2 h-5 w-5&quot; />
+                <Mail className=&quot;mr-2 h-5 w-5&quot; /></Mail>
                 Email Us
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-</>
+      <Footer />,
+</>,
 }  );
 
 export default ServiceWorkerRegistrationPage
@@ -60,7 +60,7 @@ export default ServiceWorkerRegistrationPage
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
@@ -74,5 +74,5 @@ export default ServiceWorkerRegistrationPage
             <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>h2>
             <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-            </div>
-          </div>
+            </div>,
+          </div>,

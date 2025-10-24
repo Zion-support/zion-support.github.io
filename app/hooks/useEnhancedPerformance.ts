@@ -1,19 +1,25 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
 
 export interface UseEnhancedPerformanceOptions {
+
+
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
-}
 
+
+}
 interface PerformanceMetrics {
+
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number;
-}
+  networkLatency: number;,
+,
 
+}
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
   
@@ -59,7 +65,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Measure network latency
     const measureNetworkLatency = () => {
       const start = performance.now();
-      fetch('/api/ping', { method: 'HEAD' })
+      fetch('/api/ping', { method: 'HEAD' });
         .then(() => {
           const latency = performance.now() - start;
           setMetrics(prev => ({ ...prev, networkLatency: latency }));
@@ -131,8 +137,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => imageObserver.disconnect();
   }, []);
 
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
-    if (trackPerformance) {
+  const measurePerformance = useCallback((name: string, fn: () => void) => {,
+    if (trackPerformance) {,
       performance.mark(`${component}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
@@ -174,6 +180,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     trackError,
     trackAnalytics: trackAnalyticsEvent,
     renderCount: renderCountRef.current,
-    mountTime: mountTimeRef.current
+    mountTime: mountTimeRef.current,
   };
 };

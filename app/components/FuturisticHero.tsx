@@ -5,8 +5,8 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { Phone, Mail } from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',

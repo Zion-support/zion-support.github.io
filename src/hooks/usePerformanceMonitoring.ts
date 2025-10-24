@@ -1,25 +1,31 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
+
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  fps: number;
-}
+  fps: number;,
+,
 
+}
 interface UsePerformanceMonitoringReturn {
+
+
   metrics: PerformanceMetrics;
   isMonitoring: boolean;
   startMonitoring: () => void;
-  stopMonitoring: () => void;
-}
+  stopMonitoring: () => void;,
+,
 
+}
 const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 60
+    fps: 60,
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);

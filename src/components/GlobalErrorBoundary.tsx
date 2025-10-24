@@ -3,66 +3,82 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode
-}
 
+
+  children: ReactNode,
+,
+
+}
 interface State {
-  hasError: boolean
-  error?: Error
-}
 
+
+  hasError: boolean
+  error?: Error,
+,
+
+}
 export default class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
+  constructor(props: Props) {,
+    super(props);,
+    this.state = {
+ hasError: false ,
+};
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Error logging can be implemented here for production monitoring
-    // console.error('Global error caught:', error, errorInfo)
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+    // Error logging can be implemented here for production monitoring,
+    // console.error('Global error caught:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+        <div className="min-h-screen flex items-center justify-centerbg-gray-50">
+        <div className="max-w-md w-full bg-whiteshadow-lgrounded-lgp-6">
+            <div className="flex items-center justify-center w-12 h-12mx-autobg-red-100rounded-full"></div>
               <svg
-                className="w-6 h-6 text-red-600"
+                className="w-6h-6text-red-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-              >
+              ></svg>
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth = {
+2
+};
+        </div>
+        </div>
                   d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
-                />
+                /></path>
               </svg>
             </div>
-            <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium text-gray-900">
+            <div className="mt-4text-center"></div>
+              <h3 className="text-lgfont-mediumtext-gray-900"></h3>
                 Application Error
               </h3>
-              <p className="mt-2 text-sm text-gray-500">
-                {this.state.error?.message || 'An unexpected error occurred'}
-              </p>
+              <p className="mt-2text-smtext-gray-500">
+            {this.state.error?.message || 'An unexpected error occurred'}
+              
+          
+          </p>
               <button
-                onClick={() => window.location.reload()}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                onClick = {
+() => window.location.reload();
+};
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-nonefocus:ring-2focus:ring-blue-500transition-colors"
               >
                 Reload Page
               </button>
             </div>
           </div>
-        </div>
-      )
+        </div>,
+      ),
     }
 
     return this.props.children
@@ -79,4 +95,5 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
     'Gain competitive advantage with advanced technology';
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>
-          </div>
+          </div>,
+,

@@ -3,13 +3,16 @@
 import { useEffect, useCallback, useRef } from 'react';
 
 interface PerformanceOptimizationOptions {
+
+
   enableLazyLoading?: boolean
   enablePreloading?: boolean
   enableImageOptimization?: boolean
   enableCodeSplitting?: boolean
   enableCaching?: boolean
-}
 
+
+}
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
     enableLazyLoading = true
@@ -55,24 +58,24 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement
-            const src = img.getAttribute('data-src')
+            const src = img.getAttribute('data-src');
             if (src) {
               img.src = src
-              img.removeAttribute('data-src')
-              img.classList.add('loaded')
-              observerRef.current?.unobserve(img)
+              img.removeAttribute('data-src');
+              img.classList.add('loaded');
+              observerRef.current?.unobserve(img);
             }
           }
         })
       }
       {
         rootMargin: rootMargin,
-  threshold: 0.01
+  threshold: 0.01,
       }
     )
 
     images.forEach((img) => {
-      observerRef.current?.observe(img)
+      observerRef.current?.observe(img);
     })
   }, [enableLazyLoading])
 
@@ -87,7 +90,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     ]
 
     criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
+      const link = document.createElement('link');
       link.rel = 'preload'
       link.href = resource
 
@@ -99,7 +102,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         link.as = 'image'
       }
 
-      document.head.appendChild(link)
+      document.head.appendChild(link);
     })
   }, [enablePreloading])
 
@@ -107,19 +110,19 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return
 
-    const images = document.querySelectorAll('img')
+    const images = document.querySelectorAll('img');
     images.forEach((img) => {
       // Add loading="lazy" for non-critical images
       if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy')
+        img.setAttribute('loading', 'lazy');
       }
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async')
+        img.setAttribute('decoding', 'async');
       }
       // Add proper alt text if missing
       if (!img.hasAttribute('alt')) {
-        img.setAttribute('alt', '')
+        img.setAttribute('alt', '');
       }
     })
   }, [enableImageOptimization])
@@ -135,11 +138,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     ]
 
     criticalChunks.forEach((chunk) => {
-      const link = document.createElement('link')
+      const link = document.createElement('link');
       link.rel = 'preload'
       link.href = chunk
       link.as = chunk.endsWith('.js') ? 'script' : 'style'
-      document.head.appendChild(link)
+      document.head.appendChild(link);
     })
   }, [enableCodeSplitting])
 
@@ -149,7 +152,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('/sw.js');
           .then(() => {
             // Service worker registered successfully
           })
@@ -175,7 +178,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       })
 
       try {
-        observer.observe({ entryTypes: ['longtask'] })
+        observer.observe({ entryTypes: ['longtask'] });
       } catch {
         // Long task observer not supported
       }
@@ -185,8 +188,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if ('memory' in performance) {
       const checkMemory = () => {
         const memory = (performance as any).memory
-        const usedMB = Math.round(memory.usedJSHeapSize / 1048576)
-        const totalMB = Math.round(memory.totalJSHeapSize / 1048576)
+        const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
+        const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         if (usedMB / totalMB > 0.8) {
           // High memory usage detected - consider optimization
         }
@@ -207,32 +210,31 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     ]
 
     hints.forEach((hint) => {
-      const link = document.createElement('link')
+      const link = document.createElement('link');
       Object.entries(hint).forEach(([key, value]) => {
         if (key === 'crossOrigin') {
-          link.setAttribute('crossorigin', value as string)
+          link.setAttribute('crossorigin', value as string);
         } else {
-          link.setAttribute(key, value as string)
+          link.setAttribute(key, value as string);
         }
       })
-      document.head.appendChild(link)
+      document.head.appendChild(link);
     })
   }, [])
 
   useEffect(() => {
     // Initialize all optimizations
-    setupLazyLoading()
-    preloadCriticalResources()
-    optimizeImages()
-    optimizeCodeSplitting()
-    registerServiceWorker()
-    setupPerformanceMonitoring()
-    addResourceHints()
-
+    setupLazyLoading();
+    preloadCriticalResources();
+    optimizeImages();
+    optimizeCodeSplitting();
+    registerServiceWorker();
+    setupPerformanceMonitoring();
+    addResourceHints();
     // Cleanup
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect()
+        observerRef.current.disconnect();
       }
     }
   }, [

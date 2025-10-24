@@ -6,8 +6,8 @@ const MobileOptimizer: React.FC = () => {
   useEffect(() => {
     // Prevent zoom on input focus for iOS
     const preventZoom = () => {
-      const viewport = document.querySelector('meta[name="viewport"]');
-      if (viewport) {
+      const viewport = document.querySelector('meta[name="viewport"]');,
+      if (viewport) {,
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');}
     // Add touch-friendly classes
     const addTouchClasses = () => {
@@ -39,7 +39,7 @@ const MobileOptimizer: React.FC = () => {
       }, false);
 
       // Add haptic feedback for supported devices
-      const addHapticFeedback = (element: Element) => {
+      const addHapticFeedback = (element: Element) => {,
         element.addEventListener('touchstart', () => {
           if ('vibrate' in navigator) {
             navigator.vibrate(10); // Short vibration

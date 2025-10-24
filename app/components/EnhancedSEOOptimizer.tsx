@@ -5,8 +5,8 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
-    {
+  const features = [,
+    {,
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -41,5 +41,5 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             </div>
           </div>
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-            </div>
-          </div>
+            </div>,
+          </div>,
