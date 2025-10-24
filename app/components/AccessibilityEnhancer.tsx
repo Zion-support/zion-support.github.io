@@ -1,36 +1,62 @@
-'use client'
+'use client';
 
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-}
+interface Props {
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children,
-  enableKeyboardNavigation: _enableKeyboardNavigation = true,
-  enableScreenReaderSupport: _enableScreenReaderSupport = true,
-  enableHighContrast: _enableHighContrast = false,
-  enableFocusManagement: _enableFocusManagement = true
-}) => {
+  children: React.ReactNode}
+
+const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
   useEffect(() => {
-    // Add accessibility enhancements here
-    if (_enableHighContrast) {
-      document.body.classList.add('high-contrast')
-    } else {
-      document.body.classList.remove('high-contrast')
-    }
+    // Initialize accessibility enhancements
+    const initAccessibility = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
 
-    return () => {
-      document.body.classList.remove('high-contrast')
-    }
-  }, [_enableHighContrast])
+      // Add main content landmark
+      const mainContent = document.querySelector('main') || document.querySelector('[role="main"]');
+      if (mainContent) {
+        mainContent.id = 'main-content';
+      }
 
-  return <>{children}</>
-}
+      // Enhance focus management
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const focusableContent = document.querySelectorAll(focusableElements);
+      
+      focusableContent.forEach((element) => {
+        element.setAttribute('tabindex', '0');
+      });
 
-export default AccessibilityEnhancer
+      // Add ARIA labels where missing
+      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+      buttons.forEach((button) => {
+        if (!button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
+        }
+      });
+
+      // Enhance form accessibility
+      const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+      inputs.forEach((input) => {
+        const label = document.querySelector(`label[for="${input.id}"]`);
+        if (!label && !input.getAttribute('aria-label')) {
+          input.setAttribute('aria-label', input.placeholder || 'Input field');
+        }
+      });
+    };
+
+    initAccessibility();
+  }, []);
+
+  return (
+    <div className="accessibility-enhanced" role="main">
+      {children}
+    </div>
+  );
+};
+
+export default AccessibilityEnhancer;
