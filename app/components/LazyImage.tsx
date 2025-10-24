@@ -25,18 +25,18 @@ const LazyImage: React.FC<LazyImageProps> = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-        
+          setIsInView(true);
+          observer.disconnect();
+        }
       },
-      { threshold: 0.1 
-    )
+      { threshold: 0.1 }
+    );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current)
-    
+      observer.observe(imgRef.current);
+    }
 
-    return () => observer.disconnect()
+    return () => observer.disconnect();
   }, [])
 
   const handleLoad = () => {
@@ -50,20 +50,20 @@ const LazyImage: React.FC<LazyImageProps> = ({
   
 
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !hasError && (
         <img
-          src={placeholder
+          src={placeholder}
           alt=""
           className="absolute inset-0 w-full h-full object-cover blur-sm"
         />
-      )
+      )}
       {isInView && (
         <img
-          src={src
-          alt={alt
-          onLoad={handleLoad
-          onError={handleError
+          src={src}
+          alt={alt}
+          onLoad={handleLoad}
+          onError={handleError}
           className={`w-full h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`

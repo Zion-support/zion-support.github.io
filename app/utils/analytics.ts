@@ -30,9 +30,11 @@ class Analytics {
 
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
-      this.sendToAnalytics(event)} else {
-      console.log("Analytics Event:", event)
-  
+      this.sendToAnalytics(event);
+    } else {
+      console.log("Analytics Event:", event);
+    }
+  }
 
   // Track page views
   trackPageView(page: string, title?: string): void {
@@ -43,8 +45,8 @@ class Analytics {
       custom_parameters: {
         page_title: title || document.title,
         page_url: window.location.href
-      
-    })
+      }
+    });
 
   // Track user interactions
   trackClick(element: string, location?: string): void {

@@ -55,18 +55,18 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       } else {
         const link = document.createElement('link')
         link.rel = 'canonical'
-        link.href = canonicalUrl
-        document.head.appendChild(link)
-      
-    
-  }, [title, description, keywords, canonicalUrl])
+        link.href = canonicalUrl;
+        document.head.appendChild(link);
+      }
+    }
+  }, [title, description, keywords, canonicalUrl]);
 
   return (
-      <Helmet>
+    <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
         {/* Open Graph */
         <meta property="og:title" content={title} />

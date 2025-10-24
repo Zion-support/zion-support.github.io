@@ -21,7 +21,8 @@ export interface SEOData {
   twitterTitle?: string
   twitterDescription?: string
   twitterImage?: string
-  structuredData?: StructuredData
+  structuredData?: StructuredData;
+}
 
 export const defaultSEOData: SEOData = {
   title: 'Zion Tech Group - AI & Technology Solutions',

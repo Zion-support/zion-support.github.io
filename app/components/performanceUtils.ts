@@ -62,10 +62,10 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
         cumulative_layout_shift: metrics.cumulativeLayoutShift,
         time_to_interactive: metrics.timeToInteractive,
         total_blocking_time: metrics.totalBlockingTime
-      })
+      });
     }
   }
-}
+};
 
 declare global {
   interface Window {

@@ -6,7 +6,6 @@ const InteractiveAIROICalculator: React.FC = () => {
   const [timeframe, setTimeframe] = useState(12);
   
   const calculateROI = () => {
-<<<<<<< HEAD
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
@@ -14,17 +13,6 @@ const InteractiveAIROICalculator: React.FC = () => {
   };
   
   const roi = calculateROI();
-  
-=======
-    const annualSavings = (currentCost * efficiencyGain) / 100
-    const totalSavings = annualSavings * (timeframe / 12)
-    const roi = ((totalSavings - currentCost) / currentCost) * 100
-    return Math.max(0, roi)
-  }
-  
-  const roi = calculateROI()
-  
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -63,7 +51,6 @@ const InteractiveAIROICalculator: React.FC = () => {
               </div>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
-<<<<<<< HEAD
                   Implementation Timeline (months)
                 </label>
                 <input
@@ -94,19 +81,10 @@ const InteractiveAIROICalculator: React.FC = () => {
               <div className='space-y-4'>
                 <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
                   <span className='text-gray-700'>Annual Savings:</span>
-=======
-                  Timeframe (months)
-                </label>
-                <select
-                  value={timeframe}
-                  onChange={e => setTimeframe(Number(e.target.value))}
-                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                >
-                  <option value={6}>6 months</option>
-                  <option value={12}>12 months</option>
-                  <option value={18}>18 months</option>
-                  <option value={24}>24 months</option>
-                </select>
+                  <span className='font-semibold text-green-600'>
+                    ${((currentCost * efficiencyGain) / 100).toLocaleString()}
+                  </span>
+                </div>
               </div>
             </div>
             
@@ -121,12 +99,10 @@ const InteractiveAIROICalculator: React.FC = () => {
                 </div>
                 <div className='flex justify-between items-center'>
                   <span className='text-gray-700'>Expected Annual Savings:</span>
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
                   <span className='font-semibold text-green-600'>
                     ${((currentCost * efficiencyGain) / 100).toLocaleString()}
                   </span>
                 </div>
-<<<<<<< HEAD
                 <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
                   <span className='text-gray-700'>Total Savings ({timeframe} months):</span>
                   <span className='font-semibold text-green-600'>
@@ -138,7 +114,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                   <span className='font-semibold text-blue-600'>
                     ${(((currentCost * efficiencyGain * timeframe) / 1200) - currentCost).toLocaleString()}
                   </span>
-=======
+                </div>
                 <div className='flex justify-between items-center'>
                   <span className='text-gray-700'>Total Savings ({timeframe} months):</span>
                   <span className='font-semibold text-green-600'>
@@ -157,11 +133,7 @@ const InteractiveAIROICalculator: React.FC = () => {
               </div>
               
               <div className='mt-6 text-center'>
-<<<<<<< HEAD
                 <button className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
-=======
-                <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
                   Get Detailed Analysis
                 </button>
               </div>
@@ -170,7 +142,6 @@ const InteractiveAIROICalculator: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 };
 
