@@ -2,15 +2,12 @@
 
 import React from 'react';
 
-interface AnalyticsProviderProps {
-  // Add props here
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (_props) => {
+const AnalyticsProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
     <div>
-      {/* Component content */}
+      {children}
     </div>
-  )};
+  );
+};
 
 export default AnalyticsProvider;

@@ -1,3 +1,4 @@
+// Type definitions for API client
 // RequestInit is a built-in TypeScript type for fetch options
 export interface ApiResponse<T = unknown> {
   data: T;
@@ -6,7 +7,7 @@ export interface ApiResponse<T = unknown> {
   headers: Record<string, string>;
 }
 
-export interface RequestOptions extends RequestInit {
+export interface RequestOptions extends globalThis.RequestInit {
   timeout?: number;
   retries?: number;
 }
