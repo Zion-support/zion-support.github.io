@@ -1,3 +1,5 @@
+import React from 'react';
+import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";

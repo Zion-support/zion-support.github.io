@@ -1,4 +1,5 @@
 import React from 'react';
+import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
 import React, { useState, useCallback, useMemo } from "react";
