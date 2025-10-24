@@ -43,8 +43,8 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn((cb: FrameRequestCallback) => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id));
+global.requestAnimationFrame = jest.fn((cb: any) => setTimeout(cb, 0)) as any;
+global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id)) as any;
 
 // Mock localStorage
 const localStorageMock = {
