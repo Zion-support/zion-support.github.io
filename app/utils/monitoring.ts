@@ -98,9 +98,8 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        }
-
+        console.error('Error initializing web vitals monitoring:', error)
+      }
     }
   }
   private monitorLongTasks(): void {
@@ -108,9 +107,8 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-            }
-
+            console.log('Long task detected:', entry.duration)
+          }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -122,17 +120,17 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-<<<<<<< HEAD:app/utils/monitoring.ts
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
-              }
+              console.log('Slow resource detected:', entry.name, entry.duration)
+            }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        }
-
+        // Resource timing API might not be available
+      }
     }
   }
   private setupErrorHandling(): void {
@@ -164,8 +162,8 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-<<<<<<< HEAD:app/utils/monitoring.ts
-      }
+      console.log(`Performance metric ${name}: ${value} (${rating})`)
+    }
 
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
@@ -181,9 +179,9 @@ class MonitoringService {
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
-<<<<<<< HEAD:app/utils/monitoring.ts
 
     // Send to error tracking service (if configured)
+    console.error('Error logged:', error)
   }
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }

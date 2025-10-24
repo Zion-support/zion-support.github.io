@@ -174,7 +174,7 @@ export default function HomePage() {  return (
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               With over 4 years of experience in cutting-edge technology solutions, 
-              we've helped businesses across various industries transform their operations 
+              we&apos;ve helped businesses across various industries transform their operations 
               and achieve unprecedented growth.
             </p>
             
@@ -211,7 +211,7 @@ export default function HomePage() {  return (
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how our technology solutions can drive your business forward
+              Let&apos;s discuss how our technology solutions can drive your business forward
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">

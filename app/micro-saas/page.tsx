@@ -237,7 +237,7 @@ const MicroSaasPage: React.FC = () => {
             Ready to Build Your SaaS Product?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's turn your SaaS idea into a successful, scalable business.
+            Let&apos;s turn your SaaS idea into a successful, scalable business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
