@@ -8,8 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400">Advanced AI and IT solutions for modern businesses.
-            </p>
+            <p className="text-gray-400">Advanced AI and IT solutions for modern businesses.</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
@@ -30,13 +29,11 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-gray-400 mb-2">Emai,
-      l: info@ziontech.com</p>
-            <p className="text-gray-400">Phon,
-      e: +1 (555) 123-4567</p>
+            <p className="text-gray-400 mb-2">Email: info@ziontech.com</p>
+            <p className="text-gray-400">Phone: +1 (555) 123-4567</p>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">;
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>

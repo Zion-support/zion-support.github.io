@@ -12,23 +12,16 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home
-            </Link>
-            <Link href="/about" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About
-            </Link>
-            <Link href="/services" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Services
-            </Link>
-            <Link href="/pricing" className="text-gray-500 hove,
-      r:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Pricing
-            </Link>
-            <Link href="/contact" className="text-gray-500 hove,
-      r:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact
-            </Link>
+            <Link href="/" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+            <Link href="/about" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+            <Link href="/services" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
+            <Link href="/pricing" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Pricing</Link>
+            <Link href="/contact" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
           </div>
         </div>
       </div>
     </nav>
   )
 }
-;
-export default Page;
+
+export default Navigation

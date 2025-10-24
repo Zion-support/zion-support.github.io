@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+
 const inter = Inter({ subsets: ['latin'] })
+
 export const metadata: Metadata = {
-    title: title,
-  description: description,
+  title: 'ZionTechGroup - AI Solutions & Technology Services',
+  description: 'Leading provider of AI solutions, IT services, quantum computing, autonomous systems, and enterprise technology.',
   keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology'
 }
+
 export default function RootLayout({
   children
 }: {
@@ -17,5 +20,6 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
       </body>
-    </html>;
-  )};
+    </html>
+  )
+}

@@ -68,8 +68,6 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
       </body>
-=======
->>>>>>> 936c9169b8529ba98f1996ac9beac1bb365b75be
     </html>
   );
 }

@@ -3,20 +3,35 @@
 import React from "react"
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 
-export default function FiveGSolutionsPage() {
+const Page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Navigation />
-      <main className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">5G Solutions</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Next-generation 5G solutions for ultra-fast connectivity.
-          </p>
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <>
+      <SEOOptimizer
+        title="5G Solutions - ZionTechGroup"
+        description="Next-generation 5G solutions for ultra-fast connectivity and advanced network infrastructure."
+        keywords={['5G solutions', 'ultra-fast connectivity', 'network infrastructure', 'wireless technology']}
+        canonicalUrl="https://ziontechgroup.com/5g-solutions"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="pt-24 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <section className="text-center mb-16">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+                5G Solutions
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Next-generation 5G solutions for ultra-fast connectivity and advanced network infrastructure.
+              </p>
+            </section>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 }
+
+export default Page
