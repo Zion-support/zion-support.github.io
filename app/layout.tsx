@@ -80,21 +80,12 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body className={`${inter.className} antialiased`}>
-<<<<<<< HEAD
-        <Analytics />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer>
-          {children}
-        </AccessibilityEnhancer>
-        <PerformanceMonitor />
-=======
         <Analytics>
           <PerformanceOptimizer />
           <AccessibilityEnhancer />
           {children}
           <PerformanceMonitor />
         </Analytics>
->>>>>>> cursor/fix-errors-and-merge-to-main-6f11
       </body>
     </html>
   )
