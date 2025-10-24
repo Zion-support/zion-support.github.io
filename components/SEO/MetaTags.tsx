@@ -11,4 +11,4 @@ const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
     </div>
   )
 }
-export default MetaTags
+export default MetaTags;

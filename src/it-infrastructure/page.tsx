@@ -12,4 +12,4 @@ const $1: React.FC = () => {
 </>
   )
 }
-export default ITInfrastructurePage
+export default ITInfrastructurePage;

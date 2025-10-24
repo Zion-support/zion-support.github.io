@@ -7,9 +7,9 @@ import React, { useRef, useEffect } from 'react'
 
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
+  func: T
+  wait: number;
+): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
@@ -19,9 +19,9 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(
-  func: T,
+  func: T
   limit: number
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -33,7 +33,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 }
 
 // Performance monitoring utilities
-export class PerformanceMonitor {
+export class PerformanceMonitor {;
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
@@ -143,7 +143,7 @@ export const lazyLoadImages = () => {
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return
   const criticalResources = [
-    '/fonts/inter-var.woff2',
+    '/fonts/inter-var.woff2'
     '/css/critical.css'
   ]
   criticalResources.forEach((resource) => {
@@ -177,7 +177,7 @@ export const optimizeScrollPerformance = () => {
 
   // Track Core Web Vitals
   const trackCLS = () => {
-    let clsValue = 0
+    let clsValue = 0;
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
@@ -251,9 +251,9 @@ export const getMemoryUsage = () => {
   }
   const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
   return {
-    used: memory.usedJSHeapSize,
-    total: memory.totalJSHeapSize,
-    limit: memory.jsHeapSizeLimit,
+    used: memory.usedJSHeapSize
+    total: memory.totalJSHeapSize
+    limit: memory.jsHeapSizeLimit
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
   }
 }
@@ -265,14 +265,14 @@ export const collectPerformanceMetrics = () => {
   const paint = performance.getEntriesByType('paint')
   return {
     navigation: {
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart
       totalTime: navigation.loadEventEnd - navigation.fetchStart
-    },
+    }
     paint: {
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
-    },
+    }
     memory: getMemoryUsage()
   }
 }

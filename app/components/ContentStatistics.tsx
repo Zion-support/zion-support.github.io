@@ -1,27 +1,27 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, Award, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { ArrowRight, Award, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0,
-    countries: 0,
+    clients: 0
+    projects: 0
+    satisfaction: 0
+    years: 0
+    countries: 0
     uptime: 0
   })
 
   const targetCounters = {
-    clients: 1000,
-    projects: 500,
-    satisfaction: 99,
-    years: 10,
-    countries: 25,
+    clients: 1000
+    projects: 500
+    satisfaction: 99
+    years: 10
+    countries: 25
     uptime: 99.9
   }
 
@@ -42,7 +42,7 @@ const ContentStatistics: React.FC = () => {
 
           if (current < target) {
             newCounters[key as keyof typeof newCounters] = Math.min(
-              current + increment,
+              current + increment
               target
             )
             allComplete = false
@@ -62,49 +62,54 @@ const ContentStatistics: React.FC = () => {
 
   const stats = [
     {
-      icon: <Users className="h-8 w-8" />,
-      value: Math.round(counters.clients),
-      label: "Happy Clients",
+      icon: <Users className="h-8w-8" />
+      value: Math.round(counters.clients)
+      label: "Happy Clients"
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
-      icon: <Target className="h-8 w-8" />,
-      value: Math.round(counters.projects),
-      label: "Projects Completed",
+      icon: <Target className="h-8w-8" />
+      value: Math.round(counters.projects)
+      label: "Projects Completed"
       color: "from-green-500 to-emerald-500"
-    },
+    }
     {
-      icon: <Star className="h-8 w-8" />,
-      value: `${Math.round(counters.satisfaction)}%`,
-      label: "Client Satisfaction",
+      icon: <Star className="h-8w-8" />
+      value: `${Math.round(counters.satisfaction)}%`
+      label: "Client Satisfaction"
       color: "from-yellow-500 to-orange-500"
-    },
+    }
     {
-      icon: <Clock className="h-8 w-8" />,
-      value: Math.round(counters.years),
-      label: "Years Experience",
+      icon: <Clock className="h-8w-8" />
+      value: Math.round(counters.years)
+      label: "Years Experience"
       color: "from-purple-500 to-pink-500"
-    },
+    }
     {
-      icon: <Globe className="h-8 w-8" />,
-      value: Math.round(counters.countries),
-      label: "Countries Served",
+      icon: <Globe className="h-8w-8" />
+      value: Math.round(counters.countries)
+      label: "Countries Served"
       color: "from-indigo-500 to-blue-500"
-    },
+    }
     {
-      icon: <Zap className="h-8 w-8" />,
-      value: `${Math.round(counters.uptime * 10) / 10}%`,
-      label: "Uptime Guarantee",
+      icon: <Zap className="h-8w-8" />
+      value: `${Math.round(counters.uptime * 10) / 10}%`
+      label: "Uptime Guarantee"
       color: "from-red-500 to-pink-500"
     }
   ]
 
   return (
     <>
-      <Helmet>
-        <title>ContentStatistics</title>
+      <Helmet>;
+        <Head>
+        <title>ContentStatistics</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentStatistics solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentStatistics, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -112,7 +117,7 @@ const ContentStatistics: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ContentStatistics
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -139,7 +144,7 @@ const ContentStatistics: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -168,7 +173,7 @@ const ContentStatistics: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -202,105 +207,105 @@ const ContentStatistics: React.FC = () => {
 }
 
 export default ContentStatisticsPage;
-clients: 0,
-projects: 0,
-satisfaction: 0,
-years: 0,
-countries: 0,
+clients: 0
+projects: 0
+satisfaction: 0
+years: 0
+countries: 0
 uptime: 0})
-consttargetCounters= {clients: 1000 0,
-projects: 500 0,
-satisfaction: 9 9,
-years: 1 5,
-countries: 5 0,
+consttargetCounters = {clients: 1000 0
+projects: 500 0
+satisfaction: 9 9
+years: 1 5
+countries: 5 0
 uptime:99}
 conststatistics= [
-{icon: Users,
-value: counters.clients,
-label: 'Happy Clients',
-suffix: '+',
-color: 'text-blue-40 0',
-description: 'Businesses trust our solutions'},
-{icon: Award,
-value: counters.projects,
-label: 'Projects Completed',
-suffix: '+',
-color: 'text-purple-40 0',
-description: 'Successful implementations'},
-{icon: TrendingUp,
-value: counters.satisfaction,
-label: 'Client Satisfaction',
-suffix: '%',
-color: 'text-green-40 0',
-description: 'Customer satisfaction rate'},
-{icon: Clock,
-value: counters.years,
-label: 'Years Experience',
-suffix: '+',
-color: 'text-yellow-40 0',
-description: 'Industry expertise'},
-{icon: Globe,
-value: counters.countries,
-label: 'Countries Served',
-suffix: '+',
-color: 'text-cyan-40 0',
-description: 'Global presence'},
-{icon: BarChart3,
-value: counters.uptime,
-label: 'Uptime Guarantee',
-suffix: '%',
-color: 'text-red-40 0',
+{icon: Users
+value: counters.clients
+label: 'Happy Clients'
+suffix: '+'
+color: 'text-blue-40 0'
+description: 'Businesses trust our solutions'}
+{icon: Award
+value: counters.projects
+label: 'Projects Completed'
+suffix: '+'
+color: 'text-purple-40 0'
+description: 'Successful implementations'}
+{icon: TrendingUp
+value: counters.satisfaction
+label: 'Client Satisfaction'
+suffix: '%'
+color: 'text-green-40 0'
+description: 'Customer satisfaction rate'}
+{icon: Clock
+value: counters.years
+label: 'Years Experience'
+suffix: '+'
+color: 'text-yellow-40 0'
+description: 'Industry expertise'}
+{icon: Globe
+value: counters.countries
+label: 'Countries Served'
+suffix: '+'
+color: 'text-cyan-40 0'
+description: 'Global presence'}
+{icon: BarChart3
+value: counters.uptime
+label: 'Uptime Guarantee'
+suffix: '%'
+color: 'text-red-40 0'
 description: 'Service reliability'}
 ]
 constachievements= [
-{icon: Brain,
-title: 'AI Innovation',
-description: 'Leading the industry in AI-powered solutions'},
-{icon: Shield,
-title: 'Security Excellence',
-description: 'Bank-level security for all our solutions'},
-{icon: Globe,
-title: 'Global Reach',
-description: 'Worldwide deployment and support for international businesses',
+{icon: Brain
+title: 'AI Innovation'
+description: 'Leading the industry in AI-powered solutions'}
+{icon: Shield
+title: 'Security Excellence'
+description: 'Bank-level security for all our solutions'}
+{icon: Globe
+title: 'Global Reach'
+description: 'Worldwide deployment and support for international businesses'
 stats: ['5 0+ Countries', '1 5+ Languages', '2 4/7 Support']}
 ]
 constbenefits= [
-'Advanced AI technology integration',
-'Real-time processing and analytics',
-'Enterprise-grade security and compliance',
-'Scalable and flexible solutions',
-'2 4/7 technical support',
-'Easy integration with existing systems',
-'Cost-effective pricing plans',
+'Advanced AI technology integration'
+'Real-time processing and analytics'
+'Enterprise-grade security and compliance'
+'Scalable and flexible solutions'
+'2 4/7 technical support'
+'Easy integration with existing systems'
+'Cost-effective pricing plans'
 'Proven track record of success'
 ]
 constachievements= [
-{icon: Star,
-title: 'Industry Recognition',
-description: 'Awarded Best AI Solutions Provider2024',
-value: '2 5+'},
-{icon: Target,
-title: 'Success Rate',
-description: 'Projects delivered on time and within budget',
-value: '9 8%'},
-{icon: Rocket,
-title: 'Growth Rate',
-description: 'Year-over-year business growth',
+{icon: Star
+title: 'Industry Recognition'
+description: 'Awarded Best AI Solutions Provider2024'
+value: '2 5+'}
+{icon: Target
+title: 'Success Rate'
+description: 'Projects delivered on time and within budget'
+value: '9 8%'}
+{icon: Rocket
+title: 'Growth Rate'
+description: 'Year-over-year business growth'
 value: '30 0%'}
-]
-useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
+];
+useEffect(() => {constduration= 300 0; // 3secondsconststeps = 60conststepDuration= duration / steps
 consttimers= Object.keys(targetCounters).map((key) => {
   
-consttarget= targetCounters[key as keyof type of targetCounters]
+consttarget= targetCounters[key as keyof type of targetCounters];
 constduration=2000; // 2secondsconstincrement= target / (duration /16); //60fps
 return setInterva l(() => {
   
-setCounters(prev=> {
+setCounters(prev = > {
   
 constcurrent= prev[key as keyof type of prev]
 if(current< target) {
 return {
-...prev,
+...prev
 [key]: Math.min(current + increment, target)}
 }
 return pre v
@@ -309,8 +314,8 @@ return pre v
 })
 return () =>{timers.forEach(timer=> clearInterval(timer))}
 }, [])
-return (
-<div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8&quot;></div>
+return (;
+<div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm: px-6 lg:px-8&quot;></div>
 <div className=&quot;max-w-7xl mx-auto&quot;></div>
 <div className=&quot;text-center mb-16&quot;></div>
 <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;></h2>
@@ -320,7 +325,7 @@ See how we've transformed businesses and delivered exceptional results.
 <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
 <div className=&quot;max-w-7xl mx-auto&quot;>{/* Header */}</div>
 <div className=&quot;text-center mb-16&quot;></div>
-<h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;></h2>
+<h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;></h2>
 Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Impact</span> in Numbers
 </h2>
 <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>See how we've helped businesses transform with our AI and IT solutions.</p>p>
@@ -333,7 +338,7 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <stat.icon className=&quot;h-8 w-8 text-white&quot; />
 </div>
 </div>
-<div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>div>
+<div className = {`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>div>;
 <div className=&quot;text-gray-300&quot;>{stat.label}</div>
 </div>
 ))}
@@ -353,7 +358,7 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
 <stat.icon className=&quot;w-8 h-8 text-slate-900&quot; />
 </div>
-<div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>div>
+<div className = {`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>div>;
 <div className=&quot;text-lg font-semibold text-white mb-2&quot;>{stat.label}</div>
 <div className=&quot;text-gray-400 text-sm&quot;>{stat.description}</div>
 </div>

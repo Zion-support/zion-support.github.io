@@ -11,4 +11,4 @@ const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
     </div>
   )
 }
-export default StructuredData
+export default StructuredData;

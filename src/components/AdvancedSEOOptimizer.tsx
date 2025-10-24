@@ -32,30 +32,30 @@ interface AdvancedSEOOptimizerProps {}
   enableSchemaMarkup?: boolean
 }
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
-  seoData,
-  enableStructuredData = true,
-  enableOpenGraph = true,
-  enableTwitterCards = true,
+  seoData
+  enableStructuredData = true
+  enableOpenGraph = true
+  enableTwitterCards = true
   enableSchemaMarkup = true
 }) => {}
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null)
   const generateStructuredData = useCallback(() => {}
     if (!enableStructuredData || !seoData.structuredData) return null
     const baseStructuredData = {}
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https:// ziontechgroup.com',
-      logo: 'https:// ziontechgroup.com/logo.png',
-      description: 'Advanced AI and IT Solutions',
+      '@context': 'https://schema.org'
+      '@type': 'Organization'
+      name: 'Zion Tech Group'
+      url: 'https:// ziontechgroup.com'
+      logo: 'https:// ziontechgroup.com/logo.png'
+      description: 'Advanced AI and IT Solutions'
       address: {}
-        '@type': 'PostalAddress',
+        '@type': 'PostalAddress'
         addressCountry: 'US'
-     },
+     }
       sameAs: []
-        'https:// www.linkedin.com/$1/zion-tech-group',
-        'https:// twitter.com/ziontechgroup',
-        'https:// github.com/Zion-Holdings'],
+        'https:// www.linkedin.com/$1/zion-tech-group'
+        'https:// twitter.com/ziontechgroup'
+        'https:// github.com/Zion-Holdings']
       ...seoData.structuredData
     }
     return baseStructuredData
@@ -63,18 +63,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   const generateBreadcrumbStructuredData = useCallback(() => {}
     if (!enableSchemaMarkup) return null
     const breadcrumbData = {}
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
+      '@context': 'https://schema.org'
+      '@type': 'BreadcrumbList'
       itemListElement: []
         {}
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
+          '@type': 'ListItem'
+          position: 1
+          name: 'Home'
           item: 'https:// ziontechgroup.com'
-       },
-        {'@type': 'ListItem',
-          position: 2,
-          name: seoData.title,
+       }
+        {'@type': 'ListItem'
+          position: 2
+          name: seoData.title
           item: seoData.canonicalUrl
        }]
     }
@@ -83,21 +83,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   const generateFAQStructuredData = useCallback(() => {}
     if (!enableSchemaMarkup) return null
     const faqData = {}
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@context': 'https://schema.org'
+      '@type': 'FAQPage'
       mainEntity: []
         {}
-          '@type': 'Question',
-          name: 'What services do es Zion Tech Group offer?',
+          '@type': 'Question'
+          name: 'What services do es Zion Tech Group offer?'
           acceptedAnswer: {}
-            '@type': 'Answer',
+            '@type': 'Answer'
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
          }
-        },
-        {'@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
+        }
+        {'@type': 'Question'
+          name: 'How can I contact Zion Tech Group?'
           acceptedAnswer: {}
-            '@type': 'Answer',
+            '@type': 'Answer'
             text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'
          }
         }]
@@ -108,7 +108,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   const _breadcrumbData = generateBreadcrumbStructuredData()
   const _faqData = generateFAQStructuredData()
   useEffect(() => {}
-    // Update meta description
+    // Update meta description;
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
     if (metaDescription) {}
       metaDescription.setAttribute('content', seoData.description)
@@ -118,7 +118,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       document.head.appendChild(newMetaDescription)
       newMetaDescription.setAttribute('content', seoData.description)
     }
-    // Update canonical URL
+    // Update canonical URL;
     const canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
     if (canonicalLink) {}
       canonicalLink.setAttribute('href', seoData.canonicalUrl)
@@ -140,7 +140,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   const _trackPageView = (config: SEOData) => {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {}
-        page_title: config.title,
+        page_title: config.title
         page_location: config.canonicalUrl
       })
     }
@@ -151,8 +151,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (_perfData) {}
           (window as any).gtag('event', 'page_load_performance', {}
-            event_category: 'Performance',
-            event_label: 'Page Load',
+            event_category: 'Performance'
+            event_label: 'Page Load'
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
           })
         }
@@ -161,8 +161,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   }
   return ()
   <Helme t>{/* Basic MetaTags */}
-    <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(',')} /><linkrel=&quot;canonical&quot; href={seoData.canonicalUrl} />{/* Open GraphTags */}
-      {enableOpenGraph && ()
+    <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(',')} /><linkrel=&quot;canonical&quot; href = {seoData.canonicalUrl} />{/* Open GraphTags */}
+      {enableOpenGraph && ();
       <><metaproperty=&quot;og:title&quot;content={seoData.title} /><metaproperty=&quot;og:image:height&quot;content=&quot;630&quot; /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; /></>)}
       {/* Twitter CardTags */}
       {enableTwitterCards && ()
@@ -181,7 +181,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         </script>
       )}
       {/* Preconnect to external domains for performance */}
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
+      <link rel=&quot;preconnect&quot; href=&quot;https: //fonts.googleapis.com&quot; />
       <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
       <link rel=&quot;preconnect&quot; href=&quot;https://www.google-analytics.com&quot; />
       <link rel=&quot;preconnect&quot; href=&quot;https://www.googletagmanager.com&quot; />

@@ -1,53 +1,58 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
 
 const EnhancedLoadingStatesPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedLoadingStates</title>
+      <Helmet>;
+        <Head>
+        <title>EnhancedLoadingStates</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedLoadingStates solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedLoadingStates, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -55,7 +60,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               EnhancedLoadingStates
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -82,7 +87,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -111,7 +116,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -143,24 +148,23 @@ const EnhancedLoadingStatesPage: React.FC = () => {
       <Footer />
     </>
   );
-};
-
+}
 export default EnhancedLoadingStatesPage;
-sm: 'w-4 h-4',
-md: 'w-8 h-8',
+sm: 'w-4 h-4'
+md: 'w-8 h-8'
 lg: 'w-12h-1 2'}
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName=&quot;mt-2text-smtext-gray-500&quot;>{text}</p>)}</di>)
 }
 return (
 <div className=&quot;flex flex-col items-center justify-center p-8&quot;></div>
-<Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
-{text && (
+<Loader2 className = {`${sizeClasses[size]} animate-spin text-blue-500`} />
+{text && (;
 <p className=&quot;mt-2 text-sm text-gray-500&quot;>{text}</p>
 )}
 </div>
 )
 }
-export const PageLoader: React.FC = () => (
+export const PageLoader: React.FC = () => (;
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center&quot;></div>
 <div className=&quot;text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse&quot;></div>
@@ -171,7 +175,7 @@ export const PageLoader: React.FC = () => (
 </div>
 </div>
 )
-export const ServiceCardSkeleton: React.FC = () => (
+export const ServiceCardSkeleton: React.FC = () => (;
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse&quot;></div>
 <div className=&quot;w-16 h-16 bg-gray-600 rounded-2xl mb-6&quot;></div>
 <div className=&quot;h-6 bg-gray-600 rounded mb-4&quot;></div>
@@ -183,7 +187,7 @@ export const ServiceCardSkeleton: React.FC = () => (
 </div>
 </div>
 )
-export const StatsSkeleton: React.FC = () => (
+export const StatsSkeleton: React.FC = () => (;
 <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>{Array.from({ length: 4 }).map((_, index) => (</div>
 <div key={index} className=&quot;text-center animate-pulse&quot;></div>
 <div className=&quot;h-8 bg-gray-600 rounded mb-2&quot;></div>
@@ -192,7 +196,7 @@ export const StatsSkeleton: React.FC = () => (
 ))}
 </div>
 )
-export const ContentSkeleton: React.FC = () => (
+export const ContentSkeleton: React.FC = () => (;
 <div className=&quot;space-y-6 animate-pulse&quot;></div>
 <div className=&quot;h-8 bg-gray-600 rounded w-3/4&quot;></div>
 <div className=&quot;space-y-2&quot;></div>

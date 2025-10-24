@@ -11,4 +11,4 @@ const $1: React.FC = () => {
     </div>
   )
 }
-export default AIMobileAppDevelopmentPage
+export default AIMobileAppDevelopmentPage;

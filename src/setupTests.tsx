@@ -20,13 +20,13 @@ console.error = (...args) => {}
 }
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {}
-  writable: true,
+  writable: true
   value: jest.fn().mockImplementation(query => ({}
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn()
+    removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
   }))
 })
@@ -35,9 +35,9 @@ global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
 // Mock localStorage
 const localStorageMock = {}
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
+  getItem: jest.fn()
+  setItem: jest.fn()
+  removeItem: jest.fn()
   clear: jest.fn()
 }
 Object.defineProperty(window, 'localStorage', {}
@@ -45,9 +45,9 @@ Object.defineProperty(window, 'localStorage', {}
 })
 // Mock sessionStorage
 const sessionStorageMock = {}
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
+  getItem: jest.fn()
+  setItem: jest.fn()
+  removeItem: jest.fn()
   clear: jest.fn()
 }
 Object.defineProperty(window, 'sessionStorage', {}

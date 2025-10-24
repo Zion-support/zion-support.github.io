@@ -3,28 +3,33 @@ import Footer from './Footer'
 import Navigation from './Navigation'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+import { Brain, ArrowRight, Mail } from 'lucide-react'
+import { Brain, ArrowRight, Mail } from 'lucide-react'
+import { Brain, ArrowRight, Mail } from 'lucide-react'
 
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
 const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
   return (
     <>
-      <Helmet>
-        <title>LazyImage</title>
+      <Helmet>;
+        <Head>
+        <title>LazyImage</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced LazyImage solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, LazyImage, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -32,7 +37,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               LazyImage
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -59,7 +64,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -88,7 +93,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -126,7 +131,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 bg-white/5&quot;></section>
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;></h2>
@@ -145,7 +150,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
           <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12&quot;></div>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>
@@ -164,6 +169,5 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
       <Footer />
     </>
   );
-};
-
+}
 export default LazyImagePage;

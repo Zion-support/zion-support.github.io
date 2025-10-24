@@ -5,56 +5,56 @@ import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Camera, Zap } from 'lucide-react'
 
-constAI3 DGenerationPage: React.FC= () =>{constfeatures= []
-    '3 D Model Generation',
-    'Animation Creation',
-    'Texture Mapping',
-    'Rendering',
-    'VR/AR Support',
-    'Export Formats',
-    'AI Texturing',
-    'Lighting Setup',
-    'Material Library',
+constAI3 DGenerationPage: React.FC = () =>{constfeatures= []
+    '3 D Model Generation'
+    'Animation Creation'
+    'Texture Mapping'
+    'Rendering'
+    'VR/AR Support'
+    'Export Formats'
+    'AI Texturing'
+    'Lighting Setup'
+    'Material Library'
     'Scene Composition'
   ]
 
   constbenefits= []
-    'Professional3D content',
-    'Time savings',
-    'No3D skills needed',
-    'High quality output',
-    'Cost-effective',
+    'Professional3D content'
+    'Time savings'
+    'No3D skills needed'
+    'High quality output'
+    'Cost-effective'
     'Scalable production'
   ]
 
   constpricingPlans= [
     {
-      name: 'Starter',
-      price: '$29 9',
-      period: '/month',
-      features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support'],
+      name: 'Starter'
+      price: '$29 9'
+      period: '/month'
+      features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support']
       popular: false
-   },
-    {name: 'Professional',
-      price: '$49 9',
-      period: '/month',
-      features: ['Unlimited models', 'Premium textures', '4 K rendering', 'API access', 'Priority support'],
+   }
+    {name: 'Professional'
+      price: '$49 9'
+      period: '/month'
+      features: ['Unlimited models', 'Premium textures', '4 K rendering', 'API access', 'Priority support']
       popular: true
-   },
-    {name: 'Enterprise',
-      price: '$99 9',
-      period: '/month',
-      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
+   }
+    {name: 'Enterprise'
+      price: '$99 9'
+      period: '/month'
+      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license']
       popular: false
     }
   ]
 
 const Page = () => {}
-  return ()
-  <><SEOOptimizertitle=&quot;AI3D Generation Studio - Create3D Models & Animations with AI | ZionTechGroup&quot;
+  return ();
+  <><SEOOptimizertitle =&quot;AI3D Generation Studio - Create3D Models & Animations with AI | ZionTechGroup&quot;>
         description=&quot;Create professional 3 D models, animations, and virtual environments with AI3D Generation Studio. No3D skills needed, starting at$299/month.&quot;
-        keywords={['AI3D generation', '3 D models', '3 D animation', 'VR AR content', '3 D automation', 'AI 3D']}
-        canonicalUrl=&quot;https://ziontechgroup.com/ai-3d-generation&quot;
+        keywords = {['AI3D generation', '3 D models', '3 D animation', 'VR AR content', '3 D automation', 'AI 3D']}
+        canonicalUrl=&quot;https: //ziontechgroup.com/ai-3d-generation&quot;
       />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <Navigation />
@@ -66,7 +66,7 @@ const Page = () => {}
                 <div className=&quot;w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4&quot;></div>
                   <Camera className=&quot;w-8 h-8 text-white&quot; />
                 </div>
-                <h1 className=&quot;text-4xl md:text-5xl font-bold text-white neon-text&quot;>
+                <h1 className=&quot;text-4xl md: text-5xl font-bold text-white neon-text&quot;>
                   AI 3D Generation Studio
                 </h1>
               </div>
@@ -74,14 +74,12 @@ const Page = () => {}
                 Create 3D models, animations, and virtual environments with AI
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-                <a
-                  href=&quot;/contact&quot;
+                <a href=&quot;/contact&quot;>
                   className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
                 >
                   Start Free Trial
                 </a>
-                <a
-                  href=&quot;#demo&quot;
+                <a href=&quot;#demo&quot;>
                   className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
                   <Play className=&quot;w-5 h-5&quot; />
@@ -95,9 +93,9 @@ const Page = () => {}
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               AI 3D Generation Features
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;></div>
+            <div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6&quot;></div>
               {features.map((feature, index) => ()
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 hover: scale-105 transition-all duration-300&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
                     <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3&quot; />
                     <h3 className=&quot;text-lg font-semibold text-white&quot;>{feature}</h3>
@@ -111,7 +109,7 @@ const Page = () => {}
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               Why Choose AI 3D Generation Studio?
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => ()
                 <div key={index} className=&quot;text-center&quot;></div>
                   <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
@@ -127,10 +125,10 @@ const Page = () => {}
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               Simple, Transparent Pricing
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
+            <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricingPlans.map((plan, index) => ()
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
-                  {plan.popular && ()
+                <div key = {index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
+                  {plan.popular && ();
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
                       <div className=&quot;bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold&quot;></div>
                         Most Popular
@@ -152,9 +150,8 @@ const Page = () => {}
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href=&quot;/contact&quot;
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${}
+                  <a href=&quot;/contact&quot;>
+                    className = {`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${}
                       plan.popular
                         ? 'cyber-button'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
@@ -176,14 +173,12 @@ const Page = () => {}
                 Join leading companies using AI 3D generation technology
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-                <a
-                  href=&quot;/contact&quot;
+                <a href=&quot;/contact&quot;>
                   className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
                 >
                   Start Your Free Trial
                 </a>
-                <a
-                  href=&quot;tel:+13024640950&quot;
+                <a href=&quot;tel:+13024640950&quot;>
                   className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
                   <span>Call +1 302 464 0950</span>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Home, ChevronRight } from 'lucide-react'
@@ -29,23 +28,22 @@ const Breadcrumb: React.FC = () => {
   })
 
   return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7x lmx-auto px-4 py-3">
+        <ol className="fle xitems-center space-x-2 text-sm">
           {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
+            <li key={item.path} className="fle xitems-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                <ChevronRight className="w-4h-4te x t-gray-400 mx-2" />
               )}
-              <a
-                href={item.path}
+              <a href={item.path}>
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
                   index === breadcrumbItems.length - 1
                     ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
+                    : 'text-gray-300 hover: text-cyan-400'
                 }`}
               >
-                {item.icon && <item.icon className="w-4 h-4" />}
+                {item.icon && <item.icon className="w-4h-4" />}
                 <span>{item.name}</span>
               </a>
             </li>
@@ -56,56 +54,4 @@ const Breadcrumb: React.FC = () => {
   )
 }
 
-export default Breadcrumb
-=======
-'use client';
-
-import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ChevronRight, Home } from 'lucide-react';
-
-export default function Breadcrumb() {
-  const pathname = usePathname();
-  const pathnames = pathname.split('/').filter((x) => x);
-  
-  if (pathnames.length === 0) {
-    return null;
-  }
-
-  return (
-    <nav className="bg-gray-800 text-white py-2 px-4">
-      <div className="container mx-auto">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link href="/" className="flex items-center hover:text-blue-400 transition-colors">
-              <Home className="w-4 h-4 mr-1" />
-              Home
-            </Link>
-          </li>
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            
-            return (
-              <li key={name} className="flex items-center">
-                <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
-                {isLast ? (
-                  <span className="text-gray-300 capitalize">{name.replace(/-/g, ' ')}</span>
-                ) : (
-                  <Link 
-                    href={routeTo} 
-                    className="hover:text-blue-400 transition-colors capitalize"
-                  >
-                    {name.replace(/-/g, ' ')}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-    </nav>
-  );
-}
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
+export default Breadcrumb;

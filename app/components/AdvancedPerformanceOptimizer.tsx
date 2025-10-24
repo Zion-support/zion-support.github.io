@@ -18,17 +18,17 @@ interface AdvancedPerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
-  enableWebVitals = true,
-  enableAdvancedCaching = true,
-  enableImageOptimization = true,
-  enablePreloading = true,
+  enableWebVitals = true
+  enableAdvancedCaching = true
+  enableImageOptimization = true
+  enablePreloading = true
   enableServiceWorker = true
 }) => {
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    fcp: 0,
+    lcp: 0
+    fid: 0
+    cls: 0
+    fcp: 0
     ttfb: 0
   })
 
@@ -36,11 +36,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       // Measure Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+      const lcpObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-        setPerformanceMetrics(prev => ({
-          ...prev,
+        setPerformanceMetrics(prev = > ({
+          ...prev
           lcp: lastEntry.renderTime || lastEntry.loadTime || 0
         }))
       })
@@ -52,7 +52,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         entries.forEach((entry: PerformanceEntry) => {
           const fid = (entry as any).processingStart - entry.startTime
           setPerformanceMetrics(prev => ({
-            ...prev,
+            ...prev
             fid
           }))
         })
@@ -67,7 +67,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           if (!(entry as any).hadRecentInput) {
             clsValue += entry.value
             setPerformanceMetrics(prev => ({
-              ...prev,
+              ...prev
               cls: clsValue
             }))
           }
@@ -80,7 +80,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         const entries = list.getEntries()
         entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
-            ...prev,
+            ...prev
             fcp: entry.startTime
           }))
         })
@@ -144,7 +144,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if (typeof window === 'undefined') return
 
     const criticalResources = [
-      '/fonts/inter-var.woff2',
+      '/fonts/inter-var.woff2'
       '/css/critical.css'
     ]
 
@@ -167,13 +167,13 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     // Report to analytics
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(performanceMetrics.lcp),
+        event_category: 'Performance'
+        event_label: 'Core Web Vitals'
+        value: Math.round(performanceMetrics.lcp)
         custom_map: {
-          fcp: Math.round(performanceMetrics.fcp),
-          lcp: Math.round(performanceMetrics.lcp),
-          fid: Math.round(performanceMetrics.fid),
+          fcp: Math.round(performanceMetrics.fcp)
+          lcp: Math.round(performanceMetrics.lcp)
+          fid: Math.round(performanceMetrics.fid)
           cls: Math.round(performanceMetrics.cls * 1000) / 1000
         }
       })

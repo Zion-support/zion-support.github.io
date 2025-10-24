@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
-interface AnimatedCounterProps {
+interface AnimatedCounterProps {;
   className?: string;
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
-  duration = 2000,
-  suffix = '',
-  prefix = '',
-  className = '',
+  end
+  duration = 2000
+  suffix = ''
+  prefix = ''
+  className = ''
 }) => {
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)

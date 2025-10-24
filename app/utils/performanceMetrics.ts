@@ -66,13 +66,13 @@ export class PerformanceMetrics {
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({
-                name: 'pageLoadTime',
-                value: navEntry.loadEventEnd - navEntry.fetchStart,
-                unit: 'ms',
-                timestamp: new Date(),
-                category: 'load',
+                name: 'pageLoadTime'
+                value: navEntry.loadEventEnd - navEntry.fetchStart
+                unit: 'ms'
+                timestamp: new Date()
+                category: 'load'
                 metadata: {
-                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart
                 }
               })
@@ -88,10 +88,10 @@ export class PerformanceMetrics {
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime
               this.recordMetric({
-                name: 'FCP',
-                value: entry.startTime,
-                unit: 'ms',
-                timestamp: new Date(),
+                name: 'FCP'
+                value: entry.startTime
+                unit: 'ms'
+                timestamp: new Date()
                 category: 'load'
               })
             }
@@ -107,10 +107,10 @@ export class PerformanceMetrics {
           if (lastEntry) {
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({
-              name: 'LCP',
-              value: lastEntry.startTime,
-              unit: 'ms',
-              timestamp: new Date(),
+              name: 'LCP'
+              value: lastEntry.startTime
+              unit: 'ms'
+              timestamp: new Date()
               category: 'load'
             })
           }
@@ -127,10 +127,10 @@ export class PerformanceMetrics {
           }
           this.webVitals.CLS = clsValue
           this.recordMetric({
-            name: 'CLS',
-            value: clsValue,
-            unit: 'score',
-            timestamp: new Date(),
+            name: 'CLS'
+            value: clsValue
+            unit: 'score'
+            timestamp: new Date()
             category: 'runtime'
           })
         })
@@ -162,15 +162,15 @@ export class PerformanceMetrics {
     const perfData = window.performance.timing
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
     this.recordMetric({
-      name: 'pageLoad',
-      value: pageLoadTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'load',
+      name: 'pageLoad'
+      value: pageLoadTime
+      unit: 'ms'
+      timestamp: new Date()
+      category: 'load'
       metadata: {
-        dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
-        tcpConnection: perfData.connectEnd - perfData.connectStart,
-        serverResponse: perfData.responseEnd - perfData.requestStart,
+        dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart
+        tcpConnection: perfData.connectEnd - perfData.connectStart
+        serverResponse: perfData.responseEnd - perfData.requestStart
         domParsing: perfData.domComplete - perfData.domLoading
       }
     })
@@ -181,13 +181,13 @@ export class PerformanceMetrics {
    */
   recordNetworkRequest(url: string, duration: number, status: number): void {
     this.recordMetric({
-      name: 'networkRequest',
-      value: duration,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'network',
+      name: 'networkRequest'
+      value: duration
+      unit: 'ms'
+      timestamp: new Date()
+      category: 'network'
       metadata: {
-        url,
+        url
         status
       }
     })
@@ -201,14 +201,14 @@ export class PerformanceMetrics {
     if (!(performance as PerformanceWithMemory).memory) return
     const memory = (performance as PerformanceWithMemory).memory
     this.recordMetric({
-      name: 'memoryUsage',
-      value: memory.usedJSHeapSize,
-      unit: 'bytes',
-      timestamp: new Date(),
-      category: 'memory',
+      name: 'memoryUsage'
+      value: memory.usedJSHeapSize
+      unit: 'bytes'
+      timestamp: new Date()
+      category: 'memory'
       metadata: {
-        total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
+        total: memory.totalJSHeapSize
+        limit: memory.jsHeapSizeLimit
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       }
     })
@@ -222,10 +222,10 @@ export class PerformanceMetrics {
     const result = fn()
     const endTime = performance.now()
     this.recordMetric({
-      name: `function:${name}`,
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
+      name: `function:${name}`
+      value: endTime - startTime
+      unit: 'ms'
+      timestamp: new Date()
       category: 'runtime'
     })
     return result
@@ -239,10 +239,10 @@ export class PerformanceMetrics {
     const result = await fn()
     const endTime = performance.now()
     this.recordMetric({
-      name: `async:${name}`,
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
+      name: `async:${name}`
+      value: endTime - startTime
+      unit: 'ms'
+      timestamp: new Date()
       category: 'runtime'
     })
     return result
@@ -329,14 +329,14 @@ export class PerformanceMetrics {
     const loadMetrics = this.getMetricsByCategory('load')
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
     return {
-      metrics: this.getMetrics(),
-      webVitals: this.getWebVitals(),
+      metrics: this.getMetrics()
+      webVitals: this.getWebVitals()
       summary: {
-        avgLoadTime,
-        totalMetrics: this.metrics.length,
-        performanceScore: this.calculatePerformanceScore(),
+        avgLoadTime
+        totalMetrics: this.metrics.length
+        performanceScore: this.calculatePerformanceScore()
         recommendations: this.getRecommendations()
-      },
+      }
       timestamp: new Date()
     }
   }
@@ -382,4 +382,4 @@ interface LayoutShift extends PerformanceEntry {
 
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance()
-export default PerformanceMetrics
+export default PerformanceMetrics;

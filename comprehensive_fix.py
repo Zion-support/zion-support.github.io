@@ -1,108 +1,147 @@
 #!/usr/bin/env python3
+"""
+Comprehensive script to fix all remaining syntax errors in the codebase.
+"""
+
 import os
 import re
 import glob
+from pathlib import Path
 
-def fix_imports_and_syntax(file_path):
-    """Fix common import and syntax issues"""
+def fix_jsx_syntax(content):
+    """Fix common JSX syntax errors."""
+    # Fix malformed meta tags
+    content = re.sub(r'<meta name = "([^"]+)"', r'<meta name="\1"', content)
+    
+    # Fix malformed className attributes
+    content = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', content)
+    
+    # Fix broken Link components with misplaced attributes
+    content = re.sub(r'<Link href="([^"]+)"\s*>\s*className="([^"]+)"', r'<Link href="\1" className="\2"', content)
+    
+    # Fix missing closing tags
+    content = re.sub(r'<(\w+)\s+([^>]*?)(?<!>)$', r'<\1 \2>', content, flags=re.MULTILINE)
+    
+    # Fix extra commas and semicolons
+    content = re.sub(r';\s*,\s*$', r';', content, flags=re.MULTILINE)
+    content = re.sub(r',\s*;\s*$', r';', content, flags=re.MULTILINE)
+    
+    # Fix missing semicolons after return statements
+    content = re.sub(r'(\s+);\s*$', r'\1', content, flags=re.MULTILINE)
+    
+    return content
+
+def fix_import_issues(content):
+    """Fix import issues."""
+    # Add missing Head import if needed
+    if '<title>' in content and 'import Head' not in content and 'from "next/head"' not in content:
+        content = re.sub(r'(import React from [\'"]react[\'"];)', r'\1\nimport Head from "next/head";', content)
+    
+    # Fix missing imports for lucide-react icons
+    icons_needed = []
+    if 'Mail' in content and 'import { Mail' not in content:
+        icons_needed.append('Mail')
+    if 'Send' in content and 'import { Send' not in content:
+        icons_needed.append('Send')
+    if 'CheckCircle' in content and 'import { CheckCircle' not in content:
+        icons_needed.append('CheckCircle')
+    if 'Users' in content and 'import { Users' not in content:
+        icons_needed.append('Users')
+    if 'Award' in content and 'import { Award' not in content:
+        icons_needed.append('Award')
+    if 'Target' in content and 'import { Target' not in content:
+        icons_needed.append('Target')
+    if 'Lightbulb' in content and 'import { Lightbulb' not in content:
+        icons_needed.append('Lightbulb')
+    
+    if icons_needed:
+        # Find existing lucide-react import
+        lucide_match = re.search(r"import\s*{\s*([^}]+)\s*}\s*from\s*['\"]lucide-react['\"]", content)
+        if lucide_match:
+            existing_icons = [icon.strip() for icon in lucide_match.group(1).split(',')]
+            all_icons = list(set(existing_icons + icons_needed))
+            content = re.sub(
+                r"import\s*{\s*[^}]+\s*}\s*from\s*['\"]lucide-react['\"]",
+                f"import {{ {', '.join(all_icons)} }} from 'lucide-react'",
+                content
+            )
+        else:
+            # Add new import
+            content = re.sub(
+                r'(import React from [\'"]react[\'"];)',
+                f'\\1\nimport {{ {", ".join(icons_needed)} }} from "lucide-react";',
+                content
+            )
+    
+    return content
+
+def fix_jsx_structure(content):
+    """Fix JSX structure issues."""
+    # Wrap title and meta tags in Head component
+    if '<title>' in content and '<Head>' not in content:
+        content = re.sub(
+            r'(\s+)(<title>.*?</title>)',
+            r'\1<Head>\n\1  \2',
+            content,
+            flags=re.DOTALL
+        )
+        content = re.sub(
+            r'(<meta[^>]*/>)',
+            r'\1\n\1  </Head>',
+            content,
+            flags=re.DOTALL
+        )
+    
+    # Fix broken JSX attributes
+    content = re.sub(r'hover:\s+bg-', r'hover:bg-', content)
+    content = re.sub(r'sm:\s+flex-row', r'sm:flex-row', content)
+    
+    return content
+
+def fix_syntax_errors(content):
+    """Fix general syntax errors."""
+    # Remove extra commas at end of lines
+    content = re.sub(r',\s*$', '', content, flags=re.MULTILINE)
+    
+    # Fix function declarations
+    content = re.sub(r'}\s*;\s*$', '}', content, flags=re.MULTILINE)
+    
+    # Fix return statements
+    content = re.sub(r'return\s*\(\s*<>\s*;\s*$', 'return (\n    <>', content, flags=re.MULTILINE)
+    
+    return content
+
+def process_file(file_path):
+    """Process a single file to fix all syntax errors."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix missing imports for common components
-        if 'Helmet' in content and 'import { Helmet }' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport { Helmet } from 'react-helmet-async'"
-            )
+        # Apply all fixes
+        content = fix_jsx_syntax(content)
+        content = fix_import_issues(content)
+        content = fix_jsx_structure(content)
+        content = fix_syntax_errors(content)
         
-        if 'Navigation' in content and 'import Navigation' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport Navigation from './Navigation'"
-            )
-        
-        if 'Footer' in content and 'import Footer' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport Footer from './Footer'"
-            )
-        
-        # Fix missing lucide-react imports
-        lucide_icons = ['ArrowRight', 'CheckCircle', 'Download', 'X', 'Brain', 'BarChart', 'Target', 'TrendingUp']
-        missing_icons = [icon for icon in lucide_icons if icon in content and f'import {{ {icon}' not in content]
-        if missing_icons:
-            import_line = f"import {{ {', '.join(missing_icons)} }} from 'lucide-react'"
-            if 'import { Helmet }' in content:
-                content = content.replace("import { Helmet } from 'react-helmet-async'", f"import {{ Helmet }} from 'react-helmet-async'\n{import_line}")
-            else:
-                content = content.replace("'use client'", f"'use client'\n{import_line}")
-        
-        # Fix unescaped entities
-        content = re.sub(r"Let's", "Let&apos;s", content)
-        content = re.sub(r"Don't", "Don&apos;t", content)
-        content = re.sub(r"can't", "can&apos;t", content)
-        content = re.sub(r"won't", "won&apos;t", content)
-        content = re.sub(r"it's", "it&apos;s", content)
-        content = re.sub(r"we're", "we&apos;re", content)
-        content = re.sub(r"you're", "you&apos;re", content)
-        content = re.sub(r"they're", "they&apos;re", content)
-        content = re.sub(r"isn't", "isn&apos;t", content)
-        content = re.sub(r"aren't", "aren&apos;t", content)
-        content = re.sub(r"wasn't", "wasn&apos;t", content)
-        content = re.sub(r"weren't", "weren&apos;t", content)
-        content = re.sub(r"hasn't", "hasn&apos;t", content)
-        content = re.sub(r"haven't", "haven&apos;t", content)
-        content = re.sub(r"hadn't", "hadn&apos;t", content)
-        content = re.sub(r"wouldn't", "wouldn&apos;t", content)
-        content = re.sub(r"shouldn't", "shouldn&apos;t", content)
-        content = re.sub(r"couldn't", "couldn&apos;t", content)
-        content = re.sub(r"didn't", "didn&apos;t", content)
-        content = re.sub(r"doesn't", "doesn&apos;t", content)
-        content = re.sub(r"do n't", "don&apos;t", content)
-        
-        # Fix quotes
-        content = re.sub(r'"([^"]*)"', r'&quot;\1&quot;', content)
-        
-        # Fix console statements (comment them out)
-        content = re.sub(r'console\.(log|warn|error)\([^)]*\);?', r'// \g<0>', content)
-        
-        # Fix missing display names for components
-        if 'export default function' in content and 'displayName' not in content:
-            # Find the function name
-            match = re.search(r'export default function (\w+)', content)
-            if match:
-                func_name = match.group(1)
-                content = content.replace(
-                    f'export default function {func_name}',
-                    f'export default function {func_name}\n{func_name}.displayName = "{func_name}"'
-                )
-        
-        # Fix const vs let issues
-        content = re.sub(r'let clsEntries', 'const clsEntries', content)
-        
-        # Fix missing closing tags (basic fixes)
-        content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
-        content = re.sub(r'<section([^>]*)>\s*$', r'<section\1></section>', content, flags=re.MULTILINE)
-        
-        # Fix merge conflict markers that might have been missed
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
-        
+        # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed issues in: {file_path}")
+            print(f"Fixed: {file_path}")
             return True
-        return False
+        else:
+            print(f"No changes needed: {file_path}")
+            return False
+            
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files
+    """Main function to process all files."""
+    # Get all TypeScript/TSX files
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
@@ -112,18 +151,18 @@ def main():
         'components/**/*.ts'
     ]
     
-    fixed_count = 0
-    total_files = 0
+    files_processed = 0
+    files_fixed = 0
     
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
+        for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
-                total_files += 1
-                if fix_imports_and_syntax(file_path):
-                    fixed_count += 1
+                files_processed += 1
+                if process_file(file_path):
+                    files_fixed += 1
     
-    print(f"\nFixed issues in {fixed_count} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed {files_fixed} files")
 
 if __name__ == "__main__":
     main()

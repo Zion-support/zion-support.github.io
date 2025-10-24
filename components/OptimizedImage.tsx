@@ -11,17 +11,16 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
-  'data-testid': dataTestId,
+  src
+  alt
+  width
+  height
+  className
+  'data-testid': dataTestId
   ...props
 }) => {
   return (
-    <img
-      src={src}
+    <img src = {src}>
       alt={alt}
       width={width}
       height={height}
@@ -32,4 +31,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   )
 }
 
-export default OptimizedImage
+export default OptimizedImage;

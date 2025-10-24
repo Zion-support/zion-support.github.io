@@ -12,4 +12,4 @@ const $1: React.FC = () => {
 </>
   )
 }
-export default BlockchainWeb3Page
+export default BlockchainWeb3Page;

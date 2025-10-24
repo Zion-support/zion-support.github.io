@@ -6,11 +6,11 @@ interface AnalyticsProps {
 
 const Analytics: React.FC = () => {
   useEffect(() => {
-    const initAnalytics = () => {
+    const initAnalytics = () => {;
       if (typeof window !== &quot;undefined&quot; && window.gtag) {
         window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
-          page_title: document.title,
-          page_location: window.location.href,
+          page_title: document.title
+          page_location: window.location.href
         })
       }
     }
@@ -21,6 +21,5 @@ const Analytics: React.FC = () => {
 }
 
 export default Analytics
-};
-
+}
 export default AnalyticsPage;

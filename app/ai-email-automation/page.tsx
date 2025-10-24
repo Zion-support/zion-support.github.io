@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star, BarChart } from 'lucide-react'
+import { ArrowRight, Send, Mail, Zap, CheckCircle, Shield, BarChart, Brain, BarChart3, Star, TrendingUp, Clock, DollarSign } from 'lucide-react'
 import Link from 'next/link'
 
 const AIEmailAutomationPage: React.FC = () => {
@@ -98,25 +98,25 @@ const AIEmailAutomationPage: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-s creenbg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600">
+      <section className="rel ativepy-20 px-4 overflow-hidden">
+        <div className="abs oluteinset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></div>
+        <div className="rel ativemax-w-7xl mx-auto text-center">
+          <h1 className="tex t-4xlmd: text-6xl font-bold text-gray-900 mb-6">
+            <span className="tex t-transparentbg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600">
               AI Email Automation
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="tex t-xltext-gray-600 mb-8 max-w-3xl mx-auto">
             Transform your email marketing with AI-powered automation that generates, sends, and optimizes emails for maximum engagement and ROI.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cy an-600hover:bg-cyan-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
               Start Free Trial
-              <ArrowRight className="w-8 h-8" />
+              <ArrowRight className="w-8h-8" />
             </button>
-            <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <button className="bor derborder-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               View Demo
             </button>
           </div>
@@ -124,28 +124,28 @@ const AIEmailAutomationPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-20px-4">
+        <div className="max-w-7x lmx-auto">
+          <div className="tex t-centermb-16">
+            <h2 className="tex t-3xlmd: text-4xl font-bold text-gray-900 mb-4">
               Powerful AI Email Features
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="tex t-xltext-gray-600 max-w-2xl mx-auto">
               Everything you need to create, automate, and optimize your email marketing campaigns.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
+              <div key={index} className="bg-wh itep-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300">
+                <div className="fle xitems-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
+                <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="tex t-gray-600mb-4">{feature.description}</p>
+                <ul className="spa ce-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-cyan-500" />
+                    <li key={benefitIndex} className="fle xitems-center text-sm text-gray-600">
+                      <CheckCircle className="w-4h-4mr-2 t e xt-cyan-500" />
                       {benefit}
                     </li>
                   ))}
@@ -157,34 +157,34 @@ const AIEmailAutomationPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-20px-4 b g-white/5">
+        <div className="max-w-7x lmx-auto">
+          <div className="tex t-centermb-16">
+            <h2 className="tex t-3xlmd: text-4xl font-bold text-gray-900 mb-4">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="tex t-xltext-gray-600 max-w-2xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="gri dgrid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white p-8 rounded-xl shadow-lg ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                 {plan.popular && (
-                  <div className="bg-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                  <div className="bg-cy an-500text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                <p className="text-gray-600 mb-4">{plan.description}</p>
+                <h3 className="tex t-2xlfont-bold text-gray-900 mb-2">{plan.name}</h3>
+                <p className="tex t-gray-600mb-4">{plan.description}</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                  <span className="text-gray-600">{plan.period}</span>
+                  <span className="tex t-4xlfont-bold text-gray-900">{plan.price}</span>
+                  <span className="tex t-gray-600">{plan.period}</span>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="spa ce-y-3mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 mr-3 text-cyan-500" />
+                    <li key={featureIndex} className="fle xitems-center text-gray-600">
+                      <CheckCircle className="w-5h-5mr-3 t e xt-cyan-500" />
                       {feature}
                     </li>
                   ))}
@@ -203,21 +203,21 @@ const AIEmailAutomationPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-20px-4">
+        <div className="max-w-7x lmx-auto">
+          <div className="tex t-centermb-16">
+            <h2 className="tex t-3xlmd: text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our AI Email Automation?
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="tex t-xltext-gray-600 max-w-2xl mx-auto">
               Our proven track record and innovative approach deliver measurable results.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-cyan-500 mt-1" />
-                <p className="text-gray-700 text-lg">{benefit}</p>
+              <div key={index} className="fle xitems-start space-x-3">
+                <CheckCircle className="w-6h-6te x t-cyan-500 mt-1" />
+                <p className="tex t-gray-700text-lg">{benefit}</p>
               </div>
             ))}
           </div>
@@ -225,17 +225,17 @@ const AIEmailAutomationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20px-4 b g-gradient-to-r from-cyan-600 to-purple-600">
+        <div className="max-w-4x lmx-auto text-center">
+          <h2 className="tex t-3xlmd: text-4xl font-bold text-white mb-4">
             Ready to Transform Your Email Marketing?
           </h2>
-          <p className="text-xl text-cyan-100 mb-8">
+          <p className="tex t-xltext-cyan-100 mb-8">
             Start your free trial today and see the power of AI email automation.
           </p>
-          <button className="bg-white hover:bg-gray-100 text-cyan-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
+          <button className="bg-wh itehover:bg-gray-100 text-cyan-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Free Trial
-            <ArrowRight className="w-8 h-8" />
+            <ArrowRight className="w-8h-8" />
           </button>
         </div>
       </section>
@@ -243,4 +243,4 @@ const AIEmailAutomationPage: React.FC = () => {
   )
 }
 
-export default AIEmailAutomationPage
+export default AIEmailAutomationPage;

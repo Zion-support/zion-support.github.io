@@ -6,25 +6,24 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
+        '/images/hero-bg.jpg'
+        '/images/logo.png';
       ];
       
-      criticalImages.forEach(src => {
+      criticalImages.forEach(src = > {;
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
       });
-    };
-
+    }
     // Optimize images
-    const optimizeImages = () => {
+    const optimizeImages = () => {;
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting) {;
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
@@ -33,13 +32,17 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         });
       });
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
+        <Head>
         <title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedPerformanceOptimizer, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -47,7 +50,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               EnhancedPerformanceOptimizer
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -74,7 +77,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -103,7 +106,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -135,42 +138,46 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       <Footer />
     </>
   );
-};
-
+}
 export default EnhancedPerformanceOptimizerPage;
 {
-icon: Brain,
-title: 'AI-Powered Solutions',
-description: 'Advanced AI technology to transform your business operations and improve efficiency'},
-{icon: Zap,
-title: 'High Performance',
-description: 'Lightning-fast processing and real-time analytics for optimal results'},
-{icon: Shield,
-title: 'Enterprise Security',
-description: 'Bank-level security with encryption and compliance standards'},
-{icon: Globe,
-title: 'Global Reach',
+icon: Brain
+title: 'AI-Powered Solutions'
+description: 'Advanced AI technology to transform your business operations and improve efficiency'}
+{icon: Zap
+title: 'High Performance'
+description: 'Lightning-fast processing and real-time analytics for optimal results'}
+{icon: Shield
+title: 'Enterprise Security'
+description: 'Bank-level security with encryption and compliance standards'}
+{icon: Globe
+title: 'Global Reach'
 description: 'Worldwide deployment and support for international businesses'}
 ]
-constbenefits= [
-'Advanced AI technology integration',
-'Real-time processing and analytics',
-'Enterprise-grade security and compliance',
-'Scalable and flexible solutions',
-'2 4/7 technical support',
-'Easy integration with existing systems',
-'Cost-effective pricing plans',
+constbenefits = [
+'Advanced AI technology integration'
+'Real-time processing and analytics'
+'Enterprise-grade security and compliance'
+'Scalable and flexible solutions'
+'2 4/7 technical support'
+'Easy integration with existing systems'
+'Cost-effective pricing plans'
 'Proven track record of success'
 ]
-return (
+return (;
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
 <Helmet>
-<title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
-<meta name=&quot;description&quot; content=&quot;Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
+<Head>
+        <title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
 <meta name=&quot;keywords&quot; content=&quot;EnhancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, enhancedperformanceoptimizer&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
 </Helmet>
 {/* Features Section */}
-<section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
+<section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
 <div className=&quot;max-w-7xl mx-auto&quot;></div>
 <div className=&quot;text-center mb-16&quot;></div>
 <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Why Choose Our EnhancedPerformanceOptimizer?</h2>
@@ -189,7 +196,7 @@ return (
 </div>
 </section>
 {/* Benefits Section */}
-<section className=&quot;py-20 px-4 sm:px-6 lg:px-8 bg-white/5&quot;></section>
+<section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
 <div className=&quot;max-w-7xl mx-auto&quot;></div>
 <div className=&quot;text-center mb-16&quot;></div>
 <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;></h2>
@@ -208,7 +215,7 @@ Experience the power of our enhancedperformanceoptimizer solutions for your busi
 </div>
 </section>
 {/* CTA Section */}
-<section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
+<section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
 <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
 <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12&quot;></div>
 <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>
@@ -232,7 +239,7 @@ Email Us
 </h2>
 import { useEffect, useCallback } from 'react'
 import { useAnalytics } from './EnhancedAnalytics'
-import { Phone, Mail } from 'lucide-react'
+import { Phone, Mail, CheckCircle } from 'lucide-react'
 
 interface PerformanceMetrics {
 lcp: number | null
@@ -244,59 +251,4 @@ ttfb: number | null
 const EnhancedPerformanceOptimizer: React.FC = () => {
 const { trackEvent } = useAnalytics()
 const optimizeImages = useCallback(() => {
-const images = document.querySelectorAll('img')
-=======
-      images.forEach(img => imageObserver.observe(img));
-    };
-
-    // Lazy load non-critical CSS
-    const lazyLoadCSS = () => {
-      const nonCriticalCSS = [
-        '/styles/animations.css',
-        '/styles/print.css'
-      ];
-
-      nonCriticalCSS.forEach(href => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = href;
-        link.media = 'print';
-        link.onload = () => {
-          link.media = 'all';
-        };
-        document.head.appendChild(link);
-      });
-    };
-
-    // Preconnect to external domains
-    const preconnectDomains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://www.google-analytics.com'
-    ];
-
-    preconnectDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
-
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    lazyLoadCSS();
-
-    // Cleanup
-    return () => {
-      // Remove any added preload links
-      const preloadLinks = document.querySelectorAll('link[rel="preload"]');
-      preloadLinks.forEach(link => link.remove());
-    };
-  }, []);
-
-  return null;
-};
-
-export default EnhancedPerformanceOptimizer;
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
+const images = document.querySelectorAll('img');

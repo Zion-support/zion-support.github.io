@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
-  Bars3Icon, 
+import {
+  Bars3Icon,
   XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
@@ -29,7 +29,7 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-    };
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -38,8 +38,8 @@ const Navigation = () => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
+      name: 'Services',
+      href: '/services',
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions' },
@@ -61,8 +61,7 @@ const Navigation = () => {
 
   const isActive = (path: string) => {
     return pathname === path;
-  };
-
+  }
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -83,7 +82,7 @@ const Navigation = () => {
               const Icon = item.icon;
               return (
                 <div key={item.name} className="relative group">
-                  <Link
+                  <Link 
                     href={item.href}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)
@@ -102,7 +101,8 @@ const Navigation = () => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
+                        <Link 
+                          key={subItem.name}
                           href={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
@@ -118,17 +118,14 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get Started
+            <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
+            Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button
+            <button 
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
             >
@@ -145,7 +142,7 @@ const Navigation = () => {
                 const Icon = item.icon;
                 return (
                   <div key={item.name}>
-                    <Link
+                    <Link 
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
@@ -160,7 +157,8 @@ const Navigation = () => {
                     {item.submenu && (
                       <div className="ml-8 space-y-1">
                         {item.submenu.map((subItem) => (
-                          <Link key={subItem.name}
+                          <Link 
+                            key={subItem.name}
                             href={subItem.href}
                             className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
                             onClick={() => setIsOpen(false)}
@@ -174,7 +172,7 @@ const Navigation = () => {
                 );
               })}
               <div className="pt-4 border-t border-slate-700">
-                <Link
+                <Link 
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
@@ -188,6 +186,5 @@ const Navigation = () => {
       </div>
     </nav>
   );
-};
-
+}
 export default Navigation;

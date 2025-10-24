@@ -11,11 +11,10 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false
-  };
-
+    hasError: false;
+  }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -25,38 +24,42 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">
+        <div className = "min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="tex t-center">
+            <h1 className="tex t-4xlfont-bold text-white mb-4">Something went wrong</h1>
+            <p className="tex t-gray-300mb-8">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <button
+            <button >
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-6py-3 b g-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               Refresh Page
             </button>
           </div>
-        </div>
+        </div>;
       );
     }
 
-<<<<<<< HEAD
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
     <>
       <Helmet>
-        <title>ErrorBoundary</title>
+        <Head>
+        <title>ErrorBoundary</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -64,7 +67,7 @@ class ErrorBoundary extends Component<Props, State> {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ErrorBoundary
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -91,7 +94,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -120,7 +123,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -152,14 +155,13 @@ class ErrorBoundary extends Component<Props, State> {
       <Footer />
     </>
   );
-};
-
+}
 export default ErrorBoundaryPage;
 error?: Error
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
 super(props)
-this.state= { hasError: false}
+this.state = { hasError: false}
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
@@ -176,7 +178,7 @@ render() {if (this.state.hasError) {
 if (this.props.fallback) {
 return this.props.fallback
 }
-return (
+return (;
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4&quot;></div>
 <div className=&quot;max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
@@ -184,7 +186,7 @@ return (
 </div>
 <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
 <p className=&quot;text-gray-300 mb-6&quot;>We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p>
-{process.env.NODE_ENV === 'development' && this.state.error && (
+{process.env.NODE_ENV = == 'development' && this.state.error && (;
 <details className=&quot;mb-6 text-left&quot;>
 <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;>
 Error Details (Development)
@@ -196,15 +198,15 @@ Error Details (Development)
 </details>
 )}
 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-<button
-onClick={this.handleReload}
+<button ,>
+onClick = {this.handleReload}
 className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
 <RefreshCw className=&quot;w-4 h-4&quot; />
 <span>Reload Page</span>
 </button>
-<button
-onClick={this.handleGoHome}
+<button ,>
+onClick = {this.handleGoHome}
 className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
 <Home className=&quot;w-4 h-4&quot; />
@@ -213,8 +215,7 @@ className=&quot;flex items-center justify-center space-x-2 border border-cyan-60
 </div>
 <div className=&quot;mt-6 pt-6 border-t border-white/20&quot;></div>
 <p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team:</p>p>
-<a
-href=&quot;mailto:kleber@ziontechgroup.com&quot;
+<a href=&quot;mailto:kleber@ziontechgroup.com&quot;>
 className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
 <Phone className=&quot;w-4 h-4 mr-2&quot; />
 kleber@ziontechgroup.com
@@ -222,10 +223,3 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
-=======
-    return this.props.children;
-  }
-}
-
-export default ErrorBoundary;
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

@@ -11,4 +11,4 @@ const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
     </div>
   )
 }
-export default DefaultSEO
+export default DefaultSEO;

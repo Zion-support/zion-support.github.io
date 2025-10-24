@@ -1,65 +1,36 @@
-<<<<<<< HEAD
 'use client'
 import Navigation from './Navigation';
-=======
-'use client';
-import { useEffect } from 'react';
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
-<<<<<<< HEAD
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
           const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
           if (mainContent) {
             (mainContent as HTMLElement).focus();
             event.preventDefault();
-=======
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content with Alt + M
-      if (e.altKey && e.key === 'm') {
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-
-      // Skip to navigation with Alt + N
-      if (e.altKey && e.key === 'n') {
-        e.preventDefault();
-        const navigation = document.querySelector('nav');
-        if (navigation) {
-          const firstLink = navigation.querySelector('a') as HTMLElement;
-          if (firstLink) {
-            firstLink.focus();
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
           }
         }
       }
-    };
-
+    }
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-    };
+    }
   }, []);
 
   useEffect(() => {
     // Add focus indicators
     const style = document.createElement('style');
     style.textContent = `
-      *:focus {
+      *:focus {;
         outline: 2px solid #8b5cf6 !important;
         outline-offset: 2px !important;
       }
-<<<<<<< HEAD
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
@@ -79,7 +50,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
-          * {
+          * {;
             border-color: currentColor !important;
           }
           button, a {
@@ -95,8 +66,6 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add focus management
     if (enableFocusManagement) {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
-=======
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
       
       .sr-only {
         position: absolute;
@@ -124,20 +93,12 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
 
     return () => {
       document.head.removeChild(style);
-    };
+    }
   }, []);
 
-<<<<<<< HEAD
       // Apply focus trapping to modals
       const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
       modals.forEach(trapFocus);
-=======
-  useEffect(() => {
-    // Add ARIA landmarks
-    const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main');
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
     }
 
     const nav = document.querySelector('nav');
@@ -151,7 +112,6 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   }, []);
 
-  return <>{children}</>;
-};
-
+  return <>{children}</>
+}
 export default AccessibilityEnhancer;

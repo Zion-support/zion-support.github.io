@@ -24,22 +24,26 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
           console.log('Performance Metrics: ', {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+            firstPaint: paint.find(entry = > entry.name === 'first-paint')?.startTime
+            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
           });
         }, 0);
       });
     }
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
+        <Head>
         <title>PerformanceMonitor</title>
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -47,7 +51,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               PerformanceMonitor
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -74,7 +78,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -103,7 +107,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -135,8 +139,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
       <Footer />
     </>
   );
-};
-
+}
 export default PerformanceMonitorPage;
 
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void
@@ -145,29 +148,29 @@ interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetri
 
 export default function PerformanceMonitor
 PerformanceMonitor.displayName = "PerformanceMonitor"({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  onMetricsUpdate
+  enableRealTimeMonitoring = true
   logToConsole = true
 }: PerformanceMonitorProps) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null,
-    timeToInteractive: null,
+    loadTime: null
+    firstContentfulPaint: null
+    largestContentfulPaint: null
+    firstInputDelay: null
+    cumulativeLayoutShift: null
+    timeToInteractive: null
     totalBlockingTime: null
   })
   useEffect(() => {
     if (!enableRealTimeMonitoring || typeof window === 'undefined') return
     const measurePerformance = () => {
       const newMetrics: PerformanceMetrics = {
-        loadTime: null,
-        firstContentfulPaint: null,
-        largestContentfulPaint: null,
-        firstInputDelay: null,
-        cumulativeLayoutShift: null,
-        timeToInteractive: null,
+        loadTime: null
+        firstContentfulPaint: null
+        largestContentfulPaint: null
+        firstInputDelay: null
+        cumulativeLayoutShift: null
+        timeToInteractive: null
         totalBlockingTime: null
      }
 
@@ -264,7 +267,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
     }
   }, [])
   // Performance monitoring dashboard (only in development)
-  if (process.env.NODE_ENV=== 'development') {return (
+  if (process.env.NODE_ENV=== 'development') {return (;
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;><h3className=&quot;font-boldmb-2&quot;>PerformanceMetrics</h><divclassName=&quot;space-y-1&quot;><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
     )
   }
@@ -272,12 +275,12 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   return nul l
 }
 
-// Global performance monitoring utilitiesexportconstperformanceUtils= {// Measure custom performance marksmark: (name: string) => {
+// Global performance monitoring utilitiesexportconstperformanceUtils = {// Measure custom performance marksmark: (name: string) => {
   
     if (type of windo w !== 'undefined' && 'performance' in windo w) {
       performance.mark(name)
    }
-  },
+  }
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -286,14 +289,14 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
      } else {performance.measure(namestartMark)
      }
     }
-  },
+  }
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return type ? performance.getEntriesByType(type) : performance.getEntries()
     }
     return []
-  },
+  }
   // Clear performance entries
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -309,15 +312,15 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
 
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA= (metrics: PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
     windo w.gtag('event', 'performance_metrics', {
-      event_category: 'Performance',
-      event_label: 'Core Web Vitals',
+      event_category: 'Performance'
+      event_label: 'Core Web Vitals'
       custom_map: {
-        load_time: metrics.loadTime,
-        first_contentful_paint: metrics.firstContentfulPaint,
-        largest_contentful_paint: metrics.largestContentfulPaint,
-        first_input_delay: metrics.firstInputDelay,
-        cumulative_layout_shift: metrics.cumulativeLayoutShift,
-        time_to_interactive: metrics.timeToInteractive,
+        load_time: metrics.loadTime
+        first_contentful_paint: metrics.firstContentfulPaint
+        largest_contentful_paint: metrics.largestContentfulPaint
+        first_input_delay: metrics.firstInputDelay
+        cumulative_layout_shift: metrics.cumulativeLayoutShift
+        time_to_interactive: metrics.timeToInteractive
         total_blocking_time: metrics.totalBlockingTime
      }
     })
@@ -329,20 +332,3 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
-=======
-    // Monitor memory usage
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      console.log('Memory Usage: ', {
-        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
-      });
-    }
-  }, []);
-
-  return null;
-};
-
-export default PerformanceMonitor;
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

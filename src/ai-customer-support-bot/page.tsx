@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import React from 'react';
 import { Phone } from 'lucide-react';
 
@@ -13,4 +13,4 @@ const Page: React.FC = () => {}
   )
 }
 
-export default Page
+export default Page;

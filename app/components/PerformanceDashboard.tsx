@@ -1,53 +1,58 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
 
 const PerformanceDashboardPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
     <>
-      <Helmet>
-        <title>PerformanceDashboard</title>
+      <Helmet>;
+        <Head>
+        <title>PerformanceDashboard</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceDashboard solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceDashboard, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -55,7 +60,7 @@ const PerformanceDashboardPage: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               PerformanceDashboard
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -82,7 +87,7 @@ const PerformanceDashboardPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -111,7 +116,7 @@ const PerformanceDashboardPage: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -143,16 +148,15 @@ const PerformanceDashboardPage: React.FC = () => {
       <Footer />
     </>
   );
-};
-
+}
 export default PerformanceDashboardPage;
-loadTime: 0,
-renderTime: 0,
-memoryUsage: 0,
+loadTime: 0
+renderTime: 0
+memoryUsage: 0
 fps: 0})
 const [isMonitoringsetIsMonitoring] = useState(false)
 const [alertssetAlerts]=useState<string[]>([])
-useEffect(() => {constupdateMetrics= () => {
+useEffect(() => {constupdateMetrics = () => {
   
 constnavigation= performance.getEntriesByType(
 'navigation'
@@ -177,9 +181,9 @@ if (isMonitorin g) {requestAnimationFrame(measureFPS)}
 }
 requestAnimationFrame(measureFPS)
 }
-constnewMetrics: PerformanceMetrics = {loadTime,
-renderTime,
-memoryUsage,
+constnewMetrics: PerformanceMetrics = {loadTime
+renderTime
+memoryUsage
 fps}
 setMetrics(newMetrics)
 onMetricsUpdate?.(newMetrics)
@@ -206,14 +210,13 @@ return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
 constgetPerformanceColor= (value: number, thresholds: {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'
 if (value <= thresholds.warning) return 'text-yellow-40 0'
 return 'text-red-40 0'}
-return (
+return (;
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
 <div className=&quot;flex items-center justify-between mb-6&quot;></div>
 <h3 className=&quot;text-xl font-semibold text-white flex items-center gap-2&quot;></h3>
 <Activity className=&quot;w-5 h-5&quot; />
 Performance Dashboard
-<button
-onClick={toggleMonitoring}
+<button onClick = {toggleMonitoring}>
 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
 isMonitoring
 ? 'bg-red-600 text-white hover:bg-red-700'
@@ -221,7 +224,7 @@ isMonitoring
 }`}
 >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
 </div>
-{alerts.length > 0 && (
+{alerts.length > 0 && (;
 <div className=&quot;mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
 <AlertTriangle className=&quot;w-5 h-5 text-red-400&quot; />
@@ -234,38 +237,38 @@ isMonitoring
 </ul>
 </div>
 )}
-<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;></div>
+<div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4&quot;></div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
 <Zap className=&quot;w-4 h-4 text-blue-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>Load Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}></div>
+<div className = {`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}></div>
 {metrics.loadTime.toFixed(0)}ms
-</div>
+</div>;
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
 <Cpu className=&quot;w-4 h-4 text-green-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>Render Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
+<div className = {`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
 {metrics.renderTime.toFixed(2)}ms
-</div>
+</div>;
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
 <MemoryStick className=&quot;w-4 h-4 text-purple-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>Memory Usage</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
-</div>
+<div className = {`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
+</div>;
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
 <TrendingUp className=&quot;w-4 h-4 text-orange-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>FPS</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
+<div className = {`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
 </div>
-</div>
+</div>;
 <div className=&quot;mt-6 text-center&quot;></div>
 <p className=&quot;text-gray-400 text-sm&quot;>{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance'}</p>p>
 </div>

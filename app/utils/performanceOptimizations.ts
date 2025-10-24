@@ -4,9 +4,9 @@ import { useCallback, useMemo, useState, useEffect } from 'react'
 
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
+  func: T
+  wait: number;
+): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
@@ -16,9 +16,9 @@ export const debounce = <T extends (...args: any[]) => any>(
 
 // Throttle utility for performance
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
+  func: T
   limit: number
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -31,18 +31,18 @@ export const throttle = <T extends (...args: any[]) => any>(
 
 // Intersection Observer hook for lazy loading
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
+  callback: (entries: IntersectionObserverEntry[]) => void
   options: IntersectionObserverInit = {}
 ) => {
   const observer = useMemo(
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
-            threshold: 0.1,
-            rootMargin: '50px',
+            threshold: 0.1
+            rootMargin: '50px'
             ...options
           })
-        : null,
+        : null
     [callback, options]
   )
 
@@ -53,7 +53,7 @@ export const useIntersectionObserver = (
         return () => observer.unobserve(element)
       }
       return () => {}
-    },
+    }
     [observer]
   )
 
@@ -92,7 +92,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
             img.src = src
           }
         })
-      },
+      }
       [src, isLoaded, isError]
     )
   )
@@ -119,8 +119,8 @@ export const usePerformanceMonitoring = () => {
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
-        fcp,
-        lcp,
+        fcp
+        lcp
         ttfb: navigation?.responseStart - navigation?.requestStart
       })
     }
@@ -166,8 +166,8 @@ export const useMemoryMonitoring = () => {
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
+          usedJSHeapSize: memory.usedJSHeapSize
+          totalJSHeapSize: memory.totalJSHeapSize
           jsHeapSizeLimit: memory.jsHeapSizeLimit
         })
       }
@@ -236,9 +236,9 @@ export const useBundleSizeMonitoring = () => {
       })
 
       setBundleSize({
-        totalSize,
-        jsSize,
-        cssSize,
+        totalSize
+        jsSize
+        cssSize
         imageSize
       })
     }
@@ -259,15 +259,15 @@ export const useBundleSizeMonitoring = () => {
 }
 
 const performanceOptimizations = {
-  debounce,
-  throttle,
-  useIntersectionObserver,
-  useLazyImage,
-  usePerformanceMonitoring,
-  useMemoryMonitoring,
-  preloadResource,
-  preloadCriticalResources,
+  debounce
+  throttle
+  useIntersectionObserver
+  useLazyImage
+  usePerformanceMonitoring
+  useMemoryMonitoring
+  preloadResource
+  preloadCriticalResources
   useBundleSizeMonitoring
 }
 
-export default performanceOptimizations
+export default performanceOptimizations;
