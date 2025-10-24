@@ -18,18 +18,19 @@ const ContentCarousel: React.FC = () => {
     {
       id: 1,
     title: "AI-Powered Analytics",
-      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
     features: [
         "Real-time data processing",
         "Predictive analytics",
         "Custom dashboards",
-    "Automated reporting"
-  ]
-      icon: <BarChart className="h-12 w-12" />,
-    color: "from-blue-500 to-cyan-500"}
+        "Automated reporting"
+    ],
+    icon: <BarChart className="h-12 w-12" />,
+    color: "from-blue-500 to-cyan-500"
+  },
     {
       id: 2,
-    title: "Cloud Infrastructure",
+      title: "Cloud Infrastructure",
       description: "Scalable, secure, and reliable cloud solutions for your business needs.",
       features: [
         "99.9% uptime guarantee",

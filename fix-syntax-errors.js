@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -47,10 +48,26 @@ const fixes = [
       }
       return match;
     }
+=======
+const fs = require('fs');
+const path = require('path');
+
+// Common syntax fixes
+const fixes = [
+  // Fix missing semicolons after "use client"
+  {
+    pattern: /"use client",\s*\n/g,
+    replacement: '"use client";\n'
+  },
+  {
+    pattern: /'use client',\s*\n/g,
+    replacement: "'use client";\n"
+>>>>>>> cursor/fix-errors-and-merge-to-main-46c4
   },
   
   // Fix missing commas in object properties
   {
+<<<<<<< HEAD
     pattern: /(\w+:\s*[^,}]+)\s*(\w+:\s*[^,}]+)/g,
     replacement: '$1,\n  $2'
   },
@@ -102,6 +119,46 @@ const fixes = [
       }
       return match;
     }
+=======
+    pattern: /(\w+):\s*(\w+)\s*\n\s*(\w+):/g,
+    replacement: '$1: $2,\n  $3:'
+  },
+  
+  // Fix missing commas in interface properties
+  {
+    pattern: /(\w+):\s*(\w+)\s*\n\s*(\w+):/g,
+    replacement: '$1: $2;\n  $3:'
+  },
+  
+  // Fix malformed JSX attributes
+  {
+    pattern: /className="([^"]*)\s+([^"]*)"/g,
+    replacement: 'className="$1 $2"'
+  },
+  
+  // Fix missing closing tags
+  {
+    pattern: /<div([^>]*)>\s*$/gm,
+    replacement: '<div$1></div>'
+  },
+  
+  // Fix malformed arrow functions
+  {
+    pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm,
+    replacement: 'const $1 = () => {\n  '
+  },
+  
+  // Fix missing semicolons
+  {
+    pattern: /(\w+)\s*\n\s*const/g,
+    replacement: '$1;\nconst'
+  },
+  
+  // Fix malformed imports
+  {
+    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]\s*$/gm,
+    replacement: 'import { $1 } from "$2";'
+>>>>>>> cursor/fix-errors-and-merge-to-main-46c4
   }
 ];
 
@@ -110,13 +167,18 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
+<<<<<<< HEAD
     // Apply fixes
     for (const fix of fixes) {
+=======
+    fixes.forEach(fix => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-46c4
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
       }
+<<<<<<< HEAD
     }
     
     // Additional specific fixes
@@ -143,6 +205,15 @@ function fixFile(filePath) {
       return true;
     }
     
+=======
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-46c4
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -150,6 +221,7 @@ function fixFile(filePath) {
   }
 }
 
+<<<<<<< HEAD
 function findTsxFiles(dir) {
   const files = [];
   
@@ -186,3 +258,28 @@ for (const file of tsxFiles) {
 }
 
 console.log(`Fixed ${fixedCount} files.`);
+=======
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += walkDir(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  });
+  
+  return fixedCount;
+}
+
+console.log('Starting syntax error fixes...');
+const fixedCount = walkDir('./app');
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-46c4
