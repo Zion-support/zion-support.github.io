@@ -1,86 +1,84 @@
 #!/usr/bin/env python3
+"""
+Script to fix JSX structure issues
+"""
 import os
 import re
 import glob
 
-def fix_jsx_structure(file_path):
-    """Fix JSX structure issues."""
+def fix_jsx_structure(content):
+    """Fix JSX structure issues"""
+    # Fix self-closing divs that should contain content
+    # Pattern: <div className="..."> followed by content and then </div>
+    lines = content.split('\n')
+    fixed_lines = []
+    i = 0
+    
+    while i < len(lines):
+        line = lines[i]
+        
+        # Check if this is a self-closing div that should contain content
+        if re.match(r'^\s*<div className="[^"]+" />$', line):
+            # Look ahead to see if there's content that should be inside
+            j = i + 1
+            content_lines = []
+            indent = len(line) - len(line.lstrip())
+            
+            while j < len(lines):
+                next_line = lines[j]
+                next_indent = len(next_line) - len(next_line.lstrip())
+                
+                # If we hit a line with same or less indentation that's not empty, stop
+                if next_line.strip() and next_indent <= indent:
+                    break
+                    
+                # If we hit a closing div, stop
+                if re.match(r'^\s*</div>$', next_line):
+                    break
+                    
+                content_lines.append(next_line)
+                j += 1
+            
+            # If we found content, fix the structure
+            if content_lines:
+                # Replace self-closing div with opening div
+                fixed_lines.append(line.replace(' />', '>'))
+                # Add the content
+                fixed_lines.extend(content_lines)
+                # Skip the content lines in the main loop
+                i = j
+            else:
+                fixed_lines.append(line)
+                i += 1
+        else:
+            fixed_lines.append(line)
+            i += 1
+    
+    content = '\n'.join(fixed_lines)
+    
+    # Fix other common JSX issues
+    # Fix self-closing elements that should contain text
+    content = re.sub(r'<h1 className="([^"]+)" />([^<]+)</h1>', r'<h1 className="\1">\2</h1>', content)
+    content = re.sub(r'<h2 className="([^"]+)" />([^<]+)</h2>', r'<h2 className="\1">\2</h2>', content)
+    content = re.sub(r'<h3 className="([^"]+)" />([^<]+)</h3>', r'<h3 className="\1">\2</h3>', content)
+    content = re.sub(r'<p className="([^"]+)" />([^<]+)</p>', r'<p className="\1">\2</p>', content)
+    content = re.sub(r'<span className="([^"]+)" />([^<]+)</span>', r'<span className="\1">\2</span>', content)
+    content = re.sub(r'<title />([^<]+)</title>', r'<title>\1</title>', content)
+    
+    # Fix broken className attributes (missing spaces)
+    content = re.sub(r'className="([^"]*?)([a-z])([A-Z])', r'className="\1\2 \3', content)
+    content = re.sub(r'className="([^"]*?)([a-z])([a-z])([A-Z])', r'className="\1\2\3 \4', content)
+    
+    return content
+
+def fix_file(file_path):
+    """Fix JSX structure in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
-        
-        # Fix common JSX structure issues
-        fixes = [
-            # Fix extra parentheses and malformed return
-            (r'return\s*\(\s*<>\s*\(\s*', 'return (\n    <>\n      '),
-            (r'\)\s*</>\s*\)\s*;;', '\n    </>\n  );'),
-            (r'\)\s*</>\s*\);', '\n    </>\n  );'),
-            
-            # Fix malformed Helmet tags
-            (r'<Helmet>\s*</Helmet><title>', '<Helmet>\n        <title>'),
-            (r'</title>\n        <meta', '</title>\n        <meta'),
-            (r'</Helmet>\n      <div', '</Helmet>\n      <div'),
-            
-            # Fix missing spaces in class names
-            (r'w-5 h-5ml-2', 'w-5 h-5 ml-2'),
-            
-            # Fix unclosed tags
-            (r'<div([^>]*)>([^<]*)', r'<div\1>\2</div>'),
-            
-            # Fix multiple semicolons
-            (r';;', ';'),
-            
-            # Fix extra parentheses in return
-            (r'return\s*\(\s*<>\s*\(', 'return (\n    <>'),
-            (r'\)\s*</>\s*\)', '\n    </>\n  )'),
-        ]
-        
-        for pattern, replacement in fixes:
-            content = re.sub(pattern, replacement, content, flags=re.MULTILINE)
-        
-        # Clean up the structure
-        lines = content.split('\n')
-        new_lines = []
-        in_jsx = False
-        brace_count = 0
-        
-        for i, line in enumerate(lines):
-            stripped = line.strip()
-            
-            # Skip empty lines at the beginning
-            if not stripped and not in_jsx:
-                continue
-            
-            # Check if we're entering JSX
-            if 'return' in line and '<' in line:
-                in_jsx = True
-                new_lines.append('  return (')
-                new_lines.append('    <>')
-                continue
-            
-            if in_jsx:
-                # Count braces
-                brace_count += line.count('{') - line.count('}')
-                
-                # Add proper indentation
-                if stripped.startswith('<') or stripped.startswith('</'):
-                    new_lines.append('      ' + stripped)
-                elif stripped:
-                    new_lines.append('      ' + stripped)
-                else:
-                    new_lines.append('')
-                
-                # Check if we're exiting JSX
-                if brace_count == 0 and stripped.startswith('</'):
-                    new_lines.append('    </>')
-                    new_lines.append('  );')
-                    in_jsx = False
-            else:
-                new_lines.append(line)
-        
-        content = '\n'.join(new_lines)
+        content = fix_jsx_structure(content)
         
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
@@ -88,30 +86,41 @@ def fix_jsx_structure(file_path):
             return True
         
         return False
+        
     except Exception as e:
-        print(f"Error fixing JSX structure in {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Process all TSX files
+    """Main function to fix all JSX structure issues"""
     patterns = [
-        'app/**/*.tsx',
-        'components/**/*.tsx'
+        './app/**/*.tsx',
+        './app/**/*.ts', 
+        './app/**/*.js',
+        './app/**/*.jsx',
+        './src/**/*.tsx',
+        './src/**/*.ts',
+        './src/**/*.js', 
+        './src/**/*.jsx',
+        './components/**/*.tsx',
+        './components/**/*.ts',
+        './components/**/*.js',
+        './components/**/*.jsx'
     ]
     
-    files_processed = 0
-    files_fixed = 0
-    
+    files_to_fix = []
     for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                files_processed += 1
-                print(f"Processing: {file_path}")
-                
-                if fix_jsx_structure(file_path):
-                    files_fixed += 1
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
     
-    print(f"Processed {files_processed} files, fixed {files_fixed} files")
+    fixed_count = 0
+    
+    for file_path in files_to_fix:
+        if os.path.isfile(file_path):
+            if fix_file(file_path):
+                print(f"Fixed: {file_path}")
+                fixed_count += 1
+    
+    print(f"\nFixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()

@@ -1,193 +1,161 @@
 #!/usr/bin/env python3
 """
-Script to fix syntax errors in TypeScript/JavaScript files
+Script to fix common syntax errors in TypeScript/JavaScript files
 """
 import os
 import re
 import glob
 
-def fix_hook_file(file_path):
-    """Fix hook files that have incorrect syntax"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+def fix_duplicate_imports(content):
+    """Remove duplicate imports"""
+    lines = content.split('\n')
+    seen_imports = set()
+    fixed_lines = []
+    
+    for line in lines:
+        # Check if it's an import statement
+        if line.strip().startswith('import '):
+            # Extract the import statement (without semicolon)
+            import_statement = line.strip().rstrip(';')
+            if import_statement not in seen_imports:
+                seen_imports.add(import_statement)
+                # Add semicolon if missing
+                if not line.strip().endswith(';'):
+                    fixed_lines.append(line.rstrip() + ';')
+                else:
+                    fixed_lines.append(line)
+            # Skip duplicate imports
+        else:
+            fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines)
+
+def fix_missing_semicolons(content):
+    """Add missing semicolons where needed"""
+    lines = content.split('\n')
+    fixed_lines = []
+    
+    for i, line in enumerate(lines):
+        stripped = line.strip()
         
-        # Check if this is a hook file that was incorrectly converted to a component
-        if 'useAdvancedPerformanceMonitoring' in content or 'useEnhancedPerformance' in content or 'usePerformanceMonitoring' in content:
-            # This should be a hook, not a component
-            hook_name = None
-            if 'useAdvancedPerformanceMonitoring' in content:
-                hook_name = 'useAdvancedPerformanceMonitoring'
-            elif 'useEnhancedPerformance' in content:
-                hook_name = 'useEnhancedPerformance'
-            elif 'usePerformanceMonitoring' in content:
-                hook_name = 'usePerformanceMonitoring'
+        # Skip empty lines, comments, and lines that already end with semicolon
+        if not stripped or stripped.startswith('//') or stripped.startswith('/*') or stripped.startswith('*'):
+            fixed_lines.append(line)
+            continue
             
-            if hook_name:
-                # Create a proper hook file
-                new_content = f"""import {{ useState, useEffect, useCallback }} from 'react';
-
-interface {hook_name}Options {{
-  enabled?: boolean;
-  threshold?: number;
-}}
-
-export const {hook_name} = (options: {hook_name}Options = {{}}) => {{
-  const [isVisible, setIsVisible] = useState(false);
-  const [performance, setPerformance] = useState<number>(0);
-
-  useEffect(() => {{
-    if (options.enabled !== false) {{
-      const observer = new PerformanceObserver((list) => {{
-        const entries = list.getEntries();
-        if (entries.length > 0) {{
-          setPerformance(entries[0].duration);
-        }}
-      }});
-      
-      observer.observe({{ entryTypes: ['measure'] }});
-      
-      return () => observer.disconnect();
-    }}
-  }}, [options.enabled]);
-
-  const measurePerformance = useCallback((name: string, fn: () => void) => {{
-    performance.mark(name + '-start');
-    fn();
-    performance.mark(name + '-end');
-    performance.measure(name, name + '-start', name + '-end');
-  }}, []);
-
-  return {{
-    isVisible,
-    performance,
-    measurePerformance
-  }};
-}};
-"""
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-                return True
-        
-        return False
-    except Exception as e:
-        print(f"Error fixing hook file {file_path}: {e}")
-        return False
-
-def fix_page_file(file_path):
-    """Fix page files with syntax errors"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Fix common syntax issues
-        # Fix malformed JSX closing tags
-        content = re.sub(r'</\s*>\s*$', '', content)
-        
-        # Fix missing closing braces
-        if content.strip().endswith('}'):
-            # Already has closing brace
-            pass
-        elif content.strip().endswith('</>'):
-            # Add closing brace
-            content = content.rstrip() + '\n}'
-        elif content.strip().endswith('</div>'):
-            # Add closing brace
-            content = content.rstrip() + '\n}'
-        
-        # Fix malformed JSX
-        content = re.sub(r'<>\s*$', '', content)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        return True
-    except Exception as e:
-        print(f"Error fixing page file {file_path}: {e}")
-        return False
-
-def fix_utils_file(file_path):
-    """Fix utility files with syntax errors"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Check if this is a utility file that was incorrectly converted to a component
-        if 'errorHandler' in content or 'performanceUtils' in content:
-            # This should be a utility file, not a component
-            if 'errorHandler' in content:
-                new_content = """export const errorHandler = {
-  log: (error: Error, context?: string) => {
-    console.error('Error:', error.message, context ? `Context: ${context}` : '');
-  },
-  
-  handle: (error: Error, fallback?: () => void) => {
-    console.error('Handled error:', error.message);
-    if (fallback) {
-      fallback();
-    }
-  }
-};
-"""
-            elif 'performanceUtils' in content:
-                new_content = """export const performanceUtils = {
-  measure: (name: string, fn: () => void) => {
-    performance.mark(name + '-start');
-    fn();
-    performance.mark(name + '-end');
-    performance.measure(name, name + '-start', name + '-end');
-  },
-  
-  getMetrics: () => {
-    return performance.getEntriesByType('measure');
-  }
-};
-"""
+        # Skip lines that already end with semicolon, brace, or are part of multi-line statements
+        if (stripped.endswith(';') or stripped.endswith('{') or stripped.endswith('}') or 
+            stripped.endswith(',') or stripped.endswith('(') or stripped.endswith(')') or
+            stripped.endswith('[') or stripped.endswith(']') or stripped.endswith(':')):
+            fixed_lines.append(line)
+            continue
             
+        # Skip import/export statements that might be multi-line
+        if stripped.startswith('import ') or stripped.startswith('export '):
+            # Check if next line continues the import/export
+            if i + 1 < len(lines) and lines[i + 1].strip().startswith('from '):
+                fixed_lines.append(line)
+                continue
+        
+        # Add semicolon to statements that need it
+        if (stripped and not stripped.startswith('//') and 
+            not stripped.startswith('/*') and not stripped.startswith('*') and
+            not stripped.startswith('import ') and not stripped.startswith('export ') and
+            not stripped.startswith('function ') and not stripped.startswith('const ') and
+            not stripped.startswith('let ') and not stripped.startswith('var ') and
+            not stripped.startswith('if ') and not stripped.startswith('for ') and
+            not stripped.startswith('while ') and not stripped.startswith('switch ') and
+            not stripped.startswith('try ') and not stripped.startswith('catch ') and
+            not stripped.startswith('return ') and not stripped.startswith('throw ') and
+            not stripped.startswith('break ') and not stripped.startswith('continue ') and
+            not stripped.startswith('case ') and not stripped.startswith('default ') and
+            not stripped.startswith('}') and not stripped.startswith('{') and
+            not stripped.startswith('//') and not stripped.startswith('/*') and
+            not stripped.startswith('*') and not stripped.startswith('*/')):
+            
+            # Add semicolon if the line looks like a statement
+            if ('=' in stripped or 'return' in stripped or 'console.' in stripped or 
+                'throw' in stripped or 'break' in stripped or 'continue' in stripped):
+                fixed_lines.append(line.rstrip() + ';')
+            else:
+                fixed_lines.append(line)
+        else:
+            fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines)
+
+def fix_quotes_consistency(content):
+    """Fix inconsistent quote usage"""
+    # Convert all single quotes to double quotes for consistency
+    content = re.sub(r"'([^']*)'", r'"\1"', content)
+    return content
+
+def fix_jsx_syntax(content):
+    """Fix common JSX syntax issues"""
+    # Fix missing closing tags
+    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>', r'<\1\2>', content)
+    
+    # Fix self-closing tags
+    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>', r'<\1\2 />', content)
+    
+    return content
+
+def fix_file(file_path):
+    """Fix syntax errors in a single file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        original_content = content
+        
+        # Apply fixes
+        content = fix_duplicate_imports(content)
+        content = fix_missing_semicolons(content)
+        content = fix_quotes_consistency(content)
+        content = fix_jsx_syntax(content)
+        
+        # Only write if content changed
+        if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
+                f.write(content)
             return True
         
         return False
+        
     except Exception as e:
-        print(f"Error fixing utils file {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix syntax errors"""
-    # Fix hook files
-    hook_files = glob.glob('/workspace/app/hooks/*.ts')
-    for file_path in hook_files:
-        if fix_hook_file(file_path):
-            print(f"Fixed hook file: {file_path}")
-    
-    # Fix page files with syntax errors
-    problematic_pages = [
-        '/workspace/app/ai-content-generator/page.tsx',
-        '/workspace/app/ai-solutions/page.tsx',
-        '/workspace/app/case-studies/page.tsx',
-        '/workspace/app/cloud-infrastructure/page.tsx',
-        '/workspace/app/contact/page.tsx',
-        '/workspace/app/micro-saas-solutions/page.tsx',
-        '/workspace/app/pricing/page.tsx',
-        '/workspace/app/services/page.tsx'
+    """Main function to fix all syntax errors"""
+    patterns = [
+        './app/**/*.tsx',
+        './app/**/*.ts', 
+        './app/**/*.js',
+        './app/**/*.jsx',
+        './src/**/*.tsx',
+        './src/**/*.ts',
+        './src/**/*.js', 
+        './src/**/*.jsx',
+        './components/**/*.tsx',
+        './components/**/*.ts',
+        './components/**/*.js',
+        './components/**/*.jsx'
     ]
     
-    for file_path in problematic_pages:
-        if os.path.exists(file_path):
-            if fix_page_file(file_path):
-                print(f"Fixed page file: {file_path}")
+    files_to_fix = []
+    for pattern in patterns:
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
     
-    # Fix utils files
-    utils_files = [
-        '/workspace/app/utils/errorHandler.ts',
-        '/workspace/app/utils/performanceUtils.ts'
-    ]
+    fixed_count = 0
     
-    for file_path in utils_files:
-        if os.path.exists(file_path):
-            if fix_utils_file(file_path):
-                print(f"Fixed utils file: {file_path}")
+    for file_path in files_to_fix:
+        if os.path.isfile(file_path):
+            if fix_file(file_path):
+                print(f"Fixed: {file_path}")
+                fixed_count += 1
+    
+    print(f"\nFixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()

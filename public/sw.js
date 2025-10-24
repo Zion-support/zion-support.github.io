@@ -1,11 +1,17 @@
 // Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
+
+// Assets to cache immediately;
+const STATIC_ASSETS = [;
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
-];
+  '/about',
+  '/contact',
+  '/pricing',
+  '/manifest.json',
+  '/robots.txt'
+]
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -13,6 +19,7 @@ self.addEventListener('install', (event) => {
       .then((cache) => cache.addAll(urlsToCache))
   );
 });
+
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -21,7 +28,17 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
         return fetch(event.request);
-      }
-    )
+      })
   );
 });
+    )
+})
+
+// Notification click;
+  event.notification.close()
+  
+  if (event.action === 'explore') {
+    event.waitUntil()
+      clients.openWindow('/')
+    )
+})

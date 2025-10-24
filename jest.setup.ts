@@ -1,7 +1,5 @@
-// Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextEncoder = TextEncoder;
-(global as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }).TextDecoder = TextDecoder;
+import '@testing-library/jest-dom';
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -18,24 +16,42 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof IntersectionObserver;
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
+// Mock URL.revokeObjectURL
+if (typeof URL.revokeObjectURL === 'undefined') {
+  Object.defineProperty(URL, 'revokeObjectURL', {
+    writable: true,
+    value: jest.fn(),
+  });
+}
 
 // Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  writable: true,
-  value: jest.fn(),
-});
+if (typeof window.scrollTo === 'undefined') {
+  Object.defineProperty(window, 'scrollTo', {
+    writable: true,
+    value: jest.fn(),
+  });
+}
+
+// Mock IntersectionObserver
+if (typeof window.IntersectionObserver === 'undefined') {
+  Object.defineProperty(window, 'IntersectionObserver', {
+    writable: true,
+    value: jest.fn().mockImplementation(() => ({
+      observe: jest.fn(),
+      unobserve: jest.fn(),
+      disconnect: jest.fn(),
+    })),
+  });
+}
+
+// Mock performance.getEntriesByType
+if (typeof performance.getEntriesByType !== 'function') {
+  Object.defineProperty(performance, 'getEntriesByType', {
+    writable: true,
+    value: jest.fn().mockReturnValue([]),
+  });
+}
+
+// Mock TextEncoder and TextDecoder
+global.TextEncoder = TextEncoder as any;
+global.TextDecoder = TextDecoder as any;
