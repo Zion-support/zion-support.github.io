@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useCallback, useRef, useState } from 'react';
 ;
 export interface UseEnhancedPerformanceOptions {
@@ -141,50 +142,25 @@ return (
     </>
     </>
   );
+=======
+import { useEffect, useState } from 'react';
+
+export const useEnhancedPerformance = () => {
+  const [performance, setPerformance] = useState({
+    isSlow: false,
+    connectionType: 'unknown'
+  });
+
+  useEffect(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      setPerformance({
+        isSlow: connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g',
+        connectionType: connection.effectiveType || 'unknown'
+      });
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
   }, []);
-;
-const measurePerformance = useCallback((name: string,fn: () => void) => {;
-if (trackPerformance) {;
-;
-performance.mark(`${component,}-${name}-start`);
-      fn();
-      performance.mark(`${component}-${name}-end`);
-      performance.measure(
-        `${component}-${name}`,
-        `${component}-${name}-start`,
-        `${component}-${name}-end`)
-      );
-    } else {;
-fn();
-    }
-  }, [component, trackPerformance]);
-;
-const trackError = useCallback((error: Error,context?: Record<string, unknown>) => {;
-if (trackErrors) {;
-if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console;
-        console.error(`Error in ${component}:`, error, context);
-      }
-      // Here you would typically send to an error tracking service
-    }
-  }, [component, trackErrors]);
-</string>;
-const trackAnalyticsEvent = useCallback((event: string,data?: Record<string, unknown>) => {;
-if (trackAnalytics) {;
-if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console;
-        console.log(`Analytics event in ${component}:`, event, data);
-      }
-      // Here you would typically send to an analytics service
-    }
-  }, [component, trackAnalytics]);
-;
-return {;
-metrics,;
-isOptimized,;
-optimizePerformance,;
-measurePerformance,;
-trackError,;
-trackAnalytics: trackAnalyticsEvent,renderCount: renderCountRef.current,mountTime: mountTimeRef.current,};
-};</string>
-}
+
+  return performance;
+};

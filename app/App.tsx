@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -263,3 +264,15 @@ function App() {
   );
 };
 export default App;
+=======
+import React from 'react';
+
+export default function App() {
+  return (
+    <div>
+      <h1>App</h1>
+      <p>App content.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

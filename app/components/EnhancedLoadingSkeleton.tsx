@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check     } from 'lucide-react';
 import Navigation from '../components/Navigation'
@@ -19,3 +20,20 @@ icon: TrendingUp, title: 'Growth Optimization', description: 'Optimize your busi
   ];
 export default EnhancedLoadingSkeletonPage;
 }}
+=======
+
+interface EnhancedLoadingSkeletonProps {
+  className?: string;
+}
+
+const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>EnhancedLoadingSkeleton</h2>
+      <p>EnhancedLoadingSkeleton component for enhanced functionality.</p>
+    </div>
+  );
+};
+
+export default EnhancedLoadingSkeleton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

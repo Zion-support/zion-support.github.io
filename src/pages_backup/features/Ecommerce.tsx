@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -75,3 +75,16 @@ go wrong! 🤖
 ,}
 export default EcommercePage;
 }
+=======
+
+const Ecommerce: React.FC = () => {
+  return (
+    <div className="ecommerce">
+      <h1>E-commerce Features</h1>
+      <p>Advanced e-commerce functionality.</p>
+    </div>
+  );
+};
+
+export default Ecommerce;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

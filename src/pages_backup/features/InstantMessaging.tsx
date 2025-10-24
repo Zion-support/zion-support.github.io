@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -75,3 +75,16 @@ go wrong! 🤖
 ,}
 export default InstantMessagingPage;
 }
+=======
+
+const InstantMessaging: React.FC = () => {
+  return (
+    <div className="instant-messaging">
+      <h1>Instant Messaging</h1>
+      <p>Real-time messaging capabilities.</p>
+    </div>
+  );
+};
+
+export default InstantMessaging;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

@@ -1,29 +1,19 @@
-'use client';
-import React from 'react';
-/**
- * Comprehensive Monitoring Utility
- * Real-time application monitoring, performance tracking, and error reporting
- */;
-const performanceConfig = {;
-monitoring: {,enableLongTaskDetection: true;
-enableMemoryMonitorin,g: true,sampleRate: 0.1,}
-  webVitals: {,lcp: { goo,d: 2500,needsImprovement: 4000 ,}
-    fid: { goo,d: 100,needsImprovement: 300 ,}
-    cls: { goo,d: 0.1,needsImprovement: 0.25 ,}
-    fcp: { goo,d: 1800,needsImprovement: 3000 ,}
-    ttfb: { goo,d: 800,needsImprovement: 1800 ,}
-    inp: { goo,d: 200,needsImprovement: 500 ,}
+export const monitoring = {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', eventName, properties);
+    }
+  },
+  
+  trackPageView: (pageName: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName
+      });
+    }
   }
-}
-export interface PerformanceMetrics {
-;
-lcp?: number;
-fid?: number;
-cls?: number;
-fcp?: number;
-ttfb?: number;
-inp?: number
 };
+<<<<<<< HEAD
 };
 export interface ErrorReport {
 ;
@@ -207,3 +197,5 @@ console.log('Performance metrics: ',{)
 const monitoring = new MonitoringService();
 export default monitoring;
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

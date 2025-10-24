@@ -1,33 +1,17 @@
-'use client';
-import React from 'react';
-import { useRef } from 'react';
-/**
- * Performance Enhancement Utilities
- * Advanced performance optimization tools for the application
- */
-// Debounce function for performance optimization;
-;
-export const debounce = <T extends (...args: unknown[]) => unknown>(,func: T;
-wait: number</T>
-): ((...args: Parameters<T>) => void) => {;
-  let timeout: NodeJS.Timeout;
-  return (...arg,</T>;
-s: Parameters<T>) => {;
-clearTimeout(timeout);
-timeout = setTimeout(() => func(...args),wait)
-  }
-}
-// Throttle function for performance optimization</T>;
-export const throttle = <T extends (...args: unknown[]) => unknown>(,func: T;
-limit: number</T>
-): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean;
-  return (...arg,</T>;
-s: Parameters<T>) => {;
-if (!inThrottle) {;
-func(...args);,inThrottle = true,;
-setTimeout(() => (inThrottle = false), limit)
+export const performanceEnhancer = {
+  preloadImage: (src: string) => {
+    const img = new Image();
+    img.src = src;
+  },
+  
+  preloadRoute: (route: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = route;
+      document.head.appendChild(link);
     }
+<<<<<<< HEAD
   }
 }
 // Performance monitoring utilities;
@@ -185,18 +169,22 @@ if (!layoutEntry.hadRecentInput) {;
 clsEntries.push(entry);
           clsValue += layoutEntry.value
 }
+=======
+  },
+  
+  optimizeImages: () => {
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach(img => {
+      const src = img.getAttribute('data-src');
+      if (src) {
+        img.setAttribute('src', src);
+        img.removeAttribute('data-src');
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
       }
     });
-observer.observe({ entryTypes: ['layout-shift'] ,});
-    return () => {;
-observer.disconnect();
-;
-return clsValue
-}
   }
-  const trackLCP = ($2) => {;
-$3
 };
+<<<<<<< HEAD
       }
     });
 observer.observe({ entryTypes: ['largest-contentful-paint'] ,});
@@ -275,3 +263,5 @@ console.log('Performance metrics: ',metrics
   }
 };
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

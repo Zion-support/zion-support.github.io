@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home, Mail     } from 'lucide-react';
 import { Mail     } from 'lucide-react';
 import { Home     } from 'lucide-react';
@@ -7,18 +8,31 @@ interface AdvancedErrorBoundaryProps {
 className?: string
 className?: string
 }
+=======
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
 interface State {
+<<<<<<< HEAD
 hasError: boolean
 error?: Error
 errorInfo?: ErrorInfo
 errorId?: string,}
+=======
+  hasError: boolean;
+  error?: Error;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
+
 class AdvancedErrorBoundary extends Component<Props, State> {
-constructor(props: Props) {
-super(props)
-this.state={ hasErro,r: false ,}
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
+<<<<<<< HEAD
 private reportError = (error: Error,errorInfo: ErrorInfo) => {
 :all-pages-backup/components/AdvancedErrorBoundary.tsx
 const errorReport: ErrorReport={
@@ -51,3 +65,29 @@ logErrorToService = (error: Error,errorInfo: ErrorInfo) => {,// You can integrat
 const errorData={
 </Props>
 }}
+=======
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default AdvancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

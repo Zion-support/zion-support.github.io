@@ -1,5 +1,7 @@
+import React from 'react';
 
 interface SEOHeadProps {
+<<<<<<< HEAD
 title?: string
   description?: string
   keywords?: string
@@ -50,5 +52,18 @@ Join thousands of businesses already using SEOHead to transform their operations
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default SEOHead;
+=======
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default SEOHead;

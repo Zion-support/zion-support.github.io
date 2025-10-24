@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 export default function HomePage() {
 return (
@@ -137,5 +137,16 @@ Get In Touch
 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove,"
 r: text-white transition-all duration-300" />
 Schedule Demo</Link>/Link>/div>/div>/div>/section>/div>
+=======
+
+const HomePage: React.FC = () => {
+  return (
+    <div className="home-page">
+      <h1>Welcome to Zion Tech Group</h1>
+      <p>Innovative technology solutions for the future.</p>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
   );
-,}
+};
+
+export default HomePage;

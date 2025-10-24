@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const EnhancedLoading: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,21 @@ Join thousands of businesses already using EnhancedLoading to transform their op
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedLoading;
+=======
+import React from 'react';
+
+interface EnhancedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default EnhancedLoading;

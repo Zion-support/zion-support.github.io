@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
 src: string,alt: string,}
@@ -123,4 +124,14 @@ src={src,};alt={alt};width={width};height={height};className={className};style={
 >)</img>
 }</img>;
 export default Image;</img>
+=======
+
+export default function image() {
+  return (
+    <div>
+      <h1>image</h1>
+      <p>image content.</p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

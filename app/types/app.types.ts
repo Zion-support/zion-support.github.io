@@ -1,44 +1,9 @@
 export interface User {
-;
-id: string;
-  email: string;
+  id: string;
   name: string;
-  role: 'admin' | 'user' | 'guest'
-,
-}
-export interface Service {
-;
-id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  features: string[];
-pricing: {;
-basic: number;
-    pro: number;
-    enterprise: number;
-  ,
-}
-  benefits: string[];
-useCases: string[];
-marketPrice: string;
-  contactInfo: {;
-phone: string;
-    email: string;
-    website: string;
-  ,}
-  link: string;
-,}
-export interface ContactFormData {
-;
-name: string;
   email: string;
-  company: string;
-  message: string;
-  service: string;
-,
 }
+<<<<<<< HEAD
 export interface AnalyticsEvent {
 ;
 name: string;
@@ -63,17 +28,18 @@ userId?: string;
 sessionId?: string;
 component?: string;
 action?: string
+=======
+
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
 }
-export interface ErrorReport {
-;
-id: string;
-  message: string;
-  stack?: string;
-context: ErrorContext;
-  severity: ErrorSeverity;
-  resolved: boolean;
-  createdAt: string;
-,
-}
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+
+export interface ApiResponse<T> {
+  data: T;
+  success: boolean;
+  message?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

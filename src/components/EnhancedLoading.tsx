@@ -1,6 +1,5 @@
-'use client'
-:all-pages-backup/components/EnhancedLoading.tsx;
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -112,12 +111,20 @@ Contact Sales</button>/button>/div>/div>/section>/div>Footer/ />
 :all-pages-backup/components/EnhancedLoading.tsx
   ),}
   )
+=======
+
+interface EnhancedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
-export default EnhancedLoadingPage;
-  )
-}
-export default EnhancedLoadingPage;
-  )
-{}
-export default EnhancedLoadingPage;
-}
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedLoading;

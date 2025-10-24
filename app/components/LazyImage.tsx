@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const LazyImage: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,21 @@ Join thousands of businesses already using LazyImage to transform their operatio
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default LazyImage;
+=======
+import React from 'react';
+
+interface LazyImageProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default LazyImage;

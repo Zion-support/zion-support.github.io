@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ApiResponse<T = any> {;
 data: T;
   statu,s: number;
@@ -55,36 +56,22 @@ message: error instanceof Error ? error.message : 'Unknown error',status: 500,} 
 async get<T>(endpoint: string,headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>;
 return this.request<T>(endpoint, {;
 method: 'GET',headers,
+=======
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
+
+export const apiClient = {
+  get: async (endpoint: string) => {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`);
+    return response.json();
+  },
+  
+  post: async (endpoint: string, data: any) => {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
     });
+    return response.json();
   }
-</T>;
-async post<T>(;
-endpoint: string,data?: any,</T>;
-headers?: Record<string, string />
-  ): Promise<ApiResponse<T>> {</ApiResponse>;
-return this.request<T>(endpoint, {;
-method: 'POST',body: data ? JSON.stringify(data) : undefined,headers,
-    });
-  }
-</T>;
-async put<T>(;
-endpoint: string,data?: any,</T>;
-headers?: Record<string, string />
-  ): Promise<ApiResponse<T>> {</ApiResponse>;
-return this.request<T>(endpoint, {;
-method: 'PUT',body: data ? JSON.stringify(data) : undefined,headers,
-    });
-  }
-</T>;
-async delete<T>(endpoint: string,headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>;
-return this.request<T>(endpoint, {;
-method: 'DELETE',headers,
-    });
-  }
-}
-;
-const apiClient = new ApiClient();
-;
-export default apiClient;
-export { ApiClient, type ApiResponse, type ApiError  };</T>
-}
+};

@@ -1,6 +1,5 @@
-'use client'
-:all-pages-backup/components/ServiceWorker.tsx;
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -114,20 +113,20 @@ Contact Sales</button>/button>/div>/div>/div>/section>/div>Footer/ />
 export default ServiceWorkerPage;
       </div>
   )
+=======
+
+interface ServiceWorkerProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
-export default ServiceWorkerPage;
-    if('serviceWorker' in, navigator) {
-navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-          // // console.log('SW registered: ',registration)
-        })
-        .catch((registrationError) => {
-          // // console.log('SW registration failed: ',registrationError)
-        })
-    }
-  }, [])
-return nul l
-{}
+
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
 export default ServiceWorker;
-}

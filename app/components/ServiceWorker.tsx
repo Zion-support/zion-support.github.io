@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ServiceWorker: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,21 @@ Join thousands of businesses already using ServiceWorker to transform their oper
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}  )}
-export default ServiceWorker;
+=======
+import React from 'react';
+
+interface ServiceWorkerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default ServiceWorker;

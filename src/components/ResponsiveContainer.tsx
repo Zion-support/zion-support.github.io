@@ -1,12 +1,7 @@
-'use client'
-:all-pages-backup/components/ResponsiveContainer.tsx;
-import Footer from './Footer';
-import Navigation from './Navigation';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, CheckCircle     } from 'lucide-react';
 import React from 'react';
-import { cn     } from '../lib/utils';
+
 interface ResponsiveContainerProps {
+<<<<<<< HEAD
   className?: string
 }
 }
@@ -96,12 +91,18 @@ Contact Sales</button>/button>/div>/div>/section>/div>Footer/ />
   ),}
 export default ResponsiveContainerPage;
   )}
+=======
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 export default ResponsiveContainer;
-      </div>
-  )
-}
-export default ResponsiveContainerPage;
-  )
-}
-export default ResponsiveContainer;
-}

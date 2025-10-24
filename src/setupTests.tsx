@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -21,3 +22,9 @@ This page is under development. Please check back soon for more information abou
 }
 export default Page;
 }
+=======
+import '@testing-library/jest-dom';
+import { configure } from '@testing-library/react';
+
+configure({ testIdAttribute: 'data-testid' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

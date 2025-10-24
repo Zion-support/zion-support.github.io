@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function main() {
@@ -17,3 +17,21 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
+=======
+import { createRoot } from 'react-dom/client';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>Welcome to our application</p>
+    </div>
+  );
+};
+
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(<App />);
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

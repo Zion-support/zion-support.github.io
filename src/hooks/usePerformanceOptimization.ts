@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useEffect, useCallback, useRef } from 'react';
 ;
@@ -190,36 +191,23 @@ link.setAttribute(key, value as string);
       });
 document.head.appendChild(link);
     })
+=======
+import { useEffect, useState } from 'react';
+
+export const usePerformanceOptimization = () => {
+  const [isOptimized, setIsOptimized] = useState(false);
+
+  useEffect(() => {
+    // Check if performance optimizations are enabled
+    const checkOptimizations = () => {
+      const hasServiceWorker = 'serviceWorker' in navigator;
+      const hasIntersectionObserver = 'IntersectionObserver' in window;
+      setIsOptimized(hasServiceWorker && hasIntersectionObserver);
+    };
+
+    checkOptimizations();
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
   }, []);
-useEffect(() => {
-    // Initialize all optimizations;
-setupLazyLoading();
-    preloadCriticalResources();
-    optimizeImages();
-    optimizeCodeSplitting();
-    registerServiceWorker();
-    setupPerformanceMonitoring();
-    addResourceHints();
-    // Cleanup;
-return () => {;
-if (observerRef.current) {;
-observerRef.current.disconnect();
-      }
-    }
-  }, [;
-setupLazyLoading;
-preloadCriticalResources;
-optimizeImages;
-optimizeCodeSplitting;
-registerServiceWorker;
-setupPerformanceMonitoring;
-addResourceHints
-  ]);
-return {;
-setupLazyLoading;
-preloadCriticalResources;
-optimizeImages;
-registerServiceWorker,;
-setupPerformanceMonitoring
-  }}</IntersectionObserver>;
-}
+
+  return { isOptimized };
+};

@@ -1,6 +1,5 @@
-'use client'
-:all-pages-backup/components/EnhancedErrorBoundary.tsx;
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -155,3 +154,20 @@ return (;</Props>,
 Error Details (Development)</summary>/summary>pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot; /></p>
                   {this.state.error.toString()}
 }}}
+=======
+
+interface EnhancedErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

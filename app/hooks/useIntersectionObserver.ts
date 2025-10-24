@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState, useRef } from 'react';
 ;
 interface UseIntersectionObserverOptions {
@@ -18,17 +19,33 @@ if (!node) return;
 observer.current = new IntersectionObserver(
       ([entry]) => setEntry(entry),;
 options
+=======
+import { useEffect, useRef, useState } from 'react';
+
+export const useIntersectionObserver = (options?: IntersectionObserverInit) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      options
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
     );
-;
-observer.current.observe(node);
-;
-return () => {;
-if (observer.current) {;
-observer.current.disconnect();
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, [node, options.threshold, options.root, options.rootMargin]);
-;
-return [setNode, entry] as const;
+  }, [options]);
+
+  return [ref, isIntersecting] as const;
 };
-}

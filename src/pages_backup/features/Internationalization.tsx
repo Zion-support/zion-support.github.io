@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -75,3 +75,16 @@ go wrong! 🤖
 ,}
 export default InternationalizationPage;
 }
+=======
+
+const Internationalization: React.FC = () => {
+  return (
+    <div className="internationalization">
+      <h1>Internationalization</h1>
+      <p>Multi-language support features.</p>
+    </div>
+  );
+};
+
+export default Internationalization;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

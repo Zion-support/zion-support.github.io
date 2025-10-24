@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Home, ChevronRight     } from 'lucide-react';
 import { useLocation     } from 'react-router-dom';
 interface BreadcrumbItem {
@@ -71,3 +71,20 @@ return (
 ;
 export default Breadcrumb;
 }
+=======
+
+interface BreadcrumbProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Breadcrumb;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

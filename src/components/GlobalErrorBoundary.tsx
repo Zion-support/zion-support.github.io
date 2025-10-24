@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
@@ -58,3 +59,21 @@ const benefits = [
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology',
     <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / /></div>/div>,}
+=======
+import React from 'react';
+
+interface GlobalErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default GlobalErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

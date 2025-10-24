@@ -1,6 +1,5 @@
-'use client'
-:all-pages-backup/components/ServiceCard.tsx;
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -161,5 +160,20 @@ Get Started
   </div>
 )
 {}
-export default ServiceCard;
+=======
+
+interface ServiceCardProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default ServiceCard;

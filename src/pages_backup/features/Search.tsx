@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -75,3 +75,16 @@ go wrong! 🤖
 ,}
 export default SearchPage;
 }
+=======
+
+const Search: React.FC = () => {
+  return (
+    <div className="search">
+      <h1>Search Features</h1>
+      <p>Advanced search functionality.</p>
+    </div>
+  );
+};
+
+export default Search;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

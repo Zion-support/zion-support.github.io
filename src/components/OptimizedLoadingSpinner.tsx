@@ -1,6 +1,6 @@
-'use client'
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx;
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -218,4 +218,14 @@ return (  </div>,
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
+=======
+
+export default function OptimizedLoadingSpinner() {
+  return (
+    <div>
+      <h1>OptimizedLoadingSpinner</h1>
+      <p>OptimizedLoadingSpinner content.</p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

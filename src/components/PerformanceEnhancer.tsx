@@ -1,6 +1,6 @@
-'use client'
-:all-pages-backup/components/PerformanceEnhancer.tsx;
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { Brain     } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
@@ -33,3 +33,20 @@ const benefits = [
 {}
 export default PerformanceEnhancerPage;
 }
+=======
+
+interface PerformanceEnhancerProps {
+  className?: string;
+}
+
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>PerformanceEnhancer</h2>
+      <p>PerformanceEnhancer component for enhanced functionality.</p>
+    </div>
+  );
+};
+
+export default PerformanceEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

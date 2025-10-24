@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -73,5 +73,20 @@ go wrong! 🤖
             </p>/div>/div>/div>/>
   )
 ,}
-export default InteractiveAIROICalculator;
+=======
+
+interface InteractiveAIROICalculatorProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default InteractiveAIROICalculator;

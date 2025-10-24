@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Security Headers Configuration
  * Comprehensive security headers for production applications
@@ -100,3 +101,10 @@ value
 export default defaultSecurityHeaders;
 export default defaultSecurityHeaders;
 }
+=======
+export const securityHeaders = {
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'origin-when-cross-origin'
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

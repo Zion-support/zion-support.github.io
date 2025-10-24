@@ -1,6 +1,6 @@
-'use client'
-:all-pages-backup/components/DynamicContentShowcase.tsx;
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -231,4 +231,14 @@ Schedule Demo
 }
 ;
 export default DynamicContentShowcase;
+=======
+
+export default function DynamicContentShowcase() {
+  return (
+    <div>
+      <h1>DynamicContentShowcase</h1>
+      <p>DynamicContentShowcase content.</p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }

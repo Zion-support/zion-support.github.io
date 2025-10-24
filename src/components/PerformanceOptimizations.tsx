@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 &quot;use client&quot
 const PerformanceOptimizationsPage: React.FC = () => {
 const features = [
@@ -100,6 +101,21 @@ Contact Sales</button>/button>/div>/div>/section>/div>Footer/ />
 export default PerformanceOptimizationsPage;
       </div>
   )
+=======
+import React from 'react';
+
+interface PerformanceOptimizationsProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
-export default PerformanceOptimizationsPage;
-}
+
+const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceOptimizations;

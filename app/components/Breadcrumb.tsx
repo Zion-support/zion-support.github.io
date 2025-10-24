@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import { Link from 'next/link';
 import { usePathname     } from 'next/navigation';
@@ -39,3 +40,21 @@ clipRule="evenodd"
               </li>/ol>/div>/nav>;
 export default Breadcrumb; }
 }}
+=======
+import React from 'react';
+
+interface BreadcrumbProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Breadcrumb;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

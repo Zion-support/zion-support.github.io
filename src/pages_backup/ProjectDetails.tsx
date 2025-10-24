@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -75,3 +75,16 @@ go wrong! 🤖
 ,}
 export default ProjectDetailsPage;
 }
+=======
+
+const ProjectDetails: React.FC = () => {
+  return (
+    <div className="project-details">
+      <h1>Project Details</h1>
+      <p>Detailed information about the project.</p>
+    </div>
+  );
+};
+
+export default ProjectDetails;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

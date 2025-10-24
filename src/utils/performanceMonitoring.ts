@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Advanced Performance Monitoring System
@@ -457,3 +458,19 @@ recommendations.push('Improve TTFB by optimizing server response time and using 
   return recommendations
 }</T>
 }}};
+=======
+export const performanceMonitoring = {
+  startTiming: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(`${name}-start`);
+    }
+  },
+  
+  endTiming: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(`${name}-end`);
+      performance.measure(name, `${name}-start`, `${name}-end`);
+    }
+  }
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

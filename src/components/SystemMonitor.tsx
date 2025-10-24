@@ -1,8 +1,5 @@
-'use client'
-:all-pages-backup/components/SystemMonitor.tsx;
-import Footer from './Footer';
-import Navigation from './Navigation';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { Brain     } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
@@ -93,3 +90,20 @@ export default SystemMonitorPage;
 {}
 export default SystemMonitorPage;
 }
+=======
+
+interface SystemMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SystemMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

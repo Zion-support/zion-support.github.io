@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react';
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
@@ -79,3 +79,20 @@ export default EnhancedAccessibilityEnhancerPage;        <section className="py-
 export default EnhancedAccessibilityEnhancerPage; }
 </ul>
 }
+=======
+
+interface EnhancedAccessibilityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedAccessibilityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

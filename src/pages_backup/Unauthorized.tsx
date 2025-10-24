@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -75,3 +75,16 @@ go wrong! 🤖
 ,}
 export default UnauthorizedPage;
 }
+=======
+
+const Unauthorized: React.FC = () => {
+  return (
+    <div className="unauthorized">
+      <h1>Unauthorized Access</h1>
+      <p>You don't have permission to access this resource.</p>
+    </div>
+  );
+};
+
+export default Unauthorized;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

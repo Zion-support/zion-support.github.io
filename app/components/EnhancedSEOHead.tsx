@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const EnhancedSEOHead: React.FC = () => {
 return (
     <div>Helmet />
@@ -36,5 +37,21 @@ Join thousands of businesses already using EnhancedSEOHead to transform their op
 Start Your Free Trial</button>/button>/div>/section>/div>/Footer>/div>
   )
 ,}
-export default EnhancedSEOHead;
+=======
+import React from 'react';
+
+interface EnhancedSEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default EnhancedSEOHead;

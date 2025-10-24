@@ -1,6 +1,5 @@
-'use client'
-:all-pages-backup/components/SecurityEnhancer.tsx;
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -113,6 +112,20 @@ Contact Sales</button>/button>/div>/div>/section>/div>Footer/ />
   ),}
 export default SecurityEnhancerPage;
   )
+=======
+
+interface SecurityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
 }
-export default SecurityEnhancerPage;
-}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SecurityEnhancer;

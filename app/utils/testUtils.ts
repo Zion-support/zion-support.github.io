@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Testing Utilities
@@ -256,3 +257,19 @@ retryWithBackoff;
 measureExecutionTime
 };
 }
+=======
+export const testUtils = {
+  createMockUser: () => ({
+    id: '1',
+    name: 'Test User',
+    email: 'test@example.com'
+  }),
+  
+  createMockService: () => ({
+    id: '1',
+    name: 'Test Service',
+    description: 'A test service',
+    price: 99
+  })
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

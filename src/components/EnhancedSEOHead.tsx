@@ -1,7 +1,5 @@
-'use client'
-:all-pages-backup/components/EnhancedSEOHead.tsx;
-import { Helmet     } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -165,3 +163,20 @@ export default SEOHead;
 }
 export default SEOHead;
 }
+=======
+
+interface EnhancedSEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

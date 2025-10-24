@@ -1,18 +1,7 @@
-'use client'
-:all-pages-backup/components/PerformanceDashboard.tsx;
 import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
-import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp     } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp     } from 'lucide-react';
+
 interface PerformanceDashboardProps {
+<<<<<<< HEAD
 className?: string
 }
 }
@@ -21,5 +10,18 @@ return (</PerformanceDashboardProps>,
     <div className={className} /></div>h2>PerformanceDashboard</h2>p>This component is under construction.</p>/div>
   )
 }
-export default PerformanceDashboard;
+=======
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
+export default PerformanceDashboard;

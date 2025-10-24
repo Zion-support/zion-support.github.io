@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function GenericServicePage() {
@@ -17,3 +17,20 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
+=======
+
+interface GenericServicePageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const GenericServicePage: React.FC<GenericServicePageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default GenericServicePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

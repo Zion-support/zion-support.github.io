@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Performance Metrics Utility
@@ -39,8 +40,16 @@ private webVital,s: WebVitalsMetrics = {,}
 constructor() {;
 if(typeof,window !== 'undefined') {,;
 this.initializeObservers();,
+=======
+export const performanceMetrics = {
+  getLoadTime: () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      return performance.timing.loadEventEnd - performance.timing.navigationStart;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
     }
+    return 0;
   }
+<<<<<<< HEAD
 ;
 static getInstance(): PerformanceMetrics {;
 if(!PerformanceMetrics.instance) {;
@@ -359,3 +368,6 @@ export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 </T>
 ,}
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36

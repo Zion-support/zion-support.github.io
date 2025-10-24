@@ -1,12 +1,7 @@
-'use client'
-:all-pages-backup/components/OptimizedImage.tsx;
-import Footer from './Footer';
 import React from 'react';
-import { Helmet     } from 'react-helmet-async';
-import { ArrowRight, Brain     } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
-import { Phone, Mail, ArrowRight     } from 'lucide-react';
+
 interface OptimizedImageProps {
+<<<<<<< HEAD
   className?: string
 }
 }
@@ -93,3 +88,18 @@ export default OptimizedImagePage;
 }
 export default OptimizedImagePage;
 }
+=======
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9a36
