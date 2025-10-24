@@ -38,10 +38,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -95,8 +92,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      console.log('Error report:', errorReport);
-      
+      // eslint-disable-next-line no-console
+      console.log('Error Report:', errorReport);
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -165,7 +162,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         console.error('Error reporting failed');
       });
   };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -173,7 +169,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
       const { retryCount, error, errorId } = this.state;
       const canRetry = (retryCount || 0) < this.maxRetries;
-
       return (
         <div className="error-boundary">
           <h2>Something went wrong</h2>
