@@ -1,4 +1,7 @@
 'use client'
+
+export const dynamic = 'force-dynamic';
+
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
