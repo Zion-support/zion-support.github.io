@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMonitorProps {
   performanceData?: any;
@@ -8,7 +9,7 @@ interface PerformanceMonitorProps {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    if (typeof window !== 'undefined') {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       const logMetric = (metric: any) => {
         if (process.env.NODE_ENV === 'development') {
           // eslint-disable-next-line no-console
@@ -20,10 +21,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
       getFCP(logMetric);
       getLCP(logMetric);
       getTTFB(logMetric);
-    }
+    });
 
     // Monitor performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if ('performance' in window) {
       window.addEventListener('load', () => {
         setTimeout(() => {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -43,7 +44,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
     }
 
     // Monitor memory usage
-    if (typeof window !== 'undefined' && 'memory' in performance) {
+    if ('memory' in performance) {
       const memory = (performance as any).memory;
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
