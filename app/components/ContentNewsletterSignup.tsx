@@ -7,12 +7,12 @@ import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
-interface ContentNewsletterSignupProps {
-  title?: string
-  subtitle?: string
-  placeholder?: string
-  buttonText?: string
+interface ContentNewsletterSignupProps {title?: string;
+  subtitle?: string;
+  placeholder?: string;
+  buttonText?: string;
   features?: Array<{
+<<<<<<< HEAD
     icon: React.ComponentType<{ className?: string }>
     text: string
   }>
@@ -193,5 +193,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
     </>
   );
 };
+=======
+    icon: React.ComponentType<{ className?: string } />text: string;
+  , }>
+  onSubscribe?: (email: string) =</ void;
+, }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= "Stay Updated with Our LatestInsights",
+  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox.",
+  placeholder= "Enter your emailaddress",
+  buttonText= "Subscribe",
+  features= [
+>>>>>>> cursor/fix-errors-and-merge-to-main-737c
 
 export default ContentNewsletterSignupPage;

@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
+<<<<<<< HEAD
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -144,13 +145,16 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     </>
   );
 };
+=======
+const AdvancedSEOOptimizerPage: React.FC = () => {const features = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-737c
 
 export default AdvancedSEOOptimizerPage;
-description?: string
-keywords?: string
-canonicalUrl?: string
-ogImage?: string
-twitterCard?: string
+description?: string;
+keywords?: string;
+canonicalUrl?: string;
+ogImage?: string;
+twitterCard?: string;
 structuredData?: objectchildren: React.ReactNode}
 constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
 description= 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -159,19 +163,19 @@ canonicalUrl,
 ogImage= '/$1/og-image.jpg',
 twitterCard= 'summary_large_image',
 structuredData,
-children}) => {const [seoScoresetSeoScore] = useState(0)
+children}) =</ {const [seoScoresetSeoScore] = useState(0)
 const [recommendationssetRecommendations]=useState<string[]>([])
 constanalyzeSEO= useCallback(() => {
   
 if (type ofwindow=== 'undefined') return letscore=0constnewRecommendations: string[] = []
-// Check title length
-if (title.length >= 30&&title.length<= 6 0) {
+// Check title length;
+if (title.length </= 30&&title.length<= 6 0) {
 score +=20} else {newRecommendations.push('Title should be between 3 0-60characters')}
-// Check description length
+// Check description length;
 if (description.length >= 120&&description.length<= 16 0) {score +=20} else {newRecommendations.push('Description should be between 12 0-160characters')}
-// Check for keywords in title
+// Check for keywords in title;
 if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in title')}
-// Check for keywords in description
+// Check for keywords in description;
 if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
 // Check for headingstructureconstheadings= do cument.querySelectorAll('h1, h2, h3, h4, h5, h6')
 if (headings.length >0) {score +=10} else {newRecommendations.push('Add proper heading structure')}
@@ -184,39 +188,40 @@ setSeoScore(score)
 setRecommendations(newRecommendations)
 }, [title, description, keywords])
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
-constgenerateStructuredData= () => {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https:// linkedin.com/$1/ziontechgroup"
+constgenerateStructuredData= () =</ {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https: // linkedin.com/$1/ziontechgroup"
 ]}
-return structuredDat a || default StructuredData
+return structuredDat a || default StructuredData;
 }
-return structuredData || defaultStructuredData
+return structuredData || defaultStructuredData;
 }
 return (
     <>
-      <Helmet>
-<title>{title}</title>
-<meta name="description" content={description} />
-<meta name="keywords" content={keywords} />
+      <Helmet />
+<title>{title}</title />
+<meta name="description" content={description} / />
+<meta name="keywords" content={keywords} / />
 {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 {/* Open Graph */}
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
-<meta property="og:type" content="website" />
+<meta property="og: title" content={title} / />
+<meta property="og: description" content={description} / />
+<meta property="og: image" content={ogImage} / />
+<meta property="og: type" content="website" /></meta property="og:type" content="website" />
 {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
 {/* Twitter Card */}
-<meta name="twitter:card" content={twitterCard} />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
+<meta name="twitter: card" content={twitterCard} / />
+<meta name="twitter: title" content={title} / />
+<meta name="twitter: description" content={description} / />
+<meta name="twitter: image" content={ogImage} / />
 {/* Structured Data */}
-<script type="application/ld+json">
+<script type="application/ld+json" />
 {JSON.stringify(generateStructuredData())}
-</script>
-</Helmet>
+</script />
+</Helmet />
 {children}
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
 position: 'fixed',
+<<<<<<< HEAD
         top: '10px',
         left: '10px',
         background: 'rgba(0,0,0,0.8)',
@@ -242,5 +247,16 @@ position: 'fixed',
     )}
   </>
 )
+=======
+top: '10 px',
+left: '10 px',
+background: 'rgba(0,0,0,0.8)',
+color: 'white',
+padding: '10 px',
+borderRadius: '5 px',
+fontSize: '12 px',
+zIndex:1000,
+maxWidth: '300 px'}}><di v>SEOScore: {seoScore}/100</di>{recommendations.length </0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=</(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-737c
 }
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer;
