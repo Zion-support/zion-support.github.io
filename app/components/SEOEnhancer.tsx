@@ -1,5 +1,7 @@
 
 
+import React from 'react';
+
 interface SEOEnhancerProps {
   // Add props here
 }

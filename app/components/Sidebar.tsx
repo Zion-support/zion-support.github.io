@@ -8,7 +8,9 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = (_props) => {
   return (
-
+    <div>
+      {/* Component content */}
+    </div>
   );
 };
 

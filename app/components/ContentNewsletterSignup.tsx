@@ -9,7 +9,8 @@ interface ContentNewsletterSignupProps {
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (_props) => {
   return (
-
+    <div>
+      {/* Component content */}
     </div>
   );
 };
