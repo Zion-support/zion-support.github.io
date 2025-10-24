@@ -16,16 +16,11 @@ export default function AccessibilityEnhancer() {
         left: 6px;
         background: #2563eb;
         color: white;
-<<<<<<< HEAD
-        padding: 8px;
-=======
         padding: 8px 16px;
->>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
         text-decoration: none;
         border-radius: 4px;
         z-index: 1000;
         transition: top 0.3s;
-<<<<<<< HEAD
       `;
       
       skipLink.addEventListener('focus', () => {
@@ -45,33 +40,6 @@ export default function AccessibilityEnhancer() {
       style.textContent = `
         *:focus {
           outline: 2px solid #2563eb !important;
-=======
-      `
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px'
-      })
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px'
-      })
-      
-      document.body.insertBefore(skipLink, document.body.firstChild)
-    }
-
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
-      const style = document.createElement('style')
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #3b82f6 !important;
->>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
-          outline-offset: 2px !important;
-        }
-        
-        .focus-visible:focus {
-<<<<<<< HEAD
-          outline: 2px solid #2563eb !important;
           outline-offset: 2px !important;
         }
       `;
@@ -81,90 +49,42 @@ export default function AccessibilityEnhancer() {
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
+      if (main && !main.getAttribute('id')) {
         main.id = 'main-content';
+        main.setAttribute('role', 'main');
       }
 
       const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
+      if (header) {
         header.setAttribute('role', 'banner');
       }
 
       const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
+      if (footer) {
         footer.setAttribute('role', 'contentinfo');
       }
 
       const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
+      if (nav) {
         nav.setAttribute('role', 'navigation');
       }
     };
 
-    // Add keyboard navigation
+    // Add keyboard navigation support
     const addKeyboardNavigation = () => {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
+        // Skip to main content with Enter key
+        if (e.key === 'Enter' && e.target === document.querySelector('a[href="#main-content"]')) {
+          const main = document.getElementById('main-content');
+          if (main) {
+            main.focus();
+            main.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       });
-
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
-      });
     };
 
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-contrast: high) {
-          * {
-            border-color: currentColor !important;
-          }
-          
-          .bg-gradient-to-r {
-            background: linear-gradient(90deg, #000 0%, #333 100%) !important;
-          }
-          
-          .text-gray-300 {
-            color: #fff !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Add reduced motion support
-    const addReducedMotionSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-reduced-motion: reduce) {
-          *,
-          *::before,
-          *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Initialize all enhancements
-    addSkipLink();
-    addFocusIndicators();
-    addAriaLandmarks();
-    addKeyboardNavigation();
-    addHighContrastSupport();
-    addReducedMotionSupport();
-
-    // Add announcement region for screen readers
+    // Add screen reader announcements
     const addAnnouncementRegion = () => {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -174,72 +94,21 @@ export default function AccessibilityEnhancer() {
       document.body.appendChild(announcement);
     };
 
-    addAnnouncementRegion();
-
-  }, []);
-
-  return null;
-=======
-          outline: 2px solid #3b82f6 !important;
-          outline-offset: 2px !important;
-        }
-      `
-      document.head.appendChild(style)
-    }
-
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main')
-      if (main && !main.getAttribute('id')) {
-        main.id = 'main-content'
-        main.setAttribute('role', 'main')
-      }
-
-      const header = document.querySelector('header')
-      if (header) {
-        header.setAttribute('role', 'banner')
-      }
-
-      const footer = document.querySelector('footer')
-      if (footer) {
-        footer.setAttribute('role', 'contentinfo')
-      }
-
-      const nav = document.querySelector('nav')
-      if (nav) {
-        nav.setAttribute('role', 'navigation')
-      }
-    }
-
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
-        // Skip to main content with Enter key
-        if (e.key === 'Enter' && e.target === document.querySelector('a[href="#main-content"]')) {
-          const main = document.getElementById('main-content')
-          if (main) {
-            main.focus()
-            main.scrollIntoView({ behavior: 'smooth' })
-          }
-        }
-      })
-    }
-
     // Initialize accessibility enhancements
-    addSkipLink()
-    addFocusStyles()
-    addAriaLandmarks()
-    addKeyboardNavigation()
+    addSkipLink();
+    addFocusIndicators();
+    addAriaLandmarks();
+    addKeyboardNavigation();
+    addAnnouncementRegion();
 
     // Cleanup
     return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]')
+      const skipLink = document.querySelector('a[href="#main-content"]');
       if (skipLink) {
-        skipLink.remove()
+        skipLink.remove();
       }
-    }
-  }, [])
+    };
+  }, []);
 
-  return null
->>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
+  return null;
 }
