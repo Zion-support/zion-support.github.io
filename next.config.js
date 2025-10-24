@@ -4,6 +4,12 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
   
+  // Disable static generation to avoid server component issues
+  output: 'export',
+  distDir: 'dist',
+  trailingSlash: true,
+  
+  
   // Image optimization
   images: {
     unoptimized: true,

@@ -1,1 +1,8 @@
-// Conflict resolved: taking HEAD version
+export default function aicrmoptimizerPage() {
+  return (
+    <div>
+      <h1>Ai crm optimizer</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+}
