@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
     setIsOpen(false)
     setAiServicesOpen(false)
     setItServicesOpen(false)
-    setMicroSaasOpen(false)
+    _setMicroSaasOpen(false)
   }, [])
 
   const aiServices = [

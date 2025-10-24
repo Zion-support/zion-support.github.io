@@ -24,7 +24,7 @@ const PerformanceMonitor: React.FC = () => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
-    const handleMetric = (metric: any) => {
+    const handleMetric = (metric: { name: string; value: number; id: string }) => {
       setMetrics(prev => ({
         ...prev,
         [metric.name]: metric.value,
