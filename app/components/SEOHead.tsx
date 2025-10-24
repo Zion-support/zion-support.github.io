@@ -8,6 +8,7 @@ interface SEOHeadProps {
   keywords?: string;
   ogImage?: string;
   canonical?: string;
+  structuredData?: any;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
