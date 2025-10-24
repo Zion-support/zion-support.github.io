@@ -21,7 +21,7 @@ const NotFound = () => {
               404
             </div>
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
-              <AlertTriangle className="w-6 h-6 text-red-400"  />
+              <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
           {/* Error Message */}
@@ -29,8 +29,8 @@ const NotFound = () => {
             Page Not Found
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Oops! The page you're looking for seems to have vanished into the digital void. 
-            Don't worry, even our AI can't predict everything!
+            Oops! The page you&apos;re looking for seems to have vanished into the digital void. 
+            Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,7 +38,7 @@ const NotFound = () => {
               href="/"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
-              <Home className="w-5 h-5 mr-2"  />
+              <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
             
@@ -58,14 +58,14 @@ const NotFound = () => {
               Refresh
             </button>
           </div>
-          "
+          
           <div className="mt-12">
             <p className="text-gray-400 mb-4">Looking for something specific?</p>
             <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />"
-              <input"
-                type="text""
-                placeholder="Search our services...""
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search our services..."
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
@@ -83,13 +83,13 @@ const NotFound = () => {
             <p className="text-gray-400 mb-6">Popular pages:</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Services"
+                Services
               </Link>
               <Link href="/about" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                About Us"
+                About Us
               </Link>
               <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Contact"
+                Contact
               </Link>
               <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Blog
