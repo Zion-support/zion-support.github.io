@@ -9,7 +9,7 @@ interface SEOEnhancerProps {
   twitterCard?: string
   structuredData?: object
   children: React.ReactNode
-
+}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',

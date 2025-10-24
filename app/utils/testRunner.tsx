@@ -48,7 +48,7 @@ export const createMock = <T,>(defaultValue: T): any => {
 };
 
 export const mockFunction = <T extends (..._args: any[]) => any,>(
-  implementation?: T
+  _implementation?: T
 ): any => {
   return (() => {}) as any;
 };

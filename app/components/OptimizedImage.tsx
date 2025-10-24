@@ -13,7 +13,7 @@ interface OptimizedImageProps {
   quality?: number
   placeholder?: 'empty' | 'blur'
   blurDataURL?: string
-
+}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,

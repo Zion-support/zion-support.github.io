@@ -8,7 +8,7 @@ interface OptimizedLoadingSpinnerProps {
   className?: string
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean
-
+}
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
   size = 'md',

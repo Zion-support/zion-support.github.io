@@ -1,8 +1,5 @@
-import React from 'react';
-
-'use client';
-
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react'
 
 interface EnhancedAccessibilityEnhancerProps {
   children: React.ReactNode
@@ -11,7 +8,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableHighContrast?: boolean
   enableFocusManagement?: boolean
   enableVoiceNavigation?: boolean
-
+}
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   children,
@@ -40,17 +37,17 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     
     if (isHighContrast) {
       document.documentElement.classList.add('high-contrast')
-    
+    }
     
     if (isReducedMotion) {
       document.documentElement.classList.add('reduced-motion')
-    
+    }
 
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation')
-      
+      }
       
       // Add skip links functionality
       if (event.key === 'Enter' && event.target instanceof HTMLElement) {
@@ -60,9 +57,9 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           if (target) {
             target.focus()
             target.scrollIntoView({ behavior: 'smooth' })
-          
-        
-      
+          }
+        }
+      }
     }
 
     const handleMouseDown = () => {
@@ -91,40 +88,40 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   const toggleVoiceNavigation = () => {
     if (enableVoiceNavigation && 'speechSynthesis' in window) {
       setIsVoiceEnabled(!isVoiceEnabled)
-    
+    }
   }
 
   return (
-    <div className="accessibility-enhanced"></div>
+    <div className="accessibility-enhanced">
       <div 
         className="accessibility-controls" 
-        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }
-      ></div>
+        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
+      >
         <button
-          onClick={toggleHighContrast
+          onClick={toggleHighContrast}
           className="accessibility-button"
           aria-label="Toggle high contrast"
         >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
         
-        <div className="font-size-controls"></div>
+        <div className="font-size-controls">
           <button
-            onClick={() => changeFontSize('small')
+            onClick={() => changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
             A
           </button>
           <button
-            onClick={() => changeFontSize('medium')
+            onClick={() => changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
             A
           </button>
           <button
-            onClick={() => changeFontSize('large')
+            onClick={() => changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"
           >
@@ -134,19 +131,17 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
         {enableVoiceNavigation && (
           <button
-            onClick={toggleVoiceNavigation
+            onClick={toggleVoiceNavigation}
             className="accessibility-button"
             aria-label="Toggle voice navigation"
           >
-            {isVoiceEnabled ? '🔊' : '🔇'
+            {isVoiceEnabled ? '🔊' : '🔇'}
           </button>
-        )
+        )}
       </div>
-      {children
+      {children}
     </div>
   )
 }
 
-}
-
-export default EnhancedAccessibilityEnhancer;}
+export default EnhancedAccessibilityEnhancer

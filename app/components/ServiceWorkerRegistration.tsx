@@ -11,7 +11,7 @@ interface ServiceWorkerRegistrationProps {
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
   onUpdateInstalled,
-  onError,
+  onError: _onError = () => {},
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -46,12 +46,12 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
         });
 
       } catch (error) {
-        onError?.(error as Error);
+        _onError?.(error as Error);
       }
     };
 
     registerServiceWorker();
-  }, [onUpdateAvailable, onUpdateInstalled, onError]);
+  }, [onUpdateAvailable, onUpdateInstalled, _onError]);
 
   return null;
 };

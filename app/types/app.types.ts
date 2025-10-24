@@ -4,6 +4,8 @@ export interface User {
   email: string
   name: string
   role: "admin" | "user" | "guest"
+}
+
 export interface Service {
   id: string
   title: string
@@ -14,15 +16,19 @@ export interface Service {
   pricing: {
     basic: number
     pro: number
-    enterprise: number}
+    enterprise: number
+  }
   benefits: string[]
   useCases: string[]
   marketPrice: string
   contactInfo: {
     phone: string
     email: string
-    website: string}
+    website: string
+  }
   link: string
+}
+
 export interface ContactFormData {
   name: string
   email: string

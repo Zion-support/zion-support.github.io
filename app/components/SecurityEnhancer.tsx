@@ -2,7 +2,7 @@
 
 interface SecurityEnhancerProps {
   // Add props here
-
+}
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
   return (

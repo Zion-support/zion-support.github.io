@@ -7,7 +7,7 @@ interface FuturisticHeroProps {
   subtitle?: string
   ctaText?: string
   ctaLink?: string
-
+}
 
 const FuturisticHero: React.FC<FuturisticHeroProps> = ({
   title = "Transform Your Business with AI",

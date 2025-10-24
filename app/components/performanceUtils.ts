@@ -6,6 +6,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number | null
   timeToInteractive: number | null
   totalBlockingTime: number | null
+}
 
 // Global performance monitoring utilities
 export const performanceUtils = {
@@ -13,22 +14,27 @@ export const performanceUtils = {
   mark: (name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name)
+    }
   },
 
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
-        performance.measure(name, startMark, endMark)} else {
+        performance.measure(name, startMark, endMark)
+      } else {
         performance.measure(name, startMark)
-    
+      }
+    }
   },
 
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return type ? performance.getEntriesByType(type) : performance.getEntries()
-    return []},
+    }
+    return []
+  },
 
   // Clear performance entries
   clearEntries: (type?: string) => {
@@ -56,8 +62,9 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
         cumulative_layout_shift: metrics.cumulativeLayoutShift,
         time_to_interactive: metrics.timeToInteractive,
         total_blocking_time: metrics.totalBlockingTime
-      
-    })
+      })
+    }
+  }
 }
 
 declare global {

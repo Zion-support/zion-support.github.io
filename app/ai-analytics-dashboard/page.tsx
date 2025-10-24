@@ -3,7 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Brain, BarChart, TrendingUp, Shield, Zap, Globe } from 'lucide-react';
+import { Brain, BarChart, TrendingUp, Shield, Zap } from 'lucide-react';
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [

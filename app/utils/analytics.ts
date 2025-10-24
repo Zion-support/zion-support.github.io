@@ -8,6 +8,7 @@ interface AnalyticsEvent {
   value?: number
   timestamp?: number
   custom_parameters?: Record<string, unknown>
+}
 
 class Analytics {
   private static instance: Analytics
@@ -16,7 +17,9 @@ class Analytics {
   static getInstance(): Analytics {
     if (!Analytics.instance) {
       Analytics.instance = new Analytics()
+    }
     return Analytics.instance
+  }
 
   // Track custom events
   track(event: AnalyticsEvent): void {
@@ -105,7 +108,7 @@ class Analytics {
         value: event.value,
         ...event.custom_parameters
       })
-  
+  }}}}}}}}
 
 
 export const analytics = Analytics.getInstance()

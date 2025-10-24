@@ -7,7 +7,7 @@ interface UserExperienceEnhancerProps {
   enableFocusManagement?: boolean
   enableKeyboardNavigation?: boolean
   enableAccessibility?: boolean
-
+}
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children,

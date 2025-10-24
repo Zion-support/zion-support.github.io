@@ -6,7 +6,7 @@ interface LazyImageProps {
   placeholder?: string
   onLoad?: () => void
   onError?: () => void
-
+}
 
 const LazyImage: React.FC<LazyImageProps> = ({
   src,

@@ -9,6 +9,7 @@ export interface PerformanceMetrics {
   firstInputDelay: number
   timeToInteractive: number
   firstMeaningfulPaint: number
+}
 
 export interface ErrorContext {
   url?: string

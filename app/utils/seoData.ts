@@ -6,6 +6,7 @@ export interface StructuredData {
   url: string
   logo?: string
   sameAs?: string[]
+}
 
 export interface SEOData {
   title: string

@@ -13,7 +13,7 @@ interface NavigationBackupProps {
   }>
   ctaText?: string
   ctaHref?: string
-
+}
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
   logo,

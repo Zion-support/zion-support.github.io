@@ -5,7 +5,7 @@ interface ServiceCardSkeletonProps {
   showButton?: boolean
   lines?: number
   className?: string
-
+}
 
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
   showImage = true,

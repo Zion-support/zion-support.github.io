@@ -4,7 +4,7 @@ interface LoadingSkeletonProps {
   lines?: number
   height?: string
   width?: string
-
+}
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   className = '',

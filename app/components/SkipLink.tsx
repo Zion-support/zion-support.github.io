@@ -2,7 +2,7 @@ import React from 'react';
 
 interface SkipLinkProps {
   // Add props here
-
+}
 
 const SkipLink: React.FC<SkipLinkProps> = (_props) => {
   return (

@@ -5,12 +5,12 @@ export interface ApiResponse<T = unknown> {
   status: number
   statusText: string
   headers: Record<string, string>
-
+}
 
 export interface RequestOptions extends globalThis.RequestInit {
   timeout?: number
   retries?: number
-
+}
 
 export class ApiClient {
   private baseURL: string
@@ -23,11 +23,11 @@ export class ApiClient {
       retries: 3,
       ...options,
     }
-  
+  }
 
   private async makeRequest<T>(
     url: string,
-    options: RequestOptions = {
+    options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const { timeout = 30000, retries: _retries = 3, ...fetchOptions } = {
       ...this.defaultOptions,
@@ -59,8 +59,8 @@ export class ApiClient {
     } catch (error) {
       clearTimeout(timeoutId)
       throw error
-    
-  
+    }
+  }
 
   async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {

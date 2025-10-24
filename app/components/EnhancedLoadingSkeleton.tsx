@@ -6,7 +6,7 @@ interface EnhancedLoadingSkeletonProps {
   showImage?: boolean
   height?: string
   className?: string
-
+}
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   lines = 3,
