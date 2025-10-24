@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -48,3 +49,6 @@ beforeAll(() => {
 afterAll(() => {
   console.error = originalError;
 });
+=======
+import '@testing-library/jest-dom'
+>>>>>>> origin/main

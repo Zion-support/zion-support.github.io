@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -46,6 +47,22 @@ const Navigation = () => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
+=======
+'use client'
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { ArrowRight, Brain, Menu, X } from 'lucide-react'
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ]
+>>>>>>> origin/main
 
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -56,6 +73,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+<<<<<<< HEAD
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
@@ -112,11 +130,50 @@ const Navigation = () => {
             </Link>
           </div>
 
+=======
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <Brain className="h-8 w-8 text-blue-600" />
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+
+>>>>>>> origin/main
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
               className="text-gray-300 hover:text-white p-2"
+=======
+              className="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+>>>>>>> origin/main
             >
               {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
             </button>
@@ -125,6 +182,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => {
@@ -162,18 +220,38 @@ const Navigation = () => {
               <div className="pt-4 border-t border-slate-700">
                 <Link
                   to="/contact"
+=======
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+>>>>>>> origin/main
                   onClick={() => setIsOpen(false)}
                   className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
                 >
                   Get Started
                 </Link>
+<<<<<<< HEAD
               </div>
+=======
+              ))}
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-4"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+              </Link>
+>>>>>>> origin/main
             </div>
           </div>
         )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
