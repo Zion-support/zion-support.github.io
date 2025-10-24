@@ -21,14 +21,14 @@ constAIMegaTrends2025202 6: React.FC= () =>{return (
                 operate. Organizations that embrace these mega trends will gain significant
                 competitive advantages and transform their operations for the future.
               </p>
-              <div className="bg-indigo-50 p-6 rounded-lg text-center">
+              <div className="bg-indigo-50 p-6 rounded-lg text-center"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
                   Prepare for the AI Revolution
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Join leading enterprises embracing the AI mega trends of 2025-2026
                 </p>
-                <div className="space-x-4">
+                <div className="space-x-4"></div>
                   <a href="/contact"
                     className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
                   >

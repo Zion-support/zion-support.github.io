@@ -1,9 +1,11 @@
 'use client'
-<<<<<<< HEAD
+import Footer from './Footer'
+import Navigation from './Navigation'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 import { Home } from 'lucide-react'
-=======
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -50,18 +52,18 @@ const ErrorHandlerPage: React.FC = () => {
     <>
       
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+        <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
+          <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               ErrorHandler
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced ErrorHandler solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -84,7 +86,7 @@ const ErrorHandlerPage: React.FC = () => {
         timestamp: new Date().toISOString()
       }
       // Send to your error reporting service here
-      // console.log('Error data prepared for reporting:', errorData)
+      // // console.log('Error data prepared for reporting:', errorData)
     } catch {
       // Error reporting failed
     }
@@ -106,9 +108,9 @@ const ErrorHandlerPage: React.FC = () => {
      }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
+            <div className="flex justify-center mb-4"></div>
               <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
@@ -122,18 +124,18 @@ const ErrorHandlerPage: React.FC = () => {
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
                   Error Details (Development)
                 </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto">
-                  <div className="mb-2">
+                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto"></div>
+                  <div className="mb-2"></div>
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
                   {this.state.error.stack && (
-                    <div>
+                    <div></div>
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap"></p>{this.state.error.stack}</pre>
                     </div>
                   )}
                   {this.state.errorInfo?.componentStack && (
-                    <div>
+                    <div></div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap"></p>{this.state.errorInfo.componentStack}</pre>
                     </div>
@@ -154,17 +156,17 @@ const ErrorHandlerPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -181,7 +183,6 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
                className="flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors"
               ></
                 onClick={this.handleRetry}
@@ -203,17 +204,17 @@ const ErrorHandlerPage: React.FC = () => {
 }
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -223,13 +224,13 @@ const ErrorHandlerPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>

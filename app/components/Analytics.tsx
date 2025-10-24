@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from "react"
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -8,10 +5,8 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
+interface AnalyticsProps {
+  className?: string;
 }
 
 const Analytics: React.FC = () => {
@@ -30,9 +25,6 @@ const Analytics: React.FC = () => {
   return null; // Analytics component doesn't render anything
 }
 
-<<<<<<< HEAD
-export default Analytics
-=======
   return (
     <>
       

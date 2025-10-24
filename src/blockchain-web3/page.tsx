@@ -1,4 +1,5 @@
-import React from 'react'
+"use client";
+import React from 'react';
 
 import { Coins } from 'lucide-react'
 import { CheckCircle, Star, Zap, Brain, Shield, Database, Helmet } from 'lucide-react'
@@ -10,132 +11,6 @@ import { Coins, CheckCircle, Star, Brain, Zap, Shield, Globe, Database, Code, He
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
-=======
-import {Coins, CheckCircle, Star, Zap, Brain, Database, Shield, Helmet, Globe, Globe} from 'lucide-react';;;
-constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
-    {
-      title: 'Smart Contract Development',
-      description: 'Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain applications.',
-      icon: '📜',
-      price: 'Starting at $8,00 0/project',
-      features: ['Solidity development', 'Smart contract auditing', 'Gas optimization', 'Security testing', 'Deployment & maintenance'],
-      benefits: ['Automate business processes', 'Reduce transaction costs', 'Ensure transparency and trust'],
-      marketPrice: '$1 5,00 0-5 0,00 0/project',
-      category: 'Smart Contracts',
-      technologies: ['Solidity', 'Vyper', 'Hardhat', 'Truffle', 'OpenZeppelin']
-   },
-    {title: 'DeFi Protocol Development',
-      description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.',
-      icon: '🏦',
-      price: 'Starting at $2 5,00 0/project',
-      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity mining', 'Cross-chain bridges'],
-      benefits: ['Enable decentralized finance', 'Reduce financial intermediaries', 'Increase financial inclusion'],
-      marketPrice: '$5 0,00 0-20 0,00 0/project',
-      category: 'DeFi',
-      technologies: ['Uniswap', 'Compound', 'Aave', 'Chainlink', 'Web3.js']
-   },
-    {title: 'NFT Marketplace Development',
-      description: 'Complete NFT marketplace solutions with minting, trading, and royalty management capabilities.',
-      icon: '🎨',
-      price: 'Starting at $1 5,00 0/project',
-      features: ['NFT minting', 'Marketplace functionality', 'Royalty management', 'Metadata storage', 'Payment integration'],
-      benefits: ['Monetize digital assets', 'Enable creator economy', 'Provide new revenue streams'],
-      marketPrice: '$3 0,00 0-10 0,00 0/project',
-      category: 'NFTs',
-      technologies: ['ERC-72 1', 'ERC-115 5', 'IPFS', 'OpenSea API', 'Web3 Integration']
-   },
-    {title: 'DAO Development & Governance',
-      description: 'Decentralized autonomous organizations with voting mechanisms and governance token systems.',
-      icon: '🗳️',
-      price: 'Starting at $1 2,00 0/project',
-      features: ['Governance token design', 'Voting mechanisms', 'Proposal systems', 'Treasury management', 'Multi-sig wallets'],
-      benefits: ['Enable decentralized governance', 'Increase community participation', 'Ensure transparent decision making'],
-      marketPrice: '$2 5,00 0-8 0,00 0/project',
-      category: 'DAOs',
-      technologies: ['Governance Tokens', 'Snapshot', 'Gnosis Safe', 'Aragon', 'Compound Governance']
-   },
-    {title: 'Blockchain Infrastructure',
-      description: 'Custom blockchain networks, sidechains, and layer2solutions for enterprise applications.',
-      icon: '⛓️',
-      price: 'Starting at $5 0,00 0/project',
-      features: ['Custom blockchain development', 'Consensus mechanisms', 'Node infrastructure', 'API development', 'Monitoring systems'],
-      benefits: ['Customize blockchain for specific needs', 'Improve scalability', 'Reduce transaction costs'],
-      marketPrice: '$10 0,00 0-50 0,00 0/project',
-      category: 'Infrastructure',
-      technologies: ['Substrate', 'Cosmos SDK', 'Hyperledger', 'Ethereum', 'Polkado t']
-   },
-    {title: 'Web3 Integration Services',
-      description: 'Integrate Web3 functionality into existing applications with wallet connections and blockchain interactions.',
-      icon: '🔗',
-      price: 'Starting at $5,00 0/project',
-      features: ['Wallet integration', 'Web3 authentication', 'Blockchain data fetching', 'Transaction handling', 'User onboarding'],
-      benefits: ['Modernize existing applications', 'Enable Web3 features', 'Improve user experience'],
-      marketPrice: '$1 0,00 0-3 0,00 0/project',
-      category: 'Web3 Integration',
-      technologies: ['MetaMask', 'WalletConnect', 'Web3.js', 'Ethers.js', 'React Web3']
-   },
-    {title: 'Cryptocurrency Exchange Development',
-      description: 'Secure, scalable cryptocurrency exchanges with advanced trading features and compliance tools.',
-      icon: '💱',
-      price: 'Starting at $4 0,00 0/project',
-      features: ['Trading engine', 'Order matching', 'KYC/AML integration', 'Security features', 'Mobile applications'],
-      benefits: ['Enable cryptocurrency trading', 'Generate trading fees', 'Provide liquidity'],
-      marketPrice: '$8 0,00 0-30 0,00 0/project',
-      category: 'Exchanges',
-      technologies: ['Matching Engine', 'Security Protocols', 'KYC Solutions', 'Mobile SDKs', 'API Development']
-   },
-    {title: 'Token Economics & Design',
-      description: 'Comprehensive tokenomics design including token distribution, utility, and economic models.',
-      icon: '💰',
-      price: 'Starting at $8,00 0/project',
-      features: ['Token utility design', 'Economic modeling', 'Vesting schedules', 'Inflation mechanisms', 'Governance integration'],
-      benefits: ['Create sustainable token economy', 'Align incentives', 'Ensure long-term value'],
-      marketPrice: '$1 5,00 0-5 0,00 0/project',
-      category: 'Tokenomics',
-      technologies: ['Economic Modeling', 'Token Standards', 'Vesting Contracts', 'Governance Systems']
-   },
-    {title: 'Blockchain Security Audits',
-      description: 'Comprehensive security audits for smart contracts, protocols, and blockchain applications.',
-      icon: '🔒',
-      price: 'Starting at $5,00 0/audit',
-      features: ['Smart contract auditing', 'Vulnerability assessment', 'Penetration testing', 'Code review', 'Security recommendations'],
-      benefits: ['Identify security vulnerabilities', 'Prevent exploits', 'Ensure code quality'],
-      marketPrice: '$1 0,00 0-5 0,00 0/audit',
-      category: 'Security',
-      technologies: ['Static Analysis', 'Dynamic Testing', 'Formal Verification', 'Security Tools']
-   },
-    {title: 'Cross-Chain Solutions',
-      description: 'Interoperability solutions enabling seamless asset and data transfer between different blockchains.',
-      icon: '🌉',
-      price: 'Starting at $2 0,00 0/project',
-      features: ['Cross-chain bridges', 'Asset wrapping', 'Interoperability protocols', 'Multi-chain wallets', 'Cross-chain DEXs'],
-      benefits: ['Enable blockchain interoperability', 'Increase liquidity', 'Reduce fragmentation'],
-      marketPrice: '$4 0,00 0-15 0,00 0/project',
-      category: 'Interoperability',
-      technologies: ['Polkado t', 'Cosmos', 'Chainlink', 'Wormhole', 'LayerZero']
-   },
-    {title: 'Metaverse Development',
-      description: 'Virtual worlds, avatars, and immersive experiences built on blockchain technology.',
-      icon: '🌐',
-      price: 'Starting at $3 0,00 0/project',
-      features: ['3 D virtual worlds', 'Avatar systems', 'Virtual real estate', 'In-world economies', 'VR/AR integration'],
-      benefits: ['Create immersive experiences', 'Enable virtual economies', 'Provide new engagement channels'],
-      marketPrice: '$6 0,00 0-25 0,00 0/project',
-      category: 'Metaverse',
-      technologies: ['Unity', 'Unreal Engine', 'WebXR', 'Blockchain Integration', 'NFT Standards']
-   },
-    {title: 'Blockchain Consulting & Strategy',
-      description: 'Strategic blockchain consulting and technology roadmap development for enterprise ado ption.',
-      icon: '💡',
-      price: 'Starting at $40 0/hour',
-      features: ['Blockchain strategy', 'Technology assessment', 'Use case identification', 'Implementation planning', 'Regulatory guidance'],
-      benefits: ['Navigate blockchain landscape', 'Make informed decisions', 'Ensure successful ado ption'],
-      marketPrice: '$60 0-1,50 0/hour',
-      category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management']
-    }
-  ]
-  const categories = [...new Set(blockchainServices.map(service => service.category))]
   return (
     <>
       <Helmet>
@@ -143,19 +18,19 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
         <meta name="description" content="Advanced blockchain and Web3 development services including DeFi, NFTs, smart contracts, and metaverse solutions." />
         <meta name="keywords" content="blockchain development, Web3, DeFi, NFTs, smart contracts, DAOs, cryptocurrency, metaverse" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50"></div>
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20"></section>
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Blockchain & Web3 Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
                 Build the future of decentralized applications with cutting-edge blockchain and Web3 solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                   Explore Web3 Solutions
                 </button>
@@ -167,9 +42,9 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
           </div>
         </section>
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+        <section className="py-16 bg-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our Blockchain Services?
               </h2>
@@ -177,30 +52,30 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
                 Leading blockchain expertise with proven track record in DeFi, NFTs, and Web3 applications
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              <div className="text-center"></div>
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <a className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
                 <p className="text-gray-600">Certified developers with deep blockchain expertise</p>
               </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center"></div>
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Shield className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security First</h3>
                 <p className="text-gray-600">Audited smart contracts and security best practices</p>
               </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center"></div>
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Zap className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Development</h3>
                 <p className="text-gray-600">Fast delivery with proven development methodologies</p>
               </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center"></div>
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Globe className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Future-Ready</h3>
@@ -211,9 +86,9 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
         </section>
         {/* Services by Category */}
         {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
+          <section key={category} className="py-16 bg-gray-50"></section>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+              <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Services
                 </h2>
@@ -221,24 +96,24 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
                   Specialized {category.toLowerCase()} solutions for the decentralized future
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {blockchainServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
+                      <div className="mb-4"></div>
+                        <div className="flex items-center justify-between mb-2"></div>
                           <span className="text-2xl font-bold text-purple-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-600 font-semibold"></div>
                           Save up to 50% vs market rates
                         </div>
                       </div>
-                      <div className="mb-4">
+                      <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
@@ -249,9 +124,9 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
                           ))}
                         </ul>
                       </div>
-                      <div className="mb-4">
+                      <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2"></div>
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
                               {tech}
@@ -259,7 +134,7 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
                           ))}
                         </div>
                       </div>
-                      <div className="mb-6">
+                      <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
@@ -280,9 +155,9 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
           </section>
         ))}
         {/* Blockchain Capabilities Showcase */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+        <section className="py-16 bg-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Blockchain Capabilities
               </h2>
@@ -290,33 +165,33 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
                 Comprehensive blockchain technologies and Web3 development expertise
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg"></div>
                 <a className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Secure, audited smart contracts for any use case</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg"></div>
                 <Coins className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">DeFi Protocols</h3>
                 <p className="text-gray-600">Decentralized finance solutions and protocols</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
                 <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security Audits</h3>
                 <p className="text-gray-600">Comprehensive security audits and testing</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
                 <Globe className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Web3 Integration</h3>
                 <p className="text-gray-600">Seamless Web3 integration for existing applications</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
                 <Database className="w-12 h-12 text-pink-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Infrastructure</h3>
                 <p className="text-gray-600">Custom blockchain networks and infrastructure</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
                 <Brain className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Token Economics</h3>
                 <p className="text-gray-600">Comprehensive tokenomics design and modeling</p>
@@ -325,15 +200,15 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
           </div>
         </section>
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Build the Future of Web3?
             </h2>
             <p className="text-xl mb-8 text-purple-100">
               Contact our blockchain experts for a free consultation and custom Web3 strategy
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
@@ -347,11 +222,12 @@ constBlockchainWeb3 Page: React.FC= () =>{constblockchainServices= [
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">
+            <div className="mt-8 text-sm text-purple-200"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       </div>
     </>
   )

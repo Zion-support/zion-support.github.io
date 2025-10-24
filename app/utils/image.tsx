@@ -87,7 +87,7 @@ if (hasError) {</ImageProps>
 return (</ImageProps>;}
 if (hasError) {}
 return (
-<div}
+    <div}
 if (hasError) {;}
 return(<div}
 'use client'
