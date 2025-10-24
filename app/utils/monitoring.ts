@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/utils/monitoring.ts
 // monitoring utility
 export const monitoring = () => {
@@ -8,6 +9,8 @@ export const monitoring = () => {
 export default monitoring;
 <<<<<<< HEAD:app/utils/monitoring.ts
 'use client';
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
 'use client'
 import { Download } from 'lucide-react'
 import Navigation from './Navigation'
@@ -95,8 +98,11 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD:app/utils/monitoring.ts
         }
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
         // // // console.error('Error setting up performance observers:', error)
       }
     }
@@ -106,8 +112,11 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
+<<<<<<< HEAD
 <<<<<<< HEAD:app/utils/monitoring.ts
             }
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
             // // // console.warn('Long task detected:', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
@@ -124,6 +133,7 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
+<<<<<<< HEAD
 <<<<<<< HEAD:app/utils/monitoring.ts
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {
@@ -134,6 +144,8 @@ class MonitoringService {
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
         }
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
           const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming
@@ -181,8 +193,11 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
+<<<<<<< HEAD
 <<<<<<< HEAD:app/utils/monitoring.ts
       }
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
       // // // console.log(`[Performance] ${name}:`, {
       //   value,
       //   rating,
@@ -203,7 +218,10 @@ class MonitoringService {
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:app/utils/monitoring.ts
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
     // // // console.error('[Error]', error)
     // Send to error tracking service (if configured)
   }
@@ -220,12 +238,15 @@ class MonitoringService {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
+<<<<<<< HEAD
 <<<<<<< HEAD:app/utils/monitoring.ts
         this.metrics.memory = {
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         }
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
         // // // console.log('[Memory]', {
         //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
@@ -238,6 +259,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
+<<<<<<< HEAD
 <<<<<<< HEAD:app/utils/monitoring.ts
         console.log('Performance metrics:', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
@@ -249,6 +271,8 @@ class MonitoringService {
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         });
         })
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
         // // // console.log('[Navigation Timing]', {
         //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
         //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,

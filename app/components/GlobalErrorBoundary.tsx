@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
@@ -93,3 +94,14 @@ class GlobalErrorBoundary extends Component<Props, State> {
 }
 
 export default GlobalErrorBoundary;
+=======
+import {CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
+    };
+  ];
+
+  const benefits=";"
+    'Gain competitive advantage with advanced technology'"
+            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            </div>
+          </div>"
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba

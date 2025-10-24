@@ -118,72 +118,72 @@ const AICybersecurityPage: React.FC = () => {
     }
   ]
   return (
-  <><SEOOptimizertitle=&quot;AI Cybersecurity Solutions - ZionTechGroup&quot;
-        description=&quot;Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats.&quot;
+  <><SEOOptimizertitle="AI Cybersecurity Solutions - ZionTechGroup"
+        description="Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats."
         keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']}
-        canonicalUrl=&quot;https://ziontechgroup.com/ai-cybersecurity&quot;
+        canonicalUrl="https://ziontechgroup.com/ai-cybersecurity"
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
-        <main className=&quot;pt-16&quot;>
+        <main className="pt-16">
           {/* Hero Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
-              <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Cybersecurity Solutions
               </h1>
-              <p className=&quot;text-xl md:text-2xl text-cyan-400 mb-8&quot;>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Protect your business with AI-powered security
               </p>
-              <p className=&quot;text-lg text-gray-300 mb-12 max-w-3xl mx-auto&quot;>
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                 Our AI-powered cybersecurity platform provides advanced threat detection,
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center space-x-2"
                 >
-                  <Phone className=&quot;w-5 h-5&quot; />
+                  <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+                  <Mail className="w-5 h-5" />
                   <span>Get Security Audit</span>
                 </a>
               </div>
               {/* Stats */}
-              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;></div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
                 {stats.map((stat, index) => (
-                  <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
-                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot;></div>
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
                       {stat.number}
                     </div>
-                    <div className=&quot;text-gray-300 font-medium&quot;>{stat.label}</div>
+                    <div className="text-gray-300 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
           </section>
           {/* Features Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
+          <section className="container mx-auto px-4 py-16"></section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Advanced Security Features
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
-                  <feature.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center space-x-2 text-sm text-cyan-400&quot;>
-                        <CheckCircle className=&quot;w-4 h-4&quot; />
+                      <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
+                        <CheckCircle className="w-4 h-4" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -193,26 +193,26 @@ const AICybersecurityPage: React.FC = () => {
             </div>
           </section>
           {/* Threats Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
+          <section className="container mx-auto px-4 py-16"></section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Protect Against All Threats
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               {threats.map((threat, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
-                  <threat.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{threat.title}</h3>
-                  <p className=&quot;text-gray-300&quot;>{threat.description}</p>
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                  <threat.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{threat.title}</h3>
+                  <p className="text-gray-300">{threat.description}</p>
                 </div>
               ))}
             </div>
           </section>
           {/* Pricing Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
+          <section className="container mx-auto px-4 py-16"></section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Simple, Transparent Pricing
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -220,11 +220,11 @@ const AICybersecurityPage: React.FC = () => {
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
                 }`}
                 >{plan.popular && (
-                  <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>Most Popular
+                  <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold"></className="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold">Most Popular
                     </spa></di>)}
-                <divclassName=&quot;text-centermb-6&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => (
-                   <likey={idx}className=&quot;flexitems-centerspace-x-3&quot;><CheckCircleclassName=&quot;w-5 h-5 text-cyan-400flex-shrink-0&quot; /><spanclassName=&quot;text-gray-300&quot;>{feature}</spa></l>))}
-                </u><ahref=&quot;tel:+13024640950&quot;
+                <divclassName="text-centermb-6"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><pclassName="text-gray-400mb-4">{plan.description}</p><divclassName="flexitems-baselinejustify-center"><spanclassName="text-4 xl font-boldtext-cyan-400">{plan.price}</spa><spanclassName="text-gray-400ml-1">{plan.period}</spa></di></di><ulclassName="space-y-3mb-8">{plan.features.map((featureidx) => (
+                   <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
+                </u><ahref="tel:+13024640950"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
@@ -238,28 +238,28 @@ const AICybersecurityPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 neon-text&quot;>
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Secure Your Business?
               </h2>
-              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+              <p className="text-xl text-gray-300 mb-8">
                 Join 3,000+ companies already protected by our AI cybersecurity platform
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2"
                 >
-                  <Phone className=&quot;w-5 h-5&quot; />
+                  <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
-                  <Mail className=&quot;w-5 h-5&quot; />
+                  <Mail className="w-5 h-5" />
                   <span>Get Security Audit</span>
                 </a>
               </div>

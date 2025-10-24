@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -89,6 +90,42 @@ const EnhancedSEOOptimizer: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
                   {feature.icon}
+=======
+import React from 'react';
+import {Helmet } from 'react-helmet-async';
+import {ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import {Phone, Mail, ArrowRight } from 'lucide-react';
+
+const EnhancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
+      title: 'AI-Powered Intelligence',;}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {icon: BarChart,;
+      title: 'Advanced Analytics',;}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {icon: Target,;
+      title: 'Precision Targeting',;}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {icon: TrendingUp,;
+      title: 'Growth Optimization',;}
+      description: 'Optimize your business growth with data-driven strategies.',}
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+"
+  const benefits=";"
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -131,6 +168,7 @@ const EnhancedSEOOptimizer: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -166,3 +204,9 @@ const EnhancedSEOOptimizer: React.FC = () => {
 };
 
 export default EnhancedSEOOptimizer;
+=======
+          </div>"
+            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            </div>
+          </div>"
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, CheckCircle, Settings, Target, Users, Calendar, BarChart, Shield } from 'lucide-react';
@@ -165,3 +166,12 @@ const FuturisticServiceCard: React.FC = () => {
 };
 
 export default FuturisticServiceCard;
+=======
+import {Helmet } from 'react-helmet-async';
+import {Brain } from 'lucide-react';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import {ArrowRight } from 'lucide-react';
+
+  const benefits=";"
+    'Proven track record of success'"
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba

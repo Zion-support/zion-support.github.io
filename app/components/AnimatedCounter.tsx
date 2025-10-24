@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -5,10 +6,17 @@ import { useState, useEffect } from 'react';
 interface AnimatedCounterProps {
   end: number;
   duration?: number;
+=======
+import React, {useEffect, useState, useRef } from 'react';
+import {useIntersectionObserver } from '../hooks/useIntersectionObserver';
+
+interface AnimatedCounterProps {}
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
   className?: string;
   prefix?: string;
   suffix?: string;
 }
+<<<<<<< HEAD
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ 
   end, 
@@ -54,3 +62,32 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 };
 
 export default AnimatedCounter;
+=======
+;
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({end,;
+  duration: "2000,";"
+  suffix: "'',";"}
+  prefix: "'',}";"
+  className="'',"
+}) => {const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);}
+  const [setNode, entry] = useIntersectionObserver({});
+    threshold: 0.5
+  });
+
+  useEffect(() => {if (entry?.isIntersecting && !isVisible) {}
+      setIsVisible(true)
+    }
+  }, [entry, isVisible]);
+
+  useEffect(() => {if (!isVisible) return;
+
+    let startTime: number;}
+    let animationFrame: number
+}"
+    const animate=";"
+  );
+};
+;</AnimatedCounterProps>
+export default AnimatedCounterPage;</AnimatedCounterProps>"
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba

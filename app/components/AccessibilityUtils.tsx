@@ -1,10 +1,10 @@
-&quot;use client&quot;
-import React from &quot;react&quot;
-
-interface AccessibilityUtilsProps {
+"use client""
+import React from "react";
+;
+interface AccessibilityUtilsProps {}
   className?: string;
 }
+;
+export default AccessibilityUtils;
 
-export default AccessibilityUtils
-
-export default AccessibilityUtilsPage;
+export default AccessibilityUtilsPage;"

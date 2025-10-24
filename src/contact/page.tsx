@@ -67,6 +67,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
 
 const Page = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">
@@ -75,6 +76,21 @@ const Page = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <p className="text-gray-600">
             This page is under construction. Please check back later.
+=======
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <Navigation />
+      <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
+        {/* Hero Section */}
+        <section className=&quot;text-center mb-16&quot;></section>
+          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
+            <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent&quot;>
+              Contact Us
+            </span>
+          </h1>
+          <p className=&quot;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
+            Ready to transform your business with cutting-edge AI and IT solutions?
+            Get in touch with our experts for a free consultation.
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
           </p>
         </section>
         <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;></div>
