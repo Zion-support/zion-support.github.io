@@ -1,30 +1,41 @@
+#!/usr/bin/env python3
+"""
+Fix incomplete page files that are missing their return statements and JSX content.
+"""
 
-'use client';
+import os
+import glob
+import re
 
-export const dynamic = 'force-dynamic';
-
-import React from 'react';
-import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const Page: React.FC = () => {
-  // Set document title for SEO
-  React.useEffect(() => {
-    document.title = 'Legal Document Manager - Zion Tech Group';
-  }, []);
-
-  return (
+def fix_incomplete_page(file_path):
+    """Fix an incomplete page file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if the file is incomplete (has const Page but no return statement)
+        if 'const Page: React.FC = () => {' in content and 'return (' not in content:
+            # Extract the title from the document.title line
+            title_match = re.search(r"document\.title = '([^']+)'", content)
+            if title_match:
+                title = title_match.group(1)
+                # Extract the service name from the title
+                service_name = title.replace(' - Zion Tech Group', '')
+                
+                # Create the complete page content
+                complete_content = content.replace(
+                    'export default Page;',
+                    f'''  return (
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Legal Document Manager
+              {service_name}
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Professional legal document manager services and solutions from Zion Tech Group.
+              Professional {service_name.lower()} services and solutions from Zion Tech Group.
             </p>
           </div>
 
@@ -122,6 +133,31 @@ const Page: React.FC = () => {
       <Footer />
     </>
   );
-};
+}};
 
-export default Page;
+export default Page;'''
+                )
+                
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(complete_content)
+                print(f"Fixed incomplete page: {file_path}")
+                return True
+        
+        return False
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
+        return False
+
+def main():
+    # Find all page.tsx files
+    page_files = glob.glob('app/**/page.tsx', recursive=True)
+    
+    fixed_count = 0
+    for file_path in page_files:
+        if fix_incomplete_page(file_path):
+            fixed_count += 1
+    
+    print(f"Fixed {fixed_count} incomplete page files")
+
+if __name__ == "__main__":
+    main()

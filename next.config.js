@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Use standalone output for better compatibility
-  output: 'standalone',
+  // Disable static generation completely
+  output: 'export',
   trailingSlash: true,
-  
+  images: {
+    unoptimized: true
+  },
   
   // Disable static generation to avoid serialization issues
   experimental: {
@@ -11,31 +13,6 @@ const nextConfig = {
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
-  
-  // Image optimization
-  images: {
-    unoptimized: true,
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
-  
-  // Build optimizations
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has type errors.
-    ignoreBuildErrors: true
-  },
-  
-  // Performance optimizations
-  staticPageGenerationTimeout: 60,
-  swcMinify: true,
-  compress: true,
   
   // Generate build ID for better caching
   generateBuildId: async () => {
@@ -78,6 +55,7 @@ const nextConfig = {
     ];
   },
   
+  
   // Webpack optimizations
   webpack: (config, { isServer, dev }) => {
     // Optimize for production
@@ -107,4 +85,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig;
+module.exports = nextConfig
