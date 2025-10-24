@@ -19,9 +19,7 @@ const problematicPages = [
 
 function fixPage(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false;
+
     }
 
     let content = fs.readFileSync(filePath, 'utf8');
@@ -30,7 +28,6 @@ function fixPage(filePath) {
     if (content.includes('iconMap') || !content.includes('icon:')) {
       console.log(`Skipping ${filePath} - already fixed or no icons`);
       return false;
-    }
     
     console.log(`Fixing ${filePath}`);
     
@@ -38,8 +35,6 @@ function fixPage(filePath) {
     const iconMatch = content.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react['"];?/);
     if (!iconMatch) {
       console.log(`No lucide-react imports found in ${filePath}`);
-      return false;
-    }
     
     const icons = iconMatch[1]
       .split(',')
@@ -48,8 +43,6 @@ function fixPage(filePath) {
     
     if (icons.length === 0) {
       console.log(`No icons found in ${filePath}`);
-      return false;
-    }
     
     // Create icon map
     const iconMapCode = `// Icon mapping for serialization
@@ -70,9 +63,6 @@ const iconMap = {
     return true;
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
 // Main execution
 console.log('Starting to fix remaining pages...');
@@ -81,7 +71,5 @@ let fixedCount = 0;
 for (const page of problematicPages) {
   if (fixPage(page)) {
     fixedCount++;
-  }
-}
 
 console.log(`\nFixed ${fixedCount} pages`);

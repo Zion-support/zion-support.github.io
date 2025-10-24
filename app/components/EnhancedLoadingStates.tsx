@@ -1,43 +1,10 @@
+
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target } from 'lucide-react';
 
-const Page: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
-    }
-  ];
 
-  return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              EnhancedLoadingStates
-            </h1>
-            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced EnhancedLoadingStates solutions powered by artificial intelligence and machine learning.
-            </p>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -54,8 +21,6 @@ const Page: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
 
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
@@ -69,12 +34,4 @@ const Page: React.FC = () => {
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-};
 
-export default Page;

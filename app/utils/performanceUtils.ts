@@ -1,12 +1,6 @@
-// Global performance monitoring utilities
-export const performanceUtils = {
-  // Measure custom performance marks
-  mark: (_name: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(_name);
-    }
-  },
+// Performance monitoring utilities
 
+export const performanceUtils = {
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -30,38 +24,12 @@ export const performanceUtils = {
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
-        performance.clearMarks(type);
         performance.clearMeasures(type);
+        performance.clearMarks(type);
       } else {
-        performance.clearMarks();
         performance.clearMeasures();
+        performance.clearMarks();
       }
     }
-  },
-
-  // Get navigation timing
-  getNavigationTiming: () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      return navigation;
-    }
-    return null;
-  },
-
-  // Get resource timing
-  getResourceTiming: () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      return performance.getEntriesByType('resource');
-    }
-    return [];
   }
 };
-
-interface _LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
-interface _PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-}
