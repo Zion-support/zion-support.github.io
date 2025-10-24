@@ -61,3 +61,10 @@ export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
     }
   };
 };
+
+export const generateStructuredData = (data: any): any => {
+  return {
+    '@context': 'https://schema.org',
+    ...data
+  };
+};
