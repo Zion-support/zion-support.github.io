@@ -4,7 +4,7 @@ const path = require('path');
 // Function to clean up imports and exports in a file
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Skip if it's a layout file
     if (filePath.includes('layout.tsx')) {
@@ -26,7 +26,7 @@ function fixFile(filePath) {
     };
     
     let inImportBlock = true;
-    let foundComponentStart = false;
+    const foundComponentStart = false;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
@@ -100,12 +100,12 @@ function fixFile(filePath) {
     finalContent = finalContent.replace(/\nexport default [^;]+;\nexport default [^;]+;\nexport default [^;]+;\nexport default [^;]+;/g, '\nexport default Page;');
     
     // Fix extra closing parentheses
-    finalContent = finalContent.replace(/\n  \)\n  \);/g, '\n  );');
-    finalContent = finalContent.replace(/\n  \)\n  \);/g, '\n  );');
-    finalContent = finalContent.replace(/\n  \)\n  \);/g, '\n  );');
+    finalContent = finalContent.replace(/\n {2}\)\n {2}\);/g, '\n  );');
+    finalContent = finalContent.replace(/\n {2}\)\n {2}\);/g, '\n  );');
+    finalContent = finalContent.replace(/\n {2}\)\n {2}\);/g, '\n  );');
     
     // Fix malformed JSX in the middle of object properties
-    finalContent = finalContent.replace(/\nimport { [^}]+ } from 'lucide-react';\n  \n/g, '\n');
+    finalContent = finalContent.replace(/\nimport { [^}]+ } from 'lucide-react';\n {2}\n/g, '\n');
     
     // Fix missing semicolons
     finalContent = finalContent.replace(/import ([^;]+)\n/g, (match, p1) => {
@@ -116,8 +116,8 @@ function fixFile(filePath) {
     });
     
     // Fix JSX syntax issues
-    finalContent = finalContent.replace(/\n    <>\n/g, '\n    <>\n');
-    finalContent = finalContent.replace(/\n    <>\n    <Head>/g, '\n    <>\n      <Head>');
+    finalContent = finalContent.replace(/\n {4}<>\n/g, '\n    <>\n');
+    finalContent = finalContent.replace(/\n {4}<>\n {4}<Head>/g, '\n    <>\n      <Head>');
     
     if (finalContent !== content) {
       fs.writeFileSync(filePath, finalContent);

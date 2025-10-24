@@ -109,7 +109,7 @@ const appDir = path.join(__dirname, 'app');
 const srcDir = path.join(__dirname, 'src');
 const componentsDir = path.join(__dirname, 'components');
 
-let allFiles = [];
+const allFiles = [];
 if (fs.existsSync(appDir)) allFiles.push(...findProblematicFiles(appDir));
 if (fs.existsSync(srcDir)) allFiles.push(...findProblematicFiles(srcDir));
 if (fs.existsSync(componentsDir)) allFiles.push(...findProblematicFiles(componentsDir));

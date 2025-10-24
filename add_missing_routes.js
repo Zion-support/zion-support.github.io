@@ -4,7 +4,7 @@ import fs from 'fs';
 const brokenLinks = fs.readFileSync('/workspace/broken_links.txt', 'utf8').split('\n').filter(Boolean);
 
 // Read the current App.tsx
-let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
+const appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 
 // Generate import statements for all missing pages
 const generateImportStatement = (page) => {
