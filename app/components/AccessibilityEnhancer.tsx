@@ -8,6 +8,9 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return
+
     // Add focus management
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
