@@ -52,6 +52,9 @@
     "**/backup*/**",
     "**/*.backup.*",
     "**/*.bak",
-    "**/backup/**"
+    "**/backup/**",
+    "**/ai-pages-disabled/**",
+    "**/ai-workflow-automation-disabled/**",
+    "**/ai-customer-support-disabled/**"
   ]
 }

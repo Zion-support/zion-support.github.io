@@ -6,14 +6,9 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/AdvancedSEOOptimizer';
 
 export default function APIDocsPage() {
-  const [_copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [_copiedCode, _setCopiedCode] = useState<string | null>(null);
   const [searchQuery, _setSearchQuery] = useState('');
 
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
 
   const apiEndpoints = [
     {
