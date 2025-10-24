@@ -7,9 +7,7 @@ import React from 'react';
 export default function LoadingSpinner() {
   return (
     <>
-      <div className="flex items-center justify-center"></div>
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-    </div>
+      </div>
 </>
   );
 };
@@ -113,9 +111,7 @@ const LoadingSpinnerPage: React.FC = () => {
     </div>
     </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               LoadingSpinner</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -136,9 +132,7 @@ const LoadingSpinnerPage: React.FC = () => {
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -166,9 +160,7 @@ const LoadingSpinnerPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -187,8 +179,7 @@ const LoadingSpinnerPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -225,7 +216,8 @@ constcolorClasses= {primary: primary
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;><divclassName={`animate-spin rounded-full border-2 border-gray-300border-t-transparent${sizeClasses[size]}${colorClasses[color]}`}></di>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}</p>)}</di>)
         </div>
         </div>
-}
+};
+
 const colorClasses = {
 ;
 primary: primary
@@ -249,7 +241,8 @@ secondar
   y: 'text-gray-60 0',</LoadingSpinnerProp>
 white: 'text-white'}</LoadingSpinnerProp>
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;><divclassName = {`animate-spin rounded-full border-2 border-gray-300border-t-transparent${sizeClasses[size]}${colorClasses[color]}`}></di>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}</p>)}</di>)
-}
+};
+
 const colorClasses = {
 
 primary: 'text-indigo-600'
@@ -257,12 +250,12 @@ secondary: 'text-gray-600'
 white: 'text-white'
 };
 return (;
-<div className=&quot;flex flex-col items-center justify-center space-y-2&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;></div>
 <div className = {`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
 {text && (
 <p className={`text-sm ${colorClasses[color]} animate-pulse`}>{text}</p>p>
 )}
 </div>
 )
-{}
+{};
+
 export default LoadingSpinner

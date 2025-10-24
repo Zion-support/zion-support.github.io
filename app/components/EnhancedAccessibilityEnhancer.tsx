@@ -50,9 +50,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         {/* Hero Section */}
     
         <section className="relativepy-20px-4overflow-hidden"></section>
-          <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20"></div>
-        <div className="relativemax-w-7xlmx-autotext-center"></div>
-            <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
+          <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
             Enhanced Accessibility Enhancer
             </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
@@ -72,17 +70,14 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
             </div>
             <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-                  <div className="flex items-center mb-4"></div>
+                <div className="flex items-center mb-4"></div>
                     <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                   </div>
@@ -91,12 +86,11 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                     featurebenefitsmapbenefit benefitIndex => 
                       <li key=benefitIndex className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
-                        benefit</li>                <div key=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div></div><featureicon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
+                        benefit</li>                </div><featureicon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
                   <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">featurebenefitsmapbenefit idx => 
                       </ul><li key=idx className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            </div>
+          </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -108,8 +102,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
 
         / CTA Section /
         <section className="py-20 px-4"></section>
-          <><div className="max-w-4xl mx-auto text-center"></div>
-            </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started</h2>
+          <></div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using Enhanced Accessibility Enhancer to transform their operations</p></p>
             <button className="bg-emerald-600 hoverbg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
@@ -117,20 +110,18 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </section>
       </div>
-
-    </div>
+    </>
   );
 };
 
 
-export default EnhancedAccessibilityEnhancerPage        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
-        </div>
-        <div className="text-center mb-16"> </div></div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+export default EnhancedAccessibilityEnhancerPage        <section className="py-20 px-4 bg-white/5"> </section></div>
+        </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <pExperience the benefits of cutting-edge AI technology</p>
             </p></div>
         <div className="grid grid-cols-1 mdgrid-cols-2 gap-6">benefitsmapbenefit index => 
               </div>
-        <div key=index className=quotflex items-start space-x-3quot> </div></div><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
+        </div><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
               </div>
             
           </div>

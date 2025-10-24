@@ -44,9 +44,7 @@ const ContentPromotionBanner: React.FC = () => {
     </div>
     </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               ContentPromotionBanner</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -62,20 +60,16 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
         {/* Stats Section */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat, index) => (</div>
-            <div key={index} className=&quot;text-center&quot;></div>
-              <div className=&quot;w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center&quot;></div>
+            <div className=&quot;w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center&quot;></div>
                 <stat.icon className=&quot;w-8 h-8 text-white&quot; /></stat>
               </div>
               <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.value}</div>
               <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>
               <div className=&quot;text-gray-500 text-xs mt-1&quot;>{stat.description}</div>
-            </div>
-          ))}
+    </>
+  ))}
         </div>
-<div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
-          <div className=&quot;grid grid-cols-1 md: grid-cols-2 gap-8&quot;></div>
-            <div></div>
-              <h3 className=&quot;text-2xl font-bold mb-4&quot;>Why Choose Us?</h3>
+<h3 className=&quot;text-2xl font-bold mb-4&quot;>Why Choose Us?</h3>
               <ul className=&quot;space-y-2&quot;></ul>
                 {benefits.slice(0, 4).map((benefit, index) => (</ul>
                   <li key={index} className=&quot;flex items-center&quot;></li>
@@ -85,8 +79,7 @@ const ContentPromotionBanner: React.FC = () => {
                 ))}
               </ul>
             </div>
-            <div></div>
-              <h3 className=&quot;text-2xl font-bold mb-4&quot;>Additional Benefits</h3>
+            <h3 className=&quot;text-2xl font-bold mb-4&quot;>Additional Benefits</h3>
               <ul className=&quot;space-y-2&quot;></ul>
                 {benefits.slice(4).map((benefit, index) => (</ul>
                   <li key={index} className=&quot;flex items-center&quot;></li>
@@ -105,8 +98,7 @@ const ContentPromotionBanner: React.FC = () => {
         {/* Features Grid */}
         <div className=&quot;grid md:grid-cols-2 l
   g:grid-cols-4 gap-8 mb-16&quot;>{features.map((feature, index) => (</div>
-            <div key={index} className=&quot;text-center&quot;></div>
-              <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;></div>
+            <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;></div>
                 <feature.icon className=&quot;w-8 h-8 text-white&quot; /></feature>
               </div>
               <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
@@ -115,27 +107,23 @@ const ContentPromotionBanner: React.FC = () => {
           ))}
         </div>
         {/* Benefits Section */}
-        <div className=&quot;bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16&quot;></div>
-          <div className=&quot;text-center mb-8&quot;></div>
-            <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Why Choose Our Solutions?</h2>
+        <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Why Choose Our Solutions?</h2>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>We provide comprehensive AI and IT solutions that deliver real results for your business.</p>p>
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-6&quot;>{/* Stats Section */}</div>
         <div className=&quot;grid md:grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat, index) => (</div>
-            <div key={index} className=&quot;text-center&quot;></div>
-              <div className=&quot;flex justify-center mb-4&quot;></div>
+            <div className=&quot;flex justify-center mb-4&quot;></div>
                 <stat.icon className=&quot;w-12 h-12 text-blue-400&quot; /></stat>
               </div>
               <div className=&quot;text-4xl font-bold text-white mb-2&quot;>{stat.value}</div>
               <div className=&quot;text-lg font-semibold text-gray-300 mb-1&quot;>{stat.label}</div>
               <div className=&quot;text-sm text-gray-400&quot;>{stat.description}</div>
-            </div>
-          ))}
+    </>
+  ))}
         </div>
         {/* Benefits Section */}
-        <div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16&quot;></div>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-8&quot;>Why Choose Our Solutions?</h2>
+        <h2 className=&quot;text-3xl font-bold text-white text-center mb-8&quot;>Why Choose Our Solutions?</h2>
           <div className=&quot;grid md:grid-cols-2 gap-4&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-center gap-3&quot;></div>
                 <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; /></CheckCircle>
@@ -145,9 +133,7 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
         </div>
         {/* CTA Section */}
-        <div className=&quot;text-center&quot;></div>
-          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12&quot;></div>
-            <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Transform Your Business?</h2>
+        <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-white/90 mb-8 max-w-2xl mx-auto&quot;>Join the future of business technology. Get started with our AI solutions today and see the difference.</p>p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
@@ -164,9 +150,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -194,9 +178,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -215,8 +197,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -237,9 +218,9 @@ const ContentPromotionBanner: React.FC = () => {
           <ArrowRight className=&quot;w-5 h-5 ml-2&quot; /></ArrowRight>
         </button>
       </div>
-    </div>
+    </>
   )
     </div>
-}
+};
 
 export default ContentPromotionBanner

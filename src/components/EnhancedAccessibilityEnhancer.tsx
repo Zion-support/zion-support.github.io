@@ -54,5 +54,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </div>
       </section>
-{}
+{};
+
 export default EnhancedAccessibilityEnhancerPage;]

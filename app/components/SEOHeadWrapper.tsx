@@ -7,7 +7,8 @@ interface SEOHeadProps {
   description: string
   keyword
   s: string[]
-}
+};
+
 const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
   return (</SEOHeadProps>
     <Helmet></Helmet>

@@ -22,9 +22,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">;
             {/* Hero Section */};
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-            <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               SystemMonitor</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
@@ -43,9 +41,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -69,9 +65,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -83,7 +77,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+        </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
               
             </div>
@@ -91,8 +85,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8"></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>

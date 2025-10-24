@@ -101,14 +101,10 @@ export default function Implementation5GPage() {
         {/* Hero Section */}</div>
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx</div>
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               AI 3D Generation</h1>
         <section className="rel ativepy-20 px-4 overflow-hidden"></section>
-          <div className="abs oluteinset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="rel ativemax-w-7xl mx-auto text-center"></div>
-            <h1 className="tex t-5xlmd: text-7xl font-bold text-white mb-6 leading-tight"></h1>
+          <h1 className="tex t-5xlmd: text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Advanced Performance Monitor</h1>
             </h1>
             <p className="tex t-xltext-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
@@ -129,9 +125,7 @@ export default function Implementation5GPage() {
 
         {/* Features Section */}
         <section className="py-20px-4"></section>
-          <div className="max-w-7x lmx-auto"></div>
-            <div className="tex t-centermb-16"></div>
-              <h2 className="tex t-4xlfont-bold text-white mb-4">Key Features</h2>
+          <h2 className="tex t-4xlfont-bold text-white mb-4">Key Features</h2>
               <p className="tex t-xltext-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -159,9 +153,7 @@ export default function Implementation5GPage() {
 
         {/* Benefits Section */}
         <section className="py-20px-4 b g-white/5"></section>
-          <div className="max-w-7x lmx-auto"></div>
-            <div className="tex t-centermb-16"></div>
-              <h2 className="tex t-4xlfont-bold text-white mb-4">Why Choose Our Solution?</h2>
+          <h2 className="tex t-4xlfont-bold text-white mb-4">Why Choose Our Solution?</h2>
               <p className="tex t-xltext-gray-300 max-w-3xl mx-auto"></p>
                 Experience the power of AI-driven performance monitoring</p>
               </p>
@@ -180,8 +172,7 @@ export default function Implementation5GPage() {
 
         {/* CTA Section */}
         <section className="py-20px-4"></section>
-          <div className="max-w-4x lmx-auto text-center"></div>
-            <h2 className="tex t-4xlfont-bold text-white mb-6"></h2>
+          <h2 className="tex t-4xlfont-bold text-white mb-6"></h2>
               Ready to Transform Your Business?</h2>
             </h2>
             <p className="tex t-xltext-gray-300 mb-8"></p>
@@ -204,9 +195,7 @@ export default function Implementation5GPage() {
         <meta name="description" content="Professional 5G implementation services for enterprise solutions." />
       </meta>
       </meta>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
+      <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
           <p className="text-lg text-gray-300 mb-8">Professional 5G implementation services for enterprise solutions.</p>
           
           <Link ;
@@ -219,13 +208,13 @@ export default function Implementation5GPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx
 ;
 export default AdvancedPerformanceMonitorPage
-  )}
+  )};
 
 export default Ai3dGenerationPage,
 ;

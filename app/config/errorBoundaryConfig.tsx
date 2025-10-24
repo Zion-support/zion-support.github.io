@@ -82,9 +82,8 @@ notFoun
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
+    <>
+      <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
 <svg
 className="w-6h-6text-red-600"
 fill="none"
@@ -128,9 +127,8 @@ Go Home
 function NetworkErrorFallback({ resetError }: { error: Error; resetErro)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
+    <>
+      <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
 <svg
 className="w-6h-6text-yellow-600"
 fill="none"
@@ -165,9 +163,7 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700t
 */
 function NotFoundFallback(): JSX.Element {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-mdw-fulltext-center"></div>
-<h1 className="text-6xlfont-boldtext-gray-900">
+    <h1 className="text-6xlfont-boldtext-gray-900">
             404
           </h1>
 <h2 className="mt-4 text-2xlfont-boldtext-gray-900">Page Not Found</h2>
@@ -218,7 +214,8 @@ timestam
   p: new Date().toISOString()
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 ur
-  l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
+  l: typeof window !== 'undefined' ? window.location.href : 'unknown'};
+
 export default getErrorBoundaryConfig</string>
 
 

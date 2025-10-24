@@ -3,7 +3,7 @@ import React from 'react';
 
 interface EnhancedServicesShowcaseProps {
   className?: string;
-}
+};
 
 const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className }) => {
   return (

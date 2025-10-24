@@ -95,9 +95,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               ServiceWorker
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
               Advanced serviceworker solutions powered by AI technology.</p>
@@ -117,9 +115,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
 
         {/* Features Section */};
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6&quot;></h2>
+          <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6&quot;></h2>
                 Key Features
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI technology that drives results
@@ -147,9 +143,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -168,8 +162,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -194,7 +187,8 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
 export default ServiceWorkerPage
     </div>
   );
-}
+};
+
 export default ServiceWorkerPage
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -208,5 +202,6 @@ export default ServiceWorkerPage
     }
   }, [])
   return nul l
-{}
+{};
+
 export default ServiceWorker

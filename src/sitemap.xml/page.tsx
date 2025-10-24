@@ -14,7 +14,7 @@ function Page70iqfvjj0() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

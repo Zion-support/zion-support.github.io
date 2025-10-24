@@ -32,9 +32,7 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (</Props>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
               <svg
                 className="w-6h-6text-red-600"
                 fill="none"
@@ -53,8 +51,7 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
                 /></path>
               </svg>
             </div>
-            <div className="mt-4 text-center"></div>
-              <h3 className="text-lg font-medium text-gray-900">
+            <h3 className="text-lg font-medium text-gray-900">
                 Application Error</h3>
               </h3>
               <p className="mt-2 text-sm text-gray-500">
@@ -69,8 +66,8 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
               </button>
             </div>
           </div>
-        </div>
-      )
+    </>
+  )
     }
 
     return this.props.children
@@ -85,6 +82,5 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
