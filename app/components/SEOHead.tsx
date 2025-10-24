@@ -8,7 +8,6 @@ interface SEOHeadProps {
   url?: string;
   canonical?: string;
   type?: string;
-  canonical?: string;
   structuredData?: any;
 }
 
