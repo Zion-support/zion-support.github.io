@@ -1,5 +1,10 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
+=======
+import Head from "next/head";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f713
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle, Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu, Send, BarChart3, Target, DollarSign, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 const AIAutomationPage: React.FC = () => {

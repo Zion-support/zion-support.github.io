@@ -181,4 +181,8 @@ const Navigation = () => {
     </nav>
   )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f713
 export default Navigation

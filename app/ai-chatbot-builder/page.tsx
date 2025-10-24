@@ -1,5 +1,10 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
+=======
+import Head from "next/head";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f713
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 const AiChatbotBuilderPage: React.FC = () => {

@@ -33,6 +33,7 @@ const AboutPage: React.FC = () => {
     description: 'We work closely with our clients to understand their unique needs.'}
   ]
   const stats = [
+<<<<<<< HEAD
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
@@ -106,6 +107,38 @@ const AboutPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
+=======
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: Award, value: '50+', label: 'Awards Won' },
+    { icon: Star, value: '1000+', label: 'Projects Completed' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We are a leading technology company dedicated to transforming businesses through innovative AI and IT solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex p-4 rounded-full bg-blue-600/20 mb-4">
+                  <stat.icon className="w-8 h-8 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f713
                 </div>
               ))}
             </div>
