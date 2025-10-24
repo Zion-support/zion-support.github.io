@@ -25,5 +25,5 @@ const ContactForm: React.FC = () => {
   setFormData({
       ...formData,
       [e.target.name]: e.target.value
-})
-  }
+    });
+  };

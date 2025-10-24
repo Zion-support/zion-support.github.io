@@ -1,4 +1,7 @@
 'use client';
+
+import React, { useState, useCallback, useEffect } from 'react';
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -14,7 +17,7 @@ interface PerformanceMonitorProps {
 }
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
+  onMetricsUpdate: _onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -33,6 +36,19 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
+    try {
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      observers.push(fcpObserver);
+    } catch (error) {
+      console.warn('FCP measurement failed:', error);
     }
 
     // Measure First Input Delay (FID)
@@ -109,6 +125,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (cleanup) cleanup();
       clearInterval(interval);
     };
+  }, [measureWebVitals, enableRealTimeMonitoring]);
 
   useEffect(() => {
     if (onMetricsUpdate) {
@@ -116,3 +133,28 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [metrics, onMetricsUpdate]);
 
+  return (
+    <div className="performance-monitor">
+      <div className="metrics-display">
+        <h3>Performance Metrics</h3>
+        <div className="metric">
+          <span>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</span>
+        </div>
+        <div className="metric">
+          <span>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</span>
+        </div>
+        <div className="metric">
+          <span>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</span>
+        </div>
+        <div className="metric">
+          <span>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</span>
+        </div>
+        <div className="metric">
+          <span>Memory: {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(2)}MB` : 'N/A'}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;

@@ -106,11 +106,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
               >
                 {isSubmitting ? (
+                  <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
+                  </>
                 ) : (
+                  <>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
+                  </>
                 )}
               </button>
               
