@@ -1,14 +1,20 @@
-import React, { useEffect } from &quot;react&quot;
+import React, { useEffect } from 'react'
 
 interface AnalyticsProps {
-  className?: string;
+  className?: string
 }
 
-const Analytics: React.FC = () => {
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
   useEffect(() => {
     const initAnalytics = () => {
-      if (typeof window !== &quot;undefined&quot; && window.gtag) {
-        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
           page_location: window.location.href,
         })
@@ -17,10 +23,7 @@ const Analytics: React.FC = () => {
     initAnalytics()
   }, [])
 
-  return null; // Analytics component doesn&apos;t render anything
+  return null // Analytics component doesn't render anything
 }
 
 export default Analytics
-};
-
-export default AnalyticsPage;

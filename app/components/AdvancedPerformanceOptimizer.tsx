@@ -36,10 +36,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   useEffect(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
-  
         // First Contentful Paint
         new PerformanceObserver((list) => {
-  
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }))
@@ -49,9 +47,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
         // Largest Contentful Paint
         new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
+          for (const entry of list.getEntries()) {
+            setPerformanceMetrics(prev => ({ ...prev, lcp: entry.startTime }))
+          }
         }).observe({ entryTypes: ['largest-contentful-paint'] })
 
         // First Input Delay
@@ -62,14 +60,14 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         }).observe({ entryTypes: ['first-input'] })
 
         // Cumulative Layout Shift
-        let clsValue = 0
         new PerformanceObserver((list) => {
+          let clsValue = 0
           for (const entry of list.getEntries()) {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value
-              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }))
             }
           }
+          setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }))
         }).observe({ entryTypes: ['layout-shift'] })
       }
 
@@ -77,176 +75,181 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     }
   }, [enableWebVitals])
 
-  // Advanced caching strategies
-  const setupAdvancedCaching = useCallback(() => {
-    if (typeof window === 'undefined') return
+  // Advanced caching
+  useEffect(() => {
+    if (enableAdvancedCaching && typeof window !== 'undefined') {
+      // Implement advanced caching strategies
+      const setupAdvancedCaching = () => {
+        // Cache API implementation
+        if ('caches' in window) {
+          caches.open('app-cache-v1').then(cache => {
+            // Cache critical resources
+            cache.addAll([
+              '/',
+              '/static/css/main.css',
+              '/static/js/main.js'
+            ])
+          })
+        }
+      }
 
-    // Service Worker for advanced caching
-    if ('serviceWorker' in navigator && enableServiceWorker) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch((registrationError) => {
-          console.error('Service Worker registration failed:', registrationError);
-        });
+      setupAdvancedCaching()
     }
+  }, [enableAdvancedCaching])
 
-    // Memory-based caching for API responses
-    const cache = new Map()
-    const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url
-      const cacheKey = `${url}_${JSON.stringify(init)}`
+  // Image optimization
+  useEffect(() => {
+    if (enableImageOptimization && typeof window !== 'undefined') {
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img[data-src]')
+        
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target as HTMLImageElement
+                img.src = img.dataset.src || ''
+                img.classList.remove('lazy')
+                imageObserver.unobserve(img)
+              }
+            })
+          })
 
-      if (cache.has(cacheKey)) {
-        return cache.get(cacheKey)
+          images.forEach(img => imageObserver.observe(img))
+        }
       }
 
-      const response = await originalFetch(input, init)
-      if (response.ok) {
-        cache.set(cacheKey, response.clone())
+      optimizeImages()
+    }
+  }, [enableImageOptimization])
+
+  // Lazy loading
+  useEffect(() => {
+    if (enableLazyLoading && typeof window !== 'undefined') {
+      const setupLazyLoading = () => {
+        const lazyElements = document.querySelectorAll('[data-lazy]')
+        
+        if ('IntersectionObserver' in window) {
+          const lazyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const element = entry.target as HTMLElement
+                element.classList.add('loaded')
+                lazyObserver.unobserve(element)
+              }
+            })
+          })
+
+          lazyElements.forEach(element => lazyObserver.observe(element))
+        }
       }
 
-      return response
+      setupLazyLoading()
+    }
+  }, [enableLazyLoading])
+
+  // Preloading
+  useEffect(() => {
+    if (enablePreloading && typeof window !== 'undefined') {
+      const setupPreloading = () => {
+        // Preload critical resources
+        const preloadLink = document.createElement('link')
+        preloadLink.rel = 'preload'
+        preloadLink.href = '/critical.css'
+        preloadLink.as = 'style'
+        document.head.appendChild(preloadLink)
+
+        // Prefetch next page resources
+        const prefetchLink = document.createElement('link')
+        prefetchLink.rel = 'prefetch'
+        prefetchLink.href = '/next-page.js'
+        document.head.appendChild(prefetchLink)
+      }
+
+      setupPreloading()
+    }
+  }, [enablePreloading])
+
+  // Resource hints
+  useEffect(() => {
+    if (enableResourceHints && typeof window !== 'undefined') {
+      const setupResourceHints = () => {
+        // DNS prefetch
+        const dnsPrefetch = document.createElement('link')
+        dnsPrefetch.rel = 'dns-prefetch'
+        dnsPrefetch.href = '//fonts.googleapis.com'
+        document.head.appendChild(dnsPrefetch)
+
+        // Preconnect
+        const preconnect = document.createElement('link')
+        preconnect.rel = 'preconnect'
+        preconnect.href = 'https://api.example.com'
+        document.head.appendChild(preconnect)
+      }
+
+      setupResourceHints()
+    }
+  }, [enableResourceHints])
+
+  // Service Worker
+  useEffect(() => {
+    if (enableServiceWorker && typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      const registerServiceWorker = async () => {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js')
+          console.log('Service Worker registered:', registration)
+        } catch (error) {
+          console.error('Service Worker registration failed:', error)
+        }
+      }
+
+      registerServiceWorker()
     }
   }, [enableServiceWorker])
 
-  // Image optimization with WebP and lazy loading
-  const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const images = document.querySelectorAll('img[data-src]')
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-  
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement
-          const src = img.dataset.src
-          if (src) {
-            // Check for WebP support
-            const canvas = document.createElement('canvas')
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
-
-            if (webpSupported && !src.includes('.webp')) {
-              img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
-            } else {
-              img.src = src
-            }
-
-            img.classList.remove('lazy')
-            imageObserver.unobserve(img)
-          }
-        }
-
-    images.forEach((img) => imageObserver.observe(img))
-  }, [])
-
-  // Critical resource preloading
-  const preloadCriticalResources = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/css/critical.css',
-      '/js/main.js'
-    ]
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.css') ? 'style' : 'script'
-      document.head.appendChild(link)
-
-  }, [])
-
-  // Resource hints for better performance
-  const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
-      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ]
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link')
-      link.rel = hint.rel
-      link.href = hint.href
-      if (hint.rel === 'preconnect') {
-        link.crossOrigin = 'anonymous'
+  // Critical CSS
+  useEffect(() => {
+    if (enableCriticalCSS && typeof window !== 'undefined') {
+      const loadCriticalCSS = () => {
+        const criticalCSS = document.createElement('style')
+        criticalCSS.textContent = `
+          /* Critical CSS for above-the-fold content */
+          body { margin: 0; font-family: system-ui, sans-serif; }
+          .hero { min-height: 100vh; display: flex; align-items: center; }
+        `
+        document.head.insertBefore(criticalCSS, document.head.firstChild)
       }
-      document.head.appendChild(link)
 
+      loadCriticalCSS()
+    }
+  }, [enableCriticalCSS])
+
+  // Performance optimization utilities
+  const debounce = useCallback((func: Function, wait: number) => {
+    let timeout: NodeJS.Timeout
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout)
+        func(...args)
+      }
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+    }
   }, [])
 
-  // Critical CSS inlining
-  const inlineCriticalCSS = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const criticalCSS = `
-      .cyber-grid { background-image: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
-      .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-      .cyber-button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; }
-      .cyber-button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-    `
-
-    const style = document.createElement('style')
-    style.textContent = criticalCSS
-    document.head.insertBefore(style, document.head.firstChild)
+  const throttle = useCallback((func: Function, limit: number) => {
+    let inThrottle: boolean
+    return function executedFunction(...args: any[]) {
+      if (!inThrottle) {
+        func.apply(this, args)
+        inThrottle = true
+        setTimeout(() => inThrottle = false, limit)
+      }
+    }
   }, [])
 
-  // Performance monitoring and reporting
-  const reportPerformanceMetrics = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    // Report to analytics
-    if ('gtag' in windo w) {
-      (windo w as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(performanceMetrics.lcp),
-        custom_map: {
-          fcp: Math.round(performanceMetrics.fcp),
-          lcp: Math.round(performanceMetrics.lcp),
-          fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 100 0) / 1000}
-
-    }
-  }, [performanceMetrics])
-
-  useEffect(() => {
-    if (enableAdvancedCaching) {
-      setupAdvancedCaching()
-    }
-    if (enableImageOptimization) {
-      optimizeImages()
-    }
-    if (enablePreloading) {
-      preloadCriticalResources()
-    }
-    if (enableResourceHints) {
-      addResourceHints()
-    }
-    if (enableCriticalCSS) {
-      inlineCriticalCSS()
-    }
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS])
-
-  useEffect(() => {
-    if (enableWebVitals && performanceMetrics.lcp > 0) {
-      reportPerformanceMetrics()
-    }
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
-
+  // Return null as this is a utility component
   return null
 }
 
 export default AdvancedPerformanceOptimizer
-}}}}}
-};
-
-export default AdvancedPerformanceOptimizerPage;
