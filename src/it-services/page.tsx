@@ -1,15 +1,18 @@
 import React from 'react';
+import { Cloud, Shield, Settings, Database, Globe, Users, HardDrive, Cog, ArrowRight, CheckCircle, Star, Phone, Award, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 export default ITServicesPage;
 
   ];
 
-  // Removed unused categories and services variables;
-  // Removed unused benefits array;
-  ];
 
-  // Removed unused benefits variable;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
               IT Services & Infrastructure;
             Comprehensive IT solutions to support and optimize your business infrastructure. 

@@ -1,14 +1,34 @@
 import React from 'react';
-export default Footer;
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  const microSaasServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
+    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
+    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
   ];
 
   ];
 
   ];
 
-  // Removed specializedServices as it was unused;
-  ];
-
+  const additionalServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
+    { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
   ];
 
   ];

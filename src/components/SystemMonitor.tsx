@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-export default SystemMonitor;
-/**
- * System Monitor Component;
- * Real-time monitoring dashboard for performance, errors, and system health;
- */
-// Removed unused collectPerformanceMetrics function;
-// Helper functions;
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { errorHandler } from '../utils/enhancedErrorHandler';
+// Helper functions
+const calculatePerformanceScore = () => {
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let score = 100;
@@ -74,7 +71,9 @@ export default SystemMonitor;
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-      console.error('Failed to update metrics:', error);
+    } catch (error) {
+      console.error('Error updating metrics:', error);
+    }
   }, []);
   // Initialize monitoring;
       setIsMonitoring(true);
@@ -88,21 +87,29 @@ export default SystemMonitor;
   // Update metrics periodically;
     if (!isMonitoring) return;
     const interval = setInterval(updateMetrics, refreshInterval);
- clearInterval(interval);
+    return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-  // Get memory information;
+  // Get memory information
+  const getMemoryInfo = () => {
+    if ('memory' in performance) {
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
+      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
+      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
+      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
       const percentage = (used / limit) * 100;
       return { used, total, limit, percentage };
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
-  // Get network information;
+  // Get network information
+  const getNetworkInfo = () => {
+    if ('connection' in navigator) {
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
-        saveData: connection?.saveData || false;
+      return {
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0,
+        saveData: connection?.saveData || false
       };
       saveData: false;
     };

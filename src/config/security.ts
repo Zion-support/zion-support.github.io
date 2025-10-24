@@ -19,6 +19,12 @@
 /**
  * Input validation patterns;
  */
+export const validationPatterns = {
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
+  phone: /^\+?[1-9]\d{1,14}$/,
+  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)$/,
+  alphanumeric: /^[a-zA-Z0-9]+$/,
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/
 };
 /**
  * Sanitize user input;

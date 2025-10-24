@@ -1,5 +1,10 @@
-export default AdvancedErrorBoundary;
-// Simple logger implementation;
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+// Simple logger implementation
+const logger = {
+  error: (message: string, context?: unknown) => {
+    if (process.env.NODE_ENV === 'development') {
       console.error(message, context);
 };
   hasError: boolean;

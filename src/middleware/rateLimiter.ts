@@ -63,6 +63,8 @@ export default RateLimiter;
  * @param limiter - Rate limiter instance;
  * @returns Middleware function;
  */
+export function createRateLimitMiddleware(limiter: RateLimiter) {
+  return async (request: Request): Promise<Response | null> => {
     const identifier = getClientIdentifier(request);
     const { allowed, remaining, resetTime } = limiter.check(identifier);
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
