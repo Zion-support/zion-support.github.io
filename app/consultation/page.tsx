@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Clock } from 'lucide-react';
@@ -13,14 +14,87 @@ import { Calendar } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
+=======
+'use client';
+
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
 
 export default function ConsultationPage() {
 
+<<<<<<< HEAD
   const benefits = [
     "Benefit 1",
     "Benefit 2"
+=======
+const ConsultationPage: React.FC = () => {
+  const [selectedType, setSelectedType] = useState<string>('');
+
+  const consultationTypes: ConsultationType[] = [
+    {
+      id: 'strategy',
+      name: 'IT Strategy Consultation',
+      description: 'Comprehensive analysis of your current IT infrastructure and strategic planning for digital transformation.',
+      duration: '2-4 hours',
+      price: '$500',
+      features: [
+        'Current IT assessment',
+        'Technology roadmap development',
+        'ROI analysis and recommendations',
+        'Implementation timeline',
+        'Follow-up support included'
+      ],
+      popular: false
+    },
+    {
+      id: 'ai',
+      name: 'AI Implementation Consultation',
+      description: 'Expert guidance on integrating AI solutions into your business processes and workflows.',
+      duration: '3-5 hours',
+      price: '$750',
+      features: [
+        'AI readiness assessment',
+        'Use case identification',
+        'Technology stack recommendations',
+        'Implementation strategy',
+        'Training and support planning'
+      ],
+      popular: true
+    },
+    {
+      id: 'cloud',
+      name: 'Cloud Migration Consultation',
+      description: 'Strategic planning and execution guidance for migrating your infrastructure to the cloud.',
+      duration: '4-6 hours',
+      price: '$1,000',
+      features: [
+        'Cloud readiness assessment',
+        'Migration strategy development',
+        'Cost optimization analysis',
+        'Security and compliance review',
+        'Implementation roadmap'
+      ],
+      popular: false
+    },
+    {
+      id: 'security',
+      name: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment and recommendations to protect your digital assets.',
+      duration: '6-8 hours',
+      price: '$1,500',
+      features: [
+        'Security vulnerability assessment',
+        'Compliance review',
+        'Penetration testing',
+        'Security policy development',
+        'Incident response planning'
+      ],
+      popular: false
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
   ];
   const features = [
     { title: "Feature 1", description: "Description 1" },
@@ -114,11 +188,15 @@ export default function ConsultationPage() {
         />
       </Helmet>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -445,6 +523,25 @@ export default function ConsultationPage() {
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+                >
+                  View All Services
+                </Link>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
             </div>
           </div>
         </section>

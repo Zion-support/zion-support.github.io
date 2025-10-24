@@ -187,6 +187,7 @@ export default function Pricing() {
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Pricing plans for AI and IT solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -198,6 +199,18 @@ export default function Pricing() {
           </p>
 <<<<<<< HEAD
         </div>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
+            </p>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
 
         {/* AI Services Pricing */}
         <div className="mb-20">
@@ -377,6 +390,7 @@ export default function Pricing() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
           <Link
             href="/contact"
@@ -390,5 +404,8 @@ export default function Pricing() {
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
+=======
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
   );
 }
