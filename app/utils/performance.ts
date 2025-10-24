@@ -1,7 +1,6 @@
 import React from 'react';
 
 // Performance monitoring utilities
-import React from 'react';
 
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -62,7 +61,8 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         const fidEntry = entry as any;
-        this.metrics.set('FID', (fidEntry.processingStart || fidEntry.processingEnd || 0) - entry.startTime);
+        const fid = fidEntry.processingStart ? fidEntry.processingStart - fidEntry.startTime : 0;
+        this.metrics.set('FID', fid);
       });
     }).observe({ entryTypes: ['first-input'] });
 
