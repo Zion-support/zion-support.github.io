@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import '@/types/analytics';
 
 interface PerformanceMetrics {
   loadTime: number | null;
@@ -189,13 +190,6 @@ export default function PerformanceMonitor({
 
 // Global performance monitoring utilities
 export const performanceUtils = {
-  // Measure custom performance marks
-  mark: (name: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(name);
-    }
-  },
-
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -247,3 +241,5 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
     });
   }
 };
+
+// Global types are now defined in types/analytics.ts
