@@ -1,8 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const __filename = $2;
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
@@ -16,8 +15,7 @@ function fixMergeConflicts(filePath) {
 }
       fixedLines.push(line)
     }
-    const fixedContent = fixedLines.join('\n')
-    // Clean up any remaining syntax issues
+    const fixedContent = $2;
     const cleanedContent = fixedContent
       .replace(/;\s*$/gm, '') // Remove trailing semicolons
       .replace(/\s+$/gm, '') // Remove trailing whitespace
@@ -31,24 +29,7 @@ function fixMergeConflicts(filePath) {
   }
 }
 function findTsxFiles(dir) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath)
-      }
-    }
-  }
-  traverse(dir)
-  return files
-}
-// Main execution
-const appDir = path.join(__dirname, 'app')
+  const files = $2;
 const files = findTsxFiles(appDir)
 // eslint-disable-next-line no-console
     console.log(`Found ${files.length} TypeScript files to check`)

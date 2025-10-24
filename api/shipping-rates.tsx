@@ -1,6 +1,6 @@
 import React from 'react'
 "use client"
-const ShippingRates = () => {
-  return null
-}
+const ShippingRates = ($2) => {
+  $3
+};
 export default ShippingRates

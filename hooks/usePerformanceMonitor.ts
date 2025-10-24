@@ -8,18 +8,17 @@ interface PerformanceData {
   memoryUsage?: {
     used: number;
     total: number;
-    limit: number;
+    limi,
+  t: number;
   };
 }
 
-export const usePerformanceMonitor = () => {
+export const usePerformanceMonitor = $2;
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
 
   useEffect(() => {
     // Monitor page load performance
-    const handleLoad = () => {
-      if ('performance' in window) {
-        setTimeout(() => {
+    const handleLoad = $2;
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
           
@@ -42,8 +41,7 @@ export const usePerformanceMonitor = () => {
     };
 
     // Monitor resource loading
-    const handleResourceLoad = () => {
-      if ('performance' in window) {
+    const handleResourceLoad = $2;
         const resources = performance.getEntriesByType('resource');
         const slowResources = resources.filter(resource => resource.duration > 1000);
         
@@ -54,8 +52,7 @@ export const usePerformanceMonitor = () => {
     };
 
     // Monitor memory usage
-    const checkMemoryUsage = () => {
-      if ('memory' in performance) {
+    const checkMemoryUsage = $2;
         const memory = (performance as any).memory;
         const memoryData = {
           used: Math.round(memory.usedJSHeapSize / 1048576),

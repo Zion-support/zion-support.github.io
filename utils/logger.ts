@@ -11,7 +11,8 @@ export class Logger {
   private static instance: Logger
   private logLevel: LogLevel
 
-  private constructor(logLevel: LogLevel = LogLevel.INFO) {
+  private constructor(logLeve,
+  l: LogLevel = LogLevel.INFO) {
     this.logLevel = logLevel
   }
 
@@ -47,9 +48,5 @@ export class Logger {
   }
 
   private shouldLog(level: LogLevel): boolean {
-    const levels = [LogLevel.DEBUG, LogLevel.INFO, LogLevel.WARN, LogLevel.ERROR]
-    return levels.indexOf(level) >= levels.indexOf(this.logLevel)
-  }
-}
-
+    const levels = $2;
 export const logger = Logger.getInstance()

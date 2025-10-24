@@ -73,16 +73,20 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 }
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: { [ke,
+  y: string]: string }
+  searchParams: { [ke,
+  y: string]: string | string[] | undefined }
 }
 // API route types
 export interface ApiRouteHandler {
   (req: Request): Promise<Response>}
 // Server components types
 export interface ServerComponentProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: { [ke,
+  y: string]: string }
+  searchParams: { [ke,
+  y: string]: string | string[] | undefined }
 }
 // Client components types
 export interface ClientComponentProps {
@@ -95,14 +99,17 @@ export interface RouteHandler {
   POST?: (req: Request) => Promise<Response>
   PUT?: (req: Request) => Promise<Response>
   DELETE?: (req: Request) => Promise<Response>
-  PATCH?: (req: Request) => Promise<Response>}
+  PATCH?: (re,
+  q: Request) => Promise<Response>}
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string }
+  params: { [ke,
+  y: string]: string }
 }
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: any }
+  props: { [ke,
+  y: string]: any }
   revalidate?: number
   notFound?: boolean
 }

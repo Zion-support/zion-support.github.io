@@ -1,11 +1,13 @@
 import React from 'react'
 import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react'
 import React from 'react';
+import Head from 'next/head';
 import { CheckCircle, Star, Brain, Zap, Shield, Target, Database, Users, Video, Heart, Helmet, Check } from 'lucide-react';
 
 constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
     {
-      title: 'AI Medical Image Analysis',
+      titl,
+  e: 'AI Medical Image Analysis',
       description: 'Advanced AI-powered medical imaging analysis for radiology, pathology, and diagnostic imaging with 9 9.5% accuracy.',
       icon: '🩺',
       price: '$2,99 9/month',
@@ -126,10 +128,4 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
       technologies: ['IoT Integration', 'Machine Learning', 'Real-time Processing', 'Device APIs', 'Cloud Computing']
     }
   ]
-  const categories = [...new Set(aiHealthcareServices.map(service => service.category))]
-  return ()
-      </div>
-</>
-  )
-}
-export default AIHealthcarePage
+  const categories = $2;

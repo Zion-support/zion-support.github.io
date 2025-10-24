@@ -6,7 +6,8 @@ function fixSyntaxErrors(content) {
   let fixed = content;
   
   // Fix openGraph object syntax
-  fixed = fixed.replace(/openGraph: \{\}\n\s*title:/g, 'openGraph: {\n    title:');
+  fixed = fixed.replace(/openGraph: \{\}\n\s*title:/g, 'openGraph: {\n    titl,
+  e:');
   
   // Fix features array syntax
   fixed = fixed.replace(/const features = \[\n\s*\{\}\n\s*icon:/g, 'const features = [\n    {\n      icon:');

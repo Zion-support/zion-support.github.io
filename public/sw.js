@@ -1,6 +1,6 @@
 
 // Service Worker for Zion Tech Group Website
-const CACHE_NAME = 'zion-tech-group-v1'
+const CACHE_NAME = $2;
 const urlsToCache = [
   '/'
   '/about'

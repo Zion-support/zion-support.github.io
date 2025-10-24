@@ -12,14 +12,13 @@ export default async function handler(req, res) {
   }
   try {
     // Calculate shipping rates (mock calculation)
-    const baseRate = 10
-    const weightMultiplier = parseFloat(weight) * 0.5
-    const destinationMultiplier = destination === 'international' ? 2 : 1
+    const baseRate = $2;
     const rates = [
       {
         service: 'Standard',
     cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier)
-        days: destination === 'international' ? '7-14' : '3-5'}
+        day,
+  s: destination === 'international' ? '7-14' : '3-5'}
       {
         service: 'Express',
     cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier * 1.5),

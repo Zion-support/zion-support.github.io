@@ -50,30 +50,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     }
   };
 
-  const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />
-        <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-        <p className="text-white/90">
-          Get the latest updates on AI technology, IT solutions, and industry insights.
-        </p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
-            disabled={status === 'loading'}
-          />
-          <button
-            type="submit"
-            disabled={status === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+  const content = $2;
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable,
+  d:cursor-not-allowed flex items-center justify-center"
           >
             {status === 'loading' ? (
               <>
@@ -110,19 +89,16 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           ✓ Exclusive content and early access
         </p>
       </div>
-    </div>
   );
 
   if (variant === 'modal') {
     return (
-      <div className="fixed inset-0 z-50 overflow-y-auto">
+    <div>
         <div className="flex min-h-screen items-center justify-center px-4 py-6">
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
           <div className="relative w-full max-w-md">
             {content}
           </div>
-        </div>
-      </div>
     );
   }
 

@@ -1,6 +1,5 @@
 
-const fs = require('fs')
-const path = require('path')
+const fs = $2;
 function fixFunctionDeclarations(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
@@ -38,18 +37,7 @@ function fixFunctionDeclarations(filePath) {
   }
 }
 function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath)
-  for (const file of files) {
-    const filePath = path.join(dirPath, file)
-    const stat = fs.statSync(filePath)
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      processDirectory(filePath)
-    } else if (file.endsWith('.tsx')) {
-      fixFunctionDeclarations(filePath)
-    }
-  }
-}
-// Process the app directory
+  const files = $2;
 const appDir = path.join(__dirname, 'app')
 if (fs.existsSync(appDir)) {
   processDirectory(appDir)

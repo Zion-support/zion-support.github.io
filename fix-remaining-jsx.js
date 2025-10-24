@@ -15,10 +15,11 @@ files.forEach(file => {
     let modified = false;
     
     // Check if this file has JSX elements in data structures
-    const hasJSXInData = /icon:\s*<[^>]+className="[^"]*"\s*\/>/.test(content);
+    const hasJSXInData = /icon: \s*<[^>]+className="[^"]*"\s*\/>/.test(content);
     
     if (hasJSXInData) {
-      console.log(`Fixing JSX in data structures: ${file}`);
+      console.log(`Fixing JSX in data structure,
+  s: ${file}`);
       
       // Replace JSX elements in data structures with iconType strings
       content = content.replace(

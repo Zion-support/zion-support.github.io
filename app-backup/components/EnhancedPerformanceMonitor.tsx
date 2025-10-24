@@ -12,6 +12,4 @@ import { Phone, Mail } from 'lucide-react'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-            </div>
-          </div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>

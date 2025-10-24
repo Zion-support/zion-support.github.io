@@ -21,53 +21,10 @@ export interface SEOProps {}
   structuredData?: Record<string, unknown>
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
   locale?: string
-  alternateLocales?: { locale: string; url: string }[]
+  alternateLocales?: { locale: string; ur,
+  l: string }[]
 }
-const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.',
-  keywords: []
-    'AI',
-    'artificial intelligence',
-    'enterprise solutions',
-    'digital transformation',
-    'IT services'],
-  image: 'https:// ziontechgroup.com/og-image.jpg',
-  url: 'https:// ziontechgroup.com',
-  type: 'website' as const,
-  locale: 'en_US',
-  twitterCard: 'summary_large_image' as const
-}
-export const SEO: React.FC<SEOProps> = ({}
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type= default SEO.type,
-  author,
-  publishDate,
-  modifiedDate,
-  canonical,
-  noIndex= false,
-  structuredData,
-  twitterCard= default SEO.twitterCard,
-  locale= default SEO.locale,
-  alternateLocales= []}) => {constseo= {
-  title: title ?`${title} | Zion TechGroup` : default SEO.title,
-    description: description || default SEO.description,
-    keywords: keywords || default SEO.keywords,
-    image: image || default SEO.image,
-    url: url || default SEO.url,
-    type,
-    twitterCard,
-    locale
-  }
-  // Generate structured data
-  const generateStructuredData = () => {}
-    if (structuredData) {}
-      return structuredData
-    }
+const defaultSEO = $2;
     const baseStructuredData: Record<string, unknown> = {}
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
@@ -90,58 +47,62 @@ export const SEO: React.FC<SEOProps> = ({}
     }
     return baseStructuredData
   }
-  return ()
-    <Helmet>
+  return (
+    <div>
       {/* Basic Meta Tags */}
       <title>{seo.title}</title>
-      <meta name=&quot;description&quot; content={seo.description} />
-      {seo.keywords && <meta name=&quot;keywords&quot; content={seo.keywords.join(', ')} />}
+      <meta name="description" content={seo.description} />
+      {seo.keywords && <meta name="keywords" content={seo.keywords.join(', ')} />}
       {/* Canonical URL */}
-      {canonical && <link rel=&quot;canonical&quot; href={canonical} />}
+      {canonical && <link rel="canonical" href={canonical} />}
       {/* No Index */}
-      {noIndex && <meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; />}
+      {noIndex && <meta name="robots" content="noindex, nofollow" />}
       {/* Open Graph Meta Tags */}
-      <meta property=&quot;og:title&quot; content={seo.title} />
-      <meta property=&quot;og:description&quot; content={seo.description} />
-      <meta property=&quot;og:type&quot; content={seo.type} />
-      <meta property=&quot;og:url&quot; content={seo.url} />
-      <meta property=&quot;og:image&quot; content={seo.image} />
-      <meta property=&quot;og:locale&quot; content={seo.locale} />
-      <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:type" content={seo.type} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:locale" content={seo.locale} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       {/* Alternate Locales */}
       {alternateLocales.map(({ locale: altLocale, url: altUrl }) => ()
         <React.Fragment key={altLocale}>
-          <meta property=&quot;og:locale:alternate&quot; content={altLocale} />
-          <link rel=&quot;alternate&quot; hrefLang={altLocale} href={altUrl} />
+          <meta property="og: local,
+  e:alternate" content={altLocale} />
+          <link rel="alternate" hrefLang={altLocale} href={altUrl} />
         </React.Fragment>
       ))}
       {/* Twitter Card Meta Tags */}
-      <meta name=&quot;twitter:card&quot; content={seo.twitterCard} />
-      <meta name=&quot;twitter:title&quot; content={seo.title} />
-      <meta name=&quot;twitter:description&quot; content={seo.description} />
-      <meta name=&quot;twitter:image&quot; content={seo.image} />
-      <meta name=&quot;twitter:site&quot; content=&quot;@ziontechgroup&quot; />
-      {author && <meta name=&quot;twitter:creator&quot; content={`@${author}`} />}
+      <meta name="twitter:card" content={seo.twitterCard} />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter: site" content="@ziontechgroup" />
+      {author && <meta name="twitte,
+  r:creator" content={`@${author}`} />}
       {/* Article Meta Tags */}
       {type === 'article' && ()
         <>
-          {publishDate && <meta property=&quot;article:published_time&quot; content={publishDate} />}
-          {modifiedDate && <meta property=&quot;article:modified_time&quot; content={modifiedDate} />}
-          {author && <meta property=&quot;article:author&quot; content={author} />}
+          {publishDate && <meta property="article:published_time" content={publishDate} />}
+          {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
+          {author && <meta property="article:author" content={author} />}
 </>
       )}
       {/* Structured Data */}
-      <script type=&quot;application/ld+json&quot;>{JSON.stringify(generateStructuredData())}</script>
+      <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
       {/* Preconnect to external domains */}
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="http,
+  s://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* DNS Prefetch */}
-      <link rel=&quot;dns-prefetch&quot; href=&quot;https://www.google-analytics.com&quot; />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       {/* Preload critical resources */}
       <link
-        rel=&quot;preload&quot;
-        href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&quot;
-        as=&quot;style&quot;
+        rel="preload"
+        href="https: //fonts.googleapis.com/css2?family=Inte,
+  r:wght@400;500;600;700&display=swap"
+        as="style"
       />
     </Helmet>
   )

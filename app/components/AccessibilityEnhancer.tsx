@@ -1,44 +1,16 @@
-<<<<<<< HEAD
 'use client'
 import Navigation from './Navigation';
-=======
-'use client';
-import { useEffect } from 'react';
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 
-const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<{ childre,
+  n: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
-<<<<<<< HEAD
     if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
+      const handleKeyDown = $2;
+          const mainContent = document.querySelector('main, [role="main"]');
           if (mainContent) {
             (mainContent as HTMLElement).focus();
             event.preventDefault();
-=======
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content with Alt + M
-      if (e.altKey && e.key === 'm') {
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-
-      // Skip to navigation with Alt + N
-      if (e.altKey && e.key === 'n') {
-        e.preventDefault();
-        const navigation = document.querySelector('nav');
-        if (navigation) {
-          const firstLink = navigation.querySelector('a') as HTMLElement;
-          if (firstLink) {
-            firstLink.focus();
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
           }
         }
       }
@@ -57,9 +29,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     style.textContent = `
       *:focus {
         outline: 2px solid #8b5cf6 !important;
-        outline-offset: 2px !important;
+        outline-offse,
+  t: 2px !important;
       }
-<<<<<<< HEAD
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
@@ -80,7 +52,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
-            border-color: currentColor !important;
+            border-colo,
+  r: currentColor !important;
           }
           button, a {
             border: 2px solid currentColor !important;
@@ -94,9 +67,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
-=======
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
       .sr-only {
         position: absolute;
@@ -105,9 +76,11 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         padding: 0;
         margin: -1px;
         overflow: hidden;
-        clip: rect(0, 0, 0, 0);
+        cli,
+  p: rect(0, 0, 0, 0);
         white-space: nowrap;
-        border: 0;
+        borde,
+  r: 0;
       }
       
       .high-contrast {
@@ -117,7 +90,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       .reduce-motion * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        transition-duratio,
+  n: 0.01ms !important;
       }
     `;
     document.head.appendChild(style);
@@ -127,17 +101,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     };
   }, []);
 
-<<<<<<< HEAD
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+      const modals = document.querySelectorAll('[role="dialog"]');
       modals.forEach(trapFocus);
-=======
-  useEffect(() => {
-    // Add ARIA landmarks
-    const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main');
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
     }
 
     const nav = document.querySelector('nav');

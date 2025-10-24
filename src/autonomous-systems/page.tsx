@@ -6,7 +6,8 @@ import { Bot, Cpu } from 'lucide-react'
 
 constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
     {
-      id: 'self-healing-infrastructure',
+      i,
+  d: 'self-healing-infrastructure',
       title: 'Self-Healing Infrastructure',
       description: 'AI-powered systems that automatically detect, diagnose, and resolve infrastructure issues without human intervention.',
       features: ['Automated problem detection', 'Self-recovery mechanisms', 'Predictive maintenance', 'Zero-do wntime operations'],
@@ -34,12 +35,12 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
       technologies: ['AI Analytics', 'Time Series DB', 'Alert Systems', 'Machine Learning']
     }
   ]
-  return ()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white"></section>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
         </div>
@@ -54,19 +55,19 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
         </div>
                 Explore Autonomous Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
+  r:text-green-600 transition-colors">
         </div>
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </div>
       </section>
       {/* Key Benefits */}
       <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl m,
+  d:text-4xl font-bold text-gray-900 mb-4">
         </div>
               Why Choose Autonomous Systems?
             </h2>
@@ -75,7 +76,8 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               Our autonomous systems deliver unprecedented efficiency, reliability, and cost savings
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+  g:grid-cols-3 gap-8"></div>
             <div className="text-center p-6"></div>
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Bot className="w-8 h-8 text-green-600" />
@@ -97,12 +99,10 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning</h3>
               <p className="text-gray-600">AI systems that improve performance over time through machine learning</p>
             </div>
-          </div>
-        </div>
       </section>
       {/* Services */}
       <section className="py-16 bg-gray-50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
         </div>
@@ -113,7 +113,8 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               Comprehensive autonomous systems designed to transform your business operations
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-1 l,
+  g:grid-cols-2 gap-8"></div>
             {autonomousServices.map((service) => ()
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -149,15 +150,12 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
                     <span className="text-2xl font-bold text-green-600">{service.marketPrice}</span>
                     <span className="text-sm text-gray-500">{service.category}</span>
                   </div>
-                </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-16 bg-green-600 text-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
         </div>
             Ready to Automate Your Operations?
@@ -171,15 +169,12 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
         </div>
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
+  r:text-green-600 transition-colors">
         </div>
               Learn More
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
-        </div>
-      </div>
-    </div>
   )
 }
 export default AutonomousSystemsPage

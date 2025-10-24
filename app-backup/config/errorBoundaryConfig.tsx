@@ -31,46 +31,26 @@ maxStoredErrors: number
 /**
 * Custom error messages by error type
 */
-customMessages: Record<string, string>
+customMessage,
+  s: Record<string, string>
 /**
 * Fallback UI components
 */
 fallbackComponents: {,
-    default: React.ComponentType<{ error: Error; resetError: () => void }>
-network: React.ComponentType<{ error: Error; resetError: () => void }>
-notFound: React.ComponentType<{ error: Error; resetError: () => void }>
+    default: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
+network: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
+notFound: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
 }
 }
 /**
 * Default error messages
 */
-const DEFAULT_ERROR_MESSAGES = {
-default: 'Something went wrong. Please try again.',
-    network: 'Network connection issue. Please check your internet connection.'
-notFound: 'The requested resource was not found.',
-    timeout: 'Request timed out. Please try again.'
-serverError: 'Server error occurred. Please try again later.',
-    validation: 'Validation error. Please check your input.'}
-/**
-* Get error boundary configuration based on environment
-*/
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
-logErrors: true,
-    showDetails: isDevelopment
-reportErrors: !isDevelopment,
-    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
-showErrorOverlay: isDevelopment,
-    maxStoredErrors: 50
-customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {
-default: DefaultErrorFallback,
-    network: NetworkErrorFallback
-notFound: NotFoundFallback}}
-}
-/**
-* Default error fallback component
-*/
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+const DEFAULT_ERROR_MESSAGES = $2;
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,
+  r: () => void }) {
 return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -104,14 +84,13 @@ className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-
 Go Home
 </
 </div>
-</div>
-</div>
 )
 }
 /**
 * Network error fallback component
 */
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+function NetworkErrorFallback({ resetError }: { error: Error; resetErro,
+  r: () => void }) {
 return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -137,8 +116,6 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 onClick={resetError}
 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Retry Connection</button>
 </div>
-</div>
-</div>
 )
 }
 /**
@@ -162,8 +139,6 @@ onClick={() =>window.history.back()}</button>
 className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors">
 Go Back
 </
-</div>
-</div>
 </div>
 )
 }
@@ -199,10 +174,13 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
 return {
 message: error.message,
     stack: error.stack
-name: error.name,
+nam,
+  e: error.name,
     type: getErrorType(error)
-timestamp: new Date().toISOString(),
+timestam,
+  p: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
-url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
+ur,
+  l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 }
 export default getErrorBoundaryConfig

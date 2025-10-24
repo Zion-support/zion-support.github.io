@@ -19,7 +19,7 @@ import {
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
-const Navigation = () => {
+const Navigation = $2;
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +42,8 @@ const Navigation = () => {
       href: '/services', 
       icon: BriefcaseIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
+        { nam,
+  e: 'AI Solutions', href: '/ai-solutions' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
@@ -64,10 +65,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+  g:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -82,13 +82,14 @@ const Navigation = () => {
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.name} className="relative group">
+    <div>
                   <Link
                     href={item.href}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)
                         ? 'bg-purple-600 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
+                        : 'text-gray-300 hover: text-white hove,
+  r:bg-slate-800'
                     }`}
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
@@ -104,7 +105,8 @@ const Navigation = () => {
                       {item.submenu.map((subItem) => (
                         <Link key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
+                          className="block px-4 py-2 text-sm text-gray-300 hover: text-white hove,
+  r:bg-slate-700"
                         >
                           {subItem.name}
                         </Link>
@@ -117,10 +119,11 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg: flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hove,
+  r:to-cyan-700 transition-all duration-300"
             >
               Get Started
             </Link>
@@ -135,7 +138,6 @@ const Navigation = () => {
               {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
             </button>
           </div>
-        </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -144,14 +146,15 @@ const Navigation = () => {
               {navigation.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.name}>
+    <div>
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
                         isActive(item.href)
                           ? 'bg-purple-600 text-white'
-                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                          : 'text-gray-300 hover: text-white hove,
+  r:bg-slate-700'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
@@ -182,8 +185,6 @@ const Navigation = () => {
                   Get Started
                 </Link>
               </div>
-            </div>
-          </div>
         )}
       </div>
     </nav>

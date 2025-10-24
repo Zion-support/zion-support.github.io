@@ -1,7 +1,5 @@
 
-const fs = require('fs')
-const path = require('path')
-// Function to replace react-helmet-async with Next.js Head
+const fs = $2;
 function fixHelmetInFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
@@ -30,9 +28,7 @@ function fixHelmetInFile(filePath) {
 }
 // Function to recursively find and fix all .tsx files
 function fixAllFiles(dir) {
-  const files = fs.readdirSync(dir)
-  files.forEach(file => {
-    const filePath = path.join(dir, file)
+  const files = $2;
     const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       fixAllFiles(filePath)

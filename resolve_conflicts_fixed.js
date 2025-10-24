@@ -1,6 +1,5 @@
 
-const fs = require('fs')
-const path = require('path')
+const fs = $2;
 function resolveConflicts(content) {
   // Remove all merge conflict markers and keep the HEAD version
   return content

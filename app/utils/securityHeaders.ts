@@ -14,13 +14,17 @@ export interface SecurityHeadersConfig {
 
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy
-  contentSecurityPolicy: [
+  contentSecurityPolic,
+  y: [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com http,
+  s://www.google-analytics.com",
     "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https: blob:",
+    "img-src 'self' data: https: blo,
+  b:",
     "font-src 'self' data: ",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
+    "connect-src 'self' https: //www.google-analytics.com http,
+  s://analytics.google.com",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",
@@ -52,7 +56,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
  * Get security headers as key-value pairs
  */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {
-  const config = { ...defaultSecurityHeaders, ...customConfig }
+  const config = $2;
   const headers: Record<string, string> = {
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'
@@ -83,12 +87,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 /**
  * Get security headers in Next.js format
  */
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; value: string }> {
-  const headers = getSecurityHeaders(customConfig)
-  return Object.entries(headers).map(([key, value]) => ({
-    key,
-    value
-  }))
-}
-
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; valu,
+  e: string }> {
+  const headers = $2;
 export default defaultSecurityHeaders

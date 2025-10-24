@@ -1,17 +1,5 @@
 
-const fs = require('fs')
-const path = require('path')
-// Function to fix malformed JSX files
-function fixMalformedFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    // Fix common issues
-    content = content.replace(/<React\.Fragment>/g, '<>')
-    content = content.replace(/<\/React\.Fragment>/g, '</>')
-    // Fix malformed closing tags at the end
-    const lines = content.split('\n')
-    const lastNonEmptyLine = lines.findLastIndex(line => line.trim() !== '')
-    if (lastNonEmptyLine > 0) {
+const fs = $2;
       const lastLine = lines[lastNonEmptyLine].trim()
       // If the last line is just a closing tag without proper structure, fix it
       if (lastLine.match(/^<\/[^>]+>$/)) {
@@ -19,16 +7,7 @@ function fixMalformedFile(filePath) {
         let properEndIndex = lastNonEmptyLine
         // Look for the closing of the main return statement
         for (let i = lastNonEmptyLine; i >= 0; i--) {
-          const line = lines[i].trim()
-          if (line === ')' || line === '}' || line === '}') {
-  properEndIndex = i
-            break
-}
-        }
-        // Remove malformed lines after the proper end
-        const fixedLines = lines.slice(0, properEndIndex + 1)
-        // Add proper closing if missing
-        if (!fixedLines[fixedLines.length - 1].includes('export default')) {
+          const line = $2;
           const componentName = path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '')
           fixedLines.push('')
           fixedLines.push(`export default ${componentName}Page;`)
@@ -38,17 +17,14 @@ function fixMalformedFile(filePath) {
     }
     // Ensure proper JSX structure
     if (content.includes('return (
-    <>
+    <div>
       ') && !content.includes('return (')) {
       content = content.replace(/return\s*\(/g, 'return ('
     </>
   )
     }
     // Fix missing closing tags for fragments
-    const openFragments = (content.match(/<>/g) || []).length
-    const closeFragments = (content.match(/<\/>/g) || []).length
-    if (openFragments > closeFragments) {
-  // Add missing closing fragment tags
+    const openFragments = $2;
       const missingFragments = openFragments - closeFragments
       for (let i = 0; i < missingFragments; i++) {
         content += '\n  </>'

@@ -1,13 +1,14 @@
 import React from 'react'
 import { Star } from 'lucide-react'
 import React from 'react';
+import Head from 'next/head';
 import { Star } from 'lucide-react';
 
 // import {Metadata} from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026HyperconsciousComputingRevolution
 AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousComputingRevolution"() {}
-  return ()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="container mx-auto px-4 py-16"></div>
         {/* Hero Section */}
@@ -24,7 +25,6 @@ AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousCompu
             <Star className="w-6 h-6 fill-current" />
             <span className="text-lg font-semibold">Hyperconscious Computing</span>
           </div>
-        </div>
         {/* Content Sections */}
         <div className="grid md:grid-cols-2 gap-12 mb-16"></div>
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"></div>
@@ -79,7 +79,6 @@ AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousCompu
               </li>
             </ul>
           </div>
-        </div>
         {/* CTA Section */}
         <div className="text-center"></div>
           <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-8"></div>
@@ -91,14 +90,11 @@ AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousCompu
         </div>
               Experience the AI 2026 hyperconscious computing revolution.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hove,
+  r:shadow-2xl">
         </div>
               Get Started Today
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
-        </div>
-      </div>
-    </div>
   )
 }

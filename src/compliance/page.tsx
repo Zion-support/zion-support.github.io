@@ -7,20 +7,8 @@ import { CheckCircle, Shield, Users } from 'lucide-react'
 import { Award } from 'lucide-react'
 
 const $1: React.FC = () => {
-  const certifications = []
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR', status: 'Compliant' },
-    { name: 'HIPAA', status: 'Compliant' },
-    { name: 'PCI DSS', status: 'Compliant' }
-  ]
-
-const Page = () => {}
-  return ()
-      </div>
-      <Footer />
-</>
-  )
-}
-
+  const certifications = $2;
+const Page = ($2) => {
+  $3
+};
 export default Page;

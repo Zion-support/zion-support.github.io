@@ -14,12 +14,7 @@ import path from 'path'
   '
   '
   '
-  const lines = content.split('\n'
-    if (line.startsWith('<<<<<<<') || line.startsWith('') || line.startsWith('>>>>>>>'
-      while (i < lines.length && (lines[i].startsWith('<<<<<<<') || lines[i].startsWith('') || lines[i].startsWith('>>>>>>>'
-  return resolved.join('\n'
-  // eslint-disable-next-line no-console
-    console.error('Error: '
+  const lines = $2;
     const content = fs.readFileSync(filePath, 'utf8'
 // eslint-disable-next-line no-console
     console.log('Starting merge conflict resolution...'

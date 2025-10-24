@@ -1,11 +1,13 @@
 import React from 'react'
 import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet } from 'lucide-react'
 import React from 'react';
+import Head from 'next/head';
 import { CheckCircle, Mail, Star, Brain, Zap, Target, TrendingUp, Users, Video, BarChart, Helmet, Check } from 'lucide-react';
 
 constAIMarketingPage: React.FC= () =>{constaiMarketingServices= [
     {
-      title: 'AI-Powered Ad Campaign Optimization',
+      titl,
+  e: 'AI-Powered Ad Campaign Optimization',
       description: 'Intelligent ad campaign management with real-time optimization, audience targeting, and budget allocation across all platforms.',
       icon: '🎯',
       price: '$29 9/month',
@@ -126,10 +128,4 @@ constAIMarketingPage: React.FC= () =>{constaiMarketingServices= [
       technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools']
     }
   ]
-  const categories = [...new Set(aiMarketingServices.map(service => service.category))]
-  return ()
-      </div>
-</>
-  )
-}
-export default AIMarketingPage
+  const categories = $2;

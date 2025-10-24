@@ -19,9 +19,11 @@ export default async function handler(req, res) {
       email
       phone
       details
-      country: country || 'Not specified',
+      countr,
+  y: country || 'Not specified',
     service: service || 'General inquiry'
-      status: 'pending',
+      statu,
+  s: 'pending',
     createdAt: new Date().toISOString()}
     // Here you would typically save the quote to a database
     // eslint-disable-next-line no-console

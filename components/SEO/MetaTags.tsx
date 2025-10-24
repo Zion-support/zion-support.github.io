@@ -5,7 +5,7 @@ interface MetaTagsProps {
 }
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   return (
-    <div className={className}>
+    <div>
       <h2>MetaTags</h2>
       <p>This component is under construction.</p>
     </div>

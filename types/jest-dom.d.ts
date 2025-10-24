@@ -5,7 +5,8 @@ declare global {
     interface Matchers<R> {
       toBeInTheDocument(): R
       toHaveClass(className: string): R
-      toHaveAttribute(attr: string, value?: string): R
+      toHaveAttribute(att,
+  r: string, value?: string): R
     }
   }
 }

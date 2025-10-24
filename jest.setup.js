@@ -1,5 +1,6 @@
 import React from 'react'
 import '@testing-library/jest-dom'
+
 // Mock react-router-dom
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom')
@@ -32,6 +33,7 @@ jest.mock('react-router-dom', () => {
     }
   }
 })
+
 // Suppress console warnings for tests
 const originalError = console.error
 beforeAll(() => {
@@ -43,7 +45,8 @@ beforeAll(() => {
     originalError.call(console, ...args)
   }
 })
+
 afterAll(() => {
   // eslint-disable-next-line no-console
-    console.error = originalError
+  console.error = originalError
 })

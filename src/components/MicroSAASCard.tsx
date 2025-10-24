@@ -14,14 +14,15 @@ interface MicroSAASCardProps {}
     marketPrice?: string
     category: string
     technologies: string[]
-    contactInfo: string
+    contactInf,
+  o: string
     link?: string
     popular?: boolean
   }
 }
 
 const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {}
-  return ()
+  return (
     <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
       {service.popular && ()
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
@@ -45,7 +46,6 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {}
         <div className="text-xs text-gray-400 mb-4"></div>
           <span className="bg-gray-800 px-2 py-1 rounded">{service.category}</span>
         </div>
-      </div>
       <div className="space-y-4"></div>
         
           <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -83,21 +83,18 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {}
               </span>
             ))}
           </div>
-        </div>
         <div className="pt-4"></div>
           <a
             href={service.link || 'mailto:kleber@ziontechgroup.com'}
-            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
+            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover: from-cyan-600 hove,
+  r:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
           >
         </div>
             Get Started
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
-      </div>
-    </div>
   )
 }
 

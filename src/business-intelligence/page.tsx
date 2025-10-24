@@ -5,7 +5,8 @@ import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
 
 constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
     {
-      id: 'data-analytics',
+      i,
+  d: 'data-analytics',
       title: 'Advanced Data Analytics',
       description: 'Transform raw data into actionable insights with our comprehensive analytics solutions.',
       features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
@@ -33,12 +34,12 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ]
-  return ()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"></section>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
         </div>
@@ -53,17 +54,16 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
         </div>
                 Explore BI Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
+  r:text-blue-600 transition-colors">
         </div>
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </div>
       </section>
       {/* Key Benefits */}
       <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
         </div>
@@ -74,7 +74,8 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
               Our business intelligence solutions deliver actionable insights that drive real business value
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 l,
+  g:grid-cols-3 gap-8"></div>
             <div className="text-center p-6"></div>
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <BarChart className="w-8 h-8 text-blue-600" />
@@ -96,12 +97,10 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategic Planning</h3>
               <p className="text-gray-600">Plan for the future with predictive analytics and trend analysis</p>
             </div>
-          </div>
-        </div>
       </section>
       {/* Services */}
       <section className="py-16 bg-gray-50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
         </div>
@@ -112,7 +111,8 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
               Comprehensive business intelligence services designed to unlock the value in your data
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-1 l,
+  g:grid-cols-2 gap-8"></div>
             {biServices.map((service) => ()
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -148,15 +148,12 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
                     <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
                     <span className="text-sm text-gray-500">{service.category}</span>
                   </div>
-                </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
         </div>
             Ready to Transform Your Data?
@@ -170,15 +167,12 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
         </div>
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
+  r:text-blue-600 transition-colors">
         </div>
               Learn More
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
-        </div>
-      </div>
-    </div>
   )
 }
 export default BusinessIntelligencePage

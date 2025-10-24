@@ -1,5 +1,6 @@
 import React from 'react'
 import React from 'react';
+import Head from 'next/head';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation'
@@ -17,42 +18,8 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= []
     'Integration with popular project management tools'
   ]
 
-  const benefits = []
-    '40% increase in project delivery speed',
-    '70% reduction in project delays',
-    '85% improvement in planning accuracy',
-    '30% cost reduction through optimization',
-    '95% team productivity boost',
-    '50% faster decision making'
-  ]
-
-  constpricing= [
-    {
-      plan: 'Starter',
-      price: '$19 9',
-      period: '/month',
-      features: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support'],
-      popular: false
-   },
-    {plan: 'Professional',
-      price: '$39 9',
-      period: '/month',
-      features: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations'],
-      popular: true
-   },
-    {plan: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      features: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee'],
-      popular: false
-    }
-  ]
-
-const Page = () => {}
-  return ()
-      </div>
-</>
-  )
-}
-
+  const benefits = $2;
+const Page = ($2) => {
+  $3
+};
 export default Page;

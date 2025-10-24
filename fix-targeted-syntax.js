@@ -1,15 +1,5 @@
 
-const fs = require('fs')
-const path = require('path')
-function fixTargetedSyntax(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let fixed = false
-    // Fix files with return statements outside of functions
-    if (content.includes('return (
-    <>
-      ') && !content.includes('function') && !content.includes('=>')) {
-      // Find the return statement and wrap everything in a function
+const fs = $2;
       const lines = content.split('\n'
     </>
   )
@@ -20,7 +10,7 @@ function fixTargetedSyntax(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
         if (line.trim().startsWith('return (
-    <>
+    <div>
       ') && !foundReturn) {
           newContent += 'export default function Page() {\n'
           newContent += line + '\n'
@@ -79,14 +69,7 @@ function fixTargetedSyntax(filePath) {
   }
 }
 // Fix specific problematic files
-const problematicFiles = [
-  'app/about/page.tsx'
-  'app/accessibility-page/page.tsx'
-  'app/accessibility/page.tsx'
-  'app/ai-accounting-assistant/page.tsx',
-    'app/ai-agricultural-intelligence-pro/page.tsx'
-  ]
-problematicFiles.forEach(filePath => {
+const problematicFiles = $2;
   const fullPath = path.join(__dirname, filePath)
   if (fs.existsSync(fullPath)) {
     fixTargetedSyntax(fullPath)

@@ -1,8 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const __filename = $2;
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
@@ -42,7 +41,7 @@ function fixSyntaxErrors(filePath) {
       .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
       // Fix return statements
       .replace(/return\s*\(\s*;\s*$/gm, 'return (
-    <>
+    <div>
       '
     </>
   )
@@ -52,7 +51,7 @@ function fixSyntaxErrors(filePath) {
       .replace(/\s+$/gm, '')
       .replace(/^\s+/gm, '')
     // Try to fix incomplete JSX structures
-    const lines = fixedContent.split('\n')
+    const lines = $2;
     const fixedLines = []
     let inJSX = false
     let jsxDepth = 0
@@ -90,38 +89,7 @@ function fixSyntaxErrors(filePath) {
       }
       fixedLines.push(line)
     }
-    const finalContent = fixedLines.join('\n')
-    // Only write if content changed
-    if (finalContent !== content) {
-  fs.writeFileSync(filePath, finalContent)
-      return true
-}
-    return false
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
-  }
-}
-function findTsxFiles(dir) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath)
-      }
-    }
-  }
-  traverse(dir)
-  return files
-}
-// Main execution
-const appDir = path.join(__dirname, 'app')
+    const finalContent = $2;
 const files = findTsxFiles(appDir)
 // eslint-disable-next-line no-console
     console.log(`Found ${files.length} TypeScript files to check`)

@@ -1,6 +1,6 @@
 import React from 'react'
 "use client"
-const testRunner = () => {
-  return null
-}
+const testRunner = ($2) => {
+  $3
+};
 export default testRunner

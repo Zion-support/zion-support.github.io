@@ -1,16 +1,11 @@
 
-const fs = require('fs')
-const path = require('path')
-function fixHtmlEntities(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    // Fix common HTML entities
+const fs = $2;
     const replacements = {
-      '&quot;': '"'
+      '"': '"'
       '&apos;': "'"
-      '&lt;': '<'
-      '&gt;': '>'
-      '&amp;': '&'
+      '<': '<'
+      '>': '>'
+      '&': '&'
       '&nbsp;': ' '
       '&ldquo;': '"'
       '&rdquo;': '"'
@@ -22,27 +17,8 @@ function fixHtmlEntities(filePath) {
       '&#62;': '>'
       '&#38;': '&'
 }
-    let hasChanges = false
-    for (const [entity, replacement] of Object.entries(replacements)) {
-  if (content.includes(entity)) {
-        content = content.replace(new RegExp(entity, 'g'), replacement)
-        hasChanges = true
-}
-    }
-    if (hasChanges) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      // eslint-disable-next-line no-console
-    console.log(`Fixed HTML entities in: ${filePath}`)
-    }
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error processing ${filePath}:`, error.message)
-  }
-}
-function walkDirectory(dir) {
-  const files = fs.readdirSync(dir)
-  for (const file of files) {
-    const filePath = path.join(dir, file)
+    let hasChanges = $2;
+  const files = $2;
     const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       walkDirectory(filePath)

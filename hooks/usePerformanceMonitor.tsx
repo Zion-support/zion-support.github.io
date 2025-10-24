@@ -1,6 +1,6 @@
 import React from 'react'
 "use client"
-const usePerformanceMonitor = () => {
-  return null
-}
+const usePerformanceMonitor = ($2) => {
+  $3
+};
 export default usePerformanceMonitor

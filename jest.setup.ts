@@ -12,14 +12,16 @@ import 'whatwg-fetch'
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 // Set up a mock for Vite environment variables accessed via import.meta.env
 process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'
-process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'
+process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http: //localhos,
+  t:54321'
 process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
 
 // Mock window.matchMedia for Jest
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
-    matches: false, // Default to false (light theme)
+    matche,
+  s: false, // Default to false (light theme)
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecated

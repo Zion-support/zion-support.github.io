@@ -1,15 +1,5 @@
 
-const fs = require('fs')
-const path = require('path')
-function fixComplexSyntax(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let fixed = false
-    // Fix return statements outside of functions
-    if (content.includes('return (
-    <>
-      ') && !content.includes('function') && !content.includes('=>')) {
-      // Wrap the entire content in a proper function
+const fs = $2;
       const lines = content.split('\n'
     </>
   )
@@ -19,7 +9,7 @@ function fixComplexSyntax(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
         if (line.trim().startsWith('return (
-    <>
+    <div>
       ')) {
           if (!inReturn) {
             newContent += 'export default function Page() {\n'
@@ -77,18 +67,7 @@ function fixComplexSyntax(filePath) {
   }
 }
 function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath)
-  for (const file of files) {
-    const filePath = path.join(dirPath, file)
-    const stat = fs.statSync(filePath)
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      processDirectory(filePath)
-    } else if (file.endsWith('.tsx')) {
-      fixComplexSyntax(filePath)
-    }
-  }
-}
-// Process the app directory
+  const files = $2;
 const appDir = path.join(__dirname, 'app')
 if (fs.existsSync(appDir)) {
   processDirectory(appDir)

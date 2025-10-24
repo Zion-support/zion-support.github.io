@@ -6,7 +6,8 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
+    { nam,
+  e: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
@@ -59,9 +60,10 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div>
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 l,
+  g:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -74,17 +76,17 @@ const Footer: React.FC = () => {
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover: text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hove,
+  r:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
-          </div>
 
           {/* AI Services */}
           <div className="space-y-4">
@@ -97,9 +99,10 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link 
                     href={service.url} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hove,
+  r:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -118,9 +121,10 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link 
                     href={service.url} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hove,
+  r:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -161,8 +165,6 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
 
         {/* Contact Info */}
         <div className="border-t border-slate-800 mt-12 pt-8">
@@ -173,27 +175,23 @@ const Footer: React.FC = () => {
                 <p className="text-sm text-gray-400">Email</p>
                 <p className="text-white">contact@ziontechgroup.com</p>
               </div>
-            </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-purple-400" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
                 <p className="text-white">+1 (555) 123-4567</p>
               </div>
-            </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-green-400" />
               <div>
                 <p className="text-sm text-gray-400">Location</p>
                 <p className="text-white">San Francisco, CA</p>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
+        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md: flex-row justify-between items-center">
+          <div className="flex flex-wrap gap-6 mb-4 m,
+  d:mb-0">
             {legal.map((item, index) => (
               <Link 
                 key={index}
@@ -208,7 +206,6 @@ const Footer: React.FC = () => {
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
         </div>
-      </div>
     </footer>
   );
 };
