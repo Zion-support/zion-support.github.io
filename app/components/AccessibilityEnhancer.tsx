@@ -1,18 +1,21 @@
-'use client'
-import React from 'react';
+app/components/AccessibilityEnhancer.tsx'app/components/AccessibilityEnhancer.app/components/AccessibilityEnhancer.tsx;
+app/components/AccessibilityEnhancer.tsx'app/components/AccessibilityEnhancer.tsx;
+
+import React from app/components/AccessibilityEnhancer.tsx'app/components/AccessibilityEnhancer.tsx;
 interface AccessibilityEnhancerProps {
-className?: string
-  children?: React.ReactNode
+className?: app/components/AccessibilityEnhancer.tsx;
+  children?: React.app/components/AccessibilityEnhancer.tsx;
 }
 }
 
-const AccessibilityEnhancer: "React.FC<AccessibilityEnhancerProps> = ({ className", children }) => {
+const AccessibilityEnhancer: app/components/AccessibilityEnhancer.tsx"app/components/AccessibilityEnhancer.tsx, children }) => {
   return (
     <div className = {className,}>
+    </div>
       {children;}
 
     </div>;)
   )
 }
 
-export default AccessibilityEnhancer
+export default app/components/AccessibilityEnhancer.tsx;

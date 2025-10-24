@@ -1,88 +1,46 @@
 export interface User {
 
-id: "string
-  email: string
-  name: string
-  role: 'admin' | 'user' | 'guest'
-"
+id: app/types/app.types.ts"app/types/app.types.tsadminapp/types/app.types.ts'app/types/app.types.tsuserapp/types/app.types.ts'app/types/app.types.tsguestapp/types/app.types.ts'app/types/app.types.app/types/app.types.ts;
 }
 }
 export interface Service {
 
-id: "string
-  title: string
-  description: string
-  shortDescription: string
-  icon: string
-  features: string[]
-pricing: {
-basic: number
-    pro: number
-    enterprise: number
-  "
+id: app/types/app.types.ts"app/types/app.types.app/types/app.types.ts;
 }
 }
-  benefits: "string[]
-useCases: string[]
-marketPrice: string
-  contactInfo: {
-phone: string
-    email: string
-    website: string
-  ",}
-  link: "string
-",}
+  benefits: app/types/app.types.ts"app/types/app.types.ts,}
+  link: app/types/app.types.ts"app/types/app.types.ts,}
 export interface ContactFormData {
 
-name: "string
-  email: string
-  company: string
-  message: string
-  service: string
-"
+name: app/types/app.types.ts"app/types/app.types.app/types/app.types.ts;
 }
 }
 export interface AnalyticsEvent {
 
-name: "string
-  timestamp: number
-  properties?: Record<string",string | number | boolean | null>
+name: app/types/app.types.ts"app/types/app.types.ts,string | number | boolean | null>
 
 }
 }
 export interface PerformanceMetrics {
 
-loadTime: "number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-"
+loadTime: app/types/app.types.ts"app/types/app.types.app/types/app.types.ts;
 }
 }
 export interface ErrorContext {
 
-url?: string
-userAgent?: string
-timestamp?: string
-userId?: string
-sessionId?: string
-component?: string
-action?: string
-
+url?: app/types/app.types.ts;
+userAgent?: app/types/app.types.ts;
+timestamp?: app/types/app.types.ts;
+userId?: app/types/app.types.ts;
+sessionId?: app/types/app.types.ts;
+component?: app/types/app.types.ts;
+action?: app/types/app.types.ts;
 }
 }
 export interface ErrorReport {
 
-id: "string
-  message: string
-  stack?: string
-context: ErrorContext
-  severity: ErrorSeverity
-  resolved: boolean
-  createdAt: string
-"
+id: app/types/app.types.ts"app/types/app.types.app/types/app.types.ts;
 }
 }
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+export type ErrorSeverity = app/types/app.types.ts'app/types/app.types.ts | app/types/app.types.ts'app/types/app.types.ts | app/types/app.types.ts'app/types/app.types.ts | app/types/app.types.ts'app/types/app.types.app/types/app.types.ts;
 ,}

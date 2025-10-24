@@ -1,67 +1,67 @@
 export interface StructuredData {
-  '@context': string
-  '@type': string
-  name: string
-  description: string
-  url: string
-  logo?: string
+  app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts;
+  app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts;
+  name: app/utils/seoData.ts;
+  description: app/utils/seoData.ts;
+  url: app/utils/seoData.ts;
+  logo?: app/utils/seoData.ts;
   sameAs?: string[]
-  telephone?: string
-  email?: string
+  telephone?: app/utils/seoData.ts;
+  email?: app/utils/seoData.ts;
   openingHours?: string[]
-  priceRange?: string
+  priceRange?: app/utils/seoData.ts;
   contactPoint?: {
-    '@type': string
-    telephone: string
-    contactType: string
+    app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts;
+    telephone: app/utils/seoData.ts;
+    contactType: app/utils/seoData.ts;
   }
 
   address?: {
-    '@type': string
-    streetAddress: string
-    addressLocality: string
-    addressRegion: string
-    postalCode: string
-    addressCountry: string
+    app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts;
+    streetAddress: app/utils/seoData.ts;
+    addressLocality: app/utils/seoData.ts;
+    addressRegion: app/utils/seoData.ts;
+    postalCode: app/utils/seoData.ts;
+    addressCountry: app/utils/seoData.ts;
   }
 
 }
 
 export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description: 'Leading provider of AI and IT solutions for modern businesses',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts'app/utils/seoData.ts,
+    app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts'app/utils/seoData.ts,
+    name: app/utils/seoData.ts'app/utils/seoData.ts,
+    description: app/utils/seoData.ts'app/utils/seoData.ts,
+    url: app/utils/seoData.ts'app/utils/seoData.ts,
+    logo: app/utils/seoData.ts'app/utils/seoData.ts,
     sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup'
+      app/utils/seoData.ts'app/utils/seoData.ts,
+      app/utils/seoData.ts'app/utils/seoData.ts,
+      app/utils/seoData.ts'app/utils/seoData.app/utils/seoData.ts;
     ],
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service'
+      app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts'app/utils/seoData.ts,
+      telephone: app/utils/seoData.ts'app/utils/seoData.ts,
+      contactType: app/utils/seoData.ts'app/utils/seoData.app/utils/seoData.ts;
     },
     address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Tech Street',
-      addressLocality: 'San Francisco',
-      addressRegion: 'CA',
-      postalCode: '94105',
-      addressCountry: 'US'
+      app/utils/seoData.ts'app/utils/seoData.ts: app/utils/seoData.ts'app/utils/seoData.ts,
+      streetAddress: app/utils/seoData.ts'app/utils/seoData.ts,
+      addressLocality: app/utils/seoData.ts'app/utils/seoData.ts,
+      addressRegion: app/utils/seoData.ts'app/utils/seoData.ts,
+      postalCode: app/utils/seoData.ts'app/utils/seoData.ts,
+      addressCountry: app/utils/seoData.ts'app/utils/seoData.app/utils/seoData.ts;
     },
-    ...data
+    ...app/utils/seoData.ts;
   }
 
 }
 
 export const defaultSEOData = {
-  title: 'Zion Tech Group - AI Solutions',
-  description: 'Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.',
-  keywords: 'AI, artificial intelligence, technology solutions, business automation, IT services, cloud computing, cybersecurity',
-  ogImage: '/og-image.jpg',
-  canonical: 'https://ziontechgroup.com'
+  title: app/utils/seoData.ts'app/utils/seoData.ts,
+  description: app/utils/seoData.ts'app/utils/seoData.ts,
+  keywords: app/utils/seoData.ts'app/utils/seoData.ts,
+  ogImage: app/utils/seoData.ts'app/utils/seoData.ts,
+  canonical: app/utils/seoData.ts'app/utils/seoData.app/utils/seoData.ts;
 }

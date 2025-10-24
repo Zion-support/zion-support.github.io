@@ -1,257 +1,257 @@
 export interface Service {
-  id: string
-  title: string
-  description: string
+  id: app/data/servicesData.ts;
+  title: app/data/servicesData.ts;
+  description: app/data/servicesData.ts;
   features: string[]
   benefits: string[]
   pricing: {
-    basic: string
-    pro: string
-    enterprise: string
+    basic: app/data/servicesData.ts;
+    pro: app/data/servicesData.ts;
+    enterprise: app/data/servicesData.ts;
   }
 
   contactInfo: {
-    website: string
-    email: string
-    phone: string
+    website: app/data/servicesData.ts;
+    email: app/data/servicesData.ts;
+    phone: app/data/servicesData.ts;
   }
 
-  price?: string
-  icon?: string
-  href: string
-  popular?: boolean
-  category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation'
+  price?: app/data/servicesData.ts;
+  icon?: app/data/servicesData.ts;
+  href: app/data/servicesData.ts;
+  popular?: app/data/servicesData.ts;
+  category: app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.ts | app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
 }
 
 export const aiServices: Service[] = [
   {
-    id: 'ai-analytics'
-    title: 'AI Analytics & BI'
-    description: 'Transform your data into actionable insights with our advanced AI analytics platform.'
+    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     features: [
-      'Real-time data processing'
-      'Predictive analytics'
-      'Custom dashboards'
-      'Automated reporting'
-      'Machine learning models'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     benefits: [
-      'Improved decision making'
-      'Reduced manual analysis time'
-      'Enhanced business intelligence'
-      'Cost savings through automation'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     pricing: {
-      basic: '299'
-      pro: '599'
-      enterprise: '999'
+      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
     contactInfo: {
-      website: 'https://ziontechgroup.com/ai-analytics'
-      email: 'ai@ziontechgroup.com'
-      phone: '+1-555-0123'
+      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
-    price: '$299/month'
-    icon: '📊'
-    href: '/ai-analytics'
-    popular: true
-    category: 'ai'
+    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    popular: app/data/servicesData.ts;
+    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
   }
 
   {
-    id: 'ai-automation'
-    title: 'AI Automation'
-    description: 'Streamline your business processes with intelligent automation solutions.'
+    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     features: [
-      'Workflow automation'
-      'Document processing'
-      'Email automation'
-      'Task scheduling'
-      'Process optimization'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     benefits: [
-      'Increased productivity'
-      'Reduced human error'
-      'Faster processing times'
-      'Scalable operations'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     pricing: {
-      basic: '199'
-      pro: '399'
-      enterprise: '799'
+      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
     contactInfo: {
-      website: 'https://ziontechgroup.com/ai-automation'
-      email: 'automation@ziontechgroup.com'
-      phone: '+1-555-0124'
+      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
-    price: '$199/month'
-    icon: '🤖'
-    href: '/ai-automation'
-    category: 'ai'
+    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
   }
 
   {
-    id: 'ai-chatbots'
-    title: 'AI Chatbots'
-    description: 'Intelligent conversational AI solutions for customer service and support.'
+    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     features: [
-      'Natural language processing'
-      'Multi-language support'
-      '24/7 availability'
-      'Integration with existing systems'
-      'Analytics and insights'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     benefits: [
-      'Improved customer satisfaction'
-      'Reduced support costs'
-      'Instant responses'
-      'Scalable customer service'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     pricing: {
-      basic: '149'
-      pro: '299'
-      enterprise: '599'
+      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
     contactInfo: {
-      website: 'https://ziontechgroup.com/ai-chatbots'
-      email: 'chatbots@ziontechgroup.com'
-      phone: '+1-555-0125'
+      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
-    price: '$149/month'
-    icon: '💬'
-    href: '/ai-chatbots'
-    category: 'ai'
+    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
   }
 ]
 export const itServices: Service[] = [
   {
-    id: 'web-development'
-    title: 'Web Development'
-    description: 'Build modern, responsive websites and web applications that drive results.'
+    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     features: [
-      'Responsive design'
-      'SEO optimization'
-      'Performance optimization'
-      'Cross-browser compatibility'
-      'Mobile-first approach'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     benefits: [
-      'Increased online presence'
-      'Better user experience'
-      'Higher conversion rates'
-      'Mobile accessibility'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     pricing: {
-      basic: '2999'
-      pro: '5999'
-      enterprise: '9999'
+      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
     contactInfo: {
-      website: 'https://ziontechgroup.com/web-development'
-      email: 'webdev@ziontechgroup.com'
-      phone: '+1-555-0126'
+      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
-    price: '$2,999/project'
-    icon: '🌐'
-    href: '/web-development'
-    popular: true
-    category: 'it'
+    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    popular: app/data/servicesData.ts;
+    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
   }
 
   {
-    id: 'cloud-infrastructure'
-    title: 'Cloud Infrastructure'
-    description: 'Scalable and secure cloud solutions for modern businesses.'
+    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     features: [
-      'Cloud migration'
-      'Infrastructure as Code'
-      'Auto-scaling'
-      'Disaster recovery'
-      'Security compliance'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     benefits: [
-      'Reduced infrastructure costs'
-      'Improved scalability'
-      'Enhanced security'
-      'Better reliability'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     pricing: {
-      basic: '499'
-      pro: '999'
-      enterprise: '1999'
+      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
     contactInfo: {
-      website: 'https://ziontechgroup.com/cloud-infrastructure'
-      email: 'cloud@ziontechgroup.com'
-      phone: '+1-555-0127'
+      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
-    price: '$499/month'
-    icon: '☁️'
-    href: '/cloud-infrastructure'
-    category: 'it'
+    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
   }
 
   {
-    id: 'cybersecurity'
-    title: 'Cybersecurity'
-    description: 'Comprehensive security solutions to protect your digital assets.'
+    id: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    title: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    description: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     features: [
-      'Security audits'
-      'Threat monitoring'
-      'Incident response'
-      'Compliance management'
-      'Security training'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     benefits: [
-      'Protection against threats'
-      'Regulatory compliance'
-      'Reduced risk exposure'
-      'Peace of mind'
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     ]
     pricing: {
-      basic: '399'
-      pro: '799'
-      enterprise: '1499'
+      basic: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      pro: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      enterprise: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
     contactInfo: {
-      website: 'https://ziontechgroup.com/cybersecurity'
-      email: 'security@ziontechgroup.com'
-      phone: '+1-555-0128'
+      website: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      email: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+      phone: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
     }
 
-    price: '$399/month'
-    icon: '🔒'
-    href: '/cybersecurity'
-    category: 'it'
+    price: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    icon: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    href: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
+    category: app/data/servicesData.ts'app/data/servicesData.app/data/servicesData.ts;
   }
 ]
-export const itSolutions = itServices
+export const itSolutions = app/data/servicesData.ts;
 export const allServices: Service[] = [...aiServices, ...itServices]
-// Export as servicesData for backward compatibility
+// Export as servicesData for backward app/data/servicesData.ts;
 export const servicesData = {
-  aiServices
-  itServices
-  itSolutions: itServices, // Add alias for itSolutions
-  allServices
+  app/data/servicesData.ts;
+  app/data/servicesData.ts;
+  itSolutions: itServices, // Add alias for app/data/servicesData.ts;
+  app/data/servicesData.ts;
 }
 
 export const getServiceById = (id: string): Service | undefined => {
   return allServices.find(service => service.id === id)
 }
 
-export const getServicesByCategory = (category: Service['category']): Service[] => {
+export const getServicesByCategory = (category: Service[app/data/servicesData.ts'app/data/servicesData.ts]): Service[] => {
   return allServices.filter(service => service.category === category)
 }
 

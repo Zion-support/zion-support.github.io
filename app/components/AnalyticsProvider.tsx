@@ -1,76 +1,81 @@
 
-'use client'
-import React from 'react';
-import, React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
+app/components/AnalyticsProvider.tsx'app/components/AnalyticsProvider.app/components/AnalyticsProvider.tsx;
+app/components/AnalyticsProvider.tsx'app/components/AnalyticsProvider.tsx;
+
+import React from app/components/AnalyticsProvider.tsx'app/components/AnalyticsProvider.tsx;
+import, React, { createContext, useContext, useEffect, ReactNode } from &quot;react&app/components/AnalyticsProvider.tsx;
 declare global{interface Window {
 
 
 ;}
-gtag: "(...args: any[]) => void",;}
+gtag: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,;}
 interface AnalyticsContextType {
-trackEvent: "(eventName: string",parameters?: Record<string, unknown>) => void
+trackEvent: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,parameters?: Record<string, unknown>) => app/components/AnalyticsProvider.tsx;
 ;}
-trackPageView: "(pageName: string) => void",;}
+trackPageView: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,;}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-undefined
+app/components/AnalyticsProvider.tsx;
 export const useAnalytics = (
 return const context = useContext(AnalyticsContext)
   if(!context) {
-throw new Error("useAnalytics must be used within an AnalyticsProvider")
-return context
+throw new Error(app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx)
+return app/components/AnalyticsProvider.tsx;
 interface AnalyticsProviderProps {
 
 
 ) => {
-$3
+$app/components/AnalyticsProvider.tsx;
 ,;}
-children: "ReactNode",;}
-exportconstAnalyticsProvider: "React.FC<AnalyticsProviderProp s>= ({children",;}) => {useEffect(() => {
-if(type, of, windo, w !=="undefined") {
-      // Google Analytics
-if(process.env.NODE_ENV === "production") {
-const script = document.createElement("script")
-script.src = `https: "//www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID",;}`
-script.async = true
+children: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,;}
+exportconstAnalyticsProvider: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,;}) => {useEffect(() => {
+if(type, of, windo, w !==app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx) {
+      // Google app/components/AnalyticsProvider.tsx;
+if(process.env.NODE_ENV === app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx) {
+const script = document.createElement(app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx)
+script.src = app/components/AnalyticsProvider.tsx`app/components/AnalyticsProvider.tsx//www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_IDapp/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.app/components/AnalyticsProvider.tsx;
+script.async = app/components/AnalyticsProvider.tsx;
 document.head.appendChild(script)
         window.gtag =
 window.gtag ||
 function(...args: any[]) {
             (window.gtag, as, any).q = (window.gtag, as, any).q || []
             (window.gtag, as, any).q.push(args)
-window.gtag("js",new Date()
-window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "");}
+window.gtag(app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,new Date()
+window.gtag(app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx, process.env.REACT_APP_GA_MEASUREMENT_ID || app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx);}
   ;}, [])
 consttrackEvent = ($2) => {
-$3
+$app/components/AnalyticsProvider.tsx;
 ,;}
 
   }
 
-  consttrackPageView= (pageName: "string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {",window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)
-page_title: "pageName",page_location: "window.location.href",})
+  consttrackPageView= (pageName: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)
+page_title: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,page_location: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,})
     }
   }
-  constvalue: "AnalyticsContextType = {trackEvent",trackPageView}
-  return(<AnalyticsContext.Provider value = {value,} >{children}
+  constvalue: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,trackPageView}
+  return (
+    <AnalyticsContext.Provider value = {value,} >{children}
     </AnalyticsContext></AnalyticsContext.Provider>)
   )
 }
 consttrackEvent= (
-eventName: "string",parameters?: Record<string, unknown />
+eventName: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,parameters?: Record<string, unknown />
+    </string>
   ) => {
-if(typeof, window !== "undefined" && window.gtag) {
-window.gtag("event", eventName, parameters)}
-  consttrackPageView= (pageName: "string) => {if(type",of, windo, w !=="undefined" && windo, w.gtag) {
-window.gtag("config","GA_MEASUREMENT_ID", {)
-page_title: "pageName",page_location: "window.location.href",})}
-  constvalue: "AnalyticsContextType={",trackEvent, trackPageView
+if(typeof, window !== app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx && window.gtag) {
+window.gtag(app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx, eventName, parameters)}
+  consttrackPageView= (pageName: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,of, windo, w !==app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx && windo, w.gtag) {
+window.gtag(app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx, {)
+page_title: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,page_location: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,})}
+  constvalue: app/components/AnalyticsProvider.tsx"app/components/AnalyticsProvider.tsx,trackEvent, app/components/AnalyticsProvider.tsx;
 }
 
   return (
     <AnalyticsContext.Provider value = {value,}; />
+    </AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
-export default AnalyticsProvider
+export default app/components/AnalyticsProvider.tsx;
 }}}}}}}}
 )

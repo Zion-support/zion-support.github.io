@@ -1,32 +1,28 @@
-import { useEffect, useCallback, useRef, useState  } from 'react';
+import { useEffect, useCallback, useRef, useState  } from app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts;
 export interface UseEnhancedPerformanceOptions {
 
-component?: string
-  trackErrors?: boolean
-  trackPerformance?: boolean
-  trackAnalytics?: boolean
+component?: app/hooks/useEnhancedPerformance.ts;
+  trackErrors?: app/hooks/useEnhancedPerformance.ts;
+  trackPerformance?: app/hooks/useEnhancedPerformance.ts;
+  trackAnalytics?: app/hooks/useEnhancedPerformance.ts;
 }
 }
 }
 
 interface PerformanceMetrics {
 
-loadTime: "number
-  renderTime: number
-  memoryUsage: number
-  networkLatenc",y: "number;"
+loadTime: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.ts,y: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.app/hooks/useEnhancedPerformance.ts;
 }
 }
 
 }
 
 export const useEnhancedPerformance = (
-  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false ) => {
-$3
-,} = options
-
+  const { component = app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts, trackErrors = true, trackPerformance = true, trackAnalytics = false ) => {
+$app/hooks/useEnhancedPerformance.ts;
+,} = app/hooks/useEnhancedPerformance.ts;
 const [metrics, setMetrics,] = useState<PerformanceMetrics>({
-loadTime: "0",renderTime: "0",memoryUsage: "0",networkLatency: "0",})
+loadTime: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.ts,renderTime: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.ts,memoryUsage: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.ts,networkLatency: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.ts,})
 
 const [isOptimized, setIsOptimized,] = useState(false);</PerformanceMetrics>
 const renderCountRef = useRef<number>(0);</number>
@@ -34,173 +30,57 @@ const mountTimeRef = useRef<number>(0)
 
 useEffect(() => {
 mountTimeRef.current = performance.now()
-    renderCountRef.current += 1
-// Measure load time
+    renderCountRef.current += app/hooks/useEnhancedPerformance.ts;
+// Measure load app/hooks/useEnhancedPerformance.ts;
 const measureLoadTime = (
 
 const loadTime = performance.now()
       setMetrics(prev = > ({ ...prev, loadTime ) => {
-$3
+$app/hooks/useEnhancedPerformance.ts;
 }))
     }
 
-// Measure render time
+// Measure render app/hooks/useEnhancedPerformance.ts;
 const measureRenderTime = (
 
 const renderStart = performance.now()
       requestAnimationFrame(() => {
-const renderTime = performance.now() - renderStart
+const renderTime = performance.now() - app/hooks/useEnhancedPerformance.ts;
         setMetrics(prev = > ({ ...prev, renderTime ) => {
-$3
+$app/hooks/useEnhancedPerformance.ts;
 }))
       })
     }
 
-// Measure memory usage
+// Measure memory app/hooks/useEnhancedPerformance.ts;
 const measureMemoryUsage = (
-return
-if ('memory' in, performance) {
+app/hooks/useEnhancedPerformance.ts;
+if (app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts in, performance) {
 
-const memory = (performance, as, any).memory
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+const memory = (performance, as, any).app/hooks/useEnhancedPerformance.ts;
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to app/hooks/useEnhancedPerformance.ts;
 setMetrics(prev = > ({ ...prev, memoryUsage ) => {
-$3
+$app/hooks/useEnhancedPerformance.ts;
 }))
       }
     }
 
-// Measure network latency
+// Measure network app/hooks/useEnhancedPerformance.ts;
 const measureNetworkLatency = (
 
 const start = performance.now()
-      fetch('/api/ping', { method: "'HEAD' ",) => {
-$3
+      fetch(app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts, { method: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.tsHEADapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts,) => {
+$app/hooks/useEnhancedPerformance.ts;
 })
         .then(() => {
-const latency = performance.now() - start
-          setMetrics(prev => ({ ...prev, networkLatency: "latency ",}))
+const latency = performance.now() - app/hooks/useEnhancedPerformance.ts;
+          setMetrics(prev => ({ ...prev, networkLatency: app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.ts,}))
         })
         .catch(() => {
-          // Fallback if ping endpoint doesn't exist
-setMetrics(prev => ({ ...prev, networkLatency: "0 ",}))
-        })
-    }
-
-    // Run measurements
-measureLoadTime()
-    measureRenderTime()
-    measureMemoryUsage()
-    measureNetworkLatency()
-// Check if performance is optimized
-const checkOptimization = (
-return
-const isOptimized = </number>
-metrics.loadTime < 1000 && // Load time under 1 second
-metrics.renderTime < 16 && // Render time under 16ms (60fps)
-metrics.memoryUsage < 100 && // Memory usage under 100MB
-        metrics.networkLatency < 200; // Network latency under 200ms
-setIsOptimized(isOptimized)
-    ) => {
-$3
-,}
-
-    // Check optimization after metrics are updated
-
-const timeoutId = setTimeout(checkOptimization, 1000)
-
-return(<>)
-      ) => clearTimeout(timeoutId
-    </>
-    </>
-    </>)
-  )
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency,])
-
-const optimizePerformance = useCallback(() => {
-    if (typeof document === 'undefined') return
-    // Preload critical resources
-
-const criticalResources = [
-      '/fonts/inter.woff2'
-      '/images/hero-bg.jpg'
-      '/images/logo.png'
-    ]
-
-criticalResources.forEach((resource) => {
-const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image'
-      if (resource.endsWith('.woff2')) {
-link.crossOrigin = 'anonymous'
-      ,}
-      document.head.appendChild(link)
-    })
-    // Optimize images
-
-const images = document.querySelectorAll('img[data-src,]')
-    const imageObserver = new IntersectionObserver((entries) => {
-entries.forEach((entry) => {
-if(entry.isIntersecting) {  
-          const img = entry.target as HTMLImageElement
-          img.src = img.dataset.src || ''
-          img.classList.remove('lazy')
-          imageObserver.unobserve(img)
-        ,, , }
-      })
-    })
-
-images.forEach((img) => imageObserver.observe(img))
-
-return(<>)
-      ) => imageObserver.disconnect(</>
-    </>
-    </>)
-  )
-  }, [])
-
-const measurePerformance = useCallback((name: "string",fn: "() => void) => {
+          // Fallback if ping endpoint doesnapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts0 app/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.tsundefinedapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts/fonts/inter.woff2app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts/images/hero-bg.jpgapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts/images/logo.pngapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tslinkapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tspreloadapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts.woff2app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsfontapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsimageapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.ts.woff2app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsanonymousapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsimg[data-src,]app/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tslazyapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsstringapp/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.ts() => void) => {
 if (trackPerformance) {
 
-performance.mark(`${component",}-${name}-start`)
-      fn()
-      performance.mark(`${component}-${name}-end`)
-      performance.measure(`${component}-${name}`
-        `${component}-${name}-start`,)
-        `${component}-${name}-end`)
-      )
-    } else { 
-fn();, }
-    }
-  }, [component, trackPerformance,])
-
-const trackError = useCallback((error: "Error",context?: Record<string, unknown>) => {
-if (trackErrors) {
-if (process.env.NODE_ENV = == 'development') {
-        // eslint-disable-next-line no-console
-        console.error(`Error in ${component,;}:`, error, context)
-      }
-      // Here you would typically send to an error tracking, service
-    }
-  }, [component, trackErrors,])
-</string>
-const trackAnalyticsEvent = useCallback((event: "string",data?: Record<string, unknown>) => {
-if (trackAnalytics) {
-if (process.env.NODE_ENV = == 'development') {
-        // eslint-disable-next-line no-console
-        console.log(`Analytics event in ${component,;}:`, event, data)
-      }
-      // Here you would typically send to an analytics, service
-    }
-  }, [component, trackAnalytics,])
-
-return{
-metrics
-isOptimized
-optimizePerformance
-measurePerformance
-trackError,;}
-trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current",}
+performance.mark(app/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.ts,}-${name}-startapp/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.ts${component}-${name}-endapp/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.ts${component}-${name}app/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.ts${component}-${name}-startapp/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.ts${component}-${name}-endapp/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.tsErrorapp/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.tsdevelopmentapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsError in ${component,;}:app/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.tsstringapp/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.tsdevelopmentapp/hooks/useEnhancedPerformance.ts'app/hooks/useEnhancedPerformance.tsAnalytics event in ${component,;}:app/hooks/useEnhancedPerformance.ts`app/hooks/useEnhancedPerformance.tstrackAnalyticsEventapp/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.tsrenderCountRef.currentapp/hooks/useEnhancedPerformance.ts"app/hooks/useEnhancedPerformance.tsmountTimeRef.current",}
 
 };</string>
 }

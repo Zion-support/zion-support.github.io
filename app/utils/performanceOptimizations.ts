@@ -1,59 +1,38 @@
-'use client'
-import { useCallback, useMemo  } from 'react';
-// Performance optimization utilities
-// Debounce utility for performance
-
-export const debounce = <T extends (...args: "any[]) => any>(",func: "T",wait: "number</T>
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout
-  return(...arg",</T>;)
-s: "Parameters<T>) => {
-clearTimeout(timeout)
-timeout = setTimeout(() => func(...args)",wait)
+app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.app/utils/performanceOptimizations.ts;
+import { useCallback, useMemo  } from app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts;
+// Performance optimization app/utils/performanceOptimizations.ts;
+// Debounce utility for app/utils/performanceOptimizations.ts;
+export const debounce = <T extends (...args: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,func: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,wait: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,</T>;)
+s: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,wait)
   }
 
 }
 
 // Throttle utility for performance</T>
-export const throttle = <T extends (...args: "any[]) => any>(",func: "T",limit: "number</T>
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean
-  return(...arg",</T>;)
-s: "Parameters<T>) => {
-if(!inThrottle) {  
-func(...args);",inThrottle = true
+export const throttle = <T extends (...args: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,func: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,limit: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,</T>;)
+s: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,inThrottle = app/utils/performanceOptimizations.ts;
 setTimeout(() => (inThrottle = false), limit)
     , , }
   }
 
 }
 
-// Intersection Observer hook for lazy loading
-
+// Intersection Observer hook for lazy app/utils/performanceOptimizations.ts;
 export const useIntersectionObserver = (
-callback: "(entrie",s: "IntersectionObserverEntry[]) => void",options: "IntersectionObserverInit = {",}
+callback: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,s: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,options: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,}
 
 ) => {
 const observer = useMemo()
     () =>
-typeof window !== 'undefined'
+typeof window !== app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.app/utils/performanceOptimizations.ts;
         ? new IntersectionObserver(callback, {;)
-threshold: "0.1",rootMargin: "'50px'",...options)
+threshold: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,rootMargin: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts50pxapp/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts,...options)
 })
-        : null
+        : app/utils/performanceOptimizations.ts;
     [callback, options,]
   )
 const observe = useCallback()
-    (element: "Element | null) => {
-if(observer && element) {
-observer.observe(element)
-return (
-    </T>
-    <div />)
-      ) => observer.unobserve(element)
-    </>
-    </>
-      ",}
+    (element: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,}
       return(<>)
       ) => {}
     </>
@@ -61,8 +40,8 @@ return (
     }
     [observer,]
 </div>
-      </div>
-  )
+      </$1>
+  );
   )
 const disconnect = useCallback(() => {
 if(observer) {  
@@ -74,14 +53,13 @@ return () => disconnect()
   }, [disconnect,])
 return { observe, disconnect }
 ;}
-// Image lazy loading hook
-
+// Image lazy loading app/utils/performanceOptimizations.ts;
 export const useLazyImage = (
-const [imageSrc, setImageSrc,] = useState(placeholder || '')
+const [imageSrc, setImageSrc,] = useState(placeholder || app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
   const [isLoaded, setIsLoaded,] = useState(false)
   const [isError, setIsError,] = useState(false)
   const { observe ) => {
-$3
+$app/utils/performanceOptimizations.ts;
 ;} = useIntersectionObserver(;)
 useCallback()
       (entries) => {
@@ -96,7 +74,7 @@ setImageSrc(src)
 setIsError(true)
             ,}
 
-img.src = src
+img.src = app/utils/performanceOptimizations.ts;
           ,}
         })
       }
@@ -106,196 +84,198 @@ img.src = src
   )
   return { imageSrc, isLoaded, isError, observe }
 ;}
-// Performance monitoring hook
-
+// Performance monitoring app/utils/performanceOptimizations.ts;
 export const usePerformanceMonitoring = (
 const [metrics, setMetrics,] = useState<{
-fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
-    ttfb?: number
+fcp?: app/utils/performanceOptimizations.ts;
+    lcp?: app/utils/performanceOptimizations.ts;
+    fid?: app/utils/performanceOptimizations.ts;
+    cls?: app/utils/performanceOptimizations.ts;
+    ttfb?: app/utils/performanceOptimizations.ts;
 ) => {
-$3
+$app/utils/performanceOptimizations.ts;
 }>({})
 useEffect(() => {
-if (typeof window === 'undefined') return
+if (typeof window === app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts) app/utils/performanceOptimizations.ts;
 const updateMetrics = (
-return
-return
-const navigation = performance.getEntriesByType('navigation')[0,] as PerformanceNavigationTiming
-const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-const lcp = performance.getEntriesByType('largest-contentful-paint')[0,]?.startTime
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+const navigation = performance.getEntriesByType(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)[0,] as app/utils/performanceOptimizations.ts;
+const paint = performance.getEntriesByType(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
+      const fcp = paint.find(entry => entry.name === app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)?.app/utils/performanceOptimizations.ts;
+const lcp = performance.getEntriesByType(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)[0,]?.app/utils/performanceOptimizations.ts;
 setMetrics({
 fcp;)
 lcp)
-ttfb: "navigation?.responseStart - navigation?.requestStart",) => {
-$3
+ttfb: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,) => {
+$app/utils/performanceOptimizations.ts;
 })
     }
-    // Monitor performance after page load
-if(document.readyState = == 'complete') {
+    // Monitor performance after page app/utils/performanceOptimizations.ts;
+if(document.readyState = == app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts) {
 updateMetrics()
     ,} else { 
-window.addEventListener('load', updateMetrics);, }
+window.addEventListener(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, updateMetrics);, }
     }
-    // Monitor Core Web Vitals
-if('web-vitals' in, window) {
-import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-getCLS((metric) => setMetrics(prev => ({ ...prev, cls: "metric.value ",})))
-getFID((metric) => setMetrics(prev => ({ ...prev, fid: "metric.value ",})))
-getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: "metric.value ",})))
-getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: "metric.value ",})))
-getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})))
+    // Monitor Core Web app/utils/performanceOptimizations.ts;
+if(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts in, window) {
+import(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+getCLS((metric) => setMetrics(prev => ({ ...prev, cls: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,})))
+getFID((metric) => setMetrics(prev => ({ ...prev, fid: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,})))
+getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,})))
+getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,})))
+getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,})))
       })
     }
 
-    return(<div />;)
+    return (
+    <div />;)
   ) => {
-window.removeEventListener('load', updateMetrics
-      </div>)
+window.removeEventListener(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, app/utils/performanceOptimizations.ts;
+      </$1>
+  );
   )
-      </div>
-  )
+      </$1>
+  );
     }
   }, [])
-return, metrics
+return, app/utils/performanceOptimizations.ts;
 }
-// Memory usage monitoring
-
+// Memory usage app/utils/performanceOptimizations.ts;
 export const useMemoryMonitoring = (
 const [memoryInfo, setMemoryInfo,] = useState<{
-usedJSHeapSize?: number
-    totalJSHeapSize?: number
-    jsHeapSizeLimit?: number
+usedJSHeapSize?: app/utils/performanceOptimizations.ts;
+    totalJSHeapSize?: app/utils/performanceOptimizations.ts;
+    jsHeapSizeLimit?: app/utils/performanceOptimizations.ts;
 ) => {
-$3
+$app/utils/performanceOptimizations.ts;
 }>({})
 useEffect(() => {
-if (typeof window === 'undefined' || !('memory' in, performance)) return
-
+if (typeof window === app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts || !(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts in, performance)) app/utils/performanceOptimizations.ts;
 const updateMemoryInfo = (
-return
-return
-const memory = (performance, as, any).memory
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+const memory = (performance, as, any).app/utils/performanceOptimizations.ts;
 if(memory) {
 setMemoryInfo({
-usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize;)
-jsHeapSizeLimi",)
-t: "memory.jsHeapSizeLimit",) => {
-$3
+usedJSHeapSize: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,totalJSHeapSize: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,)
+t: app/utils/performanceOptimizations.ts"app/utils/performanceOptimizations.ts,) => {
+$app/utils/performanceOptimizations.ts;
 })
 
       }
     }
     updateMemoryInfo()
     const interval = setInterval(updateMemoryInfo, 5000)
-    return(<div />)
-  ) => clearInterval(interval
-      </div>)
+    return (
+    <div />)
+  ) => clearInterval(app/utils/performanceOptimizations.ts;
+      </$1>
+  );
   )
-      </div>
-  )
+      </$1>
+  );
   }, [])
-return, memoryInfo
+return, app/utils/performanceOptimizations.ts;
 }
-// Resource preloading utility
+// Resource preloading app/utils/performanceOptimizations.ts;
 export const preloadResource = (
-if (typeof window === 'undefined') return
-const link = document.createElement('link')
-  link.rel = 'preload'
-link.href = href
-link.as = as
+if (typeof window === app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts) app/utils/performanceOptimizations.ts;
+const link = document.createElement(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
+  link.rel = app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.app/utils/performanceOptimizations.ts;
+link.href = app/utils/performanceOptimizations.ts;
+link.as = app/utils/performanceOptimizations.ts;
   document.head.appendChild(link)
 ) => {
-$3
+$app/utils/performanceOptimizations.ts;
 }
-// Critical resource preloading
+// Critical resource app/utils/performanceOptimizations.ts;
 export const preloadCriticalResources = (
-return
-return
-if (typeof window === 'undefined') return // Preload critical fonts
-preloadResource('/fonts/inter-var.woff2', 'font')
-  preloadResource('/fonts/inter-var.woff', 'font')
-  // Preload critical images
-preloadResource('/images/hero-bg.webp', 'image')
-  preloadResource('/images/logo.svg', 'image')
-  // Preload critical CSS
-preloadResource('/styles/critical.css', 'style')
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+if (typeof window === app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts) return // Preload critical app/utils/performanceOptimizations.ts;
+preloadResource(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
+  preloadResource(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
+  // Preload critical app/utils/performanceOptimizations.ts;
+preloadResource(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
+  preloadResource(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
+  // Preload critical app/utils/performanceOptimizations.ts;
+preloadResource(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
 ) => {
-$3
+$app/utils/performanceOptimizations.ts;
 }
-// Bundle size monitoring
+// Bundle size app/utils/performanceOptimizations.ts;
 export const useBundleSizeMonitoring = (
 const [bundleSize, setBundleSize,] = useState<{
-totalSize?: number
-    jsSize?: number
-    cssSize?: number
-    imageSize?: number
+totalSize?: app/utils/performanceOptimizations.ts;
+    jsSize?: app/utils/performanceOptimizations.ts;
+    cssSize?: app/utils/performanceOptimizations.ts;
+    imageSize?: app/utils/performanceOptimizations.ts;
 ) => {
-$3
+$app/utils/performanceOptimizations.ts;
 }>({})
 useEffect(() => {
-if (typeof window === 'undefined') return
+if (typeof window === app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts) app/utils/performanceOptimizations.ts;
 const calculateBundleSize = (
-return
-return
-const resources = performance.getEntriesByType('resource')
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+const resources = performance.getEntriesByType(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)
 
-let totalSize = 0
-let jsSize = 0
-let cssSize = 0
-let imageSize = 0
+let totalSize = app/utils/performanceOptimizations.ts;
+let jsSize = app/utils/performanceOptimizations.ts;
+let cssSize = app/utils/performanceOptimizations.ts;
+let imageSize = app/utils/performanceOptimizations.ts;
 resources.forEach((resource) => {
-const size = (resource, as, PerformanceResourceTiming).transferSize || 0
-totalSize += size
-if (resource.name.includes('.js')) {
-jsSize += size
+const size = (resource, as, PerformanceResourceTiming).transferSize || app/utils/performanceOptimizations.ts;
+totalSize += app/utils/performanceOptimizations.ts;
+if (resource.name.includes(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)) {
+jsSize += app/utils/performanceOptimizations.ts;
 ) => {
-$3
-} else if (resource.name.includes('.css')) {
-cssSize += size
+$app/utils/performanceOptimizations.ts;
+} else if (resource.name.includes(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts)) {
+cssSize += app/utils/performanceOptimizations.ts;
 } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
-imageSize += size
+imageSize += app/utils/performanceOptimizations.ts;
 }
       })
 setBundleSize({
-totalSize
-jsSize
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
 cssSize;)
 imageSize)
 })
     }
-    // Calculate after page load
-if(document.readyState = == 'complete') {
+    // Calculate after page app/utils/performanceOptimizations.ts;
+if(document.readyState = == app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts) {
 calculateBundleSize()
     ,} else { 
-window.addEventListener('load', calculateBundleSize);, }
+window.addEventListener(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, calculateBundleSize);, }
     }
-    return(<div />)
+    return (
+    <div />)
   ) => {
-window.removeEventListener('load', calculateBundleSize
-      </div>)
+window.removeEventListener(app/utils/performanceOptimizations.ts'app/utils/performanceOptimizations.ts, app/utils/performanceOptimizations.ts;
+      </$1>
+  );
   )
-      </div>
-  )
+      </$1>
+  );
     }
   }, []
-      </div>
-  )
-return, bundleSize
+      </$1>
+  );
+return, app/utils/performanceOptimizations.ts;
 }
 const performanceOptimizations = {
-debounce
-throttle
-useIntersectionObserver
-useLazyImage
-usePerformanceMonitoring
-useMemoryMonitoring
-preloadResource
-preloadCriticalResources
-useBundleSizeMonitoring
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
+app/utils/performanceOptimizations.ts;
 ,}
-export default performanceOptimizations
+export default app/utils/performanceOptimizations.ts;
 }

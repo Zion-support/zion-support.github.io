@@ -1,31 +1,31 @@
-// Performance monitoring utilities
-import React from 'react';
+// Performance monitoring app/utils/performance.ts;
+import React from app/utils/performance.ts'app/utils/performance.ts;
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor
+  private static instance: app/utils/performance.ts;
   private metrics: Map<string, number> = new Map()
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor()
     }
-    return PerformanceMonitor.instance
+    return PerformanceMonitor.app/utils/performance.ts;
   }
 
   startTiming(label: string): void {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(`${label}-start`)
+    if (typeof window !== app/utils/performance.ts'app/utils/performance.ts && app/utils/performance.ts'app/utils/performance.ts in window) {
+      performance.mark(app/utils/performance.ts`app/utils/performance.ts)
     }
   }
 
   endTiming(label: string): number {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(`${label}-end`)
-      performance.measure(label, `${label}-start`, `${label}-end`)
+    if (typeof window !== app/utils/performance.ts'app/utils/performance.ts && app/utils/performance.ts'app/utils/performance.ts in window) {
+      performance.mark(app/utils/performance.ts`app/utils/performance.ts)
+      performance.measure(label, app/utils/performance.ts`app/utils/performance.ts, app/utils/performance.ts`app/utils/performance.ts)
       const measure = performance.getEntriesByName(label)[0]
-      const duration = measure ? measure.duration : 0
+      const duration = measure ? measure.duration : app/utils/performance.ts;
       this.metrics.set(label, duration)
-      return duration
+      return app/utils/performance.ts;
     }
-    return 0
+    return app/utils/performance.ts;
   }
 
   getMetric(label: string): number | undefined {
@@ -40,39 +40,39 @@ export class PerformanceMonitor {
     this.metrics.clear()
   }
 
-  // Web Vitals monitoring
+  // Web Vitals app/utils/performance.ts;
   measureWebVitals(): void {
-    if (typeof window === 'undefined') return
-    // Largest Contentful Paint
+    if (typeof window === app/utils/performance.ts'app/utils/performance.ts) app/utils/performance.ts;
+    // Largest Contentful app/utils/performance.ts;
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries()
       const lastEntry = entries[entries.length - 1]
-      this.metrics.set('LCP', lastEntry.startTime)
-    }).observe({ entryTypes: ['largest-contentful-paint'] })
-    // First Input Delay
+      this.metrics.set(app/utils/performance.ts'app/utils/performance.ts, lastEntry.startTime)
+    }).observe({ entryTypes: [app/utils/performance.ts'app/utils/performance.ts] })
+    // First Input app/utils/performance.ts;
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries()
       entries.forEach((entry) => {
-        // Use processingStart if available, otherwise calculate from startTime
-        const processingStart = (entry as any).processingStart || entry.startTime
-        this.metrics.set('FID', processingStart - entry.startTime)
+        // Use processingStart if available, otherwise calculate from app/utils/performance.ts;
+        const processingStart = (entry as any).processingStart || entry.app/utils/performance.ts;
+        this.metrics.set(app/utils/performance.ts'app/utils/performance.ts, processingStart - entry.startTime)
       })
-    }).observe({ entryTypes: ['first-input'] })
-    // Cumulative Layout Shift
-    let clsValue = 0
+    }).observe({ entryTypes: [app/utils/performance.ts'app/utils/performance.ts] })
+    // Cumulative Layout app/utils/performance.ts;
+    let clsValue = app/utils/performance.ts;
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries()
       entries.forEach((entry) => {
         if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value
+          clsValue += (entry as any).app/utils/performance.ts;
         }
       })
-      this.metrics.set('CLS', clsValue)
-    }).observe({ entryTypes: ['layout-shift'] })
+      this.metrics.set(app/utils/performance.ts'app/utils/performance.ts, clsValue)
+    }).observe({ entryTypes: [app/utils/performance.ts'app/utils/performance.ts] })
   }
 }
 
-// Hook for React components
+// Hook for React app/utils/performance.ts;
 export function usePerformanceMonitor() {
 
   const monitor = PerformanceMonitor.getInstance()
@@ -89,20 +89,20 @@ export function usePerformanceMonitor() {
 
 }
 
-// Utility function to measure component render time
+// Utility function to measure component render app/utils/performance.ts;
 export function measureComponentRender(componentName: string) {
   return function <T extends React.ComponentType<any>>(WrappedComponent: T): T {
     return ((props: any) => {
       const monitor = PerformanceMonitor.getInstance()
       React.useEffect(() => {
-        monitor.startTiming(`${componentName}-render`)
+        monitor.startTiming(app/utils/performance.ts`app/utils/performance.ts)
         return () => {
-          monitor.endTiming(`${componentName}-render`)
+          monitor.endTiming(app/utils/performance.ts`app/utils/performance.ts)
         }
 
       })
       return React.createElement(WrappedComponent, props)
-    }) as T
+    }) as app/utils/performance.ts;
   }
 
 }

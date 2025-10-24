@@ -1,20 +1,20 @@
-import { useState, useEffect   } from 'react';
+import { useState, useEffect   } from app/hooks/useImageOptimization.ts'app/hooks/useImageOptimization.ts;
 interface UseImageOptimizationOptions {
-  src: string
-  placeholder?: string
-  lazy?: boolean
-  quality?: number
-  format?: 'webp' | 'avif' | 'jpeg' | 'png'
+  src: app/hooks/useImageOptimization.ts;
+  placeholder?: app/hooks/useImageOptimization.ts;
+  lazy?: app/hooks/useImageOptimization.ts;
+  quality?: app/hooks/useImageOptimization.ts;
+  format?: app/hooks/useImageOptimization.ts'app/hooks/useImageOptimization.ts | app/hooks/useImageOptimization.ts'app/hooks/useImageOptimization.ts | app/hooks/useImageOptimization.ts'app/hooks/useImageOptimization.ts | app/hooks/useImageOptimization.ts'app/hooks/useImageOptimization.app/hooks/useImageOptimization.ts;
 }
 
 export const useImageOptimization = ({
-  src
-  placeholder
-  lazy = true
-  quality = 80
-  format = 'webp'
+  app/hooks/useImageOptimization.ts;
+  app/hooks/useImageOptimization.ts;
+  lazy = app/hooks/useImageOptimization.ts;
+  quality = app/hooks/useImageOptimization.ts;
+  format = app/hooks/useImageOptimization.ts'app/hooks/useImageOptimization.app/hooks/useImageOptimization.ts;
 }: UseImageOptimizationOptions) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
+  const [imageSrc, setImageSrc] = useState(placeholder || app/hooks/useImageOptimization.ts'app/hooks/useImageOptimization.ts)
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(!lazy)
   useEffect(() => {
@@ -25,11 +25,11 @@ export const useImageOptimization = ({
         setIsLoaded(true)
       }
 
-      img.src = src
+      img.src = app/hooks/useImageOptimization.ts;
     }
   }, [src, lazy, isInView])
   useEffect(() => {
-    if (!lazy) return
+    if (!lazy) app/hooks/useImageOptimization.ts;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,7 +40,7 @@ export const useImageOptimization = ({
 
       { threshold: 0.1 }
     )
-    const element = document.querySelector(`[data-src="${src}"]`)
+    const element = document.querySelector(app/hooks/useImageOptimization.ts`app/hooks/useImageOptimization.ts${src}app/hooks/useImageOptimization.ts"app/hooks/useImageOptimization.ts)
     if (element) {
       observer.observe(element)
     }
@@ -48,10 +48,10 @@ export const useImageOptimization = ({
     return () => observer.disconnect()
   }, [src, lazy])
   return {
-    imageSrc
-    isLoaded
-    isInView
-    shouldLoad: !lazy || isInView
+    app/hooks/useImageOptimization.ts;
+    app/hooks/useImageOptimization.ts;
+    app/hooks/useImageOptimization.ts;
+    shouldLoad: !lazy || app/hooks/useImageOptimization.ts;
   }
 
 }

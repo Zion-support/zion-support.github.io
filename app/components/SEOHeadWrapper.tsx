@@ -1,21 +1,24 @@
-'use client'
-import React from 'react';
+app/components/SEOHeadWrapper.tsx'app/components/SEOHeadWrapper.app/components/SEOHeadWrapper.tsx;
+app/components/SEOHeadWrapper.tsx'app/components/SEOHeadWrapper.tsx;
+
+import React from app/components/SEOHeadWrapper.tsx'app/components/SEOHeadWrapper.tsx;
 interface SEOHeadWrapperProps {
-className?: string
-  title?: string
-  description?: string
+className?: app/components/SEOHeadWrapper.tsx;
+  title?: app/components/SEOHeadWrapper.tsx;
+  description?: app/components/SEOHeadWrapper.tsx;
   keywords?: string[]
-  children?: React.ReactNode
+  children?: React.app/components/SEOHeadWrapper.tsx;
 }
 }
 
-const SEOHeadWrapper: "React.FC<SEOHeadWrapperProps> = ({ className", title, description, keywords, children }) => {
+const SEOHeadWrapper: app/components/SEOHeadWrapper.tsx"app/components/SEOHeadWrapper.tsx, title, description, keywords, children }) => {
   return (
     <div className = {className,}>
+    </div>
       {children;}
 
     </div>;)
   )
 }
 
-export default SEOHeadWrapper
+export default app/components/SEOHeadWrapper.tsx;

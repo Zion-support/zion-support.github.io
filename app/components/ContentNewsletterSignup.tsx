@@ -1,101 +1,101 @@
-'use client'
-import React from 'react';
-import Footer } from './Footer'
-import Navigation } from './Navigation';
-import { Helmet  } from 'react-helmet-async';
-import { ArrowRight, CheckCircle  } from 'lucide-react';
-'use client'
-import { Navigation  } from './Navigation';
-import { Helmet  } from 'react-helmet-async';
-import { ArrowRight  } from 'lucide-react';
-import, React, { useState } from 'react'
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap  } from 'lucide-react';
+app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+
+import React from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+import Footer } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+import Navigation } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+import { Helmet  } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+import { ArrowRight, CheckCircle  } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+import { Navigation  } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+import { Helmet  } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+import { ArrowRight  } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
+import, React, { useState } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap  } from app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx;
 interface ContentNewsletterSignupProps {
-title?: string
-subtitle?: string
-placeholder?: string
-buttonText?: string
+title?: app/components/ContentNewsletterSignup.tsx;
+subtitle?: app/components/ContentNewsletterSignup.tsx;
+placeholder?: app/components/ContentNewsletterSignup.tsx;
+buttonText?: app/components/ContentNewsletterSignup.tsx;
 features?: Array<{
 }
 }
-    icon: "React.ComponentType<{ className?: string ",}>
-text: "string",}>
-onSubscribe?: (email: "string) => void",}constContentNewsletterSignup: React.FC<ContentNewsletterSignupProp s>= ({
-title = "Stay Updated with Our LatestInsights"
-subtitle="Get, exclusive, content,industry, insights, and early access to new features delivered to yourinbox."
-placeholder="Enter your emailaddress"
-buttonText="Subscribe"
+    icon: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx,}>
+text: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx,}>
+onSubscribe?: (email: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx,}constContentNewsletterSignup: React.FC<ContentNewsletterSignupProp s>= ({
+title = app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+subtitle=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+placeholder=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+buttonText=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
 features= [
-    { icon: "Star",text: "Exclusive content&quot
+    { icon: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx,text: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsxUsersapp/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsxIndustry insights&app/components/ContentNewsletterSignup.tsx;
   ,}
   {
-icon: "Users",text: "Industry insights&quot
-  ,}
-  {
-icon: "Globe",text: "Global updates&quot
-  ,}
-  {
-icon: "Zap",text: "Early access&quot,]
-onSubscribe
+icon: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx,text: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsxZapapp/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsxEarly access&quot,]
+app/components/ContentNewsletterSignup.tsx;
 }) => {
-const [email, setEmail,] = useState('')
+const [email, setEmail,] = useState(app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx)
   const [isSubmitting, setIsSubmitting,] = useState(false)
   const [isSubscribed, setIsSubscribed,] = useState(false)
-const handleSubmit = async (e: "React.FormEvent) => {
-e.preventDefault()
-    if (!email) return setIsSubmitting(true)
-try { // Simulate API call
-await new Promise(resolve => setTimeout(resolve",1000))
+const handleSubmit = async (e: app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx,1000))
       if(onSubscribe) {  
 onSubscribe(email), , , }
       }
       setIsSubscribed(true)
-      setEmail('')
+      setEmail(app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx)
     } catch(error) {
-console.error('Subscription failed: "'",error)
+console.error(app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsxapp/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx,error)
     } finally {
 setIsSubmitting(false),}
-  return(</ContentNewsletterSignupProp> <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
-    <h1 className = "text-4 xl font-bold text-white mb-4">{title,}</h2>
-        <p className = "text-xl text-gray-300 mb-8">{subtitle,}</p>
+  return(</ContentNewsletterSignupProp> <div className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx /> <div className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx />
+    </div>
+    <h1 className = app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx>{title,}</h2>
+        <p className = app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx>{subtitle,}</p>
 
-        <form onSubmit = {handleSubmit,} className="max-w-md mx-auto mb-8" /> <div className="flex flex-col sm: flex-row gap-4" />
+        <form onSubmit = {handleSubmit,} className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx /> <div className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx />
 
-            <input
-type="email"
+    </div>
+            <app/components/ContentNewsletterSignup.tsx;
+type=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
 value={email,})
               onChange = {(e) => setEmail(e.target.value),}
               placeholder = {placeholder,}
-className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-emerald-500 focu",s: border-transparent"
-required
+className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsxoutline-none focus:ring-2 focus:ring-emerald-500 focuapp/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
+app/components/ContentNewsletterSignup.tsx;
             /></input>
-            <button
-type="submit"
+            <app/components/ContentNewsletterSignup.tsx;
+type=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.app/components/ContentNewsletterSignup.tsx;
 disabled={isLoading,;}
-              className="bg-emerald-600 hover: "bg-emerald-700 disable",d: bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-              {isLoading ? 'Subscribing...' : buttonText,;}</button> <ArrowRight className="ml-2 h-4 w-4" />
+              className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsxbg-emerald-700 disableapp/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx>
+    </app>
+              {isLoading ? app/components/ContentNewsletterSignup.tsx'app/components/ContentNewsletterSignup.tsx : buttonText,;}</button> <ArrowRight className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx />
+    </ArrowRight>
             </button>
 
         </form>
 
-        {isSubscribed && ( <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg" /> <p className="text-emerald-400 flex items-center justify-center" /> <CheckCircle className="h-5 w-5 mr-2" />
+        {isSubscribed && ( <div className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx /> <p className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx /> <CheckCircle className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx />
+    </CheckCircle>
 Thank you for subscribing!</CheckCircle>
             </p>
 
-        ),;} <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mt-8" />
-          {features.map((feature,index) => (
-      <divkey = {index,;} className="flex items-center space-x-2 text-gray-300" />
+        ),;} <div className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx />
     </div>
-              <feature.icon className="h-5 w-5 text-emerald-400" />
-    <span className = "text-sm">{feature.text,;}</span>
+          {features.map((feature,index) => (
+      <divkey = {index,;} className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx />
+    </divkey>
+    </div>
+              <feature.icon className=app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx />
+    </feature>
+    <span className = app/components/ContentNewsletterSignup.tsx"app/components/ContentNewsletterSignup.tsx>{feature.text,;}</span>
             </div>
           ));}
 
         </div>
-      </div>
-  )
+      </$1>
+  );
 }
 
-export default ContentNewsletterSignup
+export default app/components/ContentNewsletterSignup.tsx;
 </div>
 }

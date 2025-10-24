@@ -1,187 +1,175 @@
-// Type definitions for Next.js compatibility
-
+// Type definitions for Next.js app/types/next.d.ts;
 export interface Metadata {
 
-title?: string
-description?: string
+title?: app/types/next.d.ts;
+description?: app/types/next.d.ts;
 keywords?: string[]
 }
 }
 
-authors?: Array<{ name: "string; url?: string ",}> | string[]
-creator?: string
-  publisher?: string
+authors?: Array<{ name: app/types/next.d.ts"app/types/next.d.ts,}> | string[]
+creator?: app/types/next.d.ts;
+  publisher?: app/types/next.d.ts;
   formatDetection?: {
-email?: boolean
-    address?: boolean
-    telephone?: boolean
+email?: app/types/next.d.ts;
+    address?: app/types/next.d.ts;
+    telephone?: app/types/next.d.ts;
 }
-  metadataBase?: URL
+  metadataBase?: app/types/next.d.ts;
   alternates?: {
-canonical?: string
+canonical?: app/types/next.d.ts;
 languages?: Record<string, string />
+    </string>
 }
   openGraph?: {
-title?: string
-description?: string
-url?: string
+title?: app/types/next.d.ts;
+description?: app/types/next.d.ts;
+url?: app/types/next.d.ts;
 siteName?: string</string>
 images?: Array<{
-url: "string
-width?: number
-height?: number",alt?: string
+url: app/types/next.d.ts"app/types/next.d.ts,alt?: app/types/next.d.ts;
 }>
-locale?: string
-    type?: string
-    authors?: Array<{ name: "string; url?: string ",}> | string[]
-publishedTime?: string
+locale?: app/types/next.d.ts;
+    type?: app/types/next.d.ts;
+    authors?: Array<{ name: app/types/next.d.ts"app/types/next.d.ts,}> | string[]
+publishedTime?: app/types/next.d.ts;
   }
   twitter?: {
-card?: 'summary' | 'summary_large_image' | 'app' | 'player'
-site?: string
-    creator?: string
-    title?: string
-    description?: string
+card?: app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.app/types/next.d.ts;
+site?: app/types/next.d.ts;
+    creator?: app/types/next.d.ts;
+    title?: app/types/next.d.ts;
+    description?: app/types/next.d.ts;
     images?: string[]
 }
   robots?: {
-index?: boolean
-    follow?: boolean
+index?: app/types/next.d.ts;
+    follow?: app/types/next.d.ts;
     googleBot?: {
-index?: boolean
-      follow?: boolean
-      'max-video-preview'?: number
-      'max-image-preview'?: 'none' | 'standard' | 'large'
-      'max-snippet'?: number
+index?: app/types/next.d.ts;
+      follow?: app/types/next.d.ts;
+      app/types/next.d.ts'app/types/next.d.ts?: app/types/next.d.ts;
+      app/types/next.d.ts'app/types/next.d.ts?: app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.app/types/next.d.ts;
+      app/types/next.d.ts'app/types/next.d.ts?: app/types/next.d.ts;
 }
   }
   verification?: {
-google?: string
-yandex?: string
-yahoo?: string
+google?: app/types/next.d.ts;
+yandex?: app/types/next.d.ts;
+yahoo?: app/types/next.d.ts;
 other?: Record<string, string />
+    </string>
 }
 }
 export interface MetadataRoute {
 
-url: "string
-lastModified?: string | Date
-changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-priority?: number"
+url: app/types/next.d.ts"app/types/next.d.tsalwaysapp/types/next.d.ts'app/types/next.d.tshourlyapp/types/next.d.ts'app/types/next.d.tsdailyapp/types/next.d.ts'app/types/next.d.tsweeklyapp/types/next.d.ts'app/types/next.d.tsmonthlyapp/types/next.d.ts'app/types/next.d.tsyearlyapp/types/next.d.ts'app/types/next.d.tsneverapp/types/next.d.ts'app/types/next.d.app/types/next.d.ts;
 }
 }
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute{
-url: "string",lastModified?: string | Date
-changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+url: app/types/next.d.ts"app/types/next.d.ts,lastModified?: string | app/types/next.d.ts;
+changeFrequency?: app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.ts | app/types/next.d.ts'app/types/next.d.app/types/next.d.ts;
 priority?: number,}
 }
-// Custom Next.js types
+// Custom Next.js app/types/next.d.ts;
 export interface NextPageProps {
 
 
 ;}
 ;}
-  params: "{ [ke",y: "string,]: string ",;}
+  params: app/types/next.d.ts"app/types/next.d.ts,y: app/types/next.d.ts"app/types/next.d.ts,;}
 
-  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",}
+  searchParams: app/types/next.d.ts"app/types/next.d.ts,y: app/types/next.d.ts"app/types/next.d.ts,}
 }
-// API route types
+// API route app/types/next.d.ts;
 export interface ApiRouteHandler {
 
 
 ;}
 ;}</string>
-  (req: "Request): Promise<Response>",;}
+  (req: app/types/next.d.ts"app/types/next.d.ts,;}
 
-// Server components types
+// Server components app/types/next.d.ts;
 export interface ServerComponentProps {
 
 
 ;}
 ;}
-  params: "{ [ke",y: "string,]: string ",;}
+  params: app/types/next.d.ts"app/types/next.d.ts,y: app/types/next.d.ts"app/types/next.d.ts,;}
 
-  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",}
+  searchParams: app/types/next.d.ts"app/types/next.d.ts,y: app/types/next.d.ts"app/types/next.d.ts,}
 
 }
-// Client components types
-
+// Client components app/types/next.d.ts;
 export interface ClientComponentProps {
 
-children?: React.ReactNode
-className?: string
+children?: React.app/types/next.d.ts;
+className?: app/types/next.d.ts;
 }
 }
 }
 
-// Route handlers
+// Route app/types/next.d.ts;
 export interface RouteHandler {
 </Response>
-GET?: (req: "Request) => Promise<Response />
-POST?: (req: Request) => Promise<Response />
-PUT?: (req: Request) => Promise<Response>
-DELETE?: (re",</Response>
-q: "Request) => Promise<Response>"
+GET?: (req: app/types/next.d.ts"app/types/next.d.ts,</Response>
+q: app/types/next.d.ts"app/types/next.d.app/types/next.d.ts;
 }
 }</Response>
-PATCH?: (req: "Request) => Promise<Response>",}
+PATCH?: (req: app/types/next.d.ts"app/types/next.d.ts,}
 
-// Dynamic route types
+// Dynamic route app/types/next.d.ts;
 export interface DynamicRoute {
 
 
 ;}
 ;}
-  params: "{ [ke",y: "string,]: string ",;}
+  params: app/types/next.d.ts"app/types/next.d.ts,y: app/types/next.d.ts"app/types/next.d.ts,;}
 
 }
-// Static generation types
+// Static generation app/types/next.d.ts;
 export interface StaticProps {
 
 
 ;}
 ;}
-  props: "{ [ke",y: "string,]: any ",;}
+  props: app/types/next.d.ts"app/types/next.d.ts,y: app/types/next.d.ts"app/types/next.d.ts,;}
 
-  revalidate?: number
-notFound?: boolean
-
+  revalidate?: app/types/next.d.ts;
+notFound?: app/types/next.d.ts;
 }
-// ISR types
-
+// ISR app/types/next.d.ts;
 export interface ISRConfig {
 
-revalidate: "number
-tags?: string[]"
+revalidate: app/types/next.d.ts"app/types/next.d.app/types/next.d.ts;
 }
 }
 }
 
-// Edge runtime types
+// Edge runtime app/types/next.d.ts;
 export interface EdgeRuntime {
 
 
 ;}
 ;}
-  runtime: "'edge'",;}
+  runtime: app/types/next.d.ts"app/types/next.d.tsedgeapp/types/next.d.ts'app/types/next.d.ts,;}
 
-// Node.js runtime types
+// Node.js runtime app/types/next.d.ts;
 export interface NodeRuntime {
 
 
 ;}
 ;}
-  runtime: "'nodejs'",;}
+  runtime: app/types/next.d.ts"app/types/next.d.tsnodejsapp/types/next.d.ts'app/types/next.d.ts,;}
 
-// Extend Next.js types
-declare module 'next' {
+// Extend Next.js app/types/next.d.ts;
+declare module app/types/next.d.ts'app/types/next.d.ts {
 interface NextApiRequest {
 
 user?: {
-id: "string",email: "string
-name?: string"
+id: app/types/next.d.ts"app/types/next.d.ts,email: app/types/next.d.ts"app/types/next.d.app/types/next.d.ts;
 }
 }
 }

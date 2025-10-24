@@ -1,21 +1,26 @@
-'use client'
-import React from 'react';
-import Link } from 'next/link';
-import { ArrowRight } from from 'lucide-react';
+app/main.tsx'app/main.app/main.tsx;
+app/main.tsx'app/main.tsx;
+
+import React from app/main.tsx'app/main.tsx;
+import Link } from app/main.tsx'app/main.tsx;
+import { ArrowRight } from from app/main.tsx'app/main.tsx;
 export default function main() {
 
-return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" /> <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />,<h1 className="text-4 xl font-bold text-white mb-6" />
+return (
+    <div className=app/main.tsx"app/main.tsx /> <div className=app/main.tsx"app/main.tsx />,<h1 className=app/main.tsx"app/main.tsx />
+    </h1>
 Main | Zion Tech Group</h1>
-          </h1> <p className="text-lg text-gray-300 mb-8" />
+          </h1> <p className=app/main.tsx"app/main.tsx />
+    </p>
 Professional main | zion tech group services coming soon.</p>
           </p>
-          <Linkhref="/contact"
-className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: "from-cyan-600 hove","
-r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
-Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
+          <Linkhref=app/main.tsx"app/main.app/main.tsx;
+className=app/main.tsx"app/main.tsxfrom-cyan-600 hoveapp/main.tsx"app/main.app/main.tsx;
+r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fitapp/main.tsx"app/main.tsxw-5 h-5 ml-2" />
 
-          </Link>
-)
+    </Linkhref>
+          </$1>
+  );
   )
 
 ;}

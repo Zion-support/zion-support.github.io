@@ -1,21 +1,20 @@
-'use client'
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check  } from 'lucide-react';
-import { Navigation  } from '../components/Navigation';
-const EnhancedLoadingSkeletonPage: "React.FC = () => {
-const features = [
-    {
-ico",n: "Brain",title: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis']
+app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.app/components/EnhancedLoadingSkeleton.tsx;
+app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx;
+
+import React from app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx;
+import { Helmet  } from app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check  } from app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx;
+import { Navigation  } from app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx;
+const EnhancedLoadingSkeletonPage: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsx,n: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsx,title: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxAI-Powered Intelligenceapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,description: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxAdvanced AI algorithms that provide intelligent insights and recommendations.app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,benefits: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxSmart recommendationsapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx]
     ;}
     {
-icon: "BarChart",title: "'Advanced Analytics'",description: "'Comprehensive analytics dashboard with real-time data visualization.'",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics']
+icon: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsx,title: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxAdvanced Analyticsapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,description: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxComprehensive analytics dashboard with real-time data visualization.app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,benefits: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxReal-time dashboardsapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx]
     ;}
     {
-icon: "Target",title: "'Precision Targeting'",description: "'Target specific goals and objectives with precision and accuracy.'",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics']
+icon: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsx,title: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxPrecision Targetingapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,description: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxTarget specific goals and objectives with precision and accuracy.app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,benefits: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxGoal trackingapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx]
     ;}
     {
-icon: "TrendingUp",title: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization']
+icon: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsx,title: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxGrowth Optimizationapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,description: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxOptimize your business growth with data-driven strategies.app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,benefits: app/components/EnhancedLoadingSkeleton.tsx"app/components/EnhancedLoadingSkeleton.tsxGrowth strategiesapp/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx,app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx, app/components/EnhancedLoadingSkeleton.tsx'app/components/EnhancedLoadingSkeleton.tsx]
   ]
-export default EnhancedLoadingSkeletonPage
+export default app/components/EnhancedLoadingSkeleton.tsx;
 }}

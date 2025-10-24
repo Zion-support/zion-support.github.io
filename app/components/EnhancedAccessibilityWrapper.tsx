@@ -1,18 +1,21 @@
-'use client'
-import React from 'react';
+app/components/EnhancedAccessibilityWrapper.tsx'app/components/EnhancedAccessibilityWrapper.app/components/EnhancedAccessibilityWrapper.tsx;
+app/components/EnhancedAccessibilityWrapper.tsx'app/components/EnhancedAccessibilityWrapper.tsx;
+
+import React from app/components/EnhancedAccessibilityWrapper.tsx'app/components/EnhancedAccessibilityWrapper.tsx;
 interface EnhancedAccessibilityWrapperProps {
-className?: string
-  children?: React.ReactNode
+className?: app/components/EnhancedAccessibilityWrapper.tsx;
+  children?: React.app/components/EnhancedAccessibilityWrapper.tsx;
 }
 }
 
-const EnhancedAccessibilityWrapper: "React.FC<EnhancedAccessibilityWrapperProps> = ({ className", children }) => {
+const EnhancedAccessibilityWrapper: app/components/EnhancedAccessibilityWrapper.tsx"app/components/EnhancedAccessibilityWrapper.tsx, children }) => {
   return (
     <div className = {className,}>
+    </div>
       {children;}
 
     </div>;)
   )
 }
 
-export default EnhancedAccessibilityWrapper
+export default app/components/EnhancedAccessibilityWrapper.tsx;

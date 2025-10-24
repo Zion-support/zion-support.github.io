@@ -1,17 +1,20 @@
-'use client'
-import React from 'react';
+app/components/AdvancedPerformanceMonitor.tsx'app/components/AdvancedPerformanceMonitor.app/components/AdvancedPerformanceMonitor.tsx;
+app/components/AdvancedPerformanceMonitor.tsx'app/components/AdvancedPerformanceMonitor.tsx;
+
+import React from app/components/AdvancedPerformanceMonitor.tsx'app/components/AdvancedPerformanceMonitor.tsx;
 interface AdvancedPerformanceMonitorProps {
-className?: string
+className?: app/components/AdvancedPerformanceMonitor.tsx;
 }
 }
 
-const AdvancedPerformanceMonitor: "React.FC<AdvancedPerformanceMonitorProps> = ({ className ",}) => {
+const AdvancedPerformanceMonitor: app/components/AdvancedPerformanceMonitor.tsx"app/components/AdvancedPerformanceMonitor.tsx,}) => {
   return (
     <div className = {className,;}>
+    </div>
       <h2>Advanced Performance Monitor</h2>
       <p>Advanced performance monitoring for optimal application performance.</p>
     </div>;)
   )
 }
 
-export default AdvancedPerformanceMonitor
+export default app/components/AdvancedPerformanceMonitor.tsx;

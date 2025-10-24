@@ -1,14 +1,17 @@
-"use client"
-import React from 'react';
+app/pages/ContactPage.tsx"app/pages/ContactPage.app/pages/ContactPage.tsx;
+app/pages/ContactPage.tsx'app/pages/ContactPage.tsx;
+
+import React from app/pages/ContactPage.tsx'app/pages/ContactPage.tsx;
 const ContactPage = (
   return (
     <div>
+    </div>
       <h1>Contact Page</h1>
       <p>Contact information coming soon.</p>
     </div>;)
   )
 ) => {
-$3
+$app/pages/ContactPage.tsx;
 ,}
 
-export default ContactPage
+export default app/pages/ContactPage.tsx;

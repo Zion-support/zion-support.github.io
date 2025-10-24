@@ -1,7 +1,9 @@
-"use client"
-import React from 'react';
+app/utils/testRunner.tsx"app/utils/testRunner.app/utils/testRunner.tsx;
+app/utils/testRunner.tsx'app/utils/testRunner.tsx;
+
+import React from app/utils/testRunner.tsx'app/utils/testRunner.tsx;
 export const testRunner = (
-  return null
+  return app/utils/testRunner.tsx;
 ) => {
-$3
+$app/utils/testRunner.tsx;
 ,}

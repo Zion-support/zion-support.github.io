@@ -1,87 +1,73 @@
-'use client'
-import, React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react';
+app/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
+import, React, { Component, ErrorInfo, ReactNode } from app/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
+app/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.tsx;
+
+import { AlertTriangle, RefreshCw, Home, Mail  } from app/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.tsx;
 interface AdvancedErrorBoundaryProps {
-className?: string
-  children: "ReactNode
-  onError?: (error: Error", errorInfo: "ErrorInfo) => void
-",}
+className?: app/components/AdvancedErrorBoundary.tsx;
+  children: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx, errorInfo: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx,}
 ,}
 
 interface State {
-hasError: "boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
-",}
+hasError: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx,}
 ,}
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
-  constructor(props: "AdvancedErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false ",;}
+  constructor(props: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx,;}
 
   }
 
-  private reportError = (error: "Error", errorInfo: "ErrorInfo) => {
-    const errorReport = {
-      errorId: this.state.errorId || this.generateErrorId()"
-      error
-      errorInfo
-      timestamp: "new Date().toISOString()"
-      userAgent: "navigator.userAgent"
-      url: "window.location.href"
+  private reportError = (error: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx, errorInfo: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
+      app/components/AdvancedErrorBoundary.tsx;
+      app/components/AdvancedErrorBoundary.tsx;
+      timestamp: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
+      userAgent: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
+      url: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
     }
 
-    // Log to console in development
-    if(process.env.NODE_ENV = == 'development') {  
-      console.error('Error Boundary caught an error: "'", error, errorInfo)
+    // Log to console in app/components/AdvancedErrorBoundary.tsx;
+    if(process.env.NODE_ENV = == app/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.tsx) {  
+      console.error(app/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.tsxapp/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.tsx, error, errorInfo)
     , , }
   }
 
-  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {
-    this.setState({
-      hasError: true"
-      error
+  componentDidCatch(error: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx, errorInfo: app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
+      app/components/AdvancedErrorBoundary.tsx;
       errorInfo,)
     })
-    // Call custom error handler if provided
+    // Call custom error handler if app/components/AdvancedErrorBoundary.tsx;
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
     }
 
-    // Report error
+    // Report app/components/AdvancedErrorBoundary.tsx;
     this.reportError(error, errorInfo)
   }
 
   private generateErrorId = (): string => {
 
-    return `error_${Date.now()
-,}_${Math.random().toString(36).substr(2, 9);}`
+    return app/components/AdvancedErrorBoundary.tsx`app/components/AdvancedErrorBoundary.app/components/AdvancedErrorBoundary.tsx;
   }
 
   render() {
     if (this.state.hasError) {
       return (
     <div className = {this.props.className,}>
-          <div className="error-boundary"> <AlertTriangle className="error-icon" />
+    </div>
+          <div className=app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx> <AlertTriangle className=app/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx />
+    </AlertTriangle>
             <h2>Something went wrong</h2>
-            <p>We're, sorry, but something unexpected happened.</p>
-            <div className = "error-actions">)
-              <button onClick={() => window.location.reload(),} > <RefreshCw className="icon" />
-                Try Again
-              </button>
-              <button onClick={() => window.location.href = '/',} > <Home className="icon" />
-                Go Home
+            <p>Weapp/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.tsxerror-actionsapp/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsxiconapp/components/AdvancedErrorBoundary.tsx"app/components/AdvancedErrorBoundary.tsx/app/components/AdvancedErrorBoundary.tsx'app/components/AdvancedErrorBoundary.tsxicon" />
+                Go app/components/AdvancedErrorBoundary.tsx;
               </button>
             </div>
           </div>
-        </div>
-      )
+        </$1>
+  );
     ,}
 
-    return this.props.children
+    return this.props.app/components/AdvancedErrorBoundary.tsx;
   }
 }
 
-export default AdvancedErrorBoundary
+export default app/components/AdvancedErrorBoundary.tsx;

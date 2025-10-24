@@ -1,19 +1,16 @@
-import { useCallback, useEffect, useState, useRef  } from 'react';
+import { useCallback, useEffect, useState, useRef  } from app/hooks/usePerformanceMonitor.ts'app/hooks/usePerformanceMonitor.ts;
 interface UsePerformanceMonitorOptions {
 
-enabled?: boolean
-threshold?: number
-measureMemoryUsage?: boolean
+enabled?: app/hooks/usePerformanceMonitor.ts;
+threshold?: app/hooks/usePerformanceMonitor.ts;
+measureMemoryUsage?: app/hooks/usePerformanceMonitor.ts;
 }
 }
 }
 
 interface PerformanceData {
 
-fps: "number
-memoryUsage: number
-loadTime: number
-renderTim",e: "number"
+fps: app/hooks/usePerformanceMonitor.ts"app/hooks/usePerformanceMonitor.ts,e: app/hooks/usePerformanceMonitor.ts"app/hooks/usePerformanceMonitor.app/hooks/usePerformanceMonitor.ts;
 }
 }
 }
@@ -21,20 +18,18 @@ renderTim",e: "number"
 
 export const usePerformanceMonitor = (
 const [metrics, setMetrics,] = useState<PerformanceData>({
-fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0",) => {
-$3
+fps: app/hooks/usePerformanceMonitor.ts"app/hooks/usePerformanceMonitor.ts,memoryUsage: app/hooks/usePerformanceMonitor.ts"app/hooks/usePerformanceMonitor.ts,loadTime: app/hooks/usePerformanceMonitor.ts"app/hooks/usePerformanceMonitor.ts,renderTime: app/hooks/usePerformanceMonitor.ts"app/hooks/usePerformanceMonitor.ts,) => {
+$app/hooks/usePerformanceMonitor.ts;
 })
 const [isMonitoringFPS, setIsMonitoringFPS,] = useState(false)
   const frameCountRef = useRef(0)
   const lastTimeRef = useRef(performance.now())
 const measureMemoryUsage = useCallback(() => {
-if (typeof window !== 'undefined' && 'memory' in, performance) {
-const memory = (performance, as, any).memory
+if (typeof window !== app/hooks/usePerformanceMonitor.ts'app/hooks/usePerformanceMonitor.ts && app/hooks/usePerformanceMonitor.ts'app/hooks/usePerformanceMonitor.ts in, performance) {
+const memory = (performance, as, any).app/hooks/usePerformanceMonitor.ts;
 setMetrics(prev = > ({
         ...prev,;)
-memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)
-
-      ",}))
+memoryUsage: app/hooks/usePerformanceMonitor.ts"app/hooks/usePerformanceMonitor.ts,}))
     }
   }, [])
 const init = useCallback(() => {
@@ -44,10 +39,9 @@ setIsMonitoringFPS(true)
     ,, , }
   }, [options.enabled, measureMemoryUsage,])
 useEffect(() => {
-if (!isMonitoringFPS) return
-
+if (!isMonitoringFPS) app/hooks/usePerformanceMonitor.ts;
 const countFrames = (
-return
+app/hooks/usePerformanceMonitor.ts;
 frameCountRef.current++
 const currentTime = performance.now()
       if (currentTime - lastTimeRef.current >= 1000) {
@@ -56,10 +50,10 @@ setMetrics(prev = > ({
           ...prev,;)
 fps,)
         ) => {
-$3
+$app/hooks/usePerformanceMonitor.ts;
 }))
-frameCountRef.current = 0
-lastTimeRef.current = currentTime
+frameCountRef.current = app/hooks/usePerformanceMonitor.ts;
+lastTimeRef.current = app/hooks/usePerformanceMonitor.ts;
       ,}
 
       requestAnimationFrame(countFrames)
@@ -72,11 +66,11 @@ measureMemoryUsage()
     , , }
   }, [measureMemoryUsage, options.measureMemoryUsage,])
 return{
-metrics
-setMetrics
-isMonitoringFPS
-setIsMonitoringFPS
-measureMemoryUsage
+app/hooks/usePerformanceMonitor.ts;
+app/hooks/usePerformanceMonitor.ts;
+app/hooks/usePerformanceMonitor.ts;
+app/hooks/usePerformanceMonitor.ts;
+app/hooks/usePerformanceMonitor.ts;
 init}
   }
 }

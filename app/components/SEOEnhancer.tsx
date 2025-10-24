@@ -1,127 +1,123 @@
-'use client'
-import { Navigation   } from './Navigation';
-import React } from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { ArrowRight, Brain  } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
-import { Phone, Mail, ArrowRight  } from 'lucide-react';
-const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = '' ",}) => {</SEOEnhancerProps>
+app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.app/components/SEOEnhancer.tsx;
+app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx;
+
+import { Navigation   } from app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx;
+import React } from app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx;
+import { Helmet  } from app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx;
+import { ArrowRight, Brain  } from app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx;
+import { Phone, Mail, ArrowRight  } from app/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx;
+const SEOEnhancer: app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxapp/components/SEOEnhancer.tsx'app/components/SEOEnhancer.tsx,}) => {</SEOEnhancerProps>
 return (
     </SEOEnhancerProps> <>
 
       <Helmet />
+    </Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." / />
-        <meta name="keywords" content="AI, artificial, intelligence, SEOEnhancer, AI, solutions, intelligent automation" / />
+        <meta name=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx content=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx / />
+    </meta>
+        <meta name=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx content=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx / />
+    </meta>
       </Helmet>
-      <Navigation/ /> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
-            {/* Hero Section */,} <section className="relative py-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" /> <div className="relative max-w-7 xl mx-auto text-center" /> <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" />
+      <Navigation/ /> <div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </div>
+            {/* Hero Section */,} <section className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <h1 className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </h1>
 SEOEnhancer</h1>
-            </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed" />
+            </h1> <p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </p>
 Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business.</p>
-            </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" /> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
-Get Started</button> <ArrowRight className="ml-2 h-5 w-5" />
+            </p>,<div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <button className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </button>
+Get Started</button> <ArrowRight className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
-r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
-Learn More</button>
-
-              </button>
-
-        </section>,{/* Features Section */;} <section className="py-20 px-4" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
-Powerful AI-driven features designed to transform your business operations</p>
-              </p>
-    <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />)
+              <button className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxbg-emerald-400 hoveapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.app/components/SEOEnhancer.tsx;
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxpy-20 px-4app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxmax-w-7 xl mx-autoapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-center mb-16app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-4 xl font-bold text-white mb-4app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-xl text-gray-300 max-w-3 xl mx-autoapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxgrid md: app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx,app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />)
             {features.map((feature,index) => (
-                <divkey = {index,};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-    <h1 className = "text-xl font-semibold text-white mb-3">{feature.title,}</h3>
-                  <p className = "text-gray-300 mb-4">{feature.description,}</p> <ul className="space-y-2" />
+                <divkey = {index,};className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </divkey>
+                  <feature.icon className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </feature>
+    <h1 className = app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>{feature.title,}</h3>
+                  <p className = app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>{feature.description,}</p> <ul className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </ul>
                     {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key = {idx,};className="flex items-center text-sm text-gray-300" /> <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key = {idx,};className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <CheckCircle className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </CheckCircle>
                         {benefit,}</CheckCircle>
                       </li>
                     ))}
                   </ul>
               <br / />
-    <span className="text-white">Solutions</span>
+    </br>
+    <span className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>Solutions</span>
 
-            </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-auto" />
+            </h1> <p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </p>
 Transform your business with our advanced seoenhancer solutions.
           </p>
 Powered by cutting-edge AI technology and industry expertise.
-            </p> <div className="flex flex-col sm: flex-row gap-4 justify-center" />
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">Get Started</button> <ArrowRight className="ml-2 h-5 w-5" />
+            </p> <div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </div>
+            <button className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>Get Started</button> <ArrowRight className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </ArrowRight>
               </button>
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: "from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove","
-r: scale-105" />
-Learn More</button>
-
-              </button>
-
-        ,</section>
-      {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
-    <h1 className="text-3, xl, m,"
-d: text-4 xl font-bold text-white mb-4">Why Choose Our SEOEnhancer?</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Our seoenhancer solutions deliver, unmatched, performance,security, and scalability.</p>p>
-    <divclassName="grid grid-cols-1 md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />{features.map((feature,index) => (
-              <divkey = {index,};className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300" />,<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4" />
-            <feature.icon className="h-6 w-6 text-white" />
-
-              )),}
-
-          </div>
-        </section>
-        {/* Benefits Section */} <section className="py-20 px-4 bg-white/5" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
-    <h1 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
-Experience the benefits of cutting-edge AI technology</p>
-              </p>
-            </div>
-    <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-3 gap-8" / />
+              <button className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxfrom-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hoveapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.app/components/SEOEnhancer.tsx;
+r: scale-105app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxpy-20 px-4 sm: px-6 lg:px-8app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxmax-w-7 xl mx-autoapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-center mb-16app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-3, xl, m,app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>Why Choose Our SEOEnhancer?</h2>
+            <p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>Our seoenhancer solutions deliver, unmatched, performance,security, and scalability.</p>p>
+    <divclassName=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxgrid-cols-2 lapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.app/components/SEOEnhancer.tsx;
+g: grid-cols-4 gap-8app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxbg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxflex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxh-6 w-6 text-whiteapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxpy-20 px-4 bg-white/5app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxmax-w-7 xl mx-autoapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-center mb-16app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-4 xl font-bold text-white mb-4app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxtext-xl text-gray-300 max-w-3 xl mx-autoapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxgrid md: app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx,app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx / />
+    </divclassName>
             {benefits.map((benefit,index) => (
-      <divkey = {index,};className="flex items-start space-x-4" />
-    </div> <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit,}</p>
-      <divkey = index className="flex items-start space-x-4" />
-    </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /><p className="text-gray-300 text-lg">benefit</p>
+      <divkey = {index,};className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </divkey>
+    </div> <CheckCircle className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </CheckCircle>
+                  <p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>{benefit,}</p>
+      <divkey = index className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </divkey>
+    </div><CheckCircle className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /><p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>benefit</p>
                 </div>
 
             </div>
           </div>
         </section>
-        {/* CTA Section */,} <section className="py-20 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Transform Your Business?</h2> <p className="text-xl text-gray-300 mb-8" />
+        {/* CTA Section */,} <section className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </div>
+    <h1 className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>Ready to Transform Your Business?</h2> <p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </p>
 Join thousands of businesses already using our AI solutions</p>
             </p>
           </div>
-    <div className="grid grid-cols-1 md: grid-cols-2 gap-6">{benefits.map((benefit,index) => (
-      <divkey = {index,};className="flex items-start space-x-3" />
-    </div> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit,}</p>
+    <div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>{benefits.map((benefit,index) => (
+      <divkey = {index,};className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </divkey>
+    </div> <CheckCircle className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </CheckCircle>
+                <p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>{benefit,}</p>
 
               </div>
 
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="max-w-4 xl mx-auto text-center" /> <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your seoenhancer needs and get a customized solution.</p>p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" /> <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /> <Phone className="mr-2 h-5 w-5" />
+      {/* CTA Section */} <section className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />,<div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />,<h1 className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>Ready to Get Started?</h2>
+            <p className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx>Contact our experts to discuss your seoenhancer needs and get a customized solution.</p>p>,<div className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <button className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx /> <Phone className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsx />
+    </Phone>
 Call Now</Phone>
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: "from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove","
-r: scale-105" /> <Mail className="mr-2 h-5 w-5" />
+              <button className=app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxfrom-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hoveapp/components/SEOEnhancer.tsx"app/components/SEOEnhancer.app/components/SEOEnhancer.tsx;
+r: scale-105app/components/SEOEnhancer.tsx"app/components/SEOEnhancer.tsxmr-2 h-5 w-5" />
+    </button>
 Email Us</Mail>
             </div>
           </div>
         </section>
       </div>
       </Footer>
-</div>
-  )
+</$1>
+  );
 ,}
 
-export default SEOEnhancer
+export default app/components/SEOEnhancer.tsx;
 }}}

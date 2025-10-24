@@ -1,24 +1,23 @@
-'use client'
+app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
 /**
-* Advanced Performance Monitoring System
-* Tracks Core Web Vitals and custom performance metrics
+* Advanced Performance Monitoring app/utils/performanceMonitoring.ts;
+* Tracks Core Web Vitals and custom performance app/utils/performanceMonitoring.ts;
 */
 export interface PerformanceMetric {
 
-name: "string",value: "number
-ratin",g: "'good' | 'needs-improvement' | 'poor'"
+name: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,value: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,g: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
 }
 }
-    timestamp: "number",}
+    timestamp: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 
 
 export interface WebVitals {
 
-FCP?: PerformanceMetric; // First Contentful Paint
-LCP?: PerformanceMetric; // Largest Contentful Paint
-FID?: PerformanceMetric; // First Input Delay
-CLS?: PerformanceMetric; // Cumulative Layout Shift
-TTFB?: PerformanceMetric; // Time to First, Byte
+FCP?: PerformanceMetric; // First Contentful app/utils/performanceMonitoring.ts;
+LCP?: PerformanceMetric; // Largest Contentful app/utils/performanceMonitoring.ts;
+FID?: PerformanceMetric; // First Input app/utils/performanceMonitoring.ts;
+CLS?: PerformanceMetric; // Cumulative Layout app/utils/performanceMonitoring.ts;
+TTFB?: PerformanceMetric; // Time to First, app/utils/performanceMonitoring.ts;
 }
 }
 }
@@ -27,11 +26,10 @@ INP?: PerformanceMetric; // Interaction to Next, Paint}
 }
 export interface CustomMetric {
 
-name: "string",value: "number
-uni",t: "'ms' | 'bytes' | 'count' | 'percentage'",rating: "'good' | 'needs-improvement' | 'poor'"
+name: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,value: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,t: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsmsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsbytesapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tscountapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspercentageapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts,rating: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
 }
 }
-  timestamp: "number",}
+  timestamp: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 
 export interface WebVitals {
 
@@ -40,11 +38,11 @@ export interface WebVitals {
 ;}
 
 
-FCP?: PerformanceMetric; // First Contentful Paint
-LCP?: PerformanceMetric; // Largest Contentful Paint
-FID?: PerformanceMetric; // First Input Delay
-CLS?: PerformanceMetric; // Cumulative Layout Shift
-TTFB?: PerformanceMetric; // Time to First Byte
+FCP?: PerformanceMetric; // First Contentful app/utils/performanceMonitoring.ts;
+LCP?: PerformanceMetric; // Largest Contentful app/utils/performanceMonitoring.ts;
+FID?: PerformanceMetric; // First Input app/utils/performanceMonitoring.ts;
+CLS?: PerformanceMetric; // Cumulative Layout app/utils/performanceMonitoring.ts;
+TTFB?: PerformanceMetric; // Time to First app/utils/performanceMonitoring.ts;
 INP?: PerformanceMetric; // Interaction to Next, Paint}
 }
 export interface CustomMetric {
@@ -53,19 +51,15 @@ export interface CustomMetric {
 ;}
 ;}
 
-name: "string",value: "number
-uni",t: "'ms' | 'bytes' | 'count' | 'percentage'",timestamp: "number;",}
+name: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,value: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,t: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsmsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsbytesapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tscountapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspercentageapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts,timestamp: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 }
 class PerformanceMonitoringService {;}
-private static instance: "PerformanceMonitoringService;",}
-private webVitals: "WebVitals = {",;}
+private static instance: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
+private webVitals: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 
-private customMetrics: "CustomMetric[] = []",private observers: "PerformanceObserver[] = []",private maxMetrics = 1000
+private customMetrics: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,private observers: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,private maxMetrics = app/utils/performanceMonitoring.ts;
 private constructor() {
-private customMetrics: "CustomMetric[] = []
-private observer",s: "PerformanceObserver[] = []
-private maxMetrics = 1000
-",}
+private customMetrics: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,s: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 private constructor() {}
 this.initializeObservers();}
 }
@@ -73,41 +67,41 @@ static getInstance(): PerformanceMonitoringService {}
 if (!PerformanceMonitoringService.instance) {;}
 PerformanceMonitoringService.instance = new PerformanceMonitoringService(),;}
 export interface PerformanceMetric {
-/* TODO: "Fix JSX expression */"
+/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
 }
 }
 
 }
 export interface WebVitals {
-/* TODO: "Fix JSX expression */"
+/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
 ;}
 ;}
 
 }
 export interface CustomMetric {
-/* TODO: "Fix JSX expression */"
+/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
 ;}
 ;}
 
 }
-class PerformanceMonitoringService {/* TODO: "Fix JSX expression */",;}
-webVitals: "WebVitals = {",;}
+class PerformanceMonitoringService {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
+webVitals: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 
-private
-customMetrics: "CustomMetric[] = []",private
-observers: "PerformanceObserver[] = []",private maxMetrics = 1000
-private constructor() {  /* TOD
-O: "Fix JSX expression */",, , }
+app/utils/performanceMonitoring.ts;
+customMetrics: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,app/utils/performanceMonitoring.ts;
+observers: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,private maxMetrics = app/utils/performanceMonitoring.ts;
+private constructor() {  /* app/utils/performanceMonitoring.ts;
+O: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,, , }
 }
-static getInstance(): PerformanceMonitoringService {/* TODO: "Fix JSX expression */",}
+static getInstance(): PerformanceMonitoringService {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 ;}
-return PerformanceMonitoringService.instance
+return PerformanceMonitoringService.app/utils/performanceMonitoring.ts;
 ;}
 /**
-* Initialize performance observers
+* Initialize performance app/utils/performanceMonitoring.ts;
 */
 private initializeObservers(): void {;}
-if (typeof window = == 'undefined' || !('PerformanceObserver' in, window)) {;}
+if (typeof window = == app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts || !(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts in, window)) {;}
 
 return;}
 }
@@ -115,17 +109,17 @@ try {}
 // Observe paint metrics (FCP)
 const paintObserver = new PerformanceObserver((list) => {,}
 list.getEntries().forEach((entry) => {}
-if (entry.name = == 'first-contentful-paint') {,}
-this.recordWebVital('FCP', entry.startTime)}
+if (entry.name = == app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts) {,}
+this.recordWebVital(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, entry.startTime)}
 ;}
 
 })
 })
-paintObserver.observe({ type: "'paint'",buffered: "true ",})
+paintObserver.observe({ type: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tspaintapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts,buffered: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(paintObserver)
-// Observe LCP
+// Observe app/utils/performanceMonitoring.ts;
 const lcpObserver = new PerformanceObserver((list) => {
-  // Observe, LCP
+  // Observe, app/utils/performanceMonitoring.ts;
 ;}
 
 const lcpObserver = new PerformanceObserver((list) => {,;}
@@ -134,737 +128,191 @@ const entries = list.getEntries()
 const lastEntry = entries[entries.length - 1,]
 if (lastEntry) {}
 
-this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",)
-e: "number ",}).renderTime || (lastEntry as PerformanceEntry & { renderTime: "number; loadTim",e: "number ",}).loadTime)
+this.recordWebVital(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, (lastEntry as PerformanceEntry & { renderTime: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,)
+e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}).renderTime || (lastEntry as PerformanceEntry & { renderTime: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}).loadTime)
 }
 })
-lcpObserver.observe({ type: "'largest-contentful-paint'",buffered: "true ",})
+lcpObserver.observe({ type: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tslargest-contentful-paintapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts,buffered: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(lcpObserver)
-// Observe CLS
-let clsValue = 0
-
+// Observe app/utils/performanceMonitoring.ts;
+let clsValue = app/utils/performanceMonitoring.ts;
 const clsObserver = new PerformanceObserver((list) => {
-  // Observe CLS
-let clsValue = 0
+  // Observe app/utils/performanceMonitoring.ts;
+let clsValue = app/utils/performanceMonitoring.ts;
 ,}
 const clsObserver = new PerformanceObserver((list) => {,;}
 list.getEntries().forEach((entry) => {;}
 
-if (!(entry as PerformanceEntry & { hadRecentInput: "boolean ",}).hadRecentInput) {;}
+if (!(entry as PerformanceEntry & { hadRecentInput: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}).hadRecentInput) {;}
 
-clsValue += (entry as PerformanceEntry & { value: "number ",;}).value
-this.recordWebVital('CLS', clsValue)
+clsValue += (entry as PerformanceEntry & { value: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}).app/utils/performanceMonitoring.ts;
+this.recordWebVital(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, clsValue)
 }
 })
 })
-clsObserver.observe({ type: "'layout-shift'",buffered: "true ",})
+clsObserver.observe({ type: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tslayout-shiftapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts,buffered: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(clsObserver)
-// Observe FID
+// Observe app/utils/performanceMonitoring.ts;
 const fidObserver = new PerformanceObserver((list) => {
-  // Observe, FID
+  // Observe, app/utils/performanceMonitoring.ts;
 }
 const fidObserver = new PerformanceObserver((list) => {,}
 list.getEntries().forEach((entry) => {}
-this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: "number ",;}).processingStart - entry.startTime)
+this.recordWebVital(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, (entry as PerformanceEntry & { processingStart: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}).processingStart - entry.startTime)
 })
 })
-fidObserver.observe({ type: "'first-input'",buffered: "true ",})
+fidObserver.observe({ type: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsfirst-inputapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts,buffered: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(fidObserver)
-// Observe navigation timing for TTFB
+// Observe navigation timing for app/utils/performanceMonitoring.ts;
 const navObserver = new PerformanceObserver((list) => {
 list.getEntries().forEach((entry) => {
-const navEntry = entry as PerformanceNavigationTiming
-// Observe navigation timing for, TTFB
+const navEntry = entry as app/utils/performanceMonitoring.ts;
+// Observe navigation timing for, app/utils/performanceMonitoring.ts;
 ;}
 const navObserver = new PerformanceObserver((list) => {,;}
 
 list.getEntries().forEach((entry) => {}
 
-const navEntry = entry as PerformanceNavigationTiming
-this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart)}
+const navEntry = entry as app/utils/performanceMonitoring.ts;
+this.recordWebVital(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, navEntry.responseStart - navEntry.requestStart)}
 })
 })
-navObserver.observe({ type: "'navigation'",buffered: "true ",})
+navObserver.observe({ type: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnavigationapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts,buffered: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(navObserver)
 } catch (error) {}
-logger.error('Failed to initialize performance observers', error, as, Error)}
-private initializeObservers(): void {/* TODO: "Fix JSX expression */",}
+logger.error(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, error, as, Error)}
+private initializeObservers(): void {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 }
-try { /* TODO: "Fix JSX expression */",, }
+try { /* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,, }
 ;}
 ;})
 ;})
-paintObserver.observe({/* TODO: "Fix JSX expression */",})
-d: "true ",})
+paintObserver.observe({/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
+d: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(paintObserver)
-// Observe LCP
-const lcpObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;}
+// Observe app/utils/performanceMonitoring.ts;
+const lcpObserver = new PerformanceObserver((list) => {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 
-e: "number ",}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: "Fix JSX expression */",;})
-e: "number ",}).loadTime)
+e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;})
+e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}).loadTime)
 }
 })
-lcpObserver.observe({/* TODO: "Fix JSX expression */",})
-d: "true ",})
+lcpObserver.observe({/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
+d: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(lcpObserver)
-// Observe CLS
-let clsValue = 0
+// Observe app/utils/performanceMonitoring.ts;
+let clsValue = app/utils/performanceMonitoring.ts;
+const clsObserver = new PerformanceObserver((list) => {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 
-const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;}
+t: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}).hadRecentInput) {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 
-t: "boolean ",}).hadRecentInput) {/* TODO: "Fix JSX expression */",}
-
-e: "number ",}).value
-this.recordWebVital('CLS', clsValue)
+e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}).app/utils/performanceMonitoring.ts;
+this.recordWebVital(app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, clsValue)
 }
 })
 })
-clsObserver.observe({/* TODO: "Fix JSX expression */",})
-d: "true ",})
+clsObserver.observe({/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
+d: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(clsObserver)
-// Observe FID
-const fidObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",}
-t: "number ",;}).processingStart - entry.startTime)
+// Observe app/utils/performanceMonitoring.ts;
+const fidObserver = new PerformanceObserver((list) => {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
+t: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}).processingStart - entry.startTime)
 })
 })
-fidObserver.observe({/* TODO: "Fix JSX expression */",})
-d: "true ",})
+fidObserver.observe({/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
+d: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(fidObserver)
-// Observe navigation timing for TTFB
-const navObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;}
+// Observe navigation timing for app/utils/performanceMonitoring.ts;
+const navObserver = new PerformanceObserver((list) => {/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 
 })
 })
-navObserver.observe({/* TODO: "Fix JSX expression */",})
-d: "true ",})
+navObserver.observe({/* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
+d: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,})
 this.observers.push(navObserver)
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
+} catch(error) {   /* TODO: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,, , , }
 }
 }
 /**
-* Record a Web Vital metric
+* Record a Web Vital app/utils/performanceMonitoring.ts;
 */
-private recordWebVital(name: "keyof WebVitals",value: "number): void{",const rating = this.getRating(name, value)
-const metric: "PerformanceMetric = {
-",name
+private recordWebVital(name: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,value: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,const rating = this.getRating(name, value)
+const metric: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,app/utils/performanceMonitoring.ts;
 ;}
 }
 
 
-private recordWebVital(name: "keyof WebVitals",value: "number): void {",;}
+private recordWebVital(name: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,value: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 const rating = this.getRating(name, value)
-const metric: "PerformanceMetric = {",;}
+const metric: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 
-name
-value
-rating
-timestamp: "Date.now()",}
+app/utils/performanceMonitoring.ts;
+app/utils/performanceMonitoring.ts;
+app/utils/performanceMonitoring.ts;
+timestamp: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
 }
-this.webVitals[name,] = metric
-logger.info(`Web Vital: "${name",}`, 'PerformanceMonitoring', { value, rating })
-// Send to analytics
+this.webVitals[name,] = app/utils/performanceMonitoring.ts;
+logger.info(app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.ts${nameapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts, app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts, { value, rating })
+// Send to app/utils/performanceMonitoring.ts;
 this.sendToAnalytics(metric)
 private recordWebVital(nam)
-e: "keyof WebVitals",valu)
-e: "number): void {/* TOD",O: "Fix JSX expression */",;}
+e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,valu)
+e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,O: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 ;}
-this.webVitals[name,] = metric
-logger.info(`Web)`
-Vital: "${name",}`, 'PerformanceMonitoring', { value, rating })
-// Send to analytics
-this.sendToAnalytics(metric)
+this.webVitals[name,] = app/utils/performanceMonitoring.ts;
+logger.info(app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+Vital: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.tsPerformanceMonitoringapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tskeyof WebVitalsapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber): app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsRecord<keyof WebVitalsapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber; pooapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts1800app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts3000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ gooapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts2500app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts4000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ gooapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts100app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts300 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ gooapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts0.1app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts0.25 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ gooapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts800app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts1800 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ gooapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts200app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts500 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tskeyof WebVitalsapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber): app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts3000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts4000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts300 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts0.25 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts1800 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts500 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustomMetric[app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts]): void{
+const metriapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustomMetric = {
+nameapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustomMetric[app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts]): void {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustomMetric = {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsDate.now()app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustom Metric: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.tsPerformanceMonitoringapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustomMetric[app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts]): void {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+logger.debug(app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+Metric: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.tsPerformanceMonitoringapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsPerformanceMetric): Promise<void> {
+try{app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsundefinedapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsfetchapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts/api/analytics/performanceapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts: app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsJSON.stringify(metric)
+private async sendToAnalytics(metriapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsPerformanceMetric): Promise<void> {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsundefinedapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsfetchapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts/api/analytics/performanceapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts: app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsJSON.stringify(metric)app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFailed to send metric to analyticsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsPerformanceMetric): Promise<void> {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts{ app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts: app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsJSON.stringify(metric)app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsreturn 0;app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber) => a + bapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+customMetricapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustomMetric[]app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+customMetricapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCustomMetric[]app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring[];app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring[] = []
+// Generate recommendations based on app/utils/performanceMonitoring.ts;
+if (this.webVitals.FCP && this.webVitals.FCP.rating !== app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts) {
+const recommendationapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring[] = []
+
+// Generate recommendations based on app/utils/performanceMonitoring.ts;
+app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove First Contentful Paint by optimizing critical rendering pathapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove Largest Contentful Paint by optimizing images and server responseapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsReduce Cumulative Layout Shift by reserving space for dynamic contentapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove First Input Delay by reducing JavaScript execution timeapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove Time to First Byte by optimizing server response timeapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsthis.webVitalsapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsthis.customMetricsapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => T): T{
+const start = performance.now();app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => T): T {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}
+this.recordCustomMetric(app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.ts, duration, app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts)
+return, app/utils/performanceMonitoring.ts;
 }
 /**
-* Get rating for a Web Vital metric
-*/
-private getRating(name: "keyof WebVitals",value: "number): 'good' | 'needs-improvement' | 'poor' {",;}
-
-const thresholds: "Record<keyof WebVitals",{ good: "number; poo",r: "number ",}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: "1800",poor: "3000 ",}
-LCP: "{ goo",d: "2500",poor: "4000 ",}
-FID: "{ goo",d: "100",poor: "300 ",}
-CLS: "{ goo",d: "0.1",poor: "0.25 ",}
-TTFB: "{ goo",d: "800",poor: "1800 ",}
-INP: "{ goo",d: "200",poor: "500 ",}
-}
-const threshold = thresholds[name,]
-if (!threshold) return 'good'
-if (value <= threshold.good) return 'good'
-if (value <= threshold.poor) return 'needs-improvement'
-return 'poor'
-private getRating(nam)
-e: "keyof WebVitals",valu)
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}
-r: "number ",}> = {/* TODO: "Fix JSX expression */",}
-r: "3000 ",}
-LC
-P: "{/* TOD",O: "Fix JSX expression */",}
-r: "4000 ",}
-FI
-D: "{/* TOD",O: "Fix JSX expression */",}
-r: "300 ",}
-CL
-S: "{/* TOD",O: "Fix JSX expression */",}
-r: "0.25 ",}
-TTF
-B: "{/* TOD",O: "Fix JSX expression */",}
-r: "1800 ",}
-IN
-P: "{/* TOD",O: "Fix JSX expression */",}
-r: "500 ",}
-}
-const threshold = thresholds[name,]
-if (!threshold) return 'good'
-if (value <= threshold.good) return 'good'
-if (value <= threshold.poor) return 'needs-improvement'
-return 'poor'
-;}
-/**
-* Record a custom metric
-*/
-recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void{
-const metri",c: "CustomMetric = {
-name",}
-,}
-recordCustomMetric(name: "string",value: "number",unit: "CustomMetric['unit']): void {",;}
-const metric: "CustomMetric = {",;}
-
-name
-value
-unit
-timestamp: "Date.now()",}
-}
-this.customMetrics.push(metric)
-// Maintain max metrics limit
-if (this.customMetrics.length > this.maxMetrics) {
-  // Maintain max metrics, limit
-}
-if (this.customMetrics.length > this.maxMetrics) {}
-this.customMetrics.shift();}
-}
-logger.debug(`Custom Metric: "${name",}`, 'PerformanceMonitoring', { value, unit })
-recordCustomMetric(nam;)
-e: "string",valu)
-e: "number",uni)
-t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression */",;}
-;}
-this.customMetrics.push(metric)
-// Maintain max metrics limit
-if(this.customMetrics.length > this.maxMetrics) {  /* TODO: "Fix JSX expression */",, , }
-}`
-logger.debug(`Custom)`
-Metric: "${name",}`, 'PerformanceMonitoring', { value, unit })
-}
-/**
-* Send metric to analytics service
-*/
-private async sendToAnalytics(metric: "PerformanceMetric): Promise<void> {
-try{",if (typeof window !== 'undefined' && 'fetch' in, window) {,;}
-await fetch('/api/analytics/performance', {)}
-method: "'POST'",;})
-headers: "{ 'Content-Type': 'application/json' ",})
-body: "JSON.stringify(metric)
-private async sendToAnalytics(metri",)</void>
-c: "PerformanceMetric): Promise<void> {",}
-
-try {}
-if (typeof window !== 'undefined' && 'fetch' in, window) {}
-await fetch('/api/analytics/performance', {)}
-method: "'POST'",}
-headers: "{ 'Content-Type': 'application/json' ",}
-body: "JSON.stringify(metric)",})
-}
-;} catch (error) {;}
-logger.error('Failed to send metric to analytics', error, as, Error);}
-private async sendToAnalytics(metri)</void>
-c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression */",}
-s: "{ 'Content-Type': 'application/json' ",}
-bod
-y: "JSON.stringify(metric)",})
-}
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
-}
-}
-/**
-* Get all Web Vitals
-*/
-getWebVitals(): WebVitals {}
-return { ...this.webVitals }
-getWebVitals(): WebVitals {/* TODO: "Fix JSX expression */",}
-return { ...this.webVitals }
-;}
-/**
-* Get custom metrics
-*/
-getCustomMetrics(): CustomMetric[] {}
-
-return [...this.customMetrics,];}
-getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression */",}
-}
-/**
-* Get performance score (0-100)
-*/
-getPerformanceScore(): number {}
-const vitals = Object.values(this.webVitals)
-if (vitals.length === 0) return 0
-const scores = vitals.map(metric => {
-)
-
-  )
-switch (metric.rating) {
-case 'good': return 100
-case 'needs-improvement': return 50
-case 'poor': return 0
-if (vitals.length = == 0) return, 0
-
-,}
-const scores = vitals.map(metric => {
-)
-,;}
-
-switch (metric.rating) {}
-
-case 'good': return 100
-case 'needs-improvement': return 50
-case 'poor': return 0
-default: "return 0;",,}
-getPerformanceScore(): number {/* TODO: "Fix JSX expression */",}
-}
-})
-return Math.round(scores.reduce((a: "number",b: "number) => a + b",0) / scores.length)
-;}
-/**
-* Get performance summary
-*/
-getSummary(): {
-score: "number",webVitals: "WebVitals
-customMetric",s: "CustomMetric[]",}
-getSummary(): {}
-score: "number",webVitals: "WebVitals
-customMetric",s: "CustomMetric[]",recommendations: "string[];",}
-} {}
-const score = this.getPerformanceScore()
-const recommendations: "string[] = []
-// Generate recommendations based on metrics
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
-const recommendation",s: "string[] = []
-
-// Generate recommendations based on metrics
-",}
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}
-recommendations.push('Improve First Contentful Paint by optimizing critical rendering path')}
-}
-if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}
-recommendations.push('Improve Largest Contentful Paint by optimizing images and server response')}
-}
-if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {}
-recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content')}
-}
-if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {}
-recommendations.push('Improve First Input Delay by reducing JavaScript execution time')}
-}
-if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}
-recommendations.push('Improve Time to First Byte by optimizing server response time')}
-;}
-return {;}
-score
-webVitals: "this.webVitals",customMetrics: "this.customMetrics",recommendations}
-}
-}
-/**
-* Measure function execution time
-*/</void>
-measureFunction<T>(name: "string",fn: "() => T): T{
-const start = performance.now();",}
-const result = fn(),;}</T>
-measureFunction<T>(name: "string",fn: "() => T): T {",}
-const start = performance.now()
-const result = fn()
-const duration = performance.now() - start;`,}
-this.recordCustomMetric(`fn_${name}`, duration, 'ms')
-return, result
-}
-/**
-* Measure async function execution time
+* Measure async function execution app/utils/performanceMonitoring.ts;
 */</T>
-async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {
-const start = performance.now()
-const result = await fn()",;}</T>
-async measureAsyncFunction<T>(name: "string",fn: "() => Promise<T>): Promise<T> {",;}
+async measureAsyncFunction<T>(name: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,fn: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}</T>
+async measureAsyncFunction<T>(name: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,fn: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,;}
 const start = performance.now()
 const result = await fn()
-const duration = performance.now() - start;`,}
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
-return, result
+const duration = performance.now() - start;app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.tsasync_fn_${name}app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.tsmsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstring): void {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsundefinedapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsmarkapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstring): void {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsundefinedapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsmarkapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring): number | null{app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsundefinedapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsmeasureapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring): number | null {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsundefinedapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsmeasureapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsmeasureapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsmsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFailed to measure performanceapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => T): T {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+this.recordCustomMetric(app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.ts, duration, app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts)
+return, app/utils/performanceMonitoring.ts;
 }
 /**
-* Mark a custom performance mark
-*/
-mark(name: "string): void {",if (typeof performance !== 'undefined' && 'mark' in, performance) {}
-mark(name: "string): void {",}
-if (typeof performance !== 'undefined' && 'mark' in, performance) {;}
-performance.mark(name);}
-;}
-;}
-/**
-* Measure between two marks
-*/
-measure(name: "string",startMark: "string",endMark: "string): number | null{",if (typeof performance !== 'undefined' && 'measure' in, performance) {,;}
-try {}
-measure(name: "string",startMark: "string",endMark: "string): number | null {",}
-if (typeof performance !== 'undefined' && 'measure' in, performance) {;}
-try {;}
-performance.measure(name, startMark, endMark)
-const measure = performance.getEntriesByName(name, 'measure')[0,]
-if (measure) {}
-this.recordCustomMetric(name, measure.duration, 'ms')
-return measure.duration;}
-}
-} catch (error) {}
-logger.error('Failed to measure performance', error, as, Error)}
-getSummary(): {/* TODO: "Fix JSX expression */",}
-} {/* TODO: "Fix JSX expression */",}
-}
-if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }
-}
-if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }
-}
-if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }
-}
-if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }
-}
-return {/* TODO: "Fix JSX expression */",}
-}
-;}
-/**
-* Measure function execution time
+* Measure async function execution app/utils/performanceMonitoring.ts;
 */</T>
-measureFunction<T>(nam
-e: "string",f)
-n: "() => T): T {/* TOD",O: "Fix JSX expression */",}`
-this.recordCustomMetric(`fn_${name}`, duration, 'ms')
-return, result
-}
-/**
-* Measure async function execution time
-*/</T>
-async measureAsyncFunction<T>(nam
-e: "string",f)</T>
-n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */",}`
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
-return, result
-}
-/**
-* Mark a custom performance mark
-*/
-mark(nam)
-e: "string): void {/* TOD",O: "Fix JSX expression */",}
-;}
-;}
-/**
-* Measure between two marks
-*/
-measure(nam;)
-e: "string",startMar)
-k: "string",endMar)
-k: "string): number | null {/* TOD",O: "Fix JSX expression */",}
-}
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
-}
-}
-return, null
-}
-/**
-* Clear all metrics
-*/
-clearMetrics(): void {;}
-this.webVitals = {,;}
-
-this.customMetrics = []
-clearMetrics(): void {/* TODO: "Fix JSX expression */",;}
-this.webVitals = {,;}
-this.customMetrics = []
-,;}
-/**
-* Disconnect all observers
-*/
-disconnect(): void {;}
-this.observers.forEach(observer = > observer.disconnect())
-this.observers = [];,}
-disconnect(): void {/* TODO: "Fix JSX expression */",}
-;}
-;}
-export const performanceMonitoring = PerformanceMonitoringService.getInstance()
-export default PerformanceMonitoringService
-// Export convenience enums and functions
-
-export enum MetricUnit{// Export convenience enums and, functions;}
-;}
-export enum MetricUnit {;}
-Milliseconds = 'ms'
-Bytes = 'bytes'
-Count = 'count'
-Percentage = 'percentage',}
-
-}
-
-// Simple metrics structure for testing
-interface MetricData {
-// Simple metrics structure for, testing
-;}
-;}
-
-}
-
-interface MetricData {
-
-
-;}
-;}
-
-values: "number[]",count: "number
-averag",e: "number",min: "number
-ma",x: "number",unit: "string
-rating?: 'good' | 'needs-improvement' | 'poor';",}
-}</T>
-const simpleMetrics = new Map<string, MetricData>()
-export const recordMetric = useCallback((...args) => {
-  // Record in our simple metrics store for, testing
-;}
-
-export const recordMetric = useCallback((...args) => {,;}
-
-// Record in our simple metrics store for testing
-const existing = simpleMetrics.get(name)
-
-if (existing) {,}
-existing.values.push(value)
-existing.count++
-existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count
-existing.min = Math.min(existing.min, value)
-existing.max = Math.max(existing.max, value)}
-
-} else{
-simpleMetrics.set(name, {;)
-values: "[value,]",)
-    count: "1;)
-averag",e: "value;)",min: "value;);",}
-ma,x: "value)",}
-unit)} else {}
-simpleMetrics.set(name, {)}
-values: "[value,]",count: "1
-averag",e: "value",min: "value
-max: value
-unit
-ratin",g: "getRating(name",value)}
-})
-}
-// Also record in the main performance monitoring service
-performanceMonitoring.recordCustomMetric(name, value, unit)
-}
-function getRating(name: "string",value: "number): 'good' | 'needs-improvement' | 'poor' {",;}</string>
-const thresholds: "Record<string",{ good: "number; poo",r: "number ",}> = {}</strin>
-'FCP': { good: "1800",poor: "3000 ",}
-'LCP': { good: "2500",poor: "4000 ",}
-'FID': { good: "100",poor: "300 ",}
-'CLS': { good: "0.1",poor: "0.25 ",}
-'TTFB': { good: "800",poor: "1800 ",}
-'INP': { good: "200",poor: "500 ",}
-}
-const threshold = thresholds[name,]
-if (!threshold) return 'good'
-if (value <= threshold.good) return 'good'
-if (value <= threshold.poor) return 'needs-improvement'
-return 'poor'
-}
-export const getMetrics = (): Record<string, MetricData> => {;}</string></<<<string>const</string></<<string>result</string>: Record<string, MetricData> = {;}</string></<<<string>simpleMetrics</string></string>.forEach((value, key) => {;}
-
-result[key,] = { ...value }
-
-})
-return, result
-}
-export const clearMetrics = useCallback((...args) => {,;}
-
-simpleMetrics.clear()
-performanceMonitoring.clearMetrics();}
-}
-export const measureFunction = <T>(name: "string",fn: "() => T): T => {
-",const start = performance.now()
-const result = fn()
-const duration = performance.now() - start
-recordMetric(name, duration, MetricUnit.Milliseconds)
-}
-
-return result;}
-}</T>
-export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {
+async measureAsyncFunction<T>(app/utils/performanceMonitoring.ts;
+e: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,f)</T>
+n: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,O: app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts,}app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.tsasync_fn_${name}app/utils/performanceMonitoring.ts`app/utils/performanceMonitoring.tsmsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstring): void {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring): number | null {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsmsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsbytesapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tscountapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspercentageapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsnumber[]app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+averagapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+maapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+rating?: app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts;app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts[value,]app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts1;)
+averagapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsvalue;)app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsvalue;);app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsvalue)app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts[value,]app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+averagapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsvalueapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.app/utils/performanceMonitoring.ts;
+max: app/utils/performanceMonitoring.ts;
+app/utils/performanceMonitoring.ts;
+ratinapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgetRating(nameapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber): app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsRecord<stringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber; pooapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFCPapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts1800app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts3000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsLCPapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts2500app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts4000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFIDapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts100app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts300 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCLSapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts0.1app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts0.25 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsTTFBapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts800app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts1800 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsINPapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts200app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts500 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => T): T => {
+app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => Promise<T>): Promise<T> => {
 const start = performance.now()
 const result = await fn()
-const duration = performance.now() - start
-",}</T>
-export const measureFunction = <T>(name: "string",fn: "() => T): T => {
-"
-}
+const duration = performance.now() - app/utils/performanceMonitoring.ts;
+app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => T): T => {
+app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => Promise<T>): Promise<T> => {app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFCPapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsLCPapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFIDapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsCLSapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsTTFBapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsreturn 0;app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber) => a + bapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring[] = []
+if (metrics.FCP && metrics.FCP.rating !== app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts) {
+const recommendationapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstring[] = []
 
-const start = performance.now()
-const result = fn()
-const duration = performance.now() - start
-recordMetric(name, duration, MetricUnit.Milliseconds)
-return result;}
-}</T>
-export const measureAsyncFunction = async <T>(name: "string",fn: "() => Promise<T>): Promise<T> => {",;}
-
-const start = performance.now()
-const result = await fn()
-const duration = performance.now() - start
-recordMetric(name, duration, MetricUnit.Milliseconds)
-return result;}
-}
-export const getPerformanceScore = (): number => {,;}
-
-const metrics = getMetrics()
-const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB']
-const webVitals = webVitalNames
-.map(name => metrics[name,])
-.filter(Boolean)
-if (webVitals.length === 0) return 0
-const scores = webVitals.map(metric => {
-)
-
-  )
-switch (metric.rating) {
-case 'good': return 100
-case 'needs-improvement': return 50
-case 'poor': return 0
-if (webVitals.length = == 0) return, 0
-
-,}
-const scores = webVitals.map(metric => {
-)
-,;}
-
-switch (metric.rating) {}
-
-case 'good': return 100
-case 'needs-improvement': return 50
-case 'poor': return 0
-default: "return 0;",,}
-}
-})
-const sum = scores.reduce((a: "number",b: "number) => a + b",0)
-return Math.round(sum / scores.length)
-}
-export const getRecommendations = (): string[] => {,;}
-
-const metrics = getMetrics()
-const recommendations: "string[] = []
-if (metrics.FCP && metrics.FCP.rating !== 'good') {
-const recommendation",s: "string[] = []
-
-  ",}
-if (metrics.FCP && metrics.FCP.rating !== 'good') {}
-recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources')}
-}
-if (metrics.LCP && metrics.LCP.rating !== 'good') {}
-recommendations.push('Improve LCP by optimizing largest images and server response time')}
-}
-if (metrics.FID && metrics.FID.rating !== 'good') {}
-recommendations.push('Improve FID by reducing JavaScript execution time')}
-}
-if (metrics.CLS && metrics.CLS.rating !== 'good') {}
-recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts')}
-}
-if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}
-recommendations.push('Improve TTFB by optimizing server response time and using CDN')}
-}
-return, recommendations
-}
-export enum MetricUnit {/* TODO: "Fix JSX expression */",;}
-;}
-// Simple metrics structure for testing
-interface MetricData {
-/* TODO: "Fix JSX expression */"
-;}
-;}
-
-}</T>
-const simpleMetrics = new Map<string, MetricData>()
-export const recordMetric = (nam
-e: "string",valu
-e: "number",uni)
-t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression */",}
-} else { /* TODO: "Fix JSX expression */",, }
-})
-}
-
-// Also record in the main performance monitoring service
-performanceMonitoring.recordCustomMetric(name, value, unit)
-}
-function getRating(nam)
-e: "string",valu)
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}
-r: "number ",}> = {/* TODO: "Fix JSX expression */",}
-r: "3000 ",}
-'LCP': {/* TODO: "Fix JSX expression */",}
-r: "4000 ",}
-'FID': {/* TODO: "Fix JSX expression */",}
-r: "300 ",}
-'CLS': {/* TODO: "Fix JSX expression */",}
-r: "0.25 ",}
-'TTFB': {/* TODO: "Fix JSX expression */",}
-r: "1800 ",}
-'INP': {/* TODO: "Fix JSX expression */",}
-r: "500 ",}
-}
-const threshold = thresholds[name,]
-if (!threshold) return 'good'</string>
-if (value <= threshold.good) return 'good'
-if (value <= threshold.poor) return 'needs-improvement'
-return 'poor'
-}
-export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression */",;}</string>
-result: "Record<string",MetricData> = {}
-simpleMetrics.forEach((value, key) => {/* TODO: "Fix JSX expression */",}
-result[key,] = { ...value }
-})
-return, result
-}
-export const clearMetrics = (/* TODO: "Fix JSX expression */",) => {
-$3
-}
-
-}</string>
-export const measureFunction = <T>(nam
-e: "string",f)
-n: "() => T): T = > {/* TOD",O: "Fix JSX expression */",}
-
-}</T>
-export const measureAsyncFunction = async <T>(nam
-e: "string",f)</T>
-n: "() => Promise<T>): Promise<T> => {/* TOD",O: "Fix JSX expression */",}
-}
-export const getPerformanceScore = (): number => {
-/* TODO: "Fix JSX expression */"
-;}
-
-}
-
-})
-const sum = scores.reduce((a: "number",b: "number) => a + b",0)
-return Math.round(sum / scores.length)
-}
-export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression */",}
-}
-if(metrics.LCP && metrics.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }
-}
-if(metrics.FID && metrics.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }
-}
-if(metrics.CLS && metrics.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }
-}
-if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , ;}
-;}
-return recommendations
-}
-
-`</T>
+  app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove FCP by optimizing critical CSS and reducing render-blocking resourcesapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove LCP by optimizing largest images and server response timeapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove FID by reducing JavaScript execution timeapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove CLS by reserving space for dynamic content and avoiding layout shiftsapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsImprove TTFB by optimizing server response time and using CDNapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsMetricUnit = MetricUnit.Milliseconds) => {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber): app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts | app/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.ts {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts3000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsLCPapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts4000 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFIDapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts300 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsCLSapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts0.25 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsTTFBapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts1800 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsINPapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts500 app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsneeds-improvementapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tspoorapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsRecord<stringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => T): T = > {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsstringapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts() => Promise<T>): Promise<T> => {/* TODapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumberapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsnumber) => a + bapp/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.tsgoodapp/utils/performanceMonitoring.ts'app/utils/performanceMonitoring.tsFix JSX expression */app/utils/performanceMonitoring.ts"app/utils/performanceMonitoring.ts</T>
 }

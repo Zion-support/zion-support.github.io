@@ -1,29 +1,40 @@
-'use client'
-import React from 'react';
-import Head } from 'next/head';
-import Link } from 'next/link';
+app/contact/page-broken2.tsx'app/contact/page-broken2.app/contact/page-broken2.tsx;
+app/contact/page-broken2.tsx'app/contact/page-broken2.tsx;
+
+import React from app/contact/page-broken2.tsx'app/contact/page-broken2.tsx;
+import Head } from app/contact/page-broken2.tsx'app/contact/page-broken2.tsx;
+import Link } from app/contact/page-broken2.tsx'app/contact/page-broken2.tsx;
 const WorkingPage = (
   return(<>
 
       <Head>
+    </Head>
         <title>{title) => {
-$3
+$app/contact/page-broken2.tsx;
 ,} | Zion Tech Group</title>
-        <meta name = "description" content={description,} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og: type" content="website" />
-        <meta property="og:title" content={`${title,} | Zion Tech Group`} />
-        <meta property="og: description" content={description,} />
+        <meta name = app/contact/page-broken2.tsx"app/contact/page-broken2.tsx content={description,} />
+    </meta>
+        <meta name=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx content=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx />
+    </meta>
+        <meta property=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx content=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx />
+    </meta>
+        <meta property=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx content={app/contact/page-broken2.tsx`app/contact/page-broken2.tsx} />
+    </meta>
+        <meta property=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx content={description,} />
+    </meta>
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">{title,}</h1>
-          <p className = "text-lg text-gray-300 mb-8">{description,;}</p>
-          <Link 
-            href="/contact" 
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+      <div className=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx>
+    </div>
+        <div className=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx>
+    </div>
+          <h1 className=app/contact/page-broken2.tsx"app/contact/page-broken2.tsx>{title,}</h1>
+          <p className = app/contact/page-broken2.tsx"app/contact/page-broken2.tsx>{description,;}</p>
+          <app/contact/page-broken2.tsx;
+            href=app/contact/page-broken2.tsx"app/contact/page-broken2.app/contact/page-broken2.tsx;
+            className=app/contact/page-broken2.tsx"app/contact/page-broken2.app/contact/page-broken2.tsx;
           >
-            Contact Us
+    </app>
+            Contact app/contact/page-broken2.tsx;
           </Link>
         </div>
       </div>
@@ -31,4 +42,4 @@ $3
   )
 ,}
 
-export default WorkingPage
+export default app/contact/page-broken2.tsx;

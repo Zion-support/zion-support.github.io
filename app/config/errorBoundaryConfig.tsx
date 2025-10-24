@@ -1,175 +1,161 @@
-'use client'
-import React from 'react';
+app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx;
+
+import React from app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx;
 /**
-* Error Boundary Configuration
-* Centralized configuration for error handling across the application
+* Error Boundary app/config/errorBoundaryConfig.tsx;
+* Centralized configuration for error handling across the app/config/errorBoundaryConfig.tsx;
 */
 export interface ErrorBoundaryConfig {
 /**
-* Whether to log errors to console
+* Whether to log errors to app/config/errorBoundaryConfig.tsx;
 */
-logErrors: "boolean
+logErrors: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,s: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,string>
 /**
-* Whether to show detailed error messages
-*/
-showDetails: boolean
-/**
-* Whether to send errors to external service
-*/
-reportErrors: boolean
-/**
-* Error reporting endpoint
-*/
-reportingEndpoint?: string
-/**
-* Whether to show error overlay in development
-*/
-showErrorOverlay: boolean
-/**
-* Maximum number of errors to store
-*/
-maxStoredErrors: number
-/**
-* Custom error messages by error type
-*/
-customMessage",s: "Record<string",string>
-/**
-* Fallback UI components
+* Fallback UI app/config/errorBoundaryConfig.tsx;
 */
 ;}
-fallbackComponents: "{",;}</string>
-default: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",;}>
-network: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",;}>
-notFound: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",;}>;}
+fallbackComponents: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,;}</string>
+default: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,r: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,;}>
+network: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,r: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,;}>
+notFound: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,r: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,;}>;}
 
 /**
-* Default error messages
+* Default error app/config/errorBoundaryConfig.tsx;
 */
 const DEFAULT_ERROR_MESSAGES = {
-default: "'Something went wrong. Please try again.'",network: "'Network connection issue. Please check your internet connection.'",notFound: "'The requested resource was not found.'",timeout: "'Request timed out. Please try again.'",serverError: "'Server error occurred. Please try again later.'",validation: "'Validation error. Please check your input.'",;}
+default: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxSomething went wrong. Please try again.app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,network: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxNetwork connection issue. Please check your internet connection.app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,notFound: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxThe requested resource was not found.app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,timeout: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxRequest timed out. Please try again.app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,serverError: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxServer error occurred. Please try again later.app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,validation: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxValidation error. Please check your input.app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,;}
 /**
-* Get error boundary configuration based on environment
+* Get error boundary configuration based on app/config/errorBoundaryConfig.tsx;
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig{return {
-logErrors: "true",showDetails: "isDevelopment
-reportError",s: "!isDevelopment",reportingEndpoint: "process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
-showErrorOverla",y: "isDevelopment",maxStoredErrors: "50
-customMessage",s: "DEFAULT_ERROR_MESSAGES",fallbackComponents: "{
-defaul",t: "DefaultErrorFallback",network: "NetworkErrorFallback",;}
-notFoun,d: "NotFoundFallback",;}
+logErrors: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,showDetails: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,s: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,reportingEndpoint: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,y: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,maxStoredErrors: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,s: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,fallbackComponents: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,t: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,network: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,;}
+notFoun,d: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,;}
 
 /**
-* Default error fallback component
+* Default error fallback app/config/errorBoundaryConfig.tsx;
 */
-function DefaultErrorFallback({ error, resetError ;}: { error: "Error; resetErro",)
-r: "() => void ",}) {
-return( <div className="min-h-screen flex items-center justify-centerbg-gray-50 px-4" /> <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6" /> <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100 rounded-full" />
-<svg
-className="w-6 h-6 text-red-600"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24"
+function DefaultErrorFallback({ error, resetError ;}: { error: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,)
+r: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,}) {
+return (
+    <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx /> <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx /> <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
+    </div>
+<app/config/errorBoundaryConfig.tsx;
+className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+fill=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+stroke=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+viewBox=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
  />
-<path
-strokeLinecap="round"
-strokeLinejoin="round"
+    </app>
+<app/config/errorBoundaryConfig.tsx;
+strokeLinecap=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+strokeLinejoin=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
 strokeWidth={
-2
+app/config/errorBoundaryConfig.tsx;
 ,}
-d="M6 18 L18 6 M6 6 l12 12"
+d=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
 / / />
+    </app>
 </svg>
-    <h1 className = "mt-4 text-2 xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2> <p className="mt-2 text-centertext-gray-600" />
-            {error.message || 'An unexpected error occurred',}
+    <h1 className = app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>Oops! Something went wrong</h2> <p className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
+    </p>
+            {error.message || app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,}
           </p>
-{process.env['NODE_ENV'] === 'development' && (} <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto" />{error.stack,}</pre>)
-)} <div className="mt-6 flexgap-4" />
+{process.env[app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx] === app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx && (} <pre className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />{error.stack,}</$1>
+  );
+)} <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
 
-<button
+    </div>
+<app/config/errorBoundaryConfig.tsx;
 onClick={
-resetError
+app/config/errorBoundaryConfig.tsx;
 ,;}
-className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Try Again</button>,<button
-onClick = {() =>(window.location.href = '/'),;}</button>
-className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors">
-Go Home
+className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>Try Again</button>,<app/config/errorBoundaryConfig.tsx;
+onClick = {() =>(window.location.href = app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx),;}</button>
+className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>
+Go app/config/errorBoundaryConfig.tsx;
 </
 
 /**
-* Network error fallback component
+* Network error fallback app/config/errorBoundaryConfig.tsx;
 */
-function NetworkErrorFallback({ resetError ,;}: { error: "Error; resetErro",)
-r: "() => void ",}) {
-return( <div className="min-h-screen flex items-center justify-centerbg-gray-50 px-4" /> <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6" /> <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100 rounded-full" />
-<svg
-className="w-6 h-6 text-yellow-600"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24"
+function NetworkErrorFallback({ resetError ,;}: { error: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,)
+r: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,}) {
+return (
+    <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx /> <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx /> <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
+    </div>
+<app/config/errorBoundaryConfig.tsx;
+className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+fill=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+stroke=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+viewBox=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
  />
-<path
-strokeLinecap="round"
-strokeLinejoin="round"
+    </app>
+<app/config/errorBoundaryConfig.tsx;
+strokeLinecap=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
+strokeLinejoin=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
 strokeWidth={
-2
+app/config/errorBoundaryConfig.tsx;
 ,}
-d="M18.364 5.636 a9 9 0 010 12.728 m0 0 l-2.829-2.829 m2.829 2.829 L21 21 M15.536 8.464 a5 5 0 010 7.072 m0 0 l-2.829-2.829 m-4.243 2.829 a4.978 4.978 0 01-1.414-2.83 m-1.414 5.658 a9 9 0 01-2.167-9.238 m7.824 2.167 a1 1 0 111.414 1.414 m-1.414-1.414 L3 3 m8.293 8.293 l1.414 1.414"
+d=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
 / / />
+    </app>
 </svg>
 </div>
-    <h1 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Connection Issue</h2> <p className="mt-2 text-centertext-gray-600" />
+    <h1 className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>Connection Issue</h2> <p className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
+    </p>
 Unable to connect to the server. Please check your internet connection and try again.
-          </p> <div className="mt-6" />
-<button
+          </p> <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
+    </div>
+<app/config/errorBoundaryConfig.tsx;
 onClick={
-resetError
+app/config/errorBoundaryConfig.tsx;
 ,;}
-className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Retry Connection</button>
+className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>Retry Connection</button>
 
 </div>
 </div>
 </div>
 /**
-* Not found error fallback component
+* Not found error fallback app/config/errorBoundaryConfig.tsx;
 */)
-function NotFoundFallback(): JSX.Element{return(,<div className="min-h-screen flex items-center justify-centerbg-gray-50 px-4" /> <div className="max-w-mdw-fulltext-center" /> <h1 className="text-6 xlfont-boldtext-gray-900" />
-            404
+function NotFoundFallback(): JSX.Element{return(,<div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx /> <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx /> <h1 className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
+    </h1>
+            app/config/errorBoundaryConfig.tsx;
           </h1>
-    <h1 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2> <p className="mt-2 text-gray-600" />
-The page you're looking for doesn't exist or has been moved.
-          </p> <div className="mt-6 flexgap-4 justify-center" />,<button);}
-onClick = {() =>(window.location.href = '/'),;}</button>
-className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors">
-Go Home
-</,<button
+    <h1 className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>Page Not Found</h2> <p className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />
+    </p>
+The page youapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsxt exist or has been moved.
+          </p> <div className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx />,<button);}
+onClick = {() =>(window.location.href = app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx),;}</button>
+className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>
+Go app/config/errorBoundaryConfig.tsx;
+</,<app/config/errorBoundaryConfig.tsx;
 onClick = {() =>window.history.back(),;}</button>
-className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors">
-Go Back
+className=app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx>
+Go app/config/errorBoundaryConfig.tsx;
 </
 </div>
 </div>
 </div>
 /**
-* Get error type from error object
+* Get error type from error app/config/errorBoundaryConfig.tsx;
 */
 export function getErrorType(erro,)
-r: "Error): keyof typeof DEFAULT_ERROR_MESSAGES{if (error.message.includes('Network') || error.message.includes('fetch')) {
-return 'network'",if (error.message.includes('404') || error.message.includes('not found')) {;}
-return 'notFound';}
-if (error.message.includes('timeout')) {
-return 'timeout';}
-if (error.message.includes('500') || error.message.includes('server')) {
-return 'serverError';}
-if (error.message.includes('validation')) {
-return 'validation';}
-return 'default'
+r: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxNetworkapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsxfetchapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsxnetworkapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,if (error.message.includes(app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx) || error.message.includes(app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx)) {;}
+return app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx;}
+if (error.message.includes(app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx)) {
+return app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx;}
+if (error.message.includes(app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx) || error.message.includes(app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx)) {
+return app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx;}
+if (error.message.includes(app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx)) {
+return app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx;}
+return app/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.app/config/errorBoundaryConfig.tsx;
 /**
-* Format error for logging
+* Format error for app/config/errorBoundaryConfig.tsx;
 */
-export function formatErrorForLogging(error: "Error): Record<string",unknown> {
-return{message: "error.message",stack: "error.stack
-nam",e: "error.name",type: "getErrorType(error)
-timestam",p: "new Date().toISOString()",userAgent: "typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'",}
-ur,l: "typeof window !== 'undefined' ? window.location.href : 'unknown'",}
+export function formatErrorForLogging(error: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,unknown> {
+return{message: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,stack: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,e: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,type: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,p: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsx,userAgent: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxundefinedapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsxunknownapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,}
+ur,l: app/config/errorBoundaryConfig.tsx"app/config/errorBoundaryConfig.tsxundefinedapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsxunknownapp/config/errorBoundaryConfig.tsx'app/config/errorBoundaryConfig.tsx,}
 export default getErrorBoundaryConfig</string>
 }};};};};};}

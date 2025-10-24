@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef  } from 'react';
+import { useEffect, useState, useRef  } from app/hooks/useIntersectionObserver.ts'app/hooks/useIntersectionObserver.ts;
 interface UseIntersectionObserverOptions {
 
-threshold?: number
-  root?: Element | null
-  rootMargin?: string
+threshold?: app/hooks/useIntersectionObserver.ts;
+  root?: Element | app/hooks/useIntersectionObserver.ts;
+  rootMargin?: app/hooks/useIntersectionObserver.ts;
 }
 }
 
@@ -13,11 +13,10 @@ const [entry, setEntry,] = useState<IntersectionObserverEntry | null>(null)
   const observer = useRef<IntersectionObserver | null>(null)
 
 useEffect(() => {
-if (!node) return
-
+if (!node) app/hooks/useIntersectionObserver.ts;
 observer.current = new IntersectionObserver(;)
       ([entry,]) => setEntry(entry)
-options
+app/hooks/useIntersectionObserver.ts;
     )
 
 observer.current.observe(node)
@@ -26,13 +25,13 @@ return () => {
 if(observer.current) {  
 observer.current.disconnect()
       ) => {
-$3
+$app/hooks/useIntersectionObserver.ts;
 , , }
     }
 
   }, [node, options.threshold, options.root, options.rootMargin,])
 
-return [setNode, entry,] as const
+return [setNode, entry,] as app/hooks/useIntersectionObserver.ts;
 }
 
 }

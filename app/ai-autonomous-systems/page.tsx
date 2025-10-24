@@ -1,28 +1,35 @@
-'use client'
+'use client';
+
 import React from 'react';
-import Head from 'next/head';
-export default function ServicePage() {
+import Link from 'next/link';
+import SEOHead from '../components/SEOHead';
 
-  return ( <>
-
-      <Head>
-        <title>Ai Autonomous Systems | Zion Tech Group</title>
-        <meta name="description" content="Professional ai autonomous systems services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ai Autonomous Systems | Zion Tech Group" />
-        <meta property="og:description" content="Professional ai autonomous systems services and solutions for modern businesses." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Autonomous Systems
-          </h1>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Professional ai autonomous systems services and solutions for modern businesses.
-          </p>
+export default function Page() {
+  return (
+    <>
+      <SEOHead
+        title=" - Zion Tech Group"
+        description="Professional  services by Zion Tech Group"
+        keywords=", technology, solutions"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional  services and solutions
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }

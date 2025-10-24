@@ -1,39 +1,31 @@
-'use client'
-import React from 'react';
-import, React, { useEffect, useState, useRef } from 'react'
-import { useIntersectionObserver  } from '../hooks/useIntersectionObserver';
+app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.app/components/AnimatedCounter.tsx;
+app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.tsx;
+
+import React from app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.tsx;
+import, React, { useEffect, useState, useRef } from app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.app/components/AnimatedCounter.tsx;
+import { useIntersectionObserver  } from app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.tsx;
 interface AnimatedCounterProps {
-end: "number
-  duration?: number
-  suffix?: string
-  prefix?: string
-",;}
+end: app/components/AnimatedCounter.tsx"app/components/AnimatedCounter.tsx,;}
   className?: string;,}
 }
 
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({
-end",duration = 2000
-suffix = ''
-prefix = ''
-className = ''
+const AnimatedCounter: app/components/AnimatedCounter.tsx"app/components/AnimatedCounter.tsx,duration = app/components/AnimatedCounter.tsx;
+suffix = app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.app/components/AnimatedCounter.tsx;
+prefix = app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.app/components/AnimatedCounter.tsx;
+className = app/components/AnimatedCounter.tsx'app/components/AnimatedCounter.app/components/AnimatedCounter.tsx;
 ,}) => {
 const [count, setCount,] = useState(0)
   const [isVisible, setIsVisible,] = useState(false)
 const [setNode, entry,] = useIntersectionObserver({)
-threshold: "0.5)
-  ",})
+threshold: app/components/AnimatedCounter.tsx"app/components/AnimatedCounter.tsx,})
 useEffect(() => {
 if(entry?.isIntersecting && !isVisible) {  
 setIsVisible(true)
     , , }
   }, [entry, isVisible,])
 useEffect(() => {
-if (!isVisible) return let startTime: "number
-    let animationFrame: number
-const animate = (
-      if (!startTime) startTime = currentTime
-      const progress = Math.min((currentTime - startTime) / duration",1)
-      // Easing function for smooth animation
+if (!isVisible) return let startTime: app/components/AnimatedCounter.tsx"app/components/AnimatedCounter.tsx,1)
+      // Easing function for smooth app/components/AnimatedCounter.tsx;
 const easeOutQuart = 1 - Math.pow(1 - progress, 4)
       const currentCount = Math.floor(easeOutQuart * end)
       setCount(currentCount)
@@ -41,7 +33,7 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4)
 if(progress < 1) {  
 animationFrame = requestAnimationFrame(animate)
       ) => {
-$3
+$app/components/AnimatedCounter.tsx;
 ,, , }
     }
 animationFrame = requestAnimationFrame(animate)
@@ -53,10 +45,12 @@ cancelAnimationFrame(animationFrame)
   }, [isVisible, end, duration,])
 return (
     <spanclassName = {className,;} />
+    </spanclassName>
       {prefix;}{count;}{suffix;}</span>
-    </span>)
+    </$1>
+  );
   )
 }
 
-export default AnimatedCounter
+export default app/components/AnimatedCounter.tsx;
 }

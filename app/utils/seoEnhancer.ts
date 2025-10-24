@@ -1,101 +1,88 @@
-'use client'
+app/utils/seoEnhancer.ts'app/utils/seoEnhancer.app/utils/seoEnhancer.ts;
 /**
-* SEO Enhancement Utilities
-* Tools to improve search engine optimization
+* SEO Enhancement app/utils/seoEnhancer.ts;
+* Tools to improve search engine app/utils/seoEnhancer.ts;
 */
 
-// Generate meta tags
-
+// Generate meta app/utils/seoEnhancer.ts;
 export const generateMetaTags = (
 const tags = [
-    { name: "'title'",content: "data.title ",) => {
-$3
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstitleapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,) => {
+$app/utils/seoEnhancer.ts;
 }
 
-    { name: "'description'",content: "data.description ",}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsdescriptionapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,}
 
-    { name: "'keywords'",content: "data.keywords || '' ",}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tskeywordsapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
-    { name: "'robots'",content: "'index",follow' }
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsrobotsapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsindexapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts }
 
-    { name: "'viewport'",content: "'width=device-width",initial-scale = 1' ,}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsviewportapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tswidth=device-widthapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts ,}
 
-    { name: "'author'",content: "'Zion Tech Group' ",}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsauthorapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsZion Tech Groupapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
-    { name: "'canonical'",content: "data.canonical || '' ",}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tscanonicalapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
-    { property: "'o",g: "title'",content: "data.ogTitle || data.title ",}
+    { property: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsoapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstitleapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,}
 
-    { property: "'o",g: "description'",content: "data.ogDescription || data.description ",}
+    { property: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsoapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsdescriptionapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,}
 
-    { property: "'o",g: "image'",content: "data.ogImage || '/og-image.webp' ",}
+    { property: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsoapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsimageapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts/og-image.webpapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
-    { property: "'o",g: "type'",content: "'website' ",}
+    { property: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsoapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstypeapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tswebsiteapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
-    { property: "'o",g: "site_name'",content: "'Zion Tech Group' ",}
+    { property: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsoapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tssite_nameapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsZion Tech Groupapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
-    { name: "'twitte",r: "card'",content: "data.twitterCard || 'summary_large_image' ",}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstwitteapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tscardapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tssummary_large_imageapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
-    { name: "'twitte",r: "title'",content: "data.twitterTitle || data.title ",}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstwitteapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstitleapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,}
 
-    { name: "'twitte",r: "description'",content: "data.twitterDescription || data.description ",;}
-    { name: "'twitte",r: "image'",content: "data.twitterImage || data.ogImage || '/og-image.webp' ",}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstwitteapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsdescriptionapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,;}
+    { name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tstwitteapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsimageapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,content: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts/og-image.webpapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,}
 
   ]
-return, tags
+return, app/utils/seoEnhancer.ts;
 }
 
-// Generate structured data
-
+// Generate structured app/utils/seoEnhancer.ts;
 export const generateStructuredData = (
-return{'@context': 'https: "//schema.org'",'@type': 'Organization'
-name: "data.name",description: "data.description",url: "data.url",logo: "data.logo || '/logo.png'",address: "data.address ? {",'@type': 'PostalAddress',;) => {
-$3
+return{app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts: app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts//schema.orgapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts: app/utils/seoEnhancer.ts'app/utils/seoEnhancer.app/utils/seoEnhancer.ts;
+name: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,description: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,url: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,logo: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts/logo.pngapp/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,address: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts: app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,;) => {
+$app/utils/seoEnhancer.ts;
 }
-streetAddress: "data.address.streetAddress",addressLocality: "data.address.addressLocality",addressRegion: "data.address.addressRegion",postalCode: "data.address.postalCode",addressCountry: "data.address.addressCountry",} : undefined
-contactPoint: "data.contactPoint ? {",'@type': 'ContactPoint'
-telephone: "data.contactPoint.telephone",contactType: "data.contactPoint.contactType",email: "data.contactPoint.email",} : undefined
-sameAs: "data.sameAs || []",}
+streetAddress: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,addressLocality: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,addressRegion: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,postalCode: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,addressCountry: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,} : app/utils/seoEnhancer.ts;
+contactPoint: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts: app/utils/seoEnhancer.ts'app/utils/seoEnhancer.app/utils/seoEnhancer.ts;
+telephone: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,contactType: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,email: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,} : app/utils/seoEnhancer.ts;
+sameAs: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts,}
 }
 
-// Generate sitemap
+// Generate app/utils/seoEnhancer.ts;
 export const generateSitemap = (
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9" />
-${pages.map(page = > `  <url />
+const sitemap = app/utils/seoEnhancer.ts`app/utils/seoEnhancer.ts1.0app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsUTF-8app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tshttp: //www.sitemaps.org/schemas/sitemap/0.9app/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts  <url />
+    </url>
     <loc>${page.url,) => {
-$3
+$app/utils/seoEnhancer.ts;
 }</loc>
 
     <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>)
-    <priority />${page.priority}</priority>)
-  </url>`).join('\n')}
-
-</urlset>`
-return, sitemap
+    <changefreq>${page.changeFrequency}</$1>
+  );
+    <priority />${page.priority}</$1>
+  );
+  </url>app/utils/seoEnhancer.ts`app/utils/seoEnhancer.ts\napp/utils/seoEnhancer.ts'app/utils/seoEnhancer.app/utils/seoEnhancer.ts;
+return, app/utils/seoEnhancer.ts;
 }
 
-// Generate robots.txt
+// Generate robots.app/utils/seoEnhancer.ts;
 export const generateRobotsTxt = (
-return `User-agent: "*
-${allowAll ? 'Allow: /' : 'Disallo",w: "/'",) => {
-$3
-}
-
-export const generateRobotsTxt = (
-$3
-) => {
-$3
-,}
-
-Sitemap: "${sitemapUrl",}`
+return app/utils/seoEnhancer.ts`app/utils/seoEnhancer.ts*
+${allowAll ? app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts : app/utils/seoEnhancer.ts'app/utils/seoEnhancer.ts,w: app/utils/seoEnhancer.ts"app/utils/seoEnhancer.tsapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.ts${sitemapUrlapp/utils/seoEnhancer.ts"app/utils/seoEnhancer.app/utils/seoEnhancer.ts;
 }
 
 export default{
-generateMetaTags
-generateStructuredData
-generateSitemap
+app/utils/seoEnhancer.ts;
+app/utils/seoEnhancer.ts;
+app/utils/seoEnhancer.ts;
 generateRobotsTxt}
 }
 

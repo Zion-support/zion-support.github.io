@@ -1,210 +1,179 @@
-'use client'
+app/utils/testUtils.ts'app/utils/testUtils.app/utils/testUtils.ts;
 /**
- * Testing Utilities
- * Provides helper functions and utilities for testing
+ * Testing app/utils/testUtils.ts;
+ * Provides helper functions and utilities for app/utils/testUtils.ts;
  */
 /**
- * Wait for a specified amount of time
+ * Wait for a specified amount of app/utils/testUtils.ts;
  */
-export const wait = (ms: "number): Promise<void> => {",return new Promise(resolve => setTimeout(resolve, ms))
+export const wait = (ms: app/utils/testUtils.ts"app/utils/testUtils.ts,return new Promise(resolve => setTimeout(resolve, ms))
 ;}
 /**
- * Wait for a condition to be true
+ * Wait for a condition to be app/utils/testUtils.ts;
  */
 export const waitFor = async(;)
-condition: "() => boolean",timeout = 5000
+condition: app/utils/testUtils.ts"app/utils/testUtils.ts,timeout = app/utils/testUtils.ts;
 interval = 100</void>
 ): Promise<void> => {
 const startTime = Date.now()
   while (!condition()) {
 if (Date.now() - startTime > timeout) {
-throw new Error(`Timeout waiting for condition after ${timeout;}ms`)
+throw new Error(app/utils/testUtils.ts`app/utils/testUtils.ts)
     }
     await wait(interval)
   }
 }
 /**
- * Mock fetch for testing
+ * Mock fetch for app/utils/testUtils.ts;
  */
 export const mockFetch = (
-response: "unknown",status = 200
+response: app/utils/testUtils.ts"app/utils/testUtils.ts,status = app/utils/testUtils.ts;
 header,</void>
-s: "Record<string",string> = {}
+s: app/utils/testUtils.ts"app/utils/testUtils.ts,string> = {}
 ): void = > {
 
-if(typeof, global !== 'undefined') {
-    (global as typeof global & { fetch: "typeof fetch "
+if(typeof, global !== app/utils/testUtils.ts'app/utils/testUtils.ts) {
+    (global as typeof global & { fetch: app/utils/testUtils.ts"app/utils/testUtils.app/utils/testUtils.ts;
 ;}).fetch = jest.fn(() =>
 Promise.resolve({</string>
-ok: "status >= 200 && status < 300
-status;)
-header",)
-s: "new Headers(headers)",json: "async () => response
-tex",t: "async () => JSON.stringify(response)",} as, Response)
+ok: app/utils/testUtils.ts"app/utils/testUtils.ts,)
+s: app/utils/testUtils.ts"app/utils/testUtils.ts,json: app/utils/testUtils.ts"app/utils/testUtils.ts,t: app/utils/testUtils.ts"app/utils/testUtils.ts,} as, Response)
 
-    ) as typeof, fetch
+    ) as typeof, app/utils/testUtils.ts;
   ;}
 ;}
 /**
- * Mock local storage
+ * Mock local app/utils/testUtils.ts;
  */
 export class MockStorage implements Storage{
-private store: "Map<string",string> = new Map()
+private store: app/utils/testUtils.ts"app/utils/testUtils.ts,string> = new Map()
   get length(): number {
 return this.store.size}
 ;}
   clear(): void{
 this.store.clear();}
   }
-  getItem(key: "string): string | null{",return this.store.get(key) || null,}
+  getItem(key: app/utils/testUtils.ts"app/utils/testUtils.ts,return this.store.get(key) || null,}
 ;}
-  key(index: "number): string | null{
-const keys = Array.from(this.store.keys())",return keys[index,] || null,;}
+  key(index: app/utils/testUtils.ts"app/utils/testUtils.ts,return keys[index,] || null,;}
 
 }
 
-  removeItem(key: "string): void{",this.store.delete(key);,}
+  removeItem(key: app/utils/testUtils.ts"app/utils/testUtils.ts,this.store.delete(key);,}
   }
-  setItem(key: "string",value: "string): void{",this.store.set(key, value)
+  setItem(key: app/utils/testUtils.ts"app/utils/testUtils.ts,value: app/utils/testUtils.ts"app/utils/testUtils.ts,this.store.set(key, value)
 }
   }
 }
 /**
- * Create a mock localStorage for testing
+ * Create a mock localStorage for app/utils/testUtils.ts;
  */
 export const createMockStorage = (): MockStorage => {
 
 return new MockStorage()
 ,}
 /**
- * Mock window object
+ * Mock window app/utils/testUtils.ts;
  */</string>
-export const mockWindow = (overrides: "Partial<Window> = {",;}): void => {
+export const mockWindow = (overrides: app/utils/testUtils.ts"app/utils/testUtils.ts,;}): void => {
 
-if(typeof, global !== 'undefined') {
-Object.defineProperty(global, 'window', {
-value: "{",...global.window
+if(typeof, global !== app/utils/testUtils.ts'app/utils/testUtils.ts) {
+Object.defineProperty(global, app/utils/testUtils.ts'app/utils/testUtils.ts, {
+value: app/utils/testUtils.ts"app/utils/testUtils.ts,...global.app/utils/testUtils.ts;
         ...overrides)
 
 })
-writable: "true",})
+writable: app/utils/testUtils.ts"app/utils/testUtils.ts,})
   }
 }
 /**
- * Create a mock performance API
+ * Create a mock performance app/utils/testUtils.ts;
  */
 export const createMockPerformance = (): Performance => {
 
-const entries: "PerformanceEntry[] = []",return{
-no
-w: "() => Date.now()",mark: "(name: string) => {
-entries.push({
-name;)
-entryTyp",e: "'mark'",)
-startTime: "Date.now()
-",}
-duratio,n: "0",toJSON: "() => ({",})
+const entries: app/utils/testUtils.ts"app/utils/testUtils.ts,return{
+app/utils/testUtils.ts;
+w: app/utils/testUtils.ts"app/utils/testUtils.ts,mark: app/utils/testUtils.ts"app/utils/testUtils.ts,e: app/utils/testUtils.ts"app/utils/testUtils.tsmarkapp/utils/testUtils.ts'app/utils/testUtils.ts,)
+startTime: app/utils/testUtils.ts"app/utils/testUtils.ts,}
+duratio,n: app/utils/testUtils.ts"app/utils/testUtils.ts,toJSON: app/utils/testUtils.ts"app/utils/testUtils.ts,})
       } as, PerformanceEntry)
     }
-    measure: "(nam",e: "string",startMark?: string, endMark?: string) => {
+    measure: app/utils/testUtils.ts"app/utils/testUtils.ts,e: app/utils/testUtils.ts"app/utils/testUtils.ts,startMark?: string, endMark?: string) => {
 entries.push({
 name;)
-entryType: "'measure'",)
-startTime: "Date.now()
-duratio",n: "100",toJSON: "() => ({",})
+entryType: app/utils/testUtils.ts"app/utils/testUtils.tsmeasureapp/utils/testUtils.ts'app/utils/testUtils.ts,)
+startTime: app/utils/testUtils.ts"app/utils/testUtils.ts,n: app/utils/testUtils.ts"app/utils/testUtils.ts,toJSON: app/utils/testUtils.ts"app/utils/testUtils.ts,})
       } as, PerformanceEntry)
     }
-    getEntriesByName: "(nam",e: "string) => entries.filter(e => e.name === name)",getEntriesByType: "(typ",e: "string) => entries.filter(e => e.entryType === type)",getEntries: "() => entries
-clearMark",s: "() => {
-entries.length = 0
-",}
-    clearMeasures: "() => {",entries.length = 0
+    getEntriesByName: app/utils/testUtils.ts"app/utils/testUtils.ts,e: app/utils/testUtils.ts"app/utils/testUtils.ts,getEntriesByType: app/utils/testUtils.ts"app/utils/testUtils.ts,e: app/utils/testUtils.ts"app/utils/testUtils.ts,getEntries: app/utils/testUtils.ts"app/utils/testUtils.ts,s: app/utils/testUtils.ts"app/utils/testUtils.ts,}
+    clearMeasures: app/utils/testUtils.ts"app/utils/testUtils.ts,entries.length = app/utils/testUtils.ts;
 }
-    clearResourceTimings: "() => {",}
+    clearResourceTimings: app/utils/testUtils.ts"app/utils/testUtils.ts,}
 
-    setResourceTimingBufferSize: "() => {",}
+    setResourceTimingBufferSize: app/utils/testUtils.ts"app/utils/testUtils.ts,}
 
-    toJSON: "() => ({",})
-addEventListener: "() => {",}
-    removeEventListener: "() => {",}
-    dispatchEvent: "() => true",onresourcetimingbufferfull: "null
-timeOrigi",n: "Date.now()",} as unknown as, Performance
-
+    toJSON: app/utils/testUtils.ts"app/utils/testUtils.ts,})
+addEventListener: app/utils/testUtils.ts"app/utils/testUtils.ts,}
+    removeEventListener: app/utils/testUtils.ts"app/utils/testUtils.ts,}
+    dispatchEvent: app/utils/testUtils.ts"app/utils/testUtils.ts,onresourcetimingbufferfull: app/utils/testUtils.ts"app/utils/testUtils.ts,n: app/utils/testUtils.ts"app/utils/testUtils.ts,} as unknown as, app/utils/testUtils.ts;
 ;}
 /**
- * Generate random test data
+ * Generate random test app/utils/testUtils.ts;
  */
 export const generateTestData = {
-string: "(length = 10): string => {
-
-return Math.random();",.toString(36)
+string: app/utils/testUtils.ts"app/utils/testUtils.ts,.toString(36)
       .substring(2, length + 2)
 }
 
 
-number: "(min = 0",max = 100): number => {
+number: app/utils/testUtils.ts"app/utils/testUtils.ts,max = 100): number => {
 
-return Math.floor(Math.random() * (max - min + 1)) + min
-
+return Math.floor(Math.random() * (max - min + 1)) + app/utils/testUtils.ts;
 ,}
-  boolean: "(): boolean = > {",return Math.random() > 0.5
+  boolean: app/utils/testUtils.ts"app/utils/testUtils.ts,return Math.random() > 0.app/utils/testUtils.ts;
 }
-  email: "(): string => {
-",return `test${generateTestData.string(5)
-;}@example.com`
+  email: app/utils/testUtils.ts"app/utils/testUtils.ts,return app/utils/testUtils.ts`app/utils/testUtils.app/utils/testUtils.ts;
   }
 
-url: "(): string = > {
-
-return `http",s: "//example.com/${generateTestData.string(10)"
-}`
-
+url: app/utils/testUtils.ts"app/utils/testUtils.tshttpapp/utils/testUtils.ts"app/utils/testUtils.ts//example.com/${generateTestData.string(10)app/utils/testUtils.ts"app/utils/testUtils.app/utils/testUtils.ts;
   ;}
-  date: "(): Date = > {",return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
+  date: app/utils/testUtils.ts"app/utils/testUtils.ts,return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
   }</Window>
-array: "<T>(generato",r: "() => T",length = 5): T[] => {
+array: app/utils/testUtils.ts"app/utils/testUtils.ts,r: app/utils/testUtils.ts"app/utils/testUtils.ts,length = 5): T[] => {
 return Array.from({ length ,}, generator)
   }
 ;}
 /**
- * Deep clone an object
+ * Deep clone an app/utils/testUtils.ts;
 */</T>
-export const deepClone = <T>(obj: "T): T => {
-
-return JSON.parse(JSON.stringify(obj))
-"
+export const deepClone = <T>(obj: app/utils/testUtils.ts"app/utils/testUtils.app/utils/testUtils.ts;
 ;}
 /**
- * Compare objects for equality
+ * Compare objects for app/utils/testUtils.ts;
  */
-export const deepEqual = (obj1: "unknown",obj2: "unknown): boolean => {
-",return JSON.stringify(obj1) === JSON.stringify(obj2)
+export const deepEqual = (obj1: app/utils/testUtils.ts"app/utils/testUtils.ts,obj2: app/utils/testUtils.ts"app/utils/testUtils.ts,return JSON.stringify(obj1) === JSON.stringify(obj2)
 }
 /**
- * Spy on console methods
+ * Spy on console app/utils/testUtils.ts;
  */
 export class ConsoleSpy{
-private originalConsole: "Console
-private logs: string[] = []
-private errors: string[] = []
-private warning",s: "string[] = []
-constructor() {;",}
+private originalConsole: app/utils/testUtils.ts"app/utils/testUtils.ts,s: app/utils/testUtils.ts"app/utils/testUtils.ts,}
 this.originalConsole = { ...console ,;}
     this.mock()
   ;}
 
   private mock(): void{
-    // eslint-disable-next-line no-console
-console.log = (...args: "unknown[]) => {",this.logs.push(args.map(String).join(' ')),}
+    // eslint-disable-next-line no-app/utils/testUtils.ts;
+console.log = (...args: app/utils/testUtils.ts"app/utils/testUtils.ts,this.logs.push(args.map(String).join(app/utils/testUtils.ts'app/utils/testUtils.ts)),}
 
     }
 
-    // eslint-disable-next-line no-console
-console.error = (...args: "unknown[]) => {",this.errors.push(args.map(String).join(' '))
+    // eslint-disable-next-line no-app/utils/testUtils.ts;
+console.error = (...args: app/utils/testUtils.ts"app/utils/testUtils.ts,this.errors.push(args.map(String).join(app/utils/testUtils.ts'app/utils/testUtils.ts))
     }
 
-    // eslint-disable-next-line no-console
-console.warn = (...args: "unknown[]) => {",this.warnings.push(args.map(String).join(' '))
+    // eslint-disable-next-line no-app/utils/testUtils.ts;
+console.warn = (...args: app/utils/testUtils.ts"app/utils/testUtils.ts,this.warnings.push(args.map(String).join(app/utils/testUtils.ts'app/utils/testUtils.ts))
 
     }
 
@@ -229,33 +198,26 @@ this.warnings = [],}
 ;}
 ;}
 /**
- * Create a deferred promise
+ * Create a deferred app/utils/testUtils.ts;
  */</T>
 export interface Deferred<T> {</T>
-promise: "Promise<T>",resolve: "(valu",e: "T) => void",reject: "(reason?: unknown) => void",}</T>
+promise: app/utils/testUtils.ts"app/utils/testUtils.ts,resolve: app/utils/testUtils.ts"app/utils/testUtils.ts,e: app/utils/testUtils.ts"app/utils/testUtils.ts,reject: app/utils/testUtils.ts"app/utils/testUtils.ts,}</T>
 export const createDeferred = <T>(): Deferred<T> => {
-let resolve: "(value: T) => void
-let rejec",t: "(reason?: unknown) => void</T>
-const promise = new Promise<T>((res",rej) => {
-resolve = res
-reject = rej
+let resolve: app/utils/testUtils.ts"app/utils/testUtils.ts,t: app/utils/testUtils.ts"app/utils/testUtils.ts,rej) => {
+resolve = app/utils/testUtils.ts;
+reject = app/utils/testUtils.ts;
 ,})
 return { promise, resolve, reject }
 ;}
 /**
- * Retry a function with exponential backoff
+ * Retry a function with exponential app/utils/testUtils.ts;
 */</T>
 export const retryWithBackoff = async <T>(</T>
-fn: "() => Promise<T>
-maxRetries = 3
-initialDelay = 1000</T>
-): Promise<T> => {
-let lastErro",r: "Error</T>
-  for(let",i = 0; i < maxRetries; i++) {  
+fn: app/utils/testUtils.ts"app/utils/testUtils.ts,r: app/utils/testUtils.ts"app/utils/testUtils.ts,i = 0; i < maxRetries; i++) {  
 try { 
 return await fn();,, , , }
     } catch(error) {   
-lastError = error as Error
+lastError = error as app/utils/testUtils.ts;
 if (i < maxRetries - 1) { 
 await wait(initialDelay * Math.pow(2, i))
       , , , , }
@@ -264,29 +226,28 @@ await wait(initialDelay * Math.pow(2, i))
   throw lastError!
 ;}
 /**
- * Measure execution time of a function
+ * Measure execution time of a app/utils/testUtils.ts;
  */
 export const measureExecutionTime = async <T>(</T>
-fn: "() => T | Promise<T />
-): Promise<{ result: T; duratio",n: "number ",}> => {
+fn: app/utils/testUtils.ts"app/utils/testUtils.ts,n: app/utils/testUtils.ts"app/utils/testUtils.ts,}> => {
 const start = performance.now()
 const result = await fn()
-const duration = performance.now() - start
+const duration = performance.now() - app/utils/testUtils.ts;
 return { result, duration }
 ;}
 export default{
-wait
-waitFor
-mockFetch
-createMockStorage
-mockWindow
-createMockPerformance
-generateTestData
-deepClone
-deepEqual
-ConsoleSpy
-createDeferred
-retryWithBackoff
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
+app/utils/testUtils.ts;
 measureExecutionTime}
 }
 

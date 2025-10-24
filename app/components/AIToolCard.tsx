@@ -1,26 +1,31 @@
-import React, { memo } from 'react'
+app/components/AIToolCard.tsx'app/components/AIToolCard.tsx;
+
+import React, { memo } from app/components/AIToolCard.tsx'app/components/AIToolCard.app/components/AIToolCard.tsx;
 interface AIToolCardProps {
-  title: string
-  description: string
-  link: string
+  title: app/components/AIToolCard.tsx;
+  description: app/components/AIToolCard.tsx;
+  link: app/components/AIToolCard.tsx;
 };
 ;
 const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }) => {
   return (
-    <article className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm mb-3 leading-relaxed">
+    <article className=app/components/AIToolCard.tsx"app/components/AIToolCard.tsx>
+    </article>
+      <h3 className=app/components/AIToolCard.tsx"app/components/AIToolCard.tsx>{title}</h3>
+      <p className=app/components/AIToolCard.tsx"app/components/AIToolCard.tsx>
+    </p>
         {description}
       </p>
-      <a 
+      <app/components/AIToolCard.tsx;
         href={link} 
-        className="text-blue-600 hover:text-blue-800 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-1 py-1 inline-block transition-colors"
-        aria-label={`Try ${title} tool`}
+        className=app/components/AIToolCard.tsx"app/components/AIToolCard.app/components/AIToolCard.tsx;
+        aria-label={app/components/AIToolCard.tsx`app/components/AIToolCard.tsx}
       >
+    </app>
         Try Now →
       </a>
-    </article>
-  )
+    </$1>
+  );
 })
-AIToolCard.displayName = 'AIToolCard';
-export default AIToolCard
+AIToolCard.displayName = app/components/AIToolCard.tsx'app/components/AIToolCard.tsx;
+export default app/components/AIToolCard.tsx;

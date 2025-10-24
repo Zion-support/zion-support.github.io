@@ -1,30 +1,34 @@
-'use client'
-import React from 'react';
+app/service-template.tsx'app/service-template.app/service-template.tsx;
+app/service-template.tsx'app/service-template.tsx;
+
+import React from app/service-template.tsx'app/service-template.tsx;
 interface ServiceTemplateProps {
-title: "string;",description: "string
-  features: string[]
-const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({
-title",description, features
+title: app/service-template.tsx"app/service-template.tsx,description: app/service-template.tsx"app/service-template.tsx,e: app/service-template.tsx"app/service-template.tsx,description, app/service-template.tsx;
 }
 }
 ;}) => {
-return(</ServiceTemplateProps> <div className="min-h-screen bg-gray-50 py-12" /> <div className="max-w-4 xl mx-auto px-4" /> <h1 className="text-3 xl font-bold text-gray-900 mb-8" />
+return(</ServiceTemplateProps> <div className=app/service-template.tsx"app/service-template.tsx /> <div className=app/service-template.tsx"app/service-template.tsx /> <h1 className=app/service-template.tsx"app/service-template.tsx />
+    </h1>
           {title,};</h1>
-        </h1> <div className="bg-white rounded-lg shadow p-6" /> <p className="text-gray-600 mb-6" />
+        </h1> <div className=app/service-template.tsx"app/service-template.tsx /> <p className=app/service-template.tsx"app/service-template.tsx />
+    </p>
             {description,}</p>
-          </p> <div className="grid md: grid-cols-2 gap-4" />)
+          </p> <div className=app/service-template.tsx"app/service-template.tsx />)
             {features.map((feature,index) => (
-              <divkey = {index,} className="flex items-center space-x-2" />
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" />
-                  <path fillRule="evenodd" d="M16.707 5.293 a1 1 0 010 1.414 l-8 8 a1 1 0 01-1.414 0 l-4-4 a1 1 0 011.414-1.414 L8 12.586 l7.293-7.293 a1 1 0 011.414 0 z" clipRule="evenodd" / / />
+              <divkey = {index,} className=app/service-template.tsx"app/service-template.tsx />
+    </divkey>
+                <svg className=app/service-template.tsx"app/service-template.tsx fill=app/service-template.tsx"app/service-template.tsx viewBox=app/service-template.tsx"app/service-template.tsx />
+    </svg>
+                  <path fillRule=app/service-template.tsx"app/service-template.tsx d=app/service-template.tsx"app/service-template.tsx clipRule=app/service-template.tsx"app/service-template.tsx / / />
+    </path>
                 </svg>
-    <span className = "text-gray-700">{feature,}</span>
+    <span className = app/service-template.tsx"app/service-template.tsx>{feature,}</span>
                 </div>
             ))}
             </div>
           </div>
       </div>}
 
-export default ServiceTemplate
+export default app/service-template.tsx;
   </div>
 }

@@ -1,56 +1,24 @@
-'use client'
-import React from 'react';
-import, React, { useState, useCallback } from 'react'
+app/utils/image.tsx'app/utils/image.app/utils/image.tsx;
+app/utils/image.tsx'app/utils/image.tsx;
+
+import React from app/utils/image.tsx'app/utils/image.tsx;
+import, React, { useState, useCallback } from app/utils/image.tsx'app/utils/image.app/utils/image.tsx;
 interface ImageProps {
 
 
 }
-src: "string",alt: "string",;}
+src: app/utils/image.tsx"app/utils/image.tsx,alt: app/utils/image.tsx"app/utils/image.tsx,;}
 interface ImageProps {
 
 
 ;}
 ;}
-src: "string",alt: "string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
-sr",c: "string",alt: "string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
-sr",c: "string",alt: "string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
-_placeholder?: 'blur' | 'empty'
-_blurDataURL?: string
-fill?: boolean
-sizes?: string
-style?: React.CSSProperties",onLoad?: () => void
+src: app/utils/image.tsx"app/utils/image.tsx,alt: app/utils/image.tsx"app/utils/image.tsx,c: app/utils/image.tsx"app/utils/image.tsx,alt: app/utils/image.tsx"app/utils/image.tsx,c: app/utils/image.tsx"app/utils/image.tsx,alt: app/utils/image.tsx"app/utils/image.tsxblurapp/utils/image.tsx'app/utils/image.tsxemptyapp/utils/image.tsx'app/utils/image.tsx,onLoad?: () => app/utils/image.tsx;
 onError?: () => void;}
-export const Image: "React.FC<ImageProps>= ({",;}</ImageProps>
-export const Image: "React.FC<ImageProps> = ({",;}
+export const Image: app/utils/image.tsx"app/utils/image.tsx,;}</ImageProps>
+export const Image: app/utils/image.tsx"app/utils/image.tsx,;}
 src</ImageProps>
-export const Image: "React.FC<ImageProps> = ({
-src
-alt
-width
-height
-className
-priority = false
-quality = 75
-placeholder = 'empty'
-blurDataURL
-fill = false
-sizes
-style",onLoad, onError}
+export const Image: app/utils/image.tsx"app/utils/image.tsxemptyapp/utils/image.tsx'app/utils/image.tsx,onLoad, onError}
 ...props}
 }) => {}
 const [ setIsLoaded,] = useState(false)
@@ -63,71 +31,65 @@ const handleError = useCallback(() => {,}
 setHasError(true)
 if (onError) onError();}
 ;}, [onError,])
-const imageStyle: "React.CSSProperties={
-...style
-...(fill && {
-positio",n: "'absolute'",top: "0
-lef",t: "0",};const imageStyle: "React.CSSProperties = {",}
-...style
+const imageStyle: app/utils/image.tsx"app/utils/image.tsx,n: app/utils/image.tsx"app/utils/image.tsxabsoluteapp/utils/image.tsx'app/utils/image.tsx,top: app/utils/image.tsx"app/utils/image.tsx,t: app/utils/image.tsx"app/utils/image.tsx,};const imageStyle: app/utils/image.tsx"app/utils/image.tsx,}
+...app/utils/image.tsx;
 ...(fill && {}
-position: "'absolute'",top: "0
-lef",t: "0",width: "'100%'",height: "'100%'",objectFit: "'cover'",}
+position: app/utils/image.tsx"app/utils/image.tsxabsoluteapp/utils/image.tsx'app/utils/image.tsx,top: app/utils/image.tsx"app/utils/image.tsx,t: app/utils/image.tsx"app/utils/image.tsx,width: app/utils/image.tsx"app/utils/image.tsx100%app/utils/image.tsx'app/utils/image.tsx,height: app/utils/image.tsx"app/utils/image.tsx100%app/utils/image.tsx'app/utils/image.tsx,objectFit: app/utils/image.tsx"app/utils/image.tsxcoverapp/utils/image.tsx'app/utils/image.tsx,}
 })
 if (hasError) {</ImageProps>
   </ImageProps>
-return(</ImageProps>)
+return(</$1>
+  );
   )
 if (hasError) {}
-return(<div})
+return (
+    <div})
 if (hasError) {}
-return(<div}
+return (
+    <div}
 interface ImageProps {
 
-/* TODO: "Fix JSX expression */"
+/* TODO: app/utils/image.tsx"app/utils/image.app/utils/image.tsx;
 }
 export, const)
-Image: "React.FC<ImageProps />= ({/* TOD",)
-O: "Fix JSX expression */",})
-}) => {/* TODO: "Fix JSX expression */",}
+Image: app/utils/image.tsx"app/utils/image.tsx,)
+O: app/utils/image.tsx"app/utils/image.tsx,})
+}) => {/* TODO: app/utils/image.tsx"app/utils/image.tsx,}
 ;}, [onLoad,])
-const handleError = useCallback(() => {/* TODO: "Fix JSX expression */",;}
+const handleError = useCallback(() => {/* TODO: app/utils/image.tsx"app/utils/image.tsx,;}
 ;}, [onError,])
-const
-imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */",};})
-if (hasError) {/* TODO: "Fix JSX expression */",}
-className = {`bg-gray-200 flex items-center justify-center ${className,};`}
+app/utils/image.tsx;
+imageStyle: app/utils/image.tsx"app/utils/image.tsx,O: app/utils/image.tsx"app/utils/image.tsx,};})
+if (hasError) {/* TODO: app/utils/image.tsx"app/utils/image.tsx,}
+className = {app/utils/image.tsx`app/utils/image.tsx}
 style = {
-imageStyle
+app/utils/image.tsx;
 ,}
 {...props})
 
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)",</div>)
-
+    <span className=app/utils/image.tsx"app/utils/image.tsx><span className=app/utils/image.tsx"app/utils/image.tsx>Screen reader: app/utils/image.tsx"app/utils/image.tsx,</$1>
+  );
 {...props}
-></div> <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: "</span>Failed to load image</span>",</div>
-return(<img
-return (<img>src = {src,}
+></div> <span className=app/utils/image.tsx"app/utils/image.tsx /><span className=app/utils/image.tsx"app/utils/image.tsx>Screen reader: app/utils/image.tsx"app/utils/image.tsx,</div>
+return (
+    <app/utils/image.tsx;
+return (
+    <img>src = {src,}
 alt = {alt,}
 width = {width,}
 height = {height,}
 className = {className,}
 style = {imageStyle,}
 sizes = {sizes,}
-loading = {priority ? 'eager' : 'lazy',}
+loading = {priority ? app/utils/image.tsx'app/utils/image.tsx : app/utils/image.tsx'app/utils/image.tsx,}
 onLoad = {handleLoad,}
 onError = {handleError,}
 {...props})
 >)</img></img>
 >)
 
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)
-
-{...props",;}
->  </div> <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: "</span>Failed to load image</span>
-  </div>
-return(<img
-return (<img />;)
-src={src",};alt = {alt,};width = {width,};height = {height,};className = {className,};style = {imageStyle,};sizes = {sizes,};loading = {priority ? 'eager' : 'lazy',};onLoad = {handleLoad,};onError = {handleError,};{...props})
+    <span className=app/utils/image.tsx"app/utils/image.tsx><span className=app/utils/image.tsx"app/utils/image.tsx>Screen reader: app/utils/image.tsx"app/utils/image.tsx,;}
+>  </div> <span className=app/utils/image.tsx"app/utils/image.tsx /><span className=app/utils/image.tsx"app/utils/image.tsx>Screen reader: app/utils/image.tsx"app/utils/image.tsx,};alt = {alt,};width = {width,};height = {height,};className = {className,};style = {imageStyle,};sizes = {sizes,};loading = {priority ? app/utils/image.tsx'app/utils/image.tsx : app/utils/image.tsx'app/utils/image.tsx,};onLoad = {handleLoad,};onError = {handleError,};{...props})
 >)</img>
 
 }</img>

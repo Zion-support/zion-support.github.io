@@ -1,164 +1,359 @@
-import React from 'react';
 import Link from 'next/link';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
-import Head from 'next/head';
-export default function ServicePage() {
 
-  return ( <>
-
-      <Head>
-        <title>App | Zion Tech Group</title>
-        <meta name="description" content="Professional app services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="App | Zion Tech Group" />
-        <meta property="og:description" content="Professional app services and solutions for modern businesses." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            App
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional app services and solutions for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
-            >
-              Learn More
-            </Link>
+export default function HomePage() {
+  return (
+    <>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI & IT Solutions"
+        description="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, blockchain, IT services, machine learning, artificial intelligence"
+        url="https://zion.app"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "description": "Advanced AI & IT Solutions for the Future",
+          "url": "https://zion.app",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zion.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #111827, #581c87, #111827)' }}>
+        <Navigation />
+        {/* Hero Section */}
+        <div style={{ position: 'relative', overflow: 'hidden' }}>
+          {/* Animated background elements */}
+          <div style={{ position: 'absolute', inset: 0 }}>
+            <div style={{ 
+              position: 'absolute', 
+              top: '25%', 
+              left: '25%', 
+              width: '288px', 
+              height: '288px', 
+              background: 'rgba(168, 85, 247, 0.2)', 
+              borderRadius: '50%', 
+              filter: 'blur(48px)', 
+              animation: 'pulse 3s ease-in-out infinite' 
+            }}></div>
+            <div style={{ 
+              position: 'absolute', 
+              bottom: '25%', 
+              right: '25%', 
+              width: '384px', 
+              height: '384px', 
+              background: 'rgba(34, 211, 238, 0.2)', 
+              borderRadius: '50%', 
+              filter: 'blur(48px)', 
+              animation: 'pulse 3s ease-in-out infinite 1s' 
+            }}></div>
+          </div>
+          
+          <div style={{ 
+            position: 'relative', 
+            maxWidth: '1280px', 
+            margin: '0 auto', 
+            padding: '96px 16px',
+            textAlign: 'center'
+          }}>
+            <h1 style={{ 
+              fontSize: '3.75rem', 
+              fontWeight: 'bold', 
+              color: 'white', 
+              marginBottom: '24px',
+              animation: 'fadeIn 0.6s ease-in-out'
+            }}>
+              Zion Tech Group
+            </h1>
+            <p style={{ 
+              fontSize: '1.5rem', 
+              color: '#d1d5db', 
+              marginBottom: '32px',
+              maxWidth: '768px',
+              margin: '0 auto 32px',
+              animation: 'slideUp 0.6s ease-in-out'
+            }}>
+              Advanced AI & IT Solutions for the Future
+            </p>
+            <p style={{ 
+              fontSize: '1.125rem', 
+              color: '#9ca3af', 
+              marginBottom: '48px',
+              maxWidth: '1024px',
+              margin: '0 auto 48px',
+              animation: 'slideUp 0.6s ease-in-out 0.2s'
+            }}>
+              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. 
+              Transform your business with cutting-edge technology.
+            </p>
+            <div style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              gap: '16px', 
+              justifyContent: 'center',
+              animation: 'slideUp 0.6s ease-in-out 0.3s'
+            }}>
+              <Link
+                href="/about"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  padding: '12px 32px',
+                  border: '1px solid transparent',
+                  fontSize: '1rem',
+                  fontWeight: '500',
+                  borderRadius: '6px',
+                  color: 'white',
+                  background: '#9333ea',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                Learn More
+              </Link>
+              <Link
+                href="/contact"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  padding: '12px 32px',
+                  border: '1px solid white',
+                  fontSize: '1rem',
+                  fontWeight: '500',
+                  borderRadius: '6px',
+                  color: 'white',
+                  background: 'transparent',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Services Preview */}
-        <div className="py-24 bg-white/5 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div style={{ 
+          padding: '96px 0', 
+          background: 'rgba(255, 255, 255, 0.05)', 
+          backdropFilter: 'blur(10px)' 
+        }}>
+          <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 16px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+              <h2 style={{ 
+                fontSize: '2.25rem', 
+                fontWeight: 'bold', 
+                color: 'white', 
+                marginBottom: '16px' 
+              }}>
                 Our <span className="gradient-text">Services</span>
               </h2>
-              <p className="text-xl text-gray-300">
+              <p style={{ fontSize: '1.25rem', color: '#d1d5db' }}>
                 Comprehensive technology solutions for modern businesses
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 group">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+              gap: '32px' 
+            }}>
+              <div style={{ 
+                background: 'rgba(255, 255, 255, 0.1)', 
+                backdropFilter: 'blur(10px)', 
+                borderRadius: '8px', 
+                padding: '24px',
+                transition: 'all 0.3s ease'
+              }}>
+                <div style={{ 
+                  width: '48px', 
+                  height: '48px', 
+                  background: 'rgba(168, 85, 247, 0.2)', 
+                  borderRadius: '8px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  marginBottom: '16px' 
+                }}>
+                  <svg width="24" height="24" fill="none" stroke="#a855f7" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">AI Solutions</h3>
-                <p className="text-gray-300">
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', color: 'white', marginBottom: '12px' }}>
+                  AI Solutions
+                </h3>
+                <p style={{ color: '#d1d5db', marginBottom: '16px' }}>
                   Advanced artificial intelligence solutions to automate and optimize your business processes.
                 </p>
-                <div className="mt-4">
-                  <Link href="/ai-services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <div>
+                  <Link href="/ai-services" style={{ 
+                    color: '#22d3ee', 
+                    fontSize: '0.875rem', 
+                    fontWeight: '600',
+                    textDecoration: 'none'
+                  }}>
                     Learn More →
                   </Link>
                 </div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 group">
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/30 transition-colors">
-                  <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div style={{ 
+                background: 'rgba(255, 255, 255, 0.1)', 
+                backdropFilter: 'blur(10px)', 
+                borderRadius: '8px', 
+                padding: '24px',
+                transition: 'all 0.3s ease'
+              }}>
+                <div style={{ 
+                  width: '48px', 
+                  height: '48px', 
+                  background: 'rgba(34, 211, 238, 0.2)', 
+                  borderRadius: '8px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  marginBottom: '16px' 
+                }}>
+                  <svg width="24" height="24" fill="none" stroke="#22d3ee" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
-                <p className="text-gray-300">
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', color: 'white', marginBottom: '12px' }}>
+                  Cybersecurity
+                </h3>
+                <p style={{ color: '#d1d5db', marginBottom: '16px' }}>
                   Comprehensive security solutions to protect your digital assets and infrastructure.
                 </p>
-                <div className="mt-4">
-                  <Link href="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <div>
+                  <Link href="/cybersecurity" style={{ 
+                    color: '#22d3ee', 
+                    fontSize: '0.875rem', 
+                    fontWeight: '600',
+                    textDecoration: 'none'
+                  }}>
                     Learn More →
                   </Link>
                 </div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 group">
-                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
-                  <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div style={{ 
+                background: 'rgba(255, 255, 255, 0.1)', 
+                backdropFilter: 'blur(10px)', 
+                borderRadius: '8px', 
+                padding: '24px',
+                transition: 'all 0.3s ease'
+              }}>
+                <div style={{ 
+                  width: '48px', 
+                  height: '48px', 
+                  background: 'rgba(34, 197, 94, 0.2)', 
+                  borderRadius: '8px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  marginBottom: '16px' 
+                }}>
+                  <svg width="24" height="24" fill="none" stroke="#22c55e" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cloud Computing</h3>
-                <p className="text-gray-300">
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '600', color: 'white', marginBottom: '12px' }}>
+                  Cloud Computing
+                </h3>
+                <p style={{ color: '#d1d5db', marginBottom: '16px' }}>
                   Scalable cloud infrastructure and migration services for modern applications.
                 </p>
-                <div className="mt-4">
-                  <Link href="/cloud-infrastructure" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <div>
+                  <Link href="/cloud-infrastructure" style={{ 
+                    color: '#22d3ee', 
+                    fontSize: '0.875rem', 
+                    fontWeight: '600',
+                    textDecoration: 'none'
+                  }}>
                     Learn More →
                   </Link>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="py-24 bg-gradient-to-r from-purple-900/50 to-cyan-900/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by <span className="gradient-text">Leading Companies</span>
-              </h2>
-              <p className="text-xl text-gray-300">
-                Delivering results that matter
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="animate-fade-in">
-                <div className="text-4xl font-bold text-white mb-2">500+</div>
-                <div className="text-gray-300">Projects Completed</div>
-              </div>
-              <div className="animate-fade-in delay-200">
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300">Expert Team Members</div>
-              </div>
-              <div className="animate-fade-in delay-300">
-                <div className="text-4xl font-bold text-white mb-2">99%</div>
-                <div className="text-gray-300">Client Satisfaction</div>
-              </div>
-              <div className="animate-fade-in delay-400">
-                <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-300">Support Available</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="py-24 bg-white/5 backdrop-blur-sm">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div style={{ 
+          padding: '96px 0', 
+          background: 'rgba(255, 255, 255, 0.05)', 
+          backdropFilter: 'blur(10px)' 
+        }}>
+          <div style={{ 
+            maxWidth: '1024px', 
+            margin: '0 auto', 
+            padding: '0 16px', 
+            textAlign: 'center' 
+          }}>
+            <div className="glass-dark" style={{ 
+              borderRadius: '16px', 
+              padding: '48px' 
+            }}>
+              <h2 style={{ 
+                fontSize: '2.25rem', 
+                fontWeight: 'bold', 
+                color: 'white', 
+                marginBottom: '24px' 
+              }}>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p style={{ 
+                fontSize: '1.25rem', 
+                color: '#d1d5db', 
+                marginBottom: '32px' 
+              }}>
                 Join hundreds of companies that trust us with their digital transformation journey.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div style={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                gap: '16px', 
+                justifyContent: 'center' 
+              }}>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    padding: '12px 32px',
+                    border: '1px solid transparent',
+                    fontSize: '1rem',
+                    fontWeight: '500',
+                    borderRadius: '6px',
+                    color: 'white',
+                    background: '#9333ea',
+                    textDecoration: 'none',
+                    transition: 'all 0.3s ease'
+                  }}
                 >
                   Start Your Journey
                 </Link>
                 <Link
                   href="/ai-services"
-                  className="inline-flex items-center px-8 py-3 border border-green-400 text-base font-medium rounded-md text-green-400 bg-transparent hover:bg-green-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition-all duration-300 hover:scale-105"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    padding: '12px 32px',
+                    border: '1px solid #22c55e',
+                    fontSize: '1rem',
+                    fontWeight: '500',
+                    borderRadius: '6px',
+                    color: '#22c55e',
+                    background: 'transparent',
+                    textDecoration: 'none',
+                    transition: 'all 0.3s ease'
+                  }}
                 >
                   Explore AI Solutions
                 </Link>
@@ -170,5 +365,5 @@ export default function ServicePage() {
         <Footer />
       </div>
     </>
-  )
+  );
 }

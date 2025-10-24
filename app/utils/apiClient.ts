@@ -1,39 +1,31 @@
 interface ApiResponse<T = any> {
-data: "T
-  statu",s: "number
-
-message?: string
-",}
+data: app/utils/apiClient.ts"app/utils/apiClient.ts,s: app/utils/apiClient.ts"app/utils/apiClient.ts,}
 
 interface ApiError {
 
-message: "string
-  statu",s: "number;"
+message: app/utils/apiClient.ts"app/utils/apiClient.ts,s: app/utils/apiClient.ts"app/utils/apiClient.app/utils/apiClient.ts;
 }
 }
 }
 
 class ApiClient{
-private baseURL: "string
-  private defaultHeader",</T>
-s: "Record<string",string>
+private baseURL: app/utils/apiClient.ts"app/utils/apiClient.ts,</T>
+s: app/utils/apiClient.ts"app/utils/apiClient.ts,string>
 
-constructor(baseURL: "string = '/api') {  
-this.baseURL = baseURL;",this.defaultHeaders = {
+constructor(baseURL: app/utils/apiClient.ts"app/utils/apiClient.ts/apiapp/utils/apiClient.ts'app/utils/apiClient.ts,this.defaultHeaders = {
 
-      'Content-Type': 'application/json',;, , }
+      app/utils/apiClient.ts'app/utils/apiClient.ts: app/utils/apiClient.ts'app/utils/apiClient.ts,;, , }
     }
 
   }
 </string>
 private async request<T>(
-endpoint: "string",options: "RequestInit = {",}</T>
+endpoint: app/utils/apiClient.ts"app/utils/apiClient.ts,options: app/utils/apiClient.ts"app/utils/apiClient.ts,}</T>
   ): Promise<ApiResponse<T>> {
-const url = `${this.baseURL,}${endpoint;}`
-
-const config: "RequestInit = {",...options
-headers: "{",...this.defaultHeaders
-        ...options.headers
+const url = app/utils/apiClient.ts`app/utils/apiClient.app/utils/apiClient.ts;
+const config: app/utils/apiClient.ts"app/utils/apiClient.ts,...app/utils/apiClient.ts;
+headers: app/utils/apiClient.ts"app/utils/apiClient.ts,...this.app/utils/apiClient.ts;
+        ...options.app/utils/apiClient.ts;
       }
 
     }
@@ -43,54 +35,56 @@ try{
 const response = await fetch(url, config)
 
 if(!response.ok) {;}
-throw new Error(`HTTP error! status: "${response.status",;}`)
+throw new Error(app/utils/apiClient.ts`app/utils/apiClient.ts${response.statusapp/utils/apiClient.ts"app/utils/apiClient.ts)
       }
 
 const data = await response.json()
 
 return{
 data,;}
-status: "response.status",}
+status: app/utils/apiClient.ts"app/utils/apiClient.ts,}
 
     } catch(error) {
 throw{;}
-message: "error instanceof Error ? error.message : 'Unknown error'",status: "500",;} as ApiError
+message: app/utils/apiClient.ts"app/utils/apiClient.tsUnknown errorapp/utils/apiClient.ts'app/utils/apiClient.ts,status: app/utils/apiClient.ts"app/utils/apiClient.ts,;} as app/utils/apiClient.ts;
     }
   }
 </ApiResponse>
-async get<T>(endpoint: "string",headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
+async get<T>(endpoint: app/utils/apiClient.ts"app/utils/apiClient.ts,headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
 return this.request<T>(endpoint, {
-method: "'GET'",headers
+method: app/utils/apiClient.ts"app/utils/apiClient.tsGETapp/utils/apiClient.ts'app/utils/apiClient.ts,app/utils/apiClient.ts;
     })
   }
 </T>
 async post<T>(
-endpoint: "string",data?: any,</T>
+endpoint: app/utils/apiClient.ts"app/utils/apiClient.ts,data?: any,</T>
 headers?: Record<string, string />
+    </string>
   ): Promise<ApiResponse<T>> {</ApiResponse>
 return this.request<T>(endpoint, {
-method: "'POST'",body: "data ? JSON.stringify(data) : undefined",headers
+method: app/utils/apiClient.ts"app/utils/apiClient.tsPOSTapp/utils/apiClient.ts'app/utils/apiClient.ts,body: app/utils/apiClient.ts"app/utils/apiClient.ts,app/utils/apiClient.ts;
     })
   }
 </T>
 async put<T>(
-endpoint: "string",data?: any,</T>
+endpoint: app/utils/apiClient.ts"app/utils/apiClient.ts,data?: any,</T>
 headers?: Record<string, string />
+    </string>
   ): Promise<ApiResponse<T>> {</ApiResponse>
 return this.request<T>(endpoint, {
-method: "'PUT'",body: "data ? JSON.stringify(data) : undefined",headers
+method: app/utils/apiClient.ts"app/utils/apiClient.tsPUTapp/utils/apiClient.ts'app/utils/apiClient.ts,body: app/utils/apiClient.ts"app/utils/apiClient.ts,app/utils/apiClient.ts;
     })
   }
 </T>
-async delete<T>(endpoint: "string",headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
+async delete<T>(endpoint: app/utils/apiClient.ts"app/utils/apiClient.ts,headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
 return this.request<T>(endpoint, {
-method: "'DELETE'",headers
+method: app/utils/apiClient.ts"app/utils/apiClient.tsDELETEapp/utils/apiClient.ts'app/utils/apiClient.ts,app/utils/apiClient.ts;
     })
   }
 }
 
 const apiClient = new ApiClient()
 
-export default apiClient
+export default app/utils/apiClient.ts;
 export { ApiClient, type, ApiResponse, type, ApiError  ;};</T>
 }

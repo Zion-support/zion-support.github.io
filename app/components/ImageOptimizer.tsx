@@ -1,50 +1,56 @@
 
-'use client'
-import React from 'react';
-import React from &quot;react&quot
-import { Helmet } from from &quot;react-helmet-async&quot
-&quot;use client&quot
-const ImageOptimizerPage: "React.FC = () => {
-const features = [",{
-icon: "Brain",title: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis']
+app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.app/components/ImageOptimizer.tsx;
+app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx;
+
+import React from app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx;
+import React from &quot;react&app/components/ImageOptimizer.tsx;
+import { Helmet } from from &quot;react-helmet-async&app/components/ImageOptimizer.tsx;
+&quot;use client&app/components/ImageOptimizer.tsx;
+const ImageOptimizerPage: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx,{
+icon: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx,title: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxAI-Powered Intelligenceapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,description: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxAdvanced AI algorithms that provide intelligent insights and recommendations.app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,benefits: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxSmart recommendationsapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx]
 }
   {
-icon: "BarChart",title: "'Advanced Analytics'",description: "'Comprehensive analytics dashboard with real-time data visualization.'",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics']
+icon: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx,title: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxAdvanced Analyticsapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,description: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxComprehensive analytics dashboard with real-time data visualization.app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,benefits: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxReal-time dashboardsapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx]
 }
   {
-icon: "Target",title: "'Precision Targeting'",description: "'Target specific goals and objectives with precision and accuracy.'",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics']
+icon: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx,title: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxPrecision Targetingapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,description: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxTarget specific goals and objectives with precision and accuracy.app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,benefits: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxGoal trackingapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx]
 ;}
   {
-icon: "TrendingUp",title: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization']
+icon: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx,title: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxGrowth Optimizationapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,description: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxOptimize your business growth with data-driven strategies.app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,benefits: app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsxGrowth strategiesapp/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx,app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx, app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.tsx]
   ]
 const benefits = [
-  'Increase efficiency by up to 50%'
-    'Reduce costs by 30% with automation'
-    'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology'
+  app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.app/components/ImageOptimizer.tsx;
+    app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.app/components/ImageOptimizer.tsx;
+    app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.app/components/ImageOptimizer.tsx;
+    app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.app/components/ImageOptimizer.tsx;
+    app/components/ImageOptimizer.tsx'app/components/ImageOptimizer.app/components/ImageOptimizer.tsx;
   ]
 return (
     </>
-export default ImageOptimizerPage
-export default ImageOptimizerPage
+export default app/components/ImageOptimizer.tsx;
+export default app/components/ImageOptimizer.tsx;
     <div>
 
+    </div>
       <Helmet />
 
+    </Helmet>
         <title>ImageOptimizer | Zion Tech Group</title>
-        <meta name = "description" content="Professional ImageOptimizer services by Zion Tech Group." />
-        <meta name="keywords" content="AI, artificial, intelligence, ImageOptimizer, AI, solutions, intelligent automation" />
+        <meta name = app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx content=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx />
+    </meta>
+        <meta name=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx content=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx />
 
+    </meta>
       </Helmet>
-    </div> <section className="py-20 px-4" /> <div className="container mx-auto max-w-6 xl" /> <div className="text-center mb-16" />
-    <h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6">ImageOptimizer</h1>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed">Professional ImageOptimizer services tailored to your business needs.</p>p>
+    </div> <section className=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx /> <div className=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx /> <div className=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx />
+    </div>
+    <h1 className=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx>ImageOptimizer</h1>
+            <p className=app/components/ImageOptimizer.tsx"app/components/ImageOptimizer.tsx>Professional ImageOptimizer services tailored to your business needs.</p>p>
 
         </div>
       </section>
     </div>
-export default ImageOptimizerPage
+export default app/components/ImageOptimizer.tsx;
 </div>
 ,}}
 )
