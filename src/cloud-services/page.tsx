@@ -1,22 +1,24 @@
-import React from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { CheckCircle } from 'lucide-react''
-      "title": 'Cloud Migration'',
-      "n": 'Seamless migration of your infrastructure to leading cloud platforms''
-      "s": ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime''
-      "title": 'Cloud Security'',
-      "n": 'Comprehensive security solutions for your cloud infrastructure''
-      "s": ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection''
-      "title": 'Auto Scaling'',
-      "n": 'Dynamic resource allocation based on demand''
-      "s": ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring''
-      "title": 'Cloud Analytics'',
-      "n": 'Advanced analytics and monitoring for cloud resources''
-      "s": ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights''
-    '99.9% Uptime Guarantee''
-    '24/7 Expert Support''
-    'Cost Optimization''
-    'Scalable Infrastructure''
-    'Enhanced Security'';
-    'Global CDN''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

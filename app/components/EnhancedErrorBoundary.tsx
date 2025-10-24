@@ -8,13 +8,11 @@ interface Props {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -24,7 +22,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null
     };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
@@ -32,30 +29,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null
     };
   }
-
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to monitoring service
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
-
     // Send to error reporting service in production
     if (process.env.NODE_ENV === 'production') {
       // Example: Send to error reporting service
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
-
   handleRetry = () => {
     this.setState({
       hasError: false,
@@ -63,13 +55,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null
     });
   };
-
   override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -89,15 +79,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-              
               <h1 className="text-2xl font-bold text-gray-900 mb-2">
                 Oops! Something went wrong
               </h1>
-              
               <p className="text-gray-600 mb-6">
                 We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
               </p>
-
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mb-6 text-left">
                   <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
@@ -118,7 +105,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </div>
                 </details>
               )}
-
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={this.handleRetry}
@@ -138,9 +124,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;
