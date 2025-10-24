@@ -1,18 +1,15 @@
 'use client'
-
-import React from 'react'
-
+import React from "react"
 interface ErrorBoundaryProps {
   className?: string
   children?: React.ReactNode
 }
 
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className, children }) => {
+const ErrorBoundary: React.FC<ErrorBoundaryProps>= ({ className, children }) => {
   return (
-    <div className={className}>
-      {children}
-    </div>
-  )
+    <div className={className}>{children}</>
+    </div>)
 }
 
-export default ErrorBoundary
+export default ErrorBoundary"
+"</>
