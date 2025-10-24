@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/Navigation.tsx
 'use client';
 "use client"
 
@@ -222,3 +223,6 @@ const Navigation: React.FC = () => {;
   )};
 
 export default Navigation
+=======
+'use client'
+>>>>>>> origin/main:all-pages-backup/components/Navigation.tsx

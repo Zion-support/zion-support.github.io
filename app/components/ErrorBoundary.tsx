@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -210,47 +211,46 @@ kleber@ziontechgroup.com
 </div>
 =======
 
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+>>>>>>> origin/main
 interface State {
   hasError: boolean;
   error?: Error;
 }
-
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false;
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error in development, send to error reporting service in production
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error: ', error, errorInfo);
-    }
-    // TODO: Send error to error reporting service in production
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
-
-  public render() {
+  render() {
     if (this.state.hasError) {
-      return (
-        <div className = "min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="tex t-center">
-            <h1 className="tex t-4xlfont-bold text-white mb-4">Something went wrong</h1>
-            <p className="tex t-gray-300mb-8">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button >
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
+            <button 
               onClick={() => window.location.reload()}
-              className="px-6py-3 b g-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              Refresh Page
+              Reload Page
             </button>
           </div>
-        </div>;
+        </div>
       );
     }
+<<<<<<< HEAD
 
     return this.props.children;
   }
@@ -258,3 +258,9 @@ class ErrorBoundary extends Component<Props, State> {
 
 export default ErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f713
+=======
+    return this.props.children;
+  }
+}
+export default ErrorBoundary;
+>>>>>>> origin/main

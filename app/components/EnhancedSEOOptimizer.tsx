@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -49,67 +50,44 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
+=======
+import React from 'react';
+import { Metadata } from 'next';
+>>>>>>> origin/main
 
-const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain
-      title: 'AI-Powered SEO'
-      description: 'Advanced AI algorithms that optimize your content for search engines automatically.'
-      benefits: ['Keyword optimization', 'Content analysis', 'Ranking predictions', 'Competitor insights']
-    }
-    {
-      icon: BarChart
-      title: 'Performance Analytics'
-      description: 'Comprehensive SEO analytics dashboard with real-time performance metrics.'
-      benefits: ['Ranking tracking', 'Traffic analysis', 'Conversion metrics', 'ROI reporting']
-    }
-    {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific keywords and audiences with precision and accuracy.'
-      benefits: ['Keyword research', 'Audience targeting', 'Content optimization', 'Link building']
-    }
-    {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your SEO strategy for maximum growth and visibility.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+export const metadata: Metadata = {
+  title: 'EnhancedSEOOptimizer - Zion Tech Group',
+  description: 'Comprehensive enhancedseooptimizer solutions for modern businesses.',
+  keywords: ['enhancedseooptimizer', 'AI solutions', 'technology services'],
+  openGraph: {
+    title: 'EnhancedSEOOptimizer - Zion Tech Group',
+    description: 'Comprehensive enhancedseooptimizer solutions for modern businesses.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/components',
+  },
+};
 
-  const benefits = [
-    'Increase organic traffic by up to 300%'
-    'Reduce SEO costs by 50% with automation'
-    'Improve search rankings with AI insights'
-    'Scale SEO efforts without proportional resource increases'
-    'Gain competitive advantage with advanced SEO technology'
-  ]
-
+const EnhancedSEOOptimizerPage = () => {
   return (
-    <div className="min-h-s creenbg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="rel ativepy-20 px-4 overflow-hidden">
-        <div className="abs oluteinset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="rel ativemax-w-7xl mx-auto text-center">
-          <h1 className="tex t-4xlmd: text-6xl font-bold text-gray-900 mb-6">
-            <span className="tex t-transparentbg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
-              Enhanced SEO Optimizer
-            </span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            EnhancedSEOOptimizer
           </h1>
-          <p className="tex t-xltext-gray-600 mb-8 max-w-3xl mx-auto">
-            Boost your search engine rankings with our AI-powered SEO optimization tools and strategies.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive enhancedseooptimizer solutions for modern businesses.
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-em erald-600hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Get Started
-              <ArrowRight className="w-8h-8" />
-            </button>
-            <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            </a>
+            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
-            </button>
+            </a>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -185,9 +163,16 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           </button>
         </div>
       </section>
+=======
+      </div>
+>>>>>>> origin/main
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
 export default EnhancedSEOOptimizerPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-f713
+=======
+export default EnhancedSEOOptimizerPage;
+>>>>>>> origin/main

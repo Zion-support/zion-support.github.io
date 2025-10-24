@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/PerformanceDashboard.tsx
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -187,83 +188,45 @@ constcheckPerformanceAlerts= (currentMetrics: PerformanceMetrics) => {constnewAl
 if (currentMetrics.loadTime > 300 0) {
 newAlerts.push('Load time is above3seconds')}
 if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+'use client'
+    "title": 'AI-Powered Intelligence',
+      "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+    "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'
+    "title": 'Advanced Analytics',
+      "description": 'Comprehensive analytics dashboard with real-time data visualization.',
+    "benefits": ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'
+    "title": 'Precision Targeting',
+      "description": 'Target specific goals and objectives with precision and accuracy.',
+    "benefits": ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'
+    "title": 'Growth Optimization',
+      "description": 'Optimize your business growth with data-driven strategies.',
+    "benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'
+  'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+'navigation'
+// Measure memoryusageletmemoryUsage=0if ('memory'
+if ('requestAnimationFrame'
+newAlerts.push('Load time is above3seconds'
+>>>>>>> origin/main:app-backup/components/PerformanceDashboard.tsx
 newAlerts.push('Memory usage is high'
-    </>
-  )}
-if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30')}
-setAlerts(newAlerts)
-}
-consttoggleMonitoring= () =>{setIsMonitoring(!isMonitoring)}
-constformatBytes= (bytes: number) => {if (bytes=== 0) return '0 Bytes'
-constk= 1024constsizes= ['Bytes', 'KB', 'MB', 'GB']
-consti= Math.floor(Math.log(bytes) / Math.log(k))
-return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
-constgetPerformanceColor= (value: number, thresholds: {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'
+if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30'
+constformatBytes= ("bytes": number) => {if (bytes=== 0) return '0 Bytes',
+constk= 1024constsizes= ['Bytes', 'KB', 'MB', 'GB'
+return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' '}
+constgetPerformanceColor= ("value": number, "thresholds": {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'
 if (value <= thresholds.warning) return 'text-yellow-40 0'
-return 'text-red-40 0'}
-return (
-<div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
-<div className=&quot;flex items-center justify-between mb-6&quot;></div>
-<h3 className=&quot;text-xl font-semibold text-white flex items-center gap-2&quot;></h3>
-<Activity className=&quot;w-5 h-5&quot; />
-Performance Dashboard
-<button
-onClick={toggleMonitoring}
-className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-isMonitoring
-? 'bg-red-600 text-white hover: bg-red-700'
-: 'bg-green-600 text-white hover: bg-green-700'}`}
->{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
-</div>
-{alerts.length > 0 && (
-<div className=&quot;mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg&quot;></div>
-<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<AlertTriangle className=&quot;w-5 h-5 text-red-400&quot; />
-<h4 className=&quot;text-red-400 font-semibold&quot;>Performance Alerts</h4>
-</div>
-<ul className=&quot;space-y-1&quot;>
-{alerts.map((alert, index) => (
-<li key={index} className=&quot;text-red-300 text-sm&quot;>• {alert}</li>
-))}
-</ul>
-</div>
-)}
-<div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4&quot;></div>
-<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
-<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<Zap className=&quot;w-4 h-4 text-blue-400&quot; />
-<span className=&quot;text-gray-300 text-sm&quot;>Load Time</span>
-</div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}></div>
-{metrics.loadTime.toFixed(0)}ms
-</div>
-<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
-<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<Cpu className=&quot;w-4 h-4 text-green-400&quot; />
-<span className=&quot;text-gray-300 text-sm&quot;>Render Time</span>
-</div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
-{metrics.renderTime.toFixed(2)}ms
-</div>
-<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
-<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<MemoryStick className=&quot;w-4 h-4 text-purple-400&quot; />
-<span className=&quot;text-gray-300 text-sm&quot;>Memory Usage</span>
-</div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
-</div>
-<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
-<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
-<TrendingUp className=&quot;w-4 h-4 text-orange-400&quot; />
-<span className=&quot;text-gray-300 text-sm&quot;>FPS</span>
-</div>
-<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
-</div>
-</div>
-<div className=&quot;mt-6 text-center&quot;></div>
-<p className=&quot;text-gray-400 text-sm&quot;>{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance'}</p>p>
-</div>
-</div>
-)
-}
-export default PerformanceDashboard
+return 'text-red-40 0'
+? 'bg-red-600 text-white "hover": bg-red-700',
+: 'bg-green-600 text-white "hover": bg-green-700',
+>{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring';
+<p className=&quot;text-gray-400 text-sm&quot;>{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance'

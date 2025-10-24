@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/utils/performanceOptimizations.ts
 'use client';
 import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
@@ -170,84 +171,37 @@ export const useMemoryMonitoring = (
 export const preloadResource = (href: string, as: string) => {
   if (typeof window === 'undefined') return
   const link = document.createElement('link')
+=======
+import { useCallback, useMemo } from 'react'
+'use client'
+      typeof window !== 'undefined'
+    "rootMargin": '50px',
+  const [imageSrc, setImageSrc] = useState(placeholder || ';
+    if (typeof window === 'undefined'
+      const navigation = performance.getEntriesByType('navigation';
+      const paint = performance.getEntriesByType('paint';
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint';
+      const lcp = performance.getEntriesByType('largest-contentful-paint';
+    if (document.readyState === 'complete'
+      window.addEventListener('load'
+    if ('web-vitals'
+      import('web-vitals'
+      window.removeEventListener('load'
+    if (typeof window === 'undefined' || !('memory'
+  if (typeof window === 'undefined'
+  const link = document.createElement('link'
+>>>>>>> origin/main:app-backup/utils/performanceOptimizations.ts
   link.rel = 'preload'
-  link.href = href
-  link.as = as
-  document.head.appendChild(link)
-}
-// Critical resource preloading
-export const preloadCriticalResources = () => {
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
-  preloadResource('/fonts/inter-var.woff2', 'font')
-  preloadResource('/fonts/inter-var.woff', 'font')
-  // Preload critical images
-  preloadResource('/images/hero-bg.webp', 'image')
-  preloadResource('/images/logo.svg', 'image')
-  // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style')
-}
-// Bundle size monitoring
-export const useBundleSizeMonitoring = (
-    </>
-  ) => {
-  const [bundleSize, setBundleSize] = useState<{
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
-    imageSize?: number
-}>({})
-  useEffect(() => {
-  if (typeof window === 'undefined') return
-    const calculateBundleSize = () => {
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
-      resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
-        if (resource.name.includes('.js')) {
-          jsSize += size
-} else if (resource.name.includes('.css')) {
-  cssSize += size
-} else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
-  imageSize += size
-}
-      })
-      setBundleSize({
-  totalSize
-        jsSize
-        cssSize
-        imageSize
-})
-    }
-    // Calculate after page load
-    if (document.readyState === 'complete') {
-      calculateBundleSize()
-    } else {
-      window.addEventListener('load', calculateBundleSize)
-    }
-    return (
-    <>
-      ) => {
-      window.removeEventListener('load', calculateBundleSize)
-    }
-  }, []
-    </>
-  )
-  return bundleSize
-}
-const performanceOptimizations = {
-  debounce
-  throttle
-  useIntersectionObserver
-  useLazyImage
-  usePerformanceMonitoring
-  useMemoryMonitoring
-  preloadResource
-  preloadCriticalResources
-  useBundleSizeMonitoring
-}
-export default performanceOptimizations
+  if (typeof window === 'undefined'
+  preloadResource('/fonts/inter-var.woff2', 'font'
+  preloadResource('/fonts/inter-var.woff', 'font'
+  preloadResource('/images/hero-bg.webp', 'image'
+  preloadResource('/images/logo.svg', 'image'
+  preloadResource('/styles/critical.css', 'style'
+  if (typeof window === 'undefined'
+      const resources = performance.getEntriesByType('resource';
+        if (resource.name.includes('.js'
+} else if (resource.name.includes('.css'
+    if (document.readyState === 'complete'
+      window.addEventListener('load';
+      window.removeEventListener('load'

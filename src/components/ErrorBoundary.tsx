@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/ErrorBoundary.tsx
 import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -228,3 +229,9 @@ kleber@ziontechgroup.com
 
 export default ErrorBoundary
 export default ErrorBoundary
+=======
+import { Component, ErrorInfo, ReactNode } from 'react'
+    if (process.env.NODE_ENV === 'development'
+      console.error('ErrorBoundary caught an "error": ';);
+    console.error('ErrorBoundary caught an "error": '
+>>>>>>> origin/main:all-pages-backup/components/ErrorBoundary.tsx

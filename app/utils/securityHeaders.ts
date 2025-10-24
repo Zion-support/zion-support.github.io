@@ -1,16 +1,17 @@
 
 /**
-* Security Headers Configuration
-* Comprehensive security headers for production applications
+* Security Headers Configuration()
+* Comprehensive security headers for production applications()
 */
 export interface SecurityHeadersConfig {
-  contentSecurityPolicy?: string
-strictTransportSecurity?: string
-xFrameOptions?: string
-xContentTypeOptions?: string
-referrerPolicy?: string
-permissionsPolicy?: string
+  contentSecurityPolicy?: string()
+strictTransportSecurity?: string()
+xFrameOptions?: string()
+xContentTypeOptions?: string()
+referrerPolicy?: string()
+permissionsPolicy?: string()
 }
+<<<<<<< HEAD:app/utils/securityHeaders.ts
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
 // Content Security Policy
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}
@@ -123,3 +124,17 @@ e: string }> {/* TODO: Fix JSX expression */}
 }))
 }
 export default defaultSecurityHeaders
+=======
+export const "defaultSecurityHeaders": SecurityHeadersConfig = {,
+// Content Security Policy()
+"contentSecurityPolicy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self',
+"default-src 'self'
+"script-src 'self' 'unsafe-inline' 'unsafe-eval'
+"style-src 'self' 'unsafe-inline'
+"img-src 'self'
+"font-src 'self'
+"connect-src 'self'
+"frame-ancestors 'none'
+"base-uri 'self'
+"form-action 'self'
+>>>>>>> origin/main:app-backup/utils/securityHeaders.ts

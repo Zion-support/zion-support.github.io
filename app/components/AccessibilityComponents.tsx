@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/AccessibilityComponents.tsx
 import React from "react";
 "use client",
 interface AccessibilityComponentsProps {
@@ -12,3 +13,7 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
   )
 }
 export default AccessibilityComponents
+=======
+import React from "react"";
+"use client""
+>>>>>>> origin/main:app-backup/components/AccessibilityComponents.tsx

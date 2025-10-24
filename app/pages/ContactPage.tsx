@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/pages/ContactPage.tsx
 import React from 'react';
 "use client",
 const ContactPage = () => {
@@ -17,3 +18,6 @@ const ContactPage = () => {
   )
 }
 export default ContactPage
+=======
+import React from 'react'
+>>>>>>> origin/main:app-backup/pages/ContactPage.tsx

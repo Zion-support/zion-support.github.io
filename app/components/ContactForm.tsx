@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/ContactForm.tsx
 'use client';
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
@@ -202,3 +203,28 @@ const ContactForm: React.FC = () => {
   )
 }
 export default ContactForm
+=======
+import { useState } from 'react'
+import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react'
+'use client'
+    "name": ',
+    "email": '',
+    "phone": ',
+    "company": '',
+    "message": ',
+    "service": '',
+        "name": ',
+    "email": '',
+        "phone": ',
+    "company": '',
+        "message": ',
+    "service": '',
+  'AI Solutions'
+    'Web Development'
+    'Mobile Development'
+    'Cloud Migration'
+    'Cybersecurity'
+    'Data Analytics'
+    'DevOps';
+    'Consulting'
+>>>>>>> origin/main:app-backup/components/ContactForm.tsx

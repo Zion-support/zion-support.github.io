@@ -22,6 +22,7 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     minify: 'terser',
+<<<<<<< HEAD
     terserOptions: {
       compress: {
         drop_console: true,
@@ -33,6 +34,8 @@ export default defineConfig({
         safari10: true,
       },
     },
+=======
+>>>>>>> origin/main
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -70,6 +73,7 @@ export default defineConfig({
           if (id.includes('/app/utils/')) {
             return 'utils';
           }
+          return 'app';
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

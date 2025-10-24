@@ -1,6 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 import Link from 'next/link';
+<<<<<<< HEAD:src/5g-smart-city-solutions/page.tsx
 import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react';
 
 export default function FiveGSmartCitySolutions() {
@@ -115,3 +115,6 @@ export default function FiveGSmartCitySolutions() {
       </div>
     </>
   )}
+=======
+import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react'
+>>>>>>> origin/main:all-pages-backup/5g-smart-city-solutions/page.tsx

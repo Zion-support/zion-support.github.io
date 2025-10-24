@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/EnhancedSEO.tsx
 'use client';
 import Footer from './Footer';
 import React from 'react';
@@ -53,3 +54,20 @@ export default EnhancedSEOPage
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
+=======
+import Footer from './Footer'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail, ArrowRight } from 'lucide-react'
+'use client'
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '2 4/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans';
+    'Proven track record of success'
+>>>>>>> origin/main:app-backup/components/EnhancedSEO.tsx

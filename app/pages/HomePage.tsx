@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/pages/HomePage.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
@@ -239,3 +240,9 @@ export default function HomePage() {  return (
 </>
   )
 }
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Link from 'next/link';
+} from '@heroicons/react/24/outline'
+>>>>>>> origin/main:app-backup/pages/HomePage.tsx

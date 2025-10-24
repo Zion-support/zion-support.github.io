@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
 "use client"
 
 import { useEffect, useCallback, useRef } from 'react';
@@ -232,3 +233,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     registerServiceWorker,
     setupPerformanceMonitoring
   }}
+=======
+"use client""
+      // Add loading="lazy""
+      // Add decoding="async""
+>>>>>>> origin/main:all-pages-backup/hooks/usePerformanceOptimization.ts

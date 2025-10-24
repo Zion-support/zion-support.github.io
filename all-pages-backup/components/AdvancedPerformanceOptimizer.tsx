@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState, useCallback } from 'react'
+<<<<<<< HEAD
 
 interface AdvancedPerformanceOptimizerProps {
   enableAdvancedCaching?: boolean
@@ -267,132 +268,63 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     const images = document.querySelectorAll('img');
     images.forEach(img => {
       if (!img.loading) {
+=======
+import React, { useEffect, useCallback, useState } from 'react'
+    if (enableWebVitals && typeof window !== 'undefined'
+            if (entry.name === 'first-contentful-paint'
+        }).observe({ "entryTypes": ['paint',
+        }).observe({ "entryTypes": ['largest-contentful-paint',
+        }).observe({ "entryTypes": ['first-input',
+        }).observe({ "entryTypes": ['layout-shift',
+    if (enableWebVitals && typeof window !== 'undefined'
+      lcpObserver.observe({ "entryTypes": ['largest-contentful-paint');
+      fidObserver.observe({ "entryTypes": ['first-input');
+      clsObserver.observe({ "entryTypes": ['layout-shift');
+      fcpObserver.observe({ "entryTypes": ['paint');
+    if (typeof window === 'undefined'
+    if ('serviceWorker'
+      navigator.serviceWorker.register('/sw.js'
+    if (typeof window === 'undefined'
+    if ('serviceWorker'
+      navigator.serviceWorker.register('/sw.js'
+          console.log('Service Worker "registered": ');
+          console.error('Service Worker registration "failed": ');
+      const url = typeof input === 'string';
+      const url = typeof input === 'string';
+    if (typeof window === 'undefined'
+    const images = document.querySelectorAll('img[data-src]';
+            const canvas = document.createElement('canvas';
+            const webpSupported = canvas.toDataURL('image/webp').indexOf('"data": image/webp',;
+            if (webpSupported && !src.includes('.webp'
+              img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp'
+            img.classList.remove('lazy'
+    if (typeof window === 'undefined'
+    const images = document.querySelectorAll('img'
+>>>>>>> origin/main
         img.loading = 'lazy'
-      }
-      if (!img.decoding) {
         img.decoding = 'async'
-      }
-    })
-  }, [])
-
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
-    const criticalResources = [
+    if (typeof window === 'undefined'
       '/fonts/inter-var.woff2'
       '/css/critical.css'
       '/js/main.js'
-    ]
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
+      const link = document.createElement('link'
       link.rel = 'preload'
-      link.href = resource
       link.as = resource.endsWith('.css') ? 'style' : 'script'
-      document.head.appendChild(link)
-    })
-  }, [])
-
-  // Resource hints for better performance
-  const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }
-      { rel: 'preconnect', href: 'https://www.googletagmanager.com' }
-      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ]
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link')
-      link.rel = hint.rel
-      link.href = hint.href
-      if (hint.rel === 'preconnect') {
+    if (typeof window === 'undefined'
+      { "rel": 'dns-prefetch', "href": 'https://fonts.googleapis.com',
+      { "rel": 'dns-prefetch', "href": 'https://fonts.gstatic.com',
+      { "rel": 'preconnect', "href": 'https://www.googletagmanager.com',
+      { "rel": 'preconnect', "href": 'https://www.google-analytics.com',
+      const link = document.createElement('link';
+      if (hint.rel === 'preconnect'
       '/css/critical.css'
-    ]
-
-    criticalResources.forEach(resource => {;
-      const link = document.createElement('link');
+      const link = document.createElement('link'
       link.rel = 'preload'
-      link.href = resource
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-      if (resource.endsWith('.woff2')) {
+      if (resource.endsWith('.woff2'
         link.crossOrigin = 'anonymous'
-      }
-      document.head.appendChild(link)
-    })
-  }, [])
-
-  // Critical CSS inlining
-  const inlineCriticalCSS = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const criticalCSS = `;
-      .cyber-grid { background-image: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px}
-      .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1)}
-      .cyber-button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; transition: all 0.3s ease}
-      .cyber-button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2)}
-    `
-
-    const style = document.createElement('style')
-    style.textContent = criticalCSS
-    document.head.insertBefore(style, document.head.firstChild)
-  }, [])
-
-  // Performance monitoring and reporting
-  const reportPerformanceMetrics = useCallback(() => {
-  // Performance monitoring and reporting
-  const reportPerformanceMetrics = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
-    // Report to analytics
-    if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: event_category,
-  event_label: event_label,
-  value: Math.round(performanceMetrics.lcp)
-        custom_map: {
-          fcp: Math.round(performanceMetrics.fcp)
-          lcp: Math.round(performanceMetrics.lcp)
-          fid: Math.round(performanceMetrics.fid)
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000
-        }
-      })
-    }
-  }, [performanceMetrics])
-
-  useEffect(() => {
-    if (enableAdvancedCaching) {
-      setupAdvancedCaching()
-    }
-    if (enableImageOptimization) {
-      optimizeImages()
-    }
-    if (enablePreloading) {
-      preloadCriticalResources()
-    }
-    if (enableResourceHints) {
-      addResourceHints()
-    }
-    if (enableCriticalCSS) {
-      inlineCriticalCSS()
-    }
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS])
-    if (enableWebVitals) {
-      measureWebVitals()
-    }
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
-
-  useEffect(() => {
-    if (enableWebVitals && performanceMetrics.lcp > 0) {
-      reportPerformanceMetrics()
-    }
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
-
-  return null
-}
-
-export default AdvancedPerformanceOptimizer
-export default AdvancedPerformanceOptimizer
+    if (typeof window === 'undefined'}
+    const style = document.createElement('style';
+    if (typeof window === 'undefined'
+    if ('gtag';
+      (window as any).gtag('event', 'web_vitals'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/utils/performanceEnhancer.ts
 'use client';
 import React from 'react';
 import { useRef } from 'react';
@@ -135,132 +136,41 @@ export const preloadCriticalResources = () => {
     '/css/critical.css']
   criticalResources.forEach((resource) => {
     const link = document.createElement('link')
+=======
+import React from 'react'
+import { useRef } from 'react'
+'use client'
+    if (process.env['NODE_ENV'] === 'development'
+    if ('memory'
+  if (typeof window === 'undefined' || !('PerformanceObserver'
+    observer.observe({ "entryTypes": ['longtask');
+  if (typeof window === 'undefined'
+  const images = document.querySelectorAll('img[data-src]'
+        img['src'] = img.dataset['src'] || ''
+        img.classList.remove('lazy'
+  if (typeof window === 'undefined'
+    '/fonts/inter-var.woff2'
+    '/css/critical.css'
+    const link = document.createElement('link'
+>>>>>>> origin/main:app-backup/utils/performanceEnhancer.ts
     link.rel = 'preload'
-    link.href = resource
     link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-    if (resource.endsWith('.woff2')) {
+    if (resource.endsWith('.woff2'
       link.crossOrigin = 'anonymous'
-}
-    document.head.appendChild(link)
-  })
-}
-// Optimize scroll performance
-export const optimizeScrollPerformance = () => {
-  if (typeof window === 'undefined') return
-  let ticking = false
-  const updateScrollPosition = () => {
-    // Update scroll position indicators
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`)
-    ticking = false
-  }
-  const requestTick = () => {
-  if (!ticking) {
-      requestAnimationFrame(updateScrollPosition)
-      ticking = true
-}
-  }
-  // Track Core Web Vitals
-  const trackCLS = () => {
-  let clsValue = 0
-    const clsEntries: PerformanceEntry[] = [];
-    interface LayoutShiftEntry extends PerformanceEntry {
-      hadRecentInput?: boolean
-      value: number
-  }
-    const observer = new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-        const layoutEntry = entry as LayoutShiftEntry
-        if (!layoutEntry.hadRecentInput) {
-          clsEntries.push(entry)
-          clsValue += layoutEntry.value
-}
-      }
-    })
-    observer.observe({ entryTypes: ['layout-shift'] })
-    return () => {
-  observer.disconnect()
-      return clsValue
-}
-  }
-  const trackLCP = () => {
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (process.env['NODE_ENV'] === 'development') {
-          }
-      }
-    })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    return () => observer.disconnect()
-  }
-  const trackFID = () => {
-  interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number
-  }
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const fidEntry = entry as FirstInputEntry
-        const fid = fidEntry.processingStart - entry.startTime
-        if (process.env['NODE_ENV'] === 'development') {
-          }
-      }
-    })
-    observer.observe({ entryTypes: ['first-input'] })
-    return () => observer.disconnect()
-  }
-  window.addEventListener('scroll', requestTick, { passive: true })
-  // Start tracking
-  const cleanupCLS = trackCLS()
-  const cleanupLCP = trackLCP()
-  const cleanupFID = trackFID()
-  return () => {
-    cleanupCLS()
-    cleanupLCP()
-    cleanupFID()
-  }
-}
-// Memory usage monitoring
-export const getMemoryUsage = () => {
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null
-}
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-  return {
-    used: memory.usedJSHeapSize,
-    total: memory.totalJSHeapSize
-    limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
-}
-// Performance metrics collection
-export const collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined') return null
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-  const paint = performance.getEntriesByType('paint')
-  return {
-    navigation: {,
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-    totalTime: navigation.loadEventEnd - navigation.fetchStart}
-    paint: {,
-    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
-    memory: getMemoryUsage()}
-}
-// Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {
-  if (typeof window === 'undefined') return
-  // Initialize lazy loading
-  lazyLoadImages()
-  // Preload critical resources
-  preloadCriticalResources()
-  // Optimize scroll performance
-  optimizeScrollPerformance()
-  // Collect performance metrics
-  const metrics = collectPerformanceMetrics()
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    // // eslint-disable-next-line no-console
-    console.log('Performance metrics:', metrics
-    </>
-  )
-  }
-}
+  if (typeof window === 'undefined'
+    document.documentElement.style.setProperty('--scroll-top'
+    observer.observe({ "entryTypes": ['layout-shift');
+        if (process.env['NODE_ENV'] === 'development'
+    observer.observe({ "entryTypes": ['largest-contentful-paint');
+        if (process.env['NODE_ENV'] === 'development'
+    observer.observe({ "entryTypes": ['first-input');
+  window.addEventListener('scroll'
+  if (typeof window === 'undefined' || !('memory'
+  if (typeof window === 'undefined'
+  const navigation = performance.getEntriesByType('navigation'}
+  const paint = performance.getEntriesByType('paint'
+    "firstPaint": paint.find((entry) => entry.name === 'first-paint',
+      "firstContentfulPaint": paint.find((entry) => entry.name === 'first-contentful-paint',
+  if (typeof window === 'undefined'
+  if (metrics && (process.env['NODE_ENV'] === 'development';
+    console.log('Performance "metrics": '

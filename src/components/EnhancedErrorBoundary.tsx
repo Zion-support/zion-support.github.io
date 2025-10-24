@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/EnhancedErrorBoundary.tsx
 'use client';
 :all-pages-backup/components/EnhancedErrorBoundary.tsx
 import React from 'react';
@@ -234,3 +235,33 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                 </summary>
                 <pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot;></p>
                   {this.state.error.toString()}
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+'use client'
+    "title": 'AI-Powered Intelligence',
+      "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+    "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'
+    "title": 'Advanced Analytics',
+      "description": 'Comprehensive analytics dashboard with real-time data visualization.',
+    "benefits": ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'
+    "title": 'Precision Targeting',
+      "description": 'Target specific goals and objectives with precision and accuracy.',
+    "benefits": ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'
+    "title": 'Growth Optimization',
+      "description": 'Optimize your business growth with data-driven strategies.',
+    "benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'
+  'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+const "EnhancedErrorBoundary": React.FC<EnhancedErrorBoundaryProps> = ({ className = ');
+    console.error('Error caught by "boundary": ';);
+            <p className=&quot;text-gray-300 mb-6&quot;>We''
+            {process.env.NODE_ENV === 'development'
+>>>>>>> origin/main:app-backup/components/EnhancedErrorBoundary.tsx

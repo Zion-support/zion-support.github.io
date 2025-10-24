@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/utils/image.tsx
 'use client';
 import React from 'react';
 import React, { useState, useCallback } from 'react';
@@ -27,26 +28,15 @@ height?: number
 className?: string
 priority?: boolean
 _quality?: number
+=======
+import React from 'react'
+import React, { useState, useCallback } from 'react'
+'use client'
+'use client'
+>>>>>>> origin/main:app-backup/utils/image.tsx
 _placeholder?: 'blur' | 'empty'
-_blurDataURL?: string
-fill?: boolean
-sizes?: string
-style?: React.CSSProperties
-onLoad?: () => void
-onError?: () => void;}
-}
-export const Image: React.FC<ImageProps>= ({}
-export const Image: React.FC<ImageProps> = ({}
-src
-export const Image: React.FC<ImageProps> = ({
-src
-alt
-width
-height
-className
-priority = false
-quality = 75
 placeholder = 'empty'
+<<<<<<< HEAD:app/utils/image.tsx
 blurDataURL
 fill = false
 sizes
@@ -133,3 +123,11 @@ onError={handleError}
 >)</img>
 }</img>
 export default Image</img>
+=======
+"position": 'absolute',
+"position": 'absolute',
+    "width": '100%',
+"height": '100%',
+    "objectFit": 'cover';,
+'use client'
+>>>>>>> origin/main:app-backup/utils/image.tsx

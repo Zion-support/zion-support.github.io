@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/pages/AdminPage.tsx
 import React from 'react';
 "use client",
 const AdminPage = () => {
@@ -17,3 +18,6 @@ const AdminPage = () => {
   )
 }
 export default AdminPage
+=======
+import React from 'react'
+>>>>>>> origin/main:app-backup/pages/AdminPage.tsx
