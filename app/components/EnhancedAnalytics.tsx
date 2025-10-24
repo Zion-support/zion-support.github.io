@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { createContext, useContext, useEffect } from 'react';
 
@@ -23,23 +23,22 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  // Initialize analytics
   useEffect(() => {
-    // Initialize analytics
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (process.env.NODE_ENV === 'production') {
-        // Load Google Analytics script
         const script = document.createElement('script');
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`;
         script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
         document.head.appendChild(script);
 
-        // Initialize gtag
-        (window as any).gtag = (window as any).gtag || function(...args: unknown[]) {
-          ((window as any).gtag.q = (window as any).gtag.q || []).push(args);
-        };
-        window.gtag('js', new Date());
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args: unknown[]) {
+          window.dataLayer.push(args);
+        }
+        gtag('js', new Date());
+        gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
       }
     }
   }, []);
@@ -47,8 +46,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const track = (_event: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
+<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', _event, _properties);
+=======
+      if (window.gtag) {
+        window.gtag('event', event, properties);
+>>>>>>> cursor/fix-errors-and-merge-to-main-a33a
       }
       
       // Custom analytics - only log in development
@@ -61,10 +65,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const identify = (_userId: string, _traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
+<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
           user_id: _userId,
           custom_map: _traits
+=======
+      if (window.gtag) {
+        window.gtag('config', process.env.REACT_APP_GA_ID, {
+          user_id: userId,
+          custom_map: traits
+>>>>>>> cursor/fix-errors-and-merge-to-main-a33a
         });
       }
       
@@ -78,9 +89,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const page = (_name: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
+<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
           page_title: _name,
+=======
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: name,
+>>>>>>> cursor/fix-errors-and-merge-to-main-a33a
           page_location: window.location.href,
           ..._properties
         });
@@ -110,7 +127,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
+    gtag: (..._args: unknown[]) => void;
   }
 }
 
