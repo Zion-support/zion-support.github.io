@@ -1,39 +1,29 @@
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res)
-    } catch (error) {
-      // eslint-disable-next-line no-console
-    console.error('API Error:', error)
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ error: 'Internal server error' }))
-    }
-  }
-}
-export default withErrorLogging(async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
-  const { amount, currency = 'usd' } = req.body
-  if (!amount) {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Amount is required' }))
-    return
-  }
+
   try {
-    const paymentIntent = {
-      status: 'requires_payment_method',
-    amount: amount
-      currency: currency}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify(paymentIntent))
+    const { amount, currency = 'usd' } = req.body;
+
+    if (!amount) {
+      res.statusCode = 400;
+      res.end(JSON.stringify({ error: 'Amount is required' }));
+
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100), // Convert to cents
+      currency,
+
+
+    res.statusCode = 200;
+    res.end(JSON.stringify({ clientSecret: paymentIntent.client_secret }));
+
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Payment intent creation error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }))
-  }
-})
+    console.error('Stripe payment intent error:', error);
+    res.statusCode = 500;
+

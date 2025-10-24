@@ -1,38 +1,37 @@
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res)
-    } catch (error) {
-      // eslint-disable-next-line no-console
-    console.error('API Error:', error)
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ error: 'Internal server error' }))
-    }
-  }
-}
-export default withErrorLogging(async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
-  const { productId } = req.body
-  if (!productId) {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Product ID is required' }))
-    return
-  }
+
   try {
-    const session = {
-      status: 'pending',
-    productId: productId}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify(session))
+
+
+    if (!priceId) {
+      res.statusCode = 400;
+      res.end(JSON.stringify({ error: 'Price ID is required' }));
+
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price: priceId,
+          quantity: quantity,
+        },
+      ],
+      mode: 'payment',
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.origin}/cancel`,
+    });
+
+    res.statusCode = 200;
+    res.end(JSON.stringify({ sessionId: session.id }));
+
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Checkout session creation error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }))
-  }
-})
+    console.error('Stripe checkout error:', error);
+    res.statusCode = 500;
+    res.end(JSON.stringify({ error: 'Internal server error' }));
