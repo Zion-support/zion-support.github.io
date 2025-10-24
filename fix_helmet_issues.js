@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs");"'"
 const path = require('path");
 
@@ -23,10 +24,33 @@ content = content.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="desc
 "
     // Add metadata export;"'"
 if (content.includes('export default function') && !content.includes('export const metadata")) {;"
+=======
+const fs = require('fs');
+const path = require('path');
+;
+// Function to fix helmet issues by replacing with Next.js metadata;
+function fixHelmetIssues(filePath) {;
+;
+try{;
+let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+;
+    // Remove react-helmet-async import}'
+if (content.includes("import { Helmet } from from 'react-helmet-async'")) {;";'"
+content = content.replace("import { Helmet } from from 'react-helmet-async';\n", '');
+      modified = true}
+    // Replace Helmet with Next.js metadata;'"
+if (content.includes('<Helmet>')) {;";'"
+content = content.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Helmet>/g, '');
+      modified = true}
+    // Add metadata export;
+if (content.includes('export default function') && !content.includes('export const metadata')) {;"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const titleMatch = content.match(/<title>([^<]*)<\/title>/);"
       const descMatch = content.match(/<meta name="description" content="([^"]*)" \/>/);
 ;
 if (titleMatch && descMatch) {;
+<<<<<<< HEAD
 const title = titleMatch[1,];"
         const description = descMatch[1,];"
 ;"'"
@@ -37,10 +61,21 @@ description: "'${description",}"
 };
 ;
 export default function`)
+=======
+const title = titleMatch[1];
+        const description = descMatch[1];
+;
+content = content.replace('export default function',;"
+          `export const metadata = {;";'"
+title: "'${title"}',;";'"
+description: "'${description"}'
+});`
+export default function`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
         );
-        modified = true;
-      ,}
+        modified = true}
     }
+<<<<<<< HEAD
 ;"
 if (modified) {;"
 fs.writeFileSync(filePath, content);"
@@ -53,29 +88,46 @@ console.error(`Error fixing ${filePath}:`, error.message);
 "
 // Get all page files;"'"
 const appDir = path.join(__dirname, 'app");
+=======
+if (modified) {;"
+fs.writeFileSync(filePath, content);";`"
+      console.log(`Fixed helmet issues in: "${filePath"}`)}
+  } catch (error) {;`
+console.error(`Error fixing ${filePath}:`, error.message)}
+}
+// Get all page files;
+const appDir = path.join(__dirname, 'app');
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const pageFiles = [];
 ;
-function findPageFiles(dir) {
+function findPageFiles(dir) {;
 ;
 const files = fs.readdirSync(dir);
-  files.forEach(file = > {;
-;)
+  files.forEach(file = > {);
 const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {;
+<<<<<<< HEAD
 findPageFiles(filePath);"
     "
 "'"
 ,} else if(file = == 'page.tsx") {   ;
+=======
+findPageFiles(filePath)} else if(file = == 'page.tsx') {   ;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 pageFiles.push(filePath);
-    ,, , , }
-  });
-}
-;
+    ,, }
+  })}
 findPageFiles(appDir);
-
+;
 // Fix all page files;
 pageFiles.forEach(fixHelmetIssues);
+<<<<<<< HEAD
 ;"
 console.log(`Processed ${pageFiles.length} page files`);"
 "'"
+=======
+;`
+console.log(`Processed ${pageFiles.length} page files`);"
+";`'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

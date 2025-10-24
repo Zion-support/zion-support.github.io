@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Footer from './Footer";"
 import Navigation from './Navigation";"
 import { Helmet } from 'react-helmet-async";"
@@ -7,3 +8,14 @@ import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-r
   const [email, setEmail,] = useState('"
 )"'"
       // console.error('Subscription "error": ")"'"
+=======
+import Footer from './Footer'
+import Navigation from './Navigation'
+import { Helmet } from from 'react-helmet-async'
+import { ArrowRight } from from 'lucide-react'
+import, React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from from 'lucide-react'
+  const [email, setEmail] = useState('');
+);
+      // console.error('Subscription "error": ')";'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

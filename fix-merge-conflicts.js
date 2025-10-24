@@ -1,20 +1,19 @@
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
-
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
-  try {
+;
+// Function to fix merge conflicts in a file;
+function fixMergeConflicts(filePath) {;
+  try {;
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to fix
+;
+    // Check if file has merge conflict markers;
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {;
+      return false; // No conflicts to fix;
     }
-    
     console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-    // Split content by lines
+;
+    // Split content by lines;
     const lines = content.split('\n');
 =======
 #!/usr/bin/env node
@@ -40,21 +39,27 @@ function fixMergeConflicts(filePath) {"
     const fixedLines = [];
     let inConflict = false;
     let conflictType = null;
+<<<<<<< HEAD
     
 <<<<<<< HEAD
     for (let i = 0; i < lines.length; i++) {
+=======
+;
+    for (let i = 0; i < lines.length; i++) {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       const line = lines[i];
-      
-      if (line.includes('<<<<<<< HEAD')) {
+;
+      if (line.includes('<<<<<<< HEAD')) {;
         inConflict = true;
-        conflictType = 'head';
-        continue; // Skip this line
-      } else if (line.includes('=======')) {
-        conflictType = 'separator';
-        continue; // Skip this line
-      } else if (line.includes('>>>>>>>')) {
+        conflictType = 'head'
+        continue; // Skip this line;
+      } else if (line.includes('=======')) {;
+        conflictType = 'separator'
+        continue; // Skip this line;
+      } else if (line.includes('>>>>>>>')) {;
         inConflict = false;
         conflictType = null;
+<<<<<<< HEAD
         continue; // Skip this line
       }
       
@@ -89,14 +94,26 @@ function fixMergeConflicts(filePath) {"
 <<<<<<< HEAD
         // Normal line, keep it
         fixedLines.push(line);
+=======
+        continue; // Skip this line;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       }
+      if (inConflict) {;
+        // We're inside a conflict block;
+        if (conflictType === 'head') {;
+          // Keep the HEAD version (before =======);
+          fixedLines.push(line)}
+        // Skip the other branch (after =======);
+      } else {;
+        // Normal line, keep it;
+        fixedLines.push(line)}
     }
-    
-    // Join lines back together
+    // Join lines back together;
     const fixedContent = fixedLines.join('\n');
-    
-    // Write the fixed content back to the file
+;
+    // Write the fixed content back to the file;
     fs.writeFileSync(filePath, fixedContent, 'utf8');
+<<<<<<< HEAD
     return true;
     
 =======
@@ -112,22 +129,30 @@ function fixMergeConflicts(filePath) {"
     return true; // Conflicts were fixed
 >>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
   } catch (error) {
+=======
+    return true} catch (error) {;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Function to recursively find all .tsx and .ts files
 function findTsxFiles(dir) {
+=======
+// Function to recursively find all .tsx and .ts files;
+function findTsxFiles(dir) {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   const files = [];
-  
-  function traverse(currentDir) {
+;
+  function traverse(currentDir) {;
     const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
+;
+    for (const item of items) {;
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
       
       if (stat.isDirectory()) {
         traverse(fullPath);
@@ -158,29 +183,35 @@ function fixAllMergeConflicts(dir) {
   }
   
 <<<<<<< HEAD
+=======
+;
+      if (stat.isDirectory()) {;
+        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {;
+        files.push(fullPath)}
+    }
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   traverse(dir);
-  return files;
-}
-
-// Main execution
+  return files}
+// Main execution;
 console.log('Starting merge conflict resolution...');
-
-const appDir = '/workspace/app';
+;
+const appDir = '/workspace/app'
 const files = findTsxFiles(appDir);
-
+;
 let fixedCount = 0;
 let errorCount = 0;
-
+;`
 console.log(`Found ${files.length} TypeScript files to check`);
-
-for (const file of files) {
-  try {
+;
+for (const file of files) {;
+  try {;
     const wasFixed = fixMergeConflicts(file);
-    if (wasFixed) {
-      fixedCount++;
-    }
-  } catch (error) {
+    if (wasFixed) {;
+      fixedCount++}
+  } catch (error) {;`
     console.error(`Error processing ${file}:`, error.message);
+<<<<<<< HEAD
     errorCount++;
   }
 }
@@ -212,3 +243,11 @@ for (const dir of otherDirs) {
 "
 console.log(`Total files fixed: ${totalFixed}`);"'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
+=======
+    errorCount++}
+}`
+console.log(`\nMerge conflict resolution complete!`);`
+console.log(`Files fixed: ${fixedCount}`);`
+console.log(`Errors: ${errorCount}`);`
+console.log(`Total files processed: ${files.length}`);`'
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

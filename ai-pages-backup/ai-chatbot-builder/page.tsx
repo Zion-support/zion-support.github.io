@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react";"
 import Link from 'next/link";"
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react";"
@@ -17,3 +18,23 @@ import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Ta
     { "number": '24/7', "label": 'Customer Support";"'"
 import { ArrowRight } from 'lucide-react";"
 }}}}'"
+=======
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from from 'lucide-react'
+  "color": 'from-cyan-500 to-blue-500'";'"
+  "color": 'from-green-500 to-emerald-500'";'"
+  "color": 'from-purple-500 to-pink-500'";'"
+  "color": 'from-orange-500 to-red-500'";'"
+  "color": 'from-blue-500 to-cyan-500'";'"
+  "color": 'from-indigo-500 to-purple-500'";'"
+  "benefits": ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses'";'"
+  "benefits": ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates'";'"
+  "benefits": ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations'";'"
+  "benefits": ['Reduce HR workload', 'Consistent information', 'Employee satisfaction'";'"
+    { "number": '10,000+', "label": 'Chatbots Created'";'"
+    { "number": '50+', "label": 'Languages Supported'";'"
+    { "number": '99.9%', "label": 'Uptime Guarantee'";'"
+    { "number": '24/7', "label": 'Customer Support';'"
+import { ArrowRight } from from 'lucide-react';";'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
