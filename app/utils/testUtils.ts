@@ -1,3 +1,12 @@
+<<<<<<< HEAD:app-broken/app/utils/testUtils.ts
+"use client";
+import React from 'react';
+
+const testUtils.ts = () => {
+  return null;
+};
+
+export default testUtils.ts;
 'use client'
 /**
 * Testing Utilities
@@ -290,28 +299,36 @@ export const retryWithBackoff = async <T>(
 * Measure execution time of a function
 */
 export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> => {
-  const start = performance.now();
-  const result = await fn();
-  const duration = performance.now() - start;
-  return { result, duration };
-};
-
-const testUtils = {
-  wait,
-  waitFor,
-  mockFetch,
-  createMockStorage,
-  mockWindow,
-  createMockPerformance,
-  generateTestData,
-  deepClone,
-  deepEqual,
-  ConsoleSpy,
-  createDeferred,
-  retryWithBackoff,
-  measureExecutionTime
-};
-
-export default testUtils;
+fn: () => T | Promise<T>): Promise<{ result: T; duration: number }> => {
+fn: () => T | Promise<T>;}
+): Promise<{ result: T; duration: number }> => {}
+const start = performance.now()
+const result = await fn()
+const duration = performance.now() - start;}
+return { result, duration }
+}
+export default {}
+wait,
+waitFor,
+mockFetch,
+createMockStorage,
+mockWindow,
+createMockPerformance,
+generateTestData,
+deepClone,
+deepEqual,
+ConsoleSpy,
+createDeferred,
+retryWithBackoff,
+measureExecutionTime}
+}
+export const measureExecutionTime = async <T>(f)
+n: () => T | Promise<T></T>
+): Promise<{/* TODO: Fix JSX expression */}
+n: number }> => {/* TODO: Fix JSX expression */}
+return { result, duration }
+}
+export default {/* TODO: Fix JSX expression */}
+}
+`
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/testUtils.ts
