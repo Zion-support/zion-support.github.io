@@ -15,7 +15,7 @@ const nextConfig = {
   },
   
   // Disable static optimization
-  // generateStaticParams is not a valid Next.js config option
+  // generateStaticParams: false, // This is not a valid Next.js config option
   
   // Disable linting and type checking during build
   eslint: {
