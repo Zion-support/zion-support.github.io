@@ -1,8 +1,8 @@
 'use client'
 
-import { Link from 'next/link'
-import { usePathname   } from 'next/navigation'
-import React   } from 'react'
+import { Link from 'next/link';
+import { usePathname   } from 'next/navigation';
+import React   } from 'react';
 
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();

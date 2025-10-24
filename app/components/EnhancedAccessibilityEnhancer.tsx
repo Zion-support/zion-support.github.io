@@ -127,7 +127,7 @@ export default EnhancedAccessibilityEnhancerPage        <section className="py-2
             </p></div>
         <div className="grid grid-cols-1 mdgrid-cols-2 gap-6">benefitsmapbenefit index => 
               </div>
-        <div key=index className=quotflex items-start space-x-3quot> </div></div></><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
+        <div key=index className=quotflex items-start space-x-3quot> </div></div><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
               </div>
             
           </div>

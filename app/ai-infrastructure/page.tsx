@@ -1,9 +1,9 @@
-'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import Footer from '/components/Footer'
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
 
 export default function AiinfrastructurePage() {
   return (
@@ -20,15 +20,16 @@ export default function AiinfrastructurePage() {
           <p className="text-lg text-gray-300 mb-8">
             ai-infrastructure services Transform your business with our expert solutions. services coming soon.
           </p>
-          <LinkContact Us
-            >
-            $2
-            <ArrowRight$3 />
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-200"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>
       <Footer />
-    </div>
     </div>
   );
 }

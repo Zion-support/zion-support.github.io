@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, ReactNode } from "react"
+import React, { createContext, useContext, useEffect, ReactNode } from "react";
 declare global {
   interface Window {
 

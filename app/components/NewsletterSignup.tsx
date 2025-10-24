@@ -98,7 +98,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           ✓ Exclusive content and early access</br>
         </p>
       </div>
-    </div>
   if (variant === 'modal') {
     return (
     <>

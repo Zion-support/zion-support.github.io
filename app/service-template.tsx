@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React from 'react';
 
 interface ServiceTemplateProps {
   title: string;
@@ -36,6 +36,5 @@ const ServiceTemplat,
             ))}
           </div>
         </div>
-      </div>
-    </div>}
+      </div>}
 export default ServiceTemplate;

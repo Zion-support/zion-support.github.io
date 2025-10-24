@@ -1,10 +1,10 @@
 'use client'
-import { { { Footer from 'Footer'
-import { Navigation from '/Navigation'
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe          } from 'lucide-react'
-import { { ArrowRight       } from 'lucide-react'
+import { { { Footer from 'Footer';
+import { Navigation from '/Navigation';
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe          } from 'lucide-react';
+import { { ArrowRight       } from 'lucide-react';
   
   const benefits="'Increase" efficiency by up to 50'
     'Reduce costs by 30 with automation'
@@ -93,7 +93,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
               
             </div>
@@ -126,8 +126,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
  SystemMonitorPage
             </div>
         </div>
-    </div>
-    </div>
   );
 =======
   );

@@ -1,8 +1,8 @@
-'use client'
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import  ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react'
-import { { Phone Mail     } from 'lucide-react'
+'use client';
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import  ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react';
+import { { Phone Mail     } from 'lucide-react';
     'use client'
       'Gain competitive advantage with advanced technology'
 
@@ -34,7 +34,7 @@ const EnhancedHero: React.FC = () => {
                   </div>
         <div className="flex-shrink-0">
                     </div><CheckCircle className="w-6 h-6 text-emerald-400" />
-                  </div></>
+                  </div>
                   <p className="text-gray-300">benefit</p></p>
                 </div>
               
