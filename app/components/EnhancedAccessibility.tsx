@@ -4,13 +4,7 @@ import { AccessibilitySettings, AccessibilityContextType } from '../types/access
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
-  return context;
-};
+// Context and hook moved to separate files for fast refresh compatibility
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;
