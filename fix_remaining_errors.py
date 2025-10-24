@@ -1,107 +1,136 @@
 #!/usr/bin/env python3
-"""
-Script to fix remaining JSX syntax errors
-"""
-
 import os
 import re
 import glob
 
-def fix_jsx_file(file_path):
-    """Fix remaining JSX syntax errors in a file"""
+def fix_remaining_errors(file_path):
+    """Fix remaining parsing errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix missing imports
-        if 'import React' not in content and ('React.FC' in content or 'React.Fragment' in content):
-            content = '"use client";\nimport React from "react";\n' + content
+        # Fix unterminated string literals
+        content = re.sub(r"'([^']*)$", r"'\1'", content, flags=re.MULTILINE)
+        content = re.sub(r'"([^"]*)$', r'"\1"', content, flags=re.MULTILINE)
         
-        # Fix missing Helmet import
-        if '<Helmet>' in content and 'import { Helmet }' not in content:
-            content = content.replace('"use client";\nimport React from "react";', 
-                                   '"use client";\nimport React from "react";\nimport { Helmet } from "react-helmet-async";')
+        # Fix missing semicolons after imports
+        content = re.sub(r"import\s+([^;]+)(?<!;)$", r"import \1;", content, flags=re.MULTILINE)
         
-        # Fix incomplete JSX fragments
-        if 'return (' in content and '<>' not in content and '<React.Fragment>' not in content:
-            content = content.replace('return (', 'return (\n    <>')
-            if not content.strip().endswith('</>'):
-                content = content.rstrip() + '\n    </>\n  );'
+        # Fix missing semicolons after variable declarations
+        content = re.sub(r"(const|let|var)\s+([^=]+)=([^;]+)(?<!;)$", r"\1 \2=\3;", content, flags=re.MULTILINE)
         
-        # Fix missing closing tags
-        content = re.sub(r'<section[^>]*>\s*$', lambda m: m.group(0) + '\n        </section>', content)
-        content = re.sub(r'<div[^>]*>\s*$', lambda m: m.group(0) + '\n              </div>', content)
+        # Fix missing closing brackets in arrays
+        content = re.sub(r"\[([^\]]*)$", r"[\1]", content, flags=re.MULTILINE)
         
-        # Fix incomplete map functions
-        if 'features.map(' in content and 'features = [' not in content:
-            features_def = '''  const features = [
-    {
-      icon: () => null,
-      title: "Feature",
-      description: "Description",
-    },
-  ];'''
-            content = content.replace('const ', features_def + '\n\n  const ')
+        # Fix missing closing parentheses
+        content = re.sub(r"\(([^)]*)$", r"(\1)", content, flags=re.MULTILINE)
         
-        # Fix incomplete JSX elements
-        content = re.sub(r'<button[^>]*>\s*$', lambda m: m.group(0) + '\n                Button Text\n              </button>', content)
-        content = re.sub(r'<a[^>]*>\s*$', lambda m: m.group(0) + '\n                Link Text\n              </a>', content)
+        # Fix malformed object properties
+        content = re.sub(r'"([^"]*)":\s*([^,}]+)(?![,}])', r'"\1": \2,', content)
         
-        # Fix missing closing tags in map functions
-        content = re.sub(r'\{features\.map\([^}]*\)\s*$', 
-                        lambda m: m.group(0) + '\n              ))}\n            </div>', content)
+        # Fix missing commas in arrays
+        content = re.sub(r"'([^']*)'(?=\s*$)", r"'\1',", content, flags=re.MULTILINE)
         
-        # Fix incomplete return statements
-        if 'return (' in content and not content.strip().endswith(');'):
-            content = content.rstrip() + '\n  );'
+        # Fix console statements (remove or comment out)
+        content = re.sub(r"console\.(log|warn|error|info)\([^)]*\);?", r"// \0", content)
         
-        # Fix missing export
-        if 'export default' not in content and 'const ' in content:
-            component_name = re.search(r'const (\w+):', content)
-            if component_name:
-                content += f'\n\nexport default {component_name.group(1)};'
+        # Fix malformed JSX
+        content = re.sub(r"<([^>]*)$", r"<\1>", content, flags=re.MULTILINE)
         
-        # Fix extra closing braces
-        content = re.sub(r'}\s*\)\s*$', '}', content)
+        # Fix missing closing braces
+        content = re.sub(r"\{([^}]*)$", r"{\1}", content, flags=re.MULTILINE)
         
-        # Fix missing closing tags for common patterns
-        if '<section' in content and '</section>' not in content:
-            content += '\n        </section>'
-        if '<div' in content and '</div>' not in content:
-            content += '\n      </div>'
-        if '<React.Fragment>' in content and '</React.Fragment>' not in content:
-            content += '\n    </React.Fragment>'
-        if '<>' in content and '</>' not in content:
-            content += '\n    </>'
+        # Fix standalone string literals
+        content = re.sub(r"^\s*'([^']*)'\s*$", r"// \1", content, flags=re.MULTILINE)
+        
+        # Fix malformed function declarations
+        content = re.sub(r"const\s+([^=]+)=\s*\([^)]*\)\s*=>\s*\{([^}]*)$", r"const \1 = () => {\n  \2\n}", content, flags=re.MULTILINE)
+        
+        # Fix missing return statements
+        content = re.sub(r"const\s+([^=]+)=\s*\([^)]*\)\s*=>\s*([^{][^;]*)$", r"const \1 = () => {\n  return \2;\n}", content, flags=re.MULTILINE)
         
         # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed: {file_path}")
             return True
-        else:
-            print(f"No changes needed: {file_path}")
-            return False
-            
+        
+        return False
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix remaining JSX files"""
-    # Find all TypeScript/JSX files in the app directory
-    pattern = "app/**/*.tsx"
-    files = glob.glob(pattern, recursive=True)
+    # Get list of files with errors from the linter output
+    error_files = [
+        '/workspace/app/components/SEOOptimizer.tsx',
+        '/workspace/app/pricing/page.tsx',
+        '/workspace/components/DefaultSEO.tsx',
+        '/workspace/components/OptimizedImage.tsx',
+        '/workspace/components/SEO/DefaultSEO.tsx',
+        '/workspace/components/SEO/MetaTags.tsx',
+        '/workspace/components/SEO/StructuredData.tsx',
+        '/workspace/src/ai-analytics-dashboard/page.tsx',
+        '/workspace/src/ai-content-generation/page.tsx',
+        '/workspace/src/ai-crm/page.tsx',
+        '/workspace/src/ai-customer-support/page.tsx',
+        '/workspace/src/ai-cybersecurity/page.tsx',
+        '/workspace/src/ai-data-visualization/page.tsx',
+        '/workspace/src/ai-document-processing/page.tsx',
+        '/workspace/src/ai-fashion-design/page.tsx',
+        '/workspace/src/ai-fitness-coach/page.tsx',
+        '/workspace/src/ai-healthcare/page.tsx',
+        '/workspace/src/ai-lead-generation/page.tsx',
+        '/workspace/src/ai-marketing/page.tsx',
+        '/workspace/src/ai-music-composition/page.tsx',
+        '/workspace/src/ai-project-manager/page.tsx',
+        '/workspace/src/ai-sales-automation/page.tsx',
+        '/workspace/src/ai-scheduler/page.tsx',
+        '/workspace/src/ai-services/page.tsx',
+        '/workspace/src/ai-social-media-manager/page.tsx',
+        '/workspace/src/ai-video-generation/page.tsx',
+        '/workspace/src/ai-voice-cloning/page.tsx',
+        '/workspace/src/ai-workflow-automation/page.tsx',
+        '/workspace/src/api-docs/page.tsx',
+        '/workspace/src/autonomous-systems/page.tsx',
+        '/workspace/src/business-intelligence/page.tsx',
+        '/workspace/src/cloud-services/page.tsx',
+        '/workspace/src/compliance/page.tsx',
+        '/workspace/src/components/AdvancedSEOOptimizer.tsx',
+        '/workspace/src/components/ContentNewsletterSignup.tsx',
+        '/workspace/src/components/Footer.tsx',
+        '/workspace/src/components/PWAInstaller.tsx',
+        '/workspace/src/components/SEO.tsx',
+        '/workspace/src/components/SEOHead.tsx',
+        '/workspace/src/consultation/page.tsx',
+        '/workspace/src/contact/page.tsx',
+        '/workspace/src/demo/page.tsx',
+        '/workspace/src/devops/page.tsx',
+        '/workspace/src/expense-tracker/page.tsx',
+        '/workspace/src/it-services/page.tsx',
+        '/workspace/src/machine-learning/page.tsx',
+        '/workspace/src/micro-saas/page-original.tsx',
+        '/workspace/src/micro-saas/page.tsx',
+        '/workspace/src/page-optimized.tsx',
+        '/workspace/src/pricing/page.tsx',
+        '/workspace/src/quantum-computing/page.tsx',
+        '/workspace/src/setupTests.tsx',
+        '/workspace/src/sitemap-page.tsx',
+        '/workspace/src/smart-analytics/page.tsx',
+        '/workspace/src/task-manager-pro/page.tsx'
+    ]
     
     fixed_count = 0
-    for file_path in files:
-        if fix_jsx_file(file_path):
-            fixed_count += 1
     
-    print(f"\nFixed {fixed_count} files out of {len(files)} total files")
+    for file_path in error_files:
+        if os.path.exists(file_path):
+            if fix_remaining_errors(file_path):
+                fixed_count += 1
+                print(f"Fixed {file_path}")
+    
+    print(f"Fixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@ import React, { useEffect } from &quot;react&quot()
 interface AnalyticsProps {}
   className?: string()
 }
-const "Analytics": React.FC = () => {,
+const Analytics: React.FC = () => {,
   useEffect(() => {}
     const initAnalytics = () => {
       if (typeof window !== &quot;undefined&quot; && window.gtag) {

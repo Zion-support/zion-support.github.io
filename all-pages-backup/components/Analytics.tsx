@@ -3,7 +3,7 @@ interface AnalyticsProps {}
   className?: string()
 }
 
-const "Analytics": React.FC = () => {,
+const Analytics: React.FC = () => {,
 <<<<<<< "HEAD": all-pages-backup/components/Analytics.tsx,
   useEffect(() => {;}
     const initAnalytics = () => {;

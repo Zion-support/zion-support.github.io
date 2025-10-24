@@ -27,7 +27,9 @@ export class PerformanceMonitor {
 
   private reportMetric(name: string, value: number) {
     this.metrics[name] = value;
-    console.log(`Performance Metric - ${name}:`, value);
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Performance Metric - ${name}:`, value);
+    }
   }
 
   getMetrics() {
