@@ -259,3 +259,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+    console.log('Performance metrics:', metrics);
+  }
+};
