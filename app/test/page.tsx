@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from 'components/Footer';
-import Navigation from 'components/Navigation';
+import Footer from '../../components/Footer';
+import Navigation from '../../components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -32,10 +32,10 @@ const Page: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page New
+              Test
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced page new solutions powered by artificial intelligence and machine learning.
+              Advanced test solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 

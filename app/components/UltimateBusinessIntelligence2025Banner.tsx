@@ -58,10 +58,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(timer);
   }, [content.length]);
 
+<<<<<<< HEAD
+=======
   const handleClose = () => {
     setIsVisible(false);
   };
 
+>>>>>>> 7e811ae3eb649b39deed120bb7d72840f4dbe47d
   if (!isVisible) return null;
   const currentContent = content[currentSlide];
   return (
