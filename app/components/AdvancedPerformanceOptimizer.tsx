@@ -213,7 +213,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 100 0) / 1000}
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000
+        }
 
     }
   }, [performanceMetrics])
