@@ -9,7 +9,7 @@ const ContactForm: React.FC = memo(() => {
     isSubmitting,
     submitStatus,
     errors,
-    handleInputChange,
+    handleChange,
     handleSubmit,
   } = useForm({
     initialData: {
@@ -37,6 +37,11 @@ const ContactForm: React.FC = memo(() => {
       return errors;
     },
   });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    handleChange(name as 'name' | 'email' | 'message', value);
+  };
 
   return (
     <div>
