@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, Cloud, BarChart, Smartphone, Lock, Settings, MessageCircle, Mic, Eye } from 'lucide-react';
+import { ChevronDown, Menu, X, Cloud, BarChart, Smartphone, Lock, Settings, MessageCircle, Mic, Eye, Zap, Globe, TrendingUp } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -178,4 +178,4 @@ const Navigation: React.FC = () => {
   )
 }
 
-export default Navigation
+export default Navigation;

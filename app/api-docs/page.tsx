@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+// import Navigation from '../components/Navigation';
+// import Footer from '../components/Footer';
+// import SEOOptimizer from '../components/SEOOptimizer';
 
 export default function APIDocsPage() {
   const [_copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, _setSearchQuery] = useState('');
 
-  const copyToClipboard = (code: string, id: string) => {
+  const _copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
@@ -45,12 +45,12 @@ export default function APIDocsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
+      {/* <SEOOptimizer 
         title="API Documentation - Zion Tech Group"
         description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
-      />
-      <Navigation />
+      /> */}
+      {/* <Navigation /> */}
       
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16">
@@ -82,7 +82,7 @@ export default function APIDocsPage() {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

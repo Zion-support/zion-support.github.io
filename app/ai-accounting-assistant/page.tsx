@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Calculator, BarChart, FileText, Shield, CheckCircle } from 'lucide-react';
+import { Calculator, BarChart, FileText, Shield, CheckCircle } from 'lucide-react';;
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 

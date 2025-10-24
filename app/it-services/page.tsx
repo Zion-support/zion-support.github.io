@@ -2,7 +2,7 @@
 
 
 import React from "react";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight } from 'lucide-react';
 const ITServicesPage: React.FC = () => {
   const services = [
   {

@@ -3,7 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Leaf, Eye, BarChart, Shield } from 'lucide-react';
+import { CheckCircle, Leaf, Eye, BarChart, Shield, Zap, Globe } from 'lucide-react';;
 
 const AIAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [

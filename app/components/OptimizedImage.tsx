@@ -11,14 +11,8 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   quality?: number;
-<<<<<<< HEAD
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string}
-=======
-  placeholder?: 'empty' | 'blur';
-  blurDataURL?: string;
-}
->>>>>>> 37aba0f04e90e51acce54760149379a9baa32f3e
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,

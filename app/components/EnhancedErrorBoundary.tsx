@@ -1,7 +1,7 @@
 'use client';
 
 import React, { Component, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';;
 
 interface Props {
   children: ReactNode;
@@ -9,19 +9,12 @@ interface Props {
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
 }
 
-<<<<<<< HEAD
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = (_props) => {
   return (
     <div>
       {/* Component content */}
     </div>
   )};
-=======
-interface State {
-  hasError: boolean;
-  error: Error | null;
-}
->>>>>>> 37aba0f04e90e51acce54760149379a9baa32f3e
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
