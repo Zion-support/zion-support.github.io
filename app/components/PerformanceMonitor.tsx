@@ -10,7 +10,7 @@ export default function PerformanceMonitor() {
       const measurePageLoad = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.navigationStart
+          const loadTime = navigation.loadEventEnd - navigation.fetchStart
           console.log('Page load time:', loadTime + 'ms')
           
           // Track Core Web Vitals
