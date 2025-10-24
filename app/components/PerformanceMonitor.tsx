@@ -31,7 +31,7 @@ const PerformanceMonitor: React.FC = () => {
       if (process.env.NODE_ENV === 'production') {
         // Example: sendToAnalytics(metric);
       }
-    },
+    };
 
     // Only load web-vitals in production or when needed
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
