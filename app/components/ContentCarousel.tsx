@@ -1,18 +1,26 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client'
 import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from "lucide-react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 interface Slide {
   id: number
   title: string
   description: string
   features: string[]
   icon: React.ReactNode
+<<<<<<< HEAD
   color: string
 }
 
@@ -57,18 +65,71 @@ const ContentCarousel: React.FC = () => {
         "Security training"
       ],
       icon: <Shield className="h-12 w-12" />,
+=======
+  color: string,
+}
+;
+const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const slides: Slide[] = [
+    {,
+      id: 1,"
+      title: "AI-Powered Analytics","
+      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+      features: ["
+        "Real-time data processing","
+        "Predictive analytics","
+        "Custom dashboards","
+        "Automated reporting"
+      ],"}
+      icon: <BarChart className: "h-12 w-12" />,}
+      color: "from-blue-500 to-cyan-500"
+    },
+    {id: 2,"
+      title: "Cloud Infrastructure","
+      description: "Scalable, secure, and reliable cloud solutions for your business needs.",
+      features: ["
+        "99.9% uptime guarantee","
+        "Auto-scaling capabilities","
+        "Advanced security","
+        "24/7 monitoring"</BarChart>
+      ],</BarChart>;"}
+      icon: <Cloud className: "h-12 w-12" />,}
+      color: "from-green-500 to-emerald-500"
+    },
+    {id: 3,"
+      title: "Cybersecurity Solutions","
+      description: "Protect your business with our comprehensive cybersecurity services.",
+      features: ["
+        "Threat detection","
+        "Vulnerability assessment","
+        "Incident response","
+        "Security training"</Cloud>
+      ],</Cloud>;"}
+      icon: <Shield className: "h-12 w-12" />,}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       color: "from-red-500 to-pink-500"
     }
   ]
 
+<<<<<<< HEAD
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+=======
+  const nextSlide = (): JSX.Element => {
+    setCurrentSlide((pr, e, v) => (prev + 1) % slides.length)
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   }
 
+  const prevSlide = (): JSX.Element => {
+    setCurrentSlide((pr, e, v) => (prev - 1 + slides.length) % slides.length)
+  }
+
+const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => {
   return (
     <>
       
@@ -95,6 +156,7 @@ const ContentCarousel: React.FC = () => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -154,6 +216,7 @@ const ContentCarousel: React.FC = () => {
                           <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; />
                           <span className=&quot;text-purple-100&quot;>{feature}</span>
                         </div>
+<<<<<<< HEAD
                       </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">{slide.title}</h3>
@@ -163,13 +226,23 @@ const ContentCarousel: React.FC = () => {
                             <li key={index} className="flex items-center text-gray-700">
                               <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                               {feature}
+=======
+                      </div>"
+                      <div className="flex-1"></div>"
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{slide.title}</h3>"
+                        <p className="text-gray-600 mb-6">{slide.description}</p>"
+                        <ul className="space-y-2"></ul>
+                          {slide.features.map((feature, index) => (</ul>"
+                            <li key="{index} className="flex items-center text-gray-700"></li>"
+                              <CheckCircle className="h-5 w-5 text-green-500 mr-2" /></CheckCircle>
+                              {feature}</CheckCircle>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
                   </div>
-                </div>
               ))}
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
       <div className=&quot;max-w-7xl mx-auto&quot;>{/* Header */}</div>
@@ -179,7 +252,7 @@ const ContentCarousel: React.FC = () => {
           </h2>
           <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
         </div>
-        {/* Carousel Container */}
+        {/* Carousel Container *,/}
         {/* Carousel */}
         <div className=&quot;relative&quot;></div>
           <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden&quot;></div>
@@ -218,7 +291,6 @@ const ContentCarousel: React.FC = () => {
                     <ArrowRight className=&quot;w-5 h-5&quot; />
                     Learn More
                 </div>
-              </div>
               {/* Visual Element */}
               <div className=&quot;relative&quot;></div>
                 <div className=&quot;aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center&quot;></div>
@@ -256,12 +328,11 @@ const ContentCarousel: React.FC = () => {
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronLeft className=&quot;h-6 w-6&quot; />
           </button>
-          <button
+          <button;
             onClick={nextSlide}
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronRight className=&quot;h-6 w-6&quot; />
           </button>
-        </div>
 {/* Slide Indicators */}
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
           >
@@ -274,15 +345,21 @@ const ContentCarousel: React.FC = () => {
           ></button>
             <ChevronRight className=&quot;w-6 h-6&quot; />
           </button>
-        </div>
         {/* Slide Indicators */}
         <div className=&quot;flex justify-center mt-8 space-x-2&quot;>{slides.map((_, index) => (</div>
             <button
+<<<<<<< HEAD
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
               }`}
+=======
+              key={ ind, e, x }onClick={() => setCurrentSlide(ind, e, x)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+    }`}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -306,7 +383,7 @@ const ContentCarousel: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -326,20 +403,25 @@ const ContentCarousel: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default ContentCarouselPage;
             <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
-        </div>
       </div>
-    </div>
+    </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
   )
 }
+<<<<<<< HEAD
 
 export default ContentCarousel
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+=======
+;"
+export default ContentCarousel
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

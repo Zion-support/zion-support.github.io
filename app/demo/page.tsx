@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Play, Right, Circle, Star } from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client';
 import React, { useState } from 'react';
 import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield } from 'lucide-react';
@@ -42,6 +52,7 @@ const DemoPage: React.FC = () => {
             </p>
           </div>
         </section>
+    </>
 
         {/* Demo Selection */}
         <section className="py-20">
@@ -133,4 +144,18 @@ const DemoPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default DemoPage;
+=======
+export default DemoPage;
+
+export default DemoPage;
+
+export default PagePage;
+
+export default PagePage;
+
+export default PagePage;
+
+export default PagePage;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

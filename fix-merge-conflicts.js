@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPa, t, h } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filena, m, e);
 
-function fixMergeConflicts(filePath) {
+function fixMergeConflicts(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -19,7 +19,7 @@ function fixMergeConflicts(filePath) {
         continue; // Skip lines in the non-HEAD section
       }
       
-      fixedLines.push(line);
+      fixedLines.push(li, n, e);
     }
     
     const fixedContent = fixedLines.join('\n');
@@ -32,48 +32,48 @@ function fixMergeConflicts(filePath) {
     
     fs.writeFileSync(filePath, cleanedContent);
     return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
-function findTsxFiles(dir) {
+function findTsxFiles(d, i, r) {
   const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentD, i, r) {
+    const items = fs.readdirSync(currentD, i, r);
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+      const stat = fs.statSync(fullPa, t, h);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
+        traverse(fullPa, t, h);
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
+        files.push(fullPa, t, h);
       }
     }
   }
   
-  traverse(dir);
+  traverse(d, i, r);
   return files;
 }
 
 // Main execution
 const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
+const files = findTsxFiles(appD, i, r);
 
-console.log(`Found ${files.length} TypeScript files to check`);
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 let fixedCount = 0;
 for (const file of files) {
-  if (fixMergeConflicts(file)) {
+  if (fixMergeConflicts(fi, l, e)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log(`Fixed merge conflicts in ${ fixedCou, n, t } files`);
 
 // Also check the root App.tsx
 if (fixMergeConflicts(path.join(__dirname, 'App.tsx'))) {
@@ -81,4 +81,4 @@ if (fixMergeConflicts(path.join(__dirname, 'App.tsx'))) {
   console.log('Fixed merge conflicts in App.tsx');
 }
 
-console.log(`Total files fixed: ${fixedCount}`);
+console.log(`Total files fixed: ${ fixedCou, n, t }`);

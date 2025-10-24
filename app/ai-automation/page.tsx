@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -198,7 +205,11 @@ const AIAutomationPage: React.FC = () => {
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
+=======
+            ))}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
           </div>
         </div>
       </section>
@@ -233,4 +244,14 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutomationPage;
+=======
+export default AIAutomationPage;
+
+export default Aiautomation;
+
+export default AiAutomation;
+
+export default AiAutomationPag;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

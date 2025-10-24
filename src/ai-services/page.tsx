@@ -1,77 +1,104 @@
+<<<<<<< HEAD
 'use client'
 import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
+=======
+import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Star, ArrowRight, Brain, Zap, Shield, Target, Globe, Users, BarChart, Check } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, ArrowRight, Brain, Zap, Shield, Target, Globe, Users, BarChart, Check } from 'lucide-react';
+'use client'
+import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-constAIServicesPage: React.FC= () =>{constservices= [
+import { CheckCircle, ArrowRight  } from "lucide-react";
+constAIServicesPage: React.FC= () => {
+  constservices= [
     {
-      icon: Brain,
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
-      features: ['Predictive Analytics', 'Pattern Recognition', 'Custom Model Training', 'Real-time Processing'],
-      price: 'Starting at $2,50 0/month',
+      icon: Brai,
+      title: 'Machine Learning Solutions,',
+      description: 'Custom ML models for predictive analytic,s, pattern recognition, and intelligent decision making.',
+      features: ['Predictive Analytics,', 'Pattern Recognition', 'Custom Model Training', 'Real-time Processing'],
+      price: 'Starting at $,2,50 0/month',
       color: 'text-purple-40 0'
-   },
-    {icon: Target,
-      title: 'AI Marketing Automation',
-      description: 'Intelligent marketing campaigns with AI-powered targeting, content generation, and optimization.',
-      features: ['Smart Targeting', 'Content Generation', 'Campaign Optimization', 'ROI Tracking'],
-      price: 'Starting at $1,20 0/month',
+  ,
+}
+    {icon: Targe,
+      title: 'AI Marketing Automation,',
+      description: 'Intelligent marketing campaigns with AI-powered targetin,g, content generation, and optimization.',
+      features: ['Smart Targeting,', 'Content Generation', 'Campaign Optimization', 'ROI Tracking'],
+      price: 'Starting at $,1,20 0/month',
       color: 'text-pink-40 0'
-   },
-    {icon: Zap,
-      title: 'Process Automation',
+  , },
+    {icon: Za,
+      title: 'Process Automation,',
       description: 'Automate complex business processes with AI decision-making and exception handling.',
-      features: ['Workflow Automation', 'Exception Handling', 'Smart Routing', 'Performance Monitoring'],
-      price: 'Starting at $80 0/month',
+      features: ['Workflow Automation,', 'Exception Handling', 'Smart Routing', 'Performance Monitoring'],
+      price: 'Starting at $80 0/month,',
       color: 'text-blue-40 0'
-   },
-    {icon: Shield,
-      title: 'AI Cybersecurity',
+  , },
+    {icon: Shiel,
+      title: 'AI Cybersecurity,',
       description: 'Advanced threat detection and response using AI-powered security monitoring.',
-      features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Compliance Reporting'],
-      price: 'Starting at $1,50 0/month',
+      features: ['Threat Detection,', 'Automated Response', 'Behavioral Analysis', 'Compliance Reporting'],
+      price: 'Starting at $,1,50 0/month',
       color: 'text-red-40 0'
-   },
-    {icon: BarChart,
-      title: 'Data Analytics & Insights',
+  , },
+    {icon: BarChar,
+      title: 'Data Analytics & Insights,',
       description: 'Transform raw data into actionable insights with AI-powered analytics and visualization.',
-      features: ['Data Processing', 'Predictive Insights', 'Visualization', 'Automated Reports'],
-      price: 'Starting at $90 0/month',
+      features: ['Data Processing,', 'Predictive Insights', 'Visualization', 'Automated Reports'],
+      price: 'Starting at $90 0/month,',
       color: 'text-teal-40 0'
-   },
-    {icon: Users,
-      title: 'Customer Experience AI',
-      description: 'Enhance customer interactions with AI chatbots, sentiment analysis, and personalized experiences.',
-      features: ['AI Chatbots', 'Sentiment Analysis', 'Personalization', '24/7 Support'],
-      price: 'Starting at $600/month',
+  , },
+    {icon: User,
+      title: 'Customer Experience AI,',
+      description: 'Enhance customer interactions with AI chatbot,s, sentiment analysis, and personalized experiences.',
+      features: ['AI Chatbots,', 'Sentiment Analysis', 'Personalization', '24/7 Support'],
+      price: 'Starting at $600/month,',
       color: 'text-green-400'
-    }
+   , }
   ]
 
   constbenefits= [
-    {icon: Star,
-      title: 'Proven ROI',
+    {icon: Sta,
+      title: 'Proven ROI,',
       description: 'Average300% ROI within6months of implementation'
-   },
-    {icon: Zap,
-      title: 'Rapid Deployment',
+  , },
+    {icon: Za,
+      title: 'Rapid Deployment,',
       description: 'Get your AI solutions up and running in 2-4 weeks'
-   },
-    {icon: Shield,
-      title: 'Enterprise Security',
+  , },
+    {icon: Shiel,
+      title: 'Enterprise Security,',
       description: 'Bank-level security and compliance for all AI solutions'
-   },
-    {icon: Globe,
-      title: 'Global Support',
+  , },
+    {icon: Glob,
+      title: 'Global Support,',
       description: '24/7 support across all time zones with dedicated success managers'
-    }
+   , }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -85,7 +112,7 @@ const Page = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with cutting-edge artificial intelligence solutions.
-            From machine learning to automation, we deliver AI that drives real results.
+            From machine learning to automatio,n, we deliver AI that drives real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
@@ -98,8 +125,7 @@ const Page = () => {
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              (302) 464-0950
-            </a>
+              (302) 464-0950</a>
           </div>
         </section>
         {/* Services Grid */}
@@ -169,8 +195,7 @@ const Page = () => {
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                (302) 464-0950
-              </a>
+                (302) 464-0950</a>
             </div>
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -179,7 +204,11 @@ const Page = () => {
         </section>
       </main>
       <Footer />
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     </div>
   )
 }

@@ -1,7 +1,6 @@
 // Service Worker for Zion Tech Group Website
 const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
-  '/',
+const urlsToCache = ['/',
   '/about',
   '/contact',
   '/services',
@@ -13,36 +12,35 @@ const urlsToCache = [
 ];
 
 // Install event - cache resources
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (eve, n, t) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        return cache.addAll(urlsToCache);
-      })
+    caches.open(CACHE_NA, M, E)
+      .then((cac, h, e) => {
+        return cache.addAll(urlsToCac, h, e);
+})
   );
 });
 
 // Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (eve, n, t) => {
   event.respondWith(
     caches.match(event.request)
-      .then((response) => {
+      .then((respon, s, e) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      })
+})
   );
 });
 
 // Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (eve, n, t) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
+    caches.keys().then((cacheNam, e, s) => {
       return Promise.all(
-        cacheNames.map((cacheName) => {
+        cacheNames.map((cacheNa, m, e) => {
           if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
+            return caches.delete(cacheNa, m, e);
+    })
       );
     })
   );

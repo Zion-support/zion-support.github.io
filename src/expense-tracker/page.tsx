@@ -1,50 +1,71 @@
+<<<<<<< HEAD
 'use client'
+=======
+import React from 'react';
+import { Receipt, CheckCircle, Phone, Star, Brain, Zap, Shield, Target, TrendingUp, Check } from 'lucide-react';
+import { X, Brain, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import { Recei, p, t } from "lucide-react";
+import { CheckCircle, Star, Phone } from "lucide-react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import { X, Brain, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { Receipt } from 'lucide-react'
 import { CheckCircle, Star, Phone } from 'lucide-react'
+<<<<<<< HEAD
+=======
+=======
+'use client';
+import React from 'react';
+import { Receipt, CheckCircle, Phone, Star, Brain, Zap, Shield, Target, TrendingUp, Check } from 'lucide-react';
+import { Receipt } from 'lucide-react'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 constExpenseTrackerPage: React.FC= () =>{constfeatures= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
-      icon: Receipt,
-      title: 'Smart Receipt Scanning',
-      description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
+      icon: Receip,
+      title: 'Smart Receipt Scanning,',
+      description: 'AI-powered receipt scanning that automatically extracts expense dat,a, categorizes transactions, and creates detailed reports.',
       benefit: 'Save 8+ hours per month'
-   },
-    {icon: TrendingUp,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
+  ,
+}
+    {icon: TrendingU,
+      title: 'Real-time Analytics,',
+      description: 'Get instant insights into your spending patterns with interactive chart,s, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by25%'
-   },
-    {icon: Brain,
-      title: 'AI Categorization',
+  , },
+    {icon: Brai,
+      title: 'AI Categorization,',
       description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
       benefit: '9 9% accurate categorization'
-   },
-    {icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
+  , },
+    {icon: Za,
+      title: 'Automated Workflows,',
+      description: 'Set up automated expense approval workflow,s, reimbursement processes, and compliance checks.',
       benefit: 'Process expenses5x faster'
-   },
-    {icon: Target,
-      title: 'Budget Management',
+  , },
+    {icon: Targe,
+      title: 'Budget Management,',
       description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
       benefit: 'Stay within budget90% of the time'
-   },
-    {icon: Shield,
-      title: 'Compliance & Security',
+  , },
+    {icon: Shiel,
+      title: 'Compliance & Security,',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
       benefit: '100% compliance guarantee'
-    }
+   , }
   ]
 
   constpricingPlans= [
-    {name: 'Personal',
-      price: '$9',
-      period: '/month',
+    {name: 'Personal,',
+      price: '$9,',
+      period: '/month,',
       description: 'Perfect for individuals',
-      features: [
-        'Unlimited receipts',
+      features: ['Unlimited receipts,',
         'Basic AI categorization',
         'Expense reports',
         'Mobile app access',
@@ -52,13 +73,12 @@ constExpenseTrackerPage: React.FC= () =>{constfeatures= [
         '1 year data retention'
       ],
       popular: false
-   },
-    {name: 'Business',
-      price: '$2 9',
-      period: '/month',
+  , },
+    {name: 'Business,',
+      price: '$2 9,',
+      period: '/month,',
       description: 'Ideal for small businesses',
-      features: [
-        'Up to 10users',
+      features: ['Up to 10users,',
         'Advanced AI features',
         'Team collaboration',
         'Custom categories',
@@ -68,13 +88,12 @@ constExpenseTrackerPage: React.FC= () =>{constfeatures= [
         '2 years data retention'
       ],
       popular: true
-   },
-    {name: 'Enterprise',
-      price: '$9 9',
-      period: '/month',
+  , },
+    {name: 'Enterprise,',
+      price: '$9 9,',
+      period: '/month,',
       description: 'For large organizations',
-      features: [
-        'Unlimited users',
+      features: ['Unlimited users,',
         'Premium AI features',
         'Custom workflows',
         'Advanced integrations',
@@ -84,40 +103,52 @@ constExpenseTrackerPage: React.FC= () =>{constfeatures= [
         'Custom compliance rules'
       ],
       popular: false
-    }
+   , }
   ]
 
   const integrations = [
-    { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
-    { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
-    { name: 'Sage', icon: '📈', description: 'Business management' },
-    { name: 'Stripe', icon: '💳', description: 'Payment processing' },
-    { name: 'PayPal', icon: '💸', description: 'Online payments' },
-    { name: 'Slack', icon: '💬', description: 'Team communication' },
-    { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
-    { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
+    { name: 'QuickBooks,',
+      icon: '📊,', description: 'Accounting software', },
+    { name: 'Xero,',
+      icon: '💰,', description: 'Cloud accounting', },
+    { name: 'Sage,',
+      icon: '📈,', description: 'Business management', },
+    { name: 'Stripe,',
+      icon: '💳,', description: 'Payment processing', },
+    { name: 'PayPal,',
+      icon: '💸,', description: 'Online payments', },
+    { name: 'Slack,',
+      icon: '💬,', description: 'Team communication', },
+    { name: 'Microsoft Teams,',
+      icon: '👥,', description: 'Collaboration', },
+    { name: 'Google Workspace,',
+      icon: '📧,', description: 'Productivity suite', }
   ]
 
   consttestimonials= [
-    {name: 'Michael Johnson',
-      company: 'Small Business Owner',
-      role: 'CEO',
-      content: 'Expense Tracker saved me 1 0 hours per month on bookkeeping. The AI categorization is incredibly accurate.',
+    {name: 'Michael Johnson,',
+      company: 'Small Business Owner,',
+      role: 'CEO,',
+      content: 'Expense Tracker saved me 1 0 hours per month on bookkeeping. The AI categorization is incredibly accurate.,',
       rating:5},
-    {name: 'Sarah Williams',
-      company: 'Marketing Agency',
-      role: 'Finance Manager',
-      content: 'Our expense processing time dropped from2days to2hours. The automated workflows are game-changing.',
+    {name: 'Sarah Williams,',
+      company: 'Marketing Agency,',
+      role: 'Finance Manager,',
+      content: 'Our expense processing time dropped from2days to2hours. The automated workflows are game-changing.,',
       rating:5},
-    {name: 'David Chen',
-      company: 'Consulting Firm',
-      role: 'Operations Director',
-      content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
+    {name: 'David Chen,',
+      company: 'Consulting Firm,',
+      role: 'Operations Director,',
+      content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.,',
       rating: 5
-    }
+   , }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
@@ -134,7 +165,7 @@ const Page = () => {
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your expense management with AI-powered receipt scanning, automated categorization,
-            and intelligent financial insights. Save time, reduce errors, and gain complete control
+            and intelligent financial insights. Save time, reduce errors, and gain complete control;
             over your business finances.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
@@ -148,8 +179,7 @@ const Page = () => {
             <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
-            </a>
+              Start Free Trial</a>
           </div>
         </div>
         {/* Key Benefits */}
@@ -214,7 +244,7 @@ const Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular
+                plan.popular;
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}></div>
@@ -238,10 +268,8 @@ const Page = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                  plan.popular ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600' : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+               , }`}></button>
                   Get Started
                 </button>
               </div>
@@ -291,14 +319,17 @@ const Page = () => {
             <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
-            </a>
+              Start Free Trial</a>
           </div>
         </section>
       </section>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     </div>
-  )
+  ),
 }
 
 export default Page;

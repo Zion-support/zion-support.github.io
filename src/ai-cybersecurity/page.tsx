@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 'use client'
+=======
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -9,114 +12,140 @@ import { CheckCircle, Phone, Mail } from 'lucide-react'
 
 const AICybersecurityPage: React.FC = () => {
   const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {Lock, CheckCircle, Phone, Mail} from 'lucide-react';
+import { Lo, c, k } from "lucide-react";
+import { CheckCircle, Phone, Mail } from "lucide-react";
+import { Brain, BarChart }  from "lucide-react";
+import React  from "react";import Navigation  from "../components/Navigation";
+import Footer  from "../components/Footer";import SEOOptimizer  from "../components/SEOOptimizer";
+import { Lock }  from "lucide-react";import { CheckCircle, Phone, Mail }  from "lucide-react";'use client'
+const AICybersecurityPage: React.FC = () => {
+  return (
+    <div>
+        </div>
+        </div>
+    </div>
+  );
+      const features = [
     {
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced AI algorithms that detect and prevent cyber threats in real-time, including zero-day attacks and advanced persistent threats.',
+      icon: Brain
+      title: 'AI Threat Detection'
+      description: 'Advanced AI algorithms that detect and prevent cyber threats in real-time, including zero-day attacks and advanced persistent threats.'
       benefits: ['Real-time detection', 'Zero-day protection', '9 9.9% accuracy']
-   },
-    {icon: Shield,
-      title: 'Automated Response',
-      description: 'Intelligent automated response system that instantly contains threats, isolates affected systems, and initiates recovery procedures.',
+    </div>)
+  )
+}
+    {icon: Shield
+      title: 'Automated Response'
+      description: 'Intelligent automated response system that instantly contains threats, isolates affected systems, and initiates recovery procedures.'
       benefits: ['Instant containment', 'Auto-recovery', 'Minimal do wntime']
-   },
-    {icon: Eye,
-      title: 'Continuous Monitoring',
-      description: '2 4/7 monitoring of your entire infrastructure with AI-powered analysis of network traffic, user behavior, and system activities.',
+   }
+    {icon: Eye
+      title: 'Continuous Monitoring'
+      description: '2 4/7 monitoring of your entire infrastructure with AI-powered analysis of network traffic, user behavior, and system activities.'
       benefits: ['2 4/7 surveillance', 'Behavioral analysis', 'Anomaly detection']
-   },
-    {icon: BarChart,
-      title: 'Security Analytics',
-      description: 'Comprehensive security analytics and reporting with threat intelligence, risk assessment, and compliance monitoring.',
+   }
+    {icon: BarChart
+      title: 'Security Analytics'
+      description: 'Comprehensive security analytics and reporting with threat intelligence, risk assessment, and compliance monitoring.'
       benefits: ['Threat intelligence', 'Risk scoring', 'Compliance reports']
-   },
-    {icon: Zap,
-      title: 'Vulnerability Management',
-      description: 'Automated vulnerability scanning, prioritization, and patching with AI-powered risk assessment and remediation guidance.',
+   }
+    {icon: Zap
+      title: 'Vulnerability Management'
+      description: 'Automated vulnerability scanning, prioritization, and patching with AI-powered risk assessment and remediation guidance.'
       benefits: ['Auto-scanning', 'Risk prioritization', 'Patch management']
-   },
-    {icon: Lock,
-      title: 'Zero Trust Architecture',
-      description: 'Implement zero trust security model with identity verification, device trust, and least privilege access controls.',
+   }
+    {
+  icon: Lock
+      title: 'Zero Trust Architecture'
+      description: 'Implement zero trust security model with identity verification, device trust, and least privilege access controls.'
       benefits: ['Identity verification', 'Device trust', 'Least privilege']
-    }
+}
   ]
   const pricingPlans = [
     {
-      name: 'Essential',
-      price: '$799',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      name: 'Essential'
+      price: '$799'
+      period: '/month'
+      description: 'Perfect for small businesses'
       features: [
-        'Up to 50endpoints',
-        'Basic threat detection',
-        'Email security',
-        '2 4/7 monitoring',
-        'Email support',
-        'Basic reporting',
+        'Up to 50endpoints'
+        'Basic threat detection'
+        'Email security'
+        '2 4/7 monitoring'
+        'Email support'
+        'Basic reporting'
         'Standard compliance'
-      ],
-      popular: false
-   },
-    {name: 'Professional',
-      price: '$1,99 9',
-      period: '/month',
-      description: 'Ideal for growing companies',
+      ]
+      popular: false;
+   }
+    {name: 'Professional'
+      price: '$1,99 9'
+      period: '/month'
+      description: 'Ideal for growing companies'
       features: [
-        'Up to 500endpoints',
-        'Advanced AI detection',
-        'All security modules',
-        'Real-time response',
-        'Priority support',
-        'Advanced analytics',
-        'Custom compliance',
+        'Up to 500endpoints'
+        'Advanced AI detection'
+        'All security modules'
+        'Real-time response'
+        'Priority support'
+        'Advanced analytics'
+        'Custom compliance'
         'Incident response'
-      ],
-      popular: true
-   },
-    {name: 'Enterprise',
-      price: '$4,99 9',
-      period: '/month',
-      description: 'For large organizations',
+      ]
+      popular: true;
+   }
+    {
+  name: 'Enterprise'
+      price: '$4,99 9'
+      period: '/month'
+      description: 'For large organizations'
       features: [
-        'Unlimited endpoints',
-        'Custom AI models',
-        'Full security suite',
-        'Dedicated SOC team',
-        'Dedicated support',
-        'Custom development',
-        'Advanced compliance',
-        'Penetration testing',
+        'Unlimited endpoints'
+        'Custom AI models'
+        'Full security suite'
+        'Dedicated SOC team'
+        'Dedicated support'
+        'Custom development'
+        'Advanced compliance'
+        'Penetration testing'
         'SLA guarantee'
-      ],
-      popular: false
-    }
+      ]
+      popular: false;
+}
   ]
   const stats = [
-    { number: '99.9%', label: 'Threat Detection' },
-    { number: '24/7', label: 'Monitoring' },
-    { number: '60%', label: 'Faster Response' },
-    { number: '100%', label: 'Compliance' }
+    { number: '99.9%', label: 'Threat Detection' }
+    { number: '24/7', label: 'Monitoring' }
+    { number: '60%', label: 'Faster Response' }
+    {
+  number: '100%', label: 'Compliance'
+}
   ]
   const threats = [
     {
-      title: 'Ransomware Protection',
-      description: 'Advanced AI detection and prevention of ransomware attacks with automated backup and recovery systems.',
-      icon: Shield
-   },
-    {title: 'Phishing Detection',
-      description: 'AI-powered email security that detects and blocks sophisticated phishing attempts and social engineering attacks.',
-      icon: Eye
-   },
-    {title: 'Insider Threat Detection',
-      description: 'Behavioral analysis to identify and prevent insider threats, data exfiltration, and unauthorized access.',
-      icon: Users
-   },
-    {title: 'Network Security',
-      description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.',
-      icon: Globe
-    }
+      title: 'Ransomware Protection'
+      description: 'Advanced AI detection and prevention of ransomware attacks with automated backup and recovery systems.'
+      icon: Shield;
+   }
+    {title: 'Phishing Detection'
+      description: 'AI-powered email security that detects and blocks sophisticated phishing attempts and social engineering attacks.'
+      icon: Eye;
+   }
+    {title: 'Insider Threat Detection'
+      description: 'Behavioral analysis to identify and prevent insider threats, data exfiltration, and unauthorized access.'
+      icon: Users;
+   }
+    {
+  title: 'Network Security'
+      description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.'
+      icon: Globe;
+}
   ]
+<<<<<<< HEAD
   return (
   <><SEOOptimizertitle=&quot;AI Cybersecurity Solutions - ZionTechGroup&quot;
         description=&quot;Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats.&quot;
@@ -145,17 +174,139 @@ const AICybersecurityPage: React.FC = () => {
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                 >
                   <Phone className=&quot;w-5 h-5&quot; />
+=======
+  return(<><SEOOptimizertitle ="AI Cybersecurity Solutions - ZionTechGroup"
+        description="Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats."
+        keywords={
+  ['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']
+}
+        canonicalUrl="https://ziontechgroup.com/ai-cybersecurity"
+      />
+        </SEOOptimizertitle>
+        </SEOOptimizertitle>
+        </SEOOptimizertitle>
+</SEOOptimizertitle="AI Cybersecurity Solutions - ZionTechGroup"
+        description="Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats."
+        keywords={
+  ['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']
+}
+        canonicalUrl="https://ziontechgroup.com/ai-cybersecurity"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<//div>
+        <Navigation />
+        </Navigation>
+        </Navigation>
+        </Navigation>
+        </Navigation />
+        <main className="pt-16">
+        </main>
+        </main>
+        </main>
+        </div>
+        </main>
+        </main className="pt-16">
+        </div>
+          {
+  /* Hero Section */
+}
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+<//section>
+            <div className="max-w-4xl mx-auto"></div>
+<//div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+        </h1>
+        </h1>
+        </h1>
+        </div>
+        </h1>
+              </h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+                AI Cybersecurity Solutions;
+              </h1>
+
+              <//h1>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-xl md: text-2xl text-cyan-400 mb-8">
+                Protect your business with AI-powered security;
+              </p>
+
+              <//p>
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+        </div>
+                Our AI-powered cybersecurity platform provides advanced threat detection
+                automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
+              </p>
+
+              <//p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
+<//div>
+                <a ;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center space-x-2">
+        </a>
+        </a>
+        </a>
+        </div>
+                </a;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center space-x-2">
+        </div>
+                  <Phone className="w-5 h-5" />
+        </Phone>
+        </Phone>
+        </Phone>
+                  </Phone className="w-5 h-5" />)
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                   <span>Call (302) 464-0950</span>
+<//span>
                 </a>
+<<<<<<< HEAD
                 <a
                   href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className=&quot;w-5 h-5&quot; />
+=======
+
+                <//a>
+                <a ;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+        </a>
+        </a>
+        </a>
+                </a;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  <Mail className="w-5 h-5" />
+        </Mail>
+        </Mail>
+        </Mail>
+                  </Mail className="w-5 h-5" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                   <span>Get Security Audit</span>
+<//span>
                 </a>
+
+                <//a>
               </div>
+<<<<<<< HEAD
               {/* Stats */}
               <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;></div>
                 {stats.map((stat, index) => (
@@ -164,11 +315,40 @@ const AICybersecurityPage: React.FC = () => {
                       {stat.number}
                     </div>
                     <div className=&quot;text-gray-300 font-medium&quot;>{stat.label}</div>
+=======
+
+              <//div>
+              {
+  /* Stats */
+}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
+<//div>
+                {stats.map((stat, index) => (
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+<//div>
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
+<//div>
+                      {
+  stat.number
+}
+                    </div>
+
+                    <//div>
+                    <div className="text-gray-300 font-medium">{stat.label}</div>
+<//div>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                   </div>
+
+                  <//div>
                 ))}
               </div>
+
+              <//div>
             </div>
+
+            <//div>
           </section>
+<<<<<<< HEAD
           {/* Features Section */}
           <section className=&quot;container mx-auto px-4 py-16&quot;></section>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
@@ -184,14 +364,79 @@ const AICybersecurityPage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className=&quot;flex items-center space-x-2 text-sm text-cyan-400&quot;>
                         <CheckCircle className=&quot;w-4 h-4&quot; />
+=======
+
+          <//section>
+          {
+  /* Features Section */
+}
+          <section className="container mx-auto px-4 py-16"></section>
+<//section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+            </h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+              Advanced Security Features;
+            </h2>
+
+            <//h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+<//div>
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+<//div>
+                  <feature .icon className="w-12 h-12 text-cyan-400 mb-4" />
+        </feature>
+        </feature>
+        </feature>
+                  </feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+<//h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+<//p>
+                  <ul className="space-y-2">
+        </ul>
+        </ul>
+        </ul>
+        </div>
+        </ul>
+                  </ul className="space-y-2">
+        </div>
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
+        </li>
+        </li>
+        </li>
+        </div>
+                      </li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
+        </div>
+                        <CheckCircle className="w-4 h-4" />
+        </CheckCircle>
+        </CheckCircle>
+        </CheckCircle>
+                        </CheckCircle className="w-4 h-4" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                         <span>{benefit}</span>
+<//span>
                       </li>
+
+                      <//li>
                     ))}
                   </ul>
+
+                  <//ul>
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </section>
+<<<<<<< HEAD
           {/* Threats Section */}
           <section className=&quot;container mx-auto px-4 py-16&quot;></section>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
@@ -203,10 +448,49 @@ const AICybersecurityPage: React.FC = () => {
                   <threat.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{threat.title}</h3>
                   <p className=&quot;text-gray-300&quot;>{threat.description}</p>
+=======
+
+          <//section>
+          {
+  /* Threats Section */
+}
+          <section className="container mx-auto px-4 py-16"></section>
+<//section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+            </h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+              Protect Against All Threats;
+            </h2>
+
+            <//h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+<//div>
+              {threats.map((threat, index) => (
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+<//div>
+                  <threat .icon className="w-12 h-12 text-cyan-400 mb-4" />
+        </threat>
+        </threat>
+        </threat>
+                  </threat.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{threat.title}</h3>
+<//h3>
+                  <p className="text-gray-300">{threat.description}</p>
+<//p>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </section>
+<<<<<<< HEAD
           {/* Pricing Section */}
           <section className=&quot;container mx-auto px-4 py-16&quot;></section>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
@@ -225,18 +509,73 @@ const AICybersecurityPage: React.FC = () => {
                 <divclassName=&quot;text-centermb-6&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => (
                    <likey={idx}className=&quot;flexitems-centerspace-x-3&quot;><CheckCircleclassName=&quot;w-5 h-5 text-cyan-400flex-shrink-0&quot; /><spanclassName=&quot;text-gray-300&quot;>{feature}</spa></l>))}
                 </u><ahref=&quot;tel:+13024640950&quot;
+=======
+
+          <//section>
+          {
+  /* Pricing Section */
+}
+          <section className="container mx-auto px-4 py-16"></section>
+<//section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+            </h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+              Simple, Transparent Pricing;
+            </h2>
+
+            <//h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+<//div>
+              {
+  pricingPlans.map((plan, index) => (
+                <div;
+                  key={index
+}
+                  className={`cyber-card p-8 relative ${
+                    plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
+                }`}
+                >{
+  plan.popular && (
+                  <divclassName="absolute -top-4 left-1/2transform-translate-x-1/2"><spanclassName="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold"></className="bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold">Most Popular;
+                    </spa></di>)
+}
+                <divclassName="text-centermb-6"><h3className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h><pclassName="text-gray-400mb-4">{plan.description}</p><divclassName="flexitems-baselinejustify-center"><spanclassName="text-4 xl font-boldtext-cyan-400">{plan.price}</spa><spanclassName="text-gray-400ml-1">{plan.period}</spa></di></di><ulclassName="space-y-3mb-8">{plan.features.map((featureidx) => (
+                   <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
+                </u><ahref ="tel: +13024640950"
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
-                      plan.popular
+                      plan.popular;
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
                   >
-                    Get Protected
+        </ahref>
+        </ahref>
+        </ahref>
+</ahref="tel: +13024640950"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
+                      plan.popular;
+                        ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
+                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                    }`}
+                  >
+                    Get Protected;
                   </a>
+
+                  <//a>
                 </div>
+
+                <//div>
               ))}
             </div>
+
+            <//div>
           </section>
+<<<<<<< HEAD
           {/* CTA Section */}
           <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
             <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
@@ -252,23 +591,121 @@ const AICybersecurityPage: React.FC = () => {
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                 >
                   <Phone className=&quot;w-5 h-5&quot; />
+=======
+
+          <//section>
+          {
+  /* CTA Section */
+}
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+<//section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+<//div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+        </h2>
+        </h2>
+        </h2>
+        </div>
+        </h2>
+              </h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
+                Ready to Secure Your Business?
+              </h2>
+
+              <//h2>
+              <p className="text-xl text-gray-300 mb-8">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-xl text-gray-300 mb-8">
+        </div>
+                Join 3,000+ companies already protected by our AI cybersecurity platform;
+              </p>
+
+              <//p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+<//div>
+                <a ;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2">
+        </a>
+        </a>
+        </a>
+        </div>
+                </a;
+                  href="tel: +13024640950"
+                  className="cyber-button flex items-center justify-center space-x-2">
+        </div>
+                  <Phone className="w-5 h-5" />
+        </Phone>
+        </Phone>
+        </Phone>
+                  </Phone className="w-5 h-5" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                   <span>Call (302) 464-0950</span>
+<//span>
                 </a>
+<<<<<<< HEAD
                 <a
                   href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className=&quot;w-5 h-5&quot; />
+=======
+
+                <//a>
+                <a ;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+        </a>
+        </a>
+        </a>
+                </a;
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center justify-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  <Mail className="w-5 h-5" />
+        </Mail>
+        </Mail>
+        </Mail>
+                  </Mail className="w-5 h-5" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                   <span>Get Security Audit</span>
+<//span>
                 </a>
+
+                <//a>
               </div>
+
+              <//div>
             </div>
+
+            <//div>
           </section>
+
+          <//section>
         </main>
+
+        <//main>
         <Footer />
+        </Footer>
+        </Footer>
+        </Footer>
+        </Footer />
       </div>
+
+      <//div>
     </>
+
+    <//>
   )
 }
-export default AICybersecurityPage
+export default AICybersecurityPage;
+
+export default AICybersecurityPage;
+export default AICybersecurityPage;

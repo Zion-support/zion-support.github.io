@@ -1,9 +1,12 @@
 import React from 'react'
-import { Star } from 'lucide-react'
-import React from 'react';
 import { Star } from 'lucide-react';
-
-// import {Metadata} from 'next'; // Removed for Vite
+import { Star } from 'lucide-react';
+import {Star} from 'lucide-react';
+import React from 'react';
+import { St, a, r } from "lucide-react";
+import React from 'react';
+import { St, a, r } from "lucide-react";
+// import { Metada, t, a } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026HyperconsciousComputingRevolution
 AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousComputingRevolution"() {
@@ -81,9 +84,17 @@ AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousCompu
               Get Started Today
             </button>
           </div>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
   )
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+        </div>
+      </div>
+    </div>
+  ),
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 }

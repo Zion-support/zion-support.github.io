@@ -1,113 +1,177 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Star, Brain, Zap, Shield, Settings, Palette, Video, Music, Code, BarChart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle } from 'lucide-react'
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client'
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
-import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react'
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle } from 'lucide-react'
+<<<<<<< HEAD
+=======
+=======
+'use client';
+import React from 'react';
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Star, Brain, Zap, Shield, Settings, Palette, Video, Music, Code, BarChart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+<<<<<<< HEAD
+import { CheckCirc, l, e } from "lucide-react";
+constMicroSAASPage: React.FC= () => {
+  constcategories= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 constMicroSAASPage: React.FC= () =>{constcategories= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
-      title: 'AI-Powered Tools',
-      icon: Brain,
-      color: 'text-purple-40 0',
-      bgColor: 'bg-purple-50 0/2 0',
+      title: 'AI-Powered Tools,',
+      icon: Brai,
+      color: 'text-purple-40 0,',
+      bgColor: 'bg-purple-50 0/2 0,',
       services: [
-        { name: 'AI Writing Assistant', price: '$1 9/month', description: 'AI-powered content creation and editing'},
-        {name: 'AI Code Generator', price: '$4 9/month', description: 'AI-assisted coding and development'},
-        {name: 'AI Design Studio', price: '$3 9/month', description: 'AI-powered graphic design tools'},
-        {name: 'AI Analytics Dashboard', price: '$7 9/month', description: 'Real-time business intelligence'},
-        {name: 'AI Chatbot Builder', price: '$2 9/month', description: 'No-code chatbot creation'},
-        {name: 'AI SEO Optimizer', price: '$4 9/month', description: 'Automated SEO analysis and optimization'}
+        { name: 'AI Writing Assistant,',
+      price: '$1 9/month,', description: 'AI-powered content creation and editing,'
+}
+        {name: 'AI Code Generator,',
+      price: '$4 9/month,', description: 'AI-assisted coding and development,'},
+        {name: 'AI Design Studio,',
+      price: '$3 9/month,', description: 'AI-powered graphic design tools,'},
+        {name: 'AI Analytics Dashboard,',
+      price: '$7 9/month,', description: 'Real-time business intelligence,'},
+        {name: 'AI Chatbot Builder,',
+      price: '$2 9/month,', description: 'No-code chatbot creation,'},
+        {name: 'AI SEO Optimizer,',
+      price: '$4 9/month,', description: 'Automated SEO analysis and optimization,'}
       ]
     },
-    {title: 'Business Applications',
-      icon: BarChart,
-      color: 'text-blue-40 0',
-      bgColor: 'bg-blue-50 0/2 0',
+    {title: 'Business Applications,',
+      icon: BarChar,
+      color: 'text-blue-40 0,',
+      bgColor: 'bg-blue-50 0/2 0,',
       services: [
-        { name: 'AI-Powered CRM', price: '$4 9/month', description: 'Intelligent customer relationship management'},
-        {name: 'AI Invoice Generator', price: '$1 9/month', description: 'Automated invoicing and billing'},
-        {name: 'AI Lead Scoring', price: '$3 9/month', description: 'Intelligent lead qualification'},
-        {name: 'AI Social Media Manager', price: '$5 9/month', description: 'Social media automation'},
-        {name: 'AI Email Marketing', price: '$5 9/month', description: 'Automated email campaigns'},
-        {name: 'AI Financial Planner', price: '$6 9/month', description: 'Financial planning and analysis'}
+        { name: 'AI-Powered CRM,',
+      price: '$4 9/month,', description: 'Intelligent customer relationship management,'},
+        {name: 'AI Invoice Generator,',
+      price: '$1 9/month,', description: 'Automated invoicing and billing,'},
+        {name: 'AI Lead Scoring,',
+      price: '$3 9/month,', description: 'Intelligent lead qualification,'},
+        {name: 'AI Social Media Manager,',
+      price: '$5 9/month,', description: 'Social media automation,'},
+        {name: 'AI Email Marketing,',
+      price: '$5 9/month,', description: 'Automated email campaigns,'},
+        {name: 'AI Financial Planner,',
+      price: '$6 9/month,', description: 'Financial planning and analysis,'}
       ]
     },
-    {title: 'Productivity Tools',
-      icon: Settings2,
-      color: 'text-green-40 0',
-      bgColor: 'bg-green-50 0/2 0',
+    {title: 'Productivity Tools,',
+      icon: Settings,
+      color: 'text-green-40 0,',
+      bgColor: 'bg-green-50 0/2 0,',
       services: [
-        { name: 'AI Task Manager Pro', price: '$2 9/month', description: 'Intelligent task management'},
-        {name: 'AI Expense Tracker', price: '$1 9/month', description: 'Smart expense management'},
-        {name: 'AI Scheduler', price: '$3 9/month', description: 'Intelligent scheduling'},
-        {name: 'AI Document Processor', price: '$4 9/month', description: 'Intelligent do cument processing'},
-        {name: 'AI Password Manager', price: '$9/month', description: 'Secure password management'},
-        {name: 'AI Voice Assistant', price: '$3 9/month', description: 'Custom voice assistants'}
+        { name: 'AI Task Manager Pro,',
+      price: '$2 9/month,', description: 'Intelligent task management,'},
+        {name: 'AI Expense Tracker,',
+      price: '$1 9/month,', description: 'Smart expense management,'},
+        {name: 'AI Scheduler,',
+      price: '$3 9/month,', description: 'Intelligent scheduling,'},
+        {name: 'AI Document Processor,',
+      price: '$4 9/month,', description: 'Intelligent do cument processing,'},
+        {name: 'AI Password Manager,',
+      price: '$9/month,', description: 'Secure password management,'},
+        {name: 'AI Voice Assistant,',
+      price: '$3 9/month,', description: 'Custom voice assistants,'}
       ]
     },
-    {title: 'Creative & Media',
-      icon: Palette,
-      color: 'text-pink-40 0',
-      bgColor: 'bg-pink-50 0/2 0',
+    {title: 'Creative & Media,',
+      icon: Palett,
+      color: 'text-pink-40 0,',
+      bgColor: 'bg-pink-50 0/2 0,',
       services: [
-        { name: 'AI Video Creator', price: '$7 9/month', description: 'Automated video production'},
-        {name: 'AI Music Composer', price: '$4 9/month', description: 'AI music generation'},
-        {name: 'AI3D Generator', price: '$8 9/month', description: 'AI3D modeling and design'},
-        {name: 'AI Fashion Design', price: '$6 9/month', description: 'AI fashion solutions'},
-        {name: 'AI Photo Editor', price: '$2 9/month', description: 'AI-powered photo editing'},
-        {name: 'AI Content Studio', price: '$5 9/month', description: 'Complete content creation suite'}
+        { name: 'AI Video Creator,',
+      price: '$7 9/month,', description: 'Automated video production,'},
+        {name: 'AI Music Composer,',
+      price: '$4 9/month,', description: 'AI music generation,'},
+        {name: 'AI3D Generator,',
+      price: '$8 9/month,', description: 'AI3D modeling and design,'},
+        {name: 'AI Fashion Design,',
+      price: '$6 9/month,', description: 'AI fashion solutions,'},
+        {name: 'AI Photo Editor,',
+      price: '$2 9/month,', description: 'AI-powered photo editing,'},
+        {name: 'AI Content Studio,',
+      price: '$5 9/month,', description: 'Complete content creation suite,'}
       ]
     },
-    {title: 'E-commerce & Marketing',
-      icon: CreditCard,
-      color: 'text-orange-40 0',
-      bgColor: 'bg-orange-50 0/2 0',
+    {title: 'E-commerce & Marketing,',
+      icon: CreditCar,
+      color: 'text-orange-40 0,',
+      bgColor: 'bg-orange-50 0/2 0,',
       services: [
-        { name: 'AI E-commerce Assistant', price: '$7 9/month', description: 'E-commerce optimization'},
-        {name: 'AI Store Optimizer', price: '$5 9/month', description: 'Store performance optimization'},
-        {name: 'AI Market Research', price: '$8 9/month', description: 'Automated market analysis'},
-        {name: 'AI A/B Testing', price: '$4 9/month', description: 'Intelligent testing platform'},
-        {name: 'AI Growth Hacker', price: '$9 9/month', description: 'Automated growth strategies'},
-        {name: 'AI Website Builder', price: '$3 9/month', description: 'AI website creation'}
+        { name: 'AI E-commerce Assistant,',
+      price: '$7 9/month,', description: 'E-commerce optimization,'},
+        {name: 'AI Store Optimizer,',
+      price: '$5 9/month,', description: 'Store performance optimization,'},
+        {name: 'AI Market Research,',
+      price: '$8 9/month,', description: 'Automated market analysis,'},
+        {name: 'AI A/B Testing,',
+      price: '$4 9/month,', description: 'Intelligent testing platform,'},
+        {name: 'AI Growth Hacker,',
+      price: '$9 9/month,', description: 'Automated growth strategies,'},
+        {name: 'AI Website Builder,',
+      price: '$3 9/month,', description: 'AI website creation,'}
       ]
     },
-    {title: 'Security & Monitoring',
-      icon: ShieldCheck,
-      color: 'text-red-40 0',
-      bgColor: 'bg-red-50 0/2 0',
+    {title: 'Security & Monitoring,',
+      icon: ShieldChec,
+      color: 'text-red-40 0,',
+      bgColor: 'bg-red-50 0/2 0,',
       services: [
-        { name: 'AI Security Monitor', price: '$9 9/month', description: 'Real-time security monitoring'},
-        {name: 'AI Performance Tracker', price: '$4 9/month', description: 'Comprehensive performance tracking'},
-        {name: 'AI Predictive Analytics', price: '$7 9/month', description: 'Future outcome predictions'},
-        {name: 'AI Health Tracker', price: '$2 9/month', description: 'Personal health monitoring'},
-        {name: 'AI Learning Platform', price: '$5 9/month', description: 'Personalized learning'},
-        {name: 'AI Data Pipeline', price: '$6 9/month', description: 'Automated data processing'}
+        { name: 'AI Security Monitor,',
+      price: '$9 9/month,', description: 'Real-time security monitoring,'},
+        {name: 'AI Performance Tracker,',
+      price: '$4 9/month,', description: 'Comprehensive performance tracking,'},
+        {name: 'AI Predictive Analytics,',
+      price: '$7 9/month,', description: 'Future outcome predictions,'},
+        {name: 'AI Health Tracker,',
+      price: '$2 9/month,', description: 'Personal health monitoring,'},
+        {name: 'AI Learning Platform,',
+      price: '$5 9/month,', description: 'Personalized learning,'},
+        {name: 'AI Data Pipeline,',
+      price: '$6 9/month,', description: 'Automated data processing,'}
       ]
     }
   ]
 
   constbenefits= [
-    {icon: Zap,
-      title: 'Instant Deployment',
+    {icon: Za,
+      title: 'Instant Deployment,',
       description: 'Get started in minutes with our ready-to-use applications'
-   },
-    {icon: Star,
-      title: 'Proven Results',
+  , },
+    {icon: Sta,
+      title: 'Proven Results,',
       description: 'Average200% productivity increase within 30days'
-   },
-    {icon: ShieldCheck,
-      title: 'Enterprise Security',
+  , },
+    {icon: ShieldChec,
+      title: 'Enterprise Security,',
       description: 'Bank-level security and compliance for all applications'
-   },
-    {icon: BarChart,
-      title: 'Scalable Solutions',
+  , },
+    {icon: BarChar,
+      title: 'Scalable Solutions,',
       description: 'Grow from startup to enterprise with flexible pricing'
-    }
+   , }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -134,8 +198,7 @@ const Page = () => {
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              (302) 464-0950
-            </a>
+              (302) 464-0950</a>
           </div>
         </section>
         {/* Categories */}
@@ -167,7 +230,7 @@ const Page = () => {
                         </a>
                       </div>
                     </div>
-                  ))}
+                  ),)}
                 </div>
               </div>
             ))}
@@ -215,8 +278,7 @@ const Page = () => {
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
@@ -243,8 +305,7 @@ const Page = () => {
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
@@ -271,8 +332,7 @@ const Page = () => {
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Contact Sales
-              </a>
+                Contact Sales</a>
             </div>
           </div>
         </section>
@@ -294,8 +354,7 @@ const Page = () => {
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                (302) 464-0950
-              </a>
+                (302) 464-0950</a>
             </div>
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -304,7 +363,11 @@ const Page = () => {
         </section>
       </main>
       <Footer />
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     </div>
   )
 }

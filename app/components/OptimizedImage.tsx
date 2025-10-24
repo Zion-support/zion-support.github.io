@@ -4,11 +4,19 @@ import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
 
+<<<<<<< HEAD
 interface OptimizedImageProps {
   className?: string;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
+=======
+interface OptimizedImageProps {}
+  className?: string;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '&apos;, }) => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       
@@ -21,6 +29,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 OptimizedImage
               <br />
               <span className=&quot;text-white&quot;>Solutions</span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced OptimizedImage solution for modern businesses.
@@ -32,6 +45,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
               </button>
             </div>
           </div>
@@ -56,6 +70,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                 <p className=&quot;text-gray-300&quot;>{feature.description}</p>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               </div>
             ))}
           </div>
@@ -111,9 +129,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default OptimizedImagePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

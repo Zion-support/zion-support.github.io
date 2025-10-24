@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+
+export default function Page() {
 import '@testing-library/jest-dom';
 
 // Mock the App component to avoid PerformanceObserver issues
@@ -12,10 +14,10 @@ describe('App Component', () => {
   it('renders without crashing', () => {
     render(<MockApp />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+});
 
   it('renders the main content', () => {
-    render(<MockApp />);
+  render(<MockApp />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+});
 });

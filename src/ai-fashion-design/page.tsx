@@ -1,14 +1,24 @@
-import React from 'react'
 import React from 'react';
-import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
-
+import { CheckCircle, Zap, Palette, Camera, Check } from 'lucide-react';
+import {CheckCircle, Camera, Zap, Palette} from 'lucide-react';
+import React from 'react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Camera, Zap, Palette } from 'lucide-react'
-
-constAIFashionDesignPage: React.FC= () =>{constfeatures= [
-    'Design Generation',
+import { CheckCircle, Camera, Zap, Palette } from 'lucide-react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import React from 'react'
+import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, Zap, Camera, Palette, Check  } from "lucide-react";
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Camera, Zap, Palette  } from "lucide-react";
+constAIFashionDesignPage: React.FC= () => {
+  constfeatures= ['Design Generation,',
     'Trend Analysis',
     'Color Matching',
     'Size Optimization',
@@ -20,8 +30,7 @@ constAIFashionDesignPage: React.FC= () =>{constfeatures= [
     'Cost Estimation'
   ]
 
-  constbenefits= [
-    'Faster design cycles',
+  constbenefits= ['Faster design cycles',
     'Trend accuracy',
     'Cost reduction',
     'Market insights',
@@ -31,27 +40,32 @@ constAIFashionDesignPage: React.FC= () =>{constfeatures= [
 
   constpricingPlans= [
     {
-      name: 'Starter',
-      price: '$24 9',
-      period: '/month',
-      features: ['10designs/month', 'Basic trends', 'Email support', 'Standard quality'],
+      name: 'Starter,',
+      price: '$24 9,',
+      period: '/month,',
+      features: ['10designs/month,', 'Basic trends', 'Email support', 'Standard quality'],
       popular: false
-   },
-    {name: 'Professional',
-      price: '$34 9',
-      period: '/month',
-      features: ['Unlimited designs', 'Advanced trends', '3 D visualization', 'API access', 'Priority support'],
+  ,
+}
+    {name: 'Professional,',
+      price: '$34 9,',
+      period: '/month,',
+      features: ['Unlimited designs,', 'Advanced trends', '3 D visualization', 'API access', 'Priority support'],
       popular: true
-   },
-    {name: 'Enterprise',
-      price: '$69 9',
-      period: '/month',
-      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
+  , },
+    {name: 'Enterprise,',
+      price: '$69 9,',
+      period: '/month,',
+      features: ['Everything in Pro,', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
-    }
+   , }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
   <><SEOOptimizertitle=&quot;AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup&quot;
         description=&quot;Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month.&quot;
@@ -157,11 +171,9 @@ const Page = () => {
                   <a
                     href=&quot;/contact&quot;
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
+                      plan.popular ? 'cyber-button' : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
+                   , }`}
+                  ></a>
                     Get Started
                   </a>
                 </div>
@@ -194,10 +206,14 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
-  )
+  ),
 }
 
+<<<<<<< HEAD
 export default Page;
+=======
+export default Page;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

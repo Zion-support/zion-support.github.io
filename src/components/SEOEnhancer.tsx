@@ -1,15 +1,14 @@
 import React from 'react'
-import { Helmet } from 'lucide-react'
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Code, Helmet } from 'lucide-react';
-
+import { Code, Helmet  } from "lucide-react";
 interface SEOEnhancerProps {
   title?: string
   description?: string
   keywords?: string
   image?: string
   url?: string
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;,
@@ -80,8 +79,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
   }
   return (
-    <>
-      <Helmet>
+    <><Helmet></Helmet>
         {/* Primary meta tags */}
         <title>{title}</title>
         <meta name=&quot;description&quot; content={description} />
@@ -113,7 +111,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
-      {children}
+      { childr, e, n }
+    </>
     </>
   )
 }

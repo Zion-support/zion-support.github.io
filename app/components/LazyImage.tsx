@@ -1,5 +1,10 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 interface LazyImageProps {
   src: string;
@@ -80,4 +85,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default LazyImage;
+=======
+export default LazyImage;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

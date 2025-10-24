@@ -1,72 +1,78 @@
 import React from 'react'
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
-import { MapPin } from 'lucide-react'
+import { MapPin } from 'lucide-react';
+import { CheckCircle, Phone, Mail, MapPin, Helmet, Check } from 'lucide-react';
+import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
 import React from 'react';
-import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, BarChart, Helmet, MapPin, Check } from 'lucide-react';
-
-constAnalyticsToolsPage: React.FC= () =>{constanalyticsTools= [
+import { CheckCircle, Phone, Mail, Helmet  } from "lucide-react";
+import { MapP, i, n } from "lucide-react";
+import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, BarChart, Helmet, MapPin, Check  } from "lucide-react";
+constAnalyticsToolsPage: React.FC= () => {
+  constanalyticsTools= [
     {
-      title: 'AI Business Intelligence',
-      price: '$39 9/month',
+      title: 'AI Business Intelligence,',
+      price: '$39 9/month,',
       description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
-      icon: '📊',
+      features: ['Real-time dashboards,', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
+      icon: '📊,',
       category: 'Business Intelligence'
-   },
-    {title: 'AI Web Analytics',
-      price: '$29 9/month',
+  ,
+}
+    {title: 'AI Web Analytics,',
+      price: '$29 9/month,',
       description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
-      features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
-      icon: '🌐',
+      features: ['User behavior tracking,', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
+      icon: '🌐,',
       category: 'Web Analytics'
-   },
-    {title: 'AI Marketing Analytics',
-      price: '$24 9/month',
+  , },
+    {title: 'AI Marketing Analytics,',
+      price: '$24 9/month,',
       description: 'Marketing performance analytics with AI-powered optimization recommendations.',
-      features: ['Campaign tracking', 'ROI analysis', 'Attribution modeling', 'Customer journey', 'Channel performance', 'Predictive insights'],
-      icon: '📈',
+      features: ['Campaign tracking,', 'ROI analysis', 'Attribution modeling', 'Customer journey', 'Channel performance', 'Predictive insights'],
+      icon: '📈,',
       category: 'Marketing Analytics'
-   },
-    {title: 'AI Sales Analytics',
-      price: '$19 9/month',
+  , },
+    {title: 'AI Sales Analytics,',
+      price: '$19 9/month,',
       description: 'Sales performance analytics with AI-powered forecasting and optimization.',
-      features: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights'],
-      icon: '💰',
+      features: ['Sales forecasting,', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights'],
+      icon: '💰,',
       category: 'Sales Analytics'
-   },
-    {title: 'AI Customer Analytics',
-      price: '$17 9/month',
+  , },
+    {title: 'AI Customer Analytics,',
+      price: '$17 9/month,',
       description: 'Customer behavior analytics with AI-powered insights and personalization.',
-      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Lifetime value', 'Engagement tracking', 'Personalization insights'],
-      icon: '👥',
+      features: ['Customer segmentation,', 'Behavior analysis', 'Churn prediction', 'Lifetime value', 'Engagement tracking', 'Personalization insights'],
+      icon: '👥,',
       category: 'Customer Analytics'
-   },
-    {title: 'AI Financial Analytics',
-      price: '$34 9/month',
+  , },
+    {title: 'AI Financial Analytics,',
+      price: '$34 9/month,',
       description: 'Financial performance analytics with AI-powered insights and risk assessment.',
-      features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
-      icon: '💳',
+      features: ['Financial reporting,', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
+      icon: '💳,',
       category: 'Financial Analytics'
-    }
+   , }
   ]
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Data-Driven Decisions',
+      icon: TrendingU,
+      title: 'Data-Driven Decisions,',
       description: 'Make informed decisions with comprehensive analytics and AI insights'
-   },
-    {icon: Target,
-      title: 'Predictive Insights',
+  , },
+    {icon: Targe,
+      title: 'Predictive Insights,',
       description: 'Anticipate trends and opportunities with AI-powered predictions'
-   },
-    {icon: BarChart,
-      title: 'Real-Time Monitoring',
+  , },
+    {icon: BarChar,
+      title: 'Real-Time Monitoring,',
       description: 'Track performance in real-time with live dashboards and alerts'
-   },
-    {icon: Brain,
-      title: 'AI-Powered',
+  , },
+    {icon: Brai,
+      title: 'AI-Powered,',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
-    }
+   , }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -156,11 +162,10 @@ constAnalyticsToolsPage: React.FC= () =>{constanalyticsTools= [
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started
-                  </a>
+                    Get Started</a>
                 </div>
               </div>
-            ))}
+            ),)}
           </div>
         </div>
       </section>
@@ -201,13 +206,19 @@ constAnalyticsToolsPage: React.FC= () =>{constanalyticsTools= [
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
-            </a>
+              Email Us</a>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     </div>
-  )
+  ),
 }
 export default AnalyticsToolsPage
+
+export default AnalyticsToolsPage;
+export default AnalyticsToolsPage;

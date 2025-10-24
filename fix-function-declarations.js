@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function fixFunctionDeclarations(filePath) {
+=======
+function fixFunctionDeclarations(filePa, t, h) {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let fixed = false;
@@ -34,6 +38,7 @@ function fixFunctionDeclarations(filePath) {
       fixed = true;
     }
 
+<<<<<<< HEAD
     if (fixed) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed function declarations: ${filePath}`);
@@ -54,14 +59,41 @@ function processDirectory(dirPath) {
       processDirectory(filePath);
     } else if (file.endsWith('.tsx')) {
       fixFunctionDeclarations(filePath);
+=======
+    if (fix, e, d) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed function declarations: ${ filePa, t, h }`);
+    }
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
+  }
+}
+
+function processDirectory(dirPa, t, h) {
+  const files = fs.readdirSync(dirPa, t, h);
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePa, t, h);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      processDirectory(filePa, t, h);
+    } else if (file.endsWith('.tsx')) {
+      fixFunctionDeclarations(filePa, t, h);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     }
   }
 }
 
 // Process the app directory
 const appDir = path.join(__dirname, 'app');
+<<<<<<< HEAD
 if (fs.existsSync(appDir)) {
   processDirectory(appDir);
+=======
+if (fs.existsSync(appD, i, r)) {
+  processDirectory(appD, i, r);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   console.log('Function declaration fixes completed!');
 } else {
   console.log('App directory not found');

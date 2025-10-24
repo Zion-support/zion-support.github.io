@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -158,4 +165,11 @@ const BlockchainPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
+export default BlockchainPage;
+
+export default Blockchain;
+
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default BlockchainPage;

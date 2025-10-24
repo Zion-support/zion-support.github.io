@@ -1,5 +1,10 @@
 'use client';
 import React, { useEffect } from &quot;react&quot;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 interface AnalyticsProps {
   className?: string;
@@ -14,14 +19,48 @@ const Analytics: React.FC = () => {
           page_location: window.location.href,
         })
       }
-    }
-    initAnalytics()
-  }, [])
+          page_location: window.location.href,
+        });
+      }
+    };
 
+<<<<<<< HEAD
   return null; // Analytics component doesn&apos;t render anything
 }
 
+=======
+    initAnalytics();
+  }, []);
+
+  return <>{children}</>;
+};
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
+export default Analytics;
+    }
+    initAnalytics()
+  }, []);
+
+  return null; // Analytics component doesn&apos;t render anything
+}
+;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default Analytics
 };
 
 export default AnalyticsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+};
+
+export default AnalyticsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+};
+
+export default AnalyticsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

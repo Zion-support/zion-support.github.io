@@ -4,20 +4,15 @@ import React from 'react'
 import { Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { ArrowRight } from 'lucide-react'
+<<<<<<< HEAD
+=======
 
-    }
-  ]
+    };
+  ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
-  return (
+  const benefits=";";"
+const SystemMonitor: React.FC<SystemMonitorProps> = ({className="''" }) => {}</SystemMonitorProps>
+  return (</SystemMonitorProps>
     <>
       
       <Navigation />
@@ -34,6 +29,65 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+=======
+'use client'
+import Footer from './Footer'
+import Navigation from './Navigation'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
+
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
+  return (
+    <>
+      <Helmet>
+        <title>SystemMonitor</title>
+        <meta name="description" content="Advanced SystemMonitor solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+<<<<<<< HEAD
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+        {/* Hero Section */}
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
+              SystemMonitor
+            </h1>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+              Advanced SystemMonitor solution for modern businesses.
+            </p>
+<<<<<<< HEAD
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                 Get Started
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
@@ -43,6 +97,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -111,15 +166,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default SystemMonitorPage;
             </div>
         </div>
     </div>
   )
 }
-export default SystemMonitorPage
+export default SystemMonitorPage"

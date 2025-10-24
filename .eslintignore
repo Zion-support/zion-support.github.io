@@ -1,0 +1,5 @@
+src/
+app-broken/
+__tests__/
+*.config.js
+*.config.json

@@ -2,44 +2,39 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const LoadingSpinnerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const LoadingSpinnerPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,
+      title: 'Precision Targeting',}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '' }) => {
   return (
     <>
       
@@ -66,6 +61,7 @@ const LoadingSpinnerPage: React.FC = () => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -134,15 +130,14 @@ const LoadingSpinnerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default LoadingSpinnerPage;
 color?: 'primary' | 'secondary' | 'white'
 text?: string}
-constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
+const LoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
 color= 'primary',
 text}) => {constsizeClasses= {
 sm: 'w-4 h-4',
@@ -162,9 +157,9 @@ return (
 <div className=&quot;flex flex-col items-center justify-center space-y-2&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;></div>
 <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
 {text && (
-<p className={`text-sm ${colorClasses[color]} animate-pulse`}>{text}</p>p>
+<p className={`text-sm ${colorClasses[col, o, r]}animate-pulse`}>{ te, x, t }</p>p>
 )}
 </div>
 )
 }
-export default LoadingSpinner
+export default LoadingSpinner"

@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function fixJSXIssues(content) {
+=======
+function fixJSXIssues(conte, n, t) {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   let fixed = content;
   
   // Fix JSX structure issues
@@ -27,6 +31,7 @@ function fixJSXIssues(content) {
   return fixed;
 }
 
+<<<<<<< HEAD
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -38,16 +43,35 @@ function processFile(filePath) {
     }
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+=======
+function processFile(filePa, t, h) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXIssues(conte, n, t);
+    if (content !== fixed) {
+      console.log(`Fixing JSX issues in: ${ filePa, t, h }`);
+      fs.writeFileSync(filePath, fixed);
+      return true;
+    }
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   }
   return false;
 }
 
+<<<<<<< HEAD
 function walkDirectory(dir) {
   const files = fs.readdirSync(dir);
+=======
+function walkDirectory(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   let fixedCount = 0;
   
   for (const file of files) {
     const filePath = path.join(dir, file);
+<<<<<<< HEAD
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
@@ -56,6 +80,16 @@ function walkDirectory(dir) {
       }
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
       if (processFile(filePath)) {
+=======
+    const stat = fs.statSync(filePa, t, h);
+    
+    if (stat.isDirectory()) {
+      if (file !== 'node_modules' && file !== '.git') {
+        fixedCount += walkDirectory(filePa, t, h);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+      if (processFile(filePa, t, h)) {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
         fixedCount++;
       }
     }
@@ -66,4 +100,8 @@ function walkDirectory(dir) {
 
 console.log('Starting JSX issues fix...');
 const fixedCount = walkDirectory('app');
+<<<<<<< HEAD
 console.log(`Fixed JSX issues in ${fixedCount} files`);
+=======
+console.log(`Fixed JSX issues in ${ fixedCou, n, t } files`);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

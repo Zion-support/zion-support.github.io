@@ -1,30 +1,29 @@
 import React from 'react'
-import { Helmet } from 'lucide-react'
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Helmet } from 'lucide-react';
-
+import { Helm, e, t } from "lucide-react";
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
   tags?: string[]
-  noindex?: boolean
-  nofollow?: boolean
-  canonical?: string
+  noindex?: boolean;
+  nofollow?: boolean;
+  canonical?: string;
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  title = 'Zion Tech Group - Advanced AI and IT Solutions,',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
+  image = 'https: //ziontechgroup.com/og-image.jpg,',
+  url = 'https: //ziontechgroup.com,',
   type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
@@ -35,9 +34,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   nofollow = false,
   canonical
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${ tit, l, e } | Zion Tech Group`
   const canonicalUrl = canonical || url
-  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
+  const robotsContent = `${noindex ? 'noindex' : 'index'
+    }, ${nofollow ? 'nofollow' : 'follow'
+    }`
   return (
   <Helme t>{/* Basic MetaTags */}
     <titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot; content={author} /><metaname=&quot;robots&quot; content={robotsContent} /><linkrel=&quot;canonical&quot; href={canonicalUrl} />{/* Open Graph MetaTags */}
@@ -56,24 +57,29 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     <scripttype=&quot;application/ld+json&quot;>{JSON.stringify({
           '@context': 'https:// schema.org',
           '@type': type=== 'article' ? 'Article' : 'WebPage',
-          name: fullTitle,
-          description: description,
-          url: url,
-          image: image,
+          name: fullTitl,
+      e,
+          description: descriptio,
+      n,
+          url: ur,
+      l,
+          image: imag,
+      e,
           author: {
-            '@type': 'Organization',
+            '@type': 'Organization,',
             name : author
          },
-          publisher: {'@type': 'Organization',
-            name: 'Zion Tech Group',
+          publisher: {'@type': 'Organization,',
+            name: 'Zion Tech Group,',
             logo: {
-              '@type': 'ImageObject',
+              '@type': 'ImageObject,',
               url: 'https:// ziontechgroup.com/logo.png'
-           }
+          , }
           },
-          ...(type=== 'article' && {datePublished: publishedTime,
+          ...(type=== 'article' && {datePublished: publishedTim,
+      e,
             dateModified: modifiedTime || publishedTimemainEntityOfPage: {
-              '@type': 'WebPage',
+              '@type': 'WebPage,',
               '@id': url
            }
           })

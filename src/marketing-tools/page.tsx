@@ -1,72 +1,78 @@
 import React from 'react'
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
-import { MapPin } from 'lucide-react'
+import { MapPin } from 'lucide-react';
+import { CheckCircle, Phone, Mail, MapPin, Helmet, Check } from 'lucide-react';
+import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
 import React from 'react';
-import { CheckCircle, Phone, Mail, Star, Target, TrendingUp, Clock, BarChart, Helmet, MapPin, Check } from 'lucide-react';
-
-constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
+import { CheckCircle, Phone, Mail, Helmet  } from "lucide-react";
+import { MapP, i, n } from "lucide-react";
+import React from 'react';
+import { CheckCircle, Phone, Mail, Star, Target, TrendingUp, Clock, BarChart, Helmet, MapPin, Check  } from "lucide-react";
+constMarketingToolsPage: React.FC= () => {
+  constmarketingTools= [
     {
-      title: 'AI Content Generator',
-      price: '$19 9/month',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
-      icon: '✍️',
+      title: 'AI Content Generator,',
+      price: '$19 9/month,',
+      description: 'Generate high-quality content for blog,s, social media, and marketing materials using advanced AI.',
+      features: ['Blog post generation,', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
+      icon: '✍️,',
       category: 'Content Creation'
-   },
-    {title: 'AI SEO Optimizer',
-      price: '$29 9/month',
+  ,
+}
+    {title: 'AI SEO Optimizer,',
+      price: '$29 9/month,',
       description: 'Advanced SEO analysis and optimization recommendations powered by machine learning.',
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights'],
-      icon: '🔍',
+      features: ['Keyword research,', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights'],
+      icon: '🔍,',
       category: 'SEO'
-   },
-    {title: 'AI Social Media Manager',
-      price: '$24 9/month',
+  , },
+    {title: 'AI Social Media Manager,',
+      price: '$24 9/month,',
       description: 'Automated social media management with intelligent posting and engagement optimization.',
-      features: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics'],
-      icon: '📱',
+      features: ['Content scheduling,', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics'],
+      icon: '📱,',
       category: 'Social Media'
-   },
-    {title: 'AI Email Marketing',
-      price: '$17 9/month',
+  , },
+    {title: 'AI Email Marketing,',
+      price: '$17 9/month,',
       description: 'Intelligent email marketing campaigns with personalization and automation capabilities.',
-      features: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management'],
-      icon: '📧',
+      features: ['Email templates,', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management'],
+      icon: '📧,',
       category: 'Email Marketing'
-   },
-    {title: 'AI Ad Campaign Manager',
-      price: '$39 9/month',
+  , },
+    {title: 'AI Ad Campaign Manager,',
+      price: '$39 9/month,',
       description: 'Automated ad campaign creation and optimization across multiple platforms.',
-      features: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis'],
-      icon: '📊',
+      features: ['Campaign creation,', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis'],
+      icon: '📊,',
       category: 'Advertising'
-   },
-    {title: 'AI Analytics Dashboard',
-      price: '$29 9/month',
+  , },
+    {title: 'AI Analytics Dashboard,',
+      price: '$29 9/month,',
       description: 'Comprehensive marketing analytics with AI-powered insights and predictions.',
-      features: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
-      icon: '📈',
+      features: ['Real-time analytics,', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
+      icon: '📈,',
       category: 'Analytics'
-    }
+   , }
   ]
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Increase ROI',
+      icon: TrendingU,
+      title: 'Increase ROI,',
       description: 'Average250% increase in marketing ROI with AI-powered optimization'
-   },
-    {icon: Clock,
-      title: 'Save Time',
+  , },
+    {icon: Cloc,
+      title: 'Save Time,',
       description: 'Reduce marketing tasks by80% with intelligent automation'
-   },
-    {icon: Target,
-      title: 'Better Targeting',
+  , },
+    {icon: Targe,
+      title: 'Better Targeting,',
       description: 'Reach the right audience with AI-powered targeting and personalization'
-   },
-    {icon: BarChart,
-      title: 'Data-Driven',
+  , },
+    {icon: BarChar,
+      title: 'Data-Driven,',
       description: 'Make informed decisions with comprehensive analytics and insights'
-    }
+   , }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -156,11 +162,10 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started
-                  </a>
+                    Get Started</a>
                 </div>
               </div>
-            ))}
+            ),)}
           </div>
         </div>
       </section>
@@ -201,13 +206,19 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
-            </a>
+              Email Us</a>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     </div>
-  )
+  ),
 }
 export default MarketingToolsPage
+
+export default MarketingToolsPage;
+export default MarketingToolsPage;

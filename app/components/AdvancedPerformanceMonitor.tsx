@@ -3,44 +3,13 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const AdvancedPerformanceMonitorPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
+}
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className }) => {
   return (
     <>
       
@@ -67,6 +36,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className="py-20 px-4"></section>
@@ -93,7 +63,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -132,205 +102,229 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
+            {getPerformanceRecommendations.length > 0 && (
+              <div className="mt-2">
+                <h4 className="font-semibold text-xs text-red-600">Recommendations:</h4>
+                <ul className="text-xs text-red-600">
+                  {getPerformanceRecommendations.map((rec, index) => (
+                    <li key={index}>• {rec}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-        </section>
+        )}
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
+;
 export default AdvancedPerformanceMonitorPage;
-fcp: null,
-lcp: null,
-fid: null,
-cls: null,
-ttfb: null,
-memory: null,})
-constmeasureWebVitals= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver=== 'undefined') return constobserver s: PerformanceObserver[] = []
-// Measure First Contentful Paint (FCP)
-constfcpEntries= performance.getEntriesByName('first-contentful-paint') || []
-constfcp= fcpEntries.length >0? fcpEntries[0].startTime: null
-// Measure Largest Contentful Paint (LCP)
+fcp: null,;
+lcp: null,;
+fid: null,;
+cls: null,;
+ttfb: null,;
+memory: null,});"
+constmeasureWebVitals="useCallback(()" => {if (type ofwindow="==" 'undefined' || !('performance' in windo w)) return i f (type ofPerformanceObserver="==" 'undefined') return constobserver s: PerformanceObserver[] = []
+// Measure First Contentful Paint (FCP);"
+constfcpEntries="performance.getEntriesByName('first-contentful-paint')" || [];"
+constfcp="fcpEntries.length" >0? fcpEntries[0].startTime: null
+// Measure Largest Contentful Paint (LCP);
 if ('PerformanceObserver' in windo w) {
-try {
-constlcpObserver= new PerformanceObserver(list=> {
-  
-constentries= list.getEntries()
-constlastEntry= entries[entries.length - 1]
-setMetrics(prev=> ({ ...prev, lcp: lastEntry.startTime}))
-})
-lcpObserver.observe({entry Types: ['largest-contentful-paint']})
+try {"
+constlcpObserver="new" PerformanceObserver(list=> {
+  );"
+constentries="list.getEntries()";"}
+constlastEntry="entries[entries.length" - 1]}
+setMetrics(prev=> ({...prev, lcp: lastEntry.startTime}))
+});
+lcpObserver.observe({entry Types: ['largest-contentful-paint']});
 observers.push(lcpObserver)
 } catch (error) {// eslint-disable-next-line no-console}
 }
-// Measure First Input Delay (FID)
-if ('PerformanceObserver' in windo w) {try {
-constfidObserver= new PerformanceObserver(list=> {
-  
-constentries= list.getEntries()
+// Measure First Input Delay (FID);
+if ('PerformanceObserver' in windo w) {try {"
+constfidObserver: "new" PerformanceObserver(list=> {
+  );"
+constentries="list.getEntries()";
 entries.forEach(entry=> {
-  
-if (
-entry.entryType=== 'first-input' &&
+;  
+if ();"
+entry.entryType="==" 'first-input' &&
 'processingStart' in entry && 'startTime' in entry
-) {
-constfidEntry= entry as PerformanceEventTiming
+) {"
+constfidEntry="entry" as PerformanceEventTiming;}
 setMetrics(prev=> ({
-...prev,
+...prev,});
 fid: fidEntry.processingStart - fidEntry.startTime,}))
 }
 })
-})
-fidObserver.observe({entry Types: ['first-input']})
+});
+fidObserver.observe({entry Types: ['first-input']});
 observers.push(fidObserver)
 } catch (error) {// eslint-disable-next-line no-console}
 }
-// Measure Cumulative Layout Shift (CLS)
-if ('PerformanceObserver' in windo w) {try {
-letclsValue=0constclsObserver= new PerformanceObserver(list=> {
-  
-constentries= list.getEntries()
+// Measure Cumulative Layout Shift (CLS);
+if ('PerformanceObserver' in windo w) {try {"
+letclsValue="0constclsObserver=" new PerformanceObserver(list=> {
+  );"
+constentries="list.getEntries()";
 entries.forEach(entry=> {
-  
-if (
-entry.entryType=== 'layout-shift' &&
+;  
+if ();"
+entry.entryType="==" 'layout-shift' &&
 'hadRecentInput' in entry && 'value' in entry
-) {
-constclsEntry= entry as LayoutShift
-if (!clsEntry.hadRecentInput) {
-clsValue += clsEntry.value
-setMetrics(prev=> ({ ...prev, cls: clsValue}))
+) {"
+constclsEntry="entry" as LayoutShift;
+if (!clsEntry.hadRecentInput) {}
+clsValue += clsEntry.value}
+setMetrics(prev=> ({...prev, cls: clsValue}))
 }
 }
 })
-})
-clsObserver.observe({entry Types: ['layout-shift']})
+});
+clsObserver.observe({entry Types: ['layout-shift']});
 observers.push(clsObserver)
 } catch (error) {// eslint-disable-next-line no-console}
 }
-// Measure Time to First Byte (TTFB)
-try {constnavigationEntries= performance.getEntriesByType?.('navigation') || []
-constnavigationEntry= navigationEntries[0] asPerformanceNavigationTimingconstttfb= navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart: null
-// Measure MemoryUsageconstmemory=
-(performance as Performance & { memory?: { usedJSHeapSize : number} })
-.memory?.usedJSHeapSize || null
-setMetrics(prev=> ({...prev,
-fcp,
-ttfb,
+// Measure Time to First Byte (TTFB);"
+try {constnavigationEntries="performance.getEntriesByType?.('navigation')" || []}"
+constnavigationEntry="navigationEntries[0]" asPerformanceNavigationTimingconstttfb="navigationEntry" ? navigationEntry.responseStart - navigationEntry.requestStart: null"
+// Measure MemoryUsageconstmemory="(performance" as Performance & {memory?: { usedJSHeapSize : number} })
+.memory?.usedJSHeapSize || null;
+setMetrics(prev=> ({...prev,;
+fcp,;}
+ttfb,});
 memory,}))
 } catch (error) {// eslint-disable-next-line no-console}
 // Cleanup observers
 return () => {observers.forEach(observer=> {
-  
-try {
+;  }
+try {});
 observer.disconnect()} catch (error) {// eslint-disable-next-line no-console}
 })
 }
-}, [])
-constmeasureResourceTiming= useCallback(() => {if (type ofwindow=== 'undefined' || !('performance' in windo w)) return constresources= performance.getEntriesByType('resource')
-constslowResources= resources.filter(
-(resource: PerformanceResourceTiming) => resource.duration > 1000)
+}, []);"
+constmeasureResourceTiming="useCallback(()" => {if (type ofwindow: "==" 'undefined' || !('performance' in windo w)) return constresources="performance.getEntriesByType('resource')";"
+constslowResources="resources.filter("
+(resource: PerformanceResourceTiming) => resource.duration > 1000);
 if (slowResources.length > 0) {
 // eslint-disable-next-line no-console
 // // console.log(
+<<<<<<< HEAD
 'Slow resources detected:',
 slowResources.map((r: PerformanceResourceTiming) => ({
 name: r.name,
 duration: r.duration,
+=======
+'Slow resources detected:',);
+slowResources.map((r: PerformanceResourceTiming) => ({,;
+name: r.name,;}
+duration: r.duration,}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 size: r.transferSize,}))
 )
 }
-}, [])
-constmeasureCoreWebVitals= useCallback(() => {if (type ofwindow=== 'undefined') return
-// Use web-vitals library if available
-try {
+}, []);"
+constmeasureCoreWebVitals="useCallback(()" => {if (type ofwindow="==" 'undefined') return
+// Use web-vitals library if available;
+try {}
 import('web-vitals')
 .then(webVitals=> {
-  
-const { onCLS, onFCP, onLCP, onTTFB} = webVitals
-if (onCL S) {onCLS((metric: { value: number}) =>
+  }
+const {onCLS, onFCP, onLCP, onTTFB} = webVitals);
+if (onCL S) {onCLS((metric: { value: number}) =>;
 setMetrics(prev=> ({...prev, cls: metric.value}))
 )
 }
-if (onFC P) {onFCP((metric: { value: number}) =>
+if (onFC P) {onFCP((metric: { value: number}) =>;
 setMetrics(prev=> ({...prev, fcp: metric.value}))
 )
 }
-if (onLC P) {onLCP((metric: { value: number}) =>
+if (onLC P) {onLCP((metric: { value: number}) =>;
 setMetrics(prev=> ({...prev, lcp: metric.value}))
 )
 }
-if (onTTF B) {onTTFB((metric: { value: number}) =>
+if (onTTF B) {onTTFB((metric: { value: number}) =>;
 setMetrics(prev=> ({...prev, ttfb: metric.value}))
 )
 }
 })
-.catch(() => {// web-vitals not available, continue without it})
+.catch(() => {
+  // web-vitals not available, continue without it
+})
 } catch {// web-vitals not available, continue without it}
-}, [])
-useEffect(() => {if (!enableRealTimeMonitoring) return constcleanup= measureWebVitals()
-measureResourceTiming()
-measureCoreWebVitals()
-// Monitor performanceevery5secondsconstinterval= setInterval(() => {
-  
-measureResourceTiming()}, 500 0)
-return () => {if (cleanu p) cleanup()
+}, []);"
+useEffect(() => {if (!enableRealTimeMonitoring) return constcleanup="measureWebVitals()";
+measureResourceTiming();}
+measureCoreWebVitals()"
+// Monitor performanceevery5secondsconstinterval="setInterval(()" => {
+  }
+measureResourceTiming()}, 500 0);
+return () => {if (cleanu p) cleanup()}
 clearInterval(interval)}
-}, [
-enableRealTimeMonitoring,
-measureWebVitals,
-measureResourceTiming,
+}, [;
+enableRealTimeMonitoring,;
+measureWebVitals,;
+measureResourceTiming,;
 measureCoreWebVitals,
-])
-useEffect(() => {if (onMetricsUpdat e) {
+]);
+useEffect(() => {if (onMetricsUpdat e) {}
 onMetricsUpdate(metrics)}
-}, [metricsonMetricsUpdate])
-// PerformancerecommendationsconstgetPerformanceRecommendations= useCallback(() => {constrecommendations: string[] = []
-if (metrics.fcp && metrics.fcp >1800) {
+}, [metricsonMetricsUpdate])"
+// PerformancerecommendationsconstgetPerformanceRecommendations="useCallback(()" => {constrecommendations: string[] = [];}
+if (metrics.fcp && metrics.fcp >1800) {}
 recommendations.push(
 'First Contentful Paint is slow. Consider optimizing critical rendering path.'
 )
 }
-if (metrics.lcp && metrics.lcp > 2500) {
+if (metrics.lcp && metrics.lcp > 2500) {}
 recommendations.push(
 'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
 )
 }
-if (metrics.fid && metrics.fid > 100) {
+if (metrics.fid && metrics.fid > 100) {}
 recommendations.push(
 'First Input Delay is high. Reduce JavaScript execution time.'
 )
 }
-if (metrics.cls && metrics.cls > 0.1) {
+if (metrics.cls && metrics.cls > 0.1) {}
 recommendations.push(
 'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
 )
 }
-if (metrics.ttfb && metrics.ttfb > 600) {
+if (metrics.ttfb && metrics.ttfb > 600) {}
 recommendations.push(
 'Time to First Byte is slow. Optimize server response time.'
 )
 }
 return recommendations
-}, [metrics])
-const _recommendations = getPerformanceRecommendations()
-if (process.env.NODE_ENV === 'development') {
+}, [metrics]);"
+export const _recommendations=";";"
+if (process.env.NODE_ENV="==" 'development') {}
 return (
 <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
+<<<<<<< HEAD
 <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
 <div className='text-xs space-y-1'></div>
+=======
+<h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>"
+<div className="'text-xs" space-y-1'></div>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
 <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
 <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
 <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
 <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
 <div>Memory:{' '}</div>
-{metrics.memory
+{metrics.memory;
 ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
 : 'N/A'}
 </div>
 </div>
+<<<<<<< HEAD
 {_recommendations.length > 0 && (
 <div className='mt-2'></div>
 <h4 className='font-semibold text-xs text-red-600'>
@@ -339,30 +333,36 @@ Recommendations:
 <ul className='text-xs text-red-600'>
 {_recommendations.map((rec, index) => (
 <li key={index}>• {rec}</li>
+=======
+{_recommendations.length > 0 && ("
+<div className="'mt-2'"></div>
+<h4 className='font-semibold text-xs text-red-600'>}</h4>
+Recommendations:</h4>
+</h4>"
+<ul className="'text-xs" text-red-600'></ul>
+{_recommendations.map((rec, index) => (</ul>"
+<li key="{index}">• {rec}</li>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 ))}
 </ul>
 </div>
 )}
-if (metrics.lcp && metrics.lcp > 250 0) {recommendations.push(
-'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
+if (metrics.lcp && metrics.lcp > 250 0) {recommendations.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
 )}
-if (metrics.fid && metrics.fid >100) {recommendations.push(
-'First Input Delay is high. Reduce JavaScript execution time.'
+if (metrics.fid && metrics.fid >100) {recommendations.push('First Input Delay is high. Reduce JavaScript execution time.'
 )}
-if (metrics.cls && metrics.cls > 0.1) {recommendations.push(
-'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
+if (metrics.cls && metrics.cls > 0.1) {recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
 )}
-if (metrics.ttfb && metrics.ttfb >600) {recommendations.push(
-'Time to First Byte is slow. Optimize server response time.'
+if (metrics.ttfb && metrics.ttfb >600) {recommendations.push('Time to First Byte is slow. Optimize server response time.'
 )}
 return recommendation s
-}, [metrics])
-const_recommendations= getPerformanceRecommendations()
-if (process.env.NODE_ENV=== 'development') {return(<divclassName='fixed bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0)}ms`:'N/A'}</di><di v>Memory:{''}
-{metrics.memory
-?`${(metrics.memory /1024/1024).toFixed(1)}MB`
-:'N/A'}</di></di>{_recommendations.length >0&&(<divclassName='mt-2'><h4className='font-semibold text-xs text-red-60 0'>Recommendations:</h><ulclassName='text-xs text-red-60 0'>{_recommendations.map((recindex)=>(<likey={index}>•{rec}</l>))}</u></di>)}</di>)
+}, [metrics]);"
+const_recommendations="getPerformanceRecommendations()";"
+if (process.env.NODE_ENV="==" 'development') {return(<divclassName="'fixed" bottom-4 right-4 bg-white p-4 rounded-lg shado w-lg border max-w-sm z-5 0'><h3className='font-semibold text-sm mb-2'>PerformanceMonitor</h><divclassName='text-xs space-y-1'><di v>FCP: {metrics.fcp ?`${metrics.fcp.toFixed(0)}ms`:'N/A'}</di><di v>LCP: {metrics.lcp?`${metrics.lcp.toFixed(0)}ms`:'N/A'}</di><di v>FID: {metrics.fid?`${metrics.fid.toFixed(0)}ms`:'N/A'}</di><di v>CLS: {metrics.cls ?metrics.cls.toFixed(3):'N/A'}</di><di v>TTFB: {metrics.ttfb?`${metrics.ttfb.toFixed(0)}ms`:'N/A'}</di><di v>Memory:{''}
+{metrics.memory</di>
+?`${(metrics.memory /1024/1024).toFixed(1)}MB`</di>"
+:'N/A'}</di></di>{_recommendations.length >0&&(<divclassName="'mt-2'"><h4className='font-semibold text-xs text-red-60 0'>Recommendations:</h><ulclassName="'text-xs" text-red-60 0'>{_recommendations.map((recindex)=>(<likey="{index}">•{rec}</l>))}</u></di>)}</di>)
 }
-return nul l
+return nul l;
 }
-export default AdvancedPerformanceMonitor
+export default AdvancedPerformanceMonitor"

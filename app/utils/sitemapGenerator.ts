@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const generateSitemap = useCallback((...args) => {
   const baseUrl = 'https://ziontechgroup.com'
   const staticPages = [
@@ -205,3 +206,22 @@ y: 0.3
 }
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
 };`
+=======
+export const generateSitemap = () => {
+  const baseUrl = 'https://ziontechgroup.com';
+  const staticPages = [
+    '',
+    '/services',
+    '/contact',
+    '/ai-solutions',
+    '/it-services',
+    '/about',
+    '/blog',
+  ];
+
+  return staticPages.map(page => ({
+    url: `${baseUrl}${page}`,
+    lastModified: new Date().toISOString(),
+  }));
+};
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

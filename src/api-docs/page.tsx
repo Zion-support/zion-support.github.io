@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import { X } from 'lucide-react'
 import React, { useState } from 'react'
@@ -6,21 +7,48 @@ import Footer from '../components/Footer'
 import { Key, Copy } from 'lucide-react'
 import { Code } from 'lucide-react'
 import { Check } from 'lucide-react'
+=======
+import { Key, Copy } from 'lucide-react'
+import { Code } from 'lucide-react'
+import { Check } from 'lucide-react'
+=======
+'use client';
+import React, { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Key, Copy, Star, Code, Check } from 'lucide-react';
+'use client'
+import { X } from 'lucide-react'
+import React, { useSta, t, e } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+<<<<<<< HEAD
+import { Key, Copy  } from "lucide-react";
+import { Co, d, e } from "lucide-react";
+import { Che, c, k } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null)
+  const [copiedCod, e, setCopiedCode] = useState<string | null>(nu, l, l)
 
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code)
+  const copyToClipboard = (code: strin,
+      g, id: string) => {
+    navigator.clipboard.writeText(co, d, e)
     setCopiedCode(id)
-    setTimeout(() => setCopiedCode(null), 2000)
-  }
+import React, {useState} from 'react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import {Key, Copy, Code} from 'lucide-react';
+    setTimeout(() => setCopiedCode(null,), 2000)
+}
 
   constapiEndpoints= [
-    {id: 'ai-chat',
-      title: 'AI Chat API',
-      method: 'POST',
-      endpoint: '/$1/v1/$1/chat',
+    {id: 'ai-chat,',
+      title: 'AI Chat API,',
+      method: 'POST,',
+      endpoint: '/$1/v1/$1/chat,',
       description: 'Send messages to our AI chatbot and get intelligent responses.',
       example: `curl -X POST &quot;https://api.ziontechgroup.com/$1/ai/chat&quot; \\
   -H &quot;Authorization: BearerYOUR_API_KEY&quot; \\
@@ -30,10 +58,10 @@ const ApiDocsPage: React.FC = () => {
    &quot;context&quot;:&quot;customer_support&quot;
 }'`
     },
-    {id: 'ai-analysis',
-      title: 'AI Data Analysis',
-      method: 'POST',
-      endpoint: '/$1/v1/$1/analyze',
+    {id: 'ai-analysis,',
+      title: 'AI Data Analysis,',
+      method: 'POST,',
+      endpoint: '/$1/v1/$1/analyze,',
       description: 'Analyze data using our AI models for insights and predictions.',
       example: `curl -X POST&quot;https:// api.ziontechgroup.com/$1/ai/analyze&quot; \\
   -H&quot;Authorization: Bearer YOUR_API_KEY&quot; \\
@@ -45,7 +73,11 @@ const ApiDocsPage: React.FC = () => {
     }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <>
       <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900&quot;></div>
@@ -75,7 +107,7 @@ const Page = () => {
                     <div className=&quot;flex items-center space-x-4&quot;></div>
                       <span className={`px-3 py-1 rounded text-sm font-semibold ${
                         endpoint.method === 'POST' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
-                      }`}>
+                      }`}></span>
                         {endpoint.method}
                       </span>
                       <code className=&quot;text-cyan-400 font-mono&quot;>{endpoint.endpoint}</code>
@@ -124,9 +156,14 @@ const Page = () => {
           </section>
         </div>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  )
+  ),
 }
 
+<<<<<<< HEAD
+=======
+export default Page;
+
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default Page;

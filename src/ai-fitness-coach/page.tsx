@@ -1,12 +1,36 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Play, CheckCircle, Star, Zap, Video, Heart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Zap, Heart } from 'lucide-react'
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import React from 'react'
-import { Play } from 'lucide-react'
+import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Zap, Heart } from 'lucide-react'
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import { Play, CheckCircle, Star, Zap, Video, Heart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+<<<<<<< HEAD
+import { CheckCircle, Zap, Heart } from "lucide-react";
+constAIFitnessCoachPage: React.FC= () => {
+  constfeatures= ['Personalized Plans,',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
     'Personalized Plans',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     'Progress Tracking',
     'Nutrition Analysis',
     'Workout Videos',
@@ -18,8 +42,7 @@ constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
     'Wearable Integration'
   ]
 
-  constbenefits= [
-    'Better results',
+  constbenefits= ['Better results',
     '2 4/7 guidance',
     'Personalized approach',
     'Health insights',
@@ -29,27 +52,32 @@ constAIFitnessCoachPage: React.FC= () =>{constfeatures= [
 
   constpricingPlans= [
     {
-      name: 'Basic',
-      price: '$9 9',
-      period: '/month',
-      features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
+      name: 'Basic,',
+      price: '$9 9,',
+      period: '/month,',
+      features: ['Basic plans,', 'Progress tracking', 'Email support', 'Mobile app'],
       popular: false
-   },
-    {name: 'Premium',
-      price: '$14 9',
-      period: '/month',
-      features: ['Personalized plans', 'Nutrition analysis', 'Video workouts', 'Wearable sync', 'Priority support'],
+  ,
+}
+    {name: 'Premium,',
+      price: '$14 9,',
+      period: '/month,',
+      features: ['Personalized plans,', 'Nutrition analysis', 'Video workouts', 'Wearable sync', 'Priority support'],
       popular: true
-   },
-    {name: 'Pro',
-      price: '$24 9',
-      period: '/month',
-      features: ['Everything in Premium', '1-on-1 coaching', 'Custom programs', 'Advanced analytics', 'Dedicated support'],
+  , },
+    {name: 'Pro,',
+      price: '$24 9,',
+      period: '/month,',
+      features: ['Everything in Premium,', '1-on-1 coaching', 'Custom programs', 'Advanced analytics', 'Dedicated support'],
       popular: false
-    }
+   , }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
   <><SEOOptimizertitle=&quot;AI Fitness Coach - Personalized Fitness & Nutrition Plans | ZionTechGroup&quot;
         description=&quot;Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get24/7 guidance, and achieve your health goals starting at$99/month.&quot;
@@ -155,11 +183,9 @@ const Page = () => {
                   <a
                     href=&quot;/contact&quot;
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
+                      plan.popular ? 'cyber-button' : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
+                   , }`}
+                  ></a>
                     Get Started
                   </a>
                 </div>
@@ -192,10 +218,14 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
-  )
+  ),
 }
 
+<<<<<<< HEAD
 export default Page;
+=======
+export default Page;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

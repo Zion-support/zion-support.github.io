@@ -1,11 +1,41 @@
+<<<<<<< HEAD
 'use client'
 import { Brain } from 'lucide-react'
 import React, { useState } from 'react'
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
+import { Clock } from 'lucide-react'
+'use client'
+import { Bra, i, n } from 'lucide-react'
+import React, { useSta, t, e } from 'react'
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
+<<<<<<< HEAD
+=======
+=======
+'use client';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+<<<<<<< HEAD
+import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
+import { Clo, c, k } from "lucide-react";
+constDemoPage: React.FC= () => {
+  const [formDatasetFormDa, t, a] = useState({
+    name: ',&apos;,
+    email: ',',
+      company: ',',
+    phone: ',',
+      service: ',',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',
@@ -13,61 +43,69 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     company: '',
     phone: '',
     service: '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     message: ''
-  })
+ ,
+})
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+  const { nam, e, value
+} = e.target
     setFormData(prev => ({
-      ...prev,
-      [name]: value
+      ...prev
+      [na, m, e]: value
     }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  e.preventDefault()
     // Handle form submission
-    const subject = `Demo Request from ${formData.name} - ${formData.company}`
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`
-    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    const subject = `Demo Request from ${formData.nam,e
+} - ${formData.company}`
+    const body = `Name: ${formData.nam,e}\nEmail: ${formData.emai,l}\nCompany: ${formData.compan,y}\nPhone: ${formData.phon,e}\nService: ${formData.servic,e}\nMessage: ${formData.messag,e}`
+    window.location.href = `mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject,)}&body=${encodeURIComponent(bo, d, y)}`
   }
 
   constdemoFeatures= [
-    {icon: Brain,
-      title: 'AI Solutions Demo',
+    {icon: Brai,
+      title: 'AI Solutions Demo,',
       description: 'See our AI services in action with live demonstrations'
-   },
-    {icon: Shield,
-      title: 'Security Assessment',
+  , },
+    {icon: Shiel,
+      title: 'Security Assessment,',
       description: 'Get a free security evaluation of your current setup'
-   },
-    {icon: Zap,
-      title: 'Performance Analysis',
+  , },
+    {icon: Za,
+      title: 'Performance Analysis,',
       description: 'Learn how to optimize your business processes'
-   },
-    {icon: Users,
-      title: 'Team Training',
+  , },
+    {icon: User,
+      title: 'Team Training,',
       description: 'Hands-on training for your team members'
-    }
+   , }
   ]
 
   consttestimonials= [
-    {name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      text: 'The demo was incredibly insightful. We saw immediate value in their AI solutions.',
+    {name: 'Sarah Johnson,',
+      company: 'TechCorp Inc.,',
+      text: 'The demo was incredibly insightful. We saw immediate value in their AI solutions.,',
       rating:5},
-    {name: 'Michael Chen',
-      company: 'InnovateLabs',
-      text: 'Professional team with deep expertise. The demo exceeded our expectations.',
+    {name: 'Michael Chen,',
+      company: 'InnovateLabs,',
+      text: 'Professional team with deep expertise. The demo exceeded our expectations.,',
       rating:5},
-    {name: 'Emily Rodriguez',
-      company: 'DataFlow Systems',
-      text: 'Clear, concise, and very informative. Highly recommend scheduling a demo.',
+    {name: 'Emily Rodriguez,',
+      company: 'DataFlow Systems,',
+      text: 'Clea,r, concise, and very informative. Highly recommend scheduling a demo.',
       rating: 5
-    }
+   , }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
   <><SEOOptimizertitle=&quot;Request a Demo - ZionTechGroup&quot;
         description=&quot;Schedule a personalized demo of our AI and IT services. See how we can transform your business withcutting-edgetechnology.&quot;
@@ -172,8 +210,7 @@ const Page = () => {
                       type=&quot;submit&quot;
                       className=&quot;w-full cyber-button py-3 px-6 text-center&quot;
                     >
-                      Schedule Demo
-                    </button>
+                      Schedule Demo</button>
                   </form>
                 </div>
                 {/* Contact Info */}
@@ -247,10 +284,15 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
   )
 }
 
+<<<<<<< HEAD
+=======
+export default Page;
+
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default Page;

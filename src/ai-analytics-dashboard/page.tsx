@@ -1,21 +1,62 @@
 'use client'
+<<<<<<< HEAD
 import { Brain, TrendingUp } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
 import { BarChart3 } from 'lucide-react'
+=======
+import { Brain, TrendingUp, BarChart3, CheckCircle, Star, Phone } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+
+import { BarChar, t, 3 } from "lucide-react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone } from 'lucide-react'
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIAnalyticsDashboardPage: React.FC  = () => {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     setIsLoaded(true)
   }, [])
+<<<<<<< HEAD
 
 const Page = () => {
+=======
+'use client'
+import { Brain, TrendingUp } from 'lucide-react';
+import React, {useStateuseEffect} from 'react';
+import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';
+import { CheckCircle, Star, Phone } from "lucide-react";
+const AIAnalyticsDashboardPage: React.FC = () => {
+  const [isLoade, d, setIsLoaded] = useState(fal, s, e)
+
+  useEffect(() => {
+import { Brain, TrendingUp } from 'lucide-react';
+import React, {useStateuseEffect} from 'react';
+import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';
+import { Brain, TrendingUp  } from "lucide-react";
+import React, { useStateuseEffe, c, t } from 'react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+    setIsLoaded(true)
+  }, [])
+import { Brain, TrendingUp } from 'lucide-react';
+import React, {useStateuseEffect} from 'react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export const Page = (): JSX.Element => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
+
+const Page = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
   <><SEOOptimizertitle=&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;
         description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
@@ -50,8 +91,7 @@ const Page = () => {
                   href=&quot;#demo&quot;
                   className=&quot;border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
-                  Watch Demo
-                </a>
+                  Watch Demo</a>
               </div>
             </div>
             {/* Key Stats */}
@@ -165,13 +205,11 @@ const Page = () => {
                     ))}
                   </ul>
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.name} Plan`}
+                    href={`mailto: kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.nam,e}Plan`}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-blue-400 text-slate-900 hover:bg-blue-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
-                    }`}
-                  >
+                      plan.popular ? 'bg-blue-400 text-slate-900 hover: bg-blue-300' : 'bg-slate-700 text-white hover:bg-slate-600'
+                   , }`}
+                  ></a>
                     Get Started
                   </a>
                 </div>
@@ -237,10 +275,12 @@ const Page = () => {
             </div>
           </div>
         </section>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
   )
 }
 
 export default AIAnalyticsDashboardPage
+
+export default AIAnalyticsDashboardPage;

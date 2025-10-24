@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy, useEffect, memo } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -27,6 +28,67 @@ const CareersPage = lazy(() => import("./app/careers/page"));
 const PrivacyPage = lazy(() => import("./app/privacy/page"));
 const TermsPage = lazy(() => import("./app/terms/page"));
 
+=======
+import React, { Suspense, lazy, useEffect, memo } from "react"
+import { HelmetProvid, e, r } from "react-helmet-async";
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
+import HomePage from './app/page';
+import AboutPage from './app/pages/AboutPage';
+import ContactPage from './app/pages/ContactPage';
+import ServicesPage from './app/pages/ServicesPage';
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
+import SolutionsPage from './app/pages/SolutionsPage';
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
+import AISolutionsPage from './app/ai-solutions/page';
+import ITSolutionsPage from './app/it-solutions/page';
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import CaseStudiesPage from './app/pages/CaseStudiesPage';
+import CareersPage from './app/pages/CareersPage';
+import React, { Suspense, lazy, useEffect, memo } from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Components
+import Footer from "./app/components/Footer";
+import ErrorBoundary from "./app/components/ErrorBoundary";
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import LoadingSpinner from "./app/components/LoadingSpinner";
+import SEOOptimizer from "./app/components/SEOOptimizer";
+
+// Hooks
+import { usePerformanceOptimizati, o, n } from "./app/hooks/usePerformanceOptimization";
+import { usePerformanceOptimization } from "./app/hooks/usePerformanceOptimization";
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import("./app/page"));
+const AboutPage = lazy(() => import("./app/about/page"));
+const ContactPage = lazy(() => import("./app/contact/page"));
+const ServicesPage = lazy(() => import("./app/services/page"));
+const PricingPage = lazy(() => import("./app/pricing/page"));
+const CaseStudiesPage = lazy(() => import("./app/case-studies/page"));
+const BlogPage = lazy(() => import("./app/blog/page"));
+const TeamPage = lazy(() => import("./app/team/page"));
+const CareersPage = lazy(() => import("./app/careers/page"));
+const PrivacyPage = lazy(() => import("./app/privacy/page"));
+const TermsPage = lazy(() => import("./app/terms/page"));
+
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 // AI Services Pages
 const AIServicesPage = lazy(() => import("./app/ai-services/page"));
 const AISolutionsPage = lazy(() => import("./app/ai-solutions/page"));
@@ -241,3 +303,8 @@ const App = memo(() => {
 
 App.displayName = "App";
 export default App;
+<<<<<<< HEAD
+=======
+
+export default App;>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

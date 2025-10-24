@@ -1,20 +1,51 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPa, t, h } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filena, m, e);
 
-function fixSyntaxErrors(filePath) {
+function fixSyntaxErrors(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix 1: Remove loading="lazy" from non-img elements
+    content = content.replace(/loading="lazy"(?=\s*[^>]*>)/g, '');
+    modified = true;
+
+    // Fix 2: Fix malformed JSX closing tags
+    content = content.replace(/(<[^>]+>)([^<]*?)(<\/[^>]+>)([^<]*?)(<\/[^>]+>)/g, '$1$2$3');
     
-    // Check if file has syntax issues
-    if (!content.includes(';') || !content.includes('</')) {
-      return false; // No obvious syntax issues
+    // Fix 3: Fix missing semicolons after imports
+    content = content.replace(/import\s+[^;]+$/gm, (match) => {
+      if (!match.endsWith(';')) {
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Fix 4: Fix malformed JSX attributes
+    content = content.replace(/aria-label="[^"]*">/g, (match) => {
+      return match.replace(/>$/, '>');
+    });
+
+    // Fix 5: Fix unescaped quotes in JSX
+    content = content.replace(/(<[^>]*>)([^<]*?)'([^<]*?)(<\/[^>]*>)/g, (match, open, before, after, close) => {
+      return open + before + '&apos;' + after + close;
+    });
+
+    // Fix 6: Fix malformed function declarations
+    content = content.replace(/^(\s*)(const|let|var)\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/gm, (match, indent, decl, name) => {
+      return match;
+    });
+
+    // Fix 7: Fix missing export default
+    if (content.includes('export default function') && !content.includes('export default')) {
+      content = content.replace(/export default function (\w+)/g, 'export default function $1');
     }
     
-    console.log(`Fixing syntax errors in: ${filePath}`);
+    console.log(`Fixing syntax errors in: ${ filePa, t, h }`);
     
     // Fix common syntax issues
     let fixedContent = content
@@ -25,7 +56,7 @@ function fixSyntaxErrors(filePath) {
       // Fix JSX opening tags that have semicolons
       .replace(/<([^>]+)>;\s*$/gm, '<$1>')
       // Fix JSX attributes that have semicolons
-      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1="$2"')
+      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1='$2'')
       // Fix JSX expressions that have semicolons
       .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
       // Remove standalone semicolons
@@ -45,7 +76,7 @@ function fixSyntaxErrors(filePath) {
       .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
       .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
       // Fix return statements
-      .replace(/return\s*\(\s*;\s*$/gm, 'return (')
+      .replace(/return\s*\(\s*;\s*$/gm, 'return(')
       // Fix JSX elements that are missing closing tags
       .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
       // Clean up extra whitespace
@@ -94,7 +125,7 @@ function fixSyntaxErrors(filePath) {
         }
       }
       
-      fixedLines.push(line);
+      fixedLines.push(li, n, e);
     }
     
     const finalContent = fixedLines.join('\n');
@@ -104,50 +135,50 @@ function fixSyntaxErrors(filePath) {
       fs.writeFileSync(filePath, finalContent);
       return true;
     }
-    
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
-function findTsxFiles(dir) {
+function findTsxFiles(d, i, r) {
   const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentD, i, r) {
+    const items = fs.readdirSync(currentD, i, r);
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+      const stat = fs.statSync(fullPa, t, h);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
+        traverse(fullPa, t, h);
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
+        files.push(fullPa, t, h);
       }
     }
   }
   
-  traverse(dir);
+  traverse(d, i, r);
   return files;
 }
 
 // Main execution
+console.log('Starting syntax error fixes...');
 const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
+const files = findTsxFiles(appD, i, r);
 
 console.log(`Found ${files.length} TypeScript files to check`);
 
 let fixedCount = 0;
 for (const file of files) {
-  if (fixSyntaxErrors(file)) {
+  if (fixSyntaxErrors(fi, l, e)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+console.log(`Fixed syntax errors in ${ fixedCou, n, t } files`);
 
 // Also check the root App.tsx
 if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
@@ -155,4 +186,4 @@ if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
   console.log('Fixed syntax errors in App.tsx');
 }
 
-console.log(`Total files fixed: ${fixedCount}`);
+console.log(`Total files fixed: ${ fixedCou, n, t }`);

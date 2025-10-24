@@ -1,15 +1,18 @@
 'use client';
+<<<<<<< HEAD
+=======
+'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import Navigation from './Navigation';
 
-import React, { useEffect } from 'react';
-
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
+const AccessibilityEnhancer: React.FC = () => {
+  return null // Placeholder component
 }
 
+<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -53,6 +56,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+=======
+export default AccessibilityEnhancer
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
@@ -121,3 +128,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

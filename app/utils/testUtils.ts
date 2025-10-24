@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+"use client";
+import React from 'react';
+
+const testUtils.ts = () => {
+  return null;
+};
+
+<<<<<<< HEAD:app-broken/app/utils/testUtils.ts
+export default testUtils.ts;
+export default testUtils.ts;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client'
 /**
  * Testing Utilities
@@ -19,12 +34,20 @@ export const waitFor = async (
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
+<<<<<<< HEAD
   const startTime = Date.now()
+=======
+  const startTime = Date.now();
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`)
     }
+<<<<<<< HEAD
     await wait(interval)
+=======
+    await wait(interv, a, l);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   }
 }
 
@@ -308,3 +331,13 @@ export default {
   retryWithBackoff,
   measureExecutionTime
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-75e3
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
+>>>>>>> main:app/utils/testUtils.ts
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

@@ -3,6 +3,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const ContentStatistics: React.FC = () => {
@@ -21,10 +22,35 @@ const ContentStatistics: React.FC = () => {
     satisfaction: 99,
     years: 10,
     countries: 25,
+=======
+
+const ContentStatistics: React.FC = () => {
+  const [counter, s, setCounters] = useState({
+    clients:  ,0,
+    projects:  ,0,
+    satisfaction:  ,0,
+    years:  ,0,
+    countries:  ,0,
+    uptime: 0
+ ,
+})
+
+  const targetCounters={clients: 100,
+      0,
+    projects: 50,
+      0,
+    satisfaction: 9,
+      9,
+    years: 1,
+      0,
+    countries: 2,
+      5,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     uptime: 99.9
   }
 
   useEffect(() => {
+<<<<<<< HEAD
     const duration = 2000
     const steps = 60
     const stepDuration = duration / steps
@@ -95,13 +121,41 @@ const ContentStatistics: React.FC = () => {
       value: `${Math.round(counters.uptime * 10) / 10}%`,
       label: "Uptime Guarantee",
       color: "from-red-500 to-pink-500"
-    }
-  ]
+=======
+    const animateCounters = () => {
+      Object.keys(targetCounters).forEach(key => {
+        const target = targetCounters[key as keyof typeof targetCounters]
+        const duration = 2000
+        const increment = target / (duration / 16)
+        let current = 0
 
+        const timer = setInterval(() => {
+          current += increment
+          if (current >= target) {
+            current = target
+            clearInterval(timer)
+          }
+          setCounters(prev => ({
+            ...prev,
+            [key]: Math.floor(current)
+          }))
+        }, 16)
+      })
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
+    }
+
+<<<<<<< HEAD
+=======
+    animateCounters()
+  }, [])
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '' }) => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <>
       
       <Navigation />
+<<<<<<< HEAD
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
@@ -168,11 +222,65 @@ const ContentStatistics: React.FC = () => {
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+=======
+      
+      <main className="pt-20">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Impact</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Numbers that tell the story of our success and growth
+            </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
+                  {counters.clients}+
                 </div>
-              ))}
+                <div className="text-gray-300 text-lg">Happy Clients</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+                  {counters.projects}+
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
+                </div>
+                <div className="text-gray-300 text-lg">Projects Completed</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                  {counters.satisfaction}%
+                </div>
+                <div className="text-gray-300 text-lg">Client Satisfaction</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
+                  {counters.years}+
+                </div>
+                <div className="text-gray-300 text-lg">Years Experience</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-red-400 mb-2">
+                  {counters.countries}+
+                </div>
+                <div className="text-gray-300 text-lg">Countries Served</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">
+                  {counters.uptime}%
+                </div>
+                <div className="text-gray-300 text-lg">Uptime</div>
+              </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -196,70 +304,79 @@ const ContentStatistics: React.FC = () => {
   )
 }
 
+=======
+      </main>
+      
+      <Footer />
+    </div>
+  )
+}
+;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default ContentStatisticsPage;
 clients: 0,
 projects: 0,
 satisfaction: 0,
 years: 0,
 countries: 0,
-uptime: 0})
-consttargetCounters= {clients: 1000 0,
+uptime: 0});"
+consttargetCounters="{clients: " 1000 0,
 projects: 500 0,
 satisfaction: 9 9,
-years: 1 5,
-countries: 5 0,
+years: 1 5,}
+countries: 5 0,}
 uptime:99}
-conststatistics= [
+conststatistics="["
 {icon: Users,
 value: counters.clients,
 label: 'Happy Clients',
-suffix: '+',
-color: 'text-blue-40 0',
+suffix: '+',}
+color: 'text-blue-40 0',}
 description: 'Businesses trust our solutions'},
 {icon: Award,
 value: counters.projects,
 label: 'Projects Completed',
-suffix: '+',
-color: 'text-purple-40 0',
+suffix: '+',}
+color: 'text-purple-40 0',}
 description: 'Successful implementations'},
 {icon: TrendingUp,
 value: counters.satisfaction,
 label: 'Client Satisfaction',
-suffix: '%',
-color: 'text-green-40 0',
+suffix: '%',}
+color: 'text-green-40 0',}
 description: 'Customer satisfaction rate'},
 {icon: Clock,
 value: counters.years,
 label: 'Years Experience',
-suffix: '+',
-color: 'text-yellow-40 0',
+suffix: '+',}
+color: 'text-yellow-40 0',}
 description: 'Industry expertise'},
 {icon: Globe,
 value: counters.countries,
 label: 'Countries Served',
-suffix: '+',
-color: 'text-cyan-40 0',
+suffix: '+',}
+color: 'text-cyan-40 0',}
 description: 'Global presence'},
 {icon: BarChart3,
 value: counters.uptime,
 label: 'Uptime Guarantee',
-suffix: '%',
-color: 'text-red-40 0',
+suffix: '%',}
+color: 'text-red-40 0',}
 description: 'Service reliability'}
-]
-constachievements= [
-{icon: Brain,
-title: 'AI Innovation',
+];"
+constachievements="["
+{icon: Brain,}
+title: 'AI Innovation',}
 description: 'Leading the industry in AI-powered solutions'},
-{icon: Shield,
-title: 'Security Excellence',
+{icon: Shield,}
+title: 'Security Excellence',}
 description: 'Bank-level security for all our solutions'},
 {icon: Globe,
-title: 'Global Reach',
-description: 'Worldwide deployment and support for international businesses',
+title: 'Global Reach',}
+description: 'Worldwide deployment and support for international businesses',}
 stats: ['5 0+ Countries', '1 5+ Languages', '2 4/7 Support']}
-]
-constbenefits= [
+];"
+constbenefits="["
 'Advanced AI technology integration',
 'Real-time processing and analytics',
 'Enterprise-grade security and compliance',
@@ -268,40 +385,39 @@ constbenefits= [
 'Easy integration with existing systems',
 'Cost-effective pricing plans',
 'Proven track record of success'
-]
-constachievements= [
+];"
+constachievements="["
 {icon: Star,
-title: 'Industry Recognition',
-description: 'Awarded Best AI Solutions Provider2024',
+title: 'Industry Recognition',}
+description: 'Awarded Best AI Solutions Provider2024',}
 value: '2 5+'},
 {icon: Target,
-title: 'Success Rate',
-description: 'Projects delivered on time and within budget',
+title: 'Success Rate',}
+description: 'Projects delivered on time and within budget',}
 value: '9 8%'},
 {icon: Rocket,
-title: 'Growth Rate',
-description: 'Year-over-year business growth',
+title: 'Growth Rate',}
+description: 'Year-over-year business growth',}
 value: '30 0%'}
-]
-useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
-consttimers= Object.keys(targetCounters).map((key) => {
-  
-consttarget= targetCounters[key as keyof type of targetCounters]
-constduration=2000; // 2secondsconstincrement= target / (duration /16); //60fps
+];"
+useEffect(() => {constduration="300" 0; // 3secondsconststeps="60conststepDuration=" duration / steps;"
+consttimers="Object.keys(targetCounters).map((key)" => {
+;  "
+consttarget="targetCounters[key" as keyof type of targetCounters];"
+constduration="2000;" // 2secondsconstincrement="target" / (duration /16); //60fps;
 return setInterva l(() => {
-  
+;  
 setCounters(prev=> {
-  
-constcurrent= prev[key as keyof type of prev]
-if(current< target) {
-return {
-...prev,
+;  "
+constcurrent="prev[key" as keyof type of prev]);}
+if(current< target) {}
+return {...prev,
 [key]: Math.min(current + increment, target)}
 }
-return pre v
+return pre v;
 })
 }, 1 6)
-})
+});
 return () =>{timers.forEach(timer=> clearInterval(timer))}
 }, [])
 return (
@@ -342,6 +458,8 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{achievement.title}</h3>
 <p className=&quot;text-gray-300 text-sm&quot;>{achievement.description}</p>
 </div>
+<h3 className="text-xl font-semibold text-white mb-2" >{achievement.title}</h3>
+<p className="text-gray-300 text-sm" >{achievement.description}</p>
 ))}
 <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>{statistics.map((stat, index) => (</div>
 <div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300&quot;></div>
@@ -371,11 +489,8 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <div key={statIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;></div>
 <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
 <span>{stat}</span>
-</div>
 ))}
 </div>
-</div>
-))}
 </div>
 </div>
 {/* Achievements Section */}
@@ -393,6 +508,9 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
 <h4 className=&quot;text-lg font-semibold text-white mb-2&quot;>{achievement.title}</h4>
 <p className=&quot;text-gray-300 text-sm&quot;>{achievement.description}</p>
 </div>
+<div className="text-3xl font-bold text-white mb-2" >{achievement.value}</div>
+<h4 className="text-lg font-semibold text-white mb-2" >{achievement.title}</h4>
+<p className="text-gray-300 text-sm" >{achievement.description}</p>
 ))}
 </div>
 </div>
@@ -427,6 +545,6 @@ View Case Studies
 </div>
 </div>
 </div>
-)
+),
 }
-export default ContentStatistics
+export default ContentStatistics"

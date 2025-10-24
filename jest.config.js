@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -41,6 +44,7 @@ export default {
     }
   }
 };
+<<<<<<< HEAD
 =======
 const nextJest = require('next/jest')
 
@@ -62,3 +66,5 @@ const customJestConfig = {
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
 >>>>>>> origin/main
+=======
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

@@ -4,14 +4,23 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
+<<<<<<< HEAD
 interface HeaderProps {
   className?: string;
 }
 
 const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   return (
+=======
+interface HeaderProps {}
+  className?: string;
+}
+;
+const Header: React.FC<HeaderProps> = ({className="''" }) => {}</HeaderProps>
+  return (</HeaderProps>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     <>
       
       <Navigation />
@@ -37,6 +46,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -105,14 +115,17 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default HeaderPage;
   )
 }
 export default Header
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

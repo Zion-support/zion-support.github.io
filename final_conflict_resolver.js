@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function resolveConflicts(content) {
   return content
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n/g, '')
@@ -46,3 +47,11 @@ function walkDirectory(dir) {
 console.log('Starting final conflict resolution...');
 const resolvedCount = walkDirectory('.');
 console.log(`Resolved conflicts in ${resolvedCount} files`);
+=======
+function resolveConflicts(conte, n, t) {
+  return content
+
+function processFile(filePa, t, h) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

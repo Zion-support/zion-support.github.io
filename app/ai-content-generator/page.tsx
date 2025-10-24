@@ -1,29 +1,53 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe } from 'lucide-react';
+=======
+import React from "react";
+import React from "react";
+'use client';
+import React from 'react';
+import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 export default function AIContentGeneratorPage() {
   const features = [
     {
+<<<<<<< HEAD
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
+=======
+      icon: Brain,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       title: 'AI-Powered Writing',
       description: 'Advanced AI-powered content generation with high accuracy and human-like quality.',
       benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
     },
     {
+<<<<<<< HEAD
       icon: <FileText className="w-6 h-6 text-emerald-400" />,
+=======
+      icon: FileText,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       title: 'Content Templates',
       description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
       benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
     },
     {
+<<<<<<< HEAD
       icon: <MessageCircle className="w-6 h-6 text-purple-400" />,
+=======
+      icon: MessageCircle,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       title: 'Social Media Content',
       description: 'Generate engaging social media posts, captions, and hashtags for all platforms.',
       benefits: ['Platform-specific content', 'Trending hashtags', 'Engagement optimization', 'Visual content suggestions']
     },
     {
+<<<<<<< HEAD
       icon: <Target className="w-6 h-6 text-orange-400" />,
+=======
+      icon: Target,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       title: 'SEO Optimization',
       description: 'AI-optimized content that ranks higher in search engines and drives organic traffic.',
       benefits: ['Keyword research', 'Content optimization', 'Meta descriptions', 'Schema markup']
@@ -44,7 +68,11 @@ export default function AIContentGeneratorPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               Start Generating
+<<<<<<< HEAD
               <ArrowRight className="ml-2 h-5 w-5" />
+=======
+              <ArrowRight className="w-8 h-8" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
               View Examples
@@ -73,7 +101,11 @@ export default function AIContentGeneratorPage() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
+<<<<<<< HEAD
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+=======
+                      <CheckCircle className="w-8 h-8" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                       {benefit}
                     </li>
                   ))}
@@ -95,7 +127,11 @@ export default function AIContentGeneratorPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 Get Started Now
+<<<<<<< HEAD
                 <ArrowRight className="ml-2 h-5 w-5" />
+=======
+                <ArrowRight className="w-8 h-8" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
                 Learn More
@@ -106,4 +142,12 @@ export default function AIContentGeneratorPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+export default Aicontentgenerator;
+
+export default AiContentGenerator;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

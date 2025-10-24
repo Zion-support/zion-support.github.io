@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { MessageCircle, CheckCircle, Phone, Mail, Star, Shield, Users, Clock, Check } from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -6,54 +14,69 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { MessageCircle } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+const AICustomerSupportPage: React.FC = () => {
+  const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {MessageCircle, CheckCircle, Phone, Mail} from 'lucide-react';
+import { MessageCirc, l, e } from "lucide-react";
+import { CheckCircle, Phone, Mail } from "lucide-react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
-      icon: MessageCircle,
-      title: '2 4/7 AI Chat Support',
+      icon: MessageCircl,
+      title: '2 4/7 AI Chat Support,',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
-   },
-    {icon: Users,
-      title: 'Smart Ticket Routing',
+}
+    {icon: User,
+      title: 'Smart Ticket Routing,',
       description: 'AI-powered ticket class ification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
    },
-    {icon: Clock,
-      title: 'Predictive Analytics',
+    {icon: Cloc,
+      title: 'Predictive Analytics,',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
    },
-    {icon: Shield,
-      title: 'Knowledge Base Integration',
-      description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
+    {icon: Shiel,
+      title: 'Knowledge Base Integration,',
+      description: 'Seamlessly integrated knowledge base that provides accurat,e, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
   ]
 
   constpricing= [
-    {name: 'Starter',
-      price: '$14 9/month',
+    {name: 'Starter,',
+      price: '$14 9/month,',
       description: 'Perfect for small businesses',
-      features: ['Up to 1,000conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
+      features: ['Up to ,1,000conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
    },
-    {name: 'Professional',
-      price: '$29 9/month',
+    {name: 'Professional,',
+      price: '$29 9/month,',
       description: 'Ideal for growing companies',
-      features: ['Up to10,000conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
+      features: ['Up to1,0,000conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
    },
-    {name: 'Enterprise',
-      price: '$59 9/month',
+    {name: 'Enterprise,',
+      price: '$59 9/month,',
       description: 'For large organizations',
-      features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
+      features: ['Unlimited conversations,', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ]
 
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '95%,',
+      label: 'Customer Satisfaction', },
+    { number: '60%,',
+      label: 'Faster Resolution', },
+    { number: '24/7,',
+      label: 'Availability', },
+    { number: '50+,',
+      label: 'Languages Supported', }
   ]
 
   return (
@@ -87,8 +110,7 @@ const AICustomerSupportPage: React.FC = () => {
                 href=&quot;/contact&quot;
                 className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
               >
-                Learn More
-              </a>
+                Learn More</a>
             </div>
           </section>
           {/* Features Section */}
@@ -122,10 +144,13 @@ const AICustomerSupportPage: React.FC = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`cyber-card p-8 relative ${
+                  key={ ind, e, x }className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
+<<<<<<< HEAD
                   }`}
+=======
+    }`}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                 ></div>
                   {index === 1 && (
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
@@ -145,12 +170,11 @@ const AICustomerSupportPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className=&quot;cyber-button w-full text-center block&quot;
                   >
-                    Get Started
-                  </a>
+                    Get Started</a>
                 </div>
               ))}
             </div>
@@ -189,4 +213,9 @@ const AICustomerSupportPage: React.FC = () => {
   )
 }
 
+<<<<<<< HEAD
+=======
+export default Page;
+
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default Page;

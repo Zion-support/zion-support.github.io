@@ -1,12 +1,26 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
+=======
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+'use client';
+import React from 'react';
+import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe, Send, BarChart3, Target, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'AI Solutions',
+<<<<<<< HEAD
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
+=======
+      icon: Brain,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
       services: [
         'AI Chatbots & Virtual Assistants',
@@ -19,7 +33,11 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'IT Services',
+<<<<<<< HEAD
       icon: <Cloud className="w-8 h-8 text-purple-400" />,
+=======
+      icon: Cloud,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       description: 'Comprehensive IT services to modernize your infrastructure and operations.',
       services: [
         'Cloud Migration & Management',
@@ -32,7 +50,11 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'Web Development',
+<<<<<<< HEAD
       icon: <Globe className="w-8 h-8 text-green-400" />,
+=======
+      icon: Globe,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       description: 'Custom web applications and websites built with modern technologies.',
       services: [
         'React & Next.js Applications',
@@ -45,7 +67,11 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'Mobile Development',
+<<<<<<< HEAD
       icon: <Smartphone className="w-8 h-8 text-orange-400" />,
+=======
+      icon: Smartphone,
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       services: [
         'iOS App Development',
@@ -72,7 +98,11 @@ const ServicesPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               Get Started
+<<<<<<< HEAD
               <ArrowRight className="ml-2 h-5 w-5" />
+=======
+              <ArrowRight className="w-8 h-8" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
               View Portfolio
@@ -95,14 +125,22 @@ const ServicesPage: React.FC = () => {
                 <ul className="space-y-3">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
+<<<<<<< HEAD
                       <Circle className="w-4 h-4 text-cyan-400 mr-3" />
+=======
+                      <Circle className="w-8 h-8" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                       {service}
                     </li>
                   ))}
                 </ul>
                 <button className="mt-6 text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
                   Learn More
+<<<<<<< HEAD
                   <ArrowRight className="ml-2 h-4 w-4" />
+=======
+                  <ArrowRight className="w-8 h-8" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                 </button>
               </div>
             ))}
@@ -121,7 +159,11 @@ const ServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 Contact Us
+<<<<<<< HEAD
                 <ArrowRight className="ml-2 h-5 w-5" />
+=======
+                <ArrowRight className="w-8 h-8" />
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
                 Schedule Call
@@ -134,4 +176,12 @@ const ServicesPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ServicesPage;
+=======
+export default ServicesPage;
+
+export default Services;
+
+export default Services;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

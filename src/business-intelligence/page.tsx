@@ -1,36 +1,55 @@
+<<<<<<< HEAD
 'use client'
 import { BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
+=======
+import React from 'react';
+import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
+import { BarChart, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
+<<<<<<< HEAD
+import { CheckCircle, Star, BarChart, TrendingUp, Target  } from "lucide-react";
+import { BarChart, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
-      id: 'data-analytics',
-      title: 'Advanced Data Analytics',
+      id: 'data-analytics,&apos;,
+      title: 'Advanced Data Analytics,',
       description: 'Transform raw data into actionable insights with our comprehensive analytics solutions.',
-      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
+      features: ['Real-time data processing,', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
       benefits: ['Data-driven decisions', 'Improved efficiency', 'Better forecasting', 'Competitive advantage'],
-      marketPrice: '$1,20 0-3,50 0/month',
-      category: 'Data Analytics',
-      technologies: ['Python', 'R', 'SQL', 'Tableau', 'Power BI']
-   },
-    {id: 'business-intelligence',
-      title: 'Business Intelligence Solutions',
+      marketPrice: '$,1,20 0-3,50 0/month',
+      category: 'Data Analytics,',
+      technologies: ['Python,', 'R', 'SQL', 'Tableau', 'Power BI']
+}
+    {id: 'business-intelligence,',
+      title: 'Business Intelligence Solutions,',
       description: 'Comprehensive BI platforms that provide insights across all business functions.',
-      features: ['Executive dashboards', 'KPI tracking', 'Report automation', 'Data integration'],
+      features: ['Executive dashboards,', 'KPI tracking', 'Report automation', 'Data integration'],
       benefits: ['36 0° business view', 'Faster reporting', 'Improved accuracy', 'Better planning'],
-      marketPrice: '$1,80 0-4,20 0/month',
-      category: 'BI Platforms',
-      technologies: ['Microsoft BI', 'QlikView', 'Looker', 'Sisense', 'Domo']
+      marketPrice: '$,1,80 0-4,20 0/month',
+      category: 'BI Platforms,',
+      technologies: ['Microsoft BI,', 'QlikView', 'Looker', 'Sisense', 'Domo']
    },
-    {id: 'data-warehousing',
-      title: 'Data Warehousing & ETL',
+    {id: 'data-warehousing,',
+      title: 'Data Warehousing & ETL,',
       description: 'Centralized data storage and processing solutions for enterprise-scale analytics.',
-      features: ['Data warehousing', 'ETL processes', 'Data quality management', 'Scalable architecture'],
+      features: ['Data warehousing,', 'ETL processes', 'Data quality management', 'Scalable architecture'],
       benefits: ['Unified data source', 'Improved data quality', 'Better performance', 'Cost optimization'],
-      marketPrice: '$2,50 0-6,00 0/month',
-      category: 'Data Infrastructure',
-      technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
+      marketPrice: '$,2,50 0-6,00 0/month',
+      category: 'Data Infrastructure,',
+      technologies: ['Snowflake,', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ]
   return (
@@ -159,10 +178,17 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
               Learn More
             </button>
           </div>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
         </div>
       </div>
     </div>
-  )
+  ),
 }
 export default BusinessIntelligencePage
+
+export default BusinessIntelligencePage;
+export default BusinessIntelligencePage;

@@ -4,44 +4,43 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      icon: Brai,
+      title: 'AI-Powered Intelligence,',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+}
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
+      icon: BarChar,
+      title: 'Advanced Analytics,',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
+      icon: Targe,
+      title: 'Precision Targeting,',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
+      icon: TrendingU,
+      title: 'Growth Optimization,',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
+  const benefits = ['Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
 
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '' }) => {
   return (
     <>
       
@@ -64,10 +63,31 @@ const LoadingSkeletonPage: React.FC = () => {
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
+  lines = 3, 
+  className = '' 
+}) => {
+  return (
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-4 bg-gray-300 rounded mb-2 ${
+            index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default LoadingSkeleton;
               </button>
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -136,11 +156,15 @@ const LoadingSkeletonPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default LoadingSkeletonPage;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

@@ -114,4 +114,8 @@ if __name__ == "__main__":
         sys.exit(1)
     except Exception as e:
         print(f"\n\nFatal error: {e}")
+<<<<<<< HEAD
         sys.exit(1)
+=======
+        sys.exit(1)
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

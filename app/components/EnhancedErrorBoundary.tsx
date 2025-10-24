@@ -2,46 +2,47 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const EnhancedErrorBoundaryPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const EnhancedErrorBoundaryPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,
+      title: 'Precision Targeting',}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+<<<<<<< HEAD
   ]
 
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
   return (
+=======
+  ];
+"
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className="''" }) => {}</EnhancedErrorBoundaryProps>
+  return (</EnhancedErrorBoundaryProps>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     <>
       
       <Navigation />
@@ -62,10 +63,83 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
                 <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
-            ))}
+
+              {/* Error Details (if enabled) */}
+              {this.props.showErrorDetails && error && (
+                <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                  <h3 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                    <AlertTriangle className="w-4 h-4 mr-2" />
+                    Error Details
+                  </h3>
+                  <div className="text-xs text-gray-600 font-mono">
+                    <div className="mb-1">
+                      <strong>Message:</strong> {error.message}
+                    </div>
+                    {error.stack && (
+                      <div className="mb-1">
+                        <strong>Stack:</strong>
+                        <pre className="whitespace-pre-wrap mt-1 text-xs">
+                          {error.stack.split('\n').slice(0, 5).join('\n')}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Actions */}
+              <div className="space-y-3">
+                {canRetry ? (
+                  <button
+                    onClick={this.handleRetry}
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-4 h-4 mr-2" />
+                    Try Again ({this.maxRetries - retryCount} attempts left)
+                  </button>
+                ) : (
+                  <button
+                    onClick={this.handleReload}
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-4 h-4 mr-2" />
+                    Reload Page
+                  </button>
+                )}
+
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    onClick={this.handleGoHome}
+                    className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
+                  >
+                    <Home className="w-4 h-4 mr-2" />
+                    Go Home
+                  </button>
+
+                  {this.props.showErrorDetails && (
+                    <button
+                      id="copy-error-details"
+                      onClick={this.copyErrorDetails}
+                      className="border-2 border-gray-300 text-gray-600 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
+                    >
+                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      Copy Details
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Retry Count */}
+              {retryCount > 0 && (
+                <div className="mt-4 text-center">
+                  <p className="text-sm text-gray-500">
+                    Retry attempts: {retryCount}/{this.maxRetries}
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </section>
       {/* CTA Section */}
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -82,6 +156,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -150,17 +225,16 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default EnhancedErrorBoundaryPage;
-  error?: Error
+  error?: Error;
   errorInfo?: ErrorInfo}
-class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
-    super(props)
-    this.state= { hasError: false}
+class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {}
+    super(props)}
+    this.state="{" hasError: false}
   }
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
   }
@@ -168,10 +242,10 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
     // Log error to monitoring service
     // // console.error('Error caught by boundary:', error, errorInfo)
   }
-  handleReload= () => {windo w.location.reload()
+  handleReload="()" => {windo w.location.reload()
  }
-  render() {if (this.state.hasError) {
-      if (this.props.fallback) {
+  render() {if (this.state.hasError) {}
+      if (this.props.fallback) {}
         return thi s.props.fallback
      }
       return (

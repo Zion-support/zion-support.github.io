@@ -1,80 +1,86 @@
 #!/usr/bin/env python3
 """
-Script to fix remaining JSX syntax errors
+Script to fix remaining linting errors:
+1. Add missing icon imports
+2. Fix unescaped entities in JSX content only
+3. Fix merge conflict markers
+4. Fix const vs let issues
 """
 
 import os
 import re
 import glob
 
-def fix_jsx_file(file_path):
-    """Fix remaining JSX syntax errors in a file"""
+# Icon mappings for missing imports
+ICON_MAPPINGS = {
+    'BarChart': 'BarChart3',
+    'PhoneIcon': 'Phone',
+    'MailIcon': 'Mail',
+    'AlertTriangle': 'AlertTriangle',
+    'Download': 'Download',
+    'Home': 'Home',
+    'Settings': 'Settings'
+}
+
+def fix_file(file_path):
+    """Fix remaining linting errors in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix missing imports
-        if 'import React' not in content and ('React.FC' in content or 'React.Fragment' in content):
-            content = '"use client";\nimport React from "react";\n' + content
+        # Fix merge conflict markers
+        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+            print(f"Found merge conflict markers in {file_path}, skipping...")
+            return False
         
-        # Fix missing Helmet import
-        if '<Helmet>' in content and 'import { Helmet }' not in content:
-            content = content.replace('"use client";\nimport React from "react";', 
-                                   '"use client";\nimport React from "react";\nimport { Helmet } from "react-helmet-async";')
+        # Find missing icons
+        missing_icons = set()
+        for icon_name, lucide_name in ICON_MAPPINGS.items():
+            if f"<{icon_name}" in content and f"import {{ {lucide_name}" not in content:
+                missing_icons.add(lucide_name)
         
-        # Fix incomplete JSX fragments
-        if 'return (' in content and '<>' not in content and '<React.Fragment>' not in content:
-            content = content.replace('return (', 'return (\n    <>')
-            if not content.strip().endswith('</>'):
-                content = content.rstrip() + '\n    </>\n  );'
+        # Add missing icon imports
+        if missing_icons:
+            # Find existing lucide-react import
+            lucide_import_pattern = r"import\s*{\s*([^}]+)\s*}\s*from\s*['\"]lucide-react['\"]"
+            lucide_match = re.search(lucide_import_pattern, content)
+            
+            if lucide_match:
+                # Add to existing import
+                existing_icons = [icon.strip() for icon in lucide_match.group(1).split(',')]
+                all_icons = list(set(existing_icons + list(missing_icons)))
+                all_icons.sort()
+                
+                new_import = f"import {{ {', '.join(all_icons)} }} from 'lucide-react';"
+                content = re.sub(lucide_import_pattern, new_import, content)
+            else:
+                # Add new import after React import
+                react_import_pattern = r"(import\s+React[^;]+;)"
+                if re.search(react_import_pattern, content):
+                    new_import = f"import {{ {', '.join(sorted(missing_icons))} }} from 'lucide-react';\n"
+                    content = re.sub(react_import_pattern, r"\1\n" + new_import, content)
+                else:
+                    # Add at the top
+                    new_import = f"import {{ {', '.join(sorted(missing_icons))} }} from 'lucide-react';\n"
+                    content = new_import + content
         
-        # Fix missing closing tags
-        content = re.sub(r'<section[^>]*>\s*$', lambda m: m.group(0) + '\n        </section>', content)
-        content = re.sub(r'<div[^>]*>\s*$', lambda m: m.group(0) + '\n              </div>', content)
+        # Fix unescaped entities in JSX content only
+        # This is more targeted - only fix quotes in JSX text content
+        def fix_jsx_quotes(match):
+            text = match.group(1)
+            # Only fix if it's not already escaped and not in a code context
+            if '&apos;' not in text and '&quot;' not in text:
+                text = text.replace("'", "&apos;")
+                text = text.replace('"', "&quot;")
+            return f">{text}<"
         
-        # Fix incomplete map functions
-        if 'features.map(' in content and 'features = [' not in content:
-            features_def = '''  const features = [
-    {
-      icon: () => null,
-      title: "Feature",
-      description: "Description",
-    },
-  ];'''
-            content = content.replace('const ', features_def + '\n\n  const ')
+        # Fix quotes in JSX text content
+        content = re.sub(r'>([^<]*[\'"][^<]*)<', fix_jsx_quotes, content)
         
-        # Fix incomplete JSX elements
-        content = re.sub(r'<button[^>]*>\s*$', lambda m: m.group(0) + '\n                Button Text\n              </button>', content)
-        content = re.sub(r'<a[^>]*>\s*$', lambda m: m.group(0) + '\n                Link Text\n              </a>', content)
-        
-        # Fix missing closing tags in map functions
-        content = re.sub(r'\{features\.map\([^}]*\)\s*$', 
-                        lambda m: m.group(0) + '\n              ))}\n            </div>', content)
-        
-        # Fix incomplete return statements
-        if 'return (' in content and not content.strip().endswith(');'):
-            content = content.rstrip() + '\n  );'
-        
-        # Fix missing export
-        if 'export default' not in content and 'const ' in content:
-            component_name = re.search(r'const (\w+):', content)
-            if component_name:
-                content += f'\n\nexport default {component_name.group(1)};'
-        
-        # Fix extra closing braces
-        content = re.sub(r'}\s*\)\s*$', '}', content)
-        
-        # Fix missing closing tags for common patterns
-        if '<section' in content and '</section>' not in content:
-            content += '\n        </section>'
-        if '<div' in content and '</div>' not in content:
-            content += '\n      </div>'
-        if '<React.Fragment>' in content and '</React.Fragment>' not in content:
-            content += '\n    </React.Fragment>'
-        if '<>' in content and '</>' not in content:
-            content += '\n    </>'
+        # Fix const vs let issue
+        content = re.sub(r'let\s+clsEntries\s*=', 'const clsEntries =', content)
         
         # Only write if content changed
         if content != original_content:
@@ -87,21 +93,34 @@ def fix_jsx_file(file_path):
             return False
             
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix remaining JSX files"""
-    # Find all TypeScript/JSX files in the app directory
-    pattern = "app/**/*.tsx"
-    files = glob.glob(pattern, recursive=True)
+    """Main function to fix all files."""
+    # Find all TypeScript/TSX files
+    patterns = [
+        'src/**/*.tsx',
+        'app/**/*.tsx',
+        'components/**/*.tsx',
+        '**/*.tsx'
+    ]
+    
+    files_to_fix = []
+    for pattern in patterns:
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
+    
+    # Remove duplicates
+    files_to_fix = list(set(files_to_fix))
+    
+    print(f"Found {len(files_to_fix)} files to check...")
     
     fixed_count = 0
-    for file_path in files:
-        if fix_jsx_file(file_path):
+    for file_path in files_to_fix:
+        if fix_file(file_path):
             fixed_count += 1
     
-    print(f"\nFixed {fixed_count} files out of {len(files)} total files")
+    print(f"\nFixed {fixed_count} files out of {len(files_to_fix)} files checked.")
 
 if __name__ == "__main__":
     main()

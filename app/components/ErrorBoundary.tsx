@@ -2,44 +2,39 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const ErrorBoundaryPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const ErrorBoundaryPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,
+      title: 'Precision Targeting',}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
   return (
     <>
       
@@ -63,9 +58,16 @@ const ErrorBoundaryPage: React.FC = () => {
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
               </button>
+              <Link
+                to="/"
+                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                Go to Homepage
+              </Link>
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -91,10 +93,12 @@ const ErrorBoundaryPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
+                </details>
+              )}
           </div>
-        </section>
+        </div>
+      );
+    }
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -134,31 +138,29 @@ const ErrorBoundaryPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default ErrorBoundaryPage;
-error?: Error
+error?: Error;
 errorInfo?: ErrorInfo}
-class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
-super(props)
-this.state= { hasError: false}
+class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {}
+super(props)}
+this.state="{" hasError: false}
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
-if (process.env.NODE_ENV=== 'production') {
-// In production, you would send this to an error reporting service
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production}
+if (process.env.NODE_ENV="==" 'production') {// In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo})
 }
 this.setState({errorerrorInfo})
 }
-handleReload= () => {windo w.location.reload()}
-handleGoHome= () => {windo w.location.href= '/'}
-render() {if (this.state.hasError) {
-if (this.props.fallback) {
+handleReload="()" => {windo w.location.reload()}
+handleGoHome="()" => {windo w.location.href="'/'};
+render() {if (this.state.hasError) {}
+if (this.props.fallback) {}
 return this.props.fallback
 }
 return (
@@ -176,7 +178,8 @@ Error Details (Development)
 </summary>
 <pre className=&quot;text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto&quot;></p>
 {this.state.error.toString()}
-{this.state.errorInfo?.componentStack}
+{this.state.errorInfo?.componentStack
+    }
 </pre>
 </details>
 )}
@@ -188,7 +191,7 @@ className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-
 <RefreshCw className=&quot;w-4 h-4&quot; />
 <span>Reload Page</span>
 </button>
-<button
+<button;
 onClick={this.handleGoHome}
 className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
@@ -206,4 +209,4 @@ kleber@ziontechgroup.com
 </a>
 </div>
 </div>
-</div>
+</div>"

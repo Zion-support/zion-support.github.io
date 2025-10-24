@@ -4,44 +4,38 @@ import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const SidebarPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const SidebarPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,
+      title: 'Precision Targeting',}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
+const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
   return (
     <>
       
@@ -68,6 +62,7 @@ const SidebarPage: React.FC = () => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -136,11 +131,10 @@ const SidebarPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default SidebarPage;
 Menu,
 Home,
@@ -154,37 +148,35 @@ BarChart,
 ChevronDown,
 ChevronRight,
 Phone,
-Mail,
+Mail,;
 MapPin,Clock;}
-} from 'lucide-react'
-constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
-const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
-constlocation= useLocation()
+} from 'lucide-react'"
+constSidebar: React.FC="()" =>{const [isOpensetIsOpen] = useState(false);
+const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));"
+constlocation="useLocation()";
 useEffect(() => {
-  
-consthandleResize= () => {
-  
-if (windo w.innerWidth >=1024) {
+;  "
+consthandleResize="()" => {
+;  }
+if (windo w.innerWidth >=1024) {}
 setIsOpen(false)}
 }
-windo w.addEventListener('resize', handleResize)
+windo w.addEventListener('resize', handleResize);
 return () => windo w.removeEventListener('resize', handleResize)
-}, [])
-consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSections)
+}, []);"
+consttoggleSection="(section:" string) => {constnewExpanded="new" Set(expandedSections);}
 if (newExpanded.has(section)) {;) => {
-  
+  }
 return (
 $3
-)}
-newExpanded.delete(section);}
-} else {newExpanded.add(section);}
+,)
 }
 setExpandedSections(newExpanded)
 }
-constnavigationSections= [
-{title: 'Main',
+constnavigationSections="["
+{title: 'Main',}
 items: [
-{ name: 'Home', path: '/', icon: Home},
+{name: 'Home', path: '/', icon: Home},
 {name: 'About', path: '/about', icon: Users},
 {name: 'Services', path: '/services', icon: Settings},
 {name: 'Contact', path: '/contact', icon: Phone},
@@ -192,10 +184,10 @@ items: [
 {name: 'Case Studies', path: '/case-studies', icon: BarChart},
 ]
 },
-{title: 'AI Services',
-key: 'ai-services',
+{title: 'AI Services',}
+key: 'ai-services',}
 items: [
-{ name: 'AI Services Overview', path: '/ai-services', icon: Brain},
+{name: 'AI Services Overview', path: '/ai-services', icon: Brain},
 {name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart},
 {name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings},
 {name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users},
@@ -210,10 +202,10 @@ items: [
 {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
 ]
 },
-{title: 'Micro SaaS',
-key: 'micro-saas',
+{title: 'Micro SaaS',}
+key: 'micro-saas',}
 items: [
-{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
+{name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
 {name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart},
 {name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users},
 {name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings},
@@ -228,10 +220,10 @@ items: [
 {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
 ]
 },
-{title: 'IT Services',
-key: 'it-services',
+{title: 'IT Services',}
+key: 'it-services',}
 items: [
-{ name: 'IT Services Overview', path: '/it-services', icon: Code},
+{name: 'IT Services Overview', path: '/it-services', icon: Code},
 {name: 'IT Consulting', path: '/it-consulting', icon: Users},
 {name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings},
 {name: 'IT Support', path: '/it-support', icon: Users},
@@ -242,29 +234,29 @@ items: [
 {name: 'Managed IT', path: '/managed-it', icon: Settings},
 ]
 },
-{title: 'Company',
+{title: 'Company',}
 items: [
-{ name: 'Team', path: '/team', icon: Users},
+{name: 'Team', path: '/team', icon: Users},
 {name: 'Careers', path: '/careers', icon: Users},
 {name: 'Consultation', path: '/consultation', icon: Phone},
 {name: 'Pricing', path: '/pricing', icon: BarChart},
 ]
 },
-{title: 'Resources',
+{title: 'Resources',}
 items: [
-{ name: 'Documentation', path: '/do cs', icon: Settings},
+{name: 'Documentation', path: '/do cs', icon: Settings},
 {name: 'API Docs', path: '/api-do cs', icon: Code},
 {name: 'Support', path: '/support', icon: Users},
 {name: 'Status', path: '/status', icon: Settings},
 ]
 }
-]
-constcontactInfo= {phone: '(30 2) 46 4-095 0',
-email: 'kleber@ziontechgroup.com',
-address: '364 E Main St STE 1008 Middletown, DE 19709',
+];"
+constcontactInfo="{phone: " '(30 2) 46 4-095 0',
+email: 'kleber@ziontechgroup.com',}
+address: '364 E Main St STE 1008 Middletown, DE 19709',}
 hours: 'Mon-Fri 9AM-6PM EST'
-}
-return (
+}</Set>
+return (</Set>
 <>
 {/* Mobile Menu Button */}
 <button
@@ -274,15 +266,15 @@ aria-label=&quot;Open sidebar&quot;
 >
 <Menu className=&quot;w-6 h-6&quot; />
 </button>
-{/* Sidebar Overlay */}
+{/* Sidebar Overlay *,/}
 {isOpen && (
 <div
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}
 onClick={() =>setIsOpen(false)}</div>
 />
 )}
-{/* Sidebar */}</div>
-<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
+{/* Sidebar */}</div>"
+<aside className="{`fixed" top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${}
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>
 <div className=&quot;flex flex-col h-full&quot;></div>
@@ -304,7 +296,6 @@ aria-label=&quot;Close sidebar&quot;
 >
 <X className=&quot;w-6 h-6&quot; />
 </button>
-</div>
 {/* Navigation */}
 <div className=&quot;flex-1 overflow-y-auto py-6&quot;></div>
 <nav className=&quot;space-y-2 px-4&quot;>
@@ -323,5 +314,5 @@ expandedSections.has(section.key) ?
 {(!section.key || expandedSections.has(section.key)) && (
 <div className=&quot;ml-4 space-y-1&quot;></div>
 {section.items.map((item, itemIndex) => (</div>
-<Link
-key={itemIndex}
+<Link}
+key="{itemIndex}"

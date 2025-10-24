@@ -1,38 +1,53 @@
+<<<<<<< HEAD
 'use client'
 import { Brain } from 'lucide-react'
+=======
+import React from 'react';
+import { Atom, Lock, CheckCircle, Star, Brain, Shield, Check } from 'lucide-react';
+'use client'
+import { Bra, i, n } from 'lucide-react'
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import React from 'react'
 import { Atom, Lock } from 'lucide-react'
 import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+const QuantumComputingPage: React.FC = () => {
+  const quantumServices = [
+import {Atom, Lock, CheckCircle, Star, Brain, Shield} from 'lucide-react';
+import { Atom, Lock  } from "lucide-react";
+import { CheckCircle, Star, Brain, Shield  } from "lucide-react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
     {
-      id: 'quantum-algorithms',
-      title: 'Quantum Algorithm Development',
+      id: 'quantum-algorithms,&apos;,
+      title: 'Quantum Algorithm Development,',
       description: 'Custom quantum algorithms designed to solve your specific computational challenges.',
-      features: ['Custom algorithm design', 'Quantum circuit optimization', 'Performance benchmarking', 'Implementation support'],
+      features: ['Custom algorithm design,', 'Quantum circuit optimization', 'Performance benchmarking', 'Implementation support'],
       benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-proof technology'],
-      marketPrice: '$5,00 0-1 5,00 0/month',
-      category: 'Algorithm Development',
-      technologies: ['Qiskit', 'Cirq', 'Q#', 'PennyLane', 'Quantum Hardware']
-   },
-    {id: 'quantum-cryptography',
-      title: 'Quantum Cryptography Solutions',
+      marketPrice: '$,5,00 0-1 5,00 0/month',
+      category: 'Algorithm Development,',
+      technologies: ['Qiskit,', 'Cirq', 'Q#', 'PennyLane', 'Quantum Hardware']
+}
+    {id: 'quantum-cryptography,',
+      title: 'Quantum Cryptography Solutions,',
       description: 'Ultra-secure communication systems using quantum key distribution and quantum encryption.',
-      features: ['Quantum key distribution', 'Quantum encryption', 'Security protocols', 'Implementation support'],
+      features: ['Quantum key distribution,', 'Quantum encryption', 'Security protocols', 'Implementation support'],
       benefits: ['Unbreakable security', 'Future-proof encryption', 'Regulatory compliance', 'Peace of mind'],
-      marketPrice: '$8,00 0-2 0,00 0/month',
-      category: 'Security Solutions',
-      technologies: ['BB84Protocol', 'Quantum Networks', 'Hardware Integration', 'Security Auditing']
+      marketPrice: '$,8,00 0-2 0,00 0/month',
+      category: 'Security Solutions,',
+      technologies: ['BB84Protocol,', 'Quantum Networks', 'Hardware Integration', 'Security Auditing']
    },
-    {id: 'quantum-optimization',
-      title: 'Quantum Optimization Services',
+    {id: 'quantum-optimization,',
+      title: 'Quantum Optimization Services,',
       description: 'Solve complex optimization problems using quantum annealing and variational algorithms.',
-      features: ['Problem modeling', 'Quantum annealing', 'Variational algorithms', 'Performance analysis'],
+      features: ['Problem modeling,', 'Quantum annealing', 'Variational algorithms', 'Performance analysis'],
       benefits: ['Optimal solutions', 'Faster convergence', 'Cost reduction', 'Improved efficiency'],
-      marketPrice: '$3,00 0-1 0,00 0/month',
-      category: 'Optimization',
-      technologies: ['D-Wave', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms']
+      marketPrice: '$,3,00 0-1 0,00 0/month',
+      category: 'Optimization,',
+      technologies: ['D-Wave,', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms']
     }
   ]
   return (
@@ -158,10 +173,17 @@ const QuantumComputingPage: React.FC = () => {
               Learn More
             </button>
           </div>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
         </div>
       </div>
     </div>
-  )
+  ),
 }
 export default QuantumComputingPage
+
+export default QuantumComputingPage;
+export default QuantumComputingPage;

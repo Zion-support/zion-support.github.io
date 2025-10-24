@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
 
@@ -8,100 +9,78 @@ import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
 
 interface PerformanceOptimizerProps {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+import Navigation from './Navigation'
+import { ArrowRight } from 'lucide-react'
+
+import React, {useEffect, useState, useCallback } from 'react';
+import {Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import {CheckCircle } from 'lucide-react';
+import {AlertTriangle } from 'lucide-react'
+;
+interface PerformanceOptimizerProps {}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   className?: string;
 }
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true,
-}) => {
-  const [isOptimizing, setIsOptimizing] = useState(false)
+;
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageOptimization: "true,";"
+  enableLazyLoading: "true,";"}
+  enablePreloading: "true,};
+  enableCodeSplitting="true,"</PerformanceOptimizerProps>
+}) => {const [isOptimizing, setIsOptimizing] = useState(false)</PerformanceOptimizerProps>;
   const [optimizationStatus, setOptimizationStatus] = useState<{
-    images: boolean
-    lazyLoading: boolean
-    preloading: boolean
+    images: boolean;
+    lazyLoading: boolean,}
+    preloading: boolean}
     codeSplitting: boolean
-  }>({
-    images: false,
-    lazyLoading: false,
-    preloading: false,
+  }>({images: false,
+    lazyLoading: false,}
+    preloading: false,}
     codeSplitting: false,
-  })
-
-  const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return
-
-    // Optimize images
-    const images = document.querySelectorAll('img')
-    images.forEach((img) => {
-  
-      if (img.loading !== 'lazy') {
-        img.loading = 'lazy'
+  });
+"
+  const optimizeImages=";";"
+    const images="document.querySelectorAll('img')";
+    images.forEach((img) => {if (img.loading !== 'lazy') {}
+        img.loading="'lazy'"
       }
 
-      // Add WebP support detection
-      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
-        const webpSrc = img.src.replace('.jpg', '.webp')
-        const webpImg = new Image()
-        webpImg.onload = () => {
-          img.src = webpSrc
-        }
-        webpImg.src = webpSrc
-      }
-    })
-
-    setOptimizationStatus(prev => ({ ...prev, images: true }))
-  }, [enableImageOptimization])
-
-  const enableLazyLoadingOptimization = useCallback(() => {
-    if (!enableLazyLoading) return
-
-    // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver(
-      (entries) => {
-  
-        entries.forEach((entry) => {
-  
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
-            if (img.dataset.src) {
-              img.src = img.dataset.src
-              img.removeAttribute('data-src')
+      // Add WebP support detection;"
+      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {const webpSrc: "img.src.replace('.jpg'," '.webp');"
+        const webpImg=";";}
+              img.removeAttribute('data-src')}
               observer.unobserve(img)
             }
           }
         })
       },
-      { rootMargin: '50px' }
-    )
+      {rootMargin: '50px' }
+    );
+"
+    const lazyImages="document.querySelectorAll('img[data-src]')";
+    lazyImages.forEach((img) => observer.observe(img));
 
-    const lazyImages = document.querySelectorAll('img[data-src]')
-    lazyImages.forEach((img) => observer.observe(img))
-
-    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }))
-  }, [enableLazyLoading])
-
-  const enablePreloadingOptimization = useCallback(() => {
-    if (!enablePreloading) return
-
-    // Preload critical resources
-    const criticalResources = [
+    setOptimizationStatus(prev => ({...prev, lazyLoading: true }))
+  }, [enableLazyLoading]);
+"
+  const enablePreloadingOptimization=";"
       '/fonts/main.woff2',
       '/css/critical.css',
-    ]
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.css') ? 'style' : 'font'
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
+    ];
+"
+    criticalResources.forEach((resource) => {const link="document.createElement('link')";"
+      link.rel="'preload'";"
+      link.href="resource";"
+      link.as="resource.endsWith('.css')" ? 'style' : 'font'}
+      if (resource.endsWith('.woff2')) {}
+        link.crossOrigin="'anonymous'"
       }
       document.head.appendChild(link)
-    })
+    });
 
+<<<<<<< HEAD
     setOptimizationStatus(prev => ({ ...prev, preloading: true }))
   }, [enablePreloading])
 
@@ -138,15 +117,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     } catch (error) {
       // // console.error('Optimization failed:', error)
     } finally {
+=======
+    setOptimizationStatus(prev => ({...prev, preloading: true }))
+  }, [enablePreloading]);
+"
+  const enableCodeSplittingOptimization=";"
+      // // console.error('Optimization failed:', error)
+    } finally {}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       setIsOptimizing(false)
     }
   }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization])
 
-  useEffect(() => {
+  useEffect(() => {}
     runOptimizations()
   }, [runOptimizations])
 
-  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
+  const allOptimizationsComplete = Object.values(optimizationStat, u, s).every(Boole, a, n)
 
   return (
     <>
@@ -174,6 +161,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -243,11 +231,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </section>
       </div>
     </div>
-  )
+  ),
 }
-
+;
 export default PerformanceOptimizer
   );
 };
-
-export default PerformanceOptimizerPage;
+export default PerformanceOptimizerPage;"

@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp } from 'lucide-react'
+=======
+import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react'
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import Link from 'next/link'
 
 const AIEmailAutomationPage: React.FC = () => {
@@ -149,14 +153,22 @@ const AIEmailAutomationPage: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link 
+<<<<<<< HEAD
               to="/contact" 
+=======
+              href="/contact" 
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transform hover:scale-105"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
+<<<<<<< HEAD
               to="#demo" 
+=======
+              href="#demo" 
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               className="group border-2 border-blue-400 text-blue-400 px-10 py-4 rounded-xl font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
             >
               <span>Watch Demo</span>
@@ -273,7 +285,11 @@ const AIEmailAutomationPage: React.FC = () => {
                 </div>
                 
                 <Link 
+<<<<<<< HEAD
                   to="/contact" 
+=======
+                  href="/contact" 
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
                   className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700 shadow-lg shadow-blue-500/25'
@@ -340,14 +356,22 @@ const AIEmailAutomationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link 
+<<<<<<< HEAD
               to="/contact" 
+=======
+              href="/contact" 
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
+<<<<<<< HEAD
               to="/pricing" 
+=======
+              href="/pricing" 
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
             >
               <span>View All Plans</span>

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from "react"
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Zap, Target, Layers, Rocket, CheckCircle, ArrowRight  } from "lucide-react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 "use client";
 import React from "react";
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
@@ -52,7 +59,11 @@ const MicroSaasPage: React.FC = () => {
       ],
       price: "Starting at $4,000"
     }
+<<<<<<< HEAD
   ];
+=======
+  ]
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
   const platforms = [
     "Web Applications",
@@ -69,6 +80,10 @@ const MicroSaasPage: React.FC = () => {
     "Stripe", "Auth0", "SendGrid", "Twilio", "WebSocket", "GraphQL"
   ];
 
+<<<<<<< HEAD
+=======
+const MicroSaas = () => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -237,7 +252,11 @@ const MicroSaasPage: React.FC = () => {
             Ready to Build Your SaaS Product?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
+<<<<<<< HEAD
             Let&apos;s turn your SaaS idea into a successful, scalable business.
+=======
+            Let's turn your SaaS idea into a successful, scalable business.
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -260,4 +279,8 @@ const MicroSaasPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default MicroSaasPage;
+=======
+export default MicroSaasPage;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

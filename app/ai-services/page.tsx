@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+import React from "react"
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight  } from "lucide-react";
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
+  FileText, Users, Heart, DollarSign, Target, Settings, 
+  CheckCircle, ArrowRight, Star, Clock, Award, TrendingUp,
+  Cpu, Database, Globe, Smartphone, Lock, Workflow, Sparkles
+} from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 "use client";
 import React from "react";
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
@@ -54,6 +70,79 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
+=======
+    }
+  ];
+
+  const categories = [
+    { id: 'overview', name: 'Overview', icon: <Globe className="w-5 h-5" /> },
+    { id: 'analytics', name: 'Analytics', icon: <BarChart className="w-5 h-5" /> },
+    { id: 'automation', name: 'Automation', icon: <Workflow className="w-5 h-5" /> },
+    { id: 'content', name: 'Content', icon: <FileText className="w-5 h-5" /> },
+    { id: 'vision', name: 'Vision', icon: <Eye className="w-5 h-5" /> },
+    { id: 'voice', name: 'Voice', icon: <Mic className="w-5 h-5" /> }
+  ];
+
+  const filteredServices = activeTab === 'overview' 
+    ? aiServices 
+    : aiServices.filter(service => service.category === activeTab);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <Helmet>
+        <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
+        <meta name="description" content="Discover our comprehensive AI services including analytics, automation, content generation, computer vision, and more. Transform your business with cutting-edge AI technology." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, analytics, computer vision, natural language processing" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your business with our comprehensive suite of AI-powered solutions designed to drive innovation and efficiency.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>Custom AI Solutions</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>Scalable Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Tabs */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeTab === category.id
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {category.icon}
+                <span className="ml-2">{category.name}</span>
+              </button>
+            ))}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   const process = [
     {
       step: "1",
@@ -79,9 +168,17 @@ const AIServicesPage: React.FC = () => {
       step: "5",
       title: "Monitoring & Optimization",
       description: "We continuously monitor performance and optimize the solution for better results."
+<<<<<<< HEAD
     }
   ];
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+    }
+  ];
+
+const AiServices = () => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -102,7 +199,12 @@ const AIServicesPage: React.FC = () => {
             <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               View Case Studies
             </button>
+<<<<<<< HEAD
           </div>
+=======
+
+export default AiServicesPage;          </div>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
         </div>
       </section>
 
@@ -144,10 +246,17 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* Process Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+=======
+      <section className='py-20 px-4 bg-white/5'></section>
+        <div className='max-w-7xl mx-auto'></div>
+          <div className='text-center mb-16'></div>
+            <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               Our Process
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -162,6 +271,10 @@ const AIServicesPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600 text-sm">{step.description}</p>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
               </div>
             ))}
           </div>
@@ -169,6 +282,7 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -176,6 +290,15 @@ const AIServicesPage: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             Let&apos;s discuss how our AI solutions can transform your business operations.
+=======
+      <section className='py-20 px-4'></section>
+        <div className='max-w-4xl mx-auto text-center'></div>
+          <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
+            Ready to Harness the Power of AI?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Let's discuss how our AI solutions can transform your business operations.
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -192,10 +315,22 @@ const AIServicesPage: React.FC = () => {
               Learn More About Us
             </a>
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
         </div>
       </section>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default AIServicesPage;
+=======
+export default AIServicesPage;
+
+export default AiServicesPage;>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+
+export default AIServicesPage;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

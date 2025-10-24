@@ -3,44 +3,39 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, useAnalytics } from './EnhancedAnalytics'
 
-const EnhancedPerformanceOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const EnhancedPerformanceOptimizerPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,
+      title: 'Precision Targeting',}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
+const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '' }) => {
   return (
     <>
       
@@ -67,6 +62,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -135,27 +131,25 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default EnhancedPerformanceOptimizerPage;
-{
-icon: Brain,
-title: 'AI-Powered Solutions',
+{icon: Brain,}
+title: 'AI-Powered Solutions',}
 description: 'Advanced AI technology to transform your business operations and improve efficiency'},
-{icon: Zap,
-title: 'High Performance',
+{icon: Zap,}
+title: 'High Performance',}
 description: 'Lightning-fast processing and real-time analytics for optimal results'},
-{icon: Shield,
-title: 'Enterprise Security',
+{icon: Shield,}
+title: 'Enterprise Security',}
 description: 'Bank-level security with encryption and compliance standards'},
-{icon: Globe,
-title: 'Global Reach',
+{icon: Globe,}
+title: 'Global Reach',}
 description: 'Worldwide deployment and support for international businesses'}
-]
-constbenefits= [
+];"
+constbenefits="["
 'Advanced AI technology integration',
 'Real-time processing and analytics',
 'Enterprise-grade security and compliance',
@@ -224,23 +218,22 @@ Email Us
 </div>
 </section>
 </div>
-)
+),
 }
 </button>
 </button>
-</h2>
-import { useEffect, useCallback } from 'react'
-import { useAnalytics } from './EnhancedAnalytics'
-import { Phone, Mail } from 'lucide-react'
-
-interface PerformanceMetrics {
-lcp: number | null
-fid: number | null
-cls: number | null
-fcp: number | null
+</h2>;
+import {useEffect, useCallback } from 'react'
+import {useAnalytics } from './EnhancedAnalytics'
+import {Phone, Mail } from 'lucide-react'
+;
+interface PerformanceMetrics {lcp: number | null;
+fid: number | null;
+cls: number | null,}
+fcp: number | null}
 ttfb: number | null
 }
-const EnhancedPerformanceOptimizer: React.FC = () => {
-const { trackEvent } = useAnalytics()
-const optimizeImages = useCallback(() => {
-const images = document.querySelectorAll('img')
+const EnhancedPerformanceOptimizer: React.FC = () => {}
+const {trackEvent } = useAnalytics();"
+export const optimizeImages=";";"
+export const images="document.querySelectorAll('img')""

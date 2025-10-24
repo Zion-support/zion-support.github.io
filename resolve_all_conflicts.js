@@ -1,15 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function resolveMergeConflicts(content) {
+=======
+function resolveMergeConflicts(conte, n, t) {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   // Remove all merge conflict markers and keep the HEAD version
   return content
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n/g, '')
-    .replace(/=======\n([\s\S]*?)    .replace(/}
 
-function processFile(filePath) {
+function processFile(filePa, t, h) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     
     if (content.includes('<<<<<<< HEAD')) {
       console.log(`Processing: ${filePath}`);
@@ -72,3 +75,6 @@ function main() {
 }
 
 main();
+=======
+    
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

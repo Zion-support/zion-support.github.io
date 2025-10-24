@@ -3,8 +3,13 @@ import Footer from './Footer'
 import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
+<<<<<<< HEAD
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -27,39 +32,52 @@ interface ContentNewsletterSignupProps {
     {icon: Zap, text:&quot;Early access&quot;}
   ],
   onSubscribe
-}) => {const [emailsetEmail] = useState('')
-  const [isSubmittingsetIsSubmitting] = useState(false)
-  const [isSubscribedsetIsSubscribed] = useState(false)
-  const [isLoadingsetIsLoading] = useState(false)
-  consthandleSubmit= async (e: React.FormEvent) => {
-  
-    e.preventDefault()
-    if (!email) return setIsLoadin g(true)
+}) => {const [emailsetEmail] = useState('');
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);"
+  consthandleSubmit="async" (e: React.FormEvent) => {
+;  
+    e.preventDefault();
+    if (!email) return setIsLoadin g(true);
     try {
-      // Simulate API call
-      await new Promise(resolve=> setTimeout(resolve100 0))
-      if (onSubscrib e) {
+      // Simulate API call;
+      await new Promise(resolve=> setTimeout(resolve100 0));}
+      if (onSubscrib e) {}
         onSubscribe(email)
      }
-      setIsSubscribed(true)
+      setIsSubscribed(true);
       setEmail('')
+<<<<<<< HEAD
     } catch (error) {
       // // console.error('Subscription error:', error)
     } finally {
+=======
+    } catch (error) {// // console.error('Subscription error: ', error)
+    } finally {}
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       setIsSubmitting(false)
+      setIsLoading(false)
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+<<<<<<< HEAD
   ]
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
   return (
+=======
+  ]</ContentNewsletterSignupProp>
+</ContentNewsletterSignupProp>;"
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({className="''" }) => {}</ContentNewsletterSignupProps>
+  return (</ContentNewsletterSignupProps>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     <>
       
       <Navigation />
@@ -83,11 +101,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
                 Learn More
               </button>
         </div>
-      </div>
     );
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -138,6 +156,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
                   <>
                     <div className=&quot;animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2&quot;></div>
                     Subscribing...
+    </>
                   </>
                 ) : (
                   <>
@@ -179,9 +198,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
+<<<<<<< HEAD
 
 export default ContentNewsletterSignupPage;
+=======
+export default ContentNewsletterSignupPage;"
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function resolveMergeConflicts(content) {
   // Remove all merge conflict markers and keep the HEAD version
   return content
@@ -72,3 +73,13 @@ function main() {
 }
 
 main();
+=======
+function resolveMergeConflicts(conte, n, t) {
+  // Remove all merge conflict markers and keep the HEAD version
+  return content
+
+function processFile(filePa, t, h) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

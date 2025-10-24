@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function fixComplexSyntax(filePath) {
+=======
+function fixComplexSyntax(filePa, t, h) {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let fixed = false;
@@ -24,7 +28,11 @@ function fixComplexSyntax(filePath) {
           }
           newContent += line + '\n';
           braceCount = 1;
+<<<<<<< HEAD
         } else if (inReturn) {
+=======
+        } else if (inRetu, r, n) {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
           newContent += line + '\n';
           if (line.includes('{')) braceCount++;
           if (line.includes('}')) braceCount--;
@@ -47,7 +55,11 @@ function fixComplexSyntax(filePath) {
 
     // Fix malformed JSX structure
     if (content.includes('>{/* Hero Section */}')) {
+<<<<<<< HEAD
       content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+=======
+      content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>');
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
       fixed = true;
     }
 
@@ -68,6 +80,7 @@ function fixComplexSyntax(filePath) {
     content = content.replace(/\]\s*$/, '];');
     content = content.replace(/}\s*$/, '};');
 
+<<<<<<< HEAD
     if (fixed) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed complex syntax: ${filePath}`);
@@ -88,14 +101,41 @@ function processDirectory(dirPath) {
       processDirectory(filePath);
     } else if (file.endsWith('.tsx')) {
       fixComplexSyntax(filePath);
+=======
+    if (fix, e, d) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed complex syntax: ${ filePa, t, h }`);
+    }
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
+  }
+}
+
+function processDirectory(dirPa, t, h) {
+  const files = fs.readdirSync(dirPa, t, h);
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePa, t, h);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      processDirectory(filePa, t, h);
+    } else if (file.endsWith('.tsx')) {
+      fixComplexSyntax(filePa, t, h);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     }
   }
 }
 
 // Process the app directory
 const appDir = path.join(__dirname, 'app');
+<<<<<<< HEAD
 if (fs.existsSync(appDir)) {
   processDirectory(appDir);
+=======
+if (fs.existsSync(appD, i, r)) {
+  processDirectory(appD, i, r);
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   console.log('Complex syntax fixes completed!');
 } else {
   console.log('App directory not found');

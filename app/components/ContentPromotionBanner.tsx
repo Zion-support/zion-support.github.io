@@ -1,17 +1,27 @@
 import Navigation from './Navigation'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const ContentPromotionBanner: React.FC = () => {
   const benefits = [
+=======
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+
+const ContentPromotionBanner: React.FC = () => {const benefits: ";"
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
+}
   return (
     <>
       
@@ -27,11 +37,19 @@ const ContentPromotionBanner: React.FC = () => {
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced ContentPromotionBanner solution for modern businesses.
             </p>
+<<<<<<< HEAD
           </div>
           <div className="hidden md:block w-px h-6 bg-white/30"></div>
           <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Learn More
             <ArrowRight className="inline-block ml-1 h-4 w-4" />
+=======
+          </div>"
+          <div className="hidden md:block w-px h-6 bg-white/30"></div>"
+          <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">);</button>
+            Learn More</button>"
+            <ArrowRight className="inline-block ml-1 h-4 w-4" /></ArrowRight>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
           </button>
         </div>
         {/* Stats Section */}
@@ -132,6 +150,7 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -157,10 +176,7 @@ const ContentPromotionBanner: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -177,10 +193,7 @@ const ContentPromotionBanner: React.FC = () => {
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              )}
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -197,6 +210,17 @@ const ContentPromotionBanner: React.FC = () => {
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 Schedule Demo
             </div>
+
+            {/* Close button */}
+            <button
+              onClick={handleClose}
+              className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
+              aria-label="Close banner"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       <div className=&quot;text-center&quot;></div>
@@ -206,7 +230,12 @@ const ContentPromotionBanner: React.FC = () => {
         </button>
       </div>
     </div>
-  )
+  ),
 }
+<<<<<<< HEAD
 
 export default ContentPromotionBanner
+=======
+;"
+export default ContentPromotionBanner
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

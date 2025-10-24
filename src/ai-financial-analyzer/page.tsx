@@ -1,9 +1,22 @@
 import React from 'react';
 import { Phone } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import {Phone} from 'lucide-react';
+import React from 'react';
+import React from 'react'
+import { Phone } from 'lucide-react';
+import React from 'react';
+import { Pho, n, e } from "lucide-react";
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Pho, n, e } from "lucide-react";
+import { Phone } from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const Page: React.FC = () => {
+const Page: React.FC  = () => {
   return (
     <>
       <Navigation />
@@ -21,25 +34,38 @@ const Page: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold"
+                href='/contact'
+    </></a>
+                className='cyber-button px-8 py-4 text-lg font-semibold'
               >
                 Contact Us
               </a>
               <a
-                href="tel:+13024640950"
-                className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5" />
+                href='tel:+13024640950' className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'></a>
+                <Phone className='w-5 h-5' /></Phone>
                 +1 302 464 0950
               </a>
             </div>
           </section>
         </main>
+<<<<<<< HEAD
       </div>
       <Footer />
     </>
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+      </div>
+      <Footer />
+    </>
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   );
 };
 
 export default Page;
+<<<<<<< HEAD
+=======
+
+export default Page;
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

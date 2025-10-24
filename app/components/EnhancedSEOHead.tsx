@@ -3,14 +3,22 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
+<<<<<<< HEAD
 interface EnhancedSEOHeadProps {
   className?: string;
 }
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
   return (
+=======
+interface EnhancedSEOHeadProps {}
+  className?: string;
+}
+;
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {}</EnhancedSEOHeadProps>
+  return (</EnhancedSEOHeadProps>
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     <>
       
       <Navigation />
@@ -36,6 +44,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => 
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -104,12 +113,11 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => 
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
-  );
+  );,
 };
-
 export default EnhancedSEOHeadPage;
   )
 }
-export default EnhancedSEOHead
+export default EnhancedSEOHead"

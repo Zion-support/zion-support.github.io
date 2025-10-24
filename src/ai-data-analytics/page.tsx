@@ -1,16 +1,28 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { BarChart3, CheckCircle, Star, Brain, Target, Database, BarChart, Check } from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import React from 'react'
 import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Brain, Target, Database } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+const AIDataAnalyticsPage: React.FC = () => {
+  const analyticsServices = [
+import {BarChart3, CheckCircle, Brain, Database, Target} from 'lucide-react';
+import { BarChar, t, 3 } from "lucide-react";
+import { CheckCircle, Brain, Target, Database  } from "lucide-react";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
     {
-      title: 'Real-Time Business Intelligence Platform',
-      description: 'Advanced AI-powered analytics platform providing real-time insights, predictive modeling, and automated reporting for data-driven decision making.',
-      icon: '📊',
-      price: '$1,29 9/month',
-      features: [
-        'Real-time data processing',
+      title: 'Real-Time Business Intelligence Platform,',
+      description: 'Advanced AI-powered analytics platform providing real-time insight,s, predictive modeling, and automated reporting for data-driven decision making.',
+      icon: '📊,',
+      price: '$,1,29 9/month',
+      features: ['Real-time data processing,',
         'Predictive analytics models',
         'Automated report generation',
         'Interactive dashboards',
@@ -19,23 +31,17 @@ const AIDataAnalyticsPage: React.FC = () => {
         'API integrations',
         'Mobile app access'
       ],
-      benefits: [
-        'Increase decision speed by 6 0%',
-        'Reduce manual reporting by 8 5%',
-        'Identify trends 3 x faster',
-        'Improve forecast accuracy by40%'
-      ],
-      marketPrice: '$2,00 0-4,00 0/month',
-      category: 'Business Intelligence',
-      technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'Redis', 'Apache Kafka'],
-      useCases: ['Retail Analytics', 'Financial Forecasting', 'Supply Chain Optimization', 'Customer Behavior Analysis']
-   },
-    {title: 'AI-Powered Customer Analytics Suite',
-      description: 'Comprehensive customer data analysis platform with behavioral insights, churn prediction, and personalized recommendation engines.',
-      icon: '👥',
-      price: '$89 9/month',
-      features: [
-        'Customer segmentation',
+      benefits: ['Increase decision speed by 6 0%', 'Reduce manual reporting by 8 5%', 'Identify trends 3 x faster', 'Improve forecast accuracy by40%'],
+      marketPrice: '$,2,00 0-4,00 0/month',
+      category: 'Business Intelligence,',
+      technologies: ['Python,', 'TensorFlow', 'React', 'PostgreSQL', 'Redis', 'Apache Kafka'],
+      useCases: ['Retail Analytics,', 'Financial Forecasting', 'Supply Chain Optimization', 'Customer Behavior Analysis']
+}
+    {title: 'AI-Powered Customer Analytics Suite,',
+      description: 'Comprehensive customer data analysis platform with behavioral insight,s, churn prediction, and personalized recommendation engines.',
+      icon: '👥,',
+      price: '$89 9/month,',
+      features: ['Customer segmentation,',
         'Churn prediction models',
         'Lifetime value analysis',
         'Behavioral pattern recognition',
@@ -44,23 +50,17 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Cohort analysis',
         'ROI tracking'
       ],
-      benefits: [
-        'Increase customer retention by 3 5%',
-        'Boost conversion rates by 4 5%',
-        'Reduce churn by50%',
-        'Improve customer satisfaction'
-      ],
-      marketPrice: '$1,50 0-3,00 0/month',
-      category: 'Customer Analytics',
-      technologies: ['Machine Learning', 'Python', 'Scikit-learn', 'Pandas', 'React', 'MongoDB'],
-      useCases: ['E-commerce', 'SaaS Companies', 'Financial Services', 'Healthcare']
+      benefits: ['Increase customer retention by 3 5%', 'Boost conversion rates by 4 5%', 'Reduce churn by50%', 'Improve customer satisfaction'],
+      marketPrice: '$,1,50 0-3,00 0/month',
+      category: 'Customer Analytics,',
+      technologies: ['Machine Learning,', 'Python', 'Scikit-learn', 'Pandas', 'React', 'MongoDB'],
+      useCases: ['E-commerce,', 'SaaS Companies', 'Financial Services', 'Healthcare']
    },
-    {title: 'Predictive Maintenance Analytics',
+    {title: 'Predictive Maintenance Analytics,',
       description: 'IoT and AI-driven predictive maintenance solution for manufacturing and industrial equipment monitoring.',
-      icon: '🔧',
-      price: '$1,59 9/month',
-      features: [
-        'Equipment health monitoring',
+      icon: '🔧,',
+      price: '$,1,59 9/month',
+      features: ['Equipment health monitoring,',
         'Failure prediction algorithms',
         'Maintenance scheduling optimization',
         'Cost-benefit analysis',
@@ -69,23 +69,17 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Historical trend analysis',
         'Integration with IoT sensors'
       ],
-      benefits: [
-        'Reduce unplanned do wntime by 7 0%',
-        'Lower maintenance costs by 4 0%',
-        'Extend equipment lifespan by25%',
-        'Improve operational efficiency'
-      ],
-      marketPrice: '$2,50 0-5,00 0/month',
-      category: 'Industrial Analytics',
-      technologies: ['Time Series Analysis', 'LSTM Networks', 'Python', 'TensorFlow', 'InfluxDB', 'Grafana'],
-      useCases: ['Manufacturing', 'Oil & Gas', 'Utilities', 'Transportation']
+      benefits: ['Reduce unplanned do wntime by 7 0%', 'Lower maintenance costs by 4 0%', 'Extend equipment lifespan by25%', 'Improve operational efficiency'],
+      marketPrice: '$,2,50 0-5,00 0/month',
+      category: 'Industrial Analytics,',
+      technologies: ['Time Series Analysis,', 'LSTM Networks', 'Python', 'TensorFlow', 'InfluxDB', 'Grafana'],
+      useCases: ['Manufacturing,', 'Oil & Gas', 'Utilities', 'Transportation']
    },
-    {title: 'Financial Risk Analytics Platform',
+    {title: 'Financial Risk Analytics Platform,',
       description: 'Advanced risk assessment and fraud detection system using machine learning for financial institutions.',
-      icon: '💰',
-      price: '$1,99 9/month',
-      features: [
-        'Real-time fraud detection',
+      icon: '💰,',
+      price: '$,1,99 9/month',
+      features: ['Real-time fraud detection,',
         'Credit risk assessment',
         'Market risk analysis',
         'Regulatory compliance monitoring',
@@ -94,23 +88,17 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Alert management',
         'Comprehensive reporting'
       ],
-      benefits: [
-        'Detect fraud with 9 9.5% accuracy',
-        'Reduce false positives by60%',
-        'Comply with regulations automatically',
-        'Save millions in prevented losses'
-      ],
-      marketPrice: '$3,00 0-6,00 0/month',
-      category: 'Financial Analytics',
-      technologies: ['Deep Learning', 'Anomaly Detection', 'Python', 'PyTorch', 'Apache Spark', 'Kafka'],
-      useCases: ['Banks', 'Credit Unions', 'Fintech', 'Insurance Companies']
+      benefits: ['Detect fraud with 9 9.5% accuracy', 'Reduce false positives by60%', 'Comply with regulations automatically', 'Save millions in prevented losses'],
+      marketPrice: '$,3,00 0-6,00 0/month',
+      category: 'Financial Analytics,',
+      technologies: ['Deep Learning,', 'Anomaly Detection', 'Python', 'PyTorch', 'Apache Spark', 'Kafka'],
+      useCases: ['Banks,', 'Credit Unions', 'Fintech', 'Insurance Companies']
    },
-    {title: 'AI Marketing Attribution Platform',
-      description: 'Advanced marketing analytics with multi-touch attribution, campaign optimization, and ROI maximization.',
-      icon: '📈',
-      price: '$1,19 9/month',
-      features: [
-        'Multi-touch attribution modeling',
+    {title: 'AI Marketing Attribution Platform,',
+      description: 'Advanced marketing analytics with multi-touch attributio,n, campaign optimization, and ROI maximization.',
+      icon: '📈,',
+      price: '$,1,19 9/month',
+      features: ['Multi-touch attribution modeling,',
         'Campaign performance analysis',
         'Customer journey mapping',
         'ROI optimization',
@@ -119,23 +107,17 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Competitive analysis',
         'Real-time reporting'
       ],
-      benefits: [
-        'Improve marketing ROI by50%',
-        'Optimize budget allocation',
-        'Identify high-value channels',
-        'Reduce customer acquisition costs'
-      ],
-      marketPrice: '$2,00 0-4,00 0/month',
-      category: 'Marketing Analytics',
-      technologies: ['Attribution Modeling', 'Python', 'R', 'Google Analytics API', 'Facebook API', 'React'],
-      useCases: ['E-commerce', 'SaaS', 'Retail', 'Digital Agencies']
+      benefits: ['Improve marketing ROI by50%', 'Optimize budget allocation', 'Identify high-value channels', 'Reduce customer acquisition costs'],
+      marketPrice: '$,2,00 0-4,00 0/month',
+      category: 'Marketing Analytics,',
+      technologies: ['Attribution Modeling,', 'Python', 'R', 'Google Analytics API', 'Facebook API', 'React'],
+      useCases: ['E-commerce,', 'SaaS', 'Retail', 'Digital Agencies']
    },
-    {title: 'Supply Chain Intelligence Suite',
-      description: 'AI-powered supply chain analytics for demand forecasting, inventory optimization, and supplier performance tracking.',
-      icon: '🚚',
-      price: '$1,49 9/month',
-      features: [
-        'Demand forecasting models',
+    {title: 'Supply Chain Intelligence Suite,',
+      description: 'AI-powered supply chain analytics for demand forecastin,g, inventory optimization, and supplier performance tracking.',
+      icon: '🚚,',
+      price: '$,1,49 9/month',
+      features: ['Demand forecasting models,',
         'Inventory optimization',
         'Supplier performance tracking',
         'Supply chain risk assessment',
@@ -144,21 +126,16 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Quality metrics tracking',
         'Sustainability reporting'
       ],
-      benefits: [
-        'Reduce inventory costs by30%',
-        'Improve forecast accuracy by45%',
-        'Minimize stockouts by80%',
-        'Optimize supplier relationships'
-      ],
-      marketPrice: '$2,50 0-5,00 0/month',
-      category: 'Supply Chain Analytics',
-      technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],
-      useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage']
+      benefits: ['Reduce inventory costs by30%', 'Improve forecast accuracy by45%', 'Minimize stockouts by80%', 'Optimize supplier relationships'],
+      marketPrice: '$,2,50 0-5,00 0/month',
+      category: 'Supply Chain Analytics,',
+      technologies: ['Time Series Forecasting,', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],
+      useCases: ['Manufacturing,', 'Retail', 'Logistics', 'Food & Beverage']
     }
   ]
   const additionalFeatures = [
     {
-      title: 'Advanced Data Processing',
+      title: 'Advanced Data Processing,',
       description: 'Handle massive datasets with real-time processing capabilities',
      icon:<DatabaseclassName="w-8h-8text-blue-600" />},
     {title: 'Machine Learning Models',
@@ -196,8 +173,7 @@ const AIDataAnalyticsPage: React.FC = () => {
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                ✉️ Get Free Consultation
-              </a>
+                ✉️ Get Free Consultation</a>
             </div>
           </div>
         </div>
@@ -246,10 +222,9 @@ const AIDataAnalyticsPage: React.FC = () => {
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Get Started
-                </a>
+                  Get Started</a>
               </div>
-            ))}
+            ),)}
           </div>
         </div>
       </section>
@@ -297,16 +272,22 @@ const AIDataAnalyticsPage: React.FC = () => {
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com
-            </a>
+              ✉️ kleber@ziontechgroup.com</a>
           </div>
           <div className="mt-8 text-sm text-blue-200"></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
         </div>
       </div>
     </div>
   )
 }
 export default AIDataAnalyticsPage
+
+export default AIDataAnalyticsPage;
+export default AIDataAnalyticsPage;

@@ -1,25 +1,41 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Camera, Zap } from 'lucide-react';
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import React from 'react'
-import { Play } from 'lucide-react'
+import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Camera, Zap } from 'lucide-react'
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import { Play, Camera, CheckCircle, Zap, Star, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Camera, Zap } from "lucide-react";
+constAI3 DGenerationPage: React.FC= () => {
+  constfeatures= ['3 D Model Generation,',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 constAI3 DGenerationPage: React.FC= () =>{constfeatures= [
     '3 D Model Generation',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     'Animation Creation',
-    'Texture Mapping',
-    'Rendering',
-    'VR/AR Support',
-    'Export Formats',
-    'AI Texturing',
-    'Lighting Setup',
-    'Material Library',
-    'Scene Composition'
-  ]
+    'Real-time Rendering',
+    'AI-Powered Design',
+  ];
 
-  constbenefits= [
-    'Professional3D content',
+  constbenefits= ['Professional3D content',
     'Time savings',
     'No3D skills needed',
     'High quality output',
@@ -29,27 +45,32 @@ constAI3 DGenerationPage: React.FC= () =>{constfeatures= [
 
   constpricingPlans= [
     {
-      name: 'Starter',
-      price: '$29 9',
-      period: '/month',
-      features: ['5 models/month', 'Basic textures', 'Standard quality', 'Email support'],
+      name: 'Starter,',
+      price: '$29 9,',
+      period: '/month,',
+      features: ['5 models/month,', 'Basic textures', 'Standard quality', 'Email support'],
       popular: false
-   },
-    {name: 'Professional',
-      price: '$49 9',
-      period: '/month',
-      features: ['Unlimited models', 'Premium textures', '4 K rendering', 'API access', 'Priority support'],
+  ,
+}
+    {name: 'Professional,',
+      price: '$49 9,',
+      period: '/month,',
+      features: ['Unlimited models,', 'Premium textures', '4 K rendering', 'API access', 'Priority support'],
       popular: true
-   },
-    {name: 'Enterprise',
-      price: '$99 9',
-      period: '/month',
-      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
+  , },
+    {name: 'Enterprise,',
+      price: '$99 9,',
+      period: '/month,',
+      features: ['Everything in Pro,', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
-    }
+   , }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+export const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
   <><SEOOptimizertitle=&quot;AI3D Generation Studio - Create3D Models & Animations with AI | ZionTechGroup&quot;
         description=&quot;Create professional 3 D models, animations, and virtual environments with AI3D Generation Studio. No3D skills needed, starting at$299/month.&quot;
@@ -155,11 +176,9 @@ const Page = () => {
                   <a
                     href=&quot;/contact&quot;
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
+                      plan.popular ? 'cyber-button' : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
+                   , }`}
+                  ></a>
                     Get Started
                   </a>
                 </div>
@@ -192,10 +211,13 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
-  )
+  ),
 }
 
-export default AI3DGenerationPage
+export default AI3DGenerationPage;
+
+export default AI3DGenerationPage;
+export default AI3 DGenerationPage;

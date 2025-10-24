@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import { TrendingUp } from 'lucide-react'
 import React, { useState } from 'react'
@@ -6,6 +7,33 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 import { MapPin, Clock } from 'lucide-react'
+=======
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+import { MapPin, Clock } from 'lucide-react'
+=======
+'use client';
+import React, { useState } from 'react';
+import { Send, CheckCircle, Phone, Mail, Shield, TrendingUp, Database, Users, Clock, MapPin, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+'use client'
+import { Trending, U, p } from 'lucide-react'
+import React, { useSta, t, e } from 'react'
+import { Se, n, d } from "lucide-react";
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+<<<<<<< HEAD
+import { CheckCircle, Phone, Mail } from "lucide-react";
+import { MapPin, Clock  } from "lucide-react";
+constContactPage: React.FC= () => {
+  const [formDatasetFormDa, t, a] = useState({
+    name: ',',
+      email: ',',
+    company: ',',
+      phone: ',',
+    service: ',',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 
 constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',
@@ -13,40 +41,48 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
     company: '',
     phone: '',
     service: '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     message: ''
-  })
+ ,
+})
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(fal, s, e)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+  const { nam, e, value
+} = e.target
     setFormData(prev => ({
-      ...prev,
-      [name]: value
+      ...prev
+      [na, m, e]: value
     }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  e.preventDefault()
     // Here you would typically send the form data to your backend
+<<<<<<< HEAD
     // // // console.log('Form submitted:', formData)
     setIsSubmitted(true)
+=======
+    // // // console.log('Form submitted:,', formData)
+    setIsSubmitted(tr, u, e)
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      setIsSubmitted(fal, s, e)
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+        name: ',&apos;,
+        email: ',',
+      company: ',',
+        phone: ',',
+      service: ',',
         message: ''
-      })
+     ,
+})
     }, 3000)
   }
 
-  constservices= [
-    'AI Services',
+  constservices= ['AI Services',
     'IT Services',
     'Micro SAAS Solutions',
     'Cloud Migration',
@@ -59,13 +95,17 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
   ]
 
   const achievements = [
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
+    { icon: User, text: '100+ Happy Clients', },
+    { icon: Awar, text: '50+ Successful Projects', },
+    { icon: TrendingU, text: '300% Average ROI', },
+    { icon: Shiel, text: '99.9% Uptime Guarantee', }
   ]
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const Page = (): JSX.Element => {
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -80,7 +120,11 @@ const Page = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Ready to transform your business with cutting-edge AI and IT solutions?
             Get in touch with our experts for a free consultation.
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
           </p>
         </section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
@@ -170,7 +214,7 @@ const Page = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
+                    required;
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                     placeholder="Tell us about your project and how we can help..."
@@ -184,7 +228,7 @@ const Page = () => {
                   Send Message
                 </button>
               </form>
-            )}
+            ,)}
           </div>
           {/* Contact Information */}
           <div className="space-y-8"></div>
@@ -225,8 +269,7 @@ const Page = () => {
                     <p className="text-gray-300"></p>
                       364 E Main St STE 1008<br />
                       Middletown, DE 19709<br />
-                      United States
-                    </p>
+                      United States</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4"></div>
@@ -238,8 +281,7 @@ const Page = () => {
                     <p className="text-gray-300"></p>
                       Monday - Friday: 9:00 AM - 6:00 PM EST<br />
                       Saturday: 10:00 AM - 4:00 PM EST<br />
-                      Sunday: Closed
-                    </p>
+                      Sunday: Closed</p>
                   </div>
                 </div>
               </div>
@@ -274,7 +316,7 @@ const Page = () => {
         </div>
       </div>
     </div>
-  )
+  ),
 }
 
 export default Page;

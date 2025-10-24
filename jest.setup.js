@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -49,6 +52,9 @@ beforeAll(() => {
 afterAll(() => {
   console.error = originalError;
 });
+<<<<<<< HEAD
 =======
 import '@testing-library/jest-dom'
 >>>>>>> origin/main
+=======
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

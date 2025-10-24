@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 import React from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { CheckCircle, Target, ArrowRight } from 'lucide-react'
 
+=======
+import React from 'react';
+import { ArrowLeft, CheckCircle, Star, ArrowRight, Target, Video, Check } from 'lucide-react';
+import React from 'react'
+import { ArrowLe, f, t } from "lucide-react";
+import { CheckCircle, Target, ArrowRight } from "lucide-react";
+export default function ServicesAdvertisingPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+export default function ServicesAdvertisingPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 export default function ServicesAdvertisingPage
 ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
   return (
@@ -32,7 +44,7 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
             </p>
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -45,8 +57,7 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               <a href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
-                View Our Services
-              </a>
+                View Our Services</a>
             </div>
           </div>
         </div>
@@ -334,12 +345,18 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
             <a href="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
-              View Success Stories
-            </a>
+              View Success Stories</a>
           </div>
+<<<<<<< HEAD
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+=======
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
         </div>
       </div>
     </div>
-  )
-}
+import {ArrowLeft, CheckCircle, Target, ArrowRight} from 'lucide-react';
+  ),
+
+export default function ServicesAdvertisingPage() {return (
+    <divclassName="min-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">{/* Header */};}

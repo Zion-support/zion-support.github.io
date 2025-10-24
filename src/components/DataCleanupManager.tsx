@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
+=======
+import React from 'react';
+
+"use client";
+>>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 const DataCleanupManager = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-8">
