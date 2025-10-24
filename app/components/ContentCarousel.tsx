@@ -1,4 +1,5 @@
 "use client"
+
 import React  useState useEffect  from "react" } from;
 import ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users, Settings     } from "lucide-react"
 interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 => 

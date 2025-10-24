@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useEffect, useCallback, useState } from "react"
 interface PerformanceMetrics {
 lcp: "number

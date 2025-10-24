@@ -1,13 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
-function removeDynamicExport(filePath) {
+function fixDynamicExport(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove dynamic export
-    if (content.includes('export const dynamic = \'force-dynamic\';')) {
+    // Check if file has dynamic export in wrong position
+    if (content.includes('export const dynamic = \'force-dynamic\';') && content.includes('"use client"')) {
+      // Remove the dynamic export
       content = content.replace(/export const dynamic = 'force-dynamic';\n\n?/, '');
+      
+      // Add it after "use client" directive
+      content = content.replace(
+        /("use client"\n)/,
+        '$1\nexport const dynamic = \'force-dynamic\';\n'
+      );
+      
       fs.writeFileSync(filePath, content);
       return true;
     }
@@ -30,7 +38,7 @@ function processDirectory(dirPath) {
     if (stat.isDirectory()) {
       fixedCount += processDirectory(fullPath);
     } else if (file.endsWith('.tsx')) {
-      if (removeDynamicExport(fullPath)) {
+      if (fixDynamicExport(fullPath)) {
         fixedCount++;
       }
     }
@@ -39,6 +47,6 @@ function processDirectory(dirPath) {
   return fixedCount;
 }
 
-console.log('Removing dynamic exports...');
+console.log('Fixing dynamic export positions...');
 const fixedCount = processDirectory('./app');
-console.log(`Removed dynamic export from ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files`);

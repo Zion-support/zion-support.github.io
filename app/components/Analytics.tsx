@@ -1,4 +1,5 @@
 "use client"
+
 import React from "react";
 import React, { useEffect } from &quot;react&quot
 interface AnalyticsProps {

@@ -3,6 +3,14 @@
   output: "standalone",
   trailingSlash: true,
   
+  // Disable static generation to fix build issues
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+    optimizePackageImports: ["@heroicons/react", "lucide-react"],
+    // Force all pages to be dynamic
+    isrMemoryCacheSize: 0,
+  },
+  
   // Image optimization
   images: {
     unoptimized: true,
@@ -29,8 +37,9 @@
     optimizePackageImports: ["@heroicons/react", "lucide-react"]
   },
 
-  //Optimize static generation
+  //Disable static generation temporarily to fix build issues
   staticPageGenerationTimeout: 60,
+  trailingSlash: false,
   //Enable SWC minification for better performance
   swcMinify: true,
   //Generate build ID for better caching

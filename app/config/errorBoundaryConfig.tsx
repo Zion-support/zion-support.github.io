@@ -1,4 +1,5 @@
 "use client"
+
 import React from "react";
 /**
 * Error Boundary Configuration*Centralized configuration for error handling across the application*/export interface ErrorBoundaryConfig {
