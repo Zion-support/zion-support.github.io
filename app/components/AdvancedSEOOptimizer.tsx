@@ -44,29 +44,31 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+    <Helmet ></Helmet>
+  </>
+);
         <title>{title}</title>
-        <meta name="description" content="website" />
-        <meta name="keywords" content="AI, artificial intelligence, AdvancedSEOOptimizer, AI solutions, intelligent automation" />
+        <meta name="description" content="website"   /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, AdvancedSEOOptimizer, AI solutions, intelligent automation"   /></meta>
       </Helmet>
-      <Navigation />
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               AdvancedSEOOptimizer
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
               website
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"   /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More
               </button>
             </div>
@@ -74,24 +76,24 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <feature .icon className="h-12 w-12 text-emerald-400 mb-4"   /></feature>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-sm text-gray-300"></li>
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0"   /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -107,14 +109,14 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0"   /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -126,23 +128,26 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Join thousands of businesses already using our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Contact Sales
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-    </>
-  );
+      <Footer /></Footer>
+    < />
+  </>
+);
+  </>
+);
 };
 
 export default AdvancedSEOOptimizerPage;
@@ -192,27 +197,29 @@ return structuredData || defaultStructuredData;
 }
 return (
     <>
-      <Helmet />
-<title>{title}</title />
-<meta name="description" content={description} / />
-<meta name="keywords" content={keywords} / />
-{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <Helmet /></Helmet>
+  </>
+);
+<title>{title}</title>
+<meta name="description" content={description}  /></meta>
+<meta name="keywords" content={keywords}  /></meta>
+{canonicalUrl && <link rel="canonical" href={canonicalUrl}  />}
 {/* Open Graph */}
-<meta property="og: title" content={title} / />
-<meta property="og: description" content={description} / />
-<meta property="og: image" content={ogImage} / />
-<meta property="og: type" content="website" /></meta property="og:type" content="website" />
-{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+<meta property="og: title" content={title}  /></meta>
+<meta property="og: description" content={description}  /></meta>
+<meta property="og: image" content={ogImage}  /></meta>
+<meta property="og: type" content="website"   /></meta property="og:type" content="website"  />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl}  />}
 {/* Twitter Card */}
-<meta name="twitter: card" content={twitterCard} / />
-<meta name="twitter: title" content={title} / />
-<meta name="twitter: description" content={description} / />
-<meta name="twitter: image" content={ogImage} / />
+<meta name="twitter: card" content={twitterCard}  /></meta>
+<meta name="twitter: title" content={title}  /></meta>
+<meta name="twitter: description" content={description}  /></meta>
+<meta name="twitter: image" content={ogImage}  /></meta>
 {/* Structured Data */}
-<script type="application/ld+json" />
+<script type="application/ld+json"   /></script>
 {JSON.stringify(generateStructuredData())}
-</script />
-</Helmet />
+</script>
+</Helmet>
 {children}
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
@@ -229,18 +236,22 @@ position: 'fixed',
       })
         <div>SEO Score: {seoScore}/100</div>
         {recommendations.length > 0 && (
-          <div>
+          <div ></div>
             <div>Recommendations:</div>
             <ul style={{ margin: '5px 0', paddingLeft: '15px' })
               {recommendations.map((rec, index) => (
-                <li key={index){rec}</li>
+                <li key={index){rec}</li></li>
               ))}
             </ul>
           </div>
         )}
       </div>
     )}
-  </>
+  < />
 )
 }
+  </>
+  </>
+);
+
 export default AdvancedSEOOptimizer;

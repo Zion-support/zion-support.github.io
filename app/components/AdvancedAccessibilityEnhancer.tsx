@@ -4,6 +4,7 @@ import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedAccessibilityEnhancerProps {
+  
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -13,10 +14,10 @@ interface AdvancedAccessibilityEnhancerProps {
   enableColorContrast?: boolean;
   enableMotionReduction?: boolean;
   enableFontScaling?: boolean;
-  enableVoiceNavigation?: boolean;
+  enableVoiceNavigation?: boolean
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ 
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -27,7 +28,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableMotionReduction = true,
   enableFontScaling = true,
   enableVoiceNavigation = true;
-}) => {const [accessibilitySettings, setAccessibilitySettings] = useState({
+ }) => {const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
@@ -188,19 +189,19 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   }, [enableVoiceNavigation])
 
   return (
-    <div className="accessibility-enhancer">
+    <div className="accessibility-enhancer"></div>
       {/* Accessibility Controls */}
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }} />
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}   /></div>
         <button onClick={() =>setAccessibilitySettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
           className="accessibility-toggle"
           aria-label="Toggle high contrast"
         </
-          High Contrast</button />
+          High Contrast</button>
         <button onClick={() =>setAccessibilitySettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
           className="accessibility-toggle"
           aria-label="Toggle reduced motion"
         </
-          Reduced Motion</button />
+          Reduced Motion</button>
         <button onClick={() =>setAccessibilitySettings(prev => ({ 
             ...prev, 
             fontSize: prev.fontSize === 'normal' ? 'large' : 'normal' 
@@ -208,13 +209,13 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
           className="accessibility-toggle"
           aria-label="Toggle font size"
         </
-          Large Text</button />
-      </div />
+          Large Text</button>
+      </div>
       {/* Skip Link */}
       {enableSkipLinks && (
-        <a href="#main-content" className="skip-link" />Skip to main content</a />
+        <a href="#main-content" className="skip-link"   />Skip to main content</a>
       )}
-    </div />
+    </div>
   )
 }
 

@@ -2,7 +2,8 @@
 import React, { useEffect } from "react"
 
 interface AnalyticsProps {
-  className?: string;
+  
+  className?: string
 }
 
 const Analytics: React.FC = () => {

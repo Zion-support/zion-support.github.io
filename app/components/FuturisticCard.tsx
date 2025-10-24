@@ -2,18 +2,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-interface FuturisticCardProps {children: React.ReactNode;
+interface FuturisticCardProps {
+  children: React.ReactNode;
   variant?: 'default' | 'service' | 'testimonial' | 'feature';
   className?: string;
-  onClick?: () => void;
+  onClick?: () => void
 }
 
-const FuturisticCard: React.FC<FuturisticCardProps>= ({
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   variant = 'default', 
   className = '', 
   onClick;
-}) => {const getVariantStyles = () =</ {
+ }) => {const getVariantStyles = () => (/ {
   return;
     switch (variant) {
       case 'service':
@@ -35,7 +36,7 @@ const FuturisticCard: React.FC<FuturisticCardProps>= ({
   `.trim();
 
   return (
-    <motion.div;
+    <motion .div;
       className={baseClasses}
       onClick={onClick}
       whileHover={{ scale: 1.05, y: -4 }}
@@ -43,6 +44,5 @@ const FuturisticCard: React.FC<FuturisticCardProps>= ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-     />
-
+       /></motion>
 export default FuturisticCard;

@@ -4,18 +4,19 @@ import Navigation from './Navigation';
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
+  
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
+  enableFocusManagement?: boolean
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true;
-}) => {
+ }) => {
   useEffect(() => {
     // Only run in browser environment;
     if (typeof window === 'undefined') return;

@@ -8,8 +8,9 @@ import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
 
-interface PerformanceOptimizerProps {;
-  className?: string;
+interface PerformanceOptimizerProps {
+  ;
+  className?: string
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({enableImageOptimization = true,

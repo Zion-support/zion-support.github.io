@@ -3,18 +3,19 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
-interface SEOOptimizerProps {;
-  className?: string;
+interface SEOOptimizerProps {
+  ;
+  className?: string
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps>= ({
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   structuredData;
-}) => {
+ }) => {
   useEffect(() => {
     // Update page title;
     document.title = title;
@@ -115,10 +116,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps>= ({
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
 
   return (
-    <Head />
-      <title>{title}</title />
-      <meta name="description" content={description} / />
-      <meta name="keywords" content={keywords.join(', ')} / />
-      <link rel="canonical" href={canonicalUrl} / />
-
+    <Head /></Head>
+      <title>{title}</title>
+      <meta name="description" content={description}  /></meta>
+      <meta name="keywords" content={keywords.join(', ')}  /></meta>
+      <link rel="canonical" href={canonicalUrl}  /></link>
 export default SEOOptimizerPage;

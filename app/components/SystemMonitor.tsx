@@ -21,17 +21,22 @@ import { ArrowRight } from 'lucide-react'
   const SystemMonitor: React.FC<SystemMonitorProps>= ({className = '' }) =</ {];
   return (
     <>
-      <Helmet />
+    <Helmet /></Helmet>
+  </>
+);
         <title>SystemMonitor</title>;
-        <meta name="description" content="Advanced SystemMonitor solution for modern businesses." / />
-        <meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" / />
-      </Helmet />
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
+        <meta name="description" content="Advanced SystemMonitor solution for modern businesses."    /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation"    /></meta>
+      </Helmet>
+      <Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+  </>
+  </>
+);
 
-export default SystemMonitorPage</div />
-        </div />
-    </div />
+export default SystemMonitorPage</div>
+        </div>
+    </div>
   )
 }
 export default SystemMonitorPage;

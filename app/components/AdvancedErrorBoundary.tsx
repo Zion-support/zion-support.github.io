@@ -8,17 +8,18 @@ interface AdvancedErrorBoundaryProps {
 }
 
 interface ErrorReport {
-  errorId: string
+  errorId: string;
   error: Error
   timestamp: number
-  userAgent: string
-  url: string
+  userAgent: string;
+  url: string;
 }
 
-interface State {hasError: boolean;
+interface State {
+  hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  errorId?: string;
+  errorId?: string
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
@@ -113,31 +114,31 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     if (this.state.hasError) {
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`)
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="h-16 w-16 text-red-500" />
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center"></div>
+            <div className="flex justify-center mb-4"></div>
+              <AlertTriangle className="h-16 w-16 text-red-500"   /></AlertTriangle>
             </div>
             
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            <h1 className="text-2xl font-bold text-gray-900 mb-2"></h1>
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6"></p>
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left">
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left"></div>
                 <h3 className="font-semibold text-red-800 mb-2">Error Details:</h3>
-                <p className="text-sm text-red-700 font-mono">
+                <p className="text-sm text-red-700 font-mono"></p>
                   {this.state.error.message}
                 </p>
                 {this.state.error.stack && (
-                  <details className="mt-2">
-                    <summary className="text-sm text-red-600 cursor-pointer">
+                  <details className="mt-2"></details>
+                    <summary className="text-sm text-red-600 cursor-pointer"></summary>
                       Stack Trace
                     </summary>
-                    <pre className="text-xs text-red-600 mt-2 whitespace-pre-wrap">
+                    <pre className="text-xs text-red-600 mt-2 whitespace-pre-wrap"></pre>
                       {this.state.error.stack}
                     </pre>
                   </details>
@@ -145,33 +146,30 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
               </div>
             )}
             
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
+            <div className="space-y-3"></div>
+              <button onClick={this.handleRetry}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-              >
-                <RefreshCw className="h-4 w-4 mr-2" />
+              ></button>
+                <RefreshCw className="h-4 w-4 mr-2"   /></RefreshCw>
                 Try Again
               </button>
               
-              <button
-                onClick={this.handleGoHome}
+              <button onClick={this.handleGoHome}
                 className="w-full bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-              >
-                <Home className="h-4 w-4 mr-2" />
+              ></button>
+                <Home className="h-4 w-4 mr-2"   /></Home>
                 Go Home
               </button>
               
-              <button
-                onClick={this.handleContactSupport}
+              <button onClick={this.handleContactSupport}
                 className="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-              >
-                <Mail className="h-4 w-4 mr-2" />
+              ></button>
+                <Mail className="h-4 w-4 mr-2"   /></Mail>
                 Contact Support
               </button>
             </div>
             
-            <p className="text-xs text-gray-500 mt-4">
+            <p className="text-xs text-gray-500 mt-4"></p>
               Error ID: {this.state.errorId}
             </p>
           </div>

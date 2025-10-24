@@ -168,9 +168,9 @@ generateSitemap(page,
 s: Array<{/* TODO: Fix JSX expression  */
 y: string }>)
 ) {/* TODO: Fix JSX expression  */
-<loc>${page.url}</loc />
-<lastmod>${page.lastmod}</lastmod />
-<changefreq>${page.changefreq}</changefreq />
+<loc>${page.url}</loc>
+<lastmod>${page.lastmod}</lastmod>
+<changefreq>${page.changefreq}</changefreq>
 <priority>${page.priority}</priority>`
 </url>`
 )
@@ -437,7 +437,7 @@ s: Array<{/* TODO: Fix JSX expression  */
 }
 }
 // Initialize SEO enhancements;
-export const initializeSEOEnhancements = () =</ {
+export const initializeSEOEnhancements = () => (/ {
   return /* TODO: Fix JSX expression  */
 })
 const script = document.createElement('script')

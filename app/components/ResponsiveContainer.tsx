@@ -5,8 +5,9 @@ import { Helmet } from 'react-helmet-async'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import React from 'react'
 import { cn } from '../lib/utils'
-interface ResponsiveContainerProps {;
-  className?: string;
+interface ResponsiveContainerProps {
+  ;
+  className?: string
 }
 
 constResponsiveContainer= ({children,
@@ -28,13 +29,18 @@ constResponsiveContainer= ({children,
 const ResponsiveContainer: React.FC<ResponsiveContainerProps>= ({className = '' }) =</ {
   return (
     <>
-      <Helmet />
-        <title>ResponsiveContainer</title />
-        <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses." / />
-        <meta name="keywords" content="AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation" / />
-      </Helmet />
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
+    <Helmet /></Helmet>
+  </>
+);
+        <title>ResponsiveContainer</title>
+        <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses."    /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation"    /></meta>
+      </Helmet>
+      <Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+  </>
+  </>
+);
 
 export default ResponsiveContainerPage;
   );

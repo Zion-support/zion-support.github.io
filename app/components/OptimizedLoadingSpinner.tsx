@@ -48,45 +48,45 @@ purple: 'border-purple-600bg-purple-60 0'}),
 )
 constrenderSpinner= useMemo(() =</ {switch (variant) {
 case 'do ts':
-return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2].map(i=</(</di><divkey={i}
+return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2].map(i=</(</di><divkey ={i}
 className={`w-2 h-2 rounded-full animate-bounce${colorClasses[color].split('')[1]}`}
 style={{ animationDelay: `${i*0.1}s` }}
-/></di>))}</di>)
+  /></di>))}</di>)
 case 'pulse':
-return(<divclassName={`${baseClasses} rounded-fullanimate-pulse`}
+return(<divclassName ={`${baseClasses} rounded-fullanimate-pulse`}
 role='status'
 aria-label='Loading'
-/></di>)
-case 'skeleton':return(</di><divclassName='space-y-2' role='status' aria-label='Loading'></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
-/></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
+  /></di>)
+case 'skeleton':return(</di><divclassName='space-y-2' role='status' aria-label='Loading'></di><divclassName ={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
+  /></di><divclassName ={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
 style={{ width: '7 5%'}}
-/></di><divclassName={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
+  /></di><divclassName ={`h-4 bg-gray-200roundedanimate-pulse${sizeClasses[size]}`}
 style={{ width: '5 0%'}}
-/></di>)
+  /></di>)
 case 'bars':
-return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2, 3].map(i=</(</di><divkey={i}
+return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2, 3].map(i=</(</di><divkey ={i}
 className={`w-1 ${colorClasses[color].split('')[1]}animate-pulse`}
 style={{;}
 height: `${12+ i*4}px`,
 animationDelay: `${i*0.1}s`,
 }}
-/></di>))}</di>)
+  /></di>))}</di>)
 case 'spinner':
-default: return(<divclassName={`${baseClasses} rounded-full border-2 border-t-transparentanimate-spin`}
+default: return(<divclassName ={`${baseClasses} rounded-full border-2 border-t-transparentanimate-spin`}
 role='status'
 aria-label='Loading'
-/></di>)
+  /></di>)
 }
 }, [size, variant, color, sizeClasses, colorClasses])
 const containerClasses = useMemo(() =</ {return `${baseClasses} ${fullScreenClasses} ${className}`
 }, [fullScreen, className])
-return (</div />
-<div className={containerClasses}></div />
-<div className='text-center'>{renderSpinner}</div />
+return (</div>
+<div className={containerClasses}></div>
+<div className='text-center'>{renderSpinner}</div>
 {text && (</div>;}
 <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p</
 )}
-</div />
+</div>
 )
 }
 )

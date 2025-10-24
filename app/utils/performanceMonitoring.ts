@@ -3,24 +3,27 @@
 * Advanced Performance Monitoring System;
 * Tracks Core Web Vitals and custom performance metrics;
 */
-export interface PerformanceMetric {name: string,
+export interface PerformanceMetric {
+  name: string,
 value: number,
 rating: 'good' | 'needs-improvement' | 'poor',
-timestamp: number;
+timestamp: number
 }
 export interface WebVitals {
+  
 FCP?: PerformanceMetric; // First Contentful Paint;
 LCP?: PerformanceMetric; // Largest Contentful Paint;
 FID?: PerformanceMetric; // First Input Delay;
 CLS?: PerformanceMetric; // Cumulative Layout Shift;
-TTFB?: PerformanceMetric; // Time to First Byte;}
+TTFB?: PerformanceMetric; // Time to First Byte}
 INP?: PerformanceMetric; // Interaction to Next Paint}
 }
-export interface CustomMetric {name: string;
+export interface CustomMetric {
+  name: string;
   value: number;
   unit: 'ms' | 'bytes' | 'count' | 'percentage'
   rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number;
+  timestamp: number
 }
 export interface WebVitals {}
 FCP?: PerformanceMetric; // First Contentful Paint;
@@ -542,7 +545,8 @@ Percentage = 'percentage'}
 }
 // Simple metrics structure for testing;
 interface MetricData {
-// Simple metrics structure for testing;}
+  
+// Simple metrics structure for testing}
 interface MetricData {}
 values: number[]
 count: number,
@@ -586,7 +590,7 @@ rating: getRating(name, value)}
 performanceMonitoring.recordCustomMetric(name, value, unit)
 }
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {, }
-const thresholds: Record<string, {good: number; poor: number }> = {}</strin />
+const thresholds: Record<string, {good: number; poor: number }> = {}</strin>
 'FCP': {good: 1800, poor: 3000 },
 'LCP': {good: 2500, poor: 4000 },
 'FID': {good: 100, poor: 300 },
@@ -726,7 +730,7 @@ result[key] = { ...value }
 })
 return result;
 }
-export const clearMetrics = () =</ {
+export const clearMetrics = () => (/ {
   return /* TODO: Fix JSX expression  */
 }
 export const measureFunction = <T>(nam,

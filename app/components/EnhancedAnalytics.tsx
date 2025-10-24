@@ -3,16 +3,17 @@
 import React, { createContext, useContext, useEffect } from "react"
 
 interface AnalyticsContextType {
+  
   track: (event: string, properties?: Record<string, unknown>) =</ void;
   identify: (userId: string, traits?: Record<string, unknown>) =</ void;
-  page: (name: string, properties?: Record<string, unknown>) =</ void;
+  page: (name: string, properties?: Record<string, unknown>) =</ void
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined,
 )
 
-export const useAnalytics = () =</ {
+export const useAnalytics = () => (/ {
   return;
   const context = useContext(AnalyticsContext)
   if (!context) {
@@ -22,7 +23,8 @@ export const useAnalytics = () =</ {
   return context;
 }
 
-interface AnalyticsProviderProps {children: React.ReactNode;
+interface AnalyticsProviderProps {
+  children: React.ReactNode
 }
 
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() =</ {

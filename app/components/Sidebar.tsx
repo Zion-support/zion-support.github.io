@@ -26,7 +26,7 @@ Phone,
 Mail,
 MapPin,Clock;}
 } from 'lucide-react'
-constSidebar: React.FC= () =</{const [isOpensetIsOpen] = useState(false)
+constSidebar: React.FC= () => (/{const [isOpensetIsOpen] = useState(false)
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 constlocation= useLocation()
 useEffect(() => {
@@ -135,54 +135,56 @@ hours: 'Mon-Fri 9AM-6PM EST'
 }
 return (
 <>
-{/* Mobile Menu Button */}
+    {/* Mobile Menu Button */}
+  </>
+);
 <button onClick={() =></button>setIsOpen(true)}
 className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
 aria-label="Open sidebar"
 </
-<Menu className="w-6 h-6" / />
-</button />
+<Menu className="w-6 h-6"    /></Menu>
+</button>
 {/* Sidebar Overlay  */
 {isOpen && (
 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden" }
-onClick={() =>setIsOpen(false)}</div />/</
+onClick={() =>setIsOpen(false)}</div>/</
 )}
-{/* Sidebar */}</div />
+{/* Sidebar */}</div>
 <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
-} lg: translate-x-0 lg:static lg:z-auto`, } />
-<div className="flex flex-col h-full"></div />
-{/* Header */}</div />
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div />
+} lg: translate-x-0 lg:static lg:z-auto`, }   /></aside>
+<div className="flex flex-col h-full"></div>
+{/* Header */}</div>
+<div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
 <Link to="/" className="flex items-center space-x-3" onClick={() =>setIsOpen(false)}</
-<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div />
-<Brain className="w-6 h-6 text-white" / />
-</div />
-<div /><//div>
-<h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2 />
-<p className="text-xs text-cyan-400">AI & IT Solutions</p />
-</div />
-</Link />
+<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
+<Brain className="w-6 h-6 text-white"    /></Brain>
+</div>
+<div  /><//div>
+<h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
+<p className="text-xs text-cyan-400">AI & IT Solutions</p>
+</div>
+</Link>
 <button onClick={() =></button>setIsOpen(false)}
 className="lg: hidden text-gray-400 hover:text-white transition-colors"
 aria-label="Close sidebar"
 </
-<X className="w-6 h-6" / />
-</button />
-</div />
+<X className="w-6 h-6"    /></X>
+</button>
+</div>
 {/* Navigation  */
-<div className="flex-1 overflow-y-auto py-6"></div />
-<nav className="space-y-2 px-4">{navigationSections.map((section, sectionIndex) =</ (;}
-<div key={sectionIndex} className="space-y-1"></div />
+<div className="flex-1 overflow-y-auto py-6"></div>
+<nav className="space-y-2 px-4">{navigationSections.map((section, sectionIndex => (/ (;}
+<div key={sectionIndex} className="space-y-1"></div>
 <button onClick={() =></button>section.key && toggleSection(section.key)}
 className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors"</
-<span>{section.title}</span />
+<span>{section.title}</span>
 {section.key && (
 expandedSections.has(section.key) ?
-<ChevronDown className="w-4 h-4" /> :
-<ChevronRight className="w-4 h-4" / />
+<ChevronDown className="w-4 h-4"   /> :
+<ChevronRight className="w-4 h-4"    /></ChevronRight>
 )}
-</button />
+</button>
 {(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1"></div />{section.items.map((item, itemIndex) =</ (</div />
+<div className="ml-4 space-y-1"></div>{section.items.map((item, itemIndex) =</ (</div>
 <Link key={itemIndex}

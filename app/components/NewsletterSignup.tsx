@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
+  
   variant?: 'inline' | 'modal';
-  onClose?: () => void;
+  onClose?: () => void
 }
 
 const NewsletterSignup: React.FC<NewsletterSignupProps>= ({ variant = 'inline', onClose }) =</ {const [email, setEmail] = useState('');
@@ -50,15 +51,15 @@ const NewsletterSignup: React.FC<NewsletterSignupProps>= ({ variant = 'inline', 
   };
 
   const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" / />
-        <h3 className="text-2xl font-bold mb-2">Stay Updated</h3 />
-        <p className="text-white/90" />
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
+      <div className="text-center mb-6"></div>
+        <Mail className="w-12 h-12 mx-auto mb-4 text-white/90"    /></Mail>
+        <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+        <p className="text-white/90"   /></p>
           Get the latest updates on AI technology, IT solutions, and industry insights.
-        </p />
-      </div />
-      <form onSubmit={handleSubmit} className="space-y-4" />
+        </p>
+      </div>
+      <form onSubmit={handleSubmit} className="space-y-4"   /></form>
         <div className="$1"></div>
           <input type="email"
             value={email}

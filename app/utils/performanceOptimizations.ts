@@ -89,7 +89,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
   return { imageSrc, isLoaded, isError, observe };
 };
 // Performance monitoring hook;
-export const usePerformanceMonitoring = () =</ {
+export const usePerformanceMonitoring = () => (/ {
   return;
   const [metrics, setMetrics] = useState<{
     fcp?: number;
@@ -134,7 +134,7 @@ export const usePerformanceMonitoring = () =</ {
   return metrics;
 };
 // Memory usage monitoring;
-export const useMemoryMonitoring = () =</ {
+export const useMemoryMonitoring = () => (/ {
   return;
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
@@ -183,7 +183,7 @@ export const preloadCriticalResources = () => {
 
 };
 // Bundle size monitoring;
-export const useBundleSizeMonitoring = () =</ {
+export const useBundleSizeMonitoring = () => (/ {
   return;
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;

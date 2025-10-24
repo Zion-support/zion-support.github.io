@@ -224,7 +224,7 @@ export class ConsoleSpy {private originalConsole: Console;
 /**
  * Create a deferred promise;
  */
-export interface Deferred<T> {promise: Promise<T />resolve: (value: T) => void;
+export interface Deferred<T> {promise: Promise<T  />resolve: (value: T) => void;
   reject: (reason?: unknown) =</ void;
 };
 
@@ -263,7 +263,7 @@ export const retryWithBackoff = async <T>(
  * Measure execution time of a function;
  */
 export const measureExecutionTime = async <T>(
-  fn: () =</ T | Promise<T />
+  fn: () =</ T | Promise<T /></T>
 ): Promise<{result: T; duration: number }>=</ {
   const start = performance.now()
   const result = await fn()

@@ -21,12 +21,17 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
   const LazyImage: React.FC<LazyImageProps>= ({className = '' }) =</ {];
   return (
     <>
-      <Helmet />
+    <Helmet /></Helmet>
+  </>
+);
         <title>LazyImage</title>;
-        <meta name="description" content="Advanced LazyImage solution for modern businesses." / />
-        <meta name="keywords" content="AI, artificial intelligence, LazyImage, AI solutions, intelligent automation" / />
-      </Helmet />
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
+        <meta name="description" content="Advanced LazyImage solution for modern businesses."    /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, LazyImage, AI solutions, intelligent automation"    /></meta>
+      </Helmet>
+      <Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+  </>
+  </>
+);
 
 export default LazyImagePage;

@@ -33,41 +33,41 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white"></footer>
+      <div className="max-w-7xl mx-auto px-4 py-16"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {/* Company Info */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className="space-y-6"></div>
+            <div className="flex items-center space-x-2"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
+                <Brain className="w-5 h-5 text-white"   /></Brain>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed"></p>
               Leading the future of technology with innovative AI, blockchain, and cloud solutions that transform businesses worldwide.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Github className="w-5 h-5" />
+            <div className="flex space-x-4"></div>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                <Github className="w-5 h-5"   /></Github>
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                <Linkedin className="w-5 h-5"   /></Linkedin>
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                <Twitter className="w-5 h-5"   /></Twitter>
               </a>
             </div>
           </div>
 
           {/* AI Services */}
-          <div className="space-y-6">
+          <div className="space-y-6"></div>
             <h3 className="text-lg font-semibold text-white">AI Services</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3"></ul>
               {aiServices.map((service, index) => (
-                <li key={index}>
-                  <Link href={service.href} className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                <li key={index}></li>
+                  <Link href={service.href} className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"></Link>
+                    <ArrowRight className="w-4 h-4 mr-2"   /></ArrowRight>
                     {service.name}
                   </Link>
                 </li>
@@ -76,13 +76,13 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Tech Services */}
-          <div className="space-y-6">
+          <div className="space-y-6"></div>
             <h3 className="text-lg font-semibold text-white">Tech Services</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3"></ul>
               {techServices.map((service, index) => (
-                <li key={index}>
-                  <Link href={service.href} className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                <li key={index}></li>
+                  <Link href={service.href} className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"></Link>
+                    <ArrowRight className="w-4 h-4 mr-2"   /></ArrowRight>
                     {service.name}
                   </Link>
                 </li>
@@ -91,13 +91,13 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Company Links */}
-          <div className="space-y-6">
+          <div className="space-y-6"></div>
             <h3 className="text-lg font-semibold text-white">Company</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3"></ul>
               {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link href={link.href} className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                <li key={index}></li>
+                  <Link href={link.href} className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"></Link>
+                    <ArrowRight className="w-4 h-4 mr-2"   /></ArrowRight>
                     {link.name}
                   </Link>
                 </li>
@@ -107,19 +107,19 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+        <div className="border-t border-gray-700 mt-12 pt-8"></div>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"></div>
+            <div className="text-gray-400 text-sm"></div>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
+            <div className="flex space-x-6 text-sm"></div>
+              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors"></Link>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors"></Link>
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors"></Link>
                 Cookie Policy
               </Link>
             </div>

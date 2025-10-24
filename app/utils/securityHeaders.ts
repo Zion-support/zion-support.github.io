@@ -3,12 +3,13 @@
 * Comprehensive security headers for production applications;
 */
 export interface SecurityHeadersConfig {
+  
 contentSecurityPolicy?: string;
 strictTransportSecurity?: string;
 xFrameOptions?: string;
 xContentTypeOptions?: string;
 referrerPolicy?: string;
-permissionsPolicy?: string;
+permissionsPolicy?: string
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {// Content Security Policy;
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
@@ -50,7 +51,7 @@ permissionsPolicy: [,
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 export function getSecurityHeaders()
-customConfig?: Partial<SecurityHeadersConfig />
+customConfig?: Partial<SecurityHeadersConfig /></SecurityHeadersConfig>
 ): Record<string, string> {}
 const config = { ...defaultSecurityHeaders, ...customConfig };
 
@@ -83,7 +84,7 @@ defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression  */
 /**
 * Get security headers as key-value pairs;
 */
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig  />)
 ): Record<string, string> {/* TODO: Fix JSX expression  */
 const config = { ...defaultSecurityHeaders, ...customConfig };
 
@@ -117,7 +118,7 @@ return Object.entries(headers).map(([key, value]) =</ ({}
 key,
 value}
 }))
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig  />)
 ): Array<{/* TODO: Fix JSX expression  */
 e: string }> {/* TODO: Fix JSX expression  */
 }))

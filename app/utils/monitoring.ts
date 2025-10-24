@@ -20,25 +20,28 @@ const performanceConfig = {monitoring: {
 };
 
 export interface PerformanceMetrics {
+  
   lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number;
+  inp?: number
 };
 
-  export interface ErrorReport {message: string;
+  export interface ErrorReport {
+  message: string;
   stack?: string;
   url: string;
   line?: number;
   column?: number;
   timestamp: number;
   userAgent: string;
-  userId?: string;
+  userId?: string
 }
 
-export interface MonitoringConfig {enablePerformanceMonitoring: boolean;
+export interface MonitoringConfig {
+  enablePerformanceMonitoring: boolean;
   enableErrorReporting: boolean;
   enableUserTracking: boolean;
   sampleRate: number;

@@ -2,12 +2,14 @@
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 
 declare global {interface Window {
-    gtag: (...args: any[]) => void;
+  
+    gtag: (...args: any[]) => void
   }
 }
 
-interface AnalyticsContextType {trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) = (/ void;
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string) = (/ void
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
@@ -27,7 +29,7 @@ interface AnalyticsProviderProps {
   children: ReactNode
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({  children  }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Google Analytics
@@ -69,9 +71,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackPageView}
 
   return (
-    <AnalyticsContext.Provider value={value)
+    <AnalyticsContext .Provider value={value)
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider></AnalyticsContext>
   )
 }
 

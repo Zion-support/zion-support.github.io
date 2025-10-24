@@ -2,17 +2,18 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface FuturisticButtonProps {children: React.ReactNode;
+interface FuturisticButtonProps {
+  children: React.ReactNode;
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;
   className?: string;
-  type?: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset'
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps>= ({
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
   children,
   onClick,
   variant = 'primary',
@@ -21,7 +22,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps>= ({
   loading = false,
   className = '',
   type = 'button'
-}) => {const [isHovered, setIsHovered] = useState(false);
+ }) => {const [isHovered, setIsHovered] = useState(false);
 
   const getVariantClasses = () => {
   return;
@@ -39,7 +40,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps>= ({
     }
   };
 
-  const getSizeClasses = () =</ {return;
+  const getSizeClasses = () => (/ {return;
     switch (size) {
       case 'sm':
         return 'px-4 py-2 text-sm';

@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
+  
   enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -10,10 +11,10 @@ interface AdvancedPerformanceOptimizerProps {
   enableResourceHints?: boolean;
   enableServiceWorker?: boolean;
   enableCriticalCSS?: boolean;
-  enableWebVitals?: boolean;
+  enableWebVitals?: boolean
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>= ({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ 
   enableAdvancedCaching = true,
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -23,7 +24,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>=
   enableServiceWorker = true,
   enableCriticalCSS = true,
   enableWebVitals = true;
-}) => {const [performanceMetrics, setPerformanceMetrics] = useState({
+ }) => {const [performanceMetrics, setPerformanceMetrics] = useState({
     fcp: 0,
     lcp: 0,
     fid: 0,

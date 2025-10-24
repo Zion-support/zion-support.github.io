@@ -253,7 +253,7 @@ export const collectPerformanceMetrics = () => {return;
   , };
 };
 // Initialize performance enhancements;
-export const initializePerformanceEnhancements = () =</ {
+export const initializePerformanceEnhancements = () => (/ {
   return;
   if (typeof window === 'undefined') return;
   // Initialize lazy loading;

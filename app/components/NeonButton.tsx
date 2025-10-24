@@ -1,6 +1,7 @@
 import React from "react"
 import { ArrowRight } from "lucide-react"
 interface NeonButtonProps {
+  
   children?: React.ReactNode;
   className?: string;
   title?: string;
@@ -10,7 +11,7 @@ interface NeonButtonProps {
   variant?: "primary" | "secondary" | "accent"
   size?: "sm" | "md" | "lg"
   icon?: React.ReactNode;
-  disabled?: boolean;
+  disabled?: boolean
 }
 
 const NeonButton: React.FC<NeonButtonProps>= ({
@@ -36,13 +37,18 @@ const NeonButton: React.FC<NeonButtonProps>= ({
 
   return (
     <>
-      <Helmet />
-        <title>NeonButton</title />
-        <meta name="description" content="Advanced NeonButton solution for modern businesses." / />
-        <meta name="keywords" content="AI, artificial intelligence, NeonButton, AI solutions, intelligent automation" / />
-      </Helmet />
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
+    <Helmet /></Helmet>
+  </>
+);
+        <title>NeonButton</title>
+        <meta name="description" content="Advanced NeonButton solution for modern businesses."    /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, NeonButton, AI solutions, intelligent automation"    /></meta>
+      </Helmet>
+      <Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+  </>
+  </>
+);
 
 export default NeonButtonPage;
 

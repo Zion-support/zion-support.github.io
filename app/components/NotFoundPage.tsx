@@ -40,22 +40,27 @@ const NotFoundPagePage: React.FC = () => {
 
   return (
     <>
-      <Helmet />
-        <title>NotFoundPage | Zion Tech Group</title />
-        <meta name="description" content="Professional NotFoundPage services by Zion Tech Group." / />
-        <meta name="keywords" content="AI, artificial intelligence, NotFoundPage, AI solutions, intelligent automation" / />
-      </Helmet />
-      <section className="py-20 px-4"></section />
-        <div className="container mx-auto max-w-6xl"></div />
-          <div className="text-center mb-16"></div />
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">NotFoundPage</h1 />
+    <Helmet /></Helmet>
+  </>
+);
+        <title>NotFoundPage | Zion Tech Group</title>
+        <meta name="description" content="Professional NotFoundPage services by Zion Tech Group."    /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, NotFoundPage, AI solutions, intelligent automation"    /></meta>
+      </Helmet>
+      <section className="py-20 px-4"></section>
+        <div className="container mx-auto max-w-6xl"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">NotFoundPage</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional NotFoundPage services tailored to your business needs.</p>p</
-          </div />
-        </div />
-      </section />
-    </div />
+          </div>
+        </div>
+      </section>
+    </div>
   )
 , }
+  </>
+  </>
+);
 
 export default NotFoundPagePage;
 export default NotFoundPagePage;
