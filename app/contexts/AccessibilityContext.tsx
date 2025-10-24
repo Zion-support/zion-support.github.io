@@ -1,6 +1,6 @@
 'use client';
-import React, { createContext } from 'react';
-import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
+import { createContext } from 'react';
+import { AccessibilityContextType } from '../types/accessibility';
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 

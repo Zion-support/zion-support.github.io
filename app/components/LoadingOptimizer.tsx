@@ -1,6 +1,6 @@
 'use client';
 import { Zap, Clock, CheckCircle } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 interface LoadingOptimizerProps {
   className?: string;
 }

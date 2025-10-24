@@ -1,7 +1,6 @@
 'use client';
-import { Settings } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
+import { AccessibilityContextType, AccessibilitySettings } from '../types/accessibility';
 import { AccessibilityContext } from '../contexts/AccessibilityContext';
 import { useAccessibility } from '../hooks/useAccessibility';
 
@@ -27,7 +26,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     if (savedSettings) {
       try {
         const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...prev, ...parsed }));
+        setSettings((prev: AccessibilitySettings) => ({ ...prev, ...parsed }));
       } catch (error) {
         console.warn('Failed to parse accessibility settings:', error);
       }
@@ -80,13 +79,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        setSettings(prev => ({ ...prev, keyboardNavigation: true }));
+        setSettings((prev: AccessibilitySettings) => ({ ...prev, keyboardNavigation: true }));
         document.body.classList.add('keyboard-navigation');
       }
     };
 
     const handleMouseDown = () => {
-      setSettings(prev => ({ ...prev, keyboardNavigation: false }));
+      setSettings((prev: AccessibilitySettings) => ({ ...prev, keyboardNavigation: false }));
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -132,7 +131,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
   }, [announcements]);
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+    setSettings((prev: AccessibilitySettings) => ({ ...prev, [key]: value }));
   };
 
   const announceToScreenReader = (message: string) => {

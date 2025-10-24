@@ -1,5 +1,5 @@
 'use client';
-import { Brain, Globe, ArrowRight, Cloud, Smartphone, Circle, Database } from 'lucide-react';
+import { Brain, Globe, ArrowRight, Smartphone, Circle, Cloud } from 'lucide-react';
 import React from 'react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [

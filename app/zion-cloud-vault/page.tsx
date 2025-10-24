@@ -2,8 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Cloud } from 'lucide-react';
-import Footer from '../components/Footer';
+import { ArrowRight} from 'lucide-react';
 
 export default function ZionCloudVaultPage() {
   return (
