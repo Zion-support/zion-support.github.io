@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async';
 const ErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <>{children}</>;
 };
-
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
