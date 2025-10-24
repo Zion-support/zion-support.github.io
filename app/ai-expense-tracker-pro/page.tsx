@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AiexpensetrackerproPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Expense Tracker Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function AiexpensetrackerproPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Ai Expense Tracker Pro
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional ai-expense-tracker-pro services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function AiexpensetrackerproPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

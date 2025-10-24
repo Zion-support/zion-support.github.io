@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SupportBotPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/support-bot/page.tsx
       <title>SupportBot - Zion Tech Group</title>
         <meta name="description" content="Professional supportbot services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function SupportBotPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

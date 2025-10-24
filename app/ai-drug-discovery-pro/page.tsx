@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AidrugdiscoveryproPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Drug Discovery Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function AidrugdiscoveryproPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Ai Drug Discovery Pro
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional ai-drug-discovery-pro services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function AidrugdiscoveryproPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

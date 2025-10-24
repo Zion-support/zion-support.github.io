@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function EmailOptimizerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/email-optimizer/page.tsx
       <title>EmailOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional emailoptimizer services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function EmailOptimizerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

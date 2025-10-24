@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 
 export default function MarketingautomationPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Marketing Automation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function MarketingautomationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Marketing Automation
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional marketing-automation services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function MarketingautomationPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

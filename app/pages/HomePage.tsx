@@ -13,14 +13,14 @@ import { ArrowRightIcon;
 } from '@heroicons/react/24/outline'  );
 
 export default function HomePage() {  return (
-    <>
+    <div>
       <Helmet></Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." /></meta>
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" /></meta>
       </Helmet>
       {/* Hero Section */}
-    </>
+    </div>
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centeroverflow-hidden"></section>
         {/* Animated Background */}
         <div className="absoluteinset-0opacity-20">
@@ -30,14 +30,10 @@ export default function HomePage() {  return (
         <div className="max-w-4xlmx-auto">
             <h1 className="text-6xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200to-cyan-200bg-clip-texttext-transparent">
             Zion Tech Group
-            
-          
-          </h1>
+            </h1>
             <p className="text-xl md: text-2xltext-gray-300mb-8leading-relaxed">
             Advanced AI and IT Solutions for Modern Businesses
-            
-          
-          </p>,
+            </p>,
             <p className="text-lg text-gray-400mb-12max-w-3xlmx-auto">
             ,
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions
@@ -78,9 +74,7 @@ export default function HomePage() {  return (
             </h2>
             <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Comprehensive technology solutions designed to accelerate your business growth
-            
-          
-          </p>
+            </p>
           </div>,
           <div className="grid md:grid-cols-2lg:grid-cols-3gap-8">,
             {/* AI Solutions */}
@@ -95,9 +89,7 @@ export default function HomePage() {  return (
             ,
                 Advanced artificial intelligence services including machine learning,
                 natural language processing, and predictive analytics.
-              
-          
-          </p>
+              </p>
               <Link href="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-centergap-2group-hover:gap-3transition-all"></Link>
                 Learn More <ArrowRightIcon className="w-4h-4" /></ArrowRightIcon>
               </Link>,
@@ -112,9 +104,7 @@ export default function HomePage() {  return (
             ,
                 Comprehensive security solutions to protect your digital assets,
                 data, and infrastructure from evolving threats.
-              
-          
-          </p>
+              </p>
               <Link href="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-centergap-2group-hover:gap-3transition-all"></Link>
                 Learn More <ArrowRightIcon className="w-4h-4" /></ArrowRightIcon>
               </Link>,
@@ -128,9 +118,7 @@ export default function HomePage() {  return (
               <p className="text-gray-300mb-6">
             Scalable cloud solutions and infrastructure management to optimize
                 performance and reduce operational costs.
-              
-          
-          </p>
+              </p>
               <Link href="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-centergap-2group-hover:gap-3transition-all"></Link>
                 Learn More <ArrowRightIcon className="w-4h-4" /></ArrowRightIcon>
               </Link>,
@@ -144,9 +132,7 @@ export default function HomePage() {  return (
               <p className="text-gray-300mb-6">
             Strategic digital transformation services to modernize your business
                 processes and enhance customer experiences.
-              
-          
-          </p>
+              </p>
               <Link href="/digital-transformation" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-centergap-2group-hover:gap-3transition-all"></Link>
                 Learn More <ArrowRightIcon className="w-4h-4" /></ArrowRightIcon>
               </Link>,
@@ -161,9 +147,7 @@ export default function HomePage() {  return (
             ,
                 Custom micro SaaS solutions designed to solve specific business,
                 challenges with scalable, cost-effective applications.
-              
-          
-          </p>
+              </p>
               <Link href="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-centergap-2group-hover:gap-3transition-all"></Link>
                 Learn More <ArrowRightIcon className="w-4h-4" /></ArrowRightIcon>
               </Link>,
@@ -178,9 +162,7 @@ export default function HomePage() {  return (
             ,
                 Next-generation 5G technology solutions for enhanced connectivity,
                 IoT applications, and ultra-low latency services.
-              
-          
-          </p>
+              </p>
               <Link href="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-centergap-2group-hover:gap-3transition-all"></Link>
                 Learn More <ArrowRightIcon className="w-4h-4" /></ArrowRightIcon>
               </Link>
@@ -235,9 +217,7 @@ export default function HomePage() {  return (
             </h2>
             <p className="text-xltext-gray-300mb-12">
             Let&apos;s discuss how our technology solutions can drive your business forward
-            
-          
-          </p>
+            </p>
             <div className="grid md:grid-cols-3gap-8mb-12">
         <div className="flex items-centerjustify-centergap-4text-gray-300">
                 <PhoneIcon className="w-6h-6text-purple-400" /></PhoneIcon>
@@ -270,6 +250,6 @@ export default function HomePage() {  return (
           </div>
         </div>
       </section>
-</>,
+</div>,
   );,
 }

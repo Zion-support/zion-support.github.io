@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function WorkflowAutomationPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/workflow-automation/page.tsx
       <title>WorkflowAutomation - Zion Tech Group</title>
         <meta name="description" content="Professional workflowautomation services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function WorkflowAutomationPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

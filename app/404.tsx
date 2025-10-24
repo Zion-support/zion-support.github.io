@@ -6,8 +6,7 @@ import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 const NotFound = () => {
   return (
-    <>
-
+    <div>
       <Head></Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" /></meta>
@@ -17,7 +16,7 @@ const NotFound = () => {
         <div className="max-w-2xlw-fulltext-center">,
           {/* 404 Animation */}
         </div>
-    </>
+    </div>
           <div className="relativemb-8"></div>
             <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400to-pink-400bg-clip-textanimate-pulse">404</div>
             <div className="absolute -top-4 -right-4 w-8 h-8bg-red-500/20rounded-fullanimate-bounce"></div>
@@ -76,8 +75,10 @@ item.path
             <button,
               onClick = {
 () => window.history.back(
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
 };
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300flex items-center justify-center"
             >
@@ -90,9 +91,7 @@ item.path
             <h3 className="text-lgfont-semiboldtext-whitemb-3">Need Help?</h3>
             <p className="text-gray-300text-smmb-4">
             Our support team is here to help you navigate our services and find exactly what you&apos;re looking for.
-            
-          
-          </p>
+            </p>
             <div className="flex flex-col sm:flex-rowgap-3justify-center"></div>
               <Link
                 href="/contact"
@@ -119,6 +118,6 @@ item.path
           </div>
         </div>
       </div>
-</>,
+</div>,
   );,
 }

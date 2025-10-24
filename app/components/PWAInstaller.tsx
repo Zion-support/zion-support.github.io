@@ -28,12 +28,15 @@ const PWAInstaller: React.FC = () => {,
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
     return (
-    <>
+    <div>
+
 
       ) => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
       window.removeEventListener('appinstalled', handleAppInstalled);
   }, [])
   const handleInstallClick = async () => {
@@ -56,6 +59,6 @@ const PWAInstaller: React.FC = () => {,
     sessionStorage.setItem('pwa-install-dismissed', 'true');
   // Don&apos;t show if already installed or dismissed this session
   if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed');
-    </>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function InventoryManagementPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/inventory-management/page.tsx
       <title>InventoryManagement - Zion Tech Group</title>
         <meta name="description" content="Professional inventorymanagement services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function InventoryManagementPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

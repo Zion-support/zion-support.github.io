@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function Blockchainweb3Page() {
   return (
-    <>
+    <div>
       <Head>
         <title>Blockchain Web3 - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function Blockchainweb3Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Blockchain Web3
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional blockchain-web3 services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function Blockchainweb3Page() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

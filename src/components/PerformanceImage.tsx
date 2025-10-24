@@ -38,7 +38,7 @@ const PerformanceImagePage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>;
         <title>PerformanceImage | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; /></meta>
@@ -54,7 +54,7 @@ const PerformanceImagePage: React.FC = () => {
       </section>
     </div>,
   ),
-    </>
+    </div>
 }
 
 export default PerformanceImagePage

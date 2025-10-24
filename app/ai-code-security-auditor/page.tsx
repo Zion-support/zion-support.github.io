@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AicodesecurityauditorPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Code Security Auditor - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function AicodesecurityauditorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Ai Code Security Auditor
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional ai-code-security-auditor services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function AicodesecurityauditorPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

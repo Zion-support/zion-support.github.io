@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function TermsOfServicePage() {
   return (
-    <>
+    <div>
 :all-pages-backup/terms-of-service/page.tsx
       <title>TermsOfService - Zion Tech Group</title>
         <meta name="description" content="Professional termsofservice services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function TermsOfServicePage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

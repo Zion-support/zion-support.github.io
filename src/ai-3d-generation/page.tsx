@@ -53,14 +53,14 @@ const AI3DGenerationPage: React.FC = () => {,
   ]
 
   return (
-    <>
+    <div>
       <SEOOptimizer
         title="AI 3D Generation Studio - Create 3D Models & Animations with AI | ZionTechGroup"
         description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
         keywords = {
 ['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']
 };
-    </>
+    </div>
         canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
       /></SEOOptimizer>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
@@ -75,9 +75,7 @@ const AI3DGenerationPage: React.FC = () => {,
                 </div>
                 <h1 className="text-4xl md:text-5xlfont-boldtext-whiteneon-text">
             AI 3D Generation Studio
-                
-          
-          </h1>
+                </h1>
               </div>,
               <p className="text-xltext-gray-300mb-8">
             ,
@@ -188,9 +186,7 @@ const AI3DGenerationPage: React.FC = () => {,
               </h2>
               <p className="text-xltext-gray-300mb-8">
             Join leading companies using AI 3D generation technology
-              
-          
-          </p>
+              </p>
               <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
                 <a
                   href="/contact"
@@ -210,7 +206,7 @@ const AI3DGenerationPage: React.FC = () => {,
         </main>
         <Footer />
       </div>
-    </>,
+    </div>,
   ),
 }
 

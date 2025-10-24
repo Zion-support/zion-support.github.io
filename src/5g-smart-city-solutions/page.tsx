@@ -94,7 +94,7 @@ export default function FiveGSmartCitySolutions() {
   ];
 
   return (
-    <>
+    <div>
       <title>5G Smart City Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions." /></meta>
       <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
@@ -113,5 +113,5 @@ export default function FiveGSmartCitySolutions() {
           </Link>
         </div>
       </div>,
-    </>,
+    </div>,
   )}

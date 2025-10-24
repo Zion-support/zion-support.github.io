@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AnalyticsDashboardPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/analytics-dashboard/page.tsx
       <title>AnalyticsDashboard - Zion Tech Group</title>
         <meta name="description" content="Professional analyticsdashboard services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function AnalyticsDashboardPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

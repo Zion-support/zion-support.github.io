@@ -58,7 +58,8 @@ export default function AboutPage() {
     description: 'Machine learning expert focused on developing cutting-edge AI solutions.'}
   ]
   return (
-    <>
+    <div>
+
 
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>
@@ -66,20 +67,16 @@ export default function AboutPage() {
         <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" /></meta>
       </Helmet>
       {/* Hero Section */}
-    </>
+    </div>
       <section className="relative py-20 bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></section>
         <div className="containermx-autopx-4">
         <div className="max-w-4xlmx-autotext-center">
             <h1 className="text-5xl md: text-6xlfont-boldtext-whitemb-6">
             About Zion Tech Group
-            
-          
-          </h1>
+            </h1>
             <p className="text-xltext-gray-300mb-8leading-relaxed">
             Empowering businesses through innovative technology solutions and cutting-edge AI applications
-            
-          
-          </p>,
+            </p>,
             <p className="text-lgtext-gray-400max-w-3xlmx-auto">
             ,
               Founded in 2020, we&apos;ve been at the forefront of digital transformation, 
@@ -105,24 +102,18 @@ export default function AboutPage() {
             Today, we&apos;ve grown into a trusted partner for organizations worldwide, helping them 
                   navigate the complex landscape of digital transformation while maintaining focus on 
                   security, scalability, and innovation.
-                
-          
-          </p>
+                </p>
               </div>
               <div></div>
                 <p className="text-gray-300mb-4">
             Our team combines deep technical expertise with real-world business understanding
                   ensuring that every solution we deliver not only meets technical requirements but
                   also drives tangible business value.
-                
-          
-          </p>
+                </p>
                 <p className="text-gray-300">
             We believe in the power of technology to solve complex problems and create opportunities
                   for growth, efficiency, and innovation across all industries.
-                
-          
-          </p>
+                </p>
               </div>
             </div>
           </div>
@@ -143,8 +134,9 @@ export default function AboutPage() {
             {value.description}
           </p>
                   </div>
-    </>
-  )
+    </div>
+    </div>
+  );
                 )
               })}
             </div>
@@ -222,9 +214,7 @@ export default function AboutPage() {
             To be the global leader in AI-powered business solutions, creating a world where
                 technology seamlessly integrates with human potential to solve complex challenges
                 and drive sustainable growth.
-              
-          
-          </p>
+              </p>
             </div>
           </div>
         </div>
@@ -238,9 +228,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-xltext-gray-300max-w-3xlmx-auto">
             The principles that guide everything we do and shape our company culture
-            
-          
-          </p>
+            </p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3gap-8max-w-6xlmx-auto">
         <div className="text-center">
@@ -250,9 +238,7 @@ export default function AboutPage() {
               <h3 className="text-2xlfont-boldtext-whitemb-4">Passion</h3>
               <p className="text-gray-300">
             We&apos;re passionate about technology and its potential to transform businesses and improve lives.
-              
-          
-          </p>
+              </p>
             </div>
             <div className="text-center">
         <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-centerjustify-centermx-automb-6">
@@ -261,9 +247,7 @@ export default function AboutPage() {
               <h3 className="text-2xlfont-boldtext-whitemb-4">Integrity</h3>
               <p className="text-gray-300">
             We maintain the highest ethical standards in all our business practices and client relationships.
-              
-          
-          </p>
+              </p>
             </div>
             <div className="text-center">
         <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-centerjustify-centermx-automb-6">
@@ -272,9 +256,7 @@ export default function AboutPage() {
               <h3 className="text-2xlfont-boldtext-whitemb-4">Innovation</h3>
               <p className="text-gray-300">
             We continuously push the boundaries of what&apos;s possible with cutting-edge technology solutions.
-              
-          
-          </p>
+              </p>
             </div>
             <div className="text-center">
         <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-centerjustify-centermx-automb-6">
@@ -283,9 +265,7 @@ export default function AboutPage() {
               <h3 className="text-2xlfont-boldtext-whitemb-4">Collaboration</h3>
               <p className="text-gray-300">
             We believe in the power of teamwork and work closely with our clients as partners.
-              
-          
-          </p>
+              </p>
             </div>
             <div className="text-center">
         <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-centerjustify-centermx-automb-6">
@@ -305,9 +285,7 @@ export default function AboutPage() {
               <h3 className="text-2xlfont-boldtext-whitemb-4">Growth</h3>
               <p className="text-gray-300">
             We&apos;re committed to continuous learning and helping our clients achieve sustainable growth.
-              
-          
-          </p>
+              </p>
             </div>
           </div>
         </div>
@@ -321,9 +299,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-xltext-gray-300max-w-3xlmx-auto">
             A diverse group of talented professionals passionate about technology and innovation
-            
-          
-          </p>
+            </p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3gap-8max-w-6xlmx-auto">
         <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xlborderborder-slate-600text-center">
@@ -337,9 +313,7 @@ export default function AboutPage() {
               <p className="text-gray-300">
             Visionary leader with over 4 years of experience in AI and technology solutions.
                 Passionate about digital transformation and business growth.
-              
-          
-          </p>
+              </p>
             </div>
             <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xlborderborder-slate-600text-center">
         <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-centerjustify-centermx-automb-6">
@@ -367,9 +341,7 @@ export default function AboutPage() {
               <p className="text-gray-300">
             Specialists in cloud infrastructure, cybersecurity, and DevOps practices
                 ensuring scalable and secure technology solutions.
-              
-          
-          </p>
+              </p>
             </div>
           </div>
         </div>
@@ -383,9 +355,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Numbers that reflect our commitment to excellence and client success
-            
-          
-          </p>
+            </p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-4gap-8max-w-6xlmx-auto">
         <div className="text-center">
@@ -416,9 +386,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-xltext-gray-300mb-12">
             Let&apos;s discuss how we can help transform your business with our technology solutions
-            
-          
-          </p>
+            </p>
             
             <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
               <Link 
@@ -439,6 +407,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-</>,
+</div>,
   );,
 }

@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ZionAiEnergyManagerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/zion-ai-energy-manager/page.tsx
       <title>ZionAiEnergyManager - Zion Tech Group</title>
         <meta name="description" content="Professional zionaienergymanager services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function ZionAiEnergyManagerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

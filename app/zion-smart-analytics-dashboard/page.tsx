@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionsmartanalyticsdashboardPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Smart Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function ZionsmartanalyticsdashboardPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Zion Smart Analytics Dashboard
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional zion-smart-analytics-dashboard services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function ZionsmartanalyticsdashboardPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

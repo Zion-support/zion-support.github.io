@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ExpenseTrackerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/expense-tracker/page.tsx
       <title>ExpenseTracker - Zion Tech Group</title>
         <meta name="description" content="Professional expensetracker services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function ExpenseTrackerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

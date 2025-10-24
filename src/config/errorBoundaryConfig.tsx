@@ -96,9 +96,8 @@ notFound: NotFoundFallback}}
 */;
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {}
 return ()
-    <>
-
-    <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+    <div>
+      <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-m dw-full bg-white rounded-lgshadow-lgp-6"></div>
 <div className="fle xitems-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
 <svg className="w-6h-6text-red-600"></svg>
@@ -111,7 +110,7 @@ strokeLinejoin="round"
 strokeWidth = {
 2
 };
-    </>
+    </div>
 d="M6 18L18 6M6 6l12 12"
 />
 </svg>
@@ -263,4 +262,4 @@ url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 }
 export default getErrorBoundaryConfig
 ;
-    </>
+    </div>

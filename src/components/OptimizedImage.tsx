@@ -142,7 +142,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
         </section>
       </div>
       <Footer />
-    </>,
+    </div>,
 :all-pages-backup/components/OptimizedImage.tsx,
   )};
 

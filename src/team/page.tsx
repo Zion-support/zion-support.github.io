@@ -15,8 +15,6 @@ export default function TeamPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Meet the experts behind our innovative AI and IT solutions.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function TeamPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/team/page.tsx
       <title>Team - Zion Tech Group</title>
         <meta name="description" content="Professional team services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function TeamPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

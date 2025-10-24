@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ZionInvoiceGeniusPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/zion-invoice-genius/page.tsx
       <title>ZionInvoiceGenius - Zion Tech Group</title>
         <meta name="description" content="Professional zioninvoicegenius services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function ZionInvoiceGeniusPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

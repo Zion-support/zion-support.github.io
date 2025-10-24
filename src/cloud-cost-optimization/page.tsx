@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CloudCostOptimizationPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/cloud-cost-optimization/page.tsx
       <title>CloudCostOptimization - Zion Tech Group</title>
         <meta name="description" content="Professional cloudcostoptimization services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function CloudCostOptimizationPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

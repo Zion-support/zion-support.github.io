@@ -25,8 +25,6 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({,
         <div className="bg-whiterounded-lgshadowp-6"></div>
           <p className="text-gray-600mb-6">
             {description}
-          
-          
           </p>
           
           <div className="gridmd:grid-cols-2gap-4">,

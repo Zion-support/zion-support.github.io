@@ -38,7 +38,7 @@ const ImageOptimizerPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>;
         <title>ImageOptimizer | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional ImageOptimizer services by Zion Tech Group.&quot; /></meta>
@@ -54,7 +54,7 @@ const ImageOptimizerPage: React.FC = () => {
       </section>
     </div>,
   ),
-    </>
+    </div>
 }
 
 export default ImageOptimizerPage

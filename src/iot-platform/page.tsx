@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function IotPlatformPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/iot-platform/page.tsx
       <title>IotPlatform - Zion Tech Group</title>
         <meta name="description" content="Professional iotplatform services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function IotPlatformPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

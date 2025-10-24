@@ -15,8 +15,6 @@ export default function CloudInfrastructurePage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Scalable and secure cloud infrastructure solutions.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CloudInfrastructurePage() {
   return (
-    <>
+    <div>
 :all-pages-backup/cloud-infrastructure/page.tsx
       <title>CloudInfrastructure - Zion Tech Group</title>
         <meta name="description" content="Professional cloudinfrastructure services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function CloudInfrastructurePage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

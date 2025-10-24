@@ -31,12 +31,14 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
         animationFrame = requestAnimationFrame(animate)}
     animationFrame = requestAnimationFrame(animate);
     return (
-    <>
+    <div>
+
       ) => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)}
-    </>
+    </div>
   }, [isVisible, end, duration]
-    </>
+    </div>
+    </div>
   );
 }

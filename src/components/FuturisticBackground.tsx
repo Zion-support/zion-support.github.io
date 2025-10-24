@@ -106,7 +106,8 @@ const FuturisticBackground: React.FC = () => {;
   }, []);
 
   return (
-    <>
+    <div>
+
       <Helmet></Helmet>
         <Head></Head>
         <title>FuturisticBackground - Zion Tech Group</title>
@@ -140,7 +141,7 @@ const FuturisticBackground: React.FC = () => {;
         </section>,
 ,
         {/* Features Section */}
-    </>
+    </div>
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
@@ -209,7 +210,7 @@ const FuturisticBackground: React.FC = () => {;
         </section>
       </div>
       <Footer />
-    </>
+    </div>
 :all-pages-backup/components/FuturisticBackground.tsx,
     <canvas,
       ref = {
@@ -221,6 +222,7 @@ canvasRef
   )};
 
 export default FuturisticBackground
+    </div>
   );
 }
 export default FuturisticBackground;

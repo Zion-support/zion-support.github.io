@@ -15,8 +15,6 @@ export default function PrivacyPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Learn how we protect and handle your personal information.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function PrivacyPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/privacy/page.tsx
       <title>Privacy - Zion Tech Group</title>
         <meta name="description" content="Professional privacy services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function PrivacyPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

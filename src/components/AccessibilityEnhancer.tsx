@@ -36,7 +36,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     }
   }, [])
 ;
-  return <>{children}</>};
+  return <div>{children}</div>};
 import { useEffect } from 'react';
 import Navigation from './Navigation';
 
@@ -182,9 +182,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
 :all-pages-backup/components/AccessibilityEnhancer.tsx
-  return <>{children}</>};
+  return <div>{children}</div>};
 
 export default AccessibilityEnhancer
-  return <>{children}</>
+  return <div>{children}</div>
 }
 export default AccessibilityEnhancer;

@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SitemapPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/sitemap/page.tsx
       <title>Sitemap - Zion Tech Group</title>
         <meta name="description" content="Professional sitemap services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function SitemapPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

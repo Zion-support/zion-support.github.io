@@ -15,8 +15,6 @@ export default function CareersPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Join our team and help shape the future of AI and IT solutions.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CareersPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/careers/page.tsx
       <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Professional careers services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function CareersPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

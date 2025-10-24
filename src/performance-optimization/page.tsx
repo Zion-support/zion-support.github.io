@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function PerformanceOptimizationPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/performance-optimization/page.tsx
       <title>PerformanceOptimization - Zion Tech Group</title>
         <meta name="description" content="Professional performanceoptimization services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function PerformanceOptimizationPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

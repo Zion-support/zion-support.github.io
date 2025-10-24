@@ -64,9 +64,7 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
               </h3>
               <p className="mt-2text-smtext-gray-500">
             {this.state.error?.message || 'An unexpected error occurred'}
-              
-          
-          </p>
+              </p>
               <button
                 onClick = {
 () => window.location.reload();

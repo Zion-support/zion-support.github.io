@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function GdprCompliancePage() {
   return (
-    <>
+    <div>
 :all-pages-backup/gdpr-compliance/page.tsx
       <title>GdprCompliance - Zion Tech Group</title>
         <meta name="description" content="Professional gdprcompliance services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function GdprCompliancePage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

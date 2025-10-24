@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AimlplatformPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Ml Platform - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function AimlplatformPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Ai Ml Platform
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional ai-ml-platform services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function AimlplatformPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

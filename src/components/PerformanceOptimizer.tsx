@@ -162,7 +162,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
 
   return (
-    <>
+    <div>
+
 
       <Helmet></Helmet>
 :all-pages-backup/components/PerformanceOptimizer.tsx
@@ -178,7 +179,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -272,8 +273,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 }
 
 export default PerformanceOptimizer
-    </>
-  )
+    </div>
+    </div>
+  );
   );
 :all-pages-backup/components/PerformanceOptimizer.tsx
 {};

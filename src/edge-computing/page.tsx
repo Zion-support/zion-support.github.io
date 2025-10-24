@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function EdgeComputingPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/edge-computing/page.tsx
       <title>EdgeComputing - Zion Tech Group</title>
         <meta name="description" content="Professional edgecomputing services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function EdgeComputingPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

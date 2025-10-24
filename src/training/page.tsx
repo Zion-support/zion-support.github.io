@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function TrainingPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/training/page.tsx
       <title>Training - Zion Tech Group</title>
         <meta name="description" content="Professional training services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function TrainingPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

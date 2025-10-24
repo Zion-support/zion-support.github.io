@@ -47,16 +47,18 @@ export const useIntersectionObserver = (
       if (observer && element) {
         observer.observe(element);
         return (
-    <>
+    <div>
+
 ,
       ) => observer.unobserve(element);,
-    </>
+    </div>
       }
       return () => {}
     }
     [observer]
-    </>
-  )
+    </div>
+    </div>
+  );
   )
   const disconnect = useCallback(() => {
     if (observer) {
@@ -97,7 +99,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
 }
 // Performance monitoring hook
 export const usePerformanceMonitoring = (
-    </>
+    </div>
   ) => {
   const [metrics, setMetrics] = useState<{
     fcp?: number
@@ -135,19 +137,22 @@ export const usePerformanceMonitoring = (
       })
     }
     return (
-    <>
+    <div>
+
 
       ) => {
       window.removeEventListener('load', updateMetrics
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
     }
   }, [])
   return metrics
 }
 // Memory usage monitoring
 export const useMemoryMonitoring = (
-    </>
+    </div>
   ) => {
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number
@@ -168,11 +173,14 @@ export const useMemoryMonitoring = (
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return (
-    <>
+    <div>
+
 
       ) => clearInterval(interval
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
   }, [])
   return memoryInfo
 }
@@ -199,7 +207,7 @@ export const preloadCriticalResources = () => {
 }
 // Bundle size monitoring
 export const useBundleSizeMonitoring = (
-    </>
+    </div>
   ) => {
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number
@@ -240,15 +248,18 @@ export const useBundleSizeMonitoring = (
       window.addEventListener('load', calculateBundleSize);
     }
     return (
-    <>
+    <div>
+
 
       ) => {
       window.removeEventListener('load', calculateBundleSize
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
     }
   }, []
-    </>
+    </div>
   )
   return bundleSize
 }

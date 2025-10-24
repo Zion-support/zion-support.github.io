@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function DatabasePage() {
   return (
-    <>
+    <div>
 :all-pages-backup/database/page.tsx
       <title>Database - Zion Tech Group</title>
         <meta name="description" content="Professional database services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function DatabasePage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

@@ -52,12 +52,15 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
     return (
-    <>
+    <div>
+
 
       ) => {
       motionQuery.removeEventListener('change', handleMotionChange
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
       contrastQuery.removeEventListener('change', handleContrastChange);
   }, [])
   // Apply accessibility styles
@@ -164,7 +167,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     const trapFocus = (element: HTMLElement) => {,
       const focusableElements = element.querySelectorAll(,
         'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',
-    </>
+    </div>
 <<<<<<< HEAD
   ) as NodeListOf<HTMLElement></HTMLElement>
       const firstElement = focusableElements[0]
@@ -187,11 +190,14 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       element.addEventListener('keydown', handleTabKey);
       firstElement?.focus();
       return (
-    <>
+    <div>
+
 
       ) => element.removeEventListener('keydown', handleTabKey
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
     }
     // Apply focus trap to modals
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
@@ -322,7 +328,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       setupVoiceNavigation();
     }
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]
-    </>
+    </div>
   )
   return null
 }

@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function DataAnalyticsPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/data-analytics/page.tsx
       <title>DataAnalytics - Zion Tech Group</title>
         <meta name="description" content="Professional dataanalytics services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function DataAnalyticsPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

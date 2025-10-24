@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaiemailassistantPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Ai Email Assistant - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function ZionaiemailassistantPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Zion Ai Email Assistant
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional zion-ai-email-assistant services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function ZionaiemailassistantPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

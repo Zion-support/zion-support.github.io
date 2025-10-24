@@ -37,7 +37,7 @@ import { Brain, ArrowRight, Mail } from 'lucide-react';
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );,
 :all-pages-backup/components/EnhancedSEO.tsx,
 {};

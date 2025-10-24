@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SystemIntegrationPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/system-integration/page.tsx
       <title>SystemIntegration - Zion Tech Group</title>
         <meta name="description" content="Professional systemintegration services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function SystemIntegrationPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

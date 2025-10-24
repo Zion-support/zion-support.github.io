@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AiInventoryManagerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/ai-inventory-manager/page.tsx
       <title>AiInventoryManager - Zion Tech Group</title>
         <meta name="description" content="Professional aiinventorymanager services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function AiInventoryManagerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

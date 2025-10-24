@@ -15,8 +15,6 @@ export default function DigitalTransformationPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Transform your business with our digital transformation solutions.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function DigitalTransformationPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/digital-transformation/page.tsx
       <title>DigitalTransformation - Zion Tech Group</title>
         <meta name="description" content="Professional digitaltransformation services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function DigitalTransformationPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

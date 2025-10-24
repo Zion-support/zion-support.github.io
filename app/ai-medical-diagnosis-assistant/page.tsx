@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function AimedicaldiagnosisassistantPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ai Medical Diagnosis Assistant - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function AimedicaldiagnosisassistantPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Ai Medical Diagnosis Assistant
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional ai-medical-diagnosis-assistant services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function AimedicaldiagnosisassistantPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

@@ -15,8 +15,6 @@ export default function ServicesPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Comprehensive AI and IT solutions tailored to your business needs.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ServicesPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/services/page.tsx
       <title>Services - Zion Tech Group</title>
         <meta name="description" content="Professional services services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function ServicesPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

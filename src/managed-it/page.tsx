@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ManagedItPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/managed-it/page.tsx
       <title>ManagedIt - Zion Tech Group</title>
         <meta name="description" content="Professional managedit services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function ManagedItPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

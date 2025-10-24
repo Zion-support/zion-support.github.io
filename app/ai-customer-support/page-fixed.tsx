@@ -30,7 +30,7 @@ const PageFixedPage: React.FC = () => {
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
   return (
-    <>
+    <div>
       <Helmet></Helmet>
         <title>Page Fixed - Zion Tech Group</title>
         <meta name="description" content="Advanced page fixed solutions powered by AI technology." /></meta>
@@ -40,7 +40,7 @@ const PageFixedPage: React.FC = () => {
         <section className="relative py-20px-4overflow-hidden"></section>
           <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
           <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
-    </>
+    </div>
           <div className="relative max-w-7xlmx-autotext-center"></div>
             <h1 className="text-5xl md: text-7xl font-bold text-whitemb-6leading-tight">
             Page Fixed
@@ -104,6 +104,6 @@ const PageFixedPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-</>,
+</div>,
   );,
 }

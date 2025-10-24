@@ -38,7 +38,7 @@ const NotFoundPagePage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>;
         <title>NotFoundPage | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional NotFoundPage services by Zion Tech Group.&quot; /></meta>
@@ -54,7 +54,7 @@ const NotFoundPagePage: React.FC = () => {
       </section>
     </div>,
   ),
-    </>
+    </div>
 }
 
 export default NotFoundPagePage

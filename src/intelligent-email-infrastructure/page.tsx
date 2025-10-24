@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function IntelligentEmailInfrastructurePage() {
   return (
-    <>
+    <div>
 :all-pages-backup/intelligent-email-infrastructure/page.tsx
       <title>IntelligentEmailInfrastructure - Zion Tech Group</title>
         <meta name="description" content="Professional intelligentemailinfrastructure services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function IntelligentEmailInfrastructurePage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

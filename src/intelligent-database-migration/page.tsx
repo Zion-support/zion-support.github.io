@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function IntelligentDatabaseMigrationPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/intelligent-database-migration/page.tsx
       <title>IntelligentDatabaseMigration - Zion Tech Group</title>
         <meta name="description" content="Professional intelligentdatabasemigration services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function IntelligentDatabaseMigrationPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

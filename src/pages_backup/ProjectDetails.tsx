@@ -8,14 +8,10 @@ const ProjectDetailsPage = () => {
         <div className="max-w-4xlmx-autopx-4">
         <h1 className="text-4xlfont-boldtext-gray-900mb-8">
             Project Details
-        
-          
-          </h1>
+        </h1>
         <p className="text-gray-600mb-8">
             This page is under construction.
-        
-          
-          </p>
+        </p>
       </div>
     </div>
   );

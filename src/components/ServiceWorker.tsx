@@ -74,7 +74,8 @@ const ServiceWorkerPage: React.FC = () => {
 ;
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;
   return (
-    <>
+    <div>
+
       <Helmet>;
 :all-pages-backup/components/ServiceWorker.tsx
         <Head></Head>
@@ -109,7 +110,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;
         </section>,
 ,
         {/* Features Section */}
-    </>
+    </div>
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
             <div className=&quot;text-center mb-16&quot;></div>
@@ -178,11 +179,12 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;
         </section>
       </div>
       <Footer />
-    </>,
+    </div>,
 :all-pages-backup/components/ServiceWorker.tsx,
   )};
 
 export default ServiceWorkerPage
+    </div>
   );
 }
 export default ServiceWorkerPage;

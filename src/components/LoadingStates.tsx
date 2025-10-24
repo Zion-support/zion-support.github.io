@@ -6,7 +6,8 @@ import { Loader2, CheckCircle } from 'lucide-react';
 
 export const PageLoader: React.FC = () => {;
   return (
-    <>
+    <div>
+
 
 :all-pages-backup/components/LoadingStates.tsx
       <Helmet>;
@@ -23,7 +24,7 @@ export const PageLoader: React.FC = () => {;
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -189,8 +190,9 @@ export const LoadingWaves: React.FC = () => {;
 export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => {;
       </div>
     </div>
-    </>
-  )
+    </div>
+    </div>
+  );
   );
 }
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {

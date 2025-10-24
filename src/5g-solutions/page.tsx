@@ -15,8 +15,6 @@ export default function FiveGSolutionsPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Next-generation 5G solutions for ultra-fast connectivity.
-          
-          
           </p>
         </div>
       </main>
@@ -104,7 +102,7 @@ export default function FiveGSolutions() {
   ];
 
   return (
-    <>
+    <div>
       <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900">
@@ -123,5 +121,5 @@ export default function FiveGSolutions() {
           </Link>
         </div>
       </div>,
-    </>,
+    </div>,
   )}

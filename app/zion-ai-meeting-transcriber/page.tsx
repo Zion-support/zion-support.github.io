@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function ZionaimeetingtranscriberPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Ai Meeting Transcriber - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function ZionaimeetingtranscriberPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Zion Ai Meeting Transcriber
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional zion-ai-meeting-transcriber services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function ZionaimeetingtranscriberPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

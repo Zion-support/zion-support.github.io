@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function DataCenterPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/data-center/page.tsx
       <title>DataCenter - Zion Tech Group</title>
         <meta name="description" content="Professional datacenter services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function DataCenterPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

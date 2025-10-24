@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function DataAnalytics5GPage() {
   return (
-    <>
+    <div>
       <Head></Head>
         <title>5G Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
@@ -28,6 +28,7 @@ export default function DataAnalytics5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
+    </div>
   );
 }

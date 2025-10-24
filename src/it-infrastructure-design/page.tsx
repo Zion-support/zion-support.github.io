@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ItInfrastructureDesignPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/it-infrastructure-design/page.tsx
       <title>ItInfrastructureDesign - Zion Tech Group</title>
         <meta name="description" content="Professional itinfrastructuredesign services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function ItInfrastructureDesignPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

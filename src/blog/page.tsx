@@ -15,8 +15,6 @@ export default function BlogPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Insights and updates on AI, IT, and technology trends.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function BlogPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/blog/page.tsx
       <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Professional blog services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function BlogPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

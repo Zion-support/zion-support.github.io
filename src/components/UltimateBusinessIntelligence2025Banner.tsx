@@ -9,13 +9,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
         <div className="text-center"></div>
           <h1 className="text-4xlmd:text-6xlfont-boldmb-4">
             Ultimate Business Intelligence 2025
-          
-          
           </h1>
           <p className="text-xlmd:text-2xlmb-8text-blue-100">
             Transform your business with cutting-edge AI and data analytics
-          
-          
           </p>
           <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semiboldhover:bg-gray-100transition-colors"></button>

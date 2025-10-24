@@ -59,7 +59,8 @@ const PerformanceOptimizationsPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
+
 :all-pages-backup/components/PerformanceOptimizations.tsx
       <Helmet>;
       <Helmet></Helmet>
@@ -75,7 +76,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -165,11 +166,12 @@ const PerformanceOptimizationsPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>,
+    </div>,
 :all-pages-backup/components/PerformanceOptimizations.tsx,
   )};
 
 export default PerformanceOptimizationsPage
+    </div>
   );
 }
 export default PerformanceOptimizationsPage;

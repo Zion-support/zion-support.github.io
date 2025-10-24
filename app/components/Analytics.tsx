@@ -22,7 +22,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
     initAnalytics();
   }, []);
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <div>{children}</div>;
 };
 // Extend Window interface for gtag
 declare global {

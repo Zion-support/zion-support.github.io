@@ -39,7 +39,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
+
       <Helmet></Helmet>
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
         <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /></meta>
@@ -47,20 +48,16 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className="relativepy-20px-4overflow-hidden"></section>
           <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
         <div className="relativemax-w-7xlmx-autotext-center">
             <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
             Enhanced Accessibility Enhancer
-            
-          
-          </h1>
+            </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             Advanced Enhanced Accessibility Enhancer solution for modern businesses.
-            
-          
-          </p>
+            </p>
             <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
@@ -80,9 +77,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               <h2 className="text-4xlfont-boldtext-whitemb-4">Key Features</h2>
               <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Powerful AI-driven features designed to transform your business operations
-              
-          
-          </p>
+              </p>
             </div>
             <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">,
               {features.map((feature, index) => (
@@ -115,9 +110,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               <h2 className="text-4xlfont-boldtext-whitemb-4">Why Choose Our Solution</h2>
               <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Experience the benefits of cutting-edge AI technology
-              
-          
-          </p>
+              </p>
             </div>
             <div className="gridgrid-cols-1md:grid-cols-2gap-6">{benefits.map((benefit, index) => (
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
@@ -129,7 +122,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             ))}
           </div>
         </div>
-    </>
+    </div>
+    </div>
   );
       </section>
 export default EnhancedAccessibilityEnhancerPage

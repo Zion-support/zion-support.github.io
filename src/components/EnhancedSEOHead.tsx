@@ -91,11 +91,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     }
   }
   return (
-    <>
+    <div>
+
       <Helmet></Helmet>
         <Head></Head>
         <title>{title}</title>
-    </>
+    </div>
         <meta name=&quot;description&quot; content=&quot;Zion Tech Group&quot; /></meta>
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
@@ -225,11 +226,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
           __html: JSON.stringify(structuredData || defaultStructuredData);,
         }}
       /></script>
-    </>
+    </div>
   )};
 
 export default SEOHead
-    </>
+    </div>
+    </div>
   );
 }
 export default SEOHead;

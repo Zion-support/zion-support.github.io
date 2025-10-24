@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CommunityPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/community/page.tsx
       <title>Community - Zion Tech Group</title>
         <meta name="description" content="Professional community services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function CommunityPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

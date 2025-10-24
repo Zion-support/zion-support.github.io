@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SmartCitiesPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/smart-cities/page.tsx
       <title>SmartCities - Zion Tech Group</title>
         <meta name="description" content="Professional smartcities services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function SmartCitiesPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

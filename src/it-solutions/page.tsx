@@ -15,8 +15,6 @@ export default function ITSolutionsPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Custom IT solutions designed for your business requirements.
-          
-          
           </p>
         </div>
       </main>

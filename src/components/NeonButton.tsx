@@ -45,7 +45,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   ]
 
   return (
-    <>
+    <div>
+
 :all-pages-backup/components/NeonButton.tsx
       <Helmet>;
       <Helmet></Helmet>
@@ -61,7 +62,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -151,7 +152,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </section>
       </div>
       <Footer />
-    </>,
+    </div>,
 :all-pages-backup/components/NeonButton.tsx,
   )};
 
@@ -168,6 +169,7 @@ primary:
   const neonEffect =;
     &quot;before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10&quot,
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
+    </div>
   );
 }
 export default NeonButtonPage;

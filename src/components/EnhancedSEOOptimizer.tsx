@@ -54,8 +54,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-600mb-8max-w-3xlmx-auto">
             Boost your search engine rankings with our AI-powered SEO optimization tools and strategies.
-          
-          
           </p>
           <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
@@ -78,9 +76,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             </h2>
             <p className="text-xltext-gray-600max-w-2xlmx-auto">
             Comprehensive SEO optimization tools designed to boost your search engine rankings.
-            
-          
-          </p>
+            </p>
           </div>,
           <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-8">,
             {features.map((feature, index) => (
@@ -120,9 +116,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             </h2>
             <p className="text-xltext-gray-600max-w-2xlmx-auto">
             Our proven track record and innovative approach deliver measurable results.
-            
-          
-          </p>
+            </p>
           </div>,
           <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-8">,
             {benefits.map((benefit, index) => (
@@ -147,8 +141,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           </h2>
           <p className="text-xltext-gray-600mb-8">
             Let's discuss how our SEO optimizer can help you achieve better search engine visibility.
-          
-          
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-centermx-auto"></button>
             Start Your Journey

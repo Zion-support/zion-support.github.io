@@ -26,7 +26,7 @@ const benefits = [
         </section>
       </div>
       <Footer />,
-</>,
+</div>,
 }  );
 
 export default EnhancedSEOPage

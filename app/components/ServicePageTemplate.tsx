@@ -35,7 +35,7 @@ const ServicePageTemplatePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <>
+    <div>
       <Helmet></Helmet>
         <title>ServicePageTemplate | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; /></meta>
@@ -51,7 +51,7 @@ const ServicePageTemplatePage: React.FC = () => {
       </section>
     </div>
 <<<<<<< HEAD
-    </>
+    </div>
   );,
   ),
 }

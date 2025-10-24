@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ContractManagerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/contract-manager/page.tsx
       <title>ContractManager - Zion Tech Group</title>
         <meta name="description" content="Professional contractmanager services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function ContractManagerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

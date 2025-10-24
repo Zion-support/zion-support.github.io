@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function LeadScoringPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/lead-scoring/page.tsx
       <title>LeadScoring - Zion Tech Group</title>
         <meta name="description" content="Professional leadscoring services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function LeadScoringPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

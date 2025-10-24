@@ -40,16 +40,18 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
   }, [])
 
   return (
-    <>
+    <div>
+
       <Helmet></Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>
         <meta name="theme-color" content="#059669" /></meta>
         <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} /></link>
-    </>
+    </div>
       </Helmet>
       {children}
-    </>
-  )
+    </div>
+    </div>
+  );
 };
 ;
 import React, { useEffect } from 'react';

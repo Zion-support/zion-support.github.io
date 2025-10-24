@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SeoOptimizerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/seo-optimizer/page.tsx
       <title>SeoOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional seooptimizer services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function SeoOptimizerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

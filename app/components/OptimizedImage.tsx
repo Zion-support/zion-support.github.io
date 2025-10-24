@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const OptimizedImage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet></Helmet>
         <title>OptimizedImage</title>,
         <meta name="description" content="Advanced OptimizedImage solution for modern businesses." />,
@@ -15,20 +15,16 @@ const OptimizedImage: React.FC = () => {
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className="relativepy-20px-4overflow-hidden"></section>
           <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
         <div className="relativemax-w-7xlmx-autotext-center">
             <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
             OptimizedImage
-            
-          
-          </h1>
+            </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             Advanced OptimizedImage solution for modern businesses.
-            
-          
-          </p>
+            </p>
             <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
@@ -47,9 +43,7 @@ const OptimizedImage: React.FC = () => {
               <h2 className="text-4xlfont-boldtext-whitemb-4">Key Features</h2>
               <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Discover the powerful features that make OptimizedImage the perfect solution for your business.
-              
-          
-          </p>
+              </p>
             </div>
             <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">
         <div className="bg-white/10 backdrop-blur-sm rounded-lgp-6borderborder-white/20">
@@ -86,9 +80,7 @@ const OptimizedImage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xltext-gray-300mb-8">
             Join thousands of businesses already using OptimizedImage to transform their operations.
-            
-          
-          </p>
+            </p>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
               Start Your Free Trial
             </button>
@@ -96,7 +88,7 @@ const OptimizedImage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
 ,
   );,
 }  )}

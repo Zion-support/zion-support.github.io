@@ -65,7 +65,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
           limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
         })}
   return (
-    <>
+    <div>
+
       <Helmet></Helmet>
         <title>PerformanceMonitor</title>
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; /></meta>
@@ -74,7 +75,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -164,7 +165,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         </section>
       </div>
       <Footer />,
-    </>,
+    </div>,
   )};
 
 export default PerformanceMonitorPage
@@ -186,7 +187,9 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   cumulativeLayoutShift: null,
   timeToInteractive: null,
   totalBlockingTime: null,
-  })
+  }
+    </div>
+  );
   useEffect(() => {
     if (!enableRealTimeMonitoring || typeof window === 'undefined') return
     const measurePerformance = () => {;

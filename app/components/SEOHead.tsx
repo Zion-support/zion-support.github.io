@@ -15,10 +15,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
   keywords = "AI, artificial intelligence, technology solutions, business automation" 
 }) => {
   return (
-    <>
+    <div>
       <Helmet></Helmet>
         <title>{title}</title>
-    </>
+    </div>
         <meta name="description" content={description} /></meta>
         <meta name="keywords" content={keywords} /></meta>
         <meta property="og:title" content={title} /></meta>
@@ -39,9 +39,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
             </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             {description}
-            
-          
-          </p>
+            </p>
             <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
@@ -60,9 +58,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
               <h2 className="text-4xlfont-boldtext-whitemb-4">Key Features</h2>
               <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Discover the powerful features that make SEOHead the perfect solution for your business.
-              
-          
-          </p>
+              </p>
             </div>
             <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">
         <div className="bg-white/10 backdrop-blur-sm rounded-lgp-6borderborder-white/20">
@@ -99,9 +95,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xltext-gray-300mb-8">
             Join thousands of businesses already using SEOHead to transform their operations.
-            
-          
-          </p>
+            </p>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
               Start Your Free Trial
             </button>
@@ -109,7 +103,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
         </section>
       </div>
       <Footer />
-    </>
+    </div>
 ,
   );,
 }  )}

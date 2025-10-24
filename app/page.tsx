@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AppPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Zion Tech Group - AI & Technology Solutions</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function AppPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Welcome to Zion Tech Group
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional AI and technology solutions for your business.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,7 +28,8 @@ export default function AppPage() {
         </div>,
       </div>,
       {/* <Footer /> */}
-    </>
-    </>
+    </div>
+    </div>
+    </div>
   );
 }

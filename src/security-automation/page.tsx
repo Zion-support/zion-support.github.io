@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SecurityAutomationPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/security-automation/page.tsx
       <title>SecurityAutomation - Zion Tech Group</title>
         <meta name="description" content="Professional securityautomation services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function SecurityAutomationPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

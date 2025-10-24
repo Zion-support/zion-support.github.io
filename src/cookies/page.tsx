@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CookiesPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/cookies/page.tsx
       <title>Cookies - Zion Tech Group</title>
         <meta name="description" content="Professional cookies services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function CookiesPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

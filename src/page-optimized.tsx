@@ -5,14 +5,15 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
 const Page: React.FC = () => {
   return (
-    <>
+    <div>
+
       <SEOOptimizer
         title="Page Optimized",
         description="Professional page optimized services and solutions for your business needs.",
         keywords = {
 ["page optimized","AI solutions","business automation","technology services"]
 };
-    </>
+    </div>
         canonicalUrl="https://ziontechgroup.com/page-optimized"
       /></SEOOptimizer>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
@@ -21,26 +22,21 @@ const Page: React.FC = () => {
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-5xl font-boldtext-whitemb-8neon-text">
             Page Optimized
-            
-          
-          </h1>
+            </h1>
             <p className="text-xltext-gray-300mb-8">
             Professional page optimized services and solutions for your business needs.
-            
-          
-          </p>
+            </p>
             <div className="cyber-cardp-8max-w-4xlmx-auto"></div>
               <p className="text-gray-300">
             This page is under development. Please check back soon for more information about our page optimized services.
-              
-          
-          </p>
+              </p>
             </div>
           </div>
         </main>
         <Footer />
       </div>
-    </>
+    </div>
+    </div>
   );
 };
 

@@ -15,8 +15,6 @@ export default function TermsPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Our terms and conditions for using our services.
-          
-          
           </p>
         </div>
       </main>
@@ -31,7 +29,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function TermsPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/terms/page.tsx
       <title>Terms - Zion Tech Group</title>
         <meta name="description" content="Professional terms services by Zion Tech Group." /></meta>
@@ -57,5 +55,5 @@ export default function TermsPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

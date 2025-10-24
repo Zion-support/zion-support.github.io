@@ -41,9 +41,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         <h3 className="text-2xlfont-boldmb-2">Stay Updated</h3>
         <p className="text-white/90">
             Get the latest updates on AI technology, IT solutions, and industry insights.
-        
-          
-          </p>
+        </p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4"></form>
         </div>
@@ -70,15 +68,15 @@ status === 'loading'
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowedflex items-center justify-center"
           ></button>
             {status === 'loading' ? (
-              <>
+              <div>
                 <div className="animate-spin rounded-full h-4 w-4border-b-2border-purple-600mr-2"></div>
                 Subscribing...
-</>
+</div>
             ) : (
-              <>
+              <div>
                 <Send className="w-4h-4mr-2" /></Send>
                 Subscribe,
-</>,
+</div>,
             )}
           </button>
         </div>

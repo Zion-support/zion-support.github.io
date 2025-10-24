@@ -61,7 +61,8 @@ const ContentCarousel: React.FC = () => {,
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   return (
-    <>
+    <div>
+
 
       <Helmet></Helmet>
         <title>ContentCarousel</title>
@@ -71,7 +72,7 @@ const ContentCarousel: React.FC = () => {,
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -284,8 +285,10 @@ index
 };
               onClick = {
 () => setCurrentSlide(index
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
 };
               className={
   `w-3 h-3 rounded-full transition-colors ${
@@ -334,7 +337,7 @@ index
         </section>
       </div>
       <Footer />
-</>
+</div>
 <<<<<<< HEAD,
   ),
 }

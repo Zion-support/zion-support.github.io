@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function CybersecurityadvancedPage() {
   return (
-    <>
+    <div>
       <Head>
         <title>Cybersecurity Advanced - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
@@ -16,13 +16,9 @@ export default function CybersecurityadvancedPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             Cybersecurity Advanced
-          
-          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional cybersecurity-advanced services coming soon.
-          
-          
           </p>
           <LinkContact Us
             >
@@ -32,6 +28,7 @@ export default function CybersecurityadvancedPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 }

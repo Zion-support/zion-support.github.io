@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function FaqPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/faq/page.tsx
       <title>Faq - Zion Tech Group</title>
         <meta name="description" content="Professional faq services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function FaqPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

@@ -84,7 +84,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>,
+    </div>,
 :all-pages-backup/components/ServiceWorkerRegistration.tsx,
   )};
 

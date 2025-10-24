@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SocialManagerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/social-manager/page.tsx
       <title>SocialManager - Zion Tech Group</title>
         <meta name="description" content="Professional socialmanager services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function SocialManagerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

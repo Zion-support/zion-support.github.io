@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AiSocialMediaSchedulerPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/micro-saas/ai-social-media-scheduler/page.tsx
       <title>AiSocialMediaScheduler - Zion Tech Group</title>
         <meta name="description" content="Professional aisocialmediascheduler services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function AiSocialMediaSchedulerPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

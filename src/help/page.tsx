@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function HelpPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/help/page.tsx
       <title>Help - Zion Tech Group</title>
         <meta name="description" content="Professional help services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function HelpPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

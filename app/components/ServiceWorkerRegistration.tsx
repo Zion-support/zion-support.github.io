@@ -49,7 +49,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
         </section>
       </div>
       <Footer />,
-</>,
+</div>,
 }  );
 
 export default ServiceWorkerRegistrationPage

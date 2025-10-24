@@ -95,13 +95,16 @@ export const usePerformanceMonitor = (componentName: string) => {
   useEffect(() => {
     renderStartTime.current = performance.now();
     return (
-    <>
+    <div>
+
 
       ) => {,
       const renderTime = performance.now() - renderStartTime.current,
       monitor.trackRender(componentName, renderTime
-    </>
-  ));
+    </div>
+  )
+    </div>
+  );
       monitor.trackMemory(componentName);
     }
   }, [componentName, monitor])
@@ -263,7 +266,7 @@ export const initializePerformanceEnhancements = () => {
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics
-    </>
+    </div>
   );
   }
 }

@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function LandingPageBuilderPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/landing-page-builder/page.tsx
       <title>LandingPageBuilder - Zion Tech Group</title>
         <meta name="description" content="Professional landingpagebuilder services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function LandingPageBuilderPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

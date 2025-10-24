@@ -38,7 +38,7 @@ const ServicePageTemplatePage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>;
         <title>ServicePageTemplate | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; /></meta>
@@ -54,7 +54,7 @@ const ServicePageTemplatePage: React.FC = () => {
       </section>
     </div>,
   ),
-    </>
+    </div>
 }
 
 export default ServicePageTemplatePage

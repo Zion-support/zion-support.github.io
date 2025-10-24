@@ -24,7 +24,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     handleContrastChange(mediaQuery as any);
 
   return (
-    <>
+    <div>
+
       <Helmet></Helmet>
         <Head></Head>
         <title>EnhancedAccessibility</title>
@@ -38,7 +39,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -128,7 +129,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         </section>
       </div>
       <Footer />
-    </>
+    </div>
+    </div>
   );
 :all-pages-backup/components/EnhancedAccessibility.tsx,
     return () => {,
@@ -180,7 +182,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => {
       document.removeEventListener('keydown', handleKeyDown)}}, []);
 
-  return <>{children}</>};
+  return <div>{children}</div>};
 
 export default EnhancedAccessibility
 }

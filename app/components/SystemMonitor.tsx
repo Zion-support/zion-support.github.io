@@ -16,7 +16,8 @@ import { ArrowRight } from 'lucide-react';
   ]
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
   return (
-    <>
+    <div>
+
       <Helmet></Helmet>
         <title>SystemMonitor</title>
         <meta name="description" content="Advanced SystemMonitor solution for modern businesses." /></meta>
@@ -25,20 +26,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
             {/* Hero Section */}
-    </>
+    </div>
         <section className="relativepy-20px-4overflow-hidden"></section>
           <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
         <div className="relativemax-w-7xlmx-autotext-center">
             <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
             SystemMonitor
-            
-          
-          </h1>
+            </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             Advanced SystemMonitor solution for modern businesses.
-            
-          
-          </p>
+            </p>
             <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
@@ -57,9 +54,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
               <h2 className="text-4xlfont-boldtext-whitemb-4">Key Features</h2>
               <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Powerful AI-driven features designed to transform your business operations
-              
-          
-          </p>
+              </p>
             </div>
             <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">,
             {features.map((feature, index) => (
@@ -91,9 +86,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
               <h2 className="text-4xlfont-boldtext-whitemb-4">Why Choose Our Solution</h2>
               <p className="text-xltext-gray-300max-w-3xlmx-auto">
             Experience the benefits of cutting-edge AI technology
-              
-          
-          </p>
+              </p>
             </div>
             <div className="gridmd:grid-cols-2lg:grid-cols-3gap-8">,
             {benefits.map((benefit, index) => (
@@ -115,9 +108,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xltext-gray-300mb-8">
             Join thousands of businesses already using our AI solutions
-            
-          
-          </p>
+            </p>
             <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Start Free Trial
@@ -130,7 +121,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
         </section>
       </div>
       <Footer />
-</>
+</div>
 <<<<<<< HEAD,
   ),
 }
@@ -138,7 +129,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
             </div>
         </div>
     </div>
-  )
+    </div>
+  );
 =======
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-996d

@@ -200,9 +200,9 @@ isSubmitting
           className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300disabled:opacity-50disabled:cursor-not-allowed"
         ></button>
           {isSubmitting ? (
-            <>
+            <div>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2border-whitemr-2"></div>
               Sending...
-</>,
+</div>,
   );,
 }

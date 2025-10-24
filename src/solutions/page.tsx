@@ -15,8 +15,6 @@ export default function SolutionsPage() {
           </h1>
           <p className="text-xltext-gray-600mb-8">
             Comprehensive solutions for all your AI and IT needs.
-          
-          
           </p>
         </div>
       </main>

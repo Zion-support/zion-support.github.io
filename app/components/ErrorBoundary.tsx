@@ -64,9 +64,7 @@ class ErrorBoundary extends Component<Props, State> {
               </h2>
               <p className="text-gray-300mb-4">
             We're sorry, but something unexpected happened. Please try refreshing the page.
-              
-          
-          </p>
+              </p>
               <div className="space-y-2"></div>
                 <button
                   onClick = {
@@ -164,7 +162,7 @@ class ErrorBoundary extends Component<Props, State> {
         </section>
       </div>
       <Footer />
-</>
+</div>
 ,
   );,
 }

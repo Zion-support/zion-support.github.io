@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function MobileAppDevelopmentPage() {
   return (
-    <>
+    <div>
 :all-pages-backup/mobile-app-development/page.tsx
       <title>MobileAppDevelopment - Zion Tech Group</title>
         <meta name="description" content="Professional mobileappdevelopment services by Zion Tech Group." /></meta>
@@ -32,5 +32,5 @@ export default function MobileAppDevelopmentPage() {
           </Link>
         </div>
       </div>,
-</>;,
+</div>;,
   )}

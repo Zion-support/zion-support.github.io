@@ -41,9 +41,7 @@ class ErrorBoundary extends Component<Props, State> {
           </h1>
             <p className="text-gray-300mb-8">
             We're sorry, but something unexpected happened. Please try refreshing the page.
-            
-          
-          </p>
+            </p>
             <button
               onClick = {
 () => window.location.reload(
@@ -69,7 +67,8 @@ class ErrorBoundary extends Component<Props, State> {
   ]
 
   return (
-    <>
+    <div>
+
       <Helmet>;
         <title>ErrorBoundary</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; /></meta>
@@ -78,7 +77,7 @@ class ErrorBoundary extends Component<Props, State> {
       <Navigation /></Navigation>
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-    </>
+    </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
@@ -168,7 +167,7 @@ class ErrorBoundary extends Component<Props, State> {
         </section>
       </div>
       <Footer />,
-    </>,
+    </div>,
   )};
 
 export default ErrorBoundaryPage
@@ -185,7 +184,9 @@ static getDerivedStateFromError(error: Error): State {return { hasError: true, e
 componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
 if (process.env.NODE_ENV=== 'production') {,
 // In production, you would send this to an error reporting service
-// Example: errorReportingService.captureException(error, { extra: errorInfo});
+// Example: errorReportingService.captureException(error, { extra: errorInfo}
+    </div>
+  );
 }
 this.setState({errorerrorInfo});
 }

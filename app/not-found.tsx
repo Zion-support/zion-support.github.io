@@ -12,9 +12,7 @@ export default function NotFound() {
           </h1>
         <p className="text-gray-300mb-8max-w-md">
             Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-        
-          
-          </p>
+        </p>
         <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
           <Link
             href="/"
