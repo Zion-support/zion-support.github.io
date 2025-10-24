@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticLoaderProps {
@@ -15,18 +14,3 @@ const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ className = '', chi
 };
 
 export default FuturisticLoader;
-=======
-'use client'
-
-import React from 'react'
-
-const FuturisticLoader: React.FC = () => {
-  return (
-    <div className="futuristic-loader">
-      <div className="loader-ring"></div>
-    </div>
-  )
-}
-
-export default FuturisticLoader
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

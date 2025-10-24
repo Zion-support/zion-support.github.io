@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticBackgroundProps {
@@ -15,18 +14,3 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className =
 };
 
 export default FuturisticBackground;
-=======
-'use client'
-
-import React from 'react'
-
-const FuturisticBackground: React.FC = () => {
-  return (
-    <div className="futuristic-background">
-      <div className="grid-overlay"></div>
-    </div>
-  )
-}
-
-export default FuturisticBackground
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

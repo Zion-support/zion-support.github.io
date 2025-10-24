@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface NeonButtonProps {
@@ -15,23 +14,3 @@ const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => 
 };
 
 export default NeonButton;
-=======
-'use client'
-
-import React from 'react'
-
-interface NeonButtonProps {
-  children: React.ReactNode
-  onClick?: () => void
-}
-
-const NeonButton: React.FC<NeonButtonProps> = ({ children, onClick }) => {
-  return (
-    <button className="neon-button" onClick={onClick}>
-      {children}
-    </button>
-  )
-}
-
-export default NeonButton
->>>>>>> cursor/fix-errors-and-merge-to-main-2503
