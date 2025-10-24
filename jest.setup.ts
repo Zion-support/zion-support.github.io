@@ -1,44 +1,4 @@
-<<<<<<< HEAD
-=======
-// Polyfill for TextEncoder/TextDecoder
-/* eslint-disable @typescript-eslint/no-explicit-any */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-import { TextEncoder, TextDecoder } from 'util';
-import '@testing-library/jest-dom';
-
-// Polyfill fetch and enable fetch mocks
-import 'whatwg-fetch';
-
-// Polyfill TextEncoder and TextDecoder for JSDOM environment
-process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup';
-process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321';
-process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key';
-
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-// Mock ResizeObserver
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
-// Mock TextEncoder and TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as any;
+import '@testing-library/jest-dom'
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -59,10 +19,9 @@ jest.mock('next/router', () => ({
         off: jest.fn(),
         emit: jest.fn(),
       },
-      isFallback: false,
-    };
+    }
   },
-}));
+}))
 
 // Mock Next.js navigation
 jest.mock('next/navigation', () => ({
@@ -74,12 +33,66 @@ jest.mock('next/navigation', () => ({
       back: jest.fn(),
       forward: jest.fn(),
       refresh: jest.fn(),
-    };
+    }
   },
   useSearchParams() {
-    return new URLSearchParams();
+    return new URLSearchParams()
   },
   usePathname() {
-    return '/';
+    return '/'
   },
-}));
+}))
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+})
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    getEntriesByType: jest.fn(() => []),
+    timing: {
+      navigationStart: 0,
+      loadEventEnd: 1000,
+      fetchStart: 0,
+    },
+  },
+})
+
+// Mock console methods to reduce noise in tests
+global.console = {
+  ...console,
+  log: jest.fn(),
+  debug: jest.fn(),
+  info: jest.fn(),
+  warn: jest.fn(),
+  error: jest.fn(),
+}
