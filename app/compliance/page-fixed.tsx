@@ -60,15 +60,14 @@ const CompliancePageFixed: React.FC = () => {
                 Learn More
               </button>
             </div>
-              
-            </button>
           </div>
         </div>
       </section>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4"></section>
-          <div className="max-w-7xl mx-auto"><div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>,
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center"><div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4"></div>
                     <stat.icon className="h-8 w-8 text-white" />

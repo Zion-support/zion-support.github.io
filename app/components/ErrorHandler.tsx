@@ -54,7 +54,7 @@ const Page: React.FC = () => {
                   ))
                 </ul>
               </div>
-            ))
+            ))}
           </div>
 
           <div className="text-center">
