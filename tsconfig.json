@@ -32,6 +32,11 @@
   ],
   "exclude": [
     "node_modules",
-    "app-backup/**/*"
+    "app-backup/**/*",
+    "ai-pages-backup/**/*",
+    "all-pages-backup/**/*",
+    "src/**/*",
+    "factories/**/*",
+    "problematic-files-backup/**/*"
   ]
 }

@@ -5,14 +5,6 @@ const glob = require("glob");
 // Function to clean merge conflict markers
 function cleanMergeConflicts(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g, "")
-    .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> main/g, "")
-    .replace(/=======[\s\S]*?>>>>>>> main/g, "")
-    .replace(/<<<<<<< HEAD[\s\S]*?=======/g, "")
-    .replace(/<<<<<<< HEAD/g, "")
-    .replace(/=======/g, "")
-    .replace(/>>>>>>> main/g, "")
-    .replace(/>>>>>>> [a-zA-Z0-9_-]+/g, "");
 }
 
 // Function to fix specific syntax errors
@@ -123,7 +115,6 @@ function createValidComponent(filePath, content) {
   if (
     content.length < 50 ||
     content.includes("<<<<<<<") ||
-    content.includes("=======")
   ) {
     return `import React from 'react';
 
@@ -149,7 +140,6 @@ function fixFileContent(filePath, content) {
   if (
     content.length < 100 ||
     content.includes("<<<<<<<") ||
-    content.includes("=======")
   ) {
     return createValidComponent(filePath, content);
   }

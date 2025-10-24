@@ -1,14 +1,14 @@
-"use client";
 import React from 'react';
 
-import { Smartphone } from 'lucide-react';
-import { CheckCircle, Database, Code, Cloud, Helmet } from 'lucide-react';
-
-const $1: React.FC = () => {;
-  const mobileServices = [];
-        </div>
+const AiMobileAppDevelopmentPage = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">AiMobileAppDevelopment</h1>
+        <p className="text-gray-600">This page is under construction. Please check back later.</p>
       </div>
     </div>
-  )
+  );
 };
-export default AIMobileAppDevelopmentPage;
+
+export default AiMobileAppDevelopmentPage;

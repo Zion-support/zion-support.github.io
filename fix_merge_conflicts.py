@@ -10,24 +10,8 @@ def fix_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Split by merge conflict markers
-        lines = content.split('\n')
-        fixed_lines = []
-        in_conflict = False
-        keep_lines = False
-        
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                in_conflict = True
-                keep_lines = True
-                continue
-            elif line.strip() == '=======':
                 keep_lines = False
                 continue
-            elif line.strip().startswith('>>>>>>>'):
                 in_conflict = False
                 keep_lines = False
                 continue
