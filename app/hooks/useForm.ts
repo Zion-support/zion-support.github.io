@@ -14,7 +14,7 @@ export const useForm = (initialValues = {}) => {
 
   const handleSubmit = (onSubmit: (_values: any) => void) => (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(values);
+    onSubmit(_values);
   };
 
   return {
