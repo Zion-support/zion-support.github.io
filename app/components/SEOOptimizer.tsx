@@ -1,53 +1,157 @@
-      <Helmet>
-        <title>SEOOptimizer - Zion Tech Group</title>
-        <meta name ="description" content="Professional seooptimizer services by Zion Tech Group." />"
-      </Helmet>"
-      <div className ="container mx-auto px-4 py-16">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold text-gray-900 mb-8">"
-            SEOOptimizer"
-          </h1>"
-          <p className ="text-xl text-gray-600 mb-8">"
-            Professional seooptimizer solutions tailored to your business needs.</p>"
-          <div className ="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
-            <div className ="bg-blue-50 border border-blue-200 rounded-lg p-6">"
-              <h3 className ="text-lg font-semibold text-blue-900 mb-2">"
-                Expert Solutions"
-              </h3>"
-              <p className ="text-blue-700">"
-                Our team of experts delivers cutting-edge seooptimizer solutions.;"
-              </p>"
-            </div>"
-            <div className ="bg-green-50 border border-green-200 rounded-lg p-6">"
-              <h3 className ="text-lg font-semibold text-green-900 mb-2">"
-                Custom Implementation"
-              </h3>"
-              <p className ="text-green-700">"
-                Tailored seooptimizer implementations for your specific requirements.;"
-              </p>"
-            </div>"
-            <div className ="bg-purple-50 border border-purple-200 rounded-lg p-6">"
-              <h3 className ="text-lg font-semibold text-purple-900 mb-2">"
-                24/7 Support"
-              </h3>"
-              <p className ="text-purple-700">"
-              </p>"
-            </div>"
-          </div>"
-          <div className ="mt-12">"
-            <button className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-"
-      return {}"
-        ...defaultStructuredData"
-        "@type": "WebSite"
-        "potentialAction": {}"
-          "@type": "SearchAction"
-          "target": "https://ziontechgroup.com/search?q={search_term_string}"
-          "query-input": "required= name =search_term_string"
-"
-"
-      if (path === '/about'
-    if (path === '/contact'
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-'
-if (typeof window !== 'undefined'
-      window.gtag('config', 'GA_MEASUREMENT_ID'
+'use client'
+
+import React, { useEffect } from 'react'
+import Head from 'next/head'
+
+interface SEOOptimizerProps {
+  className?: string;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  structuredData
+}) => {
+  useEffect(() => {
+    // Update page title
+    document.title = title
+
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description)
+    } else {
+      const meta = document.createElement('meta')
+      meta.name = 'description'
+      meta.content = description
+      document.head.appendChild(meta)
+    }
+  ]
+
+    // Update keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]')
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords.join(', '))
+    } else {
+      const meta = document.createElement('meta')
+      meta.name = 'keywords'
+      meta.content = keywords.join(', ')
+      document.head.appendChild(meta)
+    }
+
+    // Update canonical URL
+    let canonicalLink = document.querySelector('link[rel="canonical"]')
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', canonicalUrl)
+    } else {
+      canonicalLink = document.createElement('link')
+      canonicalLink.rel = 'canonical'
+      canonicalLink.href = canonicalUrl
+      document.head.appendChild(canonicalLink)
+    }
+
+    // Update Open Graph tags
+    const updateOGTag = (property: string, content: string) => {
+      let ogTag = document.querySelector(`meta[property="${property}"]`)
+      if (ogTag) {
+        ogTag.setAttribute('content', content)
+      } else {
+        ogTag = document.createElement('meta')
+        ogTag.setAttribute('property', property)
+        ogTag.setAttribute('content', content)
+        document.head.appendChild(ogTag)
+      }
+    }
+
+    updateOGTag('og:title', title)
+    updateOGTag('og:description', description)
+    updateOGTag('og:image', ogImage)
+    updateOGTag('og:url', canonicalUrl)
+    updateOGTag('og:type', 'website')
+
+    // Update Twitter Card tags
+    const updateTwitterTag = (name: string, content: string) => {
+      let twitterTag = document.querySelector(`meta[name="${name}"]`)
+      if (twitterTag) {
+        twitterTag.setAttribute('content', content)
+      } else {
+        twitterTag = document.createElement('meta')
+        twitterTag.setAttribute('name', name)
+        twitterTag.setAttribute('content', content)
+        document.head.appendChild(twitterTag)
+      }
+    }
+
+    updateTwitterTag('twitter:card', 'summary_large_image')
+    updateTwitterTag('twitter:title', title)
+    updateTwitterTag('twitter:description', description)
+    updateTwitterTag('twitter:image', ogImage)
+
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify(structuredData)
+      document.head.appendChild(script)
+    }
+
+    // Add viewport meta tag if not present
+    let viewport = document.querySelector('meta[name="viewport"]')
+    if (!viewport) {
+      viewport = document.createElement('meta')
+      viewport.setAttribute('name', 'viewport')
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1')
+      document.head.appendChild(viewport)
+    }
+
+    // Add charset if not present
+    let charset = document.querySelector('meta[charset]')
+    if (!charset) {
+      charset = document.createElement('meta')
+      charset.setAttribute('charset', 'UTF-8')
+      document.head.insertBefore(charset, document.head.firstChild)
+    }
+
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
+
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <link rel="canonical" href={canonicalUrl} />
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      {/* Additional SEO meta tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="UTF-8" />
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      )}
+    </Head>
+  )
+}
+
+export default SEOOptimizer
+  );
+};
+
+export default SEOOptimizerPage;

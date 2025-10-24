@@ -1,6 +1,8 @@
-import { useState, useEffect } from \"react\";"
-      setError(null)";"
-    } catch (err) {}";"
-      setError(err instanceof Error ? err.message : "An error occurred")";"
-}";"
-export default usePerformanceMonitor";"
+"use client";
+import React from 'react';
+
+const usePerformanceMonitor.ts = () => {
+  return null;
+};
+
+export default usePerformanceMonitor.ts;

@@ -1,1 +1,6 @@
-import React from 'react';'
+module.exports = {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+}

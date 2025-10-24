@@ -1,43 +1,82 @@
-      <Helmet>
-        <title>ServiceWorkerRegistration - Zion Tech Group</title>
-        <meta name ="description" content="Professional serviceworkerregistration services by Zion Tech Group." />"
-      </Helmet>"
-      <div className ="container mx-auto px-4 py-16">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold text-gray-900 mb-8">"
-            ServiceWorkerRegistration"
-          </h1>"
-          <p className ="text-xl text-gray-600 mb-8">"
-            Professional serviceworkerregistration solutions tailored to your business needs.</p>"
-          <div className ="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
-            <div className ="bg-blue-50 border border-blue-200 rounded-lg p-6">"
-              <h3 className ="text-lg font-semibold text-blue-900 mb-2">"
-                Expert Solutions"
-              </h3>"
-              <p className ="text-blue-700">"
-                Our team of experts delivers cutting-edge serviceworkerregistration solutions.;"
-              </p>"
-            </div>"
-            <div className ="bg-green-50 border border-green-200 rounded-lg p-6">"
-              <h3 className ="text-lg font-semibold text-green-900 mb-2">"
-                Custom Implementation"
-              </h3>"
-              <p className ="text-green-700">"
-                Tailored serviceworkerregistration implementations for your specific requirements.;"
-              </p>"
-            </div>"
-            <div className ="bg-purple-50 border border-purple-200 rounded-lg p-6">"
-              <h3 className ="text-lg font-semibold text-purple-900 mb-2">"
-                24/7 Support"
-              </h3>"
-              <p className ="text-purple-700">"
-              </p>"
-            </div>"
-          </div>"
-          <div className ="mt-12">"
-            <button className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-    </div>"
-  );}"
-"
-}"
-"
+'use client'
+import Footer from './Footer'
+import {CheckCircle, Phone, Mail, ArrowRight, Helmet} from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react'
+
+const ServiceWorkerRegistrationPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ServiceWorkerRegistrationPage;
+                </div>
+              ))}
+            </div>
+          </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </div>
+          </div>

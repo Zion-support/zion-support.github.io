@@ -1,4 +1,8 @@
-import { useState, useEffect  } from '
-    if (typeof: window === 'undefined' || !('PerformanceObserver'
-    }).observe({ entryTypes: ['layout-shift'
-    }).observe({ entryTypes: ['navigation'
+"use client";
+import React from 'react';
+
+const usePerformanceMetrics.ts = () => {
+  return null;
+};
+
+export default usePerformanceMetrics.ts;

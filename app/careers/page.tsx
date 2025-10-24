@@ -1,174 +1,142 @@
-  ]
-  const jobOpenings  = [
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-      id: 1,
-      title: "Senior AI Engineer","
-      department: "AI & ML","
-      category: "ai","
-      location: "Remote / New York","
-      type: "Full-time","
-      experience: "5+ years","
-      salary: "$120,000 - $180,000","
-      description: "Lead the development of cutting-edge AI solutions and machine learning models.","
-      requirements: ["
-        "PhD in Computer Science or related field","5+ years experience in AI/ML","Expertise in Python, TensorFlow, PyTorch","Experience with cloud platforms (AWS, GCP, Azure)"
-      ],"
-      benefits: ["Health Insurance", "401k Matching", "Flexible Hours", "Learning Budget"],"
-      posted: "2 days ago","
-      featured: true"
-"
-      id: 2,"
-      title: "Cybersecurity Architect","
-      department: "Cybersecurity","
-      category: "security","
-      location: "Remote / Delaware","
-      type: "Full-time","
-      experience: "7+ years","
-      salary: "$130,000 - $200,000","
-      description: "Design and implement enterprise-grade security solutions and frameworks.","
-      requirements: ["
-        "CISSP, CISM, or similar certification","7+ years in cybersecurity","Experience with security frameworks (NIST, ISO 27001)","Knowledge of cloud security best practices"
-      ],"
-      benefits: ["Health Insurance", "401k Matching", "Security Training", "Home Office Setup"],"
-      posted: "1 week ago","
-      featured: false"
-"
-      id: 3,"
-      title: "Cloud Solutions Architect","
-      department: "Cloud & DevOps","
-      category: "cloud","
-      location: "Remote / San Francisco","
-      type: "Full-time","
-      experience: "6+ years","
-      salary: "$140,000 - $220,000","
-      description: "Architect scalable cloud solutions and lead DevOps transformation initiatives.","
-      requirements: ["
-        "AWS/Azure/GCP certifications","6+ years cloud architecture experience","Expertise in Kubernetes, Docker, Terraform","Experience with CI/CD pipelines"
-      ],"
-      benefits: ["Health Insurance", "401k Matching", "Cloud Certifications", "Flexible Schedule"],"
-      posted: "3 days ago","
-      featured: true"
-"
-      id: 4,"
-      title: "Product Manager - AI Solutions","
-      department: "Product","
-      category: "product","
-      location: "Remote / Austin","
-      type: "Full-time","
-      experience: "4+ years","
-      salary: "$110,000 - $160,000","
-      description: "Drive product strategy and roadmap for our AI-powered solutions portfolio.","
-      requirements: ["
-        "MBA or technical degree","4+ years product management experience","Experience with AI/ML products","Strong analytical and communication skills"
-      ],"
-      benefits: ["Health Insurance", "401k Matching", "Stock Options", "Professional Development"],"
-      posted: "5 days ago","
-      featured: false"
-"
-      id: 5,"
-      title: "Data Scientist","
-      department: "Data & Analytics","
-      category: "data","
-      location: "Remote / Boston","
-      type: "Full-time","
-      experience: "3+ years","
-      salary: "$100,000 - $150,000","
-      description: "Extract insights from complex datasets and build predictive models for business applications.","
-      requirements: ["
-        "MS in Data Science or related field","3+ years data science experience","Proficiency in Python, R, SQL","Experience with statistical modeling and ML"
-      ],"
-      benefits: ["Health Insurance", "401k Matching", "Data Science Conferences", "Research Time"],"
-      posted: "1 week ago","
-      featured: false"
-"
-      id: 6,"
-      title: "Frontend Developer","
-      department: "Engineering","
-      category: "engineering","
-      location: "Remote / Seattle","
-      type: "Full-time","
-      experience: "3+ years","
-      salary: "$90,000 - $130,000","
-      description: "Build beautiful, responsive user interfaces for our web applications and dashboards.","
-      requirements: ["
-        "3+ years frontend development experience","Expertise in React, TypeScript, CSS","Experience with modern build tools","Portfolio demonstrating UI/UX skills"
-      ],"
-      benefits: ["Health Insurance", "401k Matching", "Design Tools", "Creative Freedom"],"
-      posted: "4 days ago","
-"
-  ]"
-  const benefits  = ["
-    {title: "Health & Wellness","
-      description: "Comprehensive health insurance, dental, vision, and mental health support","
-      icon: <Heart className="w-8 h-8" />"
-"
-      title: "Learning & Development","
-      description: "Annual learning budget, conference attendance, and certification support","
-      icon: <GraduationCap className="w-8 h-8" />"
-"
-      title: "Work-Life Balance","
-      description: "Flexible hours, remote work options, and unlimited PTO","
-      icon: <Coffee className="w-8 h-8" />"
-"
-      title: "Growth Opportunities","
-      description: "Clear career paths, mentorship programs, and internal mobility","
-      icon: <Target className="w-8 h-8" />"
-"
-      title: "Modern Tools","
-      description: "Latest technology stack, top-tier equipment, and home office setup","
-      icon: <Settings className="w-8 h-8" />"
-"
-      title: "Team Culture","
-      description: "Collaborative environment, team events, and innovation time","
-      icon: <Users className="w-8 h-8" />"
-"
-  ]"
-"
-      title: "DevOps Engineer","
-      department: "Engineering","
-      location: "Remote / New York","
-      type: "Full-time","
-      experience: "3+ years","
-      description: "Build and maintain scalable infrastructure for our AI platform.","
-      requirements: ["Kubernetes, Docker", "CI/CD pipelines", "Cloud infrastructure", "ing tools"],"
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],"
-      icon: <Settings className ="w-6 h-6" />"
-"
-      title: "Product Manager","
-      department: "Product","
-      location: "San Francisco","
-      type: "Full-time","
-      experience: "4+ years","
-      description: "Drive product strategy and roadmap for our AI solutions.","
-      requirements: ["Product management experience", "AI/ML knowledge", "Analytics skills", "Cross-functional collaboration"],"
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],"
-      icon: <Target className ="w-6 h-6" />"
-"
-  ]"
-  const  benefits = ["
-    { icon: <DollarSign className ="w-8 h-8" />, title: "Competitive Compensation", description: "Above-market salaries with equity options" },"
-    { icon: <className="w-8 h-8" />, title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage" },"
-    { icon: <Home className ="w-8 h-8" />, title: "Flexible Work", description: "Remote-first culture with flexible hours" },"
-    { icon: <GraduationCap className ="w-8 h-8" />, title: "Learning & Development", description: "Annual learning budget and conference attendance" },"
-    { icon: <className="w-8 h-8" />, title: "Cutting-Edge Tech", description: "Work with the latest AI and cloud technologies" },"
-    { icon: <className="w-8 h-8" />, title: "Job Security", description: "Stable company with strong growth trajectory" }"
-  ]"
-  return ()"
-    <div  className ="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">"
-      <Helmet>"
-        <title>Careers - Zion Tech Group</title>"
-        <meta name ="description" content="Join our team of AI and technology experts. Explore career opportunities at Zion Tech Group." />"
-      </Helmet>"
-"
-      <div  className ="container mx-auto px-4 py-16">"
-        <div  className ="text-center mb-16">"
-          <h1  className ="text-4xl md=text-6xl font-bold text-gray-900 mb-6">"
-            Join Our Team"
-          </h1>"
-          <p  className ="text-xl text-gray-600 max-w-3xl mx-auto">"
-            Be part of the AI revolution. We'
-  const: filteredJobs = selectedCategory === '
-  const filteredJobs  = selectedCategory === '
-              We're not just building technology – we're shaping the future. Here'
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg": '
-                  job.featured ? 'ring-2 ring-cyan-500/50'
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+  return (
+    <>
+      
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Join our team of innovative technologists and help shape the future of AI, cybersecurity, and cloud computing.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default PagePage;

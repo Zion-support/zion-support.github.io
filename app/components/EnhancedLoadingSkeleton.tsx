@@ -1,72 +1,36 @@
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-interface SkeletonProps {},
-      width?: string | number
-height?: string | number
-className?: string
-rounded?: boolean
-style={style} />
-  )
-      const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({},)
-        return ()
-          <div  className ="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>"
-            <Skeleton width ={60} height={20} className="mb-4" />"
-            <Skeleton width ="100%" height={24} className="mb-2" />"
-            <Skeleton width ="80%" height={16} className="mb-4" />"
-            <div  className ="space-y-2"></div>"
-              <Skeleton width ="100%" height={12} />"
-              <Skeleton width ="90%" height={12} />"
-              <Skeleton width ="75%" height={12} />"
-            </div>"
-            <div  className ="flex gap-2 mt-6"></div>"
-            </div>"
-          </div>"
-        )"
-      case "list":"
-        return ()"
-          <div  className ="space-y-4"></div>"
-            {Array.from({ length: count }).map(( index) => ()"
-              <div  key ={index} className="flex items-center space-x-4"></div>"
-                <Skeleton width ={40} height={40} rounded />"
-                <div  className ="flex-1 space-y-2"></div>"
-                  <Skeleton width ="60%" height={16} />"
-                  <Skeleton width ="40%" height={12} />"
-            )}"
-          </div>"
-        )"
-      case "text":"
-        return ()"
-          <div  className ="space-y-2"></div>"
-            <Skeleton width ="100%" height={20} />"
-            <Skeleton width ="95%" height={16} />"
-            <Skeleton width ="90%" height={16} />"
-            <Skeleton width ="85%" height={16} />"
-            <Skeleton width ="80%" height={16} />"
-          </div>"
-        )"
-      case "image":"
-        return <Skeleton width ="100%" height={200} rounded />"
-      case "button":"
-        return <Skeleton width ={120} height={40} rounded />"
-      default:"
-        return <Skeleton width ="100%" height={100} />"
-"
-  return ()"
-        <div key ={index} className={count > 1 ? "mb-4" : "}>"
-"
-        </div>"
-      </div>"
-    </>;,"
-  ),"
-}"
-"
-"
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className ="text-center">"
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>"
-"
-"
-"
+const EnhancedLoadingSkeletonPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+}

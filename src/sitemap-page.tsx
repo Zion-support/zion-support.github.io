@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'lucide-react'
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
+import { Helmet } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const pages = [
@@ -39,6 +37,17 @@ const SitemapPage: React.FC = () => {
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
   ]
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-100 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          Sitemap
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This is the sitemap page.
+          </p>
+=======
     <>
       <Helmet>
         <title>Sitemap | Zion Tech Group</title>
@@ -48,35 +57,35 @@ const SitemapPage: React.FC = () => {
         />
         <meta name="robots" content="index, follow" />
       </Helmet>
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
+      <div className="min-h-screen bg-gray-900 text-white"></div>
+        <div className="container mx-auto px-4 py-8"></div>
           <header className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
             <p className="text-xl text-gray-300">
               Complete directory of all pages on our website
             </p>
           </header>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-800 rounded-lg p-8">
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="bg-gray-800 rounded-lg p-8"></div>
               <h2 className="text-2xl font-semibold mb-6">All Pages</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
                 {pages.map((page, index) => (
-                  <div key={index} className="bg-gray-700 rounded-lg p-4">
+                  <div key={index} className="bg-gray-700 rounded-lg p-4"></div>
                     <a href={page.url}
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
                       {page.title}
                     </a>
-                    <div className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-400"></div>
                       Priority: {page.priority}
                     </div>
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-gray-500"></div>
                       {page.url}
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 text-center">
+              <div className="mt-8 text-center"></div>
                 <a href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
@@ -85,6 +94,7 @@ const SitemapPage: React.FC = () => {
               </div>
             </div>
           </div>
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </>

@@ -1,43 +1,21 @@
+"use client";
+import React from 'react';
 
-import React, { useState } from '
-import { Helmet  } from '
-} from '
-    name: '
-    email: '
-    company: '
-    phone: '
-    service: '
-      title: 'Phone'
-      details: '+1-302-464-0950'
-      description: '
-      title: 'Email'
-      details: 'kleber@ziontechgroup.com'
-      description: '
-      title: 'Address'
-      details: '364 E Main St STE 1008'
-      description: '
-      title: 'Business Hours'
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM'
-      description: '
-  const services  = ['AI Solutions',"Cybersecurity',"Cloud Infrastructure',"Micro SaaS Solutions',"5G Technology',"IT Services',"Digital Transformation'
-import SEOHead from '
-        <meta name ="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch via phone, email, or our contact form. We'
-              Ready to transform your business? Let'
-                  <p  className ="text-gray-300">We'
-                    {isSubmitting ? 'Sending...' : 'Send Message'
-                  We'
-                          {method.title === 'Phone' ? 'Call now' : method.title === 'Email' ? 'Send email' : 'View on map'
-                {' '
-              Let'
-              We'
-                  <p className ="text-gray-300 mb-6">Thank you for contacting us. We'
-                        name: '
-                        email: '
-                        company: '
-                        phone: '
-                        service: '
-                    {isSubmitting ? 'Sending...' : 'Send Message'
-                  Get in touch with us through any of the following methods. We'
-                Fill out the form below and we'
-              We'
-              We'
+const ContactPage = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          ContactPage
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactPage;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -7,8 +6,6 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { MessageCircle } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -65,12 +62,12 @@ const AICustomerSupportPage: React.FC = () => {
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AIhelpdesk']}
         canonicalUrl="https://ziontechgroup.com/ai-customer-support"
       />
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto"></div>
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          <section className="text-center mb-16"></section>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support
             </h1>
@@ -78,7 +75,7 @@ const AICustomerSupportPage: React.FC = () => {
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance,
               smart ticket routing, and predictive analytics.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
@@ -95,13 +92,13 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
           {/* Features Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -118,20 +115,20 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
           {/* Pricing Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
               {pricing.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
-                >
+                ></div>
                   {index === 1 && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular
                       </span>
@@ -159,15 +156,15 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Transform Your Customer Support?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join 500+ companies already using our AI customer support solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -187,11 +184,9 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
         </div>
-        </main>
-        <Footer />
       </div>
     </>
   )
 }
 
-export default AICustomerSupportPage
+export default Page;

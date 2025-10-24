@@ -1,13 +1,16 @@
-<<<<<<< HEAD
 "use client"
 import React from "react"
 
-const AccessibilityUtils: React.FC = () => {
-  return null
+interface AccessibilityUtilsProps {
+  className?: string;
 }
 
-export default AccessibilityUtils
+const AccessibilityUtils: React.FC<AccessibilityUtilsProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h1>Accessibility Utils</h1>
+    </div>
+  );
+};
 
-export default AccessibilityUtilsPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b7a8
+export default AccessibilityUtils;

@@ -1,33 +1,26 @@
-const Main: React.FC = () => {
-  return (
-    <div: className ="min-h-screen bg-white">";"
-        <meta: name ="description" content="Professional main services by Zion Tech Group." />";"
-      <section: className ="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">";"
-        <div: className ="max-w-6xl mx-auto text-center">";"
-          <h1: className ="text-5xl font-bold text-gray-900 mb-6">";"
-          <p: className ="text-xl text-gray-600 max-w-3xl mx-auto">";"
-      <section: className ="py-16 px-4">";"
-        <div: className ="max-w-6xl mx-auto">";"
-          <div: className ="grid md:grid-cols-2 gap-12 items-center">";"
-              <h2: className ="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>";"
-              <p: className ="text-lg text-gray-600 mb-6">";"
-              <ul: className ="space-y-3">";"
-                <li: className ="flex items-center">";"
-                  <span: className ="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>";"
-                <li: className ="flex items-center">";"
-                  <span: className ="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>";"
-                <li: className ="flex items-center">";"
-                  <span: className ="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>";"
-            <div: className ="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">";"
-              <h3: className ="text-2xl font-bold mb-4">Get Started</h3>";"
-              <p: className ="mb-6">";"
-                href="/contact";"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";"
-            href="/contact";"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";"
-          <a">";"
-            href="/contact";"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors""
-};";"
-";";"
-;"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './globals.css';
+
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => {
+        // Service Worker registered successfully
+      })
+      .catch(() => {
+        // Service Worker registration failed - handled silently
+      });
+  });
+}
+
+const root = document.getElementById('root');
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
