@@ -1,9 +1,7 @@
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
-
 const Breadcrumb: React.FC = ($2) => {
 $3
 };
@@ -15,7 +13,6 @@ $3
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
-            
             return (
               <li key={name} className="flex items-center"> </li><svg
                   className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2"
@@ -44,5 +41,4 @@ $3
     </nav>
   );
 };
-
 export default Breadcrumb;

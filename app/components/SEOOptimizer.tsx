@@ -2,14 +2,9 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
-<<<<<<< HEAD
-  className?: string
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-=======
   className?: string;
 }
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
@@ -21,27 +16,25 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
     // Update page title
     document.title = title
     // Update meta description;
-
 const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
       const meta = document.createElement('meta')
       meta.name = 'description'
-      meta.content = description
-      document.head.appendChild(meta),
-  ]
+      meta.content = description;
+      document.head.appendChild(meta),;
+  ];
     // Update keywords;
-
 const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', ')
     } else {
       const meta = document.createElement('meta')
       meta.name = 'keywords'
-      meta.content = keywords.join(', ')
-      document.head.appendChild(meta)
-    // Update canonical URL
+      meta.content = keywords.join(', ');
+      document.head.appendChild(meta);
+    // Update canonical URL;
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
@@ -50,15 +43,9 @@ const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
       canonicalLink.rel = 'canonical'
       canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)
-<<<<<<< HEAD
-    // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {
-=======
     }
     // Update Open Graph tags;
-
-const updateOGTag = (property: string, content: string) => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+const updateOGTag = (property: string, content: string) => {,;
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
       if (ogTag) {
         ogTag.setAttribute('content', content)
@@ -73,8 +60,7 @@ const updateOGTag = (property: string, content: string) => {,
     updateOGTag('og:url', canonicalUrl)
     updateOGTag('og:type', 'website')
     // Update Twitter Card tags;
-
-const updateTwitterTag = (name: string, content: string) => {,
+const updateTwitterTag = (name: string, content: string) => {,;
       let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`)
       if (twitterTag) {
         twitterTag.setAttribute('content', content)
@@ -91,9 +77,9 @@ const updateTwitterTag = (name: string, content: string) => {,
     if (structuredData) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(structuredData)
-      document.head.appendChild(script)
-    // Add viewport meta tag if not present
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    // Add viewport meta tag if not present;
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
     if (!viewport) {
       viewport = document.createElement('meta')
@@ -118,30 +104,4 @@ const updateTwitterTag = (name: string, content: string) => {,
       {structuredData && (
         </meta><script
           type=&quot;application/ld+json&quot
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}
-        />
-      )}
-    </Head>
-<<<<<<< HEAD
-  )
-}
- SEOOptimizer
-  )
-}
-=======
 export default SEOOptimizer
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
-=======
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />)}
-    </script></Head>
-  )
-}
-
-export default SEOOptimizer
-  )
-}
-
-export default SEOOptimizerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c

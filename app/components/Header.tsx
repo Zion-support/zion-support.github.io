@@ -1,8 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Footer from 'Footer';
-
-
 import Footer from '@/components/Footer';const Header: React.FC = ($2) => {
 $3
 };
@@ -10,7 +8,7 @@ $3
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Header
             </h1>
-            <pAdvanced Header solution for modern businesses.
+            <pAdvanced Header solution for modern businesses.>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
@@ -26,7 +24,7 @@ $3
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <pPowerful AI-driven features designed to transform your business operations
+              <pPowerful AI->driven features designed to transform your business operations
               </p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -46,7 +44,7 @@ $3
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <pExperience the benefits of cutting-edge AI technology
+              <pExperience the benefits of cutting->edge AI technology
               </p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -59,7 +57,7 @@ $3
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <pJoin thousands of businesses already using our AI solutions
+            <p>Join thousands of businesses already using our AI solutions
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
@@ -73,25 +71,5 @@ $3
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-<<<<<<< HEAD
-  )
-}
- HeaderPage
-  )
-=======
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
 }
-=======
-</Footer></>
-  )
-}
-
-export default HeaderPage
-  )
-}
-
-export default Header
->>>>>>> cursor/fix-errors-and-merge-to-main-998c

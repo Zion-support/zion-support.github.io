@@ -1,23 +1,13 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
-
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;,
   className?: string;
-
 interface FeedbackState {
-<<<<<<< HEAD
-  rating: number;
-  comment: string;
-  submitted: boolean;
-=======
   rating: number;,
   comment: string;,
   submitted: boolean;,
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({,
   children,
   className = ''
@@ -27,17 +17,13 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({,
     comment: '',
     submitted: false,
   });
-
   useEffect(() => {
     // UX enhancement logic;
-
-const enhanceUserExperience = () => {
-      // Add smooth scrolling
-      if (typeof document !== 'undefined') {
+const enhanceUserExperience = () => {;
+      // Add smooth scrolling;
+      if (typeof document !== 'undefined') {;
         document.documentElement.style.scrollBehavior = 'smooth';
-
         // Add loading states for interactive elements;
-
 const buttons = document.querySelectorAll('button');
         buttons.forEach((button) => {
           button.addEventListener('click', () => {
@@ -49,17 +35,9 @@ const buttons = document.querySelectorAll('button');
         });}
     enhanceUserExperience();
   }, []);
-
   return (
-<<<<<<< HEAD
-    <div className={className}>
-      {children}
-    </div>}
-=======
     <div className={className}>{children}
     </div></div>
   );
 };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
 export default UserExperienceEnhancer;

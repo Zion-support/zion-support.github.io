@@ -1,16 +1,13 @@
 'use client';
-
 import React, { useEffect } from 'react';
-
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add high contrast mode support;
-
-const addHighContrastSupport = () => {
-      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+const addHighContrastSupport = () => {;
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {;
         const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
-        const handleContrastChange = (e: MediaQueryListEvent) => {,
-          if (e.matches) {
+        const handleContrastChange = (e: MediaQueryListEvent) => {,;
+          if (e.matches) {;
             document.documentElement.classList.add('high-contrast');
           } else {
             document.documentElement.classList.remove('high-contrast');
@@ -18,7 +15,6 @@ const addHighContrastSupport = () => {
         };
         mediaQuery.addEventListener('change', handleContrastChange);
         handleContrastChange(mediaQuery as any);
-
         return (
     <>
       ) => mediaQuery.removeEventListener('change', handleContrastChange
@@ -33,16 +29,14 @@ const addHighContrastSupport = () => {
     </>
     </>
     };
-
     // Add reduced motion support;
-
-const addReducedMotionSupport = () => {
-      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+const addReducedMotionSupport = () => {;
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {;
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
         const handleMotionChange = (e: MediaQueryListEvent) => {,
-          if (e.matches) {
-            document.documentElement.classList.add('reduce-motion'
-    </>
+          if (e.matches) {;
+            document.documentElement.classList.add('reduce-motion';
+    </>;
   );
           } else {
             document.documentElement.classList.remove('reduce-motion');
@@ -50,7 +44,6 @@ const addReducedMotionSupport = () => {
         };
         mediaQuery.addEventListener('change', handleMotionChange);
         handleMotionChange(mediaQuery as any);
-
         return (
     <>
       ) => mediaQuery.removeEventListener('change', handleMotionChange
@@ -65,22 +58,17 @@ const addReducedMotionSupport = () => {
     </>
     </>
     };
-
     // Add screen reader announcements;
-
-const addScreenReaderAnnouncements = ($2) => {
-$3
+const addScreenReaderAnnouncements = ($2) => {;
+$3;
 };
     };
-
     // Initialize accessibility features;
-
-const cleanupContrast = addHighContrastSupport(
-    </>
+const cleanupContrast = addHighContrastSupport(;
+    </>;
   );
     const cleanupMotion = addReducedMotionSupport();
     addScreenReaderAnnouncements();
-
     // Cleanup
     return (
     <>
@@ -93,8 +81,6 @@ const cleanupContrast = addHighContrastSupport(
       cleanupMotion?.();
     };
   }, []);
-
   return <React.Fragment>{children}</React.Fragment>;
 };
-
 export default EnhancedAccessibility;

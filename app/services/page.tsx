@@ -3,45 +3,33 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-=======
 import Footer from '@/components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
 
-export default function ServicessPage() {
+export default function Services() {
   return (
     <>
       <Head>
         <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
+        <meta name="description" content="Professional services services by Zion Tech Group. Transform your business with our expert solutions." />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
-            Service
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div><div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center">,
-          <h1Services
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+            Services
           </h1>
-          <pProfessional services coming soon.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional services services coming soon.
           </p>
-          <Link href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit",
+          <Link 
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
           >
-            Contact Us
-            
-            <ArrowRight className="w-5 h-5 ml-2" />
+            Get Started
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
       <Footer />
     </>
-=======
-      <Footer /> </Footer></>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
   );
-}
+};

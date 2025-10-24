@@ -37,7 +37,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   const content = (
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
         <div className="text-center mb-6"> </div><Mail className="w-12 h-12 mx-auto mb-4 text-white/90" /> </Mail><h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-        <pGet the latest updates on AI technology, IT solutions, and industry insights.
+        <pGet the latest updates on AI technology, IT solutions, and industry insights.>
         </p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4"> </form><div className="flex flex-col sm: flex-row gap-3">,
@@ -55,13 +55,11 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center",
           >{status === 'loading' ? (
               </button><>
-      
     </>
       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2">Subscribing...
 </div></>
             ) : (
               <>
-      
     </>
       <Send className="w-4 h-4 mr-2" />Subscribe
 </Send></>
@@ -91,11 +89,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div></div>
         </div>
       </div>
-  return content
-<<<<<<< HEAD
-}  );
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-
+  return content;
+};
+;
 export default NewsletterSignup

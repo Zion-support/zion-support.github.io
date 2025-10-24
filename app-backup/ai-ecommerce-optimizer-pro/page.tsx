@@ -29,11 +29,7 @@ import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, G
     'Custom integrations'
   "name": 'Enterprise',
     "price": 'Custom',
-<<<<<<< HEAD
-      "period": ''',
-=======
       "period": '',
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
     "description": 'For large-scale e-commerce operations',
         'Unlimited products'
         'Full AI suite'

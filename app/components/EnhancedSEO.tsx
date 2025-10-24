@@ -10,9 +10,9 @@ const benefits = [
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '2 4/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success',
+    'Easy integration with existing systems',;
+    'Cost-effective pricing plans',;
+    'Proven track record of success',;
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
               </div><button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>,
                 </button><Phone className=&quot;mr-2 h-5 w-5&quot; />Call Now
@@ -23,15 +23,9 @@ const benefits = [
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-}  );
-=======
 </Footer></>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-
 export default EnhancedSEOPage
                 </div>
               ))}

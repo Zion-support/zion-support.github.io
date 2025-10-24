@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PageBackupPage: React.FC = () => {,
+const PageBackupPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -31,12 +31,11 @@ const PageBackupPage: React.FC = () => {,
   ]
   return (
     <>
-      
     </>
-      <Helmet> </Helmet><title>Page Backup - Zion Tech Group</title>
-        <meta name="description" content="Advanced page backup solutions powered by AI technology." /> </meta></Helmet>
-      <Navigation /> </Navigation><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80% rgba(147 51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20% rgba(59 130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /> </div><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">Page Backup</h1>,
+      <Helmet> </Head><title>Page Backup - Zion Tech Group</title>
+        <meta name="description" content="Advanced page backup solutions powered by AI technology." /> </meta></Head>
+      <Navigation /> </Navigation><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80% rgba(147 51" 234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20% rgba(59 130" 246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /> </div><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">Page Backup</h1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Advanced page backup solutions powered by AI technology.</p>p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>,
@@ -80,14 +79,8 @@ const PageBackupPage: React.FC = () => {,
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-  );
-}
-=======
 </Footer></>
   )
-}
-
-export default PageBackupPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+};
+;
+export default PageBackupPage;

@@ -26,11 +26,7 @@ color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
 ({size= 'md'
 variant= 'spinner'
 text= 'Loading...'
-<<<<<<< HEAD
-className= '''
-=======
 className= ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
 color= 'blue'
 "xs": 'h-3 w-3',
     "sm": 'h-4 w-4',
@@ -49,11 +45,7 @@ color= 'blue'
 "purple": 'border-purple-600bg-purple-60 0',
 case 'do ts'
 return(<divclassName='flex space-x-1' role='status' aria-label='Loading'
-<<<<<<< HEAD
-className={`w-2 h-2 rounded-full animate-bounce${colorClasses[color].split('''
-=======
 className={`w-2 h-2 rounded-full animate-bounce${colorClasses[color].split(''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
 case 'pulse'
 role='status'
 aria-label='Loading'
@@ -62,11 +54,7 @@ style={{ "width": '7 5%',
 style={{ "width": '5 0%',
 case 'bars'
 return(<divclassName='flex space-x-1' role='status' aria-label='Loading'}
-<<<<<<< HEAD
-className={`w-1 ${colorClasses[color].split('''
-=======
 className={`w-1 ${colorClasses[color].split(''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
 case 'spinner'
 role='status'
 aria-label='Loading'

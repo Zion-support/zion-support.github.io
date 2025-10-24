@@ -3,13 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from 'Footer';
-const AdvancedPerformanceMonitorPage: React.FC = () => {
-=======
 import Footer from '../components/Footer';
-const AdvancedPerformanceMonitorPage: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -44,16 +39,15 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
   ]
   return (
     <>
-      
     </>
-      <Helmet> </Helmet><title>Advanced Performance Monitor</title>
-        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /> </meta><meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" /> </meta></Helmet>
+      <Helmet> </Head><title>Advanced Performance Monitor</title>
+        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /> </meta><meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" /> </meta></Head>
       <Navigation /> </Navigation><div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">{/* Hero Section */}
         </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Advanced SEO Optimizer New
             </h1>
-            <pAdvanced Performance Monitor solution for modern businesses.
+            <pAdvanced Performance Monitor solution for modern businesses.>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
@@ -69,7 +63,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <pPowerful AI-driven features designed to transform your business operations
+              <pPowerful AI->driven features designed to transform your business operations
               </p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -89,7 +83,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
-              <pExperience the power of AI-driven performance monitoring
+              <pExperience the power of AI->driven performance monitoring
               </p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -103,7 +97,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?
             </h2></h2>
-            <pJoin thousands of businesses already using our AI-powered solutions
+            <pJoin thousands of businesses already using our AI->powered solutions
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
@@ -118,14 +112,8 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-  );
-}
-=======
 </Footer></>
   )
-}
-
-export default AdvancedPerformanceMonitorPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+};
+;
+export default AdvancedPerformanceMonitorPage;

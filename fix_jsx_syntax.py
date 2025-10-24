@@ -1,100 +1,114 @@
 #!/usr/bin/env python3
 """
-Script to fix JSX syntax errors
+Script to fix JSX syntax errors in TSX files.
 """
+
 import os
 import re
 import glob
 
-def fix_jsx_syntax(content):
-    """Fix JSX syntax errors"""
-    # Remove semicolons after JSX elements
-    content = re.sub(r'<([^>]+) />;', r'<\1 />', content)
-    content = re.sub(r'<([^>]+)>;', r'<\1>', content)
+def fix_jsx_syntax():
+    """Fix JSX syntax errors in TSX files"""
     
-    # Fix broken JSX tags
-    content = re.sub(r'<([^>]+) />;', r'<\1 />', content)
-    content = re.sub(r'<([^>]+)>;', r'<\1>', content)
+    # Find all TSX files
+    tsx_files = []
+    for root, dirs, files in os.walk('/workspace/app'):
+        for file in files:
+            if file.endswith('.tsx'):
+                tsx_files.append(os.path.join(root, file))
     
-    # Fix broken import statements
-    content = re.sub(r'import \{\s*;\s*', 'import { ', content)
-    
-    # Fix broken title tags
-    content = re.sub(r'<title />([^<]+)</title>', r'<title>\1</title>', content)
-    
-    # Fix broken meta tags
-    content = re.sub(r'<meta name="([^"]+)" content="([^"]+)" />;', r'<meta name="\1" content="\2" />', content)
-    
-    # Fix broken Head tags
-    content = re.sub(r'<Head />', r'<Head>', content)
-    
-    # Fix broken div tags
-    content = re.sub(r'<div className="([^"]+)" /></div>;', r'<div className="\1"></div>', content)
-    
-    # Fix broken span tags
-    content = re.sub(r'<span className="([^"]+)" /></span>;', r'<span className="\1"></span>', content)
-    
-    # Fix broken section tags
-    content = re.sub(r'<section className="([^"]+)" />;', r'<section className="\1">', content)
-    
-    # Fix broken h1 tags
-    content = re.sub(r'<h1 className="([^"]+)" />;', r'<h1 className="\1">', content)
-    
-    # Fix broken p tags
-    content = re.sub(r'<p className="([^"]+)" />;', r'<p className="\1">', content)
-    
-    return content
-
-def fix_file(file_path):
-    """Fix JSX syntax errors in a single file"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        original_content = content
-        content = fix_jsx_syntax(content)
-        
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            return True
-        
-        return False
-        
-    except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
-        return False
-
-def main():
-    """Main function to fix all JSX syntax errors"""
-    patterns = [
-        './app/**/*.tsx',
-        './app/**/*.ts', 
-        './app/**/*.js',
-        './app/**/*.jsx',
-        './src/**/*.tsx',
-        './src/**/*.ts',
-        './src/**/*.js', 
-        './src/**/*.jsx',
-        './components/**/*.tsx',
-        './components/**/*.ts',
-        './components/**/*.js',
-        './components/**/*.jsx'
-    ]
-    
-    files_to_fix = []
-    for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+    print(f"Found {len(tsx_files)} TSX files to check")
     
     fixed_count = 0
     
-    for file_path in files_to_fix:
-        if os.path.isfile(file_path):
-            if fix_file(file_path):
-                print(f"Fixed: {file_path}")
+    for file_path in tsx_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            original_content = content
+            
+            # Fix 1: Fix malformed h1 tags
+            content = re.sub(
+                r'<h1([^>]*?)([A-Za-z\s]+)\s*</h1>',
+                r'<h1\1>\2</h1>',
+                content
+            )
+            
+            # Fix 2: Fix malformed p tags
+            content = re.sub(
+                r'<p([^>]*?)([A-Za-z\s]+)>\s*</p>',
+                r'<p\1>\2</p>',
+                content
+            )
+            
+            # Fix 3: Fix malformed div elements with commas
+            content = re.sub(
+                r'<div className="([^"]*?)\s*,\s*',
+                r'<div className="\1" ',
+                content
+            )
+            
+            # Fix 4: Fix missing semicolons after variable declarations
+            content = re.sub(
+                r'const\s+(\w+)\s*=\s*([^;]+)\n',
+                r'const \1 = \2;\n',
+                content
+            )
+            
+            # Fix 5: Fix malformed JSX attributes
+            content = re.sub(
+                r'className="([^"]*?)\s*,\s*',
+                r'className="\1" ',
+                content
+            )
+            
+            # Fix 6: Fix missing opening tags for common elements
+            content = re.sub(
+                r'<h1([^>]*?)([A-Za-z\s]+)\s*</h1>',
+                r'<h1\1>\2</h1>',
+                content
+            )
+            
+            content = re.sub(
+                r'<h2([^>]*?)([A-Za-z\s]+)\s*</h2>',
+                r'<h2\1>\2</h2>',
+                content
+            )
+            
+            content = re.sub(
+                r'<h3([^>]*?)([A-Za-z\s]+)\s*</h3>',
+                r'<h3\1>\2</h3>',
+                content
+            )
+            
+            content = re.sub(
+                r'<p([^>]*?)([A-Za-z\s]+)>\s*</p>',
+                r'<p\1>\2</p>',
+                content
+            )
+            
+            # Fix 7: Fix malformed Link components
+            content = re.sub(
+                r'<Link href="([^"]*?)"\s*,\s*',
+                r'<Link href="\1" ',
+                content
+            )
+            
+            # Fix 8: Clean up extra whitespace and newlines
+            content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+            content = re.sub(r'\s+$', '', content, flags=re.MULTILINE)
+            
+            if content != original_content:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
                 fixed_count += 1
+                print(f"Fixed JSX syntax in: {file_path}")
+            
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
     
-    print(f"\nFixed {fixed_count} files")
+    print(f"Successfully fixed JSX syntax in {fixed_count} files")
 
 if __name__ == "__main__":
-    main()
+    fix_jsx_syntax()

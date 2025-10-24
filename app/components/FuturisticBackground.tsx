@@ -3,7 +3,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const FuturisticBackground: React.FC = ($2) => {
 $3
 };
@@ -11,7 +10,7 @@ $3
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               FuturisticBackground
             </h1>
-            <pAdvanced FuturisticBackground solution for modern businesses.
+            <pAdvanced FuturisticBackground solution for modern businesses.>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
@@ -23,11 +22,10 @@ $3
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <pDiscover the powerful features that make FuturisticBackground the perfect solution for your business.
+              <pDiscover the powerful features that make FuturisticBackground the perfect solution for your business.>
               </p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -46,10 +44,9 @@ $3
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <pJoin thousands of businesses already using FuturisticBackground to transform their operations.
+            <pJoin thousands of businesses already using FuturisticBackground to transform their operations.>
             </p>
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
               Start Your Free Trial
@@ -57,15 +54,9 @@ $3
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </>
-=======
       <Footer /> </Footer></>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-
   );
 }  )}
 export default FuturisticBackground

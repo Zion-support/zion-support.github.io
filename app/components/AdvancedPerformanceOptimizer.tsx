@@ -7,14 +7,6 @@ interface PerformanceMetrics {
     fcp: number,
   ttfb: number}
 interface AdvancedPerformanceOptimizerProps {
-<<<<<<< HEAD
-  enableWebVitals?: boolean
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableServiceWorker?: boolean
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
-=======
   enableWebVitals?: boolean;
   enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
@@ -22,7 +14,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableServiceWorker?: boolean;
 }
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
   enableWebVitals = true
   enableAdvancedCaching = true
   enableImageOptimization = true
@@ -36,13 +27,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fcp: 0,
     ttfb: 0})
   // Web Vitals monitoring;
-
-const measureWebVitals = useCallback(() => {
-    if (enableWebVitals && typeof window !== 'undefined') {
+const measureWebVitals = useCallback(() => {;
+    if (enableWebVitals && typeof window !== 'undefined') {;
       // Measure Largest Contentful Paint;
-
-const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+const lcpObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
           ...prev
@@ -50,7 +39,6 @@ const lcpObserver = new PerformanceObserver((list) => {
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
       // Measure First Input Delay;
-
 const fidObserver = new PerformanceObserver((list) => {
   const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
@@ -60,11 +48,10 @@ const fidObserver = new PerformanceObserver((list) => {
             fid
 })
         })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] })
-      // Measure Cumulative Layout Shift
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      // Measure Cumulative Layout Shift;
       let clsValue = 0;
-
 const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
@@ -73,11 +60,10 @@ const clsObserver = new PerformanceObserver((list) => {
             setPerformanceMetrics(prev => ({
               ...prev
               cls: clsValue})
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
       // Measure First Contentful Paint;
-
 const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach(entry => {
@@ -85,11 +71,10 @@ const fcpObserver = new PerformanceObserver((list) => {
             ...prev
             fcp: entry.startTime})
         })
-      })
-      fcpObserver.observe({ entryTypes: ['paint'] })
-  }, [enableWebVitals])
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+  }, [enableWebVitals]);
   // Advanced caching strategies;
-
 const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return
     // Service Worker registration
@@ -101,47 +86,36 @@ const setupAdvancedCaching = useCallback(() => {
         })
         .catch((registrationError) => {
           // eslint-disable-next-line no-console
-    console.error('Service Worker registration failed:', registrationError)
-        })
-<<<<<<< HEAD
-    // Memory-based caching for API responses
-    const cache = new Map()
-=======
-    }
+    console.error('Service Worker registration failed:', registrationError);
+        });
+    };
     // Memory-based caching for API responses;
-
-const cache = new Map()
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-    const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
+const cache = new Map();
+    const originalFetch = window.fetch;
+    window.fetch = async (input, init) => {;
       const url = typeof input === 'string' ? input : input.url;
-
 const cacheKey = `${url}-${JSON.stringify(init)}`
       if (cache.has(cacheKey)) {
         return cache.get(cacheKey)
       const response = await originalFetch(input, init)
       if (response.ok) {
-        cache.set(cacheKey, response.clone()
-      return response
-  }, [enableServiceWorker])
+        cache.set(cacheKey, response.clone();
+      return response;
+  }, [enableServiceWorker]);
   // Image optimization;
-
-const optimizeImages = useCallback(() => {
+const optimizeImages = useCallback(() => {;
   if (typeof window === 'undefined') return;
-
 const images = document.querySelectorAll('img')
     images.forEach(img => {
       if (!img.loading) {
         img.loading = 'lazy'
       if (!img.decoding) {
-  img.decoding = 'async'
-    })
-  }, [])
+  img.decoding = 'async';
+    });
+  }, []);
   // Preload critical resources;
-
-const preloadCriticalResources = useCallback(() => {
+const preloadCriticalResources = useCallback(() => {;
   if (typeof window === 'undefined') return;
-
 const criticalResources = [
   '/fonts/inter-var.woff2',
     '/css/critical.css'
@@ -153,11 +127,10 @@ const criticalResources = [
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous'
-      document.head.appendChild(link)
-    })
-  }, [])
+      document.head.appendChild(link);
+    });
+  }, []);
   // Performance monitoring and reporting;
-
 const reportPerformanceMetrics = useCallback(() => {
     if (typeof window === 'undefined') return
     // Report to analytics
@@ -186,11 +159,7 @@ const reportPerformanceMetrics = useCallback(() => {
   useEffect(() => {
     if (enableWebVitals && performanceMetrics.lcp > 0) {
       reportPerformanceMetrics()
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
-  return null
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
+  return null;
+;
 export default AdvancedPerformanceOptimizer

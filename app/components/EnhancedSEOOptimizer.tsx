@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
-const EnhancedSEOOptimizerPage: React.FC = () => {,
+const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -36,9 +36,9 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
                 </div>
-              ))}
-            </div>
-          </div>
+              ))};
+            </div>;
+          </div>;
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
             </div></div>
           </div>

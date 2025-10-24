@@ -3,12 +3,8 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
   src: string,
-<<<<<<< HEAD
-    alt: string
-=======
     alt: string,
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
 interface ImageProps {}
 src: string,
     alt: string,
@@ -41,7 +37,6 @@ onError?: () => void;}
 export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
 src;
-
 export const Image: React.FC<ImageProps> = ({,
 src
 alt
@@ -108,17 +103,6 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 style={imageStyle}
 {...props})
 >)</div>
-<<<<<<< HEAD
-<span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-<<<<<<< HEAD
-</div>
-  );
-=======
-=======
-<span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
-</div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
 {...props}
 ></div>
 <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>,
@@ -134,7 +118,7 @@ sizes={sizes}
 loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
-{...props}
->)</img></img>
-}</img>
+{...props};
+>)</img></img>;
+}</img>;
 export default Image</img>

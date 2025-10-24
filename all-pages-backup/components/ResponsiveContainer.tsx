@@ -14,8 +14,4 @@ import { cn } from '../lib/utils'
     '6 xl': 'max-w-6 xl'
     '7 xl': 'max-w-7 xl'
     "full": 'max-w-full';,
-<<<<<<< HEAD
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '''
-=======
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed

@@ -1,5 +1,4 @@
 'use client';
-
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -7,9 +6,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load pages for better performance;
-
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -22,9 +19,7 @@ const CareersPage = lazy(() => import('./careers/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
-
 // AI Services;
-
 const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AIAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -63,9 +58,7 @@ const AIVoiceAssistantPage = lazy(() => import('./ai-voice-assistant/page'));
 const AIContentGenerationProPage = lazy(() => import('./ai-content-generation-pro/page'));
 const AIAccountingAssistantPage = lazy(() => import('./ai-accounting-assistant/page'));
 const AICybersecurityMonitorProPage = lazy(() => import('./ai-cybersecurity-monitor-pro/page'));
-
 // IT Services;
-
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecuritySolutionsPage = lazy(() => import('./cybersecurity-solutions/page'));
 const WebDevelopmentPage = lazy(() => import('./web-development/page'));
@@ -100,9 +93,7 @@ const SecurityAutomationPage = lazy(() => import('./security-automation/page'));
 const DataVisualizationPage = lazy(() => import('./data-visualization/page'));
 const WorkflowAutomationPage = lazy(() => import('./workflow-automation/page'));
 const CloudNativeSecurityPage = lazy(() => import('./cloud-native-security/page'));
-
 // Micro SAAS Pages;
-
 const ZionAnalyticsProPage = lazy(() => import('./zion-analytics-pro/page'));
 const ZionChatAIPage = lazy(() => import('./zion-chat-ai/page'));
 const ZionSecurityShieldPage = lazy(() => import('./zion-security-shield/page'));
@@ -134,9 +125,7 @@ const ZionAIAccountingAssistantPage = lazy(() => import('./zion-ai-accounting-as
 const ZionAISEOOptimizerPage = lazy(() => import('./zion-ai-seo-optimizer/page'));
 const ZionAIDataCleanerPage = lazy(() => import('./zion-ai-data-cleaner/page'));
 const ZionCustomerInsightsPage = lazy(() => import('./zion-customer-insights/page'));
-
 // 5G Solutions Pages;
-
 const FiveGDataAnalyticsPage = lazy(() => import('./5g-data-analytics/page'));
 const FiveGEdgeComputingPage = lazy(() => import('./5g-edge-computing/page'));
 const FiveGImplementationPage = lazy(() => import('./5g-implementation/page'));
@@ -146,13 +135,9 @@ const FiveGNetworkInfrastructurePage = lazy(() => import('./5g-network-infrastru
 const FiveGPrivateNetworksPage = lazy(() => import('./5g-private-networks/page'));
 const FiveGSmartCitySolutionsPage = lazy(() => import('./5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
-
 // Test Page;
-
 const TestPage = lazy(() => import('./test/page'));
-
 // Main App Component;
-
 function App() {
   return (
     <HelmetProvider>
@@ -163,7 +148,6 @@ function App() {
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/test" element={<TestPage />} />
-
               {/* AI Services */}
               <Route path="/ai-services" element={<AIServicesPage />} />
               <Route path="/ai-marketing" element={<AIMarketingPage />} />
@@ -203,7 +187,6 @@ function App() {
               <Route path="/ai-content-generation-pro" element={<AIContentGenerationProPage />} />
               <Route path="/ai-accounting-assistant" element={<AIAccountingAssistantPage />} />
               <Route path="/ai-cybersecurity-monitor-pro" element={<AICybersecurityMonitorProPage />} />
-
               {/* IT Services */}
               <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
               <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
@@ -239,7 +222,6 @@ function App() {
               <Route path="/data-visualization" element={<DataVisualizationPage />} />
               <Route path="/workflow-automation" element={<WorkflowAutomationPage />} />
               <Route path="/cloud-native-security" element={<CloudNativeSecurityPage />} />
-
               {/* Micro SAAS Pages */}
               <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
               <Route path="/zion-chat-ai" element={<ZionChatAIPage />} />
@@ -272,7 +254,6 @@ function App() {
               <Route path="/zion-ai-seo-optimizer" element={<ZionAISEOOptimizerPage />} />
               <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
               <Route path="/zion-customer-insights" element={<ZionCustomerInsightsPage />} />
-
               {/* 5G Solutions Pages */}
               <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
               <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
@@ -288,5 +269,4 @@ function App() {
         </BrowserRouter>
       </ErrorBoundary>
     </HelmetProvider>
-
 export default App;

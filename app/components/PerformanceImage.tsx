@@ -1,8 +1,7 @@
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
 &quot;use client&quot;
-
-const PerformanceImagePage: React.FC = () => {,
+const PerformanceImagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -36,11 +35,10 @@ const PerformanceImagePage: React.FC = () => {,
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <>
-      
-    </>
-      <Helmet> </Helmet><title>PerformanceImage | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; /> </meta></Helmet>
+    <>;
+    </>;
+      <Helmet> </Head><title>PerformanceImage | Zion Tech Group</title>;
+        <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; /> </meta></Head>
       <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;container mx-auto max-w-6xl&quot;>
         <div className=&quot;text-center mb-16&quot;> </div><h1 className=&quot;text-5xl md: text-6xl font-bold text-white mb-6&quot;>PerformanceImage</h1>,
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional PerformanceImage services tailored to your business needs.</p>p>
@@ -48,20 +46,4 @@ const PerformanceImagePage: React.FC = () => {,
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-    </>
-  );
-  )
-}
-<<<<<<< HEAD
- PerformanceImagePage
-=======
 export default PerformanceImagePage
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
-=======
-
-  </>
-export default PerformanceImagePage;
-
-export default PerformanceImagePage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c

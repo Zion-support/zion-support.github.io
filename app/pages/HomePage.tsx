@@ -11,13 +11,11 @@ import { ArrowRightIcon;
   EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline'  );
-
 export default function HomePage() {  return (
     <>
-      
     </>
-      <Helmet> </Helmet><title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." /> </meta><meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" /> </meta></Helmet>
+      <Helmet> </Head><title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." /> </meta><meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" /> </meta></Head>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">{/* Animated Background */}
         </section><div className="absolute inset-0 opacity-20">
@@ -30,18 +28,17 @@ export default function HomePage() {  return (
               Advanced AI and IT Solutions for Modern Businesses
             </p>
             <pEmpowering businesses with cutting-edge artificial intelligence, cybersecurity solutions
-              cloud infrastructure, and digital transformation services to drive innovation and growth.
+              cloud infrastructure, and digital transformation services to drive innovation and growth.>
             </p>
-            
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2",
               >Get Started Today
                 </Link><ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />,
               </Link>
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2",
               >Explore Services
                 </Link><ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />,
@@ -56,7 +53,7 @@ export default function HomePage() {  return (
         <div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Our Core Services
             </h2>
-            <pComprehensive technology solutions designed to accelerate your business growth
+            <p>Comprehensive technology solutions designed to accelerate your business growth
             </p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -66,7 +63,7 @@ export default function HomePage() {  return (
                 <CpuChipIcon className="w-8 h-8 text-white" /> </CpuChipIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
               <pAdvanced artificial intelligence services including machine learning
-                natural language processing, and predictive analytics.
+                natural language processing, and predictive analytics.>
               </p>
               <Link href="/ai-solutions" className="text-purple-400 hover: text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
@@ -77,7 +74,7 @@ export default function HomePage() {  return (
                 <ShieldCheckIcon className="w-8 h-8 text-white" /> </ShieldCheckIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
               <pComprehensive security solutions to protect your digital assets
-                data, and infrastructure from evolving threats.
+                data, and infrastructure from evolving threats.>
               </p>
               <Link href="/cybersecurity" className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
@@ -88,7 +85,7 @@ export default function HomePage() {  return (
                 <CloudIcon className="w-8 h-8 text-white" /> </CloudIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
               <pScalable cloud solutions and infrastructure management to optimize
-                performance and reduce operational costs.
+                performance and reduce operational costs.>
               </p>
               <Link href="/cloud-solutions" className="text-green-400 hover: text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
@@ -99,7 +96,7 @@ export default function HomePage() {  return (
                 <ChartBarIcon className="w-8 h-8 text-white" /> </ChartBarIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
               <pStrategic digital transformation services to modernize your business
-                processes and enhance customer experiences.
+                processes and enhance customer experiences.>
               </p>
               <Link href="/digital-transformation" className="text-yellow-400 hover: text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
@@ -110,7 +107,7 @@ export default function HomePage() {  return (
                 <GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
               <pCustom micro SaaS solutions designed to solve specific business
-                challenges with scalable, cost-effective applications.
+                challenges with scalable, cost-effective applications.>
               </p>
               <Link href="/micro-saas" className="text-pink-400 hover: text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
@@ -121,7 +118,7 @@ export default function HomePage() {  return (
                 <GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3>
               <pNext-generation 5G technology solutions for enhanced connectivity
-                IoT applications, and ultra-low latency services.
+                IoT applications, and ultra-low latency services.>
               </p>
               <Link href="/5g-solutions" className="text-indigo-400 hover: text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
@@ -134,9 +131,9 @@ export default function HomePage() {  return (
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Why Choose Zion Tech Group?
             </h2>
-            <pWith over 4 years of experience in cutting-edge technology solutions, 
-              we&apos;ve helped businesses across various industries transform their operations 
-              and achieve unprecedented growth.
+            <pWith over 4 years of experience in cutting-edge technology solutions,
+              we&apos;ve helped businesses across various industries transform their operations
+              and achieve unprecedented growth.>
             </p>
             <div className="grid md: grid-cols-3 gap-8 mb-12">,
               <div50+</div>
@@ -149,11 +146,10 @@ export default function HomePage() {  return (
                 <div className="text-gray-300">Success Rate</div>
               </div>
             </div>
-            
-            <Link href="/about" 
+            <Link href="/about"
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-gray-100 transition-colors",
             >
-            Learn More About Us 
+            Learn More About Us
             <ArrowRightIcon className="w-5 h-5" />
           </Link>
           </div>
@@ -164,7 +160,7 @@ export default function HomePage() {  return (
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Ready to Transform Your Business?
             </h2>
-            <pLet&apos;s discuss how our technology solutions can drive your business forward
+            <pLet&apos;>s discuss how our technology solutions can drive your business forward
             </p>
             <div className="grid md: grid-cols-3 gap-8 mb-12">,
               <div className="flex items-center justify-center gap-4 text-gray-300"> </div><PhoneIcon className="w-6 h-6 text-purple-400" /> </PhoneIcon><span>+1-302-464-0950</span>
@@ -174,15 +170,14 @@ export default function HomePage() {  return (
               <div className="flex items-center justify-center gap-4 text-gray-300"> </div><MapPinIcon className="w-6 h-6 text-purple-400" /> </MapPinIcon><span>Middletown, DE</span>
               </div>
             </div>
-            
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300",
               >Get In Touch
               </Link></Link>
-              <Link 
-                href="/demo" 
+              <Link
+                href="/demo"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300",
               >Schedule Demo
               </Link></Link>

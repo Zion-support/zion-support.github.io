@@ -12,9 +12,9 @@ import { ArrowRight } from 'lucide-react';
     'Gain competitive advantage with advanced technology',
                 </div>
               ))}
-            </div>
-          </div>
-          </div>
+            </div>;
+          </div>;
+          </div>;
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;> </div><CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /> </CheckCircle><p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
@@ -22,9 +22,4 @@ import { ArrowRight } from 'lucide-react';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
 export default PerformanceEnhancerPage

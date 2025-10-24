@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -19,21 +18,9 @@ import {
   CogIcon,
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
-<<<<<<< HEAD
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-=======
-const Navigation = ($2) => {
-$3
+const Navigation = ($2) => {;
+$3;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
     window.addEventListener('scroll', handleScroll)
     return (
     <>
@@ -66,15 +53,10 @@ $3
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-  ]
-<<<<<<< HEAD
-  const isActive = (path: string) => {
-    return pathname === path
-=======
-  const isActive = ($2) => {
-$3
+  ];
+  const isActive = ($2) => {;
+$3;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -174,12 +156,7 @@ $3
             </div>
           </div>
         )}
-      </div>
-    </nav>
-<<<<<<< HEAD
-=======
-  )
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+      </div>;
+    </nav>;
+;
 export default Navigation
