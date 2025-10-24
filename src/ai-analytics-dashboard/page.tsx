@@ -14,6 +14,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true)
   }, [])
+import { Brain, TrendingUp } from 'lucide-react';
+import React, {useStateuseEffect} from 'react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
 const Page = () => {
   return (

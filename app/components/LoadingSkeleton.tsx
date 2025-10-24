@@ -64,6 +64,26 @@ const LoadingSkeletonPage: React.FC = () => {
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
+  lines = 3, 
+  className = '' 
+}) => {
+  return (
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-4 bg-gray-300 rounded mb-2 ${
+            index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default LoadingSkeleton;
               </button>
             </div>
           </div>
@@ -136,11 +156,14 @@ const LoadingSkeletonPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
 
 export default LoadingSkeletonPage;
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+;
+export default LoadingSkeletonPage;"
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

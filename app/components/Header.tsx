@@ -6,12 +6,12 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-interface HeaderProps {
+interface HeaderProps {}
   className?: string;
 }
-
-const Header: React.FC<HeaderProps> = ({ className = '' }) => {
-  return (
+;
+const Header: React.FC<HeaderProps> = ({className="''" }) => {}</HeaderProps>
+  return (</HeaderProps>
     <>
       
       <Navigation />
@@ -105,14 +105,16 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
-
+;
 export default HeaderPage;
   )
 }
 export default Header
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+export default Header"
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

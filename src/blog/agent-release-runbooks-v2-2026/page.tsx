@@ -17,6 +17,7 @@ Page.displayName = "Page"() {
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
           </p>
         </div>
       </section>

@@ -8,6 +8,7 @@ import { Phone } from 'lucide-react'
 
 const AIEmailMarketingPage: React.FC = () => {
   return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
       </div>
     </>
   )

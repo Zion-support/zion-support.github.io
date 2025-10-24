@@ -80,7 +80,7 @@ const Page = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Ready to transform your business with cutting-edge AI and IT solutions?
             Get in touch with our experts for a free consultation.
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
           </p>
         </section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>

@@ -5,41 +5,35 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const AdvancedSEOOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const AdvancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
+      title: 'AI-Powered Intelligence',;}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,;
+      title: 'Advanced Analytics',;}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,;
+      title: 'Precision Targeting',;}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,;
+      title: 'Growth Optimization',;}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -135,36 +129,36 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
-
+;
 export default AdvancedSEOOptimizerPage;
-description?: string
-keywords?: string
-canonicalUrl?: string
-ogImage?: string
-twitterCard?: string
-structuredData?: objectchildren: React.ReactNode}
-constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
-description= 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-keywords= 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-canonicalUrl,
-ogImage= '/$1/og-image.jpg',
-twitterCard= 'summary_large_image',
-structuredData,
-children}) => {const [seoScoresetSeoScore] = useState(0)
-const [recommendationssetRecommendations]=useState<string[]>([])
-constanalyzeSEO= useCallback(() => {
-  
-if (type ofwindow=== 'undefined') return letscore=0constnewRecommendations: string[] = []
-// Check title length
-if (title.length >= 30&&title.length<= 6 0) {
+description?: string;
+keywords?: string;
+canonicalUrl?: string;
+ogImage?: string;
+twitterCard?: string;
+structuredData?: objectchildren: React.ReactNode}"
+constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',;"
+description: "'Professional" AI and IT solutions for your business. Advanced technology, expert support, and proven results.',;"
+keywords: "'AI" solutions, IT services, technology, business solutions, Zion Tech Group',;
+canonicalUrl,;"
+ogImage: "'/$1/og-image.jpg',";"
+twitterCard: "'summary_large_image',";}
+structuredData,}</SEOOptimizerProp>
+children}) => {const [seoScoresetSeoScore] = useState(0)</SEOOptimizerProp>;
+const [recommendationssetRecommendations]=useState<string[]>([]);"
+constanalyzeSEO="useCallback(()" => {
+;  "
+if (type ofwindow="==" 'undefined') return letscore="0constnewRecommendations:" string[] = []</string>
+// Check title length</string>;}
+if (title.length >= 30&&title.length<= 6 0) {}
 score +=20} else {newRecommendations.push('Title should be between 3 0-60characters')}
-// Check description length
+// Check description length;
 if (description.length >= 120&&description.length<= 16 0) {score +=20} else {newRecommendations.push('Description should be between 12 0-160characters')}
-// Check for keywords in title
+// Check for keywords in title;
 if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in title')}
 // Check for keywords in description
 if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
@@ -175,7 +169,7 @@ constimagesWithAlt= do cument.querySelectorAll('img[alt]')
 if (images.length=== imagesWithAlt.length && images.length > 0) {score +=10} else {newRecommendations.push('Add alt text to all images')}
 // Check for internallinksconstinternalLinks= do cument.querySelectorAll('a[href^="/"],a[href^="./"]')
 if (internalLinks.length > 0) {score +=10} else {newRecommendations.push('Add internal links for better SEO')}
-setSeoScore(score)
+setSeoScore(score);
 setRecommendations(newRecommendations)
 }, [title, description, keywords])
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
@@ -202,4 +196,4 @@ fontSize: '12 px',
 zIndex:1000,
 maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
 }
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer"

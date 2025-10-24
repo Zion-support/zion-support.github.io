@@ -1,3 +1,12 @@
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
+  FileText, Users, Heart, DollarSign, Target, Settings, 
+  CheckCircle, ArrowRight, Star, Clock, Award, TrendingUp,
+  Cpu, Database, Globe, Smartphone, Lock, Workflow, Sparkles
+} from 'lucide-react';
 "use client";
 import React from "react";
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
@@ -54,6 +63,76 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
+    }
+  ]
+
+  const categories = [
+    { id: 'overview', name: 'Overview', icon: <Globe className="w-5 h-5" /> },
+    { id: 'analytics', name: 'Analytics', icon: <BarChart className="w-5 h-5" /> },
+    { id: 'automation', name: 'Automation', icon: <Workflow className="w-5 h-5" /> },
+    { id: 'content', name: 'Content', icon: <FileText className="w-5 h-5" /> },
+    { id: 'vision', name: 'Vision', icon: <Eye className="w-5 h-5" /> },
+    { id: 'voice', name: 'Voice', icon: <Mic className="w-5 h-5" /> }
+  ];
+
+  const filteredServices = activeTab === 'overview' 
+    ? aiServices 
+    : aiServices.filter(service => service.category === activeTab);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <Helmet>
+        <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
+        <meta name="description" content="Discover our comprehensive AI services including analytics, automation, content generation, computer vision, and more. Transform your business with cutting-edge AI technology." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, analytics, computer vision, natural language processing" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your business with our comprehensive suite of AI-powered solutions designed to drive innovation and efficiency.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>Custom AI Solutions</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>Scalable Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Tabs */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeTab === category.id
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {category.icon}
+                <span className="ml-2">{category.name}</span>
+              </button>
+            ))}
   const process = [
     {
       step: "1",
@@ -79,6 +158,7 @@ const AIServicesPage: React.FC = () => {
       step: "5",
       title: "Monitoring & Optimization",
       description: "We continuously monitor performance and optimize the solution for better results."
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
     }
   ];
 
@@ -102,7 +182,8 @@ const AIServicesPage: React.FC = () => {
             <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               View Case Studies
             </button>
-          </div>
+
+export default AiServicesPage;          </div>
         </div>
       </section>
 
@@ -162,6 +243,7 @@ const AIServicesPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600 text-sm">{step.description}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
               </div>
             ))}
           </div>
@@ -192,6 +274,7 @@ const AIServicesPage: React.FC = () => {
               Learn More About Us
             </a>
           </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
         </div>
       </section>
     </div>
@@ -199,3 +282,5 @@ const AIServicesPage: React.FC = () => {
 };
 
 export default AIServicesPage;
+
+export default AiServicesPage;>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

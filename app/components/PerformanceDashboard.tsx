@@ -5,41 +5,35 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const PerformanceDashboardPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const PerformanceDashboardPage: React.FC="()" => {const features: ";",;
+      title: 'AI-Powered Intelligence',;}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,;
+      title: 'Advanced Analytics',;}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,;
+      title: 'Precision Targeting',;}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,;
+      title: 'Growth Optimization',;}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -135,71 +129,71 @@ const PerformanceDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
-
+;
 export default PerformanceDashboardPage;
-loadTime: 0,
-renderTime: 0,
-memoryUsage: 0,
-fps: 0})
-const [isMonitoringsetIsMonitoring] = useState(false)
-const [alertssetAlerts]=useState<string[]>([])
-useEffect(() => {constupdateMetrics= () => {
-  
-constnavigation= performance.getEntriesByType(
-'navigation'
-)[0] asPerformanceNavigationTimingconstloadTime= navigation ? navigation.loadEventEnd - navigation.fetchStart: 0
-// Measure rendertimeconstrenderStart= performance.now()
-constrenderTime= performance.now() - renderStart
-// Measure memoryusageletmemoryUsage=0if ('memory' in performance) {
-constmemory= (performance as { memory?: { usedJSHeapSize : number} }).memorymemoryUsage= memory?.usedJSHeapSize || 0
+loadTime: 0,;
+renderTime: 0,;
+memoryUsage: 0,;
+fps: 0});
+const [isMonitoringsetIsMonitoring] = useState(false);
+const [alertssetAlerts]=useState<string[]>([]);"
+useEffect(() => {constupdateMetrics="()" => {
+;  "
+constnavigation="performance.getEntriesByType("
+'navigation'"
+)[0] asPerformanceNavigationTimingconstloadTime="navigation" ? navigation.loadEventEnd - navigation.fetchStart: 0"
+// Measure rendertimeconstrenderStart="performance.now()";"}
+constrenderTime="performance.now()" - renderStart"
+// Measure memoryusageletmemoryUsage="0if" ('memory' in performance) {}"
+constmemory="(performance" as {memory?: { usedJSHeapSize : number} }).memorymemoryUsage="memory?.usedJSHeapSize" || 0
 }
-// Measure FPS (simplified)
-letfps= 6 0
-if ('requestAnimationFrame' in windo w) {letlastTime= performance.now()
-letframeCount= 0
-constmeasureFPS= () => {
-  
-constcurrentTime= performance.now()
-frameCount++
-if (currentTime - lastTime >= 100 0) {
-fps= Math.round((frameCount * 100 0) / (currentTime - lastTime))
-frameCount=0lastTime= currentTime}
+// Measure FPS (simplified);"
+letfps="6" 0;"
+if ('requestAnimationFrame' in windo w) {letlastTime="performance.now()";"
+letframeCount="0";"
+constmeasureFPS="()" => {
+;  "
+constcurrentTime="performance.now()";
+frameCount++;
+if (currentTime - lastTime >= 100 0) {"}
+fps="Math.round((frameCount" * 100 0) / (currentTime - lastTime))}"
+frameCount="0lastTime=" currentTime}
 if (isMonitorin g) {requestAnimationFrame(measureFPS)}
 }
 requestAnimationFrame(measureFPS)
-}
-constnewMetrics: PerformanceMetrics = {loadTime,
-renderTime,
-memoryUsage,
+}"
+constnewMetrics: PerformanceMetrics="{loadTime,";
+renderTime,;}
+memoryUsage,}
 fps}
-setMetrics(newMetrics)
+setMetrics(newMetrics);
 onMetricsUpdate?.(newMetrics)
-// Check for performance alerts
+// Check for performance alerts;
 checkPerformanceAlerts(newMetrics)
 }
-if (isMonitorin g) {updateMetrics()
-constinterval= setInterval(updateMetrics100 0)
+if (isMonitorin g) {updateMetrics();"}
+constinterval="setInterval(updateMetrics100" 0)}
 return () => clearInterval(interval)}
-}, [isMonitoringonMetricsUpdate])
-constcheckPerformanceAlerts= (currentMetrics: PerformanceMetrics) => {constnewAlerts: string[] = []
-if (currentMetrics.loadTime > 300 0) {
+}, [isMonitoringonMetricsUpdate]);"
+constcheckPerformanceAlerts="(currentMetrics:" PerformanceMetrics) => {constnewAlerts: string[] = [];}
+if (currentMetrics.loadTime > 300 0) {}
 newAlerts.push('Load time is above3seconds')}
-if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB
-newAlerts.push('Memory usage is high')}
+if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB}</string>
+newAlerts.push('Memory usage is high')}</string>;
 if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30')}
 setAlerts(newAlerts)
-}
-consttoggleMonitoring= () =>{setIsMonitoring(!isMonitoring)}
-constformatBytes= (bytes: number) => {if (bytes=== 0) return '0 Bytes'
-constk= 1024constsizes= ['Bytes', 'KB', 'MB', 'GB']
-consti= Math.floor(Math.log(bytes) / Math.log(k))
-return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
-constgetPerformanceColor= (value: number, thresholds: {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'
-if (value <= thresholds.warning) return 'text-yellow-40 0'
+}"
+consttoggleMonitoring="()" =>{setIsMonitoring(!isMonitoring)}"
+constformatBytes="(bytes:" number) => {if (bytes: "==" 0) return '0 Bytes'"
+constk="1024constsizes=" ['Bytes', 'KB', 'MB', 'GB'];"}
+consti="Math.floor(Math.log(bytes)" / Math.log(k))}
+return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}"
+constgetPerformanceColor="(value:" number, thresholds: {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'}
+if (value <= thresholds.warning) return 'text-yellow-40 0'}
 return 'text-red-40 0'}
 return (
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
@@ -245,6 +239,20 @@ isMonitoring
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
 {metrics.renderTime.toFixed(2)}ms
+</div>"
+<div className="&quot;bg-white/5" rounded-lg p-4&quot;></div>"
+<div className="&quot;flex" items-center gap-2 mb-2&quot;></div>"
+<MemoryStick className="&quot;w-4" h-4 text-purple-400&quot; /></MemoryStick>"
+<span className="&quot;text-gray-300" text-sm&quot;>Memory Usage</span>
+</div>"
+<div className="{`text-2xl" font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
+</div>"
+<div className="&quot;bg-white/5" rounded-lg p-4&quot;></div>"
+<div className="&quot;flex" items-center gap-2 mb-2&quot;></div>"
+<TrendingUp className="&quot;w-4" h-4 text-orange-400&quot; /></TrendingUp>"
+<span className="&quot;text-gray-300" text-sm&quot;>FPS</span>
+</div>"
+<div className="{`text-2xl" font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
 </div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
@@ -267,4 +275,4 @@ isMonitoring
 </div>
 )
 }
-export default PerformanceDashboard
+export default PerformanceDashboard"

@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageCircle } from 'lucide-react';
 "use client";
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
@@ -25,10 +28,42 @@ const ContactPage: React.FC = () => {
     // Here you would typically send the form data to your backend
     // Form submitted successfully
     setIsSubmitted(true);
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
+<<<<<<< HEAD
         name: "",
         email: "",
         company: "",
@@ -64,6 +99,60 @@ const ContactPage: React.FC = () => {
     "IT Services",
     "Micro SaaS Development",
     "Business Intelligence",
+    }
+  ]
+
+  const services = [
+    'AI Solutions',
+    'Web Development',
+    'Mobile Development',
+    'Cloud Migration',
+    'Cybersecurity',
+    'Data Analytics',
+    'DevOps',
+    'Consulting'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <Helmet>
+        <title>Contact Us - Zion Tech Group | Get in Touch</title>
+        <meta name="description" content="Get in touch with Zion Tech Group. Contact our team for AI solutions, web development, and IT services. We're here to help transform your business." />
+        <meta name="keywords" content="contact us, get in touch, AI solutions, web development, IT services, consultation" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Touch</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Ready to transform your business with cutting-edge AI and IT solutions? Let's start the conversation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {info.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{info.title}</h3>
+                <div className="space-y-2 mb-4">
+                  {info.details.map((detail, idx) => (
+                    <div key={idx} className="text-gray-300">{detail}</div>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-400">{info.description}</p>
+              </div>
+            ))}
     "Consulting",
     "Other"
   ];
@@ -79,6 +168,7 @@ const ContactPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Ready to transform your business with AI and technology? Let's start the conversation.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
           </p>
         </div>
       </section>
@@ -97,6 +187,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-600 text-sm">{info.description}</p>
               </div>
             ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
           </div>
         </div>
       </section>
@@ -126,6 +217,43 @@ const ContactPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            </div>
+
+            {/* Additional Info */}
+            <div className="space-y-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-xl font-semibold text-white mb-4">Why Choose Us?</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Expert team with 10+ years of experience</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Custom solutions tailored to your needs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">24/7 support and maintenance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Proven track record of success</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-xl font-semibold text-white mb-4">Quick Response</h3>
+                <p className="text-gray-300 mb-4">
+                  We typically respond to all inquiries within 24 hours. For urgent matters, please call us directly.
+                </p>
+                <div className="flex items-center text-cyan-400">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <span className="font-medium">Average response time: 2 hours</span>
+                </div>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
                     Full Name *
                   </label>
                   <input
@@ -152,6 +280,7 @@ const ContactPage: React.FC = () => {
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="your.email@company.com"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
                   />
                 </div>
               </div>
@@ -168,6 +297,7 @@ const ContactPage: React.FC = () => {
                     value={formData.company}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
                     placeholder="Your company name"
                   />
                 </div>
@@ -187,6 +317,7 @@ const ContactPage: React.FC = () => {
                       <option key={index} value={service}>{service}</option>
                     ))}
                   </select>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
                 </div>
               </div>
 
@@ -213,6 +344,7 @@ const ContactPage: React.FC = () => {
                 <Send className="mr-2 h-5 w-5" />
                 Send Message
               </button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
             </form>
           )}
         </div>
@@ -255,3 +387,5 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+
+export default ContactPage;>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

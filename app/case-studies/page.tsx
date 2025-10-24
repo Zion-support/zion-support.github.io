@@ -1,3 +1,7 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -24,24 +28,72 @@ const CaseStudiesPage: React.FC = () => {
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-grade security measures to protect your data and operations.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance monitoring']
+    },
+    {
+      icon: Zap,
+      title: 'Lightning Fast',
+      description: 'Optimized performance with lightning-fast response times.',
+      benefits: ['Fast loading', 'Quick responses', 'Efficient processing', 'Scalable architecture']
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Connect with customers and partners worldwide.',
+      benefits: ['Multi-language support', 'Global deployment', '24/7 availability', 'Worldwide coverage']
     }
-  ]
+  ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+  const caseStudies = [
+    {
+      title: 'AI-Powered E-commerce Optimization',
+      company: 'TechCorp Solutions',
+      industry: 'E-commerce',
+      challenge: 'Low conversion rates and poor customer experience',
+      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
+      results: [
+        '40% increase in conversion rates',
+        '60% improvement in customer satisfaction',
+        '35% boost in average order value',
+        '50% reduction in cart abandonment'
+      ],
+      icon: TrendingUp
+    },
+    {
+      title: 'Automated Financial Analysis',
+      company: 'FinanceFlow Inc.',
+      industry: 'Financial Services',
+      challenge: 'Manual financial analysis was time-consuming and error-prone',
+      solution: 'Deployed AI-powered financial analysis platform with automated reporting',
+      results: [
+        '80% reduction in analysis time',
+        '95% accuracy in financial predictions',
+        '70% cost savings on manual processes',
+        '100% compliance with regulations'
+      ],
+      icon: BarChart
+    },
+    {
+      title: 'Smart Manufacturing Optimization',
+      company: 'ManufacturingPro',
+      industry: 'Manufacturing',
+      challenge: 'Inefficient production processes and high operational costs',
+      solution: 'Implemented AI-driven predictive maintenance and process optimization',
+      results: [
+        '25% increase in production efficiency',
+        '30% reduction in maintenance costs',
+        '45% decrease in downtime',
+        '20% improvement in product quality'
+      ],
+      icon: Settings
+    }
+  ];
 
   return (
-    <>
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -110,31 +162,35 @@ const CaseStudiesPage: React.FC = () => {
                   <CheckCircle className="w-8 h-8" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join hundreds of companies that have already revolutionized their operations with our AI solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center justify-center">
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-lg transition-colors duration-300">
+              View All Case Studies
+            </button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 };
 

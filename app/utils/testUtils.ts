@@ -1,3 +1,4 @@
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 'use client'
 /**
  * Testing Utilities
@@ -308,3 +309,4 @@ export default {
   retryWithBackoff,
   measureExecutionTime
 }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

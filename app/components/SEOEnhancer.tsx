@@ -7,8 +7,8 @@ import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
-  return (
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEnhancerProps>
+  return (</SEOEnhancerProps>
     <>
       
       <Navigation />
@@ -146,11 +146,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
 
 export default SEOEnhancerPage;
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+;
+export default SEOEnhancerPage;"
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

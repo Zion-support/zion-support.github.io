@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -154,5 +157,7 @@ const AboutPage: React.FC = () => {
       </div>
   );
 };
+
+export default AboutPage;
 
 export default AboutPage;

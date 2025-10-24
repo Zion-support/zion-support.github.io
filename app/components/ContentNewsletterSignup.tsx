@@ -27,39 +27,38 @@ interface ContentNewsletterSignupProps {
     {icon: Zap, text:&quot;Early access&quot;}
   ],
   onSubscribe
-}) => {const [emailsetEmail] = useState('')
-  const [isSubmittingsetIsSubmitting] = useState(false)
-  const [isSubscribedsetIsSubscribed] = useState(false)
-  const [isLoadingsetIsLoading] = useState(false)
-  consthandleSubmit= async (e: React.FormEvent) => {
-  
-    e.preventDefault()
-    if (!email) return setIsLoadin g(true)
+}) => {const [emailsetEmail] = useState('');
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);"
+  consthandleSubmit="async" (e: React.FormEvent) => {
+;  
+    e.preventDefault();
+    if (!email) return setIsLoadin g(true);
     try {
-      // Simulate API call
-      await new Promise(resolve=> setTimeout(resolve100 0))
-      if (onSubscrib e) {
+      // Simulate API call;
+      await new Promise(resolve=> setTimeout(resolve100 0));}
+      if (onSubscrib e) {}
         onSubscribe(email)
      }
-      setIsSubscribed(true)
+      setIsSubscribed(true);
       setEmail('')
-    } catch (error) {
-      // // console.error('Subscription error:', error)
-    } finally {
+    } catch (error) {// // console.error('Subscription error: ', error)
+    } finally {}
       setIsSubmitting(false)
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
-
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
-  return (
+  ]</ContentNewsletterSignupProp>
+</ContentNewsletterSignupProp>;"
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({className="''" }) => {}</ContentNewsletterSignupProps>
+  return (</ContentNewsletterSignupProps>
     <>
       
       <Navigation />
@@ -179,9 +178,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
-
-export default ContentNewsletterSignupPage;
+;
+export default ContentNewsletterSignupPage;"

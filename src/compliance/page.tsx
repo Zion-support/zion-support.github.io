@@ -17,6 +17,7 @@ const CompliancePage: React.FC = () => {
 
 const Page = () => {
   return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
       </div>
       <Footer />
     </>

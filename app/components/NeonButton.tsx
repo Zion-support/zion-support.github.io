@@ -33,8 +33,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
-  return (
+}</NeonButtonProps>
+  return (</NeonButtonProps>
     <>
       
       <Navigation />
@@ -128,11 +128,11 @@ const NeonButton: React.FC<NeonButtonProps> = ({
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
-
+;
 export default NeonButtonPage;
 
   constvariantClasses= {primary:
@@ -153,25 +153,25 @@ export default NeonButtonPage;
       {children}
       {!icon && <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />}
     </div>
-  )
+  );
 
-  if (href) {
-    return (
-      <a href={href} className={buttonClasses}>
-        {content}
+  if (href) {}
+    return ("
+      <a href="{href}" className="{buttonClasses}"></a>
+        {content}</a>
       </a>
     )
   }
-
-  return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses}>
-      {content}
+;
+  return ("
+    <button onClick="{onClick}" disabled="{disabled}" className="{buttonClasses}"></button>
+      {content}</button>
     </button>
   )
 }
-
+;
 export default NeonButton
   );
 };
-
-export default NeonButton;
+;
+export default NeonButton;"

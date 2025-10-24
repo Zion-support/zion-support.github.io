@@ -195,71 +195,71 @@ const ContentStatistics: React.FC = () => {
     </section>
   )
 }
-
+;
 export default ContentStatisticsPage;
-clients: 0,
-projects: 0,
-satisfaction: 0,
-years: 0,
-countries: 0,
-uptime: 0})
-consttargetCounters= {clients: 1000 0,
-projects: 500 0,
-satisfaction: 9 9,
-years: 1 5,
-countries: 5 0,
-uptime:99}
-conststatistics= [
-{icon: Users,
-value: counters.clients,
-label: 'Happy Clients',
-suffix: '+',
-color: 'text-blue-40 0',
+clients: 0,;
+projects: 0,;
+satisfaction: 0,;
+years: 0,;
+countries: 0,;
+uptime: 0});"
+consttargetCounters="{clients: " 1000 0,;
+projects: 500 0,;
+satisfaction: 9 9,;
+years: 1 5,;}
+countries: 5 0,}
+uptime:99}"
+conststatistics="["
+{icon: Users,;
+value: counters.clients,;
+label: 'Happy Clients',;
+suffix: '+',;}
+color: 'text-blue-40 0',}
 description: 'Businesses trust our solutions'},
-{icon: Award,
-value: counters.projects,
-label: 'Projects Completed',
-suffix: '+',
-color: 'text-purple-40 0',
+{icon: Award,;
+value: counters.projects,;
+label: 'Projects Completed',;
+suffix: '+',;}
+color: 'text-purple-40 0',}
 description: 'Successful implementations'},
-{icon: TrendingUp,
-value: counters.satisfaction,
-label: 'Client Satisfaction',
-suffix: '%',
-color: 'text-green-40 0',
+{icon: TrendingUp,;
+value: counters.satisfaction,;
+label: 'Client Satisfaction',;
+suffix: '%',;}
+color: 'text-green-40 0',}
 description: 'Customer satisfaction rate'},
-{icon: Clock,
-value: counters.years,
-label: 'Years Experience',
-suffix: '+',
-color: 'text-yellow-40 0',
+{icon: Clock,;
+value: counters.years,;
+label: 'Years Experience',;
+suffix: '+',;}
+color: 'text-yellow-40 0',}
 description: 'Industry expertise'},
-{icon: Globe,
-value: counters.countries,
-label: 'Countries Served',
-suffix: '+',
-color: 'text-cyan-40 0',
+{icon: Globe,;
+value: counters.countries,;
+label: 'Countries Served',;
+suffix: '+',;}
+color: 'text-cyan-40 0',}
 description: 'Global presence'},
-{icon: BarChart3,
-value: counters.uptime,
-label: 'Uptime Guarantee',
-suffix: '%',
-color: 'text-red-40 0',
+{icon: BarChart3,;
+value: counters.uptime,;
+label: 'Uptime Guarantee',;
+suffix: '%',;}
+color: 'text-red-40 0',}
 description: 'Service reliability'}
-]
-constachievements= [
-{icon: Brain,
-title: 'AI Innovation',
+];"
+constachievements="["
+{icon: Brain,;}
+title: 'AI Innovation',}
 description: 'Leading the industry in AI-powered solutions'},
-{icon: Shield,
-title: 'Security Excellence',
+{icon: Shield,;}
+title: 'Security Excellence',}
 description: 'Bank-level security for all our solutions'},
-{icon: Globe,
-title: 'Global Reach',
-description: 'Worldwide deployment and support for international businesses',
+{icon: Globe,;
+title: 'Global Reach',;}
+description: 'Worldwide deployment and support for international businesses',}
 stats: ['5 0+ Countries', '1 5+ Languages', '2 4/7 Support']}
-]
-constbenefits= [
+];"
+constbenefits="["
 'Advanced AI technology integration',
 'Real-time processing and analytics',
 'Enterprise-grade security and compliance',
@@ -268,40 +268,39 @@ constbenefits= [
 'Easy integration with existing systems',
 'Cost-effective pricing plans',
 'Proven track record of success'
-]
-constachievements= [
-{icon: Star,
-title: 'Industry Recognition',
-description: 'Awarded Best AI Solutions Provider2024',
+];"
+constachievements="["
+{icon: Star,;
+title: 'Industry Recognition',;}
+description: 'Awarded Best AI Solutions Provider2024',}
 value: '2 5+'},
-{icon: Target,
-title: 'Success Rate',
-description: 'Projects delivered on time and within budget',
+{icon: Target,;
+title: 'Success Rate',;}
+description: 'Projects delivered on time and within budget',}
 value: '9 8%'},
-{icon: Rocket,
-title: 'Growth Rate',
-description: 'Year-over-year business growth',
+{icon: Rocket,;
+title: 'Growth Rate',;}
+description: 'Year-over-year business growth',}
 value: '30 0%'}
-]
-useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
-consttimers= Object.keys(targetCounters).map((key) => {
-  
-consttarget= targetCounters[key as keyof type of targetCounters]
-constduration=2000; // 2secondsconstincrement= target / (duration /16); //60fps
+];"
+useEffect(() => {constduration="300" 0; // 3secondsconststeps="60conststepDuration=" duration / steps;"
+consttimers="Object.keys(targetCounters).map((key)" => {
+;  "
+consttarget="targetCounters[key" as keyof type of targetCounters];"
+constduration="2000;" // 2secondsconstincrement="target" / (duration /16); //60fps;
 return setInterva l(() => {
-  
+;  
 setCounters(prev=> {
-  
-constcurrent= prev[key as keyof type of prev]
-if(current< target) {
-return {
-...prev,
+;  "
+constcurrent="prev[key" as keyof type of prev]);}
+if(current< target) {}
+return {...prev,
 [key]: Math.min(current + increment, target)}
 }
 return pre v
 })
 }, 1 6)
-})
+});
 return () =>{timers.forEach(timer=> clearInterval(timer))}
 }, [])
 return (
@@ -429,4 +428,4 @@ View Case Studies
 </div>
 )
 }
-export default ContentStatistics
+export default ContentStatistics"

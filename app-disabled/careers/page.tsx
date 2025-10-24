@@ -1,3 +1,6 @@
+import { useState } from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Right, Circle, Star, } from 'lucide-react;
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Clock, Users, Briefcase, Star } from 'lucide-react';
@@ -5,6 +8,7 @@ import { MapPin, Clock, Users, Briefcase, Star } from 'lucide-react';
 interface JobPosition {
   // Add properties here
 }
+import { Right, Circle, } from 'lucide-react;
   id: number
 import { Right, Circle} from 'lucide-react
 const PagePage: React.FC = () => {}
@@ -76,6 +80,7 @@ const eersPage: React.FC = () => {}
         </div>
       </div>
     </div>
+import { Right, Circle, Star, } from 'lucide-react';
   )
 }
 import { Right, Circle, Star} from 'lucide-react'
@@ -361,3 +366,5 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                         <li className="text-sm text-gray-400>
             </div>  ));)
 export default eersPage
+
+export default eersPage;

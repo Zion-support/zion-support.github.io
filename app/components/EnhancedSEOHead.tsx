@@ -5,12 +5,12 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-interface EnhancedSEOHeadProps {
+interface EnhancedSEOHeadProps {}
   className?: string;
 }
-
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
-  return (
+;
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {}</EnhancedSEOHeadProps>
+  return (</EnhancedSEOHeadProps>
     <>
       
       <Navigation />
@@ -104,12 +104,12 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => 
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
-
+;
 export default EnhancedSEOHeadPage;
   )
 }
-export default EnhancedSEOHead
+export default EnhancedSEOHead"

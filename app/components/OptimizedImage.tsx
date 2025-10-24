@@ -4,7 +4,7 @@ import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
 
-interface OptimizedImageProps {
+interface OptimizedImageProps {}
   className?: string;
 }
 
@@ -32,6 +32,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
               </button>
             </div>
           </div>
@@ -56,6 +57,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                 <p className=&quot;text-gray-300&quot;>{feature.description}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
               </div>
             ))}
           </div>
@@ -111,9 +113,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
 
 export default OptimizedImagePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

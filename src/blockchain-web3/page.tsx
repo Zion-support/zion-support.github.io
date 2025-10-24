@@ -8,6 +8,7 @@ import { Globe } from 'lucide-react'
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
   return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
       </div>
     </>
   )

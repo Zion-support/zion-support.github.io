@@ -1,3 +1,6 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Play, Right, Circle, Star } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield } from 'lucide-react';
@@ -132,5 +135,7 @@ const DemoPage: React.FC = () => {
       </div>
   );
 };
+
+export default DemoPage;
 
 export default DemoPage;

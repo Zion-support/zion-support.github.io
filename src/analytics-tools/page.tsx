@@ -206,7 +206,7 @@ constAnalyticsToolsPage: React.FC= () =>{constanalyticsTools= [
           </div>
         </div>
       </section>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+>>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
     </div>
   )
 }

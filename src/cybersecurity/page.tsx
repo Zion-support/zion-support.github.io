@@ -8,6 +8,7 @@ import { Globe, AlertTriangle } from 'lucide-react'
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
   return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
       </div>
     </>
   )

@@ -37,6 +37,7 @@ const SitemapPage: React.FC = () => {
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
   ]
   return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
         </div>
       </div>
     </>

@@ -8,6 +8,7 @@ import { Cpu, Globe } from 'lucide-react'
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
   return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
       </div>
     </>
   )

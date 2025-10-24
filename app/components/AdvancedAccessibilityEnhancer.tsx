@@ -3,16 +3,15 @@ import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
-interface AdvancedAccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean
-  enableScreenReader?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableARIALabels?: boolean
-  enableSkipLinks?: boolean
-  enableColorContrast?: boolean
-  enableMotionReduction?: boolean
-  enableFontScaling?: boolean
+interface AdvancedAccessibilityEnhancerProps {enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableARIALabels?: boolean;
+  enableSkipLinks?: boolean;
+  enableColorContrast?: boolean;
+  enableMotionReduction?: boolean;}
+  enableFontScaling?: boolean}
   enableVoiceNavigation?: boolean
 }
 
@@ -34,54 +33,41 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     keyboardNavigation: false
   })
 
-  // Detect user preferences
-  useEffect(() => {
-    if (typeof window === 'undefined') return
+  // Detect user preferences;"
+  useEffect(() => {if (typeof window: "==" 'undefined') return
 
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    // Check for reduced motion preference;"
+    const prefersReducedMotion="window.matchMedia('(prefers-reduced-motion:" reduce)').matches
 
-    // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+    // Check for high contrast preference;"
+    const prefersHighContrast="window.matchMedia('(prefers-contrast:" high)').matches
 
-    // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+    // Check for color scheme preference;"
+    const prefersDarkScheme="window.matchMedia('(prefers-color-scheme:" dark)').matches;
 
     setAccessibilitySettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
+      ...prev,;}
+      reducedMotion: prefersReducedMotion,});
       highContrast: prefersHighContrast
     }))
 
-    // Listen for changes in user preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
+    // Listen for changes in user preferences;"
+    const motionQuery="window.matchMedia('(prefers-reduced-motion:" reduce)');"
+    const contrastQuery="window.matchMedia('(prefers-contrast:" high)');
+"
+    const handleMotionChange=";";
+    motionQuery.addEventListener('change', handleMotionChange);
+    contrastQuery.addEventListener('change', handleContrastChange);
 
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
-    }
-
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
-    }
-
-    motionQuery.addEventListener('change', handleMotionChange)
-    contrastQuery.addEventListener('change', handleContrastChange)
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange)
+    return () => {motionQuery.removeEventListener('change', handleMotionChange)}
       contrastQuery.removeEventListener('change', handleContrastChange)
     }
   }, [])
 
-  // Apply accessibility styles
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const root = document.documentElement
-
-    // Apply high contrast mode
-    if (accessibilitySettings.highContrast) {
+  // Apply accessibility styles;"
+  useEffect(() => {if (typeof window="==" 'undefined') return;
+"}
+    const root=";}";
       root.classList.add('high-contrast')
     } else {
       root.classList.remove('high-contrast')
@@ -114,20 +100,29 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   ]
 
-    // Apply reduced motion
-    if (accessibilitySettings.reducedMotion) {
+    // Apply reduced motion;
+    if (accessibilitySettings.reducedMotion) {}
       root.classList.add('reduced-motion')
-    } else {
+    } else {}
       root.classList.remove('reduced-motion')
     }
 
-    // Apply font scaling
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
+    // Apply font scaling;"
+    root.style.setProperty('--font-scale', accessibilitySettings.fontSize="==" 'large' ? '1.2' : '1')
   }, [accessibilitySettings])
 
-  // Keyboard navigation enhancement
-  const setupKeyboardNavigation = useCallback(() => {
-    if (typeof window === 'undefined') return
+  // Keyboard navigation enhancement;"
+  const setupKeyboardNavigation=";";"
+    if (typeof window="==" 'undefined') return;
+"
+    consthandleKeyDown="(event:" KeyboardEvent) => {// Skip to main content;"
+      if (event.key="==" 'Tab' && event.shiftKey && event.target="==" document.body) {"
+        const skipLink="document.querySelector('[data-skip-link]')" as HTMLElement;
+        if (skipLink) {}
+          skipLink.focus()}
+          event.preventDefault()
+        }
+      }
 
     consthandleKeyDown= (event: KeyboardEvent) => {
   
@@ -162,8 +157,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         }
       }
     }
-
-    document.addEventListener('keydown', handleKeyDown)
+;
+    document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
 
@@ -202,9 +197,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   }, [])
 
-  // Focus management
-  const setupFocusManagement = useCallback(() => {
-    if (typeof window === 'undefined') return
+  // Focus management;"
+  const setupFocusManagement=";";"
+    if (typeof window="==" 'undefined') return
 
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
@@ -222,15 +217,17 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
             if (document.activeElement === firstElement) {
               lastElement.focus()
               e.preventDefault()
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement.focus()
+            }"
+          } else {if (document.activeElement="==" lastElement) {}
+              firstElement.focus()}
               e.preventDefault()
             }
           }
         }
       }
+;
+      element.addEventListener('keydown', handleTabKey);
+      firstElement?.focus();
 
       element.addEventListener('keydown', handleTabKey)
       firstElement?.focus()
@@ -367,30 +364,29 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   }, [])
 
-  // Initialize all accessibility features
-  useEffect(() => {
-    if (enableKeyboardNavigation) {
+  // Initialize all accessibility features;
+  useEffect(() => {if (enableKeyboardNavigation) {}
       setupKeyboardNavigation()
     }
-    if (enableScreenReader) {
+    if (enableScreenReader) {}
       setupScreenReaderSupport()
     }
-    if (enableFocusManagement) {
+    if (enableFocusManagement) {}
       setupFocusManagement()
     }
-    if (enableARIALabels) {
+    if (enableARIALabels) {}
       enhanceARIALabels()
     }
-    if (enableSkipLinks) {
+    if (enableSkipLinks) {}
       addSkipLinks()
     }
-    if (enableColorContrast) {
+    if (enableColorContrast) {}
       checkColorContrast()
     }
-    if (enableVoiceNavigation) {
+    if (enableVoiceNavigation) {}
       setupVoiceNavigation()
     }
-  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
+  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
 
   return null
 }

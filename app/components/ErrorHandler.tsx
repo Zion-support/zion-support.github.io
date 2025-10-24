@@ -5,41 +5,35 @@ import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 import { Home } from 'lucide-react'
 
-const ErrorHandlerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+const ErrorHandlerPage: React.FC="()" => {const features: ";",;
+      title: 'AI-Powered Intelligence',;}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    {icon: BarChart,;
+      title: 'Advanced Analytics',;}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: Target,;
+      title: 'Precision Targeting',;}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: TrendingUp,;
+      title: 'Growth Optimization',;}
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const benefits = [
+  ];
+"
+  const benefits=";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -64,39 +58,38 @@ const ErrorHandlerPage: React.FC = () => {
     if (process.env.NODE_ENV=== 'development') {// Error caught by handler
    }
 
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV=== 'production') {// You can integrate with services like Sentry, LogRocket, etc.
+    // Send error to monitoring service in production;"
+    if (process.env.NODE_ENV="==" 'production') {// You can integrate with services like Sentry, LogRocket, etc.}
       this.logErrorToService(errorerrorInfo)
    }
   }
-
-  logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
-    try {
-      // Replace with your actual error reportingserviceconsterrorData= {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
+;"
+  logErrorToService="(error:" Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service;
+    try {"
+      // Replace with your actual error reportingserviceconsterrorData: "{",;
+        message: error.message,;
+        stack: error.stack,;}
+        componentStack: errorInfo.componentStack,}
         timestamp: new Date().toISOString()
       }
       // Send to your error reporting service here
       // // console.log('Error data prepared for reporting:', errorData)
-    } catch {
-      // Error reporting failed
+    } catch {// Error reporting failed
     }
   }
-
-  handleRetry= () => {this.setState({
-      hasError: false,
-      error: null,
+;"
+  handleRetry="()" => {this.setState({
+      hasError: false,;}
+      error: null,});
       errorInfo: null
    })
   }
-
-  handleGoHome= () => {windo w.location.href= '/'
+;"
+  handleGoHome="()" => {windo w.location.href="'/'"
  }
-
-  render() {if (this.state.hasError) {
-      if (this.props.fallback) {
+;
+  render() {if (this.state.hasError) {}
+      if (this.props.fallback) {}
         return thi s.props.fallback
      }
 
@@ -191,7 +184,7 @@ const ErrorHandlerPage: React.FC = () => {
             </butto></di></di></di>
       )
     }
-
+;
     return thi s.props.children
   }
 }
@@ -234,9 +227,9 @@ const ErrorHandlerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
-
-export default ErrorHandlerPage;
+;
+export default ErrorHandlerPage;"
