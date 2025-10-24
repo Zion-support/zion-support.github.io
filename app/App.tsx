@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 
-const App = () => {}
-  return ()
+const App = () => {
+  return (
     <div className="min-h-screen bg-gray-100 py-8">
         </div>
         </div>
