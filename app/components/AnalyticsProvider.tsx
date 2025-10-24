@@ -1,14 +1,55 @@
 <<<<<<< HEAD
+'use client';
+
+import { createContext, useContext, useEffect, useState } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
+=======
+<<<<<<< HEAD
 import { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
+>>>>>>> origin/main
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+<<<<<<< HEAD
+export function useAnalytics() {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+}
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  useEffect(() => {
+    // Initialize analytics
+    // Analytics initialization logic here
+  }, []);
+
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
+    }
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href,
+=======
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
@@ -31,10 +72,18 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         user_id: userId,
         custom_map: traits
+>>>>>>> origin/main
       });
     }
   };
 
+<<<<<<< HEAD
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+  };
+
+=======
   const page = (name: string, properties?: Record<string, any>) => {
     console.log('Analytics Page:', name, properties);
     
@@ -134,10 +183,22 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   }
 >>>>>>> origin/main
 
+>>>>>>> origin/main
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+<<<<<<< HEAD
+  );
+}
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+=======
 <<<<<<< HEAD
   );
 };
@@ -160,4 +221,5 @@ export default AnalyticsProvider
 };
 
 export default AnalyticsProviderPage;
+>>>>>>> origin/main
 >>>>>>> origin/main

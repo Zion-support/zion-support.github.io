@@ -1,60 +1,58 @@
-<<<<<<< HEAD
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, BarChart, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, Shield } from 'lucide-react';
+import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap } from 'lucide-react';
 
-const EnhancedSEOOptimizer: React.FC = () => {
+const AnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: <Search className="w-8 h-8 text-cyan-400" />,
-      title: 'AI-Powered SEO Analysis',
-      description: 'Advanced AI technology to automatically analyze and optimize your website for search engines.'
+      icon: <BarChart className="w-8 h-8 text-cyan-400" />,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive data analysis and visualization tools for deep business insights.'
     },
     {
-      icon: <BarChart className="w-8 h-8 text-purple-400" />,
-      title: 'Real-time Performance Tracking',
-      description: 'Monitor your SEO performance with real-time analytics and detailed reporting.'
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+      title: 'Performance Tracking',
+      description: 'Real-time performance monitoring and trend analysis across all business metrics.'
     },
     {
       icon: <Brain className="w-8 h-8 text-green-400" />,
-      title: 'Intelligent Content Optimization',
-      description: 'AI-driven content suggestions to improve your search rankings and user engagement.'
+      title: 'AI-Powered Insights',
+      description: 'Machine learning algorithms that identify patterns and predict future trends.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
-      title: 'Automated Technical SEO',
-      description: 'Automatically fix technical SEO issues and optimize your website structure.'
+      icon: <Target className="w-8 h-8 text-orange-400" />,
+      title: 'Custom Dashboards',
+      description: 'Personalized dashboards tailored to your specific business needs and KPIs.'
     }
   ];
 
   const benefits = [
-    'Increase organic traffic by 50%',
-    'Improve search rankings',
-    'Boost click-through rates',
-    'Enhance user experience',
-    'Reduce bounce rates',
-    'Generate more qualified leads'
+    'Make data-driven decisions with confidence',
+    'Identify growth opportunities and trends',
+    'Optimize business performance in real-time',
+    'Reduce manual reporting by 80%',
+    'Predict future outcomes with AI',
+    'Custom analytics for your industry'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Helmet>
-        <title>Enhanced SEO Optimizer - Zion Tech Group | SEO Solutions</title>
-        <meta name="description" content="Transform your website's SEO with our enhanced SEO optimizer. Improve rankings, increase traffic, and boost your online visibility." />
-        <meta name="keywords" content="SEO optimization, search engine optimization, SEO tools, website optimization, SEO analysis" />
+        <title>Analytics - Zion Tech Group | Advanced Business Intelligence</title>
+        <meta name="description" content="Transform your business with advanced analytics and business intelligence solutions. Get insights that drive growth and optimize performance." />
+        <meta name="keywords" content="business analytics, data analysis, business intelligence, performance tracking, data visualization" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Enhanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">SEO Optimizer</span>
+            Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Analytics</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your website's SEO with our enhanced SEO optimizer. Improve rankings, increase traffic, and boost your online visibility.
+            Transform your business with advanced analytics and business intelligence solutions. Get insights that drive growth and optimize performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -65,10 +63,10 @@ const EnhancedSEOOptimizer: React.FC = () => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/it-services"
+              to="/ai-services"
               className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
-              View All IT Services
+              View All AI Services
             </Link>
           </div>
         </div>
@@ -79,10 +77,10 @@ const EnhancedSEOOptimizer: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced SEO Optimization Features
+              Powerful Analytics Features
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our enhanced SEO optimizer provides comprehensive tools to improve your website's search engine performance.
+              Our analytics platform provides comprehensive tools to transform your data into actionable business insights.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -105,10 +103,10 @@ const EnhancedSEOOptimizer: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our SEO Optimizer?
+                Why Choose Our Analytics Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Our enhanced SEO optimizer helps you achieve better search rankings, increase organic traffic, and grow your online presence.
+                Our advanced analytics platform helps you unlock the power of your data and make informed decisions that drive business growth.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -127,7 +125,7 @@ const EnhancedSEOOptimizer: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Intelligence</h3>
                   <p className="text-gray-300">
-                    Our AI analyzes your website and automatically optimizes it for search engines, saving you time and improving results.
+                    Our AI algorithms analyze your data patterns and automatically generate insights and recommendations for optimal business performance.
                   </p>
                 </div>
               </div>
@@ -140,24 +138,24 @@ const EnhancedSEOOptimizer: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Boost Your SEO Performance?
+            Ready to Transform Your Data into Insights?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Join thousands of businesses already using our SEO optimizer to improve their search rankings and grow their online presence.
+            Join thousands of businesses already using our analytics platform to make better decisions and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              Start Your SEO Optimization
+              Start Your Analytics Journey
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
-              to="/it-services" 
+              to="/ai-services" 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
-              Explore All IT Services
+              Explore All AI Services
             </Link>
           </div>
         </div>
@@ -166,54 +164,4 @@ const EnhancedSEOOptimizer: React.FC = () => {
   );
 };
 
-export default EnhancedSEOOptimizer;
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
-
-const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-                </div>
-              ))}
-            </div>
-          </div>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-            </div>
-          </div>
->>>>>>> origin/main
+export default AnalyticsPage;

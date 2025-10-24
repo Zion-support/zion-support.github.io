@@ -1,60 +1,58 @@
-<<<<<<< HEAD
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, BarChart, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, Shield } from 'lucide-react';
+import { ArrowRight, Cloud, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Shield } from 'lucide-react';
 
-const EnhancedSEOOptimizer: React.FC = () => {
+const CloudMigrationProPage: React.FC = () => {
   const features = [
     {
-      icon: <Search className="w-8 h-8 text-cyan-400" />,
-      title: 'AI-Powered SEO Analysis',
-      description: 'Advanced AI technology to automatically analyze and optimize your website for search engines.'
+      icon: <Cloud className="w-8 h-8 text-cyan-400" />,
+      title: 'Seamless Cloud Migration',
+      description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.'
     },
     {
-      icon: <BarChart className="w-8 h-8 text-purple-400" />,
-      title: 'Real-time Performance Tracking',
-      description: 'Monitor your SEO performance with real-time analytics and detailed reporting.'
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      title: 'Security & Compliance',
+      description: 'Ensure your cloud infrastructure meets the highest security standards and compliance requirements.'
     },
     {
       icon: <Brain className="w-8 h-8 text-green-400" />,
-      title: 'Intelligent Content Optimization',
-      description: 'AI-driven content suggestions to improve your search rankings and user engagement.'
+      title: 'AI-Powered Optimization',
+      description: 'Leverage AI to optimize your cloud resources and reduce costs while improving performance.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
-      title: 'Automated Technical SEO',
-      description: 'Automatically fix technical SEO issues and optimize your website structure.'
+      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      title: 'Custom Solutions',
+      description: 'Tailored cloud migration strategies that fit your specific business needs and requirements.'
     }
   ];
 
   const benefits = [
-    'Increase organic traffic by 50%',
-    'Improve search rankings',
-    'Boost click-through rates',
-    'Enhance user experience',
-    'Reduce bounce rates',
-    'Generate more qualified leads'
+    'Reduce infrastructure costs by 40%',
+    'Improve scalability and flexibility',
+    'Enhance security and compliance',
+    'Increase system reliability',
+    'Enable remote work capabilities',
+    'Future-proof your technology stack'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Helmet>
-        <title>Enhanced SEO Optimizer - Zion Tech Group | SEO Solutions</title>
-        <meta name="description" content="Transform your website's SEO with our enhanced SEO optimizer. Improve rankings, increase traffic, and boost your online visibility." />
-        <meta name="keywords" content="SEO optimization, search engine optimization, SEO tools, website optimization, SEO analysis" />
+        <title>Cloud Migration Pro - Zion Tech Group | Professional Cloud Migration</title>
+        <meta name="description" content="Transform your business with professional cloud migration services. Seamlessly migrate to the cloud with zero downtime and enhanced security." />
+        <meta name="keywords" content="cloud migration, cloud services, cloud computing, cloud infrastructure, cloud security" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Enhanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">SEO Optimizer</span>
+            Cloud Migration <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pro</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your website's SEO with our enhanced SEO optimizer. Improve rankings, increase traffic, and boost your online visibility.
+            Transform your business with professional cloud migration services. Seamlessly migrate to the cloud with zero downtime and enhanced security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -79,10 +77,10 @@ const EnhancedSEOOptimizer: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced SEO Optimization Features
+              Professional Cloud Migration Services
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our enhanced SEO optimizer provides comprehensive tools to improve your website's search engine performance.
+              Our cloud migration experts provide comprehensive solutions to move your business to the cloud safely and efficiently.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -105,10 +103,10 @@ const EnhancedSEOOptimizer: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our SEO Optimizer?
+                Why Choose Our Cloud Migration Services?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Our enhanced SEO optimizer helps you achieve better search rankings, increase organic traffic, and grow your online presence.
+                Our cloud migration experts help you leverage the power of cloud computing to reduce costs, improve scalability, and enhance security.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -125,9 +123,9 @@ const EnhancedSEOOptimizer: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
                     <Brain className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Intelligence</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">Expert Migration</h3>
                   <p className="text-gray-300">
-                    Our AI analyzes your website and automatically optimizes it for search engines, saving you time and improving results.
+                    Our experienced team ensures a smooth, secure, and cost-effective migration to the cloud with minimal business disruption.
                   </p>
                 </div>
               </div>
@@ -140,17 +138,17 @@ const EnhancedSEOOptimizer: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Boost Your SEO Performance?
+            Ready to Move to the Cloud?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Join thousands of businesses already using our SEO optimizer to improve their search rankings and grow their online presence.
+            Join thousands of businesses already using our cloud migration services to transform their infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              Start Your SEO Optimization
+              Start Your Cloud Migration
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
@@ -166,54 +164,4 @@ const EnhancedSEOOptimizer: React.FC = () => {
   );
 };
 
-export default EnhancedSEOOptimizer;
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
-
-const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-                </div>
-              ))}
-            </div>
-          </div>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-            </div>
-          </div>
->>>>>>> origin/main
+export default CloudMigrationProPage;

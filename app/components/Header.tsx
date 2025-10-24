@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+import Navigation from './Navigation';
+
+const Header: React.FC = () => {
+  return (
+    <header>
+      <Navigation />
+    </header>
+  );
+};
+
+export default Header;
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -118,3 +132,4 @@ export default HeaderPage;
   )
 }
 export default Header
+>>>>>>> origin/main
