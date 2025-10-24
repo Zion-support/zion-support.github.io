@@ -74,7 +74,7 @@ const nextConfig = {
   experimental: {
     missingSuspenseWithCSRBailout: false,
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB']
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
   
   // Webpack optimizations
@@ -98,11 +98,12 @@ const nextConfig = {
         ...config.resolve.fallback,
         fs: false,
         net: false,
-        tls: false
+        tls: false,
       };
     }
     
     return config;
   },
 }
+
 module.exports = nextConfig;

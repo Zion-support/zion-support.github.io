@@ -1,253 +1,88 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-;
-// Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-;
-    // Check if file has merge conflict markers;
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {;
-      return false; // No conflicts to fix;
-    }
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-;
-    // Split content by lines;
-    const lines = content.split('\n');
-=======
 #!/usr/bin/env node
 
-const fs = require('fs");"'"
-const path = require('path");
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix merge conflicts in a file"
-function fixMergeConflicts(filePath) {"
-  try {"'"
-    let content = fs.readFileSync(filePath, 'utf8");"
-    "
-    // Check if file has merge conflict markers"'"
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>")) {
-      return false; // No conflicts to fix
-    }
+// Function to clean merge conflicts and syntax errors
+function cleanFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    console.log(`Fixing merge conflicts in: ${filePath}`);"
-    "
-    // Split content by lines"'"
-    const lines = content.split('\n");
->>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
-    const fixedLines = [];
-    let inConflict = false;
-    let conflictType = null;
-<<<<<<< HEAD
+    // Remove merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-<<<<<<< HEAD
-    for (let i = 0; i < lines.length; i++) {
-=======
-;
-    for (let i = 0; i < lines.length; i++) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-      const line = lines[i];
-;
-      if (line.includes('<<<<<<< HEAD')) {;
-        inConflict = true;
-        conflictType = 'head'
-        continue; // Skip this line;
-      } else if (line.includes('=======')) {;
-        conflictType = 'separator'
-        continue; // Skip this line;
-      } else if (line.includes('>>>>>>>')) {;
-        inConflict = false;
-        conflictType = null;
-<<<<<<< HEAD
-        continue; // Skip this line
-      }
-      
-      if (inConflict) {
-        // We're inside a conflict block
-        if (conflictType === 'head') {
-=======
-    for (let i = 0; i < lines.length; i++) {"
-      const line = lines[i];"
-      "'"
-      if (line.includes('<<<<<<< HEAD")) {"
-        inConflict = true;"'"
-        conflictType = 'head";"
-        continue; // Skip the conflict marker"'"
-      } else if (line.includes('=======")) {"'"
-        conflictType = 'separator";"
-        continue; // Skip the separator"'"
-      } else if (line.includes('>>>>>>>")) {
-        inConflict = false;
-        conflictType = null;
-        continue; // Skip the end marker
-      }"
-      "
-      if (inConflict) {"'"
-        if (conflictType === 'head") {
->>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
-          // Keep the HEAD version (before =======)
-          fixedLines.push(line);
-        }
-        // Skip the other branch (after =======)
-      } else {
-<<<<<<< HEAD
-        // Normal line, keep it
-        fixedLines.push(line);
-=======
-        continue; // Skip this line;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-      }
-      if (inConflict) {;
-        // We're inside a conflict block;
-        if (conflictType === 'head') {;
-          // Keep the HEAD version (before =======);
-          fixedLines.push(line)}
-        // Skip the other branch (after =======);
-      } else {;
-        // Normal line, keep it;
-        fixedLines.push(line)}
-    }
-    // Join lines back together;
-    const fixedContent = fixedLines.join('\n');
-;
-    // Write the fixed content back to the file;
-    fs.writeFileSync(filePath, fixedContent, 'utf8');
-<<<<<<< HEAD
-    return true;
+    // Fix common syntax errors
+    // Remove extra quotes and semicolons
+    content = content.replace(/;\"/g, '"');
+    content = content.replace(/\"\"/g, '"');
+    content = content.replace(/;\n/g, '\n');
+    content = content.replace(/;\s*$/gm, '');
     
-=======
-        // Not in conflict, keep the line
-        fixedLines.push(line);
-      }
-    }"
-    "
-    // Write the fixed content back"'"
-    const fixedContent = fixedLines.join('\n");"'"
-    fs.writeFileSync(filePath, fixedContent, 'utf8");
+    // Fix JSX syntax errors
+    content = content.replace(/<div>\s*<Head>/g, '<div>\n      <Head>');
+    content = content.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
     
-    return true; // Conflicts were fixed
->>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
+    // Fix import statements
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm, "import { $1 } from '$2';");
+    
+    // Fix function declarations
+    content = content.replace(/export default function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<div>/g, 'export default function $1() {\n  return (\n    <div>');
+    
+    // Fix closing tags and parentheses
+    content = content.replace(/\)\s*}\s*;?\s*$/gm, '  );\n}');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/gm, '');
+    
+    // Fix specific patterns
+    content = content.replace(/const NotFound = \(return \(<>;/g, 'const NotFound = () => {\n  return (\n    <>');
+    content = content.replace(/from from /g, 'from ');
+    content = content.replace(/;\s*$/gm, '');
+    
+    // Fix JSX closing tags
+    content = content.replace(/<\/div>\s*\)\s*;\s*$/gm, '</div>\n  );\n}');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-=======
-    return true} catch (error) {;`
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false}
+  }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-// Function to recursively find all .tsx and .ts files
+// Function to find all TypeScript/JSX files
 function findTsxFiles(dir) {
-=======
-// Function to recursively find all .tsx and .ts files;
-function findTsxFiles(dir) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   const files = [];
-;
-  function traverse(currentDir) {;
+  
+  function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-;
-    for (const item of items) {;
+    
+    for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
       
-      if (stat.isDirectory()) {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         files.push(fullPath);
-=======
-// Function to recursively find and fix all files with merge conflicts
-function fixAllMergeConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    "
-    if (stat.isDirectory()) {"
-      // Skip node_modules and other common directories"'"
-      if (['node_modules', '.git', '.next', 'dist', 'build"].includes(file)) {
-        continue;"
-      }"
-      fixedCount += fixAllMergeConflicts(filePath);"'"
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx")) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
->>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
       }
     }
   }
   
-<<<<<<< HEAD
-=======
-;
-      if (stat.isDirectory()) {;
-        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {;
-        files.push(fullPath)}
-    }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   traverse(dir);
-  return files}
-// Main execution;
-console.log('Starting merge conflict resolution...');
-;
-const appDir = '/workspace/app'
-const files = findTsxFiles(appDir);
-;
-let fixedCount = 0;
-let errorCount = 0;
-;`
-console.log(`Found ${files.length} TypeScript files to check`);
-;
-for (const file of files) {;
-  try {;
-    const wasFixed = fixMergeConflicts(file);
-    if (wasFixed) {;
-      fixedCount++}
-  } catch (error) {;`
-    console.error(`Error processing ${file}:`, error.message);
-<<<<<<< HEAD
-    errorCount++;
-  }
+  return files;
 }
 
-console.log(`\nMerge conflict resolution complete!`);
-console.log(`Files fixed: ${fixedCount}`);
-console.log(`Errors: ${errorCount}`);
-console.log(`Total files processed: ${files.length}`);
-=======
-  return fixedCount;
-}"
-"
-// Main execution"'"
-console.log('Starting merge conflict resolution...");"'"
-const fixedCount = fixAllMergeConflicts('/workspace/app");
-console.log(`Fixed merge conflicts in ${fixedCount} files`);"
-"
-// Also check other directories"'"
-const otherDirs = ['/workspace/components', '/workspace/api"];
-let totalFixed = fixedCount;
+// Main execution
+console.log('Starting merge conflict cleanup...');
 
-for (const dir of otherDirs) {
-  if (fs.existsSync(dir)) {
-    const count = fixAllMergeConflicts(dir);
-    totalFixed += count;
-    console.log(`Fixed merge conflicts in ${count} files in ${dir}`);
-  }
-}"
-"
-console.log(`Total files fixed: ${totalFixed}`);"'"
->>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
-=======
-    errorCount++}
-}`
-console.log(`\nMerge conflict resolution complete!`);`
-console.log(`Files fixed: ${fixedCount}`);`
-console.log(`Errors: ${errorCount}`);`
-console.log(`Total files processed: ${files.length}`);`'
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+const files = findTsxFiles('/workspace');
+console.log(`Found ${files.length} TypeScript/JSX files to process`);
+
+files.forEach(file => {
+  cleanFile(file);
+});
+
+console.log('Merge conflict cleanup completed!');

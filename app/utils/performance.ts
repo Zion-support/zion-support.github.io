@@ -1,91 +1,74 @@
-import React from 'react'
-
-// Performance monitoring utilities
-
-export class PerformanceMonitor {
-  private timings: Map<string, number> = new Map()
-  private marks: Map<string, number> = new Map()
-
-  startTiming(name: string) {
-    this.timings.set(name, performance.now())
-  }
-
-  endTiming(name: string): number {
-    const startTime = this.timings.get(name)
-    if (startTime) {
-      const duration = performance.now() - startTime
-      this.timings.delete(name)
-      return duration
-    }
-    return 0
-  }
-
-  mark(name: string) {
-    this.marks.set(name, performance.now())
-  }
-
-  measure(name: string, startMark: string, endMark?: string): number {
-    const startTime = this.marks.get(startMark)
-    const endTime = endMark ? this.marks.get(endMark) : performance.now()
-    
-    if (startTime && endTime) {
-      return endTime - startTime
-    }
-    return 0
-  }
-
-  getMemoryUsage() {
-    if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize / 1024 / 1024 // MB
-    }
-    return 0
-  }
-
-  getNavigationTiming() {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-    return {
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-      totalTime: navigation.loadEventEnd - navigation.fetchStart
-    }
-  }
+  private static instance: PerformanceMonitor
+  private metrics: Map<string, number> = new Map()
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor(    )
 }
-
-const performanceMonitor = new PerformanceMonitor()
-
-export const usePerformanceMonitor = () => {
-  const startTiming = (name: string) => {
-    performanceMonitor.startTiming(name)
+    return PerformanceMonitor.instance}
+  startTiming(label: string): void {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(`${label}-start`    )
+}
   }
-
-  const endTiming = (name: string) => {
-    return performanceMonitor.endTiming(name)
-  }
-
-  const mark = (name: string) => {
-    performanceMonitor.mark(name)
-  }
-
-  const measure = (name: string, startMark: string, endMark?: string) => {
-    return performanceMonitor.measure(name, startMark, endMark)
-  }
-
-  const getMemoryUsage = () => {
-    return performanceMonitor.getMemoryUsage()
-  }
-
-  const getNavigationTiming = () => {
-    return performanceMonitor.getNavigationTiming()
-  }
-
+  endTiming(label: string): number {
+    if (typeof window !== 'undefined' && 'performance' in window) {;`
+      performance.mark(`${label}-end`);`
+      performance.measure(label, `${label}-start`, `${label}-end`)
+      const measure = performance.getEntriesByName(label)[0]
+      const duration = measure ? measure.duration : 0
+      this.metrics.set(label, duration)
+      return duration}
+    return 0}
+  getMetric(label: string): number | undefined {
+    return this.metrics.get(label    )
+}
+  getAllMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics    )
+}
+  clearMetrics(): void {
+    this.metrics.clear(    )
+}
+  // Web Vitals monitoring
+  measureWebVitals(): void {
+    if (typeof window === 'undefined') return
+    // Largest Contentful Paint
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries()
+      const lastEntry = entries[entries.length - 1]
+      this.metrics.set('LCP', lastEntry.startTime)}).observe({ entryTypes: ['largest-contentful-paint'] })
+    // First Input Delay
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries()
+    let clsValue = 0
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries()
+      entries.forEach((entry) => {
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value}
+      })
+      this.metrics.set('CLS', clsValue)}).observe({ entryTypes: ['layout-shift'] }    )
+}
+}
+// Hook for React components
+export function usePerformanceMonitor() {
+  const monitor = PerformanceMonitor.getInstance()
   return {
-    startTiming,
-    endTiming,
-    mark,
-    measure,
-    getMemoryUsage,
-    getNavigationTiming
-  }
+    startTiming: monitor.startTiming.bind(monitor),
+    endTiming: monitor.endTiming.bind(monitor),
+    getMetric: monitor.getMetric.bind(monitor),
+    getAllMetrics: monitor.getAllMetrics.bind(monitor    )
 }
-
-export default performanceMonitor
+}
+// Utility function to measure component render time
+export function measureComponentRender(componentName: string) {
+  return function <T extends React.ComponentType<any>>(WrappedComponent: T): T {
+    return ((props: any) => {
+      const monitor = PerformanceMonitor.getInstance()
+      React.useEffect(() => {;`
+        monitor.startTiming(`${componentName}-render`)
+        return () => {;`
+          monitor.endTiming(`${componentName}-render`    )
+}
+      })
+      return React.createElement(WrappedComponent, props)}) as T}
+}`'
