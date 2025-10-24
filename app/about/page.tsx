@@ -15,27 +15,27 @@ export const metadata: Metadata = {
   }
 };
 
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   const values = [
     {
-      icon: Brain,
+      icon: <Brain className="w-8 h-8 text-blue-600" />,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
+      description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.'
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-8 h-8 text-green-600" />,
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with localized support and expertise.'
+      icon: <Users className="w-8 h-8 text-purple-600" />,
+      title: 'Collaboration',
+      description: 'We work closely with your team to understand your unique business needs.'
     },
     {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs.'
+      icon: <Globe className="w-8 h-8 text-orange-600" />,
+      title: 'Global Reach',
+      description: 'Serving clients worldwide with scalable, cloud-based solutions.'
     }
   ];
 
@@ -46,17 +46,12 @@ const AboutPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
-export default function AboutPage() {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
         <p className="text-lg text-gray-600 mb-6">
-          We are a leading provider of AI and IT solutions, helping businesses transform 
-          their operations through cutting-edge technology.
-        </p>
-        <p className="text-lg text-gray-600">
-          Our team of experts is dedicated to delivering innovative solutions that drive 
+          We are a leading technology company specializing in AI and IT solutions that drive
           growth and efficiency for our clients.
         </p>
       </div>
