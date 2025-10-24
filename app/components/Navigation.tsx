@@ -4,6 +4,22 @@ import { Home, Info, Briefcase, Phone, GraduationCap, X, Menu } from 'lucide-rea
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+<<<<<<< HEAD
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  ChevronDownIcon
+} from '@heroicons/react/24/outline';
+import { X } from 'lucide-react';;
+
+=======
+>>>>>>> origin/main
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

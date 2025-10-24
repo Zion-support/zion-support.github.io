@@ -1,6 +1,11 @@
 import type { Metadata} from 'next';
 import { Inter} from 'next/font/google';
 import './globals.css';
+<<<<<<< HEAD
+// import Navigation from './components/Navigation';
+// import Footer from './components/Footer';
+=======
+>>>>>>> origin/main
 import Analytics from './components/Analytics';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';

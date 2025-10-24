@@ -185,7 +185,7 @@ class MonitoringService {
     }
   }
 
-  public logError(error: ErrorReport): void {
+  public logError(_error: ErrorReport): void {
     this.errors.push(error)
     // Keep only last 50 errors
     if (this.errors.length > 50) {

@@ -1,5 +1,8 @@
 "use client";
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';

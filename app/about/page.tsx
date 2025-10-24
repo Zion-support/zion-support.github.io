@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 import Link from 'next/link';
 import { Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+import { CheckCircle, Users, Target, Award, ArrowRight, Check } from 'lucide-react';;
+=======
 import { CheckCircle, Users, Target, Award, ArrowRight, } from 'lucide-react';
+>>>>>>> origin/main
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group',

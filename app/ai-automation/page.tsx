@@ -1,6 +1,10 @@
 'use client';
 import { Zap, Brain, Globe, Users, BarChart, MessageCircle, FileText, TrendingUp, Clock, Star, ArrowRight, CheckCircle, Cpu, Settings, Shield } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { ArrowRight, CheckCircle, Cpu, Check, Zap, Brain, Settings, Globe, Users, BarChart, MessageCircle, FileText, TrendingUp, Clock, Shield, Star } from 'lucide-react';;
+=======
+>>>>>>> origin/main
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
