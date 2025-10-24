@@ -1,7 +1,8 @@
 'use client'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
 import { Users, Zap, Shield } from 'lucide-react'
 
 const HomePage: React.FC = () => {
@@ -33,6 +34,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Navigation />
+      <PerformanceOptimizer />
       
       <main className="pt-16">
         {/* Hero Section */}
