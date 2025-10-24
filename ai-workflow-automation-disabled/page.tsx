@@ -139,7 +139,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-const AIWorkflowAutomationPage2: React.FC = () => {
+const AIWorkflowAutomationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
@@ -276,4 +276,4 @@ const AIWorkflowAutomationPage2: React.FC = () => {
   );
 };
 
-export default AIWorkflowAutomationPage2;
+export default AIWorkflowAutomationPage;

@@ -1,97 +1,94 @@
-import React from 'react';
-import { AlertTriangle, Home, Mail, RefreshCw } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
 
 interface AdvancedErrorBoundaryProps {
-  children: ReactNode
-  );
-  className?: string
-  );
-  children: ReactNode
-  );
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
-  );
+  children: ReactNode;
+  className?: string;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface ErrorReport {
-  errorId: string
-  );
-  error: Error
-  );
+  errorId: string;
+  error: Error;
+  errorInfo: ErrorInfo;
+  timestamp: string;
+  userAgent: string;
+  url: string;
 }
 
 interface State {
-  hasError: boolean
-  );
-  error?: Error
-  );
-  errorInfo?: ErrorInfo
-  );
-  errorId?: string
-  );
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
-  constructor(props: "AdvancedErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false "}
-
+  constructor(props: AdvancedErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  private reportError = (error: "Error", errorInfo: "ErrorInfo) => {
-    const errorReport = {
-      errorId: this.state.errorId || this.generateErrorId()"
-      error
-      errorInfo
-      timestamp: "new Date().toISOString()",
-    userAgent: "navigator.userAgent"
-      url: "window.location.href"
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport: ErrorReport = {
+      errorId: this.state.errorId || this.generateErrorId(),
+      error,
+      errorInfo,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
+
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error Boundary caught an error:', error, errorInfo);
     }
+  };
 
-    //Log to console in development
-    if(process.env.NODE_ENV = == "development") {  
-      console.error("Error Boundary caught an error: """, error, errorInfo)
-  }
-
-  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      hasError: true"
-      error
-      errorInfo)
-    })
+      hasError: true,
+      error,
+      errorInfo
+    });
+    
     // Call custom error handler if provided
-  );
-    if (this.props.onError) {}
-      this.props.onError(error, errorInfo)
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
     }
+    
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)
+      console.error('Error caught by boundary:', error, errorInfo);
     }
-    // Log error to external service in production;"
-    if (process.env.NODE_ENV="==" 'production') {}
-      this.logErrorToService(error, errorInfo
-  );
-}
+    
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo);
+    }
+  }
+
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
       errorId: this.state.errorId,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
       error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString()
-    }
+    };
     
     // Send to external service (implement as needed)
-    console.error('Error logged to service:', errorData)
-  }
+    console.error('Error logged to service:', errorData);
+  };
 
-    return`error_${Date.now()_${Math.random().toString(36).substr(2, 9)`
-  }
+  generateErrorId = (): string => {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  };
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
   render() {
     if (this.state.hasError) {
@@ -111,16 +108,20 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-              <button onClick={() => window.location.href="/"} > <Home className="icon" />
+              <button 
+                onClick={() => window.location.href = "/"}
+                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+              >
+                <Home className="h-4 w-4 mr-2" />
                 Go Home
               </button>
             </div>
           </div>
         </div>
-      )
-   , }
+      );
+    }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 

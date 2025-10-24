@@ -118,7 +118,7 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-const AICustomerSupportPage2: React.FC = () => {
+const AICustomerSupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
@@ -249,4 +249,4 @@ const AICustomerSupportPage2: React.FC = () => {
   );
 };
 
-export default AICustomerSupportPage2;
+export default AICustomerSupportPage;
