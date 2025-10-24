@@ -1,16 +1,15 @@
-/**
- * Sitemap Generator()
- * Generates sitemap and robots.txt for SEO optimization()
+/**;
+ * Sitemap Generator();
+ * Generates sitemap and robots.txt for SEO optimization();
  */;
-export interface SitemapEntry { 
+export interface SitemapEntry {;
 ;
-  "loc": string,
-  "lastmod": string,
-  "changefreq": string,
-  "priority": number()
-, }
+  "loc": string,"
+  "lastmod": string,"
+  "changefreq": string,"
+  "priority": number();
 }
 }
-;
-export const generateSitemap = (): SitemapEntry[] => {;,}
-  const baseUrl = '"https": //ziontechgroup.com'';
+}"
+export const generateSitemap = (): SitemapEntry[] => {}"
+  const baseUrl = '"https": //ziontechgroup.com'';";'"

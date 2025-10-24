@@ -1,37 +1,35 @@
-'use client';
-import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe     ;} from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from from 'react-helmet-async'
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from from 'lucide-react'
 import Navigation from '../components/Navigation'
-const EnhancedPerformanceMonitorPage: "React.FC = () => {
-const benefits = [
+const EnhancedPerformanceMonitorPage: "React.FC = () => {;"
+const benefits = [";'"
     'Increase efficiency by up to 50%'",'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology',
-    <divclassName="flex flex-col sm: flex-row gap-4 justify-center" />
-
+    'Scale operations without proportional staff increases';'"
+    'Gain competitive advantage with advanced technology',"
+    <div className="flex flex-col sm: flex-row gap-4 justify-center"  />
         </section>
-
-        {/* Features Section */,}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<divclassName="max-w-7 xl mx-auto" />,
-    <divclassName="text-center mb-16" />,
+        {/* Features Section */}"
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-7 xl mx-auto" />,"
+    <div className="text-center mb-16" />,"
     <h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
-Key Features
+Key Features;"
               </h2>
-              <pclassName="text-xl text-gray-300 max-w-3 xl mx-auto" />
-Our enhanced performance monitoring system provides comprehensive insights and optimization.
-              </p>,<divclassName="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8" />
-              {features.map((feature,index) => (
-                <divkey = {index,} className="bg-gray-800 rounded-lg p-6 hover: bg-gray-700 transition-colors" />
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />,<h1 className="text-xl font-semibold text-white mb-3">{feature.title,}</h3>
-                  <p className = "text-gray-300 mb-4">{feature.description,}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key = {idx,} className = "flex items-center text-sm text-gray-400">
-                        <CheckCircleclassName="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit,}
-                      </li>
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto"  />"
+Our enhanced performance monitoring system provides comprehensive insights and optimization."
+              </p>,<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"  />"
+              {features.map((feature,index) => ("
+                <divkey = {index} className="bg-gray-800 rounded-lg p-6 hover: bg-gray-700 transition-colors" />"
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />,<h1 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">);"
+                    {feature.benefits.map((benefit, idx) => ("
+                      <li key = {idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0"  />;
+                        {benefit}
+                      </li>);
                     ))}
                   </ul>
                   </div>
@@ -39,42 +37,40 @@ Our enhanced performance monitoring system provides comprehensive insights and o
               </div>
             </div>
         </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800">,<divclassName="max-w-7 xl mx-auto" />,
-    <divclassName="text-center mb-16" />,
+        {/* Benefits Section */}"
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800">,<div className="max-w-7 xl mx-auto" />,"
+    <div className="text-center mb-16" />,"
     <h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
-Why Choose Our Performance Monitor?
+Why Choose Our Performance Monitor?;"
               </h2>
-              <pclassName="text-xl text-gray-300 max-w-3 xl mx-auto" />
-Experience the benefits of advanced performance monitoring with our comprehensive solution.
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto"  />
+Experience the benefits of advanced performance monitoring with our comprehensive solution.;"
               </p>
-              </div>,<divclassName="grid grid-cols-1 md: grid-cols-2 gap-6" />
-              {benefits.map((benefit,index) => (
-                <divkey = {index,;} className = "flex items-start space-x-3" />
-                  <CheckCircleclassName="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit,;}</p>
-                  </div>
-              ));}
+              </div>,<div className="grid grid-cols-1 md: grid-cols-2 gap-6"  />"
+              {benefits.map((benefit,index) => ("
+                <divkey = {index} className="flex items-start space-x-3" />"
+                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />"
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                  </div>);
+              ))}
               </div>
             </div>
         </section>
-
-        {/* CTA Section */;}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">,<divclassName="max-w-4 xl mx-auto text-center" />,
-    <divclassName="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
-Ready to Optimize Your Performance?
+        {/* CTA Section */}"
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-4 xl mx-auto text-center" />,"
+    <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
+Ready to Optimize Your Performance?;"
               </h2>
-              <pclassName="text-xl text-purple-100 mb-8" />
-Get started with our enhanced performance monitoring solution today.
-              </p>,<divclassName="flex flex-col sm: flex-row gap-4 justify-center" />
+              <p className="text-xl text-purple-100 mb-8"  />"
+Get started with our enhanced performance monitoring solution today."
+              </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />"
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  <PhoneclassName="mr-2 h-5 w-5 inline" />
-Call Now
+                  <Phone className="mr-2 h-5 w-5 inline"  />;
+Call Now;"
                 </button>
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  <MailclassName="mr-2 h-5 w-5 inline" />
-Email Us
+                  <Mail className="mr-2 h-5 w-5 inline"  />;
+Email Us;
                 </button>
                 </div>
               </div>
@@ -82,7 +78,6 @@ Email Us
         </section>
         </div>
       </div>
-  );
-,};
-export default EnhancedPerformanceMonitorPage;
-}
+  )}
+export default EnhancedPerformanceMonitorPage}"
+";'"

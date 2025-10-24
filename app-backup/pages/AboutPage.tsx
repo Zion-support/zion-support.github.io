@@ -1,28 +1,27 @@
-import React from 'react';
-import { Helmet     ;} from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from from 'react-helmet-async'
 import Link from 'next/link'
-;} from '@heroicons/react/24/outline'
-    "title": 'Mission-Driven'
-      "description": 'We are committed to delivering innovative solutions that drive real business value and transformation.'
-    "title": 'Client-Focused'
-      "description": 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'
-    "title": 'Excellence'
-      "description": 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'
-    "title": 'Innovation'
-      "description": 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
-    "title": 'Integrity'
-      "description": 'We conduct business, with, honesty, transparency, and ethical practices in all our interactions.'
-    "title": 'Agility'
-    "description": 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
-      "name": 'Kleber Santos'
-    "role": 'CEO & Founder'
-      "description": 'Visionary leader with 15+ years in AI and technology innovation.'
-      "name": 'Sarah Johnson'
-    "role": 'CTO'
-      "description": 'Technical expert specializing in cloud architecture and AI implementation.'
-      "name": 'Michael Chen'
-    "role": 'Head of Security'
-      "description": 'Cybersecurity specialist with expertise in enterprise security solutions.'
-      "name": 'Emily Rodriguez'
-    "role": 'Lead AI Engineer';
-    "description": 'Machine learning expert focused on developing cutting-edge AI solutions.'
+} from '@heroicons/react/24/outline'
+    "title": 'Mission-Driven'";'"
+      "description": 'We are committed to delivering innovative solutions that drive real business value and transformation.'";'"
+    "title": 'Client-Focused'";'"
+      "description": 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'";'"
+    "title": 'Excellence'";'"
+      "description": 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'";'"
+    "title": 'Innovation'";'"
+      "description": 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'";'"
+    "title": 'Integrity'";'"
+      "description": 'We conduct business, with, honesty, transparency, and ethical practices in all our interactions.'";'"
+    "title": 'Agility'";'"
+    "description": 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'";'"
+      "name": 'Kleber Santos'";'"
+    "role": 'CEO & Founder'";'"
+      "description": 'Visionary leader with 15+ years in AI and technology innovation.'";'"
+      "name": 'Sarah Johnson'";'"
+    "role": 'CTO'";'"
+      "description": 'Technical expert specializing in cloud architecture and AI implementation.'";'"
+      "name": 'Michael Chen'";'"
+    "role": 'Head of Security'";'"
+      "description": 'Cybersecurity specialist with expertise in enterprise security solutions.'";'"
+      "name": 'Emily Rodriguez'";'"
+    "role": 'Lead AI Engineer'"description": 'Machine learning expert focused on developing cutting-edge AI solutions.'";'"

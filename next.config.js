@@ -9,16 +9,16 @@ const nextConfig = {
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   typescript: {
     // Warning: This allows production builds to successfully complete even if
     // your project has type errors.
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true
   },
   // Skip problematic pages for now
   experimental: {
-    missingSuspenseWithCSRBailout: false,
+    missingSuspenseWithCSRBailout: false
   },
   // Optimize static generation
   staticPageGenerationTimeout: 60,
@@ -26,25 +26,24 @@ const nextConfig = {
   swcMinify: true,
   // Generate build ID for better caching
   generateBuildId: async () => {
-    return 'build-' + Date.now()
+    return 'build-' + Date.now();
   },
   // Enable compression
   compress: true,
   // Enable experimental features for better performance
   experimental: {
     missingSuspenseWithCSRBailout: false,
-    optimizePackageImports: ['@heroicons/react', 'lucide-react'],
+    optimizePackageImports: ['@heroicons/react', 'lucide-react']
   },
   // Exclude problematic files temporarily
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
-        fs: false,
-      };
+        fs: false
+      }
     }
-    return config;
-  },
+    return config
+  }
 }
-
 module.exports = nextConfig;
