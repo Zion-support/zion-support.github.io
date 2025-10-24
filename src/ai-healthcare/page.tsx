@@ -1,176 +1,191 @@
 import React from 'react';
-import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react';
-=======
->>>>>>> 936c9169b8529ba98f1996ac9beac1bb365b75be
-import React from 'react';
 import { Heart, Helmet, Users, Target, Zap, CheckCircle, Shield, Brain, Star } from 'lucide-react';
 
-
-constAIHealthcarePage: React.FC = () => {constaiHealthcareService,
-      s = [
+const AIHealthcarePage: React.FC = () => {
+  const aiHealthcareServices = [
     {
-      title: 'AI Medical Image Analysis'
-      descriptio,
-      n: 'Advanced AI-powered medical imaging analysis for radiology, pathology, and diagnostic imaging with 9 9.5% accuracy.'
-      icon: '🩺'
-      pric,
-      e: '$2,99 9/month'
-      features: ['X-ray analysis', 'MRI/CT scan interpretation', 'Pathology image analysis', 'Tumor detection', 'Diagnostic reporting']
-      benefits: ['Improve diagnostic accuracy by 4 0%', 'Reduce reading time by60%', 'Early disease detection']
-      marketPrice: '$5,00 0-1 5,00 0/month'
-      category: 'Medical Imaging'
-      technologie,
-      s: ['TensorFlow', 'PyTorch', 'OpenCV', 'DICOM', 'Medical AI Models']
-   }
-    {title: 'AI Drug Discovery & Development'
-      descriptio,
-      n: 'Machine learning models for pharmaceutical research, molecular design, and drug development optimization.'
-      icon: '💊'
-      pric,
-      e: '$4,99 9/month'
-      features: ['Molecular property prediction', 'Drug-target interaction modeling', 'ADMET prediction', 'Compound optimization', 'Clinical trial optimization']
-      benefits: ['Accelerate drug discovery by 5 0%', 'Reduce R&D costs by40%', 'Improve success rates']
-      marketPrice: '$8,00 0-2 5,00 0/month'
-      category: 'Drug Discovery'
-      technologie,
-      s: ['RDKit', 'DeepChem', 'PyTorch', 'TensorFlow', 'Molecular Dynamics']
-   }
-    {title: 'AI Electronic Health Records (EHR)'
-      descriptio,
-      n: 'Intelligent EHR system with automated data entry, clinical decision support, and predictive analytics.'
-      icon: '📋'
-      pric,
-      e: '$1,99 9/month'
-      features: ['Automated data entry', 'Clinical decision support', 'Predictive analytics', 'Interoperability', 'Security compliance']
-      benefits: ['Reduce do cumentation time by70%', 'Improve patient care quality', 'Ensure HIPAA compliance']
-      marketPrice: '$3,50 0-1 0,00 0/month'
-      category: 'Health Records'
-      technologie,
-      s: ['HL7 FHIR', 'NLP', 'Machine Learning', 'Blockchain', 'Cloud Security']
-   }
-    {title: 'AI Telemedicine Platform'
-      descriptio,
-      n: 'Intelligent telemedicine platform with symptom analysis, triage, and remote patient monitoring.'
-      icon: '📱'
-      pric,
-      e: '$1,49 9/month'
-      features: ['Symptom analysis', 'Automated triage', 'Remote monitoring', 'Video consultations', 'Prescription management']
-      benefits: ['Increase patient access by 30 0%', 'Reduce healthcare costs by50%', 'Improve patient outcomes']
-      marketPrice: '$2,50 0-8,00 0/month'
-      category: 'Telemedicine'
-      technologie,
-      s: ['WebRTC', 'NLP', 'Computer Vision', 'IoT Sensors', 'Mobile Apps']
-   }
-    {title: 'AI Clinical Decision Support System'
-      description: 'Intelligent clinical decision support with evidence-based recommendations and risk assessment.'
-      ico,
-      n: '🧠'
-      pric,
-      e: '$2,49 9/month'
-      features: ['Evidence-based recommendations', 'Risk assessment', 'Drug interaction checking', 'Treatment protocols', 'Outcome prediction']
-      benefits: ['Reduce medical errors by60%', 'Improve treatment outcomes', 'Standardize care protocols']
-      marketPrice: '$4,00 0-1 2,00 0/month'
-      category: 'Clinical Support'
-      technologie,
-      s: ['Knowledge Graphs', 'NLP', 'Machine Learning', 'Clinical Guidelines', 'Evidence Databases']
-   }
-    {title: 'AI Personalized Medicine Platform'
-      description: 'Genomic analysis and personalized treatment recommendations using machine learning and genetic data.'
-      ico,
-      n: '🧬'
-      pric,
-      e: '$3,99 9/month'
-      features: ['Genomic analysis', 'Treatment recommendation', 'Drug response prediction', 'Risk assessment', 'Clinical decision support']
-      benefits: ['Improve treatment outcomes by45%', 'Reduce side effects by60%', 'Personalize healthcare']
-      marketPrice: '$6,00 0-2 0,00 0/month'
-      category: 'Personalized Medicine'
-      technologie,
-      s: ['Biopython', 'Pandas', 'Scikit-learn', 'TensorFlow', 'Genomic APIs']
-   }
-    {title: 'AI Health Monitoring & Wearables'
-      description: 'Intelligent health monitoring using wearable devices and IoT sensors with predictive health analytics.'
-      ico,
-      n: '⌚'
-      pric,
-      e: '$1,29 9/month'
-      features: ['Vital signs monitoring', 'Activity tracking', 'Sleep analysis', 'Health predictions', 'Alert systems']
-      benefits: ['Prevent health issues early', 'Improve patient engagement', 'Reduce hospital readmissions']
-      marketPrice: '$2,00 0-6,00 0/month'
-      category: 'Health Monitoring'
-      technologie,
-      s: ['IoT Sensors', 'Machine Learning', 'Time Series Analysis', 'Mobile Apps', 'Cloud Computing']
-   }
-    {title: 'AI Mental Health Support System'
-      descriptio,
-      n: 'AI-powered mental health assessment, therapy recommendations, and crisis intervention support.'
-      icon: '🧘'
-      pric,
-      e: '$1,79 9/month'
-      features: ['Mental health assessment', 'Therapy recommendations', 'Crisis detection', 'Mood tracking', 'Intervention support']
-      benefits: ['Improve mental health outcomes', 'Reduce suicide rates', 'Increase therapy accessibility']
-      marketPrice: '$3,00 0-9,00 0/month'
-      category: 'Mental Health'
-      technologie,
-      s: ['NLP', 'Sentiment Analysis', 'Machine Learning', 'Chatbots', 'Mobile Apps']
-   }
-    {title: 'AI Hospital Management System'
-      descriptio,
-      n: 'Intelligent hospital operations management with resource optimization, scheduling, and patient flow management.'
-      icon: '🏥'
-      pric,
-      e: '$2,99 9/month'
-      features: ['Resource optimization', 'Staff scheduling', 'Patient flow management', 'Inventory management', 'Performance analytics']
-      benefits: ['Improve operational efficiency by40%', 'Reduce wait times by50%', 'Optimize resource utilization']
-      marketPrice: '$5,00 0-1 5,00 0/month'
-      category: 'Hospital Management'
-      technologie,
-      s: ['Optimization Algorithms', 'Machine Learning', 'IoT Sensors', 'Real-time Analytics', 'Cloud Computing']
-   }
-    {title: 'AI Medical Research Platform'
-      descriptio,
-      n: 'AI-powered medical research platform with data analysis, hypothesis generation, and clinical trial optimization.'
-      icon: '🔬'
-      pric,
-      e: '$3,49 9/month'
-      features: ['Research data analysis', 'Hypothesis generation', 'Clinical trial design', 'Literature review', 'Collaboration tools']
-      benefits: ['Accelerate research by60%', 'Improve research quality', 'Facilitate collaboration']
-      marketPrice: '$6,00 0-1 8,00 0/month'
-      category: 'Medical Research'
-      technologie,
-      s: ['Data Mining', 'NLP', 'Machine Learning', 'Knowledge Graphs', 'Research APIs']
-   }
-    {title: 'AI Healthcare Analytics & Insights'
-      descriptio,
-      n: 'Advanced healthcare analytics with population health insights, cost optimization, and outcome predictions.'
-      icon: '📊'
-      pric,
-      e: '$2,29 9/month'
-      features: ['Population health analytics', 'Cost optimization', 'Outcome predictions', 'Quality metrics', 'Trend analysis']
-      benefits: ['Improve population health', 'Reduce healthcare costs by30%', 'Predict health trends']
-      marketPrice: '$4,00 0-1 2,00 0/month'
-      category: 'Healthcare Analytics'
-      technologie,
-      s: ['Big Data Analytics', 'Machine Learning', 'Statistical Modeling', 'Data Visualization', 'Cloud Computing']
-   }
-    {title: 'AI Medical Device Integration'
-      description: 'Intelligent integration of medical devices with AI-powered data analysis and automated monitoring.'
-      ico,
-      n: '🔧'
-      pric,
-      e: '$1,99 9/month'
-      features: ['Device integration', 'Data analysis', 'Automated monitoring', 'Alert systems', 'Maintenance prediction']
-      benefits: ['Improve device efficiency', 'Reduce maintenance costs', 'Enhance patient safety']
-      marketPrice: '$3,50 0-1 0,00 0/month'
-      category: 'Medical Devices'
-      technologie,
-      s: ['IoT Integration', 'Machine Learning', 'Real-time Processing', 'Device APIs', 'Cloud Computing']
+      title: 'AI Medical Image Analysis',
+      description: 'Advanced AI-powered medical imaging analysis for radiology, pathology, and diagnostic imaging with 99.5% accuracy.',
+      icon: '🩺',
+      price: '$2,999/month',
+      features: ['X-ray analysis', 'MRI/CT scan interpretation', 'Pathology image analysis', 'Tumor detection', 'Diagnostic reporting'],
+      benefits: ['Improve diagnostic accuracy by 40%', 'Reduce reading time by 60%', 'Early disease detection'],
+      marketPrice: '$5,000-15,000/month'
+    },
+    {
+      title: 'AI Drug Discovery Platform',
+      description: 'Revolutionary AI-driven drug discovery and development platform accelerating pharmaceutical research.',
+      icon: '💊',
+      price: '$4,999/month',
+      features: ['Molecular modeling', 'Drug-target interaction', 'Clinical trial optimization', 'Side effect prediction', 'Patent analysis'],
+      benefits: ['Reduce drug development time by 50%', 'Lower R&D costs by 30%', 'Higher success rates'],
+      marketPrice: '$10,000-25,000/month'
+    },
+    {
+      title: 'AI Patient Monitoring System',
+      description: 'Real-time AI-powered patient monitoring with predictive analytics for early intervention.',
+      icon: '📊',
+      price: '$1,999/month',
+      features: ['Vital signs monitoring', 'Predictive alerts', 'Risk stratification', 'Remote monitoring', 'Integration with EHR'],
+      benefits: ['Reduce readmission rates by 35%', 'Improve patient outcomes', '24/7 monitoring'],
+      marketPrice: '$3,000-8,000/month'
     }
-  ]
-  const categories = [
-    '...new Set(aiHealthcareServices.map(service => service.category))'
   ];
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8 text-blue-600" />,
+      title: 'Advanced AI Algorithms',
+      description: 'State-of-the-art machine learning models trained on millions of medical records and images.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-green-600" />,
+      title: 'HIPAA Compliant',
+      description: 'Fully compliant with healthcare regulations and data protection standards.'
+    },
+    {
+      icon: <Target className="w-8 h-8 text-purple-600" />,
+      title: 'Precision Medicine',
+      description: 'Personalized treatment recommendations based on individual patient data and genetics.'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-600" />,
+      title: 'Real-time Processing',
+      description: 'Instant analysis and results for critical healthcare decisions.'
+    }
+  ];
+
   return (
-</>
-  )
-}
-export default Page;
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI Healthcare Solutions
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform healthcare with cutting-edge AI technology. Improve patient outcomes, 
+              accelerate drug discovery, and enhance medical diagnostics.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              AI Healthcare Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive AI solutions designed specifically for healthcare organizations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiHealthcareServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-3xl font-bold text-blue-600">{service.price}</span>
+                    <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our AI Healthcare Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Built with healthcare professionals in mind
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Ready to Transform Healthcare with AI?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Join leading healthcare organizations using our AI solutions to improve patient care.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Start Free Trial
+            </button>
+            <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AIHealthcarePage;

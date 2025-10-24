@@ -1,14 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Customer Support Pro - Zion Tech Group',
+  description: 'Revolutionize your customer support with AI-powered automation, intelligent routing, and 24/7 assistance. Reduce response times and improve customer satisfaction.',
+};
 
 export default function ZionaicustomersupportproPage() {
   return (
     <>
-      <Helmet>
-        <title>AI Customer Support Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your customer support with AI-powered automation, intelligent routing, and 24/7 assistance. Reduce response times and improve customer satisfaction." />
-      </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

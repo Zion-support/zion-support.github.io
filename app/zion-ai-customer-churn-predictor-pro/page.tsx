@@ -1,14 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Customer Churn Predictor Pro - Zion Tech Group',
+  description: 'Advanced AI-powered customer churn prediction with enterprise features. Real-time analytics, custom models, and dedicated support for large organizations.',
+};
 
 export default function ZionaicustomerchurnpredictorproPage() {
   return (
     <>
-      <Helmet>
-        <title>AI Customer Churn Predictor Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered customer churn prediction with enterprise features. Real-time analytics, custom models, and dedicated support for large organizations." />
-      </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

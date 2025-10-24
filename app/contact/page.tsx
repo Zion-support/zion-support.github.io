@@ -1,3 +1,5 @@
+'use client';
+
 import React, { memo } from 'react';
 import EnhancedSEOHead from '../components/EnhancedSEOHead';
 import { useForm } from '../hooks/useForm';
