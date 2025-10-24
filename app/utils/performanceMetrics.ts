@@ -1,6 +1,6 @@
-// Utility file: performanceMetrics
-export const performanceMetrics = {}
-  // Utility functions will be implemented here
+// performanceMetrics utility functions
+export const performanceMetrics = () => {
+  return null;
 };
 
-export default PerformanceMetrics.tsPage;
+export default performanceMetrics;

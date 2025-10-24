@@ -1,6 +1,6 @@
-// Utility file: performanceOptimizations
-export const performanceOptimizations = {}
-  // Utility functions will be implemented here
+// performanceOptimizations utility functions
+export const performanceOptimizations = () => {
+  return null;
 };
 
 export default PerformanceOptimizations.tsPage;

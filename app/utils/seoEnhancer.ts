@@ -1,4 +1,6 @@
-// seoEnhancer utility
-// Add utility functions here
+// seoEnhancer utility functions
+export const seoEnhancer = () => {
+  return null;
+};
 
-export {};
+export default seoEnhancer;

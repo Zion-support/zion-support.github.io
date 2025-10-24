@@ -1,6 +1,6 @@
-// Utility file: monitoring
-export const monitoring = {}
-  // Utility functions will be implemented here
+// monitoring utility functions
+export const monitoring = () => {
+  return null;
 };
 
-export default Monitoring.tsPage;
+export default monitoring;

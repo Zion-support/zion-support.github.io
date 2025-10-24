@@ -1,25 +1,19 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
+const pagePage = () => {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6"></h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Page
+        </h1>
+        <p className="text-lg text-gray-600">
+          This page is under construction. Please check back later for updates.
+        </p>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
-export default Page;
+export default pagePage;

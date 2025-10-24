@@ -201,8 +201,8 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our AI and IT solutions can drive your success. Get a free consultation today.
+            <p className="text-xl text-purple-100 mb-8">
+              Let&apos;s discuss how our AI and IT solutions can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

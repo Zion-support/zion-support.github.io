@@ -1,6 +1,6 @@
-// Utility file: performanceMonitoring
-export const performanceMonitoring = {}
-  // Utility functions will be implemented here
+// performanceMonitoring utility functions
+export const performanceMonitoring = () => {
+  return null;
 };
 
-export default PerformanceMonitoring.tsPage;
+export default performanceMonitoring;

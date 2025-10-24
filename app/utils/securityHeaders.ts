@@ -1,4 +1,6 @@
-// securityHeaders utility
-// Add utility functions here
+// securityHeaders utility functions
+export const securityHeaders = () => {
+  return null;
+};
 
-export {};
+export default securityHeaders;

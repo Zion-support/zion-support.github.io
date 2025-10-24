@@ -71,16 +71,12 @@
     }
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
     "next-env.d.ts",
-    "types/**/*.ts",
-    "dist/types/**/*.ts"
+    "app/page.tsx",
+    "app/layout.tsx",
+    "app/team/page.tsx",
+    "app/_not-found.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

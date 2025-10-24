@@ -1,6 +1,6 @@
-// Utility file: performanceEnhancer
-export const performanceEnhancer = {}
-  // Utility functions will be implemented here
+// performanceEnhancer utility functions
+export const performanceEnhancer = () => {
+  return null;
 };
 
-export default PerformanceEnhancer.tsPage;
+export default performanceEnhancer;

@@ -1,4 +1,6 @@
-// testUtils utility
-// Add utility functions here
+// testUtils utility functions
+export const testUtils = () => {
+  return null;
+};
 
-export {};
+export default testUtils;
