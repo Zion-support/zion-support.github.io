@@ -1,34 +1,9 @@
-// import React from "react";
-// import { Link } from "react-router-dom"; // Unused import
-// import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"; // Unused import
 import React from 'react';
-import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
   return (
-import {Link} from 'react-router-dom';
-import {ArrowRight, Mail, Phone, MapPin} from 'lucide-react';
-
-const EnhancedFooter: React.FC = () => {return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-              Leading provider of AI and IT solutions for businesses worldwide.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2"   />
-            </Link>
-          </div>
-
     <footer className="bg-slate-900 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -46,6 +21,7 @@ const EnhancedFooter: React.FC = () => {return (
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
+          </div>
           
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
@@ -74,14 +50,16 @@ const EnhancedFooter: React.FC = () => {return (
               </div>
             </div>
           </div>
+        </div>
         
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center">
+        <div className="border-t border-slate-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-              © 2024 Zion Tech Group. All rights reserved.
+            © 2024 Zion Tech Group. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
-  );};
+  );
+};
 
 export default EnhancedFooter;
