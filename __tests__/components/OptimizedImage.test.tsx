@@ -8,6 +8,7 @@ describe('OptimizedImage', () => {
       <OptimizedImage 
         src="/test-image.jpg" 
         alt="Test image" 
+        data-testid="optimized-image"
       />
     );
     
@@ -24,6 +25,7 @@ describe('OptimizedImage', () => {
         alt="Test image"
         width={300}
         height={200}
+        data-testid="optimized-image"
       />
     );
     
@@ -37,6 +39,7 @@ describe('OptimizedImage', () => {
       <OptimizedImage 
         src="/test-image.jpg" 
         alt="" 
+        data-testid="optimized-image"
       />
     );
     
