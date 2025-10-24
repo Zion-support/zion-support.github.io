@@ -47,8 +47,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section$1>
-        <div$2>
+      <section>
+        <div>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -75,8 +75,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section$1>
-        <div$2>
+      <section>
+        <div>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedAccessibilityEnhancer?
@@ -101,8 +101,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section$1>
-        <div$2>
+      <section>
+        <div>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -124,8 +124,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section$1>
-        <div$2>
+      <section>
+        <div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -235,43 +235,39 @@ export default AdvancedAccessibilityEnhancer;
   return (
     </AccessibilityEnhancerProps><div className="accessibility-enhanced">
       </div><div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
-        </div><$2 />
+        </div>
           onClick={toggleHighContrast}
           className="accessibility-button"
           aria-label="Toggle high contrast"
         >
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         <div className="font-size-controls">
-          </div><$2 />
+          </div>
             onClick={() => changeFontSize('small')}
-          <$2 />
             onClick={() =>changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
             A
-  
-          <$2 />
+          </button>
+          <button
             onClick={() => changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
             A
-  
-          <$2 />
+          </button>
+          <button
             onClick={() => changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"
           >
             A
-  
+          </button>
         </div>
       </div>
-      {children}</div>
-  )
-}
-export default AdvancedAccessibilityEnhancer
-  </button>
-  </button>
-  </button>
-  </AccessibilityEnhancerProps>
+      {children}
+    </div>
+  );
+};
+export default AdvancedAccessibilityEnhancer;
