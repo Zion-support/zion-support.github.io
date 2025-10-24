@@ -110,7 +110,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle key down events
    */
-  private handleKeyDown(_event: KeyboardEvent): void {
+  private handleKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Tab':
         this.handleTabNavigation(event);
