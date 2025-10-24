@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const PerformanceOptimizer: React.FC = () => {
+const EnhancedPerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -22,44 +22,32 @@ const PerformanceOptimizer: React.FC = () => {
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
+        img.loading = 'lazy';
+        img.decoding = 'async';
       });
     };
 
-    // Add service worker for caching
+    // Register service worker
     const registerServiceWorker = () => {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
+            // Service worker registered successfully
+            // console.log('SW registered: ', registration);
           })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+            // Service worker registration failed
+            // console.log('SW registration failed: ', registrationError);
           });
       }
     };
 
-    // Initialize performance optimizations
     preloadCriticalResources();
     optimizeImages();
     registerServiceWorker();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
   }, []);
 
   return null;
 };
 
-const PerformanceOptimizer = () => {
-  return (<></>);
-};
-
-export default PerformanceOptimizer;
+export default EnhancedPerformanceOptimizer;
