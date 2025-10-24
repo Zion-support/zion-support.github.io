@@ -76,6 +76,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -146,7 +147,7 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({className=
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default EnhancedErrorBoundaryPage;

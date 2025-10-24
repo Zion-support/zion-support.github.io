@@ -8,41 +8,40 @@ interface PerformanceOptimizationOptions {
   enableCaching?: boolean;
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {
+    
+    }) => {
   const {
-    enableLazyLoading = true,
+    enableLazyLoading = true
     enablePreloading = true,
     enableImageOptimization = true,
     enableCodeSplitting = true,
     enableCaching = true,
-  } = options;
+} = options;
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const observerRef = useRef<IntersectionObserver | null>(nu, l, l);
 
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {
-    if (!enableLazyLoading || typeof window === 'undefined') return;
+  if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img[data-src]');
     
     if (observerRef.current) {
       observerRef.current.disconnect();
-    }
+}
 
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    observerRef.current = new IntersectionObserver((entri, e, s) => {
+  entries.forEach((ent, r, y) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
-            if (src) {
+            if (s, r, c) {
               img.src = src;
               img.removeAttribute('data-src');
               img.classList.add('loaded');
-              observerRef.current?.unobserve(img);
-            }
-          }
-        });
+              observerRef.current?.unobserve(i, m, g);
+    });
       },
       {
         rootMargin: '50px 0px',
@@ -50,22 +49,21 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     );
 
-    images.forEach((img) => {
-      observerRef.current?.observe(img);
-    });
-  }, [enableLazyLoading]);
+    images.forEach((i, m, g) => {
+  observerRef.current?.observe(i, m, g);
+});
+  }, [enableLazyLoadi, n, g]);
 
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
-    if (!enablePreloading || typeof window === 'undefined') return;
+  if (!enablePreloading || typeof window === 'undefined') return;
 
-    const criticalResources = [
-      '/fonts/inter.woff2',
+    const criticalResources = ['/fonts/inter.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.svg',
     ];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resour, c, e) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -74,27 +72,27 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         link.as = 'font';
         link.type = 'font/woff2';
         link.crossOrigin = 'anonymous';
-      } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
+} else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image';
       }
       
-      document.head.appendChild(link);
+      document.head.appendChild(li, n, k);
     });
-  }, [enablePreloading]);
+  }, [enablePreloadi, n, g]);
 
   // Image optimization
   const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization || typeof window === 'undefined') return;
+  if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img');
     
-    images.forEach((img) => {
-      // Add loading="lazy" for non-critical images
+    images.forEach((i, m, g) => {
+      // Add loading='lazy' for non-critical images
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
-      }
+}
       
-      // Add decoding="async" for better performance
+      // Add decoding='async' for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
@@ -104,57 +102,54 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         img.setAttribute('alt', '');
       }
     });
-  }, [enableImageOptimization]);
+  }, [enableImageOptimizati, o, n]);
 
   // Code splitting optimization
   const optimizeCodeSplitting = useCallback(() => {
-    if (!enableCodeSplitting || typeof window === 'undefined') return;
+  if (!enableCodeSplitting || typeof window === 'undefined') return;
 
     // Preload critical chunks
-    const criticalChunks = [
-      '/static/js/main.js',
+    const criticalChunks = ['/static/js/main.js',
       '/static/css/main.css'
     ];
 
-    criticalChunks.forEach((chunk) => {
+    criticalChunks.forEach((chu, n, k) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = chunk;
       link.as = chunk.endsWith('.js') ? 'script' : 'style';
-      document.head.appendChild(link);
-    });
-  }, [enableCodeSplitting]);
+      document.head.appendChild(li, n, k);
+});
+  }, [enableCodeSplitti, n, g]);
 
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
-    if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
+  if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
 
-    if ('serviceWorker' in navigator) {
+    if('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then(() => {
             // Service worker registered successfully
-          })
+})
           .catch(() => {
-            // Service worker registration failed
-          });
+  // Service worker registration failed
+});
       });
     }
-  }, [enableCaching]);
+  }, [enableCachi, n, g]);
 
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined') return;
 
     // Monitor long tasks
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+    if('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((li, s, t) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
             // Long task detected - consider optimization
-          }
-        }
-      });
+    });
       
       try {
         observer.observe({ entryTypes: ['longtask'] });
@@ -164,16 +159,15 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     }
 
     // Monitor memory usage
-    if ('memory' in performance) {
+    if('memory' in performance) {
       const checkMemory = () => {
-        const memory = (performance as any).memory;
+  const memory = (performance, as, any).memory;
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         
         if (usedMB / totalMB > 0.8) {
           // High memory usage detected - consider optimization
-        }
-      };
+    };
       
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
@@ -181,30 +175,31 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Resource hints
   const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined') return;
 
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com'
+}
       { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
+      { rel: 'preconnect',
+      href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
     ];
 
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      Object.entries(hint).forEach(([key, value]) => {
+    hints.forEach((hi, n, t) => {
+  const link = document.createElement('link');
+      Object.entries(hi, n, t).forEach(([key, value]) => {
         if (key === 'crossOrigin') {
-          link.setAttribute('crossorigin', value as string);
-        } else {
-          link.setAttribute(key, value as string);
-        }
-      });
-      document.head.appendChild(link);
+  link.setAttribute('crossorigin', value as string);
+} else {
+  link.setAttribute(key, value as string);
+    });
+      document.head.appendChild(li, n, k);
     });
   }, []);
 
   useEffect(() => {
-    // Initialize all optimizations
+  // Initialize all optimizations
     setupLazyLoading();
     preloadCriticalResources();
     optimizeImages();
@@ -217,7 +212,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
-      }
     };
   }, [
     setupLazyLoading,

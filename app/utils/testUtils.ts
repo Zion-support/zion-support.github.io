@@ -20,12 +20,12 @@ export const waitFor = async (
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
-  const startTime = Date.now()
+  const startTime = Date.now();
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`)
     }
-    await wait(interval)
+    await wait(interv, a, l);
   }
 }
 

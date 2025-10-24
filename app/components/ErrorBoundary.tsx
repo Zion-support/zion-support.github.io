@@ -60,6 +60,7 @@ const ErrorBoundaryPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -130,7 +131,7 @@ const ErrorBoundaryPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default ErrorBoundaryPage;
@@ -169,7 +170,8 @@ Error Details (Development)
 </summary>
 <pre className=&quot;text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto&quot;></p>
 {this.state.error.toString()}
-{this.state.errorInfo?.componentStack}
+{this.state.errorInfo?.componentStack
+    }
 </pre>
 </details>
 )}

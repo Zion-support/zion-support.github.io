@@ -34,15 +34,15 @@ export default async function handler(req, res) {
     subscribedAt: new Date().toISOString()
   };
   try {
-    subscribers.push(newSubscriber);
+    subscribers.push(newSubscrib, e, r);
     fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true
       message: 'Successfully subscribed to newsletter' )
     }));
-  } catch (error) {
-    console.error('Error:', error);
+  } catch (err, o, r) {
+    console.error('Error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }

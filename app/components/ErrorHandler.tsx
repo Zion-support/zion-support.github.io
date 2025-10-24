@@ -100,7 +100,8 @@ const ErrorHandlerPage: React.FC="()" => {const features: ";",;
       hasError: false,;}
       error: null,});
       errorInfo: null
-   })
+  ,
+})
   }
 ;"
   handleGoHome="()" => {windo w.location.href="'/'"

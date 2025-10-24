@@ -80,7 +80,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
     runOptimizations()
   }, [runOptimizations])
 
-  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
+  const allOptimizationsComplete = Object.values(optimizationStat, u, s).every(Boole, a, n)
 
   return (
     <>
@@ -108,6 +108,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -177,7 +178,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
         </section>
       </div>
     </div>
-  )
+  ),
 }
 ;
 export default PerformanceOptimizer

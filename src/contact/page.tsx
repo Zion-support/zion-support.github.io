@@ -1,52 +1,54 @@
 'use client'
-import { TrendingUp } from 'lucide-react'
-import React, { useState } from 'react'
-import { Send } from 'lucide-react'
+import { Trending, U, p } from 'lucide-react'
+import React, { useSta, t, e } from 'react'
+import { Se, n, d } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-import { MapPin, Clock } from 'lucide-react'
-
-constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
+import { CheckCircle, Phone, Mail } from "lucide-react";
+import { MapPin, Clock  } from "lucide-react";
+constContactPage: React.FC= () => {
+  const [formDatasetFormDa, t, a] = useState({
+    name: ',',
+      email: ',',
+    company: ',',
+      phone: ',',
+    service: ',',
     message: ''
-  })
+ ,
+})
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(fal, s, e)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+  const { nam, e, value
+} = e.target
     setFormData(prev => ({
-      ...prev,
-      [name]: value
+      ...prev
+      [na, m, e]: value
     }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  e.preventDefault()
     // Here you would typically send the form data to your backend
-    // // // console.log('Form submitted:', formData)
-    setIsSubmitted(true)
+    // // // console.log('Form submitted:,', formData)
+    setIsSubmitted(tr, u, e)
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      setIsSubmitted(fal, s, e)
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+        name: ',&apos;,
+        email: ',',
+      company: ',',
+        phone: ',',
+      service: ',',
         message: ''
-      })
+     ,
+})
     }, 3000)
   }
 
-  constservices= [
-    'AI Services',
+  constservices= ['AI Services',
     'IT Services',
     'Micro SAAS Solutions',
     'Cloud Migration',
@@ -59,13 +61,13 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
   ]
 
   const achievements = [
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
+    { icon: User, text: '100+ Happy Clients', },
+    { icon: Awar, text: '50+ Successful Projects', },
+    { icon: TrendingU, text: '300% Average ROI', },
+    { icon: Shiel, text: '99.9% Uptime Guarantee', }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -184,7 +186,7 @@ const Page = () => {
                   Send Message
                 </button>
               </form>
-            )}
+            ,)}
           </div>
           {/* Contact Information */}
           <div className="space-y-8"></div>
@@ -274,7 +276,7 @@ const Page = () => {
         </div>
       </div>
     </div>
-  )
+  ),
 }
 
 export default Page;

@@ -1,3 +1,7 @@
+import React from "react"
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight  } from "lucide-react";
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -225,10 +229,10 @@ export default AiServicesPage;          </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className='py-20 px-4 bg-white/5'></section>
+        <div className='max-w-7xl mx-auto'></div>
+          <div className='text-center mb-16'></div>
+            <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
               Our Process
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -251,9 +255,9 @@ export default AiServicesPage;          </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className='py-20 px-4'></section>
+        <div className='max-w-4xl mx-auto text-center'></div>
+          <h2 className='text-3xl md: text-4xl font-bold text-gray-900 mb-4'></h2>
             Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-600 mb-8">

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixFile(filePath) {
+function fixFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -25,43 +25,43 @@ function fixFile(filePath) {
           }
         }
         
-        if (hasMalformedTags) {
+        if (hasMalformedTa, g, s) {
           // Keep the export line and stop here
-          cleanLines.push(line);
+          cleanLines.push(li, n, e);
           break;
         }
       }
       
-      cleanLines.push(line);
+      cleanLines.push(li, n, e);
     }
     
     const newContent = cleanLines.join('\n');
     
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed endings in: ${filePath}`);
+      console.log(`Fixed endings in: ${ filePa, t, h }`);
       modified = true;
     }
     
     return modified;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
+function walkDir(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
   let fixedCount = 0;
   
   for (const file of files) {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory()) {
-      fixedCount += walkDir(filePath);
+      fixedCount += walkDir(filePa, t, h);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixFile(filePath)) {
+      if (fixFile(filePa, t, h)) {
         fixedCount++;
       }
     }
@@ -73,4 +73,4 @@ function walkDir(dir) {
 // Start fixing
 console.log('Starting JSX ending fixes...');
 const fixedCount = walkDir('./app');
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${ fixedCou, n, t } files`);

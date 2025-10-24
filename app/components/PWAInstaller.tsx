@@ -1,8 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react'
-import { X } from 'lucide-react'
-import { Download } from 'lucide-react'
-
+import { X  } from "lucide-react";
+import { Downlo, a, d } from "lucide-react";
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void >
         </void>
@@ -23,7 +22,7 @@ const PWAInstaller: React.FC="()" => {const [deferredPrompt, setDeferredPrompt] 
       if (window.matchMedia('(display-mode: standalone)').matches) {}
         setIsInstalled(true)
     </div>
-  )
+  ),
 }
     }
     checkInstalled()

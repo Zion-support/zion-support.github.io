@@ -1,3 +1,6 @@
+import { useSta, t, e } from 'react';
+import { Helm, e, t } from "react-helmet-async";
+import { MapPin, Clock, Users, Briefcase, Star  } from "lucide-react";
 import { useState } from 'react;
 import { Helmet } from 'react-helmet-async;
 import { Right, Circle, Star, } from 'lucide-react;
@@ -10,8 +13,8 @@ interface JobPosition {
 }
 import { Right, Circle, } from 'lucide-react;
   id: number
-import { Right, Circle} from 'lucide-react
-const PagePage: React.FC = () => {}
+import { Righ, t, Circle } from 'lucide-react
+const PagePage: React.FC = () => ,{}
 }title: string
   department: string
   location: string
@@ -21,52 +24,52 @@ const PagePage: React.FC = () => {}
   description: string
   requirements: string[]
   benefits: string[]
-  featured: boolean
+  featured: boolean,
 }
-const eersPage: React.FC = () => {}
+const eersPage: React.FC = () => ,{}
 }const [selectedDepartment, setSelectedDepartment] = useState('all)
   const [selectedLocation, setSelectedLocation] = useState('all)
-      title: 'Senior AI Engineer,
-      department: 'Engineering,
-      location: 'Remote,
-      type: 'Full-time,
-      experience: '5+ years,
-      posted: '2 days ago,
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,
+      title: 'Senior AI Enginee,r,
+      department: 'Engineerin,g,
+      location: 'Remot,e,
+      type: 'Full-tim,e,
+      experience: '5+ year,s,
+      posted: '2 days ag,o,
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients,.,
       requirements: []
-        'Master\'s degree in Computer Science or related field,
+        'Master\'s degree in Computer Science or related fiel,d,
         '5+ years experience in AI/ML development,
         'Expertise in Python, TensorFlow, PyTorch,
         'Experience with cloud platforms (AWS, Azure, GCP),
         'Strong problem-solving and communication skills
       ],
       benefits: []
-        'Competitive salary and equity,
+        'Competitive salary and equit,y,
         'Comprehensive health insurance,
         'Flexible work arrangements,
         'Professional development budget,
         '401k with company matching
-      title: 'Quantum Computing Researcher,
-      department: 'Research,
-      location: 'San Francisco, CA,
-      type: 'Full-time,
-      experience: '3+ years,
-      posted: '1 week ago,
-      description: 'Research and develop quantum algorithms and applications for real-world business problems.,
+      title: 'Quantum Computing Researche,r,
+      department: 'Researc,h,
+      location: 'San Francisc,o, CA,
+      type: 'Full-tim,e,
+      experience: '3+ year,s,
+      posted: '1 week ag,o,
+      description: 'Research and develop quantum algorithms and applications for real-world business problems,.,
       requirements: []
-        'PhD in Physics, Computer Science, or related field,
+        'PhD in Physic,s, Computer Science, or related field,
         '3+ years quantum computing research experience,
         'Knowledge of quantum algorithms and programming,
         'Experience with quantum simulators and hardware,
         'Strong publication record
       ],
       benefits: []
-        'Research autonomy and resources,
+        'Research autonomy and resource,s,
         'Conference and publication support,
         'Collaboration with top researchers,
         'Competitive salary and benefits,
         'State-of-the-art facilities
-const eersPage: React.FC = () => {}
+const eersPage: React.FC = () => ,{}
 }return ()
     <div className="min-h-screen pt-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div>
@@ -83,85 +86,85 @@ const eersPage: React.FC = () => {}
 import { Right, Circle, Star, } from 'lucide-react';
   )
 }
-import { Right, Circle, Star} from 'lucide-react'
+import { Right, Circle, Star } from 'lucide-react'
     },
     {}
-      id: 3,
-      title: 'DevOps Engineer,
-      department: 'Engineering,
-      location: 'New York, NY,
-      type: 'Full-time,
-      experience: '3+ years,
-      posted: '3 days ago,
-      description: 'Build and maintain scalable infrastructure for our AI and cloud services.,
+      id:  ,3,
+      title: 'DevOps Enginee,r,
+      department: 'Engineerin,g,
+      location: 'New Yor,k, NY,
+      type: 'Full-tim,e,
+      experience: '3+ year,s,
+      posted: '3 days ag,o,
+      description: 'Build and maintain scalable infrastructure for our AI and cloud services,.,
       requirements: []
-        'Bachelor\'s degree in Computer Science or related field,
+        'Bachelor\'s degree in Computer Science or related fiel,d,
         '3+ years DevOps experience,
         'Expertise in Kubernetes, Docker, CI/CD,
         'Experience with cloud platforms,
         'Knowledge of monitoring and logging tools
       ],
       benefits: []
-        'Competitive salary,
+        'Competitive salar,y,
         'Health and dental insurance,
         'Flexible PTO,
         'Learning and development opportunities,
         'Team building events
-      title: 'AI Product Manager,
-      department: 'Product,
-      location: 'Remote,
-      type: 'Full-time,
-      experience: '4+ years,
-      posted: '5 days ago,
-      description: 'Drive product strategy and roadmap for our AI-powered solutions.,
+      title: 'AI Product Manage,r,
+      department: 'Produc,t,
+      location: 'Remot,e,
+      type: 'Full-tim,e,
+      experience: '4+ year,s,
+      posted: '5 days ag,o,
+      description: 'Drive product strategy and roadmap for our AI-powered solutions,.,
       requirements: []
-        'Bachelor\'s degree in Business, Engineering, or related field,
+        'Bachelor\'s degree in Busines,s, Engineering, or related field,
         '4+ years product management experience,
         'Experience with AI/ML products,
         'Strong analytical and communication skills,
         'Experience with agile development
       ],
       benefits: []
-        'Competitive salary and equity,
+        'Competitive salary and equit,y,
         'Comprehensive benefits package,
         'Remote work flexibility,
         'Professional development opportunities,
         'Stock options
-      title: 'Cybersecurity Specialist,
-      department: 'location: 'Austin, TX,
-      type: 'Full-time,
-      experience: '4+ years,
-      posted: '1 week ago,
-      description: 'Protect our systems and data with advanced cybersecurity measures and AI-powered threat detection.,
+      title: 'Cybersecurity Specialis,t,
+      department: 'location: 'Austi,n, TX,
+      type: 'Full-tim,e,
+      experience: '4+ year,s,
+      posted: '1 week ag,o,
+      description: 'Protect our systems and data with advanced cybersecurity measures and AI-powered threat detection,.,
       requirements: []
-        'Bachelor\'s degree in Cybersecurity or related field,
+        'Bachelor\'s degree in Cybersecurity or related fiel,d,
         '4+ years cybersecurity experience,
         'Certifications (CISSP, CISM, etc.),
         'Experience with security tools and frameworks,
         'Knowledge of AI security best practices
       ],
       benefits: []
-        'Competitive salary,
+        'Competitive salar,y,
         'Health and wellness benefits,
         'Professional certification support,
         'Flexible work schedule,
         'conference attendance
-      title: 'Data Scientist,
-      department: 'Data,
-      location: 'Seattle, WA,
-      type: 'Full-time,
-      experience: '3+ years,
-      posted: '2 weeks ago,
-      description: 'Extract insights from complex data sets to drive business decisions and improve AI models.,
+      title: 'Data Scientis,t,
+      department: 'Dat,a,
+      location: 'Seattl,e, WA,
+      type: 'Full-tim,e,
+      experience: '3+ year,s,
+      posted: '2 weeks ag,o,
+      description: 'Extract insights from complex data sets to drive business decisions and improve AI models,.,
       requirements: []
-        'Master\'s degree in Data Science, Statistics, or related field,
+        'Master\'s degree in Data Scienc,e, Statistics, or related field,
         '3+ years data science experience,
         'Expertise in Python, R, SQL,
         'Experience with machine learning,
         'Strong statistical analysis skills
       ],
       benefits: []
-        'Competitive salary and equity,
+        'Competitive salary and equit,y,
         'Comprehensive health insurance,
         'Data science conference attendance,
         'Access to cutting-edge tools,
@@ -173,67 +176,68 @@ import { Right, Circle, Star} from 'lucide-react'
 
   const featuredPositions = filteredPositions.filter(position => position.featured)
   const regularPositions = filteredPositions.filter(position => !position.featured)
-      id: '1,
-      title: 'Senior AI Engineer,
-      department: 'AI Solutions',      location: 'Remote,
-      type: 'Full-time,
-      experience: '5+ years,
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,
+      id: ',1,
+      title: 'Senior AI Enginee,r,
+      department: 'AI Solutions,',      location: 'Remot,e,
+      type: 'Full-tim,e,
+      experience: '5+ year,s,
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients,.,
       requirements: []
-        '5+ years experience in AI/ML development,
+        '5+ years experience in AI/ML developmen,t,
         'Expertise in Python, TensorFlow, PyTorch,
         'Experience with cloud platforms (AWS, Azure, GCP),
         'Strong understanding of deep learning algorithms,
         Previous experience in production AI systems
       ],
       benefits: []
-        'Competitive salary: $120,000 - $180,000,
+        'Competitive salary: $12,0,000 - $180,000,
         'Equity participation,
         'Flexible remote work,
         Professional development budget
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       requirements: []
-        '5+ years experience in AI/ML development',
+        '5+ years experience in AI/ML development,',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong understanding of deep learning algorithms',
         'Previous experience in production AI systems'
       ],
       benefits: []
-        'Competitive salary: $120,000 - $180,000',
+        'Competitive salary: $12,0,000 - $180,000',
         'Equity participation',
         'Flexible remote work',
         'Professional development budget'
       ],
-      posted: '2 days ago,
-      featured: true}
+      posted: '2 days ag,o,
+      featured: tru,
+      e}
 })
 },
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});)
+      requirements: ['AW,S, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});)
 }
     'eer growth opportunities'
   const values = []
     {}
   const culture = []
     {}
-      stat: '98%,
-      label: 'Employee Satisfaction,
-      description: 'Our team loves working here});)
+      stat: '98,%,
+      label: 'Employee Satisfactio,n,
+      description: 'Our team loves working her,e});)
 },
     {}
-      stat: '50+,
-      label: 'Team Members,
-      description: 'Growing team of experts});)
+      stat: '50,+,
+      label: 'Team Member,s,
+      description: 'Growing team of expert,s});)
 },
     {}
-      stat: '15+,
-      label: 'Countries,
-      description: 'Global remote team});)
+      stat: '15,+,
+      label: 'Countrie,s,
+      description: 'Global remote tea,m});)
 },
     {}
-      stat: '4.9/5,
-      label: 'Glassdoor Rating,
-      description: 'Highly rated workplace});)
+      stat: '4.9/,5,
+      label: 'Glassdoor Ratin,g,
+      description: 'Highly rated workplac,e});)
         <title>eers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />
         <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, tech jobs, remote work, engineering positions />
@@ -311,7 +315,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
             <
           <
         <
-        {/* Featured Positions */}
+        {/* Featured Positions *,/}
         {featuredPositions.length > 0 && ()
           <section className="py-16 px-4>
             <div className="max-w-7xl mx-auto></div>
@@ -353,12 +357,11 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                 <h3 className="text-2xl font-bold text-white mb-4>No positions found</h3>
                 <p className="text-gray-300 mb-8>Try adjusting your filters or check back later for new opportunities</p>
                 <button
-                  onClick={() => {}
-}setSelectedDepartment('all)
+                  onClick={() => ,{}}setSelectedDepartment('all)
                     setSelectedLocation('all)
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${}
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20
-                  } hover:border-purple-400 transition-all duration-300 group}
+                  } hover: border-purple-400 transition-all duration-300 grou,p}
                 >                <div></div>
                   {position.featured && ()
                   <p className="text-gray-300 mb-6>{position.description}</p>

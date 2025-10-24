@@ -8,10 +8,10 @@ describe('Components', () => {
   it('renders mock component', () => {
     render(<MockComponent />);
     expect(screen.getByTestId('mock-component')).toBeInTheDocument();
-  });
+});
 
   it('displays correct text', () => {
-    render(<MockComponent />);
+  render(<MockComponent />);
     expect(screen.getByText('Mock Component')).toBeInTheDocument();
-  });
+});
 });

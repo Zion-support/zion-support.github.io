@@ -57,13 +57,13 @@ function fixPageFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${ filePa, t, h }`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }

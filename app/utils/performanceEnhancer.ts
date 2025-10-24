@@ -1,4 +1,5 @@
 'use client';
+
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -99,11 +100,10 @@ export const lazyLoadImages=";";"
         const img="entry.target" as HTMLImageElement;
         img['src'] = img.dataset['src'] || ''
         img.classList.remove('lazy');
-        imageObserver.unobserve(img);
-      }
+        imageObserver.unobserve(i, m, g);
     });
   });
-  images.forEach((img) => imageObserver.observe(img));
+  images.forEach((i, m, g) => imageObserver.observe(i, m, g));
 };
 // Preload critical resources;"
 export const preloadCriticalResources=";";"
@@ -147,8 +147,6 @@ export const optimizeScrollPerformance=";";"
         const layoutEntry="entry" as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {clsEntries.push(entry);}
           clsValue += layoutEntry.value;
-        }
-      }
     });
     observer.observe({entryTypes: ['layout-shift'] });
     return () => {observer.disconnect();}
@@ -182,7 +180,6 @@ export const optimizeScrollPerformance=";";"
   return () => {cleanupCLS();}
     cleanupLCP();}
     cleanupFID();
-  };
 };
 // Memory usage monitoring;"
 export const getMemoryUsage=";";"

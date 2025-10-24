@@ -60,6 +60,7 @@ const SEOHeadPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -130,7 +131,7 @@ const SEOHeadPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default SEOHeadPage;
@@ -158,14 +159,10 @@ return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname="&quot;
 {canonicalUrl&&<linkrel="&quot;canonical&quot;href={canonicalUrl}" />}</linkrel>"
 {/* Open GraphMetaTags*/}<metaproperty="&quot;og:title&quot;" content="{fullTitle}" /><metaproperty="&quot;og:description&quot;" content="{description}" /><metaproperty="&quot;og:type&quot;" content="{ogType}" /><metaproperty="&quot;og:url&quot;" content="{canonicalUrl}" /><metaproperty="&quot;og:image&quot;" content="{ogImage}" /><metaproperty="&quot;og:site_name&quot;content=&quot;Zion" TechGroup&quot; /><metaproperty="&quot;og:locale&quot;content=&quot;en_US&quot;" />{/* Twitter CardMetaTags*/}<metaname="&quot;twitter:card&quot;" content="{twitterCard}" /><metaname="&quot;twitter:title&quot;" content="{fullTitle}" /><metaname="&quot;twitter:description&quot;" content="{description}" /><metaname="&quot;twitter:image&quot;" content="{ogImage}" />{/* Additional SEOMetaTags*/}<metaname="&quot;theme-color&quot;content=&quot;#0f172a&quot;" /><metaname="&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot;" /><metaname="&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot;" /><metaname="&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot;" />{/* StructuredData*/}<scripttype="&quot;application/ld+json&quot;">{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
-constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI & IT Solutions',
-description= 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
-keywords= 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
-canonical,
-ogImage= '/og-image.jpg',
-ogType= 'website',
-twitterCard= 'summary_large_image',
-structuredData}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`
+constSEOHead: React.FC<SEOHeadProp s>= ({title='Zion Tech Group - Advanced AI & IT Solutions,' description='Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.' keywords='AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation' canonical,
+ogImage='/og-image.jpg' ogType='website' twitterCard='summary_large_image' structuredData}) => {
+  constfullTitle= title.includes('Zion Tech Group&apos;) ? title: `${titl,e
+} | Zion TechGroup`
 constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location.href: '')
 const defaultStructuredData= {&quot;@context&quot;:&quot;https:// schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https:// ziontechgroup.com&quot;,&quot;logo&quot;:&quot;https:// ziontechgroup.com/logo.png&quot;,&quot;description&quot;:&quot;Advanced AI and IT Solutions company providing cutting-edge technology services&quot;,&quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;,&quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;,&quot;addressLocality&quot;:&quot;Middletown&quot;,&quot;addressRegion&quot;:&quot;DE&quot;,&quot;postalCode&quot;:&quot;1970 9&quot;,&quot;addressCountry&quot;:&quot;US&quot;},&quot;contactPoint&quot;: {&quot;@type&quot;:&quot;ContactPoint&quot;,&quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;,&quot;contactType&quot;:&quot;customer service&quot;,&quot;email&quot;:&quot;kleber@ziontechgroup.com&quot;},&quot;sameAs&quot;: [&quot;https:// www.linkedin.com/$1/zion-tech-group&quot;,&quot;https:// twitter.com/ziontechgroup&quot;
 ]

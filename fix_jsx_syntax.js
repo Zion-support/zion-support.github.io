@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixJSXSyntax(content) {
+function fixJSXSyntax(conte, n, t) {
   // Fix common JSX syntax issues
   let fixed = content;
   
@@ -40,35 +40,35 @@ function fixJSXSyntax(content) {
   return fixed;
 }
 
-function processFile(filePath) {
+function processFile(filePa, t, h) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXSyntax(content);
+    const fixed = fixJSXSyntax(conte, n, t);
     if (content !== fixed) {
-      console.log(`Fixing JSX syntax in: ${filePath}`);
+      console.log(`Fixing JSX syntax in: ${ filePa, t, h }`);
       fs.writeFileSync(filePath, fixed);
       return true;
     }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
   }
   return false;
 }
 
-function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
+function walkDirectory(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
   let fixedCount = 0;
   
   for (const file of files) {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory()) {
       if (file !== 'node_modules' && file !== '.git') {
-        fixedCount += walkDirectory(filePath);
+        fixedCount += walkDirectory(filePa, t, h);
       }
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-      if (processFile(filePath)) {
+      if (processFile(filePa, t, h)) {
         fixedCount++;
       }
     }
@@ -79,4 +79,4 @@ function walkDirectory(dir) {
 
 console.log('Starting JSX syntax fix...');
 const fixedCount = walkDirectory('app');
-console.log(`Fixed JSX syntax in ${fixedCount} files`);
+console.log(`Fixed JSX syntax in ${ fixedCou, n, t } files`);

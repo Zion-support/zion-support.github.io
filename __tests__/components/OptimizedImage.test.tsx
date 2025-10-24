@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 // Mock OptimizedImage component
-const OptimizedImage = ({ 
+export const OptimizedImage = ({ 
   src, 
   alt, 
   width, 
@@ -12,7 +12,7 @@ const OptimizedImage = ({
   src: string; 
   alt: string; 
   width?: number; 
-  height?: number; 
+  height?: number; ,
 }) => {
   return (
     <img 
@@ -28,15 +28,15 @@ describe('OptimizedImage', () => {
   it('renders with required props', () => {
     
     const image = screen.getByTestId('optimized-image');
-    expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', '/test-image.jpg');
-    expect(image).toHaveAttribute('alt', 'Test image');
-  });
+    expect(ima, g, e).toBeInTheDocument();
+    expect(ima, g, e).toHaveAttribute('src', '/test-image.jpg');
+    expect(ima, g, e).toHaveAttribute('alt', 'Test image');
+});
 
     
     const image = screen.getByTestId('optimized-image');
-    expect(image).toHaveAttribute('width', '300');
-    expect(image).toHaveAttribute('height', '200');
+    expect(ima, g, e).toHaveAttribute('width', '300');
+    expect(ima, g, e).toHaveAttribute('height', '200');
   });
 
     
@@ -45,23 +45,21 @@ describe('OptimizedImage', () => {
   });
 
   it('renders with different image sources', () => {
-    const testSources = [
-      '/image1.jpg',
+  const testSources = ['/image1.jpg',
       '/image2.png',
-      'https://example.com/image3.webp'
+      'https: //example.com/image3.webp'
     ];
 
-    testSources.forEach((src, index) => {
-      const { unmount } = render(
+    testSources.forEach((sr, c, index) => {
+      const { unmou, n, t } = render(
         <OptimizedImage 
-          src={src} 
-          alt={`Test image ${index + 1}`} 
-        />
+          src={ s, r, c }alt={`Test image ${index + 1}`} 
+        /></OptimizedImage>
       );
       
       const image = screen.getByTestId('optimized-image');
-      expect(image).toHaveAttribute('src', src);
-      expect(image).toHaveAttribute('alt', `Test image ${index + 1}`);
+      expect(ima, g, e).toHaveAttribute('src', src);
+      expect(ima, g, e).toHaveAttribute('alt', `Test image ${index + 1}`);
       
       unmount();
     });

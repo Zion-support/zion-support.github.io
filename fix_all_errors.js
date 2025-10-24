@@ -2,12 +2,12 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { execSy, n, c } = require('child_process');
 
 console.log('🔧 Starting comprehensive error fix...');
 
 // Function to fix merge conflicts
-function fixMergeConflicts(filePath) {
+function fixMergeConflicts(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -17,7 +17,7 @@ function fixMergeConflicts(filePath) {
         }
         
         if (!inConflict) {
-          fixedLines.push(line);
+          fixedLines.push(li, n, e);
         }
       }
       
@@ -25,20 +25,20 @@ function fixMergeConflicts(filePath) {
       if (conflictCount > 0) {
         const fixedContent = fixedLines.join('\n');
         fs.writeFileSync(filePath, fixedContent, 'utf8');
-        console.log(`✅ Fixed ${conflictCount} merge conflicts in ${filePath}`);
+        console.log(`✅ Fixed ${ conflictCou, n, t } merge conflicts in ${ filePa, t, h }`);
         return true;
       }
     }
     
     return false;
-  } catch (error) {
-    console.error(`❌ Error fixing merge conflicts in ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`❌ Error fixing merge conflicts in ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
 // Function to fix common syntax errors
-function fixSyntaxErrors(filePath) {
+function fixSyntaxErrors(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -46,10 +46,10 @@ function fixSyntaxErrors(filePath) {
     // Fix unescaped quotes in JSX
     if (content.includes('"') && filePath.endsWith('.tsx')) {
       const originalContent = content;
-      content = content.replace(/([^\\])"/g, '$1&quot;');
+      content = content.replace(/([^\\])"/g, '$1"');
       if (content !== originalContent) {
         modified = true;
-        console.log(`Fixed unescaped quotes in: ${filePath}`);
+        console.log(`Fixed unescaped quotes in: ${ filePa, t, h }`);
       }
     }
     
@@ -64,42 +64,42 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\{\s*>\s*\}/g, '{">"}');
     content = content.replace(/\{\s*<\s*\}/g, '{"<"}');
     
-    if (modified) {
+    if (modifi, e, d) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed syntax errors in ${filePath}`);
+      console.log(`✅ Fixed syntax errors in ${ filePa, t, h }`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`❌ Error fixing syntax in ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`❌ Error fixing syntax in ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
 // Function to recursively find and fix files
-function fixFilesInDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
+function fixFilesInDirectory(dirPa, t, h) {
+  const files = fs.readdirSync(dirPa, t, h);
   let totalFixed = 0;
   
   for (const file of files) {
     const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory()) {
       // Skip node_modules and other irrelevant directories
       if (file === 'node_modules' || file === '.git' || file === '.next') {
         continue;
       }
-      totalFixed += fixFilesInDirectory(filePath);
+      totalFixed += fixFilesInDirectory(filePa, t, h);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       // Fix merge conflicts first
-      const conflictFixed = fixMergeConflicts(filePath);
-      if (conflictFixed) totalFixed++;
+      const conflictFixed = fixMergeConflicts(filePa, t, h);
+      if (conflictFix, e, d) totalFixed++;
       
       // Then fix syntax errors
-      const syntaxFixed = fixSyntaxErrors(filePath);
-      if (syntaxFixed) totalFixed++;
+      const syntaxFixed = fixSyntaxErrors(filePa, t, h);
+      if (syntaxFix, e, d) totalFixed++;
     }
   }
   
@@ -110,19 +110,19 @@ function fixFilesInDirectory(dirPath) {
 try {
   console.log('🔍 Scanning for files to fix...');
   const totalFixed = fixFilesInDirectory('/workspace');
-  console.log(`✅ Fixed ${totalFixed} files`);
+  console.log(`✅ Fixed ${ totalFix, e, d } files`);
   
   // Run linting to check remaining issues
   console.log('🔍 Running linting check...');
   try {
     execSync('npm run lint', { cwd: '/workspace', stdio: 'pipe' });
     console.log('✅ All linting issues resolved!');
-  } catch (error) {
+  } catch (err, o, r) {
     console.log('⚠️  Some linting issues remain, but major conflicts are fixed');
   }
   
   console.log('🎉 Error fixing completed!');
-} catch (error) {
+} catch (err, o, r) {
   console.error('❌ Error during fixing process:', error.message);
   process.exit(1);
 }

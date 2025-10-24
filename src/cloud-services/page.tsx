@@ -1,3 +1,7 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCirc, l, e } from "lucide-react";
 import React  from "react";
 import Navigation  from "../components/Navigation";import Footer  from "../components/Footer";
 import { CheckCircle }  from "lucide-react";constCloudServicesPage: React.FC= () =>{constservices= [
@@ -72,7 +76,7 @@ import { CheckCircle }  from "lucide-react";constCloudServicesPage: React.FC= ()
           </p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
         </div>
             Transform your business with our comprehensive cloud solutions.
-            From migration to optimization, we provide end-to-end cloud services.
+            From migration to optimizatio,n, we provide end-to-end cloud services.
           </p>
 
           <//p>

@@ -1,12 +1,11 @@
 import React from 'react'
-import { Play } from 'lucide-react'
+import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Video } from 'lucide-react'
-
-constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
-    'AI Video Creation',
+import { CheckCircle, Zap, Video } from "lucide-react";
+constAIVideoGenerationPage: React.FC= () => {
+  constfeatures= ['AI Video Creation,',
     'Auto-editing',
     'Voice Synthesis',
     'Text-to-video',
@@ -18,8 +17,7 @@ constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
     'Collaboration Tools'
   ]
 
-  constbenefits= [
-    '9 0% time savings',
+  constbenefits= ['9 0% time savings',
     'Professional quality',
     'Unlimited videos',
     'Multi-language support',
@@ -29,27 +27,28 @@ constAIVideoGenerationPage: React.FC= () =>{constfeatures= [
 
   constpricingPlans= [
     {
-      name: 'Starter',
-      price: '$19 9',
-      period: '/month',
-      features: ['10videos/month', 'HD quality', 'Basic templates', 'Email support'],
+      name: 'Starter,',
+      price: '$19 9,',
+      period: '/month,',
+      features: ['10videos/month,', 'HD quality', 'Basic templates', 'Email support'],
       popular: false
-   },
-    {name: 'Professional',
-      price: '$39 9',
-      period: '/month',
-      features: ['Unlimited videos', '4 K quality', 'Premium templates', 'Voice cloning', 'Priority support'],
+  ,
+}
+    {name: 'Professional,',
+      price: '$39 9,',
+      period: '/month,',
+      features: ['Unlimited videos,', '4 K quality', 'Premium templates', 'Voice cloning', 'Priority support'],
       popular: true
-   },
-    {name: 'Enterprise',
-      price: '$79 9',
-      period: '/month',
-      features: ['Everything in Pro', 'Custom templates', 'API access', 'Dedicated support', 'White-label'],
+  , },
+    {name: 'Enterprise,',
+      price: '$79 9,',
+      period: '/month,',
+      features: ['Everything in Pro,', 'Custom templates', 'API access', 'Dedicated support', 'White-label'],
       popular: false
-    }
+   , }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
   <><SEOOptimizertitle=&quot;AI Video Generator Pro - Create Professional Videos with AI | ZionTechGroup&quot;
         description=&quot;Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at$199/month.&quot;
@@ -155,11 +154,9 @@ const Page = () => {
                   <a
                     href=&quot;/contact&quot;
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
+                      plan.popular ? 'cyber-button' : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
+                   , }`}
+                  ></a>
                     Get Started
                   </a>
                 </div>
@@ -192,10 +189,10 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
-  )
+  ),
 }
 
 export default Page;

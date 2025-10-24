@@ -4,76 +4,80 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
-constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Phone, Mail } from "lucide-react";
+constAIDataVisualizationPage: React.FC= () => {
+  constfeatures= [
     {
-      icon: BarChart,
-      title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that automatically update with real-time data.',
+      icon: BarChar,
+      title: 'Interactive Dashboards,',
+      description: 'Create stunnin,g, interactive dashboards that automatically update with real-time data.',
       benefits: ['Real-time Updates', 'Custom Visualizations', 'Interactive Elements', 'Mobile Responsive']
-   },
-    {icon: Brain,
-      title: 'AI-Powered Insights',
+}
+    {icon: Brai,
+      title: 'AI-Powered Insights,',
       description: 'Leverage machine learning to automatically identify patterns and generate actionable insights.',
       benefits: ['Pattern Recognition', 'Predictive Analytics', 'Anomaly Detection', 'Smart Recommendations']
    },
-    {icon: Database,
-      title: 'Multi-Source Integration',
+    {icon: Databas,
+      title: 'Multi-Source Integration,',
       description: 'Connect to any data source and automatically transform raw data into meaningful visualizations.',
       benefits: ['API Integration', 'Database Connections', 'File Uploads', 'Real-time Sync']
    },
-    {icon: Settings,
-      title: 'Customizable Reports',
+    {icon: Setting,
+      title: 'Customizable Reports,',
       description: 'Generate automated reports with customizable templates and scheduling options.',
       benefits: ['Auto-generation', 'Custom Templates', 'Scheduled Reports', 'Export Options']
     }
   ]
 
   constpricing= [
-    {name: 'Starter',
-      price: '$19 9/month',
+    {name: 'Starter,',
+      price: '$19 9/month,',
       description: 'Perfect for small teams',
-      features: ['Up to5dashboards', 'Basic visualizations', '2 data sources', 'Email support']
+      features: ['Up to5dashboards,', 'Basic visualizations', '2 data sources', 'Email support']
    },
-    {name: 'Professional',
-      price: '$39 9/month',
+    {name: 'Professional,',
+      price: '$39 9/month,',
       description: 'Ideal for growing businesses',
-      features: ['Unlimited dashboards', 'Advanced AI insights', '10data sources', 'Priority support', 'Custom branding']
+      features: ['Unlimited dashboards,', 'Advanced AI insights', '10data sources', 'Priority support', 'Custom branding']
    },
-    {name: 'Enterprise',
-      price: '$79 9/month',
+    {name: 'Enterprise,',
+      price: '$79 9/month,',
       description: 'For large organizations',
-      features: ['Everything in Professional', 'Unlimited data sources', 'Custom integrations', 'Dedicated support', 'On-premise deployment']
+      features: ['Everything in Professional,', 'Unlimited data sources', 'Custom integrations', 'Dedicated support', 'On-premise deployment']
     }
   ]
   const stats = [
-    { number: '85%', label: 'Faster Decision Making' },
-    { number: '300%', label: 'Data Processing Speed' },
-    { number: '50+', label: 'Visualization Types' },
-    { number: '99.9%', label: 'Uptime Guarantee' }
+    { number: '85%,',
+      label: 'Faster Decision Making', },
+    { number: '300%,',
+      label: 'Data Processing Speed', },
+    { number: '50+,',
+      label: 'Visualization Types', },
+    { number: '99.9%,',
+      label: 'Uptime Guarantee', }
   ]
 
   constuseCases= [
-    {title: 'Sales Analytics',
-      description: 'Track sales performance, identify trends, and optimize your sales strategy with real-time dashboards.',
+    {title: 'Sales Analytics,',
+      description: 'Track sales performanc,e, identify trends, and optimize your sales strategy with real-time dashboards.',
       icon: BarChart
-   },
-    {title: 'Marketing Insights',
-      description: 'Analyze campaign performance, customer behavior, and ROI with comprehensive marketing analytics.',
+  , },
+    {title: 'Marketing Insights,',
+      description: 'Analyze campaign performanc,e, customer behavior, and ROI with comprehensive marketing analytics.',
       icon: TrendingUp
-   },
-    {title: 'Financial Reporting',
+  , },
+    {title: 'Financial Reporting,',
       description: 'Generate automated financial reports and track key metrics for better financial decision making.',
       icon: Database
-   },
-    {title: 'Operations Monitoring',
-      description: 'Monitor operational efficiency, identify bottlenecks, and optimize business processes.',
+  , },
+    {title: 'Operations Monitoring,',
+      description: 'Monitor operational efficienc,y, identify bottlenecks, and optimize business processes.',
       icon: Settings
-    }
+   , }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
   <><SEOOptimizertitle=&quot;AI Data Visualization Solutions - ZionTechGroup&quot;
         description=&quot;Transform your data into actionable insights with AI-powered visualization tools. Create interactive dashboards, automated reports, andintelligentanalytics.&quot;
@@ -172,10 +176,9 @@ const Page = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`cyber-card p-8 relative ${
+                  key={ ind, e, x }className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
+    }`}
                 ></div>
                   {index === 1 && (
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
@@ -234,7 +237,7 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
   )

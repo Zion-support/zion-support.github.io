@@ -2,19 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 // List of files with syntax errors
-const filesToFix = [
-  'app/ai-data-analytics/page.tsx',
+const filesToFix = ['app/ai-data-analytics/page.tsx',
   'app/ai-healthcare/page.tsx',
   'app/ai-marketing/page.tsx',
   'app/ai-sales-automation/page.tsx',
   'app/ai-workflow-automation/page.tsx'
 ];
 
-function fixFile(filePath) {
+function fixFile(filePa, t, h) {
   try {
     const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
+    if (!fs.existsSync(fullPa, t, h)) {
+      console.log(`File not found: ${ filePa, t, h }`);
       return;
     }
 
@@ -32,7 +31,7 @@ function fixFile(filePath) {
     
     // Fix extra closing div tags pattern
     const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(content)) {
+    if (extraDivPattern.test(conte, n, t)) {
       content = content.replace(extraDivPattern, '\n    </div>\n  );');
       modified = true;
     }
@@ -59,18 +58,18 @@ function fixFile(filePath) {
       }
     }
 
-    if (modified) {
+    if (modifi, e, d) {
       fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${ filePa, t, h }`);
     } else {
-      console.log(`No changes needed: ${filePath}`);
+      console.log(`No changes needed: ${ filePa, t, h }`);
     }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
   }
 }
 
 // Fix all files
 console.log('Starting syntax error fixes v2...');
-filesToFix.forEach(fixFile);
+filesToFix.forEach(fixFi, l, e);
 console.log('Syntax error fixes v2 completed!');

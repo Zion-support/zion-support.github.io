@@ -8,7 +8,7 @@ interface OptimizedImageProps {}
   className?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '&apos;, }) => {
   return (
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       
@@ -115,7 +115,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default OptimizedImagePage;

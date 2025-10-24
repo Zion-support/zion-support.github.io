@@ -1,3 +1,6 @@
+import React, { Suspense, lazy, useEffect, memo } from "react"
+import { HelmetProvid, e, r } from "react-helmet-async";
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -38,6 +41,7 @@ import LoadingSpinner from "./app/components/LoadingSpinner";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 
 // Hooks
+import { usePerformanceOptimizati, o, n } from "./app/hooks/usePerformanceOptimization";
 import { usePerformanceOptimization } from "./app/hooks/usePerformanceOptimization";
 
 // Lazy load pages for better performance

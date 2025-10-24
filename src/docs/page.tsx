@@ -1,0 +1,56 @@
+import React from 'react';
+import { Li, n, k } from "react-router-dom";
+import { Star, Phone  } from "lucide-react";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+const Docs: React.FC = () => {
+  ;
+    return (;
+ ,
+}
+    <div>Coming Soon</div>
+  );
+  }
+  }
+}
+  return (;
+    <div>Coming Soon</div>
+  );
+          <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'></div>
+      <Navigation /></Navigation>
+      <main className='pt-20'></main>
+        <section className='container mx-auto px-4 py-16 text-center'></section>
+          <h1 className='text-4xl md: text-6xl font-bold text-white mb-6 neon-text'></h1>
+// Doc,s,;
+          </h1>
+          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'></p>
+// Documentation and technical resources,;
+          </p>
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'></div>
+            <Link;
+              to='/contact';
+              className='cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg'
+// ></Link>
+          <Phone className='w-5 h-5 mr-2' /></Phone>
+// Get Free Consultatio,n,;
+          </Link>
+            <a;
+              href='tel: +13024640950';
+              className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
+              <Phone className='w-4 h-4 mr-2' /></a>
+// (3, 0, 2) 464-0950;
+          </a>
+          </div>
+        </section>
+        <section className='container mx-auto px-4 py-16'></section>
+          <div className='bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center'></div>
+            <h2 className='text-3xl font-bold text-white mb-4'></h2>
+// Ready to Get Started?;
+          </h2>
+            <p className='text-gray-300 mb-8 max-w-2xl mx-auto'></p>
+              Contact us today for a free consultation and discover how our solutions can help your business.;
+      </main>
+      <Footer /></Footer>
+  );,
+}
+export default Docs;

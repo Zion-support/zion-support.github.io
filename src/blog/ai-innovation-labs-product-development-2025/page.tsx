@@ -1,12 +1,10 @@
 import React from 'react'
-import { Helmet } from 'lucide-react'
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Star, Code, Helmet } from 'lucide-react';
-
+import { Star, Code, Helmet } from "lucide-react";
 const InnovationLabsPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <><Helmet></Helmet>
         <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.&quot; />
         <meta property=&quot;og:url&quot; content=&quot;/og/ai-innovation-labs-2025.jpg&quot; />
@@ -103,7 +101,8 @@ const InnovationLabsPage: React.FC = () => {
 └── Infrastructure
     ├── Cloud-native Architecture
     ├── Kubernetes & Docker
-    └── CI/CD Automation`}
+    └── CI/CD Automation,`
+}
               </pre>
             </div>
             <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>🚀 Getting Started with AI Innovation</h2>
@@ -132,6 +131,6 @@ const InnovationLabsPage: React.FC = () => {
       </div>
     </div>
     </>
-  )
+  ),
 }
 export default InnovationLabsPage

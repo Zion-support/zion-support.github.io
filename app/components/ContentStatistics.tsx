@@ -5,21 +5,26 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0,
-    countries: 0,
+  const [counter, s, setCounters] = useState({
+    clients:  ,0,
+    projects:  ,0,
+    satisfaction:  ,0,
+    years:  ,0,
+    countries:  ,0,
     uptime: 0
-  })
+ ,
+})
 
-  const targetCounters = {
-    clients: 1000,
-    projects: 500,
-    satisfaction: 99,
-    years: 10,
-    countries: 25,
+  const targetCounters={clients: 100,
+      0,
+    projects: 50,
+      0,
+    satisfaction: 9,
+      9,
+    years: 1,
+      0,
+    countries: 2,
+      5,
     uptime: 99.9
   }
 
@@ -345,6 +350,6 @@ View Case Studies
 </div>
 </div>
 </div>
-)
+),
 }
 export default ContentStatistics"

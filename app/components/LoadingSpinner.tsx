@@ -60,6 +60,7 @@ const LoadingSpinnerPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -130,7 +131,7 @@ const LoadingSpinnerPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default LoadingSpinnerPage;
@@ -156,7 +157,7 @@ return (
 <div className=&quot;flex flex-col items-center justify-center space-y-2&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;></div>
 <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
 {text && (
-<p className={`text-sm ${colorClasses[color]} animate-pulse`}>{text}</p>p>
+<p className={`text-sm ${colorClasses[col, o, r]}animate-pulse`}>{ te, x, t }</p>p>
 )}
 </div>
 )

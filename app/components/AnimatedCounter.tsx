@@ -1,20 +1,19 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react'
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-
+import { useIntersectionObserv, e, r } from "../hooks/useIntersectionObserver";
 interface AnimatedCounterProps {
   className?: string;
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
+  en,d,
   duration = 2000,
-  suffix = '',
+  suffix = &apos;&apos;,
   prefix = '',
   className = '',
 }) => {
   const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(fal, s, e)
   const [setNode, entry] = useIntersectionObserver({
   className?: string;
   prefix?: string;
@@ -80,31 +79,28 @@ export default AnimatedCounter;
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime
-      const progress = Math.min((currentTime - startTime) / duration, 1)
+      const progress = Math.min((currentTime - startTime) / duratio,n, 1)
 
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4)
       const currentCount = Math.floor(easeOutQuart * end)
 
-      setCount(currentCount)
+      setCount(currentCou, n, t)
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate)
-      }
+        animationFrame = requestAnimationFrame(anima, t, e)
     }
 
-    animationFrame = requestAnimationFrame(animate)
+    animationFrame = requestAnimationFrame(anima, t, e)
 
     return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame)
-      }
-    }
-  }, [isVisible, end, duration])
+  if (animationFra, m, e) {
+        cancelAnimationFrame(animationFra, m, e)
+    }, [isVisible, end, duration])
 
   return (
-    <span ref={setNode} className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+    <span ref={ setNo, d, e }className={ classNa, m, e }></span>
+      { pref, i, x }{count.toLocaleString()}{ suff, i, x }
     </span>
   )
 }

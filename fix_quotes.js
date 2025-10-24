@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix HTML entities back to normal quotes
-function fixQuotes(content) {
+function fixQuotes(conte, n, t) {
   // Fix HTML entities
   content = content.replace(/&quot;/g, '"');
   content = content.replace(/&apos;/g, "'");
@@ -14,7 +14,7 @@ function fixQuotes(content) {
 }
 
 // Function to fix common syntax issues
-function fixSyntax(content) {
+function fixSyntax(conte, n, t) {
   // Fix empty function bodies
   content = content.replace(/return\s*\(\s*\)\s*;\s*}\s*;\s*export/g, 'return null;\n};\n\nexport');
   
@@ -24,41 +24,41 @@ function fixSyntax(content) {
   
   if (openBraces > closeBraces) {
     const missingBraces = openBraces - closeBraces;
-    content += '\n' + '}'.repeat(missingBraces);
+    content += '\n}'.repeat(missingBrac, e, s);
   }
   
   return content;
 }
 
 // Main function to process files
-function processFile(filePath) {
+function processFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Apply fixes
-    content = fixQuotes(content);
-    content = fixSyntax(content);
+    content = fixQuotes(conte, n, t);
+    content = fixSyntax(conte, n, t);
     
     // Write back the fixed content
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.log(`Fixed: ${ filePa, t, h }`);
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
   }
 }
 
 // Find all TSX files and process them
-function findAndProcessFiles(dir) {
-  const files = fs.readdirSync(dir);
+function findAndProcessFiles(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
   
   files.forEach(file => {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      findAndProcessFiles(filePath);
+      findAndProcessFiles(filePa, t, h);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      processFile(filePath);
+      processFile(filePa, t, h);
     }
   });
 }

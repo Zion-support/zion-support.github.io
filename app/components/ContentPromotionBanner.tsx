@@ -131,6 +131,7 @@ const ContentPromotionBanner: React.FC="()" => {const benefits: ";"
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -205,7 +206,7 @@ const ContentPromotionBanner: React.FC="()" => {const benefits: ";"
         </button>
       </div>
     </div>
-  )
+  ),
 }
 ;"
 export default ContentPromotionBanner

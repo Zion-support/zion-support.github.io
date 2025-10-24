@@ -87,6 +87,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -137,6 +138,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
                   <>
                     <div className=&quot;animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2&quot;></div>
                     Subscribing...
+    </>
                   </>
                 ) : (
                   <>
@@ -180,7 +182,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default ContentNewsletterSignupPage;"

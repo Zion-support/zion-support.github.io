@@ -33,6 +33,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEn
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -86,7 +87,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEn
                 <div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4&quot;></div>
                   <feature.icon className=&quot;h-6 w-6 text-white&quot; />
                 </div>
-              ))}
+              ),)}
             </div>
           </div>
         </section>
@@ -147,7 +148,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({className="''" }) => {}</SEOEn
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default SEOEnhancerPage;

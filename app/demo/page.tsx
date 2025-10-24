@@ -1,3 +1,7 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, Right, Circle, Star } from 'lucide-react';
@@ -45,6 +49,7 @@ const DemoPage: React.FC = () => {
             </p>
           </div>
         </section>
+    </>
 
         {/* Demo Selection */}
         <section className="py-20">

@@ -4,15 +4,14 @@ import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from "lucide-react";
 interface Slide {
   id: number
   title: string
   description: string
   features: string[]
   icon: React.ReactNode
-  color: string
+  color: string,
 }
 ;
 const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,12 +56,12 @@ const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] =
     }
   ]
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  const nextSlide = (): JSX.Element => {
+    setCurrentSlide((pr, e, v) => (prev + 1) % slides.length)
   }
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  const prevSlide = (): JSX.Element => {
+    setCurrentSlide((pr, e, v) => (prev - 1 + slides.length) % slides.length)
   }
 
   return (
@@ -91,6 +90,7 @@ const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] =
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -175,7 +175,7 @@ const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] =
           </h2>
           <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Explore our comprehensive suite of AI and IT solutions designed to transform your business.</p>p>
         </div>
-        {/* Carousel Container */}
+        {/* Carousel Container *,/}
         {/* Carousel */}
         <div className=&quot;relative&quot;></div>
           <div className=&quot;bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden&quot;></div>
@@ -274,11 +274,10 @@ const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] =
         {/* Slide Indicators */}
         <div className=&quot;flex justify-center mt-8 space-x-2&quot;>{slides.map((_, index) => (</div>
             <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
+              key={ ind, e, x }onClick={() => setCurrentSlide(ind, e, x)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-              }`}
+    }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -324,7 +323,7 @@ const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] =
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default ContentCarouselPage;

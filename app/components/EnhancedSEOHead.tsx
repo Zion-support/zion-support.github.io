@@ -36,6 +36,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -106,7 +107,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default EnhancedSEOHeadPage;

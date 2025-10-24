@@ -2,8 +2,9 @@ import React from 'react'
 'use client'
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
-src: string,
-alt: string;}
+src: strin,
+      g,
+alt: string,;}
 interface ImageProps {}
 src: string,;
 alt: string;

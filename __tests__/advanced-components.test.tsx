@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-const TestComponent = () => {
+export const TestComponent = (): JSX.Element => {
   return <div>Test content</div>;
 };
 

@@ -12,10 +12,10 @@ describe('App Component', () => {
   it('renders without crashing', () => {
     render(<MockApp />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+});
 
   it('renders the main content', () => {
-    render(<MockApp />);
+  render(<MockApp />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+});
 });

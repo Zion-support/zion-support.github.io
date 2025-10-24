@@ -36,6 +36,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({className="''" }) => {}</S
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -106,7 +107,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({className="''" }) => {}</S
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default SystemMonitorPage;

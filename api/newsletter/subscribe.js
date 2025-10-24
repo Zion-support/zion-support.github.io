@@ -1,6 +1,6 @@
-const isValidEmail = (email) => {
+const isValidEmail = (ema, i, l) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  return emailRegex.test(ema, i, l);
 };
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -20,14 +20,14 @@ export default async function handler(req, res) {
     return;
   }
   try {
-    console.log('Newsletter subscription:', email);
+    console.log('Newsletter subscription: ', email);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true
       message: 'Successfully subscribed to newsletter' )
     }));
-  } catch (error) {
-    console.error('Newsletter subscription error:', error);
+  } catch (err, o, r) {
+    console.error('Newsletter subscription error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter'

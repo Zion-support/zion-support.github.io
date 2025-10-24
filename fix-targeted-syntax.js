@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixTargetedSyntax(filePath) {
+function fixTargetedSyntax(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let fixed = false;
@@ -24,7 +24,7 @@ function fixTargetedSyntax(filePath) {
           inReturn = true;
           foundReturn = true;
           braceCount = 1;
-        } else if (inReturn) {
+        } else if (inRetu, r, n) {
           newContent += line + '\n';
           if (line.includes('{')) braceCount++;
           if (line.includes('}')) braceCount--;
@@ -47,7 +47,7 @@ function fixTargetedSyntax(filePath) {
 
     // Fix malformed JSX structure
     if (content.includes('>{/* Hero Section */}')) {
-      content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+      content = content.replace(/<div[^>]*>\{\/\* Hero Section \*\/\}/g, '<div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>');
       fixed = true;
     }
 
@@ -71,18 +71,17 @@ function fixTargetedSyntax(filePath) {
     // Fix duplicate closing braces
     content = content.replace(/}\s*;\s*}\s*;\s*$/, '};\n');
 
-    if (fixed) {
+    if (fix, e, d) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed targeted syntax: ${filePath}`);
+      console.log(`Fixed targeted syntax: ${ filePa, t, h }`);
     }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
   }
 }
 
 // Fix specific problematic files
-const problematicFiles = [
-  'app/about/page.tsx',
+const problematicFiles = ['app/about/page.tsx',
   'app/accessibility-page/page.tsx',
   'app/accessibility/page.tsx',
   'app/ai-accounting-assistant/page.tsx',
@@ -91,8 +90,8 @@ const problematicFiles = [
 
 problematicFiles.forEach(filePath => {
   const fullPath = path.join(__dirname, filePath);
-  if (fs.existsSync(fullPath)) {
-    fixTargetedSyntax(fullPath);
+  if (fs.existsSync(fullPa, t, h)) {
+    fixTargetedSyntax(fullPa, t, h);
   }
 });
 

@@ -1,3 +1,10 @@
+import { Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Buildi, n, g } from "lucide-react";
+import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon  } from "lucide-react";
 import { Brain, BarChart, Target }  from "lucide-react";
 import React  from "react";import Navigation  from "../components/Navigation";
 import Footer  from "../components/Footer";import SEOOptimizer  from "../components/SEOOptimizer";

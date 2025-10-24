@@ -61,6 +61,7 @@ const PerformanceDashboardPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -131,7 +132,7 @@ const PerformanceDashboardPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default PerformanceDashboardPage;
@@ -202,13 +203,11 @@ return (
 <Activity className=&quot;w-5 h-5&quot; />
 Performance Dashboard
 <button
-onClick={toggleMonitoring}
-className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-isMonitoring
-? 'bg-red-600 text-white hover:bg-red-700'
-: 'bg-green-600 text-white hover:bg-green-700'
-}`}
->{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
+onClick={ toggleMonitori, n, g }className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+isMonitoring ? 'bg-red-600 text-white hover: bg-red-700' : 'bg-green-600 text-white hover:bg-green-700'
+    }`}
+>{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'
+    }</button>button>
 </div>
 {alerts.length > 0 && (
 <div className=&quot;mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg&quot;></div>
@@ -229,7 +228,8 @@ isMonitoring
 <Zap className=&quot;w-4 h-4 text-blue-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>Load Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}></div>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTim,e, { good: 100,
+      0, warning: 2000, })}`}></div>
 {metrics.loadTime.toFixed(0)}ms
 </div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
@@ -237,7 +237,8 @@ isMonitoring
 <Cpu className=&quot;w-4 h-4 text-green-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>Render Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 1,
+      6, warning: 33, })}`}></div>
 {metrics.renderTime.toFixed(2)}ms
 </div>"
 <div className="&quot;bg-white/5" rounded-lg p-4&quot;></div>"
@@ -259,14 +260,15 @@ isMonitoring
 <MemoryStick className=&quot;w-4 h-4 text-purple-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>Memory Usage</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 102,4, warning: 30 * 1024 * 1024, })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
 </div>
 <div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
 <div className=&quot;flex items-center gap-2 mb-2&quot;></div>
 <TrendingUp className=&quot;w-4 h-4 text-orange-400&quot; />
 <span className=&quot;text-gray-300 text-sm&quot;>FPS</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
+<div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 1,
+      0, warning: 20, })}`}>{metrics.fps}</div>div>
 </div>
 </div>
 <div className=&quot;mt-6 text-center&quot;></div>

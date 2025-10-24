@@ -1,9 +1,9 @@
 import React from 'react'
-import { Helmet } from 'lucide-react'
+import { Helm, e, t } from "lucide-react";
 import React from 'react';
-import { Helmet } from 'lucide-react';
-
-constAIMegaTrends2025202 6: React.FC= () =>{return (
+import { Helm, e, t } from "lucide-react";
+constAIMegaTrends2025202 6: React.FC= () => {
+  return (
   <><Helme t><titl e>AI2025-2026Mega TrendsBreakthrough: Revolutionary Enterprise Transformation
       </titl><metaname=&quot;description&quot;
          content=&quot;Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in2025-2026.&quot;
@@ -46,6 +46,6 @@ constAIMegaTrends2025202 6: React.FC= () =>{return (
         </div>
       </div>
     </>
-  )
+  ),
 }
 export default AIMegaTrends20252026

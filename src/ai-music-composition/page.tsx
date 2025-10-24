@@ -1,12 +1,11 @@
 import React from 'react'
-import { Play } from 'lucide-react'
+import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Music } from 'lucide-react'
-
-constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
-    'AI Composition',
+import { CheckCircle, Zap, Music } from "lucide-react";
+constAIMusicCompositionPage: React.FC= () => {
+  constfeatures= ['AI Composition,',
     'Multiple Genres',
     'Custom Length',
     'Royalty-free',
@@ -18,8 +17,7 @@ constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
     'Export Options'
   ]
 
-  constbenefits= [
-    'Unlimited music',
+  constbenefits= ['Unlimited music',
     'No copyright issues',
     'Custom compositions',
     'Professional quality',
@@ -29,27 +27,28 @@ constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
 
   constpricingPlans= [
     {
-      name: 'Starter',
-      price: '$9 9',
-      period: '/month',
-      features: ['10tracks/month', 'MP3 export', 'Basic genres', 'Email support'],
+      name: 'Starter,',
+      price: '$9 9,',
+      period: '/month,',
+      features: ['10tracks/month,', 'MP3 export', 'Basic genres', 'Email support'],
       popular: false
-   },
-    {name: 'Professional',
-      price: '$19 9',
-      period: '/month',
-      features: ['Unlimited tracks', 'WAV/MP3 export', 'All genres', 'API access', 'Priority support'],
+  ,
+}
+    {name: 'Professional,',
+      price: '$19 9,',
+      period: '/month,',
+      features: ['Unlimited tracks,', 'WAV/MP3 export', 'All genres', 'API access', 'Priority support'],
       popular: true
-   },
-    {name: 'Enterprise',
-      price: '$39 9',
-      period: '/month',
-      features: ['Everything in Pro', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license'],
+  , },
+    {name: 'Enterprise,',
+      price: '$39 9,',
+      period: '/month,',
+      features: ['Everything in Pro,', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
-    }
+   , }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
   <><SEOOptimizertitle=&quot;AI Music Composer - Generate Royalty-Free Music with AI | ZionTechGroup&quot;
         description=&quot;Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at$99/month.&quot;
@@ -155,11 +154,9 @@ const Page = () => {
                   <a
                     href=&quot;/contact&quot;
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
+                      plan.popular ? 'cyber-button' : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
+                   , }`}
+                  ></a>
                     Get Started
                   </a>
                 </div>
@@ -192,10 +189,10 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
-  )
+  ),
 }
 
 export default Page;

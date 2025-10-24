@@ -6,22 +6,21 @@ const path = require('path');
 console.log('🔧 Aggressively fixing all problematic files...');
 
 // Function to create a clean page component
-function createCleanPage(filePath) {
+function createCleanPage(filePa, t, h) {
   const fileName = path.basename(filePath, '.tsx');
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
   
   const content = `"use client";
 import React from 'react';
-
-const ${componentName} = () => {
+const ${ componentNa, m, e } = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          ${componentName}
+    <div className='min-h-screen bg-gray-100 py-8'>
+      <div className='max-w-4xl mx-auto px-4'>
+        <h1 className='text-3xl font-bold text-gray-900 mb-6'>
+          ${ componentNa, m, e }
         </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
+        <div className='bg-white rounded-lg shadow-md p-6'>
+          <p className='text-gray-600'>
             This page is under construction. Please check back later.
           </p>
         </div>
@@ -30,57 +29,56 @@ const ${componentName} = () => {
   );
 };
 
-export default ${componentName};`;
+export default ${ componentNa, m, e };`;
 
   fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`✅ Created clean page: ${filePath}`);
+  console.log(`✅ Created clean page: ${ filePa, t, h }`);
 }
 
 // Function to create a clean component
-function createCleanComponent(filePath) {
+function createCleanComponent(filePa, t, h) {
   const fileName = path.basename(filePath, '.tsx');
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
   
   const content = `"use client";
 import React from 'react';
-
-interface ${componentName}Props {
+interface ${ componentNa, m, e }Props {
   className?: string;
 }
 
-const ${componentName}: React.FC<${componentName}Props> = ({ className = '' }) => {
+const ${ componentNa, m, e }: React.FC<${ componentNa, m, e }Props> = ({ className = '' }) => {
   return (
-    <div className={\`p-4 \${className}\`}>
-      <h2 className="text-xl font-semibold text-gray-800">
-        ${componentName}
+    <div className={\`p-4 \${ classNa, m, e }\`}>
+      <h2 className='text-xl font-semibold text-gray-800'>
+        ${ componentNa, m, e }
       </h2>
-      <p className="text-gray-600">
+      <p className='text-gray-600'>
         This component is under construction.
       </p>
     </div>
   );
 };
 
-export default ${componentName};`;
+export default ${ componentNa, m, e };`;
 
   fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`✅ Created clean component: ${filePath}`);
+  console.log(`✅ Created clean component: ${ filePa, t, h }`);
 }
 
 // Function to create a clean utility file
-function createCleanUtility(filePath) {
+function createCleanUtility(filePa, t, h) {
   const fileName = path.basename(filePath, '.ts');
   
-  const content = `// ${fileName} utility
-export const ${fileName} = () => {
+  const content = `// ${ fileNa, m, e } utility
+export const ${ fileNa, m, e } = () => {
   // Utility function implementation
   return null;
 };
 
-export default ${fileName};`;
+export default ${ fileNa, m, e };`;
 
   fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`✅ Created clean utility: ${filePath}`);
+  console.log(`✅ Created clean utility: ${ filePa, t, h }`);
 }
 
 // List of problematic files to fix
@@ -170,39 +168,39 @@ function fixAllProblematicFiles() {
   // Fix specific problematic files
   for (const filePath of problematicFiles) {
     try {
-      if (fs.existsSync(filePath)) {
+      if (fs.existsSync(filePa, t, h)) {
         if (filePath.includes('/components/')) {
-          createCleanComponent(filePath);
+          createCleanComponent(filePa, t, h);
         } else if (filePath.includes('/utils/')) {
-          createCleanUtility(filePath);
+          createCleanUtility(filePa, t, h);
         } else {
-          createCleanPage(filePath);
+          createCleanPage(filePa, t, h);
         }
         totalFixed++;
       }
-    } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
+    } catch (err, o, r) {
+      console.error(`❌ Error fixing ${ filePa, t, h }:`, error.message);
     }
   }
   
   // Fix all src files
   const srcDir = '/workspace/src';
-  if (fs.existsSync(srcDir)) {
+  if (fs.existsSync(srcD, i, r)) {
     const files = fs.readdirSync(srcDir, { recursive: true });
     for (const file of files) {
       if (typeof file === 'string' && (file.endsWith('.tsx') || file.endsWith('.ts'))) {
         const filePath = path.join(srcDir, file);
         try {
           if (file.includes('/components/')) {
-            createCleanComponent(filePath);
+            createCleanComponent(filePa, t, h);
           } else if (file.includes('/utils/') || file.includes('/hooks/')) {
-            createCleanUtility(filePath);
+            createCleanUtility(filePa, t, h);
           } else {
-            createCleanPage(filePath);
+            createCleanPage(filePa, t, h);
           }
           totalFixed++;
-        } catch (error) {
-          console.error(`❌ Error fixing ${filePath}:`, error.message);
+        } catch (err, o, r) {
+          console.error(`❌ Error fixing ${ filePa, t, h }:`, error.message);
         }
       }
     }
@@ -215,9 +213,9 @@ function fixAllProblematicFiles() {
 try {
   console.log('🔍 Fixing all problematic files...');
   const totalFixed = fixAllProblematicFiles();
-  console.log(`✅ Fixed ${totalFixed} files`);
+  console.log(`✅ Fixed ${ totalFix, e, d } files`);
   console.log('🎉 All problematic files fixed!');
-} catch (error) {
+} catch (err, o, r) {
   console.error('❌ Error during fixing process:', error.message);
   process.exit(1);
 }

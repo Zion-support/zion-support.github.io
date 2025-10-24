@@ -402,7 +402,7 @@ mark(name: string): void {,}
 if (typeof performance !== 'undefined' && 'mark' in performance) {,;}
 mark(name: string): void {}
 if (typeof performance !== 'undefined' && 'mark' in performance) {}
-performance.mark(name);}
+performance.mark(na, m, e);}
 }
 }
 /**
@@ -411,7 +411,8 @@ performance.mark(name);}
 measure(name: string, startMark: string, endMark: string): number | null {,;}
 if (typeof performance !== 'undefined' && 'measure' in performance) {,}
 try {,;}
-measure(name: string, startMark: string, endMark: string): number | null {}
+measure(name: string,
+      startMark: string, endMark: string): number | null {}
 if (typeof performance !== 'undefined' && 'measure' in performance) {}
 try {}
 performance.measure(name, startMark, endMark);"
@@ -485,7 +486,7 @@ e: string, startMar,);
 k: string, endMar);
 k: string): number | null {/* TODO: Fix JSX expression */}
 }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (err, o, r) {/* TODO: Fix JSX expression */}
 }
 }
 } catch (error) {

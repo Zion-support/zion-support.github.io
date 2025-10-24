@@ -107,7 +107,7 @@ Go Home
 </div>
 </div>
 </div>
-)
+),
 }
 /**
 * Network error fallback component
@@ -139,7 +139,7 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 </div>
 </div>
 </div>
-)
+),
 }
 /**
 * Not found error fallback component
@@ -164,7 +164,7 @@ Go Back
 </div>
 </div>
 </div>
-)
+),
 }
 /**
 * Get error type from error object

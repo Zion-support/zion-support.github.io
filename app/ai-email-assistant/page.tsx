@@ -1,3 +1,7 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -88,6 +92,7 @@ const AIEmailAssistantPage: React.FC = () => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className="py-20">
@@ -174,7 +179,7 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 
 export default AIEmailAssistantPage;

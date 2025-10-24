@@ -12,7 +12,7 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined,
 );
 
@@ -28,7 +28,7 @@ interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Google Analytics

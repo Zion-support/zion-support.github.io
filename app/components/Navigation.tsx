@@ -20,7 +20,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(fal, s, e);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
     { name: 'Services', href: '/services' },
     { name: 'Team', href: '/team' },
     { name: 'Contact', href: '/contact' }
-  ]
+  ];
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
@@ -45,7 +45,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navigation.map((item) => (
+              {navigation.map((it, e, m) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -63,8 +63,8 @@ const Navigation: React.FC = () => {
               href="/contact"
               className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center"
             >
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
@@ -74,7 +74,7 @@ const Navigation: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -98,14 +98,15 @@ const Navigation: React.FC = () => {
                 className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 mt-4"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
+                <span>Get Started</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

@@ -1,49 +1,49 @@
 'use client'
 import { Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
-import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
-
-constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Star, Phone, BarChart  } from "lucide-react";
+constSmartAnalyticsPage: React.FC= () => {
+  constfeatures= [
     {
-      icon: BarChart,
-      title: 'Real-time Dashboards',
+      icon: BarChar,
+      title: 'Real-time Dashboards,',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit: 'Make decisions10x faster'
-   },
-    {icon: Brain,
-      title: 'AI-Powered Insights',
+  ,
+}
+    {icon: Brai,
+      title: 'AI-Powered Insights,',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities'
-   },
-    {icon: Target,
-      title: 'Custom Metrics',
+  , },
+    {icon: Targe,
+      title: 'Custom Metrics,',
       description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
       benefit: 'Focus on what drives growth'
-   },
-    {icon: Zap,
-      title: 'Automated Alerts',
+  , },
+    {icon: Za,
+      title: 'Automated Alerts,',
       description: 'Get instant notifications when important metrics change or when action is needed.',
       benefit: 'Never miss critical changes'
-   },
-    {icon: Users,
-      title: 'Team Collaboration',
+  , },
+    {icon: User,
+      title: 'Team Collaboration,',
       description: 'Share insights and reports with your team with role-based access and collaborative features.',
       benefit: 'Align your entire organization'
-   },
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
+  , },
+    {icon: Shiel,
+      title: 'Enterprise Security,',
+      description: 'Bank-level security with data encryptio,n, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
-    }
+   , }
   ]
 
   constpricingPlans= [
-    {name: 'Starter',
-      price: '$19 9',
-      period: '/month',
+    {name: 'Starter,',
+      price: '$19 9,',
+      period: '/month,',
       description: 'Perfect for small businesses',
-      features: [
-        'Up to5data sources',
+      features: ['Up to5data sources,',
         'Basic dashboards',
         'Standard reports',
         'Email support',
@@ -51,13 +51,12 @@ constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
         '3 0-day data retention'
       ],
       popular: false
-   },
-    {name: 'Professional',
-      price: '$39 9',
-      period: '/month',
+  , },
+    {name: 'Professional,',
+      price: '$39 9,',
+      period: '/month,',
       description: 'Ideal for growing teams',
-      features: [
-        'Up to 2 0 data sources',
+      features: ['Up to 2 0 data sources,',
         'Advanced dashboards',
         'AI-powered insights',
         'Priority support',
@@ -67,13 +66,12 @@ constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
         'API access'
       ],
       popular: true
-   },
-    {name: 'Enterprise',
-      price: '$79 9',
-      period: '/month',
+  , },
+    {name: 'Enterprise,',
+      price: '$79 9,',
+      period: '/month,',
       description: 'For large organizations',
-      features: [
-        'Unlimited data sources',
+      features: ['Unlimited data sources,',
         'Custom dashboards',
         'Advanced AI analytics',
         'Dedicated support',
@@ -83,40 +81,48 @@ constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
         'White-label options'
       ],
       popular: false
-    }
+   , }
   ]
 
   const integrations = [
-    { name: 'Google Analytics', icon: '📊', description: 'Website traffic and behavior' },
-    { name: 'Salesforce', icon: '💼', description: 'CRM and sales data' },
-    { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' },
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce analytics' },
-    { name: 'Facebook Ads', icon: '📱', description: 'Social media advertising' },
-    { name: 'Stripe', icon: '💳', description: 'Payment processing' },
-    { name: 'Mailchimp', icon: '📧', description: 'Email marketing' },
-    { name: 'Slack', icon: '💬', description: 'Team communication' }
+    { name: 'Google Analytics,',
+      icon: '📊,', description: 'Website traffic and behavior', },
+    { name: 'Salesforce,',
+      icon: '💼,', description: 'CRM and sales data', },
+    { name: 'HubSpot,',
+      icon: '🎯,', description: 'Marketing automation', },
+    { name: 'Shopify,',
+      icon: '🛒,', description: 'E-commerce analytics', },
+    { name: 'Facebook Ads,',
+      icon: '📱,', description: 'Social media advertising', },
+    { name: 'Stripe,',
+      icon: '💳,', description: 'Payment processing', },
+    { name: 'Mailchimp,',
+      icon: '📧,', description: 'Email marketing', },
+    { name: 'Slack,',
+      icon: '💬,', description: 'Team communication', }
   ]
 
   consttestimonials= [
-    {name: 'Alex Thompson',
-      company: 'GrowthCo',
-      role: 'CEO',
-      content: 'Smart Analytics helped us identify a 3 0% revenue opportunity we never knew existed. The AI insights are game-changing.',
+    {name: 'Alex Thompson,',
+      company: 'GrowthCo,',
+      role: 'CEO,',
+      content: 'Smart Analytics helped us identify a 3 0% revenue opportunity we never knew existed. The AI insights are game-changing.,',
       rating:5},
-    {name: 'Maria Garcia',
-      company: 'Digital Marketing Pro',
-      role: 'Marketing Director',
-      content: 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 5 0% in just2months.',
+    {name: 'Maria Garcia,',
+      company: 'Digital Marketing Pro,',
+      role: 'Marketing Director,',
+      content: 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 5 0% in just2months.,',
       rating:5},
-    {name: 'James Wilson',
-      company: 'E-commerce Solutions',
-      role: 'Operations Manager',
-      content: 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.',
+    {name: 'James Wilson,',
+      company: 'E-commerce Solutions,',
+      role: 'Operations Manager,',
+      content: 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.,',
       rating: 5
-    }
+   , }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
@@ -133,7 +139,7 @@ const Page = () => {
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your data into actionable insights with our AI-powered analytics platform.
-            Get real-time dashboards, predictive analytics, and intelligent recommendations that
+            Get real-time dashboard,s, predictive analytics, and intelligent recommendations that
             drive growth and optimize performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
@@ -237,10 +243,8 @@ const Page = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                  plan.popular ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600' : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+               , }`}></button>
                   Get Started
                 </button>
               </div>
@@ -297,7 +301,7 @@ const Page = () => {
       </section>
 >>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
     </div>
-  )
+  ),
 }
 
 export default Page;

@@ -61,6 +61,7 @@ const ServiceCardSkeleton: React.FC="()" => {}
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -131,7 +132,7 @@ const ServiceCardSkeleton: React.FC="()" => {}
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default ServiceCardSkeletonPage;"

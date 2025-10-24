@@ -3,57 +3,60 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { MessageCircle } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
+import { MessageCirc, l, e } from "lucide-react";
+import { CheckCircle, Phone, Mail } from "lucide-react";
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
-      icon: MessageCircle,
-      title: '2 4/7 AI Chat Support',
+      icon: MessageCircl,
+      title: '2 4/7 AI Chat Support,',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
-   },
-    {icon: Users,
-      title: 'Smart Ticket Routing',
+}
+    {icon: User,
+      title: 'Smart Ticket Routing,',
       description: 'AI-powered ticket class ification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
    },
-    {icon: Clock,
-      title: 'Predictive Analytics',
+    {icon: Cloc,
+      title: 'Predictive Analytics,',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
    },
-    {icon: Shield,
-      title: 'Knowledge Base Integration',
-      description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
+    {icon: Shiel,
+      title: 'Knowledge Base Integration,',
+      description: 'Seamlessly integrated knowledge base that provides accurat,e, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
     }
   ]
 
   constpricing= [
-    {name: 'Starter',
-      price: '$14 9/month',
+    {name: 'Starter,',
+      price: '$14 9/month,',
       description: 'Perfect for small businesses',
-      features: ['Up to 1,000conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
+      features: ['Up to ,1,000conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
    },
-    {name: 'Professional',
-      price: '$29 9/month',
+    {name: 'Professional,',
+      price: '$29 9/month,',
       description: 'Ideal for growing companies',
-      features: ['Up to10,000conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
+      features: ['Up to1,0,000conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
    },
-    {name: 'Enterprise',
-      price: '$59 9/month',
+    {name: 'Enterprise,',
+      price: '$59 9/month,',
       description: 'For large organizations',
-      features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
+      features: ['Unlimited conversations,', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ]
 
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '24/7', label: 'Availability' },
-    { number: '50+', label: 'Languages Supported' }
+    { number: '95%,',
+      label: 'Customer Satisfaction', },
+    { number: '60%,',
+      label: 'Faster Resolution', },
+    { number: '24/7,',
+      label: 'Availability', },
+    { number: '50+,',
+      label: 'Languages Supported', }
   ]
 
   return (
@@ -122,10 +125,9 @@ const AICustomerSupportPage: React.FC = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`cyber-card p-8 relative ${
+                  key={ ind, e, x }className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
+    }`}
                 ></div>
                   {index === 1 && (
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>

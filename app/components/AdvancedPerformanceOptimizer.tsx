@@ -26,7 +26,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     fid: 0,;}
     cls: 0,});
     ttfb: 0
-  })
+ ,
+})
 
   // Web Vitals monitoring;
   useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {"
@@ -60,7 +61,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 ;
       measureWebVitals()
     }
-  }, [enableWebVitals])
+  }, [enableWebVita, l, s])
 
   // Advanced caching strategies;"
   const setupAdvancedCaching=";";"

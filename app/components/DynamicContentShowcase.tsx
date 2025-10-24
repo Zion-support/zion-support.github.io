@@ -3,15 +3,14 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from "lucide-react";
 interface Testimonial {
   id: number
   name: string
   company: string
   content: string
   rating: number
-  avatar?: string
+  avatar?: string,
 }
 ;
 const DynamicContentShowcase: React.FC="()" => {const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -298,7 +297,7 @@ const DynamicContentShowcase: React.FC="()" => {const [currentTestimonial, setCu
         </div>
       </section>
     </div>
-  )
+  ),
 }
 ;"
 export default DynamicContentShowcase

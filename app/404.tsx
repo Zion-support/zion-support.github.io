@@ -35,19 +35,16 @@ export default function NotFound() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'></div>
             <Link
-              href="/"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <Home className="w-5 h-5 mr-2" />
+              href='/' className='bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'></Link>
+              <Home className='w-5 h-5 mr-2' /></Home>
               Go Home
             </Link>
             <button
-              onClick={() => window.history.back()}
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
+              onClick={() => window.history.back(,)}className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center'
             >
-              <ArrowLeft className="w-5 h-5 mr-2" />
+              <ArrowLeft className='w-5 h-5 mr-2' /></ArrowLeft>
               Go Back
             </button>
           </div>
@@ -58,7 +55,7 @@ export default function NotFound() {
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and find exactly what you're looking for.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className='flex flex-col sm: flex-row gap-3 justify-center'></div>
               <Link
                 key={index}
                 href={page.path}
@@ -67,9 +64,7 @@ export default function NotFound() {
                 {page.name}
               </Link>
               <a
-                href="mailto:support@ziontechgroup.com"
-                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-              >
+                href='mailto:support@ziontechgroup.com' className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center'></a>
                 Send Email
               </a>
             </div>

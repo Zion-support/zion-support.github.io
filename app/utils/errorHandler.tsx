@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
-
-const errorHandler = () => {
+const errorHandler = (): JSX.Element => {
   return null;
 };
 

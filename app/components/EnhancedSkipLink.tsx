@@ -60,6 +60,7 @@ const EnhancedSkipLinkPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -130,7 +131,7 @@ const EnhancedSkipLinkPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default EnhancedSkipLinkPage;

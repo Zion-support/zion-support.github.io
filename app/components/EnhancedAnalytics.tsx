@@ -106,7 +106,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 declare global {interface Window {}
     dataLayer: unknown[]}
     gtag: (...args: any[]) => void
-  }
+ , }
 }
 'use client'
 import React from 'react'
@@ -170,6 +170,7 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}"
         <section className="py-20 px-4"></section>"
@@ -240,7 +241,7 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  ;);,
 };
 ;
 export default EnhancedAnalyticsPage;

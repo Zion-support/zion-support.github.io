@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
-
-const testRunner = () => {
+const testRunner = (): JSX.Element => {
   return null;
 };
 

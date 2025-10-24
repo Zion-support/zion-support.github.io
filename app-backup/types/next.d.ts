@@ -60,8 +60,13 @@ export interface Metadata {
 }
 
 export interface MetadataRoute {
+<<<<<<< HEAD:app-backup/types/next.d.ts
   url: string
   lastModified?: string | Date
+=======
+  url: string,
+      lastModified?: string | Date
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c8e5:app-broken/app/types/next.d.ts
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number
 }

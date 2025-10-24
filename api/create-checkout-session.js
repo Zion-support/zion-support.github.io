@@ -1,18 +1,20 @@
-const withErrorLogging = (handler) => {
+const withErrorLogging = (handl, e, r) => {
   return async (req, res) => {
     try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
+  await handler(req, res);
+} catch (err, o, r) {
+  console.error('API Error: ', error);
       res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
+      res.end(JSON.stringify({ error: 'Internal server error'
+}));
     }
   };
 };
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed'
+}));
     return;
   }
   const { productId } = req.body;
@@ -27,9 +29,9 @@ export default withErrorLogging(async (req, res) => {
       productId: productId;
     };
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(session));
-  } catch (error) {
-    console.error('Checkout session creation error:', error);
+    res.end(JSON.stringify(sessi, o, n));
+  } catch (err, o, r) {
+    console.error('Checkout session creation error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }

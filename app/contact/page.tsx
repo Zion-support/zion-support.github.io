@@ -1,3 +1,7 @@
+import React, { useSta, t, e } from "react"
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Mail, Phone, MapPin, Send, CheckCircle  } from "lucide-react";
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageCircle } from 'lucide-react';
@@ -42,7 +46,7 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
+  setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
@@ -263,12 +267,11 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
+                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent' placeholder='Your full name'
+                  /></input>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <div></div>
+                  <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-2'></label>
                     Email Address *
                   </label>
                   <input
@@ -285,9 +288,9 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'></div>
+                <div></div>
+                  <label htmlFor='company' className='block text-sm font-medium text-gray-700 mb-2'></label>
                     Company
                   </label>
                   <input
@@ -301,8 +304,8 @@ export default function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                <div></div>
+                  <label htmlFor='service' className='block text-sm font-medium text-gray-700 mb-2'></label>
                     Service Interest
                   </label>
                   <select
@@ -313,16 +316,16 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service}>{service}</option>
+                    {services.map((servic, e, index) => (
+                      <option key={ ind, e, x }value={ servi, c, e }>{ servi, c, e }</option>
                     ))}
                   </select>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
                 </div>
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className='mb-6'></div>
+                <label htmlFor='message' className='block text-sm font-medium text-gray-700 mb-2'></label>
                   Message *
                 </label>
                 <textarea
@@ -346,7 +349,7 @@ export default function ContactPage() {
               </button>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
             </form>
-          )}
+          ,)}
         </div>
       </section>
 

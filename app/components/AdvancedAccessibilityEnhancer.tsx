@@ -16,7 +16,7 @@ interface AdvancedAccessibilityEnhancerProps {enableKeyboardNavigation?: boolean
 }
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
+  enableKeyboardNavigation = tru,e,
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
@@ -49,7 +49,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       ...prev,;}
       reducedMotion: prefersReducedMotion,});
       highContrast: prefersHighContrast
-    }))
+   ,
+}))
 
     // Listen for changes in user preferences;"
     const motionQuery="window.matchMedia('(prefers-reduced-motion:" reduce)');"
@@ -330,7 +331,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       // Voice commands;
       if (command.includes('go to home')) {
         window.location.href = '/'
-      } else if (command.includes('go to about')) {
+     ,
+} else if (command.includes('go to about')) {
         window.location.href = '/about'
       } else if (command.includes('go to contact')) {
         window.location.href = '/contact'

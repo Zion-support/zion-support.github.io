@@ -1,3 +1,7 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -73,6 +77,7 @@ const SupportPage: React.FC = () => {
             </p>
           </div>
         </section>
+    </>
 
         {/* Support Options */}
         <section className="py-20 px-4">
@@ -148,7 +153,7 @@ const SupportPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  );,
 };
 
 export default SupportPage;

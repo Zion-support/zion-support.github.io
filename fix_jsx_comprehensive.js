@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixFile(filePath) {
+function fixFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -41,31 +41,31 @@ function fixFile(filePath) {
     content = content.replace(/  <\/\s*$/gm, '  </');
     content = content.replace(/  <\/\s*\n/gm, '  </\n');
     
-    if (modified) {
+    if (modifi, e, d) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${ filePa, t, h }`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
     return false;
   }
 }
 
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
+function walkDir(d, i, r) {
+  const files = fs.readdirSync(d, i, r);
   let fixedCount = 0;
   
   for (const file of files) {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const stat = fs.statSync(filePa, t, h);
     
     if (stat.isDirectory()) {
-      fixedCount += walkDir(filePath);
+      fixedCount += walkDir(filePa, t, h);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixFile(filePath)) {
+      if (fixFile(filePa, t, h)) {
         fixedCount++;
       }
     }
@@ -77,4 +77,4 @@ function walkDir(dir) {
 // Start fixing
 console.log('Starting comprehensive JSX fixes...');
 const fixedCount = walkDir('./app');
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${ fixedCou, n, t } files`);

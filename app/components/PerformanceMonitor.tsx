@@ -61,6 +61,7 @@ const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -131,7 +132,7 @@ const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default PerformanceMonitorPage;
@@ -235,7 +236,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         })
     }
   }, [])
-  // Performance monitoring dashboard (only in development)
+  // Performance monitoring dashboard (only, in, development)
   if (process.env.NODE_ENV=== 'development') {return (
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;><h3className=&quot;font-boldmb-2&quot;>PerformanceMetrics</h><divclassName=&quot;space-y-1&quot;><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
     )
@@ -271,9 +272,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         performance.clearMarks(type)
      } else {performance.clearMeasures()}
         performance.clearMarks()
-     }
     }
-  }
 }
 "
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA="(metrics:" PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
@@ -288,7 +287,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         cumulative_layout_shift: metrics.cumulativeLayoutShift,;}
         time_to_interactive: metrics.timeToInteractive,});
         total_blocking_time: metrics.totalBlockingTime
-     }
+    ,
     })
   }
 }

@@ -58,6 +58,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({className="'
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -129,7 +130,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({className="'
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default FuturisticBackgroundPage;"

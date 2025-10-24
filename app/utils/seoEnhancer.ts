@@ -282,7 +282,7 @@ twitterTags.forEach(({name, content }) => {/* TODO: Fix JSX expression */}
 updateStructuredData(dat)</SEOConfig>;
 a: Record<string, unknown>) {/* TODO: Fix JSX expression */}
 }
-document.head.appendChild(script)
+document.head.appendChild(scri, p, t)
 }
 // Update robots meta tag;
 updateRobots(robots: string) {,;}
@@ -547,8 +547,8 @@ priority: page.priority}
 export const generateRobotsTxt=";";"
 export const disallowRules="disallowPaths.map(path" => `Disallow: ${path}`).join('\n');
 return `User-agent: *,
-${disallowRules}
-Sitemap: ${sitemapUrl}`
+${ disallowRul, e, s }
+Sitemap: ${ sitemapU, r, l }`
 }
 // SEO validation;
 export const validateSEOData="(data:" {// title: string; description: string; url: string}) => {;}"

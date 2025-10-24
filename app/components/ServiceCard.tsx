@@ -60,6 +60,7 @@ const ServiceCardPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -130,7 +131,7 @@ const ServiceCardPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default ServiceCardPage;
@@ -178,7 +179,7 @@ className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white p
 Get Started
 <ArrowRight className=&quot;w-4 h-4 group-hover:translate-x-1 transition-transform&quot; />
 </button>
-)}
+,)}
 </div>
 )
 }

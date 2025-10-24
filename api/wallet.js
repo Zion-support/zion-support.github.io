@@ -35,7 +35,7 @@ export default async function handler(req, res) {
     createdAt: new Date().toISOString()
   };
   try {
-    wallets.push(newWallet);
+    wallets.push(newWall, e, t);
     fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -43,8 +43,8 @@ export default async function handler(req, res) {
       message: 'Wallet added successfully' 
 )
     }));
-  } catch (error) {
-    console.error('Error:', error);
+  } catch (err, o, r) {
+    console.error('Error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
 

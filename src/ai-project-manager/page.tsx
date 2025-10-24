@@ -1,13 +1,11 @@
 import React from 'react'
 import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-
+import { CheckCircle, Phone, Star, TrendingUp, Check  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
-
-constAIProjectManagerPage: React.FC= () =>{constfeatures= [
-    'AI-powered project planning and resource allocation',
+import { CheckCircle, Phone, TrendingUp } from "lucide-react";
+constAIProjectManagerPage: React.FC= () => {
+  constfeatures= ['AI-powered project planning and resource allocation,',
     'Intelligent timeline prediction and risk assessment',
     'Smart task management with priority optimization',
     'Real-time collaboration and team coordination',
@@ -17,8 +15,7 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= [
     'Integration with popular project management tools'
   ]
 
-  const benefits = [
-    '40% increase in project delivery speed',
+  const benefits = ['40% increase in project delivery speed',
     '70% reduction in project delays',
     '85% improvement in planning accuracy',
     '30% cost reduction through optimization',
@@ -28,32 +25,33 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= [
 
   constpricing= [
     {
-      plan: 'Starter',
-      price: '$19 9',
-      period: '/month',
-      features: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support'],
+      plan: 'Starter,',
+      price: '$19 9,',
+      period: '/month,',
+      features: ['Up to5projects,', '10team members', 'Basic AI planning', 'Email support'],
       popular: false
-   },
-    {plan: 'Professional',
-      price: '$39 9',
-      period: '/month',
-      features: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations'],
+  ,
+}
+    {plan: 'Professional,',
+      price: '$39 9,',
+      period: '/month,',
+      features: ['Unlimited projects,', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations'],
       popular: true
-   },
-    {plan: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      features: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee'],
+  , },
+    {plan: 'Enterprise,',
+      price: 'Custom,',
+      period: ',',
+      features: ['Unlimited everything,', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee'],
       popular: false
-    }
+   , }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
       </div>
     </>
-  )
+  ),
 }
 
 export default Page;

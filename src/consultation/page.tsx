@@ -1,97 +1,100 @@
 'use client'
 import { Brain, Target, TrendingUp } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useSta, t, e } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
-import { Clock } from 'lucide-react'
-
-constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    industry: '',
-    companySize: '',
-    currentChallenges: '',
-    goals: '',
-    timeline: '',
-    budget: '',
+import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
+import { Clo, c, k } from "lucide-react";
+constConsultationPage: React.FC= () => {
+  const [formDatasetFormDa, t, a] = useState({
+    name: ',&apos;,
+    email: ',',
+      company: ',',
+    phone: ',',
+      industry: ',',
+    companySize: ',',
+      currentChallenges: ',',
+    goals: ',',
+      timeline: ',',
+    budget: ',',
     message: ''
-  })
+ ,
+})
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+  const { nam, e, value
+} = e.target
     setFormData(prev => ({
-      ...prev,
-      [name]: value
+      ...prev
+      [na, m, e]: value
     }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  e.preventDefault()
     // Handle form submission
-    const subject = `Free Consultation Request from ${formData.name} - ${formData.company}`
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nIndustry: ${formData.industry}\nCompany Size: ${formData.companySize}\nCurrent Challenges: ${formData.currentChallenges}\nGoals: ${formData.goals}\nTimeline: ${formData.timeline}\nBudget: ${formData.budget}\nMessage: ${formData.message}`
-    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    const subject = `Free Consultation Request from ${formData.nam,e
+} - ${formData.company}`
+    const body = `Name: ${formData.nam,e}\nEmail: ${formData.emai,l}\nCompany: ${formData.compan,y}\nPhone: ${formData.phon,e}\nIndustry: ${formData.industr,y}\nCompany Size: ${formData.companySiz,e}\nCurrent Challenges: ${formData.currentChallenge,s}\nGoals: ${formData.goal,s}\nTimeline: ${formData.timelin,e}\nBudget: ${formData.budge,t}\nMessage: ${formData.messag,e}`
+    window.location.href = `mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject,)}&body=${encodeURIComponent(bo, d, y)}`
   }
 
   constconsultationBenefits= [
-    {icon: Target,
-      title: 'Strategic Assessment',
+    {icon: Targe,
+      title: 'Strategic Assessment,',
       description: 'Comprehensive analysis of your current technology stack and business processes'
-   },
-    {icon: Brain,
-      title: 'AI Readiness Evaluation',
+  , },
+    {icon: Brai,
+      title: 'AI Readiness Evaluation,',
       description: 'Determine how AI can best serve your specific business needs'
-   },
-    {icon: Shield,
-      title: 'Security Audit',
+  , },
+    {icon: Shiel,
+      title: 'Security Audit,',
       description: 'Identify potential vulnerabilities and security improvements'
-   },
-    {icon: TrendingUp,
-      title: 'Growth Strategy',
+  , },
+    {icon: TrendingU,
+      title: 'Growth Strategy,',
       description: 'Develop a roadmap for scaling your technology infrastructure'
-    }
+   , }
   ]
 
   constconsultationProcess= [
-    {step: '1',
-      title: 'Initial Assessment',
+    {step: '1,',
+      title: 'Initial Assessment,',
       description: 'We review your current setup and understand your business goals'
-   },
-    {step: '2',
-      title: 'Gap Analysis',
+  , },
+    {step: '2,',
+      title: 'Gap Analysis,',
       description: 'Identify areas where technology can drive improvement'
-   },
-    {step: '3',
-      title: 'Solution Design',
+  , },
+    {step: '3,',
+      title: 'Solution Design,',
       description: 'Create a customized technology roadmap for your business'
-   },
-    {step: '4',
-      title: 'Implementation Plan',
+  , },
+    {step: '4,',
+      title: 'Implementation Plan,',
       description: 'Provide detailed steps and timeline for your transformation'
-    }
+   , }
   ]
 
   consttestimonials= [
-    {name: 'David Thompson',
-      company: 'Manufacturing Plus',
-      text: 'The free consultation opened our eyes to possibilities we never considered. Highly valuable session.',
+    {name: 'David Thompson,',
+      company: 'Manufacturing Plus,',
+      text: 'The free consultation opened our eyes to possibilities we never considered. Highly valuable session.,',
       rating:5},
-    {name: 'Lisa Wang',
-      company: 'Retail Innovations',
-      text: 'Professional, insightful, and completely free. They helped us plan our digital transformation.',
+    {name: 'Lisa Wang,',
+      company: 'Retail Innovations,',
+      text: 'Professiona,l, insightful, and completely free. They helped us plan our digital transformation.',
       rating:5},
-    {name: 'Robert Martinez',
-      company: 'Healthcare Solutions',
-      text: 'The consultation was worth every minute. Clear recommendations and actionable insights.',
+    {name: 'Robert Martinez,',
+      company: 'Healthcare Solutions,',
+      text: 'The consultation was worth every minute. Clear recommendations and actionable insights.,',
       rating: 5
-    }
+   , }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
   <><SEOOptimizertitle=&quot;Free Business Consultation - ZionTechGroup&quot;
         description=&quot;Get a free30-minute consultation with our technology experts. Discover how AI and IT solutions can transformyourbusiness.&quot;
@@ -344,7 +347,7 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
   )

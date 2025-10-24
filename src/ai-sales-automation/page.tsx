@@ -4,78 +4,81 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { Building } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
+import { Buildi, n, g } from "lucide-react";
+import { CheckCircle, Phone, Mail } from "lucide-react";
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Target,
-      title: 'Lead Scoring & Qualification',
-      description: 'AI automatically scores and qualifies leads based on behavior, demographics, and engagement patterns.',
+      icon: Targe,
+      title: 'Lead Scoring & Qualification,',
+      description: 'AI automatically scores and qualifies leads based on behavio,r, demographics, and engagement patterns.',
       benefits: ['Behavioral Analysis', 'Predictive Scoring', 'Auto-qualification', 'Priority Ranking']
-   },
-    {icon: Users,
-      title: 'Customer Segmentation',
+}
+    {icon: User,
+      title: 'Customer Segmentation,',
       description: 'Intelligent customer segmentation helps you target the right audience with personalized messaging.',
       benefits: ['Dynamic Segmentation', 'Behavioral Clustering', 'Personalization', 'Campaign Optimization']
    },
-    {icon: BarChart,
-      title: 'Sales Forecasting',
+    {icon: BarChar,
+      title: 'Sales Forecasting,',
       description: 'Predict future sales performance with AI-powered forecasting models and trend analysis.',
       benefits: ['Predictive Models', 'Trend Analysis', 'Revenue Projections', 'Risk Assessment']
    },
-    {icon: Zap,
-      title: 'Automated Follow-ups',
+    {icon: Za,
+      title: 'Automated Follow-ups,',
       description: 'Never miss an opportunity with intelligent follow-up sequences that adapt to customer behavior.',
       benefits: ['Smart Sequences', 'Behavioral Triggers', 'Multi-channel', 'Timing Optimization']
     }
   ]
 
   constpricing= [
-    {name: 'Starter',
-      price: '$24 9/month',
+    {name: 'Starter,',
+      price: '$24 9/month,',
       description: 'Perfect for small sales teams',
-      features: ['Up to 1,000contacts', 'Basic automation', 'Email campaigns', 'Lead scoring']
+      features: ['Up to ,1,000contacts', 'Basic automation', 'Email campaigns', 'Lead scoring']
    },
-    {name: 'Professional',
-      price: '$49 9/month',
+    {name: 'Professional,',
+      price: '$49 9/month,',
       description: 'Ideal for growing businesses',
-      features: ['Up to10,000contacts', 'Advanced AI features', 'Multi-channel campaigns', 'Sales forecasting', 'CRM integration']
+      features: ['Up to1,0,000contacts', 'Advanced AI features', 'Multi-channel campaigns', 'Sales forecasting', 'CRM integration']
    },
-    {name: 'Enterprise',
-      price: '$99 9/month',
+    {name: 'Enterprise,',
+      price: '$99 9/month,',
       description: 'For large sales organizations',
-      features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
+      features: ['Unlimited contacts,', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
   ]
   const stats = [
-    { number: '40%', label: 'Increase in Sales' },
-    { number: '60%', label: 'Time Saved' },
-    { number: '85%', label: 'Lead Accuracy' },
-    { number: '200%', label: 'ROI Improvement' }
+    { number: '40%,',
+      label: 'Increase in Sales', },
+    { number: '60%,',
+      label: 'Time Saved', },
+    { number: '85%,',
+      label: 'Lead Accuracy', },
+    { number: '200%,',
+      label: 'ROI Improvement', }
   ]
 
   constuseCases= [
-    {title: 'B2 B Sales',
-      description: 'Automate lead qualification, follow-ups, and pipeline management for B2 B sales teams.',
+    {title: 'B2 B Sales,',
+      description: 'Automate lead qualificatio,n, follow-ups, and pipeline management for B2 B sales teams.',
       icon: Building
-   },
-    {title: 'E-commerce',
+  , },
+    {title: 'E-commerce,',
       description: 'Personalize customer experiences and optimize conversion rates with AI-driven insights.',
       icon: ShoppingCart
-   },
-    {title: 'SaaS Companies',
+  , },
+    {title: 'SaaS Companies,',
       description: 'Streamline the sales process from lead generation to customer onboarding and retention.',
       icon: Cloud
-   },
-    {title: 'Real Estate',
-      description: 'Qualify leads, schedule showings, and follow up with potential buyers automatically.',
+  , },
+    {title: 'Real Estate,',
+      description: 'Qualify lead,s, schedule showings, and follow up with potential buyers automatically.',
       icon: Home
-    }
+   , }
   ]
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
   <><SEOOptimizertitle=&quot;AI Sales Automation Solutions - ZionTechGroup&quot;
         description=&quot;Revolutionize your sales process with AI-powered automation. Increase sales by40%, save60% time, and improve lead accuracy by85%.&quot;
@@ -174,10 +177,9 @@ const Page = () => {
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`cyber-card p-8 relative ${
+                  key={ ind, e, x }className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
+    }`}
                 ></div>
                   {index === 1 && (
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
@@ -236,7 +238,7 @@ const Page = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
   )

@@ -1,3 +1,7 @@
+import React from "react"
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Zap, Target, Layers, Rocket, CheckCircle, ArrowRight  } from "lucide-react";
 "use client";
 import React from "react";
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";

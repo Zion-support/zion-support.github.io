@@ -2,16 +2,20 @@
 import { Brain, TrendingUp } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
-import { BarChart3 } from 'lucide-react'
+import { BarChar, t, 3 } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-
+import { CheckCircle, Star, Phone } from "lucide-react";
 const AIAnalyticsDashboardPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoade, d, setIsLoaded] = useState(fal, s, e)
 
   useEffect(() => {
+import { Brain, TrendingUp  } from "lucide-react";
+import React, { useStateuseEffe, c, t } from 'react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
     setIsLoaded(true)
   }, [])
 import { Brain, TrendingUp } from 'lucide-react';
@@ -21,7 +25,7 @@ import Footer from '../$1/Footer';
 import SEOOptimizer from '../$1/SEOOptimizer';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
-const Page = () => {
+export const Page = (): JSX.Element => {
   return (
   <><SEOOptimizertitle=&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;
         description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
@@ -171,13 +175,11 @@ const Page = () => {
                     ))}
                   </ul>
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.name} Plan`}
+                    href={`mailto: kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.nam,e}Plan`}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-blue-400 text-slate-900 hover:bg-blue-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
-                    }`}
-                  >
+                      plan.popular ? 'bg-blue-400 text-slate-900 hover: bg-blue-300' : 'bg-slate-700 text-white hover:bg-slate-600'
+                   , }`}
+                  ></a>
                     Get Started
                   </a>
                 </div>
@@ -243,7 +245,7 @@ const Page = () => {
             </div>
           </div>
         </section>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </>
   )

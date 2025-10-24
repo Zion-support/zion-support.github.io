@@ -40,7 +40,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true
   enableSchemaMarkup = true;
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null)
+  const _structuredDataRef = useRef<HTMLScriptElement | null>(nu, l, l)
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
     const baseStructuredData = {
@@ -121,7 +121,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     } else {
   const newMetaDescription = document.createElement('meta')
       newMetaDescription.setAttribute('name', 'description')
-      document.head.appendChild(newMetaDescription)
+      document.head.appendChild(newMetaDescripti, o, n)
       newMetaDescription.setAttribute('content', seoData.description)
 }
     // Update canonical URL;
@@ -131,14 +131,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     } else {
   const newCanonicalLink = document.createElement('link')
       newCanonicalLink.setAttribute('rel', 'canonical')
-      document.head.appendChild(newCanonicalLink)
+      document.head.appendChild(newCanonicalLi, n, k)
       newCanonicalLink.setAttribute('href', seoData.canonicalUrl)
 }
   }, [seoData])
   const _addStructuredData = (data: Record<string, unknown>) => {
   const script = document.createElement('script')
     script.type = 'application/ld+json'
-    script.textContent = JSON.stringify(data)
+    script.textContent = JSON.stringify(da, t, a)
     script.id = 'structured-data'
     document.head.appendChild(script)
     _structuredDataRef.current = script;

@@ -61,6 +61,7 @@ const AdvancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className="py-20 px-4"></section>
@@ -131,7 +132,7 @@ const AdvancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default AdvancedSEOOptimizerPage;
@@ -163,7 +164,11 @@ if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0
 // Check for keywords in description
 if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
 // Check for headingstructureconstheadings= do cument.querySelectorAll('h1, h2, h3, h4, h5, h6')
-if (headings.length >0) {score +=10} else {newRecommendations.push('Add proper heading structure')}
+if (headings.length >0) {
+  score +=10
+} else {
+  newRecommendations.push('Add proper heading structure')
+}
 // Check for images with alttextconstimages= do cument.querySelectorAll('img')
 constimagesWithAlt= do cument.querySelectorAll('img[alt]')
 if (images.length=== imagesWithAlt.length && images.length > 0) {score +=10} else {newRecommendations.push('Add alt text to all images')}

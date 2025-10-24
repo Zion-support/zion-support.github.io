@@ -116,6 +116,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
 
           <//div>
         </section>
+    </>
 
         <//section>
         {

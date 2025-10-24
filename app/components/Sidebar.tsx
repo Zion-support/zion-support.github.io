@@ -63,6 +63,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -133,7 +134,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default SidebarPage;
@@ -170,9 +171,7 @@ if (newExpanded.has(section)) {;) => {
   }
 return (
 $3
-)}
-newExpanded.delete(section);}
-} else {newExpanded.add(section);}
+,)
 }
 setExpandedSections(newExpanded)
 }"
@@ -269,7 +268,7 @@ aria-label=&quot;Open sidebar&quot;
 >
 <Menu className=&quot;w-6 h-6&quot; />
 </button>
-{/* Sidebar Overlay */}
+{/* Sidebar Overlay *,/}
 {isOpen && (
 <div
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}

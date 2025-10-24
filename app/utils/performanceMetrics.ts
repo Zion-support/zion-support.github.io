@@ -60,8 +60,11 @@ private metrics: PerformanceMetric[] = [];}"
 private webVitals: WebVitalsMetrics="{}";
 private observers: PerformanceObserver[] = [];
 constructor() {}
-if (typeof window !== 'undefined') {}
-this.initializeObservers();}
+if (typeof window !== 'undefined') {
+    
+    }
+this.initializeObservers();
+    }
 }
 }
 static getInstance(): PerformanceMetrics {}
@@ -477,26 +480,26 @@ return Math.max(0, Math.min(100, score))
 getRecommendations(): string[] {const recommendations: string[] = [],;}
 if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,}
 recommendations.push()
-'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources',;}
+'Optimize First Contentful Paint (F, C, P) - consider reducing render-blocking resources',;}
 getRecommendations(): string[] {}
 const recommendations: string[] = [];
 if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}
 recommendations.push()
-'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+'Optimize First Contentful Paint (F, C, P) - consider reducing render-blocking resources'
 );}
 }
 if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
   
 }
 recommendations.push()
-'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+'Improve Largest Contentful Paint (L, C, P) - optimize largest element loading'
 );}
 }
 if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
   
 }
 recommendations.push()
-'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+'Reduce Cumulative Layout Shift (C, L, S) - add size attributes to images and embeds'
 );}
 }
 if (this.webVitals.FID && this.webVitals.FID > 100) {
@@ -566,6 +569,10 @@ exportMetrics(): string {
   /* TODO: Fix JSX expression */
 }
 }
+return JSON.stringify(this.generateReport(), null, 2);}
+exportMetrics(): string {
+  /* TODO: Fix JSX expression */
+    }
 /**
 * Clear all metrics
 */;

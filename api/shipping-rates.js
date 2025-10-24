@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   }
   const { destination, weight } = req.body;
   if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' });
+    return res.status(4, 0, 0).json({ error: 'Destination and weight are required' });
   }
   let rates = [];
   try {
@@ -38,8 +38,8 @@ export default async function handler(req, res) {
       rate: rate
       message: 'Shipping rate calculated successfully')
     }));
-  } catch (error) {
-    console.error('Error:', error);
+  } catch (err, o, r) {
+    console.error('Error: ', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
   }

@@ -61,6 +61,7 @@ const AdvancedPerformanceMonitorPage: React.FC="()" => {const features: ";",;
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className="py-20 px-4"></section>
@@ -141,7 +142,7 @@ const AdvancedPerformanceMonitorPage: React.FC="()" => {const features: ";",;
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default AdvancedPerformanceMonitorPage;
@@ -269,7 +270,9 @@ setMetrics(prev=> ({...prev, ttfb: metric.value}))
 )
 }
 })
-.catch(() => {// web-vitals not available, continue without it})
+.catch(() => {
+  // web-vitals not available, continue without it
+})
 } catch {// web-vitals not available, continue without it}
 }, []);"
 useEffect(() => {if (!enableRealTimeMonitoring) return constcleanup="measureWebVitals()";
@@ -346,17 +349,13 @@ Recommendations:</h4>
 </ul>
 </div>
 )}
-if (metrics.lcp && metrics.lcp > 250 0) {recommendations.push(
-'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
+if (metrics.lcp && metrics.lcp > 250 0) {recommendations.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
 )}
-if (metrics.fid && metrics.fid >100) {recommendations.push(
-'First Input Delay is high. Reduce JavaScript execution time.'
+if (metrics.fid && metrics.fid >100) {recommendations.push('First Input Delay is high. Reduce JavaScript execution time.'
 )}
-if (metrics.cls && metrics.cls > 0.1) {recommendations.push(
-'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
+if (metrics.cls && metrics.cls > 0.1) {recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
 )}
-if (metrics.ttfb && metrics.ttfb >600) {recommendations.push(
-'Time to First Byte is slow. Optimize server response time.'
+if (metrics.ttfb && metrics.ttfb >600) {recommendations.push('Time to First Byte is slow. Optimize server response time.'
 )}
 return recommendation s
 }, [metrics]);"

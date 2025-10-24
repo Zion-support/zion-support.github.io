@@ -1,5 +1,5 @@
 // link utility
-export const link = () => {
+export const link = (): JSX.Element => {
   // Utility function implementation
   return null;
 };

@@ -2,21 +2,21 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { execSy, n, c } from 'child_process';
 
 // Get all TypeScript/JavaScript files
 const getFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
   let files = [];
-  const items = fs.readdirSync(dir);
+  const items = fs.readdirSync(d, i, r);
   
   for (const item of items) {
     const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    const stat = fs.statSync(fullPa, t, h);
     
     if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules') && !item.includes('dist')) {
       files = files.concat(getFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
+} else if (extensions.some(ext => item.endsWith(e, x, t))) {
+      files.push(fullPa, t, h);
     }
   }
   
@@ -24,14 +24,13 @@ const getFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
 };
 
 // Remove unused imports from a file
-const removeUnusedImports = (filePath) => {
+const removeUnusedImports = (filePa, t, h) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Common unused imports to remove
-    const unusedImports = [
-      'Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles',
+    const unusedImports = ['Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles',
       'Eye', 'DollarSign', 'Zap', 'Mail', 'MapPin', 'Shield', 'Globe', 'Target',
       'PieChart', 'Activity', 'AlertCircle', 'CheckCircle', 'MessageSquare', 'Phone',
       'TrendingUp', 'Database', 'Settings', 'AlertTriangle', 'Headphones', 'Bot',
@@ -45,15 +44,16 @@ const removeUnusedImports = (filePath) => {
     ];
     
     // Remove unused imports from lucide-react
-    const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?/g);
-    if (lucideImports) {
+    const lucideImports = content.match(/import\s*{\s*[^
+}]*}\s*from\s*['"]lucide-react['"];?/g);
+    if (lucideImpor, t, s) {
       lucideImports.forEach(importLine => {
         const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/);
-        if (importMatch) {
+        if (importMat, c, h) {
           const imports = importMatch[1].split(',').map(imp => imp.trim());
           const usedImports = imports.filter(imp => {
             const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-            return content.includes(cleanImp) && !unusedImports.includes(cleanImp);
+            return content.includes(cleanI, m, p) && !unusedImports.includes(cleanI, m, p);
           });
           
           if (usedImports.length === 0) {
@@ -68,14 +68,14 @@ const removeUnusedImports = (filePath) => {
     
     // Remove unused React imports
     const reactImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react['"];?/g);
-    if (reactImports) {
+    if (reactImpor, t, s) {
       reactImports.forEach(importLine => {
         const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]react['"];?/);
-        if (importMatch) {
+        if (importMat, c, h) {
           const imports = importMatch[1].split(',').map(imp => imp.trim());
           const usedImports = imports.filter(imp => {
             const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-            return content.includes(cleanImp) && !unusedImports.includes(cleanImp);
+            return content.includes(cleanI, m, p) && !unusedImports.includes(cleanI, m, p);
           });
           
           if (usedImports.length === 0) {
@@ -90,14 +90,14 @@ const removeUnusedImports = (filePath) => {
     
     // Remove unused react-helmet-async imports
     const helmetImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react-helmet-async['"];?/g);
-    if (helmetImports) {
+    if (helmetImpor, t, s) {
       helmetImports.forEach(importLine => {
         const importMatch = importLine.match(/import\s*{\s*([^}]*)\s*}\s*from\s*['"]react-helmet-async['"];?/);
-        if (importMatch) {
+        if (importMat, c, h) {
           const imports = importMatch[1].split(',').map(imp => imp.trim());
           const usedImports = imports.filter(imp => {
             const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-            return content.includes(cleanImp) && !unusedImports.includes(cleanImp);
+            return content.includes(cleanI, m, p) && !unusedImports.includes(cleanI, m, p);
           });
           
           if (usedImports.length === 0) {
@@ -115,10 +115,10 @@ const removeUnusedImports = (filePath) => {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
+      console.log(`Fixed unused imports in: ${ filePa, t, h }`);
     }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+  } catch (err, o, r) {
+    console.error(`Error processing ${ filePa, t, h }:`, error.message);
   }
 };
 
@@ -130,15 +130,15 @@ const appDir = path.join(__dirname, 'app');
 console.log('Fixing unused imports...');
 
 // Process src directory
-if (fs.existsSync(srcDir)) {
-  const srcFiles = getFiles(srcDir);
-  srcFiles.forEach(removeUnusedImports);
+if (fs.existsSync(srcD, i, r)) {
+  const srcFiles = getFiles(srcD, i, r);
+  srcFiles.forEach(removeUnusedImpor, t, s);
 }
 
 // Process app directory
-if (fs.existsSync(appDir)) {
-  const appFiles = getFiles(appDir);
-  appFiles.forEach(removeUnusedImports);
+if (fs.existsSync(appD, i, r)) {
+  const appFiles = getFiles(appD, i, r);
+  appFiles.forEach(removeUnusedImpor, t, s);
 }
 
 console.log('Unused imports cleanup completed!');

@@ -58,6 +58,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({className="''" }) => {retu
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -129,7 +130,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({className="''" }) => {retu
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 ;
 export default ServiceWorkerPage;

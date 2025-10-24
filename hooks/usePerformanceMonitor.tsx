@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
-
-const usePerformanceMonitor = () => {
+const usePerformanceMonitor = (): JSX.Element => {
   return null;
 };
 

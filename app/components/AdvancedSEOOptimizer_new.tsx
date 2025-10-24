@@ -6,8 +6,8 @@ import Footer from '../components/Footer'
 const AdvancedSEOOptimizerNewPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      icon: Brai,
+      title: 'AI-Powered Intelligence,',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
@@ -54,14 +54,15 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className='ml-2 h-5 w-5' /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Learn More
               </button>
             </div>
           </div>
         </section>
+    </>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -80,9 +81,9 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
+                        <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
+                        { benef, i, t }
                       </li>
                     ))}
                   </ul>
@@ -123,7 +124,7 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
                 Contact Sales
               </button>
             </div>
@@ -132,7 +133,7 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
       </div>
       <Footer /></Footer>
     </>
-  );
+  );,
 };
 
 export default AdvancedSEOOptimizerNewPage;
