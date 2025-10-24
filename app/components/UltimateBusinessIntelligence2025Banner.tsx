@@ -58,21 +58,19 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(timer);
   }, [content.length]);
 
-<<<<<<< HEAD
-  // const handleClose = () => {
-  //   setIsVisible(false);
-  // };
-=======
-<<<<<<< HEAD
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+  if (!isVisible) return null;
+  const currentContent = content[currentSlide];
 =======
   const handleClose = () => {
     setIsVisible(false);
   };
->>>>>>> 7731b4b6fd97e47e852139145bd07a5c5da22c6d
 
->>>>>>> 7e811ae3eb649b39deed120bb7d72840f4dbe47d
   if (!isVisible) return null;
-  const currentContent = content[currentSlide];
+  const _currentContent = content[currentSlide];
+>>>>>>> cursor/fix-errors-and-merge-to-main-72d6
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
