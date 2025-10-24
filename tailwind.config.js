@@ -5,6 +5,25 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  // Enable JIT mode for better performance
+  mode: 'jit',
+  // Purge unused styles in production
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      './pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './components/**/*.{js,ts,jsx,tsx,mdx}',
+      './app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    options: {
+      safelist: [
+        'animate-fade-in',
+        'animate-slide-up',
+        'animate-bounce-slow',
+        'gradient-text',
+      ],
+    },
+  },
   theme: {
     extend: {
       colors: {
@@ -52,6 +71,9 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'bounce-slow': 'bounce 2s infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 3s linear infinite',
+        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
       keyframes: {
         fadeIn: {
@@ -63,7 +85,33 @@ module.exports = {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
+      // Add gradient text utility
+      backgroundImage: {
+        'gradient-text': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.gradient-text': {
+          'background': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          '-webkit-background-clip': 'text',
+          '-webkit-text-fill-color': 'transparent',
+          'background-clip': 'text',
+        },
+        '.glass': {
+          'background': 'rgba(255, 255, 255, 0.1)',
+          'backdrop-filter': 'blur(10px)',
+          'border': '1px solid rgba(255, 255, 255, 0.2)',
+        },
+        '.glass-dark': {
+          'background': 'rgba(0, 0, 0, 0.1)',
+          'backdrop-filter': 'blur(10px)',
+          'border': '1px solid rgba(255, 255, 255, 0.1)',
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 }

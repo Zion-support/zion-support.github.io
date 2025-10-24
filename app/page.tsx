@@ -1,9 +1,28 @@
+'use client';
+
+import React from 'react';
 import Link from 'next/link';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import { usePerformanceMonitor } from './utils/performance';
+import { useAnalytics } from './utils/analytics';
 
 export default function HomePage() {
+  const { startTiming, endTiming } = usePerformanceMonitor();
+  const { trackPageView, trackClick } = useAnalytics();
+
+  // Track page performance
+  React.useEffect(() => {
+    startTiming('homepage-load');
+    trackPageView('/', 'Zion Tech Group - Advanced AI & IT Solutions');
+    
+    return () => {
+      endTiming('homepage-load');
+    };
+  }, [startTiming, endTiming, trackPageView]);
+
   return (
     <>
       <SEOHead
@@ -48,12 +67,14 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Link
+                  onClick={() => trackClick('hero-cta-primary', 'hero-section')}
                   href="/about"
                   className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
                 >
                   Learn More
                 </Link>
                 <Link
+                  onClick={() => trackClick('hero-cta-secondary', 'hero-section')}
                   href="/contact"
                   className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
                 >
@@ -192,6 +213,7 @@ export default function HomePage() {
         </div>
 
         <Footer />
+        <PerformanceDashboard show={process.env.NODE_ENV === 'development'} />
       </div>
     </>
   );
