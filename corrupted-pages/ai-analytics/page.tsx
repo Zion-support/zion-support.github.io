@@ -3,7 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye } from 'lucide-react'
 
 const AIAnalyticsPage: React.FC = () => {
   const features = [
@@ -27,32 +27,7 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD:app/ai-analytics/page.tsx
-      title: 'Predictive Modeling',
-      description: 'Forecast future trends and outcomes using advanced predictive modeling techniques.',
-      benefits: ['Future predictions', 'Risk assessment', 'Scenario planning']
-=======
-      title: 'Performance Analytics',
-      description: 'Track and analyze performance metrics across all your business operations.',
-      benefits: ['KPI tracking', 'Performance monitoring', 'Efficiency metrics', 'Growth analysis']
-    },
-    {
-      icon: Activity,
-      title: 'Real-time Monitoring',
-      description: 'Monitor your systems and processes in real-time with instant alerts and notifications.',
-      benefits: ['Live monitoring', 'Instant alerts', 'System health', 'Performance tracking']
-    },
-    {
-      icon: PieChart,
-      title: 'Data Visualization',
-      description: 'Transform complex data into clear, actionable insights with advanced visualization tools.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export options']
-    },
-    {
-      title: 'Performance Tracking',
-      description: 'Track KPIs and performance metrics with automated alerts and goal monitoring.',
-      benefits: ['KPI tracking', 'Goal setting', 'Progress monitoring', 'Alert system']
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:corrupted-pages/ai-analytics/page.tsx
+
     },
     {
       icon: Zap,
@@ -68,53 +43,7 @@ const AIAnalyticsPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD:app/ai-analytics/page.tsx
-  const pricing = [
-=======
-  const benefits = [
-    'Increase data accuracy by 95%',
-    'Reduce analysis time by 80%',
-    'Improve decision-making speed by 70%',
-    'Lower operational costs by 40%',
-    'Enable real-time business insights',
-    'Automate routine analytics tasks',
-    'Scale analytics across departments',
-    'Enhance competitive advantage'
-                  ];
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']},
-    {icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']},
-    {icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']},
-    {icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']},
-  ];
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    },
-  ];];];
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ];
 
-return (
-    <>
-  </>
-      <Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
-  const useCases = [
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:corrupted-pages/ai-analytics/page.tsx
     {
       name: 'Starter',
       price: '$199',

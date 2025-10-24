@@ -41,10 +41,10 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (entry.processingStart && entry.startTime) {
+        if ((entry as any).processingStart && entry.startTime) {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: (entry as any).processingStart - entry.startTime 
           }));
         }
       });
@@ -55,8 +55,8 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -66,10 +66,10 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (entry.responseStart && entry.requestStart) {
+        if ((entry as any).responseStart && (entry as any).requestStart) {
           setMetrics(prev => ({ 
             ...prev, 
-            ttfb: entry.responseStart - entry.requestStart 
+            ttfb: (entry as any).responseStart - (entry as any).requestStart 
           }));
         }
       });

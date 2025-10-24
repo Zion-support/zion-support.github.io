@@ -3,11 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<<< HEAD:ai-pages-disabled/ai-business-intelligence/page.tsx
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
-========
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
->>>>>>>> cursor/fix-errors-and-merge-to-main-328b:corrupted-pages-backup/ai-business-intelligence/page.tsx
+
 const AiBusinessIntelligencePage: React.FC = () => {
     const features = [
     {

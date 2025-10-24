@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';;
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -41,6 +42,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
+=======
+
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 import React from 'react';
 

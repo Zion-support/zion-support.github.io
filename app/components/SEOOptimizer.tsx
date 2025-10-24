@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+<<<<<<< HEAD
 'use client';;
 interface SEOOptimizerProps {title: string;,}
   description: string;,
@@ -33,6 +34,9 @@ interface SEOOptimizerProps {title: string;,}
 
 import React, { useEffect } from 'react';
 import Head from 'next/head';
+=======
+
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface SEOOptimizerProps {
   // Add props here

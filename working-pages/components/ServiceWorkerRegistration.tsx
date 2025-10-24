@@ -1,18 +1,6 @@
 'use client';;
 import React from 'react';
-<<<<<<< HEAD:app/page-optimized.tsx
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
-const PageOptimizedPage: React.FC = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-'use client';;
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const ServiceWorkerRegistrationPage: React.FC = () => {
-const ServiceWorkerRegistrationPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/ServiceWorkerRegistration.tsx
     const features = [
     {
       icon: Brain,
@@ -59,12 +47,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-<<<<<<< HEAD:app/page-optimized.tsx
-      <title>Page Optimized | Zion Tech Group</title>
-=======
-      <Helmet>
-        </Helmet><title>ServiceWorkerRegistration | Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/ServiceWorkerRegistration.tsx
+
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

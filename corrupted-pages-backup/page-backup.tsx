@@ -12,11 +12,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import StructuredData from './components/StructuredData';
 
-<<<<<<< HEAD:app/page-backup.tsx
-import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText} from 'lucide-react';
-=======
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:corrupted-pages-backup/page-backup.tsx
+
 
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (,

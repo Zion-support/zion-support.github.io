@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';;
 import React, {Suspense, lazy}from 'react';
 import {Link, useLocation}}from 'react-router-dom';
@@ -13,124 +14,157 @@ import {X,}
   BarChart,
   ChevronDown,
   ChevronRight,
+=======
+'use client';
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
-import React from 'react';
+import React, { useState } from 'react';
+import { _Menu, X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
-  // Add props here
+  isOpen: boolean;
+  onClose: () => void;
+  menuItems?: Array<{
+    label: string;
+    href: string;
+    icon?: React.ReactNode;
+    submenu?: Array<{
+      label: string;
+      href: string;
+    }>;
+  }>;
+  user?: {
+    name: string;
+    email: string;
+    avatar?: string;
+  };
+  onLogout?: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = (_props) => {
+const Sidebar: React.FC<SidebarProps> = ({
+  isOpen,
+  onClose,
+  menuItems = [
+    { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> },
+    { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> },
+    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> },
+  ],
+  user,
+  onLogout,
+}) => {
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+  const toggleSubmenu = (label: string) => {
+    setActiveSubmenu(activeSubmenu === label ? null : label);
+  };
+
+  if (!isOpen) return null;
+
   return (
     <>
-  </>
-      {/* Mobile Menu Button */}
-      <button
-        onClick={() => setIsOpen(true</div>
-        className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-        aria-label="Open sidebar"
-      >,
-        <Menu>
-      </button>
-
-      {/* Sidebar Overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-          onClick={() => setIsOpen(false</div>
-        />
-      </div>
-      {/* Sidebar */}</div>
-      <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      } lg:translate-x-0 lg:static lg:z-auto`}>
+      {/* Overlay */}
+      <div
+        className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+        onClick={onClose}
+      />
+      
+      {/* Sidebar */}
+      <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out">
         <div className="flex flex-col h-full">
-          {/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
-            <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <div></div>
-                <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-                <p className="text-xs text-cyan-400">AI & IT Solutions</p>
-              </div>
-            </Link>
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b">
+            <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
             <button
-              onClick={() => setIsOpen(false</div>
-              className="lg:hidden text-gray-400 hover:text-white transition-colors"
-              aria-label="Close sidebar"
-            >,
-              <X>
-
+              onClick={onClose}
+              className="p-2 rounded-md hover:bg-gray-100"
+            >
+              <X className="w-5 h-5" />
             </button>
-'use client';</button>
           </div>
 
-          {/* Navigation */}
-          <div className="flex-1 overflow-y-auto py-6">
-            <nav className="space-y-2 px-4">
-              {navigationSections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-1">
-                  <button
-                    onClick={() => section.key && toggleSection(section.key</div>
-                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <span>{section.title}</span>
-                    {section.key && (
-                      expandedSections.has(section.key) ? 
-                        <ChevronDown className="w-4 h-4" /> : 
-                        <ChevronRight className="w-4 h-4" />
-                    </div>
-                  </button>
-                  
-                  {(!section.key || expandedSections.has(section.key)) && (
-                    <div className="ml-4 space-y-1">
-                      {section.items.map((item, itemIndex) => (</div>
-                        <Link
-                          key={itemIndex}
-                          to={item.path}
-                          onClick={() => setIsOpen(false</div>
-                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
-                            location.pathname === item.path
-                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
-                          }`}
-                        >
-                          <item.icon className="w-4 h-4 flex-shrink-0" />
-                          <span>{item.name}</span>
-                        </Link>
-                      ))}
-                    </div>
+          {/* User Info */}
+          {user && (
+            <div className="p-4 border-b">
+              <div className="flex items-center space-x-3">
+                {user.avatar ? (
+                  <img
+                    src={user.avatar}
+                    alt={user.name}
+                    className="w-10 h-10 rounded-full"
+                  />
+                ) : (
+                  <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                    <User className="w-5 h-5 text-gray-600" />
                   </div>
+                )}
+                <div>
+                  <p className="text-sm font-medium text-gray-900">{user.name}</p>
+                  <p className="text-xs text-gray-500">{user.email}</p>
                 </div>
-              ))}
-            </nav>
-          </div>
+              </div>
+            </div>
+          )}
 
-          {/* Contact Info */}
-          <div className="border-t border-slate-700/50 p-6">
-            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
-            <div className="space-y-3 text-sm text-gray-300">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span>{contactInfo.phone}</span>
+          {/* Menu Items */}
+          <nav className="flex-1 p-4 space-y-2">
+            {menuItems.map((item, index) => (
+              <div key={index}>
+                <a
+                  href={item.href}
+                  className="flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100 hover:text-gray-900"
+                >
+                  <div className="flex items-center">
+                    {item.icon && <span className="mr-3">{item.icon}</span>}
+                    {item.label}
+                  </div>
+                  {item.submenu && (
+                    <button
+                      onClick={() => toggleSubmenu(item.label)}
+                      className="p-1 hover:bg-gray-200 rounded"
+                    >
+                      <ChevronRight
+                        className={`w-4 h-4 transition-transform ${
+                          activeSubmenu === item.label ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </button>
+                  )}
+                </a>
+                {item.submenu && activeSubmenu === item.label && (
+                  <div className="ml-6 mt-2 space-y-1">
+                    {item.submenu.map((subItem, subIndex) => (
+                      <a
+                        key={subIndex}
+                        href={subItem.href}
+                        className="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900"
+                      >
+                        {subItem.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="truncate">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs">{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs">{contactInfo.hours}</span>
-              </div>
-          </div>
-      </aside>
+            ))}
+          </nav>
 
+<<<<<<< HEAD
+=======
+          {/* Logout */}
+          {onLogout && (
+            <div className="p-4 border-t">
+              <button
+                onClick={onLogout}
+                className="flex items-center w-full px-3 py-2 text-sm font-medium text-red-600 rounded-md hover:bg-red-50"
+              >
+                <LogOut className="w-5 h-5 mr-3" />
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
   );
 };
 

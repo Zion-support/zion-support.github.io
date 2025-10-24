@@ -1,144 +1,186 @@
+<<<<<<< HEAD
 'use client';;
 import React from 'react';
+=======
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { Activity, Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface SystemMonitorProps {
-  // Add props here
+  showDetails?: boolean;
+  refreshInterval?: number;
+  className?: string;
 }
 
-const SystemMonitor: React.FC<SystemMonitorProps> = (_props) => {
+interface SystemStats {
+  cpu: number;
+  memory: number;
+  disk: number;
+  network: number;
+  battery?: number;
+}
+
+const SystemMonitor: React.FC<SystemMonitorProps> = ({
+  _showDetails = true,
+  refreshInterval = 1000,
+  className = '',
+}) => {
+  const [stats, setStats] = useState<SystemStats>({
+    cpu: 0,
+    memory: 0,
+    disk: 0,
+    network: 0,
+  });
+
+  useEffect(() => {
+    const updateStats = () => {
+      // Simulate system stats (in a real app, you'd get these from an API)
+      setStats({
+        cpu: Math.random() * 100,
+        memory: Math.random() * 100,
+        disk: Math.random() * 100,
+        network: Math.random() * 100,
+        battery: Math.random() * 100,
+      });
+    };
+
+    updateStats();
+    const interval = setInterval(updateStats, refreshInterval);
+
+    return () => clearInterval(interval);
+  }, [refreshInterval]);
+
+  const _getStatusColor = (value: number) => {
+    if (value < 50) return 'text-green-500';
+    if (value < 80) return 'text-yellow-500';
+    return 'text-red-500';
+  };
+
+  const getStatusBgColor = (value: number) => {
+    if (value < 50) return 'bg-green-500';
+    if (value < 80) return 'bg-yellow-500';
+    return 'bg-red-500';
+  };
+
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>SystemMonitor | Zion Tech Group</title>
         <meta name="description" content="Professional SystemMonitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SystemMonitor, AI solutions, IT services, Zion Tech Group, systemmonitor" />
       </Helmet>
+=======
+    <div className={`bg-white rounded-lg shadow-lg p-4 ${className}`}>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+          <Activity className="w-5 h-5 mr-2" />
+          System Monitor
+        </h3>
+        <div className="text-sm text-gray-500">
+          {new Date().toLocaleTimeString()}
+        </div>
+      </div>
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                SystemMonitor
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {/* CPU */}
+        <div className="text-center">
+          <div className="flex items-center justify-center mb-2">
+            <Cpu className="w-5 h-5 text-blue-500 mr-1" />
+            <span className="text-sm font-medium text-gray-700">CPU</span>
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {stats.cpu.toFixed(0)}%
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+            <div
+              className={`h-2 rounded-full ${getStatusBgColor(stats.cpu)}`}
+              style={{ width: `${stats.cpu}%` }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Memory */}
+        <div className="text-center">
+          <div className="flex items-center justify-center mb-2">
+            <HardDrive className="w-5 h-5 text-green-500 mr-1" />
+            <span className="text-sm font-medium text-gray-700">Memory</span>
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {stats.memory.toFixed(0)}%
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+            <div
+              className={`h-2 rounded-full ${getStatusBgColor(stats.memory)}`}
+              style={{ width: `${stats.memory}%` }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Disk */}
+        <div className="text-center">
+          <div className="flex items-center justify-center mb-2">
+            <HardDrive className="w-5 h-5 text-purple-500 mr-1" />
+            <span className="text-sm font-medium text-gray-700">Disk</span>
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {stats.disk.toFixed(0)}%
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+            <div
+              className={`h-2 rounded-full ${getStatusBgColor(stats.disk)}`}
+              style={{ width: `${stats.disk}%` }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Network */}
+        <div className="text-center">
+          <div className="flex items-center justify-center mb-2">
+            <Wifi className="w-5 h-5 text-orange-500 mr-1" />
+            <span className="text-sm font-medium text-gray-700">Network</span>
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {stats.network.toFixed(0)}%
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+            <div
+              className={`h-2 rounded-full ${getStatusBgColor(stats.network)}`}
+              style={{ width: `${stats.network}%` }}
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Battery (if available) */}
+      {stats.battery !== undefined && (
+        <div className="mt-4 pt-4 border-t">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <Battery className="w-5 h-5 text-gray-500 mr-2" />
+              <span className="text-sm font-medium text-gray-700">Battery</span>
+            </div>
+            <div className="flex items-center">
+              <span className="text-sm font-medium text-gray-900 mr-2">
+                {stats.battery.toFixed(0)}%
               </span>
-              <br />
-}
-  ]
-</span>
-              <br></br>
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p>Transform your business with our advanced systemmonitor solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
-                <ArrowRight>
-              </button>
-              <button>Learn More;</button>
-              </button>
-            </div>
-        </div>
-    </div>
-  ),
-}
-export default SystemMonitorPage
-'use client';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-    }
-  ]
-              <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced systemmonitor solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our SystemMonitor?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our systemmonitor solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+              <div className="w-16 bg-gray-200 rounded-full h-2">
+                <div
+                  className={`h-2 rounded-full ${getStatusBgColor(stats.battery)}`}
+                  style={{ width: `${stats.battery}%` }}
+                ></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our systemmonitor solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your systemmonitor needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
+=======
+      )}
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
     </div>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';;
 import React from 'react';
 
@@ -228,14 +229,64 @@ return (
       </section>
     </div>
   ),
+=======
+'use client';
+
+import React, { useEffect } from 'react';
+
+interface ServiceWorkerRegistrationProps {
+  onUpdateAvailable?: () => void;
+  onUpdateInstalled?: () => void;
+  onError?: (error: Error) => void;
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 }
 
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  );
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
+  onUpdateAvailable,
+  onUpdateInstalled,
+  onError,
+}) => {
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
+      return;
+    }
+
+    const registerServiceWorker = async () => {
+      try {
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed') {
+                if (navigator.serviceWorker.controller) {
+                  // New content is available
+                  onUpdateAvailable?.();
+                } else {
+                  // Content is cached for the first time
+                  onUpdateInstalled?.();
+                }
+              }
+            });
+          }
+        });
+
+        // Handle controller change
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          window.location.reload();
+        });
+
+      } catch (error) {
+        onError?.(error as Error);
+      }
+    };
+
+    registerServiceWorker();
+  }, [onUpdateAvailable, onUpdateInstalled, onError]);
+
+  return null;
 };
 
 export default ServiceWorkerRegistration;

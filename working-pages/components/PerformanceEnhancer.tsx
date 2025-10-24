@@ -1,16 +1,6 @@
 'use client';;
 import React from 'react';
-<<<<<<< HEAD:app/micro-saas-services/microSaasServices.tsx
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
-const MicroSaasServicesPage: React.FC = () => {
-    const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const PerformanceEnhancerPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/PerformanceEnhancer.tsx
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -64,12 +54,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-<<<<<<< HEAD:app/micro-saas-services/microSaasServices.tsx
-      <title>MicroSaasServices | Zion Tech Group</title>
-=======
-      <Helmet>
-        </Helmet><title>PerformanceEnhancer | Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/PerformanceEnhancer.tsx
+
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
