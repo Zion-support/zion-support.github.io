@@ -1,3 +1,4 @@
+'use client';
 /**
  * Application Type Definitions
  * Core types used across the application

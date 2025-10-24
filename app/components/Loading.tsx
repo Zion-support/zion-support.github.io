@@ -1,6 +1,7 @@
-const Loading: React.FC = () => {
-return(<div>
+'use client';
 import React from 'react'
+const Loading: React.FC = () => {;
+return(<div>;
         <title>Loading</title>
         <meta name="description" content="Advanced Loading solution for modern businesses." / />
         <meta name="keywords" content="AI,artificial, intelligence, Loading, AI, solutions, intelligent automation" /  />

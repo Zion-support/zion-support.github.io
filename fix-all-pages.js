@@ -1,13 +1,13 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer'
 const fs = require('fs');
 const path = require('path');
 
-// Template for a standard service page
-const servicePageTemplate = (title, description) => `'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import Footer from '../components/Footer'
+// Template for a standard service page;
+const servicePageTemplate = (title, description) => `'use client';
 
 export default function ServicePage() {
   return (
@@ -31,14 +31,12 @@ export default function ServicePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105">
               Get Started
             </Link>
             <Link
               href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105">
               Learn More
             </Link>
           </div>
@@ -51,8 +49,8 @@ export default function ServicePage() {
 
 // Function to fix a page file
 function fixPageFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Skip if file doesn't exist or is empty
     if (!content) return;
@@ -65,17 +63,17 @@ function fixPageFile(filePath) {
     
     // Check if file has syntax errors (semicolon after import, malformed JSX)
     if (content.includes('import') && content.includes(';\n') && content.includes('return (<div>')) {
-      // Extract title from the file path or content
-      const pathParts = filePath.split('/');
+      // Extract title from the file path or content;
+const pathParts = filePath.split('/');
       const folderName = pathParts[pathParts.length - 2];
       const title = folderName
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-      
-      const description = `Professional ${folderName.replace(/-/g, ' ')} services and solutions for modern businesses.`;
-      
-      const newContent = servicePageTemplate(title, description);
+      ;
+const description = `Professional ${folderName.replace(/-/g, ' ')} services and solutions for modern businesses.`;
+      ;
+const newContent = servicePageTemplate(title, description);
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
     }
@@ -85,11 +83,11 @@ function fixPageFile(filePath) {
 }
 
 // Function to recursively find and fix page files
-function fixAllPages(dir) {
-  const items = fs.readdirSync(dir);
+function fixAllPages(dir) {;
+const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
@@ -106,4 +104,4 @@ function fixAllPages(dir) {
 // Start fixing from the app directory
 console.log('Starting to fix all page files...');
 fixAllPages('./app');
-console.log('Finished fixing all page files.');
+console.log('Finished fixing all page files.');)

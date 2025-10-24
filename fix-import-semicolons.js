@@ -3,8 +3,8 @@ const path = require('path');
 
 // Function to fix import semicolon issues
 function fixPageFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Skip if file doesn't exist or is empty
     if (!content) return;
@@ -15,8 +15,8 @@ function fixPageFile(filePath) {
       return;
     }
     
-    // Fix the specific issue: semicolon after import statements
-    let fixed = content
+    // Fix the specific issue: semicolon after import statements;
+let fixed = content
       // Remove semicolons after import statements
       .replace(/import\s+[^;]+;\s*$/gm, (match) => match.replace(/;\s*$/, ''))
       // Remove standalone semicolons on their own lines
@@ -54,11 +54,11 @@ function fixPageFile(filePath) {
 }
 
 // Function to recursively find and fix page files
-function fixAllPages(dir) {
-  const items = fs.readdirSync(dir);
+function fixAllPages(dir) {;
+const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {

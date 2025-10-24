@@ -3,8 +3,8 @@ const path = require('path');
 
 // Function to fix missing closing brace
 function fixMissingClosingBrace(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix missing closing brace for function
@@ -25,12 +25,12 @@ function fixMissingClosingBrace(filePath) {
 }
 
 // Function to recursively find all .tsx files
-function findTSXFiles(dir) {
-  const files = [];
+function findTSXFiles(dir) {;
+const files = [];
   const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
@@ -47,7 +47,7 @@ function findTSXFiles(dir) {
 console.log('Starting missing closing brace fixes...');
 const appDir = '/workspace/app';
 const tsxFiles = findTSXFiles(appDir);
-
+;
 let fixedCount = 0;
 for (const file of tsxFiles) {
   if (fixMissingClosingBrace(file)) {

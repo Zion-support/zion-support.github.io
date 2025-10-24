@@ -1,10 +1,10 @@
-const fs = require('fs");"
+const fs = require('fs");";
 const path = require('path");
 
 // Function to fix malformed strings
-function fixMalformedStrings(content) {
-  let fixed = content;
-
+function fixMalformedStrings(content) {;
+let fixed = content;
+"
   // Fix malformed 'use client" directives"
   fixed = fixed.replace(/^'use client\";\"$/gm, "'use client';");"
   fixed = fixed.replace(/^\"use client\";\"$/gm, "'use client';");"
@@ -12,8 +12,8 @@ function fixMalformedStrings(content) {
   fixed = fixed.replace(/^\"use client\"[^;]*$/gm, "'use client';");
   
   // Fix malformed import statements"
-  fixed = fixed.replace(/import\s+([^;]+)\";\"'\"$/gm, (match, importContent) => {"
-    const cleanImport = importContent.replace(/['"]/g, '").trim();
+  fixed = fixed.replace(/import\s+([^;]+)\";\"'\"$/gm, (match, importContent) => {";
+const cleanImport = importContent.replace(/['"]/g, '").trim();
     return `import ${cleanImport};`;
   });
   
@@ -37,8 +37,8 @@ function fixMalformedStrings(content) {
 
 // Function to process a file
 function processFile(filePath) {
-  try {"
-    const content = fs.readFileSync(filePath, 'utf8");
+  try {";
+const content = fs.readFileSync(filePath, 'utf8");
     const fixed = fixMalformedStrings(content);
     
     if (content !== fixed) {
@@ -54,14 +54,14 @@ function processFile(filePath) {
 }
 
 // Function to recursively find and process files
-function processDirectory(dirPath) {
-  let processedCount = 0;
+function processDirectory(dirPath) {;
+let processedCount = 0;
   
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
+  function walkDir(currentPath) {;
+const items = fs.readdirSync(currentPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+    for (const item of items) {;
+const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules") {
@@ -79,6 +79,6 @@ function processDirectory(dirPath) {
 }
 
 // Main execution"
-console.log('Starting malformed string fixes...");"
+console.log('Starting malformed string fixes...");";
 const processedCount = processDirectory('/workspace");
 console.log(`Processed ${processedCount} files with malformed string fixes.`);"

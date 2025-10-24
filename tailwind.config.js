@@ -79,4 +79,4 @@
 >>>>>>> cursor/fix-errors-and-merge-to-main-4fc4
 
 ";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+}
