@@ -196,7 +196,7 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [metrics.cls, metrics.fid, metrics.lcp]);
   return null;
 };
 

@@ -182,9 +182,11 @@ class Logger {
     
     switch (level) {
       case LogLevel.DEBUG:
+        // eslint-disable-next-line no-console
         console.debug(`%c${message}`, styles, entry);
         break;
       case LogLevel.INFO:
+        // eslint-disable-next-line no-console
         console.info(`%c${message}`, styles, entry);
         break;
       case LogLevel.WARN:

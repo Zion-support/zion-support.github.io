@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Bot, Cpu, Brain, Settings, RefreshCw } from 'lucide-react';
+import { CheckCircle, Bot, Cpu, Brain, Settings, RefreshCw, Zap, Shield, Target, Star, BarChart } from 'lucide-react';
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
@@ -142,10 +141,7 @@ const AutonomousSystemsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Autonomous Systems Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced autonomous systems services including self-healing infrastructure, process automation, and intelligent monitoring solutions." />
-        <meta name="keywords" content="autonomous systems, self-healing infrastructure, process automation, intelligent monitoring, business automation" />      </Helmet>
+      
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}

@@ -60,6 +60,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.groupEnd();
     }
+
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
@@ -162,12 +168,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         console.warn('Failed to copy error details');
       });
   };
-
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
 
   render() {
     if (this.state.hasError) {
