@@ -3119,127 +3119,127 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
   ]
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps&quot; />
+        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
+        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
       </Helmet>
       {/* Hero Section */}
-      <section className=&quot;pt-24 pb-16 px-4&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto text-center&quot;></div>
-          <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6&quot;>
+      <section className="pt-24 pb-16 px-4"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Micro SAAS Solutions
           </h1>
-          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
           </p>
           {/* Stats */}
-          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-12&quot;></div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>50+</div>
-              <div className=&quot;text-gray-300&quot;>Applications</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300">Applications</div>
             </div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>$49</div>
-              <div className=&quot;text-gray-300&quot;>Starting Price</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
+              <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-purple-400 mb-2&quot;>24/7</div>
-              <div className=&quot;text-gray-300&quot;>Support</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support</div>
             </div>
-            <div className=&quot;bg-white/10 backdrop-blur-sm rounded-lg p-6&quot;></div>
-              <div className=&quot;text-3xl font-bold text-orange-400 mb-2&quot;>99.9%</div>
-              <div className=&quot;text-gray-300&quot;>Uptime</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime</div>
             </div>
           </div>
           {/* Contact Info */}
-          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12&quot;></div>
-            <div className=&quot;flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8&quot;></div>
-              <div className=&quot;flex items-center space-x-2&quot;></div>
-                <Phone className=&quot;w-5 h-5&quot; />
-                <span className=&quot;text-white font-medium&quot;>+1 302 464 0950</span>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
+              <div className="flex items-center space-x-2"></div>
+                <Phone className="w-5 h-5" />
+                <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className=&quot;flex items-center space-x-2&quot;></div>
-                <Mail className=&quot;w-5 h-5&quot; />
-                <span className=&quot;text-white font-medium&quot;>kleber@ziontechgroup.com</span>
+              <div className="flex items-center space-x-2"></div>
+                <Mail className="w-5 h-5" />
+                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className=&quot;flex items-center space-x-2&quot;></div>
-                <MapPin className=&quot;w-5 h-5&quot; />
-                <span className=&quot;text-white font-medium&quot;>Middletown, DE</span>
+              <div className="flex items-center space-x-2"></div>
+                <MapPin className="w-5 h-5" />
+                <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
           </div>
         </div>
       </section>
       {/* Services Grid */}
-      <section className=&quot;py-16 px-4&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
             Choose Your Perfect AI Tools
           </h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {microSAASServices.map((service, index) => (
-              <div key={index} className=&quot;bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105&quot;></div>
-                <div className=&quot;text-center mb-6&quot;></div>
-                  <div className=&quot;text-5xl mb-4&quot;>{service.icon}</div>
-                  <h3 className=&quot;text-xl font-bold text-gray-900 mb-2&quot;>{service.title}</h3>
-                  <p className=&quot;text-gray-600 text-sm&quot;>{service.description}</p>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"></div>
+                <div className="text-center mb-6"></div>
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <div className=&quot;flex items-center justify-between mb-4&quot;></div>
-                    <span className=&quot;text-2xl font-bold text-green-600&quot;>{service.price}</span>
-                    <span className=&quot;text-sm text-gray-500&quot;>Market: {service.marketPrice}</span>
+                <div className="mb-6"></div>
+                  <div className="flex items-center justify-between mb-4"></div>
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
+                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
-                  <div className=&quot;bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block&quot;></div>
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div>
                     {service.category}
                   </div>
                 </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Key Features:</h4>
-                  <ul className=&quot;space-y-2&quot;>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-600&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 text-green-500 mr-2 flex-shrink-0&quot; />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
-                      <li className=&quot;text-sm text-gray-500&quot;>
+                      <li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
                       </li>
                     )}
                   </ul>
                 </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Benefits:</h4>
-                  <ul className=&quot;space-y-1&quot;>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                  <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className=&quot;text-sm text-gray-600 flex items-center&quot;>
-                        <TrendingUp className=&quot;w-3 h-3 text-blue-500 mr-2 flex-shrink-0&quot; />
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className=&quot;mb-6&quot;></div>
-                  <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Technologies:</h4>
-                  <div className=&quot;flex flex-wrap gap-2&quot;></div>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2"></div>
                     {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className=&quot;bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded&quot;>
+                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className=&quot;text-center&quot;></div>
+                <div className="text-center"></div>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
-                    className=&quot;w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block&quot;
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started Now
                   </a>
-                  <p className=&quot;text-xs text-gray-500 mt-2&quot;>
+                  <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
                   </p>
                 </div>
@@ -3249,24 +3249,24 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= [
         </div>
       </section>
       {/* CTA Section */}
-      <section className=&quot;py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600&quot;></section>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-          <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className=&quot;text-xl text-purple-100 mb-8&quot;>
+          <p className="text-xl text-purple-100 mb-8">
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-              href=&quot;tel:+13024640950&quot;
-              className=&quot;bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors&quot;
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
               Call (302) 464-0950
             </a>
             <a
-              href=&quot;mailto:kleber@ziontechgroup.com&quot;
-              className=&quot;bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors&quot;
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
               Email Us
             </a>

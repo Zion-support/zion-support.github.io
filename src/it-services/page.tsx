@@ -306,99 +306,99 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = [
 
 const Page = () => {
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
+      <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className=&quot;text-center mb-16&quot;></section>
-          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;></h1>
-            <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent&quot;>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               IT Services & Infrastructure
             </span>
           </h1>
-          <p className=&quot;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Comprehensive IT solutions to support and optimize your business infrastructure.
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-              href=&quot;/contact&quot;
-              className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105&quot;
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
             >
               Get Free IT Assessment
             </a>
             <a
-              href=&quot;tel:+13024640950&quot;
-              className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
+              href="tel:+13024640950"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               (302) 464-0950
             </a>
           </div>
         </section>
         {/* Main Services Grid */}
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Core IT Services</h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service, index) => (
-              <div key={index} className=&quot;cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
-                <div className=&quot;text-cyan-400 mb-4&quot;></div>
+              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="text-cyan-400 mb-4"></div>
                   {React.isValidElement(service.icon) ? service.icon :
-                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: &quot;w-8 h-8&quot; }) :
-                   <div className=&quot;w-8 h-8 bg-cyan-400 rounded&quot; />}
+                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) :
+                   <div className="w-8 h-8 bg-cyan-400 rounded" />}
                 </div>
-                <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{service.title}</h3>
-                <p className=&quot;text-gray-300 mb-4 text-sm&quot;>{service.description}</p>
-                <div className=&quot;mb-4&quot;></div>
-                  <h4 className=&quot;text-sm font-semibold text-cyan-400 mb-2&quot;>Key Features:</h4>
-                  <ul className=&quot;text-sm text-gray-400 space-y-1&quot;>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-400 space-y-1">
                     {service.features.slice(0, 4).map((feature, idx) => (
-                      <li key={idx} className=&quot;flex items-center&quot;>
-                        <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className=&quot;mb-4&quot;></div>
-                  <h4 className=&quot;text-sm font-semibold text-cyan-400 mb-2&quot;>Benefits:</h4>
-                  <ul className=&quot;text-sm text-gray-400 space-y-1&quot;>
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
+                  <ul className="text-sm text-gray-400 space-y-1">
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center&quot;>
-                        <Star className=&quot;w-3 h-3 text-yellow-400 mr-2 flex-shrink-0&quot; />
+                      <li key={idx} className="flex items-center">
+                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className=&quot;mb-4&quot;></div>
-                  <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
+                <div className="mb-4"></div>
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                 </div>
-                <div className=&quot;mb-4&quot;></div>
-                  <h4 className=&quot;text-sm font-semibold text-cyan-400 mb-2&quot;>Technologies:</h4>
-                  <div className=&quot;flex flex-wrap gap-1&quot;></div>
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-1"></div>
                     {service.technologies.slice(0, 4).map((tech, idx) => (
-                      <span key={idx} className=&quot;px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded&quot;>
+                      <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-                <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
-                <ul className=&quot;space-y-2 mb-6&quot;>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-400&quot;>
-                      <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className=&quot;text-center&quot;></div>
-                  <div className=&quot;text-lg font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
+                <div className="text-center"></div>
+                  <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                   <a
-                    href=&quot;/contact&quot;
-                    className=&quot;inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity&quot;
+                    href="/contact"
+                    className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
                   >
-                    Learn More <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
               </div>
@@ -406,101 +406,101 @@ const Page = () => {
           </div>
         </section>
         {/* Additional Services */}
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Additional IT Services</h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;></div>
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {additionalServices.map((service, index) => (
-              <div key={index} className=&quot;bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300&quot;></div>
-                <div className=&quot;flex items-center mb-3&quot;></div>
-                  <service.icon className=&quot;w-6 h-6 text-cyan-400 mr-3&quot; />
-                  <h3 className=&quot;text-lg font-bold text-white&quot;>{service.title}</h3>
+              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300"></div>
+                <div className="flex items-center mb-3"></div>
+                  <service.icon className="w-6 h-6 text-cyan-400 mr-3" />
+                  <h3 className="text-lg font-bold text-white">{service.title}</h3>
                 </div>
-                <p className=&quot;text-gray-300 text-sm mb-3&quot;>{service.description}</p>
-                <div className=&quot;text-cyan-400 font-bold text-sm&quot;>{service.price}</div>
+                <p className="text-gray-300 text-sm mb-3">{service.description}</p>
+                <div className="text-cyan-400 font-bold text-sm">{service.price}</div>
               </div>
             ))}
           </div>
         </section>
         {/* Support Tiers */}
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Support Tiers</h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;></div>
-            <div className=&quot;bg-slate-800/50 backdrop-blur-sm rounded-xl p-6&quot;></div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Basic Support</h3>
-              <div className=&quot;text-3xl font-bold text-cyan-400 mb-4&quot;>$199/month</div>
-              <ul className=&quot;space-y-2 mb-6&quot;>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Business hours support
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Remote assistance
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Basic monitoring
                 </li>
               </ul>
               <a
-                href=&quot;/contact&quot;
-                className=&quot;block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors&quot;
+                href="/contact"
+                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
               </a>
             </div>
-            <div className=&quot;bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500&quot;></div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Professional Support</h3>
-              <div className=&quot;text-3xl font-bold text-cyan-400 mb-4&quot;>$499/month</div>
-              <ul className=&quot;space-y-2 mb-6&quot;>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   24/7 support
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   On-site visits
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Advanced monitoring
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Priority response
                 </li>
               </ul>
               <a
-                href=&quot;/contact&quot;
-                className=&quot;block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors&quot;
+                href="/contact"
+                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
               </a>
             </div>
-            <div className=&quot;bg-slate-800/50 backdrop-blur-sm rounded-xl p-6&quot;></div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Enterprise Support</h3>
-              <div className=&quot;text-3xl font-bold text-cyan-400 mb-4&quot;>Custom</div>
-              <ul className=&quot;space-y-2 mb-6&quot;>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Dedicated team
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Custom SLAs
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Proactive monitoring
                 </li>
-                <li className=&quot;flex items-center text-sm text-gray-300&quot;>
-                  <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                <li className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Strategic consulting
                 </li>
               </ul>
               <a
-                href=&quot;/contact&quot;
-                className=&quot;block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors&quot;
+                href="/contact"
+                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Contact Sales
               </a>
@@ -508,22 +508,22 @@ const Page = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;text-center&quot;></section>
-          <div className=&quot;bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8&quot;></div>
-            <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Optimize Your IT Infrastructure?</h2>
-            <p className=&quot;text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+        <section className="text-center"></section>
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8"></div>
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
-                href=&quot;/contact&quot;
-                className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105&quot;
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
                 Get Free IT Assessment
               </a>
               <a
-                href=&quot;tel:+13024640950&quot;
-                className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 (302) 464-0950
               </a>
