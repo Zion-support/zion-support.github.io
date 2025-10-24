@@ -1,6 +1,5 @@
 'use client';
-
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -11,23 +10,21 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
+  structuredData?: object;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-  description = 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
-  keywords = 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services from Zion Tech Group.',
+  keywords = 'AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity',
   canonical,
-  ogImage = '/og-image.jpg',
+  ogImage = '/images/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  noindex = false,
-  nofollow = false,
+  structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://zion.app');
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
   return (
     <Head>
@@ -35,72 +32,80 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={currentUrl} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
       
-      {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
-      {/* Open Graph */}
+      {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
+      {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-      <meta name="theme-color" content="#7c3aed" />
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#2563eb" />
+      <meta name="msapplication-TileColor" content="#2563eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://zion.app",
-            "logo": "https://zion.app/logo.png",
-            "description": description,
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/zion-tech-group"
-            ],
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-555-0123",
-              "contactType": "customer service",
-              "availableLanguage": "English"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "US"
-            }
-          })
-        }}
-      />
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
+      
+      {/* Default Structured Data for Organization */}
+      {!structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Leading technology solutions provider specializing in AI, cloud architecture, and innovative development services",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/images/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-123-4567",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              },
+              "sameAs": [
+                "https://twitter.com/ziontechgroup",
+                "https://linkedin.com/company/zion-tech-group"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Tech Street",
+                "addressLocality": "Innovation City",
+                "addressRegion": "IC",
+                "postalCode": "12345",
+                "addressCountry": "US"
+              }
+            })
+          }}
+        />
+      )}
     </Head>
   );
 };

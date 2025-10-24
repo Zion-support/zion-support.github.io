@@ -1,66 +1,39 @@
 interface PerformanceMetrics {
-  loadTime: number | null
-  firstContentfulPaint: number | null
-  largestContentfulPaint: number | null
-  firstInputDelay: number | null
-  cumulativeLayoutShift: number | null
-  timeToInteractive: number | null
-  totalBlockingTime: number | null
+  loadTime: number | null;
+  firstContentfulPaint: number | null;
+  largestContentfulPaint: number | null;
+  firstInputDelay: number | null;
+  cumulativeLayoutShift: number | null;
+  timeToInteractive: number | null;
+  totalBlockingTime: number | null;
+}
 
 // Global performance monitoring utilities
-export const performanceUtils = {
-  // Measure custom performance marks
-  mark: (name: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(name)
-  },
+export const getPerformanceMetrics = (): PerformanceMetrics => {
+  if (typeof window === 'undefined') {
+    return {
+      loadTime: null,
+      firstContentfulPaint: null,
+      largestContentfulPaint: null,
+      firstInputDelay: null,
+      cumulativeLayoutShift: null,
+      timeToInteractive: null,
+      totalBlockingTime: null
+    };
+  }
 
-  // Measure time between marks
-  measure: (name: string, startMark: string, endMark?: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      if (endMark) {
-        performance.measure(name, startMark, endMark)} else {
-        performance.measure(name, startMark)
-    
-  },
-
-  // Get performance entries
-  getEntries: (type?: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      return type ? performance.getEntriesByType(type) : performance.getEntries()
-    return []},
-
-  // Clear performance entries
-  clearEntries: (type?: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      if (type) {
-        performance.clearMeasures(type)
-        performance.clearMarks(type)} else {
-        performance.clearMeasures()
-        performance.clearMarks()
-    
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paintEntries = performance.getEntriesByType('paint');
   
-}
+  return {
+    loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : null,
+    firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || null,
+    largestContentfulPaint: null, // Would need to be measured with observer
+    firstInputDelay: null, // Would need to be measured with observer
+    cumulativeLayoutShift: null, // Would need to be measured with observer
+    timeToInteractive: null, // Would need to be calculated
+    totalBlockingTime: null // Would need to be calculated
+  };
+};
 
-// Google Analytics integration for performance tracking
-export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
-      event_category: 'Performance',
-      event_label: 'Core Web Vitals',
-      custom_map: {
-        load_time: metrics.loadTime,
-        first_contentful_paint: metrics.firstContentfulPaint,
-        largest_contentful_paint: metrics.largestContentfulPaint,
-        first_input_delay: metrics.firstInputDelay,
-        cumulative_layout_shift: metrics.cumulativeLayoutShift,
-        time_to_interactive: metrics.timeToInteractive,
-        total_blocking_time: metrics.totalBlockingTime
-      
-    })
-}
-
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void
-}
+export default getPerformanceMetrics;
