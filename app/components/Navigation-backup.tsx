@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 import { X, Menu } from 'lucide-react';
 
 interface NavigationBackupProps {
-  logo?: string
-  logoText?: string
+  logo?: string;
+  logoText?: string;
   menuItems?: Array<{
-    label: string,
-      href: string
+    label: string;
+    href: string;
     submenu?: Array<{
-      label: string,
-      href: string
-    }>
-  }>
-  ctaText?: string
-  ctaHref?: string
+      label: string;
+      href: string;
+    }>;
+  }>;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
-  logo
-  logoText = 'Zion Tech Group'
+  logo,
+  logoText = 'Zion Tech Group',
   menuItems = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },

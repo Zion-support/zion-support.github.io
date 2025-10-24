@@ -134,8 +134,4 @@ const EnhancedServicesShowcase: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedServicesShowcase;
-=======
-export default EnhancedServicesShowcase;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a

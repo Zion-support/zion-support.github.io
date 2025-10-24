@@ -26,7 +26,8 @@ export const performanceUtils = {
         performance.measure(name, startMark);
       }
     }
-      }
+  },
+
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -52,23 +53,18 @@ export const performanceUtils = {
 export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
-      event_category: 'Performance'
-      event_label: 'Core Web Vitals'
+      event_category: 'Performance',
+      event_label: 'Core Web Vitals',
       custom_map: {
-        load_time: metrics.loadTime
-        first_contentful_paint: metrics.firstContentfulPaint
-        largest_contentful_paint: metrics.largestContentfulPaint
-        first_input_delay: metrics.firstInputDelay
-        cumulative_layout_shift: metrics.cumulativeLayoutShift
-        time_to_interactive: metrics.timeToInteractive
+        load_time: metrics.loadTime,
+        first_contentful_paint: metrics.firstContentfulPaint,
+        largest_contentful_paint: metrics.largestContentfulPaint,
+        first_input_delay: metrics.firstInputDelay,
+        cumulative_layout_shift: metrics.cumulativeLayoutShift,
+        time_to_interactive: metrics.timeToInteractive,
         total_blocking_time: metrics.totalBlockingTime
-<<<<<<< HEAD
       }
     });
-=======
-      });
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   }
 };
 

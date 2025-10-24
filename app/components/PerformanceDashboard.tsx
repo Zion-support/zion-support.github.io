@@ -2,7 +2,8 @@
 import React from 'react';
 
 interface PerformanceDashboardProps {
-  // Add props here
+  showMetrics?: boolean;
+  refreshInterval?: number;
 }
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {

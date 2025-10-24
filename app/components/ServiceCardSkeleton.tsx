@@ -8,9 +8,9 @@ interface ServiceCardSkeletonProps {
 }
 
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
-  showImage = true
-  showButton = true
-  lines = 3
+  showImage = true,
+  showButton = true,
+  lines = 3,
   className = ''
 }) => {
   return (

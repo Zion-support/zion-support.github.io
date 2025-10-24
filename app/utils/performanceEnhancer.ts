@@ -1,5 +1,7 @@
-import { useRef, useEffect } from 'react'
-'use client'
+'use client';
+
+import { useRef, useEffect } from 'react';
+
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -12,17 +14,10 @@ export const debounce = <T extends (..._args: unknown[]) => unknown>(
 ): ((..._args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
-<<<<<<< HEAD
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(..._args), wait)
-  }
-}
-=======
     clearTimeout(timeout);
     timeout = setTimeout(() => func(..._args), wait);
   };
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
 
 // Throttle function for performance optimization
 export const throttle = <T extends (..._args: unknown[]) => unknown>(
@@ -54,13 +49,9 @@ export class PerformanceMonitor {
 
   // Track component render time
   trackRender(componentName: string, renderTime: number) {
-    this.metrics.set(`${componentName}_render`, renderTime)
+    this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-      console.log(`${componentName} rendered in ${renderTime}ms`)
-=======
       console.log(`${componentName} rendered in ${renderTime}ms`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
     }
   }
 
@@ -92,11 +83,7 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-<<<<<<< HEAD
-          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
-=======
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
         }
       })
     })
@@ -216,11 +203,7 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-          console.log('LCP:', entry.startTime)
-=======
           console.log('LCP:', entry.startTime);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
         }
       }
     })
@@ -235,13 +218,9 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry
-        const fid = fidEntry.processingStart - entry.startTime
+        const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-          console.log('FID:', fid)
-=======
           console.log('FID:', fid);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
         }
       }
     })
@@ -306,13 +285,8 @@ export const initializePerformanceEnhancements = () => {
   // Optimize scroll performance
   optimizeScrollPerformance()
   // Collect performance metrics
-  const metrics = collectPerformanceMetrics()
+  const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-<<<<<<< HEAD
-    console.log('Performance metrics:', metrics)
-=======
-<<<<<<< HEAD
     console.log('Performance metrics:', metrics);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   }
 }

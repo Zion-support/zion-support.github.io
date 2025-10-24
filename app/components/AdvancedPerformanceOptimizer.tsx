@@ -8,16 +8,16 @@ interface PerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children
+  children,
   enableOptimizations = true
 }) => {
-  const [isOptimized, setIsOptimized] = useState(false)
+  const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({
     imagesOptimized: 0,
-      scriptsOptimized: 0,
-      cssOptimized: 0,
-      totalSavings: 0
-  })
+    scriptsOptimized: 0,
+    cssOptimized: 0,
+    totalSavings: 0
+  });
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return
     const images = document.querySelectorAll('img')
@@ -70,11 +70,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const scriptsOptimized = optimizeScripts()
     const cssOptimized = optimizeCSS()
     setOptimizationMetrics({
-      imagesOptimized
-      scriptsOptimized
-      cssOptimized
+      imagesOptimized,
+      scriptsOptimized,
+      cssOptimized,
       totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
-    })
+    });
     setIsOptimized(true)
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
   useEffect(() => {
@@ -106,14 +106,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         <div
           className="optimization-debug"
           style={{
-            position: 'fixed'
-            bottom: '10px'
-            right: '10px'
-            background: 'rgba(0,0,0,0.8)'
-            color: 'white'
-            padding: '10px'
-            borderRadius: '5px'
-            fontSize: '12px'
+            position: 'fixed',
+            bottom: '10px',
+            right: '10px',
+            background: 'rgba(0,0,0,0.8)',
+            color: 'white',
+            padding: '10px',
+            borderRadius: '5px',
+            fontSize: '12px',
             zIndex: 1000
           }}
         >

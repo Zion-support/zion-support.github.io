@@ -1,46 +1,46 @@
 export interface Service {
-  id: string
-  title: string
-  description: string
-  features: string[]
-  benefits: string[]
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  benefits: string[];
   pricing: {
-    basic: string
-    pro: string
-    enterprise: string
-  }
+    basic: string;
+    pro: string;
+    enterprise: string;
+  };
   contactInfo: {
-    website: string
-    email: string
-    phone: string
-  }
-  price?: string
-  icon?: string
-  href: string
-  popular?: boolean
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"
+    website: string;
+    email: string;
+    phone: string;
+  };
+  price?: string;
+  icon?: string;
+  href: string;
+  popular?: boolean;
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation";
 }
 
 export const aiServices: Service[] = [
   {
-    id: "ai-analytics"
-    title: "AI Analytics & BI"
-    description: "Transform your data into actionable insights with our advanced AI analytics platform."
+    id: "ai-analytics",
+    title: "AI Analytics & BI",
+    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
     features: [
-      "Real-time data processing"
-      "Predictive analytics"
-      "Custom dashboards"
-      "Automated reporting"
+      "Real-time data processing",
+      "Predictive analytics",
+      "Custom dashboards",
+      "Automated reporting",
       "Machine learning models"
-      ];
+    ],
     benefits: [
-      "Improved decision making"
-      "Reduced manual analysis time"
-      "Better business insights"
+      "Improved decision making",
+      "Reduced manual analysis time",
+      "Better business insights",
       "Cost savings"
-      ];
+    ],
     pricing: {
-      basic: "/month"
+      basic: "/month",
       pro: ",999/month"
       enterprise: "Custom pricing"
         }

@@ -8,9 +8,9 @@ interface LoadingSkeletonProps {
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-  className = ''
-  lines = 1
-  height = 'h-4'
+  className = '',
+  lines = 1,
+  height = 'h-4',
   width = 'w-full'
 }) => {
   return (
@@ -27,8 +27,4 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   );
 };
 
-<<<<<<< HEAD
 export default LoadingSkeleton;
-=======
-export default LoadingSkeleton;
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)

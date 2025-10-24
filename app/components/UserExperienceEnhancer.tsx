@@ -10,11 +10,11 @@ interface UserExperienceEnhancerProps {
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children
-  enableAnimations = true
-  enableHoverEffects = true
-  enableFocusManagement = true
-  enableKeyboardNavigation = true
+  children,
+  enableAnimations = true,
+  enableHoverEffects = true,
+  enableFocusManagement = true,
+  enableKeyboardNavigation = true,
   enableAccessibility = true
 }) => {
   const [isReducedMotion, setIsReducedMotion] = useState(false)
@@ -109,6 +109,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     <div className="...">
       {children}
     </div>
-  )
-}
-export default UserExperienceEnhancer
+  );
+};
+
+export default UserExperienceEnhancer;

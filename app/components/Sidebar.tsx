@@ -4,28 +4,28 @@ import React, { useState } from 'react';
 import { X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean,
-      onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
   menuItems?: Array<{
-    label: string,
-      href: string
-    icon?: React.ReactNode
+    label: string;
+    href: string;
+    icon?: React.ReactNode;
     submenu?: Array<{
-      label: string,
-      href: string
-    }>
-  }>
+      label: string;
+      href: string;
+    }>;
+  }>;
   user?: {
-    name: string,
-      email: string
-    avatar?: string
-  }
-  onLogout?: () => void
+    name: string;
+    email: string;
+    avatar?: string;
+  };
+  onLogout?: () => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
-  isOpen
-  onClose
+  isOpen,
+  onClose,
   menuItems = [
     { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> },
     { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> },
@@ -38,8 +38,9 @@ const Sidebar: React.FC<SidebarProps> = ({
   const toggleSubmenu = (label: string) => {
     setActiveSubmenu(activeSubmenu === label ? null : label)
   }
-  if (!isOpen) return null
-    return (
+  if (!isOpen) return null;
+
+  return (
     <>
       {/* Overlay */}
       <div
@@ -135,6 +136,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           )}
         </div>
       </div>
-      )
-}
-export default Sidebar
+    </>
+  );
+};
+
+export default Sidebar;

@@ -13,13 +13,13 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.'
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group'
-  canonicalUrl
-  ogImage = '/images/og-image.jpg'
-  twitterCard = 'summary_large_image'
-  structuredData
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData,
   children
 }) => {
   useEffect(() => {
@@ -103,6 +103,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         )}
       </Helmet>
       {children}
-      )
-}
-export default SEOEnhancer
+    </>
+  );
+};
+
+export default SEOEnhancer;
