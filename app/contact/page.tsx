@@ -1,6 +1,7 @@
-"use client";
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
     setFormData(prev => ({
       ...prev,
@@ -47,14 +48,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
     }
   ];
 
-  const services = [
-    "AI Solutions",
-    "IT Services",
-    "Micro SaaS Development",
-    "Business Intelligence",
-    "Consulting",
-    "Other"
-  ];
+  // const benefits = [] // Unused variable
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">

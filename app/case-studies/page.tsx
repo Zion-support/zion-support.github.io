@@ -1,25 +1,12 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {}
   const  caseStudies = [
 
-      id= 1,
-      title: "AI-Powered E-commerce Transformation",""
-      client: "TechRetail Inc.",""
-      industry: "E-commerce",""
-      challenge: "Low conversion rates and poor customer experience",""
-      solution: "Implemented AI-powered recommendation engine and chatbot",""
-      results: [
-        "40% increase in conversion rates",""
-        "60% reduction in customer service tickets",""
-        "25% increase in average order value"""
-      ],
-      image: "/images/case-studies/ecommerce-ai.jpg",""
-      duration: "6 months",""
-      team: "8 specialists"""
+  // const benefits = [] // Unused variable
 
       id= 2,
       title: "Cloud Migration for Financial Services",""

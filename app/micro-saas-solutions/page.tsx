@@ -1,8 +1,33 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
+const MicroSaasSolutionsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and AI.'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+    }
+  ];
+
+  // const benefits = [] // Unused variable
 
   return (
     <>

@@ -1,6 +1,7 @@
-"use client";
-import React from "react";
-import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const services = [
@@ -54,12 +55,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const technologies = [
-    "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
-    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch",
-    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js",
-    "Python", "Go", "Rust", "TypeScript"
-  ];
+  // const benefits = [] // Unused variable
 
       import {},
       Server,

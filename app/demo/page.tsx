@@ -1,6 +1,7 @@
 'use client';
-import React, { useState } from 'react';
-import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('ai-chatbot');
@@ -31,6 +32,8 @@ const DemoPage: React.FC = () => {
       features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics']
     }
   ];
+
+  // const benefits = [] // Unused variable
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">

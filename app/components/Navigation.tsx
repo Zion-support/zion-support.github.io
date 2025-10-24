@@ -90,41 +90,31 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
   ];
 
-  const toggleMobileMenu = useCallback(() => {
-    setIsOpen(prev => !prev);
-  }, []);
+  // const aiServices = [
+  //   { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
+  //   { name: 'AI Content Generator', href: '/ai-content-generator' },
+  //   { name: 'AI Data Visualizer', href: '/ai-data-visualizer' },
+  //   { name: 'AI Document Intelligence', href: '/ai-document-intelligence' },
+  //   { name: 'AI Financial Forecasting', href: '/ai-financial-forecasting' },
+  //   { name: 'AI Fraud Detection', href: '/ai-fraud-detection' }
+  // ];
 
-  const isActive = (path: string) => {
-    return location.pathname === path,
-  };
+  // const itServices = [
+  //   { name: 'Web Development', href: '/web-development' },
+  //   { name: 'Mobile Development', href: '/mobile-development' },
+  //   { name: 'API Development', href: '/api-development' },
+  //   { name: 'Cloud Solutions', href: '/cloud-solutions' },
+  //   { name: 'Cybersecurity', href: '/cybersecurity' },
+  //   { name: 'Data Analytics', href: '/data-analytics' }
+  // ];
 
-  const toggleServicesMenu = () => {
-    setIsServicesOpen(!isServicesOpen);
-    setIsSolutionsOpen(false);
-    setIsResourcesOpen(false);
-    setIsCompanyOpen(false);
-  };
-
-  const toggleSolutionsMenu = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
-    setIsServicesOpen(false);
-    setIsResourcesOpen(false);
-    setIsCompanyOpen(false);
-  };
-
-  const toggleResourcesMenu = () => {
-    setIsResourcesOpen(!isResourcesOpen);
-    setIsServicesOpen(false);
-    setIsSolutionsOpen(false);
-    setIsCompanyOpen(false);
-  };
-
-  const toggleCompanyMenu = () => {
-    setIsCompanyOpen(!isCompanyOpen);
-    setIsServicesOpen(false);
-    setIsSolutionsOpen(false);
-    setIsResourcesOpen(false);
-  };
+  // const microSaas = [
+  //   { name: 'Analytics Dashboard', href: '/analytics-dashboard' },
+  //   { name: 'Expense Tracker Pro', href: '/expense-tracker-pro' },
+  //   { name: 'Inventory Manager', href: '/inventory-manager' },
+  //   { name: 'Task Manager Pro', href: '/task-manager-pro' },
+  //   { name: 'Social Media Scheduler', href: '/social-media-scheduler' }
+  // ];
 
   return (
     <nav className="bg-slate-900 shadow-lg">

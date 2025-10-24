@@ -1,42 +1,34 @@
 
-      interface Props {},
-      children: ReactNode;
-fallback?: ReactNode
-      interface State {},
-      hasError: boolean,
-      error: Error | null,
-      errorInfo: ErrorInfo | null
-class ErrorBoundary extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props),
-      this.state = {},
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | undefined;
+}
 
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error?: Error | undefined; resetError: () => void }>;
+}
 
-      hasError: true,
-      error,
-      errorInfo: null
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false, error: undefined };
+  }
 
     this.setState({},)
 
-      error,
+  override   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
 
     // Log error to console in development
 
-      // Here you would typically send the error to an error reporting service
-  handleRetry = () => {},
-      this.setState({},)
-      hasError: false,
-      error: null,
-      errorInfo: null
-    })
-  render() {},
-      if (this.state.hasError) {}
-      // Custom fallback UI
-      if (this.props.fallback) {},
+  override render() {
+    if (this.state.hasError) {
+      const FallbackComponent = this.props.fallback;
+      if (FallbackComponent) {
+        return <FallbackComponent error={this.state.error} resetError={this.resetError} />;
+      }
 
           </div>
         </div>

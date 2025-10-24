@@ -1,6 +1,7 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, FileText, Zap, Shield } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const AiDocumentProcessorPage = () => {
   const features = [
@@ -24,7 +25,14 @@ const AiDocumentProcessorPage = () => {
       title: 'Security',
       description: 'Enterprise-grade security with advanced document protection and compliance.',
     },
-  ]
+    {
+      icon: Globe,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
+    }
+  ];
+
+  // const benefits = [] // Unused variable
 
   return (
     <>
