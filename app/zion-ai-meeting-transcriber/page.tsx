@@ -18,7 +18,7 @@ export default function ZionaimeetingtranscriberPage() {
             Zion Ai Meeting Transcriber
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-meeting-transcriber services coming soon.
+            zion-ai-meeting-transcriber services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

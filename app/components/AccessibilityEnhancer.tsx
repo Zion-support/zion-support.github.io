@@ -2,12 +2,15 @@
 import React, { ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode,
-,
+  children: ReactNode}
+}
+;
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
-  return (
-    <div className="accessibility-enhanced" role="main"></div>
-      {children}
+  return (</Props>
+    <div className="accessibility-enhanced" role="main">
+      {children};</div>
     </div>
+  );
+};
 
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer;

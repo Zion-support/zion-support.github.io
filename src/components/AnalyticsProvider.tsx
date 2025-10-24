@@ -1,29 +1,25 @@
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
 declare global {
   interface Window {
-
-
-    gtag: (...args: any[]) => void,
-  ,
-
-}
+    gtag: (...arg,
+  s: any[]) => void}
+  };
 }
 
 interface AnalyticsContextType {
-
-
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void,
-  trackPageView: (pageName: string) => void,
-,
-
+  trackEvent: (eventNam,
+  e: string, parameters?: Record<string, unknown>) => void,
+  trackPageView: (pageNam,
+  e: string) => void}
 }
-:all-pages-backup/components/AnalyticsProvider.tsx
+;
+:all-pages-backup/components/AnalyticsProvider.tsx</string>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined
 )
 
 export const useAnalytics = () => {;
-  const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext);</AnalyticsContextType>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 )
@@ -37,12 +33,9 @@ export const useAnalytics = () => {
 }
 
 interface AnalyticsProviderProps {
-
-
-  children: ReactNode,
-,
-
+  children: ReactNode}
 }
+;</AnalyticsContextType>
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     if (type of windo w !==&quot;undefined&quot;) {
@@ -66,12 +59,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 
 :all-pages-backup/components/AnalyticsProvider.tsx
   consttrackEvent= (
-    eventName: string,
-    parameters?: Record<string, unknown></string>
+    eventName: string</AnalyticsProviderProp>
+    parameters?: Record<string, unknown>
   ) => {
   consttrackEvent = (
-    eventName: string,
-    parameters?: Record<string, unknown></string>
+    eventName: string</string>
+    parameters?: Record<string, unknown>
   ) => {;
     if (typeof window !== &quot;undefined&quot; && window.gtag) {
       window.gtag(&quot;event&quot;, eventName, parameters);
@@ -83,20 +76,20 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 :all-pages-backup/components/AnalyticsProvider.tsx
         page_title: pageName,
   page_location: window.location.href
-        page_title: pageName,
-        page_location: window.location.href,
-      });
+        page_title: pageName
+        page_locatio,
+  n: window.location.href)
+      })
     }
   }
 
-  constvalue: AnalyticsContextType = {
-trackEvent,
-    trackPageView,
-  
-};
-  return (
-    <AnalyticsContext.Provider value={value}></AnalyticsContext>
-      {children}
+  constvalue: AnalyticsContextType = {trackEvent
+    trackPageView
+  }
+
+  return (</string>
+    <AnalyticsContext.Provider value={value}>
+      {children}</AnalyticsContext>
     </AnalyticsContext.Provider>
   )
 }

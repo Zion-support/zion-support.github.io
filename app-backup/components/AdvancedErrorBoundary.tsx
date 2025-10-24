@@ -4,4 +4,4 @@ import { Mail } from 'lucide-react'
 import { Home } from 'lucide-react'
     if (process.env.NODE_ENV === 'development'
     console.error('Error caught by "boundary": ';,
-    if (process.env.NODE_ENV === 'production'
+    if (process.env.NODE_ENV === 'production')

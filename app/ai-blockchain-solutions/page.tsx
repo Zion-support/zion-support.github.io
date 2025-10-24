@@ -18,7 +18,7 @@ export default function AiblockchainsolutionsPage() {
             Ai Blockchain Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-blockchain-solutions services coming soon.
+            ai-blockchain-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

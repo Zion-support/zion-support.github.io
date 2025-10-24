@@ -1,14 +1,11 @@
 import React from 'react';
 
 interface ContentNewsletterSignupProps {
-
-
-  className?: string;
-
-
+  className?: string;}
 }
+;
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
-  return (
+  return (</ContentNewsletterSignupProps>
     <div className={className}></div>
       <h2>ContentNewsletterSignup</h2>
       <p>This component is under construction.</p>

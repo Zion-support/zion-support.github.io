@@ -18,7 +18,7 @@ export default function ZionleadmagnetPage() {
             Zion Lead Magnet
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-lead-magnet services coming soon.
+            zion-lead-magnet services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

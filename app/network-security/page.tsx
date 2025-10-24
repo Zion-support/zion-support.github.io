@@ -18,7 +18,7 @@ export default function NetworksecurityPage() {
             Network Security
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional network-security services coming soon.
+            network-security services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function ZionaimarketingautomationPage() {
             Zion Ai Marketing Automation
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-marketing-automation services coming soon.
+            zion-ai-marketing-automation services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

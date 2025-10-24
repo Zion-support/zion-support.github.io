@@ -19,8 +19,7 @@ export default function GdataanalyticsPage() {
           
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional 5g-data-analytics services coming soon.
-          
+            5g-data-analytics services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

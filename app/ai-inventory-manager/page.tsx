@@ -18,7 +18,7 @@ export default function AiinventorymanagerPage() {
             Ai Inventory Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-inventory-manager services coming soon.
+            ai-inventory-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

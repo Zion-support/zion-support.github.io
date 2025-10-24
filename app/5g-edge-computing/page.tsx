@@ -18,7 +18,7 @@ export default function GedgecomputingPage() {
             5g Edge Computing
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional 5g-edge-computing services coming soon.
+            5g-edge-computing services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

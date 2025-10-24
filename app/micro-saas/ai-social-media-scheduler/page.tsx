@@ -18,7 +18,7 @@ export default function AisocialmediaschedulerPage() {
             Ai Social Media Scheduler
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-social-media-scheduler services coming soon.
+            ai-social-media-scheduler services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

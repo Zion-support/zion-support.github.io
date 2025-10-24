@@ -18,7 +18,7 @@ export default function AidrugdiscoveryproPage() {
             Ai Drug Discovery Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-drug-discovery-pro services coming soon.
+            ai-drug-discovery-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

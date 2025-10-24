@@ -18,7 +18,7 @@ export default function AismartcalendarPage() {
             Ai Smart Calendar
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-smart-calendar services coming soon.
+            ai-smart-calendar services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

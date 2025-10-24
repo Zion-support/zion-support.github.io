@@ -6,18 +6,16 @@ import Footer from '../components/Footer';
 
 export default function ITSolutionsPage() {
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-gray-50to-blue-50"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
       <Navigation /></Navigation>
-      <main className="py-20px-4"></main>
-        <div className="max-w-4xlmx-auto"></div>
-          <h1 className="text-4xlfont-boldtext-gray-900mb-8">
-            IT Solutions
-          </h1>
-          <p className="text-xltext-gray-600mb-8">
-            Custom IT solutions designed for your business requirements.
+      <main className="py-20 px-4"></main>
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">IT Solutions</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Custom IT solutions designed for your business requirements.</p>
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer /></Footer>
     </div>;
   )}

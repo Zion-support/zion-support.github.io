@@ -2,9 +2,10 @@
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
 const PerformanceImagePage: React.FC = () => {
-  const features = [,
-    {,
-      icon: Brain,
+  const features = [
+    {
+      ico,
+  n: Brain,
   title: title,
   description: description,
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -38,8 +39,10 @@ const PerformanceImagePage: React.FC = () => {
   ]
 
   return (
-    <div>
-      <Helmet>;
+    <>
+    ;
+  </>
+      <Helmet>;</Helmet>
         <title>PerformanceImage | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; /></meta>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; /></meta>
@@ -55,6 +58,7 @@ const PerformanceImagePage: React.FC = () => {
     </div>,
   ),
     </div>
+  );
 }
 
 export default PerformanceImagePage

@@ -6,21 +6,20 @@ export interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
-  trackAnalytics?: boolean;
-
-
+  trackAnalytics?: boolean;}
 }
+;
 interface PerformanceMetrics {
 
 
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number;,
-,
-
+  networkLatenc,
+  y: number;}
 }
-export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+;
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {;
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
   
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -30,8 +29,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     networkLatency: 0,
   });
 
-  const [isOptimized, setIsOptimized] = useState(false);
-  const renderCountRef = useRef<number>(0);
+  const [isOptimized, setIsOptimized] = useState(false);</PerformanceMetrics>
+  const renderCountRef = useRef<number>(0);</number>
   const mountTimeRef = useRef<number>(0);
 
   useEffect(() => {
@@ -39,13 +38,13 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCountRef.current += 1;
 
     // Measure load time
-    const measureLoadTime = () => {
+    const measureLoadTime = () => {;
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
     // Measure render time
-    const measureRenderTime = () => {
+    const measureRenderTime = () => {;
       const renderStart = performance.now();
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
@@ -55,7 +54,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     // Measure memory usage
     const measureMemoryUsage = () => {
-      if ('memory' in performance) {
+      if ('memory' in performance) {;
         const memory = (performance as any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
@@ -63,7 +62,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     };
 
     // Measure network latency
-    const measureNetworkLatency = () => {
+    const measureNetworkLatency = () => {;
       const start = performance.now();
       fetch('/api/ping', { method: 'HEAD' });
         .then(() => {
@@ -84,10 +83,10 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     // Check if performance is optimized
     const checkOptimization = () => {
-      const isOptimized = 
+      const isOptimized = </number>
         metrics.loadTime < 1000 && // Load time under 1 second
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
-        metrics.memoryUsage < 100 && // Memory usage under 100MB
+        metrics.memoryUsage < 100 && // Memory usage under 100MB;
         metrics.networkLatency < 200; // Network latency under 200ms
       setIsOptimized(isOptimized);
     };
@@ -98,14 +97,14 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => clearTimeout(timeoutId);
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
-  const optimizePerformance = useCallback(() => {
+  const optimizePerformance = useCallback(() => {;
     if (typeof document === 'undefined') return;
 
     // Preload critical resources
     const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
-      '/images/logo.png',
+      '/images/logo.png',;
     ];
 
     criticalResources.forEach((resource) => {
@@ -123,7 +122,7 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) {;
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
@@ -137,15 +136,15 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     return () => imageObserver.disconnect();
   }, []);
 
-  const measurePerformance = useCallback((name: string, fn: () => void) => {,
-    if (trackPerformance) {,
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    if (trackPerformance) {;
       performance.mark(`${component}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
       performance.measure(
         `${component}-${name}`,
         `${component}-${name}-start`,
-        `${component}-${name}-end`
+        `${component}-${name}-end`)
       );
     } else {
       fn();
@@ -155,17 +154,17 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
+        // eslint-disable-next-line no-console;
         console.error(`Error in ${component}:`, error, context);
       }
       // Here you would typically send to an error tracking service
     }
   }, [component, trackErrors]);
-
+</string>
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
+        // eslint-disable-next-line no-console;
         console.log(`Analytics event in ${component}:`, event, data);
       }
       // Here you would typically send to an analytics service
@@ -182,4 +181,4 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     renderCount: renderCountRef.current,
     mountTime: mountTimeRef.current,
   };
-};
+};</string>

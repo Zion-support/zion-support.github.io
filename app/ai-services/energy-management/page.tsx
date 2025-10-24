@@ -18,7 +18,7 @@ export default function EnergymanagementPage() {
             Energy Management
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional energy-management services coming soon.
+            energy-management services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

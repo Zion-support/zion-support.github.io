@@ -16,6 +16,10 @@ import { cn } from '../lib/utils'
     "full": 'max-w-full';,
 <<<<<<< HEAD
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '''
-=======
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</ResponsiveContainerProps>
+const ResponsiveContaine,</ResponsiveContainerProps>
+  r: React.FC<ResponsiveContainerProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</ResponsiveContainerProps>
+</ResponsiveContainerProps>
+
+export default ResponsiveContainer;

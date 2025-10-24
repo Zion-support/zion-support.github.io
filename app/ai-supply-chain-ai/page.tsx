@@ -18,7 +18,7 @@ export default function AisupplychainaiPage() {
             Ai Supply Chain Ai
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-supply-chain-ai services coming soon.
+            ai-supply-chain-ai services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -8,21 +8,23 @@ import { useRef } from 'react';
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
     func: T
-  wait: number
-): ((...args: Parameters<T>) => void) => {
+  wait: number</T>
+): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
-    clearTimeout(timeout);,
+  return (...arg,</T>
+  s: Parameters<T>) => {
+    clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
-// Throttle function for performance optimization
+// Throttle function for performance optimization</T>
 export const throttle = <T extends (...args: unknown[]) => unknown>(,
     func: T
-  limit: number
-): ((...args: Parameters<T>) => void) => {
+  limit: number</T>
+): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (...arg,</T>
+  s: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);,
       inThrottle = true,
@@ -32,8 +34,9 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
 }
 // Performance monitoring utilities
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;,
-  private metrics: Map<string, number> = new Map();
+  private static instance: PerformanceMonitor;
+  private metric,</T>
+  s: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {,
@@ -50,9 +53,10 @@ export class PerformanceMonitor {
     }
   }
   // Track memory usage
-  trackMemory(componentName: string) {,
-    if ('memory' in performance) {,
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+  trackMemory(componentName: string) {
+    if ('memory' in performance) {
+      const memory = (performance as { memory?: { usedJSHeapSiz,
+  e: number } }).memory
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
@@ -89,31 +93,26 @@ export class PerformanceMonitor {
 }
 }
 // React hook for performance monitoring
-export const usePerformanceMonitor = (componentName: string) => {
+export const usePerformanceMonitor = (componentName: string) => {</string>
   const renderStartTime = useRef<number>(0)
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {
-    renderStartTime.current = performance.now();
-    return (
-    <div>
-
-
-      ) => {,
-      const renderTime = performance.now() - renderStartTime.current,
-      monitor.trackRender(componentName, renderTime
-    </div>
-  )
-    </div>
-  );
-      monitor.trackMemory(componentName);
+    renderStartTime.current = performance.now()
+    return (</number>
+    <>
+      ) => {
+      const renderTime = performance.now() - renderStartTime.current
+      monitor.trackRender(componentName, renderTime)
+      monitor.trackMemory(componentName)
     }
   }, [componentName, monitor])
   return {
-    trackRender: (fn: () => void) => {
-      const start = performance.now();
-      fn();,
-      const duration = performance.now() - start,
-      monitor.trackRender(`${componentName}_function`, duration);
+    trackRender: (f,
+  n: () => void) => {
+      const start = performance.now()
+      fn()
+      const duration = performance.now() - start
+      monitor.trackRender(`${componentName}_function`, duration)
     }
   }
 }
@@ -168,11 +167,12 @@ export const optimizeScrollPerformance = () => {
   }
   // Track Core Web Vitals
   const trackCLS = () => {
-  let clsValue = 0
+  let clsValue = 0;
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
-      hadRecentInput?: boolean,
-      value: number,
+      hadRecentInput?: boolean
+      valu,
+  e: number
   }
     const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
@@ -229,12 +229,14 @@ export const optimizeScrollPerformance = () => {
 export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null
-}
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+};
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,
+  t: number } }).memory
   return {
     used: memory.usedJSHeapSize,
-    total: memory.totalJSHeapSize,
-    limit: memory.jsHeapSizeLimit,
+    total: memory.totalJSHeapSize
+    limi,
+  t: memory.jsHeapSizeLimit,
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
 }
 // Performance metrics collection
@@ -244,12 +246,14 @@ export const collectPerformanceMetrics = () => {
   const paint = performance.getEntriesByType('paint');
   return {
     navigation: {,
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+      loadComplet,
+  e: navigation.loadEventEnd - navigation.loadEventStart,
     totalTime: navigation.loadEventEnd - navigation.fetchStart}
     paint: {,
-    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
+    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
+      firstContentfulPain,
+  t: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
     memory: getMemoryUsage()}
 }
 // Initialize performance enhancements
@@ -266,7 +270,7 @@ export const initializePerformanceEnhancements = () => {
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics
-    </div>
-  );
+    </>)
+  )
   }
-}
+};

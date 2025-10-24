@@ -18,7 +18,7 @@ export default function CloudmigrationPage() {
             Cloud Migration
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cloud-migration services coming soon.
+            cloud-migration services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

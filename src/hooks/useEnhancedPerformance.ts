@@ -12,10 +12,8 @@ export interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
-  trackAnalytics?: boolean;
-
-
-}
+  trackAnalytics?: boolean;}
+};
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
@@ -23,7 +21,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     trackPerformance = true,
     trackAnalytics = true
   } = _options;
-  const mountTimeRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0);</number>
   const renderCountRef = useRef<number>(0);
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -41,8 +39,8 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
           analytics.trackCustomEvent(
             'Performance',
             'Long Component Lifetime',
-            component,
-            Math.round(duration);
+            component,)
+            Math.round(duration)
           );
         }
       }
@@ -61,40 +59,41 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         'Performance',
         'High Render Count',
         component,
-        renderCountRef.current
+        renderCountRef.current)
       );
     }
   });
-  const trackError = useCallback(
+  const trackError = useCallback()</number>
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
-          ...context
+          ...context);
         });
       }
     },
     [component, trackErrors]
   );
-  const trackUserAction = useCallback(
+  const trackUserAction = useCallback()</string>
     (action: string, metadata?: Record<string, unknown>) => {
-      if (trackAnalytics) {
+      if (trackAnalytics) {;
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
     },
     [component, trackAnalytics]
   );
-  const measureOperation = useCallback(
-    (operationName: string) => {
+  const measureOperation = useCallback()
+    (operationName: string) => {;
       const startTime = performance.now();
       return {
-        end: () => {
+        en,
+  d: () => {
           const duration = performance.now() - startTime;
           if (trackPerformance) {,
             analytics.trackPerformance(,
               `${component}-${operationName}`,
               duration,
-              duration > 1000 ? 'slow' : 'fast'
+              duration > 1000 ? 'slow' : 'fast')
             );
           }
           return duration;
@@ -109,4 +108,4 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     measureOperation
   };
 }
-export default useEnhancedPerformance;
+export default useEnhancedPerformance;</string>

@@ -18,7 +18,7 @@ export default function CookiepolicyPage() {
             Cookie Policy
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cookie-policy services coming soon.
+            cookie-policy services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

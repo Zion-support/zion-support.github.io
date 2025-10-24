@@ -1,11 +1,8 @@
 declare global {
   interface Window {
-
-
-    gtag: (...args: any[]) => void;,
-  ,
-
-}
+    gtag: (...arg,
+  s: any[]) => void;}
+  };
 }
 
 export {};

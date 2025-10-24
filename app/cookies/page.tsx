@@ -18,7 +18,7 @@ export default function CookiesPage() {
             Cookies
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cookies services coming soon.
+            cookies services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

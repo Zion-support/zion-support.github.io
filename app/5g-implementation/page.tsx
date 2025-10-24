@@ -18,7 +18,7 @@ export default function GimplementationPage() {
             5g Implementation
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional 5g-implementation services coming soon.
+            5g-implementation services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function ArvrsolutionsPage() {
             Ar Vr Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ar-vr-solutions services coming soon.
+            ar-vr-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

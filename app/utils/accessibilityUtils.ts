@@ -1,15 +1,15 @@
 // Accessibility utilities for improving user experience and compliance
 
-export const generateId = (prefix: string = 'id'): string => {,
+export const generateId = (prefix: string = 'id'): string => {;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
-export const createAriaLabel = (text: string, context?: string): string => {
+export const createAriaLabel = (text: string, context?: string): string => {;
   return context ? `${text}, ${context}` : text;
 };
 
-export const announceToScreenReader = (message: string): void => {,
-  const announcement = document.createElement('div');,
+export const announceToScreenReader = (message: string): void => {;
+  const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -23,9 +23,9 @@ export const announceToScreenReader = (message: string): void => {,
   }, 1000);
 };
 
-export const trapFocus = (element: HTMLElement): (() => void) => {,
-  const focusableElements = element.querySelectorAll(,
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+export const trapFocus = (element: HTMLElement): (() => void) => {
+  const focusableElements = element.querySelectorAll()
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   
   const firstElement = focusableElements[0] as HTMLElement;
@@ -34,9 +34,9 @@ export const trapFocus = (element: HTMLElement): (() => void) => {,
   const handleTabKey = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();,
-          e.preventDefault();,
+        if (document.activeElement === firstElement) {;
+          lastElement.focus();
+          e.preventDefault();
         }
       } else {
         if (document.activeElement === lastElement) {
@@ -55,21 +55,23 @@ export const trapFocus = (element: HTMLElement): (() => void) => {,
   };
 };
 
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {,
-  const skipLink = document.createElement('a');,
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
+  const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
-  ,
-  return skipLink;,
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu,
+  s:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
+  
+  return skipLink;
 };
 
 export const validateColorContrast = (foreground: string, background: string): boolean => {
-  // Simple contrast ratio calculation,
-  const getLuminance = (color: string): number => {,
+  // Simple contrast ratio calculation
+  const getLuminance = (colo,
+  r: string): number => {;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
-      c = c / 255;
+      c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -83,7 +85,7 @@ export const validateColorContrast = (foreground: string, background: string): b
   return contrast >= 4.5; // WCAG AA standard
 };
 
-export const createHighContrastMode = (): void => {
+export const createHighContrastMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'high-contrast-mode';
   style.textContent = `
@@ -97,12 +99,12 @@ export const createHighContrastMode = (): void => {
   document.head.appendChild(style);
 };
 
-export const enableHighContrastMode = (): void => {
+export const enableHighContrastMode = (): void => {;
   document.body.classList.add('high-contrast');
   createHighContrastMode();
 };
 
-export const disableHighContrastMode = (): void => {
+export const disableHighContrastMode = (): void => {;
   document.body.classList.remove('high-contrast');
   const style = document.getElementById('high-contrast-mode');
   if (style) {
@@ -110,26 +112,29 @@ export const disableHighContrastMode = (): void => {
   }
 };
 
-export const createFocusIndicator = (): void => {
+export const createFocusIndicator = (): void => {;
   const style = document.createElement('style');
   style.id = 'focus-indicator';
   style.textContent = `
     *:focus {
-      outline: 2px solid #3b82f6 !important;,
-      outline-offset: 2px !important;,
+      outline: 2px solid #3b82f6 !important;
+      outline-offse,
+  t: 2px !important;
     }
-    *:focus:not(:focus-visible) {,
-      outline: none !important;,
+    *:focus:not(:focus-visible) {
+      outlin,
+  e: none !important;
     }
     *:focus-visible {
-      outline: 2px solid #3b82f6 !important;,
-      outline-offset: 2px !important;,
+      outline: 2px solid #3b82f6 !important;
+      outline-offse,
+  t: 2px !important;
     }
   `;
   document.head.appendChild(style);
 };
 
-export const createReducedMotionMode = (): void => {
+export const createReducedMotionMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';
   style.textContent = `
@@ -139,8 +144,9 @@ export const createReducedMotionMode = (): void => {
       *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;,
-        scroll-behavior: auto !important;,
+        transition-duration: 0.01ms !important;
+        scroll-behavio,
+  r: auto !important;
       }
     }
   `;
@@ -151,7 +157,7 @@ export const setupKeyboardNavigation = (): void => {
   // Add keyboard navigation support
   document.addEventListener('keydown', (e) => {
     // Escape key to close modals/dropdowns
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape') {;
       const activeElement = document.activeElement as HTMLElement;
       if (activeElement && activeElement.blur) {
         activeElement.blur();
@@ -167,7 +173,7 @@ export const setupKeyboardNavigation = (): void => {
   });
 };
 
-export const createScreenReaderOnly = (): void => {
+export const createScreenReaderOnly = (): void => {;
   const style = document.createElement('style');
   style.id = 'screen-reader-only';
   style.textContent = `
@@ -176,11 +182,13 @@ export const createScreenReaderOnly = (): void => {
       width: 1px;
       height: 1px;
       padding: 0;
-      margin: -1px;,
-      overflow: hidden;,
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;,
-      border: 0;,
+      margin: -1px;
+      overflow: hidden;
+      cli,
+  p: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      borde,
+  r: 0;
     }
     .sr-only:focus {
       position: static;
@@ -189,21 +197,22 @@ export const createScreenReaderOnly = (): void => {
       padding: inherit;
       margin: inherit;
       overflow: visible;
-      clip: auto;,
-      white-space: normal;,
+      clip: auto;
+      white-spac,
+  e: normal;
     }
   `;
   document.head.appendChild(style);
 };
 
-export const setupAccessibility = (): void => {
+export const setupAccessibility = (): void => {;
   createFocusIndicator();
   createReducedMotionMode();
   createScreenReaderOnly();
   setupKeyboardNavigation();
 };
 
-export const createARIALiveRegion = (): HTMLElement => {
+export const createARIALiveRegion = (): HTMLElement => {;
   const liveRegion = document.createElement('div');
   liveRegion.setAttribute('aria-live', 'polite');
   liveRegion.setAttribute('aria-atomic', 'true');
@@ -213,7 +222,7 @@ export const createARIALiveRegion = (): HTMLElement => {
   return liveRegion;
 };
 
-export const updateLiveRegion = (message: string): void => {
+export const updateLiveRegion = (message: string): void => {;
   let liveRegion = document.getElementById('aria-live-region');
   if (!liveRegion) {,
     liveRegion = createARIALiveRegion();,
@@ -221,7 +230,7 @@ export const updateLiveRegion = (message: string): void => {
   liveRegion.textContent = message;
 };
 
-export const createLandmarkNavigation = (): void => {
+export const createLandmarkNavigation = (): void => {;
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
   
   landmarks.forEach((landmark, index) => {
@@ -233,17 +242,17 @@ export const createLandmarkNavigation = (): void => {
   });
 };
 
-export const setupLandmarkNavigation = (): void => {
+export const setupLandmarkNavigation = (): void => {;
   createLandmarkNavigation();
   
   // Update landmarks when content changes
-  const observer = new MutationObserver(() => {
+  const observer = new MutationObserver(() => {;
     createLandmarkNavigation();
   });
   
   observer.observe(document.body, {
     childList: true,
-    subtree: true,
+    subtree: true)
   });
 };
 /**
@@ -261,10 +270,10 @@ export interface AccessibilityMetrics {
   focusManagement: number;
   ariaLabels: number;
   headingStructure: number;
-  altText: number;,
-,
-
+  altTex,
+  t: number;}
 }
+;
 export interface AccessibilityConfig {
 
 
@@ -272,15 +281,16 @@ export interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
   enableFocusManagement: boolean;
-  enableAriaLabels: boolean;,
-,
-
+  enableAriaLabel,
+  s: boolean;}
 }
+;
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
-  private metrics: AccessibilityMetrics | null = null;,
-,
-  constructor(config: Partial<AccessibilityConfig> = {}) {
+  private metrics: AccessibilityMetrics | null = null;
+
+  constructor(confi,)
+  g: Partial<AccessibilityConfig> = {}) {
     this.config = {
       enableHighContrast: true,
       enableKeyboardNavigation: true,
@@ -326,8 +336,9 @@ class AccessibilityEnhancer {
       @media (prefers-contrast: high) {,
         .cyber-card, .quantum-card {
           border: 2px solid #ffffff !important;
-          background: #000000 !important;,
-          color: #ffffff !important;,
+          background: #000000 !important;
+          colo,
+  r: #ffffff !important;
         }
         
         .neon-text, .cyber-text {
@@ -354,8 +365,9 @@ class AccessibilityEnhancer {
     const focusStyle = document.createElement('style');
     focusStyle.textContent = `
       .keyboard-navigation *:focus {
-        outline: 2px solid #00ffff !important;,
-        outline-offset: 2px !important;,
+        outline: 2px solid #00ffff !important;
+        outline-offse,
+  t: 2px !important;
       }
     `;
     document.head.appendChild(focusStyle);
@@ -414,8 +426,9 @@ class AccessibilityEnhancer {
   }
 
   collectMetrics(): AccessibilityMetrics {
-    const metrics: AccessibilityMetrics = {,
-      overallScore: 0,
+    const metrics: AccessibilityMetrics = {
+      overallScor,
+  e: 0,
       colorContrast: this.checkColorContrast(),
       keyboardNavigation: this.checkKeyboardNavigation(),
       screenReaderCompatibility: this.checkScreenReaderCompatibility(),
@@ -457,8 +470,8 @@ class AccessibilityEnhancer {
   }
 
   private checkKeyboardNavigation(): number {
-    const focusableElements = document.querySelectorAll(
-      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    const focusableElements = document.querySelectorAll()
+      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     let accessibleElements = 0;
 
@@ -496,8 +509,8 @@ class AccessibilityEnhancer {
 
   private checkFocusManagement(): number {
     // Check if focus is properly managed
-    const focusableElements = document.querySelectorAll(
-      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    const focusableElements = document.querySelectorAll()
+      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     
     let properlyManaged = 0;
@@ -515,7 +528,7 @@ class AccessibilityEnhancer {
 
   private checkAriaLabels(): number {
     const interactiveElements = document.querySelectorAll(
-      'button, input, textarea, select, [role="button"], [role="link"]'
+      'button, input, textarea, select, [role="button"], [role="link"]');
     );
     
     let labeledElements = 0;
@@ -538,7 +551,7 @@ class AccessibilityEnhancer {
     let previousLevel = 0;
 
     headings.forEach((heading) => {
-      const level = parseInt(heading.tagName.charAt(1));
+      const level = parseInt(heading.tagName.charAt(1));</AccessibilityConfig>
       if (level <= previousLevel + 1) {
         properStructure++;
         previousLevel = level;

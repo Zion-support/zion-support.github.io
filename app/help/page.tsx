@@ -18,7 +18,7 @@ export default function HelpPage() {
             Help
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional help services coming soon.
+            help services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

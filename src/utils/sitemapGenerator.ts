@@ -9,17 +9,17 @@ export interface SitemapEntry {
   loc: string,
   lastmod: string,
   changefreq: string,
-  priority: number,
-,
-
+  priority: number}
 }
+;
 export const generateSitemap = (): SitemapEntry[] => {;
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
 
-  return [,
-    {,
-      loc: loc,
+  return [
+    {
+      lo,
+  c: loc,
   lastmod: currentDate,
   changefreq: changefreq,
   priority: 1.0,
@@ -117,10 +117,12 @@ Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay for better server performance
-Crawl-delay: 1,
-,
+Crawl-dela,
+  y: 1
+
 # Disallow admin and private areas,
   Disallow: /admin/
-Disallow: /api/,
-Disallow: /_next/;,
-Disallow: /private/`}
+Disallow: /api/
+Disallow: /_next/;
+Disallo,
+  w: /private/`}

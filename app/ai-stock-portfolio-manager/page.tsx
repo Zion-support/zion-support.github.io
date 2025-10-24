@@ -18,7 +18,7 @@ export default function AistockportfoliomanagerPage() {
             Ai Stock Portfolio Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-stock-portfolio-manager services coming soon.
+            ai-stock-portfolio-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

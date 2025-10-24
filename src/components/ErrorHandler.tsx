@@ -17,9 +17,10 @@ import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } fr
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
-    {,
-:all-pages-backup/components/ErrorHandler.tsx,
-      icon: Brain,
+    {
+:all-pages-backup/components/ErrorHandler.tsx
+      ico,
+  n: Brain,
   title: title,
   description: description,
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -41,26 +42,30 @@ const ErrorHandlerPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      icon: Brain
+      titl,
+  e: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
   {
-    icon: BarChart,
-      title: 'Advanced Analytics',
+    icon: BarChart
+      titl,
+  e: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
   {
-    icon: Target,
-      title: 'Precision Targeting',
+    icon: Target
+      titl,
+  e: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
   {
-    icon: TrendingUp,
-      title: 'Growth Optimization',
+    icon: TrendingUp
+      titl,
+  e: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -75,11 +80,15 @@ const ErrorHandlerPage: React.FC = () => {
   ]
 
   return (
-:all-pages-backup/components/ErrorHandler.tsx
-    <div>;
-      <Helmet>;
-    <div>
-      <Helmet>;
+:all-pages-backup/components/ErrorHandler.tsx;
+    <>
+    ;
+  </>
+      <Helmet>;</Helmet>
+    <>
+    
+  </>
+      <Helmet>;</Helmet>
         <Head></Head>
         <title>ErrorHandler</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorHandler solution for modern businesses.&quot; /></meta>
@@ -98,17 +107,18 @@ const ErrorHandlerPage: React.FC = () => {
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
             <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
-              ErrorHandler
+              ErrorHandler</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
-              Advanced ErrorHandler solution for modern businesses.
+              Advanced ErrorHandler solution for modern businesses.</p>
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
-    // Log error in development,
-    if (process.env.NODE_ENV = == 'development') {// Error caught by handler,
+              <button className=&quot;bg-emerald-600 hove,
+  r:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
+                Get Started</button>
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+    // Log error in development
+    if (process.env.NODE_ENV = == 'development') {// Error caught by handler
    }
 
     // Send error to monitoring service in production
@@ -119,19 +129,19 @@ const ErrorHandlerPage: React.FC = () => {
 
   logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
     try {
-      // Replace with your actual error reportingserviceconsterrorData = {
-,
-:all-pages-backup/components/ErrorHandler.tsx,
-        message: error.message,
+      // Replace with your actual error reportingserviceconsterrorData= {
+:all-pages-backup/components/ErrorHandler.tsx
+        messag,
+  e: error.message,
   stack: error.stack,
   componentStack: errorInfo.componentStack,
   timestamp: new Date().toISOString();
         message: error.message
         stack: error.stack
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString();,
-      
-};
+        componentStack: errorInfo.componentStack
+        timestam,
+  p: new Date().toISOString()
+      }
       // Send to your error reporting service here
       // // console.log('Error data prepared for reporting:', errorData);
     } catch {
@@ -145,9 +155,10 @@ const ErrorHandlerPage: React.FC = () => {
   error: null,
   errorInfo: null
       hasError: false
-      error: null,
-      errorInfo: null,
-   });
+      error: null
+      errorInf,
+  o: null)
+   })
   }
 
   handleGoHome= () => {windo w.location.href= '/'
@@ -157,27 +168,28 @@ const ErrorHandlerPage: React.FC = () => {
       if (this.props.fallback) {
         return thi s.props.fallback
      }
-
-      return (;
+</ArrowRight>
+      return (;</ArrowRight>
         <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50&quot;></div>
           <div className=&quot;max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center&quot;></div>
             <div className=&quot;flex justify-center mb-4&quot;></div>
               <AlertTriangle className=&quot;w-16 h-16 text-red-500&quot; /></AlertTriangle>
             </div>
             <h1 className=&quot;text-2xl font-bold text-gray-900 mb-4&quot;></h1>
-              Oops! Something went wrong
+              Oops! Something went wrong</h1>
             </h1>
             <p className=&quot;text-gray-600 mb-6&quot;></p>
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>
             </p>
             {process.env.NODE_ENV = == 'development' && this.state.error && (;
               <details className=&quot;mb-6 text-left&quot;></details>
                 <summary className=&quot;cursor-pointer text-sm text-gray-500 hover: text-gray-700&quot;></summary>
-                  Error Details (Development)
+                  Error Details (Development)</summary>
                 </summary>
-                <div className=&quot;mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto&quot;></div>,
-                  <div className=&quot;mb-2&quot;></div>,
-                    <strong>Error:</strong> {this.state.error.message}
+                <div className=&quot;mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto&quot;></div>
+                  <div className=&quot;mb-2&quot;></div>
+                    <strong>Erro,</strong>
+  r:</strong> {this.state.error.message}
                   </div>
                   {this.state.error.stack && (
                     <div></div>
@@ -197,15 +209,13 @@ const ErrorHandlerPage: React.FC = () => {
               </button>
 :all-pages-backup/components/ErrorHandler.tsx
               <button
-                onClick = {
-this.handleGoHome
-};
-                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot,
+                onClick={this.handleGoHome}
+                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot
               <button onClick = {this.handleGoHome};></button>
-                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot;
+                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot;</button>
               ></button>
                 <Home className=&quot;w-4 h-4 mr-2&quot; /></Home>
-                Go Home
+                Go Home</Home>
               </button>
             </div>
           </div>
@@ -217,20 +227,21 @@ this.handleGoHome
             <div className=&quot;text-center mb-16&quot;></div>
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
-                Powerful AI-driven features designed to transform your business operations
+                Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>,
+            <div className=&quot;grid md: grid-cols-2 l,
+  g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;></ul>
-                    {feature.benefits.map((benefit, idx) => (
+                    {feature.benefits.map((benefit, idx) => (</ul>
                       <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
                         <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
-                        {benefit}
+                        {benefit}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -246,35 +257,25 @@ this.handleGoHome
 this.handleRetry
 };
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot
-              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again,
-            </butto><,
-                onClick = {
-this.handleGoHome
-};
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot,
-              ></,
-                onClick = {
-this.handleGoHome
-};
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot,
-                onClick = {
-this.handleRetry
-};
+              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again</RefreshCwclassName>
+            </butto><
+                onClick={this.handleGoHome}
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
+              ></
+                onClick={this.handleGoHome}
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
+                onClick = {this.handleRetry}
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
-              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again,
-            </butto><,
-                onClick = {
-this.handleGoHome
-};
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;,
-              ></,
-                onClick = {
-this.handleGoHome
-};
+              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again</RefreshCwclassName>
+            </butto><
+                onClick = {this.handleGoHome}
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
-              ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home
-            </butto></di></di></di>,
-      ),
+              ></
+                onClick = {this.handleGoHome}
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
+              ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home</HomeclassName>
+            </butto></di></di></di>
+      )
     }
 
     return thi s.props.children
@@ -287,10 +288,11 @@ this.handleGoHome
             <div className=&quot;text-center mb-16&quot;></div>
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
-                Experience the benefits of cutting-edge AI technology
+                Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>,
+            <div className=&quot;grid md: grid-cols-2 l,
+  g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
@@ -306,23 +308,24 @@ this.handleGoHome
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
-              Join thousands of businesses already using our AI solutions
+              Join thousands of businesses already using our AI solutions</p>
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Start Free Trial
+                Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Contact Sales
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+                Contact Sales</button>
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-    </div>
-  );,
-:all-pages-backup/components/ErrorHandler.tsx,
+      <Footer /></Footer>
+    </>
+  );
+:all-pages-backup/components/ErrorHandler.tsx
 {};
 
 export default ErrorHandlerPage

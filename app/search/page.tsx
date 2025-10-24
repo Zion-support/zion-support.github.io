@@ -18,7 +18,7 @@ export default function SearchPage() {
             Search
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional search services coming soon.
+            search services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

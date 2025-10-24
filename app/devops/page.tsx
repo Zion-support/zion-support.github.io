@@ -18,7 +18,7 @@ export default function DevopsPage() {
             Devops
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional devops services coming soon.
+            devops services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

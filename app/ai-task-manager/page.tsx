@@ -18,7 +18,7 @@ export default function AitaskmanagerPage() {
             Ai Task Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-task-manager services coming soon.
+            ai-task-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

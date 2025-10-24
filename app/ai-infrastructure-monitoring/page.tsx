@@ -18,7 +18,7 @@ export default function AiinfrastructuremonitoringPage() {
             Ai Infrastructure Monitoring
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-infrastructure-monitoring services coming soon.
+            ai-infrastructure-monitoring services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

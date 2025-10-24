@@ -18,7 +18,7 @@ export default function GdprcompliancePage() {
             Gdpr Compliance
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional gdpr-compliance services coming soon.
+            gdpr-compliance services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

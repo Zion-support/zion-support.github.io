@@ -18,7 +18,7 @@ export default function AinlpPage() {
             Ai Nlp
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-nlp services coming soon.
+            ai-nlp services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

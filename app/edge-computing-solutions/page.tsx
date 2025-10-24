@@ -18,7 +18,7 @@ export default function EdgecomputingsolutionsPage() {
             Edge Computing Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional edge-computing-solutions services coming soon.
+            edge-computing-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

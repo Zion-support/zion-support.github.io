@@ -18,7 +18,7 @@ export default function DatabasemanagementPage() {
             Database Management
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional database-management services coming soon.
+            database-management services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

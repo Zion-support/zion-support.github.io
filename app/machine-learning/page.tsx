@@ -18,7 +18,7 @@ export default function MachinelearningPage() {
             Machine Learning
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional machine-learning services coming soon.
+            machine-learning services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

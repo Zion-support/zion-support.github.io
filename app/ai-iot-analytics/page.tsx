@@ -18,7 +18,7 @@ export default function AiiotanalyticsPage() {
             Ai Iot Analytics
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-iot-analytics services coming soon.
+            ai-iot-analytics services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

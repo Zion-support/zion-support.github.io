@@ -18,7 +18,7 @@ export default function AischedulerPage() {
             Ai Scheduler
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-scheduler services coming soon.
+            ai-scheduler services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

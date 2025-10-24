@@ -18,7 +18,7 @@ export default function ContractmanagerPage() {
             Contract Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional contract-manager services coming soon.
+            contract-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

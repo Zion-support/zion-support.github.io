@@ -18,7 +18,7 @@ export default function AipriceoptimizerPage() {
             Ai Price Optimizer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-price-optimizer services coming soon.
+            ai-price-optimizer services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

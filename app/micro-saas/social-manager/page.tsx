@@ -18,7 +18,7 @@ export default function SocialmanagerPage() {
             Social Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional social-manager services coming soon.
+            social-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function AimlPage() {
             Ai Ml
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-ml services coming soon.
+            ai-ml services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

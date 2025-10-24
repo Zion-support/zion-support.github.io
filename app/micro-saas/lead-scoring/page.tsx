@@ -18,7 +18,7 @@ export default function LeadscoringPage() {
             Lead Scoring
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional lead-scoring services coming soon.
+            lead-scoring services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

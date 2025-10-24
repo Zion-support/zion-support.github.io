@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -32,7 +32,6 @@ const Footer: React.FC = () => {
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ];
 
@@ -40,9 +39,7 @@ const Footer: React.FC = () => {
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
     { name: 'Blog', url: '/blog' },
-    { name: 'Tutorials', url: '/tutorials' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Support', url: '/support' }
+    { name: 'Case Studies', url: '/case-studies' }
   ];
 
   const legal = [
@@ -176,22 +173,17 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {legal.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.url}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
+            {legal.map((item, index) => (
+              <Link
+                key={index}
+                href={item.url}
+                className="text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

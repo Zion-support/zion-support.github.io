@@ -18,7 +18,7 @@ export default function ZionaifrauddetectionPage() {
             Zion Ai Fraud Detection
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-fraud-detection services coming soon.
+            zion-ai-fraud-detection services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

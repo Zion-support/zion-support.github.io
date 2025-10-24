@@ -56,7 +56,7 @@ className={`w-2 h-2 rounded-full animate-bounce${colorClasses[color].split(''
 >>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
 case 'pulse'
 role='status'
-aria-label='Loading'
+aria-label='Loading'</divclassName>
 case 'skeleton':return(</di><divclassName='space-y-2' role='status' aria-label='Loading'
 style={{ "width": '7 5%',
 style={{ "width": '5 0%',
@@ -69,6 +69,6 @@ className={`w-1 ${colorClasses[color].split(''
 >>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
 case 'spinner'
 role='status'
-aria-label='Loading'
+aria-label='Loading'</divclassName>
 <div className='text-center';
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner')

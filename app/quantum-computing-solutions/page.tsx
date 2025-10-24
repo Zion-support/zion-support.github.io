@@ -18,7 +18,7 @@ export default function QuantumcomputingsolutionsPage() {
             Quantum Computing Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional quantum-computing-solutions services coming soon.
+            quantum-computing-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

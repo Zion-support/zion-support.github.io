@@ -18,7 +18,7 @@ export default function AiedgecomputingPage() {
             Ai Edge Computing
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-edge-computing services coming soon.
+            ai-edge-computing services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

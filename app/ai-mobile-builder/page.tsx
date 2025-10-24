@@ -18,7 +18,7 @@ export default function AimobilebuilderPage() {
             Ai Mobile Builder
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-mobile-builder services coming soon.
+            ai-mobile-builder services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function AdmanagementPage() {
             Ad Management
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ad-management services coming soon.
+            ad-management services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

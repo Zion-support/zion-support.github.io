@@ -18,7 +18,7 @@ export default function BusinessappsPage() {
             Business Apps
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional business-apps services coming soon.
+            business-apps services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

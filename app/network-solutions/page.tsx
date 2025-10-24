@@ -18,7 +18,7 @@ export default function NetworksolutionsPage() {
             Network Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional network-solutions services coming soon.
+            network-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

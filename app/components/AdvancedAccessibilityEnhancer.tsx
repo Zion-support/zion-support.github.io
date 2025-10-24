@@ -123,11 +123,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           activeElement.click()}
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
+        const menu = document.querySelector('[role="menu"]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
-          event.preventDefault();
-          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[]
-          const currentIndex = menuItems.indexOf(event.target as HTMLElement);
+          event.preventDefault()
+          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
+          const currentIndex = menuItems.indexOf(event.target as HTMLElement)
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
             : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
@@ -164,10 +164,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupFocusManagement = useCallback(() => {
     if (typeof window === 'undefined') return
     // Trap focus in modals
-    const trapFocus = (element: HTMLElement) => {,
-      const focusableElements = element.querySelectorAll(,
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',
-    </div>
+    const trapFocus = (element: HTMLElement) => {
+      const focusableElements = element.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    </>
 <<<<<<< HEAD
   ) as NodeListOf<HTMLElement></HTMLElement>
       const firstElement = focusableElements[0]
@@ -200,7 +200,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   );
     }
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+    const modals = document.querySelectorAll('[role="dialog"]')
     modals.forEach(modal => {
   const cleanup = trapFocus(modal as HTMLElement);
       // Store cleanup function for later use

@@ -18,7 +18,7 @@ export default function CasestudiesPage() {
             Case Studies
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional case-studies services coming soon.
+            case-studies services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

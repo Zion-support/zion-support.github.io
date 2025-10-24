@@ -18,7 +18,7 @@ export default function CybersecurityauditPage() {
             Cybersecurity Audit
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cybersecurity-audit services coming soon.
+            cybersecurity-audit services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

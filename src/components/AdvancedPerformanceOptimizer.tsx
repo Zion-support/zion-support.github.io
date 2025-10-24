@@ -1,399 +1,116 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
+"use client";
 
-interface AdvancedPerformanceOptimizerProps {
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
+const measureWebVitals = () => {
+  return (
+    <>
+      <Head>
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:type" content="website" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+        <div className="max-w-2xl w-full text-center">
+          {/* 404 Animation */}
+          <div className="relative mb-8">
+            <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse">
+              404
+            </div>
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
+              <AlertTriangle className="w-6 h-6 text-red-400" />
+            </div>
+          </div>
+          
+          {/* Error Message */}
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Page Not Found
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
+          </p>
+          
+          {/* Search Suggestion */}
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
+            <div className="flex items-center justify-center mb-4">
+              <Search className="w-6 h-6 text-cyan-400 mr-2" />
+              <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
+            </div>
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages:</p>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Contact", path: "/contact" }
+              ].map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.path}
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              <Home className="w-5 h-5 mr-2" />
+              Go Home
+            </Link>
+            <button
+              onClick={() => window.history.back()}
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Go Back
+            </button>
+          </div>
+          
+          {/* Help Section */}
+          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Our support team is here to help you navigate our services and find exactly what you're looking for.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Contact Support
+              </Link>
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+              >
+                Send Email
+              </a>
+            </div>
+          </div>
+          
+          {/* Fun Fact */}
+          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
+            <p className="text-sm text-gray-400">
+              <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
+              confused sometimes. That's why we have humans to help when things
+              go wrong! 🤖
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enableLazyLoading?: boolean
-  enablePreloading?: boolean
-  enableCodeSplitting?: boolean
-  enableResourceHints?: boolean
-  enableServiceWorker?: boolean
-  enableCriticalCSS?: boolean
-  enableWebVitals?: boolean
-
-
-}
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
-  enableAdvancedCaching = true
-  enableImageOptimization = true
-  enableLazyLoading = true
-  enablePreloading = true
-  enableCodeSplitting = true
-  enableResourceHints = true
-  enableServiceWorker = true
-  enableCriticalCSS = true,
-  enableWebVitals = true,
-}) => {
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    fcp: 0,
-  lcp: 0,
-  fid: 0,
-    cls: 0,
-import React, { useEffect, useCallback, useState } from 'react';
-
-interface PerformanceMetrics {
-
-
-  lcp: number,
-  fid: number,
-  cls: number,
-  fcp: number,
-  ttfb: number,
-,
-
-}
-interface AdvancedPerformanceOptimizerProps {
-
-
-  enableWebVitals?: boolean
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableServiceWorker?: boolean
-
-
-}
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({;
-  enableWebVitals = true
-  enableAdvancedCaching = true
-  enableImageOptimization = true
-  enablePreloading = true,
-  enableServiceWorker = true,
-}) => {
-  const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({;
-    lcp: 0,
-  fid: 0,
-  cls: 0,
-  fcp: 0,
-  ttfb: 0,
-  })
-
-  // Web Vitals monitoring
-  useEffect(() => {
-    if (enableWebVitals && typeof window !== 'undefined') {
-      const measureWebVitals = () => {
-        // First Contentful Paint
-        new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
-              setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }))
-            }
-          }
-        }).observe({ entryTypes: ['paint'] });
-        // Largest Contentful Paint
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1]
-          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
-        }).observe({ entryTypes: ['largest-contentful-paint'] });
-        // First Input Delay
-        new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            const fidEntry = entry as any
-            if (fidEntry.processingStart) {
-              setPerformanceMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))
-            }
-          }
-        }).observe({ entryTypes: ['first-input'] });
-        // Cumulative Layout Shift
-        let clsValue = 0
-        new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value
-              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }))
-            }
-          }
-        }).observe({ entryTypes: ['layout-shift'] });
-      }
-
-      measureWebVitals();
-  const measureWebVitals = useCallback(() => {;
-    if (enableWebVitals && typeof window !== 'undefined') {
-      // Measure Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
-        setPerformanceMetrics(prev => ({
-          ...prev,
-  lcp: lastEntry.renderTime || lastEntry.loadTime || 0,
-        }))
-      })
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      // Measure First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-          const fid = (entry as any).processingStart - entry.startTime
-          setPerformanceMetrics(prev => ({
-            ...prev,
-            fid,
-          }))
-        })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      // Measure Cumulative Layout Shift
-      let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += entry.value,
-            setPerformanceMetrics(prev => ({,
-              ...prev,
-  cls: clsValue,
-            }))
-          }
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      // Measure First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();
-        entries.forEach(entry => {
-          setPerformanceMetrics(prev => ({
-            ...prev,
-  fcp: entry.startTime,
-          }))
-        })
-      })
-      fcpObserver.observe({ entryTypes: ['paint'] });
-    }
-  }, [enableWebVitals])
-
-  // Advanced caching strategies
-  const setupAdvancedCaching = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    // Service Worker for advanced caching
-    if ('serviceWorker' in navigator && enableServiceWorker) {
-      navigator.serviceWorker.register('/sw.js');
-        .then((registration) => {
-:app/components/AdvancedPerformanceOptimizer.tsx
-          // eslint-disable-next-line no-console
-          // Service Worker registered successfully
-        })
-        .catch((registrationError) => {
-          // Service Worker registration failed
-  const setupAdvancedCaching = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
-    // Service Worker registration
-    if ('serviceWorker' in navigator && enableServiceWorker) {
-      navigator.serviceWorker.register('/sw.js');
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch((registrationError) => {
-          // eslint-disable-next-line no-console
-          console.error('Service Worker registration failed:', registrationError);
-        })
-    }
-
-    // Memory-based caching for API responses
-    const cache = new Map();
-    const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : (input as Request).url
-      const cacheKey = `${url}_${JSON.stringify(init)}`
-
-      if (cache.has(cacheKey)) {
-        return cache.get(cacheKey);
-      }
-
-      const response = await originalFetch(input, init);
-      if (response.ok) {
-        cache.set(cacheKey, response.clone())
-      }
-;
-    const cache = new Map();
-    const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url
-      const cacheKey = `${url}-${JSON.stringify(init)}`;
-      
-      if (cache.has(cacheKey)) {
-        return cache.get(cacheKey);
-      }
-      
-      const response = await originalFetch(input, init);
-      if (response.ok) {
-        cache.set(cacheKey, response.clone())
-      }
-      
-      return response
-    }
-  }, [enableServiceWorker])
-
-  // Image optimization with WebP and lazy loading
-  const optimizeImages = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement
-          const src = img.dataset.src
-          if (src) {
-            // Check for WebP support
-            const canvas = document.createElement('canvas');
-            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
-,
-            if (webpSupported && !src.includes('.webp')) {,
-              img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
-            } else {
-              img.src = src
-            }
-
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        }
-      })
-    })
-
-    images.forEach((img) => imageObserver.observe(img))
-  }, [])
-
-  // Critical resource preloading
-  const preloadCriticalResources = useCallback(() => {
-  // Image optimization
-  const optimizeImages = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy'
-      }
-      if (!img.decoding) {
-        img.decoding = 'async'
-      }
-    })
-  }, [])
-
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/css/critical.css',
-      '/js/main.js'
-    ]
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.css') ? 'style' : 'script'
-      document.head.appendChild(link);
-    })
-  }, [])
-
-  // Resource hints for better performance
-  const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
-      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ]
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      link.rel = hint.rel
-      link.href = hint.href
-      if (hint.rel === 'preconnect') {
-      '/css/critical.css'
-    ]
-
-    criticalResources.forEach(resource => {;
-      const link = document.createElement('link');
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
-      }
-      document.head.appendChild(link);
-    })
-  }, [])
-
-  // Critical CSS inlining
-  const inlineCriticalCSS = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const criticalCSS = `;
-      .cyber-grid { background-image: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px}
-      .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1)}
-      .cyber-button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; transition: all 0.3s ease}
-      .cyber-button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2)}
-    `
-
-    const style = document.createElement('style');
-    style.textContent = criticalCSS
-    document.head.insertBefore(style, document.head.firstChild);
-  }, [])
-
-  // Performance monitoring and reporting
-  const reportPerformanceMetrics = useCallback(() => {
-  // Performance monitoring and reporting
-  const reportPerformanceMetrics = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
-    // Report to analytics
-    if ('gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: event_category,
-  event_label: event_label,
-  value: Math.round(performanceMetrics.lcp);
-        custom_map: {
-          fcp: Math.round(performanceMetrics.fcp);
-          lcp: Math.round(performanceMetrics.lcp);
-          fid: Math.round(performanceMetrics.fid);,
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000,
-        }
-      })
-    }
-  }, [performanceMetrics])
-
-  useEffect(() => {
-    if (enableAdvancedCaching) {
-      setupAdvancedCaching();
-    }
-    if (enableImageOptimization) {
-      optimizeImages();
-    }
-    if (enablePreloading) {
-      preloadCriticalResources();
-    }
-    if (enableResourceHints) {
-      addResourceHints();
-    }
-    if (enableCriticalCSS) {
-      inlineCriticalCSS();
-    }
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS])
-    if (enableWebVitals) {
-      measureWebVitals();
-    }
-  }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
-
-  useEffect(() => {
-    if (enableWebVitals && performanceMetrics.lcp > 0) {
-      reportPerformanceMetrics();
-    }
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
-
-  return null
-}
-
-export default AdvancedPerformanceOptimizer
-export default AdvancedPerformanceOptimizer
+export default measureWebVitals;

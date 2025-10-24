@@ -18,7 +18,7 @@ export default function AicyberdefensematrixPage() {
             Ai Cyber Defense Matrix
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-cyber-defense-matrix services coming soon.
+            ai-cyber-defense-matrix services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

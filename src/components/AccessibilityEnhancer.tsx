@@ -5,12 +5,9 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-
-
-  children: React.ReactNode,
-,
-
+  children: React.ReactNode}
 }
+;
 export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   useEffect(() => {
     // Accessibility enhancements
@@ -19,8 +16,10 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu,
+  s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+      document.body.insertBefore(skipLink, document.body.firstChild)
+
       // Add main content ID
       const main = document.querySelector('main');
       if (main && !main.id) {
@@ -34,24 +33,26 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         }
       }
     }
-  }, [])
+  }, []);
 ;
   return <div>{children}</div>};
 import { useEffect } from 'react';
 import Navigation from './Navigation';
 
-const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<{ childre,
+  n: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
 :all-pages-backup/components/AccessibilityEnhancer.tsx
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content with Alt + M
+      // Skip to main content with Alt + M;
       if (e.altKey && e.key === 'm') {;
         e.preventDefault();
         const mainContent = document.getElementById('main-content');
-        if (mainContent) {,
-          mainContent.focus();,
-          mainContent.scrollIntoView({ behavior: 'smooth' })}
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavio,)
+  r: 'smooth' })}
       }
 
       // Skip to navigation with Alt + N
@@ -64,8 +65,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
             firstLink.focus()}
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content,
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;,
+        // Skip to main content;
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
           const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
           if (mainContent) {
             (mainContent as HTMLElement).focus();
@@ -92,8 +93,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         outline: 2px solid #8b5cf6 !important
         outline-offset: 2px !important
       *:focus {;
-        outline: 2px solid #8b5cf6 !important;,
-        outline-offset: 2px !important;,
+        outline: 2px solid #8b5cf6 !important;
+        outline-offse,
+  t: 2px !important;
       }
 
       const nav = document.querySelector('nav');
@@ -115,8 +117,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
 :all-pages-backup/components/AccessibilityEnhancer.tsx
           * {
             border-color: currentColor !important
-          * {;,
-            border-color: currentColor !important;,
+          * {;
+            border-colo,
+  r: currentColor !important;
           }
           button, a {
             border: 2px solid currentColor !important,
@@ -148,8 +151,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       
       .reduce-motion * {
         animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important,
-        transition-duration: 0.01ms !important,
+        animation-iteration-count: 1 !important
+        transition-duratio,
+  n: 0.01ms !important
       }
     `;
     document.head.appendChild(style);

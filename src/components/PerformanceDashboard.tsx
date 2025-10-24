@@ -14,14 +14,11 @@ import Footer from '../components/Footer';
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 
 interface PerformanceDashboardProps {
-
-
-  className?: string;
-
-
+  className?: string;}
 }
+;
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '' }) => {
-  return (
+  return (</PerformanceDashboardProps>
     <div className={className}></div>
       <h2>PerformanceDashboard</h2>
       <p>This component is under construction.</p>

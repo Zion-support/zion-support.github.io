@@ -18,7 +18,7 @@ export default function AiwebsiteanalyzerPage() {
             Ai Website Analyzer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-website-analyzer services coming soon.
+            ai-website-analyzer services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

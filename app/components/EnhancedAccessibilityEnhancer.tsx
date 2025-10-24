@@ -1,42 +1,43 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
+
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [,
     {,
       icon: Brain,
-    title: 'AI-Powered Intelligence',
+      title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: BarChart,
-    title: 'Advanced Analytics',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {
-    icon: Target,
-    title: 'Precision Targeting',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {
-    icon: TrendingUp,
-    title: 'Growth Optimization',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  ]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <div>
@@ -61,7 +62,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
+                <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Learn More
@@ -71,28 +72,26 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20px-4"></section>
-          <div className="max-w-7xlmx-auto">
-        <div className="text-centermb-16">
-              <h2 className="text-4xlfont-boldtext-whitemb-4">Key Features</h2>
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
-            Powerful AI-driven features designed to transform your business operations
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
             </div>
             <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">,
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xlp-6borderborder-white/20"></div>
-        </div>
-        </div>
-                  <feature.icon className="h-12w-12text-emerald-400mb-4" /></feature>
-                  <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                  <p className="text-gray-300mb-4">
-            {feature.description}
-          </p>
-                  <ul className="space-y-2"></ul>
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flexitems-centertext-smtext-gray-300"></li>
-                        <CheckCircle className="h-4 w-4text-emerald-400mr-2flex-shrink-0" /></CheckCircle>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                         {benefit}
                       </li>
                     ))}
@@ -104,26 +103,38 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20px-4bg-white/5"></section>
-          <div className="max-w-7xlmx-auto">
-        <div className="text-centermb-16">
-              <h2 className="text-4xlfont-boldtext-whitemb-4">Why Choose Our Solution</h2>
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
-            Experience the benefits of cutting-edge AI technology
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of our Enhanced Accessibility Enhancer solution.
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2gap-6">{benefits.map((benefit, index) => (
-              <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-        </div>
-        </div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
-        </div>
-    </div>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using Enhanced Accessibility Enhancer to transform their operations.
+            </p>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Start Your Free Trial
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
   );
-      </section>
-export default EnhancedAccessibilityEnhancerPage
+};
+
+export default EnhancedAccessibilityEnhancerPage;

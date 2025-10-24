@@ -24,7 +24,7 @@ import { Brain, Mail } from 'lucide-react';
 {              ))}
             </div>
 :all-pages-backup/components/PerformanceEnhancer.tsx
-          </div>
+          </div>;
           </div>;
           </div>;
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>

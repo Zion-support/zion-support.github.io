@@ -4,35 +4,39 @@ import { useCallback, useMemo, useState, useEffect } from 'react';
 
 // Debounce utility for performance
 :all-pages-backup/utils/performanceOptimizations.ts
-export const debounce = <T extends (...args: any[]) => any>(;,
-  func: T,
-  wait: number
+export const debounce = <T extends (...args: any[]) => any>(;
+  fun,
+  c: T,
+  wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
-  let timeout: NodeJS.Timeout
+  let timeout: NodeJS.Timeout</T>
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T
-  wait: number;
+  func: T;
+  wait: number;</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
-    clearTimeout(timeout);,
+  return (...arg,</T>
+  s: Parameters<T>) => {
+    clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
 
 // Throttle utility for performance
-:all-pages-backup/utils/performanceOptimizations.ts
-export const throttle = <T extends (...args: any[]) => any>(;,
-  func: T,
-  limit: number
+:all-pages-backup/utils/performanceOptimizations.ts</T>
+export const throttle = <T extends (...args: any[]) => any>(;
+  fun,
+  c: T,
+  limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean
+  let inThrottle: boolean</T>
 export const throttle = <T extends (...args: any[]) => any>(
   func: T
-  limit: number
+  limit: number</T>;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (...arg,</T>
+  s: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);,
       inThrottle = true,
@@ -44,27 +48,30 @@ export const throttle = <T extends (...args: any[]) => any>(
 // Intersection Observer hook for lazy loading
 :all-pages-backup/utils/performanceOptimizations.ts
 export const useIntersectionObserver = (;
-  callback: (entries: IntersectionObserverEntry[]) => void,
+  callback: (entrie,
+  s: IntersectionObserverEntry[]) => void,
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
-  options: IntersectionObserverInit = {}
-) => {
-  const observer = useMemo(;
+  callback: (entries: IntersectionObserverEntry[]) => void
+  option,
+  s: IntersectionObserverInit = {}
+) => {;
+  const observer = useMemo(;)
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
 :all-pages-backup/utils/performanceOptimizations.ts
             threshold: 0.1,
   rootMargin: '50px',
-            threshold: 0.1,
-            rootMargin: '50px',
-            ...options
-          });
+            threshold: 0.1
+            rootMargi,
+  n: '50px',
+            ...options)
+          })
         : null
     [callback, options]
   )
 
-  const observe = useCallback(;
+  const observe = useCallback(;)
     (element: Element | null) => {
       if (observer && element) {
         observer.observe(element);,
@@ -95,7 +102,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
   const [isError, setIsError] = useState(false);
 
   const { observe } = useIntersectionObserver(;
-    useCallback(
+    useCallback()
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
@@ -119,7 +126,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
 }
 
 // Performance monitoring hook
-export const usePerformanceMonitoring = () => {;
+export const usePerformanceMonitoring = () => {;</T>
   const [metrics, setMetrics] = useState<{;
     fcp?: number
     lcp?: number
@@ -132,7 +139,7 @@ export const usePerformanceMonitoring = () => {;
     if (typeof window === 'undefined') return
 
     const updateMetrics = () => {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
@@ -141,9 +148,10 @@ export const usePerformanceMonitoring = () => {;
 :all-pages-backup/utils/performanceOptimizations.ts
         lcp,
   ttfb: navigation?.responseStart - navigation?.requestStart
-        lcp,
-        ttfb: navigation?.responseStart - navigation?.requestStart,
-      });
+        lcp
+        ttf,
+  b: navigation?.responseStart - navigation?.requestStart)
+      })
     }
 
     // Monitor performance after page load
@@ -172,7 +180,7 @@ export const usePerformanceMonitoring = () => {;
   return metrics
 }
 
-// Memory usage monitoring
+// Memory usage monitoring;
 export const useMemoryMonitoring = () => {;
   const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number
@@ -192,9 +200,10 @@ export const useMemoryMonitoring = () => {;
   totalJSHeapSize: memory.totalJSHeapSize,
   jsHeapSizeLimit: memory.jsHeapSizeLimit
           usedJSHeapSize: memory.usedJSHeapSize
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit,
-        });
+          totalJSHeapSize: memory.totalJSHeapSize
+          jsHeapSizeLimi,
+  t: memory.jsHeapSizeLimit)
+        })
       }
     }
 
@@ -263,8 +272,8 @@ export const useBundleSizeMonitoring = () => {;
         totalSize
         jsSize
         cssSize
-        imageSize
-      });
+        imageSize)
+      })
     }
 
     // Calculate after page load
@@ -282,7 +291,7 @@ export const useBundleSizeMonitoring = () => {;
   return bundleSize
 }
 
-:all-pages-backup/utils/performanceOptimizations.ts
+:all-pages-backup/utils/performanceOptimizations.ts;
 const performanceOptimizations = {;
 const performanceOptimizations = {
   debounce
@@ -294,7 +303,7 @@ const performanceOptimizations = {
   preloadResource
   preloadCriticalResources
   useBundleSizeMonitoring
-:all-pages-backup/utils/performanceOptimizations.ts
+:all-pages-backup/utils/performanceOptimizations.ts;
 };
 ;
 export default performanceOptimizations

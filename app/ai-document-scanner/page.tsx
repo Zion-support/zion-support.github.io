@@ -18,7 +18,7 @@ export default function AidocumentscannerPage() {
             Ai Document Scanner
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-document-scanner services coming soon.
+            ai-document-scanner services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

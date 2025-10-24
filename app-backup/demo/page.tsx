@@ -13,4 +13,4 @@ import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Tar
   "id": 'ai-security',
     "title": 'AI Security Demo',
       "description": 'Discover our AI-powered security solutions for threat detection and prevention.';,
-      "features": ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics'
+      "features": ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics')

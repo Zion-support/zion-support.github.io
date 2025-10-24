@@ -18,7 +18,7 @@ export default function AiseooptimizerPage() {
             Ai Seo Optimizer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-seo-optimizer services coming soon.
+            ai-seo-optimizer services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

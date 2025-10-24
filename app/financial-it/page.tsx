@@ -18,7 +18,7 @@ export default function FinancialitPage() {
             Financial It
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional financial-it services coming soon.
+            financial-it services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

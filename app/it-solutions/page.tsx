@@ -18,7 +18,7 @@ export default function ItsolutionsPage() {
             It Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional it-solutions services coming soon.
+            it-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function QualityassurancePage() {
             Quality Assurance
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional quality-assurance services coming soon.
+            quality-assurance services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

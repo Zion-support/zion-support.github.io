@@ -18,7 +18,7 @@ export default function EmailmarketingPage() {
             Email Marketing
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional email-marketing services coming soon.
+            email-marketing services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

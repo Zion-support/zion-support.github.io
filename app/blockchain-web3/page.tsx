@@ -18,7 +18,7 @@ export default function Blockchainweb3Page() {
             Blockchain Web3
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional blockchain-web3 services coming soon.
+            blockchain-web3 services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

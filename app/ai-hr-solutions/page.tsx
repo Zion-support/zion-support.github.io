@@ -18,7 +18,7 @@ export default function AihrsolutionsPage() {
             Ai Hr Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-hr-solutions services coming soon.
+            ai-hr-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

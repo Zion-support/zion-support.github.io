@@ -18,7 +18,7 @@ export default function AieducationtutorPage() {
             Ai Education Tutor
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-education-tutor services coming soon.
+            ai-education-tutor services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

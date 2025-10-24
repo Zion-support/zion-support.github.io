@@ -18,7 +18,7 @@ export default function AimeetingtranscriberPage() {
             Ai Meeting Transcriber
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-meeting-transcriber services coming soon.
+            ai-meeting-transcriber services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

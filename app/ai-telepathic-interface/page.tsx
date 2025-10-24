@@ -18,7 +18,7 @@ export default function AitelepathicinterfacePage() {
             Ai Telepathic Interface
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-telepathic-interface services coming soon.
+            ai-telepathic-interface services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

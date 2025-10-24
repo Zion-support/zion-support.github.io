@@ -18,7 +18,7 @@ export default function AisupplychainoptimizerPage() {
             Ai Supply Chain Optimizer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-supply-chain-optimizer services coming soon.
+            ai-supply-chain-optimizer services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function ProjectmanagementproPage() {
             Project Management Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional project-management-pro services coming soon.
+            project-management-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function DatacenterPage() {
             Data Center
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional data-center services coming soon.
+            data-center services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

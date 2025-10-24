@@ -18,7 +18,7 @@ export default function BlogPage() {
             Blog
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional blog services coming soon.
+            blog services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

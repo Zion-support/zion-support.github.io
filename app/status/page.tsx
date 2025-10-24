@@ -18,7 +18,7 @@ export default function StatusPage() {
             Status
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional status services coming soon.
+            status services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

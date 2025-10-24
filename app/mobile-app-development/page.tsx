@@ -18,7 +18,7 @@ export default function MobileappdevelopmentPage() {
             Mobile App Development
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional mobile-app-development services coming soon.
+            mobile-app-development services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

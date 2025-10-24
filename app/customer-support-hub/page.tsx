@@ -18,7 +18,7 @@ export default function CustomersupporthubPage() {
             Customer Support Hub
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional customer-support-hub services coming soon.
+            customer-support-hub services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function AiprojectmanagementPage() {
             Ai Project Management
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-project-management services coming soon.
+            ai-project-management services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

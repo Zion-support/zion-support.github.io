@@ -2,9 +2,10 @@
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
 const ServicePageTemplatePage: React.FC = () => {
-  const features = [,
-    {,
-      icon: Brain,
+  const features = [
+    {
+      ico,
+  n: Brain,
   title: title,
   description: description,
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -38,8 +39,10 @@ const ServicePageTemplatePage: React.FC = () => {
   ]
 
   return (
-    <div>
-      <Helmet>;
+    <>
+    ;
+  </>
+      <Helmet>;</Helmet>
         <title>ServicePageTemplate | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; /></meta>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; /></meta>
@@ -55,6 +58,7 @@ const ServicePageTemplatePage: React.FC = () => {
     </div>,
   ),
     </div>
+  );
 }
 
 export default ServicePageTemplatePage

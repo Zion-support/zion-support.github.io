@@ -58,35 +58,40 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focus:border-transparent",
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focu,
+  s:border-transparent",
                     placeholder="Your full name"
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2"
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focus:border-transparent",
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focu,
+  s:border-transparent",
                     placeholder="your.email@company.com"
               <div className="grid grid-cols-1 "md": grid-cols-2 gap-6 mb-6",
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2"
                     type="text"
                     id="company"
                     name="company"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focus:border-transparent",
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focu,
+  s:border-transparent",
                     placeholder="Your company name"
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2"
                     id="service"
                     name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focus:border-transparent",
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focu,
+  s:border-transparent",
 <<<<<<< HEAD
                     <option value="""
 =======
                     <option value=""
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</div>
               <div className="mb-6"
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2"
                   id="message"
                   name="message"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focus:border-transparent",
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focu,
+  s:border-transparent",
                   placeholder="Tell us about your project or how we can help you..."
                 type="submit"
                 className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold "hover": from-emerald-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center",

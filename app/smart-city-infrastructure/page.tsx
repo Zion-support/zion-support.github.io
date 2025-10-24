@@ -18,7 +18,7 @@ export default function SmartcityinfrastructurePage() {
             Smart City Infrastructure
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional smart-city-infrastructure services coming soon.
+            smart-city-infrastructure services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

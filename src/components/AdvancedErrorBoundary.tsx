@@ -8,46 +8,44 @@ interface AdvancedErrorBoundaryProps {
 ;
 :all-pages-backup/components/AdvancedErrorBoundary.tsx
   className?: string
-  className?: string;
-
-
+  className?: string;}
 }
+;
 interface State {
 
 
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
-  errorId?: string,
-,
-
-}
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
-    super(props);,
-    this.state = {
- hasError: false ,
+  errorId?: string}
 };
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasErro,
+  r: false }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
 :all-pages-backup/components/AdvancedErrorBoundary.tsx
-    const errorReport: ErrorReport = {;,
-      errorId: this.state.errorId || this.generateErrorId();,
+    const errorReport: ErrorReport = {;
+      errorI,
+  d: this.state.errorId || this.generateErrorId()
       error,
   errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId();,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: this.state.errorId || this.generateErrorId()
+      error
+      errorI,
+  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo,
-    });
+      error
+      errorInfo)
+    })
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -65,3 +63,4 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {;
+</Props>

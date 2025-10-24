@@ -18,7 +18,7 @@ export default function ZionemailautomationPage() {
             Zion Email Automation
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-email-automation services coming soon.
+            zion-email-automation services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

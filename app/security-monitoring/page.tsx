@@ -18,7 +18,7 @@ export default function SecuritymonitoringPage() {
             Security Monitoring
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional security-monitoring services coming soon.
+            security-monitoring services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

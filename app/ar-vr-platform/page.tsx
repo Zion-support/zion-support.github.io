@@ -18,7 +18,7 @@ export default function ArvrplatformPage() {
             Ar Vr Platform
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ar-vr-platform services coming soon.
+            ar-vr-platform services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -3,43 +3,38 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-
-
-  children: ReactNode,
-,
-
+  children: ReactNode}
 }
+;
 interface State {
-
-
   hasError: boolean
-  error?: Error,
-,
-
+  error?: Error}
 }
+;
 export default class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
-    super(props);,
-    this.state = {
- hasError: false ,
-};
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasErro,
+  r: false }
   }
 
-  static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error }
+  static getDerivedStateFromError(error: Error): State {
+    return { hasErro,
+  r: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    // Error logging can be implemented here for production monitoring,
-    // console.error('Global error caught:', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Error logging can be implemented here for production monitoring
+    // console.error('Global error caugh,)
+  t:', error, errorInfo)
   }
 
   render() {
     if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-centerbg-gray-50">
-        <div className="max-w-md w-full bg-whiteshadow-lgrounded-lgp-6">
-            <div className="flex items-center justify-center w-12 h-12mx-autobg-red-100rounded-full"></div>
+      return (</Props>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
               <svg
                 className="w-6h-6text-red-600"
                 fill="none"
@@ -58,20 +53,19 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
                 /></path>
               </svg>
             </div>
-            <div className="mt-4text-center"></div>
-              <h3 className="text-lgfont-mediumtext-gray-900"></h3>
-                Application Error
+            <div className="mt-4 text-center"></div>
+              <h3 className="text-lg font-medium text-gray-900">
+                Application Error</h3>
               </h3>
-              <p className="mt-2text-smtext-gray-500">
-            {this.state.error?.message || 'An unexpected error occurred'}
+              <p className="mt-2 text-sm text-gray-500">
+                {this.state.error?.message || 'An unexpected error occurred'}</p>
               </p>
               <button
-                onClick = {
-() => window.location.reload();
-};
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-nonefocus:ring-2focus:ring-blue-500transition-colors"
+                onClick={() => window.location.reload()}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focu,
+  s:ring-blue-500 transition-colors"
               >
-                Reload Page
+                Reload Page</button>
               </button>
             </div>
           </div>
@@ -89,7 +83,7 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>

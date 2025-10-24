@@ -18,7 +18,7 @@ export default function ZionaiemailassistantPage() {
             Zion Ai Email Assistant
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-email-assistant services coming soon.
+            zion-ai-email-assistant services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

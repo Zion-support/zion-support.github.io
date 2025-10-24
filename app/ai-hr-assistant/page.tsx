@@ -18,7 +18,7 @@ export default function AihrassistantPage() {
             Ai Hr Assistant
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-hr-assistant services coming soon.
+            ai-hr-assistant services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function AimentalhealthcompanionPage() {
             Ai Mental Health Companion
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-mental-health-companion services coming soon.
+            ai-mental-health-companion services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

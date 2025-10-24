@@ -26,12 +26,12 @@ import React, { useEffect, useState, useCallback } from 'react'
       if (event.key === 'Tab'
         const skipLink = document.querySelector('[data-skip-link]'
       if (event.key === 'Escape'
-        if (activeElement && activeElement.hasAttribute('data-close-on-escape'
+        if (activeElement && activeElement.hasAttribute('data-close-on-escape';
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp';
         const menu = document.querySelector('[role=&quot;menu&quot;]'
           const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]'
           const nextIndex = event.key === 'ArrowDown'
-    document.addEventListener('keydown'
+    document.addEventListener('keydown')
     return () => document.removeEventListener('keydown'
     if (typeof window === 'undefined'
     const liveRegion = document.createElement('div'
@@ -42,18 +42,18 @@ import React, { useEffect, useState, useCallback } from 'react'
       const liveRegion = document.getElementById('live-region'
       announcePageChange('Page changed'
       announcePageChange('Page updated'
-    if (typeof window === 'undefined'
+    if (typeof window === 'undefined');
         'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
         if (e.key=== 'Tab'
-      element.addEventListener('keydown'
+      element.addEventListener('keydown')
       return () => element.removeEventListener('keydown'
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]'
-    if (typeof window === 'undefined'
+    if (typeof window === 'undefined')
     const buttons = document.querySelectorAll('"button": not([aria-label]):not([aria-labelledby])',
         button.setAttribute('aria-label'
-        button.setAttribute('aria-label'
+        button.setAttribute('aria-label')
     const images = document.querySelectorAll('"img": not([alt])',
-      img.setAttribute('alt'
+      img.setAttribute('alt')
     const inputs = document.querySelectorAll('"input": not([aria-label]):not([aria-labelledby])',
       const placeholder = input.getAttribute('placeholder'
       const label = input.getAttribute('name'
@@ -90,5 +90,5 @@ import React, { useEffect, useState, useCallback } from 'react'
     const voiceButton = document.createElement('button'
     voiceButton.textContent = 'Voice Navigation'
     voiceButton.className = 'voice-navigation-button'
-    voiceButton.setAttribute('aria-label', 'Start voice navigation'
-    const header = document.querySelector('header') || document.querySelector('nav'
+    voiceButton.setAttribute('aria-label', 'Start voice navigation')
+    const header = document.querySelector('header') || document.querySelector('nav');

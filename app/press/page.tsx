@@ -18,7 +18,7 @@ export default function PressPage() {
             Press
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional press services coming soon.
+            press services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

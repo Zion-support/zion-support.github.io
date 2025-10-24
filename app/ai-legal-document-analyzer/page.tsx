@@ -18,7 +18,7 @@ export default function AilegaldocumentanalyzerPage() {
             Ai Legal Document Analyzer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-legal-document-analyzer services coming soon.
+            ai-legal-document-analyzer services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function FaqPage() {
             Faq
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional faq services coming soon.
+            faq services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

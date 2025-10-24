@@ -29,16 +29,20 @@ showErrorOverlay: boolean
 */
 maxStoredErrors: number
 /**
-* Custom error messages by error type,
-*/,
-customMessages: Record<string, string></string>
+* Custom error messages by error type
+*/
+customMessage,
+  s: Record<string, string>
 /**
 * Fallback UI components
 */
-fallbackComponents: {,
-    default: React.ComponentType<{ error: Error; resetError: () => void }>
-network: React.ComponentType<{ error: Error; resetError: () => void }>
-notFound: React.ComponentType<{ error: Error; resetError: () => void }>}
+fallbackComponents: {,}</string>
+    default: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
+network: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
+notFound: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>}
 /**
 * Default error messages
 */
@@ -56,20 +60,26 @@ serverError: 'Server error occurred. Please try again later.',
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
 logErrors: true,
-    showDetails: isDevelopment,
-reportErrors: !isDevelopment,
-    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-showErrorOverlay: isDevelopment,
-    maxStoredErrors: 50,
-customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {,
-default: DefaultErrorFallback,
-    network: NetworkErrorFallback,
-notFound: NotFoundFallback}
+    showDetails: isDevelopment
+reportError,
+  s: !isDevelopment,
+    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
+showErrorOverla,
+  y: isDevelopment,
+    maxStoredErrors: 50
+customMessage,
+  s: DEFAULT_ERROR_MESSAGES,
+    fallbackComponents: {
+defaul,
+  t: DefaultErrorFallback,
+    network: NetworkErrorFallback
+notFoun,
+  d: NotFoundFallback}
 /**
 * Default error fallback component
-*/
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+*/;
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
+  r: () => void }) {
 return (
     <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
@@ -112,9 +122,10 @@ Go Home
 </div>
 </div>
 /**
-* Network error fallback component,
-*/,
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+* Network error fallback component
+*/
+function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
+  r: () => void }) {
 return (
     <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
@@ -179,7 +190,8 @@ Go Back
 /**
 * Get error type from error object
 */
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
+export function getErrorType(erro,)
+  r: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
 return 'network',
 if (error.message.includes('404') || error.message.includes('not found')) {,
@@ -197,10 +209,13 @@ return 'default'
 export function formatErrorForLogging(error: Error): Record<string, unknown> {
 return {
 message: error.message,
-    stack: error.stack,
-name: error.name,
-    type: getErrorType(error);,
-timestamp: new Date().toISOString(),
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
-export default getErrorBoundaryConfig
+    stack: error.stack
+nam,
+  e: error.name,
+    type: getErrorType(error)
+timestam,
+  p: new Date().toISOString(),
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
+ur,
+  l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
+export default getErrorBoundaryConfig</string>

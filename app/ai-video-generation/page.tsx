@@ -18,7 +18,7 @@ export default function AivideogenerationPage() {
             Ai Video Generation
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-video-generation services coming soon.
+            ai-video-generation services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

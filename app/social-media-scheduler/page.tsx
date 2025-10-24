@@ -18,7 +18,7 @@ export default function SocialmediaschedulerPage() {
             Social Media Scheduler
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional social-media-scheduler services coming soon.
+            social-media-scheduler services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

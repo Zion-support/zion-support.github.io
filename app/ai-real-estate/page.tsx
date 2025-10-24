@@ -18,7 +18,7 @@ export default function AirealestatePage() {
             Ai Real Estate
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-real-estate services coming soon.
+            ai-real-estate services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

@@ -18,7 +18,7 @@ export default function Ai3dgenerationPage() {
             Ai 3d Generation
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-3d-generation services coming soon.
+            ai-3d-generation services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

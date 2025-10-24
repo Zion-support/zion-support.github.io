@@ -18,7 +18,7 @@ export default function AivoicesynthesisPage() {
             Ai Voice Synthesis
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-voice-synthesis services coming soon.
+            ai-voice-synthesis services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

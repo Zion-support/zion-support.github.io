@@ -23,4 +23,4 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
 constmain= do cument.querySelector('#main-content';
-main.scrollIntoView({ "behavior": 'smooth'
+main.scrollIntoView({ "behavior": 'smooth')

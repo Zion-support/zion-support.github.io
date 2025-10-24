@@ -18,7 +18,7 @@ export default function DataanalyticsbiPage() {
             Data Analytics Bi
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional data-analytics-bi services coming soon.
+            data-analytics-bi services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

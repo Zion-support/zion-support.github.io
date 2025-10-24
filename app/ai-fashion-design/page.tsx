@@ -18,7 +18,7 @@ export default function AifashiondesignPage() {
             Ai Fashion Design
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-fashion-design services coming soon.
+            ai-fashion-design services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

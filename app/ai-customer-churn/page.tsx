@@ -18,7 +18,7 @@ export default function AicustomerchurnPage() {
             Ai Customer Churn
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-customer-churn services coming soon.
+            ai-customer-churn services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

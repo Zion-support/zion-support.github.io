@@ -18,7 +18,7 @@ export default function ZionsmartinventorymanagerPage() {
             Zion Smart Inventory Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-smart-inventory-manager services coming soon.
+            zion-smart-inventory-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

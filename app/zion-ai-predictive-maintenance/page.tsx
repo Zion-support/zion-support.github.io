@@ -18,7 +18,7 @@ export default function ZionaipredictivemaintenancePage() {
             Zion Ai Predictive Maintenance
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-predictive-maintenance services coming soon.
+            zion-ai-predictive-maintenance services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

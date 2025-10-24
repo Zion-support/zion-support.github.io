@@ -18,7 +18,7 @@ export default function CloudcostoptimizationPage() {
             Cloud Cost Optimization
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cloud-cost-optimization services coming soon.
+            cloud-cost-optimization services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

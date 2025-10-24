@@ -18,7 +18,7 @@ export default function CybersecurityadvancedPage() {
             Cybersecurity Advanced
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cybersecurity-advanced services coming soon.
+            cybersecurity-advanced services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

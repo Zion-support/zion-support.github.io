@@ -18,7 +18,7 @@ export default function TeamPage() {
             Team
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional team services coming soon.
+            team services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >

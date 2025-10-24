@@ -8,7 +8,7 @@ import { CheckCircle } from 'lucide-react'
 import { AlertTriangle } from 'lucide-react'
     const images = document.querySelectorAll('img'
       if (img.loading !== 'lazy'
-        img.loading = 'lazy'
+        img.loading = 'lazy')
       if (!img.src.includes('.webp') && img.src.includes('.jpg'
         const webpSrc = img.src.replace('.jpg', '.webp'
               img.removeAttribute('data-src'
@@ -17,8 +17,8 @@ import { AlertTriangle } from 'lucide-react'
       '/fonts/main.woff2'
       '/css/critical.css'}
       const link = document.createElement('link'
-      link.rel = 'preload'
+      link.rel = 'preload')
       link.as = resource.endsWith('.css') ? 'style' : 'font'
-      if (resource.endsWith('.woff2'
+      if (resource.endsWith('.woff2';
         link.crossOrigin = 'anonymous';
-      // // console.error('Optimization "failed": '
+      // // console.error('Optimization "failed": ')

@@ -18,7 +18,7 @@ export default function CloudinfrastructuremanagerPage() {
             Cloud Infrastructure Manager
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional cloud-infrastructure-manager services coming soon.
+            cloud-infrastructure-manager services Transform your business with our expert solutions. services coming soon.
           </p>
           <LinkContact Us
             >
