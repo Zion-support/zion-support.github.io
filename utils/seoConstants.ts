@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-// SEO constants
-export const seoConstants = {
-  // Add SEO constants here
-=======
 // SEO constants and configuration
 
 export const SEO_DEFAULTS = {
@@ -48,5 +43,4 @@ export const STRUCTURED_DATA = {
       contactType: 'customer service'
     }
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 }

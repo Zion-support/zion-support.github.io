@@ -14,7 +14,8 @@ const App = () => {
           </p>
         </div>
       </div>
-    </div>;
-  )};
+    </div>
+  );
+};
 
 export default App
