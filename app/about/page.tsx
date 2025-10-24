@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
                 About Zion Tech Group
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                We're a team of passionate technologists dedicated to transforming businesses 
+                We&apos;re a team of passionate technologists dedicated to transforming businesses 
                 through innovative AI and IT solutions that drive real-world impact.
               </p>
             </div>
@@ -221,7 +221,7 @@ const AboutPage: React.FC = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Let's discuss how we can help transform your business with our AI and IT solutions.
+              Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">

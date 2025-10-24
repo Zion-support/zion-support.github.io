@@ -159,7 +159,7 @@ const AccessibilityPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Make Your Products Accessible?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's work together to create inclusive digital experiences that work for everyone.
+              Let&apos;s work together to create inclusive digital experiences that work for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
