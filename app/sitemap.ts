@@ -1,30 +1,51 @@
 import { MetadataRoute } from 'next';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com';
+  const baseUrl = 'https://zion.app';
+  const currentDate = new Date();
+  
   return [
     {
-      url: 'https://ziontechgroup.com',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://ziontechgroup.com/about',
-      lastModified: new Date(),
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://ziontechgroup.com/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: `${baseUrl}/ai-services`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/it-services`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ai-cybersecurity`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: 'https://ziontechgroup.com/contact',
-      lastModified: new Date(),
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.5,
+      priority: 0.7,
     },
-  ]
+    {
+      url: `${baseUrl}/test-page`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+  ];
 }

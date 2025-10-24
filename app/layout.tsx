@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Analytics from './components/Analytics'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import ErrorBoundary from './components/ErrorBoundary'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -86,12 +87,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <Analytics />
         <PerformanceMonitor />
-        <AccessibilityEnhancer />
-        <Navigation />
-        <main className="pt-16">
-          {children}
-        </main>
-        <Footer />
+        <ErrorBoundary>
+          <AccessibilityEnhancer />
+          <Navigation />
+          <main className="pt-16">
+            {children}
+          </main>
+          <Footer />
+        </ErrorBoundary>
       </body>
     </html>
   );
