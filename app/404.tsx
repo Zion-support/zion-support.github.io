@@ -21,7 +21,8 @@ const NotFound = () => {
                 </div>
               </div>
           {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Page Not Found
           </h1>
           
           <p className="text-lg text-gray-300 mb-8">Oops! The page you're looking for seems to have vanished into the digital void. 
@@ -95,8 +96,7 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-
-    </>
+    </div>
   );
 };
 

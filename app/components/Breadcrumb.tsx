@@ -1,12 +1,12 @@
-'use client'
-
-import React from 'react'
+'use client';
+import React from 'react';
+import Link from 'next/link';
 
 interface BreadcrumbProps {
   items: Array<{
-    label: string
-    href?: string
-  }>
+    label: string;
+    href?: string;
+  }>;
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
@@ -19,12 +19,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
               Home
             </Link>
           </li>
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
+          {items.map((item, index) => {
+            const isLast = index === items.length - 1;
             
             return (
-              <li key={name} className="flex items-center"> </li><svg
+              <li key={index} className="flex items-center">
+                <svg
                   className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -36,23 +36,22 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                   />
                 </svg>
                 {isLast ? (
-                  <span className="text-white font-medium">
-                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
-                  </span>
+                  <span className="text-white font-medium">{item.label}</span>
                 ) : (
                   <Link
-                    href={routeTo}
+                    href={item.href || '#'}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
+                    {item.label}
                   </Link>
                 )}
               </li>
-
+            );
+          })}
         </ol>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Breadcrumb
+export default Breadcrumb;
