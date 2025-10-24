@@ -10,14 +10,14 @@ const ContentStatistics: React.FC = () => {
     years: 0
   })
 
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
-    years: 10
-  }
-
   useEffect(() => {
+    const targetCounters = {
+      clients: 500,
+      projects: 1000,
+      satisfaction: 99,
+      years: 10
+    }
+
     const duration = 2000; // 2 seconds
     const steps = 60
     const stepDuration = duration / steps
@@ -75,7 +75,7 @@ const ContentStatistics: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16"></div>
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Impact in Numbers
           </h2>
@@ -84,7 +84,7 @@ const ContentStatistics: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -100,7 +100,7 @@ const ContentStatistics: React.FC = () => {
                 {stat.label}
               </div>
             </div>
-          ))
+          ))}
         </div>
       </div>
     </div>

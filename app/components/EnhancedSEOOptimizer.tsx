@@ -1,19 +1,16 @@
 'use client';
-import React from 'react'
+import React from 'react';
 
 interface EnhancedSEOOptimizerProps {
   // Add props here
-
+}
 
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
   return (
     <div>
-      {/* Component content */
+      {/* Component content */}
     </div>
-  )
-}
+  );
+};
 
-}
-
-export default EnhancedSEOOptimizer
-}
+export default EnhancedSEOOptimizer;
