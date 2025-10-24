@@ -55,9 +55,12 @@ const Page: React.FC = () => {
                 </ul>
               </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             </div>
           ))}
 =======
+>>>>>>> origin/main
             ))}
           </div>
 >>>>>>> origin/main
