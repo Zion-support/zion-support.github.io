@@ -1,8 +1,13 @@
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const AdvancedSEOOptimizerNewPage: React.FC = () => {
+import React from 'react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+interface AdvancedSEOOptimizer_newProps {
+  className?: string;
+}
+
+const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ className = '' }) => {
   const features = [
     {
       icon: Brain,
@@ -22,22 +27,21 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,
-      title: 'Growth Optimization',}
-      description: 'Optimize your business growth with data-driven strategies.',}
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-"
-  const benefits=";"
+
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
-const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ className = '' }) => {
   return (
     <>
       
@@ -56,15 +60,14 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className='ml-2 h-5 w-5' /></ArrowRight>
+                <ArrowRight className='ml-2 h-5 w-5' />
               </button>
-              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
                 Learn More
               </button>
             </div>
           </div>
         </section>
-    </>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -82,9 +85,9 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
-                        <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        { benef, i, t }
+                      <li key={idx} className='flex items-center text-sm text-gray-300'>
+                        <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' />
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -124,16 +127,16 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
+              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'>
                 Contact Sales
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer />
     </>
-  );,
+  );
 };
 
-export default AdvancedSEOOptimizerNewPag;e;
+export default AdvancedSEOOptimizer_new;
