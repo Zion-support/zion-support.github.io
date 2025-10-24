@@ -2,8 +2,68 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
+const stats = [
+  { number: '1B+', label: 'People with disabilities worldwide' },
+  { number: '15%', label: 'Of global population' },
+  { number: '$13T', label: 'Annual spending power' },
+  { number: '71%', label: 'Leave sites due to accessibility issues' }
+];
+
+const features = [
+  {
+    title: 'AI-Powered Audits',
+    description: 'Automated accessibility testing using advanced AI algorithms to identify issues quickly and accurately.',
+    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
+    benefits: [
+      'Comprehensive WCAG 2.1 AA compliance checking',
+      'Real-time issue detection and reporting',
+      'Automated remediation suggestions',
+      'Detailed accessibility score and recommendations'
+    ]
+  },
+  {
+    title: 'Manual Testing',
+    description: 'Expert human testing to catch issues that automated tools might miss.',
+    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
+    benefits: [
+      'Screen reader compatibility testing',
+      'Keyboard navigation verification',
+      'Color contrast and visual accessibility',
+      'User experience evaluation'
+    ]
+  }
+];
+
+const services = [
+  {
+    title: 'Accessibility Audit',
+    description: 'Comprehensive evaluation of your digital assets',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $500'
+  },
+  {
+    title: 'Implementation',
+    description: 'Fix identified accessibility issues',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $1,000'
+  },
+  {
+    title: 'Training',
+    description: 'Team training on accessibility best practices',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $300'
+  },
+  {
+    title: 'Ongoing Support',
+    description: 'Continuous monitoring and maintenance',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $200/mo'
+  }
+];
 
 export default function AccessibilityPage() {
   return (
