@@ -3,106 +3,104 @@
  * Generates sitemap and robots.txt for SEO optimization
  */
 
-export interface SitemapEntry {;
-  loc: string,
-  lastmod: string,
-  changefreq: string,
+export interface SitemapEntry {}
+  loc: strin,g,
+  lastmod: strin,g,
+  changefreq: strin,g,
   priority: number
 }
 
 export const generateSitemap = (): SitemapEntry[] => {;
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString();
-
-  return [
+  const baseUrl = 'https://ziontechgroup.co'',m;''',
+  const currentDate = new Date().toISOString();return [
     {
-      loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+      loc: lo,c,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 1.0
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.8
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.9
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.9
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.9
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.9
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.9
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.8
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.9
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.8
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.7
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.8
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.8
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.3
     }
     {
       loc: loc,
-  lastmod: currentDate,
-  changefreq: changefreq,
+  lastmod: currentDat,e,
+  changefreq: changefre,q,
   priority: 0.3
     }
   ]
@@ -116,8 +114,8 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay for better server performance
 Crawl-delay: 1
 
-# Disallow admin and private areas,
+# Disallow admin and private area,s,
   Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/;
+Disallow: /_next,/;
 Disallow: /private/`}

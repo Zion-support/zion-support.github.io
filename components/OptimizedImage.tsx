@@ -1,23 +1,23 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'react''',
+import Image from 'next/image''',
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  "data-testid"?: string;
-  [key: string]: any;
+interface OptimizedImageProps {}
+  src: strin,g;}
+  alt: strin,g;
+  width?: numbe;r;
+  height?: numbe;r;
+  className?: strin;g;
+  "data-testid"?: string"",
+  [key: string]: an,y;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+  sr,c,
   alt,
-  width = 800,
-  height = 600,
-  className = "",
-  "data-testid": testId,
+  width = 800,;
+  height = 600,;
+  className = """",;
+  "data-testid": testId"",
   ...props
 }) => {
   return (

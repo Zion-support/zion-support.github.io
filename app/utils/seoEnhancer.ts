@@ -1,4 +1,4 @@
-'use client';
+'use client''',
 
 /**
 * SEO Enhancement Utilities
@@ -6,36 +6,35 @@
 */
 
 // Generate meta tags
-export const generateMetaTags = (data: {,
-    title: string,
+export const generateMetaTags = (data: ,{,
+    title: strin,g,
       description: string
-  keywords?: string
-  canonical?: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: string
-  twitterCard?: string
-  twitterTitle?: string
-  twitterDescription?: string
-  twitterImage?: string
-}) => {
+  keywords?: strin,g;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string}) => {
   const tags = [
-    { name: 'title', content: data.title },
-    { name: 'description', content: data.description },
-    { name: 'keywords', content: data.keywords || '' },
-    { name: 'robots', content: 'index, follow' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'author', content: 'Zion Tech Group' },
-    { name: 'canonical', content: data.canonical || '' },
-    { property: 'og:title', content: data.ogTitle || data.title },
-    { property: 'og:description', content: data.ogDescription || data.description },
-    { property: 'og:image', content: data.ogImage || '/og-image.webp' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: 'Zion Tech Group' },
-    { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
-    { name: 'twitter:title', content: data.twitterTitle || data.title },
-    { name: 'twitter:description', content: data.twitterDescription || data.description },
-    { name: 'twitter:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
+    { name: 'title''', content: data.titl,e },
+    { name: 'description''', content: data.descriptio,n },
+    { name: 'keywords''', content: data.keywords || ''',' }'',
+    { name: 'robots''', content: 'inde''',x, follow' }'',
+    { name: 'viewport''', content: 'width=device-widt''',h, initial-scale=1' }'',,
+    { name: 'author''', content: 'Zion Tech Group''',' }'',
+    { name: 'canonical''', content: data.canonical || ''',' }'',
+    { property: 'og:title''', content: data.ogTitle || data.titl,e },
+    { property: 'og:description''', content: data.ogDescription || data.descriptio,n },
+    { property: 'og:image''', content: data.ogImage || '/og-image.webp'',' }'',
+    { property: 'og:type''', content: 'website''',' }'',
+    { property: 'og:site_name''', content: 'Zion Tech Group''',' }'',
+    { name: 'twitter:card''', content: data.twitterCard || 'summary_large_image'',' }'',
+    { name: 'twitter:title''', content: data.twitterTitle || data.titl,e },
+    { name: 'twitter:description''', content: data.twitterDescription || data.descriptio,n },
+    { name: 'twitter:image''', content: data.twitterImage || data.ogImage || '/og-image.webp' }
   ]
 
   return tags
@@ -46,7 +45,7 @@ export const generateStructuredData = (data: {
   name: string
   description: string
   url: string
-  logo?: string
+  logo?: string'',
   address?: {
     streetAddress: string
     addressLocality: string
@@ -59,27 +58,26 @@ export const generateStructuredData = (data: {
     contactType: string
     email: string
   }
-  sameAs?: string[]
-}) => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: data.name,
-    description: data.description,
-    url: data.url,
-    logo: data.logo || '/logo.png',
+  sameAs?: string;[]
+}) => {return {
+    '@context': 'https://schema.org''',
+    '@type': 'Organization'}
+    name: data.nam'',e,
+    description: data.descriptio,n,
+    url: data.ur,l,
+    logo: data.logo || '/logo.png''',
     address: data.address ? {
-      '@type': 'PostalAddress',
-      streetAddress: data.address.streetAddress,
-      addressLocality: data.address.addressLocality,
-      addressRegion: data.address.addressRegion,
-      postalCode: data.address.postalCode,
+      '@type': 'PostalAddress''',
+      streetAddress: data.address.streetAddres,s,
+      addressLocality: data.address.addressLocalit,y,
+      addressRegion: data.address.addressRegio,n,
+      postalCode: data.address.postalCod,e,
       addressCountry: data.address.addressCountry
     } : undefined,
     contactPoint: data.contactPoint ? {
-      '@type': 'ContactPoint',
-      telephone: data.contactPoint.telephone,
-      contactType: data.contactPoint.contactType,
+      '@type': 'ContactPoint''',
+      telephone: data.contactPoint.telephon,e,
+      contactType: data.contactPoint.contactTyp,e,
       email: data.contactPoint.email
     } : undefined,
     sameAs: data.sameAs || []
@@ -93,29 +91,23 @@ export const generateSitemap = (pages: Array<{
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority: number
 }>) => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url}><loc>${page.url}</loc><lastmod>${page.lastModified}</lastmod><changefreq>${page.changeFrequency}</changefreq><priority>${page.priority}</priority></url>`).join('\n')}
 </urlset>`
 
   return sitemap
 }
 
 // Generate robots.txt
-export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
+export const generateRobotsTxt = (sitemapUrl: strin'"'",g, allowAll: boolean = true) => {
   return `User-agent: *
 ${allowAll ? 'Allow: /' : 'Disallow: /'}
 
 Sitemap: ${sitemapUrl}`
 }
 
-export default {
-  generateMetaTags,
+export default {}
+  generateMetaTags'',}
   generateStructuredData,
   generateSitemap,
   generateRobotsTxt

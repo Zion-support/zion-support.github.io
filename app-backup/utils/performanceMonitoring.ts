@@ -1,50 +1,50 @@
 
 'use client'
-"rating": 'good' | 'needs-improvement' | 'poor',
-  "unit": 'ms' | 'bytes' | 'count' | 'percentage',
-    "rating": 'good' | 'needs-improvement' | 'poor',
-"unit": 'ms' | 'bytes' | 'count' | 'percentage',
+"rating": 'good' | 'needs-improvement' | 'poor''"'",
+  "unit": 'ms' | 'bytes' | 'count' | 'percentage''"'",
+    "rating": 'good' | 'needs-improvement' | 'poor''"'",
+"unit": 'ms' | 'bytes' | 'count' | 'percentage''"'",
 if (typeof window === 'undefined' || !('PerformanceObserver'
-if (entry.name === 'first-contentful-paint'
+if (entry.name === 'first-contentful-paint''',
 this.recordWebVital('FCP'
-paintObserver.observe({ "type": 'paint');
+paintObserver.observe({ "type": 'paint')'"'",
 this.recordWebVital('LCP'
-lcpObserver.observe({ "type": 'largest-contentful-paint');
+lcpObserver.observe({ "type": 'largest-contentful-paint')'"'",
 this.recordWebVital('CLS'
-clsObserver.observe({ "type": 'layout-shift');
+clsObserver.observe({ "type": 'layout-shift')'"'",
 this.recordWebVital('FID'
-fidObserver.observe({ "type": 'first-input');
+fidObserver.observe({ "type": 'first-input')'"'",
 this.recordWebVital('TTFB'
-navObserver.observe({ "type": 'navigation');
+navObserver.observe({ "type": 'navigation')'"'",
 logger.error('Failed to initialize performance observers'
 this.recordWebVital('CLS'
-logger.info(`Web "Vital": ${name}`, 'PerformanceMonitoring'
-"Vital": ${name}`, 'PerformanceMonitoring'
-private getRating("name": keyof WebVitals, "value": number): 'good' | 'needs-improvement' | 'poor',
+logger.info(`Web "Vital": ${name}`'"'", 'PerformanceMonitoring'
+"Vital": ${name}`'"'", 'PerformanceMonitoring'
+private getRating("name": keyof WebVitals'"'", "value": number): 'good' | 'needs-improvement' | 'poor''"'",
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
-"e": number): 'good' | 'needs-improvement' | 'poor',
+"e": number): 'good' | 'needs-improvement' | 'poor''"'",
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
-recordCustomMetric("name": string, "value": number, "unit": CustomMetric['unit');
-recordCustomMetric("name": string, "value": number, "unit": CustomMetric['unit');
-logger.debug(`Custom "Metric": ${name}`, 'PerformanceMonitoring'
-"t": CustomMetric['unit',
-"Metric": ${name}`, 'PerformanceMonitoring'
+recordCustomMetric("name": string'"'", "value": number"", "unit": CustomMetric['unit')'"'",
+recordCustomMetric("name": string"", "value": number"", "unit": CustomMetric['unit')'"'",
+logger.debug(`Custom "Metric": ${name}`"", 'PerformanceMonitoring'
+"t": CustomMetric['unit''"'",
+"Metric": ${name}`"", 'PerformanceMonitoring'
 if (typeof window !== 'undefined' && 'fetch'
 await fetch('/api/analytics/performance'
-"method": 'POST',
-"headers": { 'Content-Type': 'application/json',
+"method": 'POST''"'",
+"headers": { 'Content-Type': 'application/json''"'",
 if (typeof window !== 'undefined' && 'fetch'
 await fetch('/api/analytics/performance'
-"method": 'POST',
-"headers": { 'Content-Type': 'application/json',
+"method": 'POST''"'",
+"headers": { 'Content-Type': 'application/json''"'",
 logger.error('Failed to send metric to analytics'
-"s": { 'Content-Type': 'application/json',
+"s": { 'Content-Type': 'application/json''"'",
 case 'good'
 case 'needs-improvement'
 case 'poor'
@@ -62,27 +62,27 @@ if (this.webVitals.FID && this.webVitals.FID.rating !== 'good'
 recommendations.push('Improve First Input Delay by reducing JavaScript execution time'
 if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good'
 recommendations.push('Improve Time to First Byte by optimizing server response time'
-this.recordCustomMetric(`fn_${name}`, duration, 'ms'
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms'
+this.recordCustomMetric(`fn_${name}`'', duration, 'ms'
+this.recordCustomMetric(`async_fn_${name}`'', duration, 'ms'
 if (typeof performance !== 'undefined' && 'mark'
 if (typeof performance !== 'undefined' && 'mark'
 if (typeof performance !== 'undefined' && 'measure'
 if (typeof performance !== 'undefined' && 'measure'
-const measure = performance.getEntriesByName(name, 'measure'
-this.recordCustomMetric(name, measure.duration, 'ms'
+const measure = performance.getEntriesByName(name'', 'measure'
+this.recordCustomMetric(name'', measure.duration, 'ms'
 logger.error('Failed to measure performance'
 if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good'
 if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good'
 if (this.webVitals.FID && this.webVitals.FID.rating !== 'good'
 if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good'
-this.recordCustomMetric(`fn_${name}`, duration, 'ms'
-this.recordCustomMetric(`async_fn_${name}`, duration, 'ms'
-Milliseconds = 'ms'
-Bytes = 'bytes'
-Count = 'count'
-Percentage = 'percentage'
+this.recordCustomMetric(`fn_${name}`'', duration, 'ms'
+this.recordCustomMetric(`async_fn_${name}`'', duration, 'ms'
+Milliseconds = 'ms''',
+Bytes = 'bytes''',
+Count = 'count''',
+Percentage = 'percentage''',
 rating?: 'good' | 'needs-improvement' | 'poor'
-function getRating("name": string, "value": number): 'good' | 'needs-improvement' | 'poor',
+function getRating("name": string'"'", "value": number): 'good' | 'needs-improvement' | 'poor''"'",
 'FCP'
 'LCP'
 'FID'
@@ -93,7 +93,7 @@ if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
-const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'
+const webVitalNames = ['FCP''', 'LCP''', 'FID''', 'CLS''', 'TTFB''',
 case 'good'
 case 'needs-improvement'
 case 'poor'
@@ -111,7 +111,7 @@ if (metrics.CLS && metrics.CLS.rating !== 'good'
 recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts'
 if (metrics.TTFB && metrics.TTFB.rating !== 'good'
 recommendations.push('Improve TTFB by optimizing server response time and using CDN'
-"e": number): 'good' | 'needs-improvement' | 'poor',
+"e": number): 'good' | 'needs-improvement' | 'poor''"'",
 'LCP'
 'FID'
 'CLS'

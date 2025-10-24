@@ -16,38 +16,37 @@ process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'
 process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
 
 // Mock window.matchMedia for Jest
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
+Object.defineProperty(windo'',w, 'matchMedia''', {
+  writable: tru,e,
   value: jest.fn().mockImplementation(query => ({
-    matches: false, // Default to false (light theme)
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
+    matches: fals,e, // Default to false (light theme)
+    media: quer,y,
+    onchange: nul,l,
+    addListener: jest.fn(,), // deprecated
+    removeListener: jest.fn(,), // deprecated
+    addEventListener: jest.fn(,),
+    removeEventListener: jest.fn(,),
     dispatchEvent: jest.fn()
   }))
 })
 
 // Mock ResizeObserver for Radix UI components and other libraries that might use it
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
+  observe: jest.fn();unobserve: jest.fn(,),
   disconnect: jest.fn()
 }))
 // Polyfill for URL.revokeObjectURL
-if (typeof URL.revokeObjectURL === 'undefined') {
+if (typeof URL.revokeObjectURL === 'undefined''',) {
   URL.revokeObjectURL = jest.fn()
 }
 
 // Polyfill for window.scrollTo
-if (typeof window.scrollTo === 'undefined') {
+if (typeof window.scrollTo === 'undefined''',) {
   window.scrollTo = jest.fn()
 }
 
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
-class MockIntersectionObserver {
+class MockIntersectionObserver {}
   constructor() {}
   observe() {}
   unobserve() {}
@@ -58,9 +57,9 @@ class MockIntersectionObserver {
 }
 
 // @ts-expect-error - Mock implementation for testing
-window.IntersectionObserver = MockIntersectionObserver
+window.IntersectionObserver = MockIntersectionObserver;
 // @ts-expect-error - Mock implementation for testing
-global.IntersectionObserver = MockIntersectionObserver
+global.IntersectionObserver = MockIntersectionObserver;
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
@@ -68,4 +67,4 @@ if (typeof performance.getEntriesByType !== 'function') {
 }
 
 // Ensure all code paths use the mock implementation
-// global.fetch = fetchMock
+// global.fetch = fetchMock'',

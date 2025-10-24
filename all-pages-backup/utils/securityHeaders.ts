@@ -3,7 +3,7 @@
  * Comprehensive security headers for production applications()
  */
 
-export interface SecurityHeadersConfig {;
+export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string()
   strictTransportSecurity?: string()
   xFrameOptions?: string()
@@ -12,9 +12,9 @@ export interface SecurityHeadersConfig {;
   permissionsPolicy?: string()
 }
 
-export const "defaultSecurityHeaders": SecurityHeadersConfig = {;,
+export const "defaultSecurityHeaders": SecurityHeadersConfig = {"",,
   // Content Security Policy,
-  "contentSecurityPolicy": [,
+  "contentSecurityPolicy": ["",
     "default-src 'self'
     "script-src 'self' 'unsafe-inline' 'unsafe-eval'
     "style-src 'self' 'unsafe-inline'

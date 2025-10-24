@@ -1,19 +1,66 @@
-const fs = require('fs''
-const path = require('path''
-  fixed = fixed.replace(/export const "metadata": Metadata = {}\n\s*"title": /g, 'export const "metadata": Metadata = {\n  title:'',
-  fixed = fixed.replace(/const features = \[\]\n\s*\{\}\n\s*,/g, 'const features = [\n    {''
-  fixed = fixed.replace(/import \{\}\n\s*ArrowRight,/g, 'import {\n  ArrowRight,''
-  fixed = fixed.replace(/= \{\}\n\s*"title": /g, '= {\n  "title": '',
-  fixed = fixed.replace(/= \{\}\n\s*"icon": /g, '= {\n  "icon": '',
-  fixed = fixed.replace(/= \[\]\n\s*\{\}\n\s*"icon": /g, '= [\n    {\n      "icon": '',
-  fixed = fixed.replace(/= \[\]\n\s*\{\}/g, '= [\n    {''
-    return match.replace('import {}', 'import {''
-  fixed = fixed.replace(/export const "metadata": Metadata = \{\n\s*title:/g, 'export const "metadata": Metadata = {\n  title:'',
-  fixed = fixed.replace(/const \w+: React\.FC = \(\) => \{\}\n\s*const/g, 'const $"1": React.FC = () => {\n  const'',}
-    const content = fs.readFileSync(filePath, 'utf8''
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules''
-    } else if (item.endsWith('.tsx') || item.endsWith('.jsx''
-console.log('Fixing syntax errors...''
-processDirectory('/workspace/app''
-processDirectory('/workspace/src'';
-console.log('Syntax error fixing complete!''
+const fs = require('fs');
+const path = require('path');
+
+// List of files with critical syntax errors
+const criticalFiles = [
+  'app/components/AccessibilityComponents.tsx',
+  'app/components/AdvancedErrorBoundary.tsx',
+  'app/components/AdvancedPerformanceMonitor.tsx',
+  'app/components/AdvancedPerformanceOptimizer.tsx',
+  'app/components/Analytics.tsx',
+  'app/components/ContactForm.tsx',
+  'app/components/Header.tsx',
+  'app/components/NewsletterSignup.tsx'
+];
+
+// Fix common syntax errors
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix common issues
+    content = content
+      // Fix missing semicolons after interface properties
+      .replace(/(\w+)\s*\?\s*:\s*(\w+)(?!\s*;)/g, '$1?: $2;')
+      // Fix missing semicolons after function declarations
+      .replace(/(\w+)\s*=\s*\([^)]*\)\s*=>\s*{([^}]*)}/g, (match, funcName, body) => {
+        if (!match.includes(';')) {
+          return match.replace('}', '};');
+        }
+        return match;
+      })
+      // Fix missing semicolons after variable declarations
+      .replace(/(\w+)\s*=\s*[^;]+(?!;)(?=\n)/g, (match) => {
+        if (!match.includes(';') && !match.includes('{') && !match.includes('(')) {
+          return match + ';';
+        }
+        return match;
+      })
+      // Fix JSX syntax issues
+      .replace(/>\s*</g, '><')
+      // Fix missing closing brackets
+      .replace(/(\w+)\s*{\s*([^}]*?)(?=\n\s*[a-zA-Z])/g, (match, name, body) => {
+        if (!body.includes('}')) {
+          return match + '}';
+        }
+        return match;
+      });
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Process critical files
+criticalFiles.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  if (fs.existsSync(fullPath)) {
+    fixFile(fullPath);
+  } else {
+    console.log(`File not found: ${file}`);
+  }
+});
+
+console.log('Syntax fixing completed');

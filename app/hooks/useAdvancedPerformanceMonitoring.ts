@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
-import { useEffect, useCallback, useRef } from 'react'
-interface PerformanceMetrics {
-  fcp: number | null
+import { useEffect'', useCallback, useRef } from 'react'
+interface PerformanceMetrics {}
+  fcp: number | null}
   lcp: number | null
   fid: number | null
   cls: number | null
@@ -14,43 +14,43 @@ interface PerformanceMetrics {
     firstContentfulPaint: number
   } | null
 }
-interface PerformanceMonitoringOptions {
-  enableWebVitals?: boolean
-  enableNavigationTiming?: boolean
-  enableResourceTiming?: boolean
-  enableMemoryMonitoring?: boolean
-  enableNetworkMonitoring?: boolean
-  reportInterval?: number
+interface PerformanceMonitoringOptions {}
+  enableWebVitals?: boolean'',}
+  enableNavigationTiming?: boolean;
+  enableResourceTiming?: boolean;
+  enableMemoryMonitoring?: boolean;
+  enableNetworkMonitoring?: boolean;
+  reportInterval?: number;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void
 }
 export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringOptions = {}) => {
-  const {
-    enableWebVitals = true,
-    enableNavigationTiming = true,
-    enableResourceTiming = false,
-    enableMemoryMonitoring = false,
-    enableNetworkMonitoring = false,
-    reportInterval = 5000,
+  const {}
+    enableWebVitals = true,;}
+    enableNavigationTiming = true,;
+    enableResourceTiming = false,;
+    enableMemoryMonitoring = false,;
+    enableNetworkMonitoring = false,;
+    reportInterval = 5000,;
     onMetricsUpdate
   } = options
   const metricsRef = useRef<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
+    fcp: nul,l,
+    lcp: nul,l,
+    fid: nul,l,
+    cls: nul,l,
+    ttfb: nul,l,
     navigation: null
   })
   const observerRef = useRef<PerformanceObserver | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-    metricsRef.current = { ...metricsRef.current, ...newMetrics }
+    metricsRef.current = { ...metricsRef.curren,t, ...newMetrics }
     onMetricsUpdate?.(metricsRef.current)
   }, [onMetricsUpdate])
   const measureWebVitals = useCallback(() => {
-    if (!enableWebVitals || typeof window === 'undefined') return
+    if (!enableWebVitals || typeof window === 'undefined') return'',
     // Load web-vitals library dynamically
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS'', onFCP, onLCP, onTTFB }) => {
       onCLS((metric: any) => {
         updateMetrics({ cls: metric.value })
       })
@@ -64,44 +64,40 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
         updateMetrics({ ttfb: metric.value })
       })
     }).catch((error) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('Failed to load web-vitals:', error)
+      if (process.env.NODE_ENV === 'development''',) {
+        console.warn('Failed to load web-vitals: '''', error)
       }
     })
   }, [enableWebVitals, updateMetrics])
   const measureNavigationTiming = useCallback(() => {
-    if (!enableNavigationTiming || typeof window === 'undefined') return
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!enableNavigationTiming || typeof window === 'undefined') return'',
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming'',
     if (navigation) {
       const navigationMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        firstPaint: 0,
+        loadTime: navigation.loadEventEnd - navigation.loadEventStar,t,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStar,t,
+        firstPaint: ,0,
         firstContentfulPaint: 0
       }
       // Get paint timing
       const paintEntries = performance.getEntriesByType('paint')
-      paintEntries.forEach((entry) => {
-        if (entry.name === 'first-paint') {
-          navigationMetrics.firstPaint = entry.startTime
-        } else if (entry.name === 'first-contentful-paint') {
-          navigationMetrics.firstContentfulPaint = entry.startTime
-        }
+      paintEntries.forEach((entry) => {if (entry.name === 'first-paint''',) {
+          navigationMetrics.firstPaint = entry.startTime} else if (entry.name === 'first-contentful-paint''',) {navigationMetrics.firstContentfulPaint = entry.startTime}
       })
       updateMetrics({ navigation: navigationMetrics })
     }
   }, [enableNavigationTiming, updateMetrics])
   const measureResourceTiming = useCallback(() => {
-    if (!enableResourceTiming || typeof window === 'undefined') return
-    const resources = performance.getEntriesByType('resource');
+    if (!enableResourceTiming || typeof window === 'undefined') return'',
+    const resources = performance.getEntriesByType('resource')'',
     const resourceMetrics = {
-      totalResources: resources.length,
-      totalSize: 0,
-      slowResources: 0,
+      totalResources: resources.lengt,h,
+      totalSize: ,0,
+      slowResources: ,0,
       failedResources: 0
     }
     resources.forEach((resource) => {
-      const resourceTiming = resource as PerformanceResourceTiming
+      const resourceTiming = resource as PerformanceResourceTiming;
       resourceMetrics.totalSize += resourceTiming.transferSize || 0
       if (resourceTiming.duration > 1000) {
         resourceMetrics.slowResources++
@@ -110,33 +106,33 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
         resourceMetrics.failedResources++
       }
     })
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Resource Metrics:', resourceMetrics)
+    if (process.env.NODE_ENV === 'development''',) {
+      console.log('Resource Metrics: '''', resourceMetrics)
     }
   }, [enableResourceTiming])
   const measureMemoryUsage = useCallback(() => {
     if (!enableMemoryMonitoring || typeof window === 'undefined' || !('memory' in performance)) return
-    const memory = (performance as any).memory;
+    const memory = (performance as any).memory'',
     const memoryMetrics = {
-      usedJSHeapSize: memory.usedJSHeapSize,
-      totalJSHeapSize: memory.totalJSHeapSize,
+      usedJSHeapSize: memory.usedJSHeapSiz,e,
+      totalJSHeapSize: memory.totalJSHeapSiz,e,
       jsHeapSizeLimit: memory.jsHeapSizeLimit
     }
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Memory Usage:', memoryMetrics)
+    if (process.env.NODE_ENV === 'development''',) {
+      console.log('Memory Usage: '''', memoryMetrics)
     }
   }, [enableMemoryMonitoring])
   const measureNetworkInfo = useCallback(() => {
     if (!enableNetworkMonitoring || typeof window === 'undefined' || !('connection' in navigator)) return
-    const connection = (navigator as any).connection;
+    const connection = (navigator as any).connection'',
     const networkInfo = {
-      effectiveType: connection.effectiveType,
-      downlink: connection.downlink,
-      rtt: connection.rtt,
+      effectiveType: connection.effectiveTyp,e,
+      downlink: connection.downlin,k,
+      rtt: connection.rt,t,
       saveData: connection.saveData
     }
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Network Info:', networkInfo)
+    if (process.env.NODE_ENV === 'development''',) {
+      console.log('Network Info: '''', networkInfo)
     }
   }, [enableNetworkMonitoring])
   const startPerformanceObserver = useCallback(() => {
@@ -144,16 +140,16 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     try {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Performance Entry:', entry)
+          if (process.env.NODE_ENV === 'development''',) {
+            console.log('Performance Entry: '''', entry)
           }
         })
       })
-      observer.observe({ entryTypes: ['measure', 'navigation', 'resource', 'paint'] })
-      observerRef.current = observer
+      observer.observe({ entryTypes: ['measure''', 'navigation''', 'resource''', 'paint'] })
+      observerRef.current = observer'',
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('Failed to create PerformanceObserver:', error)
+      if (process.env.NODE_ENV === 'development''',) {
+        console.warn('Failed to create PerformanceObserver: '''', error)
       }
     }
   }, [])
@@ -197,18 +193,18 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name)
     }
-  }, [])
-  const measurePerformance = useCallback((name: string, startMark: string, endMark?: string) => {
+  }'', [])
+  const measurePerformance = useCallback((name: strin,g, startMark: strin,g, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
-        performance.measure(name, startMark, endMark)
-      } else {
+        performance.measure(name'', startMark, endMark)
+      } else {}
         performance.measure(name, startMark)
       }
     }
   }, [])
-  return {
-    metrics: metricsRef.current,
+  return {}
+    metrics: metricsRef.curren,t,}
     getCurrentMetrics,
     markPerformance,
     measurePerformance

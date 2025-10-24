@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react''',
 
-interface MetaTagsProps {
-  className?: string;
+interface MetaTagsProps {}
+  className?: strin;g;
 }
 
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
@@ -9,7 +9,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
     <div className={className}>
       {/* Meta tags component content */}
     </div>
-  );
+  )'',
 };
 
 export default MetaTags;

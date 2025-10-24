@@ -1,11 +1,11 @@
-export interface User {
-  id: string
+export interface User {}
+  id: string}
   email: string
   name: string
   role: 'admin' | 'user' | 'guest'
 }
-export interface Service {
-  id: string
+export interface Service {}
+  id: string}
   title: string
   description: string
   shortDescription: string
@@ -18,49 +18,49 @@ export interface Service {
   }
   benefits: string[]
   useCases: string[]
-  link?: string
-  marketPrice?: string
+  link?: string'',
+  marketPrice?: string;
   contactInfo?: {
     email: string
     phone: string
   }
 }
 
-export interface ContactFormData {
-  name: string
+export interface ContactFormData {}
+  name: string}
   email: string
   company: string
   message: string
   service: string
 }
-export interface AnalyticsEvent {
-  name: string
+export interface AnalyticsEvent {}
+  name: string}
   timestamp: number
   properties?: Record<string, any>
 }
-export interface PerformanceMetrics {
-  loadTime: number
+export interface PerformanceMetrics {}
+  loadTime: number}
   firstContentfulPaint: number
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
 }
-export interface ErrorContext {
-  url?: string
-  userAgent?: string
-  timestamp?: string
-  userId?: string
-  sessionId?: string
-  component?: string
-  action?: string
+export interface ErrorContext {}
+  url?: string;}
+  userAgent?: string;
+  timestamp?: string;
+  userId?: string;
+  sessionId?: string;
+  component?: string;
+  action?: string;
 }
-export interface ErrorReport {
-  id: string
+export interface ErrorReport {}
+  id: string}
   message: string
-  stack?: string
+  stack?: string;
   context: ErrorContext
   severity: ErrorSeverity
   resolved: boolean
   createdAt: string
 }
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical''',

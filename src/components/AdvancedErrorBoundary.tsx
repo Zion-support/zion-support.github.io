@@ -1,19 +1,19 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Home } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react''',
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react''',
+import { Mail } from 'lucide-react''',
+import { Home } from 'lucide-react''',
 
 interface AdvancedErrorBoundaryProps {;
-:all-pages-backup/components/AdvancedErrorBoundary.tsx
-  className?: string
+:all-pages-backup/components/AdvancedErrorBoundary.tsx}
   className?: string;
+  className?: strin;g;
 }
 
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
+interface State {}
+  hasError: boolean}
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -23,9 +23,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
 :all-pages-backup/components/AdvancedErrorBoundary.tsx
-    const errorReport: ErrorReport = {;
+    const errorReport: ErrorReport = ,{;
       errorId: this.state.errorId || this.generateErrorId()
-      error,
+      erro,r,
   errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId()
@@ -34,7 +34,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) {
     this.setState({
       error
       errorInfo
@@ -44,15 +44,15 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo)
     }
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // // console.error('Error caught by boundary:', error, errorInfo)
+    if (process.env.NODE_ENV === 'development''',) {
+      // // console.error('Error caught by boundary: '''', error, errorInfo)
     }
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production''',) {
       this.logErrorToService(error, errorInfo)
     }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // You can integrate with services like Sentry, LogRocket, etc.
+  logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {
+    // You can integrate with services like Sentr,y, LogRocket, etc.
     const errorData = {;

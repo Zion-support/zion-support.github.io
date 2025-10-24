@@ -4,11 +4,11 @@
  */
 
 export interface SitemapEntry {;
-  "loc": string,
-  "lastmod": string,
-  "changefreq": string,
+  "loc": string"",
+  "lastmod": string"",
+  "changefreq": string"",
   "priority": number()
 }
 
-export const generateSitemap = (): SitemapEntry[] => {;}
-  const baseUrl = '"https": //ziontechgroup.com'
+export const generateSitemap = (): SitemapEntry[] => {}
+  const baseUrl = '"https": //ziontechgroup.com''"'",

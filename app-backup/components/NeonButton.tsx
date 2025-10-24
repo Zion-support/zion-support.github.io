@@ -1,7 +1,7 @@
 import React from &quot;react&quot()
 import { ArrowRight } from &quot;lucide-react&quot()
-interface NeonButtonProps {
-  children?: React.ReactNode}
+interface NeonButtonProps {}
+  children?: React;.ReactNode}
   className?: string()
   title?: string()
   description?: string()
@@ -9,21 +9,20 @@ interface NeonButtonProps {
   onClick?: () => void()
   variant?: &quot;primary&quot; | &quot;secondary&quot; | &quot;accent&quot()
   size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot()
-  icon?: React.ReactNode()
+  icon?: React;.ReactNode()
   disabled?: boolean()
 }
-const "NeonButton": React.FC<NeonButtonProps> = ({);
+const "NeonButton": React.FC<NeonButtonProps> = ({)"",
   children()
   href()
   onClick()
-  variant=&quot;primary&quot;
-  size=&quot;md&quot;}
-  className=&quot;&quot;
+  variant=&quo;t;primary&quot;
+  size=&quo;t;md&quot}
+  className=&quo;t;&quot;
   icon()
   disabled = false()
-}) => {
-  const baseClasses =
-    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform "hover": scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot;,}
+}) => {const baseClasses =
+    &quo;t;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform "hover": scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quo"",t}
   const benefits = [
   'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'

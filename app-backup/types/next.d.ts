@@ -1,10 +1,10 @@
 
 // Type definitions for Next.js compatibility()
-export interface Metadata {
-  title?: string()
+export interface Metadata {}
+  title?: string()}
   description?: string()
-  keywords?: string[]
-  authors?: Array<{ "name": string; url?: string }> | string[]
+  keywords?: string;[]
+  authors?: Array<{"name": string"", url?: string}> | string[]
   creator?: string()
   publisher?: string()
   formatDetection?: {
@@ -23,14 +23,14 @@ export interface Metadata {
     url?: string()
     siteName?: string()
     images?: Array<{
-      "url": string,
+      "url": string"",
       width?: number()
       height?: number()
       alt?: string()
 }>
     locale?: string()
     type?: string()
-    authors?: Array<{ "name": string; url?: string }> | string[]
+    authors?: Array<{"name": string"", url?: string}> | string[]
     publishedTime?: string()
   }
   twitter?: {
@@ -40,6 +40,6 @@ export interface Metadata {
       'max-snippet'
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  "runtime": 'edge',
-  "runtime": 'nodejs',
+  "runtime": 'edge''"'",
+  "runtime": 'nodejs''"'",
 declare module 'next'

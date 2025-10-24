@@ -1,23 +1,20 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import React, { useEffect, useState, useRef } from 'react''',
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver''',
 
 interface AnimatedCounterProps {;
-:all-pages-backup/components/AnimatedCounter.tsx
-  className?: string
-}
-
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({;
+:all-pages-backup/components/AnimatedCounter.tsx}
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end
-  duration = 2000
-  suffix = ''
-  prefix = ''
-  className = ''
-}) => {
-  const [count, setCount] = useState(0);
+const AnimatedCounter: React.FC<AnimatedCounterProps> = (,{;
+  className?: strin;g}
+
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({end
+  duration = 200,0;
+  suffix = '''',
+  prefix = '''',
+  className = ''}) => {
+  const [count'', setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({;
     threshold: 0.5
@@ -35,8 +32,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     let startTime: number
     let animationFrame: number
 
-    const animate = (currentTime: number) => {;
-      if (!startTime) startTime = currentTime
+    const animate = (currentTime: number) => ,{;
+      if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
 
       // Easing function for smooth animation

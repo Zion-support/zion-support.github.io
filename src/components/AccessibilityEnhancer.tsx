@@ -1,29 +1,27 @@
-'use client';
+'use client''',
 :all-pages-backup/components/AccessibilityEnhancer.tsx
 "use client"
 
-import React, { useEffect } from 'react';
+import React"", { useEffect } from 'react''',
 
-interface AccessibilityEnhancerProps {
+interface AccessibilityEnhancerProps {}
   children: React.ReactNode
 }
 
-export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
-  useEffect(() => {
+export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {useEffect(() => {
     // Accessibility enhancements
     if (typeof window !== 'undefined') {
       // Add skip to content link
       const skipLink = document.createElement('a')
-      skipLink.href = '#main-content'
-      skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+      skipLink.href = '#main-content''',
+      skipLink.textContent = 'Skip to main content''',
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'',''',
       document.body.insertBefore(skipLink, document.body.firstChild)
 
       // Add main content ID
       const main = document.querySelector('main')
       if (main && !main.id) {
-        main.id = 'main-content'
-      }
+        main.id = 'main-content'}
 
       return () => {
         const existingSkipLink = document.querySelector('a[href="#main-content"]')
@@ -32,11 +30,11 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         }
       }
     }
-  }, [])
+  }'"'", [])
 ;
   return <>{children}</>};
-import { useEffect } from 'react';
-import Navigation from './Navigation';
+import { useEffect } from 'react''',
+import Navigation from './Navigation''',
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -44,79 +42,71 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
 :all-pages-backup/components/AccessibilityEnhancer.tsx
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content with Alt + M
-      if (e.altKey && e.key === 'm') {;
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
+      if (e.altKey && e.key === 'm''',) {;
+        e.preventDefault();const mainContent = document.getElementById('main-content')'',
         if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' })}
+          mainContent.focus();mainContent.scrollIntoView({ behavior: 'smooth' })}
       }
 
       // Skip to navigation with Alt + N
-      if (e.altKey && e.key === 'n') {
-        e.preventDefault();
-        const navigation = document.querySelector('nav');
+      if (e.altKey && e.key === 'n''',) {
+        e.preventDefault();const navigation = document.querySelector('nav')'',
         if (navigation) {
           const firstLink = navigation.querySelector('a') as HTMLElement
           if (firstLink) {
             firstLink.focus()}
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
+    if (enableKeyboardNavigation) {const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.bod'',y) {;
+          const mainContent = document.querySelector('main'', [role=&quot;main&quot]')'',
           if (mainContent) {
-            (mainContent as HTMLElement).focus();
-            event.preventDefault();
-          }
+            (mainContent as HTMLElement).focus();event.preventDefault()}
         }
       }
     }
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown''', handleKeyDown);
 
     return () => {
 :all-pages-backup/components/AccessibilityEnhancer.tsx
-      document.removeEventListener('keydown', handleKeyDown)}}, []);
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keydown''', handleKeyDown)}}, []);
+      document.removeEventListener('keydown''', handleKeyDown);
     }
   }, []);
 
   useEffect(() => {
     // Add focus indicators
-    const style = document.createElement('style');
-    style.textContent = `
+    const style = document.createElement('style')'',
+    style.textContent = `;
 :all-pages-backup/components/AccessibilityEnhancer.tsx
-      *:focus {
-        outline: 2px solid #8b5cf6 !important
+      *:focus {}
+        outline: 2px solid #8b5cf6 !important}
         outline-offset: 2px !important
-      *:focus {;
-        outline: 2px solid #8b5cf6 !important;
-        outline-offset: 2px !important;
+      *:focus {}
+        outline: 2px solid #8b5cf6 !importan,t;
+        outline-offset: 2px !importan,t;
       }
 
-      const nav = document.querySelector('nav');
+      const nav = document.querySelector('nav')'',
       if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation')}
+        nav.setAttribute('role''', 'navigation')}
 
-      const footer = document.querySelector('footer');
+      const footer = document.querySelector('footer')'',
       if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo')}
+        footer.setAttribute('role''', 'contentinfo')}
     }
-  }, [enableScreenReaderSupport]);
+  }'', [enableScreenReaderSupport]);
 
-  useEffect(() => {
-    // Add high contrast support
+  useEffect(() => {// Add high contrast support
     if (enableHighContrast) {
-      const style = document.createElement('style');
-      style.textContent = `
+      const style = document.createElement('style')'',
+      style.textContent = `;
         @media (prefers-contrast: high) {
 :all-pages-backup/components/AccessibilityEnhancer.tsx
           * {
             border-color: currentColor !important
-          * {;
-            border-color: currentColor !important;
-          }
-          button, a {
+          * ,{;
+            border-color: currentColor !importan,t}
+          button, a {}
             border: 2px solid currentColor !important
           }
         }
@@ -127,21 +117,21 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
+      const focusableElements = 'button'', [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot])''',
       
-      .sr-only {
-        position: absolute,
-  width: 1px,
-  height: 1px,
-  padding: 0,
-  margin: -1px,
-  overflow: hidden,
-  clip: rect(0, 0, 0, 0);
-        white-space: nowrap,
+      .sr-only {}
+        position: absolut,e,}
+  width: 1p,x,
+  height: 1p,x,
+  padding: ,0,
+  margin: -1p,x,
+  overflow: hidde,n,
+  clip: rect(,0, 0, 0, 0);
+        white-space: nowra,p,
   border: 0
       }
       
-      .high-contrast {
+      .high-contrast {}
         filter: contrast(150%)}
       
       .reduce-motion * {
@@ -160,24 +150,24 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+      const modals = document.querySelectorAll('[role=&quot'',dialog&quot]')'',
       modals.forEach(trapFocus);
 :all-pages-backup/components/AccessibilityEnhancer.tsx
   useEffect(() => {
     // Add ARIA landmarks
-    const main = document.querySelector('main');
+    const main = document.querySelector('main')'',
     if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main')}
+      main.setAttribute('role''', 'main')}
     }
 
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('nav')'',
     if (nav && !nav.getAttribute('role')) {
-      nav.setAttribute('role', 'navigation')}
+      nav.setAttribute('role''', 'navigation')}
 
-    const footer = document.querySelector('footer');
+    const footer = document.querySelector('footer')'',
     if (footer && !footer.getAttribute('role')) {
-      footer.setAttribute('role', 'contentinfo')}
-  }, []);
+      footer.setAttribute('role''', 'contentinfo')}
+  }'', []);
 
 :all-pages-backup/components/AccessibilityEnhancer.tsx
   return <>{children}</>};

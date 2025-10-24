@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react''',
 
-interface StructuredDataProps {
-  className?: string;
+interface StructuredDataProps {}
+  className?: strin;g;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
@@ -9,7 +9,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
     <div className={className}>
       {/* Structured data component content */}
     </div>
-  );
+  )'',
 };
 
 export default StructuredData;

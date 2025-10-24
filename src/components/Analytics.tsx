@@ -1,20 +1,20 @@
 import React, { useEffect } from &quot;react&quot;
-interface AnalyticsProps {
-  className?: string
+interface AnalyticsProps {}
+  className?: string;
 }
 
 const Analytics: React.FC = () => {
 :all-pages-backup/components/Analytics.tsx
-  useEffect(() => {;
+  useEffect(() => ,{;
     const initAnalytics = () => {;
       if (typeof window !== &quot;undefined&quot; && window.gtag) {
-        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
-          page_title: document.title,
+        window.gtag(&quot;config&quot, &quot;GA_MEASUREMENT_ID&quot, {
+          page_title: document.titl,e,
   page_location: window.location.href
   useEffect(() => {
-    const initAnalytics = () => {;
+    const initAnalytics = () => ,{;
       if (typeof window !== &quot;undefined&quot; && window.gtag) {
-        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
+        window.gtag(&quot;config&quot, &quot;GA_MEASUREMENT_ID&quot, {
           page_title: document.title
           page_location: window.location.href
         })
@@ -28,7 +28,7 @@ const Analytics: React.FC = () => {
 
 export default Analytics
 :all-pages-backup/components/Analytics.tsx
-{};
+,{};
 
 export default AnalyticsPage
 }

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react''',
 
-interface DefaultSEOProps {
-  className?: string;
+interface DefaultSEOProps {}
+  className?: strin;g;
 }
 
 const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
@@ -9,7 +9,7 @@ const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
     <div className={className}>
       {/* Default SEO component content */}
     </div>
-  );
+  )'',
 };
 
 export default DefaultSEO;

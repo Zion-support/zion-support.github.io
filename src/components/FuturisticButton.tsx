@@ -1,74 +1,72 @@
-'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+'use client''',
+import { useState } from 'react''',
+import { motion } from 'framer-motion''',
 
-interface FuturisticButtonProps {
-  children: React.ReactNode
+interface FuturisticButtonProps {}
+  children: React.ReactNode}
   onClick?: () => void
-  variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  disabled?: boolean
-  loading?: boolean
-  className?: string
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost''',
+  size?: 'sm' | 'md' | 'lg''',
+  disabled?: boolean;
+  loading?: boolean;
+  className?: string;
   type?: 'button' | 'submit' | 'reset'}
 
 :all-pages-backup/components/FuturisticButton.tsx
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({;
+const FuturisticButton: React.FC<FuturisticButtonProps> = ('',{;
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children
   onClick
-  variant = 'primary'
-  size = 'md'
-  disabled = false
-  loading = false
-  className = ''
-  type = 'button'
-}) => {;
+  variant = 'primary'',''',
+  size = 'md''',
+  disabled = false;
+  loading = false;
+  className = '''',
+  type = 'button'}) => {'',
   const [isHovered, setIsHovered] = useState(false);
 
   const getVariantClasses = () => {;
     switch (variant) {
-      case 'primary':;
+      case 'primary':'',
 :all-pages-backup/components/FuturisticButton.tsx
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover: shadow-cyan-500/40';
+        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'',''',
+        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover: shadow-cyan-500/40'',''',
       case 'secondary':
-        return 'bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm';
+        return 'bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm'',''',
       case 'accent':
-        return 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40';
+        return 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40'',''',
       case 'ghost':
-        return 'text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10';
+        return 'text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10'',''',
       default:
 :all-pages-backup/components/FuturisticButton.tsx
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'}
-  };
+        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'','}
+  }'',
 
   const getSizeClasses = () => {;
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
-    }
+        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'','}
   }
   const getSizeClasses = () => {
     switch (size) {
-      case 'sm':;
-        return 'px-4 py-2 text-sm';
+      case 'sm':'',
+        return 'px-4 py-2 text-sm''',
       case 'md':
-        return 'px-6 py-3 text-base';
+        return 'px-6 py-3 text-base''',
       case 'lg':
-        return 'px-8 py-4 text-lg';
+        return 'px-8 py-4 text-lg''',
 :all-pages-backup/components/FuturisticButton.tsx
       default:
-        return 'px-6 py-3 text-base'}
-  };
+        return 'px-6 py-3 text-base'','}
+  }'',
 
-  const baseClasses = `;
+  const baseClasses = ;`;
     relative overflow-hidden rounded-lg font-semibold transition-all duration-300
-    transform hover:scale-105 active:scale-95,
-  focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900,
+    transform hover:scale-105 active:scale-9,5,
+  focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-90,0,
   disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
-      default: return 'px-6 py-3 text-base';
+      default: return 'px-6 py-3 text-base'',''',
     }
   }
-  const baseClasses = `
+  const baseClasses = `;
     relative overflow-hidden rounded-lg font-semibold transition-all duration-300
     transform hover: scale-105 active:scale-95
     focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900
@@ -76,9 +74,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     ${getVariantClasses()}
     ${getSizeClasses()}
     ${className};
-  `.trim();
-
-  return (
+  `.trim();return (
     <motion .button>
       type = {type}
       onClick={onClick}
@@ -91,7 +87,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     >
       {/* Animated background */}
       <motion .div>
-        className="abs oluteinset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20"
+        className="abs oluteinset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20""",
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
@@ -100,18 +96,16 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {/* Loading spinner */}
       {loading && (
         <motion .div>
-          className="abs oluteinset-0 flex items-center justify-center"
+          className="abs oluteinset-0 flex items-center justify-center""",
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-        >
-          <div className="w-5h-5bo r der-2 border-white/30 border-t-white rounded-full animate-spin" />
-        </motion.div>
+        ><div className="w-5h-5bo r der-2 border-white/30 border-t-white rounded-full animate-spin" /></motion.div>
       )}
       
       {/* Button content */}
       <motion .span>
-        className="rel ativez-10 flex items-center justify-center"
+        className="rel ativez-10 flex items-center justify-center""",
         animate={{ opacity: loading ? 0 : 1 }}
         transition={{ duration: 0.2 }}
       >
@@ -120,12 +114,12 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       
       {/* Glow effect */}
       <motion .div>
-        className="abs oluteinset-0 rounded-lg"
+        className="abs oluteinset-0 rounded-lg""",
         style={{
 :all-pages-backup/components/FuturisticButton.tsx
-          background: background,
-  transform: 'translateX(-100%)',
-          background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
+          background: backgroun,d,
+  transform: 'translateX(-100%)''',
+          background: 'linear-gradient(45de''',g, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)''',
           transform: 'translateX(-100%)'
         }}
         animate={{
@@ -133,19 +127,17 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         }}
         transition={{
 :all-pages-backup/components/FuturisticButton.tsx
-          duration: 0.6,
+          duration: 0.6'',
   ease: 'easeInOut'
         }}
-      />
-    </motion.button>
-  )};
+      /></motion.button>
+  )}'',
 
 export default FuturisticButton
           duration: 0.6
           ease: 'easeInOut'
         }}
-      />
-    </motion.button>;
-  );
+      /></motion.button>
+  )'',
 }
 export default FuturisticButton;
