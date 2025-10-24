@@ -63,7 +63,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       if ((window as any).gtag) {
         (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
           user_id: userId,
-          custom_map: traits
+          custom_map: traits;
         });
       }
       // Custom analytics

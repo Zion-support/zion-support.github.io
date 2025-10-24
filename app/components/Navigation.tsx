@@ -21,19 +21,18 @@ import {
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
-const Navigation = ($2) => {
-$3
-};
+const Navigation = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
 
-    window.addEventListener('scroll', handleScroll)
-    return (
-    <>
-      ) => window.removeEventListener('scroll', handleScroll
-    </>
-    </>
-    </>
-  );
-  }, [])
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -41,7 +40,7 @@ $3
       name: 'Services',
       href: '/services',
       icon: BriefcaseIcon,
-      submenu: [,
+      submenu: [
         { name: 'AI Solutions', href: '/ai-solutions' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
@@ -59,21 +58,25 @@ $3
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ]
 
-  const isActive = ($2) => {
-$3
-};
+  const isActive = (href) => {
+    return pathname === href;
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}> </nav><div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        <div className="flex items-center justify-between h-16">{/* Logo */}
-          </div><Link href="/" className="flex items-center space-x-2"> </Link><div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center"> </div><span className="text-white font-bold text-lg">Z</span>
+      scrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
-          <div className="hidden lg: flex items-center space-x-8">,
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
               const Icon = item.icon
               return (

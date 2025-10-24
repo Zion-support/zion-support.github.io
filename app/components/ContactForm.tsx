@@ -4,15 +4,15 @@ import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
 interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  service: string;
+}
 
-  name: string;,
-    email: string;,
-  phone: string;,
-    company: string;,
-  message: string;,
-    service: string,
-  }
-const ContactForm: React.FC = () => {,
+const ContactForm: React.FC = () => {
 
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -189,13 +189,11 @@ handleChange
           className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed",
         >{isSubmitting ? (
             </button><>
-      
     </>
       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">Sending...
 </div></>
           ) : (
             <>
-      
     </>
       <Send className="w-5 h-5 mr-2" />Send Message
 </Send></>

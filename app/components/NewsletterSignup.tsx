@@ -55,13 +55,11 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center",
           >{status === 'loading' ? (
               </button><>
-      
     </>
       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2">Subscribing...
 </div></>
             ) : (
               <>
-      
     </>
       <Send className="w-4 h-4 mr-2" />Subscribe
 </Send></>

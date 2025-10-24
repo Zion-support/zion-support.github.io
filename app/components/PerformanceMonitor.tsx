@@ -146,3 +146,4 @@ const monitorCoreWebVitals = () => {
 };
 
 export default monitorCoreWebVitals;
+</divWarnings>

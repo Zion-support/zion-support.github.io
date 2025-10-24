@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const Breadcrumb: React.FC = ($2) => {
-$3
-};
+const Breadcrumb: React.FC = () => {
   return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700"> </nav><div className="max-w-7xl mx-auto px-4 py-3"> </div><ol className="flex items-center space-x-2 text-sm"> </ol><li> </li><Link href="/" className="text-gray-400 hover: text-white transition-colors">,
+    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 py-3">
+        <ol className="flex items-center space-x-2 text-sm">
+          <li>
+            <Link href="/" className="text-gray-400 hover:text-white transition-colors">
               Home
             </Link>
           </li>

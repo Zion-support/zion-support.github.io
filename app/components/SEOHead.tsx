@@ -16,7 +16,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
 }) => {
   return (
     <>
-      
     </>
       <Helmet> </Helmet><title>{title}</title>
         <meta name="description" content={description} /> </meta><meta name="keywords" content={keywords} /> </meta><meta property="og:title" content={title} /> </meta><meta property="og:description" content={description} /> </meta><meta name="twitter:title" content={title} /> </meta><meta name="twitter:description" content={description} /> </meta></Helmet>

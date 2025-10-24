@@ -50,7 +50,6 @@ export default function AboutPage() {
   ]
   return (
     <>
-      
     </>
       <Helmet> </Helmet><title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." /> </meta><meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" /> </meta></Helmet>
@@ -284,3 +283,9 @@ export default function AboutPage() {
 </div>,
   );,
 }
+</div500>
+</div50>
+</div15>
+</div99>
+</div25>
+</div4>

@@ -16,7 +16,6 @@ import { ArrowRight } from 'lucide-react';
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
   return (
     <>
-      
     </>
       <Helmet> </Helmet><title>SystemMonitor</title>
         <meta name="description" content="Advanced SystemMonitor solution for modern businesses." /> </meta><meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" /> </meta></Helmet>

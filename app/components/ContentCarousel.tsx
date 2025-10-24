@@ -51,7 +51,6 @@ $3
 };
   return (
     <>
-      
     </>
       <Helmet> </Helmet><title>ContentCarousel</title>
         <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; /> </meta></Helmet>
@@ -260,3 +259,5 @@ export default ContentCarouselPage
 
 export default ContentCarousel
 
+
+</div4>

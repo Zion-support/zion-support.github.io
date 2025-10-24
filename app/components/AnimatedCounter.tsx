@@ -40,7 +40,6 @@ $3
       ) => {
     </>
     </>
-
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
       }
