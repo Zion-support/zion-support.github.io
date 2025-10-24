@@ -102,6 +102,7 @@ const ContactPage: React.FC = () => {
     telephone: '+1-555-ZION-TECH',
     email: 'contact@ziontechgroup.com',
     address: {
+      '@type': 'PostalAddress',
       streetAddress: '123 Tech Street',
       addressLocality: 'Innovation City',
       addressRegion: 'IC',
@@ -118,8 +119,7 @@ const ContactPage: React.FC = () => {
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
         keywords="contact us, get in touch, AI consultation, IT support, customer service, Zion Tech Group"
-        canonicalUrl="https://ziontechgroup.com/contact"
-        structuredData={structuredData}
+        canonical="https://ziontechgroup.com/contact"
       />
       
       <div className="min-h-screen bg-white">

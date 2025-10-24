@@ -74,7 +74,7 @@ const AIServicesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-purple-400 mb-3">Benefits</h4>
                     <ul className="space-y-2">
-                      {service.benefits.slice(0, 3).map((benefit, index) => (
+                      {service.benefits?.slice(0, 3).map((benefit, index) => (
                         <li key={index} className="text-gray-300 text-sm flex items-center">
                           <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                           {benefit}
@@ -85,11 +85,11 @@ const AIServicesPage: React.FC = () => {
 
                   <div className="flex justify-between items-center mb-6">
                     <div>
-                      <span className="text-2xl font-bold text-cyan-400">${service.pricing.basic}</span>
+                      <span className="text-2xl font-bold text-cyan-400">${service.pricing?.basic}</span>
                       <span className="text-gray-400 text-sm ml-1">/month</span>
                     </div>
                     <a 
-                      href={service.contactInfo.website} 
+                      href={service.contactInfo?.website || '#'} 
                       className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold"
                     >
                       Learn More →
