@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
@@ -11,10 +10,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  generateStaticParams: false,
   experimental: {
     missingSuspenseWithCSRBailout: false,
-  }
+  },
+  skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true
 }
 
 module.exports = nextConfig
