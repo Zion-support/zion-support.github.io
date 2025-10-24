@@ -28,6 +28,8 @@ export default function AiRecruitmentAssistantPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiRecruitmentAssistantPage

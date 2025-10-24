@@ -28,6 +28,8 @@ export default function ContentGenerationPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ContentGenerationPage

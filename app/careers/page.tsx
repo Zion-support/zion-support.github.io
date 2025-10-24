@@ -28,6 +28,8 @@ export default function CareersPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default CareersPage

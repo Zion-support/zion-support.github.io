@@ -28,6 +28,8 @@ export default function AiStockPortfolioManagerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiStockPortfolioManagerPage

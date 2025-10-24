@@ -28,6 +28,8 @@ export default function AiWorkflowAutomationPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiWorkflowAutomationPage

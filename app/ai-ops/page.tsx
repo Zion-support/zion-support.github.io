@@ -28,6 +28,8 @@ export default function AiOpsPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiOpsPage

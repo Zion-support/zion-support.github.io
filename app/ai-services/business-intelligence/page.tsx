@@ -28,6 +28,8 @@ export default function BusinessIntelligencePage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default BusinessIntelligencePage

@@ -28,6 +28,8 @@ export default function AiFashionDesignPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiFashionDesignPage

@@ -28,6 +28,8 @@ export default function ZionCustomerInsightsPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionCustomerInsightsPage

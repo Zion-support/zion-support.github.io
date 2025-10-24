@@ -28,6 +28,8 @@ export default function AiChatbotEnterprisePage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiChatbotEnterprisePage

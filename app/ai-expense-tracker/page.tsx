@@ -28,6 +28,9 @@ export default function AiExpenseTrackerPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
-}
+};
+
+export default AIExpenseTrackerPage;

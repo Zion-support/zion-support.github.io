@@ -28,6 +28,8 @@ export default function ZionAiImageGeneratorPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionAiImageGeneratorPage

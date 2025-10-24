@@ -28,6 +28,8 @@ export default function AiContentWriterPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiContentWriterPage

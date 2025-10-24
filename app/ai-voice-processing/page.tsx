@@ -28,6 +28,8 @@ export default function AiVoiceProcessingPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiVoiceProcessingPage

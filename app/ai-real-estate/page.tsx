@@ -28,6 +28,8 @@ export default function AiRealEstatePage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiRealEstatePage

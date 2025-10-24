@@ -28,6 +28,8 @@ export default function ZionSmartAnalyticsDashboardPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionSmartAnalyticsDashboardPage

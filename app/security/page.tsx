@@ -28,6 +28,8 @@ export default function SecurityPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default SecurityPage

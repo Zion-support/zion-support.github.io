@@ -28,6 +28,8 @@ export default function AiAutomatedTestingPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiAutomatedTestingPage

@@ -28,6 +28,8 @@ export default function AiTransportationPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiTransportationPage

@@ -28,6 +28,8 @@ export default function ZionAiSocialSchedulerProPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionAiSocialSchedulerProPage

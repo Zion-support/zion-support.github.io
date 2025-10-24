@@ -28,6 +28,8 @@ export default function QuantumComputingSolutionsPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default QuantumComputingSolutionsPage

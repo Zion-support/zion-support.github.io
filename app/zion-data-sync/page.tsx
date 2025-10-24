@@ -28,6 +28,8 @@ export default function ZionDataSyncPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionDataSyncPage

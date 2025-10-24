@@ -28,6 +28,8 @@ export default function ZionAiVoiceAssistantPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionAiVoiceAssistantPage

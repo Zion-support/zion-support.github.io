@@ -28,6 +28,8 @@ export default function ZionCustomerSatisfactionMonitorPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionCustomerSatisfactionMonitorPage

@@ -28,6 +28,8 @@ export default function ZionAiWebsiteAnalyzerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionAiWebsiteAnalyzerPage

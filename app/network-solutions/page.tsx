@@ -28,6 +28,8 @@ export default function NetworkSolutionsPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default NetworkSolutionsPage

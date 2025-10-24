@@ -28,6 +28,8 @@ export default function AiSeoOptimizerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiSeoOptimizerPage

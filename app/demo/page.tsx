@@ -28,6 +28,7 @@ export default function DemoPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+</>
+  )
 }
+export default DemoPage

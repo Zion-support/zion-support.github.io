@@ -28,6 +28,8 @@ export default function ItInfrastructureSolutionsPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ItInfrastructureSolutionsPage

@@ -28,6 +28,8 @@ export default function ZionLeadMagnetPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionLeadMagnetPage

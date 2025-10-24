@@ -28,6 +28,8 @@ export default function AiCybersecurityMonitorPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiCybersecurityMonitorPage

@@ -28,6 +28,8 @@ export default function AiQuantumTaskOptimizerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiQuantumTaskOptimizerPage

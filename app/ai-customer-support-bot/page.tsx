@@ -28,6 +28,8 @@ export default function AiCustomerSupportBotPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiCustomerSupportBotPage

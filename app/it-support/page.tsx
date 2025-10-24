@@ -28,6 +28,8 @@ export default function ItSupportPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ItSupportPage

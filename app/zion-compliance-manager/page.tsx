@@ -28,6 +28,8 @@ export default function ZionComplianceManagerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionComplianceManagerPage

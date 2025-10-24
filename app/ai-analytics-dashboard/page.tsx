@@ -28,6 +28,8 @@ export default function AiAnalyticsDashboardPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiAnalyticsDashboardPage

@@ -28,6 +28,8 @@ export default function AiSupplyChainPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiSupplyChainPage

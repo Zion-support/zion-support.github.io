@@ -28,6 +28,8 @@ export default function AiMobileAppBuilderPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiMobileAppBuilderPage

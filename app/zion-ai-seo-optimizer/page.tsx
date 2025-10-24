@@ -28,6 +28,8 @@ export default function ZionAiSeoOptimizerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionAiSeoOptimizerPage

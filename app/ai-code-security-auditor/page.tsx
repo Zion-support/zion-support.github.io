@@ -28,6 +28,8 @@ export default function AiCodeSecurityAuditorPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiCodeSecurityAuditorPage

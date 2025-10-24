@@ -28,6 +28,8 @@ export default function AiRecommendationEnginePage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiRecommendationEnginePage

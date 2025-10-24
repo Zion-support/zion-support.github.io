@@ -1,101 +1,101 @@
-'use client';
-import React, { useEffect } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void,
+  trackPageView: (pageName: string) => void
+}
+
+:all-pages-backup/components/AnalyticsProvider.tsx
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
+  undefined
+)
+
+export const useAnalytics = () => {;
+  const context = useContext(AnalyticsContext);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined
+)
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext)
+  if (!context) {;
+    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
+  }
+  return context
+}
+
+interface AnalyticsProviderProps {
+  children: ReactNode
+}
+
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
-  useEffect(() => {
-    // Initialize Google Analytics
-    const initAnalytics = () => {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-      document.head.appendChild(script);
-      // Initialize gtag
-      (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];
-      function gtag(...args: unknown[]) {
-        (window as { dataLayer: unknown[] }).dataLayer.push(args);
-      }
-      (window as { gtag: typeof gtag }).gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', GA_TRACKING_ID, {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true
-      });
-    };
-    // Track page views
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-          send_page_view: true
-        });
-      }
-    };
+    if (type of windo w !==&quot;undefined&quot;) {
+      // Google Analytics
+      if (process.env.NODE_ENV === &quot;production&quot;) {
+        const script = document.createElement(&quot;script&quot;);
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+        script.async = true
+        document.head.appendChild(script)
 
-    // Handle route changes
-    const handleRouteChange = () => {
-      if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-          send_page_view: true
-        });
+        window.gtag =
+          window.gtag ||
+          function (...args: any[]) {
+            (window.gtag as any).q = (window.gtag as any).q || []
+            (window.gtag as any).q.push(args)
+          }
+        window.gtag(&quot;js&quot;, new Date())
+        window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
       }
-    };
-    // Track user interactions
-    const trackInteractions = () => {
-      // Track button clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
-          if ((window as { gtag: unknown }).gtag) {
-            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'click', {
-              event_category: 'engagement',
-              event_label: text,
-              value: href
-            });
-          }
-        }
-      });
-      // Track form submissions
-      document.addEventListener('submit', (e) => {
-        const form = e.target as HTMLFormElement;
-        if ((window as { gtag: unknown }).gtag) {
-          (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'form_submit', {
-            event_category: 'engagement',
-            event_label: form.id || 'contact_form'
-          });
-        }
-      });
-      // Track phone number clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.getAttribute('href') && target.getAttribute('href')?.startsWith('tel:')) {
-          if ((window as { gtag: unknown }).gtag) {
-            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
-              event_category: 'engagement',
-              event_label: 'phone_number',
-              value: target.getAttribute('href')
-            });
-          }
-        }
-      });
-    };
-    // Initialize analytics
-    initAnalytics();
-    trackPageView();
-    trackInteractions();
-    window.addEventListener('popstate', handleRouteChange);
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, [GA_TRACKING_ID]);
-  return <>{children}</>;
-};
+    }
+  }, [])
+
+:all-pages-backup/components/AnalyticsProvider.tsx
+  consttrackEvent= (
+    eventName: string
+    parameters?: Record<string, unknown>
+  ) => {
+  consttrackEvent = (
+    eventName: string
+    parameters?: Record<string, unknown>
+  ) => {;
+    if (typeof window !== &quot;undefined&quot; && window.gtag) {
+      window.gtag(&quot;event&quot;, eventName, parameters)
+    }
+  }
+
+  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
+      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
+:all-pages-backup/components/AnalyticsProvider.tsx
+        page_title: pageName,
+  page_location: window.location.href
+        page_title: pageName
+        page_location: window.location.href
+      })
+    }
+  }
+
+  constvalue: AnalyticsContextType = {trackEvent
+    trackPageView
+  }
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  )
+}
+
 export default AnalyticsProvider;
+  );
+:all-pages-backup/components/AnalyticsProvider.tsx
+{};
+
+export default AnalyticsProviderPage
+}
+export default AnalyticsProviderPage;

@@ -28,6 +28,8 @@ export default function AiPredictiveAnalyticsPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiPredictiveAnalyticsPage

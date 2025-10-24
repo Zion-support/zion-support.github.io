@@ -28,6 +28,8 @@ export default function ZionAiSurveyBuilderPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionAiSurveyBuilderPage

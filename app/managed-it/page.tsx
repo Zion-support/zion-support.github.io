@@ -28,6 +28,8 @@ export default function ManagedItPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ManagedItPage

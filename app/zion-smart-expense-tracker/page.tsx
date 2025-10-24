@@ -28,6 +28,8 @@ export default function ZionSmartExpenseTrackerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionSmartExpenseTrackerPage

@@ -28,6 +28,8 @@ export default function ZionChatAiPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionChatAiPage

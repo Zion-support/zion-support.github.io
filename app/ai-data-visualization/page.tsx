@@ -28,6 +28,8 @@ export default function AiDataVisualizationPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiDataVisualizationPage

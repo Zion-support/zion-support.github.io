@@ -28,6 +28,8 @@ export default function AiTelepathicInterfacePage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiTelepathicInterfacePage

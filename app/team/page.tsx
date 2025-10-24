@@ -28,6 +28,7 @@ export default function TeamPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
+export default TeamPage

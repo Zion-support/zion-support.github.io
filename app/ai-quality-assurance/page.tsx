@@ -28,6 +28,8 @@ export default function AiQualityAssurancePage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiQualityAssurancePage

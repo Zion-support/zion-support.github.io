@@ -28,6 +28,8 @@ export default function AiSentimentAnalyzerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiSentimentAnalyzerPage

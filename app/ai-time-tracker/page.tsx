@@ -28,6 +28,8 @@ export default function AiTimeTrackerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiTimeTrackerPage

@@ -28,6 +28,9 @@ export default function AiVideoEditorPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
-}
+};
+
+export default AIVideoEditorPage;

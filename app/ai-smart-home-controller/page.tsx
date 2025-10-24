@@ -28,6 +28,8 @@ export default function AiSmartHomeControllerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiSmartHomeControllerPage

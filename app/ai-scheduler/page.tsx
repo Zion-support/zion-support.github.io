@@ -28,6 +28,8 @@ export default function AiSchedulerPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiSchedulerPage

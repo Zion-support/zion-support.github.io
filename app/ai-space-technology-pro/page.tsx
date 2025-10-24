@@ -28,6 +28,8 @@ export default function AiSpaceTechnologyProPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiSpaceTechnologyProPage

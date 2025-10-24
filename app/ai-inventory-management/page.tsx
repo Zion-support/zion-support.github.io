@@ -28,6 +28,8 @@ export default function AiInventoryManagementPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiInventoryManagementPage

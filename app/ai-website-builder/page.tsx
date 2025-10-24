@@ -28,6 +28,8 @@ export default function AiWebsiteBuilderPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiWebsiteBuilderPage

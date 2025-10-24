@@ -28,6 +28,8 @@ export default function ZionApiDevelopmentPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionApiDevelopmentPage

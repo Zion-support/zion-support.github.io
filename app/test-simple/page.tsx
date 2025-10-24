@@ -28,6 +28,8 @@ export default function TestSimplePage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default TestSimplePage

@@ -28,6 +28,8 @@ export default function AccessibilityPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AccessibilityPage

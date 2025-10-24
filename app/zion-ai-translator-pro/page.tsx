@@ -28,6 +28,8 @@ export default function ZionAiTranslatorProPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default ZionAiTranslatorProPage

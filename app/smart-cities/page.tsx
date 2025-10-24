@@ -28,6 +28,8 @@ export default function SmartCitiesPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default SmartCitiesPage

@@ -28,6 +28,8 @@ export default function AiAutomatedReportingPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiAutomatedReportingPage

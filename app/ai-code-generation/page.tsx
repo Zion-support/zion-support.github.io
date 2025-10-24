@@ -28,6 +28,8 @@ export default function AiCodeGenerationPage() {
           </Link>
         </div>
       </div>
-    </>
-  );
+      <Footer />
+</>
+  )
 }
+export default AiCodeGenerationPage
