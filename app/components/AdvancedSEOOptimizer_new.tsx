@@ -1,7 +1,7 @@
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import React from 'react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 interface AdvancedSEOOptimizer_newProps {
   className?: string;
@@ -42,7 +42,10 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1679
   return (
     <>
       <Navigation />
@@ -141,4 +144,8 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedSEOOptimizer_new;
+=======
+export default AdvancedSEOOptimizer_new;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1679
