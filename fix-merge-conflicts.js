@@ -14,8 +14,7 @@ function fixMergeConflicts(filePath) {
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
     // Split by merge conflict markers
-    const parts = content.split(/<<<<<<< HEAD|=======|>>>>>>> [a-f0-9]+/);
-    
+    const parts = content.split(/<<<<<<< HEAD|=======|    
     if (parts.length >= 3) {
       // Take the first part (before HEAD) and the second part (between HEAD and =======)
       // This usually gives us the most complete version

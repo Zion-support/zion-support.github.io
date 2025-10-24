@@ -60,8 +60,8 @@ function fixSyntaxErrors(filePath) {
     const functionFixes = [
       // Fix malformed function with missing return
       {
-        pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*</g,$2 />
-        replacement: 'const $1: React.FC = () => {\n  return (\n    <'$2 />
+        pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*</g,
+        replacement: 'const $1: React.FC = () => {\n  return (\n    <'
       },
       // Fix malformed function with missing return statement
       {
