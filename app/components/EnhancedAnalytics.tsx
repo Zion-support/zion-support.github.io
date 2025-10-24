@@ -1,5 +1,13 @@
 'use client';
 import React, { createContext, useContext, useEffect, useState } from 'react';
+
+// Extend Window interface for Google Analytics
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (page: string) => void;

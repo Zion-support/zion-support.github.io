@@ -1,13 +1,13 @@
-'use client';
 import React from 'react';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
+  title: 'AI Email Marketing Automation - Zion Tech Group',
+  description: 'AI-powered email marketing automation solutions for modern businesses.',
+  keywords: 'email marketing, AI automation, technology services',
   openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
+    title: 'AI Email Marketing Automation - Zion Tech Group',
+    description: 'AI-powered email marketing automation solutions for modern businesses.',
     type: 'website',
     url: 'https://ziontechgroup.com/micro-saas/ai-email-marketing-automation',
   },

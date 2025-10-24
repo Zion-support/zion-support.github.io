@@ -1,13 +1,13 @@
-'use client';
 import React from 'react';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
+  title: 'AI Expense Tracker - Zion Tech Group',
+  description: 'AI-powered expense tracking solutions for modern businesses.',
+  keywords: 'expense tracking, AI solutions, technology services',
   openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
+    title: 'AI Expense Tracker - Zion Tech Group',
+    description: 'AI-powered expense tracking solutions for modern businesses.',
     type: 'website',
     url: 'https://ziontechgroup.com/micro-saas/ai-expense-tracker',
   },

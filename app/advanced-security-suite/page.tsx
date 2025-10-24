@@ -1,13 +1,13 @@
-'use client';
 import React from 'react';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
+  title: 'Advanced Security Suite - Zion Tech Group',
+  description: 'Comprehensive advanced security solutions for modern businesses.',
+  keywords: 'security, AI solutions, technology services',
   openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
+    title: 'Advanced Security Suite - Zion Tech Group',
+    description: 'Comprehensive advanced security solutions for modern businesses.',
     type: 'website',
     url: 'https://ziontechgroup.com/advanced-security-suite',
   },

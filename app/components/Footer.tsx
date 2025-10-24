@@ -1,16 +1,4 @@
-import React from "'react';"
-import { Metadata } from 'next';
-export const metadata: Metadata = {
-  title: 'Footer - Zion Tech Group',
-  description: 'Comprehensive footer solutions for modern businesses.',
-  keywords: 'footer, AI solutions, technology services',
-  openGraph: {
-    title: 'Footer - Zion Tech Group',
-    description: 'Comprehensive footer solutions for modern businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/components',
-  },
-};
+import React from 'react';
 const FooterPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

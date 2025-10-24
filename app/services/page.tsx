@@ -1,13 +1,13 @@
-'use client';
 import React from 'react';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
+  title: 'Services - Zion Tech Group',
+  description: 'Comprehensive technology services for modern businesses.',
+  keywords: 'services, AI solutions, technology services',
   openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
+    title: 'Services - Zion Tech Group',
+    description: 'Comprehensive technology services for modern businesses.',
     type: 'website',
     url: 'https://ziontechgroup.com/services',
   },

@@ -1,13 +1,13 @@
-'use client';
 import React from 'react';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
+  title: '5G Smart City Solutions - Zion Tech Group',
+  description: 'Comprehensive 5G smart city solutions for modern businesses.',
+  keywords: '5G, smart city, AI solutions, technology services',
   openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
+    title: '5G Smart City Solutions - Zion Tech Group',
+    description: 'Comprehensive 5G smart city solutions for modern businesses.',
     type: 'website',
     url: 'https://ziontechgroup.com/5g-smart-city-solutions',
   },

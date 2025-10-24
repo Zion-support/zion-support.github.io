@@ -1,12 +1,12 @@
-import React from "'react';"
+import React from 'react';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
+  title: 'AI Chatbot Builder - Zion Tech Group',
+  description: 'Comprehensive AI chatbot builder solutions for modern businesses.',
+  keywords: 'AI chatbot, AI solutions, technology services',
   openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
+    title: 'AI Chatbot Builder - Zion Tech Group',
+    description: 'Comprehensive AI chatbot builder solutions for modern businesses.',
     type: 'website',
     url: 'https://ziontechgroup.com/ai-chatbot-builder',
   },

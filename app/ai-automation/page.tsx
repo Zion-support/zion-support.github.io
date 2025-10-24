@@ -1,12 +1,12 @@
-import React from "'react';"
+import React from 'react';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
+  title: 'AI Automation - Zion Tech Group',
+  description: 'Comprehensive AI automation solutions for modern businesses.',
+  keywords: 'AI automation, AI solutions, technology services',
   openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
+    title: 'AI Automation - Zion Tech Group',
+    description: 'Comprehensive AI automation solutions for modern businesses.',
     type: 'website',
     url: 'https://ziontechgroup.com/ai-automation',
   },
