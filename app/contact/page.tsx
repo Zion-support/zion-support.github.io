@@ -30,7 +30,7 @@ const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -51,7 +51,7 @@ const ContactPage: React.FC = () => {
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Get in touch</h2>
               <p className="text-gray-300 mb-8">
-                We're here to help you transform your business with cutting-edge AI and IT solutions. 
+                We're here to help you transform your business with cutting-edge AI and IT solutions.
                 Reach out to us and let's start your digital transformation journey.
               </p>
             </div>
@@ -83,7 +83,6 @@ const ContactPage: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
                   <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-                </div>
                 </div>
               </div>
             </div>
@@ -163,7 +162,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   )
