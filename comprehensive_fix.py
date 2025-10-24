@@ -1,129 +1,160 @@
 #!/usr/bin/env python3
+"""
+Comprehensive script to fix all syntax errors in TypeScript/JSX files
+"""
 import os
 import re
 import glob
 
-def fix_imports_and_syntax(file_path):
-    """Fix common import and syntax issues"""
+def comprehensive_fix(file_path):
+    """Comprehensive fix for all syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix missing imports for common components
-        if 'Helmet' in content and 'import { Helmet }' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport { Helmet } from 'react-helmet-async'"
-            )
+        # Fix 1: Remove all malformed JSX comments and empty braces
+        content = re.sub(r'\{/\*.*?\*/\};\s*', '', content)
+        content = re.sub(r'\{\}\s*', '', content)
         
-        if 'Navigation' in content and 'import Navigation' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport Navigation from './Navigation'"
-            )
+        # Fix 2: Fix malformed return statements
+        content = re.sub(r'return\s*\(\s*\n\s*\n\s*<', 'return (\n    <', content)
+        content = re.sub(r'return\s*\(\s*\n\s*<', 'return (\n    <', content)
         
-        if 'Footer' in content and 'import Footer' not in content:
-            content = content.replace(
-                "'use client'",
-                "'use client'\nimport Footer from './Footer'"
-            )
+        # Fix 3: Remove duplicate export statements
+        # Find all export default statements and keep only the last one
+        export_matches = list(re.finditer(r'export default \w+;', content))
+        if len(export_matches) > 1:
+            # Keep only the last export statement
+            for i, match in enumerate(export_matches[:-1]):
+                content = content.replace(match.group(), '')
         
-        # Fix missing lucide-react imports
-        lucide_icons = ['ArrowRight', 'CheckCircle', 'Download', 'X', 'Brain', 'BarChart', 'Target', 'TrendingUp']
-        missing_icons = [icon for icon in lucide_icons if icon in content and f'import {{ {icon}' not in content]
-        if missing_icons:
-            import_line = f"import {{ {', '.join(missing_icons)} }} from 'lucide-react'"
-            if 'import { Helmet }' in content:
-                content = content.replace("import { Helmet } from 'react-helmet-async'", f"import {{ Helmet }} from 'react-helmet-async'\n{import_line}")
+        # Fix 4: Fix malformed function declarations
+        # Replace PagePage with proper component names
+        if 'const PagePage = () => {' in content:
+            filename = os.path.basename(file_path)
+            if filename == 'page.tsx':
+                dir_name = os.path.basename(os.path.dirname(file_path))
+                component_name = ''.join(word.capitalize() for word in dir_name.split('-')) + 'Page'
             else:
-                content = content.replace("'use client'", f"'use client'\n{import_line}")
+                component_name = filename.replace('.tsx', '').replace('.ts', '')
+                component_name = ''.join(word.capitalize() for word in component_name.split('-'))
+            
+            content = content.replace('const PagePage = () => {', f'const {component_name} = () => {{')
+            content = content.replace('export default PagePage;', f'export default {component_name};')
         
-        # Fix unescaped entities
-        content = re.sub(r"Let's", "Let&apos;s", content)
-        content = re.sub(r"Don't", "Don&apos;t", content)
-        content = re.sub(r"can't", "can&apos;t", content)
-        content = re.sub(r"won't", "won&apos;t", content)
-        content = re.sub(r"it's", "it&apos;s", content)
-        content = re.sub(r"we're", "we&apos;re", content)
-        content = re.sub(r"you're", "you&apos;re", content)
-        content = re.sub(r"they're", "they&apos;re", content)
-        content = re.sub(r"isn't", "isn&apos;t", content)
-        content = re.sub(r"aren't", "aren&apos;t", content)
-        content = re.sub(r"wasn't", "wasn&apos;t", content)
-        content = re.sub(r"weren't", "weren&apos;t", content)
-        content = re.sub(r"hasn't", "hasn&apos;t", content)
-        content = re.sub(r"haven't", "haven&apos;t", content)
-        content = re.sub(r"hadn't", "hadn&apos;t", content)
-        content = re.sub(r"wouldn't", "wouldn&apos;t", content)
-        content = re.sub(r"shouldn't", "shouldn&apos;t", content)
-        content = re.sub(r"couldn't", "couldn&apos;t", content)
-        content = re.sub(r"didn't", "didn&apos;t", content)
-        content = re.sub(r"doesn't", "doesn&apos;t", content)
-        content = re.sub(r"do n't", "don&apos;t", content)
+        # Fix 5: Fix malformed JSX structure
+        # Remove empty lines and fix indentation
+        lines = content.split('\n')
+        fixed_lines = []
+        in_jsx = False
+        jsx_indent = 0
         
-        # Fix quotes
-        content = re.sub(r'"([^"]*)"', r'&quot;\1&quot;', content)
+        for line in lines:
+            stripped = line.strip()
+            
+            # Track JSX context
+            if 'return (' in line:
+                in_jsx = True
+                jsx_indent = 0
+            elif in_jsx and stripped.startswith('</'):
+                in_jsx = False
+                jsx_indent = 0
+            
+            # Fix empty lines in JSX
+            if in_jsx and not stripped and jsx_indent > 0:
+                continue
+            
+            # Fix indentation in JSX
+            if in_jsx and stripped.startswith('<'):
+                if stripped.startswith('</'):
+                    jsx_indent -= 1
+                line = '    ' * (jsx_indent + 1) + stripped
+                if not stripped.startswith('</'):
+                    jsx_indent += 1
+            
+            fixed_lines.append(line)
         
-        # Fix console statements (comment them out)
-        content = re.sub(r'console\.(log|warn|error)\([^)]*\);?', r'// \g<0>', content)
+        content = '\n'.join(fixed_lines)
         
-        # Fix missing display names for components
-        if 'export default function' in content and 'displayName' not in content:
-            # Find the function name
-            match = re.search(r'export default function (\w+)', content)
-            if match:
-                func_name = match.group(1)
-                content = content.replace(
-                    f'export default function {func_name}',
-                    f'export default function {func_name}\n{func_name}.displayName = "{func_name}"'
-                )
+        # Fix 6: Remove semicolons after JSX elements
+        content = re.sub(r';\s*$', '', content, flags=re.MULTILINE)
         
-        # Fix const vs let issues
-        content = re.sub(r'let clsEntries', 'const clsEntries', content)
+        # Fix 7: Fix malformed JSX attributes
+        content = re.sub(r'className="([^"]*)"\s*;\s*', r'className="\1" ', content)
         
-        # Fix missing closing tags (basic fixes)
-        content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
-        content = re.sub(r'<section([^>]*)>\s*$', r'<section\1></section>', content, flags=re.MULTILINE)
+        # Fix 8: Fix missing closing braces
+        # Count braces and ensure proper closing
+        brace_count = 0
+        paren_count = 0
+        in_function = False
+        lines = content.split('\n')
+        fixed_lines = []
         
-        # Fix merge conflict markers that might have been missed
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        for line in lines:
+            if 'const ' in line and '= () => {' in line:
+                in_function = True
+                brace_count = 1
+                paren_count = 0
+            elif in_function:
+                if '{' in line:
+                    brace_count += line.count('{')
+                if '}' in line:
+                    brace_count -= line.count('}')
+                if '(' in line:
+                    paren_count += line.count('(')
+                if ')' in line:
+                    paren_count -= line.count(')')
+                
+                if brace_count == 0 and paren_count == 0 and in_function:
+                    in_function = False
+                    if not line.strip().endswith('};'):
+                        line = line.rstrip() + ';'
+            
+            fixed_lines.append(line)
         
+        content = '\n'.join(fixed_lines)
+        
+        # Fix 9: Clean up any remaining malformed patterns
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)  # Remove multiple empty lines
+        content = re.sub(r';\s*;', ';', content)  # Remove duplicate semicolons
+        content = re.sub(r'\{\s*\}', '{}', content)  # Clean up empty braces
+        
+        # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed issues in: {file_path}")
+            print(f"Comprehensively fixed: {file_path}")
             return True
+        
         return False
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files
+    """Main function to comprehensively fix all files"""
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
-        'src/**/*.tsx',
-        'src/**/*.ts',
         'components/**/*.tsx',
         'components/**/*.ts'
     ]
     
-    fixed_count = 0
-    total_files = 0
+    files_processed = 0
+    files_fixed = 0
     
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
+        for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
-                total_files += 1
-                if fix_imports_and_syntax(file_path):
-                    fixed_count += 1
+                files_processed += 1
+                if comprehensive_fix(file_path):
+                    files_fixed += 1
     
-    print(f"\nFixed issues in {fixed_count} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Comprehensively fixed {files_fixed} files")
 
 if __name__ == "__main__":
     main()

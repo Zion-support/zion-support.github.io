@@ -1,0 +1,12 @@
+
+const fs = require('fs''
+const path = require('path''
+    let content = fs.readFileSync(filePath, 'utf8''
+      '&quot;': ''
+      '&apos;': "''
+      '&ldquo;': ''
+      '&rdquo;': ''
+      '&lsquo;': "''
+      '&rsquo;': "''
+      '&#39;': "''
+      '&#34;': ''

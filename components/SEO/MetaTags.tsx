@@ -1,5 +1,8 @@
-"use client";
+<<<<<<< HEAD
+import React from 'react'
+=======
 import React from 'react';
+>>>>>>> origin/main
 
 interface MetaTagsProps {
   className?: string;
@@ -8,10 +11,17 @@ interface MetaTagsProps {
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      <h2>MetaTags</h2>
-      <p>This component is under construction.</p>
+<<<<<<< HEAD
+      {/* Meta Tags component */}
+=======
+      {/* Meta tags component content */}
+>>>>>>> origin/main
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default MetaTags;
+=======
+export default MetaTags;
+>>>>>>> origin/main

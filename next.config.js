@@ -13,10 +13,13 @@ const nextConfig = {
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
+<<<<<<< HEAD
   output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist'
+=======
+>>>>>>> origin/main
 }
 
 module.exports = nextConfig

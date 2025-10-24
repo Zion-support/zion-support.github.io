@@ -1,47 +1,70 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React, { useEffect } from 'react';
 
-const PerformanceMonitorPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+interface WebVitalMetric {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals with proper analytics
+    const sendToAnalytics = (metric: WebVitalMetric) => {
+      // Send to analytics service (replace with your analytics provider)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true
+        });
+      }
+      
+      // Log in development for debugging
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+      }
+      
+      // Send to analytics service in production
+      if (process.env.NODE_ENV === 'production') {
+        // Example: sendToAnalytics(metric);
+      }
+    };
+
+    // Only load web-vitals in production or when needed
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+        onCLS(sendToAnalytics);
+        onFCP(sendToAnalytics);
+        onLCP(sendToAnalytics);
+        onTTFB(sendToAnalytics);
+        onINP(sendToAnalytics);
+      }).catch((error) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to load web-vitals: ', error);
+        }
+      });
     }
-  ]
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+    // Monitor page load performance
+    const measurePageLoad = () => {
+      if (typeof window !== 'undefined' && window.performance) {
+        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`[Performance] Page Load Time: ${loadTime}ms`);
+            console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
+          }
+        }
+      }
+    };
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -321,3 +344,21 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
+=======
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePageLoad();
+    } else {
+      window.addEventListener('load', measurePageLoad);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePageLoad);
+    };
+  }, []);
+
+  return null;
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/main
