@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send, Clock } from 'lucide-react';
 import { Metadata } from 'next';
@@ -15,38 +13,38 @@ export const metadata: Metadata = {
 export default function AiFinancialAnalyticsProPage() {
   const features = [
     {
-      icon: Brain,
-    title: 'AI-Powered Insights',
+      icon: 'Brain',
+      title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
-    benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
-},
-  {
-    icon: BarChart3,
-    title: 'Real-Time Analytics',
+      benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
+    },
+    {
+      icon: 'BarChart3',
+      title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
-    benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
-},
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
+      benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
+    },
+    {
+      icon: 'Shield',
+      title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
-    benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
-},
-  {
-    icon: Target,
-    title: 'Custom Dashboards',
+      benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
+    },
+    {
+      icon: 'Target',
+      title: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
-    benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
-},
-  {
-    icon: Zap,
-    title: 'Automated Reporting',
+      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
+    },
+    {
+      icon: 'Zap',
+      title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
-    benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
-},
-  {
-    icon: Globe,
-    title: 'Multi-Currency Support',
+      benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
+    },
+    {
+      icon: 'Globe',
+      title: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
     benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
 }
@@ -202,20 +200,20 @@ export default function AiFinancialAnalyticsProPage() {
     results: '20+ hours saved weekly'}
   ]
   const stats = [
-    { number: '500+', label: 'Financial Institutions', icon: Building2 },
-    { number: '1M+', label: 'Transactions Analyzed', icon: Database },
-    { number: '99.9%', label: 'Data Accuracy', icon: Shield },
-    { number: '50%', label: 'Faster Reporting', icon: Zap }
+    { number: '500+', label: 'Financial Institutions', icon: 'Building2' },
+    { number: '1M+', label: 'Transactions Analyzed', icon: 'Database' },
+    { number: '99.9%', label: 'Data Accuracy', icon: 'Shield' },
+    { number: '50%', label: 'Faster Reporting', icon: 'Zap' }
   ]
   const integrations = [
-    { name: 'QuickBooks', icon: Calculator, category: 'Accounting' },
-    { name: 'Xero', icon: FileText, category: 'Accounting' },
-    { name: 'SAP', icon: Database, category: 'ERP' },
-    { name: 'Oracle', icon: Building2, category: 'ERP' },
-    { name: 'Salesforce', icon: TrendingUp, category: 'CRM' },
-    { name: 'HubSpot', icon: Target, category: 'CRM' },
-    { name: 'Stripe', icon: CreditCard, category: 'Payments' },
-    { name: 'PayPal', icon: Wallet, category: 'Payments' }
+    { name: 'QuickBooks', icon: 'Calculator', category: 'Accounting' },
+    { name: 'Xero', icon: 'FileText', category: 'Accounting' },
+    { name: 'SAP', icon: 'Database', category: 'ERP' },
+    { name: 'Oracle', icon: 'Building2', category: 'ERP' },
+    { name: 'Salesforce', icon: 'TrendingUp', category: 'CRM' },
+    { name: 'HubSpot', icon: 'Target', category: 'CRM' },
+    { name: 'Stripe', icon: 'CreditCard', category: 'Payments' },
+    { name: 'PayPal', icon: 'Wallet', category: 'Payments' }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -403,7 +401,7 @@ export default function AiFinancialAnalyticsProPage() {
                 Join hundreds of finance professionals who trust AI Financial Analytics Pro.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <div className="flex items-center mb-4">
@@ -440,7 +438,7 @@ export default function AiFinancialAnalyticsProPage() {
               Start your free trial today and experience the power of AI-driven financial analytics.
               Join hundreds of finance professionals making smarter decisions with data.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"

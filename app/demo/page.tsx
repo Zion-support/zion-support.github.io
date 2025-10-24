@@ -2,37 +2,38 @@
 import React, { useState } from 'react';
 import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 const DemoPage: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState('ai-chatbot')
+  const [activeDemo, setActiveDemo] = useState('ai-chatbot');
+  
   const demos = [
     {
       id: 'ai-chatbot',
-    title: 'AI Chatbot Demo',
+      title: 'AI Chatbot Demo',
       description: 'Experience our intelligent chatbot that can handle customer inquiries 24/7.',
-    icon: Brain,
-    features: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Integration Ready']
-  },
-  {
-    id: 'ai-automation',
-    title: 'AI Automation Demo',
+      icon: 'Brain',
+      features: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Integration Ready']
+    },
+    {
+      id: 'ai-automation',
+      title: 'AI Automation Demo',
       description: 'See how AI can automate complex business processes and workflows.',
-    icon: Zap,
-    features: ['Workflow Automation', 'Smart Decision Making', 'Process Optimization', 'Real-time Monitoring']
-  },
-  {
-    id: 'ai-security',
-    title: 'AI Security Demo',
+      icon: 'Zap',
+      features: ['Workflow Automation', 'Smart Decision Making', 'Process Optimization', 'Real-time Monitoring']
+    },
+    {
+      id: 'ai-security',
+      title: 'AI Security Demo',
       description: 'Discover our AI-powered security solutions for threat detection and prevention.',
-    icon: Shield,
-    features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics']
-}
-  ]
+      icon: 'Shield',
+      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics']
+    }
+  ];
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
         {/* Hero Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Interactive <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Demos</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -44,7 +45,7 @@ const DemoPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 {demos.map((demo) => (
                   <div
                     key={demo.id}

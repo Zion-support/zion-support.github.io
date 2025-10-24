@@ -3,59 +3,59 @@ import React from 'react';
 import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe, Send, BarChart3, Target, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
-  {
+    {
       title: 'AI Solutions',
-      icon: Brain,
+      icon: 'Brain',
       description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
-    services: [
+      services: [
         'AI Chatbots & Virtual Assistants',
         'Machine Learning Models',
         'Natural Language Processing',
         'Computer Vision',
         'Predictive Analytics',
-    'AI Automation'
+        'AI Automation'
       ]
     },
     {
       title: 'IT Services',
-      icon: Cloud,
+      icon: 'Cloud',
       description: 'Comprehensive IT services to modernize your infrastructure and operations.',
-    services: [
+      services: [
         'Cloud Migration & Management',
         'Cybersecurity Solutions',
         'DevOps & CI/CD',
         'Database Management',
         'Network Infrastructure',
-    'IT Support & Maintenance'
+        'IT Support & Maintenance'
       ]
     },
     {
       title: 'Web Development',
-      icon: Globe,
+      icon: 'Globe',
       description: 'Custom web applications and websites built with modern technologies.',
-    services: [
+      services: [
         'React & Next.js Applications',
         'E-commerce Solutions',
         'Progressive Web Apps',
         'API Development',
         'Mobile-First Design',
-    'Performance Optimization'
+        'Performance Optimization'
       ]
     },
     {
       title: 'Mobile Development',
-      icon: Smartphone,
+      icon: 'Smartphone',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
-    services: [
+      services: [
         'iOS App Development',
         'Android App Development',
         'React Native Apps',
         'Flutter Applications',
         'App Store Optimization',
-    'Mobile UI/UX Design'
-  ]
-}
-  ]
+        'Mobile UI/UX Design'
+      ]
+    }
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
       {/* Hero Section */}

@@ -5,22 +5,22 @@ import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle, Cloc
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Zap,
+      icon: 'Zap',
       title: 'Workflow Automation',
       description: 'Automate complex business processes with intelligent workflow management.'
     },
     {
-      icon: Brain,
+      icon: 'Brain',
       title: 'Intelligent Decision Making',
       description: 'AI-powered decision making based on data analysis and business rules.'
     },
     {
-      icon: Settings,
+      icon: 'Settings',
       title: 'Custom Integrations',
       description: 'Seamlessly integrate with your existing systems and third-party applications.'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       title: 'Scalable Solutions',
       description: 'Automation solutions that grow with your business and adapt to changing needs.'
     }
@@ -29,24 +29,24 @@ const AIAutomationPage: React.FC = () => {
     {
       title: 'Customer Service',
       description: 'Automate ticket routing, response generation, and issue resolution.',
-      icon: Users
+      icon: 'Users'
     },
     {
       title: 'Data Processing',
       description: 'Automate data collection, validation, and analysis workflows.',
-      icon: BarChart
+      icon: 'BarChart'
     },
     {
       title: 'Marketing Automation',
       description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: MessageCircle
+      icon: 'MessageCircle'
     },
     {
       title: 'Financial Operations',
       description: 'Automate invoice processing, expense management, and financial reporting.',
-      icon: FileText
+      icon: 'FileText'
     }
-  ]
+  ];
   const benefits = [
   'Reduce operational costs by up to 70%',
     'Increase productivity and efficiency',
