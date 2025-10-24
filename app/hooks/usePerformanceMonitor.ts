@@ -5,7 +5,6 @@ enabled?: boolean;
 threshold?: number;
 measureMemoryUsage?: boolean;
 }
-}
 };"
 interface PerformanceData {"
 ;"
@@ -13,7 +12,7 @@ fps: "number;"
 memoryUsage: number;"
 loadTime: number;"
 renderTim",e: "number",
-}
+  );
 }
 };
 ;"
@@ -32,8 +31,9 @@ setMetrics(prev = > ({;"
         ...prev,;)"
 memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)"
 
-      ",}))
-    }
+      ",}
+  );
+}
   }, []);
 const init = useCallback(() => {;
 if(options.enabled !== false) {  ;
@@ -43,7 +43,7 @@ setIsMonitoringFPS(true);
   }, [options.enabled, measureMemoryUsage]);
 useEffect(() => {;
 if (!isMonitoringFPS) return;
-;
+}
 const countFrames = (;
 return;
 frameCountRef.current++);
@@ -62,8 +62,9 @@ lastTimeRef.current = currentTime}
     requestAnimationFrame(countFrames)}, [isMonitoringFPS]);
 useEffect(() => {;
 if(options.measureMemoryUsage) {  ;
-measureMemoryUsage();
-    }
+measureMemoryUsage(
+  );
+}
   }, [measureMemoryUsage, options.measureMemoryUsage]);
 return{;
 metrics,;
@@ -71,8 +72,9 @@ setMetrics,;
 isMonitoringFPS,;
 setIsMonitoringFPS,;
 measureMemoryUsage,;
-init}
-  }
+init
+  );
+}
 };"
 export default usePerformanceMonitor;</PerformanceData>
 }'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async";"'
+;import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
 import Footer from '../components/Footer";"'
@@ -26,12 +26,12 @@ color?: 'primary' | 'secondary' | 'white'"
 "constLoadingSpinner": React.FC<LoadingSpinnerProp s>= ({size = 'md'
 color= 'primary'"
 "sm": 'w-4 h-4'"
-    "md": 'w-8 h-8'"
+    "md": 'w-8 h-8'"}
 "lg": 'w-12 h-1 2",}"'"
 constcolorClasses= {"primary": 'text-indigo-60 0'"
     "secondary": 'text-gray-60 0'"
 "white": 'text-white";"'"
 "primary": 'text-indigo-600";"'"
     "secondary": 'text-gray-600";"'"
-"white": 'text-white"</LoadingSpinnerProp>"
+"white": 'text-white"</LoadingSpinnerProp>"}
 })'"

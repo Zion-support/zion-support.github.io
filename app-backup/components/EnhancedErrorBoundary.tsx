@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async";"'
+;import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
 import Footer from '../components/Footer";"'
@@ -24,5 +24,5 @@ use client';'"
     'Gain competitive advantage with advanced technology"
 "'"
             {process.env.NODE_ENV === 'development")</p>;"
-export default EnhancedErrorBoundary;"
+export default EnhancedErrorBoundary;"}
 }'"

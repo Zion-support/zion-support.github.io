@@ -10,8 +10,8 @@ $3"
 } else{;}"'"
 fetch(url, { body, method: "'POST'",keepalive: "true ",}).catch(() => {
         // Failed to send analytics - handle, silently
-      });
-    }"
+  );
+}"
   }, []);"
   useEffect(() => {;"'"
 if (typeof window !== 'undefined' && 'performance" in, window) {
@@ -25,8 +25,9 @@ timestamp: "Date.now();"
         }"
       });"'"
       observer.observe({ entryTypes: "['navigation'",'paint', 'largest-contentful-paint"] });
-      return () => observer.disconnect();
-    }
+      return () => observer.disconnect(
+  );
+}
   }, [reportWebVitals,]);
   return { reportWebVitals ;};"
 };"

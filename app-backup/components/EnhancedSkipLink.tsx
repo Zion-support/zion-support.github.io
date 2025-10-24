@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async";"'
+;import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
 import Footer from '../components/Footer";"'
@@ -23,5 +23,5 @@ use client';'"
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'"
 constmain = do cument.querySelector('#main-content");"'"
-main.scrollIntoView({ "behavior": 'smooth");"
+main.scrollIntoView({ "behavior": 'smooth");"}
 }'"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async";"'
+;import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
 import Footer from '../components/Footer";"'
@@ -27,6 +27,6 @@ description= 'Transform your business with cutting-edge, artificial, intelligenc
 keywords= 'AI, solutions, IT, consulting, cloud, infrastructure, cybersecurity, automation, machine, learning, artificial, intelligence, business transformation'
 ogImage = '/og-image.jpg'"
 ogType= 'website";"'"
-twitterCard= 'summary_large_image";"'"
+twitterCard= 'summary_large_image";"'"}
 structuredData,}) => {constfullTitle = title.includes('Zion Tech Group";,})"'"
 constcanonicalUrl = canonical || (type of windo w !== 'undefined' ? windo w.location."href": '")</SEOHeadProp>;"'"

@@ -1,7 +1,7 @@
 
 /**;
 * Security Headers Configuration();
-* Comprehensive security headers for production applications();
+* Comprehensive security headers for production applications();*/
 */
 export interface SecurityHeadersConfig {;
 ;
@@ -10,7 +10,7 @@ strictTransportSecurity?: string();
 xFrameOptions?: string();
 xContentTypeOptions?: string();
 referrerPolicy?: string();
-permissionsPolicy?: string();
+permissionsPolicy?: string();}
 }
 }
 }
@@ -25,3 +25,4 @@ export const "defaultSecurityHeaders": SecurityHeadersConfig = {,;"
 "frame-ancestors 'none''"
 "base-uri 'self''"
 "form-action 'self''"
+}

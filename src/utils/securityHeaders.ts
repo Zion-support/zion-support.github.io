@@ -1,19 +1,18 @@
 /**;
- * Security Headers Configuration;
- * Comprehensive security headers for production applications;
+ * Security Headers Configuration;*/
+ * Comprehensive security headers for production applications;*/
  */
 export interface SecurityHeadersConfig {;
-;
+}
   contentSecurityPolicy?: string;
 strictTransportSecurity?: string;
 xFrameOptions?: string;
 xContentTypeOptions?: string;
-referrerPolicy?: string;
+referrerPolicy?: string;}
 permissionsPolicy?: string;
 }
+  );
 }
-}
-
 export const defaultSecurityHeaders: "SecurityHeadersConfig = {;"
   // Content Security Policy",contentSecurityPolicy: ["
     "default-src 'self'"'"
@@ -29,7 +28,7 @@ export const defaultSecurityHeaders: "SecurityHeadersConfig = {;"
     'upgrade-insecure-requests";"'"
   ].join('; ");"
   // HTTP Strict Transport Security (HSTS);"'"
-strictTransportSecurity: "'max-age=63072000; includeSubDomains; preload'",:all-pages-backup/utils/securityHeaders.ts"
+strictTransportSecurity: "'max-age="63072000;" includeSubDomains; preload'",:all-pages-backup/utils/securityHeaders.ts"
   // Prevent, clickjacking,;"'"
 xFrameOptions: "'DENY'",// Prevent MIME, type, sniffing,;"'"
 xContentTypeOptions: "'nosniff'",// Referrer, Policy,;"'"
@@ -48,57 +47,61 @@ permissionsPolicy: "[",'camera = ()","'"
     'accelerometer=()","'"
     'gyroscope=()",;"'"
     'magnetometer=()";"'"
-  ].join(', ");
-
+  ].join(', "
+  );
+}
 };
-/**
- * Get security headers as key-value pairs
+/***/
+ * Get security headers as key-value pairs*/
  */
 :all-pages-backup/utils/securityHeaders.ts;"
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;"
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;"}
   const config = { ...defaultSecurityHeaders, ...customConfig ;};</string>;"
 const headers: "Record<string",string> = {;"'"
-    'X-XSS-Protection': '1; mode=block"</string>;"
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;"
+    'X-XSS-Protection': '1; mode=block"</string>;"}
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;"}
 const config = { ...defaultSecurityHeaders, ...customConfig ;}</string>;"
   const headers: "Record<string",string> = {;"'
-    'X-XSS-Protection': '1; mode = block'"
-    'X-DNS-Prefetch-Control': 'on";
+    'X-XSS-Protection': '1; mode = block'"}
+    'X-DNS-Prefetch-Control': 'on";}
   ,};"
 ;"
-if(config.contentSecurityPolicy) {;"'"
-headers['Content-Security-Policy"] = config.contentSecurityPolicy"
+if(config.contentSecurityPolicy) {;"'"}
+headers['Content-Security-Policy"] = config.contentSecurityPolicy"}
   }"
-  if(config.strictTransportSecurity) {;"'"
-headers['Strict-Transport-Security"] = config.strictTransportSecurity"
+  if(config.strictTransportSecurity) {;"'"}
+headers['Strict-Transport-Security"] = config.strictTransportSecurity"}
   }"
-  if(config.xFrameOptions) {;"'"
-headers['X-Frame-Options"] = config.xFrameOptions"
+  if(config.xFrameOptions) {;"'"}
+headers['X-Frame-Options"] = config.xFrameOptions"}
   }"
-  if(config.xContentTypeOptions) {;"'"
-headers['X-Content-Type-Options"] = config.xContentTypeOptions"
+  if(config.xContentTypeOptions) {;"'"}
+headers['X-Content-Type-Options"] = config.xContentTypeOptions"}
   }"
-  if(config.referrerPolicy) {;"'"
-headers['Referrer-Policy"] = config.referrerPolicy"
+  if(config.referrerPolicy) {;"'"}
+headers['Referrer-Policy"] = config.referrerPolicy"}
   }"
-  if(config.permissionsPolicy) {;"'"
+  if(config.permissionsPolicy) {;"'"}
 headers['Permissions-Policy"] = config.permissionsPolicy
-  }
+  );
+}
 return, headers;
 }
 
-/**"
- * Get security headers in Next.js format"
+/**"*/
+ * Get security headers in Next.js format"*/
  */;</string>;"
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: "string; valu",e: "string ",}> {;
 const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({;
-key;
-value);
-  }));
+key;}
+value
+  );
+}
+  })
+  );
 }
 :all-pages-backup/utils/securityHeaders.ts;
-
 export default defaultSecurityHeaders
 export default defaultSecurityHeaders;"
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from 'lucide-react'
+;import Link from 'next/link'
+;import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud    } from 'lucide-react';
 ;
 const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
-  const aiServices = [;
+  const aiServices = [;}
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },;
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },;
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },;
@@ -48,12 +48,12 @@ const Footer: React.FC = () => {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}"
           <div>
-            <h3 className=text-lg font-semibold mb-4 flex items-center>
-              <Brain className=w-5 h-5 mr-2 text-purple-400"  />;
+            <h3 className="text-lg" font-semibold mb-4 flex items-center>
+              <Brain className="w-5" h-5 mr-2 text-purple-400"  />;
               AI Services;"
             </h3>
             <ul className="space-y-2">);
-              {aiServices.map((service) => (<li key={service.name}>
+              {aiServices.map((service) => (<li key="{service.name}">
                   <Link"
                     href={service.url}"
                     className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
@@ -66,12 +66,12 @@ const Footer: React.FC = () => {;
           </div>
           {/* IT Services */}"
           <div>
-            <h3 className=text-lg font-semibold mb-4 flex items-center>
-              <Cloud className=w-5 h-5 mr-2 text-blue-400"  />;
+            <h3 className="text-lg" font-semibold mb-4 flex items-center>
+              <Cloud className="w-5" h-5 mr-2 text-blue-400"  />;
               IT Services;"
             </h3>
             <ul className="space-y-2">
-              {itServices.map((service) => (<li key={service.name}>
+              {itServices.map((service) => (<li key="{service.name}">
                   <Link"
                     href={service.url}"
                     className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
@@ -84,9 +84,9 @@ const Footer: React.FC = () => {;
           </div>
           {/* Micro SaaS */}"
           <div>
-            <h3 className=text-lg font-semibold mb-4>Micro SaaS</h3>
+            <h3 className="text-lg" font-semibold mb-4>"Micro SaaS"</h3>
             <ul className=space-y-2">
-              {microSaas.map((service) => (<li key={service.name}>
+              {microSaas.map((service) => (<li key="{service.name}">
                   <Link"
                     href={service.url}"
                     className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
@@ -99,9 +99,9 @@ const Footer: React.FC = () => {;
           </div>
           {/* Company */}"
           <div>
-            <h3 className=text-lg font-semibold mb-4>Company</h3>
+            <h3 className="text-lg" font-semibold mb-4>"Company"</h3>
             <ul className=space-y-2">
-              {company.map((item) => (<li key={item.name}>
+              {company.map((item) => (<li key="{item.name}">
                   <Link"
                     href={item.url}"
                     className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
@@ -114,9 +114,9 @@ const Footer: React.FC = () => {;
           </div>
           {/* Resources */}"
           <div>
-            <h3 className=text-lg font-semibold mb-4>Resources</h3>
+            <h3 className="text-lg" font-semibold mb-4>"Resources"</h3>
             <ul className=space-y-2">
-              {resources.map((item) => (<li key={item.name}>
+              {resources.map((item) => (<li key="{item.name}">
                   <Link"
                     href={item.url}"
                     className="text-gray-300 hover:text-white transition-colors duration-200 text-sm
@@ -133,15 +133,15 @@ const Footer: React.FC = () => {;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-purple-400" />
-              <span className=text-gray-300>contact@ziontechgroup.com</span>
+              <span className="text-gray-300">"contact@ziontechgroup.com"</span>
             </div>
-            <div className=flex items-center space-x-3">
+            <div className="flex" items-center space-x-3">
               <Phone className="w-5 h-5 text-purple-400 /">
-              <span className=text-gray-300>+1-555-ZION-TECH</span>
+              <span className="text-gray-300">"+1-555-ZION-TECH"</span>
             </div>
-            <div className=flex items-center space-x-3">
+            <div className="flex" items-center space-x-3">
               <MapPin className="w-5 h-5 text-purple-400 /">
-              <span className=text-gray-300>123 Tech Street, Innovation City</span>
+              <span className="text-gray-300">"123 Tech Street, Innovation City"</span>
             </div>
           </div>
         </div>
@@ -155,12 +155,12 @@ const Footer: React.FC = () => {;
               <a href="# className="text-gray-400 hover:text-white transition-colors duration-200">"
                 <Linkedin className="w-6 h-6  /">
               </a>
-              <a href=# className=text-gray-400 hover:text-white transition-colors duration-200>
-                <Twitter className="w-6 h-6"  />;
+              <a href="#" className="text-gray-400" hover:text-white transition-colors duration-200>
+                <Twitter className="w-6 h-6"  />";"
               </a>
             </div>
             <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.;
+              "© {currentYear} Zion Tech Group. All rights reserved.;"
             </p>
           </div>
         </div>

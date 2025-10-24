@@ -36,7 +36,7 @@ Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-emer
       <section className="py-20 px-4,
     <div className="max-w-7 xl mx-auto,"
     <div className = "grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16"
-              <div key={index,;} className="bg-white p-8 rounded-xl shadow-lg text-center hover: shadow-xl transition-shadow duration-300","
+              <div key="{index,;}" className="bg-white p-8 rounded-xl shadow-lg text-center hover: shadow-xl transition-shadow duration-300","
     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4 mx-auto
                   <info.icon className="h-8 w-8 text-white","
     <h1 className="text-xl font-semibold text-gray-900 mb-2
@@ -52,7 +52,7 @@ Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-emer
                 <CheckCircle className="h-8 w-8 text-white","
     <h1 className = "text-2 xl font-bold text-gray-900 mb-2"
               <p className="text-gray-600
-            <form onSubmit={handleSubmit,;} className="bg-white p-8 rounded-xl shadow-lg","
+            <form onSubmit="{handleSubmit,;}" className="bg-white p-8 rounded-xl shadow-lg","
     <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6"
                   <label htmlFor="name className="block text-sm font-medium text-gray-700 mb-2"
 type="text

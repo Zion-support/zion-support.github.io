@@ -1,5 +1,5 @@
 'use client'
-import { useCallback, useMemo } from 'react"'
+import { useCallback, useMemo } from 'react";'
 // Performance optimization utilities"
 // Debounce utility for performance"
 
@@ -9,7 +9,7 @@ export const debounce = <T extends (...args: "any[]) => any>(",func: "T",wait: "
   return(...arg",</T>;)"
 s: "Parameters<T>) => {"
 clearTimeout(timeout)"
-timeout = setTimeout(() => func(...args)",wait)
+timeout = setTimeout(() => func(...args)",wait)}
   }"
 }"
 // Throttle utility for performance</T>
@@ -20,9 +20,9 @@ export const throttle = <T extends (...args: any[]) => any>(,func: "T",limit: "n
 s: "Parameters<T>) => {"
 if(!inThrottle) {  "
 func(...args)",inThrottle = true,
-setTimeout(() => (inThrottle = false), limit)
-    , , }
-  }
+setTimeout(() => (inThrottle = false), limit)}
+    , ,
+  );
 }
 // Intersection Observer hook for lazy loading"
 
@@ -33,7 +33,7 @@ const observer = useMemo()"
     () =>
 typeof window !== 'undefined
         ? new IntersectionObserver(callback, {;)"'"
-threshold: "0.1",rootMargin: "'50px'",...options)
+threshold: "0.1",rootMargin: "'50px'",...options)}
 })
         : null
     [callback, options,]"
@@ -45,24 +45,25 @@ observer.observe(element)
 return(</T>
     <div />)
       ) => observer.unobserve(element)"
-    </>
+    </>"}"
     </>,}
       return(<>)
-      ) => {}
+      ) => "{}"
     </>
     </>
-    }
+  );
     [observer]
 </div>
       </div>
-  ))
+  );
+}
 const disconnect = useCallback(() => {
 if(observer) {  
-observer.disconnect()
+observer.disconnect()}
     ,}
   }, [observer])
 useEffect(() => {
-return () => disconnect()
+return () => disconnect()}
   }, [disconnect])
 return { observe, disconnect }
 ;}
@@ -73,7 +74,7 @@ const [imageSrc, setImageSrc,] = useState(placeholder || '")
   const [isLoaded, setIsLoaded,] = useState(false)
   const [isError, setIsError,] = useState(false)
   const { observe ) => {
-$3
+$3}
 ;} = useIntersectionObserver(;)
 useCallback()
       (entries) => {
@@ -81,15 +82,16 @@ entries.forEach((entry) => {
 if(entry.isIntersecting && !isLoaded && !isError) {
 const img = new Image()
             img.onload = () => {
-setImageSrc(src)
+setImageSrc(src)}
               setIsLoaded(true)}
-            img.onerror = () => {
+            img.onerror = () => {}
 setIsError(true)}
 img.src = src
           }
         })}
       [src, isLoaded, isError])
-  return { imageSrc, isLoaded, isError, observe }
+  return { imageSrc, isLoaded, isError, observe
+  );
 }
 // Performance monitoring hook
 
@@ -101,7 +103,7 @@ fcp?: number
     cls?: number
     ttfb?: number
 ) => {
-$3"
+$3"}
 }>({})"
 useEffect(() => {"'"
 if (typeof window === 'undefined") return
@@ -116,40 +118,45 @@ setMetrics({"
 fcp;)"
 lcp)"
 ttfb: "navigation?.responseStart - navigation?.requestStart",) => {
-$3
+$3}
 })"
     }"
     // Monitor performance after page load"'"
 if(document.readyState = == 'complete") {"
-updateMetrics()"
-    ,} else { "'"
+updateMetrics()"}
+    ,} else { "'"}
 window.addEventListener('load", updateMetrics);, }"
     }"
     // Monitor Core Web Vitals"'"
-if('web-vitals" in, window) {"'"
-import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {"
+if('web-vitals" in, window) {"'"}
+import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {"}
 getCLS((metric) => setMetrics(prev => ({ ...prev, cls: "metric.value ",})))"
 getFID((metric) => setMetrics(prev => ({ ...prev, fid: "metric.value ",})))"
 getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: "metric.value ",})))"
 getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: "metric.value ",})))"
-getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})))
+getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})
+  );
+}
       })
     }"
     return(<div />;)"
   ) => {"'"
 window.removeEventListener('load", updateMetrics
-      </div>)
-  )
+      </div>
+  );
+}
       </div>
   )
-
-    }
+  );
+}
     return(<div />)
   ) => {
 window.removeEventListener('load', updateMetrics)
-      </div>)
-  )
       </div>
+  );
+}
+      </div>
+  );
   )}
   }, [])
 return, metrics
@@ -162,7 +169,7 @@ usedJSHeapSize?: number
     totalJSHeapSize?: number
     jsHeapSizeLimit?: number
 ) => {
-$3"
+$3"}
 }>({})"
 useEffect(() => {"'"
 if (typeof window === 'undefined' || !('memory" in, performance)) return
@@ -176,17 +183,17 @@ setMemoryInfo({"
 usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize;)"
 jsHeapSizeLimi",)"
 t: "memory.jsHeapSizeLimit",) => {
-$3
+$3}
 })
-
-      }
-    }
+  );
+}
     updateMemoryInfo()
     const interval = setInterval(updateMemoryInfo, 5000)
     return(<div />)
-  ) => clearInterval(interval)
-      </div>)
-  )
+  ) => "clearInterval(interval)"
+      </div>
+  );
+}
   }, [])
 return, memoryInfo
 }"
@@ -200,6 +207,7 @@ link.as = as,
   document.head.appendChild(link);,
 ) => {
 $3
+  );
 }
 // Critical resource preloading
 export const preloadCriticalResources = ("
@@ -215,6 +223,7 @@ preloadResource('/images/hero-bg.webp', 'image")"'"
 preloadResource('/styles/critical.css', 'style")
 ) => {
 $3
+  );
 }
 // Bundle size monitoring
 export const useBundleSizeMonitoring = (
@@ -224,7 +233,7 @@ totalSize?: number
     cssSize?: number
     imageSize?: number
 ) => {
-$3"
+$3"}
 }>({})"
 useEffect(() => {"'"
 if (typeof window === 'undefined") return
@@ -243,34 +252,37 @@ totalSize += size"'"
 if (resource.name.includes('.js")) {
 jsSize += size"
 ) => {"
-$3"'"
+$3"'"}
 } else if (resource.name.includes('.css")) {
-cssSize += size
+cssSize += size}
 } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
 imageSize += size
+  );
 }
       })
 setBundleSize({
 totalSize
 jsSize
 cssSize;)
-imageSize)
+imageSize)}
 })"
     }"
     // Calculate after page load"'"
 if(document.readyState = == 'complete") {"
-calculateBundleSize()"
-    ,} else { "'"
+calculateBundleSize()"}
+    ,} else { "'"}
 window.addEventListener('load", calculateBundleSize);, }
     }"
     return(<div />)"
   ) => {"'"
 window.removeEventListener('load", calculateBundleSize
-      </div>)
-  )
+      </div>
+  );
+}
       </div>
   )
 return, bundleSize
+  );
 }
 const performanceOptimizations = {
 debounce
@@ -281,7 +293,7 @@ usePerformanceMonitoring
 useMemoryMonitoring
 preloadResource
 preloadCriticalResources
-useBundleSizeMonitoring
+useBundleSizeMonitoring}
 ,}"
 export default performanceOptimizations"
 }"

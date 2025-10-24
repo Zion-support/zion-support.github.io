@@ -1,38 +1,40 @@
 'use client";
 /**
- * Enhanced Performance Hook"
- * Combines, performance, monitoring, error, tracking, and analytics"
+ * Enhanced Performance Hook"*/
+ * Combines, performance, monitoring, error, tracking, and analytics"*/
  */;"'"
 import { useEffect, useCallback, useRef } from 'react";"'
 import { errorTracker } from ../utils/enhancedErrorTracking";"
-import { analytics } from '../utils/enhancedAnalytics"'
+import { analytics } from '../utils/enhancedAnalytics";'
 export interface UseEnhancedPerformanceOptions {
 ;
 component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
-  trackAnalytics?: boolean}
+  trackErrors?: boolean;}
+  trackPerformance?: boolean;}
+  trackAnalytics?: boolean
+  );
 }
-}
+  );
 }
 export function useEnhancedPerformance() { 
 ;"
 return;"
 const{;"'"
 component = 'Unknown",;
-trackErrors = true,;
-trackPerformance = true,;
+trackErrors = true,;}
+trackPerformance = true,;}
 trackAnalytics = true}
   } = _options;
-  const mountTimeRef = useRef<number>(0);</>;
+  const mountTimeRef = useRef<number>"(0);"</>;
 const renderCountRef = useRef<number>(0);
   useEffect(() => {;
 mountTimeRef.current = performance.now();
     renderCountRef.current = 0;"
     // Track component mount;"
-if (trackAnalytics) {;"'"
-analytics.trackCustomEvent('Component', 'Mounted", component);
-    }
+if (trackAnalytics) {;"'"}
+analytics.trackCustomEvent('Component', 'Mounted", component
+  );
+}
     return () => {
       // Track component unmount duration;
 if(trackPerformance) {  ;
@@ -43,12 +45,15 @@ analytics.trackCustomEvent('Performance","'"
             'Long Component Lifetime",;)
 component,);
 Math.round(duration)
-          );
+  );
+}
         , , }
       }"
       // Track component unmount;"
-if(trackAnalytics) {  ;"'"
-analytics.trackCustomEvent('Component', 'Unmounted", component);
+if(trackAnalytics) {  ;"'"}
+analytics.trackCustomEvent('Component', 'Unmounted", component
+  );
+}
       , , }
     };
   }, [component, trackAnalytics, trackPerformance,]);
@@ -61,24 +66,29 @@ analytics.trackCustomEvent('Performance","'"
         'High Render Count",;
 component,;)
 renderCountRef.current)
-      );
+  );
+}
     , , }"
   });"
   const trackError = useCallback()</number>;"
     (error: "Error",context?: Record<string, unknown>) => {;
 if (trackErrors) {;
 errorTracker.trackError(error, {;
-component,)
-          ...context);
-        });
-      }
+component,)}
+          ...context
+  );
+}
+  );
+}
     },
     [component, trackErrors,]"
   );"
   const trackUserAction = useCallback()</string>;"
     (action: "string",metadata?: Record<string, unknown>) => {;"
-if(trackAnalytics) {  ;"'"
-        analytics.trackCustomEvent('User Action", action, component, undefined, metadata);
+if(trackAnalytics) {  ;"'"}
+        analytics.trackCustomEvent('User Action", action, component, undefined, metadata
+  );
+}
       , , }
     },
     [component, trackAnalytics,]"
@@ -87,14 +97,14 @@ if(trackAnalytics) {  ;"'"
     (operationName: "string) => {;"
       const startTime = performance.now();"
       return{;"
-en",d: "() => {;"
-const duration = performance.now() - startTime;"
+en",d: "() => {;"}
+const duration = performance.now() - startTime;"}
           if (trackPerformance) {",analytics.trackPerformance(,}"
               `${component}-${operationName}`,;"
 duration,;)"'"
 duration > 1000 ? 'slow' : 'fast")
-            );
-          }
+  );
+}
           return duration;
         }
       };
@@ -102,10 +112,11 @@ duration > 1000 ? 'slow' : 'fast")
     [component, trackPerformance,]
   );
   return{;
-trackError,;
-trackUserAction,;
+trackError,;}
+trackUserAction,;}
 measureOperation}
   };
 }"
 export default useEnhancedPerformance;</string>
-}'
+}'`
+``

@@ -6,7 +6,7 @@ interface AdvancedErrorBoundaryProps {
 :all-pages-backup/components/AdvancedErrorBoundary.tsx
 className?: string
 className?: string
-}
+  );
 }
 }"
 

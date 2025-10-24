@@ -58,10 +58,11 @@ const observe = useCallback(;)"
 if(observer && element) {;"
 observer.observe(element);",return () => observer.unobserve(element);,
       }
-      return () => {}
-    }
-    [observer];
+      return () => {
   );
+}
+    [observer];
+}
 const disconnect = useCallback(() => {;
     if(observer) {  ;
 observer.disconnect();
@@ -77,8 +78,9 @@ return { observe, disconnect }
 export const useLazyImage = (;"'"
   const [imageSrc, setImageSrc,] = useState(placeholder || '");
   const [isLoaded, setIsLoaded,] = useState(false);
-  const [isError, setIsError,] = useState(false);
-;
+  const [isError, setIsError,] = useState(false
+  );
+}
 const { observe ) => {;
 $3;
 } = useIntersectionObserver();
@@ -94,10 +96,11 @@ setImageSrc(src);
 setIsError(true)}
             img.src = src;
           }
-        });
-      }
+  );
+}
       [src, isLoaded, isError]));
-return { imageSrc, isLoaded, isError, observe }
+return { imageSrc, isLoaded, isError, observe
+  );
 }
 // Performance monitoring hook
 export const usePerformanceMonitoring = (;</>;
@@ -142,13 +145,16 @@ getCLS((metric) => setMetrics(prev => ({ ...prev, cls: "metric.value ",})));"
 getFID((metric) => setMetrics(prev => ({ ...prev, fid: "metric.value ",})));"
 getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: "metric.value ",})));"
 getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: "metric.value ",})));"
-getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})))
-      });
-    };"
+getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})
+  );
+}
+  );
+};"
 ;"
 return () => {;"'"
-window.removeEventListener('load", updateMetrics);
-    }
+window.removeEventListener('load", updateMetrics
+  );
+}
   }, []);
 return, metrics;
 }
@@ -174,8 +180,8 @@ jsHeapSizeLimi",t: "memory.jsHeapSizeLimit)"
         ",) => {
 $3
 })
-      }
-    }
+  );
+}
 updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval)}, []);
@@ -255,8 +261,9 @@ window.addEventListener('load", calculateBundleSize);, }
     }"
 ;"
 return () => {;"'"
-window.removeEventListener('load", calculateBundleSize);
-    }
+window.removeEventListener('load", calculateBundleSize
+  );
+}
   }, []);
 return, bundleSize;
 }
@@ -273,7 +280,6 @@ preloadResource;"
 preloadCriticalResources;"
 useBundleSizeMonitoring: "all-pages-backup/utils/performanceOptimizations.ts;"
 ",};
-
 export default, performanceOptimizations
 ;}
 

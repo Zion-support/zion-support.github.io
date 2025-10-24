@@ -1,12 +1,12 @@
 import, React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot();
-declare global{interface Window {;
+declare global{interface Window {;}
 }
     "gtag": (...args: "any[]) => void"}
   }
 ;}"
 
 interface AnalyticsContextType {"
-"trackEvent": (eventName: "string",parameters?: Record<string, unknown>) => void"
+"trackEvent": (eventName: "string",parameters?: Record<string, unknown>) => void"}
 ;}"
   "trackPageView": (pageName: "string) => void()",;}"
 ;}"
@@ -16,35 +16,35 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined();
 )
 export const useAnalytics = () => {
-$3;
+$3;}
 }
   const context = useContext(AnalyticsContext);
 :app/components/AnalyticsProvider.tsx();
 if (!context) {;
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot);
+    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot);}
   }
   return context();
 }"
 
 interface AnalyticsProviderProps {"
-"children": ReactNode();
+"children": ReactNode();}
 }
 ;}"
 ;}"
 ;</AnalyticsContextType>
 exportconstAnalyticsProvider: React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
 if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics()"
+      // Google Analytics()"}
 if (process.env.NODE_ENV = == &quot;production&quot;) {,}"
         const script = document.createElement(&quot;script&quot;)"
-        script.src = `"https": //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID,}`
+        script.src = `"https": //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_MEASUREMENT_ID,}`"
 script.async = true()
 document.head.appendChild(script)"
 window.gtag ="
 window.gtag ||"
 function (..."args": any[]) {
             (window.gtag, as, any).q = (window.gtag, as, any).q || []
-            (window.gtag, as, any).q.push(args);
+            (window.gtag, as, any).q.push(args);}
           };
         window.gtag(&quot;js&quot;, new Date())
 window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
@@ -59,7 +59,7 @@ parameters?: Record<string, unknown>
   ) => {;
 :app/components/AnalyticsProvider.tsx();
 if(typeof window !== &quot;undefined&quot; && window.gtag) {  
-window.gtag(&quot;event&quot;, eventName, parameters)
+window.gtag(&quot;event&quot;, eventName, parameters)}
     , , }"
   }"
 
@@ -68,17 +68,17 @@ window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {</string>
 <<<<<<< HEAD: all-pages-backup/components/AnalyticsProvider.tsx"
         "page_title": pageName)"
   "page_location": window.location.href,)
-:app/components/AnalyticsProvider.tsx();
+:app/components/AnalyticsProvider.tsx();}
       })
     }"
   }"
 
   "constvalue": AnalyticsContextType = {trackEvent
-trackPageView()
+trackPageView()}
   ,}
 
 return(<AnalyticsContext.Provider value = {value,} >
-      {children}</AnalyticsContext>
+      "{children}"</AnalyticsContext>
     </AnalyticsContext.Provider>)
   );
 };
@@ -89,3 +89,4 @@ export default AnalyticsProvider;"
 {}
 export default AnalyticsProviderPage;()"
 :app/components/AnalyticsProvider.tsx"
+`

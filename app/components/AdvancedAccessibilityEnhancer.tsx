@@ -12,7 +12,7 @@ className?: string
   enableColorContrast?: boolean
   enableMotionReduction?: boolean
   enableFontScaling?: boolean
-  enableVoiceNavigation?: boolean
+  enableVoiceNavigation?: boolean}
 }"
 }"
 
@@ -27,14 +27,14 @@ const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp
   enableColorContrast = true,
   enableMotionReduction = true,
   enableFontScaling = true,
-  enableVoiceNavigation = true"
+  enableVoiceNavigation = true"}
 ,;}) => {"
   const [accessibilitySettings, setAccessibilitySettings,] = useState({"
     highContrast: "false","
     reducedMotion: "false",""
     fontSize: "'normal'","
     screenReader: "false","
-    keyboardNavigation: "false",;)
+    keyboardNavigation: "false",;)}
   })
 
   // Detect user preferences"
@@ -51,7 +51,7 @@ const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp
     setAccessibilitySettings(prev = > ({"
       ...prev","
       reducedMotion: "prefersReducedMotion","
-      highContrast: "prefersHighContrast",;)
+      highContrast: "prefersHighContrast",;)}
     }))"
 
     // Listen for changes in user preferences"'"
@@ -61,12 +61,14 @@ const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp
     const handleMotionChange = ("
       setAccessibilitySettings(prev = > ({ ...prev", reducedMotion: "e.matches ",) => {
 $3
-}))
+}
+  );
+}
     }"
 
     const handleContrastChange = ("
       setAccessibilitySettings(prev = > ({ ...prev, highContrast: "e.matches ",) => {
-$3
+$3}
 }))"
     }"
 "'"
@@ -76,14 +78,15 @@ $3
     return () => {"'"
       motionQuery.removeEventListener('change", handleMotionChange)"'"
       contrastQuery.removeEventListener('change", handleContrastChange)
-    }
+  );
+}
   }, [])
 
-  return(<div className={className}>
-      <h2>Advanced Accessibility Enhancer</h2>
-      <p>Enhanced accessibility features for better user experience.</p>
-    </div>;)
-  )
+  return(<div className="{className}">
+      <h2>"Advanced Accessibility Enhancer"</h2>
+      <p>"Enhanced accessibility features for better user experience."</p>
+    </div>;
+}
 }"
 
 export default AdvancedAccessibilityEnhancer"'"

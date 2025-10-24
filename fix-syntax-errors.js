@@ -1,123 +1,129 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  let fixed = content;
+// Common syntax fixes
+const fixes = [
+  // Fix unterminated string literals in imports
+  {
+    pattern: /import\s+.*from\s+['"]([^'"]*)$/gm,
+    replacement: (match, p1) => {
+      if (p1.includes("'")) {
+        return match.replace(p1, p1 + "'");
+      }
+      return match.replace(p1, p1 + '"');
+    }
+  },
   
   // Fix unterminated string literals in JSX attributes
-  fixed = fixed.replace(/href="([^]*?)"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `href="${p1}${p2}`;"
+  {
+    pattern: /className=([^"'\s>]+)(?=\s|>)/g,
+    replacement: 'className="$1"'
+  },
+  
+  // Fix unterminated string literals in JSX text content
+  {
+    pattern: />\s*([^<>\n]*?)\s*<\//g,
+    replacement: (match, content) => {
+      if (content.trim() && !content.includes('"') && !content.includes("'")) {
+        return match.replace(content, `"${content.trim()}"`);
+      }
+      return match;
     }
-    return match;
-  });
+  },
   
-  // Fix unterminated string literals in className
-  fixed = fixed.replace(/className="([^]*?)([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `className="${p1}${p2}`;
-    }
-    return match;
-  });
-  
-  // Fix malformed import statements
-  fixed = fixed.replace(/import\s+,\s*React/g, 'import React');
-  fixed = fixed.replace(/from\s+from\s+/g, 'from ');'
-  fixed = fixed.replace(/import\s+React\s+from\s+react'\s*;\s*import\s+React/g, 'import React');
-  
-  // Fix unterminated string literals in import statements
-  fixed = fixed.replace(/from\s+'([^']*?)'([^']*?)'/g, (match, p1, p2) ="> {
-    if (p2 && !p2.includes("'")) {
-      return `from '${p1}${p2}`;'
-    }
-    return match;
-  });
-  
-  // Fix JSX fragment issues
-  fixed = fixed.replace(/<>\s*"([^"]*?)"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `<>${p1}${p2}`;
-    }
-    return match;
-  });
-  
-  // Fix unterminated comments
-  fixed = fixed.replace(/\/\*([^*]*?)\*\/"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `/*${p1}*/${p2}`;
-    }
-    return match;
-  });
-  
-  // Fix standalone quotes that should be removed
-  fixed = fixed.replace(/^\s*"\s*$/gm, '');
-  fixed = fixed.replace(/^\s*'\s*$/gm, '');
+  // Fix missing quotes around JSX attributes
+  {
+    pattern: /(\w+)=([^"'\s>]+)(?=\s|>)/g,
+    replacement: '$1="$2"'
+  },
   
   // Fix malformed JSX closing tags
-  fixed = fixed.replace(/>\s*"([^"]*?)"([^"]*?)"/g, (match, p1, p2) => {
-    if (p2 && !p2.includes('"')) {
-      return `>${p1}${p2}`;
-    }
-    return match;
-  });
+  {
+    pattern: /<\/(\w+)\s*>/g,
+    replacement: '</$1>'
+  },
   
-  // Fix semicolon issues
-  fixed = fixed.replace(/;\s*import/g, '\nimport');
-  fixed = fixed.replace(/;\s*export/g, '\nexport');
+  // Fix unterminated comments
+  {
+    pattern: /\/\*([^*]|\*(?!\/))*$/gm,
+    replacement: (match) => match + '*/'
+  },
   
-  return fixed;
-}
+  // Fix missing semicolons after imports
+  {
+    pattern: /import\s+.*from\s+['"][^'"]*['"]\s*(?!;)/g,
+    replacement: (match) => match + ';'
+  },
+  
+  // Fix malformed function declarations
+  {
+    pattern: /const\s+(\w+):\s*React\.FC<[^>]*>\s*=\s*\(\s*\{[^}]*\}\s*\)\s*=>\s*\{/g,
+    replacement: (match) => match.replace(/\s*=>\s*\{/, ' = ({ }) => {')
+  }
+];
 
-// Function to process a single file
-function processFile(filePath) {
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    // Apply each fix
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    // Additional specific fixes for common patterns
+    content = content
+      // Fix unterminated template literals
+      .replace(/`([^`]*)$/gm, '`$1`')
+      // Fix missing closing braces
+      .replace(/\{([^}]*)$/gm, '{$1}')
+      // Fix malformed JSX
+      .replace(/<(\w+)([^>]*?)>/g, '<$1$2>')
+      // Fix unterminated strings in JSX
+      .replace(/>\s*([^<>\n]*?)\s*<\//g, (match, content) => {
+        if (content.trim() && !content.includes('"') && !content.includes("'")) {
+          return match.replace(content, `"${content.trim()}"`);
+        }
+        return match;
+      });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
+  
+  return false;
 }
 
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and .next directories
-        if (item === 'node_modules' || item === '.next' || item === 'dist') {
-          continue;
-        }
-        fixedCount += processDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
-      }
+// Find all TypeScript and TSX files
+const patterns = [
+  'app/**/*.{ts,tsx}',
+  'src/**/*.{ts,tsx}',
+  'components/**/*.{ts,tsx}',
+  '**/*.{ts,tsx}'
+];
+
+let totalFixed = 0;
+
+patterns.forEach(pattern => {
+  const files = glob.sync(pattern, { ignore: ['node_modules/**', '.next/**'] });
+  files.forEach(file => {
+    if (fixFile(file)) {
+      totalFixed++;
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-  
-  return fixedCount;
-}
+  });
+});
 
-// Main execution
-console.log('Starting syntax error fixes...');
-const fixedCount = processDirectory('/workspace');
-console.log(`Fixed ${fixedCount} files`);
+console.log(`\nFixed ${totalFixed} files`);

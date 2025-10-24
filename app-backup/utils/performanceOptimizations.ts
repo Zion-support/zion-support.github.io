@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react;'
-"use client;"
+;"use client;"
 typeof window !== 'undefined''"
     "rootMargin": '50px'",;"'"
 const [imageSrc, setImageSrc,] = useState(placeholder || ";"

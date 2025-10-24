@@ -1,4 +1,4 @@
-import { useEffect } from 'react"'
+import { useEffect } from 'react";'
 export const usePerformanceMonitor = (
   useEffect(() => {"
     // Monitor page load performance"
@@ -14,7 +14,7 @@ export const usePerformanceMonitor = (
           firstPaint: "paint.find(entry = > entry.name === 'first-paint')?.startTime",;"'"
           firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime",;
         ) => {
-$3
+$3}
 });
       }
     };
@@ -30,7 +30,7 @@ $3
                 duration: "entry.duration",);"
                 size: "(entry, as, any).transferSize",;
               ) => {
-$3
+$3}
 });
             }
           });"
@@ -46,7 +46,7 @@ $3
     const cleanup = monitorResourceLoading();
     // Cleanup;
     return () => {;
-      cleanup?.();
+      cleanup?.();}
     ,};"
   }, []);"
 };"'"

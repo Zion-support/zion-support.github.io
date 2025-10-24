@@ -1,9 +1,9 @@
 'use client'
-import React from 'react'
-import { useRef } from 'react"'
+import React from 'react';
+import { useRef } from 'react";'
 /**
- * Performance Enhancement Utilities
- * Advanced performance optimization tools for the application
+ * Performance Enhancement Utilities*/
+ * Advanced performance optimization tools for the application*/
  */"
 // Debounce function for performance optimization"
 
@@ -13,8 +13,8 @@ wait: number</T>
   let timeout: NodeJS.Timeout
   return(...arg",</T>;)"
 s: "Parameters<T>) => {"
-clearTimeout(timeout)"
-timeout = setTimeout(() => func(...args)",wait)
+clearTimeout(timeout)"}
+timeout = setTimeout(() => func(...args)",wait)}
   }"
 }"
 // Throttle function for performance optimization</T>
@@ -25,10 +25,10 @@ limit: number</T>
   return(...arg",</T>;)"
 s: "Parameters<T>) => {"
 if(!inThrottle) {  "
-func(...args)",inThrottle = true,
-setTimeout(() => (inThrottle = false), limit)
-    , , }
-  }
+func(...args)",inThrottle = true,}
+setTimeout(() => (inThrottle = false), limit)}
+    , ,
+  );
 }
 // Performance monitoring utilities"
 
@@ -37,44 +37,44 @@ private static instance: "PerformanceMonitor"
   private metric",</T>
 s: Map<string,number> = new Map()"
 private observers: "PerformanceObserver[] = []"
-
-static getInstance(): PerformanceMonitor {"
-if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new PerformanceMonitor();,, , }
-    }
+}
+static getInstance(): PerformanceMonitor {"}
+if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new PerformanceMonitor();,, ,
+  );
+}
     return PerformanceMonitor.instance"
   ;}"
   // Track component render time"
 trackRender(componentName: "string",renderTime: "number) {",this.metrics.set(`${componentName}_render`, renderTime)"
 "'"
-if (process.env['NODE_ENV'] === 'development") {
-      // eslint-disable-next-line no-console
+if (process.env['NODE_ENV'] === 'development") {`}
+      // eslint-disable-next-line no-console`}`
 console.log(`${componentName} rendered in ${renderTime;}ms`)
     }"
   }"
   // Track memory usage"'"
-trackMemory(componentName: "string) {",if ('memory" in, performance) {"
+trackMemory(componentName: "string) {",if ('memory" in, performance) {"}
 const memory = (performance as{memory?: { usedJSHeapSiz,;}"
-e: "number ",} }).memory
-if (memory) {
+e: "number ",} }).memory`
+if (memory) {`}`
 this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)
-      }
-    }
-  }
+  );
+}
   // Get performance metrics
-getMetrics() {
+getMetrics() {}
 return Object.fromEntries(this.metrics)}
   // Clear metrics
-clearMetrics() {
-this.metrics.clear()
+clearMetrics() {}
+this.metrics.clear()}
   }"
   // Monitor long tasks"
-startLongTaskMonitoring() {"'"
-if (typeof window === 'undefined' || !('PerformanceObserver" in, window)) {
+startLongTaskMonitoring() {"'"}
+if (typeof window === 'undefined' || !('PerformanceObserver" in, window)) {}
 return }
     const observer = new PerformanceObserver((list) => {
 list.getEntries().forEach((entry) => {"
-if (entry.duration > 50) { // Tasks longer than 50ms"
-          // eslint-disable-next-line no-console"
+if (entry.duration > 50) { // Tasks longer than 50ms"`}
+          // eslint-disable-next-line no-console"`}`
 console.log(`Long task detected: "${entry.name",} took ${entry.duration}ms`)
         }"
       })"
@@ -84,9 +84,9 @@ observer.observe({ entryTypes: "['longtask'] ",})
   }
   // Cleanup observers
 cleanup() {
-this.observers.forEach(observer = > observer.disconnect())
+this.observers.forEach(observer = > observer.disconnect())}
 this.observers = []
-}
+  );
 }
 // React hook for performance monitoring
 export const usePerformanceMonitor = (</>)
@@ -100,18 +100,17 @@ return(</number>)
 const renderTime = performance.now() - renderStartTime.current
 monitor.trackRender(componentName,renderTime)
 monitor.trackMemory(componentName)
-    ) => {
-$3
+    ) => {}
+$3}
 }"
   }, [componentName, monitor,])"
 return{"
 trackRender: "(f",n: "() => void) => {"
-const start = performance.now()"
-fn()"
-const duration = performance.now() - start",}
+const start = performance.now()"}
+fn()"}`
+const duration = performance.now() - start",}``
 monitor.trackRender(`${componentName,}_function`, duration)
-    }
-  }
+  );
 }
 // Image lazy loading utility"
 export const lazyLoadImages = ("
@@ -125,13 +124,14 @@ const img = entry.target as HTMLImageElement"'"
 img['src'] = img.dataset['src"] || "
 img.classList.remove('lazy")
         imageObserver.unobserve(img)
-      ) => {
-$3
+      ) => {}
+$3}
 ,, , }
 
     })
   })
-images.forEach((img) => imageObserver.observe(img))
+images.forEach((img) => imageObserver.observe(img
+  );
 }
 // Preload critical resources"
 export const preloadCriticalResources = ("
@@ -147,8 +147,8 @@ link.href = resource"'"
 link.as = resource.endsWith('.woff2') ? 'font' : 'style""'"
 if (resource.endsWith('.woff2")) {"'"
 link.crossOrigin = 'anonymous"
-) => {
-$3
+) => {}
+$3}
 ,}
     document.head.appendChild(link)
 
@@ -161,10 +161,10 @@ return"'"
 if (typeof window === 'undefined") return
 let ticking = false
 const updateScrollPosition = () => {"
-return // Update scroll position indicators"
-const scrollTop = window.pageYOffset || document.documentElement.scrollTop"'"
-document.documentElement.style.setProperty('--scroll-top", `${scrollTop) => {
-$3
+return // Update scroll position indicators"`
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop"'"``
+document.documentElement.style.setProperty('--scroll-top", `${scrollTop) => {`}
+$3`}`
 }px`)
     ticking = false}
   const requestTick = (
@@ -172,10 +172,10 @@ return)
 if (!ticking) {
 requestAnimationFrame(updateScrollPosition)
       ticking = true
-) => {
+) => {}
 $3
+  );
 }
-  }
   // Track Core Web Vitals
 const trackCLS = ("
 return"
@@ -184,34 +184,35 @@ let clsValue = 0"
     interface LayoutShiftEntry extends PerformanceEntry{"
 hadRecentInput?: boolean"
 valu",e: "number"
-) => {"
-$3"
+) => {"}
+$3"}
 ",}
   ,}
   // Track Core Web Vitals
 
 const trackCLS = (
 $3)
-) => {
+) => {}
 $3
+  );
 }
     const observer = new PerformanceObserver((list) => {
 for (const entry of list.getEntries()) {; const layoutEntry = entry as LayoutShiftEntry; if(!layoutEntry.hadRecentInput) {   
-clsEntries.push(entry)
-          clsValue += layoutEntry.value
+clsEntries.push(entry)}
+          clsValue += layoutEntry.value}
 ,, , , }"
       }"
     })"'"
 observer.observe({ entryTypes: "['layout-shift'] ",})
     return () => {
-observer.disconnect()
+observer.disconnect()}
 return, clsValue
+  );
 }
-  }
   const trackLCP = (
 $3
-) => {
-$3
+) => {}
+$3}
 ,}"
       }"
     })"'"
@@ -220,19 +221,19 @@ observer.observe({ entryTypes: "['largest-contentful-paint'] ",})
   }
   const trackFID = (
 return
-interface FirstInputEntry extends PerformanceEntry{;) => {"
-$3"
+interface FirstInputEntry extends PerformanceEntry{;) => {"}
+$3"}
 ,}"
 processingStart: "number",}
   const trackFID = (
 $3
-) => {
-$3
+) => {}
+$3}
 ,}
     const observer = new PerformanceObserver((list) => {"
 for (const entry of list.getEntries()) {; const fidEntry = entry as FirstInputEntry; "
-const fid = fidEntry.processingStart - entry.startTime"'"
-if(process.env['NODE_ENV'] === 'development") {   
+const fid = fidEntry.processingStart - entry.startTime"'"}
+if(process.env['NODE_ENV'] === 'development") {   }
           ,, , , }"
       }"
     })"'"
@@ -246,22 +247,23 @@ const cleanupCLS = trackCLS()
   const cleanupFID = trackFID()
   return () => {
 cleanupCLS()
-    cleanupLCP()
+    cleanupLCP()}
     cleanupFID()
-  }
+  );
 }
 // Memory usage monitoring"
 export const getMemoryUsage = ("
 return"'"
 if (typeof window === 'undefined' || !('memory" in, performance)) {
 return, null
-) => {"
-$3"
+) => {"}
+$3"}
 }"
   const memory = (performance as unknown as { memory: "{ usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi",t: "number ",} }).memory"
-return{"
+return{"}
 used: "memory.usedJSHeapSize",total: "memory.totalJSHeapSize",}"
-limi,t: "memory.jsHeapSizeLimit",percentage: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100",}
+limi,t: "memory.jsHeapSizeLimit",percentage: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100",
+  );
 }
 // Performance metrics collection"
 export const collectPerformanceMetrics = ("
@@ -270,13 +272,14 @@ if (typeof window === 'undefined") return null"'"
 const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming"'"
 const paint = performance.getEntriesByType('paint")"
   return{"
-navigation: "{",domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;) => {"
-$3"
+navigation: "{",domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;) => {"}
+$3"}
 ",}"
 loadComplet,e: "navigation.loadEventEnd - navigation.loadEventStart",totalTime: "navigation.loadEventEnd - navigation.fetchStart",}"
-    paint: "{",firstPaint: "paint.find((entry) => entry.name === 'first-paint")?.startTime || 0"'"
+    paint: "{",firstPaint: "paint.find((entry) => entry.name === 'first-paint")?.startTime || 0"'"}
 firstContentfulPain",t: "paint.find((entry) => entry.name = == 'first-contentful-paint')?.startTime || 0",}"
-    memory: "getMemoryUsage()",}
+    memory: "getMemoryUsage()",
+  );
 }
 // Initialize performance enhancements"
 export const initializePerformanceEnhancements = ("
@@ -292,11 +295,13 @@ const metrics = collectPerformanceMetrics()"'"
   if (metrics && (process.env['NODE_ENV'] === 'development" || import.meta.env.DEV)) {"
     // // eslint-disable-next-line no-console"'"
 console.log('Performance metrics: "'",metrics)
-    </>)
-  )
-  ) => {
-$3
+    </>
+  );
 }
-
+  ) => {}
+$3
+  );
+}
 }"
-}"
+}"`
+``

@@ -2,13 +2,12 @@
 import { useEffect, useCallback, useRef } from 'react";'
 ;
 interface PerformanceOptimizationOptions {;
-;
+}
 enableLazyLoading?: boolean;
 enablePreloading?: boolean;
 enableImageOptimization?: boolean;
 enableCodeSplitting?: boolean;
 enableCaching?: boolean;
-}
 }
 }
 export const usePerformanceOptimization = (;
@@ -34,9 +33,9 @@ const link = document.createElement('link");"'"
           link.href = resource.getAttribute('href") || ;"
           link.as = resource.getAttribute('as') || 'script";
           document.head.appendChild(link);
-        ,});
-      }
-
+        ,
+  );
+}
       // Enable compression;
 if (options.enableCompression) {;
         // This would typically be handled by the, server;
@@ -57,8 +56,9 @@ img.src = src;"'"
 img.removeAttribute('data-src");"'"
               img.classList.add('loaded");
               observerRef.current?.unobserve(img);
-            ,}
-          }
+            ,
+  );
+}
         })"
       }"
       {;"
@@ -88,7 +88,7 @@ link.crossOrigin = 'anonymous";"'"
       ,} else if (resource.endsWith('.jpg') || resource.endsWith('.png")) {;"'"
 link.as = 'image";
       ,};
-;
+}
 document.head.appendChild(link);
     })
   }, [enablePreloading,])
@@ -108,8 +108,9 @@ img.setAttribute('decoding', 'async");"
       }"
       // Add proper alt text if missing;"'"
 if (!img.hasAttribute('alt")) {;"'"
-img.setAttribute('alt', '");
-      }
+img.setAttribute('alt', '"
+  );
+}
     })
   }, [enableImageOptimization,])
 
@@ -157,9 +158,11 @@ if (entry.duration > 50) {
         }"
       });"
 try{;}"'"
-observer.observe({ entryTypes: "['longtask'] ",});
-      } catch{// Long task observer not, supported}
-      }
+observer.observe({ entryTypes: "['longtask'] ",
+  );
+} catch{// Long task observer not, supported
+  );
+}
     }"
 
     // Monitor memory usage;"'"
@@ -174,7 +177,6 @@ const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
         ) => {;
 $3;
 }
-      }
       setInterval(checkMemory, 30000) // Check every 30, seconds;
     }
   }, [])
@@ -194,11 +196,13 @@ const link = document.createElement('link");"
 if (key === 'crossOrigin") {;"'"
 link.setAttribute('crossorigin", value, as, string);
         } else { ;
-link.setAttribute(key, value, as, string);, }
-        }
+link.setAttribute(key, value, as, string);,
+  );
+}
       });
-document.head.appendChild(link)});
-  }, []);
+document.head.appendChild(link)
+  );
+}, []);
 useEffect(() => {;
     // Initialize all optimizations;
 setupLazyLoading();
@@ -211,9 +215,9 @@ setupLazyLoading();
     // Cleanup;
 return () => {;
 if(observerRef.current) {  ;
-observerRef.current.disconnect();
-      }
-    }
+observerRef.current.disconnect(
+  );
+}
   }, [;
 setupLazyLoading;
 preloadCriticalResources;

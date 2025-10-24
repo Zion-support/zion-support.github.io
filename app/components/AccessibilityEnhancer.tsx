@@ -1,11 +1,11 @@
 'use client'
 "'"
-import { useEffect } from 'react"'
+import { useEffect } from 'react";'
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode
+  );
 }
-
 export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   useEffect(() => {"
     // Add skip link functionality"
@@ -19,8 +19,8 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       skipLink.style.zIndex = '9999"
       
       document.body.insertBefore(skipLink, document.body.firstChild)
-    }
-
+  );
+}
     // Enhance focus management"
     const enhanceFocusManagement = () => {"
       // Add focus indicators for keyboard navigation"'"
@@ -29,8 +29,8 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         .focus-visible:focus {
           outline: 2px solid #3b82f6
           outline-offset: 2px
-        }
-        
+  );
+}
         .sr-only {
           position: absolute
           width: 1px
@@ -41,8 +41,8 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
           clip: rect(0, 0, 0, 0)
           white-space: nowrap
           border: 0
-        }
-        
+  );
+}
         .sr-only:focus {
           position: static
           width: auto
@@ -51,8 +51,8 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
           margin: inherit
           overflow: visible
           clip: auto
-          white-space: normal
-        }
+          white-space: normal}
+        }`
       `
       document.head.appendChild(style)
     }
@@ -62,21 +62,20 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       const main = document.querySelector('main")"'"
       if (main && !main.getAttribute('role")) {"'"
         main.setAttribute('role', 'main")"'"
-        main.id = 'main-content""
+        main.id = 'main-content""}
       }"
 "'"
       const nav = document.querySelector('nav")"'"
       if (nav && !nav.getAttribute('role")) {"'"
         nav.setAttribute('role', 'navigation")"'"
-        nav.setAttribute('aria-label', 'Main navigation")"
+        nav.setAttribute('aria-label', 'Main navigation")"}
       }"
 "'"
       const footer = document.querySelector('footer")"'"
       if (footer && !footer.getAttribute('role")) {"'"
         footer.setAttribute('role', 'contentinfo")
-      }
-    }
-
+  );
+}
     // Enhance form accessibility"
     const enhanceFormAccessibility = () => {"'"
       const forms = document.querySelectorAll('form")"
@@ -84,12 +83,12 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
         const inputs = form.querySelectorAll('input, textarea, select")"
         inputs.forEach((input) => {"
           const inputElement = input as HTMLInputElement"'"
-          if (!inputElement.getAttribute('aria-label') && !inputElement.getAttribute('aria-labelledby")) {"
+          if (!inputElement.getAttribute('aria-label') && !inputElement.getAttribute('aria-labelledby")) {"`}
             const label = form.querySelector(`label[for="${inputElement.id}]`)"
-            if (label) {"'"
+            if (label) {"'"`}
               inputElement.setAttribute('aria-labelledby", label.id || `label-${inputElement.id}`)
-            }
-          }
+  );
+}
         })
       })
     }
@@ -100,10 +99,11 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
 
       const updateContrast = () => {"
         if (prefersHighContrast.matches) {"'"
-          document.body.classList.add('high-contrast")"
+          document.body.classList.add('high-contrast")"}
         } else {"'"
           document.body.classList.remove('high-contrast")
-        }
+  );
+}
       }"
 
       updateContrast()"'"
@@ -122,10 +122,11 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       const skipLink = document.querySelector('a[href="#main-content]")
       if (skipLink) {
         skipLink.remove()
-      }
-    }
+  );
+}
   }, [])
 
-  return <>{children}</>
+  return <>"{children}"</>
 }"
 "'"
+`

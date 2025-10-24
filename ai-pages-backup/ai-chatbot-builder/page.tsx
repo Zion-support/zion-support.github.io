@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link";"'
+;import Link from 'next/link";"'
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react";"'
   "color": from-cyan-500 to-blue-500'"
   "color": 'from-green-500 to-emerald-500'"
@@ -14,6 +14,6 @@ import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Ta
     { "number": '10,000+', "label": 'Chatbots Created'"
     { "number": '50+', "label": 'Languages Supported'"
     { "number": '99.9%', "label": 'Uptime Guarantee'"
-    { "number": '24/7', "label": 'Customer Support";"'"
+    { "number": '24/7', "label": 'Customer Support";"'"}
 import { ArrowRight } from 'lucide-react";"'
 }}}}'"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async";"'
+;import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
 import Footer from '../components/Footer";"'
@@ -24,6 +24,6 @@ use client';'"
     'Gain competitive advantage with advanced technology'"
 if(process.env.NODE_ENV = == 'production");"'"
 handleGoHome= () => {windo w.location.href= '/";"'
-<pclassName=&quot;text-gray-300 mb-6&quot; />We''"
-{process.env.NODE_ENV = == 'development"</p>;"
+<pclassName="&quot;text-gray-300" mb-6&quot; />We''"
+{process.env.NODE_ENV = == 'development"</p>;"}
 }}'"

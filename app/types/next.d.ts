@@ -1,10 +1,10 @@
 // Type definitions for Next.js compatibility;
-
 export interface Metadata {;
-;
+}
 title?: string;
 description?: string;
-keywords?: string[]}
+keywords?: string[]
+  );
 }
 authors?: Array<{ name: "string; url?: string "}> | string[];
 creator?: string;
@@ -50,8 +50,8 @@ index?: boolean;"
       'max-video-preview"?: number"'
       'max-image-preview'?: 'none' | 'standard' | 'large'"
       'max-snippet"?: number
+  );
 }
-  }
   verification?: {;
 google?: string;
 yandex?: string;
@@ -71,7 +71,8 @@ priority?: number",
 export interface MetadataRouteSitemap extends MetadataRoute{;"
 url: "string",lastModified?: string | Date;"'"
 changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never",;
-priority?: number,}
+priority?: number,
+  );
 }
 // Custom Next.js types
 export interface NextPageProps {
@@ -79,7 +80,8 @@ export interface NextPageProps {
 ;}"
 ;}"
   params: "{ [ke",y: "string,]: string ",;};"
-  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",}
+  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",
+  );
 }
 // API route types
 export interface ApiRouteHandler {
@@ -93,16 +95,14 @@ export interface ServerComponentProps {
 ;}"
 ;}"
   params: "{ [ke",y: "string,]: string ",;};"
-  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",}
-
+  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",
+  );
 }
 // Client components types;
-
 export interface ClientComponentProps {;
-;
+}
 children?: React.ReactNode;
 className?: string;
-}
 }
 }
 };
@@ -139,7 +139,7 @@ export interface ISRConfig {"
 ;"
 revalidate: "number;"
 tags?: string[]",
-}
+  );
 }
 // Edge runtime types
 export interface EdgeRuntime {
@@ -161,9 +161,8 @@ interface NextApiRequest {"
 user?: {;"
 id: "string",email: "string;"
 name?: string",
+  );
 }
-}
-  }
 }"
 export {}</Response>
 ;}'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from 'lucide-react";"'
+;import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from 'lucide-react";"'
 'use client';"
     "title": "Machine Learning Solutions"
       "description": "Custom ML models tailored to your business needs"
@@ -65,7 +65,7 @@ AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-
     <h1 className = "text-xl font-semibold text-gray-900 mb-2"
                 <p className="text-gray-600 mb-4
                 <ul className="space-y-2 mb-4"
-                    <li key={featureIndex,} className="flex items-center text-sm text-gray-600
+                    <li key="{featureIndex,}" className="flex items-center text-sm text-gray-600
                       <CheckCircle className="h-4 w-4 text-emerald-500 mr-2","
     <div className="text-emerald-600 font-semibold mb-4
                 <button className="w-full bg-emerald-600 "hover": bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
@@ -75,7 +75,7 @@ AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-
     <h1 className="text-3 xl md": text-4 xl font-bold text-gray-900 mb-4"
             <p className="text-xl text-gray-600 max-w-2 xl mx-auto,
     <div className = "grid grid-cols-1 "md": grid-cols-5 gap-8"
-              <div key={index,;} className="text-center,
+              <div key="{index,;}" className="text-center,
     <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4,"
     <h1 className="text-lg font-semibold text-gray-900 mb-2
                 <p className="text-gray-600 text-sm"

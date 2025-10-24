@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async";"'
+;import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
-import Footer from '../components/Footer'"
+import Footer from '../components/Footer';"
   "benefits": ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights'"
   "benefits": ['Keyword targeting', 'Audience analysis', 'Competitor research', 'Market insights'"
   "benefits": ['Automated 3 D modeling', 'Real-time generation', 'Quality optimization', 'Custom parameters'"

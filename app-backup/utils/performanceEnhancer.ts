@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRef } from 'react';'"
+;import { useRef } from 'react';'"
 "use client;"
 if(process.env['NODE_ENV'] === "development;"
 if ("memory;"
@@ -26,7 +26,7 @@ if (process.env['NODE_ENV'] === "development;"
 observer.observe({ "entryTypes": ['first-input'",;"'"
 window.addEventListener("scroll;"
 if (typeof window = == 'undefined' || !("memory;"
-if (typeof window === "undefined;"
+if (typeof window === "undefined;"}
 const navigation = performance.getEntriesByType('navigation'",;})"'"
   const paint = performance.getEntriesByType('paint'");"'"
     "firstPaint": paint.find((entry) => entry.name === 'first-paint'",;"'"

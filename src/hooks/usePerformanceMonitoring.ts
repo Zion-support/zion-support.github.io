@@ -6,8 +6,7 @@ loadTime: "number;"
   renderTime: number;"
   memoryUsage: number;"
   fp",s: "number;",
-}
-}
+  );
 }
 ;"
 interface UsePerformanceMonitoringReturn {"
@@ -16,8 +15,7 @@ metrics: "PerformanceMetrics;"
   isMonitoring: boolean;"
   startMonitoring: () => void;"
   stopMonitorin",g: "() => void;",
-}
-}
+  );
 }
 ;
 const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {;"
@@ -25,17 +23,18 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {;"
 const [metrics, setMetrics,] = useState<PerformanceMetrics>({;"
 loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60;"
   ",
-});
-;
+}
+  );
+}
 const [isMonitoring, setIsMonitoring,] = useState(false);"
 ;"
 const measurePerformance = useCallback(() => {;""
     const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-;
+}
 const renderTime = performance.now();
 const memoryUsage = (performance, as, any).memory?.usedJSHeapSize || 0;
-;
+}
     // Simple FPS calculation;
 let fps = 60;
     let lastTime = performance.now();
@@ -51,22 +50,26 @@ loadTime,;
 renderTime,);
 memoryUsage,);
 fps);
-    })}, []);
-;
+    })}, []
+  );
+}
 const startMonitoring = useCallback(() => {;
     setIsMonitoring(true);
     measurePerformance();
-  }, [measurePerformance]);
-;
+  }, [measurePerformance]
+  );
+}
 const stopMonitoring = useCallback(() => {;
-    setIsMonitoring(false)}, []);
-;
+    setIsMonitoring(false)}, []
+  );
+}
 useEffect(() => {;
 if(isMonitoring) {  ;
 const interval = setInterval(measurePerformance, 1000);
       return () => clearInterval(interval)}
-  }, [isMonitoring, measurePerformance]);
-;
+  }, [isMonitoring, measurePerformance]
+  );
+}
 return{;
 metrics,;
 isMonitoring,;

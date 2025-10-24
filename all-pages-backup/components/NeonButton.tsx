@@ -2,7 +2,7 @@ import React from &quot;react&quot()
 import { ArrowRight;} from &quot;lucide-react&quot()
 interface NeonButtonProps {
 
-
+}
 }
 }
   children?: React.ReactNode}
@@ -21,14 +21,14 @@ disabled?: boolean();
 const NeonButton: "React.FC<NeonButtonProps> = ({;",children()"
 href()"
 onClick: "app/components/NeonButton.tsx()"
-variant=&quot;primary&quot"
+variant=&quot;primary&quot"}
   size=&quot;md&quot;",}
   className = &quot;&quot
   icon()
 disabled = false();"
-,}) => {</NeonButtonProps>;"
+,}) => "{"</NeonButtonProps>;"
 const baseClasses =;</NeonButtonProps>
-<<<<<<< HEAD: all-pages-backup/components/NeonButton.tsx"
+<<<<<<< HEAD: all-pages-backup/components/NeonButton.tsx"}
     &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform "hover": scale-105 active: "scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hove",r: "scale-100&quot",:app/components/NeonButton.tsx}"
   const benefits = ["
     'Increase efficiency by up to 50%'

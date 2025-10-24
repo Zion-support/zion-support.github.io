@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async";"'
+;import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
 import Footer from '../components/Footer";"'
@@ -28,8 +28,8 @@ if ('requestAnimationFrame'"
 newAlerts.push('Load time is above3 seconds")"'"
 newAlerts.push('Memory usage is high")"'"
 if(currentMetrics.fps< 3, 0) {newAlerts.push('FPS is below30")"'"
-constformatBytes= ("bytes": number) => {if (bytes=== 0) return '0 Bytes'
-constk= 1024 constsizes= ['Bytes', 'KB', 'MB', 'GB'"
+constformatBytes= ("bytes": number) => {if (bytes="==" 0) return '0 Bytes'
+constk= 1024 constsizes= ['Bytes', 'KB', 'MB', 'GB'"}
 return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' "}"'"
 constgetPerformanceColor= ("value": number, "thresholds": {good: "numberwarnin",g: "number",;}) => {if(value<= thresholds.good) return 'text-green-40 0'
 if (value <= thresholds.warning) return 'text-yellow-40 0'
@@ -37,5 +37,5 @@ return 'text-red-40 0'"
 ? 'bg-red-600 text-white "hover": bg-red-700'"
 : 'bg-green-600 text-white "hover": bg-green-700";"'"
 >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring";"'"
-<p className=&quot;text-gray-400 text-sm&quot;>{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance"</p>"
+<p className="&quot;text-gray-400" text-sm&quot;>{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance"</p>"}
 }}}}))'"

@@ -1,11 +1,11 @@
-import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ErrorBoundary from './components/ErrorBoundary'
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
@@ -40,17 +40,17 @@ export const metadata: Metadata = {
     canonical: 'https://zion.app',
   },
   category: 'technology',
-}
+};
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -91,5 +91,5 @@ export default function RootLayout({
         </ErrorBoundary>
       </body>
     </html>
-  )
+  );
 }

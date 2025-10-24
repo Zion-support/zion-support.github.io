@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link";"'
+;import Link from 'next/link";"'
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"'
 use client';'"
       "title": 'No-Code Builder'"
@@ -65,5 +65,5 @@ use client';'"
     { "number": '10,000+', "label": 'Chatbots Created'"
     { "number": '50+', "label": 'Languages Supported'"
     { "number": '99.9%', "label": 'Uptime Guarantee";"'"
-    { "number": '24/7', "label": 'Customer Support'
+    { "number": '24/7', "label": 'Customer Support'}
 }}}}'"

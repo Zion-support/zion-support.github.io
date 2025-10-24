@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link";"'
+;import Link from 'next/link";"'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react";"'
     { "name": AI Analytics & BI', "url": '/ai-analytics', "description": 'Business intelligence'"
     { "name": 'AI Automation', "url": '/ai-automation', "description": 'Process automation'"
@@ -35,5 +35,5 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Clou
     { "name": 'Privacy Policy', "url": '/privacy'"
     { "name": 'Terms of Service', "url": '/terms'"
     { "name": 'Cookie Policy', "url": '/cookies";"'"
-    { "name": 'GDPR Compliance', "url": '/gdpr'
+    { "name": 'GDPR Compliance', "url": '/gdpr'}
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}'"

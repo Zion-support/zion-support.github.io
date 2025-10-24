@@ -88,66 +88,66 @@ function App() {
             <FuturisticBackground />
             <Navigation />
             <Breadcrumb />
-            <Suspense fallback={<LoadingSpinner />
+            <Suspense fallback="{<LoadingSpinner" />}
 ,} >
               <Routes>
-                <Route path = "/" element={<HomePage />,} />
-                <Route path = /about element={<AboutPage />,} />
-                <Route path = /contact element={<ContactPage />,} />
-                <Route path = /services element={<ServicesPage />,} />
-                <Route path = /pricing element={<PricingPage />,} />
-                <Route path = /blog element={<BlogPage />,} />
-                <Route path = /case-studies element={<CaseStudiesPage />,} />
-                <Route path = /careers element={<CareersPage />,} />
-                <Route path = /ai-services element={<AIServicesPage />,} />
-                <Route path = /it-services element={<ItServicesPage />,} />
-                <Route path = /micro-saas element={<MicroSaasPage />,} />
-                <Route path = /tutorials element={<TutorialsPage />,} />
-                <Route path = /consultation element={<ConsultationPage />,} />
-                <Route path = /demo element={<DemoPage />,} />
-                <Route path = /support element={<SupportPage />,} />
-                <Route path = /privacy element={<PrivacyPage />,} />
-                <Route path = /terms element={<TermsPage />,} />
-                <Route path = /cookies element={<CookiesPage />,} />
-                <Route path = /sitemap element={<SitemapPage />,} />
+                <Route path = "/" element="{<HomePage" />,} />
+                <Route path = /about element="{<AboutPage" />,} />
+                <Route path = /contact element="{<ContactPage" />,} />
+                <Route path = /services element="{<ServicesPage" />,} />
+                <Route path = /pricing element="{<PricingPage" />,} />
+                <Route path = /blog element="{<BlogPage" />,} />
+                <Route path = /case-studies element="{<CaseStudiesPage" />,} />
+                <Route path = /careers element="{<CareersPage" />,} />
+                <Route path = /ai-services element="{<AIServicesPage" />,} />
+                <Route path = /it-services element="{<ItServicesPage" />,} />
+                <Route path = /micro-saas element="{<MicroSaasPage" />,} />
+                <Route path = /tutorials element="{<TutorialsPage" />,} />
+                <Route path = /consultation element="{<ConsultationPage" />,} />
+                <Route path = /demo element="{<DemoPage" />,} />
+                <Route path = /support element="{<SupportPage" />,} />
+                <Route path = /privacy element="{<PrivacyPage" />,} />
+                <Route path = /terms element="{<TermsPage" />,} />
+                <Route path = /cookies element="{<CookiesPage" />,} />
+                <Route path = /sitemap element="{<SitemapPage" />,} />
                 {/* AI Service Routes */}
-                <Route path = /ai-analytics" element={<AiAnalyticsPage />,} />
-                <Route path = /ai-automation element={<AiAutomationPage />,} />
-                <Route path = /ai-chatbot-builder element={<AiChatbotBuilderPage />,} />
-                <Route path = /ai-cybersecurity element={<AiCybersecurityPage />,} />
-                <Route path = /ai-crm element={<AiCrmPage />,} />
-                <Route path = /ai-data-analytics element={<AiDataAnalyticsPage />,} />
-                <Route path = /ai-healthcare element={<AiHealthcarePage />,} />
-                <Route path = /ai-financial-services element={<AiFinancialServicesPage />,} />
-                <Route path = /ai-computer-vision element={<AiComputerVisionPage />,} />
-                <Route path = /ai-voice-solutions element={<AiVoiceSolutionsPage />,} />
-                <Route path = /ai-ecommerce-solutions element={<AiEcommerceSolutionsPage />,} />
-                <Route path = /ai-hr-solutions element={<AiHrSolutionsPage />,} />
-                <Route path = /ai-workflow-automation element={<AiWorkflowAutomationPage />,} />
-                <Route path = /ai-document-processing element={<AiDocumentProcessingPage />,} />
-                <Route path = /ai-predictive-analytics element={<AiPredictiveAnalyticsPage />,} />
-                <Route path = /ai-edge-computing element={<AiEdgeComputingPage />,} />
-                <Route path = /ai-video-analysis element={<AiVideoAnalysisPage />,} />
-                <Route path = /ai-speech-synthesis element={<AiSpeechSynthesisPage />,} />
-                <Route path = /ai-recommendation-engine element={<AiRecommendationEnginePage />,} />
-                <Route path = /ai-sentiment-analysis element={<AiSentimentAnalysisPage />,} />
-                <Route path = /ai-chatbot-enterprise element={<AiChatbotEnterprisePage />,} />
-                <Route path = /ai-content-moderation element={<AiContentModerationPage />,} />
-                <Route path = /ai-predictive-modeling element={<AiPredictiveModelingPage />,} />
-                <Route path = /ai-document-intelligence element={<AiDocumentIntelligencePage />,} />
-                <Route path = /ai-conversation-analytics element={<AiConversationAnalyticsPage />,} />
-                <Route path = /ai-supply-chain-ai element={<AiSupplyChainAiPage />,} />
-                <Route path = /ai-healthcare-diagnostics element={<AiHealthcareDiagnosticsPage />,} />
+                <Route path = /ai-analytics" element="{<AiAnalyticsPage" />,} />
+                <Route path = /ai-automation element="{<AiAutomationPage" />,} />
+                <Route path = /ai-chatbot-builder element="{<AiChatbotBuilderPage" />,} />
+                <Route path = /ai-cybersecurity element="{<AiCybersecurityPage" />,} />
+                <Route path = /ai-crm element="{<AiCrmPage" />,} />
+                <Route path = /ai-data-analytics element="{<AiDataAnalyticsPage" />,} />
+                <Route path = /ai-healthcare element="{<AiHealthcarePage" />,} />
+                <Route path = /ai-financial-services element="{<AiFinancialServicesPage" />,} />
+                <Route path = /ai-computer-vision element="{<AiComputerVisionPage" />,} />
+                <Route path = /ai-voice-solutions element="{<AiVoiceSolutionsPage" />,} />
+                <Route path = /ai-ecommerce-solutions element="{<AiEcommerceSolutionsPage" />,} />
+                <Route path = /ai-hr-solutions element="{<AiHrSolutionsPage" />,} />
+                <Route path = /ai-workflow-automation element="{<AiWorkflowAutomationPage" />,} />
+                <Route path = /ai-document-processing element="{<AiDocumentProcessingPage" />,} />
+                <Route path = /ai-predictive-analytics element="{<AiPredictiveAnalyticsPage" />,} />
+                <Route path = /ai-edge-computing element="{<AiEdgeComputingPage" />,} />
+                <Route path = /ai-video-analysis element="{<AiVideoAnalysisPage" />,} />
+                <Route path = /ai-speech-synthesis element="{<AiSpeechSynthesisPage" />,} />
+                <Route path = /ai-recommendation-engine element="{<AiRecommendationEnginePage" />,} />
+                <Route path = /ai-sentiment-analysis element="{<AiSentimentAnalysisPage" />,} />
+                <Route path = /ai-chatbot-enterprise element="{<AiChatbotEnterprisePage" />,} />
+                <Route path = /ai-content-moderation element="{<AiContentModerationPage" />,} />
+                <Route path = /ai-predictive-modeling element="{<AiPredictiveModelingPage" />,} />
+                <Route path = /ai-document-intelligence element="{<AiDocumentIntelligencePage" />,} />
+                <Route path = /ai-conversation-analytics element="{<AiConversationAnalyticsPage" />,} />
+                <Route path = /ai-supply-chain-ai element="{<AiSupplyChainAiPage" />,} />
+                <Route path = /ai-healthcare-diagnostics element="{<AiHealthcareDiagnosticsPage" />,} />
                 {/* 5G Service Routes */}
-                <Route path = /5g-data-analytics" element={<FiveGDataAnalyticsPage />,} />
-                <Route path = /5g-edge-computing element={<FiveGEdgeComputingPage />,} />
-                <Route path = /5g-implementation element={<FiveGImplementationPage />,} />
-                <Route path = /5g-iot-solutions element={<FiveGIotSolutionsPage />,} />
-                <Route path = /5g-mobile-applications element={<FiveGMobileApplicationsPage />,} />
-                <Route path = /5g-network-infrastructure element={<FiveGNetworkInfrastructurePage />,} />
-                <Route path = /5g-private-networks element={<FiveGPrivateNetworksPage />,} />
-                <Route path = /5g-smart-city-solutions element={<FiveGSmartCitySolutionsPage />,} />
-                <Route path = /5g-solutions element={<FiveGSolutionsPage />,;} />
+                <Route path = /5g-data-analytics" element="{<FiveGDataAnalyticsPage" />,} />
+                <Route path = /5g-edge-computing element="{<FiveGEdgeComputingPage" />,} />
+                <Route path = /5g-implementation element="{<FiveGImplementationPage" />,} />
+                <Route path = /5g-iot-solutions element="{<FiveGIotSolutionsPage" />,} />
+                <Route path = /5g-mobile-applications element="{<FiveGMobileApplicationsPage" />,} />
+                <Route path = /5g-network-infrastructure element="{<FiveGNetworkInfrastructurePage" />,} />
+                <Route path = /5g-private-networks element="{<FiveGPrivateNetworksPage" />,} />
+                <Route path = /5g-smart-city-solutions element="{<FiveGSmartCitySolutionsPage" />,} />
+                <Route path = /5g-solutions element="{<FiveGSolutionsPage" />,;} />
               </Routes>
             </Suspense>
             <Footer />
@@ -160,7 +160,7 @@ function App() {
             <PerformanceMonitor />
           </div>
         </Router>
-      </ErrorBoundaryWrapper>;
+      </ErrorBoundaryWrapper>";"
     </HelmetProvider>;)
   );
 }"

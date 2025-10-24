@@ -1,17 +1,17 @@
-import React from "react
-
-use client";
-interface StructuredDataProps {
-className?: string
+import React from "react"
+;"
+;use client";
+interface StructuredDataProps {}
+className?: string}
 ;}
 ;}"
 ;}"
 "'"
-const StructuredData: "React.FC<StructuredDataProps> = ({ className = '' ",;}) => {
-return(</StructuredDataProps>,
-    <div className={className,;} />
-      <h2>StructuredData</h2>
-      <p>This component is under construction.</p>
+const StructuredData: "React.FC<StructuredDataProps> = ({ className = '' ",;}) => {}
+return(</StructuredDataProps>,}
+    <div className="{className,;}" />
+      <h2>"StructuredData"</h2>
+      <p>"This component is under construction."</p>
     </div>)
   );
 };"

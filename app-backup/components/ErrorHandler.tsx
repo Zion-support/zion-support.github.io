@@ -24,9 +24,9 @@ import { Home } from 'lucide-react";"'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
 if(process.env.NODE_ENV = == 'development'
-if (process.env.NODE_ENV=== 'production'"
+if (process.env.NODE_ENV="==" 'production'"
 console.log('Error data prepared for "reporting": '"
 windo w.location.href= '/"
 );"'"
-            {process.env.NODE_ENV === 'development");"
+            {process.env.NODE_ENV === 'development");"}
 })'"

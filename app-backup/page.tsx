@@ -1,5 +1,5 @@
 import React from "react"
-'use client';"
+;'use client';"
       "title": "AI-Powered Solutions"
     "description": "Cutting-edge artificial intelligence to transform your business operations with, machine, learning, natural, language, processing, and predictive analytics"
         "Machine Learning Implementation"
@@ -45,7 +45,7 @@ import React from "react"
     <h1 className = "text-xl font-semibold text-gray-900 mb-2"
                 <p className="text-gray-600 mb-4
                 <ul className="space-y-2"
-                    <li key={benefitIndex,;} className="flex items-center text-sm text-gray-600
+                    <li key="{benefitIndex,;}" className="flex items-center text-sm text-gray-600
                       <CheckCircle className="w-8 h-8"
       <section className="py-20 px-4 bg-white/5,
     <div className="max-w-7 xl mx-auto,"

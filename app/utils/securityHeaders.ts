@@ -1,21 +1,21 @@
 /**;
-* Security Headers Configuration;
-* Comprehensive security headers for production applications;
+* Security Headers Configuration;*/
+* Comprehensive security headers for production applications;*/
 */
 export interface SecurityHeadersConfig {;
-;
+}
 contentSecurityPolicy?: string;
 strictTransportSecurity?: string;
 xFrameOptions?: string;
 xContentTypeOptions?: string;
-referrerPolicy?: string;
+referrerPolicy?: string;}
 permissionsPolicy?: string;
 }
-}
+  );
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {;
-;
-// Content Security Policy;
+;}
+// Content Security Policy;}
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: "https:; font-src 'self' data:; connect-src 'self' http",s: ; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';",}"
 // Content Security Policy;"'"
 contentSecurityPolicy: "[","default-src 'self'"'"
@@ -26,7 +26,7 @@ contentSecurityPolicy: "[","default-src 'self'"'"
 'upgrade-insecure-requests'].join('; ")"
 // HTTP Strict Transport Security (HSTS);"
 strictTransportSecurit,;"'"
-y: "'max-age=63072000; includeSubDomains; preload'",// Prevent clickjacking;"'"
+y: "'max-age="63072000;" includeSubDomains; preload'",// Prevent clickjacking;"'"
 xFrameOptions: "'DENY'",// Prevent MIME type sniffing;"'"
 xContentTypeOptions: "'nosniff'",// Referrer Policy;"'"
 referrerPolicy: "'strict-origin-when-cross-origin'",// Permissions Policy (formerly, Feature, Policy);"'"
@@ -38,10 +38,11 @@ permissionsPolicy: "[",'camera = ()","'"
 'interest-cohort=()","'"
 'accelerometer=()","'"
 'gyroscope=()","'"
-'magnetometer=()'].join(', ")}
+'magnetometer=()'].join(', ")
+  );
 }
-/**;
-* Get security headers as key-value pairs;
+/**;*/
+* Get security headers as key-value pairs;*/
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 export function getSecurityHeaders()</SecurityHeadersConfig>;
@@ -70,16 +71,17 @@ headers['Referrer-Policy"] = config.referrerPolicy;}"
 }"
 if(config.permissionsPolicy) {}"'"
 headers['Permissions-Policy"] = config.permissionsPolicy;}"
-export interface SecurityHeadersConfig {"
-/* TODO: "Fix JSX expression */,
+export interface SecurityHeadersConfig {"}
+/* TODO: "Fix JSX expression */,}
 ;}
 ;};
 }"
 export const;"
-defaultSecurityHeaders: "SecurityHeadersConfig = {/* TOD",O: "Fix JSX expression */,}
+defaultSecurityHeaders: "SecurityHeadersConfig = {/* TOD",O: "Fix JSX expression */,
+  );
 }
-/**;
-* Get security headers as key-value pairs;
+/**;*/
+* Get security headers as key-value pairs;*/
 */</string>;"
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)"
 ): Record<string, string> {/* TODO: "Fix JSX expression */,;}
@@ -98,18 +100,20 @@ if(config.xContentTypeOptions) {  /* TODO: "Fix JSX expression */,, , }
 }"
 if(config.referrerPolicy) {  /* TODO: "Fix JSX expression */,, , }
 }"
-if(config.permissionsPolicy) {  /* TODO: "Fix JSX expression */,, , }
+if(config.permissionsPolicy) {  /* TODO: "Fix JSX expression */,, ,
+  );
 }
 return, headers
 }
-/**
-* Get security headers in Next.js format
+/***/
+* Get security headers in Next.js format*/
 */</string>;"
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)</SecurityHeadersConfig>;"
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>")"</SecurityHeadersConfig>;"
 ): Array<{ key: "string; valu",e: "string ",}> {
-export function getNextSecurityHeaders();"
+export function getNextSecurityHeaders();"}
 customConfig?: Partial<SecurityHeadersConfig>
-}</SecurityHeadersConfig>
+  );
+"}"</SecurityHeadersConfig>
 ): Array<{ key: string; valu",e: "string ",}> {}
 ;
 const headers = getSecurityHeaders(customConfig);
@@ -120,8 +124,9 @@ value}"
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);"
 ): Array<{/* TODO: "Fix JSX expression */,}
 ;"
-e: "string ",}> {/* TODO: "Fix JSX expression */,}
-}))
+e: "string ",}> {/* TODO: "Fix JSX expression */,
+}
+  );
 }
 export default defaultSecurityHeaders;"
 }"'"

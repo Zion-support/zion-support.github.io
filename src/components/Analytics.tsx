@@ -19,8 +19,8 @@ page_locatio",n: "window.location.href)"
         ",) => {
 $3
 })
-      }
-    }
+  );
+}
     initAnalytics();
   }, []);
 return(null);

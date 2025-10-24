@@ -7,38 +7,38 @@ import { Component, ErrorInfo, ReactNode, useState, useEffect } from react";
 // Test component that throws an error"
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {"
   if (shouldThrow) {"'"
-    throw new Error('Test error");
+    throw new Error('Test error");}
   }
-  return <div>No error</div>;
+  return <div>"No error"</div>;
 };
 
 // Error boundary component for testing
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
-  retryCount: number;
+  retryCount: number;}
 }
 
 interface ErrorBoundaryProps {
   children: ReactNode;
-  onError?: (error: Error) => void;
+  onError?: (error: Error) => void;}
 }
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {}
   constructor(props: { children: ReactNode; onError?: (error: Error) => void }) {
-    super(props);
+    super(props);}
     this.state = { hasError: false, retryCount: 0 };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {}
     return { hasError: true, error, retryCount: 0 };
   }
 
   componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
-    this.props.onError?.(error);
+    this.props.onError?.(error);}
   }
 
-  handleRetry = () => {
+  handleRetry = () => {}
     this.setState({ hasError: false, error: undefined, retryCount: this.state.retryCount + 1 });
   };
 
@@ -46,8 +46,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     if (this.state.hasError) {
       return (
         <div>
-          <h2>Something went wrong.</h2>
-          <button onClick={this.handleRetry}>Retry</button>
+          <h2>"Something went wrong."</h2>}
+          <button onClick="{this.handleRetry}">"Retry"</button>
         </div>
       );
     }
@@ -61,7 +61,7 @@ const PerformanceMonitor = () => {
   const [metrics, setMetrics] = useState({
     renderTime: 0,
     memoryUsage: 0,
-    errorCount: 0,
+    errorCount: 0,}
   });
 
   useEffect(() => {
@@ -69,7 +69,7 @@ const PerformanceMonitor = () => {
       const startTime = performance.now();
       setMetrics(prev => ({
         ...prev,
-        renderTime: endTime - startTime,
+        renderTime: endTime - startTime,}
       }));
       const endTime = performance.now();
     };
@@ -79,9 +79,9 @@ const PerformanceMonitor = () => {
 
   return (
     <div>
-      <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memory Usage: {metrics.memoryUsage}MB</div>
-      <div>Error Count: {metrics.errorCount}</div>
+      <div>"Render Time: {metrics.renderTime.toFixed(2)}ms"</div>
+      <div>"Memory Usage: {metrics.memoryUsage}MB"</div>
+      <div>"Error Count: {metrics.errorCount}"</div>
     </div>
   );"
 };"
@@ -90,17 +90,17 @@ describe("Advanced Components", () => {"
   test("should render error boundary without errors", () => {
     render(
       <ErrorBoundary>
-        <div>Test content</div>
+        <div>"Test content"</div>
       </ErrorBoundary>
     );
-    expect(screen.getByText("Test content")).toBeInTheDocument();"
+    expect(screen.getByText("Test content")).toBeInTheDocument();"}
   });"
 
   test("should catch and display errors", () => {
     const onError = jest.fn();
-    render(
-      <ErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />
+    render(}
+      <ErrorBoundary onError="{onError}">
+        <ThrowError shouldThrow="{true}" />
       </ErrorBoundary>
     );
     expect(screen.getByText("Something went wrong.")).toBeInTheDocument();"
@@ -108,8 +108,8 @@ describe("Advanced Components", () => {"
 
   test("should handle retry functionality", () => {
     render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
+      <ErrorBoundary>}
+        <ThrowError shouldThrow="{true}" />
       </ErrorBoundary>
     );
 
@@ -123,27 +123,27 @@ describe("Advanced Components", () => {"
     render(<PerformanceMonitor />);
     expect(screen.getByText(/Render Time:/)).toBeInTheDocument();
     expect(screen.getByText(/Memory Usage:/)).toBeInTheDocument();
-    expect(screen.getByText(/Error Count:/)).toBeInTheDocument();"
+    expect(screen.getByText(/Error Count:/)).toBeInTheDocument();"}
   });"
 
   test("should work with router", () => {
     render(
       <MemoryRouter>
-        <div>Router test</div>
+        <div>"Router test"</div>
       </MemoryRouter>
     );
-    expect(screen.getByText("Router test")).toBeInTheDocument();"
+    expect(screen.getByText("Router test")).toBeInTheDocument();"}
   });"
 
   test("should work with helmet provider", () => {
     render(
       <HelmetProvider>
         <Helmet>
-          <title>Test Title</title>
+          <title>"Test Title"</title>
         </Helmet>
-        <div>Helmet test</div>
+        <div>"Helmet test"</div>
       </HelmetProvider>
     );
-    expect(screen.getByText("Helmet test")).toBeInTheDocument();"
+    expect(screen.getByText("Helmet test")).toBeInTheDocument();"}
   });"
 });"'"

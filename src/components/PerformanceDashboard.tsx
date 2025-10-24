@@ -1,6 +1,6 @@
 'use client"
 :all-pages-backup/components/PerformanceDashboard.tsx;"'"
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import Navigation from ../components/Navigation";"
@@ -12,17 +12,18 @@ import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from lucide-re
 import Navigation from '../components/Navigation";"'
 import Footer from '../components/Footer";"'
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from lucide-react";
-interface PerformanceDashboardProps {
+interface PerformanceDashboardProps {}
 className?: string
+  );
 }
 }"
 ;}"
 "'"
-const PerformanceDashboard: "React.FC<PerformanceDashboardProps> = ({ className = '' ",;}) => {
-return(</PerformanceDashboardProps>,
-    <div className={className,;} />
-      <h2>PerformanceDashboard</h2>
-      <p>This component is under construction.</p>
+const PerformanceDashboard: "React.FC<PerformanceDashboardProps> = ({ className = '' ",;}) => {}
+return(</PerformanceDashboardProps>,}
+    <div className="{className,;}" />
+      <h2>"PerformanceDashboard"</h2>
+      <p>"This component is under construction."</p>
       </div>)
   );
 };"

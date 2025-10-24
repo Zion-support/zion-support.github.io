@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'"
+;import Link from 'next/link';"
  } from "lucide-react";'"
   "description": 'Automate complex business processes with intelligent workflow management.'"
   "description": 'AI-powered decision making based on data analysis and business rules.'"
@@ -14,6 +14,6 @@ import Link from 'next/link'"
     { "number": '70%', "label": 'Cost Reduction'"
     { "number": '24/7', "label": 'Automated Operations'"
     { "number": '99.9%', "label": 'Accuracy Rate'"
-    { "number": '3-6', "label": 'Months ROI";"'"
+    { "number": '3-6', "label": 'Months ROI";"'"}
 import { ArrowRight } from 'lucide-react";"'
 }}}'"

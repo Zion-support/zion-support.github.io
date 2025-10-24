@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-
+import React, { useState } from 'react';
+import Link from 'next/link';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -56,7 +55,7 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header

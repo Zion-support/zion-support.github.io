@@ -1,7 +1,7 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
-  ];
+ ; ;];
 const benefits = [;
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'

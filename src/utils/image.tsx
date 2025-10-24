@@ -1,21 +1,23 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import, React, { useState, useCallback } from 'react"'
 interface ImageProps {
-
-
+  );
+}
 }"
 }"
 :all-pages-backup/utils/image.tsx"
 src: "string",{alt: "string",;}
 interface ImageProps {
-
+  );
+}
 ;}"
 ;}"
   src: "string",alt: "string",src: "string"
 al",t: "string;",}
 interface ImageProps {
-
+  );
+}
 }"
 }"
   src: "string"
@@ -54,7 +56,7 @@ onLoad?: () => void",:all-pages-backup/utils/image.tsx"
 export const Image: "React.FC<ImageProps>= ({",;}</ImageProps>;"
 export const Image: "React.FC<ImageProps> = ({",;}"
 src</ImageProps>;"
-export const Image: "React.FC<ImageProps> = ({",src"
+export const Image: "React.FC<ImageProps> = ({",src"}
 onError?: () => void;}"
 }</ImageProps>;"
 export const Image: "React.FC<ImageProps>= ({;",}</ImageProps>;"
@@ -70,8 +72,8 @@ priority = false"
 quality = 75"'"
 placeholder = 'empty"
 blurDataURL"
-fill = false"
-sizes",:all-pages-backup/utils/image.tsx
+fill = false"}
+sizes",:all-pages-backup/utils/image.tsx}
 style, onLoad, onError,}
 {...props}
 {}) => {}
@@ -79,7 +81,9 @@ const [, setIsLoaded,] = useState(false)
 const [hasError, setHasError,] = useState(false)
 const handleLoad = useCallback(() => {,}
 setIsLoaded(true)
-{if (onLoad) onLoad();}
+{if (onLoad) onLoad(
+  );
+}
 {}, [onLoad,])
 const handleError = useCallback(() => {,}
 setHasError(true)"
@@ -95,21 +99,25 @@ const imageStyle: "React.CSSProperties={",}"
 position: "position",top: "0",left: "0",width: "width",height: "'100%'",{objectFit: "'cover'",}
 {})
 {}</ImageProps>
-if(hasError) {</ImageProps>
-return(</ImageProps>})
+"if(hasError) {"</ImageProps>
+  );
+"return("</ImageProps>})
 if (hasError) {}
 return ();
 {    <div}
 if(hasError) {}
 {return(<div});
 style, onLoad, onError});
-...props});
+...props
+  );
 }) = /> {}
 const [, setIsLoaded] = useState(false);
 const [hasError, setHasError] = useState(false);
 const handleLoad = useCallback(() => {}
 setIsLoaded(true);
-if (onLoad) onLoad();}
+if (onLoad) onLoad(
+  );
+}
 }, [onLoad,])
 const handleError = useCallback(() => {,;};
 setHasError(true);"
@@ -125,98 +133,101 @@ const imageStyle: "React.CSSProperties={",}"
 ...(fill && {}"'"
 position: "'absolute'",top: "0",left: "0"'"
 widt",h: "'100%'",height: "'100%'",objectFit: "'cover'",}
-})
-;}  </div>;
-if(hasError) {</ImageProps>;
+  );
+}  </div>;
+if(hasError) {</ImageProps>;}
 return(</ImageProps>;})
 if (hasError) {}
 return ()
     <div;} />
-if(hasError) {;}  </div>
+"if(hasError) {;}"  </div>
 return(<div} />
 interface ImageProps {
-
+}
 /* TODO: Fix JSX expression */,
+  );
 }
 :all-pages-backup/utils/image.tsx
 {}"
 export, const,  </div>)"
-Image: "React.FC<ImageProps>= ({/* TOD",)</ImageProps>
-O: Fix JSX expression */,})  </div>
+Image: "React.FC<ImageProps>= ({/* TOD",)</ImageProps>*/}
+"O: Fix JSX expression */,})"  </div>
 {}) => {/* TODO: Fix JSX expression */,}
 {}, [onLoad,])"
 const handleError = useCallback(() => {/* TODO: "Fix JSX expression */,}
 {}, [onError,])"
 const"
-imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */,}
+imageStyle: "React.CSSProperties="{/*" TOD",O: "Fix JSX expression */,}
 {})
 {;};
 }"
 export const"
-Image: "React.FC<ImageProps>= ({/* TOD",</ImageProps>
-O: Fix JSX expression */,})  </div>
+Image: "React.FC<ImageProps>= ({/* TOD",</ImageProps>*/}
+"O: Fix JSX expression */,})"  </div>
 }) => {/* TODO: Fix JSX expression */,}
 }, [onLoad,])"
 const handleError = useCallback(() => {/* TODO: "Fix JSX expression */,}
 }, [onError,])"
 const"
-imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */,}
+imageStyle: "React.CSSProperties="{/*" TOD",O: "Fix JSX expression */,}
 })"
 }"
 if(hasError) {/* TODO: "Fix JSX expression */,}
 className = {`bg-gray-200 flex items-center justify-center ${className,}`}
-style = {
-imageStyle
+style = {}
+imageStyle}
 ,}
 {...props})"
->)  </div>,"
-    <span className="text-gray-500 text-sm"><span className=s"r-only">Screen reader: "</span>Failed to load image</span>)"
+>")"  </div>,"
+    <span className="text-gray-500 text-sm"><span className=s"r-only">Screen reader: "</span>"Failed to load image"</span>)"
 </div>)",)"
 {...props}"
 >  </div>,"
-    <span className="text-gray-500 text-sm /"><span className=s"r-only">Screen reader: "</span>Failed to load image</span>
+    <span className="text-gray-500 text-sm /"><span className=s"r-only">Screen reader: "</span>"Failed to load image"</span>
   </div>
 ),:all-pages-backup/utils/image.tsx
 {}
 return(<img )
-return ();
+return (
+  );
 }
 return(<img return () />
-src = {
-src
+src = {}
+src}
 ,}
-alt = {
-alt
+alt = {}
+alt}
 ,}
-width = {
-width
+width = {}
+width}
 ,}
-height = {
-height
+height = {}
+height}
 ,}
-className = {
-className
+className = {}
+className}
 ,}
-style = {
-imageStyle
+style = {}
+imageStyle}
 ,}
-sizes = {
-sizes"
+sizes = {}
+sizes"}
 ,}"
-loading = {"'"
-priority ? 'eager' : 'lazy"
+loading = {"'"}
+priority ? 'eager' : 'lazy"}
 ,}
-onLoad = {
-handleLoad
+onLoad = {}
+handleLoad}
 ,;}
-onError = {
-handleError
+onError = {}
+handleError}
 ,;}
 {...props;}
 :all-pages-backup/utils/image.tsx</img>
->)</img>
-{;}</img>;
->)</img>;
+>")"</img>
+"{;}"</img>;
+>")"</img>;
 }</img>;"
 export default Image;</img>
-}'
+}'`
+``

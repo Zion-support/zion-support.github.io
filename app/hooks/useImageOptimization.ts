@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react"'
+import { useState, useEffect } from 'react";'
 
 interface UseImageOptimizationOptions {
   src: string
@@ -6,14 +6,14 @@ interface UseImageOptimizationOptions {
   lazy?: boolean"
   quality?: number""
   format?: 'webp' | 'avif' | 'jpeg' | 'png"
+  );
 }
-
 export const useImageOptimization = ({
   src,
   placeholder,"
   lazy = true,"
   quality = 80,"'"
-  format = 'webp"
+  format = 'webp"}
 }: UseImageOptimizationOptions) => {"'"
   const [imageSrc, setImageSrc] = useState(placeholder || '")
   const [isLoaded, setIsLoaded] = useState(false)
@@ -23,7 +23,7 @@ export const useImageOptimization = ({
     if (!lazy || isInView) {
       const img = new Image()
       img.onload = () => {
-        setImageSrc(src)
+        setImageSrc(src)}
         setIsLoaded(true)}
       img.src = src}
   }, [src, lazy, isInView])
@@ -36,13 +36,14 @@ export const useImageOptimization = ({
         if (entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-        }
+  );
+}
       },
       { threshold: 0.1 }"
     )"
 
     const element = document.querySelector(`[data-src="${src}"]`)
-    if (element) {
+    if (element) {}
       observer.observe(element)}
     return () => observer.disconnect()
   }, [src, lazy])
@@ -51,6 +52,7 @@ export const useImageOptimization = ({
     imageSrc,
     isLoaded,
     isInView,
-    shouldLoad: !lazy || isInView"
+    shouldLoad: !lazy || isInView"}
   }"
 }"
+`

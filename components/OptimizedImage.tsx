@@ -1,12 +1,12 @@
-import React from 'react'
-import Image from "next/image"
-interface OptimizedImageProps {
+import React from 'react';
+import Image from "next/image";
+;interface OptimizedImageProps {
 src: string
 alt: string
 width?: number"
 height?: number"
-className?: string"
-  "data-testid"?: string"
+className?: string"}
+  "data-testid"?: string"}
 ,}"
   [ke,y: "string,]: any",}"
 }"
@@ -16,10 +16,11 @@ src",alt"
 width = 800"
 height = 600"
 className="
-  data-testid": testId
-  ...props
-,}) => {
+  data-testid": testId}
+  ...props}
+,}) => {}
 return(</OptimizedImageProps>
+  );
     <Imagesrc = {src,}
       alt = {alt,}
       width = {width,;}

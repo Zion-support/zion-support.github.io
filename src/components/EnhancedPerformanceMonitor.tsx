@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async";"'
 import { ArrowRight, Brain } from 'lucide-react";"'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react";"
@@ -12,5 +12,5 @@ const benefits = ["'
     'Improve decision-making with AI insights'"
     'Scale operations without proportional staff increases";"'"
     'Gain competitive advantage with advanced technology",;"
-    <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / / />
+    <divclassName="&quot;flex" flex-col sm: "flex-row gap-4 justify-center&quot; / / />
           </div>,}'"

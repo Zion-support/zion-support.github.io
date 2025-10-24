@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link";"'
+;import Link from 'next/link";"'
 import { Metadata } from 'next";"'
 import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star, Send, BarChart3, Target, Zap, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from lucide-react";"
     "title": 'About Us - Zion Tech Group | AI & IT Solutions'"
@@ -19,5 +19,5 @@ import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star, Send
     { "number": '500+', "label": 'Projects Completed'"
     { "number": '50+', "label": 'Happy Clients'"
     { "number": '5+', "label": 'Years Experience";"'"
-    { "number": '24/7', "label": 'Support Available'
+    { "number": '24/7', "label": 'Support Available'}
 }}}}'"

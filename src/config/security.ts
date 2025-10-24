@@ -1,5 +1,5 @@
 interface SecurityConfig {;
-;
+}
 enableCSP: "boolean;
   enableHSTS: boolean;"
   enableXSSProtection: boolean;"

@@ -6,7 +6,7 @@ lcp: "number;
   fid: number;
   cls: number;"
   fcp: number;"
-  ttfb: number;"
+  ttfb: number;"}
 ",}
 ,}
 
@@ -16,7 +16,7 @@ className?: string;
   enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
-  enableServiceWorker?: boolean;
+  enableServiceWorker?: boolean;}
 }"
 }"
 
@@ -26,14 +26,14 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
   enableAdvancedCaching = true,
   enableImageOptimization = true,
   enablePreloading = true,
-  enableServiceWorker = true,"
+  enableServiceWorker = true,"}
 ;}) => {"
   const [performanceMetrics, setPerformanceMetrics,] = useState<PerformanceMetrics>({"
     lcp: "0","
     fid: "0","
     cls: "0","
     fcp: "0",;"
-    ttfb: "0",;
+    ttfb: "0",;}
   });
 
   // Web Vitals monitoring"
@@ -45,22 +45,26 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
           if (entry.entryType === 'largest-contentful-paint") {"
             setPerformanceMetrics(prev => ({"
               ...prev,;"
-              lcp: "entry.startTime",;)
+              lcp: "entry.startTime",;)}
             }));
           }"
         }"
       });"'"
-      observer.observe({ entryTypes: "['largest-contentful-paint'] ",});
-    }
+      observer.observe({ entryTypes: "['largest-contentful-paint'] ",
+  );
+}
   }, [enableWebVitals,]);
 
   useEffect(() => {
-    measureWebVitals();
-  }, [measureWebVitals]);
-;
-  return(<div className={className}>
-      <h2>Advanced Performance Optimizer</h2>
-      <p>Advanced performance optimization for better application performance.</p>;
+    measureWebVitals(
+  );
+}
+  }, [measureWebVitals]
+  );
+}
+  return(<div className="{className}">
+      <h2>"Advanced Performance Optimizer"</h2>
+      <p>"Advanced performance optimization for better application performance."</p>";"
     </div>;)
   );
 };"

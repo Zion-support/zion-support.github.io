@@ -1,5 +1,5 @@
 export interface User {;
-;
+}
 id: "string;"
   email: string;"
   name: string;"
@@ -47,7 +47,7 @@ export interface AnalyticsEvent {"
 name: "string;"
   timestamp: number;"
   properties?: Record<string",string | number | boolean | null>
-}
+  );
 }"
 export interface PerformanceMetrics {"
 ;"
@@ -59,7 +59,7 @@ loadTime: "number;
 ",
 }
 export interface ErrorContext {;
-;
+}
 url?: string;
 userAgent?: string;
 timestamp?: string;

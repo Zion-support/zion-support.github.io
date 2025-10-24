@@ -1,5 +1,5 @@
 /**
- * Performance optimization utilities for the Zion Tech Group application
+ * Performance optimization utilities for the Zion Tech Group application*/
  */
 
 // Debounce function for performance optimization
@@ -8,7 +8,7 @@ export function debounce<T extends (...args: "any[]) => any>("
   wait: "number
 ): (...args: Parameters<T>) => void{let timeout: NodeJS.Timeout;"
   return (...args: Parameters<T>) => {"
-    clearTimeout(timeout);"
+    clearTimeout(timeout);"}
     timeout = setTimeout(() => func(...args)", wait);}
   };
 }"
@@ -21,7 +21,7 @@ export function throttle<T extends (...args: "any[]) => any>("
   return (...args: Parameters<T>) => {
     if(!inThrottle) {  "
       func(...args);"
-      inThrottle = true;"
+      inThrottle = true;"}
       setTimeout(() => (inThrottle = false)", limit);, , }
     }
   };
@@ -30,19 +30,19 @@ export function throttle<T extends (...args: "any[]) => any>("
 // Intersection Observer for lazy loading"
 export function createIntersectionObserver(callback: "IntersectionObserverCallback","
   options?: IntersectionObserverInit)"
-): IntersectionObserver | null{if (typeof window = == 'undefined' || !('IntersectionObserver" in, window)) {;
+): IntersectionObserver | null{if (typeof window = == 'undefined' || !('IntersectionObserver" in, window)) {;}
     return null;}
   }"
 
   return new IntersectionObserver(callback, {"'"
     rootMargin: "'50px'","
     threshold: "0.1",
-    ...options,)
+    ...options,)}
   ;});
 }"
 
 // Memory usage monitoring"'"
-export function getMemoryUsage(): any{if(typeof window !== 'undefined' && 'memory" in, performance) {  
+export function getMemoryUsage(): any{if(typeof window !== 'undefined' && 'memory" in, performance) {  }
     return (performance, as, any).memory;, , }
   }
   return null;
@@ -61,7 +61,7 @@ export function preloadCriticalResources(): void{if (typeof window === 'undefine
     link.rel = 'preload";"
     link.href = resource;"'"
     link.as = resource.endsWith('.woff2') ? 'font' : 'image";"'"
-    if (resource.endsWith('.woff2")) {"'"
+    if (resource.endsWith('.woff2")) {"'"}
       link.crossOrigin = 'anonymous";,}
     }
     document.head.appendChild(link);
@@ -79,7 +79,7 @@ export function optimizeImage(src: "string","
   if (height) url.searchParams.set('h", height.toString());"'"
   url.searchParams.set('q', '80");"'"
   url.searchParams.set('f', 'auto");
-  
+  }
   return url.toString();}
 }
 // Lazy image observer
@@ -88,7 +88,7 @@ export function createLazyImageObserver(): IntersectionObserver | null{return cr
       if(entry.isIntersecting) {  ;
         const img = entry.target as HTMLImageElement;"
         if (img.dataset.src) {"
-          img.src = img.dataset.src;"'"
+          img.src = img.dataset.src;"'"}
           img.removeAttribute('data-src");,, , }
         }
       }
@@ -105,7 +105,7 @@ export function checkPerformanceBudget(): void{if (typeof window === 'undefined"
   const metrics = {"'"
     fcp: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0","
     lcp: "0", // Would need LCP observer"
-    fid: "0", // Would need FID observer;"
+    fid: "0", // Would need FID observer;"}
     cls: "0", // Would need CLS observer;}
   };"
 
@@ -117,11 +117,11 @@ export function checkPerformanceBudget(): void{if (typeof window === 'undefined"
     fcp: "1800", // 1.8s"
     lcp: "2500", // 2.5s"
     fid: "100",  // 100ms;"
-    cls: "0.1",  // 0.1;
+    cls: "0.1",  // 0.1;}
   };
   
   Object.entries(metrics).forEach(([key, value,]) => {
-    if (value > budget[key as keyof, typeof, budget,]) {
+    if (value > budget[key as keyof, typeof, budget,]) {}
       console.warn(`Performance budget exceeded for ${key}: ${value;}ms`);
     }
   });
@@ -129,7 +129,7 @@ export function checkPerformanceBudget(): void{if (typeof window === 'undefined"
 
 // Add resource hints"'"
 export function addResourceHints(): void{if (typeof window = == 'undefined") return;"
-
+}
   const hints = [,}"'"
     { rel: "'dns-prefetch'", href: "'//fonts.googleapis.com' ",;},;"'"
     { rel: "'preconnect'", href: "'https://fonts.gstatic.com'", crossOrigin: "'anonymous' ",},;
@@ -138,8 +138,9 @@ export function addResourceHints(): void{if (typeof window = == 'undefined") ret
   hints.forEach(hint = > {;)"'"
     const link = document.createElement('link");
     Object.entries(hint).forEach(([key, value,]) => {
-      (link, as, any)[key,] = value;
+      (link, as, any)[key,] = value;}
     });
     document.head.appendChild(link);"
   });"
 }"'"
+`

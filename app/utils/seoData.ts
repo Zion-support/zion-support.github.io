@@ -21,9 +21,9 @@ export interface StructuredData {
     addressLocality: string;
     addressRegion: string;
     postalCode: string;
-    addressCountry: string}
+    addressCountry: string
+  );
 }
-
 export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {"
   return {"'"
     '@context': 'https://schema.org","'"

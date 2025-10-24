@@ -1,15 +1,15 @@
-import React from 'react"'
+import React from 'react";'
 interface FooterProps {
-className?: string
+className?: string}
 ;}
 ;}"
 ;}"
 ""
 const Footer: "React.FC<FooterProps> = ({ className = '' ",;}) => {
-return(</FooterProps>,
-    <div className={className,;} />
-      <h2>Footer</h2>
-      <p>This component is under construction.</p>
+return(</FooterProps>,}
+    <div className="{className,;}" />
+      <h2>"Footer"</h2>
+      <p>"This component is under construction."</p>
       </div>)
   );
 };"

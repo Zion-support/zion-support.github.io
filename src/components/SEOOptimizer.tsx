@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async";'
 :all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
 
-
+}
 }"
 children: "React.ReactNode",;}
 ;}
@@ -23,7 +23,7 @@ const structuredData = {"
         "@type": "Organization"
         "name": "Zion Tech Group"
         "description": "Professional AI and IT solutions for modern businesses","url": window.location.origin"
-
+}
 }"'"
       const script = document.createElement('script")"'"
       script.type = 'application/ld+json"
@@ -32,26 +32,27 @@ const structuredData = {"
       return () => {"'"
 const existingScript = document.querySelector('script[type="application/ld+json]")
         if(existingScript) {  
-existingScript.remove()
+existingScript.remove()}
         ,, , ;}
       ;}
     ;}
   ;}, [])
-return(<>
+return (
+    <>
   </>
       <Helmet />
-        <meta name="viewport" content="width=device-width, initial-scale=1" / />
-        <meta name=theme-color content="#059669 / /">'
-        <link rel=canonical" href={typeof window !== 'undefined' ? window.location.href: "''",;} / />
+        <meta name="viewport" content="width="device-width," initial-scale=1" / />
+        <meta name="theme-color" content="#059669 / /">'
+        <link rel=canonical" href="{typeof" window !== 'undefined' ? window.location.href: "''",;} / />
       </Helmet>
-      {children;}
+      "{children;}"
     </>)"
   );"
 };"'"
 import, React, { useEffect } from "react";"
-import Head from 'next/head"'
+import Head from 'next/head";'
 interface SEOOptimizerProps {
-className?: string
+className?: string}
 ;}
 ;}"
 ;}"
@@ -59,19 +60,19 @@ className?: string
 const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({
 interface SEOOptimizerProps {"
 
-
+}
 ",;}
   className?: string;,}"
 }</SEOOptimizerProps>
-;</SEOOptimizerProps>
+";"</SEOOptimizerProps>
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({"
 title = 'Zion Tech Group - Advanced AI and IT Solutions'"
 description = 'Leading provider of AI-powered enterprise solutions",quantum, computing, autonomous, systems, and digital transformation services.'"
 keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI"]"'"
 canonicalUrl = 'https: "//ziontechgroup.com'"
 ogImage = 'http",s: "//ziontechgroup.com/og-image.jpg"
-structuredData"
-",;}) => {"
+structuredData"}
+",;}) = ({ }) => {"
 useEffect(() => {"
     // Update page title"
 document.title = title: "all-pages-backup/components/SEOOptimizer.tsx;"
@@ -80,10 +81,10 @@ const metaDescription = document.querySelector('meta[name=&quot;description&quot
     // Update meta description"'"
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]")"
     if(metaDescription) {"'"
-metaDescription.setAttribute('content'",description)"'"
+metaDescription.setAttribute('content'",description)"'"}
     } else { const meta = document.createElement('meta")"'"
       meta.name = 'description"
-meta.content = description
+meta.content = description}
       document.head.appendChild(meta),, }
     ;}
   ]
@@ -94,10 +95,10 @@ const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]")"
     // Update keywords"'"
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]")"
     if(metaKeywords) {"'"
-metaKeywords.setAttribute('content', keywords.join(', "))"'"
+metaKeywords.setAttribute('content', keywords.join(', "))"'"}
     } else { const meta = document.createElement('meta")"'
       meta.name = 'keywords'"
-      meta.content = keywords.join(', ")
+      meta.content = keywords.join(', ")}
       document.head.appendChild(meta), }
     ;}
 
@@ -107,23 +108,24 @@ let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]")"
     // Update canonical URL"'"
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]")"
     if(canonicalLink) {"'"
-canonicalLink.setAttribute('href", canonicalUrl)"'"
+canonicalLink.setAttribute('href", canonicalUrl)"'"}
     } else { canonicalLink = document.createElement('link")"'"
       canonicalLink.rel = 'canonical"
-canonicalLink.href = canonicalUrl
-      document.head.appendChild(canonicalLink),, }
-    }
+canonicalLink.href = canonicalUrl}
+      document.head.appendChild(canonicalLink),,
+  );
+}
     // Update Open Graph tags;
 const updateOGTag = (;,:all-pages-backup/components/SEOOptimizer.tsx
-let ogTag = document.querySelector(`meta[property=&quot;${property) => {
-$3
-,}&quot;]`)"
+let ogTag = document.querySelector(`meta[property="&quot;${property)" => {
+$3`}
+,}&quot;]`)"`
       let ogTag = document.querySelector(`meta[property=&quot;${property,}&quot;]`)"
       if(ogTag) {"'"
-ogTag.setAttribute('content", content)"'"
+ogTag.setAttribute('content", content)"'"}
       } else { ogTag = document.createElement('meta")"'"
         ogTag.setAttribute('property", property)"'"
-        ogTag.setAttribute('content", content)
+        ogTag.setAttribute('content", content)}
         document.head.appendChild(ogTag), }
       }"
     }"
@@ -134,16 +136,16 @@ updateOGTag('og: "title'",title)"'"
     updateOGTag('og: "url'",canonicalUrl)"'"
     updateOGTag('og: "type'",'website");
     // Update Twitter Card tags;
-const updateTwitterTag = (;,:all-pages-backup/components/SEOOptimizer.tsx
-let twitterTag = document.querySelector(`meta[name=&quot;${name) => {
-$3
-,}&quot;]`)"
+const updateTwitterTag = (;,:all-pages-backup/components/SEOOptimizer.tsx`
+let twitterTag = document.querySelector(`meta[name="&quot;${name)" => {
+$3`}
+,}&quot;]`)"`
       let twitterTag = document.querySelector(`meta[name=&quot;${name,}&quot;]`)"
       if(twitterTag) {"'"
-twitterTag.setAttribute('content", content)"'"
+twitterTag.setAttribute('content", content)"'"}
       } else { twitterTag = document.createElement('meta")"'"
         twitterTag.setAttribute('name", name)"'"
-        twitterTag.setAttribute('content", content)
+        twitterTag.setAttribute('content", content)}
         document.head.appendChild(twitterTag), }
       }"
     }"
@@ -157,7 +159,7 @@ if(structuredData) {"'"
 const script = document.createElement('script")"'"
       script.type = 'application/ld+json"
       script.textContent = JSON.stringify(structuredData)
-      document.head.appendChild(script)
+      document.head.appendChild(script)}
     ,;}
 
 :all-pages-backup/components/SEOOptimizer.tsx;"
@@ -168,8 +170,8 @@ let viewport = document.querySelector('meta[name=&quot;viewport&quot;]")"
     if(!viewport) {"'"
 viewport = document.createElement('meta")"'"
       viewport.setAttribute('name', 'viewport")"'"
-      viewport.setAttribute('content', 'width=device-width, initial-scale = 1")
-      document.head.appendChild(viewport)
+      viewport.setAttribute('content', 'width="device-width," initial-scale = 1")
+      document.head.appendChild(viewport)}
     ,}"
 
     // Add charset if not present"'"
@@ -177,52 +179,53 @@ let charset = document.querySelector('meta[charset,]")"
     if(!charset) {  "'"
 charset = document.createElement('meta")"'"
       charset.setAttribute('charset', 'UTF-8")
-      document.head.insertBefore(charset, document.head.firstChild)
+      document.head.insertBefore(charset, document.head.firstChild)}
     , , }
 
   ;}, [title, description, keywords, canonicalUrl, ogImage, structuredData,])
 </SEOOptimizerProps>
-return(</SEOOptimizerProps>
+"return("</SEOOptimizerProps>
     <Head />
-:all-pages-backup/components/SEOOptimizer.tsx</Head>;"
-      <title>{title}</title>;"
+":all-pages-backup/components/SEOOptimizer.tsx"</Head>;"
+      <title>"{title}"</title>;"
       <meta name = &quot;description&quot; content = {description,} / />;)"'"
-      <meta name=&quot;keywords&quot; content = {keywords.join(', ")} / />;
+      <meta name="&quot;keywords&quot;" content = {keywords.join(', ")} / />;
       <link rel = &quot;canonical&quot; href = {canonicalUrl,} / />;"
-        <title>{title}</title>;"
-      <meta name = &quot;description&quot; content={description,} />;</meta>'
-      <meta name=&quot;keywords&quot; content={keywords.join(', )} />;</meta>
+        <title>"{title}"</title>;"
+      <meta name = &quot;description&quot; content="{description,}" />";"</meta>'
+      <meta name="&quot;keywords&quot;" content={keywords.join(', )} />";"</meta>
       <link rel = &quot;canonical&quot; href = {canonicalUrl,} / />;
       {/* Open Graph */}</link>;
-      <meta property=&quot;og: "title&quot; content={title",} />;</meta>
-      <meta property=&quot;og: description&quot; content={description,} />;</meta>
-      <meta property=&quot;og: image&quot; content={ogImage,} />;</meta>
-      <meta property=&quot;og: url&quot; content={canonicalUrl,} />;</meta>
-      <meta property=&quot;og: type&quot; content=&quot;website&quot; / />
-      {/* Twitter Card */,}</meta>
-      <meta name=&quot;twitter: "card&quot; content=&quot;summary_large_image&quot; / />
-      <meta name=&quot;twitte,r: title&quot; content={title",} />;</meta>
-      <meta name=&quot;twitter: description&quot; content={description,} />;</meta>
-      <meta name=&quot;twitter: image&quot; content = {ogImage,} / />;
+      <meta property="&quot;og:" "title&quot; content={title",} />";"</meta>
+      <meta property="&quot;og:" description&quot; content="{description,}" />";"</meta>
+      <meta property="&quot;og:" image&quot; content="{ogImage,}" />";"</meta>
+      <meta property="&quot;og:" url&quot; content="{canonicalUrl,}" />";"</meta>
+      <meta property="&quot;og:" type&quot; content="&quot;website&quot;" / />
+      "{/* Twitter Card */,}"</meta>
+      <meta name="&quot;twitter:" "card&quot; content="&quot;summary_large_image&quot;" / />
+      <meta name="&quot;twitte,r:" title&quot; content={title",} />";"</meta>
+      <meta name="&quot;twitter:" description&quot; content="{description,}" />";"</meta>
+      <meta name="&quot;twitter:" image&quot; content = {ogImage,} / />;
       {/* Additional SEO meta tags */}</meta>;
-      <meta name=&quot;robots&quot; content=&quot;index, follow&quot; / />
-      <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; / />
-      <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale = 1&quot; / />
-      <meta charSet=&quot;UTF-8&quot; />
+      <meta name="&quot;robots&quot;" content="&quot;index," follow&quot; / />
+      <meta name="&quot;author&quot;" content="&quot;Zion" Tech Group&quot; / />
+      <meta name="&quot;viewport&quot;" content="&quot;width=device-width," initial-scale = 1&quot; / />
+      <meta charSet="&quot;UTF-8&quot;" />
       {/* Structured Data */,}
       {structuredData && (</meta>
-:all-pages-backup/components/SEOOptimizer.tsx</meta>
+":all-pages-backup/components/SEOOptimizer.tsx"</meta>
         <script
-type=&quot;application/ld+json&quot
+type="&quot;application/ld+json&quot"}
 dangerouslySetInnerHTML = {{ __html: "JSON.stringify(structuredData) ",}};"
-        <script type=&quot;application/ld+json&quot; />
-dangerouslySetInnerHTML = {{ __html: JSON.stringify(structuredData) ,}}
+        <script type="&quot;application/ld+json&quot;" />
+dangerouslySetInnerHTML = {{ __html: JSON.stringify(structuredData) ,
+  );
+}
         /></script>
-      )}</script>
+      ")}"</script>
     </Head>
   );
 };
-
 export default SEOOptimizer;
   )
 :all-pages-backup/components/SEOOptimizer.tsx
@@ -231,3 +234,4 @@ export default SEOOptimizerPage;
 }"
 export default SEOOptimizerPage;"
 }"'"
+`

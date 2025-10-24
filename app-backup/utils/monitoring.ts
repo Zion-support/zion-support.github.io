@@ -1,5 +1,5 @@
 import React from "react"
-use client";"
+;use client";"
 if(typeof window !== "undefined;"
 if ("PerformanceObserver;"
 this.reportMetric("lcp;"
@@ -21,7 +21,7 @@ if (typeof gtag === "function;"
 gtag('event''"
         "value": Math.round(name = == 'cls'",;"'"
     "event_category": 'Web Vitals'",;"'"
-if ("memory;"
+if ("memory;"}
 if ('performance' in window && 'getEntriesByType'";}"'"
       const navigation = performance.getEntriesByType("navigation;"
 console.log('Performance "metrics": '","'
