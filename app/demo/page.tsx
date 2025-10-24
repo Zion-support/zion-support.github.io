@@ -59,7 +59,7 @@ const DemoPage: React.FC = () => {
                     }`}
                   >
                     <div className="flex items-center mb-4">
-                      {demo.icon}
+                      <demo.icon className="w-8 h-8 text-cyan-400" />
                       <h3 className="text-xl font-bold text-white ml-3">{demo.title}</h3>
                     </div>
                     <p className="text-gray-300 mb-4">{demo.description}</p>

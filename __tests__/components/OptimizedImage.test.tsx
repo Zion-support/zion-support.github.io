@@ -7,12 +7,14 @@ const OptimizedImage = ({
   src, 
   alt, 
   width, 
-  height 
+  height,
+  ...props
 }: { 
   src: string; 
   alt: string; 
   width?: number; 
   height?: number; 
+  [key: string]: any;
 }) => {
   return (
     <img 
@@ -20,12 +22,20 @@ const OptimizedImage = ({
       alt={alt} 
       width={width} 
       height={height}
+      {...props}
     />
   );
 };
 
 describe('OptimizedImage', () => {
   it('renders with required props', () => {
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="Test image" 
+        data-testid="optimized-image"
+      />
+    );
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
@@ -33,12 +43,30 @@ describe('OptimizedImage', () => {
     expect(image).toHaveAttribute('alt', 'Test image');
   });
 
+  it('renders with width and height', () => {
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="Test image" 
+        width={300}
+        height={200}
+        data-testid="optimized-image"
+      />
+    );
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toHaveAttribute('width', '300');
     expect(image).toHaveAttribute('height', '200');
   });
 
+  it('renders with empty alt text', () => {
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="" 
+        data-testid="optimized-image"
+      />
+    );
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toHaveAttribute('alt', '');
@@ -55,7 +83,8 @@ describe('OptimizedImage', () => {
       const { unmount } = render(
         <OptimizedImage 
           src={src} 
-          alt={`Test image ${index + 1}`} 
+          alt={`Test image ${index + 1}`}
+          data-testid="optimized-image"
         />
       );
       
