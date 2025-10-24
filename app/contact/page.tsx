@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+'use client';
+
+import React, { memo } from 'react';
+import EnhancedSEOHead from '../components/EnhancedSEOHead';
+import { useForm } from '../hooks/useForm';
+
+export const dynamic = 'force-dynamic';
+
+const ContactPage: React.FC = memo(() => {
+  const {
+    data: formData,
+    isSubmitting,
+    submitStatus,
+    errors,
+    handleInputChange,
+    handleSubmit,
+  } = useForm({
+    initialData: {
+      name: '',
+      email: '',
+      message: ''
+=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';

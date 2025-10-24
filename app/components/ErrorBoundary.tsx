@@ -9,6 +9,10 @@ interface Props {
 ,
 
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
 interface State {
   hasError: boolean;
   error: Error | undefined;
@@ -20,6 +24,10 @@ interface State {
 ,
 
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {,
     hasError: false,
