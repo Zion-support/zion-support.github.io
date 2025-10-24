@@ -31,10 +31,10 @@ export default function AIContentGeneratorPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
       {/* Hero Section */}
-      <section className="py-20" />
-        <div className="container mx-auto px-4 text-center" />
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
             AI Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Generator</span />
           </h1 />
@@ -53,18 +53,18 @@ export default function AIContentGeneratorPage() {
         </div />
       </section />
       {/* Features Section */, }
-      <section className="py-20" />
-        <div className="container mx-auto px-4" />
-          <div className="text-center mb-16" />
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2 />
             <p className="text-xl text-gray-300 max-w-2xl mx-auto" />
               Our AI content generator comes with everything you need to create compelling content at scale.
             </p />
           </div />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover: bg-white/20 transition-all duration-300"></div key={index, } className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover: bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4" />
+                <div className="flex items-center mb-4">
                   {feature.icon, }
                   <h3 className="text-xl font-bold text-white ml-3">{feature.title}</h3 />
                 </div />
@@ -83,9 +83,9 @@ export default function AIContentGeneratorPage() {
         </div />
       </section />
       {/* CTA Section */}
-      <section className="py-20" />
-        <div className="container mx-auto px-4 text-center" />
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12" />
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Content?</h2 />
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" />
               Start generating high-quality content with our AI-powered writing assistant today.

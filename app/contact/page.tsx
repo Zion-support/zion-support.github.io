@@ -69,11 +69,11 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden" />
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
-        <div className="relative max-w-7xl mx-auto text-center" />
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6"></h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Touch</span />
           </h1 />
@@ -83,12 +83,12 @@ const ContactPage: React.FC = () => {
         </div />
       </section />
       {/* Contact Info Section */, }
-      <section className="py-20 px-4" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16" />
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {contactInfo.map((info, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover: shadow-xl transition-shadow duration-300"></div key={index, } className="bg-white p-8 rounded-xl shadow-lg text-center hover: shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4 mx-auto" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4 mx-auto">
                   <info.icon className="h-8 w-8 text-white" / />
                 </div />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title, }</h3 />
@@ -100,9 +100,9 @@ const ContactPage: React.FC = () => {
         </div />
       </section />
       {/* Contact Form Section */}
-      <section className="py-20 px-4 bg-white/5" />
-        <div className="max-w-4xl mx-auto" />
-          <div className="text-center mb-12" />
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4"></h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Send us a Message;
             </h2 />
@@ -111,8 +111,8 @@ const ContactPage: React.FC = () => {
             </p />
           </div />
           {isSubmitted ? (
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center" />
-              <div className="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-4 mx-auto" />
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-4 mx-auto">
                 <CheckCircle className="h-8 w-8 text-white" / />
               </div />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3 />
@@ -152,7 +152,7 @@ const ContactPage: React.FC = () => {
                   / />
                 </div />
               </div />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div />
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2" />
                     Company;
@@ -191,7 +191,7 @@ const ContactPage: React.FC = () => {
                   </select />
                 </div />
               </div />
-              <div className="mb-6" />
+              <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2" />
                   Message *
                 </label />
@@ -227,9 +227,9 @@ const ContactPage: React.FC = () => {
         </div />
       </section />
       {/* FAQ Section */}
-      <section className="py-20 px-4" />
-        <div className="max-w-4xl mx-auto" />
-          <div className="text-center mb-12" />
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Frequently Asked Questions;
             </h2 />
@@ -237,20 +237,20 @@ const ContactPage: React.FC = () => {
               Quick answers to common questions about our services.
             </p />
           </div />
-          <div className="space-y-6" />
-            <div className="bg-white p-6 rounded-xl shadow-lg" />
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">How quickly can you start a project?</h3 />
               <p className="text-gray-600">We typically begin new projects within 1-2 weeks of contract signing, depending on our current workload and project complexity.</p />
             </div />
-            <div className="bg-white p-6 rounded-xl shadow-lg" />
+            <div className="bg-white p-6 rounded-xl shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you work with small businesses?</h3 />
               <p className="text-gray-600">Absolutely! We work with businesses of all sizes, from startups to enterprise companies. Our solutions are scalable to meet your needs and budget.</p />
             </div />
-            <div className="bg-white p-6 rounded-xl shadow-lg" />
+            <div className="bg-white p-6 rounded-xl shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">What technologies do you specialize in?</h3 />
               <p className="text-gray-600">We specialize in AI/ML, cloud computing, web development, mobile apps, and data analytics. We stay current with the latest technologies and frameworks.</p />
             </div />
-            <div className="bg-white p-6 rounded-xl shadow-lg" />
+            <div className="bg-white p-6 rounded-xl shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you provide ongoing support?</h3 />
               <p className="text-gray-600">Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after launch.</p />
             </div />

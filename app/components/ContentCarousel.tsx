@@ -80,19 +80,19 @@ const ContentCarousel: React.FC = () => {
         <meta name="description" content="Advanced content carousel solution for modern businesses." / />
         <meta name="keywords" content="AI, artificial intelligence, content carousel, AI solutions, intelligent automation" / />
       </Helmet />
-      <Navigation / />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden" />
+        <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
-          <div className="relative max-w-7xl mx-auto text-center" />
+          <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Content Carousel;
             </h1 />
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" />
               Advanced content carousel solution for modern businesses.
             </p />
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" / />
@@ -104,20 +104,20 @@ const ContentCarousel: React.FC = () => {
           </div />
         </section />
         {/* Carousel Section */, }
-        <section className="py-20 px-4" />
-          <div className="max-w-7xl mx-auto" />
-            <div className="text-center mb-16" />
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Solutions</h2 />
               <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Explore our comprehensive suite of AI and IT solutions designed to transform your business.
               </p />
             </div />
             {/* Carousel Container */}
-            <div className="relative" />
+            <div className="relative">
               <div className="$1"></div>
-                <div className="flex items-center justify-between mb-8" />
-                  <div className="flex items-center gap-4" />
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center" />
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
                       {currentSlideData.icon, }
                     </div />
                     <div />
@@ -127,9 +127,9 @@ const ContentCarousel: React.FC = () => {
                   </div />
                 </div />
                 {/* Features */}
-                <div className="space-y-4 mb-8" />
+                <div className="space-y-4 mb-8">
                   <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4 />
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {currentSlideData.features.map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3" />
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" / />
@@ -168,7 +168,7 @@ const ContentCarousel: React.FC = () => {
               </button />
             </div />
             {/* Slide Indicators */, }
-            <div className="flex justify-center mt-8 space-x-2" />
+            <div className="flex justify-center mt-8 space-x-2">
               {slides.map((_, index) => (
                 <button;
                   key={index}
@@ -183,8 +183,8 @@ const ContentCarousel: React.FC = () => {
           </div />
         </section />
         {/* CTA Section */}
-        <section className="py-20 px-4" />
-          <div className="max-w-4xl mx-auto text-center" />
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2 />
             <p className="text-xl text-gray-300 mb-8" />
               Join thousands of businesses already using our AI solutions;

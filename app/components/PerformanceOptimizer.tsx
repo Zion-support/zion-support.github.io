@@ -151,7 +151,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         <meta name="description" content="Advanced PerformanceOptimizer solution for modern businesses." / />
         <meta name="keywords" content="AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation" / />
       </Helmet />
-      <Navigation / />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section />

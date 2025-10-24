@@ -83,18 +83,18 @@ const AIServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden" />
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
-        <div className="relative max-w-7xl mx-auto text-center" />
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6"></h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Services</span />
           </h1 />
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" />
             Transform your business with cutting-edge artificial intelligence solutions designed to drive growth and efficiency.
           </p />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
               Get Started;
               <ArrowRight className="ml-2 h-5 w-5" / />
@@ -106,9 +106,9 @@ const AIServicesPage: React.FC = () => {
         </div />
       </section />
       {/* Services Grid */, }
-      <section className="py-20 px-4" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our AI Solutions;
             </h2 />
@@ -116,10 +116,10 @@ const AIServicesPage: React.FC = () => {
               Comprehensive AI services to solve your most complex business challenges.
             </p />
           </div />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300"></div key={index, } className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4" />
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
                   <service.icon className="h-6 w-6 text-white" / />
                 </div />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title, }</h3 />
@@ -142,9 +142,9 @@ const AIServicesPage: React.FC = () => {
         </div />
       </section />
       {/* Process Section */}
-      <section className="py-20 px-4 bg-white/5" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our Process;
             </h2 />
@@ -152,10 +152,10 @@ const AIServicesPage: React.FC = () => {
               A proven methodology for delivering successful AI solutions.
             </p />
           </div />
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center" />
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4" />
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
                   {step.step}
                 </div />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3 />
@@ -166,15 +166,15 @@ const AIServicesPage: React.FC = () => {
         </div />
       </section />
       {/* CTA Section */}
-      <section className="py-20 px-4" />
-        <div className="max-w-4xl mx-auto text-center" />
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4"></h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Ready to Harness the Power of AI?
           </h2 />
           <p className="text-xl text-gray-600 mb-8" />
             Let&apos;s discuss how our AI solutions can transform your business operations.
           </p />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a;
               href="/contact"
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"

@@ -33,10 +33,10 @@ const DemoPage: React.FC = () => {
     <>
       
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16" />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
         {/* Hero Section */}
-        <section className="py-20" />
-          <div className="container mx-auto px-4 text-center" />
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Interactive <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Demos</span />
             </h1 />
@@ -46,9 +46,9 @@ const DemoPage: React.FC = () => {
           </div />
         </section />
         {/* Demo Selection */, }
-        <section className="py-20" />
-          <div className="container mx-auto px-4" />
-            <div className="max-w-6xl mx-auto" />
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
               <div className="$1"></div>
                 {demos.map((demo) => (
                   <div;
@@ -60,7 +60,7 @@ const DemoPage: React.FC = () => {
                         : 'bg-white/10 hover: bg-white/20 border-2 border-transparent'
                     , }`}
                   >
-                    <div className="flex items-center mb-4" />
+                    <div className="flex items-center mb-4">
                       {demo.icon}
                       <h3 className="text-xl font-bold text-white ml-3">{demo.title}</h3 />
                     </div />
@@ -77,8 +77,8 @@ const DemoPage: React.FC = () => {
                 ))}
               </div />
               {/* Demo Content */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8" />
-                <div className="text-center mb-8" />
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                <div className="text-center mb-8">
                   <h2 className="text-3xl font-bold text-white mb-4" />
                     {demos.find(d => d.id === activeDemo)?.title}
                   </h2 />
@@ -86,9 +86,9 @@ const DemoPage: React.FC = () => {
                     {demos.find(d => d.id === activeDemo)?.description}
                   </p />
                 </div />
-                <div className="bg-black/50 rounded-lg p-8 mb-8" />
-                  <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg" />
-                    <div className="text-center" />
+                <div className="bg-black/50 rounded-lg p-8 mb-8">
+                  <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg">
+                    <div className="text-center">
                       <Play className="w-16 h-16 text-cyan-400 mx-auto mb-4" / />
                       <h3 className="text-xl font-bold text-white mb-2">Demo Coming Soon</h3 />
                       <p className="text-gray-400" />
@@ -97,7 +97,7 @@ const DemoPage: React.FC = () => {
                     </div />
                   </div />
                 </div />
-                <div className="text-center" />
+                <div className="text-center">
                   <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto"></button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
                     Schedule Live Demo;
                     <ArrowRight className="ml-2 h-5 w-5" / />
@@ -108,9 +108,9 @@ const DemoPage: React.FC = () => {
           </div />
         </section />
         {/* CTA Section */, }
-        <section className="py-20" />
-          <div className="container mx-auto px-4 text-center" />
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12" />
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to See More?</h2 />
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" />
                 Contact our team to schedule a personalized demonstration of our AI and IT solutions.

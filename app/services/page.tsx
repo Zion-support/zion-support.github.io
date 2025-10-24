@@ -59,17 +59,17 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-16">
       {/* Hero Section */}
-      <section className="py-20" />
-        <div className="container mx-auto px-4 text-center" />
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span />
           </h1 />
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" />
             We provide comprehensive AI and IT solutions to help your business thrive in the digital age.
           </p />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center" />
               Get Started;
               <ArrowRight className="ml-2 h-5 w-5" / />
@@ -81,12 +81,12 @@ const ServicesPage: React.FC = () => {
         </div />
       </section />
       {/* Services Grid */, }
-      <section className="py-20" />
-        <div className="container mx-auto px-4" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" />
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceCategories.map((category, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover: bg-white/20 transition-all duration-300"></div key={index, } className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover: bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-6" />
+                <div className="flex items-center mb-6">
                   {category.icon, }
                   <h3 className="text-2xl font-bold text-white ml-4">{category.title}</h3 />
                 </div />
@@ -109,9 +109,9 @@ const ServicesPage: React.FC = () => {
         </div />
       </section />
       {/* CTA Section */}
-      <section className="py-20" />
-        <div className="container mx-auto px-4 text-center" />
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12" />
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2 />
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" />
               Let's discuss your project and see how we can help you achieve your goals.

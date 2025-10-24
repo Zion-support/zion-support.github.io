@@ -37,17 +37,17 @@ const CloudMigrationProPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <section className="$1"></section>
-        <div className="max-w-7xl mx-auto text-center" />
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
             Cloud Migration <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pro</span />
           </h1 />
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" />
             Transform your business with professional cloud migration services. Seamlessly migrate to the cloud with zero downtime and enhanced security.
           </p />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -65,9 +65,9 @@ const CloudMigrationProPage: React.FC = () => {
         </div />
       </section />
       {/* Features Section */, }
-      <section className="py-20 px-4 sm:px-6 lg:px-8" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" />
               Professional Cloud Migration Services;
             </h2 />
@@ -75,10 +75,10 @@ const CloudMigrationProPage: React.FC = () => {
               Our cloud migration experts provide comprehensive solutions to move your business to the cloud safely and efficiently.
             </p />
           </div />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group"></div key={index, } className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
-                <div className="mb-6" />
+                <div className="mb-6">
                   {feature.icon, }
                 </div />
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3 />
@@ -89,9 +89,9 @@ const CloudMigrationProPage: React.FC = () => {
         </div />
       </section />
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="grid lg:grid-cols-2 gap-12 items-center" />
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div />
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" />
                 Why Choose Our Cloud Migration Services?
@@ -108,10 +108,10 @@ const CloudMigrationProPage: React.FC = () => {
                 ))}
               </ul />
             </div />
-            <div className="relative" />
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10" />
-                <div className="text-center" />
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6" />
+            <div className="relative">
+              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
                     <Brain className="w-10 h-10 text-white" / />
                   </div />
                   <h3 className="text-2xl font-bold text-white mb-4">Expert Migration</h3 />
@@ -126,14 +126,14 @@ const CloudMigrationProPage: React.FC = () => {
       </section />
       {/* CTA Section */}
       <section className="$1"></section>
-        <div className="max-w-4xl mx-auto text-center" />
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" />
             Ready to Move to the Cloud?
           </h2 />
           <p className="text-xl text-cyan-100 mb-8" />
             Join thousands of businesses already using our cloud migration services to transform their infrastructure.
           </p />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
               to="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"

@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center" />
+      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" / />
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3 />
         <p className="text-gray-300">Thank you for reaching out. We'll get back to you soon.</p />
@@ -78,7 +78,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" />
+    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2 />
       <form onSubmit={handleSubmit} className="space-y-6" />
         <div className="$1"></div>
@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
             / />
           </div />
         </div />
-        <div className="grid md:grid-cols-2 gap-6" />
+        <div className="grid md:grid-cols-2 gap-6">
           <div />
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" />
               Phone Number;
@@ -210,18 +210,18 @@ const ContactForm: React.FC = () => {
           ), }
         </button />
       </form />
-      <div className="mt-8 pt-8 border-t border-white/10" />
+      <div className="mt-8 pt-8 border-t border-white/10">
         <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3 />
-        <div className="space-y-3" />
-          <div className="flex items-center justify-center" />
+        <div className="space-y-3">
+          <div className="flex items-center justify-center">
             <Mail className="w-5 h-5 text-cyan-400 mr-2" / />
             <span className="text-gray-300">kleber@ziontechgroup.com</span />
           </div />
-          <div className="flex items-center justify-center" />
+          <div className="flex items-center justify-center">
             <Phone className="w-5 h-5 text-purple-400 mr-2" / />
             <span className="text-gray-300">+1 (302) 464-0950</span />
           </div />
-          <div className="flex items-center justify-center" />
+          <div className="flex items-center justify-center">
             <MessageSquare className="w-5 h-5 text-green-400 mr-2" / />
             <span className="text-gray-300">24/7 Support</span />
           </div />

@@ -70,11 +70,11 @@ const MicroSaasPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden" />
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
-        <div className="relative max-w-7xl mx-auto text-center" />
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6" />
             Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">SaaS</span />
           </h1 />
@@ -93,9 +93,9 @@ const MicroSaasPage: React.FC = () => {
         </div />
       </section />
       {/* Services Grid */, }
-      <section className="py-20 px-4" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our SaaS Services;
             </h2 />
@@ -103,10 +103,10 @@ const MicroSaasPage: React.FC = () => {
               End-to-end SaaS development and growth services to help you succeed.
             </p />
           </div />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300"></div key={index, } className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4" />
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
                   <service.icon className="h-6 w-6 text-white" / />
                 </div />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title, }</h3 />
@@ -129,9 +129,9 @@ const MicroSaasPage: React.FC = () => {
         </div />
       </section />
       {/* Platforms Section */}
-      <section className="py-20 px-4 bg-white/5" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Platforms We Build;
             </h2 />
@@ -139,7 +139,7 @@ const MicroSaasPage: React.FC = () => {
               We create SaaS solutions across multiple platforms to reach your target audience.
             </p />
           </div />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {platforms.map((platform, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center hover: shadow-lg transition-shadow duration-300"></div key={index, } className="bg-white p-6 rounded-lg shadow-md text-center hover: shadow-lg transition-shadow duration-300">
                 <span className="text-gray-700 font-medium">{platform, }</span />
@@ -149,9 +149,9 @@ const MicroSaasPage: React.FC = () => {
         </div />
       </section />
       {/* Tech Stack Section */}
-      <section className="py-20 px-4" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our Technology Stack;
             </h2 />
@@ -159,7 +159,7 @@ const MicroSaasPage: React.FC = () => {
               We use proven technologies to build robust, scalable, and maintainable SaaS applications.
             </p />
           </div />
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4" />
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {techStack.map((tech, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-md text-center hover: shadow-lg transition-shadow duration-300"></div key={index, } className="bg-white p-4 rounded-lg shadow-md text-center hover: shadow-lg transition-shadow duration-300">
                 <span className="text-gray-700 font-medium text-sm">{tech, }</span />
@@ -169,9 +169,9 @@ const MicroSaasPage: React.FC = () => {
         </div />
       </section />
       {/* Process Section */}
-      <section className="py-20 px-4 bg-white/5" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our SaaS Development Process;
             </h2 />
@@ -179,44 +179,44 @@ const MicroSaasPage: React.FC = () => {
               A proven methodology for building successful SaaS products.
             </p />
           </div />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
-            <div className="bg-white p-8 rounded-xl shadow-lg" />
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4">
                 1;
               </div />
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Discovery & Planning</h3 />
               <p className="text-gray-600">We analyze your market, define your MVP, and create a detailed roadmap for your SaaS product.</p />
             </div />
-            <div className="bg-white p-8 rounded-xl shadow-lg" />
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4" />
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4">
                 2;
               </div />
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Design & Development</h3 />
               <p className="text-gray-600">We design the user experience and develop your SaaS application using modern technologies and best practices.</p />
             </div />
-            <div className="bg-white p-8 rounded-xl shadow-lg" />
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4" />
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4">
                 3;
               </div />
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Testing & Launch</h3 />
               <p className="text-gray-600">We thoroughly test your application and help you launch it to market with a solid go-to-market strategy.</p />
             </div />
-            <div className="bg-white p-8 rounded-xl shadow-lg" />
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4" />
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4">
                 4;
               </div />
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Growth & Optimization</h3 />
               <p className="text-gray-600">We help you scale your SaaS product, optimize performance, and implement growth strategies.</p />
             </div />
-            <div className="bg-white p-8 rounded-xl shadow-lg" />
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4" />
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4">
                 5;
               </div />
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Maintenance & Support</h3 />
               <p className="text-gray-600">We provide ongoing maintenance, updates, and support to ensure your SaaS product continues to thrive.</p />
             </div />
-            <div className="bg-white p-8 rounded-xl shadow-lg" />
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4" />
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mb-4">
                 6;
               </div />
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Scaling & Expansion</h3 />
@@ -226,8 +226,8 @@ const MicroSaasPage: React.FC = () => {
         </div />
       </section />
       {/* CTA Section */}
-      <section className="py-20 px-4" />
-        <div className="max-w-4xl mx-auto text-center" />
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
             Ready to Build Your SaaS Product?
           </h2 />

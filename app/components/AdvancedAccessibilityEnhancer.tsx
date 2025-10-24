@@ -191,7 +191,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   }, [enableVoiceNavigation])
 
   return (
-    <div className="accessibility-enhancer" />
+    <div className="accessibility-enhancer">
       {/* Accessibility Controls */}
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 , }} />
         <button;

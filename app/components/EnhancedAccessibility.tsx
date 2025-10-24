@@ -49,7 +49,7 @@ const EnhancedAccessibilityPage: React.FC = () => {
         <meta name="description" content="Advanced EnhancedAccessibility solution for modern businesses." / />
         <meta name="keywords" content="AI, artificial intelligence, EnhancedAccessibility, AI solutions, intelligent automation" / />
       </Helmet />
-      <Navigation / />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section />

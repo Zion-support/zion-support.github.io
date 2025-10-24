@@ -64,7 +64,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
         }}
       / />
       {/* Content */}
-      <div className="relative z-10" />
+      <div className="relative z-10">
         {children}
       </div />
       {/* Glow effect */}

@@ -17,19 +17,19 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' , }) => {
         <meta name="description" content="Professional SEO Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." / />
         <meta name="keywords" content="AI, artificial intelligence, SEO enhancer, AI solutions, intelligent automation" / />
       </Helmet />
-      <Navigation / />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden" />
+        <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
-          <div className="relative max-w-7xl mx-auto text-center" />
+          <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               SEO Enhancer;
             </h1 />
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" />
               Professional SEO Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p />
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" / />
@@ -41,16 +41,16 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' , }) => {
           </div />
         </section />
         {/* Features Section */, }
-        <section className="py-20 px-4" />
-          <div className="max-w-7xl mx-auto" />
-            <div className="text-center mb-16" />
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2 />
               <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Powerful SEO enhancement features designed to boost your search rankings;
               </p />
             </div />
             <div className="$1"></div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <Brain className="h-12 w-12 text-emerald-400 mb-4" / />
                 <h3 className="text-xl font-semibold text-white mb-3">AI-Powered SEO</h3 />
                 <p className="text-gray-300 mb-4">Advanced AI algorithms that optimize your content for search engines</p />
@@ -65,7 +65,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' , }) => {
                   </li />
                 </ul />
               </div />
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <Zap className="h-12 w-12 text-emerald-400 mb-4" / />
                 <h3 className="text-xl font-semibold text-white mb-3">Fast Results</h3 />
                 <p className="text-gray-300 mb-4">See improvements in your search rankings quickly</p />
@@ -80,7 +80,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' , }) => {
                   </li />
                 </ul />
               </div />
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <Shield className="h-12 w-12 text-emerald-400 mb-4" / />
                 <h3 className="text-xl font-semibold text-white mb-3">Safe & Compliant</h3 />
                 <p className="text-gray-300 mb-4">White-hat SEO techniques that comply with search engine guidelines</p />
@@ -99,8 +99,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' , }) => {
           </div />
         </section />
         {/* CTA Section */, }
-        <section className="py-20 px-4" />
-          <div className="max-w-4xl mx-auto text-center" />
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Boost Your SEO?</h2 />
             <p className="text-xl text-gray-300 mb-8" />
               Join thousands of businesses already using our SEO enhancement solutions;

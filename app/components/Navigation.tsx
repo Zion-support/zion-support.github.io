@@ -69,10 +69,10 @@ const Navigation = () => {
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`} />
       <div className="$1"></div>
-        <div className="flex items-center justify-between h-16" />
+        <div className="flex items-center justify-between h-16">
           {/* Logo */, }
           <Link href="/" className="flex items-center space-x-2" />
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center" />
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span />
             </div />
             <span className="text-white font-bold text-xl">Zion Tech Group</span />
@@ -99,7 +99,7 @@ const Navigation = () => {
                   </Link />
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50" />
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
                         <Link key={subItem.name}
                           href={subItem.href}
@@ -139,7 +139,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="$1"></div>
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2" />
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -157,7 +157,7 @@ const Navigation = () => {
                       <span>{item.name}</span />
                     </Link />
                     {item.submenu && (
-                      <div className="ml-8 space-y-1" />
+                      <div className="ml-8 space-y-1">
                         {item.submenu.map((subItem) => (
                           <Link key={subItem.name}
                             href={subItem.href}
@@ -172,7 +172,7 @@ const Navigation = () => {
                   </div />
                 );
               })}
-              <div className="pt-4 border-t border-slate-700" />
+              <div className="pt-4 border-t border-slate-700">
                 <Link;
                   href="/contact"
                   onClick={() => setIsOpen(false)}

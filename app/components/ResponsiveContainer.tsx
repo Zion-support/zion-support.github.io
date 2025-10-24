@@ -33,7 +33,7 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
         <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses." / />
         <meta name="keywords" content="AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation" / />
       </Helmet />
-      <Navigation / />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section />

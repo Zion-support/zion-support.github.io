@@ -61,19 +61,19 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" />
-      <Navigation / />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden" />
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
-        <div className="relative max-w-7xl mx-auto text-center" />
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6"></h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Zion Tech Group</span />
           </h1 />
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" />
             Advanced AI and IT solutions for modern businesses. We help you leverage cutting-edge technology to drive growth and innovation.
           </p />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
               Get Started;
               <ArrowRight className="ml-2 h-5 w-5" / />
@@ -85,9 +85,9 @@ export default function HomePage() {
         </div />
       </section />
       {/* Features Section */, }
-      <section className="py-20 px-4" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our Solutions;
             </h2 />
@@ -95,10 +95,10 @@ export default function HomePage() {
               Comprehensive AI and IT solutions designed to transform your business.
             </p />
           </div />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300"></div key={index, } className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4" />
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" / />
                 </div />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title, }</h3 />
@@ -117,9 +117,9 @@ export default function HomePage() {
         </div />
       </section />
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-white/5" />
-        <div className="max-w-7xl mx-auto" />
-          <div className="text-center mb-16" />
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Why Choose Zion Tech Group?
             </h2 />
@@ -127,7 +127,7 @@ export default function HomePage() {
               Our proven track record and innovative approach deliver measurable results.
             </p />
           </div />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3" />
                 <CheckCircle className="h-6 w-6 text-emerald-500 mt-1 flex-shrink-0" / />
@@ -138,8 +138,8 @@ export default function HomePage() {
         </div />
       </section />
       {/* CTA Section */}
-      <section className="py-20 px-4" />
-        <div className="max-w-4xl mx-auto text-center" />
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4"></h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Ready to Transform Your Business?
           </h2 />

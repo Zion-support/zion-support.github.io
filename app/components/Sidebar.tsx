@@ -50,7 +50,7 @@ const SidebarPage: React.FC = () => {
         <meta name="description" content="Advanced Sidebar solution for modern businesses." / />
         <meta name="keywords" content="AI, artificial intelligence, Sidebar, AI solutions, intelligent automation" / />
       </Helmet />
-      <Navigation / />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div />
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section />
@@ -309,7 +309,7 @@ aria-label="Close sidebar"
 </div />
 {/* Navigation */, }
 <div className="flex-1 overflow-y-auto py-6"></div />
-<nav className="space-y-2 px-4" />
+<nav className="space-y-2 px-4">
 {navigationSections.map((section, sectionIndex) => (;}
 <div key={sectionIndex} className="space-y-1"></div />
 <button;

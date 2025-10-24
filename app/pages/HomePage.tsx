@@ -21,13 +21,13 @@ export default function HomePage() {  return (
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" / />
       </Helmet />
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden" />
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20" />
+        <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div />
         </div />
-        <div className="relative z-10 container mx-auto px-4 text-center" />
-          <div className="max-w-4xl mx-auto" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent" />
               Zion Tech Group;
             </h1 />
@@ -61,9 +61,9 @@ export default function HomePage() {  return (
         <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"></div />
       </section />
       {/* Services Section */}
-      <section className="py-20 bg-slate-900" />
-        <div className="container mx-auto px-4" />
-          <div className="text-center mb-16" />
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Core Services;
             </h2 />
@@ -71,10 +71,10 @@ export default function HomePage() {  return (
               Comprehensive technology solutions designed to accelerate your business growth;
             </p />
           </div />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI Solutions */, }
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105" />
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <CpuChipIcon className="w-8 h-8 text-white" / />
               </div />
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3 />
@@ -87,8 +87,8 @@ export default function HomePage() {  return (
               </Link />
             </div />
             {/* Cybersecurity */, }
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105" />
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <ShieldCheckIcon className="w-8 h-8 text-white" / />
               </div />
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3 />
@@ -102,7 +102,7 @@ export default function HomePage() {  return (
             </div />
             {/* Cloud Infrastructure */, }
             <div className="$1"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <CloudIcon className="w-8 h-8 text-white" / />
               </div />
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3 />
@@ -116,7 +116,7 @@ export default function HomePage() {  return (
             </div />
             {/* Digital Transformation */, }
             <div className="$1"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <ChartBarIcon className="w-8 h-8 text-white" / />
               </div />
               <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3 />
@@ -129,8 +129,8 @@ export default function HomePage() {  return (
               </Link />
             </div />
             {/* Micro SaaS */, }
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105" />
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <GlobeAltIcon className="w-8 h-8 text-white" / />
               </div />
               <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3 />
@@ -143,8 +143,8 @@ export default function HomePage() {  return (
               </Link />
             </div />
             {/* 5G Solutions */, }
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105" />
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <GlobeAltIcon className="w-8 h-8 text-white" / />
               </div />
               <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3 />
@@ -160,9 +160,9 @@ export default function HomePage() {  return (
         </div />
       </section />
       {/* About Section */, }
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900" />
-        <div className="container mx-auto px-4" />
-          <div className="max-w-4xl mx-auto text-center" />
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8" />
               Why Choose Zion Tech Group?
             </h2 />
@@ -172,15 +172,15 @@ export default function HomePage() {  return (
               and achieve unprecedented growth.
             </p />
             <div className="$1"></div>
-              <div className="text-center" />
+              <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">50+</div />
                 <div className="text-gray-300">Projects Completed</div />
               </div />
-              <div className="text-center" />
+              <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div />
                 <div className="text-gray-300">Happy Clients</div />
               </div />
-              <div className="text-center" />
+              <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div />
                 <div className="text-gray-300">Success Rate</div />
               </div />
@@ -195,25 +195,25 @@ export default function HomePage() {  return (
         </div />
       </section />
       {/* Contact Section */, }
-      <section className="py-20 bg-slate-900" />
-        <div className="container mx-auto px-4" />
-          <div className="max-w-4xl mx-auto text-center" />
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8" />
               Ready to Transform Your Business?
             </h2 />
             <p className="text-xl text-gray-300 mb-12" />
               Let's discuss how our technology solutions can drive your business forward;
             </p />
-            <div className="grid md:grid-cols-3 gap-8 mb-12" />
-              <div className="flex items-center justify-center gap-4 text-gray-300" />
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-purple-400" / />
                 <span>+1-302-464-0950</span />
               </div />
-              <div className="flex items-center justify-center gap-4 text-gray-300" />
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <EnvelopeIcon className="w-6 h-6 text-purple-400" / />
                 <span>kleber@ziontechgroup.com</span />
               </div />
-              <div className="flex items-center justify-center gap-4 text-gray-300" />
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <MapPinIcon className="w-6 h-6 text-purple-400" / />
                 <span>Middletown, DE</span />
               </div />

@@ -47,7 +47,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' , }) => {
         <meta name="description" content="Advanced serviceworker solutions powered by AI technology." / />
         <meta name="keywords" content="AI, artificial intelligence, ServiceWorker, AI solutions, intelligent automation" / />
       </Helmet />
-      <Navigation / />
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div />
         <section className="relative py-20 px-4 overflow-hidden"></section />
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div />
