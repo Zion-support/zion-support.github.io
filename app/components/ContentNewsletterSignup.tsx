@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string;

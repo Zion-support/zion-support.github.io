@@ -1,6 +1,6 @@
 'use client';
+import { Zap, Brain, Shield, ArrowRight, CheckCircle, Workflow, Play } from 'lucide-react';
 import React, { useState } from 'react';
-import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 const DemoPage: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('ai-chatbot')
   const demos = [

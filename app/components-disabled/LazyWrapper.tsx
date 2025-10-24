@@ -1,4 +1,5 @@
 'use client';
+import { ArrowRight } from 'lucide-react';
 import React from 'react';
 
 export default function LazyWrapper({ children }: { children: React.ReactNode }) {

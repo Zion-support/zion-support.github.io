@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
+import { AlertCircle, Mail, Send, CheckCircle, } from 'lucide-react';
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
@@ -119,7 +119,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   return content
 
 }
-
 
 export default NewsletterSignup
 ;

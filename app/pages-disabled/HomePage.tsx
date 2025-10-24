@@ -1,3 +1,4 @@
+import { Phone, Cloud } from 'lucide-react';
 import Link from 'next/link';
 import {
 
@@ -7,7 +8,7 @@ import {
   CpuChipIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  PhoneIcon,
+  Phone,
   EnvelopeIcon,
   MapPinIcon} from '@heroicons/react/24/outline';
 
@@ -197,7 +198,7 @@ export default function HomePage() {  return (
             
             <div className="grid md: grid-cols-3 gap-8 mb-12"></div>,
               <div className="flex items-center justify-center gap-4 text-gray-300"></div>
-                <PhoneIcon className="w-6 h-6 text-purple-400" />
+                <Phone className="w-6 h-6 text-purple-400" />
                 <span>+1-302-464-0950</span>
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-300"></div>

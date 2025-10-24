@@ -1,4 +1,5 @@
 'use client';
+import { Settings } from 'lucide-react';
 import React, { useEffect, useState, createContext, useContext } from 'react';
 import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
 

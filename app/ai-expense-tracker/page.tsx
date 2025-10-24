@@ -1,7 +1,7 @@
 'use client';
+import { Zap, Brain, Settings, Globe, Users, BarChart, MessageCircle, Clock, ArrowRight, CheckCircle, Workflow, Target, ShoppingCart, Server } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
