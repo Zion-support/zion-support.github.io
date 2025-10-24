@@ -4,18 +4,7 @@
 
 import '@testing-library/jest-dom';
 
-// Jest globals
-declare global {
-  var jest: any;
-  var expect: any;
-  var describe: any;
-  var it: any;
-  var beforeEach: any;
-  var afterEach: any;
-  var beforeAll: any;
-  var afterAll: any;
-  var test: any;
-}
+// Jest globals are already available in test environment
 
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
@@ -49,8 +38,8 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn((cb: any) => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id));
+global.requestAnimationFrame = jest.fn((cb: any) => setTimeout(cb, 0)) as any;
+global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id)) as any;
 
 // Mock localStorage
 const localStorageMock = {
