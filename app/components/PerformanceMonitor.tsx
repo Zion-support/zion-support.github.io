@@ -275,43 +275,49 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   return nul l
 }
 
-// Global performance monitoring utilitiesexportconstperformanceUtils= {// Measure custom performance marksmark: (name: string) => {
-  
-    if (type of windo w !== 'undefined' && 'performance' in windo w) {
-      performance.mark(name)
-   }
+// Global performance monitoring utilities
+export const performanceUtils = {
+  // Measure custom performance marks
+  mark: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(name);
+    }
   },
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
-        performance.measure(name, startMark, endMark)
-     } else {performance.measure(namestartMark)
-     }
+        performance.measure(name, startMark, endMark);
+      } else {
+        performance.measure(name, startMark);
+      }
     }
   },
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      return type ? performance.getEntriesByType(type) : performance.getEntries()
+      return type ? performance.getEntriesByType(type) : performance.getEntries();
     }
-    return []
+    return [];
   },
   // Clear performance entries
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
-        performance.clearMeasures(type)
-        performance.clearMarks(type)
-     } else {performance.clearMeasures()
-        performance.clearMarks()
-     }
+        performance.clearMeasures(type);
+        performance.clearMarks(type);
+      } else {
+        performance.clearMeasures();
+        performance.clearMarks();
+      }
     }
   }
-}
+};
 
-// Google Analytics integration for performance trackingexportconsttrackPerformanceToGA= (metrics: PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
-    windo w.gtag('event', 'performance_metrics', {
+// Google Analytics integration for performance tracking
+export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    window.gtag('event', 'performance_metrics', {
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
       custom_map: {
