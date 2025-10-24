@@ -1,72 +1,55 @@
 'use client';
-
+import Footer from './Footer';
 import React from 'react';
-import Head from 'next/head';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail, ArrowRight } from 'lucide-react';
+const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '2 4/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success',
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                <Phone className=&quot;mr-2 h-5 w-5&quot; />
+                Call Now
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                <Mail className=&quot;mr-2 h-5 w-5&quot; />
+                Email Us
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+</>
+  )
 }
-
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
-  canonical,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-
-  return (
-    <Head>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Robots Meta Tags */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
-        />
-      )}
-    </Head>
-  );
-};
-
-export default EnhancedSEO;
+export default EnhancedSEOPage
+                </div>
+              ))}
+            </div>
+          </div>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
+              <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; />
+                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12&quot;></div>
+            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>h2>
+            <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+            </div>
+          </div>

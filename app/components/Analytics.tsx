@@ -1,23 +1,20 @@
-'use client';
-
-import React, { useEffect } from 'react';
-
+import React, { useEffect } from &quot;react&quot;
 interface AnalyticsProps {
-  children: React.ReactNode;
+  className?: string
 }
-
-const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+const Analytics: React.FC = () => {
   useEffect(() => {
-    // Google Analytics initialization
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
+    const initAnalytics = () => {
+      if (typeof window !== &quot;undefined&quot; && window.gtag) {
+        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
+          page_title: document.title,
+    page_location: window.location.href})
+      }
     }
-  }, []);
-
-  return <>{children}</>;
-};
-
-export default Analytics;
+    initAnalytics()
+  }, [])
+  return null; // Analytics component doesn&apos;t render anything
+}
+export default Analytics
+}
+export default AnalyticsPage

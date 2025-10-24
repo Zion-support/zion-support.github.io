@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
 interface OptimizedImageProps {
   src: string
@@ -7,14 +7,18 @@ interface OptimizedImageProps {
   width?: number
   height?: number
   className?: string
+  "data-testid"?: string
+  [key: string]: any
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   src,
   alt,
   width = 800,
   height = 600,
-  className = ''
+  className = "",
+  "data-testid": testId,
+  ...props
 }) => {
   return (
     <Image
@@ -23,7 +27,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       width={width}
       height={height}
       className={className}
-      priority
+      data-testid={testId}
+      {...props}
     />
   )
 }
