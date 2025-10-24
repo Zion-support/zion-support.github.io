@@ -3,19 +3,11 @@
 import React from 'react';
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
-<<<<<<< HEAD
 &quot;use client&quot;
 
 const PerformanceImagePage: React.FC = () => {,
   const features = [
     {
-=======
-&quot;use client&quot
-
-const PerformanceImagePage: React.FC = () => {
-  const features = [,
-    {,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -47,7 +39,6 @@ const PerformanceImagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-<<<<<<< HEAD
     <>
       
     </>
@@ -62,34 +53,3 @@ const PerformanceImagePage: React.FC = () => {
     </div>
 
 export default PerformanceImagePage
-
-=======
-
-  </>
-export default PerformanceImagePage;
-
-export default PerformanceImagePage
-
-=======
-    <div>
-      <Helmet />
-        <title>PerformanceImage | Zion Tech Group</title>
-        <meta name="description" content="Professional PerformanceImage services by Zion Tech Group." />
-        <meta name="keywords" content="AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation" />
-      </Helmet>
-      <section className="py-20 px-4" />
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">PerformanceImage</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>p>
-          
-        </div>
-      </section>
-    </div>
-
-export default PerformanceImagePage
-
-
-</div>
-}}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

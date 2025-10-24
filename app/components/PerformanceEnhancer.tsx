@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
@@ -28,10 +27,3 @@ import { ArrowRight } from 'lucide-react';
 
 
 export default PerformanceEnhancerPage
-=======
-
-          </div>
-        </div>
-      </section>
-export default PerformanceEnhancerPage }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
 "use client";
 import React from "react";
 interface AccessibilityComponentsProps {
@@ -22,19 +15,3 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
 };
 
 export default AccessibilityComponents;
-
-=======
-'use client';
-import React from "react";
-"use client";
-interface AccessibilityComponentsProps {
-  className?: string}
-const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
-  return (</AccessibilityComponentsProps>
-    <div className={className}>
-      <h2>Accessibility Components</h2>
-      <p>Accessibility components for enhanced user experience.</p>
-    </div>
-export default AccessibilityComponents
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

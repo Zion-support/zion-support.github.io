@@ -6,7 +6,6 @@ import { Mail  } from "lucide-react";
 import { Home  } from "lucide-react";
 interface AdvancedErrorBoundaryProps {
 
-<<<<<<< HEAD
   className?: string;
 }
 interface State {
@@ -32,27 +31,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-
-=======
-  className?: string
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo,
-  errorId?: string,
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)}
-    this.state = { hasError: false};
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorRepor,
-  t: ErrorReport = {,
-    errorId: this.state.errorId || this.generateErrorId()
-      error
-      errorI,
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   this.setState({
       error
       errorInfo)
@@ -65,19 +43,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       // // // eslint-disable-next-line no-console
     console.error('Error caught by boundary:', error, errorInfo);
     // Log error to external service in production
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'production') {
 
       this.logErrorToService(error, errorInfo)
     }
   }
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
-
-=======
-    if(process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo)}
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {</Props>;
 }}}}}}}}}

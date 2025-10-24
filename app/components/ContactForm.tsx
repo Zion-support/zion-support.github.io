@@ -3,7 +3,6 @@ import React from 'react';
 import { useState  } from "react";
 import { MessageSquare, Mail, Phone, Send, CheckCircle  } from "lucide-react";
 interface FormData {
-<<<<<<< HEAD
 
   name: string;,
     email: string;,
@@ -13,19 +12,6 @@ interface FormData {
     service: string,
   }
 const ContactForm: React.FC = () => {,
-
-=======
-  name: string;,
-  email: string;
-  phone: string;,
-  company: string;
-  message: string;
-  servic,
-  e: string;}
-}
-;
-const ContactForm: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -33,7 +19,6 @@ const ContactForm: React.FC = () => {
     company: '',
     message: '',
     service: ''
-<<<<<<< HEAD
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -50,23 +35,6 @@ const ContactForm: React.FC = () => {
 
     e.preventDefault()
     setIsSubmitting(true)
-=======
-  });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);</FormData>
-</FormData>
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value);
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
-    setIsSubmitting(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
@@ -96,19 +64,9 @@ const ContactForm: React.FC = () => {
     'Consulting';
   ];
 
-<<<<<<< HEAD
   if (isSubmitted) {
     return (
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"> </div><CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> </CheckCircle><h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-=======
-  if(isSubmitted) {
-    return (</HTMLInputElement>
-    <>
-      </HTMLInputElement>
-      <div className = "bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
-        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" / />
-        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>;
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       
     
@@ -116,23 +74,11 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
 
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"> </div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6"> </form><div className="grid md: grid-cols-2 gap-6">,
           <div> </div><label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Full Name *
             </label></label>
-
-=======
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-      <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-      <form onSubmit={handleSubmit} className="space-y-6" />
-        <div className="grid md:grid-cols-2 gap-6">
-            <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2" />
-              Full Name *</label>
-            </label>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             <input
               type="text"
               id="name",
@@ -144,7 +90,6 @@ formData.name
 handleChange
 };
               required
-<<<<<<< HEAD
 
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
@@ -152,17 +97,6 @@ handleChange
             /> </input></div>
           <div> </div><label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address *
             </label></label>
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
-              placeholder="Your full name"
-            / />
-          
-            <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2" />
-              Email Address *</label>
-            </label>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             <input
               type="email"
               id="email",
@@ -174,7 +108,6 @@ formData.email
 handleChange
 };
               required
-<<<<<<< HEAD
 
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
@@ -185,27 +118,12 @@ handleChange
         <div className="grid md: grid-cols-2 gap-6">,
           <div> </div><label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number
             </label></label>
-
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              placeholder="your@email.com"
-            / />
-          
-        
-        <div className="grid m,
-  d:grid-cols-2 gap-6">
-            <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" />
-              Phone Number</label>
-            </label>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             <input
               type="tel"
               id="phone"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-<<<<<<< HEAD
 
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
@@ -213,24 +131,12 @@ handleChange
             /> </input></div>
           <div> </div><label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">Company
             </label></label>
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
-              placeholder="+1 (555) 123-4567"
-            / />
-          
-            <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" />
-              Company</label>
-            </label>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             <input
               type="text"
               id="company"
               name="company"
               value={formData.company}
               onChange={handleChange}
-<<<<<<< HEAD
 
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
@@ -239,24 +145,11 @@ handleChange
         </div>
         <div> </div><label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">Service Interest
           </label></label>
-=======
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
-              placeholder="Your company name"
-            / />
-          
-          </div>
-        <div />
-          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" />
-            Service Interest</label>
-          </label>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
           <select
             id="service"
             name="service"
             value={formData.service}
             onChange={handleChange}
-<<<<<<< HEAD
 
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
           > </select><option value="">Select a service</option>
@@ -269,23 +162,6 @@ handleChange
         </div>
         <div> </div><label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message *
           </label></label>
-=======
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
-           />
-            <option value="">Select a service</option>
-            {services.map((service, index) => (
-              <option key={index} value={service} className="bg-gray-800" />
-                {service}</option>
-              </option>
-            ))}
-          </select>
-          </div>
-        <div />
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2" />
-            Message *</label>
-          </label>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
           <textarea
             id="message"
             name="message"
@@ -297,7 +173,6 @@ handleChange
 };
             required
             rows={6}
-<<<<<<< HEAD
 
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none",
 
@@ -333,23 +208,6 @@ handleChange
           </div>
         </div>
       </div>
-
-=======
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent resize-none"
-            placeholder="Tell us about your project or how we can help..."
-          / />
-          </div>
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disable,
-  d:cursor-not-allowed"
-         />
-          {isSubmitting ? (</button>
-            <>
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     </div>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
               Sending...

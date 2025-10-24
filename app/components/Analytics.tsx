@@ -3,21 +3,10 @@ import React from 'react';
 import React, { useEffect } from &quot;react&quot;
 
 interface AnalyticsProps {
-<<<<<<< HEAD
 
   className?: string;
 }
 const Analytics: React.FC = () => {,
-
-=======
-
-
-  className?: string;
-
-
-}
-const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
@@ -26,18 +15,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
-<<<<<<< HEAD
 
           page_location: window.location.href,
         });
       }
     };
-
-
-=======
-          page_location: window.location.href});
-        });}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     initAnalytics();
   }, []);
 
@@ -46,7 +28,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   );}
 // Extend Window interface for gtag
 declare global {
-<<<<<<< HEAD
   interface Window {
 
     gtag: (...args: any[]) => void;,
@@ -55,10 +36,3 @@ declare global {
 
 
 export default Analytics;
-=======
-  interface Window {}
-    gtag: (...arg,
-  s: any[]) => void;};
-export default Analytics;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

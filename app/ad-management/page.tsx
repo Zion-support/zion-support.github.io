@@ -2,13 +2,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
-=======
-import { ArrowRight  } from "lucide-react";
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 
 export default function AdmanagementPage() {
   
@@ -16,7 +11,6 @@ export default function AdmanagementPage() {
         <div>
       <Head>
         <title>Ad Management - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,34 +19,12 @@ export default function AdmanagementPage() {
           <p>Professional ad management - zion tech group services coming soon.</p>
           <Link href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-=======
-        <meta name = "description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Ad Management
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional services by Zion Tech Group.
-          </p>
-          <Link
-            href="/contact"
-
-            className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-<<<<<<< HEAD
         </div>
       </div>
-=======
-            </div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       <Footer />
       </div>
   );

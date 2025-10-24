@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -18,10 +17,6 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean;
 }
 
-=======
-'use client'
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
-
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true,
   enableScreenReader= true,
   enableHighContrast= true,
@@ -36,7 +31,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     reducedMotion: false,
     fontSize: 'normal',
     screenReader: false,
-<<<<<<< HEAD
     keyboardNavigation: false,
   });
   // Detect user preferences
@@ -69,47 +63,13 @@ const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
 
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
-=======
-    keyboardNavigation: false});
-  // Detect user preferences
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
-    // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-    setAccessibilitySettings(prev => ({,
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-    highContrast: prefersHighContrast});
-    // Listen for changes in user preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)'),
-    const handleMotionChange = (e: MediaQueryListEvent) => {,
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches });
-    const handleContrastChange = (e: MediaQueryListEvent) => {,
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches });
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     return (
     <div>
       ) => {
-<<<<<<< HEAD
     </>
     </>
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
-=======
-      motionQuery.removeEventListener('change', handleMotionChange
-    
-  )
-    
-  );
-      contrastQuery.removeEventListener('change', handleContrastChange);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }, [])
   // Apply accessibility styles
   useEffect(() => {
@@ -119,17 +79,10 @@ const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
     if(accessibilitySettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
-<<<<<<< HEAD
   root.classList.remove('high-contrast')
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {,
   const features = [
     {
-=======
-  root.classList.remove('high-contrast');
-const AdvancedAccessibilityEnhancerPage: React.FC = () => {
-  const features = [,
-    {,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -161,7 +114,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Apply font scaling
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1');
   }, [accessibilitySettings])
-<<<<<<< HEAD
 
   // Keyboard navigation enhancement;
 
@@ -173,19 +125,6 @@ $3
   </>
 };
       }
-
-=======
-  // Keyboard navigation enhancement
-  const setupKeyboardNavigation = useCallback(() => {
-    if (typeof window === 'undefined') return
-    consthandleKeyDown= (event: KeyboardEvent) => {
-      // Skip to main content
-      if(event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
-        if(skipLink) {,
-          skipLink.focus();,
-          event.preventDefault()}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       // Escape key to close modals/dropdowns
       if(event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement
@@ -202,7 +141,6 @@ $3
             ? (currentIndex + 1) % menuItems.length
             : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
           menuItems[nextIndex]?.focus()}
-<<<<<<< HEAD
     document.addEventListener('keydown', handleKeyDown)
     return (
     <>
@@ -211,15 +149,10 @@ $3
     </>
     </>
   );
-=======
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }, [])
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {
   if (typeof window === 'undefined') return
-<<<<<<< HEAD
     // Add live region for dynamic content updates;
 
 const liveRegion = document.createElement('div')
@@ -235,21 +168,6 @@ const announcePageChange = ($2) => {
 $3
 };
     }
-
-=======
-    // Add live region for dynamic content updates
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-    // Announce page changes
-    const announcePageChange = (message: string) => {
-      const liveRegion = document.getElementById('live-region');,
-      if(liveRegion) {,
-        liveRegion.textContent = message}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     // Listen for route changes (if using client-side routing)
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
@@ -263,7 +181,6 @@ $3
   // Focus management
   const setupFocusManagement = useCallback(() => {
     if (typeof window === 'undefined') return
-<<<<<<< HEAD
 
     // Trap focus in modals;
 
@@ -431,23 +348,3 @@ const voiceButton = document.createElement('button')
   );
 
 }
-=======
-
-export default AdvancedAccessibilityEnhancer
-}}}}}
-}
-
-export default AdvancedAccessibilityEnhancerPage
-
-=======
-    // Trap focus in modals
-    const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-    
-
-}
-</div>
-</AdvancedAccessibilityEnhancerProps>
-}}}}}}}}}}}}}}}}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

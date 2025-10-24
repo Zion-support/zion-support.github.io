@@ -1,18 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 const benefits = [
-=======
-import { Helmet  } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe  } from "lucide-react";
-import Navigation from '../components/Navigation';
-
-const EnhancedSEOPage: React.FC = () => {
-  const benefits = [
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -21,7 +12,6 @@ const EnhancedSEOPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success',
-<<<<<<< HEAD
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
               </div><button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>,
                 </button><Phone className=&quot;mr-2 h-5 w-5&quot; />Call Now
@@ -37,50 +27,20 @@ const EnhancedSEOPage: React.FC = () => {
   )
 }
 
-=======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" />
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" />
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-            
-          
-        </section>
-      
-      
-    
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
-
 export default EnhancedSEOPage
                 
               ))}
-<<<<<<< HEAD
             </div>
           </div>
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;> </div><CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /> </CheckCircle><p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
-=======
-            
-          
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             ))}
           
           </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
 <<<<<<< HEAD
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;>,
         </section><div className=&quot;max-w-4xl mx-auto text-center&quot;>
@@ -90,21 +50,8 @@ export default EnhancedSEOPage
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
             </div></div>
           </div>
-=======
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>
-=======
-      <section className="py-20 px-4 sm: px-6 lg:px-8" />
-        <div className="max-w-4xl mx-auto text-center" />
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12" />
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center" / />
             </div>
-<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-607a
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

@@ -19,20 +19,11 @@ interface AnalyticsContextType {
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
-<<<<<<< HEAD
 
 )
 export const useAnalytics = ($2) => {
 $3
 };
-
-=======
-export const useAnalytics = () => {
-  return 
-  const context = useContext(AnalyticsContext);
-  if(!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider")
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   return context
 interface AnalyticsProviderProps {
 
@@ -56,55 +47,9 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
         window.gtag("js", new Date()
         window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")}
   }, [])
-<<<<<<< HEAD
 
 export default AnalyticsProvider
 
-=======
-  consttrackEvent = ($2) => {
-$3
-};
-  }
-  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,
-      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
-        page_title: pageName,
-    page_location: window.location.href})
-    }
-  }
-  constvalue: AnalyticsContextType = {trackEvent,
-    trackPageView}
-  return (
-    <AnalyticsContext.Provider value={value}>{children}
-    </AnalyticsContext></AnalyticsContext.Provider>
-  )
-}
-=======
-  consttrackEvent= (
-    eventName: string,
-    parameters?: Record<string, unknown />
-  ) => {
-    if(typeof, window !== "undefined" && window.gtag) {
-      window.gtag("event", eventName, parameters)}
-  consttrackPageView= (pageName: string) => {if(type, of windo, w !=="undefined" && windo, w.gtag) {
-      window.gtag("config","GA_MEASUREMENT_ID", {
-        page_title: pageName,
-    page_location: window.location.href})}
-  constvalue: AnalyticsContextType = {,
-trackEvent,
-    trackPageView
-};
-  return (
-    <AnalyticsContext.Provider value={value}; />
-      {children}
-    </AnalyticsContext.Provider>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
-
 export default AnalyticsProvider
 
-<<<<<<< HEAD
 export default AnalyticsProviderPage
-
-=======
-
-}}}}}}}}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

@@ -1,17 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 import { Phone, Mail } from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {,
-=======
-import { Helmet  } from "react-helmet-async";
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe  } from "lucide-react";
-import Navigation from '../components/Navigation';
-
-const FuturisticHeroPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   const features = [
     {
       ico,

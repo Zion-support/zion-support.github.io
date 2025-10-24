@@ -5,23 +5,14 @@ import { useCallback, useMemo  } from "react";
 
 export const debounce = <T extends (...args: any[]) => any>(,
     func: T,
-<<<<<<< HEAD
   wait: number,
 ): ((...args: Parameters<T>) => void) => {,
   let timeout: NodeJS.Timeout;,
   return (...args: Parameters<T>) => {,
-=======
-  wait: number</T>
-): ((...args: Parameters<T>) => void) => {;
-  let timeout: NodeJS.Timeout;
-  return (...arg,</T>
-  s: Parameters<T>) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
-<<<<<<< HEAD
 // Throttle utility for performance;
 
 export const throttle = <T extends (...args: any[]) => any>(,
@@ -31,17 +22,6 @@ export const throttle = <T extends (...args: any[]) => any>(,
   let inThrottle: boolean;,
   return (...args: Parameters<T>) => {,
     if (!inThrottle) {
-=======
-// Throttle utility for performance</T>
-export const throttle = <T extends (...args: any[]) => any>(,
-    func: T,
-  limit: number</T>
-): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean;
-  return (...arg,</T>
-  s: Parameters<T>) => {
-    if(!inThrottle) {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       func(...args);,
       inThrottle = true,
       setTimeout(() => (inThrottle = false), limit)
@@ -66,15 +46,9 @@ export const useIntersectionObserver = (
         : null
     [callback, options]
   )
-<<<<<<< HEAD
   const observe = useCallback(
     (element: Element | null) => {,
       if (observer && element) {
-=======
-  const observe = useCallback()
-    (element: Element | null) => {
-      if(observer && element) {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         observer.observe(element)
         return (</T>
     <div>
@@ -89,22 +63,14 @@ export const useIntersectionObserver = (
     </>
     }
     [observer]
-<<<<<<< HEAD
     </>
   );
-=======
-      </div>
-      </div>
-  );
-  )
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   const disconnect = useCallback(() => {
     if(observer) {
       observer.disconnect();
     }
   }, [observer])
   useEffect(() => {
-<<<<<<< HEAD
     return (
     <>
       ) => disconnect(
@@ -112,9 +78,6 @@ export const useIntersectionObserver = (
     </>
     </>
   );
-=======
-    return () => disconnect();
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }, [disconnect])
   return { observe, disconnect }
 }
@@ -128,7 +91,6 @@ export const useLazyImage = (src: string, placeholder?: string) => {
     useCallback()
       (entries) => {
         entries.forEach((entry) => {
-<<<<<<< HEAD
           if (entry.isIntersecting && !isLoaded && !isError) {
             const img = new Image()
             img.onload = ($2) => {
@@ -138,17 +100,6 @@ $3
             img.onerror = ($2) => {
 $3
 };
-=======
-          if(entry.isIntersecting && !isLoaded && !isError) {
-            const img = new Image();
-            img.onload = () => {
-              setImageSrc(src);
-              setIsLoaded(true);
-            }
-            img.onerror = () => {
-              setIsError(true);
-            }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             img.src = src
           }
         })
@@ -171,7 +122,6 @@ export const usePerformanceMonitoring = (
     ttfb?: number;
 }>({})
   useEffect(() => {
-<<<<<<< HEAD
     if (typeof window === 'undefined') return;
 
 const updateMetrics = () => {
@@ -181,16 +131,6 @@ const paint = performance.getEntriesByType('paint')
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
 
 const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
-=======
-    if (typeof window === 'undefined') return
-    const updateMetrics = () => {
-  return 
-  return 
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       setMetrics({
         fcp
         lcp)
@@ -213,21 +153,11 @@ const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTi
       })
     }
     return (
-<<<<<<< HEAD
     <div>
       ) => {
     </>
     </>
       window.removeEventListener('load', updateMetrics)
-=======
-      <div>
-      ) => {
-      window.removeEventListener('load', updateMetrics
-      </div>
-  )
-      </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     }
   }, [])
   return metrics
@@ -252,20 +182,13 @@ const updateMemoryInfo = () => {
       if(memory) {
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
-<<<<<<< HEAD
     totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit})
-=======
-    totalJSHeapSize: memory.totalJSHeapSize
-          jsHeapSizeLimi,)
-  t: memory.jsHeapSizeLimit})
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       }
     }
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return (
-<<<<<<< HEAD
     <>
       ) => clearInterval(interval)
     </>
@@ -285,42 +208,6 @@ export const preloadCriticalResources = ($2) => {
 $3
 };
 // Bundle size monitoring;
-
-=======
-      <div>
-      ) => clearInterval(interval
-      </div>
-  )
-      </div>
-  );
-  }, [])
-  return memoryInfo
-}
-// Resource preloading utility
-export const preloadResource = (href: string, as: string) => {
-  if (typeof window === 'undefined') return
-  const link = document.createElement('link');
-  link.rel = 'preload'
-  link.href = href
-  link.as = as,;
-  document.head.appendChild(link);,
-}
-// Critical resource preloading
-export const preloadCriticalResources = () => {
-  return 
-  return 
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
-  preloadResource('/fonts/inter-var.woff2', 'font');
-  preloadResource('/fonts/inter-var.woff', 'font');
-  // Preload critical images
-  preloadResource('/images/hero-bg.webp', 'image');
-  preloadResource('/images/logo.svg', 'image');
-  // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style');
-}
-// Bundle size monitoring
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 export const useBundleSizeMonitoring = (
       </div>
   ) => {
@@ -331,18 +218,10 @@ export const useBundleSizeMonitoring = (
     imageSize?: number;
 }>({})
   useEffect(() => {
-<<<<<<< HEAD
   if (typeof window === 'undefined') return;
 
 const calculateBundleSize = () => {
       const resources = performance.getEntriesByType('resource')
-=======
-  if (typeof window === 'undefined') return
-    const calculateBundleSize = () => {
-  return 
-  return 
-      const resources = performance.getEntriesByType('resource');
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       let totalSize = 0
       let jsSize = 0
       let cssSize = 0
@@ -372,21 +251,11 @@ const calculateBundleSize = () => {
       window.addEventListener('load', calculateBundleSize);
     }
     return (
-<<<<<<< HEAD
     <div>
       ) => {
     </>
     </>
       window.removeEventListener('load', calculateBundleSize)
-=======
-      <div>
-      ) => {
-      window.removeEventListener('load', calculateBundleSize
-      </div>
-  )
-      </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     }
   }, []
       </div>

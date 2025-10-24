@@ -26,14 +26,8 @@ const Breadcrumb: React.FC = () => {
             const isLast = index === pathnames.length - 1;
             
             return (
-<<<<<<< HEAD
               <li key={name} className="flex items-center"> </li><svg
                   className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2"
-=======
-              <li key={name} className="flex items-center">
-                <svg
-                  className="flex-shrink-0 h-4 w-4text-gray-400mx-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
