@@ -46,10 +46,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, [])
 
-<<<<<<< HEAD
-  const track = (event: string, properties?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, properties)
+  const track = (event: string, _properties?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, _properties)
+      }
+
+      // Custom analytics
+      console.log('Analytics Event:', event, _properties)
     }
   }
 
@@ -119,12 +124,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, properties)
-=======
-      if (window.gtag) {
-        window.gtag('event', event, properties);
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, _properties)
       }
       
       // Custom analytics - only log in development
@@ -139,12 +140,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
-=======
-      if (window.gtag) {
-        window.gtag('config', process.env.REACT_APP_GA_ID, {
 >>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
           user_id: userId,
           custom_map: traits
@@ -162,12 +159,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const page = (name: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-<<<<<<< HEAD
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
-=======
-      if (window.gtag) {
-        window.gtag('event', 'page_view', {
 >>>>>>> 189aa74f8961d76a83fc82f1935cf4b76f8c7cbf
           page_title: name,
           page_location: window.location.href,
@@ -235,9 +228,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-  )
-=======
   );
 };
 

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 

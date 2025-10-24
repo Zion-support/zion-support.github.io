@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 };
 
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   const values = [
     {
       icon: Brain,
@@ -45,8 +45,6 @@ const AboutPage: React.FC = () => {
     { number: '5+', label: 'Years Experience' },
     { number: '24/7', label: 'Support Available' }
   ];
-
-export default function AboutPage() {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">
