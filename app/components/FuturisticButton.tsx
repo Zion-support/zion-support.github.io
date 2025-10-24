@@ -2,15 +2,20 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 interface FuturisticButtonProps {
-  children: React.ReactNode
+  children: React.ReactNode,
   onClick?: () => void
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
-  disabled?: boolean
-  loading?: boolean
-  className?: string
+  disabled?: boolean;
+  loading?: boolean;
+  className?: string;
   type?: 'button' | 'submit' | 'reset'
+<<<<<<< HEAD
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
+=======
+}
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({,
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
   children
   onClick
   variant = 'primary'
@@ -21,6 +26,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   type = 'button'
 }) => {
   const [isHovered, setIsHovered] = useState(false)
+<<<<<<< HEAD
   const getVariantClasses = () => {
     switch (variant) {
       case 'primary':
@@ -41,11 +47,21 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       case 'lg':
         return 'px-8 py-4 text-lg'
       default: return 'px-6 py-3 text-base'}
+=======
+  const getVariantClasses = ($2) => {
+$3
+};
+  }
+  const getSizeClasses = ($2) => {
+$3
+};
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
   const baseClasses = `
     relative overflow-hidden rounded-lg font-semibold transition-all duration-300
     transform hover: scale-105 active:scale-95,
     focus: outline-none focus: ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900,
-    disabled: opacity-50 disabled:cursor-not-allowed disabled:transform-none
+    disabled: opacity-50 disabled:cursor-not-allowed disabled:transform-none,
     ${getVariantClasses()}
     ${getSizeClasses()}
     ${className}
@@ -64,29 +80,50 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {/* Animated background */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20"
+<<<<<<< HEAD
         initial={{ opacity: 0}
         animate={{ opacity: isHovered ? 1 : 0}
         transition={{ duration: 0.3}
       />
       {/* Loading spinner */}
+=======
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      />{/* Loading spinner */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
       {loading && (
-        <motion.div
+        </motion><motion.div
           className="absolute inset-0 flex items-center justify-center"
+<<<<<<< HEAD
           initial={{ opacity: 0}
           animate={{ opacity: 1}
           exit={{ opacity: 0}
         >
           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </motion.div>
+=======
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        > </motion><div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> </div></motion.div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
       )}
       {/* Button content */}
       <motion.span
         className="relative z-10 flex items-center justify-center"
+<<<<<<< HEAD
         animate={{ opacity: loading ? 0 : 1}
         transition={{ duration: 0.2}
       >
         {children}
       </motion.span>
+=======
+        animate={{ opacity: loading ? 0 : 1 }}
+        transition={{ duration: 0.2 }}
+      >{children}
+      </motion></motion.span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
       {/* Glow effect */}
       <motion.div
         className="absolute inset-0 rounded-lg"
@@ -97,7 +134,15 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
           transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)'}
         transition={{
           duration: 0.6,
+<<<<<<< HEAD
     ease: 'easeInOut'}
       />
     </motion.button>
+=======
+    ease: 'easeInOut'}}
+      /> </motion></motion.button>
+  )
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
 export default FuturisticButton

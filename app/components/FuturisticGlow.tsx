@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 
 interface FuturisticGlowProps {
-  children: React.ReactNode;
+  children: React.ReactNode;,
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
@@ -20,6 +20,7 @@ export default function FuturisticGlow({
     const container = containerRef.current;
     if (!container) return;
 
+<<<<<<< HEAD
     const getIntensityValue = () => {
       switch (intensity) {
         case 'low': return '0.3';
@@ -34,6 +35,18 @@ export default function FuturisticGlow({
         case 'blue': return '59, 130, 246';
         case 'red': return '239, 68, 68';
         default: return '0, 255, 255';}
+=======
+    const getIntensityValue = ($2) => {
+$3
+};
+    };
+
+    const getColorValue = ($2) => {
+$3
+};
+    };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
     const rgb = getColorValue();
     const opacity = getIntensityValue();
     // Apply CSS custom properties for dynamic glow
@@ -46,28 +59,34 @@ export default function FuturisticGlow({
       ref={containerRef}
       className={`
         relative
-        before:absolute
-        before:inset-0 
-        before:rounded-inherit
-        before:bg-gradient-to-r 
-        before:from-transparent 
-        before:via-[var(--glow-color)] 
-        before:to-transparent
-        before:opacity-0 
-        before:transition-opacity 
-        before:duration-500
-        hover:before:opacity-100
-        after:absolute
-        after:inset-0 
-        after:rounded-inherit
-        after:shadow-[0_0_20px_var(--glow-color)]
-        after:opacity-0 
-        after:transition-opacity 
-        after:duration-500
-        hover:after:opacity-100
+        before: absolute,
+        before: inset-0 ,
+        before: rounded-inherit,
+        before: bg-gradient-to-r ,
+        before: from-transparent ,
+        before: via-[var(--glow-color)] ,
+        before: to-transparent,
+        before: opacity-0 ,
+        before: transition-opacity ,
+        before: duration-500,
+        hover: before:opacity-100,
+        after: absolute,
+        after: inset-0 ,
+        after: rounded-inherit,
+        after: shadow-[0_0_20px_var(--glow-color)],
+        after: opacity-0 ,
+        after: transition-opacity ,
+        after: duration-500,
+        hover: after:opacity-100,
         ${className}
       `}
+<<<<<<< HEAD
     >
       {children}
     </div>
+=======
+    >{children}
+    </div></div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
 }

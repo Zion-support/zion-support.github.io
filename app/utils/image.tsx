@@ -3,40 +3,46 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
   src: string,
+<<<<<<< HEAD
     alt: string
+=======
+    alt: string,
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
 interface ImageProps {}
 src: string,
-    alt: string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
+    alt: string,
+width?: number;
+height?: number;
+className?: string;
+priority?: boolean;
+_quality?: number;
 src: string,
-    alt: string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
+    alt: string,
+width?: number;
+height?: number;
+className?: string;
+priority?: boolean;
+_quality?: number;
 src: string,
-    alt: string
-width?: number
-height?: number
-className?: string
-priority?: boolean
-_quality?: number
+    alt: string,
+width?: number;
+height?: number;
+className?: string;
+priority?: boolean;
+_quality?: number;
 _placeholder?: 'blur' | 'empty'
-_blurDataURL?: string
-fill?: boolean
-sizes?: string
+_blurDataURL?: string;
+fill?: boolean;
+sizes?: string;
 style?: React.CSSProperties
 onLoad?: () => void
 onError?: () => void;}
 export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
-src
-export const Image: React.FC<ImageProps> = ({
+src;
+
+export const Image: React.FC<ImageProps> = ({,
 src
 alt
 width
@@ -63,17 +69,17 @@ const handleError = useCallback(() => {}
 setHasError(true)
 if (onError) onError()}
 }, [onError])
-const imageStyle: React.CSSProperties = {
+const imageStyle: React.CSSProperties = {,
 ...style
 ...(fill && {
 position: 'absolute',
-    top: 0
+    top: 0,
 left: 0}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
-    top: 0
+    top: 0,
 left: 0,
     width: '100%',
 height: '100%',
@@ -102,20 +108,23 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 style={imageStyle}
 {...props})
 >)</div>
+<<<<<<< HEAD
 <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 <<<<<<< HEAD
 </div>
   );
 =======
+=======
+<span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
 </div>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-996d
 {...props}
 ></div>
-<span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+<span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>,
 </div>
 return(<img
-return (<img></img>
-src={src}
+return (<img>src={src}
 alt={alt}
 width={width}
 height={height}
@@ -126,6 +135,6 @@ loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
 {...props}
->)</img>
+>)</img></img>
 }</img>
 export default Image</img>

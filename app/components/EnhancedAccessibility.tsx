@@ -4,11 +4,12 @@ import React, { useEffect } from 'react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
+    // Add high contrast mode support;
+
+const addHighContrastSupport = () => {
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-        const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-        const handleContrastChange = (e: MediaQueryListEvent) => {
+        const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
+        const handleContrastChange = (e: MediaQueryListEvent) => {,
           if (e.matches) {
             document.documentElement.classList.add('high-contrast');
           } else {
@@ -18,18 +19,31 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         mediaQuery.addEventListener('change', handleContrastChange);
         handleContrastChange(mediaQuery as any);
 
-        return () => mediaQuery.removeEventListener('change', handleContrastChange);
+        return (
+    <>
+      ) => mediaQuery.removeEventListener('change', handleContrastChange
+    </>
+    </>
+    </>
+  );
       }
-      return () => {};
+      return (
+    <>
+      ) => {};
+    </>
+    </>
     };
 
-    // Add reduced motion support
-    const addReducedMotionSupport = () => {
+    // Add reduced motion support;
+
+const addReducedMotionSupport = () => {
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const handleMotionChange = (e: MediaQueryListEvent) => {
+        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
+        const handleMotionChange = (e: MediaQueryListEvent) => {,
           if (e.matches) {
-            document.documentElement.classList.add('reduce-motion');
+            document.documentElement.classList.add('reduce-motion'
+    </>
+  );
           } else {
             document.documentElement.classList.remove('reduce-motion');
           }
@@ -37,31 +51,45 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         mediaQuery.addEventListener('change', handleMotionChange);
         handleMotionChange(mediaQuery as any);
 
-        return () => mediaQuery.removeEventListener('change', handleMotionChange);
+        return (
+    <>
+      ) => mediaQuery.removeEventListener('change', handleMotionChange
+    </>
+    </>
+    </>
+  );
       }
-      return () => {};
+      return (
+    <>
+      ) => {};
+    </>
+    </>
     };
 
-    // Add screen reader announcements
-    const addScreenReaderAnnouncements = () => {
-      if (typeof document !== 'undefined') {
-        const announcement = document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.setAttribute('aria-atomic', 'true');
-        announcement.className = 'sr-only';
-        announcement.id = 'announcements';
-        document.body.appendChild(announcement);
-      }
+    // Add screen reader announcements;
+
+const addScreenReaderAnnouncements = ($2) => {
+$3
+};
     };
 
-    // Initialize accessibility features
-    const cleanupContrast = addHighContrastSupport();
+    // Initialize accessibility features;
+
+const cleanupContrast = addHighContrastSupport(
+    </>
+  );
     const cleanupMotion = addReducedMotionSupport();
     addScreenReaderAnnouncements();
 
     // Cleanup
-    return () => {
-      cleanupContrast?.();
+    return (
+    <>
+      ) => {
+    </>
+    </>
+      cleanupContrast?.(
+    </>
+  );
       cleanupMotion?.();
     };
   }, []);

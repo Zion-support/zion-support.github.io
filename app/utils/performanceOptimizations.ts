@@ -1,24 +1,26 @@
 'use client';
 import { useCallback, useMemo } from 'react';
 // Performance optimization utilities
-// Debounce utility for performance
+// Debounce utility for performance;
+
 export const debounce = <T extends (...args: any[]) => any>(,
-    func: T
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+    func: T,
+  wait: number,
+): ((...args: Parameters<T>) => void) => {,
+  let timeout: NodeJS.Timeout;,
+  return (...args: Parameters<T>) => {,
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
-// Throttle utility for performance
+// Throttle utility for performance;
+
 export const throttle = <T extends (...args: any[]) => any>(,
-    func: T
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+    func: T,
+  limit: number,
+): ((...args: Parameters<T>) => void) => {,
+  let inThrottle: boolean;,
+  return (...args: Parameters<T>) => {,
     if (!inThrottle) {
       func(...args)
       inThrottle = true
@@ -26,7 +28,8 @@ export const throttle = <T extends (...args: any[]) => any>(,
     }
   }
 }
-// Intersection Observer hook for lazy loading
+// Intersection Observer hook for lazy loading;
+
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void,
     options: IntersectionObserverInit = {}
@@ -43,28 +46,42 @@ export const useIntersectionObserver = (
     [callback, options]
   )
   const observe = useCallback(
-    (element: Element | null) => {
+    (element: Element | null) => {,
       if (observer && element) {
         observer.observe(element)
         return (
     <>
       ) => observer.unobserve(element)
+    </>
+    </>
       }
-      return () => {}
+      return (
+    <>
+      ) => {}
+    </>
+    </>
     }
     [observer]
-  )
+    </>
+  );
   const disconnect = useCallback(() => {
     if (observer) {
       observer.disconnect()
     }
   }, [observer])
   useEffect(() => {
-    return () => disconnect()
+    return (
+    <>
+      ) => disconnect(
+    </>
+    </>
+    </>
+  );
   }, [disconnect])
   return { observe, disconnect }
 }
-// Image lazy loading hook
+// Image lazy loading hook;
+
 export const useLazyImage = (src: string, placeholder?: string) => {
   const [imageSrc, setImageSrc] = useState(placeholder || '')
   const [isLoaded, setIsLoaded] = useState(false)
@@ -75,13 +92,13 @@ export const useLazyImage = (src: string, placeholder?: string) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
             const img = new Image()
-            img.onload = () => {
-              setImageSrc(src)
-              setIsLoaded(true)
-            }
-            img.onerror = () => {
-              setIsError(true)
-            }
+            img.onload = ($2) => {
+$3
+  </>
+};
+            img.onerror = ($2) => {
+$3
+};
             img.src = src
           }
         })
@@ -91,24 +108,28 @@ export const useLazyImage = (src: string, placeholder?: string) => {
   );
   return { imageSrc, isLoaded, isError, observe }
 }
-// Performance monitoring hook
+// Performance monitoring hook;
+
 export const usePerformanceMonitoring = (
     </>
   ) => {
   const [metrics, setMetrics] = useState<{
-    fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
-    ttfb?: number
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
 }>({})
   useEffect(() => {
-    if (typeof window === 'undefined') return
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+    if (typeof window === 'undefined') return;
+
+const updateMetrics = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+const paint = performance.getEntriesByType('paint')
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+
+const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
         fcp
         lcp
@@ -133,28 +154,32 @@ export const usePerformanceMonitoring = (
     return (
     <>
       ) => {
+    </>
+    </>
       window.removeEventListener('load', updateMetrics)
     }
   }, [])
   return metrics
 }
-// Memory usage monitoring
+// Memory usage monitoring;
+
 export const useMemoryMonitoring = (
     </>
   ) => {
   const [memoryInfo, setMemoryInfo] = useState<{
-    usedJSHeapSize?: number
-    totalJSHeapSize?: number
-    jsHeapSizeLimit?: number
+    usedJSHeapSize?: number;
+    totalJSHeapSize?: number;
+    jsHeapSizeLimit?: number;
 }>({})
   useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-    const updateMemoryInfo = () => {
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
+
+const updateMemoryInfo = () => {
       const memory = (performance as any).memory
       if (memory) {
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
-    totalJSHeapSize: memory.totalJSHeapSize
+    totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit})
       }
     }
@@ -163,43 +188,37 @@ export const useMemoryMonitoring = (
     return (
     <>
       ) => clearInterval(interval)
+    </>
+    </>
   }, [])
   return memoryInfo
 }
-// Resource preloading utility
-export const preloadResource = (href: string, as: string) => {
-  if (typeof window === 'undefined') return
-  const link = document.createElement('link')
-  link.rel = 'preload'
-  link.href = href
-  link.as = as
-  document.head.appendChild(link)
-}
-// Critical resource preloading
-export const preloadCriticalResources = () => {
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
-  preloadResource('/fonts/inter-var.woff2', 'font')
-  preloadResource('/fonts/inter-var.woff', 'font')
-  // Preload critical images
-  preloadResource('/images/hero-bg.webp', 'image')
-  preloadResource('/images/logo.svg', 'image')
-  // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style')
-}
-// Bundle size monitoring
+// Resource preloading utility;
+
+export const preloadResource = ($2) => {
+$3
+  </>
+};
+// Critical resource preloading;
+
+export const preloadCriticalResources = ($2) => {
+$3
+};
+// Bundle size monitoring;
+
 export const useBundleSizeMonitoring = (
     </>
   ) => {
   const [bundleSize, setBundleSize] = useState<{
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
-    imageSize?: number
+    totalSize?: number;
+    jsSize?: number;
+    cssSize?: number;
+    imageSize?: number;
 }>({})
   useEffect(() => {
-  if (typeof window === 'undefined') return
-    const calculateBundleSize = () => {
+  if (typeof window === 'undefined') return;
+
+const calculateBundleSize = () => {
       const resources = performance.getEntriesByType('resource')
       let totalSize = 0
       let jsSize = 0
@@ -232,6 +251,8 @@ export const useBundleSizeMonitoring = (
     return (
     <>
       ) => {
+    </>
+    </>
       window.removeEventListener('load', calculateBundleSize)
     }
   }, []

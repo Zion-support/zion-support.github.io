@@ -5,19 +5,20 @@
 * Tools to improve search engine optimization
 */
 
-// Generate meta tags
+// Generate meta tags;
+
 export const generateMetaTags = (data: {,
     title: string,
-      description: string
-  keywords?: string
-  canonical?: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: string
-  twitterCard?: string
-  twitterTitle?: string
-  twitterDescription?: string
-  twitterImage?: string
+      description: string,
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
 }) => {
   const tags = [
     { name: 'title', content: data.title },
@@ -41,23 +42,24 @@ export const generateMetaTags = (data: {,
   return tags
 }
 
-// Generate structured data
-export const generateStructuredData = (data: {
-  name: string
-  description: string
-  url: string
-  logo?: string
+// Generate structured data;
+
+export const generateStructuredData = (data: {,
+  name: string,
+  description: string,
+  url: string,
+  logo?: string;
   address?: {
-    streetAddress: string
-    addressLocality: string
-    addressRegion: string
-    postalCode: string
-    addressCountry: string
+    streetAddress: string,
+    addressLocality: string,
+    addressRegion: string,
+    postalCode: string,
+    addressCountry: string,
   }
   contactPoint?: {
-    telephone: string
-    contactType: string
-    email: string
+    telephone: string,
+    contactType: string,
+    email: string,
   }
   sameAs?: string[]
 }) => {
@@ -68,35 +70,35 @@ export const generateStructuredData = (data: {
     description: data.description,
     url: data.url,
     logo: data.logo || '/logo.png',
-    address: data.address ? {
+    address: data.address ? {,
       '@type': 'PostalAddress',
       streetAddress: data.address.streetAddress,
       addressLocality: data.address.addressLocality,
       addressRegion: data.address.addressRegion,
       postalCode: data.address.postalCode,
-      addressCountry: data.address.addressCountry
+      addressCountry: data.address.addressCountry,
     } : undefined,
-    contactPoint: data.contactPoint ? {
+    contactPoint: data.contactPoint ? {,
       '@type': 'ContactPoint',
       telephone: data.contactPoint.telephone,
       contactType: data.contactPoint.contactType,
-      email: data.contactPoint.email
+      email: data.contactPoint.email,
     } : undefined,
-    sameAs: data.sameAs || []
+    sameAs: data.sameAs || [],
   }
 }
 
-// Generate sitemap
-export const generateSitemap = (pages: Array<{
-  url: string
-  lastModified: string
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority: number
+// Generate sitemap;
+
+export const generateSitemap = (pages: Array<{,
+  url: string,
+  lastModified: string,
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
+  priority: number,
 }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${page.url}</loc>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+${pages.map(page => `  <url> </url><loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
     <priority>${page.priority}</priority>
@@ -106,11 +108,11 @@ ${pages.map(page => `  <url>
   return sitemap
 }
 
-// Generate robots.txt
-export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
-  return `User-agent: *
-${allowAll ? 'Allow: /' : 'Disallow: /'}
+// Generate robots.txt;
 
+export const generateRobotsTxt = ($2) => {
+$3
+};
 Sitemap: ${sitemapUrl}`
 }
 

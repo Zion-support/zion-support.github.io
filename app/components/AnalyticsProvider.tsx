@@ -7,10 +7,17 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string) => void}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
+<<<<<<< HEAD
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
+=======
+)
+export const useAnalytics = ($2) => {
+$3
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
   return context
 interface AnalyticsProviderProps {
   children: ReactNode}
@@ -24,12 +31,13 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
         document.head.appendChild(script)
         window.gtag =
           window.gtag ||
-          function (...args: any[]) {
+          function (...args: any[]) {,
             (window.gtag as any).q = (window.gtag as any).q || []
             (window.gtag as any).q.push(args)
         window.gtag(&quot;js&quot;, new Date()
         window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)}
   }, [])
+<<<<<<< HEAD
   consttrackEvent= (
     eventName: string
     parameters?: Record<string, unknown>
@@ -55,3 +63,28 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
 =======
 export default AnalyticsProvider
 >>>>>>> cursor/fix-errors-and-merge-to-main-996d
+=======
+  consttrackEvent = ($2) => {
+$3
+};
+  }
+  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,
+      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
+        page_title: pageName,
+    page_location: window.location.href})
+    }
+  }
+  constvalue: AnalyticsContextType = {trackEvent,
+    trackPageView}
+  return (
+    <AnalyticsContext.Provider value={value}>{children}
+    </AnalyticsContext></AnalyticsContext.Provider>
+  )
+}
+
+export default AnalyticsProvider
+  )
+}
+
+export default AnalyticsProviderPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c

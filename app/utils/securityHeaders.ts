@@ -4,24 +4,24 @@
 * Comprehensive security headers for production applications
 */
 export interface SecurityHeadersConfig {
-  contentSecurityPolicy?: string
-strictTransportSecurity?: string
-xFrameOptions?: string
-xContentTypeOptions?: string
-referrerPolicy?: string
-permissionsPolicy?: string
+  contentSecurityPolicy?: string;
+strictTransportSecurity?: string;
+xFrameOptions?: string;
+xContentTypeOptions?: string;
+referrerPolicy?: string;
+permissionsPolicy?: string;
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
+export const defaultSecurityHeaders: SecurityHeadersConfig = {,
 // Content Security Policy
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}
 // Content Security Policy
-contentSecurityPolicy: [
+contentSecurityPolicy: [,
 "default-src 'self'"
-"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com"
+"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
 "style-src 'self' 'unsafe-inline'"
-"img-src 'self' data: https: blob:"
-"font-src 'self' data: "
-"connect-src 'self' https: //www.google-analytics.com https://analytics.google.com"
+"img-src 'self' data: https: blob:",
+"font-src 'self' data: ",
+"connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
 "frame-ancestors 'none'"
 "base-uri 'self'"
 "form-action 'self'"
@@ -35,7 +35,7 @@ xContentTypeOptions: 'nosniff',
 // Referrer Policy
 referrerPolicy: 'strict-origin-when-cross-origin',
 // Permissions Policy (formerly Feature Policy)
-permissionsPolicy: [
+permissionsPolicy: [,
 'camera=()',
 'microphone=()',
 'geolocation=()',
@@ -51,8 +51,7 @@ permissionsPolicy: [
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 export function getSecurityHeaders()
-customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {}
+customConfig?: Partial<SecurityHeadersConfig>): Record</SecurityHeadersConfig><string, string> {}
 const config = { ...defaultSecurityHeaders, ...customConfig }
 const headers: Record<string, string> = {}
 'X-XSS-Protection': '1; mode=block'
@@ -83,8 +82,8 @@ defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 /**
 * Get security headers as key-value pairs
 */
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Record<string, string> {/* TODO: Fix JSX expression */}
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
+): Record</SecurityHeadersConfig><string, string> {/* TODO: Fix JSX expression */}
 const config = { ...defaultSecurityHeaders, ...customConfig }
 const
 headers: Record<string, string> = {/* TODO: Fix JSX expression */}
@@ -109,16 +108,15 @@ return headers
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
   export function getNextSecurityHeaders()
-customConfig?: Partial<SecurityHeadersConfig>
-}
-): Array<{ key: string; value: string }> {}
+customConfig?: Partial<SecurityHeadersConfig>}
+): Array</SecurityHeadersConfig><{ key: string; value: string }> {}
 const headers = getSecurityHeaders(customConfig)
 return Object.entries(headers).map(([key, value]) => ({}
 key
 value}
 }))
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Array<{/* TODO: Fix JSX expression */}
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
+): Array</SecurityHeadersConfig><{/* TODO: Fix JSX expression */}
 e: string }> {/* TODO: Fix JSX expression */}
 }))
 }

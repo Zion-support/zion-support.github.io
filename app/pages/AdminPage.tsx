@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+<<<<<<< HEAD
 "use client",
 const AdminPage = () => {
   return (
@@ -14,4 +16,9 @@ const AdminPage = () => {
         </div>
       </div>
     </div>
+=======
+const AdminPage = ($2) => {
+$3
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
 export default AdminPage

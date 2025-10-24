@@ -2,17 +2,27 @@
 import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
   lcp: number,
-    fid: number
+    fid: number,
   cls: number,
-    fcp: number
+    fcp: number,
   ttfb: number}
 interface AdvancedPerformanceOptimizerProps {
+<<<<<<< HEAD
   enableWebVitals?: boolean
   enableAdvancedCaching?: boolean
   enableImageOptimization?: boolean
   enablePreloading?: boolean
   enableServiceWorker?: boolean
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+=======
+  enableWebVitals?: boolean;
+  enableAdvancedCaching?: boolean;
+  enableImageOptimization?: boolean;
+  enablePreloading?: boolean;
+  enableServiceWorker?: boolean;
+}
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({,
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
   enableWebVitals = true
   enableAdvancedCaching = true
   enableImageOptimization = true
@@ -21,15 +31,17 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 }) => {
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
     lcp: 0,
-    fid: 0
+    fid: 0,
     cls: 0,
-    fcp: 0
+    fcp: 0,
     ttfb: 0})
-  // Web Vitals monitoring
-  const measureWebVitals = useCallback(() => {
+  // Web Vitals monitoring;
+
+const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
-      // Measure Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      // Measure Largest Contentful Paint;
+
+const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
@@ -37,10 +49,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           lcp: lastEntry.renderTime || lastEntry.loadTime || 0})
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-      // Measure First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      // Measure First Input Delay;
+
+const fidObserver = new PerformanceObserver((list) => {
   const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) => {,
           const fid = (entry as any).processingStart - entry.startTime
           setPerformanceMetrics(prev => ({
             ...prev
@@ -50,10 +63,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       })
       fidObserver.observe({ entryTypes: ['first-input'] })
       // Measure Cumulative Layout Shift
-      let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
+      let clsValue = 0;
+
+const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: PerformanceEntry) => {,
           if (!(entry as any).hadRecentInput) {
             clsValue += entry.value
             setPerformanceMetrics(prev => ({
@@ -62,8 +76,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         })
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] })
-      // Measure First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      // Measure First Contentful Paint;
+
+const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
@@ -73,8 +88,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       })
       fcpObserver.observe({ entryTypes: ['paint'] })
   }, [enableWebVitals])
-  // Advanced caching strategies
-  const setupAdvancedCaching = useCallback(() => {
+  // Advanced caching strategies;
+
+const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return
     // Service Worker registration
     if ('serviceWorker' in navigator && enableServiceWorker) {
@@ -87,12 +103,20 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           // eslint-disable-next-line no-console
     console.error('Service Worker registration failed:', registrationError)
         })
+<<<<<<< HEAD
     // Memory-based caching for API responses
     const cache = new Map()
+=======
+    }
+    // Memory-based caching for API responses;
+
+const cache = new Map()
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url
-      const cacheKey = `${url}-${JSON.stringify(init)}`
+      const url = typeof input === 'string' ? input : input.url;
+
+const cacheKey = `${url}-${JSON.stringify(init)}`
       if (cache.has(cacheKey)) {
         return cache.get(cacheKey)
       const response = await originalFetch(input, init)
@@ -100,10 +124,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         cache.set(cacheKey, response.clone()
       return response
   }, [enableServiceWorker])
-  // Image optimization
-  const optimizeImages = useCallback(() => {
-  if (typeof window === 'undefined') return
-    const images = document.querySelectorAll('img')
+  // Image optimization;
+
+const optimizeImages = useCallback(() => {
+  if (typeof window === 'undefined') return;
+
+const images = document.querySelectorAll('img')
     images.forEach(img => {
       if (!img.loading) {
         img.loading = 'lazy'
@@ -111,10 +137,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   img.decoding = 'async'
     })
   }, [])
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-  if (typeof window === 'undefined') return
-    const criticalResources = [
+  // Preload critical resources;
+
+const preloadCriticalResources = useCallback(() => {
+  if (typeof window === 'undefined') return;
+
+const criticalResources = [
   '/fonts/inter-var.woff2',
     '/css/critical.css'
   ]
@@ -128,8 +156,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       document.head.appendChild(link)
     })
   }, [])
-  // Performance monitoring and reporting
-  const reportPerformanceMetrics = useCallback(() => {
+  // Performance monitoring and reporting;
+
+const reportPerformanceMetrics = useCallback(() => {
     if (typeof window === 'undefined') return
     // Report to analytics
     if ('gtag' in window) {
@@ -137,9 +166,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         event_category: 'Performance',
     event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
-    custom_map: {
+    custom_map: {,
           fcp: Math.round(performanceMetrics.fcp),
-    lcp: Math.round(performanceMetrics.lcp)
+    lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
     cls: Math.round(performanceMetrics.cls * 1000) / 1000}
       })
@@ -159,4 +188,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       reportPerformanceMetrics()
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-998c
 export default AdvancedPerformanceOptimizer
