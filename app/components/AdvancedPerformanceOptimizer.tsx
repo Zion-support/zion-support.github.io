@@ -86,10 +86,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration)
+          // Service Worker registered successfully
         })
         .catch((registrationError) => {
-          console.error('Service Worker registration failed:', registrationError)
+          // Service Worker registration failed
         })
     }
 
