@@ -5,6 +5,7 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clo
 import Navigation from '../components/Navigation';
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {
+
   const features = [
     {
       ico,
@@ -12,7 +13,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+},
     {
       icon: BarChart,
       title: 'Advanced Analytics',

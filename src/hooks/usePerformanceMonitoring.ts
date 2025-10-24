@@ -21,16 +21,18 @@ interface UsePerformanceMonitoringReturn {
 }
 ;
 const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 60;
-  });
+});
 
   const [isMonitoring, setIsMonitoring] = useState(false);
 
-  const measurePerformance = useCallback(() => {;
+  const measurePerformance = useCallback(() => {
+;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     
@@ -38,14 +40,14 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
     
     const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
     
-    // Simple FPS calculation
+    // Simple FPS calculation;
     let fps = 60;
     let lastTime = performance.now();
     const calculateFPS = () => {;
       const currentTime = performance.now();
       fps = 1000 / (currentTime - lastTime);
       lastTime = currentTime;
-    };
+};
     
     calculateFPS();
 
@@ -57,27 +59,30 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
     });
   }, []);
 
-  const startMonitoring = useCallback(() => {;
+  const startMonitoring = useCallback(() => {
+;
     setIsMonitoring(true);
     measurePerformance();
-  }, [measurePerformance]);
+}, [measurePerformance]);
 
-  const stopMonitoring = useCallback(() => {;
+  const stopMonitoring = useCallback(() => {
+;
     setIsMonitoring(false);
-  }, []);
+}, []);
 
   useEffect(() => {
+
     if (isMonitoring) {
       const interval = setInterval(measurePerformance, 1000);
       return () => clearInterval(interval);
-    }
+}
   }, [isMonitoring, measurePerformance]);
 
   return {
     metrics,
     isMonitoring,
     startMonitoring,
-    stopMonitoring
+    stopMonitoring;
   };
 };
 

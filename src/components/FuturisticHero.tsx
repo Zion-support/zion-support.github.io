@@ -6,6 +6,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail } from 'lucide-react';
 
 const FuturisticHeroPage: React.FC = () => {
+
   const features = [
     {
       ico,
@@ -13,7 +14,7 @@ const FuturisticHeroPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+},
   {
     icon: BarChart,
   title: title,

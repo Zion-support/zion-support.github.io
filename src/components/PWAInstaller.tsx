@@ -5,8 +5,10 @@ interface PWAInstallerProps {
 }
 ;
 const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '' }) => {
+
   return (</PWAInstallerProps>
-    <div className={className}></div>
+    <div className="{className ">
+}></div>
       <h2>PWAInstaller</h2>
       <p>This component is under construction.</p>
     </div>

@@ -1,6 +1,6 @@
 /**
- * Sitemap Generator
- * Generates sitemap and robots.txt for SEO optimization
+ * Sitemap Generator;
+ * Generates sitemap and robots.txt for SEO optimization;
  */
 
 export interface SitemapEntry {
@@ -12,7 +12,8 @@ export interface SitemapEntry {
   priority: number}
 }
 ;
-export const generateSitemap = (): SitemapEntry[] => {;
+export const generateSitemap = (): SitemapEntry[] => {
+;
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
 
@@ -23,7 +24,7 @@ export const generateSitemap = (): SitemapEntry[] => {;
   lastmod: currentDate,
   changefreq: changefreq,
   priority: 1.0,
-    }
+}
     {
       loc: loc,
   lastmod: currentDate,
@@ -111,18 +112,18 @@ export const generateSitemap = (): SitemapEntry[] => {;
   ]
 }
 
-export const generateRobotsTxt = (): string => {;
+export const generateRobotsTxt = (): string => {
+;
   return `User-agent: *
 Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay for better server performance
+Sitemap: https://ziontechgroup.com/sitemap.xml;
+# Crawl-delay for better server performance;
 Crawl-dela,
-  y: 1
-
+  y: 1;
 # Disallow admin and private areas,
   Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/;
 Disallo,
-  w: /private/`}
+  w: /private/`
+}

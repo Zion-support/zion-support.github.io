@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  "data-testid"?: string
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  "data-testid"?: string;
   [ke,
   y: string]: any}
 }
@@ -19,18 +19,20 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   height = 600,
   className = "",
   "data-testid": testId,
-  ...props
+  ...props;
 }) => {
+
   return (</OptimizedImageProps>
-    <Image
-      src={src};
+    <Image;
+      src={src;
+};
       alt={alt}
       width={width}
       height={height}
-      className={className}
+      className="{className}
       data-testid={testId}
       {...props}
-    />
+    /">
   )
 }
 

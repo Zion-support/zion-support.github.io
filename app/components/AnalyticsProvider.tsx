@@ -12,31 +12,33 @@ declare global {
 interface AnalyticsContextType {
 
 
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void,
 
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined
+  undefined;
 export const useAnalytics = () => {
+
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
-  return context
+  return context;
 interface AnalyticsProviderProps {
 
 
   children: ReactNode,
-
 }
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
-    if (type of windo w !=="undefined") {
-      // Google Analytics
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {
+useEffect(() => {
+    if (type of windo w !=="undefined ) {
+      // Google Analytics;
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
-        document.head.appendChild(script);
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env. REACT_APP_GA_MEASUREMENT_ID;
+}`
+        script.async = true;
+        document.head.appen dChild(script);
         window.gtag =
           window.gtag ||
           function (...args: any[]) {
@@ -49,30 +51,23 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
     eventName: string,
     parameters?: Record<string, unknown></string>
   ) => {
+
     if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", eventName, parameters)}
-  consttrackPageView= (pageName: string) => {if (type of windo w !=="undefined" && windo w.gtag) {
+      window.gtag("event", eventName, parameters)
+}
+  consttrackPageView= (pageName: string) => {
+if (type of windo w !=="undefined && windo w.gtag) {
       window.gtag("config","GA_MEASUREMENT_ID", {
         page_title: pageName,
-    page_location: window.location.href})}
+    page_location: window.location.href;
+})}
   constvalue: AnalyticsContextType = {,
 trackEvent,
-    trackPageView
+    trackPageView;
 };
   return (
     <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
- AnalyticsProvider
-  );
-}
-=======
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
-export default AnalyticsProvider
-
+export default AnalyticsProvider;

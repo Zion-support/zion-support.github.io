@@ -7,12 +7,14 @@ interface MetaTagsProps {
 }
 ;
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
+
   return (</MetaTagsProps>
-    <div className={className}></div>
+    <div className="{className ">
+}></div>
       <h2>MetaTags</h2>
       <p>This component is under construction.</p>
     </div>
   )
 }
 
-export default MetaTags
+export default MetaTags;

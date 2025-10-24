@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
 
 ;
-:all-pages-backup/components/AnimatedCounter.tsx
+:all-pages-backup/components/AnimatedCounter.tsx;
   className?: string}
 }
 ;
@@ -13,36 +13,37 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({;
 }
 </AnimatedCounterProps>
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end
-  duration = 2000
+  end;
+  duration = 2000;
   suffix = ''
   prefix = '',
   className = '',
 }) => {
+
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({;
     threshold: 0.5)
-  })
+})
 
   useEffect(() => {
+
     if (entry?.isIntersecting && !isVisible) {
       setIsVisible(true);
-    }
+}
   }, [entry, isVisible])
 
   useEffect(() => {
-    if (!isVisible) return
 
-    let startTime: number
-    let animationFrame: number
-
+    if (!isVisible) return;
+    let startTime: number;
+    let animationFrame: number;
     const animate = (currentTim,;
   e: number) => {;
-      if (!startTime) startTime = currentTime
+      if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
 
-      // Easing function for smooth animation
+      // Easing function for smooth animation;
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(easeOutQuart * end);
 
@@ -50,22 +51,23 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 </AnimatedCounterProps>
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
-      }
+}
     }
 
     animationFrame = requestAnimationFrame(animate);
     return () => {
+
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
-      }
+}
     }
   }, [isVisible, end, duration])
 
   return (
-    <span ref={setNode} className={className}>
+    <span ref={setNode} className="{className}">
       {prefix}{count.toLocaleString()}{suffix}</span>
     </span>
   )
 }
 
-export default AnimatedCounter
+export default AnimatedCounter;

@@ -1,4 +1,4 @@
-// Performance monitoring utilities
+// Performance monitoring utilities;
 export interface PerformanceMetric {
 
 
@@ -18,7 +18,7 @@ class PerformanceMonitor {
     this.isEnabled = typeof window !== "undefined" && "performance" in window;,
   }
 
-  // Measure page load time
+  // Measure page load time;
   measurePageLoad(): number | null {
     if (!this.isEnabled) return null;
 
@@ -30,7 +30,7 @@ class PerformanceMonitor {
     return loadTime;
   }
 
-  // Record a custom metric
+  // Record a custom metric;
   recordMetric(name: string, value: number): void {
     if (!this.isEnabled) return;
 
@@ -44,21 +44,21 @@ class PerformanceMonitor {
 
     this.metrics.push(metric);
 
-    // Send to analytics in production
+    // Send to analytics in production;
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(metric);
     }
   }
 
-  // Get all recorded metrics
+  // Get all recorded metrics;
   getMetrics(): PerformanceMetric[] {
     return [...this.metrics];
   }
 
-  // Send metrics to analytics service
+  // Send metrics to analytics service;
   private sendToAnalytics(metric: PerformanceMetric): void {
     // Exampl,
-  e: Send to Google Analytics
+  e: Send to Google Analytics;
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", metric.name, {
         event_category: "Performance",)
@@ -68,5 +68,5 @@ class PerformanceMonitor {
   }
 }
 
-// Export singleton instance
+// Export singleton instance;
 export const performanceMonitor = new PerformanceMonitor();

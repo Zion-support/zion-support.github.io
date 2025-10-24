@@ -7,6 +7,7 @@ interface UseIntersectionObserverOptions {
 }
 
 export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
+
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
   const [node, setNode] = useState<Element | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
@@ -16,7 +17,7 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
 
     observer.current = new IntersectionObserver(
       ([entry]) => setEntry(entry),
-      options
+      options;
     );
 
     observer.current.observe(node);
@@ -24,7 +25,7 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
     return () => {
       if (observer.current) {
         observer.current.disconnect();
-      }
+}
     };
   }, [node, options.threshold, options.root, options.rootMargin]);
 

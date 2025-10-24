@@ -1,5 +1,5 @@
 'use client';
-:all-pages-backup/components/PerformanceDashboard.tsx
+:all-pages-backup/components/PerformanceDashboard.tsx;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -18,8 +18,10 @@ interface PerformanceDashboardProps {
 }
 ;
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '' }) => {
+
   return (</PerformanceDashboardProps>
-    <div className={className}></div>
+    <div className="{className ">
+}></div>
       <h2>PerformanceDashboard</h2>
       <p>This component is under construction.</p>
     </div>

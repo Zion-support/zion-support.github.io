@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 
-// dynamic utility
+// dynamic utility;
 export const dynamic = () => {
-  // Utility function implementation
-  return null
+  // Utility function implementation;
+  return null;
 export default dynamic;

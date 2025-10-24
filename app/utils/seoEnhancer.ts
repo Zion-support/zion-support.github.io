@@ -1,27 +1,29 @@
 'use client';
 
 /**
-* SEO Enhancement Utilities
-* Tools to improve search engine optimization
+* SEO Enhancement Utilities;
+* Tools to improve search engine optimization;
 */
 
 // Generate meta tags;
 
 export const generateMetaTags = (data: {,
     title: string,
-      description: string
-  keywords?: string
-  canonical?: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: string
-  twitterCard?: string
-  twitterTitle?: string
+      description: string;
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
   twitterDescription?: string,
   twitterImage?: string,
 }) => {
+
   const tags = [
-    { name: 'title', content: data.title },
+    { name: 'title', content: data.title;
+},
     { name: 'description', content: data.description },
     { name: 'keywords', content: data.keywords || '' },
     { name: 'robots', content: 'index, follow' },
@@ -48,7 +50,7 @@ export const generateMetaTags = (data: {,
   r:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
   ]
 
-  return tags
+  return tags;
 }
 
 // Generate structured data;
@@ -59,21 +61,22 @@ export const generateStructuredData = (data: {,
   url: string,
   logo?: string;
   address?: {
-    streetAddress: string
-    addressLocality: string
-    addressRegion: string
-    postalCode: string
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
     addressCountr,
-  y: string
+  y: string;
   }
   contactPoint?: {
-    telephone: string
-    contactType: string
+    telephone: string;
+    contactType: string;
     emai,
-  l: string
+  l: string;
   }
   sameAs?: string[]
 }) => {
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -88,7 +91,7 @@ export const generateStructuredData = (data: {,
       addressRegion: data.address.addressRegion,
       postalCode: data.address.postalCode,
       addressCountry: data.address.addressCountry,
-    } : undefined,
+} : undefined,
     contactPoint: data.contactPoint ? {,
       '@type': 'ContactPoint',
       telephone: data.contactPoint.telephone,
@@ -99,42 +102,47 @@ export const generateStructuredData = (data: {,
   }
 }
 
-// Generate sitemap
+// Generate sitemap;
 export const generateSitemap = (pages: Array<{
-  url: string
-  lastModified: string
+  url: string;
+  lastModified: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priorit,
-  y: number
+  y: number;
 }>) => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+
+  const sitemap = `<?xml version="1.0 encoding=" UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${pages.map(page => `  <url></url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
+    <loc>${page.url;
+}</loc>
+    <lastmod>${page.las tModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
     <priority>${page.priority}</priority>)
   </url>`).join('\n')}
 </urlset>`
 
-  return sitemap
+  return sitemap;
 }
 
-// Generate robots.txt
-export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
+// Generate robots.txt;
+export const generat eRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
+
   return `User-agent: *
-${allowAll ? 'Allow: /' : 'Disallo,
-  w: /'}
+${allo wAll ? 'Allow: /' : 'Disallo,
+  w: /'
+}
 
 export const generateRobotsTxt = ($2) => {
-$3
+
+$3;
 };
 Sitemap: ${sitemapUrl}`
 }
 
 export default {
-  generateMetaTags,
+  generat eMetaTags,
   generateStructuredData,
   generateSitemap,
-  generateRobotsTxt
+  generateRobotsTxt;
 };

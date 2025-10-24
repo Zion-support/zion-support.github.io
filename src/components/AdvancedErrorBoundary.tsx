@@ -6,17 +6,17 @@ import { Home } from 'lucide-react';
 interface AdvancedErrorBoundaryProps {
 
 ;
-:all-pages-backup/components/AdvancedErrorBoundary.tsx
-  className?: string
+:all-pages-backup/components/AdvancedErrorBoundary.tsx;
+  className?: string;
   className?: string;}
 }
 ;
 interface State {
 
 
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
   errorId?: string}
 };
 class AdvancedErrorBoundary extends Component<Props, State> {
@@ -27,34 +27,36 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-:all-pages-backup/components/AdvancedErrorBoundary.tsx
+
+:all-pages-backup/components/AdvancedErrorBoundary.tsx;
     const errorReport: ErrorReport = {;
       errorI,
   d: this.state.errorId || this.generateErrorId()
       error,
-  errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    const errorReport: ErrorReport = {
+  errorId: `error_${Date.now()
+}_${Math.random().t oString(36).substr(2, 9)}`
+    const erro rReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId()
-      error
+      error;
       errorI,
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  d: `error_${Date.now()}_${Math.random().t oString(36).substr(2, 9)}`
     }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componen tDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error
+      error;
       errorInfo)
     })
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       // // console.error('Error caught by boundary:', error, errorInfo);
     }
-    // Log error to external service in production
+    // Log error to external service in production;
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
     }

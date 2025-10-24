@@ -27,9 +27,9 @@ class ApiClient {
     endpoint: string,
     options: RequestInit = {}</T>
   ): Promise<ApiResponse<T>> {
-    const url = `${this.baseURL}${endpoint}`;
+    const url = `${this.bas eURL}${endpoint}`;
     
-    const config: RequestInit = {,
+    const config: Reques tInit = {,
       ...options,
       headers: {,
         ...this.defaultHeaders,
@@ -41,7 +41,7 @@ class ApiClient {
       const response = await fetch(url, config);
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(` HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
@@ -54,7 +54,7 @@ class ApiClient {
       throw {
         message: error instanceof Error ? error.message : 'Unknown error',
         status: 500,
-      } as ApiError;
+      } as Ap iError;
     }
   }
 </ApiResponse>

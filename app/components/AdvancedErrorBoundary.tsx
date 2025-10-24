@@ -5,10 +5,10 @@ import { Mail } from 'lucide-react';
 import { Home } from 'lucide-react';
 interface AdvancedErrorBoundaryProps {
 
-  className?: string
+  className?: string;
 interface State {
-  hasError: boolean
-  error?: Error
+  hasError: boolean;
+  error?: Error;
   errorInfo?: ErrorInfo,
   errorId?: string,
 class AdvancedErrorBoundary extends Component<Props, State> {
@@ -16,25 +16,27 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     super(props)}
     this.state = { hasError: false};
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
+
     const errorRepor,
   t: ErrorReport = {,
     errorId: this.state.errorId || this.generateErrorId()
-      error
+      error;
       errorI,
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  d: `error_${Date.now()
+}_${Math.random().t oString(36).substr(2, 9)}`}
+  componen tDidCatch(error: Error, errorInfo: ErrorInfo) {
   this.setState({
-      error
+      error;
       errorInfo)
 })
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
-      // // // eslint-disable-next-line no-console
+      // // // eslint-disable-next-line no-console;
     console.error('Error caught by boundary:', error, errorInfo);
-    // Log error to external service in production
+    // Log error to external service in production;
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)}
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
