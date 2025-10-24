@@ -1,30 +1,84 @@
-'use client'
-import React from 'react'
-import Link from 'next/link""
-import { ArrowRight } from 'lucide-react"
-export default function ThemeToggle() {"
-"
-return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />,"
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />,<h1 className="text-4 xl font-bold text-white mb-6" />"
-Service</h1>"
-          </h1>"
-          <p className="text-lg text-gray-300 mb-8" />"
-Professional service services coming soon.</p>"
-          </p>"
-          <Linkhref="/contact"
-className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: "from-cyan-600 hove","
-r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />"
-Contact Us</Link>"
-            <ArrowRight className="w-5 h-5 ml-2" />
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon, Monitor } from 'lucide-react';
 
-          </Link>
-)
-  )
-,;
-;}
+type Theme = 'light' | 'dark' | 'system';
+
+const ThemeToggle: React.FC = () => {
+  const [theme, setTheme] = useState<Theme>('system');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    const root = window.document.documentElement;
+    root.classList.remove('light', 'dark');
+
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.add(theme);
+    }
+
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
+
+  const handleThemeChange = (newTheme: Theme) => {
+    setTheme(newTheme);
+  };
+
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 rounded-lg bg-gray-200 animate-pulse"></div>
+    );
+  }
+
+  return (
+    <div className="flex items-center space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+      <button
+        onClick={() => handleThemeChange('light')}
+        className={`p-2 rounded-md transition-colors ${
+          theme === 'light'
+            ? 'bg-white text-yellow-600 shadow-sm'
+            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
+        }`}
+        title="Light theme"
+      >
+        <Sun className="h-4 w-4" />
+      </button>
+      <button
+        onClick={() => handleThemeChange('dark')}
+        className={`p-2 rounded-md transition-colors ${
+          theme === 'dark'
+            ? 'bg-gray-800 text-blue-400 shadow-sm'
+            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
+        }`}
+        title="Dark theme"
+      >
+        <Moon className="h-4 w-4" />
+      </button>
+      <button
+        onClick={() => handleThemeChange('system')}
+        className={`p-2 rounded-md transition-colors ${
+          theme === 'system'
+            ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow-sm'
+            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
+        }`}
+        title="System theme"
+      >
+        <Monitor className="h-4 w-4" />
+      </button>
     </div>
-    </div>"
-    </div>"
-}"
+  );
+};
+
+export default ThemeToggle;

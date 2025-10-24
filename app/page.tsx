@@ -14,7 +14,7 @@ export default function HomePage() {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials.length]);
 
   const features = [
     {
@@ -209,7 +209,7 @@ export default function HomePage() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what industry leaders say about our solutions.
+              Don&apos;t just take our word for it. Here&apos;s what industry leaders say about our solutions.
             </p>
           </div>
           
@@ -217,7 +217,7 @@ export default function HomePage() {
             <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700">
               <div className="text-center">
                 <div className="text-2xl text-gray-300 mb-6 italic">
-                  "{testimonials[currentTestimonial].content}"
+                  &ldquo;{testimonials[currentTestimonial].content}&rdquo;
                 </div>
                 <div className="text-white font-semibold text-lg">
                   {testimonials[currentTestimonial].name}

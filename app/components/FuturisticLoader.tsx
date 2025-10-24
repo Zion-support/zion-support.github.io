@@ -1,30 +1,54 @@
-'use client'
-import React from 'react'
-import Link from 'next/link""
-import { ArrowRight } from 'lucide-react"
-export default function FuturisticLoader() {"
-"
-return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />,"
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />,<h1 className="text-4 xl font-bold text-white mb-6" />"
-Service</h1>"
-          </h1>"
-          <p className="text-lg text-gray-300 mb-8" />"
-Professional service services coming soon.</p>"
-          </p>"
-          <Linkhref="/contact"
-className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: "from-cyan-600 hove","
-r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />"
-Contact Us</Link>"
-            <ArrowRight className="w-5 h-5 ml-2" />
+'use client';
+import React, { useState, useEffect } from 'react';
 
-          </Link>
-)
-  )
-,;
-;}
+const FuturisticLoader: React.FC = () => {
+  const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) {
+          setLoading(false);
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!loading) return null;
+
+  return (
+    <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 z-50 flex items-center justify-center">
+      <div className="text-center">
+        <div className="relative w-64 h-64 mb-8">
+          <div className="absolute inset-0 rounded-full border-4 border-purple-500/20"></div>
+          <div 
+            className="absolute inset-0 rounded-full border-4 border-transparent border-t-purple-500 border-r-cyan-500 animate-spin"
+            style={{ animationDuration: '1s' }}
+          ></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 opacity-20 animate-pulse"></div>
+          </div>
+        </div>
+        
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold text-white mb-2">Loading Advanced Systems</h2>
+          <div className="w-64 bg-gray-700 rounded-full h-2 mx-auto">
+            <div 
+              className="bg-gradient-to-r from-purple-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+          <p className="text-gray-300 text-sm">{progress}% Complete</p>
+        </div>
+      </div>
     </div>
-    </div>"
-    </div>"
-}"
+  );
+};
+
+export default FuturisticLoader;
