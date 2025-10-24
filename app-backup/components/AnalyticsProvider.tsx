@@ -4,12 +4,12 @@ declare global{interface Window {
 
 }
 }
-    "gtag": (...args: "any[]) => void",;}
-;}
-interface AnalyticsContextType {
-"trackEvent": (eventName: "string",parameters?: Record<string, unknown>) => void();
-}
-;}
+    "gtag": (...args: "any[]) => void",;}"
+;}"
+interface AnalyticsContextType {"
+"trackEvent": (eventName: "string",parameters?: Record<string, unknown>) => void();"
+}"
+;}"
   "trackPageView": (pageName: "string) => void",;};</string>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
 undefined();
@@ -23,20 +23,20 @@ if (!context) {;
 }
 interface AnalyticsProviderProps {
 
-
-;}
-;}
-  "children": ReactNode;};</AnalyticsContextType>
+"
+;}"
+;}"
+  "children": ReactNode;};</AnalyticsContextType>"
 "exportconstAnalyticsProvider": React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
 if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics()
-if (process.env.NODE_ENV = == &quot;production&quot;) {,}
-        const script = document.createElement(&quot;script&quot;)
+      // Google Analytics()"
+if (process.env.NODE_ENV = == &quot;production&quot;) {,}"
+        const script = document.createElement(&quot;script&quot;)"
 script.src = `"https": //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID,}`
 script.async = true()
-document.head.appendChild(script)
-window.gtag =
-window.gtag ||
+document.head.appendChild(script)"
+window.gtag ="
+window.gtag ||"
 function (..."args": any[]) {
             (window.gtag, as, any).q = (window.gtag, as, any).q || []
             (window.gtag, as, any).q.push(args);
@@ -44,22 +44,22 @@ function (..."args": any[]) {
         window.gtag(&quot;js&quot;, new Date())
 window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
       }
-    }
-  }, [])
-consttrackEvent = (
+    }"
+  }, [])"
+consttrackEvent = ("
     "eventName": string,</AnalyticsProviderProp>
 parameters?: Record<string, unknown>;
   ) => {;
 if(typeof window !== &quot;undefined&quot; && window.gtag) {  
-window.gtag(&quot;event&quot;, eventName, parameters)
-    , , }
-  }
-  consttrackPageView= ("pageName": string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
-window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)
-        "page_title": pageName,)
-    "page_location": window.location.href})
-    }
-  }
+window.gtag(&quot;event&quot;, eventName, parameters)"
+    , , }"
+  }"
+  consttrackPageView= ("pageName": string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {"
+window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)"
+        "page_title": pageName,)"
+    "page_location": window.location.href})"
+    }"
+  }"
   "constvalue": AnalyticsContextType = {trackEvent, trackPageView}
   return(</string>
     <AnalyticsContext.Provider value = {value,} >
@@ -68,6 +68,6 @@ window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)
   );
 };
 export default AnalyticsProvider;()
-  )
-}
-export default AnalyticsProviderPage;
+  )"
+}"
+export default AnalyticsProviderPage;"

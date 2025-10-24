@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react";"
 import Image from "next/image"
 interface OptimizedImageProps {
 src: string
 alt: string
-width?: number
-height?: number
-className?: string
-  "data-testid"?: string
-,}
-  [ke,y: "string,]: any",}
-}
-
-const OptimizedImage: "React.FC<OptimizedImageProps /> = ({
-src",alt
-width = 800
-height = 600
+width?: number"
+height?: number"
+className?: string"
+  "data-testid"?: string"
+,}"
+  [ke,y: "string,]: any",}"
+}"
+"
+const OptimizedImage: "React.FC<OptimizedImageProps /> = ({"
+src",alt"
+width = 800"
+height = 600"
 className=""
   "data-testid": testId
   ...props
@@ -28,6 +28,6 @@ return(</OptimizedImageProps>
       data-testid = {testId,;}
       {...props;} />)
   );
-};
-;
-export default OptimizedImage;</Image>
+};"
+;"
+export default OptimizedImage;</Image>"
