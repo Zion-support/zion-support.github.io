@@ -1,7 +1,62 @@
-'use client';
-
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Star, Sparkles, PieChart } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform',
+  description: 'Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today.',
+  keywords: 'AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group',
+  robots: 'index, follow',
+  author: 'Zion Tech Group',
+  openGraph: {
+    title: 'AI Financial Analytics Pro - Advanced Financial Intelligence Platform',
+    description: 'Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/ai-financial-analytics-pro',
+    images: ['https://ziontechgroup.com/og-ai-financial-analytics.jpg'],
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Financial Analytics Pro - Advanced Financial Intelligence Platform',
+    description: 'Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling.',
+    images: ['https://ziontechgroup.com/twitter-ai-financial-analytics.jpg'],
+    site: '@ziontechgroup',
+  },
+  other: {
+    'application/ld+json': JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Financial Analytics Pro",
+      "description": "Advanced AI-powered financial analytics platform with machine learning insights, real-time reporting, and predictive modeling for smarter financial decisions.",
+      "url": "https://ziontechgroup.com/ai-financial-analytics-pro",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "199",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "199",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "url": "https://ziontechgroup.com"
+      }
+    })
+  }
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  themeColor: '#8b5cf6',
+};
 
 export default function AiFinancialAnalyticsProPage() {
 
@@ -218,59 +273,6 @@ export default function AiFinancialAnalyticsProPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div>
-        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-        <meta name="description" content="Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today." />
-        <meta name="keywords" content="AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#8b5cf6" />
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" />
-        <meta property="og:description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analytics-pro" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-ai-financial-analytics.jpg" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" />
-        <meta name="twitter:description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-financial-analytics.jpg" />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI Financial Analytics Pro",
-            "description": "Advanced AI-powered financial analytics platform with machine learning insights, real-time reporting, and predictive modeling for smarter financial decisions.",
-            "url": "https://ziontechgroup.com/ai-financial-analytics-pro",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web, iOS, Android",
-            "offers": {
-              "@type": "Offer",
-              "price": "199",
-              "priceCurrency": "USD",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "199",
-                "priceCurrency": "USD",
-                "unitText": "MONTH"
-              }
-            },
-            "provider": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com"
-            }
-          })}
-        </script>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
@@ -287,14 +289,14 @@ export default function AiFinancialAnalyticsProPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               View All AI Services
@@ -312,7 +314,7 @@ export default function AiFinancialAnalyticsProPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
-                    <stat.icon className="h-8 w-8 text-white" />
+                    {stat.icon}
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -447,7 +449,7 @@ export default function AiFinancialAnalyticsProPage() {
                 </ul>
                 
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
@@ -512,14 +514,14 @@ export default function AiFinancialAnalyticsProPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Start Free Trial
                 <Sparkles className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
                 Learn More

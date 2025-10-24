@@ -1,7 +1,21 @@
-"use client";
 import React from "react";
 import { Brain, Shield, Zap, Star } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI & IT Solutions',
+  description: 'Advanced AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.',
+  keywords: 'AI solutions, IT services, business automation, technology consulting, Zion Tech Group',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description: 'Advanced AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.',
+    type: 'website',
+    url: 'https://ziontechgroup.com',
+    images: ['https://ziontechgroup.com/og-image.jpg'],
+  },
+};
 
 const HomePage = () => {
   const features = [
