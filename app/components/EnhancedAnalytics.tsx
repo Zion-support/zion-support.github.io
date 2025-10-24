@@ -4,7 +4,7 @@ import React, { createContext, useContext, useEffect } from 'react';
 
 declare global {
   interface Window {
-    gtag: (..._args: any[]) => void;
+    gtag: (..._args: unknown[]) => void;
     dataLayer: unknown[];
   }
 }
@@ -42,9 +42,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        const gtagFunction = function(..._args: any[]) {
-          (window as any).gtag.q = (window as any).gtag.q || [];
-          (window as any).gtag.q.push(_args);
+        const gtagFunction = function(..._args: unknown[]) {
+          const gtag = window as { gtag?: { q?: unknown[] } };
+          gtag.gtag = gtag.gtag || { q: [] };
+          gtag.gtag.q = gtag.gtag.q || [];
+          gtag.gtag.q.push(_args);
         };
         window.gtag = window.gtag || gtagFunction;
         window.gtag = window.gtag || gtagFunction;
