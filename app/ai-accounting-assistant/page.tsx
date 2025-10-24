@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -60,12 +59,6 @@ const AIAccountingAssistantPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Accounting Assistant | Zion Tech Group</title>
-        <meta name="description" content="Streamline your accounting with AI-powered automation, financial analytics, and tax preparation. Reduce manual work by 80%." />
-        <meta name="keywords" content="AI accounting, automated bookkeeping, financial analytics, tax preparation, accounting software" />
-      </Helmet>
-      
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

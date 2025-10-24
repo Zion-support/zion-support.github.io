@@ -1,36 +1,24 @@
 'use client';
 import React from 'react';
 
-
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
 
-
       icon: Target,
       title: 'Precision Targeting',
 
-
       icon: TrendingUp,
       title: 'Growth Optimization',
-
 
     }
   ];
 
   const benefits = [
 
-
-
-
   return (
     <>
-      <Helmet>
-        <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-
-        <meta name="keywords" content="SEO optimization, AI SEO, search engine optimization, digital marketing, Zion Tech Group" />
-      </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -42,7 +30,6 @@ import React from 'react';
               Enhanced SEO Optimizer
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-
 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -56,19 +43,15 @@ import React from 'react';
             </div>
         </section>
 
-
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-
 
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
-
 
                         {benefit}
                       </li>
@@ -80,12 +63,9 @@ import React from 'react';
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
 
-
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
-
 
                   <p className="text-gray-300 text-lg">{benefit}</p>
 
@@ -96,13 +76,8 @@ import React from 'react';
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI-powered SEO solutions
 
-
-
       <Footer />
     </>
   );
 };
-
-
-
 

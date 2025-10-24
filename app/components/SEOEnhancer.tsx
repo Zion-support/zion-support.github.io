@@ -37,12 +37,6 @@ const SEOEnhancerPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>SEOEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
-      </Helmet>
-
       {/* Hero Section */}
       <section$1>
         <div$2>
@@ -65,8 +59,7 @@ const SEOEnhancerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div><Helmet>
-        </Helmet><title>SEOEnhancer | Zion Tech Group</title>
+      </div><title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
       {/* Hero Section */}

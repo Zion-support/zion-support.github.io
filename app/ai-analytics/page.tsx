@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react'
@@ -76,12 +75,6 @@ const AIAnalyticsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Analytics Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI Analytics solutions. Advanced analytics, predictive modeling, and real-time processing for better business decisions." />
-        <meta name="keywords" content="AI analytics, business intelligence, data analysis, predictive analytics, machine learning, data insights" />
-      </Helmet>
-
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">

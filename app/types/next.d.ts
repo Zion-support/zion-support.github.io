@@ -209,13 +209,11 @@ declare global {
 export {};
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const NextPage: React.FC = () => {
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const Next.dPage: React.FC = () => {
   const features = [
@@ -254,12 +252,7 @@ const Next.dPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Next.d | Zion Tech Group</title>
-        <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
-      </Helmet>
-  description?: string;
+      description?: string;
   keywords?: string[]
   authors?: Array<{ name: string; url?: string }> | string[]
   creator?: string;

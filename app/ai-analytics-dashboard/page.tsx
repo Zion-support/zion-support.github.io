@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {
@@ -110,12 +109,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Analytics Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI Analytics Dashboard. Real-time analytics, predictive modeling, and custom dashboards for better business decisions." />
-        <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, data insights" />
-      </Helmet>
-
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

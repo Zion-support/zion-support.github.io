@@ -1,23 +1,12 @@
 'use client'
-<<<<<<< HEAD
+
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Users, Target, Award, Shield, Globe } from 'lucide-react'
+import { CheckCircle, Users, Target, Award, Shield, Globe, Brain, ArrowRight, Star, Zap } from 'lucide-react'
 
 const AboutPage: React.FC = () => {
   const values = [
-=======
-
-import React from 'react'
-import { Brain, Shield, Globe, Users, CheckCircle, ArrowRight, Star, Award, Target, Zap } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-
-const AboutPage: React.FC = () => {
-  const _values = [
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
     {
       icon: Target,
       title: 'Innovation',
@@ -30,79 +19,6 @@ const AboutPage: React.FC = () => {
     },
     {
       icon: Globe,
-<<<<<<< HEAD
-      title: 'Excellence',
-      description: 'We strive for perfection in every project, ensuring the highest quality standards.'
-    }
-  ]
-
-  return (
-    <>
-      <Navigation />
-      
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-6">About Zion Tech Group</h1>
-              <p className="text-xl text-blue-100">
-                Leading technology solutions provider helping businesses transform their digital presence
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-                <p className="text-xl text-gray-600">
-                  To empower businesses with cutting-edge technology solutions that drive growth, 
-                  innovation, and success in the digital age.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-                <p className="text-xl text-gray-600">
-                  The principles that guide everything we do
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {values.map((value, index) => (
-                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center">
-                    <value.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {value.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </>
-  )
-}
-
-=======
       title: 'Global Reach',
       description: 'Serving clients worldwide with localized support and expertise.'
     },
@@ -113,7 +29,7 @@ const AboutPage: React.FC = () => {
     }
   ]
 
-  const _team = [
+  const team = [
     {
       name: 'Sarah Johnson',
       role: 'CEO & Founder',
@@ -140,7 +56,7 @@ const AboutPage: React.FC = () => {
     }
   ]
 
-  const _stats = [
+  const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Countries Served' },
     { number: '99%', label: 'Client Satisfaction' },
@@ -167,7 +83,7 @@ const AboutPage: React.FC = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-              {_stats.map((stat, index) => (
+              {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -246,7 +162,7 @@ const AboutPage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {_values.map((value, index) => (
+              {values.map((value, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <value.icon className="w-6 h-6 text-blue-600" />
@@ -276,7 +192,7 @@ const AboutPage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {_team.map((member, index) => (
+              {team.map((member, index) => (
                 <div key={index} className="text-center">
                   <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white text-2xl font-bold">
@@ -323,6 +239,4 @@ const AboutPage: React.FC = () => {
     </>
   )
 }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
 export default AboutPage

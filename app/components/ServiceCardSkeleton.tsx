@@ -37,12 +37,6 @@ const benefits = [
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>ServiceCardSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional ServiceCardSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="ServiceCardSkeleton, AI solutions, IT services, Zion Tech Group, servicecardskeleton" />
-      </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

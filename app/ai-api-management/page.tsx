@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -76,12 +75,6 @@ const AIApiManagementPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI API Management | Zion Tech Group</title>
-        <meta name="description" content="Streamline your API management with AI-powered solutions. Advanced security, performance optimization, and comprehensive analytics for better API governance." />
-        <meta name="keywords" content="API management, API gateway, API security, API analytics, microservices, API governance" />
-      </Helmet>
-
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-orange-50 to-red-100">

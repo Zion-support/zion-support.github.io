@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Leaf, Zap, Eye, BarChart, Globe, Shield, Users } from 'lucide-react'
@@ -48,11 +47,6 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered agricultural intelligence solutions for modern farming. Optimize crop yields, monitor health, and make data-driven decisions." />
-      </Helmet>
-
       <Navigation />
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />

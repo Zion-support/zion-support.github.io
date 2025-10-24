@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 interface EnhancedSEOHeadProps {
   title?: string;
   description?: string;
@@ -14,20 +12,15 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 
 }) => {
 
-
 interface SEOHeadProps {
-
 
     </Helmet>
   );
 };
 
-
-
   ];
 
   const benefits = [
-
 
   return (
     <>
@@ -93,8 +86,4 @@ interface SEOHeadProps {
                 Contact Sales
       <Footer />
     </>
-
-
-
-
 

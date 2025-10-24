@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const EnhancedHeroPage: React.FC = () => {
@@ -50,8 +49,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>EnhancedHero | Zion Tech Group</title>
+      <title>EnhancedHero | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -83,12 +81,6 @@ return (
               </div>
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>EnhancedHero | Zion Tech Group
-        <meta name="description" content="Professional EnhancedHero services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedHero, AI solutions, IT services, Zion Tech Group, enhancedhero" />
-      </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

@@ -49,8 +49,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
+      <title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

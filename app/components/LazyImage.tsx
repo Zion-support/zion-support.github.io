@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const LazyImagePage: React.FC = () => {
@@ -44,16 +43,9 @@ const benefits = [
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>LazyImage | Zion Tech Group</title>
-        <meta name="description" content="Professional LazyImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="LazyImage, AI solutions, IT services, Zion Tech Group, lazyimage" />
-      </Helmet>
-
-    'Proven track record of success'
+      'Proven track record of success'
   ]
 {/* Hero Section */} <section className="py-20 px-4">
-
 
       {/* Hero Section */}
       <section$1>

@@ -1,10 +1,7 @@
 
 
-
-
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const AccessibilityCheckerPage: React.FC = () => {
   const features = [
@@ -43,12 +40,6 @@ const AccessibilityCheckerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AccessibilityChecker | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
-      </Helmet>
-
       {/* Hero Section */}
       <section$1>
         <div$2>
