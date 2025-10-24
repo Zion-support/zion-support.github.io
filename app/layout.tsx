@@ -1,26 +1,26 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import React from 'react';
-import './globals.css';
+import { Helmet } from 'react-helmet-async';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading Technology Solutions Provider',
-  description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services from Zion Tech Group.',
-  keywords: 'AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity',
+const LayoutPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Layout - Zion Tech Group</title>
+        <meta name="description" content="Professional layout services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">Layout</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
-  );
-}
+export default LayoutPage;

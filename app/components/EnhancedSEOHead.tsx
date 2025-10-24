@@ -1,16 +1,16 @@
-'use client';;
-
+'use client';
 import React from 'react';
 
-interface EnhancedSEOHeadProps {
-  // Add props here
+interface Props {
+  [key: string]: any;
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
+const EnhancedSEOHead: React.FC<Props> = (props) => {
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <Helmet>
+      <title>Zion Tech Group</title>
+      <meta name="description" content="Professional AI and IT solutions" />
+    </Helmet>
   );
 };
 

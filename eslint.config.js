@@ -42,6 +42,7 @@ export default [
       'backup-pages/**',
       'backup-problematic/**',
       'backup-problematic-files/**',
+      'corrupted-src-backup/**',
       'clean-build/**',
       'ci-cd-reports/**',
       'apps.backup/**',
@@ -49,7 +50,16 @@ export default [
       'out/**',
       '*.min.js',
       '*.min.css',
-      'chunk-*.js'
+      'chunk-*.js',
+      'comprehensive-*.js',
+      'comprehensive_*.js',
+      'automation-runner.js',
+      'check_*.js',
+      'cleanup-*.js',
+      'close-*.js',
+      'code-quality-*.js',
+      'commit-and-*.js',
+      'contracts/**'
     ]
   },
   // Base JavaScript configuration

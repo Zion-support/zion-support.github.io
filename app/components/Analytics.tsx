@@ -1,35 +1,25 @@
-'use client';;
-import React, {Suspense, lazy}from 'react';
-interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
-  enablePerformanceMonitoring?: boolean;
-  enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;}}
-const Analytics: React.FC<AnalyticsProps> = ({,
-    enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true;}}) => {useEffect(() => {
-    if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()}}
-if (enablePerformanceMonitoring) {initializePerformanceMonitoring()}}
-if (enableErrorTracking) {initializeErrorTracking()}}
-if (enableUserBehaviorTracking) {initializeUserBehaviorTracking()}}
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-const initializeGoogleAnalytics = (;
-    // Load Google Analytics;
-
+'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface AnalyticsProps {
-  // Add props here
-}
-
-const Analytics: React.FC<AnalyticsProps> = (_props) => {
+const AnalyticsPage: React.FC = () => {
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional Analytics services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">Analytics</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
-export default Analytics;
+export default AnalyticsPage;

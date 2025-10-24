@@ -1,15 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import { describe, test, expect } from '@jest/globals'
-import { HelmetProvider } from 'react-helmet-async'
-
-// Mock component for testing
-const MockComponent = () => (
-  <div data-testid="mock-component">
-    Mock Component
-  </div>
-)
-
+import { describe, test, expect } from '@jest/globals';
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 describe('Component Tests', () => {
   test('renders with HelmetProvider', () => {
     render(

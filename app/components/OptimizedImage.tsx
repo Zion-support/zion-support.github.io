@@ -1,51 +1,25 @@
 'use client';;
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = '',
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL
-
-
-}) => {
+const OptimizedImagePage: React.FC = () => {
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        priority={priority}
-        quality={quality}
-        placeholder={placeholder}
-        blurDataURL={blurDataURL}
-        className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>OptimizedImage - Zion Tech Group</title>
+        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">OptimizedImage</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
-export default OptimizedImage;
-
-
-
+export default OptimizedImagePage;

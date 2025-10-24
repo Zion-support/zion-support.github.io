@@ -1,53 +1,25 @@
 'use client';
-
 import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-const EnhancedServicesShowcase: React.FC = () => {
-    const services = [
-    {
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
-      icon: Brain,
-      color: 'text-purple-400',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: '300% ROI',
-    },
-    {
-      title: 'IT Infrastructure',
-      description: 'Build and maintain robust technology foundations',
-      icon: Cloud,
-      color: 'text-blue-400',
-      features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
-      stats: '99.9% Uptime',
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Protect your business with enterprise-grade security',
-      icon: Shield,
-      color: 'text-green-400',
-      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
-      stats: 'Zero Breaches',
-    },
-    {
-      title: 'Automation',
-      description: 'Streamline processes with intelligent automation',
-      icon: Zap,
-      color: 'text-yellow-400',
-      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-      stats: '95% Efficiency',
-    }
-  ];
+import { Helmet } from 'react-helmet-async';
 
-interface EnhancedServicesShowcaseProps {
-  // Add props here
-}
-
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = (_props) => {
+const EnhancedServicesShowcasePage: React.FC = () => {
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>EnhancedServicesShowcase - Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedServicesShowcase services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">EnhancedServicesShowcase</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcasePage;

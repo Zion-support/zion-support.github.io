@@ -1,17 +1,12 @@
 'use client';
-
 import React from 'react';
 
-interface GlobalErrorBoundaryProps {
-  // Add props here
+interface Props {
+  children: React.ReactNode;
 }
 
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  );
+const GlobalErrorBoundary: React.FC<Props> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default GlobalErrorBoundary;

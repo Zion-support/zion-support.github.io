@@ -1,44 +1,25 @@
-'use client';;
-import React, {Suspense, lazy}from 'react';
-interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
-  text?: string;
-  className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean;
-}
-
-import React from 'react';
-
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-              /></div>
-              <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '75%' ,}}
-              /></div>
-              <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '50%' ,}}
-              /></div>
-          );
-case 'bars':;
-          return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
-              {[0, 1, 2, 3].map(i => (</div>)
-                <div;}key={i}className={`w-1 ${colorClasses[color].split(' ')[1]}animate-pulse`}
-                  style={{}height: `${12 + i * 4,}px`,
-                    animationDelay: `${i * 0.1,}s`,
 'use client';
-import React, { Suspense, lazy } from 'react'
-interface OptimizedLoadingSpinnerProps {
-  // Add props here
-}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = (_props) => {
+const OptimizedLoadingSpinnerPage: React.FC = () => {
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>OptimizedLoadingSpinner - Zion Tech Group</title>
+        <meta name="description" content="Professional OptimizedLoadingSpinner services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">OptimizedLoadingSpinner</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
-export default OptimizedLoadingSpinner;
+export default OptimizedLoadingSpinnerPage;

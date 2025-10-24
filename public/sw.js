@@ -1,42 +1,20 @@
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
+  '/',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+];
 
-// Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
-// Service Worker for Zion Tech Group;
-const CACHE_NAME = 'zion-tech-group-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
-
-// Assets to cache immediately;
-const STATIC_ASSETS = ['/',
-  '/about',
-  '/contact',
-  '/pricing',
-  '/manifest.json',
-  '/robots.txt']
-
-// Install event - cache static assets;
-  console.log('Service Worker installing...')
-
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE)
-        console.log('Caching static assets')
-        return cache.addAll(STATIC_ASSETS)
-      })
-        console.log('Static assets cached successfully')
-        return self.skipWaiting()
-        console.error('Failed to cache static assets: ', error)
-  )
+    caches.open(CACHE_NAME)
+  );
+});
 
-// Activate event - clean up old caches;
-  console.log('Service Worker activating...')
-
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {console.log('Deleting old cache: ', cacheName)
-              return caches.delete(cacheName)})
-      .then(() => {
-        return self.clients.claim();
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
   );
 });
 

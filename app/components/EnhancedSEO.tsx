@@ -1,16 +1,25 @@
 'use client';;
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface EnhancedSEOProps {
-  // Add props here
-}
-
-const EnhancedSEO: React.FC<EnhancedSEOProps> = (_props) => {
+const EnhancedSEOPage: React.FC = () => {
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>EnhancedSEO - Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedSEO services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">EnhancedSEO</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
-export default EnhancedSEO;
+export default EnhancedSEOPage;

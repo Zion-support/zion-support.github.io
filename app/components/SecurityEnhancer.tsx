@@ -1,33 +1,18 @@
-'use client';;
-import React from 'react';
-'use client';;
-import React, {useEffect}from 'react';
-interface SecurityEnhancerProps {children: React.ReactNode;,}}}
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {useEffect(() => {
-    // Security enhancement logic;
-    const enhanceSecurity = (;
-      // Add security headers;
-      const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
-        'X-XSS-Protection': '1; mode=block',) => {
-  return($3;)
-  )}'Referrer-Policy': 'strict-origin-when-cross-origin';}
-      }
-// Add CSP meta tag;
+'use client';
+import React, { useEffect } from 'react';
 
-import React from 'react';
+const SecurityEnhancer: React.FC = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Add security headers
+      const cspMeta = document.createElement('meta');
+      cspMeta.httpEquiv = 'Content-Security-Policy';
+      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+      document.head.appendChild(cspMeta);
+    }
+  }, []);
 
-interface SecurityEnhancerProps {
-  // Add props here
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  );
+  return null;
 };
 
 export default SecurityEnhancer;
