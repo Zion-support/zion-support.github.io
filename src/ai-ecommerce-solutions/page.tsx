@@ -372,7 +372,6 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
           <div className="mt-8 text-sm text-purple-200"></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>

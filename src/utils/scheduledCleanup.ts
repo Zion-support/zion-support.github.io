@@ -4,9 +4,6 @@ export const scheduledCleanup = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default scheduledCleanup;
-=======
 export interface CleanupStats {
   totalRuns: number
   successfulRuns: number
@@ -219,4 +216,3 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     scheduledCleanup.start()
   }, 5000)
 }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

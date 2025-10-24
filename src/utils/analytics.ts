@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-// analytics utility
-export const analytics = () => {
-  // Utility implementation
-  return null;
-};
-
-export default analytics;
-=======
 'use client'
 import { X } from 'lucide-react'
 import React from 'react'
@@ -216,4 +207,3 @@ if (typeof window !== 'undefined') {
   analytics.initialize()
 }
 export default analytics
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

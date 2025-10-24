@@ -158,7 +158,6 @@ const QuantumComputingPage: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>

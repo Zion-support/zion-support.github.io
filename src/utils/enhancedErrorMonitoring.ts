@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-// enhancedErrorMonitoring utility
-export const enhancedErrorMonitoring = () => {
-  // Utility implementation
-  return null;
-};
-
-export default enhancedErrorMonitoring;
-=======
 'use client'
 import React from 'react'
 /**
@@ -359,4 +350,3 @@ ${stats.recent.map(error => `
 // Export singleton instance
 export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance()
 export default enhancedErrorMonitoring
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

@@ -1,205 +1,134 @@
-'use client'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight } from 'lucide-react'
+'use client';
+import Navigation from './Navigation';
+import {Helmet } from 'react-helmet-async';
+import {ArrowRight } from 'lucide-react';
 
-import React, { useEffect, useState, useCallback } from 'react'
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
-import { CheckCircle } from 'lucide-react'
-import { AlertTriangle } from 'lucide-react'
-
-interface PerformanceOptimizerProps {
+import React, {useEffect, useState, useCallback } from 'react';
+import {Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import {CheckCircle } from 'lucide-react';
+import {AlertTriangle } from 'lucide-react'
+;
+interface PerformanceOptimizerProps {}
   className?: string;
 }
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true,
-}) => {
-  const [isOptimizing, setIsOptimizing] = useState(false)
+;
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageOptimization: "true,";"
+  enableLazyLoading: "true,";"}
+  enablePreloading: "true,}";"
+  enableCodeSplitting="true,"</PerformanceOptimizerProps>
+}) => {const [isOptimizing, setIsOptimizing] = useState(false)</PerformanceOptimizerProps>;
   const [optimizationStatus, setOptimizationStatus] = useState<{
-    images: boolean
-    lazyLoading: boolean
-    preloading: boolean
+    images: boolean;
+    lazyLoading: boolean,;}
+    preloading: boolean}
     codeSplitting: boolean
-  }>({
-    images: false,
-    lazyLoading: false,
-    preloading: false,
+  }>({images: false,;
+    lazyLoading: false,;}
+    preloading: false,}
     codeSplitting: false,
-  })
-
-  const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) return
-
-    // Optimize images
-    const images = document.querySelectorAll('img')
-    images.forEach((img) => {
-  
-      if (img.loading !== 'lazy') {
-        img.loading = 'lazy'
+  });
+"
+  const optimizeImages=";";"
+    const images="document.querySelectorAll('img')";
+    images.forEach((img) => {if (img.loading !== 'lazy') {}"
+        img.loading="'lazy'"
       }
 
-      // Add WebP support detection
-      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
-        const webpSrc = img.src.replace('.jpg', '.webp')
-        const webpImg = new Image()
-        webpImg.onload = () => {
-          img.src = webpSrc
-        }
-        webpImg.src = webpSrc
-      }
-    })
-
-    setOptimizationStatus(prev => ({ ...prev, images: true }))
-  }, [enableImageOptimization])
-
-  const enableLazyLoadingOptimization = useCallback(() => {
-    if (!enableLazyLoading) return
-
-    // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver(
-      (entries) => {
-  
-        entries.forEach((entry) => {
-  
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
-            if (img.dataset.src) {
-              img.src = img.dataset.src
-              img.removeAttribute('data-src')
+      // Add WebP support detection;"
+      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {const webpSrc: "img.src.replace('.jpg'," '.webp');"
+        const webpImg=";";}
+              img.removeAttribute('data-src')}
               observer.unobserve(img)
             }
           }
         })
       },
-      { rootMargin: '50px' }
-    )
+      {rootMargin: '50px' }
+    );
+"
+    const lazyImages="document.querySelectorAll('img[data-src]')";
+    lazyImages.forEach((img) => observer.observe(img));
 
-    const lazyImages = document.querySelectorAll('img[data-src]')
-    lazyImages.forEach((img) => observer.observe(img))
-
-    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }))
-  }, [enableLazyLoading])
-
-  const enablePreloadingOptimization = useCallback(() => {
-    if (!enablePreloading) return
-
-    // Preload critical resources
-    const criticalResources = [
+    setOptimizationStatus(prev => ({...prev, lazyLoading: true }))
+  }, [enableLazyLoading]);
+"
+  const enablePreloadingOptimization=";"
       '/fonts/main.woff2',
       '/css/critical.css',
-    ]
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.css') ? 'style' : 'font'
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
+    ];
+"
+    criticalResources.forEach((resource) => {const link="document.createElement('link')";"
+      link.rel="'preload'";"
+      link.href="resource";"
+      link.as="resource.endsWith('.css')" ? 'style' : 'font'}
+      if (resource.endsWith('.woff2')) {}"
+        link.crossOrigin="'anonymous'"
       }
       document.head.appendChild(link)
-    })
+    });
 
-    setOptimizationStatus(prev => ({ ...prev, preloading: true }))
-  }, [enablePreloading])
-
-  const enableCodeSplittingOptimization = useCallback(() => {
-    if (!enableCodeSplitting) return
-
-    // Dynamic imports for codesplittingconstloadComponent= async (componentName: string) => {
-  
-      try {
-        const module = await import(`../components/${componentName}.tsx`)
-        return module.default
-      } catch (error) {
-        // // console.warn(`Failed to load component: ${componentName}`, error)
-        return null
-      }
-    }
-
-    // Store the function globally for use in other components
-    (window as any).loadComponent = loadComponent
-
-    setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
-  }, [enableCodeSplitting])
-
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true)
-
-    try {
-      await Promise.all([
-        optimizeImages(),
-        enableLazyLoadingOptimization(),
-        enablePreloadingOptimization(),
-        enableCodeSplittingOptimization(),
-      ])
-    } catch (error) {
+    setOptimizationStatus(prev => ({...prev, preloading: true }))
+  }, [enablePreloading]);
+"
+  const enableCodeSplittingOptimization=";"
       // // console.error('Optimization failed:', error)
-    } finally {
+    } finally {}
       setIsOptimizing(false)
     }
-  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization])
+  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization]);
 
-  useEffect(() => {
+  useEffect(() => {}
     runOptimizations()
-  }, [runOptimizations])
-
-  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
-
-  return (
-    <>
-      <Helmet>
-        <title>PerformanceOptimizer</title>
-        <meta name="description" content="Advanced PerformanceOptimizer solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation" />
+  }, [runOptimizations]);
+"
+  const allOptimizationsComplete=";""
+        <meta name="&quot;description&quot;" content="&quot;Advanced" PerformanceOptimizer solution for modern businesses.&quot; /></meta>"
+        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation&quot; /></meta>
       </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              PerformanceOptimizer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced PerformanceOptimizer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
+      <Navigation /></Navigation>"
+      <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+        {/* Hero Section */}"
+        <section className="&quot;relative" py-20 px-4 overflow-hidden&quot;></section>"
+          <div className="&quot;absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>"
+          <div className="&quot;relative" max-w-7xl mx-auto text-center&quot;></div>"
+            <h1 className="&quot;text-5xl" md:text-7xl font-bold text-white mb-6 leading-tight&quot;>;</h1>
+              PerformanceOptimizer</h1>
+            </h1>"
+            <p className="&quot;text-xl" text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>;</p>
+              Advanced PerformanceOptimizer solution for modern businesses.</p>
+            </p>"
+            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
+              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>;</button>
+                Get Started</button>"
+                <ArrowRight className="&quot;ml-2" h-5 w-5&quot; /></ArrowRight>
+              </button>"
+              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+                Learn More</button>
               </button>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
+        {/* Features Section */}"
+        <section className="&quot;py-20" px-4&quot;></section>"
+          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
+            <div className="&quot;text-center" mb-16&quot;></div>"
+              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Key Features</h2>"
+              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>;</p>
+                Powerful AI-driven features designed to transform your business operations</p>
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
+            </div>"
+            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+              {features.map((feature, index) => ("
+                <div key="{index}" className="&quot;bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>"
+                  <feature.icon className="&quot;h-12" w-12 text-emerald-400 mb-4&quot; /></feature>"
+                  <h3 className="&quot;text-xl" font-semibold text-white mb-3&quot;>{feature.title}</h3>"
+                  <p className="&quot;text-gray-300" mb-4&quot;>{feature.description}</p>"
+                  <ul className="&quot;space-y-2&quot;"></ul>
+                    {feature.benefits.map((benefit, idx) => (</ul>"
+                      <li key="{idx}" className="&quot;flex" items-center text-sm text-gray-300&quot;></li>"
+                        <CheckCircle className="&quot;h-4" w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+                        {benefit}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -209,39 +138,39 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
+        {/* Benefits Section */}"
+        <section className="&quot;py-20" px-4 bg-white/5&quot;></section>"
+          <div className="&quot;max-w-7xl" mx-auto&quot;></div>"
+            <div className="&quot;text-center" mb-16&quot;></div>"
+              <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>"
+              <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>;</p>
+                Experience the benefits of cutting-edge AI technology</p>
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+            </div>"
+            <div className="&quot;grid" md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+              {benefits.map((benefit, index) => ("
+                <div key="{index}" className="&quot;flex" items-start space-x-4&quot;></div>"
+                  <CheckCircle className="&quot;h-6" w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>"
+                  <p className="&quot;text-gray-300" text-lg&quot;>{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
+        {/* CTA Section */}"
+        <section className="&quot;py-20" px-4&quot;></section>"
+          <div className="&quot;max-w-4xl" mx-auto text-center&quot;></div>"
+            <h2 className="&quot;text-4xl" font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>"
+            <p className="&quot;text-xl" text-gray-300 mb-8&quot;>;</p>
+              Join thousands of businesses already using our AI solutions</p>
+            </p>"
+            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>"
+              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+                Start Free Trial</button>
+              </button>"
+              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>;</button>
+                Contact Sales</button>
               </button>
             </div>
           </div>
@@ -250,9 +179,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </div>
   )
 }
-
+;
 export default PerformanceOptimizer
   );
 };
-
-export default PerformanceOptimizerPage;
+;
+export default PerformanceOptimizerPage;"

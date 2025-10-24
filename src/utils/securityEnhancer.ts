@@ -236,4 +236,3 @@ Security Report:
 export const securityEnhancer = new SecurityEnhancer()
 // Export class for custom instances
 export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
