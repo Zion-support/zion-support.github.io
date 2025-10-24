@@ -36,23 +36,23 @@ const HomePage: React.FC = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="bg-gradient-to-rfrom-blue-600to-purple-600text-white py-20">
-          <div className="containermx-autopx-4">
-            <div className="max-w-4xlmx-autotext-center">
-              <h1 className="text-5xlfont-boldmb-6">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold mb-6">
                 Transform Your Business with 
-                <span className="blocktext-yellow-300">Cutting-Edge Technology</span>
+                <span className="block text-yellow-300">Cutting-Edge Technology</span>
               </h1>
-              <p className="text-xlmb-8text-blue-100">
+              <p className="text-xl mb-8 text-blue-100">
                 Leading technology solutions provider helping businesses transform their digital
                 presence with AI, cloud architecture, and innovative development services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-whitetext-blue-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                   Get Started
-                  <ArrowRight className="ml-2w-5h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="border-2border-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Learn More
                 </button>
               </div>
@@ -61,23 +61,23 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20bg-gray-50">
-          <div className="containermx-autopx-4">
-            <div className="max-w-6xlmx-auto">
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-boldtext-gray-900mb-4">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
                   Why Choose Zion Tech Group?
                 </h2>
-                <p className="text-xltext-gray-600">
+                <p className="text-xl text-gray-600">
                   We deliver exceptional results through innovative technology solutions
                 </p>
               </div>
               
-              <div className="gridgrid-cols-1md:grid-cols-3gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-whitep-8rounded-lgshadow-lg hover:shadow-xl transition-shadow">
+                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                    <h3 className="text-xlfont-semiboldtext-gray-900mb-3">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600">
@@ -91,22 +91,22 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20bg-blue-600text-white">
-          <div className="containermx-autopx-4">
-            <div className="max-w-4xlmx-auto">
-              <div className="text-centermb-12">
-                <h2 className="text-4xl font-boldmb-4">
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
                   Our Impact in Numbers
                 </h2>
-                <p className="text-xltext-blue-100">
+                <p className="text-xl text-blue-100">
                   Delivering measurable results for our clients
                 </p>
               </div>
               
-              <div className="gridgrid-cols-2md:grid-cols-4gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-4xl font-boldmb-2">
+                    <div className="text-4xl font-bold mb-2">
                       {stat.number}
                     </div>
                     <div className="text-blue-100">
@@ -120,21 +120,21 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20bg-gray-900text-white">
-          <div className="containermx-autopx-4">
-            <div className="max-w-4xlmx-autotext-center">
-              <h2 className="text-4xl font-boldmb-6">
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xltext-gray-300mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how our technology solutions can drive your success
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600text-whitepx-8py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
                   Start Your Project
-                  <ArrowRight className="ml-2w-5h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="border-2border-whitetext-whitepx-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
                   Schedule Consultation
                 </button>
               </div>
