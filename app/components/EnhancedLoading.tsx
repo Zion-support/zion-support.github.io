@@ -80,4 +80,6 @@ const EnhancedLoading: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default EnhancedLoading

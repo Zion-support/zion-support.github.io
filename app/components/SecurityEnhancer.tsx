@@ -80,4 +80,6 @@ const SecurityEnhancer: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default SecurityEnhancer

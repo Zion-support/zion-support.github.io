@@ -8,7 +8,6 @@ interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
-}
 
 const SEOHead: React.FC<SEOHeadProps> = ({ 
   title = "Zion Tech Group - AI Solutions", 
@@ -91,7 +90,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default SEOHead

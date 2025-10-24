@@ -80,4 +80,6 @@ const EnhancedLoadingStates: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default EnhancedLoadingStates

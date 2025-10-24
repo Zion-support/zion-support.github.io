@@ -3,19 +3,20 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
 
 export default function ZionAiCustomerServiceProPage() {
   return (<>
       <Head>
-        <title>Zion Ai Customer Service Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional zion ai customer service pro services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Zion Ai Customer Zion Ai Customer Service Pro Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional zion-ai-customer-service-pro services by Zion Tech Group. Transform your business with our expert solutions." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <h1 className="text-4xl font-bold text-white mb-6">
-            Zion Ai Customer Service Pro
+            Service
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion ai customer service pro services coming soon.
+            Professional zion-ai-customer-service-pro services coming soon.
           </p>
           <Link
             href="/contact"

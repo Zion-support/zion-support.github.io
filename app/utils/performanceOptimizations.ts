@@ -87,8 +87,8 @@ export const useLazyImage = (src: string, placeholder?: string) => {
         })
       }
       [src, isLoaded, isError]
-    )
-  )
+    
+  );
   return { imageSrc, isLoaded, isError, observe }
 }
 // Performance monitoring hook

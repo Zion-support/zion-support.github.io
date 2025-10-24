@@ -80,4 +80,6 @@ const OptimizedLoadingSpinner: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default OptimizedLoadingSpinner

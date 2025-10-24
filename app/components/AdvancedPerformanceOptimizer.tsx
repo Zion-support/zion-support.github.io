@@ -12,7 +12,6 @@ interface AdvancedPerformanceOptimizerProps {
   enableImageOptimization?: boolean
   enablePreloading?: boolean
   enableServiceWorker?: boolean
-}
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
   enableWebVitals = true
   enableAdvancedCaching = true
@@ -74,7 +73,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         })
       })
       fcpObserver.observe({ entryTypes: ['paint'] })
-    }
   }, [enableWebVitals])
   // Advanced caching strategies
   const setupAdvancedCaching = useCallback(() => {
@@ -90,7 +88,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           // eslint-disable-next-line no-console
     console.error('Service Worker registration failed:', registrationError)
         })
-    }
     // Memory-based caching for API responses
     const cache = new Map()
     const originalFetch = window.fetch
@@ -99,13 +96,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       const cacheKey = `${url}-${JSON.stringify(init)}`
       if (cache.has(cacheKey)) {
         return cache.get(cacheKey)
-      }
       const response = await originalFetch(input, init)
       if (response.ok) {
-        cache.set(cacheKey, response.clone())
-      }
+        cache.set(cacheKey, response.clone()
       return response
-    }
   }, [enableServiceWorker])
   // Image optimization
   const optimizeImages = useCallback(() => {
@@ -114,10 +108,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     images.forEach(img => {)
       if (!img.loading) {
         img.loading = 'lazy'
-}
       if (!img.decoding) {
   img.decoding = 'async'
-}
     })
   }, [])
   // Preload critical resources
@@ -134,7 +126,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous'
-}
       document.head.appendChild(link)
     })
   }, [])
@@ -153,27 +144,20 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fid: Math.round(performanceMetrics.fid),
     cls: Math.round(performanceMetrics.cls * 1000) / 1000}
       })
-    }
   }, [performanceMetrics])
   useEffect(() => {
     if (enableAdvancedCaching) {
       setupAdvancedCaching()
-    }
     if (enableImageOptimization) {
       optimizeImages()
-    }
     if (enablePreloading) {
       preloadCriticalResources()
-    }
     if (enableWebVitals) {
       measureWebVitals()
-    }
   }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
   useEffect(() => {
     if (enableWebVitals && performanceMetrics.lcp > 0) {
       reportPerformanceMetrics()
-    }
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
-}
 export default AdvancedPerformanceOptimizer

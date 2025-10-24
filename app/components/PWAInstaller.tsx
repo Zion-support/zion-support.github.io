@@ -5,7 +5,6 @@ import { Download } from 'lucide-react';
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
-}
 const PWAInstaller: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [showInstallPrompt, setShowInstallPrompt] = useState(false)
@@ -23,7 +22,6 @@ const PWAInstaller: React.FC = () => {
       e.preventDefault()
       setDeferredPrompt(e as BeforeInstallPromptEvent)
       setShowInstallPrompt(true)
-    }
     // Listen for appinstalled event
     const handleAppInstalled = () => {
   return setIsInstalled(true)
@@ -36,7 +34,6 @@ const PWAInstaller: React.FC = () => {
       ) => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
       window.removeEventListener('appinstalled', handleAppInstalled)
-    }
   }, [])
   const handleInstallClick = async () => {
     if (!deferredPrompt) return
@@ -47,14 +44,11 @@ const PWAInstaller: React.FC = () => {
   // Installation successful
 } else {
   // Installation dismissed
-}
       setDeferredPrompt(null)
       setShowInstallPrompt(false)
     } catch (error) {
       // // eslint-disable-next-line no-console
-    console.error('Installation failed:', error)
-    }
-  }
+    console.error('Installation failed:', error)}
   const handleDismiss = () => {
   return setShowInstallPrompt(false)
     // Don&apos;t show again for this session

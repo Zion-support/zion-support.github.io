@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
+import Footer from 'Footer';
 
 const Header: React.FC = () => {
   return (<header className="bg-white shadow-sm border-b">
@@ -91,7 +92,6 @@ const Header: React.FC = () => {
 </>
   )
 }
-export default HeaderPage
+ HeaderPage
   )
 }
-export default Header

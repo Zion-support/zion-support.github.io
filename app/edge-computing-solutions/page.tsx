@@ -3,19 +3,20 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
 
 export default function EdgeComputingSolutionsPage() {
   return (<>
       <Head>
         <title>Edge Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional edge computing solutions services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="Professional edge-computing-solutions services by Zion Tech Group. Transform your business with our expert solutions." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <h1 className="text-4xl font-bold text-white mb-6">
             Edge Computing Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional edge computing solutions services coming soon.
+            Professional edge-computing-solutions services coming soon.
           </p>
           <Link
             href="/contact"

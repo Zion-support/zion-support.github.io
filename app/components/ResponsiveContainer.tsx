@@ -80,4 +80,6 @@ const ResponsiveContainer: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default ResponsiveContainer

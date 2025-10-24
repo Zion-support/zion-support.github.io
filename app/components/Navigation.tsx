@@ -100,7 +100,6 @@ const Navigation = () => {
                     </div>
                   )}
                 </div>
-              )
             })}
           </div>
           {/* CTA Button */}
@@ -152,7 +151,6 @@ const Navigation = () => {
                       </div>
                     )}
                   </div>
-                )
               })}
               <div className="pt-4 border-t border-slate-700"></div>
                 <Link
@@ -168,6 +166,4 @@ const Navigation = () => {
         )}
       </div>
     </nav>
-  )
-}
 export default Navigation

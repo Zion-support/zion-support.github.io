@@ -4,7 +4,6 @@ import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal'
   onClose?: () => void
-}
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -15,16 +14,14 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setStatus('error')
       setMessage('Please enter your email address')
       return
-}
     if (!/\S+@\S+\.\S+/.test(email)) {
   setStatus('error')
       setMessage('Please enter a valid email address')
       return
-}
     setStatus('loading')
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await new Promise(resolve => setTimeout(resolve, 1000)
       // In a real app, you would make an API call here
       setStatus('success')
       setMessage('Thank you for subscribing! Check your email for confirmation.')
@@ -34,12 +31,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         setTimeout(() => {
           onClose()
         }, 2000)
-      }
     } catch (error) {
       setStatus('error')
-      setMessage('Something went wrong. Please try again.')
-    }
-  }
+      setMessage('Something went wrong. Please try again.')}
   const content = (
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
       <div className="text-center mb-6"></div>
@@ -98,7 +92,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         </p>
       </div>
     </div>
-  )
   if (variant === 'modal') {
     return (<div className="fixed inset-0 z-50 overflow-y-auto"> {content}</div>
           </div>
@@ -107,5 +100,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     )
   }
   return content
-}
+}  );
+
 export default NewsletterSignup

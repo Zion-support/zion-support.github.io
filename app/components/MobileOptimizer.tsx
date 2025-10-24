@@ -34,10 +34,7 @@ const MobileOptimizer: React.FC = () => {
 }
         if (!imageElement.decoding) {
           imageElement.decoding = 'async';
-        }
-      });
-    };
-
+      });}
     // Add mobile-specific event listeners
     const addMobileEventListeners = () => {
   return // Prevent double-tap zoom
@@ -55,22 +52,15 @@ const MobileOptimizer: React.FC = () => {
         element.addEventListener('touchstart', () => {
           if ('vibrate' in navigator) {
             navigator.vibrate(10); // Short vibration
-          }
-        });
-      };
-
+        });}
       const interactiveElements = document.querySelectorAll('button, a, [role="button"]');
-      interactiveElements.forEach(addHapticFeedback);
-    };
-
+      interactiveElements.forEach(addHapticFeedback);}
     // Optimize scroll performance
     const optimizeScrollPerformance = () => {
       let ticking = false;
       const updateScrollPosition = () => {
         // Add scroll-based optimizations here
-        ticking = false;
-      };
-      
+        ticking = false;}
       const requestTick = () => {
   return if (!ticking) {
           requestAnimationFrame(updateScrollPosition);
@@ -90,11 +80,8 @@ const MobileOptimizer: React.FC = () => {
 
     // Cleanup
     return () => {
-      // Cleanup if needed
-    };
+      // Cleanup if needed}
   }, []);
 
-  return null;
-};
-
+  return null;}
 export default MobileOptimizer;

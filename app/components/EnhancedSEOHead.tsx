@@ -80,4 +80,6 @@ const EnhancedSEOHead: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default EnhancedSEOHead

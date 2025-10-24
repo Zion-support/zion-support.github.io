@@ -80,4 +80,6 @@ const SkipLink: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default SkipLink

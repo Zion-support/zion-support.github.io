@@ -5,13 +5,11 @@ import React, { useState, useEffect } from 'react';
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;
   className?: string;
-}
 
 interface FeedbackState {
   rating: number;
   comment: string;
   submitted: boolean;
-}
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children,
@@ -39,10 +37,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
               button.classList.remove('opacity-75', 'cursor-not-allowed');
             }, 1000);
           });
-        });
-      }
-    };
-
+        });}
     enhanceUserExperience();
   }, []);
 

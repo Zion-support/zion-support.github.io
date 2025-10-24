@@ -24,12 +24,11 @@ const ContactForm: React.FC = () => {
       ...formData
       [e.target.name]: e.target.value)
 })
-  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise(resolve => setTimeout(resolve, 2000)
     setIsSubmitting(false)
     setIsSubmitted(true)
     // Reset form after 3 seconds
@@ -43,7 +42,6 @@ const ContactForm: React.FC = () => {
         message: '',)
     service: ''})
     }, 3000)
-  }
   const services = [
   'AI Solutions',
     'Web Development',

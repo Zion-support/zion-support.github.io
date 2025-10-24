@@ -1,5 +1,5 @@
 'use client';
-import Footer from './Footer';
+import Footer from 'Footer';
 import {CheckCircle, Phone, Mail, ArrowRight, Helmet} from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -30,7 +30,6 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-}
   ]
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -51,8 +50,8 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
       </div>
       <Footer />
 </>
-  )
-}
+}  );
+
 export default ServiceWorkerRegistrationPage
                 </div>
               ))}

@@ -80,4 +80,6 @@ const LazyImage: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default LazyImage

@@ -80,4 +80,6 @@ const ServiceCard: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default ServiceCard

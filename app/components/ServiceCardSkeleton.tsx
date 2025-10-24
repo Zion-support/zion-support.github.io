@@ -80,4 +80,6 @@ const ServiceCardSkeleton: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default ServiceCardSkeleton

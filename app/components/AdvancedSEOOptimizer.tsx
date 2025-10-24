@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from 'Footer';
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -23,7 +23,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     title: 'Growth Optimization',
       description: 'Optimize your website for maximum growth and visibility.',
     benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
-}
   ]
   const benefits = [
   'Increase organic traffic by up to 300%',
@@ -127,6 +126,5 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       </div>
       <Footer />
 </>
-  )
+  );
 }
-export default AdvancedSEOOptimizerPage

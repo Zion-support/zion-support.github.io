@@ -80,4 +80,6 @@ const ErrorHandler: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default ErrorHandler

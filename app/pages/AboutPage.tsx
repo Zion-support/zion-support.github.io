@@ -9,7 +9,8 @@ import { CheckCircleIcon;
   HeartIcon
   ArrowRightIcon
   StarIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline'  );
+
 export default function AboutPage() {
   const values = [
     {
@@ -362,5 +363,5 @@ export default function AboutPage() {
         </div>
       </section>
 </>
-  )
+  );
 }

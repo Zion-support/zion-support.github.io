@@ -38,9 +38,7 @@ customMessages: Record<string, string>
 fallbackComponents: {,
     default: React.ComponentType<{ error: Error; resetError: () => void }>
 network: React.ComponentType<{ error: Error; resetError: () => void }>
-notFound: React.ComponentType<{ error: Error; resetError: () => void }>
-}
-}
+notFound: React.ComponentType<{ error: Error; resetError: () => void }>}
 /**
 * Default error messages
 */
@@ -105,8 +103,6 @@ Go Home
 </div>
 </div>
 </div>
-)
-}
 /**
 * Network error fallback component
 */
@@ -161,33 +157,21 @@ Go Back
 </div>
 </div>
 </div>
-)
-}
 /**
 * Get error type from error object
 */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
 return 'network'
-}
 if (error.message.includes('404') || error.message.includes('not found')) {
-  return 'notFound'
-}
-}
+  return 'notFound'}
 if (error.message.includes('timeout')) {
-  return 'timeout'
-}
-}
+  return 'timeout'}
 if (error.message.includes('500') || error.message.includes('server')) {
-  return 'serverError'
-}
-}
+  return 'serverError'}
 if (error.message.includes('validation')) {
-  return 'validation'
-}
-}
+  return 'validation'}
 return 'default'
-}
 /**
 * Format error for logging
 */
@@ -200,5 +184,4 @@ name: error.name,
 timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
-}
 export default getErrorBoundaryConfig

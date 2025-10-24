@@ -80,4 +80,6 @@ const ContentPreviewCard: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default ContentPreviewCard

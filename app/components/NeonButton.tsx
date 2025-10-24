@@ -80,4 +80,6 @@ const NeonButton: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default NeonButton

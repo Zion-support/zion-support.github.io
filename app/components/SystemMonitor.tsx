@@ -1,12 +1,11 @@
 'use client';
-import Footer from './Footer';
+import Footer from 'Footer';
 import Navigation from './Navigation';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
-}
   ]
   const benefits = [
   'Increase efficiency by up to 50%',
@@ -110,10 +109,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
 </>
   )
 }
-export default SystemMonitorPage
+ SystemMonitorPage
             </div>
         </div>
     </div>
   )
 }
-export default SystemMonitorPage

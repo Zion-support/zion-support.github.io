@@ -3,19 +3,20 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
 
 export default function MachineLearningOpsPage() {
   return (<>
       <Head>
         <title>Machine Learning Ops - Zion Tech Group</title>
-        <meta name="description" content="Professional machine learning ops services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="Professional machine-learning-ops services by Zion Tech Group. Transform your business with our expert solutions." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <h1 className="text-4xl font-bold text-white mb-6">
             Machine Learning Ops
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional machine learning ops services coming soon.
+            Professional machine-learning-ops services coming soon.
           </p>
           <Link
             href="/contact"

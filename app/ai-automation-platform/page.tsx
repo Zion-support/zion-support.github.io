@@ -1,7 +1,9 @@
-
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import SEOHead from '../components/SEOHead';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const AiAutomationPlatformPage: React.FC = () => {
   return (<>
@@ -37,8 +39,4 @@ const AiAutomationPlatformPage: React.FC = () => {
       </div>
     </>)
   );
-};
-
-export default AiAutomationPlatformPage;
-
-
+}

@@ -30,17 +30,13 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
-    }
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // // // eslint-disable-next-line no-console
     console.error('Error caught by boundary:', error, errorInfo)
-    }
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo)
-    }
-  }
+      this.logErrorToService(error, errorInfo)}
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {

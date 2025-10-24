@@ -1,5 +1,5 @@
 'use client';
-import Footer from './Footer';
+import Footer from 'Footer';
 import Navigation from './Navigation';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -143,6 +143,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
       </div>
       <Footer />
 </>
-  )
+  );
 }
-export default SEOEnhancerPage

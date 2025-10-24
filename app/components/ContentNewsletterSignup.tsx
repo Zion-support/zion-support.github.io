@@ -1,4 +1,4 @@
-import Footer from './Footer';
+import Footer from 'Footer';
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
@@ -43,10 +43,9 @@ interface ContentNewsletterSignupProps {
     if (!email) return setIsLoadin g(true)
     try {
       // Simulate API call
-      await new Promise(resolve=> setTimeout(resolve100 0))
+      await new Promise(resolve=> setTimeout(resolve100 0)
       if (onSubscrib e) {
         onSubscribe(email)
-      }
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
@@ -100,7 +99,5 @@ interface ContentNewsletterSignupProps {
         </div>
       </div>
     </div>
-  )
-}
 
 export default ContentNewsletterSignup

@@ -1,6 +1,9 @@
-
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const AdManagementPage: React.FC = () => {
   return (<>
@@ -25,10 +28,4 @@ const AdManagementPage: React.FC = () => {
       </div>
     </>)
   );
-};
-
-export default AdManagementPage;
-
-
-
-
+}

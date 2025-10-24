@@ -10,7 +10,6 @@ interface FuturisticButtonProps {
   loading?: boolean
   className?: string
   type?: 'button' | 'submit' | 'reset'
-}
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children
   onClick
@@ -32,9 +31,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         return 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/25 hover: shadow-orange-500/40';
       case 'ghost':
         return 'text-cyan-400 hover: text-cyan-300 hover:bg-cyan-500/10';,
-    default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
-  }
-  }
+    default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'}
   const getSizeClasses = () => {
   switch (size) {
       case 'sm':
@@ -43,9 +40,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         return 'px-6 py-3 text-base'
       case 'lg':
         return 'px-8 py-4 text-lg'
-      default: return 'px-6 py-3 text-base'
-  }
-  }
+      default: return 'px-6 py-3 text-base'}
   const baseClasses = `
     relative overflow-hidden rounded-lg font-semibold transition-all duration-300
     transform hover: scale-105 active:scale-95,
@@ -62,23 +57,23 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       className={baseClasses})
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.05}
+      whileTap={{ scale: 0.95}
     >
       {/* Animated background */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
+        initial={{ opacity: 0}
+        animate={{ opacity: isHovered ? 1 : 0}
+        transition={{ duration: 0.3}
       />
       {/* Loading spinner */}
       {loading && (
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0}
+          animate={{ opacity: 1}
+          exit={{ opacity: 0}
         >
           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /></div>
         </motion.div>
@@ -86,8 +81,8 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {/* Button content */}
       <motion.span
         className="relative z-10 flex items-center justify-center"
-        animate={{ opacity: loading ? 0 : 1 }}
-        transition={{ duration: 0.2 }}
+        animate={{ opacity: loading ? 0 : 1}
+        transition={{ duration: 0.2}
       >
         {children}
       </motion.span>
@@ -96,14 +91,12 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         className="absolute inset-0 rounded-lg"
         style={{
           background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
-          transform: 'translateX(-100%)'}}
+          transform: 'translateX(-100%)'}
         animate={{
-          transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)'}}
+          transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)'}
         transition={{
           duration: 0.6,
-    ease: 'easeInOut'}}
+    ease: 'easeInOut'}
       />
     </motion.button>
-  )
-}
 export default FuturisticButton

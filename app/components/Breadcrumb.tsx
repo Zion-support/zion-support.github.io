@@ -10,7 +10,6 @@ const Breadcrumb: React.FC = () => {
   
   if (pathnames.length === 0) {
     return null;
-  }
 
   return (<nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 py-3"></div>
@@ -49,12 +48,8 @@ const Breadcrumb: React.FC = () => {
                   </Link>
                 )}
               </li>
-            );
           })}
         </ol>
       </div>
-    </nav>
-  );
-};
-
+    </nav>}
 export default Breadcrumb;

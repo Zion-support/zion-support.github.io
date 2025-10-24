@@ -80,4 +80,6 @@ const ServiceWorker: React.FC = () => {
   )
 }
 
+  );
+}  )}
 export default ServiceWorker
