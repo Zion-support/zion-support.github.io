@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -58,3 +59,19 @@ const problematicFiles = [
 
 problematicFiles.forEach(fixJsxStructure);
 console.log('JSX structure fix completed!');
+=======
+import fs from '
+  content = content.replace(/<div: className ="\$2" \/>/g, '<div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">'
+  content = content.replace(/<Helmet \/>/g, '<Helmet>'
+  content = content.replace(/<div: className ="\$2" \/>/g, '<div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">'
+  content = content.replace(/className="t e xt-4xl/g, 'className="text-4xl'
+  content = content.replace(/className="t e xt-lg/g, 'className="text-lg'
+  content = content.replace(/className="b g-g radient-to-r/g, 'className="bg-gradient-to-r'
+  content = content.replace(/className="\$2"/g, '
+  content = content.replace(/<\/Helmet>/g, '</Helmet>'
+  content = content.replace(/<\/div>/g, '</div>'
+      fs.writeFileSync(filePath, fixedContent, 'utf8'
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts'
+console.log('Starting JSX structure fixes...'
+const processedCount  = processDirectory('./app'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2

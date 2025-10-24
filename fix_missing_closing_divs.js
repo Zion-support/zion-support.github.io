@@ -1,0 +1,8 @@
+import fs from '
+      // Check if there'
+        return match.replace(')', '</div>\n  )'
+    /(\s*<\/>\s*<\/div>\s*\);\s*})/g'
+      fs.writeFileSync(filePath, fixedContent, 'utf8'
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts'
+console.log('Starting missing closing div fixes...'
+const processedCount  = processDirectory('./app'

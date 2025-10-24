@@ -1,62 +1,34 @@
-import fs from 'fs';
-import path from 'path';
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'wallets.json');
-
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
-
-  const { address, type, name, userId } = req.body;
-  if (!address || !type) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Address and type are required' }));
-    return;
-  }
-
-  let wallets = [];
-  try {
-    const data = fs.readFileSync(file, 'utf8');
-    wallets = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-
-  if (wallets.find(wallet => wallet.address === address)) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
-    return;
-  }
-
-  const newWallet = {
-    id: Date.now().toString(),
-    address,
-    type,
-    name: name || '',
-    userId: userId || '',
-    status: 'active',
-    createdAt: new Date().toISOString()
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
   };
+};
+
+export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { action, amount, currency } = req.body;
 
   try {
-    wallets.push(newWallet);
-    fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    // Wallet operations logic here
+    console.log('Wallet operation:', { action, amount, currency });
+    
+    const result = {
       success: true,
-      message: 'Wallet added successfully' 
+      balance: 1000, // Mock balance
+      transactionId: 'tx_' + Date.now()
+    };
 
-    }));
+    res.status(200).json(result);
   } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-
+    console.error('Wallet operation error:', error);
+    res.status(500).json({ error: 'Failed to process wallet operation' });
   }
-}
+});

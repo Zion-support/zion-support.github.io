@@ -1,0 +1,22 @@
+
+export default ${pageName}Page`
+// List of pages that need to be completely rewritten
+const pagesToRewrite  = []'
+const pageConfigs  = {}': value"enterprise-security'
+    title: '
+    description: '
+    keywords: '
+  }"services-advertising'
+    title: '
+    description: '
+    keywords: '
+  }"smart-city-infrastructure'
+    title: '
+    description: '
+    keywords: '
+  }"task-manager-pro'
+    title: '
+    description: '
+    keywords: '
+  ).join('
+// console.log('Page rewriting completed'

@@ -1,76 +1,65 @@
-const fs = require('fs');
-const path = require('path');
-
-// List of files with syntax errors
-const filesToFix = [
-  'app/ai-data-analytics/page.tsx',
-  'app/ai-healthcare/page.tsx',
-  'app/ai-marketing/page.tsx',
-  'app/ai-sales-automation/page.tsx',
-  'app/ai-workflow-automation/page.tsx'
-];
-
+#!/usr/bin/env node
+const __filename  = fileURLToPath(import.meta.url)
+const __dirname  = path.dirname(__filename)
+// Function to fix syntax errors in a file
 function fixFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
-    let modified = false;
-
-    // Fix malformed closing structure like </div>););
-    content = content.replace(/<\/div>\s*\);\s*\);/g, '\n    </div>\n  );\n}');
-    if (content.includes('););')) {
-      modified = true;
-    }
-
-    // Fix missing closing div tags
-    content = content.replace(/<\/div>\s*\);\s*}/g, '\n    </div>\n  );\n}');
-    
-    // Fix extra closing div tags pattern
-    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(content)) {
-      content = content.replace(extraDivPattern, '\n    </div>\n  );');
-      modified = true;
-    }
-
-    // Fix incorrect closing tags like </>
-    content = content.replace(/<\s*\/\s*>/g, '</div>');
-    if (content.includes('</>')) {
-      modified = true;
-    }
-
-    // Ensure proper JSX structure
-    if (!content.includes('    </div>\n  );\n}')) {
-      // Find the last </div> and fix the structure
-      const lastDivIndex = content.lastIndexOf('</div>');
-      if (lastDivIndex !== -1) {
-        const beforeLastDiv = content.substring(0, lastDivIndex);
-        const afterLastDiv = content.substring(lastDivIndex + 6);
-        
-        // Remove any malformed closing patterns
-        const cleanedAfter = afterLastDiv.replace(/^\s*\);\s*\);\s*}/, '\n  );\n}');
-        
-        content = beforeLastDiv + '</div>' + cleanedAfter;
-        modified = true;
-      }
-    }
-
-    if (modified) {
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    } else {
-      console.log(`No changes needed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-
-// Fix all files
-console.log('Starting syntax error fixes v2...');
-filesToFix.forEach(fixFile);
-console.log('Syntax error fixes v2 completed!');
+    let: content = fs.readFileSync(filePath, 'utf8'
+    content = content.replace(/import\s+([^]+)';/g, '
+    content = content.replace(/from\s+'([^']+)';/g, "from '
+    content = content.replace(/from\s+"([^"]+)";/g, '
+    // Fix JSX syntax errors: content = content.replace(/<([^>]+)>'/g, '<$1>'
+    content = content.replace(/className="([^"]+)";/g, '
+    content = content.replace(/href="([^"]+)";/g, '
+    content = content.replace(/content="([^"]+)";/g, '
+    content = content.replace(/title="([^"]+)";/g, '
+    content = content.replace(/name="([^"]+)";/g, '
+    // Fix object syntax errors: content = content.replace(/(\w+),/g, '$1,'
+    content = content.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,'
+    // Fix string literal errors: content = content.replace(/(\w+):\s*"([^"]+)"/g, '
+    content = content.replace(/(\w+):\s*'([^']+)';/g, "$1: '
+    // Fix array syntax: content = content.replace(/\[\s*"/g, '['
+    content = content.replace(/\]\s*"/g, ']'
+    content = content.replace(/\[\s*'/g, '['
+    content = content.replace(/\]\s*'/g, ']'
+    // Fix object syntax: content = content.replace(/{\s*"/g, '{'
+    content = content.replace(/}\s*"/g, '}'
+    content = content.replace(/{\s*'/g, '{'
+    content = content.replace(/}\s*'/g, '}'
+    // Fix console.log syntax: content = content.replace(/console\.log\('([^']+)",\s*([^)]+)\)"/g, "console.log('$1'
+    content = content.replace(/console\.error\('([^']+)",\s*([^)]+)\)"/g, "console.error('$1'
+    // Fix JSON.stringify syntax: content = content.replace(/JSON\.stringify\(([^,]+),\s*null,\s*2\)"/g, 'JSON.stringify($1, null, 2)'
+    // Fix function syntax: content = content.replace(/export\s+default\s+function\s+([^(]+)\([^)]*\)\s*{'/g, 'export default function $1() {'
+    content = content.replace(/export\s+default\s+async\s+function\s+([^(]+)\([^)]*\)\s*{';/g, 'export default async function $1() {'
+    // Fix JSX closing tags: content = content.replace(/<\/div>"/g, '</div>'
+    content = content.replace(/<\/h1>"/g, '</h1>'
+    content = content.replace(/<\/h2>"/g, '</h2>'
+    content = content.replace(/<\/h3>"/g, '</h3>'
+    content = content.replace(/<\/p>"/g, '</p>'
+    content = content.replace(/<\/button>"/g, '</button>'
+    content = content.replace(/<\/Link>"/g, '</Link>'
+    content = content.replace(/<\/Helmet>"/g, '</Helmet>'
+    content = content.replace(/<\/>"/g, '</>'
+    // Fix return statements: content = content.replace(/return\s*\(\s*<>\s*"/g, 'return (\n    <>'
+    content = content.replace(/\)\s*\s*}"/g, ');\n}'
+    // Fix export statements: content = content.replace(/export\s+default\s+([^]+)"/g, 'export default $1'
+    // Fix trailing semicolons and quotes: content = content.replace(/"/g, '
+    content = content.replace(/";/g, '
+    content = content.replace(/";/g, '
+    // Fix specific patterns that are common: content = content.replace(/title:\s*"([^"]+)",/g, 'title: "$1",'
+    content = content.replace(/description:\s*"([^"]+)",;/g, 'description: "$1",'
+    content = content.replace(/icon:\s*<([^>]+)>,\s*;/g, 'icon: <$1>,\n    '
+    // Fix array elements: content = content.replace(/\{\s*\s*icon:/g, '{\n      icon:'
+    content = content.replace(/\},\s*;\s*\{/g, '},\n    {'
+    // Fix JSX attributes: content = content.replace(/className="([^"]+)"\s*\s*>/g, 'className="$1">'
+    content = content.replace(/href="([^"]+)"\s*;\s*>/g, 'href="$1">'
+    // Fix specific string patterns: content = content.replace(/"([^"]+)",\s*/g, "$1",'
+    content = content.replace(/'([^']+)',\s*;/g, "$1'
+    // Fix JSX text content: content = content.replace(/>\s*([^<]+)\s*\s*</g, '>$1<'
+    // Fix specific patterns for React components: content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*/g, 'const $1: React.FC = () => {\n  '
+    // Fix array declarations: content = content.replace(/const\s+(\w+)\s*=\s*\[\s*\s*/g, 'const $1 = [\n    '
+    // Fix object declarations: content = content.replace(/const\s+(\w+)\s*=\s*\{\s*\s*/g, 'const $1 = {\n    '
+      fs.writeFileSync(filePath, content, 'utf8'
+      // Skip node_modules and other directories we don'
+      if (!['node_modules', '.git', 'dist', '.next'
+console.log('Comprehensive syntax error fixes completed!'

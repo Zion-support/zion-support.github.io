@@ -1,47 +1,34 @@
-// Shipping rates calculation
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  };
+};
 
-export default async function handler(req, res) {
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { destination, weight } = req.body;
-  
-  if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' });
-  }
+  const { destination, weight, dimensions } = req.body;
 
   try {
-    // Calculate shipping rates (mock calculation)
-    const baseRate = 10;
-    const weightMultiplier = parseFloat(weight) * 0.5;
-    const destinationMultiplier = destination === 'international' ? 2 : 1;
+    // Shipping rates calculation logic here
+    console.log('Shipping rates request:', { destination, weight, dimensions });
     
     const rates = [
-      {
-        service: 'Standard',
-        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier),
-        days: destination === 'international' ? '7-14' : '3-5'
-      },
-      {
-        service: 'Express',
-        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier * 1.5),
-        days: destination === 'international' ? '3-7' : '1-2'
-      }
+      { service: 'standard', cost: 10.99, days: 5 },
+      { service: 'express', cost: 19.99, days: 2 },
+      { service: 'overnight', cost: 29.99, days: 1 }
     ];
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      rates,
-      destination,
-      weight
-    }));
+    res.status(200).json({ rates });
   } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to calculate shipping rates' }));
+    console.error('Shipping rates error:', error);
+    res.status(500).json({ error: 'Failed to calculate shipping rates' });
   }
-}
+});

@@ -1,0 +1,12 @@
+// Read existing pages
+const existingPages  = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n'
+const navigationLinks  = []'
+const footerLinks  = []'
+const appRoutes  = []'
+  const path  = link.replace('/', '
+  const link  = `/${page}`'
+  return !allLinks.includes(link) && page !== 'page.tsx'
+console.log('=== MISSING: PAGES ==='
+console.log('\n=== BROKEN LINKS (Pages exist but, no, route) ==='
+console.log('\n=== SUMMARY ==='
+fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'

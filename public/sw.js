@@ -1,49 +1,21 @@
-// Service Worker for Zion Tech Group Website
-const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
-  '/',
-  '/about',
-  '/contact',
-  '/services',
-  '/ai-services',
-  '/consultation',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
-];
-
-// Install event - cache resources
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
-
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      })
-  );
-});
-
-// Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
+// Assets to cache immediately
+const STATIC_ASSETS  = ['/',"/index.html',"/manifest.json',"/favicon.ico',"/images/icon-192x192.png'
+self.addEventListener('install'
+        console.log('Caching static assets'
+            // Don'
+            if (!response || response.status !== 200 || response.type !== 'basic'
+if (request.destination === 'document'
+              return caches.match('/offline.html'
+self.addEventListener('sync'
+  if (event.tag === 'background-sync'
+console.log('Background sync triggered'
+self.addEventListener('push'
+  const options  = {body: event.data ? event.data.text() : 'New update available!'
+    icon: '/images/icon-192x192.png'
+    badge: '/images/icon-192x192.png'
+        action: 'explore'
+        title: 'Go to the site'
+        icon: '
+        action: 'close'
+        title: 'Close notification'
+        icon: '

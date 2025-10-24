@@ -1,43 +1,36 @@
-export default async function handler(req, res) {
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  };
+};
+
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, phone, details, country, service } = req.body;
-  
-  if (!name || !email || !phone || !details) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
-    return;
-  }
+  const { service, budget, timeline, requirements } = req.body;
 
   try {
-    // Process the quote request
-    const quote = {
-      id: Date.now().toString(),
-      name,
-      email,
-      phone,
-      details,
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
-      status: 'pending',
-      createdAt: new Date().toISOString()
-    };
+    // Quote generation logic here
+    console.log('Quote request:', { service, budget, timeline, requirements });
     
-    // Here you would typically save the quote to a database
-    console.log('Quote request processed:', quote.id);
+    const quote = {
+      id: 'quote_' + Date.now(),
+      service,
+      estimatedCost: budget,
+      timeline,
+      status: 'pending'
+    };
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      message: 'Quote request submitted successfully' 
-    }));
+    res.status(200).json({ quote });
   } catch (error) {
-    console.error('Quote submission error:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    console.error('Quote generation error:', error);
+    res.status(500).json({ error: 'Failed to generate quote' });
   }
-}
+});

@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { 
-  ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star
-} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | AI & IT Solutions',
@@ -16,6 +13,7 @@ export const metadata: Metadata = {
     url: 'https://ziontechgroup.com/about',
   },
 };
+import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star, Send, BarChart3, Target, Zap, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
 
@@ -67,7 +65,7 @@ const AboutPage: React.FC = () => {
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                 >
                   Get in Touch
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link 
                   href="/services" 
@@ -115,7 +113,7 @@ const AboutPage: React.FC = () => {
               {values.map((value, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="flex justify-center mb-4">
-                    <value.icon className="w-8 h-8 text-cyan-400" />
+                    <value.icon className="w-12 h-12 text-cyan-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
@@ -131,7 +129,7 @@ const AboutPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let&apos;s discuss how our AI and IT solutions can help your business grow and succeed.
+                Let's discuss how our AI and IT solutions can help your business grow and succeed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -139,7 +137,7 @@ const AboutPage: React.FC = () => {
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                 >
                   Start Your Project
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link 
                   href="/services" 

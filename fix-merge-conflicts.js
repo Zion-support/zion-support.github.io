@@ -1,13 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+    
+      inConflict = false
+keepContent = false
+continue
 
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
         inConflict = false;
@@ -38,47 +34,6 @@ function fixMergeConflicts(filePath) {
   }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to check`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-
-// Also check the root App.tsx
-if (fixMergeConflicts(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++;
-  console.log('Fixed merge conflicts in App.tsx');
-}
-
-console.log(`Total files fixed: ${fixedCount}`);
+  return resolvedLines.join('\n'
+  // Fix JSX syntax issues: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*$/gm, '<$1>'

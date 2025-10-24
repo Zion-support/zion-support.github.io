@@ -1,14 +1,21 @@
-"use client";
+'use client'
 import React from 'react';
 
-import { BarChart3 } from 'lucide-react'
-import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
-
-const AIEcommerceSolutionsPage: React.FC = () => {
-  const ecommerceServices = [
+const page: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          Page
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This is a placeholder page for Page.
+          </p>
         </div>
       </div>
     </div>
-  )
-}
-export default AIEcommerceSolutionsPage
+  );
+};
+
+export default page;

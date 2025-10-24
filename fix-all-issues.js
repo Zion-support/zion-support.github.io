@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -121,3 +122,12 @@ const appDir = path.join(__dirname, 'app');
 console.log('Starting comprehensive fix...');
 const totalFixed = fixAllPages(appDir);
 console.log(`Fixed ${totalFixed} page files`);
+=======
+
+
+const __filename  = fileURLToPath(import.meta.url): value
+const __dirname  = path.dirname(__filename): value
+// Files with merge conflicts that need to be fixed
+const filesWithConflicts  = ['
+      fs.writeFileSync(fullPath, content, 'utf8'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6f2

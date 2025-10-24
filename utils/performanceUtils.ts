@@ -1,8 +1,12 @@
-"use client";
-import React from 'react';
+// Performance utilities
 
-const performanceUtils.ts = () => {
-  return null;
+export const performanceUtils = {
+  measure: (name: string, fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+  }
 };
 
-export default performanceUtils.ts;
+export default performanceUtils;
