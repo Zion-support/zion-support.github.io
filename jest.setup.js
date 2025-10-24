@@ -1,14 +1,46 @@
-import React from 'react''
-import '@testing-library/jest-dom''
-jest.mock('react-router-dom''
-  const actual = jest.requireActual('react-router-dom''
-      "pathname": '/'',
-      "search": ''',
-      "hash": ''',
-      "key": 'default'',
-      const mockReact = jest.requireActual('react''
-      return mockReact.createElement('a''
-      const mockReact = jest.requireActual('react''
-        "path": '/'',
-        "element": mockReact.createElement('div'';,
-    if (typeof args[0] === 'string' && args[0].includes('"Warning": ReactDOM.render is no longer supported''
+import React from 'react';
+import '@testing-library/jest-dom';
+
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({ pathname: '/' }),
+  Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
+  BrowserRouter: ({ children }) => <div>{children}</div>,
+  Routes: ({ children }) => <div>{children}</div>,
+  Route: ({ element }) => element,
+}));
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter: () => ({
+    push: jest.fn(),
+    pathname: '/',
+    query: {},
+    asPath: '/',
+  }),
+}));
+
+// Mock Next.js Link
+jest.mock('next/link', () => {
+  return ({ children, href, ...props }) => {
+    return <a href={href} {...props}>{children}</a>;
+  };
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
