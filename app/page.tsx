@@ -1,11 +1,31 @@
 import Link from 'next/link';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI & IT Solutions"
+        description="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, blockchain, IT services, machine learning, artificial intelligence"
+        url="https://zion.app"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "description": "Advanced AI & IT Solutions for the Future",
+          "url": "https://zion.app",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zion.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
       {/* Hero Section */}
       <div className="relative overflow-hidden">
 <<<<<<< HEAD
@@ -236,7 +256,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
