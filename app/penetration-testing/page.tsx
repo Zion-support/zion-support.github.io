@@ -30,10 +30,7 @@ export default function PenetrationtestingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

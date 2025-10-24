@@ -30,8 +30,6 @@ export default function TeamPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-  )
-
+    </>
+  );
 }

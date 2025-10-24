@@ -30,10 +30,7 @@ export default function NewsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

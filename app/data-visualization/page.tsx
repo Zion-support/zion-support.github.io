@@ -30,10 +30,7 @@ export default function DatavisualizationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

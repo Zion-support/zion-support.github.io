@@ -31,7 +31,6 @@ export default function ZionaisupplychainoptimizerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

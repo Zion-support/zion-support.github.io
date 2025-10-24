@@ -30,10 +30,7 @@ export default function AicrmassistantPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

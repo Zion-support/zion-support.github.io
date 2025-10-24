@@ -31,7 +31,6 @@ export default function QuantumcomputingPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -30,10 +30,7 @@ export default function ZionaidatacleanerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

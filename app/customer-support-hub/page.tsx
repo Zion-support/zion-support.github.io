@@ -30,10 +30,7 @@ export default function CustomersupporthubPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

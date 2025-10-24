@@ -30,10 +30,7 @@ export default function SystemintegrationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

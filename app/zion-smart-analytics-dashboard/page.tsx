@@ -31,7 +31,6 @@ export default function ZionsmartanalyticsdashboardPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

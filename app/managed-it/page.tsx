@@ -31,7 +31,6 @@ export default function ManageditPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

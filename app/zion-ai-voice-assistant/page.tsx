@@ -31,7 +31,6 @@ export default function ZionaivoiceassistantPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

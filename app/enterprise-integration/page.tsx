@@ -30,10 +30,7 @@ export default function EnterpriseintegrationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

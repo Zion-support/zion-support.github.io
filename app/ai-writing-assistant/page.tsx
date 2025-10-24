@@ -31,7 +31,6 @@ export default function AiwritingassistantPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

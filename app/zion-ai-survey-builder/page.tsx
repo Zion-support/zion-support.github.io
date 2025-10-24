@@ -31,7 +31,6 @@ export default function ZionaisurveybuilderPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -30,10 +30,7 @@ export default function CybersecurityconsultingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

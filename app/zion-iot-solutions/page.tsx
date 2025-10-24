@@ -31,7 +31,6 @@ export default function ZioniotsolutionsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

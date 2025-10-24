@@ -30,10 +30,7 @@ export default function DataanalyticsbiPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

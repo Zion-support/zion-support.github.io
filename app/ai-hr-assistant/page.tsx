@@ -31,7 +31,6 @@ export default function AihrassistantPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

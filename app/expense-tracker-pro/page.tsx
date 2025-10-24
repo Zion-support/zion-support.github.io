@@ -30,10 +30,7 @@ export default function ExpensetrackerproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

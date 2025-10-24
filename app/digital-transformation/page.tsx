@@ -30,10 +30,7 @@ export default function DigitaltransformationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

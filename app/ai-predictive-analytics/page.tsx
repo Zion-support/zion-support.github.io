@@ -31,7 +31,6 @@ export default function AipredictiveanalyticsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

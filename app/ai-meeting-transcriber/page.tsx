@@ -30,10 +30,7 @@ export default function AimeetingtranscriberPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

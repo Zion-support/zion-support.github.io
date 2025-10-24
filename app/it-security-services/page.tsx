@@ -30,10 +30,7 @@ export default function ItsecurityservicesPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

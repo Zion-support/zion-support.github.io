@@ -31,7 +31,6 @@ export default function ZionaiseooptimizerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

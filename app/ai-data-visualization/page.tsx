@@ -31,7 +31,6 @@ export default function AidatavisualizationPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

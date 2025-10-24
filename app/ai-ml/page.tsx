@@ -31,7 +31,6 @@ export default function AimlPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

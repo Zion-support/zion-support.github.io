@@ -31,7 +31,6 @@ export default function AicustomersupportPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

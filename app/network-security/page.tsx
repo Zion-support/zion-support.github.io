@@ -31,7 +31,6 @@ export default function NetworksecurityPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

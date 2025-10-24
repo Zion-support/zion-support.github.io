@@ -30,10 +30,7 @@ export default function AiecommerceassistantPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

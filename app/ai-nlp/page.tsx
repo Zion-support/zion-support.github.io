@@ -31,7 +31,6 @@ export default function AinlpPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

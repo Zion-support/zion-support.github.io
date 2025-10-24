@@ -31,9 +31,5 @@ export default function AianalyticsPage() {
       </div>
       <Footer />
     </div>
-
-    </div>
-    </div>
-
   );
 }

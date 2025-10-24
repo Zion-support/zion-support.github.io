@@ -31,7 +31,6 @@ export default function ZionanalyticsproPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

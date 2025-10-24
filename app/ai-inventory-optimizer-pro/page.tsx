@@ -30,10 +30,7 @@ export default function AiinventoryoptimizerproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

@@ -31,7 +31,6 @@ export default function AihrPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

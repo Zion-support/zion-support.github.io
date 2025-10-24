@@ -30,10 +30,7 @@ export default function ServerlessarchitecturePage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

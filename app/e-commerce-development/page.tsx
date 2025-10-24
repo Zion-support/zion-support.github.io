@@ -30,10 +30,7 @@ export default function EcommercedevelopmentPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

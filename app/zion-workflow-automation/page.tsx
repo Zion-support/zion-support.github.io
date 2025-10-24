@@ -31,7 +31,6 @@ export default function ZionworkflowautomationPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

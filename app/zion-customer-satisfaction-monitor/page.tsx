@@ -31,7 +31,6 @@ export default function ZioncustomersatisfactionmonitorPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

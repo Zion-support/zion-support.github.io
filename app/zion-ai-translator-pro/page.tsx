@@ -31,7 +31,6 @@ export default function ZionaitranslatorproPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

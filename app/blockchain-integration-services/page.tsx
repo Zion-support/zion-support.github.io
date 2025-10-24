@@ -30,10 +30,7 @@ export default function BlockchainintegrationservicesPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

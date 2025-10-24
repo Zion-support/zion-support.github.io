@@ -30,10 +30,7 @@ export default function DisasterrecoveryadvancedPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

@@ -31,7 +31,6 @@ export default function AiautomatedtestingPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

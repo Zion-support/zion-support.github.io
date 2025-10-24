@@ -30,10 +30,7 @@ export default function SeooptimizerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

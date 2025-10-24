@@ -30,10 +30,7 @@ export default function AiemailoptimizerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

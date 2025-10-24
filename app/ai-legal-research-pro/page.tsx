@@ -31,7 +31,6 @@ export default function AilegalresearchproPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

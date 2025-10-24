@@ -30,10 +30,7 @@ export default function AnalyticstoolsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

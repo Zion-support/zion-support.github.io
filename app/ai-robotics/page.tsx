@@ -31,7 +31,6 @@ export default function AiroboticsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

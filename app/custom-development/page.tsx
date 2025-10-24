@@ -30,10 +30,7 @@ export default function CustomdevelopmentPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

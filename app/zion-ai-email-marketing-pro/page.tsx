@@ -30,10 +30,7 @@ export default function ZionaiemailmarketingproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

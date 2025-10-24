@@ -30,10 +30,7 @@ export default function AismartcontractauditorPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

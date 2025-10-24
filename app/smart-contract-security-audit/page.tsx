@@ -31,7 +31,6 @@ export default function SmartcontractsecurityauditPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

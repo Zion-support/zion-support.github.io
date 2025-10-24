@@ -31,7 +31,6 @@ export default function ZionaiworkflowautomatorproPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

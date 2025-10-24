@@ -31,7 +31,6 @@ export default function AicybersecuritymonitorPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

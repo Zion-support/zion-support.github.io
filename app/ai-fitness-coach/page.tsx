@@ -31,7 +31,6 @@ export default function AifitnesscoachPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -30,10 +30,7 @@ export default function DigitaltwinplatformPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

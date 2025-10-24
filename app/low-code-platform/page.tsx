@@ -30,10 +30,7 @@ export default function LowcodeplatformPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

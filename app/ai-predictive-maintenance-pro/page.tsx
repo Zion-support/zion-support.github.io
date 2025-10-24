@@ -30,10 +30,7 @@ export default function AipredictivemaintenanceproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

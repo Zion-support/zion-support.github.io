@@ -30,10 +30,7 @@ export default function ZionaicontractanalyzerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

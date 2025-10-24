@@ -30,10 +30,7 @@ export default function CybersecurityadvancedPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

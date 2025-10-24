@@ -31,7 +31,6 @@ export default function SolutionsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

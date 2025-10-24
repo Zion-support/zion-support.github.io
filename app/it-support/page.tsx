@@ -31,7 +31,6 @@ export default function ItsupportPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

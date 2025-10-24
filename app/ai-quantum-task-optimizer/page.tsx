@@ -31,7 +31,6 @@ export default function AiquantumtaskoptimizerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -31,7 +31,6 @@ export default function AieducationPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

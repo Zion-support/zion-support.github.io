@@ -31,7 +31,6 @@ export default function AiautomatedreportingPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

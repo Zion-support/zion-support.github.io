@@ -31,7 +31,6 @@ export default function SmartanalyticsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -31,12 +31,5 @@ export default function AiemailmarketingautomationPage() {
       </div>
       <Footer />
     </div>
-
-    </div>
-    </div>
-
   );
-};
-
-
-export default AiEmailMarketingAutomationPage;
+}

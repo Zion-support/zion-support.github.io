@@ -30,10 +30,7 @@ export default function DevopsautomationproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

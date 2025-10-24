@@ -30,10 +30,7 @@ export default function CybersecuritysuitePage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

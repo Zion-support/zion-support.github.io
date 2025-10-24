@@ -30,10 +30,7 @@ export default function AispeechsynthesisPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

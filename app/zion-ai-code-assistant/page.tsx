@@ -30,10 +30,7 @@ export default function ZionaicodeassistantPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

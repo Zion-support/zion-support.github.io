@@ -30,10 +30,7 @@ export default function ArvrplatformPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
 
-export default function AivoiceassistantPage() {
+export default function AiVoiceAssistantPage() {
   return (
     <div>
       <Head>
@@ -31,12 +31,5 @@ export default function AivoiceassistantPage() {
       </div>
       <Footer />
     </div>
-
-    </div>
-    </div>
-
   );
-};
-
-
-export default AiVoiceAssistantPage;
+}

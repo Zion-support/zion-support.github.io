@@ -31,7 +31,6 @@ export default function AiquantumoptimizationPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

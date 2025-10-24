@@ -31,7 +31,6 @@ export default function AicybersecuritysuitePage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

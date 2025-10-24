@@ -31,7 +31,6 @@ export default function ZionaischedulingassistantPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

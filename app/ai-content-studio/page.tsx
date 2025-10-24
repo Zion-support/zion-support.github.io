@@ -31,7 +31,6 @@ export default function AicontentstudioPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

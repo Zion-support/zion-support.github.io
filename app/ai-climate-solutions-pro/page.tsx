@@ -31,7 +31,6 @@ export default function AiclimatesolutionsproPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

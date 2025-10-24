@@ -31,7 +31,6 @@ export default function AifinancialanalyzerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

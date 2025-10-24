@@ -31,7 +31,6 @@ export default function AilogodesignerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

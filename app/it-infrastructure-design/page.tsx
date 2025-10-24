@@ -30,10 +30,7 @@ export default function ItinfrastructuredesignPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

@@ -30,10 +30,7 @@ export default function CloudnativedevelopmentPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

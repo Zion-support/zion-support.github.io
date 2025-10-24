@@ -31,7 +31,6 @@ export default function QuantumaiPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

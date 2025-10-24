@@ -30,10 +30,7 @@ export default function AibusinessintelligenceproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

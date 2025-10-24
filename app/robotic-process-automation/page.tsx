@@ -30,10 +30,7 @@ export default function RoboticprocessautomationPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

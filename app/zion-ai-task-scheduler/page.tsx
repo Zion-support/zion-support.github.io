@@ -31,7 +31,6 @@ export default function ZionaitaskschedulerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

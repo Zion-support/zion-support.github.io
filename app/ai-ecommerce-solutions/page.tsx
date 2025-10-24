@@ -31,7 +31,6 @@ export default function AiecommercesolutionsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

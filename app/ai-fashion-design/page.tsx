@@ -31,7 +31,6 @@ export default function AifashiondesignPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

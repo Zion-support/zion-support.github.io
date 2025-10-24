@@ -30,10 +30,7 @@ export default function ServicesAdvertisingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

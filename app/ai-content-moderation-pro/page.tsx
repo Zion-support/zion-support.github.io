@@ -30,10 +30,7 @@ export default function AicontentmoderationproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

@@ -31,7 +31,6 @@ export default function AiedgecomputingPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

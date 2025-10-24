@@ -31,7 +31,6 @@ export default function AiworkflowautomationPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

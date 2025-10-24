@@ -30,10 +30,7 @@ export default function VirtualrealitysolutionsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

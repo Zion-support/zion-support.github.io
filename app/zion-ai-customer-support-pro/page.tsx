@@ -30,10 +30,7 @@ export default function ZionaicustomersupportproPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

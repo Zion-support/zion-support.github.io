@@ -31,7 +31,6 @@ export default function AiseooptimizerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

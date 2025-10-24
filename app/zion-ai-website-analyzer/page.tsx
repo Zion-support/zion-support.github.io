@@ -31,7 +31,6 @@ export default function ZionaiwebsiteanalyzerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

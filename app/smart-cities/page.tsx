@@ -31,7 +31,6 @@ export default function SmartcitiesPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

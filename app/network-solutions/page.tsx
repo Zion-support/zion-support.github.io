@@ -31,7 +31,6 @@ export default function NetworksolutionsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

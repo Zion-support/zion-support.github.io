@@ -30,10 +30,7 @@ export default function ZionaiimagerecognitionPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

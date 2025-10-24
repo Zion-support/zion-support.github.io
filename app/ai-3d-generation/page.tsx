@@ -31,7 +31,6 @@ export default function Ai3dgenerationPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

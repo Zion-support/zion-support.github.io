@@ -31,7 +31,6 @@ export default function AiquantumcomputingPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

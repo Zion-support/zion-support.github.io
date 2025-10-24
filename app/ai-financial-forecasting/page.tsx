@@ -30,10 +30,7 @@ export default function AifinancialforecastingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

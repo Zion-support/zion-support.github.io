@@ -31,7 +31,6 @@ export default function ZiondatasyncPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

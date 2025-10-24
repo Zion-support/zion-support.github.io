@@ -30,10 +30,7 @@ export default function AiautomationplatformPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

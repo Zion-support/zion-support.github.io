@@ -30,10 +30,7 @@ export default function AipredictivemodelingPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

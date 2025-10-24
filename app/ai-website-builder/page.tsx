@@ -31,7 +31,6 @@ export default function AiwebsitebuilderPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

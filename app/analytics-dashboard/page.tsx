@@ -30,10 +30,7 @@ export default function AnalyticsdashboardPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

@@ -30,8 +30,6 @@ export default function AiservicesPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-  )
-
+    </>
+  );
 }

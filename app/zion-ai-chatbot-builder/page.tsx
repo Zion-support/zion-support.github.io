@@ -30,10 +30,7 @@ export default function ZionaichatbotbuilderPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

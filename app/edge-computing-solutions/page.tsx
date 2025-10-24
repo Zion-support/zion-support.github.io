@@ -30,10 +30,7 @@ export default function EdgecomputingsolutionsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

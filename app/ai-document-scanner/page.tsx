@@ -31,7 +31,6 @@ export default function AidocumentscannerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

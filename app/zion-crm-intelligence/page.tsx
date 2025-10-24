@@ -31,7 +31,6 @@ export default function ZioncrmintelligencePage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

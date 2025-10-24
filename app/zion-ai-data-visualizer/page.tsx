@@ -30,10 +30,7 @@ export default function ZionaidatavisualizerPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

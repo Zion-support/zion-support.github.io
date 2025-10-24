@@ -30,10 +30,7 @@ export default function ZionaipredictiveanalyticsPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

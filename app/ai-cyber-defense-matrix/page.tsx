@@ -30,10 +30,7 @@ export default function AicyberdefensematrixPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

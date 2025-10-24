@@ -30,10 +30,7 @@ export default function AisentimentanalysisPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

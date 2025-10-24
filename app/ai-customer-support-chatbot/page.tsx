@@ -30,10 +30,7 @@ export default function AicustomersupportchatbotPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

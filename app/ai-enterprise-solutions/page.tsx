@@ -31,7 +31,6 @@ export default function AienterprisesolutionsPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -30,8 +30,6 @@ export default function MicrosaasPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-  )
-
+    </>
+  );
 }

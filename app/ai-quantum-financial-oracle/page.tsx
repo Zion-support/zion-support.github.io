@@ -31,7 +31,6 @@ export default function AiquantumfinancialoraclePage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

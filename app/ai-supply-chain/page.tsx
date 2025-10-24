@@ -31,7 +31,6 @@ export default function AisupplychainPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

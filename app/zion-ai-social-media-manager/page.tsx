@@ -31,7 +31,6 @@ export default function ZionaisocialmediamanagerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

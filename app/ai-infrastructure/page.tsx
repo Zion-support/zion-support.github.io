@@ -30,10 +30,7 @@ export default function AiinfrastructurePage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

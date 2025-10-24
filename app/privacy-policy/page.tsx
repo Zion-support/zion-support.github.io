@@ -30,10 +30,7 @@ export default function PrivacypolicyPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

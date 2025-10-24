@@ -31,7 +31,6 @@ export default function AivideogeneratorPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

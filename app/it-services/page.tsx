@@ -30,8 +30,6 @@ export default function ItservicesPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-  )
-
+    </>
+  );
 }

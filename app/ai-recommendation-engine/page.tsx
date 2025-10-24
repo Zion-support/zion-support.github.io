@@ -31,7 +31,6 @@ export default function AirecommendationenginePage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

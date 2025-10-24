@@ -31,7 +31,6 @@ export default function ZionperformancemonitorPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

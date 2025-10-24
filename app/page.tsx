@@ -3,7 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
+import Footer from './components/Footer';
 
 export default function AppPage() {
   return (
@@ -30,9 +30,7 @@ export default function AppPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-
-  );
+  
+</div>
+);
 }

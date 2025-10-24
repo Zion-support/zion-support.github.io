@@ -30,8 +30,6 @@ export default function ApiPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-  )
-
+    </>
+  );
 }

@@ -31,7 +31,6 @@ export default function AisalesautomationPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

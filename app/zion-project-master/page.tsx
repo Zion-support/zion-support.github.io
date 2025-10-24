@@ -31,7 +31,6 @@ export default function ZionprojectmasterPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -31,7 +31,6 @@ export default function AicontentwriterPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

@@ -31,7 +31,6 @@ export default function AistockportfoliomanagerPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }

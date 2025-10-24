@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
 
-export default function AisocialmediamanagerPage() {
+export default function AiSocialMediaManagerPage() {
   return (
     <div>
       <Head>
@@ -31,12 +31,5 @@ export default function AisocialmediamanagerPage() {
       </div>
       <Footer />
     </div>
-
-    </div>
-    </div>
-
   );
-};
-
-
-export default AiSocialMediaManagerPage;
+}

@@ -30,10 +30,7 @@ export default function ItprojectmanagementPage() {
         </div>
       </div>
       <Footer />
-    </div>
-
-    </div>
-    </div>
-
-  );
+  
+</div>
+);
 }

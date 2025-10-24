@@ -31,7 +31,6 @@ export default function AidocumentprocessorPage() {
       </div>
       <Footer />
 
-</div>
-  )
-
+</>
+  );
 }
