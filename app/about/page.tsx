@@ -18,22 +18,10 @@ const AboutPage: React.FC = () => {
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       title: 'Excellence',
       description: 'We strive for perfection in every project, ensuring the highest quality standards.'
     }
   ]
-=======
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with localized support and expertise.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs.'
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-4a55
 
   return (
     <>
@@ -67,7 +55,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Values Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -101,8 +88,5 @@ const AboutPage: React.FC = () => {
     </>
   )
 }
-=======
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-4a55
 
 export default AboutPage

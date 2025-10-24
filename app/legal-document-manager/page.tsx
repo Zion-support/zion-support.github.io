@@ -1,63 +1,56 @@
 'use client';
+
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
-import {FileText, Search, Shield, Zap, BarChart, CheckCircle} from 'lucide-react';
-const LegalDocumentManagerPage: React.FC = () => {
-  const features = [
-    { icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' ,},
-    {icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' ,},
-    {icon: Shield, title: 'Compliance Tracking', description: 'Automated compliance monitoring and regulatory requirement tracking.' ,},
-    {icon: Zap, title: 'Contract Analysis', description: 'AI-powered contract analysis and risk assessment.' ,},
-    {icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' ,},
-    {icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' ,}]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
+
+const PagePage: React.FC = () => {
+  return (
     <>
       <Helmet>
-        <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
-        <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
-        <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">Legal Document Manager</h1>,
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Streamline legal document management with AI-powered tools.</p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
-              {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">,</div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="Page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
+              <p className="text-gray-300 mb-6">
+                We provide comprehensive Page solutions tailored to your business needs.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
+                  <p className="text-gray-300">Description of service 1</p>
                 </div>
-              ))}
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
+                  <p className="text-gray-300">Description of service 2</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-      </section>
-      </div>
+      </main>
+
+      <Footer />
     </>
-  )
-}
-export default LegalDocumentManagerPage
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Legal Document Manager
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Streamline legal document management with AI-powered tools.
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300">{feature.description}
-              ))}
-  )
-}
-export default LegalDocumentManagerPage</div></div></div></div></div></div></p></p></h1></h3></section>
+  );
+};
+
+export default PagePage;
