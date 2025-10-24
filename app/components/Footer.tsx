@@ -54,14 +54,14 @@ const Footer: React.FC = memo(() => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="...">
+            <div className="...">
+              <div className="...">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="...">
               Leading technology solutions provider helping businesses transform their digital
               infrastructure with cutting-edge AI and IT services.
             </p>

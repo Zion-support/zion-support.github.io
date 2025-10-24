@@ -8,12 +8,12 @@ export interface User {
 }
 
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  features: string[];
+  id: string,
+      title: string,
+      description: string,
+      shortDescription: string,
+      icon: string,
+      features: string[  ];
   pricing: {
     basic: number;
     pro: number;

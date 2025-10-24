@@ -94,7 +94,6 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default FuturisticHero;
+  )
+}
+export default FuturisticHero

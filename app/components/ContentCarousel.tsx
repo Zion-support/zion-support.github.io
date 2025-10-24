@@ -5,49 +5,42 @@ import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-rea
 
 interface ContentCarouselProps {
   items: Array<{
-    id: string;
-    title: string;
-    description: string;
-    image?: string;
-    link?: string;
-  }>;
-  autoPlay?: boolean;
-  interval?: number;
+    id: string,
+      title: string,
+      description: string
+    image?: string
+    link?: string
+  }>
+  autoPlay?: boolean
+  interval?: number
 }
 
 const ContentCarousel: React.FC<ContentCarouselProps> = ({
-  items,
-  autoPlay = true,
-  interval = 5000,
+  items
+  autoPlay = true
+  interval = 5000
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0)
   useEffect(() => {
-    if (!autoPlay || items.length <= 1) return;
-
+    if (!autoPlay || items.length <= 1) return
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === items.length - 1 ? 0 : prevIndex + 1
-      );
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [autoPlay, interval, items.length]);
-
+      )
+    }, interval)
+    return () => clearInterval(timer)
+  }, [autoPlay, interval, items.length])
   const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
+    setCurrentIndex(index)
+  }
   const goToPrevious = () => {
-    setCurrentIndex(currentIndex === 0 ? items.length - 1 : currentIndex - 1);
-  };
-
+    setCurrentIndex(currentIndex === 0 ? items.length - 1 : currentIndex - 1)
+  }
   const goToNext = () => {
-    setCurrentIndex(currentIndex === items.length - 1 ? 0 : currentIndex + 1);
-  };
-
+    setCurrentIndex(currentIndex === items.length - 1 ? 0 : currentIndex + 1)
+  }
   if (!items || items.length === 0) {
-    return <div>No items to display</div>;
+    return <div>No items to display</div>
   }
 
   return (
@@ -122,7 +115,6 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
         ))}
       </div>
     </div>
-  );
-};
-
-export default ContentCarousel;
+  )
+}
+export default ContentCarousel

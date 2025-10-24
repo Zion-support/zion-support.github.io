@@ -84,8 +84,8 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="...">
+        <div className="...">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -139,7 +139,7 @@ const Navigation: React.FC = () => {
             </div>
 
             {/* IT Services Dropdown */}
-            <div className="relative group">
+            <div className="...">
               <button
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setItServicesOpen(true)}
@@ -185,7 +185,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="...">
             <Link
               href="/contact"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2"

@@ -42,6 +42,9 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>Page Title</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Advanced Accessibility Enhancer, AI solutions, IT services, Zion Tech Group, accessibility" />
@@ -82,7 +85,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="...">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4">
@@ -101,10 +104,10 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h2 className="...">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">

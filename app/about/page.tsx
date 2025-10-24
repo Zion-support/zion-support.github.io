@@ -26,8 +26,7 @@ const AboutPage: React.FC = () => {
       title: 'Quality',
       description: 'We maintain the highest standards of quality in all our deliverables and services.'
     }
-  ];
-
+    ];
   const team = [
     {
       name: 'John Smith',
@@ -54,7 +53,6 @@ const AboutPage: React.FC = () => {
       bio: 'Creative designer focused on user experience and interface design.'
     }
   ];
-
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -111,14 +109,14 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Values Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+        <section className="...">
+          <div className="...">
+            <div className="...">
               <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="...">
                 {values.map((value, index) => (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div key={index} className="...">
+                    <div className="...">
                       <value.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
@@ -131,14 +129,14 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+        <section className="...">
+          <div className="...">
+            <div className="...">
               <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="...">
                 {team.map((member, index) => (
-                  <div key={index} className="text-center">
-                    <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div key={index} className="...">
+                    <div className="...">
                       <Users className="w-16 h-16 text-gray-400" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
@@ -161,7 +159,7 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-blue-100 mb-8">
                 Let's discuss how we can help transform your business with our innovative solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="...">
                 <a
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"

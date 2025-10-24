@@ -11,12 +11,12 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-gray-600">
+    <nav aria-label="Breadcrumb" className="...">
       {items.map((item, index) => (
         <React.Fragment key={index}>
           {index > 0 && <span>/</span>}
           {item.href ? (
-            <a href={item.href} className="hover:text-gray-900">
+            <a href={item.href} className="...">
               {item.label}
             </a>
           ) : (

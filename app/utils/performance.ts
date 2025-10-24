@@ -81,9 +81,9 @@ export class PerformanceMonitor {
 export function usePerformanceMonitor() {
   const monitor = PerformanceMonitor.getInstance()
   return {
-    startTiming: monitor.startTiming.bind(monitor),
-    endTiming: monitor.endTiming.bind(monitor),
-    getMetric: monitor.getMetric.bind(monitor),
+    startTiming: monitor.startTiming.bind(monitor)
+    endTiming: monitor.endTiming.bind(monitor)
+    getMetric: monitor.getMetric.bind(monitor)
     getAllMetrics: monitor.getAllMetrics.bind(monitor)
   }
 }
