@@ -1,3 +1,6 @@
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Phone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
