@@ -4,7 +4,10 @@
 
 import '@testing-library/jest-dom';
 
-// Jest globals are already available in test environment
+// Declare Jest globals for TypeScript
+declare global {
+  var jest: any;
+}
 
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
