@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react';
 
