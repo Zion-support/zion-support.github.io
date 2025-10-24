@@ -14,7 +14,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   title = 'Zion Tech Group',
   description = 'Advanced AI and IT solutions for modern businesses',
   keywords = 'AI, artificial intelligence, IT solutions, technology',
-  className: _className = ''
+  className: _className = '' 
 }) => {
   return (
     <Helmet>

@@ -18,6 +18,14 @@ interface PerformanceMonitorProps {
   logToConsole?: boolean;
 }
 
+interface _LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
+interface _PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+}
 export default function PerformanceMonitor({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -77,8 +85,10 @@ export default function PerformanceMonitor({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+            const fidEntry = entry as _PerformanceEventTiming;
+            if ('processingStart' in fidEntry) {
+              newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -88,9 +98,9 @@ export default function PerformanceMonitor({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const _clsEntry = entry as PerformanceEntry & { value: number };
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+            const clsEntry = entry as _LayoutShift;
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value;
             }
           });
           newMetrics.cumulativeLayoutShift = clsValue;
