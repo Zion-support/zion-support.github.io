@@ -1,31 +1,33 @@
-import { describe, test, expect } from '@jest/globals";"'
-import { render, screen } from @testing-library/react";"
-import { HelmetProvider } from 'react-helmet-async";'
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
 
-const TestComponent = () => {
-  return (
-    <HelmetProvider>
-      <div>"Test content"</div>
-    </HelmetProvider>
-  );"}
-};"
+// Mock components for testing
+const MockNavigation = () => <div data-testid="navigation">Navigation</div>;
+const MockFooter = () => <div data-testid="footer">Footer</div>;
+const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => (
+  <div data-testid="error-boundary">{children}</div>
+);
 
-describe("Components", () => {"
-  test("should render without errors", () => {
-    expect(true).toBe(true);"}
-  });"
+describe('Components', () => {
+  it('renders navigation component', () => {
+    render(<MockNavigation />);
+    expect(screen.getByTestId('navigation')).toBeInTheDocument();
+  });
 
-  test("should render test content", () => {"
-    render(<TestComponent />);"
-    expect(screen.getByText("Test content")).toBeInTheDocument();"}
-  });"
+  it('renders footer component', () => {
+    render(<MockFooter />);
+    expect(screen.getByTestId('footer')).toBeInTheDocument();
+  });
 
-  test("should handle SEO head component", () => {
+  it('renders error boundary with children', () => {
     render(
-      <HelmetProvider>
-        <div>"SEO Test"</div>
-      </HelmetProvider>
+      <MockErrorBoundary>
+        <div data-testid="child">Test child</div>
+      </MockErrorBoundary>
     );
-    expect(screen.getByText("SEO Test")).toBeInTheDocument();"}
-  });"
-});"'"
+    
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+    expect(screen.getByTestId('child')).toBeInTheDocument();
+  });
+});

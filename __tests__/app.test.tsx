@@ -1,26 +1,106 @@
-import { render, screen } from '@testing-library/react";"'
-import @testing-library/jest-dom";
+// Mock CSS imports before any imports
+jest.mock('../app/styles/futuristic.css', () => ({}));
 
-const TestComponent = () => {
-  return <div>"Test content"</div>;"}
-};"
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
+import App from '../App';
 
-describe("App Component", () => {"
-  it("should render without errors", () => {
-    expect(true).toBe(true);"}
-  });"
+// Mock the components to avoid import issues
+jest.mock('../app/components/Navigation', () => {
+  return function MockNavigation() {
+    return <div data-testid="navigation">Navigation</div>;
+  };
+});
 
-  it("should render test content", () => {"
-    render(<TestComponent />);"
-    expect(screen.getByText("Test content")).toBeInTheDocument();"}
-  });"
+jest.mock('../app/components/Footer', () => {
+  return function MockFooter() {
+    return <div data-testid="footer">Footer</div>;
+  };
+});
 
-  it("should handle console errors", () => {"
-    const consoleSpy = jest"
-      .spyOn(console, "error")}
-      .mockImplementation(() => {});
+jest.mock('../app/components/ErrorBoundaryWrapper', () => {
+  return function MockErrorBoundaryWrapper({ children }: { children: React.ReactNode }) {
+    return <div data-testid="error-boundary">{children}</div>;
+  };
+});
+
+jest.mock('../app/components/PerformanceMonitor', () => {
+  return function MockPerformanceMonitor() {
+    return <div data-testid="performance-monitor">Performance Monitor</div>;
+  };
+});
+
+jest.mock('../app/components/FuturisticBackground', () => {
+  return function MockFuturisticBackground() {
+    return <div data-testid="futuristic-background">Background</div>;
+  };
+});
+
+jest.mock('../app/components/LoadingSpinner', () => {
+  return function MockLoadingSpinner() {
+    return <div data-testid="loading-spinner">Loading...</div>;
+  };
+});
+
+jest.mock('../app/components/Breadcrumb', () => {
+  return function MockBreadcrumb() {
+    return <div data-testid="breadcrumb">Breadcrumb</div>;
+  };
+});
+
+jest.mock('../app/page', () => {
+  return function MockHomePage() {
+    return <div data-testid="home-page">Home Page</div>;
+  };
+});
+
+jest.mock('../app/components/EnhancedPerformanceOptimizer', () => {
+  return function MockPerformanceOptimizer() {
+    return <div data-testid="performance-optimizer">Performance Optimizer</div>;
+  };
+});
+
+jest.mock('../app/components/AccessibilityEnhancer', () => {
+  return function MockAccessibilityEnhancer({ children }: { children: React.ReactNode }) {
+    return <div data-testid="accessibility-enhancer">{children}</div>;
+  };
+});
+
+jest.mock('../app/components/EnhancedAccessibilityWrapper', () => {
+  return function MockEnhancedAccessibilityWrapper({ children }: { children: React.ReactNode }) {
+    return <div data-testid="enhanced-accessibility-wrapper">{children}</div>;
+  };
+});
+
+describe('App Component', () => {
+  it('renders without crashing', () => {
+    render(
+      <HelmetProvider>
+        <MemoryRouter>
+          <App />
+        </MemoryRouter>
+      </HelmetProvider>
+    );
     
-    expect(consoleSpy).toBeDefined();
-    consoleSpy.mockRestore();"
-  });"
-});"'"
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+  });
+
+  it('renders all main components', () => {
+    render(
+      <HelmetProvider>
+        <MemoryRouter>
+          <App />
+        </MemoryRouter>
+      </HelmetProvider>
+    );
+    
+    expect(screen.getByTestId('futuristic-background')).toBeInTheDocument();
+    expect(screen.getByTestId('navigation')).toBeInTheDocument();
+    expect(screen.getByTestId('breadcrumb')).toBeInTheDocument();
+    expect(screen.getByTestId('footer')).toBeInTheDocument();
+    expect(screen.getByTestId('performance-optimizer')).toBeInTheDocument();
+    expect(screen.getByTestId('accessibility-enhancer')).toBeInTheDocument();
+    expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+  });
+});

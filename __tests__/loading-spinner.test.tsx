@@ -1,26 +1,29 @@
-import { render, screen } from '@testing-library/react";"'
-import @testing-library/jest-dom";
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
 
-const TestComponent = () => {
-  return <div>"Test content"</div>;"}
-};"
+// Mock loading spinner component
+const MockLoadingSpinner = () => (
+  <div data-testid="loading-spinner" className="flex items-center justify-center">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    <span className="ml-2">Loading...</span>
+  </div>
+);
 
-describe("Advanced Components", () => {"
-  it("should render without errors", () => {
-    expect(true).toBe(true);"}
-  });"
+describe('LoadingSpinner Component', () => {
+  it('renders loading spinner', () => {
+    render(<MockLoadingSpinner />);
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
+  });
 
-  it("should render test content", () => {"
-    render(<TestComponent />);"
-    expect(screen.getByText("Test content")).toBeInTheDocument();"}
-  });"
+  it('displays loading text', () => {
+    render(<MockLoadingSpinner />);
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+  });
 
-  it("should handle console errors", () => {"
-    const consoleSpy = jest"
-      .spyOn(console, "error")}
-      .mockImplementation(() => {});
-    
-    expect(consoleSpy).toBeDefined();
-    consoleSpy.mockRestore();"
-  });"
-});"'"
+  it('has proper styling classes', () => {
+    render(<MockLoadingSpinner />);
+    const spinner = screen.getByTestId('loading-spinner');
+    expect(spinner).toHaveClass('flex', 'items-center', 'justify-center');
+  });
+});

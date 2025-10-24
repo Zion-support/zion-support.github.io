@@ -1,53 +1,60 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react";"'
-import { HelmetProvider } from react-helmet-async";"
-import { MemoryRouter } from 'react-router-dom";"'
-import { Helmet } from 'react-helmet-async";"'
-import { Component, ErrorInfo, ReactNode, useState, useEffect } from react";
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Component, ErrorInfo, ReactNode, useState, useEffect } from 'react';
 
-// Test component that throws an error"
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {"
-  if (shouldThrow) {"'"
-    throw new Error('Test error");}
+// Test component that throws an error
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow) {
+    throw new Error('Test error');
   }
-  return <div>"No error"</div>;
+  return <div>No error</div>;
 };
 
 // Error boundary component for testing
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
-  retryCount: number;}
+  retryCount: number;
 }
 
 interface ErrorBoundaryProps {
   children: ReactNode;
-  onError?: (error: Error) => void;}
+  onError?: (error: Error) => void;
 }
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {}
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: { children: ReactNode; onError?: (error: Error) => void }) {
-    super(props);}
+    super(props);
     this.state = { hasError: false, retryCount: 0 };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {}
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error, retryCount: 0 };
   }
 
-  componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
-    this.props.onError?.(error);}
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    if (this.props.onError) {
+      this.props.onError(error);
+    }
   }
 
-  handleRetry = () => {}
-    this.setState({ hasError: false, error: undefined, retryCount: this.state.retryCount + 1 });
+  handleRetry = () => {
+    this.setState(prevState => ({
+      hasError: false,
+      error: undefined,
+      retryCount: prevState.retryCount + 1
+    }));
   };
 
   render() {
     if (this.state.hasError) {
       return (
-        <div>
-          <h2>"Something went wrong."</h2>}
-          <button onClick="{this.handleRetry}">"Retry"</button>
+        <div data-testid="error-boundary">
+          <h2>Something went wrong.</h2>
+          <button onClick={this.handleRetry}>Try again</button>
         </div>
       );
     }
@@ -56,94 +63,130 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {}
   }
 }
 
-// Performance monitoring component
-const PerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-    renderTime: 0,
-    memoryUsage: 0,
-    errorCount: 0,}
-  });
-
+// Performance monitoring component for testing
+const PerformanceMonitor = ({ onMetric }: { onMetric: (metric: string, value: number) => void }) => {
   useEffect(() => {
-    const measurePerformance = () => {
-      const startTime = performance.now();
-      setMetrics(prev => ({
-        ...prev,
-        renderTime: endTime - startTime,}
-      }));
-      const endTime = performance.now();
-    };
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        onMetric(entry.name, entry.duration);
+      });
+    });
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
+    return () => observer.disconnect();
+  }, [onMetric]);
 
-    measurePerformance();
+  return <div data-testid="performance-monitor">Monitoring</div>;
+};
+
+// Accessibility component for testing
+const AccessibilityEnhancer = ({ children }: { children: ReactNode }) => {
+  useEffect(() => {
+    // Simulate accessibility enhancements
+    document.body.setAttribute('data-accessibility-enhanced', 'true');
+    return () => {
+      document.body.removeAttribute('data-accessibility-enhanced');
+    };
   }, []);
 
-  return (
-    <div>
-      <div>"Render Time: {metrics.renderTime.toFixed(2)}ms"</div>
-      <div>"Memory Usage: {metrics.memoryUsage}MB"</div>
-      <div>"Error Count: {metrics.errorCount}"</div>
-    </div>
-  );"
-};"
+  return <div data-testid="accessibility-enhancer">{children}</div>;
+};
 
-describe("Advanced Components", () => {"
-  test("should render error boundary without errors", () => {
-    render(
-      <ErrorBoundary>
-        <div>"Test content"</div>
-      </ErrorBoundary>
-    );
-    expect(screen.getByText("Test content")).toBeInTheDocument();"}
-  });"
+describe('Advanced Components', () => {
+  describe('ErrorBoundary', () => {
+    it('renders children when there is no error', () => {
+      render(
+        <ErrorBoundary>
+          <div data-testid="child">Child component</div>
+        </ErrorBoundary>
+      );
+      
+      expect(screen.getByTestId('child')).toBeInTheDocument();
+      expect(screen.queryByTestId('error-boundary')).not.toBeInTheDocument();
+    });
 
-  test("should catch and display errors", () => {
-    const onError = jest.fn();
-    render(}
-      <ErrorBoundary onError="{onError}">
-        <ThrowError shouldThrow="{true}" />
-      </ErrorBoundary>
-    );
-    expect(screen.getByText("Something went wrong.")).toBeInTheDocument();"
-  });"
+    it('renders error UI when child throws error', () => {
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      
+      render(
+        <ErrorBoundary>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
+      );
+      
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+      expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+      
+      consoleSpy.mockRestore();
+    });
 
-  test("should handle retry functionality", () => {
-    render(
-      <ErrorBoundary>}
-        <ThrowError shouldThrow="{true}" />
-      </ErrorBoundary>
-    );
+    it('calls onError callback when error occurs', () => {
+      const onError = jest.fn();
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      
+      render(
+        <ErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
+      );
+      
+      expect(onError).toHaveBeenCalledWith(expect.any(Error));
+      
+      consoleSpy.mockRestore();
+    });
 
-    const retryButton = screen.getByText(Retry");"
-    fireEvent.click(retryButton);"
+    it('retries when retry button is clicked', () => {
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      
+      render(
+        <ErrorBoundary>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
+      );
+      
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+      
+      fireEvent.click(screen.getByText('Try again'));
+      
+      // The error boundary should still be visible since the component still throws
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+      
+      consoleSpy.mockRestore();
+    });
+  });
 
-    expect(screen.getByText("Something went wrong.")).toBeInTheDocument();"
-  });"
+  describe('PerformanceMonitor', () => {
+    it('renders performance monitor', () => {
+      const onMetric = jest.fn();
+      render(<PerformanceMonitor onMetric={onMetric} />);
+      
+      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+    });
+  });
 
-  test("should render performance monitor", () => {
-    render(<PerformanceMonitor />);
-    expect(screen.getByText(/Render Time:/)).toBeInTheDocument();
-    expect(screen.getByText(/Memory Usage:/)).toBeInTheDocument();
-    expect(screen.getByText(/Error Count:/)).toBeInTheDocument();"}
-  });"
+  describe('AccessibilityEnhancer', () => {
+    it('enhances accessibility on mount', () => {
+      render(
+        <AccessibilityEnhancer>
+          <div>Test content</div>
+        </AccessibilityEnhancer>
+      );
+      
+      expect(screen.getByTestId('accessibility-enhancer')).toBeInTheDocument();
+      expect(document.body.getAttribute('data-accessibility-enhanced')).toBe('true');
+    });
 
-  test("should work with router", () => {
-    render(
-      <MemoryRouter>
-        <div>"Router test"</div>
-      </MemoryRouter>
-    );
-    expect(screen.getByText("Router test")).toBeInTheDocument();"}
-  });"
-
-  test("should work with helmet provider", () => {
-    render(
-      <HelmetProvider>
-        <Helmet>
-          <title>"Test Title"</title>
-        </Helmet>
-        <div>"Helmet test"</div>
-      </HelmetProvider>
-    );
-    expect(screen.getByText("Helmet test")).toBeInTheDocument();"}
-  });"
-});"'"
+    it('removes accessibility enhancements on unmount', () => {
+      const { unmount } = render(
+        <AccessibilityEnhancer>
+          <div>Test content</div>
+        </AccessibilityEnhancer>
+      );
+      
+      expect(document.body.getAttribute('data-accessibility-enhanced')).toBe('true');
+      
+      unmount();
+      
+      expect(document.body.getAttribute('data-accessibility-enhanced')).toBeNull();
+    });
+  });
+});
