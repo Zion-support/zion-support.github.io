@@ -1,4 +1,4 @@
-interface ApiResponse<T = any> {
+interface ApiResponse<T = any> {;
   data: T;,
   status: number;,
   message?: string;
@@ -13,17 +13,17 @@ class ApiClient {
   private baseURL: string;,
   private defaultHeaders: Record<string, string>;
 
-  constructor(baseURL: string = '/api') {,
+  constructor(baseURL: string = '/api') {,;
     this.baseURL = baseURL;
     this.defaultHeaders = {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json',;
     };
   }
 </string>
   private async request<T>(
     endpoint: string,
     options: RequestInit = {}</T>
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>> {;
     const url = `${this.baseURL}${endpoint}`;
     
     const config: RequestInit = {,
@@ -31,7 +31,7 @@ class ApiClient {
       headers: {,
         ...this.defaultHeaders,
         ...options.headers,
-      },
+      },;
     };
 
     try {

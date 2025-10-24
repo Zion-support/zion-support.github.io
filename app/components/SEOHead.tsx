@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 'use client'
-import React from 'react'
+import React from "react"
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -20,7 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
       
     </>
       <Helmet> </Helmet><title>{title}</title>
-        <meta name="description" content={description} /> </meta><meta name="keywords" content={keywords} /> </meta><meta property="og:title" content={title} /> </meta><meta property="og:description" content={description} /> </meta><meta name="twitter:title" content={title} /> </meta><meta name="twitter:description" content={description} /> </meta></Helmet>
+        <meta name="description" content={description} /> </meta><meta name="keywords" content={keywords} /> </meta><meta property="og:title" content={title} /> </meta><meta property="og:description" content={description} /> </meta><meta name="twitter:title" content={title} /> </meta><meta name="twitter:description" content={description} /> </meta>
       <Navigation /> </Navigation><div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">{/* Hero Section */}
         </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
@@ -35,30 +35,22 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Learn More
               </button>
-            </div>
-          </div>
-        </section>,
+          </div>,
 ,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make SEOHead the perfect solution for your business.</p>
-            </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
                 <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
                 <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
                 <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-              </div>
             </div>
-          </div>
         </section>,
 ,
         {/* CTA Section */}
@@ -67,15 +59,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
               Start Your Free Trial
             </button>
-          </div>
         </section>
-      </div>
 
       <Footer /> </Footer></>
   )
 }
 
-
+;
   );
 }  )}
 export default SEOHead
+  );
+}

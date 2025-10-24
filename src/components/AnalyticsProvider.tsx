@@ -24,7 +24,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 )
 
-export const useAnalytics = () => {
+export const useAnalytics = () => {;
   const context = useContext(AnalyticsContext);
   if (!context) {;
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;);
@@ -36,19 +36,18 @@ interface AnalyticsProviderProps {
   children: ReactNode}
 }
 ;</AnalyticsContextType>
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+exportconstAnalyticsProvider: React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if (process.env.NODE_ENV === &quot;production&quot;) {
         const script = document.createElement(&quot;script&quot;);
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
+        script.async = true;
         document.head.appendChild(script);
-        window.gtag =
-          window.gtag ||
+        window.gtag = window.gtag ||
           function (...args: any[]) {
-            (window.gtag as any).q = (window.gtag as any).q || [],
+            (window.gtag as any).q = (window.gtag as any).q || [],;
             (window.gtag as any).q.push(args);,
           }
         window.gtag(&quot;js&quot;, new Date())
@@ -58,13 +57,13 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   }, [])
 
 :all-pages-backup/components/AnalyticsProvider.tsx
-  consttrackEvent= (
+  consttrackEvent = (
     eventName: string</AnalyticsProviderProp>
     parameters?: Record<string, unknown>
   ) => {
   consttrackEvent = (
     eventName: string</string>
-    parameters?: Record<string, unknown>
+    parameters?: Record<string, unknown>;
   ) => {;
     if (typeof window !== &quot;undefined&quot; && window.gtag) {
       window.gtag(&quot;event&quot;, eventName, parameters);
@@ -93,7 +92,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     </AnalyticsContext.Provider>
   )
 }
-
+;
 export default AnalyticsProvider;
   );
 :all-pages-backup/components/AnalyticsProvider.tsx

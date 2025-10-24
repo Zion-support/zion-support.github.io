@@ -34,13 +34,13 @@ class PerformanceMonitor {
       name,
       value,
       timestamp: Date.now(),
-      url: window.location.href,
+      url: window.location.href,;
     };
 
     this.metrics.push(metric);
 
     // Send to analytics in production
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV = == "production") {;
       this.sendToAnalytics(metric);
     }
   }

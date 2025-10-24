@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -12,7 +12,6 @@ export default function SitemapPage() {
         <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
             Contact Us</Link>
           <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
-        </Link>
-      </div>
+      </div>;
     </div>;
   )}

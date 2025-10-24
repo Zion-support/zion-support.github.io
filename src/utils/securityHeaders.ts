@@ -23,7 +23,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     "img-src 'self' data: https: blob:"
     "font-src 'self' data: "
     "connect-src 'self' https://www.google-analytics.com http,
-  s://analytics.google.com"
+  s: //analytics.google.com"
     "frame-ancestors 'none'"
     "base-uri 'self'",
 :all-pages-backup/utils/securityHeaders.ts,
@@ -42,7 +42,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolicy: [,
-    'camera=()',
+    'camera = ()',
   // Prevent clickjacking
   xFrameOptions: 'DENY',
   // Prevent MIME type sniffing
@@ -59,7 +59,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     'interest-cohort=()',
     'accelerometer=()',
     'gyroscope=()',
-    'magnetometer=()'
+    'magnetometer=()';
   ].join(', ');
 
 };
@@ -70,8 +70,8 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;
   const config = { ...defaultSecurityHeaders, ...customConfig };</string>
   const headers: Record<string, string> = {;
-    'X-XSS-Protection': '1; mode=block'</string>
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {
+    'X-XSS-Protection': '1; mode = block'</string>
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;
   const config = { ...defaultSecurityHeaders, ...customConfig }</string>;
   const headers: Record<string, string> = {;
     'X-XSS-Protection': '1; mode = block'
@@ -101,7 +101,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 }
 
 /**
- * Get security headers in Next.js format
+ * Get security headers in Next.js format;
  */;</string>
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; valu,
   e: string }> {

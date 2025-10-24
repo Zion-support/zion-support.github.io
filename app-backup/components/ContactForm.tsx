@@ -1,11 +1,7 @@
 import { useState } from 'react'
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react'
 'use client'
-<<<<<<< HEAD
     "name": ''',
-=======
-    "name": '',
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
     "email": '',
     "phone": '',
     "company": '',

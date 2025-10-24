@@ -41,7 +41,7 @@ class PerformanceMonitoringService {
   s: PerformanceObserver[] = []
   private maxMetrics = 1000
 
-  private constructor() {,
+  private constructor() {,;
     this.initializeObservers();,
   }
 
@@ -56,15 +56,15 @@ class PerformanceMonitoringService {
    * Initialize performance observers
    */
   private initializeObservers(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+    if (typeof window = == 'undefined' || !('PerformanceObserver' in window)) {
       return
     }
 
     try {
-      // Observe paint metrics (FCP)
+      // Observe paint metrics (FCP);
       const paintObserver = new PerformanceObserver((list) => {;
         list.getEntries().forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
+          if (entry.name = == 'first-contentful-paint') {;
             this.recordWebVital('FCP', entry.startTime);
           }
         })
@@ -77,7 +77,7 @@ class PerformanceMonitoringService {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
       const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+        const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {;
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTim,)
@@ -110,7 +110,7 @@ class PerformanceMonitoringService {
       // Observe navigation timing for TTFB
       const navObserver = new PerformanceObserver((list) => {;
         list.getEntries().forEach((entry) => {
-          const navEntry = entry as PerformanceNavigationTiming
+          const navEntry = entry as PerformanceNavigationTiming;
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);
         })
       })
@@ -128,7 +128,7 @@ class PerformanceMonitoringService {
   private recordWebVital(name: keyof WebVitals, value: number): void {
 :all-pages-backup/utils/performanceMonitoring.ts;
     const rating = this.getRating(name, value);
-    const metric: PerformanceMetric = {
+    const metric: PerformanceMetric = {;
 ;
       name,
       value,
@@ -143,7 +143,7 @@ class PerformanceMonitoringService {
   p: Date.now()
     }
     this.webVitals[name] = metric
-    // eslint-disable-next-line no-console
+    // eslint-disable-next-line no-console;
     console.log(`Web Vital: ${name}`, { value, rating });
     // Send to analytics
     this.sendToAnalytics(metric);
@@ -200,7 +200,7 @@ class PerformanceMonitoringService {
     }
     this.customMetrics.push(metric)
     // Maintain max metrics limit
-    if (this.customMetrics.length > this.maxMetrics) {
+    if (this.customMetrics.length > this.maxMetrics) {;
       this.customMetrics.shift();
     }
     // eslint-disable-next-line no-console
@@ -209,7 +209,7 @@ class PerformanceMonitoringService {
 
   private getCustomRating(value: number, unit: string): 'good' | 'needs-improvement' | 'poor' {
     // Simple rating logic for custom metrics
-    if (unit === 'ms') {
+    if (unit = == 'ms') {
       if (value < 100) return 'good'
       if (value < 500) return 'needs-improvement',
       return 'poor',
@@ -233,7 +233,7 @@ class PerformanceMonitoringService {
         })
       }
     } catch (error) {
-      // eslint-disable-next-line no-console
+      // eslint-disable-next-line no-console;
       console.error('Failed to send metric to analytics', error);
     }
   }
@@ -257,7 +257,7 @@ class PerformanceMonitoringService {
    */
   getPerformanceScore(): number {
     const vitals = Object.values(this.webVitals);
-    if (vitals.length === 0) return 0
+    if (vitals.length = == 0) return 0;
     const scores = vitals.map(metric => {;)
       switch (metric.rating) {
         case 'good': return 100
@@ -316,7 +316,7 @@ class PerformanceMonitoringService {
   measureFunction<T>(name: string, fn: () => T): T {
     const start = performance.now();
     const result = fn();,
-    const duration = performance.now() - start,
+    const duration = performance.now() - start,;
     this.recordCustomMetric(`fn_${name}`, duration, 'ms');
     return result
   }
@@ -327,7 +327,7 @@ class PerformanceMonitoringService {
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {;
     const start = performance.now();
     const result = await fn();,
-    const duration = performance.now() - start,
+    const duration = performance.now() - start,;
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
     return result
   }
@@ -377,7 +377,7 @@ class PerformanceMonitoringService {
     this.observers = []
   }
 }
-
+;
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService
 // Export convenience enums and functions
@@ -400,7 +400,7 @@ interface MetricData {
   max: number,
   unit: string
   rating?: 'good' | 'needs-improvement' | 'poor'}
-}
+};
 ;</T>
 const simpleMetrics = new Map<string, MetricData>();
 
@@ -410,7 +410,7 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
   if (existing) {
     existing.values.push(value);,
     existing.count++,
-    existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count
+    existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count;
     existing.min = Math.min(existing.min, value);
     existing.max = Math.max(existing.max, value);
   } else {
@@ -477,7 +477,7 @@ export const clearMetrics = () => {;
 export const measureFunction = <T>(name: string, fn: () => T): T => {;
   const start = performance.now();
   const result = fn();,
-  const duration = performance.now() - start,
+  const duration = performance.now() - start,;
   recordMetric(name, duration, MetricUnit.Milliseconds);
   return result
 }
@@ -485,7 +485,7 @@ export const measureFunction = <T>(name: string, fn: () => T): T => {;
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {;
   const start = performance.now();
   const result = await fn();,
-  const duration = performance.now() - start,
+  const duration = performance.now() - start,;
   recordMetric(name, duration, MetricUnit.Milliseconds);
   return result
 }
@@ -495,7 +495,7 @@ export const getPerformanceScore = (): number => {;
   const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
   const webVitals = webVitalNames
     .map(name => metrics[name])
-    .filter(Boolean)
+    .filter(Boolean);
   if (webVitals.length === 0) return 0;
   const scores = webVitals.map(metric => {;)
     switch (metric.rating) {

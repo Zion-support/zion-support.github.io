@@ -18,7 +18,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   suffix = ''
   prefix = '',
   className = '',
-}) => {
+}) => {;
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({;
@@ -39,7 +39,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
     const animate = (currentTim,;
   e: number) => {;
-      if (!startTime) startTime = currentTime
+      if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
 
       // Easing function for smooth animation
@@ -62,10 +62,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [isVisible, end, duration])
 
   return (
-    <span ref={setNode} className={className}>
+    <span ref = {setNode} className={className}>
       {prefix}{count.toLocaleString()}{suffix}</span>
-    </span>
   )
 }
 
-export default AnimatedCounter
+export default AnimatedCounter;

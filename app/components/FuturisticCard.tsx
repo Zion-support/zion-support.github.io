@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import { motion } from 'framer-motion';
 interface FuturisticCardProps {
   children: React.ReactNode,
@@ -18,7 +18,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({,
 }) => {
 
   const getVariantStyles = ($2) => {
-$3
+$3;
 };
   }
 
@@ -54,7 +54,7 @@ $3
           ease: 'easeInOut'}}
       />{/* Content */}
       </motion><div className="relative z-10">{children}
-      </div></div>
+      </div>
 
       {/* Glow effect */}
       <motion.div
@@ -73,4 +73,6 @@ $3
 }
 
 
-export default FuturisticCard
+export default FuturisticCard;
+  );
+}

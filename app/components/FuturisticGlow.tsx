@@ -13,7 +13,7 @@ export default function FuturisticGlow({
   intensity = 'medium',
   color = 'cyan',
   className = ''
-}: FuturisticGlowProps) {
+}: FuturisticGlowProps) {;
   const containerRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -22,12 +22,12 @@ export default function FuturisticGlow({
 
 
     const getIntensityValue = ($2) => {
-$3
+$3;
 };
     };
 
     const getColorValue = ($2) => {
-$3
+$3;
 };
     };
 
@@ -68,7 +68,6 @@ const getIntensityValue = () => {
       `}
 
     >{children}
-    </div></div>
-  );
-
+    </div>;
+    );
 }

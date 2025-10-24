@@ -7,21 +7,19 @@ import Footer from '../components/Footer';
 export default function FiveGSolutionsPage() {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
+      <div className = "min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
       <Navigation /></Navigation>
       <main className="py-20 px-4"></main>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">5G Solutions</h1>
           <p className="text-xl text-gray-600 mb-8"></p>
             Next-generation 5G solutions for ultra-fast connectivity.</p>
-          </p>
         </div>
-      </main>
-      <Footer /></Footer>
+      <Footer /></Footer>;
     </div>;
     </>
   );
-import React from 'react';
+import React from "react";
 
 import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react';
 import Link from 'next/link';
@@ -72,7 +70,7 @@ export default function FiveGSolutions() {
     icon: <BarChart3 className="w-8 h-8 text-pink-400" />
       titl,
   e: title,
-  description: description,
+  description: description,;
   features: features,;
   link: '/5g-data-analytics'};
   ];
@@ -99,7 +97,7 @@ export default function FiveGSolutions() {
   {</Cpu>
     icon: <Shield className="w-6 h-6 text-red-400" />
       titl,
-  e: title,
+  e: title,;
   description: 'Advanced encryption and security protocols built-in';
     };
   ];
@@ -107,7 +105,7 @@ export default function FiveGSolutions() {
   const stats = [</Shield>
     { number: '10 Gbps', label: 'Peak Speed', icon: <Zap className="w-6 h-6 text-cyan-400" /> },</Zap>
     { number: '1ms', label: 'Latency', icon: <Cpu className="w-6 h-6 text-emerald-400" /> },</Cpu>
-    { number: '1M+', label: 'Devices per km²', icon: <Network className="w-6 h-6 text-purple-400" /> }</Network>
+    { number: '1M+', label: 'Devices per km²', icon: <Network className="w-6 h-6 text-purple-400" /> }</Network>;
     { number: '99.9%', label: 'Reliability', icon: <Shield className="w-6 h-6 text-orange-400" /> },;
   ];
 </Shield>
@@ -116,8 +114,7 @@ export default function FiveGSolutions() {
     
   </>
       <title>5G Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions." />
-      </meta>
+        <meta name = "description" content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions." />
       </meta>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
@@ -126,12 +123,10 @@ export default function FiveGSolutions() {
           
           <Link 
             href="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
           ></Link>
             Contact Us</Link>
             <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
-          </Link>
-        </div>
-      </div>,
+        </div>,
     </div>,
-  )}
+  )};

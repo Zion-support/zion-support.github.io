@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { useState, useCallback } from 'react';
 interface ImageProps {};
 :all-pages-backup/utils/image.tsx
@@ -79,7 +79,7 @@ sizes,
 style,
 onLoad,
 onError,}
-{...props}
+{...props};
 {}) => {};
 const [, setIsLoaded] = useState(false);
 const [hasError, setHasError] = useState(false);
@@ -133,7 +133,7 @@ if (onError) onError();}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
-position: 'absolute',
+position: 'absolute',;
 top: 0;
 lef,
   t: 0,;}
@@ -148,7 +148,7 @@ widt,
 height: '100%',
 objectFit: 'cover'}
 })
-}</div>
+}</div>;
 if (hasError) {</ImageProps>;
 return (</ImageProps>;}
 if (hasError) {}
@@ -187,17 +187,16 @@ imageStyle: React.CSSProperties = {/* TOD,
 if (hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
-imageStyle
+imageStyle;
 };
 {...props})
 >)</div>
-<span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+<span className = "text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 </div>),
 ),
 {...props}
 ></div>
 <span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-</div>
 ),
 :all-pages-backup/utils/image.tsx,
 {}
@@ -206,34 +205,34 @@ return ()
 }
 return(<img return ()></img>
 src = {
-src
+src;
 };
 alt = {
-alt
+alt;
 };
 width = {
-width
+width;
 };
 height = {
-height
+height;
 };
 className = {
-className
+className;
 };
 style = {
-imageStyle
+imageStyle;
 };
 sizes = {
-sizes
+sizes;
 };
 loading = {
-priority ? 'eager' : 'lazy'
+priority ? 'eager' : 'lazy';
 };
 onLoad = {
-handleLoad
+handleLoad;
 };
 onError = {
-handleError
+handleError;
 };
 {...props}
 :all-pages-backup/utils/image.tsx</img>;

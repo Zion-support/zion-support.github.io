@@ -20,7 +20,6 @@ export default function ServicePage() {
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional service coming soon.
-=======
         <title>Test - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
@@ -28,7 +27,6 @@ export default function ServicePage() {
           <h1Test
           </h1>
           <pProfessional test services coming soon.
->>>>>>> cursor/fix-errors-and-merge-to-main-998c:app/test/page.tsx
           </p>
           <Link href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit",

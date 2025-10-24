@@ -11,12 +11,10 @@ import { ArrowRight } from 'lucide-react'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology';
-<<<<<<< HEAD
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '''
 =======</SystemMonitorProps>
 const SystemMonito,</SystemMonitorProps>
   r: React.FC<SystemMonitorProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</SystemMonitorProps>
 </SystemMonitorProps>
 
 export default SystemMonitor;

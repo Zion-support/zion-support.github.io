@@ -1,100 +1,75 @@
 #!/usr/bin/env python3
-"""
-Script to fix JSX syntax errors
-"""
 import os
 import re
 import glob
 
-def fix_jsx_syntax(content):
-    """Fix JSX syntax errors"""
-    # Remove semicolons after JSX elements
-    content = re.sub(r'<([^>]+) />;', r'<\1 />', content)
-    content = re.sub(r'<([^>]+)>;', r'<\1>', content)
-    
-    # Fix broken JSX tags
-    content = re.sub(r'<([^>]+) />;', r'<\1 />', content)
-    content = re.sub(r'<([^>]+)>;', r'<\1>', content)
-    
-    # Fix broken import statements
-    content = re.sub(r'import \{\s*;\s*', 'import { ', content)
-    
-    # Fix broken title tags
-    content = re.sub(r'<title />([^<]+)</title>', r'<title>\1</title>', content)
-    
-    # Fix broken meta tags
-    content = re.sub(r'<meta name="([^"]+)" content="([^"]+)" />;', r'<meta name="\1" content="\2" />', content)
-    
-    # Fix broken Head tags
-    content = re.sub(r'<Head />', r'<Head>', content)
-    
-    # Fix broken div tags
-    content = re.sub(r'<div className="([^"]+)" /></div>;', r'<div className="\1"></div>', content)
-    
-    # Fix broken span tags
-    content = re.sub(r'<span className="([^"]+)" /></span>;', r'<span className="\1"></span>', content)
-    
-    # Fix broken section tags
-    content = re.sub(r'<section className="([^"]+)" />;', r'<section className="\1">', content)
-    
-    # Fix broken h1 tags
-    content = re.sub(r'<h1 className="([^"]+)" />;', r'<h1 className="\1">', content)
-    
-    # Fix broken p tags
-    content = re.sub(r'<p className="([^"]+)" />;', r'<p className="\1">', content)
-    
-    return content
-
-def fix_file(file_path):
-    """Fix JSX syntax errors in a single file"""
+def fix_jsx_syntax(file_path):
+    """Fix JSX syntax errors in TypeScript/JavaScript files"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
-        content = fix_jsx_syntax(content)
         
+        # Fix common JSX syntax issues
+        # 1. Fix missing React import
+        if 'import React' not in content and ('<div>' in content or '<>' in content or '<Head>' in content):
+            content = "import React from 'react';\n" + content
+        
+        # 2. Fix missing Head import
+        if '<Head>' in content and 'import Head' not in content:
+            content = content.replace("import React from 'react';", "import React from 'react';\nimport Head from 'next/head';")
+        
+        # 3. Fix malformed JSX return statements
+        content = re.sub(r'return\s*\(\s*<div>', 'return (\n    <div>', content)
+        content = re.sub(r'return\s*\(\s*<>', 'return (\n    <>', content)
+        
+        # 4. Fix malformed meta tags
+        content = re.sub(r'<meta name = "([^"]+)"', '<meta name="\1"', content)
+        
+        # 5. Fix missing closing tags
+        content = re.sub(r'<Head>\s*<title>([^<]+)</title>\s*<meta[^>]+>\s*</Head>', 
+                        '<Head>\n        <title>\1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Head>', content)
+        
+        # 6. Fix malformed function declarations
+        content = re.sub(r'export default function (\w+)\(\) \{', r'export default function \1() {\n  return (', content)
+        
+        # 7. Fix missing closing parentheses and braces
+        if 'return (' in content and not content.strip().endswith(');'):
+            content = content.rstrip() + '\n  );\n}'
+        
+        # 8. Fix malformed JSX fragments
+        content = re.sub(r'<>\s*<div>', '<>\n      <div>', content)
+        content = re.sub(r'</div>\s*</>', '</div>\n    </>', content)
+        
+        # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
             return True
         
         return False
-        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all JSX syntax errors"""
+    # Find all TypeScript and JavaScript files
     patterns = [
-        './app/**/*.tsx',
-        './app/**/*.ts', 
-        './app/**/*.js',
-        './app/**/*.jsx',
-        './src/**/*.tsx',
-        './src/**/*.ts',
-        './src/**/*.js', 
-        './src/**/*.jsx',
-        './components/**/*.tsx',
-        './components/**/*.ts',
-        './components/**/*.js',
-        './components/**/*.jsx'
+        'app/**/*.tsx',
+        'app/**/*.ts', 
+        'app/**/*.js',
+        'app/**/*.jsx'
     ]
     
-    files_to_fix = []
+    files_fixed = 0
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            if fix_jsx_syntax(file_path):
+                files_fixed += 1
+                print(f"Fixed JSX syntax in: {file_path}")
     
-    fixed_count = 0
-    
-    for file_path in files_to_fix:
-        if os.path.isfile(file_path):
-            if fix_file(file_path):
-                print(f"Fixed: {file_path}")
-                fixed_count += 1
-    
-    print(f"\nFixed {fixed_count} files")
+    print(f"Fixed JSX syntax in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

@@ -1,87 +1,84 @@
 #!/usr/bin/env python3
-"""
-Script to fix common syntax errors in TypeScript/JSX files
-"""
-
 import os
 import re
 import glob
 
 def fix_syntax_errors(file_path):
-    """Fix common syntax errors in a single file"""
+    """Fix common syntax errors in TypeScript/JavaScript files"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix 1: Remove trailing comma after function declaration
-        content = re.sub(r'const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{,', 'const \\1: React.FC = () => {', content)
+        # Fix common syntax issues
+        # 1. Fix malformed JSX fragments
+        content = re.sub(r'<>\s*<>\s*', '<>', content)
+        content = re.sub(r'</>\s*</>\s*', '</>', content)
         
-        # Fix 2: Fix malformed JSX with missing opening tags
-        # Pattern: </div><div className="...">, -> </div><div className="...">
-        content = re.sub(r'</div><div className="[^"]*">,', '</div><div className="\\1">', content)
+        # 2. Fix missing semicolons after variable declarations
+        content = re.sub(r'(\w+)\s*=\s*([^;]+)\s*$', r'\1 = \2;', content, flags=re.MULTILINE)
         
-        # Fix 3: Fix malformed h1 tags
-        # Pattern: <h1Ai -> <h1>Ai
-        content = re.sub(r'<h1([A-Z][a-zA-Z\s]*)', r'<h1>\1', content)
+        # 3. Fix malformed function parameters
+        content = re.sub(r'(\w+):\s*(\w+)\s*=\s*([^,)]+)', r'\1: \2 = \3', content)
         
-        # Fix 4: Fix missing closing tags in h1
-        content = re.sub(r'<h1>([^<]+)\n\s*</h1>', r'<h1>\1</h1>', content)
+        # 4. Fix malformed JSX attributes
+        content = re.sub(r'className=&quot;([^&]+)&quot;', r'className="\1"', content)
+        content = re.sub(r'className=&quot;([^&]+)&quot;', r'className="\1"', content)
         
-        # Fix 5: Fix malformed JSX attributes
-        # Pattern: className="..." -> className="..."
-        content = re.sub(r'className="([^"]*)"\s*,', r'className="\1"', content)
+        # 5. Fix malformed arrow functions
+        content = re.sub(r'(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{', r'\1: React.FC = () => {', content)
         
-        # Fix 6: Fix missing opening tags for div elements
-        content = re.sub(r'</div><div className="([^"]*)"\s*>,', r'</div><div className="\1">', content)
+        # 6. Fix malformed destructuring
+        content = re.sub(r'{\s*(\w+)\s*:\s*(\w+)\s*}\s*=\s*', r'{\1: \2} = ', content)
         
-        # Fix 7: Fix malformed return statements
-        content = re.sub(r'return\s*\(\s*<>\s*<Head>', 'return (\n    <>\n      <Head>', content)
+        # 7. Fix malformed imports
+        content = re.sub(r'import\s+(\w+)\s+from\s+[\'"](\w+)[\'"]', r'import \1 from "\2"', content)
         
-        # Fix 8: Fix missing semicolons
-        content = re.sub(r'const\s+\w+\s*=\s*new\s+Date\(\)\.getFullYear\(\)\n', 'const \\1 = new Date().getFullYear();\n', content)
+        # 8. Fix malformed JSX closing tags
+        content = re.sub(r'</(\w+)>\s*</(\w+)>', r'</\1>', content)
         
-        # Fix 9: Fix malformed JSX structure
-        content = re.sub(r'<div className="min-h-screen[^"]*">\s*</div><div className="[^"]*">,', 
-                        lambda m: m.group(0).replace(',', ''), content)
+        # 9. Fix malformed object properties
+        content = re.sub(r'(\w+):\s*([^,}]+)\s*,', r'\1: \2,', content)
         
-        # Fix 10: Fix missing closing tags
-        content = re.sub(r'<h1([^>]*)>\s*([^<]+)\n\s*</h1>', r'<h1\1>\2</h1>', content)
+        # 10. Fix malformed array destructuring
+        content = re.sub(r'\[\s*(\w+)\s*,\s*(\w+)\s*\]\s*=\s*', r'[\1, \2] = ', content)
         
         # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed syntax errors in: {file_path}")
             return True
         
         return False
-        
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix syntax errors in all files"""
+    # Find all TypeScript and JavaScript files
     patterns = [
         'app/**/*.tsx',
-        'app/**/*.ts',
+        'app/**/*.ts', 
+        'app/**/*.js',
+        'app/**/*.jsx',
+        'src/**/*.tsx',
+        'src/**/*.ts',
+        'src/**/*.js',
+        'src/**/*.jsx',
         'components/**/*.tsx',
-        'components/**/*.ts'
+        'components/**/*.ts',
+        'components/**/*.js',
+        'components/**/*.jsx'
     ]
     
-    files_processed = 0
     files_fixed = 0
-    
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                files_processed += 1
-                if fix_syntax_errors(file_path):
-                    files_fixed += 1
+            if fix_syntax_errors(file_path):
+                files_fixed += 1
+                print(f"Fixed syntax errors in: {file_path}")
     
-    print(f"\nProcessed {files_processed} files")
     print(f"Fixed syntax errors in {files_fixed} files")
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import React from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -56,11 +56,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-  },
-};
+  }
+}
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
 export default function RootLayout({
   children,
 }: {
@@ -68,11 +66,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
       <body className={inter.className}>{children}</body>
-=======
-      <body>{children}</body>
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
     </html>
   )
 }

@@ -24,7 +24,7 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0,
+    memoryUsage: 0,;
     fps: 60;
   });
 

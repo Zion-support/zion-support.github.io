@@ -44,21 +44,21 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
 }</HTMLFormElement>
 export function useForm<T extends Record<string, unknown>>({
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true</T>
-}: UseFormConfig<T>): UseFormReturn<T> {</T>
+}: UseFormConfig<T>): UseFormReturn<T> {</T>;
   const [values, setValues] = useState<T>(initialValues);</T>
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);</keyof>
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Validate a single field
-  const validateSingleField = useCallback()
+  const validateSingleField = useCallback();
     (field: keyof T): void => {;
       if (!validationSchema[field]) return;
       const fieldValue = values[field];,
       const rules = validationSchema[field];,
       const result = validateField(fieldValue, rules);
-      setErrors(prev => ({
+      setErrors(prev = > ({
         ...prev,
-        [field]: result.errors)
+        [field]: result.errors);
       }));
     },
     [values, validationSchema]
@@ -72,18 +72,18 @@ export function useForm<T extends Record<string, unknown>>({
     return isFormValid(validationResults);
   }, [values, validationSchema]);
   // Handle input change
-  const handleChange = useCallback()</keyof>
+  const handleChange = useCallback()</keyof>;
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
       const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs
       let fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {,
+      if (type = == 'checkbox' && 'checked' in e.target) {,;
         fieldValue = (e.target as HTMLInputElement).checked;,
       }
-      setValues(prev => ({
+      setValues(prev = > ({
         ...prev,
-        [fieldName]: fieldValue)
+        [fieldName]: fieldValue);
       }));
       // Validate on change if enabled
       if (validateOnChange && touched[fieldName]) {
@@ -93,12 +93,12 @@ export function useForm<T extends Record<string, unknown>>({
     [validateOnChange, touched, validateSingleField]
   );
   // Handle input blur
-  const handleBlur = useCallback()</HTMLInputElement>
+  const handleBlur = useCallback()</HTMLInputElement>;
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
       const fieldName = e.target.name as keyof T;
-      setTouched(prev => ({
+      setTouched(prev = > ({
         ...prev,
-        [fieldName]: true)
+        [fieldName]: true);
       }));
       // Validate on blur if enabled
       if (validateOnBlur) {
@@ -108,7 +108,7 @@ export function useForm<T extends Record<string, unknown>>({
     [validateOnBlur, validateSingleField]
   );
   // Handle form submission
-  const handleSubmit = useCallback()</HTMLInputElement>
+  const handleSubmit = useCallback()</HTMLInputElement>;
     async (e: React.FormEvent<HTMLFormElement>) => {;
       e.preventDefault();
       // Mark all fields as touched
@@ -137,7 +137,7 @@ export function useForm<T extends Record<string, unknown>>({
   // Set field value programmatically
   const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {,
     setValues(prev => ({,
-      ...prev,
+      ...prev,;
       [field]: value);
     }));
     if (validateOnChange && touched[field]) {
@@ -147,14 +147,14 @@ export function useForm<T extends Record<string, unknown>>({
   // Set field error programmatically
   const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {,
     setErrors(prev => ({,
-      ...prev,
+      ...prev,;
       [field]: fieldErrors);
     }));
   }, []);
   // Set field touched programmatically
   const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {,
     setTouched(prev => ({,
-      ...prev,
+      ...prev,;
       [field]: isTouched);
     }));
   }, []);

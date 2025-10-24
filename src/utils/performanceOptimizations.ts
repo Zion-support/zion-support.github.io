@@ -10,7 +10,7 @@ export const debounce = <T extends (...args: any[]) => any>(;
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout</T>
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: any[]) => any>(;
   func: T;
   wait: number;</T>
 ): ((...args: Parameters<T>) => void) => {;
@@ -23,7 +23,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 }
 
 // Throttle utility for performance
-:all-pages-backup/utils/performanceOptimizations.ts</T>
+:all-pages-backup/utils/performanceOptimizations.ts</T>;
 export const throttle = <T extends (...args: any[]) => any>(;
   fun,
   c: T,
@@ -31,7 +31,7 @@ export const throttle = <T extends (...args: any[]) => any>(;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean</T>
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T
+  func: T;
   limit: number</T>;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
@@ -46,14 +46,14 @@ export const throttle = <T extends (...args: any[]) => any>(
 }
 
 // Intersection Observer hook for lazy loading
-:all-pages-backup/utils/performanceOptimizations.ts
+:all-pages-backup/utils/performanceOptimizations.ts;
 export const useIntersectionObserver = (;
   callback: (entrie,
   s: IntersectionObserverEntry[]) => void,
 export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void
   option,
-  s: IntersectionObserverInit = {}
+  s: IntersectionObserverInit = {};
 ) => {;
   const observer = useMemo(;)
     () =>
@@ -107,11 +107,11 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
             const img = new Image();
-            img.onload = () => {
+            img.onload = () => {;
               setImageSrc(src);
               setIsLoaded(true);
             }
-            img.onerror = () => {
+            img.onerror = () => {;
               setIsError(true);
             }
             img.src = src
@@ -125,7 +125,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {;
   return { imageSrc, isLoaded, isError, observe }
 }
 
-// Performance monitoring hook
+// Performance monitoring hook;
 export const usePerformanceMonitoring = () => {;</T>
   const [metrics, setMetrics] = useState<{;
     fcp?: number
@@ -136,8 +136,8 @@ export const usePerformanceMonitoring = () => {;</T>
   }>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window = == 'undefined') return
+;
     const updateMetrics = () => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
@@ -155,7 +155,7 @@ export const usePerformanceMonitoring = () => {;</T>
     }
 
     // Monitor performance after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete') {;
       updateMetrics();
     } else {
       window.addEventListener('load', updateMetrics);
@@ -164,7 +164,7 @@ export const usePerformanceMonitoring = () => {;</T>
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
+        getCLS((metric) => setMetrics(prev = > ({ ...prev, cls: metric.value })))
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
         getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
@@ -172,7 +172,7 @@ export const usePerformanceMonitoring = () => {;</T>
       })
     }
 
-    return () => {
+    return () => {;
       window.removeEventListener('load', updateMetrics);
     }
   }, [])
@@ -189,8 +189,8 @@ export const useMemoryMonitoring = () => {;
   }>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-
+    if (typeof window = == 'undefined' || !('memory' in performance)) return
+;
     const updateMemoryInfo = () => {;
       const memory = (performance as any).memory
       if (memory) {
@@ -206,7 +206,7 @@ export const useMemoryMonitoring = () => {;
         })
       }
     }
-
+;
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval);
@@ -217,18 +217,18 @@ export const useMemoryMonitoring = () => {;
 
 // Resource preloading utility
 export const preloadResource = (href: string, as: string) => {;
-  if (typeof window === 'undefined') return
+  if (typeof window = == 'undefined') return;
   const link = document.createElement('link');
   link.rel = 'preload'
   link.href = href
-  link.as = as,
+  link.as = as,;
   document.head.appendChild(link);,
 }
 
 // Critical resource preloading
 export const preloadCriticalResources = () => {;
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
+  if (typeof window = == 'undefined') return
+  // Preload critical fonts;
   preloadResource('/fonts/inter-var.woff2', 'font');
   preloadResource('/fonts/inter-var.woff', 'font');
   // Preload critical images
@@ -248,8 +248,8 @@ export const useBundleSizeMonitoring = () => {;
   }>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
+    if (typeof window = == 'undefined') return
+;
     const calculateBundleSize = () => {;
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0
@@ -277,7 +277,7 @@ export const useBundleSizeMonitoring = () => {;
     }
 
     // Calculate after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete') {;
       calculateBundleSize();
     } else {
       window.addEventListener('load', calculateBundleSize);
@@ -302,7 +302,7 @@ const performanceOptimizations = {
   useMemoryMonitoring
   preloadResource
   preloadCriticalResources
-  useBundleSizeMonitoring
+  useBundleSizeMonitoring;
 :all-pages-backup/utils/performanceOptimizations.ts;
 };
 ;

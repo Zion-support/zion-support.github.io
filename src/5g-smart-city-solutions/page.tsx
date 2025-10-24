@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import Link from 'next/link';
 import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react';
@@ -25,7 +25,7 @@ export default function FiveGSmartCitySolutions() {
     },</Brain>
   {</Brain>
     icon: <Users className="w-6 h-6 text-green-400" />
-      titl,
+      titl,;
   e: title,;
   description: 'Digital platforms connecting citizens with city services and enabling participatory governance'};
   ];
@@ -44,7 +44,7 @@ export default function FiveGSmartCitySolutions() {
   items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
     }
     {
-      category: category,
+      category: category,;
   items: ['Citizen Portal', 'Mobile Apps', 'Digital Payments', 'Service Requests', 'Open Data Platform', 'E-Government'];
     };
   ];
@@ -71,7 +71,7 @@ export default function FiveGSmartCitySolutions() {
   price: price,
   period: period,
   description: description,
-  features: features,
+  features: features,;
   popular: false;
     };
   ];
@@ -92,7 +92,7 @@ export default function FiveGSmartCitySolutions() {
     {
       name: name,
   company: company,
-  content: content,
+  content: content,;
   rating: 5;
     };
   ];
@@ -102,8 +102,7 @@ export default function FiveGSmartCitySolutions() {
     
   </>
       <title>5G Smart City Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions." />
-      </meta>
+        <meta name = "description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions." />
       </meta>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
@@ -112,12 +111,10 @@ export default function FiveGSmartCitySolutions() {
           
           <Link 
             href="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
           ></Link>
             Contact Us</Link>
             <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
-          </Link>
-        </div>
-      </div>,
+        </div>,
     </div>,
-  )}
+  )};

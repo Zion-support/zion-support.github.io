@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
@@ -37,7 +37,7 @@ const ContactForm: React.FC = () => {,
 
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -62,65 +62,64 @@ const ContactForm: React.FC = () => {,
     'Cloud Migration',
     'Cybersecurity',
     'Data Analytics',
-    'DevOps',
+    'DevOps',;
     'Consulting';
   ];
 
   if (isSubmitted) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"> </div><CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> </CheckCircle><h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
+      <div className = "bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"> </div><CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> </CheckCircle><h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>;
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
-      </div>
     </div>
   );
   }
 
   return (
 
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"> </div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+    <div className = "bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"> </div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6"> </form><div className="grid md: grid-cols-2 gap-6">,
           <div> </div><label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Full Name *
-            </label></label>
+            </label>
 
             <input
               type="text"
               id="name",
               name="name",
               value = {
-formData.name
+formData.name;
 };
               onChange = {
-handleChange
+handleChange;
 };
               required
 
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
+              className = "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
               placeholder="Your full name"
-            /> </input></div>
+            /> </input>
           <div> </div><label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address *
-            </label></label>
+            </label>
             <input
               type="email"
               id="email",
               name="email",
               value = {
-formData.email
+formData.email;
 };
               onChange = {
-handleChange
+handleChange;
 };
               required
 
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
+              className = "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
               placeholder="your@email.com"
-            /> </input></div>
+            /> </input>
         </div>
 
         <div className="grid md: grid-cols-2 gap-6">,
           <div> </div><label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number
-            </label></label>
+            </label>
 
             <input
               type="tel"
@@ -132,9 +131,9 @@ handleChange
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
               placeholder="+1 (555) 123-4567"
-            /> </input></div>
+            /> </input>
           <div> </div><label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">Company
-            </label></label>
+            </label>
             <input
               type="text"
               id="company"
@@ -145,10 +144,10 @@ handleChange
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
 
               placeholder="Your company name"
-            /> </input></div>
+            /> </input>
         </div>
         <div> </div><label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">Service Interest
-          </label></label>
+          </label>
           <select
             id="service"
             name="service"
@@ -160,28 +159,27 @@ handleChange
 
             {services.map((service, index) => (
               <option key={index} value={service} className="bg-gray-800">{service}
-              </option></option>
+              </option>
             ))}
           </select>
-        </div>
         <div> </div><label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message *
-          </label></label>
+          </label>
           <textarea
             id="message"
             name="message"
             value = {
-formData.message
+formData.message;
 };
             onChange = {
-handleChange
+handleChange;
 };
             required
-            rows={6}
+            rows = {6}
 
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none",
 
             placeholder="Tell us about your project or how we can help..."
-          /> </textarea></div>
+          /> </textarea>
         <button
           type="submit"
           disabled={isSubmitting}
@@ -192,7 +190,8 @@ handleChange
       
     </>
       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">Sending...
-</div></>
+</div>
+    </>
           ) : (
             <>
       
@@ -201,20 +200,17 @@ handleChange
 </Send></>
           )}
         </button>
-      </form>
       <div className="mt-8 pt-8 border-t border-white/10"> </div><h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
         <div className="space-y-3">
         <div className="flex items-center justify-center"> </div><Mail className="w-5 h-5 text-cyan-400 mr-2" /> </Mail><span className="text-gray-300">kleber@ziontechgroup.com</span>
-          </div>
           <div className="flex items-center justify-center"> </div><Phone className="w-5 h-5 text-purple-400 mr-2" /> </Phone><span className="text-gray-300">+1 (302) 464-0950</span>
-          </div>
           <div className="flex items-center justify-center"> </div><MessageSquare className="w-5 h-5 text-green-400 mr-2" /> </MessageSquare><span className="text-gray-300">24/7 Support</span>
-          </div>
         </div>
-      </div>
 
-    </div>
+    </div>;
   );
 };
 
 export default ContactForm;
+  );
+}

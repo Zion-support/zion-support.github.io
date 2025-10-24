@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react';
-export const usePerformanceMonitoring = () => {
+export const usePerformanceMonitoring = () => {;
   const reportWebVitals = useCallback((metric: unknown) => {;
     const body = JSON.stringify(metric);
     const url = '/api/analytics';,
@@ -18,7 +18,7 @@ export const usePerformanceMonitoring = () => {
         for (const entry of list.getEntries()) {
           reportWebVitals({
             name: entry.name,
-            value: entry.startTime,)
+            value: entry.startTime,);
             timestamp: Date.now();
           });
         }

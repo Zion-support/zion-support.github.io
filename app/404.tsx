@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
@@ -8,8 +8,8 @@ const NotFound = () => {
   return (
     <div>
       <Head>
-        <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
+        <title>About - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
@@ -19,10 +19,9 @@ const NotFound = () => {
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
-          </div>
           
           {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">Page Not Found
           </h1>
           
           <p className="text-lg text-gray-300 mb-8">Oops! The page you're looking for seems to have vanished into the digital void. 
@@ -54,7 +53,6 @@ const NotFound = () => {
               <RefreshCw className="w-5 h-5 mr-2" />
               Refresh
             </button>
-          </div>
           
           {/* Search Suggestion */}
           <div className="mt-12">
@@ -66,7 +64,7 @@ const NotFound = () => {
                 placeholder="Search our services..."
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 onKeyPress={(e) => {
-                  if (e.key === 'Enter') {
+                  if (e.key === 'Enter') {;
                     const query = e.target.value;
                     if (query.trim()) {
                       window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
@@ -75,10 +73,9 @@ const NotFound = () => {
                 }}
               />
             </div>
-          </div>
           
           {/* Popular Links */}
-          <div className="mt-12">
+          <div className = "mt-12">
             <p className="text-gray-400 mb-6">Popular pages:</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -93,14 +90,12 @@ const NotFound = () => {
               <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Blog
               </Link>
-            </div>
           </div>
-        </div>
       </div>
-
-    </>
+    </>;
   );
 };
 
 export default NotFound;
-
+  );
+}

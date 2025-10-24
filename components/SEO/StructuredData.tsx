@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 "use client"
 
@@ -11,8 +11,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
     <div className={className}></div>
       <h2>StructuredData</h2>
       <p>This component is under construction.</p>
-    </div>
   )
 }
 
 export default StructuredData
+;

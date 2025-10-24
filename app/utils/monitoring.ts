@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
@@ -25,7 +25,7 @@ const performanceConfig = {
   d: 200, needsImprovement: 500 }
   }
 }
-export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -46,7 +46,7 @@ class MonitoringService {
   private errors: ErrorReport[] = [],
   private observer: PerformanceObserver | null = null,
   constructor() {
-    if (typeof window !== 'undefined') {,
+    if (typeof window !== 'undefined') {,;
       this.initializeMonitoring();,
     }
   }
@@ -66,9 +66,9 @@ class MonitoringService {
         // Largest Contentful Paint;
 
 const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
+          const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
+          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -80,7 +80,7 @@ const fidObserver = new PerformanceObserver((list) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime
             this.reportMetric('fid', this.metrics.fid)
           })
-        })
+        });
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift
         let clsValue = 0;
@@ -90,7 +90,7 @@ const clsObserver = new PerformanceObserver(list => {
           entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {
               clsValue += entry.value,
-              this.metrics.cls = clsValue,
+              this.metrics.cls = clsValue,;
               this.reportMetric('cls', clsValue);
             }
           })
@@ -104,7 +104,7 @@ const fcpObserver = new PerformanceObserver(list => {
             this.metrics.fcp = entry.startTime)
             this.reportMetric('fcp', entry.startTime)
           })
-        })
+        });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
         }
@@ -116,7 +116,7 @@ const fcpObserver = new PerformanceObserver(list => {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             }
-        })
+        });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch (error) {
   // Long task API might not be available
@@ -132,7 +132,7 @@ const fcpObserver = new PerformanceObserver(list => {
             if (entry.duration > 1000) {
               }
           })
-        })
+        });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
         }
@@ -177,7 +177,7 @@ const fcpObserver = new PerformanceObserver(list => {
   public logError(error: ErrorReport): void {,
     this.errors.push(error)
     // Keep only last 50 errors
-    if (this.errors.length > 50) {,
+    if (this.errors.length > 50) {,;
       this.errors = this.errors.slice(-50);,
     }
     // Send to error tracking service (if configured)
@@ -191,7 +191,7 @@ const fcpObserver = new PerformanceObserver(list => {
   public clearErrors(): void {
   this.errors = []
 }
-  public measureMemory(): void {
+  public measureMemory(): void {;
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,
   t: number } }).memory
@@ -209,7 +209,7 @@ const fcpObserver = new PerformanceObserver(list => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         // eslint-disable-next-line no-console
-    console.log('Performance metrics:', {)
+    console.log('Performance metrics: ', {)
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`
@@ -222,8 +222,8 @@ const fcpObserver = new PerformanceObserver(list => {
       }
     }
   }
-}
+};
 // Singleton instance;
 
-const monitoring = new MonitoringService()
+const monitoring = new MonitoringService();
 export default monitoring;

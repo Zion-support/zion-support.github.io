@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
 "use client";
 import React from "react";
 interface AccessibilityComponentsProps {
@@ -13,12 +7,12 @@ interface AccessibilityComponentsProps {
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
   return (
-    <div className={className}> </div><h2>Accessibility Components</h2>
+    <div className = {className}> </div><h2>Accessibility Components</h2>
       <p>Accessibility components for enhanced user experience.</p>
-    </div>
-
+;
   );
 };
 
 export default AccessibilityComponents;
-
+  );
+}

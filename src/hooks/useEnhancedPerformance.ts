@@ -19,7 +19,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
-    trackAnalytics = true
+    trackAnalytics = true;
   } = _options;
   const mountTimeRef = useRef<number>(0);</number>
   const renderCountRef = useRef<number>(0);
@@ -67,7 +67,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
-          component,
+          component,;
           ...context);
         });
       }
@@ -75,14 +75,14 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     [component, trackErrors]
   );
   const trackUserAction = useCallback()</string>
-    (action: string, metadata?: Record<string, unknown>) => {
+    (action: string, metadata?: Record<string, unknown>) => {;
       if (trackAnalytics) {;
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
     },
     [component, trackAnalytics]
   );
-  const measureOperation = useCallback()
+  const measureOperation = useCallback();
     (operationName: string) => {;
       const startTime = performance.now();
       return {

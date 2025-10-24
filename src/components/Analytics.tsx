@@ -4,7 +4,7 @@ interface AnalyticsProps {
 }
 ;
 const Analytics: React.FC = () => {
-:all-pages-backup/components/Analytics.tsx
+:all-pages-backup/components/Analytics.tsx;
   useEffect(() => {;
     const initAnalytics = () => {;,
       if (typeof window !== &quot;undefined&quot; && window.gtag) {,

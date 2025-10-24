@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from './Navigation';
 import React, { useEffect, useState, useCallback } from 'react';
@@ -35,17 +35,17 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     reducedMotion: false,
     fontSize: 'normal',
     screenReader: false,
-    keyboardNavigation: false,
+    keyboardNavigation: false,;
   });
   // Detect user preferences
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return;
     // Check for reduced motion preference;
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
     // Check for high contrast preference;
 
-const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches,
+const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches,;
     // Check for color scheme preference;
 
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches,
@@ -53,7 +53,7 @@ const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matc
       ...prev
       reducedMotion: prefersReducedMotion,
 
-    highContrast: prefersHighContrast}))
+    highContrast: prefersHighContrast}));
     // Listen for changes in user preferences;
 
 const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
@@ -70,18 +70,16 @@ const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
     return (
     <div>
       ) => {
-    </>
-    </>
-      motionQuery.removeEventListener('change', handleMotionChange)
+    </>motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
   }, [])
   // Apply accessibility styles
-  useEffect(() => {
+  useEffect(() => {;
     if (typeof window === 'undefined') return;
 
 const root = document.documentElement
     // Apply high contrast mode
-    if (accessibilitySettings.highContrast) {
+    if (accessibilitySettings.highContrast) {;
       root.classList.add('high-contrast');
     } else {
   root.classList.remove('high-contrast')
@@ -112,7 +110,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {,
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
     // Apply reduced motion
-    if (accessibilitySettings.reducedMotion) {
+    if (accessibilitySettings.reducedMotion) {;
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
@@ -122,17 +120,17 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {,
 
   // Keyboard navigation enhancement;
 
-const setupKeyboardNavigation = useCallback(() => {
+const setupKeyboardNavigation = useCallback(() => {;
     if (typeof window === 'undefined') return;
 
 consthandleKeyDown = ($2) => {
 $3
-  </>
+  </>;
 };
       }
 
       // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
+      if (event.key = == 'Escape') {
         const activeElement = document.activeElement as HTMLElement
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
           activeElement.click()}
@@ -151,15 +149,13 @@ $3
     return (
     <>
       ) => document.removeEventListener('keydown', handleKeyDown
-    </>
-    </>
-    </>
+    </></>;
   );
   }, [])
   // Screen reader enhancements;
 
 const setupScreenReaderSupport = useCallback(() => {
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return;
     // Add live region for dynamic content updates;
 
 const liveRegion = document.createElement('div')
@@ -168,11 +164,11 @@ const liveRegion = document.createElement('div')
     liveRegion.className = 'sr-only'
     liveRegion.id = 'live-region'
     document.body.appendChild(liveRegion)
-
+;
     // Announce page changes;
 
 const announcePageChange = ($2) => {
-$3
+$3;
 };
     }
 
@@ -180,10 +176,10 @@ $3
     const originalPushState = history.pushState;
 
 const originalReplaceState = history.replaceState
-    history.pushState = function(...args) {
+    history.pushState = function(...args) {;
       originalPushState.apply(history, args);
       announcePageChange('Page changed');
-    history.replaceState = function(...args) {
+    history.replaceState = function(...args) {;
       originalReplaceState.apply(history, args);
       announcePageChange('Page updated');
   }, [])
@@ -191,15 +187,15 @@ const originalReplaceState = history.replaceState
 
 const setupFocusManagement = useCallback(() => {
     if (typeof window === 'undefined') return
-
+;
     // Trap focus in modals;
 
 const trapFocus = ($2) => {
-$3
+$3;
 };
 
           } else {
-            if (document.activeElement === lastElement) {
+            if (document.activeElement = == lastElement) {;
               firstElement.focus();
               e.preventDefault();
             }
@@ -211,25 +207,23 @@ $3
       return (
     <>
       ) => element.removeEventListener('keydown', handleTabKey)
-    </>
-    </>
-    }
+    </>}
     // Apply focus trap to modals;
 
 const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
-    modals.forEach(modal => {
+    modals.forEach(modal = > {;
   const cleanup = trapFocus(modal as HTMLElement);
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup
-}, [])
+}, []);
   // ARIA labels enhancement;
 
 const enhanceARIALabels = useCallback(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     // Add missing ARIA labels to interactive elements;
 
 const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])'),
-    buttons.forEach((button, index) => {
+    buttons.forEach((button, index) => {;
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
         button.setAttribute('aria-label', text);
@@ -240,11 +234,11 @@ const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-l
 
 const images = document.querySelectorAll('img: not([alt])'),
     images.forEach((img, index) => {
-      img.setAttribute('alt', `Image ${index + 1}`)
+      img.setAttribute('alt', `Image ${index + 1}`);
     // Add ARIA labels to form inputs;
 
 const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
-    inputs.forEach((input, index) => {
+    inputs.forEach((input, index) => {;
       const placeholder = input.getAttribute('placeholder');
       const label = input.getAttribute('name');
       if (placeholder) {
@@ -257,42 +251,42 @@ const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-lab
   }, [])
   // Skip links;
 
-const addSkipLinks = useCallback(() => {
+const addSkipLinks = useCallback(() => {;
     if (typeof window === 'undefined') return;
 
 const skipLinks = [
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
-    ]
+    ];
     const skipLinksContainer = document.createElement('div');
-    skipLinksContainer.className = 'skip-links'
+    skipLinksContainer.className = 'skip-links';
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
     skipLinks.forEach(({ href, text }) => {
       const link = document.createElement('a');
       link.href = href
       link.textContent = text
-      link.className = 'skip-link'
+      link.className = 'skip-link';
       link.setAttribute('data-skip-link', 'true');
       skipLinksContainer.appendChild(link);
     document.body.insertBefore(skipLinksContainer, document.body.firstChild);
   }, [])
   // Color contrast checking;
 
-const checkColorContrast = useCallback(() => {
+const checkColorContrast = useCallback(() => {;
     if (typeof window === 'undefined') return;
 
 const checkElementContrast = ($2) => {
 $3
-  </>
+  </>;
 };
     }
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    elements.forEach(element => checkElementContrast(element as HTMLElement))
-  }, [])
+    elements.forEach(element = > checkElementContrast(element as HTMLElement))
+  }, []);
   // Voice navigation support;
 
-const setupVoiceNavigation = useCallback(() => {
+const setupVoiceNavigation = useCallback(() => {;
   if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return;
 
 const recognition = new (window as any).webkitSpeechRecognition()
@@ -313,12 +307,12 @@ const recognition = new (window as any).webkitSpeechRecognition()
 } else if (command.includes('call phone')) {
         window.location.href = 'tel: +13024640950'} else if (command.includes('send email')) {
         window.location.href = 'mailto: kleber@ziontechgroup.com'}
-    }
+    };
     // Add voice navigation button;
 
 const voiceButton = document.createElement('button')
     voiceButton.textContent = 'Voice Navigation'
-    voiceButton.className = 'voice-navigation-button'
+    voiceButton.className = 'voice-navigation-button';
     voiceButton.setAttribute('aria-label', 'Start voice navigation');
     voiceButton.onclick = () => recognition.start();
     const header = document.querySelector('header') || document.querySelector('nav');
@@ -365,4 +359,5 @@ export default AdvancedAccessibilityEnhancer
 }
 
 export default AdvancedAccessibilityEnhancerPage
-
+  );
+}

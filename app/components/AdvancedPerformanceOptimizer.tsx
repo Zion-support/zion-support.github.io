@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
 
@@ -30,21 +30,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fid: 0,
     cls: 0,
     fcp: 0,
-    ttfb: 0})
+    ttfb: 0});
   // Web Vitals monitoring;
 
 const measureWebVitals = useCallback(() => {
-    if (enableWebVitals && typeof window !== 'undefined') {
+    if (enableWebVitals && typeof window !== 'undefined') {;
       // Measure Largest Contentful Paint;
 
 const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+        const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-        setPerformanceMetrics(prev => ({
+        setPerformanceMetrics(prev = > ({
           ...prev)
           lcp: lastEntry.renderTime || lastEntry.loadTime || 0})
       })
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // Measure First Input Delay;
 
 const fidObserver = new PerformanceObserver((list) => {
@@ -56,7 +56,7 @@ const fidObserver = new PerformanceObserver((list) => {
             fid)
 })
         })
-      })
+      });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // Measure Cumulative Layout Shift
       let clsValue = 0;
@@ -72,7 +72,7 @@ const clsObserver = new PerformanceObserver((list) => {
   s: clsValue})
         })
       })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
       // Measure First Contentful Paint;
 
 const fcpObserver = new PerformanceObserver((list) => {
@@ -82,7 +82,7 @@ const fcpObserver = new PerformanceObserver((list) => {
             ...prev)
             fcp: entry.startTime})
         })
-      })
+      });
       fcpObserver.observe({ entryTypes: ['paint'] });
   }, [enableWebVitals])
   // Advanced caching strategies;
@@ -90,15 +90,15 @@ const fcpObserver = new PerformanceObserver((list) => {
 const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return
     // Service Worker registration
-    if ('serviceWorker' in navigator && enableServiceWorker) {
+    if ('serviceWorker' in navigator && enableServiceWorker) {;
       navigator.serviceWorker.register('/sw.js');
         .then((registration) => {
           // eslint-disable-next-line no-console
-    console.log('Service Worker registered:', registration);
+    console.log('Service Worker registered: ', registration);
         })
         .catch((registrationError) => {
           // eslint-disable-next-line no-console
-    console.error('Service Worker registration failed:', registrationError);
+    console.error('Service Worker registration failed: ', registrationError);
         })
 
     }
@@ -107,11 +107,11 @@ const setupAdvancedCaching = useCallback(() => {
 const cache = new Map()
 
     const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
+    window.fetch = async (input, init) => {;
       const url = typeof input === 'string' ? input : input.url;
 
 const cacheKey = `${url}-${JSON.stringify(init)}`
-      if (cache.has(cacheKey)) {
+      if (cache.has(cacheKey)) {;
         return cache.get(cacheKey);
       const response = await originalFetch(input, init);
       if (response.ok) {
@@ -120,7 +120,7 @@ const cacheKey = `${url}-${JSON.stringify(init)}`
   }, [enableServiceWorker])
   // Image optimization;
 
-const optimizeImages = useCallback(() => {
+const optimizeImages = useCallback(() => {;
   if (typeof window === 'undefined') return;
 
 const images = document.querySelectorAll('img')
@@ -130,10 +130,10 @@ const images = document.querySelectorAll('img')
       if (!img.decoding) {
   img.decoding = 'async'
     })
-  }, [])
+  }, []);
   // Preload critical resources;
 
-const preloadCriticalResources = useCallback(() => {
+const preloadCriticalResources = useCallback(() => {;
   if (typeof window === 'undefined') return;
 
 const criticalResources = [
@@ -146,7 +146,7 @@ const criticalResources = [
       link.href = resource
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
+        link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     })
   }, [])
@@ -168,7 +168,7 @@ const reportPerformanceMetrics = useCallback(() => {
       })
   }, [performanceMetrics])
   useEffect(() => {
-    if (enableAdvancedCaching) {
+    if (enableAdvancedCaching) {;
       setupAdvancedCaching();
     if (enableImageOptimization) {
       optimizeImages();

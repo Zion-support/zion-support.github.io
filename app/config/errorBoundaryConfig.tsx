@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 /**
 * Error Boundary Configuration
 * Centralized configuration for error handling across the application
@@ -49,7 +49,7 @@ default: 'Something went wrong. Please try again.',
 notFound: 'The requested resource was not found.',
     timeout: 'Request timed out. Please try again.',
 serverError: 'Server error occurred. Please try again later.',
-    validation: 'Validation error. Please check your input.',
+    validation: 'Validation error. Please check your input.',;
 };
 /**
 * Get error boundary configuration based on environment
@@ -75,7 +75,7 @@ notFound: NotFoundFallback}}
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+    <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
 </div><div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
 </div><svg
@@ -88,11 +88,11 @@ viewBox="0 0 24 24"
 strokeLinecap="round"
 strokeLinejoin="round"
 strokeWidth = {
-2
+2;
 };
-d="M6 18L18 6M6 6l12 12"
+d = "M6 18L18 6M6 6l12 12"
 />
-</path></svg>
+</path>
 </div>
 <h2 className="mt-4 text-2xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>
 <p className="mt-2text-centertext-gray-600">
@@ -107,9 +107,9 @@ onClick={resetError}
 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Try Again</button>,
 <button
 onClick = {
-resetError
+resetError;
 };
-className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">Try Again</button>,
+className = "flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700transition-colors">Try Again</button>,
 <button,
 onClick={() =>(window.location.href = '/')}</button>
 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors">,
@@ -117,14 +117,13 @@ Go Home
 </
 </div>
 </div>
-</div>
 /**
 * Network error fallback component
-*/
+*/;
 function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+    <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
 </div><div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
 </div><svg
@@ -137,11 +136,11 @@ viewBox="0 0 24 24"
 strokeLinecap="round"
 strokeLinejoin="round"
 strokeWidth = {
-2
+2;
 };
-d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
+d = "M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
 />
-</path></svg>
+</path>
 </div>
 <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
 <p className="mt-2 text-center text-gray-600">Unable to connect to the server. Please check your internet connection and try again.</p>
@@ -149,7 +148,6 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 </div><button
 onClick={resetError}
 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Retry Connection</button>,
-</div>
 </div>
 </div>
 /**
@@ -173,7 +171,6 @@ onClick={() =>window.history.back()}</button>
 className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors">,
 Go Back
 </
-</div>
 </div>
 </div>
 /**
@@ -207,4 +204,6 @@ url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 }
 
 
-export default getErrorBoundaryConfig
+export default getErrorBoundaryConfig;
+  );
+}

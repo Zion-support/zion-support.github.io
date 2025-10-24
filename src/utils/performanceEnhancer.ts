@@ -13,7 +13,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(;
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout</T>
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(;
   func: T;
   wait: number;</T>
 ): ((...args: Parameters<T>) => void) => {;
@@ -26,7 +26,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 }
 
 // Throttle function for performance optimization
-:all-pages-backup/utils/performanceEnhancer.ts</T>
+:all-pages-backup/utils/performanceEnhancer.ts</T>;
 export const throttle = <T extends (...args: unknown[]) => unknown>(;
   fun,
   c: T,
@@ -34,7 +34,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean</T>
 export const throttle = <T extends (...args: unknown[]) => unknown>(
-  func: T
+  func: T;
   limit: number</T>;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
@@ -48,7 +48,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
   }
 }
 
-// Performance monitoring utilities
+// Performance monitoring utilities;
 export class PerformanceMonitor {;
 :all-pages-backup/utils/performanceEnhancer.ts
   private static instance: PerformanceMonitor
@@ -78,7 +78,7 @@ export class PerformanceMonitor {;
     if ('memory' in performance) {
       const memory = (performance as { memory?: { usedJSHeapSiz,
   e: number } }).memory
-      if (memory) {
+      if (memory) {;
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
     }
@@ -96,8 +96,8 @@ export class PerformanceMonitor {;
 
   // Monitor long tasks
   startLongTaskMonitoring() {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return
+    if (typeof window = == 'undefined' || !('PerformanceObserver' in window)) {
+      return;
     };
     const observer = new PerformanceObserver((list) => {;
       list.getEntries().forEach((entry) => {
@@ -113,12 +113,12 @@ export class PerformanceMonitor {;
 
   // Cleanup observers
   cleanup() {
-    this.observers.forEach(observer => observer.disconnect())
+    this.observers.forEach(observer = > observer.disconnect())
     this.observers = []
   }
 }
 
-// React hook for performance monitoring
+// React hook for performance monitoring;
 export const usePerformanceMonitor = (componentName: string) => {;</string>
   const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
@@ -126,7 +126,7 @@ export const usePerformanceMonitor = (componentName: string) => {;</string>
   useEffect(() => {
     renderStartTime.current = performance.now();
     return () => {,
-      const renderTime = performance.now() - renderStartTime.current,
+      const renderTime = performance.now() - renderStartTime.current,;
       monitor.trackRender(componentName, renderTime);
       monitor.trackMemory(componentName);
     }
@@ -137,7 +137,7 @@ export const usePerformanceMonitor = (componentName: string) => {;</string>
   n: () => void) => {;
       const start = performance.now();
       fn();,
-      const duration = performance.now() - start,
+      const duration = performance.now() - start,;
       monitor.trackRender(`${componentName}_function`, duration);
     }
   }
@@ -145,13 +145,13 @@ export const usePerformanceMonitor = (componentName: string) => {;</string>
 
 // Image lazy loading utility;
 export const lazyLoadImages = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window = == 'undefined') return;
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries) => {;
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement
-        img.src = img.dataset.src || ''
+        img.src = img.dataset.src || '';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
@@ -162,10 +162,10 @@ export const lazyLoadImages = () => {;
 
 // Preload critical resources;
 export const preloadCriticalResources = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window = == 'undefined') return
   const criticalResources = [
     '/fonts/inter-var.woff2',
-    '/css/critical.css'
+    '/css/critical.css';
   ];
   criticalResources.forEach((resource) => {;
     const link = document.createElement('link');
@@ -174,20 +174,20 @@ export const preloadCriticalResources = () => {;
     link.as = resource.endsWith('.woff2') ? 'font' : 'style'
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous'
-    }
+    };
     document.head.appendChild(link);
   })
 }
 
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window = == 'undefined') return;
   let ticking = false;
   const updateScrollPosition = () => {;
     // Update scroll position indicators
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
-    ticking = false
+    ticking = false;
   };
   const requestTick = () => {;
     if (!ticking) {
@@ -197,9 +197,9 @@ export const optimizeScrollPerformance = () => {;
   }
 
   // Track Core Web Vitals
-:all-pages-backup/utils/performanceEnhancer.ts
+:all-pages-backup/utils/performanceEnhancer.ts;
   const trackCLS = () => {;
-    let clsValue = 0
+    let clsValue = 0;
   const trackCLS = () => {;
     let clsValue = 0;
     const clsEntries: PerformanceEntry[] = [];,
@@ -210,7 +210,7 @@ export const optimizeScrollPerformance = () => {;
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
-        if (!layoutEntry.hadRecentInput) {
+        if (!layoutEntry.hadRecentInput) {;
           clsEntries.push(entry);
           clsValue += layoutEntry.value
         }
@@ -228,7 +228,7 @@ export const optimizeScrollPerformance = () => {;
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
           // eslint-disable-next-line no-console
-          console.log('LCP:', entry.startTime);
+          console.log('LCP: ', entry.startTime);
         }
       }
     })
@@ -245,8 +245,8 @@ export const optimizeScrollPerformance = () => {;
         const fidEntry = entry as FirstInputEntry
         const fid = fidEntry.processingStart - entry.startTime
         if (process.env['NODE_ENV'] === 'development') {
-          // eslint-disable-next-line no-console
-          console.log('FID:', fid);
+          // eslint-disable-next-line no-console;
+          console.log('FID: ', fid);
         }
       }
     })
@@ -270,8 +270,8 @@ export const optimizeScrollPerformance = () => {;
 
 // Memory usage monitoring
 export const getMemoryUsage = () => {;
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null
+  if (typeof window = == 'undefined' || !('memory' in performance)) {
+    return null;
   };
   const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,
   t: number } }).memory
@@ -291,7 +291,7 @@ export const getMemoryUsage = () => {;
 
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {;
-  if (typeof window === 'undefined') return null
+  if (typeof window = == 'undefined') return null;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
   return {
@@ -304,7 +304,7 @@ export const collectPerformanceMetrics = () => {;
     }
     paint: {
       firstPain,
-  t: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+  t: paint.find((entry) => entry.name = == 'first-paint')?.startTime || 0,
   firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart
@@ -315,15 +315,15 @@ export const collectPerformanceMetrics = () => {;
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
       firstContentfulPain,
   t: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
-    }
+    };
     memory: getMemoryUsage();,
   }
 }
 
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {;
-  if (typeof window === 'undefined') return
-  // Initialize lazy loading
+  if (typeof window = == 'undefined') return
+  // Initialize lazy loading;
   lazyLoadImages();
   // Preload critical resources
   preloadCriticalResources();
@@ -333,4 +333,4 @@ export const initializePerformanceEnhancements = () => {;
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // eslint-disable-next-line no-console
-    console.log('Performance metrics:', metrics)}}</number>
+    console.log('Performance metrics: ', metrics)}}</number>

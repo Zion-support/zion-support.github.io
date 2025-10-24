@@ -13,7 +13,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 
 )
 export const useAnalytics = ($2) => {
-$3
+$3;
 };
   return context
 }
@@ -27,16 +27,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     // Initialize analytics
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if (process.env.NODE_ENV === 'production') {
+      if (process.env.NODE_ENV = == 'production') {;
         const script = document.createElement('script');
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
         document.head.appendChild(script);
 
 
-        ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
-          (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {,
+        ;(window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || []
+        function gtag(...args: unknown[]) {,;
           ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
 
         }
@@ -49,11 +48,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as any).gtag) {
+      if ((window as any).gtag) {;
         (window as any).gtag('event', event, properties);
       }
       // Custom analytics
-      console.log('Analytics Event:', event, properties);
+      console.log('Analytics Event: ', event, properties);
     }
   };
 
@@ -63,11 +62,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       if ((window as any).gtag) {
         (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
           user_id: userId,
-          custom_map: traits
+          custom_map: traits;
         });
       }
       // Custom analytics
-      console.log('Analytics Identify:', userId, traits);
+      console.log('Analytics Identify: ', userId, traits);
     }
   };
 
@@ -78,18 +77,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
           page_title: name,
           page_location: window.location.href,
-          ...properties
+          ...properties;
         });
       }
       // Custom analytics
-      console.log('Analytics Page:', name, properties);
+      console.log('Analytics Page: ', name, properties);
     }
   };
 
   const value: AnalyticsContextType = {,
     track,
     identify,
-    page
+    page;
   };
 
 const useAnalytics = () => {
@@ -100,5 +99,7 @@ const useAnalytics = () => {
   )
 }
 
-
+;
 export default useAnalytics;
+  );
+}

@@ -12,7 +12,7 @@ referrerPolicy?: string;
 permissionsPolicy?: string;
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {,
-// Content Security Policy
+// Content Security Policy;
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http,
   s:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}
 // Content Security Policy
@@ -38,7 +38,7 @@ xContentTypeOptions: 'nosniff',
 referrerPolicy: 'strict-origin-when-cross-origin',
 // Permissions Policy (formerly Feature Policy)
 permissionsPolicy: [,
-'camera=()',
+'camera = ()',
 'microphone=()',
 'geolocation=()',
 'payment=()',
@@ -55,11 +55,11 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders()
 customConfig?: Partial<SecurityHeadersConfig>): Record</SecurityHeadersConfig><string, string> {}
 const config = { ...defaultSecurityHeaders, ...customConfig }
-const headers: Record<string, string> = {}
-'X-XSS-Protection': '1; mode=block'
+const headers: Record<string, string> = {};
+'X-XSS-Protection': '1; mode = block'
 'X-DNS-Prefetch-Control': 'on'}
 }
-if (config.contentSecurityPolicy) {}
+if (config.contentSecurityPolicy) {};
 headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
 }
 if (config.strictTransportSecurity) {}
@@ -107,7 +107,7 @@ return headers
 }
 /**
 * Get security headers in Next.js format
-*/</string>
+*/</string>;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)</SecurityHeadersConfig>;
 ): Array<{ key: string; valu,
   e: string }> {
@@ -123,5 +123,5 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 ): Array</SecurityHeadersConfig><{/* TODO: Fix JSX expression */}
 e: string }> {/* TODO: Fix JSX expression */}
 }))
-}
+};
 export default defaultSecurityHeaders;

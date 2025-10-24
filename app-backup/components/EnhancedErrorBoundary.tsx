@@ -22,7 +22,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-<<<<<<< HEAD
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = ''',</EnhancedErrorBoundaryProps>
     console.error('Error caught by "boundary": ";,</EnhancedErrorBoundaryProps>
             <p className=&quot;text-gray-300 mb-6&quot;>We"</p>
@@ -30,7 +29,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '',</EnhancedErrorBoundaryProps>
     console.error('Error caught by "boundary": \';,</EnhancedErrorBoundaryProps>
             <p className=&quot;text-gray-300 mb-6&quot;>We\'
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</p>
             {process.env.NODE_ENV === 'development')</p>
 
 export default EnhancedErrorBoundary;

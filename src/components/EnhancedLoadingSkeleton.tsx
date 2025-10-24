@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -30,7 +30,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
   {
     icon: TrendingUp,
   title: title,
-  description: description,
+  description: description,;
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
     };
   ]};

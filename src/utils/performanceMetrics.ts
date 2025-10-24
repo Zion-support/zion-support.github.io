@@ -46,7 +46,7 @@ export class PerformanceMetrics {;
   private observers: PerformanceObserver[] = []
 
   constructor() {
-    if (typeof window !== 'undefined') {,
+    if (typeof window !== 'undefined') {,;
       this.initializeObservers();,
     }
   }
@@ -68,7 +68,7 @@ export class PerformanceMetrics {;
         // Navigation timing
         const navObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
+            if (entry.entryType = == 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
@@ -101,11 +101,11 @@ export class PerformanceMetrics {;
         })
         navObserver.observe({ entryTypes: ['navigation'] })
         this.observers.push(navObserver)
-
+;
         // Paint timing;
         const paintObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
+            if (entry.name = == 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
@@ -124,7 +124,7 @@ export class PerformanceMetrics {;
               })
             }
           }
-        })
+        });
         paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver);
         // Largest Contentful Paint
@@ -149,7 +149,7 @@ export class PerformanceMetrics {;
   y: 'load'
             })
           }
-        })
+        });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
         // Layout Shift
@@ -175,12 +175,12 @@ export class PerformanceMetrics {;
             categor,
   y: 'runtime'
           })
-        })
+        });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.error('Failed to initialize performance observers:', error);
+        console.error('Failed to initialize performance observers: ', error);
       }
     }
   }
@@ -200,7 +200,7 @@ export class PerformanceMetrics {;
    * Record page load time
    */
   recordPageLoad(): void {
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return
     const perfData = window.performance.timing
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
     this.recordMetric({
@@ -303,7 +303,7 @@ export class PerformanceMetrics {;
 
   /**
    * Measure function execution time
-   */</string>
+   */</string>;
   measureFunction<T>(name: string, fn: () => T): T {;
     const startTime = performance.now();
     const result = fn();
@@ -404,7 +404,7 @@ export class PerformanceMetrics {;
 
   /**
    * Get performance recommendations
-   */
+   */;
   getRecommendations(): string[] {;
     const recommendations: string[] = [];
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
@@ -421,7 +421,7 @@ export class PerformanceMetrics {;
     }
     const networkMetrics = this.getMetricsByCategory('network');
     const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
-    if (avgNetworkTime > 500) {
+    if (avgNetworkTime > 500) {;
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
     }
     return recommendations
@@ -440,7 +440,7 @@ export class PerformanceMetrics {;
   y: {
 :all-pages-backup/utils/performanceMetrics.ts
         avgLoadTime,
-  totalMetrics: this.metrics.length,
+  totalMetrics: this.metrics.length,;
   performanceScore: this.calculatePerformanceScore();
         avgLoadTime
         totalMetrics: this.metrics.length
@@ -491,7 +491,7 @@ interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean,
 }
 
-// Export singleton instance
+// Export singleton instance;
 :all-pages-backup/utils/performanceMetrics.ts;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics

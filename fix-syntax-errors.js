@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // Common syntax fixes
 const fixes = [
   // Fix missing semicolons after interface properties
@@ -43,40 +42,6 @@ const fixes = [
   {
     pattern: /(\w+):\s*([^,}\n]+)\s*\n\s*}/g,
     replacement: '$1: $2,\n}'
-=======
-// Function to fix common syntax errors in React components
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix LinkContact Us pattern
-  fixed = fixed.replace(/LinkContact Us\s*>\s*\$2\s*<ArrowRight\$3 \/>\s*<\/Link>/g, 
-    `Link
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>`);
-  
-  // Fix ArrowRight$ pattern
-  fixed = fixed.replace(/ArrowRight\$[0-9]/g, 'ArrowRight className="w-5 h-5 ml-2"');
-  
-  // Fix $2, $3 patterns
-  fixed = fixed.replace(/\$[0-9]/g, '');
-  
-  // Fix extra closing divs - remove duplicate closing divs at the end
-  const lines = fixed.split('\n');
-  const lastLines = lines.slice(-10);
-  let extraDivs = 0;
-  
-  // Count extra closing divs in the last few lines
-  for (let i = lastLines.length - 1; i >= 0; i--) {
-    if (lastLines[i].trim() === '</div>') {
-      extraDivs++;
-    } else if (lastLines[i].trim() && !lastLines[i].trim().startsWith('//')) {
-      break;
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
   }
   
   // Remove extra closing divs
@@ -102,7 +67,6 @@ function fixSyntaxErrors(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -135,25 +99,10 @@ function processFile(filePath) {
     }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-=======
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
   }
   return false;
 }
 
-<<<<<<< HEAD
 function walkDirectory(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -176,42 +125,4 @@ function walkDirectory(dir) {
 
 console.log('Starting syntax error fixes...');
 const fixedCount = walkDirectory('./app');
-=======
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = '/workspace/app';
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
 console.log(`Fixed ${fixedCount} files`);

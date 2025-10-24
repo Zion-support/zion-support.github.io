@@ -6,11 +6,7 @@ import { motion } from 'framer-motion'
   type?: 'button' | 'submit' | 'reset'
   variant = 'primary'
   size = 'md'
-<<<<<<< HEAD
   className = '''
-=======
-  className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
   type = 'button'
       case 'primary'
         return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 "hover": shadow-cyan-500/40',

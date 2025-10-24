@@ -26,11 +26,11 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({,
   const [isHovered, setIsHovered] = useState(false)
 
   const getVariantClasses = ($2) => {
-$3
+$3;
 };
   }
   const getSizeClasses = ($2) => {
-$3
+$3;
 };
   }
 
@@ -99,4 +99,6 @@ $3
 }
 
 
-export default FuturisticButton
+export default FuturisticButton;
+  );
+}

@@ -25,9 +25,9 @@ export function useForm<T extends Record<string, any />>({
     errors: {},
   });
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {,
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {,;
     const { name, value } = e.target;
-    setFormState(prev => ({
+    setFormState(prev = > ({
       ...prev,
       data: {,
         ...prev.data,
@@ -36,54 +36,54 @@ export function useForm<T extends Record<string, any />>({
       errors: {,
         ...prev.errors,
         [name]: "", // Clear error when user starts typing
-      },
+      },;
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {,
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {,;
     e.preventDefault();
     
     // Validate form;
 
 const validationErrors = validate ? validate(formState.data) : {};
     if (Object.keys(validationErrors).length > 0) {
-      setFormState(prev => ({
+      setFormState(prev = > ({
         ...prev,
-        errors: validationErrors,
+        errors: validationErrors,;
       }));
       return;
     }
 
-    setFormState(prev => ({
+    setFormState(prev = > ({
       ...prev,
       isSubmitting: true,
       submitStatus: "idle",
-      errors: {},
+      errors: {},;
     }));
 
     try {
       await onSubmit(formState.data);
-      setFormState(prev => ({
+      setFormState(prev = > ({
         ...prev,
         submitStatus: "success",
-        data: initialData, // Reset form
+        data: initialData, // Reset form;
       }));
     } catch (error) {
       // Log error in development, send to error service in production
-      if (process.env.NODE_ENV === "development") {
-        console.error("Form submission error:", error);
+      if (process.env.NODE_ENV = == "development") {;
+        console.error("Form submission error: ", error);
       }
       // In production, you would send this to your error monitoring service
       // Example: sendToErrorService(error, "FormSubmission");
       
-      setFormState(prev => ({
+      setFormState(prev = > ({
         ...prev,
-        submitStatus: "error",
+        submitStatus: "error",;
       }));
     } finally {
-      setFormState(prev => ({
+      setFormState(prev = > ({
         ...prev,
-        isSubmitting: false,
+        isSubmitting: false,;
       }));
     }
   }, [formState.data, onSubmit, validate, initialData]);
@@ -93,7 +93,7 @@ const validationErrors = validate ? validate(formState.data) : {};
       data: initialData,
       isSubmitting: false,
       submitStatus: "idle",
-      errors: {},
+      errors: {},;
     });
   }, [initialData]);
 

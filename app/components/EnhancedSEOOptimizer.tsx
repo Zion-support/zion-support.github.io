@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
@@ -28,7 +28,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    };
   ];
 
   const benefits = [
@@ -36,14 +36,14 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
   ];
 
   return (
     <div>
       <Helmet>
         <title>Enhanced SEO Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Advanced SEO optimization tools powered by AI for maximum search engine visibility" />
+        <meta name="" content="Advanced SEO optimization tools powered by AI for maximum search engine visibility" />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gray-900">
@@ -66,13 +66,11 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -81,7 +79,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our enhanced SEO optimizer provides comprehensive tools for maximum visibility.
               </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
@@ -96,10 +93,10 @@ const EnhancedSEOOptimizerPage: React.FC = () => {,
                       </li>
                     ))}
                   </ul>
-                </div>
               ))}
+            </div>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             </div>
           </div>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-            </div></div>
-          </div>
+  );
+}

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -9,7 +9,7 @@ export default function ZionAiCodeReviewerPage() {
   return (
     <>
       <Head>
-        <title>Zion Ai Code Reviewer - Zion Tech Group</title>
+        <title>About - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -22,8 +22,6 @@ export default function ZionAiCodeReviewerPage() {
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
-        </div>
       </div>
-    </>
-  );
+      );
 }

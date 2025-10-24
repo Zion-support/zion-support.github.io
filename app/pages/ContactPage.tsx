@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
+import React from "react";
 
 const ContactPage = ($2) => {
-$3
+$3;
 };
 
 export default ContactPage

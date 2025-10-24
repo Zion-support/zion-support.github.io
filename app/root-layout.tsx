@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,8 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en"> </html><body className={inter.className}>{children}
-      </body></body>
+      </body>
     </html>
   )
 
 
+;
+  );
+}

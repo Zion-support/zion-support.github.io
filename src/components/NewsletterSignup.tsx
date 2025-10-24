@@ -42,26 +42,24 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
       // Close modal after success if it's a modal variant
 :all-pages-backup/components/NewsletterSignup.tsx
-      if (variant === 'modal' && onClose) {
+      if (variant = == 'modal' && onClose) {
         setTimeout(() => {
           onClose()}, 2000)}
-    } catch (error) {
+    } catch (error) {;
       setStatus('error');
       setMessage('Something went wrong. Please try again.')}
   };
 
   const content = (;
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
+    <div className = "bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
       <div className="text-center mb-6"></div>
         <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" /></Mail>
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90">
-      if (variant = == 'modal' && onClose) {
+      if (variant = == 'modal' && onClose) {;
         setTimeout(() => {;
           onClose(
-        </div>
         </div>);
-        </div>
         </div>
         }, 2000);
       }
@@ -77,11 +75,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         <h3 className="tex t-2xlfont-bold mb-2">Stay Updated</h3>
         <p className="tex t-white/90"></p>
           Get the latest updates on AI technology, IT solutions, and industry insights.</p>
-        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="spa ce-y-4"></form>
-        <div className="fle xflex-col sm:flex-row gap-3"></div>
+        <div className="fle xflex-col sm: flex-row gap-3"></div>
           <input type="email",>
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -92,7 +89,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           /></input>
           <button type="submit">
             disabled={status === 'loading'}
-            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disable,
+            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable,
   d:cursor-not-allowed flex items-center justify-center"
           ></button>
             {status === 'loading' ? (</button>
@@ -111,7 +108,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
               </>
             )}
           </button>
-        </div>
 
         {message && (
           <div className={`flex items-center space-x-2 text-sm ${></div>
@@ -123,7 +119,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
               <AlertCircle className="w-4h-4" /></AlertCircle>
             )}</AlertCircle>
             <span>{message}</span>
-          </div>
         )}
       </form>
 
@@ -131,8 +126,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         <p></p>
           ✓ No spam, unsubscribe anytime<br /></br>
           ✓ Weekly updates on latest tech trends<br /></br>
-          ✓ Exclusive content and early access</br>
-        </p>
+          ✓ Exclusive content and early access</br>;
       </div>;
     </div>;
   );
@@ -144,13 +138,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           <div className="fix edinset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} /></div>
           <div className="rel ativew-full max-w-md"></div>
             {content}</div>
-          </div>
         </div>
 :all-pages-backup/components/NewsletterSignup.tsx
       </div>
     )}
 
-  return content
+  return content;
 };
 
 export default NewsletterSignup

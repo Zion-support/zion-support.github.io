@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
@@ -23,10 +23,9 @@ const TalentMarketplacePage = () => {
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
-          </div>
           
           {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Page Not Found
           </h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -38,8 +37,7 @@ const TalentMarketplacePage = () => {
             <div className="flex items-center justify-center mb-4">
               <Search className="w-6 h-6 text-cyan-400 mr-2" />
               <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages:</p>
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>
             <div className="flex flex-wrap gap-2 justify-center">
               {[
                 { name: "Home", path: "/" },
@@ -56,7 +54,6 @@ const TalentMarketplacePage = () => {
                 </Link>
               ))}
             </div>
-          </div>
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -74,7 +71,6 @@ const TalentMarketplacePage = () => {
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
-          </div>
           
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
@@ -96,7 +92,6 @@ const TalentMarketplacePage = () => {
               >
                 Send Email
               </a>
-            </div>
           </div>
           
           {/* Fun Fact */}
@@ -106,10 +101,8 @@ const TalentMarketplacePage = () => {
               confused sometimes. That's why we have humans to help when things
               go wrong! 🤖
             </p>
-          </div>
         </div>
-      </div>
-    </>
+    </>;
   );
 };
 

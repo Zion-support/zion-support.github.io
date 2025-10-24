@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
   ]
   const benefits = [
@@ -7,12 +7,7 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
-<<<<<<< HEAD
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-            </div></div>
-          </div>
-=======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+    'Gain competitive advantage with advanced technology',;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
+          </div>

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { useEffect } from &quot;react&quot;
 interface AnalyticsProps {
 
@@ -7,7 +7,7 @@ interface AnalyticsProps {
 }
 const Analytics: React.FC = () => {,
 
-  useEffect(() => {
+  useEffect(() => {;
     // Initialize analytics tracking;
 
 const initAnalytics = () => {
@@ -16,7 +16,7 @@ const initAnalytics = () => {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
 
-          page_location: window.location.href,
+          page_location: window.location.href,;
         });
       }
     };
@@ -38,3 +38,5 @@ declare global {
 
 
 export default Analytics;
+  );
+}

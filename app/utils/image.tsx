@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
 
@@ -57,15 +57,15 @@ sizes
 style,
 onLoad,
 onError}
-...props}
+...props};
 }) => {};
 const [ setIsLoaded] = useState(false)
 const [hasError, setHasError] = useState(false)
-const handleLoad = useCallback(() => {}
+const handleLoad = useCallback(() => {};
 setIsLoaded(true);
 if (onLoad) onLoad()}
 }, [onLoad])
-const handleError = useCallback(() => {}
+const handleError = useCallback(() => {};
 setHasError(true);
 if (onError) onError()}
 }, [onError])
@@ -86,9 +86,8 @@ height: '100%',
     objectFit: 'cover'}
 })
 if (hasError) {</ImageProps>
-  </ImageProps>
 return (
-    </ImageProps>
+    </ImageProps>;
   );
 if (hasError) {}
 return (
@@ -110,13 +109,13 @@ imageStyle: React.CSSProperties = {/* TOD,
 if (hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
-imageStyle
+imageStyle;
 };
 {...props})
 >)</div>
 
 =======
-<span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),
+<span className = "text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),
 
 </div>)
 
@@ -136,6 +135,8 @@ loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
 {...props}
->)</img></img>
+>)</img>
 }</img>
-export default Image</img>
+export default Image</img>;
+  );
+}

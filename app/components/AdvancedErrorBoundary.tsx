@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail , Mail  } from 'lucide-react';
 import { Home } from 'lucide-react';
@@ -36,19 +36,19 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       errorInfo)
 })
     // Call custom error handler if provided
-    if (this.props.onError) {
+    if (this.props.onError) {;
       this.props.onError(error, errorInfo);
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // // // eslint-disable-next-line no-console
-    console.error('Error caught by boundary:', error, errorInfo);
+    if (process.env.NODE_ENV = == 'development') {
+      // // // eslint-disable-next-line no-console;
+    console.error('Error caught by boundary: ', error, errorInfo);
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV = == 'production') {
 
       this.logErrorToService(error, errorInfo)
     }
   }
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
 
-    // You can integrate with services like Sentry, LogRocket, etc.
+    // You can integrate with services like Sentry, LogRocket, etc.;
     const errorData = {</Props>;

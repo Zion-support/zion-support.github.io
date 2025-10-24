@@ -39,23 +39,20 @@ const PerformanceImagePage: React.FC = () => {
   ]
 
   return (
-    <>
+    <>;
     ;
   </>
       <Helmet>;</Helmet>
         <title>PerformanceImage | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; /></meta>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; /></meta>
-      </Helmet>
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;container mx-auto max-w-6xl&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>PerformanceImage</h1>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional PerformanceImage services tailored to your business needs.</p>p>
+      <section className="py-20 px-4"></section>
+        <div className="container mx-auto max-w-6xl"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">PerformanceImage</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>p>
           </div>
-        </div>
-      </section>
-    </div>,
+      </section>,
   ),
     </div>
   );

@@ -48,8 +48,7 @@ ${staticPages.map(page => `
 </url><loc>${baseUrl}${page}</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <changefreq>weekly</changefreq>
-<priority>${page === '' ? '1.0' : '0.8'}</priority>
-</url>`).join('')}
+<priority>${page === '' ? '1.0' : '0.8'}</priority>`).join('')}
 </urlset>`
 return sitemap
 }
@@ -62,7 +61,7 @@ Crawl-delay: 1,
 # Disallow admin and private areas
 Disallow: /admin/,
     Disallow: /api/,
-Disallow: /_next/,
+Disallow: /_next/,;
     Disallow: /private/`;}
 }
 export interface SitemapEntry {/* TODO: Fix JSX expression */};
@@ -204,5 +203,5 @@ priorit,
     y: 0.3}
   ]
 }
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
+export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */};
 }`;

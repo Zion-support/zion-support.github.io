@@ -22,9 +22,9 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   ...props
 }) => {
   return (</OptimizedImageProps>
-    <Image
+    <Image;
       src={src};
-      alt={alt}
+      alt = {alt}
       width={width}
       height={height}
       className={className}
@@ -34,4 +34,4 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   )
 }
 
-export default OptimizedImage</Image>
+export default OptimizedImage</Image>;

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
 import Footer from './Footer';
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
@@ -26,7 +21,7 @@ interface ContentNewsletterSignupProps {
   subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;
   placeholder= &quot;Enter your emailaddress&quot;
   buttonText= &quot;Subscribe&quot;
-  features= [
+  features = [;
     { icon: Star, text: &quot;Exclusive content&quot,
   },
   {
@@ -51,7 +46,7 @@ interface ContentNewsletterSignupProps {
     if (!email) return setIsLoadin g(true)
 
     try {
-      // Simulate API call
+      // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000));
       if (onSubscribe) {
         onSubscribe(email);
@@ -59,7 +54,7 @@ interface ContentNewsletterSignupProps {
       setIsSubscribed(true);
       setEmail('');
     } catch (error) {
-      console.error('Subscription failed:', error);
+      console.error('Subscription failed: ', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -67,17 +62,16 @@ interface ContentNewsletterSignupProps {
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-8 text-center">
+      <div className = "bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-8 text-center">
         <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-white mb-2">Successfully Subscribed!</h3>
-        <p className="text-cyan-100">Thank you for subscribing to our newsletter.</p>
-      </div>
+        <p className="text-cyan-100">Thank you for subscribing to our newsletter.</p>;
     );
   }
 
   return (
 
-    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4">
+    <div className = "bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
         <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
         
@@ -97,26 +91,25 @@ interface ContentNewsletterSignupProps {
             >{isLoading ? 'Subscribing...' : buttonText}
               </button><ArrowRight className="ml-2 h-4 w-4" />
             </button>
-          </div>
         </form>
         
         {isSubscribed && (
           <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg"> </div><p className="text-emerald-400 flex items-center justify-center"> </p><CheckCircle className="h-5 w-5 mr-2" />Thank you for subscribing!
-            </CheckCircle></p>
+            </CheckCircle>
           </div>
         )}
         
         <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mt-8">,
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-2 text-gray-300"> </div><feature.icon className="h-5 w-5 text-emerald-400" /> </feature><span className="text-sm">{feature.text}</span>
-            </div>
           ))}
 
         </div>
-      </div>
-    </div>
+    </div>;
   );
 };
 
 export default ContentNewsletterSignup
 ;
+  );
+}

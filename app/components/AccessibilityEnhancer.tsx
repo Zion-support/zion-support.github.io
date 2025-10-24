@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { ReactNode } from 'react';
 
 interface Props {
@@ -8,9 +8,11 @@ interface Props {
 
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   return (
-    <div className="accessibility-enhanced" role="main">{children}
-    </div></div>
+    <div className = "accessibility-enhanced" role="main">{children}
+    </div>
   )
 }
-
+;
 export default AccessibilityEnhancer;
+  );
+}

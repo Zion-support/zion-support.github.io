@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 "use client"
 
@@ -11,8 +11,8 @@ const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
     <div className={className}></div>
       <h2>MetaTags</h2>
       <p>This component is under construction.</p>
-    </div>
   )
 }
 
 export default MetaTags
+;

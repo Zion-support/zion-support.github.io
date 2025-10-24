@@ -21,7 +21,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({,
   const [feedback, setFeedback] = useState<FeedbackState>({
     rating: 0,
     comment: '',
-    submitted: false,
+    submitted: false,;
   });
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({,
 
 const enhanceUserExperience = () => {
       // Add smooth scrolling
-      if (typeof document !== 'undefined') {
+      if (typeof document !== 'undefined') {;
         document.documentElement.style.scrollBehavior = 'smooth';
 
         // Add loading states for interactive elements;
@@ -50,9 +50,11 @@ const enhanceUserExperience = () => {
   return (
 
     <div className={className}>{children}
-    </div></div>
+    </div>;
   );
 };
 
 
 export default UserExperienceEnhancer;
+  );
+}

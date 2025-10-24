@@ -16,7 +16,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     memoryUsage: 0,
     loadTime: 0,
     renderTime: 0,
-  })
+  });
   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now())
@@ -30,7 +30,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     }
   }, [])
   const init = useCallback(() => {
-    if (options.enabled !== false) {
+    if (options.enabled !== false) {;
       setIsMonitoringFPS(true);
       measureMemoryUsage();
     }
@@ -39,7 +39,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     if (!isMonitoringFPS) return;
 
 const countFrames = () => {
-      frameCountRef.current++
+      frameCountRef.current++;
       const currentTime = performance.now();
       if (currentTime - lastTimeRef.current >= 1000) {
         const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current))
@@ -49,7 +49,7 @@ const countFrames = () => {
         }))
         frameCountRef.current = 0
         lastTimeRef.current = currentTime
-      }
+      };
       requestAnimationFrame(countFrames);
     }
     requestAnimationFrame(countFrames);

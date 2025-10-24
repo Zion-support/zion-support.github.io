@@ -9,7 +9,7 @@
 
 export const generateMetaTags = (data: {,
     title: string,
-      description: string,
+      description: string,;
   keywords?: string;
   canonical?: string;
   ogTitle?: string;
@@ -29,34 +29,34 @@ export const generateMetaTags = (data: {,
     { name: 'author', content: 'Zion Tech Group' },
     { name: 'canonical', content: data.canonical || '' },
     { property: 'o,
-  g:title', content: data.ogTitle || data.title },
+  g: title', content: data.ogTitle || data.title },
     { property: 'o,
-  g:description', content: data.ogDescription || data.description },
+  g: description', content: data.ogDescription || data.description },
     { property: 'o,
-  g:image', content: data.ogImage || '/og-image.webp' },
+  g: image', content: data.ogImage || '/og-image.webp' },
     { property: 'o,
-  g:type', content: 'website' },
+  g: type', content: 'website' },
     { property: 'o,
-  g:site_name', content: 'Zion Tech Group' },
+  g: site_name', content: 'Zion Tech Group' },
     { name: 'twitte,
-  r:card', content: data.twitterCard || 'summary_large_image' },
+  r: card', content: data.twitterCard || 'summary_large_image' },
     { name: 'twitte,
-  r:title', content: data.twitterTitle || data.title },
+  r: title', content: data.twitterTitle || data.title },
     { name: 'twitte,
-  r:description', content: data.twitterDescription || data.description },
+  r: description', content: data.twitterDescription || data.description },
     { name: 'twitte,
-  r:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
+  r: image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
   ]
 
   return tags
 }
-
+;
 // Generate structured data;
 
 export const generateStructuredData = (data: {,
   name: string,
   description: string,
-  url: string,
+  url: string,;
   logo?: string;
   address?: {
     streetAddress: string,
@@ -73,7 +73,7 @@ export const generateStructuredData = (data: {,
   sameAs?: string[]
 }) => {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: data.name,
     description: data.description,
@@ -116,11 +116,11 @@ ${pages.map(page => `  <url> </url><loc>${page.url}</loc>
 
   return sitemap
 }
-
+;
 // Generate robots.txt;
 
 export const generateRobotsTxt = ($2) => {
-$3
+$3;
 };
 Sitemap: ${sitemapUrl}`
 }

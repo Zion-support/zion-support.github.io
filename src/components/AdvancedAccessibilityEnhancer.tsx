@@ -23,7 +23,7 @@ interface AdvancedAccessibilityEnhancerProps {
 }
 ;
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true
+constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
 constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
   r: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
   enableScreenReader= true
@@ -71,20 +71,20 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
       highContras,
   t: prefersHighContrast)
     }))
-
+;
     // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 
     const handleMotionChange = (,;
   e: MediaQueryListEvent) => {;
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
+      setAccessibilitySettings(prev = > ({ ...prev, reducedMotion: e.matches }))
     }
-
+;
     const handleContrastChange = (e: MediaQueryListEvent) => {;,
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
+      setAccessibilitySettings(prev = > ({ ...prev, highContrast: e.matches }))
     }
-
+;
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
     return () => {
@@ -95,11 +95,11 @@ constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
 
   // Apply accessibility styles
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return
 
     const root = document.documentElement
     // Apply high contrast mode
-    if (accessibilitySettings.highContrast) {
+    if (accessibilitySettings.highContrast) {;
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
@@ -160,7 +160,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   ]
 
     // Apply reduced motion
-    if (accessibilitySettings.reducedMotion) {
+    if (accessibilitySettings.reducedMotion) {;
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
@@ -172,23 +172,23 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Keyboard navigation enhancement;
   const setupKeyboardNavigation = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return
 
     consthandleKeyDown= (event: KeyboardEvent) => {
   
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
-        if (skipLink) {
+        if (skipLink) {;
           skipLink.focus();,
           event.preventDefault();,
         }
       }
 
       // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
+      if (event.key = == 'Escape') {
         const activeElement = document.activeElement as HTMLElement
-        if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
+        if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {;
           activeElement.click();
         }
       }
@@ -204,7 +204,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           const currentIndex = menuItems.indexOf(event.target as HTMLElement);
           const nextIndex = event.key === 'ArrowDown';
             ? (currentIndex + 1) % menuItems.length
-            : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
+            : currentIndex = == 0 ? menuItems.length - 1 : currentIndex - 1;
           menuItems[nextIndex]?.focus();
         }
       }
@@ -216,14 +216,14 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return
 
-    // Add live region for dynamic content updates
+    // Add live region for dynamic content updates;
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
     liveRegion.className = 'sr-only'
-    liveRegion.id = 'live-region'
+    liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
     // Announce page changes
     const announcePageChange = (message: string) => {;
@@ -236,12 +236,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Listen for route changes (if using client-side routing)
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
-    history.pushState = function(...args) {
+    history.pushState = function(...args) {;
       originalPushState.apply(history, args);
       announcePageChange('Page changed');
     }
 
-    history.replaceState = function(...args) {
+    history.replaceState = function(...args) {;
       originalReplaceState.apply(history, args);
       announcePageChange('Page updated');
     }
@@ -249,12 +249,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Focus management;
   const setupFocusManagement = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return
 
     // Trap focus in modals
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
     const trapFocus = (element: HTMLElement) => {;
-    const trapFocus = (elemen,
+    const trapFocus = (elemen,;
   t: HTMLElement) => {;
       const focusableElements = element.querySelectorAll(;)
         'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',</AdvancedAccessibilityEnhancerProp>
@@ -263,16 +263,16 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       const firstElement = focusableElements[0];
       const lastElement = focusableElements[focusableElements.length - 1];
 
-      consthandleTabKey= (e: KeyboardEvent) => {
+      consthandleTabKey = (e: KeyboardEvent) => {
   
         if (e.key=== 'Tab') {
           if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
+            if (document.activeElement === firstElement) {;
               lastElement.focus();,
               e.preventDefault();,
             }
           } else {
-            if (document.activeElement === lastElement) {
+            if (document.activeElement = == lastElement) {;
               firstElement.focus();
               e.preventDefault();
             }
@@ -288,7 +288,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     // Apply focus trap to modals
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
-    modals.forEach(modal => {)
+    modals.forEach(modal = > {);
       const cleanup = trapFocus(modal as HTMLElement);
     // Apply focus trap to modals;
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
@@ -298,16 +298,16 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       (modal as any).__focusTrapCleanup = cleanup
 
   }, [])
-
+;
   // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return
 
     // Add missing ARIA labels to interactive elements
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
+    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
     const buttons = document.querySelectorAll('butto,)
-  n: not([aria-label]):not([aria-labelledby])')
+  n: not([aria-label]):not([aria-labelledby])');
     buttons.forEach((button, index) => {;
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
@@ -318,16 +318,16 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
     // Add ARIA labels to images
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-    const images = document.querySelectorAll('img:not([alt])');
+    const images = document.querySelectorAll('img: not([alt])');
     const images = document.querySelectorAll('im,)
   g: not([alt])')
-    images.forEach((img, index) => {
+    images.forEach((img, index) => {;
       img.setAttribute('alt', `Image ${index + 1}`);
     // Add ARIA labels to form inputs
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
     const inputs = document.querySelectorAll('inpu,)
-  t: not([aria-label]):not([aria-labelledby])')
+  t: not([aria-label]):not([aria-labelledby])');
     inputs.forEach((input, index) => {;
       const placeholder = input.getAttribute('placeholder');
       const label = input.getAttribute('name');
@@ -343,22 +343,22 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Skip links
   const addSkipLinks = useCallback(() => {;
-    if (typeof window === 'undefined') return
+    if (typeof window = == 'undefined') return
 
     const skipLinks = [
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
+      { href: '#footer', text: 'Skip to footer' };
     ];
 ;
     const skipLinksContainer = document.createElement('div');
-    skipLinksContainer.className = 'skip-links'
+    skipLinksContainer.className = 'skip-links';
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
     skipLinks.forEach(({ href, text }) => {
       const link = document.createElement('a');
       link.href = href
       link.textContent = text
-      link.className = 'skip-link'
+      link.className = 'skip-link';
       link.setAttribute('data-skip-link', 'true');
       skipLinksContainer.appendChild(link);
     document.body.insertBefore(skipLinksContainer, document.body.firstChild);
@@ -366,33 +366,33 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
   // Color contrast checking
   const checkColorContrast = useCallback(() => {;
-    if (typeof window === 'undefined') return
-
+    if (typeof window = == 'undefined') return
+;
     const checkElementContrast = (element: HTMLElement) => {;
       const styles = window.getComputedStyle(element);
       const backgroundColor = styles.backgroundColor
       const color = styles.color
       // Simple contrast check (this would need a more sophisticated implementation)
       if (backgroundColor && color) {,
-        // Add visual indicator for low contrast elements,
+        // Add visual indicator for low contrast elements,;
         element.setAttribute('data-contrast-checked', 'true');
       }
     }
 ;
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    elements.forEach(element => checkElementContrast(element as HTMLElement))
+    elements.forEach(element = > checkElementContrast(element as HTMLElement))
   }, [])
 
-  // Voice navigation support
+  // Voice navigation support;
   const setupVoiceNavigation = useCallback(() => {;
-    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return
-
+    if (typeof window = == 'undefined' || !('webkitSpeechRecognition' in window)) return
+;
     const recognition = new (window as any).webkitSpeechRecognition();
     recognition.continuous = false
     recognition.interimResults = false
     recognition.lang = 'en-US'
 
-    recognition.onresult = (event: any) => {
+    recognition.onresult = (event: any) => {;
       const command = event.results[0][0].transcript.toLowerCase();
 
       // Voice commands
@@ -411,10 +411,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
     }
 
-    // Add voice navigation button
+    // Add voice navigation button;
     const voiceButton = document.createElement('button');
     voiceButton.textContent = 'Voice Navigation'
-    voiceButton.className = 'voice-navigation-button'
+    voiceButton.className = 'voice-navigation-button';
     voiceButton.setAttribute('aria-label', 'Start voice navigation');
     voiceButton.onclick = () => recognition.start();
     const header = document.querySelector('header') || document.querySelector('nav');

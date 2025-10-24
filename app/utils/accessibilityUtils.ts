@@ -1,6 +1,7 @@
+import React from 'react';
 // Accessibility utilities for improving user experience and compliance;
 
-export const generateId = (prefix: string = 'id'): string => {,
+export const generateId = (prefix: string = 'id'): string => {,;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
@@ -8,7 +9,7 @@ export const createAriaLabel = (text: string, context?: string): string => {;
   return context ? `${text}, ${context}` : text;
 };
 
-export const announceToScreenReader = (message: string): void => {,
+export const announceToScreenReader = (message: string): void => {,;
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -25,17 +26,17 @@ export const announceToScreenReader = (message: string): void => {,
 
 export const trapFocus = (element: HTMLElement): (() => void) => {,
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
   
   const handleTabKey = ($2) => {
-$3
+$3;
 };
       } else {
-        if (document.activeElement === lastElement) {
+        if (document.activeElement = == lastElement) {;
           firstElement.focus();
           e.preventDefault();
         }
@@ -49,15 +50,13 @@ $3
   return (
     <>
       ) => {
-    </>
-    </>
-    element.removeEventListener('keydown', handleTabKey
+    </>element.removeEventListener('keydown', handleTabKey
     </>
   );
   };
 };
 
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {,
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {,;
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -65,12 +64,12 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   return skipLink;
 };
 
-export const validateColorContrast = (foreground: string, background: string): boolean => {,
+export const validateColorContrast = (foreground: string, background: string): boolean => {,;
   // Simple contrast ratio calculation;
 
-const getLuminance = (color: string): number => {,
+const getLuminance = (color: string): number => {,;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
-    const [r, g, b] = rgb.map(c => {
+    const [r, g, b] = rgb.map(c = > {;
       c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
@@ -89,7 +88,7 @@ export const createHighContrastMode = (): void => {;
   const style = document.createElement('style');
   style.id = 'high-contrast-mode';
   style.textContent = `
-    .high-contrast {
+    .high-contrast {;
       filter: contrast(150%) brightness(120%);,
     }
     .high-contrast * {
@@ -116,7 +115,7 @@ export const createFocusIndicator = (): void => {;
   const style = document.createElement('style');
   style.id = 'focus-indicator';
   style.textContent = `
-    *:focus {
+    *:focus {;
       outline: 2px solid #3b82f6 !important;,
       outline-offset: 2px !important;,
     }
@@ -138,7 +137,7 @@ export const createReducedMotionMode = (): void => {;
     @media (prefers-reduced-motion: reduce) {,
       *,
       *::before,
-      *::after {
+      *::after {;
         animation-duration: 0.01ms !important;,
         animation-iteration-count: 1 !important;,
         transition-duration: 0.01ms !important;,
@@ -152,7 +151,7 @@ export const createReducedMotionMode = (): void => {;
 export const setupKeyboardNavigation = (): void => {
   // Add keyboard navigation support
   document.addEventListener('keydown', (e) => {
-    // Escape key to close modals/dropdowns
+    // Escape key to close modals/dropdowns;
     if (e.key === 'Escape') {;
       const activeElement = document.activeElement as HTMLElement;
       if (activeElement && activeElement.blur) {
@@ -161,8 +160,8 @@ export const setupKeyboardNavigation = (): void => {
     }
     
     // Enter key to activate buttons
-    if (e.key === 'Enter' && e.target instanceof HTMLElement) {
-      if (e.target.getAttribute('role') === 'button' || e.target.tagName === 'BUTTON') {
+    if (e.key = == 'Enter' && e.target instanceof HTMLElement) {
+      if (e.target.getAttribute('role') === 'button' || e.target.tagName === 'BUTTON') {;
         e.target.click();
       }
     }
@@ -173,7 +172,7 @@ export const createScreenReaderOnly = (): void => {;
   const style = document.createElement('style');
   style.id = 'screen-reader-only';
   style.textContent = `
-    .sr-only {
+    .sr-only {;
       position: absolute;,
       width: 1px;,
       height: 1px;,
@@ -215,7 +214,7 @@ export const createARIALiveRegion = (): HTMLElement => {;
   return liveRegion;
 };
 
-export const updateLiveRegion = (message: string): void => {,
+export const updateLiveRegion = (message: string): void => {,;
   let liveRegion = document.getElementById('aria-live-region');
   if (!liveRegion) {,
     liveRegion = createARIALiveRegion();,
@@ -240,7 +239,7 @@ export const setupLandmarkNavigation = (): void => {;
   
   // Update landmarks when content changes;
 
-const observer = new MutationObserver(() => {
+const observer = new MutationObserver(() => {;
     createLandmarkNavigation();
   });
   
@@ -283,7 +282,7 @@ class AccessibilityEnhancer {
       enableScreenReaderSupport: true,
       enableFocusManagement: true,
       enableAriaLabels: true,
-      ...config,
+      ...config,;
     };
   }
 
@@ -321,7 +320,7 @@ class AccessibilityEnhancer {
 const style = document.createElement('style');
     style.textContent = `
       @media (prefers-contrast: high) {,
-        .cyber-card, .quantum-card {
+        .cyber-card, .quantum-card {;
           border: 2px solid #ffffff !important;,
           background: #000000 !important;,
           color: #ffffff !important;,
@@ -338,7 +337,7 @@ const style = document.createElement('style');
   private setupKeyboardNavigation(): void {
     // Add keyboard navigation support
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
+      if (event.key = == 'Tab') {;
         document.body.classList.add('keyboard-navigation');
       }
     });
@@ -351,7 +350,7 @@ const style = document.createElement('style');
 
 const focusStyle = document.createElement('style');
     focusStyle.textContent = `
-      .keyboard-navigation *:focus {
+      .keyboard-navigation *:focus {;
         outline: 2px solid #00ffff !important;,
         outline-offset: 2px !important;,
       }
@@ -375,7 +374,7 @@ const announcement = document.createElement('div');
 
 const focusHistory: HTMLElement[] = [];,
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
+      if (event.key = == 'Escape') {;
         // Return focus to previous element;
 
 const previousElement = focusHistory.pop();
@@ -423,7 +422,7 @@ const buttons = document.querySelectorAll('button: not([aria-label])');,
       focusManagement: this.checkFocusManagement(),
       ariaLabels: this.checkAriaLabels(),
       headingStructure: this.checkHeadingStructure(),
-      altText: this.checkAltText(),
+      altText: this.checkAltText(),;
     };
 
     // Calculate overall score;
@@ -460,7 +459,7 @@ const elements = document.querySelectorAll('*');
   }
 
   private checkKeyboardNavigation(): number {
-    const focusableElements = document.querySelectorAll()
+    const focusableElements = document.querySelectorAll();
       'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     let accessibleElements = 0;
@@ -501,7 +500,7 @@ const elements = document.querySelectorAll('*');
     // Check if focus is properly managed;
 
 const focusableElements = document.querySelectorAll(
-      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     );
     
     let properlyManaged = 0;
@@ -518,7 +517,7 @@ const focusableElements = document.querySelectorAll(
   }
 
   private checkAriaLabels(): number {
-    const interactiveElements = document.querySelectorAll(
+    const interactiveElements = document.querySelectorAll(;
       'button, input, textarea, select, [role="button"], [role="link"]');
     );
     

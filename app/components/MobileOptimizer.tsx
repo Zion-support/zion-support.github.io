@@ -1,20 +1,20 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
 
 const MobileOptimizer: React.FC = ($2) => {
-$3
+$3;
 };
     };
 
     // Add touch-friendly classes;
 
 const addTouchClasses = ($2) => {
-$3
+$3;
 };
         });
       }
@@ -23,7 +23,7 @@ $3
     // Optimize images for mobile;
 
 const optimizeImagesForMobile = ($2) => {
-$3
+$3;
 };
         if (!imageElement.decoding) {
           imageElement.decoding = 'async';
@@ -34,7 +34,7 @@ $3
     // Add mobile-specific event listeners;
 
 const addMobileEventListeners = ($2) => {
-$3
+$3;
 };
         lastTouchEnd = now;
       }, false);
@@ -42,7 +42,7 @@ $3
       // Add haptic feedback for supported devices;
 
 const addHapticFeedback = ($2) => {
-$3
+$3;
 };
         });
       };
@@ -53,15 +53,15 @@ $3
 
     // Optimize scroll performance;
 
-const optimizeScrollPerformance = () => {
+const optimizeScrollPerformance = () => {;
       let ticking = false;
       const updateScrollPosition = () => {
-        // Add scroll-based optimizations here
+        // Add scroll-based optimizations here;
         ticking = false;
       };
       
       const requestTick = ($2) => {
-$3
+$3;
 };
       };
       
@@ -81,9 +81,7 @@ $3
     return (
     <>
       ) => {
-    </>
-    </>
-      // Cleanup if needed
+    </>// Cleanup if needed
     };
   }, []
     </>
@@ -93,3 +91,5 @@ $3
 
 
 export default MobileOptimizer;
+  );
+}

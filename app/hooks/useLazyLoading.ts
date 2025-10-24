@@ -10,7 +10,7 @@ export function useLazyLoading(options: UseLazyLoadingOptions = {}) {
   const {
     threshold = 0.1,
     rootMargin = '50px',
-    triggerOnce = true,
+    triggerOnce = true,;
   } = options;
 
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -22,7 +22,7 @@ export function useLazyLoading(options: UseLazyLoadingOptions = {}) {
     if (!element) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry]) => {;
         const isVisible = entry.isIntersecting;
         setIsIntersecting(isVisible);
         
@@ -53,7 +53,7 @@ export function useLazyLoading(options: UseLazyLoadingOptions = {}) {
   };
 }
 
-export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions = {}) {
+export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions = {}) {;
   const { shouldLoad, elementRef } = useLazyLoading(options);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -65,12 +65,12 @@ export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions 
     }
   }, [shouldLoad, src, imageSrc]);
 
-  const handleLoad = () => {
+  const handleLoad = () => {;
     setIsLoaded(true);
     setHasError(false);
   };
 
-  const handleError = () => {
+  const handleError = () => {;
     setHasError(true);
     setIsLoaded(false);
   };
@@ -84,4 +84,6 @@ export function useImageLazyLoading(src: string, options: UseLazyLoadingOptions 
     onLoad: handleLoad,
     onError: handleError,
   };
+}
+  );
 }

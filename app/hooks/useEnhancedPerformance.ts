@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useCallback, useRef, useState } from 'react';
 
 export interface UseEnhancedPerformanceOptions {
@@ -36,14 +37,14 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     // Measure load time;
 
-const measureLoadTime = () => {
+const measureLoadTime = () => {;
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
     // Measure render time;
 
-const measureRenderTime = () => {
+const measureRenderTime = () => {;
       const renderStart = performance.now();
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
@@ -54,7 +55,7 @@ const measureRenderTime = () => {
     // Measure memory usage;
 
 const measureMemoryUsage = () => {
-      if ('memory' in performance) {
+      if ('memory' in performance) {;
         const memory = (performance as any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
@@ -63,7 +64,7 @@ const measureMemoryUsage = () => {
 
     // Measure network latency;
 
-const measureNetworkLatency = () => {
+const measureNetworkLatency = () => {;
       const start = performance.now();
       fetch('/api/ping', { method: 'HEAD' });
         .then(() => {
@@ -87,7 +88,7 @@ const measureNetworkLatency = () => {
 const checkOptimization = () => {
       const isOptimized = 
         metrics.loadTime < 1000 && // Load time under 1 second
-        metrics.renderTime < 16 && // Render time under 16ms (60fps)
+        metrics.renderTime < 16 && // Render time under 16ms (60fps);
         metrics.memoryUsage < 100 && // Memory usage under 100MB;
         metrics.networkLatency < 200; // Network latency under 200ms
       setIsOptimized(isOptimized);
@@ -100,9 +101,7 @@ const timeoutId = setTimeout(checkOptimization, 1000);
     return (
     <>
       ) => clearTimeout(timeoutId
-    </>
-    </>
-    </>
+    </></>
   );
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
@@ -113,7 +112,7 @@ const timeoutId = setTimeout(checkOptimization, 1000);
 
 const criticalResources = [
       '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
+      '/images/hero-bg.jpg',;
       '/images/logo.png',;
     ];
 
@@ -132,7 +131,7 @@ const criticalResources = [
 
 const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry) => {;
         if (entry.isIntersecting) {;
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
@@ -147,14 +146,12 @@ const images = document.querySelectorAll('img[data-src]');
     return (
     <>
       ) => imageObserver.disconnect(
-    </>
-    </>
-    </>
+    </></>
   );
   }, []);
 
   const measurePerformance = useCallback((name: string, fn: () => void) => {,
-    if (trackPerformance) {
+    if (trackPerformance) {;
       performance.mark(`${component}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
@@ -170,7 +167,7 @@ const images = document.querySelectorAll('img[data-src]');
 
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {;
         // eslint-disable-next-line no-console;
         console.error(`Error in ${component}:`, error, context);
       }
@@ -180,7 +177,7 @@ const images = document.querySelectorAll('img[data-src]');
 </string>
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {;
         // eslint-disable-next-line no-console;
         console.log(`Analytics event in ${component}:`, event, data);
       }
@@ -199,3 +196,5 @@ const images = document.querySelectorAll('img[data-src]');
     mountTime: mountTimeRef.current,
   };
 };</string>
+  );
+}

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
@@ -17,7 +17,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title
+    document.title = title;
     // Update meta description;
 
 const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
@@ -28,7 +28,7 @@ const metaDescription = document.querySelector('meta[name=&quot;description&quot
       meta.name = 'description'
       meta.content = description
       document.head.appendChild(meta),
-  ]
+  ];
     // Update keywords;
 
 const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
@@ -36,12 +36,12 @@ const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
       metaKeywords.setAttribute('content', keywords.join(', ');
     } else {
       const meta = document.createElement('meta');
-      meta.name = 'keywords'
+      meta.name = 'keywords';
       meta.content = keywords.join(', ');
       document.head.appendChild(meta);
     // Update canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]')
-    if (canonicalLink) {
+    if (canonicalLink) {;
       canonicalLink.setAttribute('href', canonicalUrl);
     } else {
       canonicalLink = document.createElement('link');
@@ -49,11 +49,11 @@ const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
       canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)
 
-    }
+    };
     // Update Open Graph tags;
 
 const updateOGTag = (property: string, content: string) => {,
-
+;
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
       if (ogTag) {
         ogTag.setAttribute('content', content);
@@ -62,14 +62,14 @@ const updateOGTag = (property: string, content: string) => {,
         ogTag.setAttribute('property', property);
         ogTag.setAttribute('content', content);
         document.head.appendChild(ogTag)}
-    updateOGTag('og:title', title)
-    updateOGTag('og:description', description)
-    updateOGTag('og:image', ogImage)
-    updateOGTag('og:url', canonicalUrl)
-    updateOGTag('og:type', 'website')
+    updateOGTag('og: title', title)
+    updateOGTag('og: description', description)
+    updateOGTag('og: image', ogImage)
+    updateOGTag('og: url', canonicalUrl)
+    updateOGTag('og: type', 'website')
     // Update Twitter Card tags;
 
-const updateTwitterTag = (name: string, content: string) => {,
+const updateTwitterTag = (name: string, content: string) => {,;
       let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`)
       if (twitterTag) {
         twitterTag.setAttribute('content', content);
@@ -78,19 +78,19 @@ const updateTwitterTag = (name: string, content: string) => {,
         twitterTag.setAttribute('name', name);
         twitterTag.setAttribute('content', content);
         document.head.appendChild(twitterTag)}
-    updateTwitterTag('twitter:card', 'summary_large_image');
-    updateTwitterTag('twitter:title', title);
-    updateTwitterTag('twitter:description', description);
-    updateTwitterTag('twitter:image', ogImage);
+    updateTwitterTag('twitter: card', 'summary_large_image');
+    updateTwitterTag('twitter: title', title);
+    updateTwitterTag('twitter: description', description);
+    updateTwitterTag('twitter: image', ogImage);
     // Add structured data
     if (structuredData) {
       const script = document.createElement('script');
-      script.type = 'application/ld+json'
+      script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name="viewport"]')
-    if (!viewport) {
+    if (!viewport) {;
       viewport = document.createElement('meta');
       viewport.setAttribute('name', 'viewport');
       viewport.setAttribute('content', 'width=device-width, initial-scale=1');
@@ -104,22 +104,20 @@ const updateTwitterTag = (name: string, content: string) => {,
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   return (
     <Head> </Head><title>{title}</title>
-      <meta name=&quot;description&quot; content={description} /> </meta><meta name=&quot;keywords&quot; content={keywords.join(', ')} /> </meta><link rel=&quot;canonical&quot; href={canonicalUrl} />{/* Open Graph */}
+      <meta name=&quot;description&quot; content={description} /> </meta><meta name=&quot;keywords&quot; content={keywords.join(', ')} /> </meta><link rel=&quot;canonical&quot; href = {canonicalUrl} />{/* Open Graph */};
       </link><meta property=&quot;og:title&quot; content={title} /> </meta><meta property=&quot;og:description&quot; content={description} /> </meta><meta property=&quot;og:image&quot; content={ogImage} /> </meta><meta property=&quot;og:url&quot; content={canonicalUrl} /> </meta><meta property=&quot;og: type&quot; content=&quot;website&quot; />,
       {/* Twitter Card */}
       <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; />,
-      <meta name=&quot;twitter:title&quot; content={title} /> </meta><meta name=&quot;twitter:description&quot; content={description} /> </meta><meta name=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEO meta tags */}
+      <meta name=&quot;twitter:title&quot; content={title} /> </meta><meta name=&quot;twitter:description&quot; content={description} /> </meta><meta name=&quot;twitter:image&quot; content = {ogImage} />{/* Additional SEO meta tags */};
       </meta><meta name=&quot;robots&quot; content=&quot;index, follow&quot; /> </meta><meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; /> </meta><meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /> </meta><meta charSet=&quot;UTF-8&quot; />{/* Structured Data */}
       {structuredData && (
         </meta><script
           type=&quot;application/ld+json&quot
 
-export default SEOOptimizer
-
-=======
+export default SEOOptimizer = ======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />)}
-    </script></Head>
+    </script>
   )
 }
 
@@ -129,3 +127,6 @@ export default SEOOptimizer
 
 export default SEOOptimizerPage
 
+;
+  );
+}

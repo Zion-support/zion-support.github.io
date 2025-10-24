@@ -16,7 +16,7 @@ const securityConfig: SecurityConfig = {
   enableXSSProtection: true,
   enableCSRFProtection: true,
   allowedOrigins: ['http,
-  s://ziontechgroup.com', 'https://www.ziontechgroup.com']
+  s: //ziontechgroup.com', 'https://www.ziontechgroup.com'];
 };
 
 export default securityConfig;

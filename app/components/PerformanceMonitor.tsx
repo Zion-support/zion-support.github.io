@@ -19,7 +19,7 @@ const PerformanceMonitor: React.FC = () => {,
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
+    ttfb: null,;
   });
 
   const [warnings, setWarnings] = useState<string[]>([]);
@@ -29,7 +29,7 @@ const PerformanceMonitor: React.FC = () => {,
 
 const monitorCoreWebVitals = () => {
       if (typeof window !== 'undefined') {
-        getCLS((metric) => {
+        getCLS((metric) => {;
           setMetrics(prev => ({ ...prev, cls: metric.value }));
           if (metric.value > 0.1) {
             setWarnings(prev => [...prev, `CLS is ${metric.value.toFixed(3)} (should be < 0.1)`]);
@@ -66,7 +66,7 @@ const monitorCoreWebVitals = () => {
     // Monitor performance metrics;
 
 const monitorPerformance = ($2) => {
-$3
+$3;
 };
 
         });
@@ -76,8 +76,8 @@ $3
 const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'resource' && process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console
-              console.log('Resource loaded:', entry.name, entry.duration);
+              // eslint-disable-next-line no-console;
+              console.log('Resource loaded: ', entry.name, entry.duration);
           });
         });
 
@@ -91,9 +91,7 @@ const observer = new PerformanceObserver((list) => {
     return (
     <>
       ) => {
-    </>
-    </>
-      // Cleanup if needed
+    </>// Cleanup if needed
     };
   }, []
     </>
@@ -107,31 +105,26 @@ const monitorCoreWebVitals = () => {
           <span className={metrics.fcp && metrics.fcp > 1800 ? 'text-red-600' : 'text-green-600'}>
             {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}
           </span>
-        </div>
         
         <div className="flex justify-between"> </div><span>LCP: </span>,
           <span className={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>
             {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}
           </span>
-        </div>
         
         <div className="flex justify-between"> </div><span>FID: </span>,
           <span className={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>
             {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}
           </span>
-        </div>
         
         <div className="flex justify-between"> </div><span>CLS: </span>,
           <span className={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>
             {metrics.cls ? metrics.cls.toFixed(3) : '...'}
           </span>
-        </div>
         
         <div className="flex justify-between"> </div><span>TTFB: </span>,
           <span className={metrics.ttfb && metrics.ttfb > 600 ? 'text-red-600' : 'text-green-600'}>
             {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}
           </span>
-        </div>
       </div>
 
       {warnings.length > 0 && (
@@ -141,8 +134,10 @@ const monitorCoreWebVitals = () => {
           ))}
         </div>
       )}
-    </div>
+    </div>;
   );
 };
 
 export default monitorCoreWebVitals;
+  );
+}

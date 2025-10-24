@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -22,16 +22,14 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Navigation = ($2) => {
-$3
+$3;
 };
 
     window.addEventListener('scroll', handleScroll)
     return (
     <>
       ) => window.removeEventListener('scroll', handleScroll
-    </>
-    </>
-    </>
+    </></>
   );
   }, [])
   const navigation = [
@@ -60,18 +58,16 @@ $3
   ]
 
   const isActive = ($2) => {
-$3
+$3;
 };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}> </nav><div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="flex items-center justify-between h-16">{/* Logo */}
           </div><Link href="/" className="flex items-center space-x-2"> </Link><div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center"> </div><span className="text-white font-bold text-lg">Z</span>
-            </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
-          </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg: flex items-center space-x-8">,
             {navigation.map((item) => {
@@ -96,7 +92,7 @@ $3
                           href={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700",
                         >{subItem.name}
-                        </Link></Link>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -109,7 +105,7 @@ $3
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-purple-700 hover:to-cyan-700 transition-all duration-300",
             >Get Started
-            </Link></Link>
+            </Link>
           </div>
           {/* Mobile menu button */}
           <div className="lg: hidden">,
@@ -120,7 +116,6 @@ $3
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
-          </div>
         </div>
         {/* Mobile Navigation */}
         {isOpen && (
@@ -137,7 +132,6 @@ $3
                           : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
                     >
                       <Icon className="w-5 h-5" /> </Icon><span>{item.name}</span>
-                    </Link>
                     {item.submenu && (
                       <div className="ml-8 space-y-1">{item.submenu.map((subItem) => (
                           </div><Link key={subItem.name}
@@ -159,9 +153,7 @@ $3
                 >
                   Get Started
                 </Link>
-              </div>
             </div>
-          </div>
           
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
@@ -170,13 +162,13 @@ $3
               confused sometimes. That's why we have humans to help when things
               go wrong! 🤖
             </p>
-          </div>
         </div>
-      </div>
     </nav>
 
   )
 }
 
 
-export default Navigation
+export default Navigation;
+  );
+}

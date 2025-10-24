@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Head from "next/head";
 
 import Link from 'next/link';
@@ -13,8 +13,7 @@ export default function DataAnalytics5GPage() {
       
         <Head></Head>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
+        <meta name = "description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -25,10 +24,7 @@ export default function DataAnalytics5GPage() {
           <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
             Contact Us</Link>
             <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
-          </Link>
         </div>
-      </div>
-    </div>
-    </div>
+    </div>;
   );
 }

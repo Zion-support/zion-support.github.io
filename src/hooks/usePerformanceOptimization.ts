@@ -27,7 +27,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const setupLazyLoading = useCallback(() => {
     if (!enableLazyLoading || typeof window === 'undefined') return
 
-      // Preload critical resources
+      // Preload critical resources;
       if (options.enablePreloading) {;
         const criticalResources = document.querySelectorAll('[data-preload]');
         criticalResources.forEach((resource) => {
@@ -56,10 +56,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
             if (src) {
-              img.src = src
+              img.src = src;
               img.removeAttribute('data-src');
               img.classList.add('loaded');
               observerRef.current?.unobserve(img);
@@ -88,7 +88,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       '/images/logo.svg'
     ]
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resource) => {;
       const link = document.createElement('link');
       link.rel = 'preload'
       link.href = resource
@@ -100,7 +100,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image'
       }
-
+;
       document.head.appendChild(link);
     })
   }, [enablePreloading])
@@ -108,15 +108,15 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   // Image optimization
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return
-
+;
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add loading="lazy" for non-critical images
-      if (!img.hasAttribute('loading')) {
+      // Add loading = "lazy" for non-critical images
+      if (!img.hasAttribute('loading')) {;
         img.setAttribute('loading', 'lazy');
       }
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
+      // Add decoding = "async" for better performance
+      if (!img.hasAttribute('decoding')) {;
         img.setAttribute('decoding', 'async');
       }
       // Add proper alt text if missing
@@ -136,11 +136,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       '/static/css/main.css'
     ]
 
-    criticalChunks.forEach((chunk) => {
+    criticalChunks.forEach((chunk) => {;
       const link = document.createElement('link');
       link.rel = 'preload'
       link.href = chunk
-      link.as = chunk.endsWith('.js') ? 'script' : 'style'
+      link.as = chunk.endsWith('.js') ? 'script' : 'style';
       document.head.appendChild(link);
     })
   }, [enableCodeSplitting])
@@ -150,7 +150,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
 
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
+      window.addEventListener('load', () => {;
         navigator.serviceWorker.register('/sw.js');
           .then(() => {
             // Service worker registered successfully
@@ -176,7 +176,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         }
       })
 
-      try {
+      try {;
         observer.observe({ entryTypes: ['longtask'] });
       } catch {
         // Long task observer not supported
@@ -186,7 +186,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
-        const memory = (performance as any).memory
+        const memory = (performance as any).memory;
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         if (usedMB / totalMB > 0.8) {
@@ -207,13 +207,13 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       { rel: 'preconnect', href: 'http,
   s://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'http,
-  s://fonts.gstatic.com', crossOrigin: 'anonymous' }
+  s: //fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
 
-    hints.forEach((hint) => {
+    hints.forEach((hint) => {;
       const link = document.createElement('link');
       Object.entries(hint).forEach(([key, value]) => {
-        if (key === 'crossOrigin') {
+        if (key = == 'crossOrigin') {;
           link.setAttribute('crossorigin', value as string);
         } else {
           link.setAttribute(key, value as string);

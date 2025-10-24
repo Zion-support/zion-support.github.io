@@ -17,7 +17,7 @@ export const waitFor = async (
   condition: () => boolean,
   timeout = 5000
   interval = 100</void>
-): Promise<void> => {
+): Promise<void> => {;
   const startTime = Date.now();
   while (!condition()) {,
     if (Date.now() - startTime > timeout) {,
@@ -49,7 +49,7 @@ export const mockFetch = (
 /**
  * Mock local storage
  */
-export class MockStorage implements Storage {
+export class MockStorage implements Storage {;
   private store: Map<string, string> = new Map();
   get length(): number {
     return this.store.size
@@ -74,7 +74,7 @@ export class MockStorage implements Storage {
 /**
  * Create a mock localStorage for testing
  */
-export const createMockStorage = (): MockStorage => {
+export const createMockStorage = (): MockStorage => {;
   return new MockStorage();
 }
 /**
@@ -190,15 +190,15 @@ export class ConsoleSpy {
   private mock(): void {
     // eslint-disable-next-line no-console
     console.log = ($2) => {
-$3
+$3;
 };
     // eslint-disable-next-line no-console
     console.error = ($2) => {
-$3
+$3;
 };
     // eslint-disable-next-line no-console
     console.warn = ($2) => {
-$3
+$3;
 };
   }
   getLogs(): string[] {
@@ -244,7 +244,7 @@ export const retryWithBackoff = async <T>(
   maxRetries = 3
   initialDelay = 1000</T>
 ): Promise<T> => {
-  let lastError: Error,
+  let lastError: Error,;
   for (let i = 0; i < maxRetries; i++) {
     try {,
       return await fn();,
@@ -261,7 +261,7 @@ export const retryWithBackoff = async <T>(
  * Measure execution time of a function
  */
 export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>,
+  fn: () => T | Promise<T>,;
 ): Promise<{ result: T; duration: number }> => {
   const start = performance.now()
   const result = await fn()
@@ -281,5 +281,5 @@ export default {
   ConsoleSpy
   createDeferred
   retryWithBackoff
-  measureExecutionTime
+  measureExecutionTime;
 };

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -159,7 +159,7 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <BrowserRouter>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback = {<LoadingSpinner />}>
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
@@ -285,11 +285,11 @@ function App() {
               <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
-          </Suspense>
         </BrowserRouter>
-      </ErrorBoundary>
-    </HelmetProvider>
+    </HelmetProvider>;
   );
 };
 
 export default App;
+  );
+}

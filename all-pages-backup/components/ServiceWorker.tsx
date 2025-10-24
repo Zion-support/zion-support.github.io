@@ -14,12 +14,10 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology';
-<<<<<<< HEAD
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '''
 =======</ServiceWorkerProps>
 const ServiceWorke,</ServiceWorkerProps>
   r: React.FC<ServiceWorkerProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</ServiceWorkerProps>
 </ServiceWorkerProps>
 
 export default ServiceWorker;

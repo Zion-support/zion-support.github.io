@@ -3,11 +3,7 @@ import { motion } from 'framer-motion'
 'use client'
   variant?: 'default' | 'service' | 'testimonial' | 'feature'
   variant = 'default'
-<<<<<<< HEAD
   className = '''
-=======
-  className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
       case 'service'
         return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-cyan-500/30 "hover": border-cyan-400/50 shadow-2xl hover:shadow-cyan-500/20',
       case 'testimonial'

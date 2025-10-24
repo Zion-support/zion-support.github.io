@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
 declare global {
   interface Window {
@@ -20,7 +20,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 
 )
 export const useAnalytics = ($2) => {
-$3
+$3;
 };
 
   return context
@@ -33,13 +33,12 @@ interface AnalyticsProviderProps {
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
     if (type of windo w !=="undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === "production") {
+      if (process.env.NODE_ENV = == "production") {
         const script = document.createElement("script")
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
+        script.async = true;
         document.head.appendChild(script);
-        window.gtag =
-          window.gtag ||
+        window.gtag = window.gtag ||
           function (...args: any[]) {,
             (window.gtag as any).q = (window.gtag as any).q || []
             (window.gtag as any).q.push(args)
@@ -51,7 +50,7 @@ export default AnalyticsProvider
 
 =======
   consttrackEvent = ($2) => {
-$3
+$3;
 };
   }
   consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,
@@ -74,3 +73,6 @@ export default AnalyticsProvider
 
 export default AnalyticsProviderPage
 
+;
+  );
+}
