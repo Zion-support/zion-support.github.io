@@ -62,8 +62,7 @@ const Header: React.FC = () => {
                 <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                   Learn More
                 </button>
-              </div>
-            </div>
+              
           </div>
         </section>
         {/* Features Section */}
@@ -92,8 +91,7 @@ const Header: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -111,8 +109,7 @@ const Header: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -127,10 +124,9 @@ const Header: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
-            </div>
-          </div>
+            
         </section>
-      </div>
+        </div>
       <Footer />
     </header>
   );

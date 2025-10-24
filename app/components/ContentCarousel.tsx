@@ -11,7 +11,7 @@ interface Slide {
       description: string,
     features: string[]
   icon: React.ReactNode,
-    color: string}
+    color: string};
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides: Slide[] = [
@@ -83,8 +83,7 @@ const ContentCarousel: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
-            </div>
-          </div>
+            
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
@@ -112,8 +111,7 @@ const ContentCarousel: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -142,8 +140,7 @@ const ContentCarousel: React.FC = () => {
                         <div key={featureIndex} className="flex items-center"></div>
                           <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-purple-100">{feature}</span>
-                        </div>
-                      </div>
+                        
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">{slide.title}</h3>
                         <p className="text-gray-600 mb-6">{slide.description}</p>
@@ -155,8 +152,7 @@ const ContentCarousel: React.FC = () => {
                             </li>
                           ))}
                         </ul>
-                      </div>
-                    </div>
+                      
                   </div>
                 </div>
               ))}
@@ -218,8 +214,7 @@ const ContentCarousel: React.FC = () => {
                     <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}</div>div>
                     <div className="text-gray-300">Slide {currentSlide + 1} of {slides.length}</div>div>
                   </div>
-                </div>
-              </div>
+                
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{currentSlideData.features.map((feature, index) => (</div>
                 <div key={index} className="flex items-center gap-3"></div>
@@ -249,7 +244,7 @@ const ContentCarousel: React.FC = () => {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></button>
             <ChevronRight className="h-6 w-6" />
           </button>
-        </div>
+        
 {/* Slide Indicators */}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
@@ -261,7 +256,7 @@ const ContentCarousel: React.FC = () => {
           ></button>
             <ChevronRight className="w-6 h-6" />
           </button>
-        </div>
+        
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
             <button
@@ -283,8 +278,7 @@ const ContentCarousel: React.FC = () => {
               <div className="text-left"></div>
                 <div className="text-2xl font-bold">4.9/5</div>
                 <div className="text-gray-400 text-sm">Customer Rating</div>
-              </div>
-            </div>
+              
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
@@ -293,8 +287,7 @@ const ContentCarousel: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -309,10 +302,9 @@ const ContentCarousel: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
-            </div>
-          </div>
+            
         </section>
-      </div>
+        </div>
       <Footer />
 </>
 <<<<<<< HEAD
@@ -321,7 +313,7 @@ const ContentCarousel: React.FC = () => {
  ContentCarouselPage
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
-        </div>
+        
       </div>
     </div>
   )

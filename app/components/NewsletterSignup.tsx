@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal'
-  onClose?: () => void}
+  onClose?: () => void};
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {</NewsletterSignupProps>
   const [email, setEmail] = useState('')</NewsletterSignupProps>
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -41,8 +41,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90"></p>
           Get the latest updates on AI technology, IT solutions, and industry insights.</p>
-        </p>
-      </div>
+        
       <form onSubmit={handleSubmit} className="space-y-4"></form>
         <div className="flex flex-col sm: flex-row gap-3"></div>
           <input
@@ -96,8 +95,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           ✓ No spam, unsubscribe anytime<br /></br>
           ✓ Weekly updates on latest tech trends<br /></br>
           ✓ Exclusive content and early access</br>
-        </p>
-      </div>
+        
     </div>
   if (variant === 'modal') {
     return (
@@ -107,8 +105,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} /></div>
           <div className="relative w-full max-w-md"></div>
             {content}</div>
-          </div>
-        </div>
+          
       </div>
   return content;
 }

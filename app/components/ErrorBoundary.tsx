@@ -2,22 +2,30 @@ import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 interface Props {
   children: ReactNode;
-
+}
+;
 interface State {
   hasError: boolean;
   error: Error | undefined;
-
+}
+;
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
-    error: undefined,}
+    error: undefined,
+  };
+
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error}
+    return { hasError: true, error };
+  }
+
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error to console in development only
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
-      console.error('Error caught by boundary:', error, errorInfo);}
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
   public render() {
     if (this.state.hasError) {
       return (
@@ -38,7 +46,7 @@ class ErrorBoundary extends Component<Props, State> {
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
                   />
                 </svg>
-              </div>
+              
               <h2 className="text-xl font-semibold text-white mb-2">
                 Something went wrong
               </h2>
@@ -70,8 +78,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </details>
               )}
             </div>
-          </div>
-        </section>
+          
         {/* Features Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -98,8 +105,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -117,8 +123,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -133,10 +138,9 @@ class ErrorBoundary extends Component<Props, State> {
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
-            </div>
-          </div>
+            
         </section>
-      </div>
+        </div>
       <Footer />
 </>
 
@@ -193,8 +197,7 @@ className="flex items-center justify-center space-x-2 border border-cyan-600 tex
 ></button>
 <Home className="w-4 h-4" />
 <span>Go Home</span>
-</button>
-</div>
+
 <div className="mt-6 pt-6 border-t border-white/20"></div>
 <p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team: </p>p>
 <a
@@ -203,6 +206,5 @@ className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transitio
 <Phone className="w-4 h-4 mr-2" />
 kleber@ziontechgroup.com
 </a>
-</div>
-</div>
+
 </div>

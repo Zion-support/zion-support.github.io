@@ -28,7 +28,7 @@ export default function Ai3dmodelgeneratorPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
+        </div>
       <Footer />
     </>
   );

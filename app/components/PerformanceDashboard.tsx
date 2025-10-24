@@ -13,7 +13,7 @@ const PerformanceDashboard: React.FC = () => {
         <title>PerformanceDashboard</title>
         <meta name="description" content="Advanced PerformanceDashboard solution for modern businesses." /></meta>
         <meta name="keywords" content="AI, artificial intelligence, PerformanceDashboard, AI solutions, intelligent automation" /></meta>
-      </Helmet>
+      
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}</div>
@@ -33,8 +33,7 @@ const PerformanceDashboard: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
-              </button>
-            </div>
+              
           </div>
         </section>
 
@@ -45,8 +44,7 @@ const PerformanceDashboard: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Discover the powerful features that make PerformanceDashboard the perfect solution for your business.</p>
-              </p>
-            </div>
+              
             <div className="grid md:grid-cols-2 l,
   g:grid-cols-4 gap-8"></div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
@@ -64,8 +62,7 @@ const PerformanceDashboard: React.FC = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
                 <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-              </div>
-            </div>
+              
           </div>
         </section>
 
@@ -78,12 +75,11 @@ const PerformanceDashboard: React.FC = () => {
             </p>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
               Start Your Free Trial</button>
-            </button>
-          </div>
+            
         </section>
-      </div>
+        </div>
       <Footer /></Footer>
-    </>
+    
 
   );
 }  )}

@@ -99,7 +99,7 @@ const ContentStatistics: React.FC = () => {
         <title>ContentStatistics</title>
         <meta name="description" content="Advanced ContentStatistics solution for modern businesses." /></meta>
         <meta name="keywords" content="AI, artificial intelligence, ContentStatistics, AI solutions, intelligent automation" /></meta>
-      </Helmet>
+      
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
             {/* Hero Section */}</div>
@@ -116,12 +116,11 @@ const ContentStatistics: React.FC = () => {
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
-              </button>
+              
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
-              </button>
-            </div>
+              
           </div>
         </section>
         {/* Features Section */}
@@ -131,8 +130,7 @@ const ContentStatistics: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven features designed to transform your business operations</p>
-              </p>
-            </div>
+              
             <div className="grid md:grid-cols-2 l,
   g:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (</div>
@@ -151,8 +149,7 @@ const ContentStatistics: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -160,8 +157,7 @@ const ContentStatistics: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience the benefits of cutting-edge AI technology</p>
-              </p>
-            </div>
+              
             <div className="grid md:grid-cols-2 l,
   g:grid-cols-3 gap-8"></div>
             {benefits.map((benefit, index) => (</div>
@@ -171,8 +167,7 @@ const ContentStatistics: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -187,11 +182,9 @@ const ContentStatistics: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Contact Sales</button>
-              </button>
-            </div>
+              
           </div>
-        </section>
-      </div>
+        
     </section>
   )
 }
@@ -341,7 +334,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div className="flex justify-center mb-4"></div>
             <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center"></div>
 <stat.icon className="h-8 w-8 text-white" /></stat>
-</div>
+
 </div>
 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>div>
 <div className="text-gray-300">{stat.label}</div>
@@ -354,7 +347,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4"></div>
             <achievement.icon className="h-6 w-6 text-white" /></achievement>
-</div>
+
 <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
 <p className="text-gray-300 text-sm">{achievement.description}</p>
 </div>
@@ -364,7 +357,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300"></div>
 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
             <stat.icon className="w-8 h-8 text-slate-900" /></stat>
-</div>
+
 <div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>div>
 <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
 <div className="text-gray-400 text-sm">{stat.description}</div>
@@ -382,7 +375,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300"></div>
 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"></div>
             <feature.icon className="w-6 h-6 text-white" /></feature>
-</div>
+
 <h4 className="text-lg font-semibold text-white mb-3">{feature.title}</h4>
 <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
 <div className="space-y-2">{feature.stats.map((stat, statIndex) => (</div>
@@ -406,7 +399,7 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300"></div>
 <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
             <achievement.icon className="w-8 h-8 text-white" /></achievement>
-</div>
+
 <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
 <h4 className="text-lg font-semibold text-white mb-2">{achievement.title}</h4>
 <p className="text-gray-300 text-sm">{achievement.description}</p>
@@ -443,8 +436,7 @@ Get Started Today</Zap>
   r:bg-white/10 transition-colors duration-200"></button>
 View Case Studies
 </div>
-</div>
-</div>
+
 </div>
 </div>
 )

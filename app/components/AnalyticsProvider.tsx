@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useEffect, ReactNode } from "react"
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void}
+    gtag: (...args: any[]) => void};
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void}
+  trackPageView: (pageName: string) => void};
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 export const useAnalytics = () => {
@@ -13,7 +13,7 @@ export const useAnalytics = () => {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
   return context
 interface AnalyticsProviderProps {
-  children: ReactNode}
+  children: ReactNode};
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
     if (type of windo w !=="undefined") {
       // Google Analytics

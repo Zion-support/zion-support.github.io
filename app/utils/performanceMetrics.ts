@@ -19,7 +19,7 @@ FCP?: number; // First Contentful Paint
 LCP?: number; // Largest Contentful Paint
 FID?: number; // First Input Delay
 CLS?: number; // Cumulative Layout Shift
-TTFB?: number; // Time to First Byte}
+TTFB?: number; // Time to First Byte};
 export interface PerformanceMetric {};
 name: string,
     value: number

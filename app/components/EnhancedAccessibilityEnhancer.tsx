@@ -64,8 +64,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
-            </div>
-          </div>
+            
         </section>
 
         {/* Features Section */}
@@ -94,8 +93,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
@@ -113,8 +111,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-    </>
+        
   );
       </section>
 export default EnhancedAccessibilityEnhancerPage

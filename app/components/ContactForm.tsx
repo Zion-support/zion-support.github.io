@@ -72,8 +72,7 @@ const ContactForm: React.FC = () => {
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /></CheckCircle>
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
-      </div>
-    </>
+      
   );
   }
 
@@ -97,7 +96,7 @@ const ContactForm: React.FC = () => {
   s:border-transparent"
               placeholder="Your full name"
             /></input>
-          </div>
+          
           <div></div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Email Address *</label>
@@ -112,7 +111,7 @@ const ContactForm: React.FC = () => {
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="your@email.com"
             /></input>
-          </div>
+          
         </div>
         <div className="grid m,
   d:grid-cols-2 gap-6"></div>
@@ -130,7 +129,7 @@ const ContactForm: React.FC = () => {
   s:border-transparent"
               placeholder="+1 (555) 123-4567"
             /></input>
-          </div>
+          
           <div></div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Company</label>
@@ -145,7 +144,7 @@ const ContactForm: React.FC = () => {
   s:border-transparent"
               placeholder="Your company name"
             /></input>
-          </div>
+          
         </div>
         <div></div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -182,7 +181,7 @@ const ContactForm: React.FC = () => {
   s:border-transparent resize-none"
             placeholder="Tell us about your project or how we can help..."
           /></textarea>
-        </div>
+        
         <button
           type="submit"
           disabled={isSubmitting}
@@ -205,8 +204,7 @@ const ContactForm: React.FC = () => {
             </>
           )}
         </button>
-      </form>
-    </div>
+      
   );
 };
 

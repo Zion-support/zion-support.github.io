@@ -1,11 +1,18 @@
 import React from "react";
-"use client",
+
+"use client";
+
 interface AccessibilityComponentsProps {
-  className?: string}
+  className?: string;
+}
+;
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
-  return (</AccessibilityComponentsProps>
-    <div className={className}></div>
+  return (
+    <div className={className}>
       <h2>Accessibility Components</h2>
       <p>Accessibility components for enhanced user experience.</p>
     </div>
-export default AccessibilityComponents
+  );
+};
+
+export default AccessibilityComponents;

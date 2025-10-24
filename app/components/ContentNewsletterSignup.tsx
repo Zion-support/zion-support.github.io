@@ -76,7 +76,7 @@ interface ContentNewsletterSignupProps {
             >
               {isLoading ? 'Subscribing...' : buttonText}</button>
               <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
-            </button>
+            
           </div>
         </form>
         
@@ -85,8 +85,7 @@ interface ContentNewsletterSignupProps {
             <p className="text-emerald-400 flex items-center justify-center"></p>
               <CheckCircle className="h-5 w-5 mr-2" />
               Thank you for subscribing!</CheckCircle>
-            </p>
-          </div>
+            
         )}
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -97,8 +96,7 @@ interface ContentNewsletterSignupProps {
             </div>
           ))}
         </div>
-      </div>
-    </div>
+      
 
 export default ContentNewsletterSignup
 ;

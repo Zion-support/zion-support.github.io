@@ -28,7 +28,7 @@ export default function NetworkinfrastructurePage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
+        </div>
       <Footer />
     </>
   );

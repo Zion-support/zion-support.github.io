@@ -28,7 +28,7 @@ export default function AppPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
+        </div>
       <Footer />
     </>
   );

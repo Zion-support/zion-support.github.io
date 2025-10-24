@@ -23,7 +23,7 @@ const NotFound = () => {
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
-          </div>
+          
           
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -96,8 +96,7 @@ const NotFound = () => {
               >
                 Send Email
               </a>
-            </div>
-          </div>
+            
           
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">

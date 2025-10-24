@@ -20,8 +20,7 @@ const Breadcrumb: React.FC = () => {
             <Link href="/" className="text-gray-400 hove,
   r:text-white transition-colors">
               Home</Link>
-            </Link>
-          </li>
+            
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
@@ -38,7 +37,7 @@ const Breadcrumb: React.FC = () => {
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                     clipRule="evenodd"
                   /></path>
-                </svg>
+                
                 {isLast ? (
                   <span className="text-white font-medium">
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}</span>
@@ -55,8 +54,7 @@ const Breadcrumb: React.FC = () => {
             );
           })}
         </ol>
-      </div>
-    </nav>
+      
   );
 };
 

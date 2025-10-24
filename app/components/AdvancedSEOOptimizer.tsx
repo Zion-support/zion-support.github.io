@@ -40,7 +40,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         <title>Advanced SEO Optimizer</title>
         <meta name="description" content="Advanced SEO Optimizer solution for modern businesses." /></meta>
         <meta name="keywords" content="AI, artificial intelligence, SEO optimization, AI solutions, intelligent automation" /></meta>
-      </Helmet>
+      
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}</div>
@@ -57,12 +57,11 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
-              </button>
+              
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
-              </button>
-            </div>
+              
           </div>
         </section>
         {/* Features Section */}
@@ -72,8 +71,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven SEO features designed to transform your online presence</p>
-              </p>
-            </div>
+              
             <div className="grid md: grid-cols-2 l,
   g:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (</div>
@@ -92,8 +90,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -101,8 +98,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience the power of AI-driven SEO optimization</p>
-              </p>
-            </div>
+              
             <div className="grid md: grid-cols-2 l,
   g:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (</div>
@@ -112,8 +108,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -127,17 +122,14 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Start Free Trial</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
-              </button>
+              
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Contact Sales</button>
-              </button>
+              
             </div>
-          </div>
-        </section>
-      </div>
       <Footer /></Footer>
-</>;
+;
   );
 };
 

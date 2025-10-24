@@ -37,7 +37,7 @@ const PageFixedPage: React.FC = () => {
       <Helmet></Helmet>
         <title>Page Fixed - Zion Tech Group</title>
         <meta name="description" content="Advanced page fixed solutions powered by AI technology." /></meta>
-      </Helmet>
+      
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -50,8 +50,7 @@ const PageFixedPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>
               <button className="border border-purple-400 text-purple-400 hover: bg-purple-400 hove,
   r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
-            </div>
-          </div>
+            
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
@@ -66,7 +65,7 @@ const PageFixedPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
   r: scale-110 transition-transform"></div>
                     <feature.icon className="w-8 h-8 text-white" /></feature>
-                  </div>
+                  
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -82,8 +81,7 @@ const PageFixedPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -94,13 +92,10 @@ const PageFixedPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Us</button>
                 <button className="border border-purple-400 text-purple-400 hover: bg-purple-400 hove,
   r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
-              </div>
+              
             </div>
-          </div>
-        </section>
-      </div>
       <Footer /></Footer>
-</>;
+;
   );
 };
 
