@@ -71,6 +71,6 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
 
 declare global {
   interface Window {
-    gtag: (..._args: unknown[]) => void
+    gtag?: (..._args: unknown[]) => void
   }
 }
