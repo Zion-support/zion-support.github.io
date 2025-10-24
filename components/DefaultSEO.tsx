@@ -4,7 +4,7 @@ interface DefaultSEOProps {
   className?: string;
 }
 
-const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = ' }) => {
+const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
   return (
     <div className={className}>
       {/* Default SEO component */}
