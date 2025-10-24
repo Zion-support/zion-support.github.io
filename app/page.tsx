@@ -12,6 +12,10 @@ import Head from "next/head";
 import React from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {

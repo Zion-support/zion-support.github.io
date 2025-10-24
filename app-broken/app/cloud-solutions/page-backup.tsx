@@ -1,9 +1,20 @@
+<<<<<<< HEAD:app-broken/app/cloud-solutions/page-backup.tsx
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 const PageBackupPage: React.FC = () => {
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
+const PageBackupPage: React.FC = ( => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d938:app/ai-customer-support/page-backup.tsx
   const features = [
     {
       icon: Brain,
@@ -42,11 +53,27 @@ const PageBackupPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
+<<<<<<< HEAD:app-broken/app/cloud-solutions/page-backup.tsx
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Page Backup</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Advanced page backup solutions powered by AI technology.</p>p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
+=======
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Page Backup;
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced page backup solutions powered by AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started;
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More;
+              </button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d938:app/ai-customer-support/page-backup.tsx
             </div>
           </div>
         </section>
@@ -54,8 +81,17 @@ const PageBackupPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
+<<<<<<< HEAD:app-broken/app/cloud-solutions/page-backup.tsx
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results</p>
+=======
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features;
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results;
+              </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d938:app/ai-customer-support/page-backup.tsx
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -83,11 +119,27 @@ const PageBackupPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+<<<<<<< HEAD:app-broken/app/cloud-solutions/page-backup.tsx
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
               <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your requirements and get started today.</p>p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Us</button>
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
+=======
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us;
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More;
+                </button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d938:app/ai-customer-support/page-backup.tsx
               </div>
             </div>
           </div>
@@ -95,6 +147,13 @@ const PageBackupPage: React.FC = () => {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:app-broken/app/cloud-solutions/page-backup.tsx
   )
 }
 export default PageBackupPage
+=======
+  ;
+};
+
+export default PageBackupPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d938:app/ai-customer-support/page-backup.tsx

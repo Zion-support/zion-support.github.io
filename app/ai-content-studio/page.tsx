@@ -9,6 +9,8 @@ import Footer from "../components/Footer";
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -93,3 +95,6 @@ export default PagePage;
 export default AiContentStudioPage;
 export default AiContentStudioPage;
 export default AiContentStudioPage;
+
+export default AiContentStudioPage;
+export default AIContentStudioPage;

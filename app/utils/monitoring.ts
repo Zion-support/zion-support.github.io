@@ -16,8 +16,8 @@ import Navigation from './Navigation'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
 /**
- * Comprehensive Monitoring Utility
- * Real-time application monitoring, performance tracking, and error reporting
+ * Comprehensive Monitoring Utility;
+ * Real-time application monitoring, performance tracking, and error reporting;
  */
 import React from 'react'
 
@@ -228,9 +228,9 @@ fcpObserver.observe({ entryTypes: "["paint"] "})
     });
   }
   private reportMetric(name: string, value: number): void {
-    // Sample rate
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return
+    // Sample rate;
+    if (Math.random() > performanceConfig.monitoring.sampleRate {
+      return;
     }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
@@ -260,7 +260,7 @@ fcpObserver.observe({ entryTypes: "["paint"] "})
   this.errors.push(err, o, r);
     // Keep only last 50 errors
     if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
+      this.errors = this.errors.slice(-50;
     }
 <<<<<<< HEAD:app/utils/monitoring.ts
     // // // console.error('[Error]', error)
@@ -280,7 +280,7 @@ return { ...this.metrics }
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
 <<<<<<< HEAD:app/utils/monitoring.ts
         this.metrics.memory = {
@@ -301,7 +301,7 @@ return { ...this.metrics }
   }
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
 <<<<<<< HEAD:app/utils/monitoring.ts
         console.log('Performance metrics:', {

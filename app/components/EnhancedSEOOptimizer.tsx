@@ -194,7 +194,7 @@ return (<div>
         </div>
       </section>
     </div>
-  );
+  ;
 };
 
 export default EnhancedSEOOptimize;r;

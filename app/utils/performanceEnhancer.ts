@@ -235,8 +235,8 @@ export const initializePerformanceEnhancements=";";"
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // console.log('Performance metrics:', metrics)
   }
-<<<<<<< HEAD
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9

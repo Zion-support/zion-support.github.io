@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Footer from "../components/Footer";
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -80,7 +81,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
+  ;
 };
 
 export default Page;

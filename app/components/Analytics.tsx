@@ -29,7 +29,7 @@ page_title: "document.title",page_location: "window.location.href") => {
   return <>{children}</>;
 };
 
-// Extend Window interface for gtag
+// Extend Window interface for gtag;
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;

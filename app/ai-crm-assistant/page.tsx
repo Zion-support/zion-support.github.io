@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -28,6 +29,7 @@ const Page: React.FC = () => {
     {
       icon: Target,
       title: 'Precision Targeting',
+import { CheckCircle, ArrowRight } from 'lucide-react';
       description: 'Target the right audience with AI-driven precision and accuracy.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
@@ -89,4 +91,7 @@ export default Page;
 
 export default PagePage;
 
+export default AICrmAssistantPage;
+
+export default AiCrmAssistantPage;
 export default AICrmAssistantPage;

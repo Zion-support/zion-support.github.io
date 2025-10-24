@@ -49,7 +49,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const currentCount = Math.floor(easeOutCubic * end);
       
       setCount(currentCount);
-      
+
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }

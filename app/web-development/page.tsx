@@ -8,6 +8,10 @@ import Footer from "../components/Footer";
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import SecurityEnhancer from '../components/SecurityEnhancer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -87,5 +91,7 @@ const Page: React.FC = () => {
 export default Page;
 
 export default PagePage;
+
+export default WebDevelopmentPage;
 
 export default WebDevelopmentPage;

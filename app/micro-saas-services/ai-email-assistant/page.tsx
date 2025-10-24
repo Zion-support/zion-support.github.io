@@ -74,7 +74,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
+  ;
 };
 
 export default Page;

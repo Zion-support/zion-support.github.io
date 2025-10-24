@@ -140,7 +140,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
                     Subscribing...
     </>
                   </>
-                ) : (
+                 : (
                   <>
                     {buttonText}
                     <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
 import { CheckCircle, ArrowRight, Shield, FileText, Users, Lock, AlertTriangle, Award } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';

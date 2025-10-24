@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Zap } from 'lucide-react';
@@ -83,7 +87,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
+  ;
 };
 
 export default Page;

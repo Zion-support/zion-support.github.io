@@ -112,7 +112,7 @@ const features = [
         </div>
       </section>
     </div>
-  );
+  ;
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/innovation-labs/page.tsx

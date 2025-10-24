@@ -18,7 +18,9 @@ import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lu
 
 const Page: React.FC = () => {
   const features = [
-    {
+
+export default function StatusPage() {
+  const [lastUpdated, setLastUpdated] = useState(new Date());    {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',

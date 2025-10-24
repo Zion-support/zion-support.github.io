@@ -333,7 +333,7 @@ class AccessibilityEnhancer {
     if (!this.config.enableHighContrast) return;
     // Check for high contrast preference
     if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast');
+      document.body.classList.add('high-contrast';
     }
     // Listen for changes
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
@@ -351,7 +351,7 @@ class AccessibilityEnhancer {
     if (!this.config.enableReducedMotion) return;
     // Check for reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('reduced-motion');
+      document.body.classList.add('reduced-motion';
     }
     // Listen for changes
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
@@ -541,10 +541,10 @@ class AccessibilityEnhancer {
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
       'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'button: not([disabled]',
+      'input: not([disabled]',
+      'select: not([disabled]',
+      'textarea: not([disabled]',
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
     ];

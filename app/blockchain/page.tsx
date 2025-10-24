@@ -96,3 +96,5 @@ export default Page;
 export default PagePage;
 
 export default BlockchainPage;
+
+export default BlockchainPage;

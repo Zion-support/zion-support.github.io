@@ -16,6 +16,17 @@ function cleanupMergeConflicts(filePath) {
     
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< [^\n]*\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
+    
+    // Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d938
     console.log(`Cleaned: ${filePath}`);
     return true;
   } catch (error) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp, Building2, Zap } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';
@@ -83,7 +84,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
+  ;
 };
 
 export default Page;

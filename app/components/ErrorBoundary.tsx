@@ -97,7 +97,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '' }) => {
               )}
           </div>
         </div>
-      );
+      ;
     }
 
         {/* Benefits Section */}

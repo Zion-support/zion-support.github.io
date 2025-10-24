@@ -14,7 +14,9 @@ import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lu
 
 const Page: React.FC = () => {
   const features = [
-    {
+
+export default function APIDocsPage() {
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);    {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
