@@ -16,16 +16,16 @@ const Page: React.FC = () => {
     uptime: 0
   })
 
-  const targetCounters = {
-    clients: 1000,
-    projects: 500,
-    satisfaction: 99,
-    years: 10,
-    countries: 25,
-    uptime: 99.9
-  }
-
   useEffect(() => {
+    const targetCounters = {
+      clients: 1000,
+      projects: 500,
+      satisfaction: 99,
+      years: 10,
+      countries: 25,
+      uptime: 99.9
+    }
+
     const duration = 2000
     const steps = 60
     const stepDuration = duration / steps

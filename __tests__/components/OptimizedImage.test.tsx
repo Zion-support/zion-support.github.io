@@ -6,12 +6,14 @@ const OptimizedImage = ({
   src, 
   alt, 
   width, 
-  height 
+  height,
+  'data-testid': dataTestId
 }: { 
   src: string; 
   alt: string; 
   width?: number; 
-  height?: number; 
+  height?: number;
+  'data-testid'?: string;
 }) => {
   return (
     <img 
@@ -19,6 +21,7 @@ const OptimizedImage = ({
       alt={alt} 
       width={width} 
       height={height}
+      data-testid={dataTestId}
     />
   );
 };
@@ -56,7 +59,8 @@ describe('OptimizedImage', () => {
       const { unmount } = render(
         <OptimizedImage 
           src={src} 
-          alt={`Test image ${index + 1}`} 
+          alt={`Test image ${index + 1}`}
+          data-testid="optimized-image"
         />
       );
       
