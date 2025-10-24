@@ -1,8 +1,6 @@
 import React from 'react';
 export default EnhancedSEO;
 
-
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -85,5 +83,4 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
 
   )
-
 

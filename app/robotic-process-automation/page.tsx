@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const RoboticProcessAutomationPage: React.FC = () => {
@@ -31,12 +31,6 @@ const RoboticProcessAutomationPage: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Helmet>
-        <title>Robotic Process Automation - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional roboticprocessautomation solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="roboticprocessautomation, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

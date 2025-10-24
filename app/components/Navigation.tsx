@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,17 +14,17 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-purple-400">
+            <Link href="/" className="text-2xl font-bold text-purple-400">
               Zion Tech Group
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:text-purple-400 transition-colors">
+            <Link href="/" className="hover:text-purple-400 transition-colors">
               Home
             </Link>
-            <Link to="/about" className="hover:text-purple-400 transition-colors">
+            <Link href="/about" className="hover:text-purple-400 transition-colors">
               About
             </Link>
             <div className="relative group">
@@ -36,16 +36,16 @@ const Navigation: React.FC = () => {
               </button>
               <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-1">
-                  <Link to="/ai-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/ai-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     All AI Services
                   </Link>
-                  <Link to="/ai-analytics" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/ai-analytics" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     AI Analytics
                   </Link>
-                  <Link to="/ai-automation" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/ai-automation" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     AI Automation
                   </Link>
-                  <Link to="/ai-cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/ai-cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     AI Cybersecurity
                   </Link>
                 </div>
@@ -60,29 +60,29 @@ const Navigation: React.FC = () => {
               </button>
               <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-1">
-                  <Link to="/it-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/it-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     All IT Services
                   </Link>
-                  <Link to="/cloud-migration" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/cloud-migration" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     Cloud Migration
                   </Link>
-                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     Cybersecurity
                   </Link>
-                  <Link to="/web-development" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                  <Link href="/web-development" className="block px-4 py-2 text-sm hover:bg-gray-700">
                     Web Development
                   </Link>
                 </div>
               </div>
             </div>
-            <Link to="/pricing" className="hover:text-purple-400 transition-colors">
+            <Link href="/pricing" className="hover:text-purple-400 transition-colors">
               Pricing
             </Link>
-            <Link to="/contact" className="hover:text-purple-400 transition-colors">
+            <Link href="/contact" className="hover:text-purple-400 transition-colors">
               Contact
             </Link>
             <Link 
-              to="/demo" 
+              href="/demo" 
               className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md transition-colors"
             >
               Get Demo
@@ -110,25 +110,25 @@ const Navigation: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-md mt-2">
-              <Link to="/" className="block px-3 py-2 hover:text-purple-400">
+              <Link href="/" className="block px-3 py-2 hover:text-purple-400">
                 Home
               </Link>
-              <Link to="/about" className="block px-3 py-2 hover:text-purple-400">
+              <Link href="/about" className="block px-3 py-2 hover:text-purple-400">
                 About
               </Link>
-              <Link to="/ai-services" className="block px-3 py-2 hover:text-purple-400">
+              <Link href="/ai-services" className="block px-3 py-2 hover:text-purple-400">
                 AI Services
               </Link>
-              <Link to="/it-services" className="block px-3 py-2 hover:text-purple-400">
+              <Link href="/it-services" className="block px-3 py-2 hover:text-purple-400">
                 IT Services
               </Link>
-              <Link to="/pricing" className="block px-3 py-2 hover:text-purple-400">
+              <Link href="/pricing" className="block px-3 py-2 hover:text-purple-400">
                 Pricing
               </Link>
-              <Link to="/contact" className="block px-3 py-2 hover:text-purple-400">
+              <Link href="/contact" className="block px-3 py-2 hover:text-purple-400">
                 Contact
               </Link>
-              <Link to="/demo" className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-center">
+              <Link href="/demo" className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-center">
                 Get Demo
               </Link>
             </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 export default SEOHead;
 
-
-
   return()
         <title>5G Data Analytics - Zion Tech Group<>
     </title>
