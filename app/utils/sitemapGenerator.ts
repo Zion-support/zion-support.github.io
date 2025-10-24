@@ -11,13 +11,12 @@ export interface SitemapEntry {
 }
 
 export const generateSitemap = (): SitemapEntry[] => {
-  const baseUrl = 'https: //ziontechgroup.com'
+  const baseUrl = 'https://ziontechgroup.com'
   const currentDate = new Date().toISOString()
 
   return [
     {
-      lo,
-      c: `${baseUrl}/`,
+      loc: `${baseUrl}/`,
       lastmod: currentDate,
       changefreq: 'daily',
       priority: 1.0
@@ -120,8 +119,6 @@ Crawl-delay: 1
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
-Disallo,
-      w: /_next/
-Disallo,
-      w: /private/`
+Disallow: /_next/
+Disallow: /private/`
 }
