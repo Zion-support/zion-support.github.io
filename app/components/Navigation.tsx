@@ -31,13 +31,7 @@ const Navigation: React.FC = () => {
         </div>
       </div>
     </nav>
-<<<<<<< HEAD
   )
 }
 
 export default Navigation
-=======
-  );
-}
-export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4

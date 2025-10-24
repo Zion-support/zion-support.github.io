@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Head from "next/head";
 
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react';
 
@@ -132,7 +129,6 @@ const AiChatbotBuilderPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
 
       {/* Hero Section */}
@@ -159,25 +155,6 @@ const AiChatbotBuilderPage: React.FC = () => {
               View All AI Services
             </Link>
           </div>
-=======
-    <>
-      
-        <Head>
-        <title>AiChatbotBuilder - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
-      
-      
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="con tainermx-auto px-4 py-16">
-          <h1 className="tex t-4xlfont-bold text-white mb-6">AiChatbotBuilder</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional aichatbotbuilder services by Zion Tech Group.</p>
-          
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Us
-            <ArrowRight className="ml-2h-4w-4" />
-          </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         </div>
       </section>
 
