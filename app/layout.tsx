@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -9,6 +10,15 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import ErrorBoundary from './components/ErrorBoundary'
 
 const inter = Inter({ subsets: ['latin'] });
+=======
+import MobileNavigation from "./components/MobileNavigation";
+import ImprovedNavigation from "./components/ImprovedNavigation";
+import ImprovedFooter from "./components/ImprovedFooter";
+import ImprovedSidebar from "./components/ImprovedSidebar";
+import { Helmet } from 'react-helmet-async';
+import { Monitor } from 'lucide-react';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),

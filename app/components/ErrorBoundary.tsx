@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 'use client';
 
+=======
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
+<<<<<<< HEAD
 
 interface State {
   hasError: boolean;
@@ -108,3 +113,12 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+=======
+export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
+  return (
+    <div className={`errorboundary-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314

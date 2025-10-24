@@ -1,8 +1,16 @@
 'use client';
 
 import React from 'react';
+<<<<<<< HEAD
 
 const Loading: React.FC = () => {
+=======
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+export default function Loading({ className = '', children, ...props }: LoadingProps) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="text-center">
@@ -12,6 +20,10 @@ const Loading: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default Loading;
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314

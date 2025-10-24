@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, AlertTriangle, ShieldCheck, Eye, Zap } from 'lucide-react';
 
@@ -188,6 +189,14 @@ const AICybersecurityPage: React.FC = () => {
     'SOC 2 Type II', 'ISO 27001', 'NIST Framework', 'GDPR', 'HIPAA', 'PCI DSS', 'SOX', 'FedRAMP'
   ];
 
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+export default function AiCybersecurityZionTechGroup() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
       
@@ -381,6 +390,10 @@ const AICybersecurityPage: React.FC = () => {
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default AICybersecurityPage;
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314

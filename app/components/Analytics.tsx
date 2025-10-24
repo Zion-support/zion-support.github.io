@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
+=======
+import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
   }
 }
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 
 const Analytics: React.FC = () => {
   useEffect(() => {
@@ -86,5 +96,15 @@ const Analytics: React.FC = () => {
 
   return null
 }
+<<<<<<< HEAD
 
 export default Analytics
+=======
+export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
+  return (
+    <div className={`analytics-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314

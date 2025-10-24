@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { useEffect } from 'react';
@@ -133,4 +134,17 @@ export default function AccessibilityEnhancer() {
   }, []);
 
   return null;
+=======
+import React from 'react';
+interface AccessibilityenhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+export default function Accessibilityenhancer({ className = '', children, ...props }: AccessibilityenhancerProps) {
+  return (
+    <div className={`accessibilityenhancer-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 }

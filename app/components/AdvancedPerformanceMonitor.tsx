@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -308,3 +309,18 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default AdvancedPerformanceMonitor;
+=======
+import React from 'react';
+import { Monitor } from 'lucide-react';
+interface AdvancedperformancemonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+export default function Advancedperformancemonitor({ className = '', children, ...props }: AdvancedperformancemonitorProps) {
+  return (
+    <div className={`advancedperformancemonitor-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314

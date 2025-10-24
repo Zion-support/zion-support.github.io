@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Enhanced Logger Utility
  * Provides structured logging with different levels and contexts
@@ -258,3 +259,9 @@ class Logger {
 }
 
 export const logger = new Logger();
+=======
+// Logger utility functions
+export function logger() {
+  // Implementation here
+  return null;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314

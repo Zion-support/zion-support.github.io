@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -5,9 +6,48 @@ import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 
 const Navigation: React.FC = () => {
+=======
+import React, { useState, useCallback } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useCallback, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Package } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Receipt } from 'lucide-react';
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
+export default function Navigation({ onSidebarToggle }: NavigationProps) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
+<<<<<<< HEAD
     { name: "Home", href: "/" },
     { name: "AI Services", href: "/ai-services" },
     { name: "IT Services", href: "/it-services" },
@@ -66,6 +106,73 @@ const Navigation: React.FC = () => {
     };
   }, []);
 
+=======
+    {
+      name: 'Home',
+      path: '/',
+      icon: <Globe className="w-4 h-4" />
+    },
+    {
+      name: 'About',
+      path: '/about',
+      icon: <Brain className="w-4 h-4" />
+    },
+    {
+      name: 'Services',
+      path: '/services',
+      icon: <Shield className="w-4 h-4" />
+    },
+    {
+      name: 'AI Services',
+      path: '/ai-services',
+      icon: <Brain className="w-4 h-4" />
+    },
+    {
+      name: 'Micro SAAS',
+      path: '/micro-saas',
+      icon: <Zap className="w-4 h-4" />
+    },
+    {
+      name: '5G Solutions',
+      path: '/5g-solutions',
+      icon: <Zap className="w-4 h-4" />
+    },
+    {
+      name: 'Blog',
+      path: '/blog',
+      icon: <Globe className="w-4 h-4" />
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+      icon: <Globe className="w-4 h-4" />
+  ];
+
+  const serviceDropdownItems = [
+    {
+      title: 'AI Solutions',
+      items: [
+        { name: 'AI Analytics', path: '/ai-analytics' },
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' }
+      ]
+    },
+    {
+      title: '5G Solutions',
+      items: [
+        { name: '5G Network Design', path: '/5g-network-design' },
+        { name: '5G Implementation', path: '/5g-implementation' },
+        { name: '5G Private Networks', path: '/5g-private-networks' }
+      ]
+  ];
+
+  return null;
+};
+
+export default function Navigation({ className = '', children, ...props }: NavigationProps) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -306,6 +413,10 @@ const Navigation: React.FC = () => {
       </div>
     </nav>
   );
+<<<<<<< HEAD
 };
 
 export default Navigation;
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314

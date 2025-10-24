@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 
@@ -49,3 +50,18 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+=======
+import React from 'react';
+import { Monitor } from 'lucide-react';
+interface PerformancemonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+export default function Performancemonitor({ className = '', children, ...props }: PerformancemonitorProps) {
+  return (
+    <div className={`performancemonitor-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
