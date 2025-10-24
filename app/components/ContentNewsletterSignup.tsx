@@ -1,5 +1,5 @@
 'use client';
-import Navigation from './Navigation';
+import Navigation from "./Navigation";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
@@ -28,7 +28,7 @@ interface ContentNewsletterSignupProps {
     icon: Globe, text: "Global updates&quot
   },
   {
-    icon: Zap, text: "Early access&quot,
+    icon: Zap, text: "Early access&quot
   ]
   onSubscribe
 }) => {
@@ -38,12 +38,11 @@ interface ContentNewsletterSignupProps {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-    
+    if (!email) return
     setIsSubmitting(true);
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve = () => setTimeout(resolve, 1000));
       if (onSubscribe) {
         onSubscribe(email);
       }
@@ -52,7 +51,7 @@ interface ContentNewsletterSignupProps {
     } catch (error) {
       console.error('Subscription failed:', error);
     } finally {
-      setIsSubmitting(false),}
+      setIsSubmitting(false)}
   return (</ContentNewsletterSignupProp>
     <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -66,15 +65,12 @@ interface ContentNewsletterSignupProps {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={placeholder}
-              className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focu,
-  s:border-transparent"
+              className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focu, s:border-transparent"
               required
             /></input>
-            <button
-              type="submit"
+            <button type="submit"
               disabled={isLoading}
-              className="bg-emerald-600 hover:bg-emerald-700 disable,
-  d:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+              className="bg-emerald-600 hover:bg-emerald-700 disable, d:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
               {isLoading ? 'Subscribing...' : buttonText}</button>
               <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
@@ -104,4 +100,3 @@ interface ContentNewsletterSignupProps {
 };
 
 export default ContentNewsletterSignup
-;

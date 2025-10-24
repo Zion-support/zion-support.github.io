@@ -3,11 +3,8 @@ import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
 
 
-  lcp: number,
-    fid: number
-  cl,
-  s: number,
-    fcp: number}
+  lcp: number, fid: number
+  cl, s: number, fcp: number}
   ttfb: number};
 interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean
@@ -23,13 +20,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableServiceWorker = true}
 }) => {</AdvancedPerformanceOptimizerProps>
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
-    lcp: 0,
-    fid: 0
-    cl,
-  s: 0,
-    fcp: 0
-    ttf,
-  b: 0})
+    lcp: 0, fid: 0
+    cl, s: 0, fcp: 0
+    ttf, b: 0})
   // Web Vitals monitoring
   const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
@@ -37,7 +30,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-        setPerformanceMetrics(prev => ({
+        setPerformanceMetrics(prev = () => ({
           ...prev)
           lcp: lastEntry.renderTime || lastEntry.loadTime || 0})
       })
@@ -47,7 +40,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
           const fid = (entry as any).processingStart - entry.startTime
-          setPerformanceMetrics(prev => ({
+          setPerformanceMetrics(prev = () => ({
             ...prev
             fid)
 })
@@ -61,7 +54,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         entries.forEach((entry: PerformanceEntry) => {
           if (!(entry as any).hadRecentInput) {
             clsValue += entry.value
-            setPerformanceMetrics(prev => ({
+            setPerformanceMetrics(prev = () => ({
               ...prev
               cl,)
   s: clsValue})
@@ -71,8 +64,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       // Measure First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach(entry => {
-          setPerformanceMetrics(prev => ({
+        entries.forEach(entry = () => {
+          setPerformanceMetrics(prev = () => ({
             ...prev)
             fcp: entry.startTime})
         })
@@ -110,7 +103,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   const optimizeImages = useCallback(() => {
   if (typeof window === 'undefined') return
     const images = document.querySelectorAll('img')
-    images.forEach(img => {)
+    images.forEach(img = () => {)
       if (!img.loading) {
         img.loading = 'lazy'
       if (!img.decoding) {
@@ -124,7 +117,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   '/fonts/inter-var.woff2',
     '/css/critical.css'
   ]
-    criticalResources.forEach(resource => {)
+    criticalResources.forEach(resource = () => {)
       const link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource
@@ -144,11 +137,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     event_label: 'Core Web Vitals',)
         value: Math.round(performanceMetrics.lcp),
     custom_map: {
-          fc,
-  p: Math.round(performanceMetrics.fcp),
+          fc, p: Math.round(performanceMetrics.fcp),
     lcp: Math.round(performanceMetrics.lcp)
-          fi,
-  d: Math.round(performanceMetrics.fid),
+          fi, d: Math.round(performanceMetrics.fid),
     cls: Math.round(performanceMetrics.cls * 1000) / 1000}
       })
   }, [performanceMetrics])
@@ -167,5 +158,5 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       reportPerformanceMetrics();
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
-export default AdvancedPerformanceOptimizer</PerformanceMetrics>
+export default AdvancedPerformanceOptimizer;</PerformanceMetrics>
   );

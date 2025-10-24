@@ -1,21 +1,11 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react'
+import React from "react";
 import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-=======
-'use client';
-import React from 'react';
-import  Helmet  from 'react-helmet-async';
-import Navigation  } from '/components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
+import Navigation from "../components/Navigation";
 
 const PerformanceDashboard: React.FC = () => {
   return (
     <div>
-    
-  
       <Helmet></Helmet>
         <title>PerformanceDashboard</title>
         <meta name="description" content="Advanced PerformanceDashboard solution for modern businesses." /></meta>
@@ -37,8 +27,7 @@ const PerformanceDashboard: React.FC = () => {
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove, r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
             
@@ -54,8 +43,7 @@ const PerformanceDashboard: React.FC = () => {
                 Discover the powerful features that make PerformanceDashboard the perfect solution for your business.</p>
               </p>
             
-            <div className="grid md:grid-cols-2 l,
-  g:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 l, g:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
@@ -91,7 +79,6 @@ const PerformanceDashboard: React.FC = () => {
       </div>
       </Footer>
     </div>
-
   );
 }  )}
 export default PerformanceDashboard

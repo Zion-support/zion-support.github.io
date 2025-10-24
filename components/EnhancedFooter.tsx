@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
@@ -12,15 +12,13 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 mb-4">
               Leading provider of AI and IT solutions for businesses worldwide.</p>
             </p>
-            <Link
-              href="/contact"
+            <Link href="/contact"
               className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Get Started</Link>
               <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
             </Link>
           </div>
-          
           <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2"></ul>
@@ -46,7 +44,6 @@ const EnhancedFooter: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2"></ul>
@@ -66,14 +63,12 @@ const EnhancedFooter: React.FC = () => {
                 </Link>
               </li>
               <li></li>
-                <Link href="/contact" className="text-gray-300 hove,
-  r:text-cyan-400 transition-colors">
+                <Link href="/contact" className="text-gray-300 hove, r:text-cyan-400 transition-colors">
                   Contact</Link>
                 </Link>
               </li>
             </ul>
           </div>
-
           <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
             <div className="space-y-3"></div>
@@ -92,7 +87,6 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
         </div>
-        
         <div className="border-t border-gray-700 mt-8 pt-8 text-center"></div>
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.</p>
@@ -103,4 +97,4 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
-export default EnhancedFooter;
+export default EnhancedFooter

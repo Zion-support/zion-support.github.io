@@ -1,31 +1,27 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
 
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [,
     {,
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      icon: Brain, title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
+      icon: BarChart, title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
+      icon: Target, title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
+      icon: TrendingUp, title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -41,7 +37,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
 
   return (
     <div>
-
       <Helmet></Helmet>
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
         <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /></meta>
@@ -54,8 +49,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
         <div className="relativemax-w-7xlmx-autotext-center">
             <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
-            Enhanced Accessibility Enhancer
-            </h1>
+            Enhanced Accessibility Enhancer</h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             Advanced Enhanced Accessibility Enhancer solution for modern businesses.
             </p>
@@ -65,8 +59,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
-                Learn More
-              </button>
+                Learn More</button>
             </div>
           </div>
         </section>,
@@ -89,12 +82,12 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                   </div>
           <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">
-                    featurebenefitsmapbenefit benefitIndex => 
+                    featurebenefitsmapbenefit benefitIndex = () => 
                       <li key=benefitIndex className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                         benefit</li>                <div key=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div></div><featureicon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
                   <p className="text-gray-300 mb-4">featuredescription</p></p>
-                  <ul className="space-y-2">featurebenefitsmapbenefit idx => 
+                  <ul className="space-y-2">featurebenefitsmapbenefit idx = () => 
                       </ul><li key=idx className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             </div>
@@ -118,25 +111,23 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </section>
       </div>
-
     </div>
   );
 };
 
 
-export default EnhancedAccessibilityEnhancerPage        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
+export default EnhancedAccessibilityEnhancerPage;        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         </div>
         <div className="text-center mb-16"> </div></div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <pExperience the benefits of cutting-edge AI technology</p>
             </p></div>
-        <div className="grid grid-cols-1 mdgrid-cols-2 gap-6">benefitsmapbenefit index => 
+        <div className="grid grid-cols-1 mdgrid-cols-2 gap-6">benefitsmapbenefit index = () => 
               </div>
         <div key=index className=quotflex items-start space-x-3quot> </div></div><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
               </div>
-            
           </div>
         </div>
       </section>
 
   </>
-export default EnhancedAccessibilityEnhancerPage }
+export default EnhancedAccessibilityEnhancerPage; }

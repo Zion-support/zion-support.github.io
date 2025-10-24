@@ -4,7 +4,7 @@
 import React, { ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
@@ -15,4 +15,4 @@ const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   );
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

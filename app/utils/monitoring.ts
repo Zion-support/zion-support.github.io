@@ -1,29 +1,21 @@
 'use client';
-import React from 'react';
+import React from "react";
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-const performanceConfig = {
+const performanceConfig={
 
   monitoring: {,
     enableLongTaskDetection: true
-    enableMemoryMonitorin,
-  g: true,
-    sampleRate: 0.1}
+    enableMemoryMonitorin, g: true, sampleRate: 0.1}
   webVitals: {,
-    lcp: { goo,
-  d: 2500, needsImprovement: 4000 }
-    fid: { goo,
-  d: 100, needsImprovement: 300 }
-    cls: { goo,
-  d: 0.1, needsImprovement: 0.25 }
-    fcp: { goo,
-  d: 1800, needsImprovement: 3000 }
-    ttfb: { goo,
-  d: 800, needsImprovement: 1800 }
-    inp: { goo,
-  d: 200, needsImprovement: 500 }
+    lcp: { goo, d: 2500, needsImprovement: 4000 }
+    fid: { goo, d: 100, needsImprovement: 300 }
+    cls: { goo, d: 0.1, needsImprovement: 0.25 }
+    fcp: { goo, d: 1800, needsImprovement: 3000 }
+    ttfb: { goo, d: 800, needsImprovement: 1800 }
+    inp: { goo, d: 200, needsImprovement: 500 }
   }
 }
 export interface PerformanceMetrics {
@@ -39,23 +31,20 @@ export interface PerformanceMetrics {
 export interface ErrorReport {
 
 
-  message: string;
+  message: string
   stack?: string
   component?: string
-  timestam,
-  p: number;,
-    userAgent: string;
-  ur,
-  l: string}
+  timestam, p: number;,
+    userAgent: string
+  ur, l: string}
   };
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
-  private observe,
-  r: PerformanceObserver | null = null
+  private observe, r: PerformanceObserver | null = null
   constructor() {
     if (typeof window !== 'undefined') {,
-      this.initializeMonitoring();,
+      this.initializeMonitoring();
     }
   }
   private initializeMonitoring(): void {
@@ -83,28 +72,25 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {,
-            this.metrics.fid = (entry as any).processingStart - entry.startTime,
-            this.reportMetric('fid', this.metrics.fid);
+            this.metrics.fid = (entry as any).processingStart - entry.startTime, this.reportMetric('fid', this.metrics.fid);
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift
         let clsValue = 0
-        const clsObserver = new PerformanceObserver(list => {)
+        const clsObserver = new PerformanceObserver(list = () => {)
           const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value,
-              this.metrics.cls = clsValue,
-              this.reportMetric('cls', clsValue);
+              clsValue += entry.value, this.metrics.cls = clsValue, this.reportMetric('cls', clsValue);
             }
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {)
+        const fcpObserver = new PerformanceObserver(list = () => {)
           const entries = list.getEntries()
-          entries.forEach(entry => {
+          entries.forEach(entry = () => {
             this.metrics.fcp = entry.startTime)
             this.reportMetric('fcp', entry.startTime)
           })
@@ -133,7 +119,7 @@ class MonitoringService {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {,
-            if (entry.duration > 1000) {,
+            if (entry.duration > 1000) {
               }
           })
         })
@@ -146,29 +132,25 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message,
-    stack: event.error?.stack
+        message: event.message, stack: event.error?.stack
         timestam,)
   p: Date.now(),
     userAgent: navigator.userAgent
-        ur,
-  l: window.location.href})
+        ur, l: window.location.href})
     })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejectio,
-  n: ${event.reason}`)
+        message: `Unhandled Promise Rejectio, n: ${event.reason}`)
         timestamp: Date.now(),
     userAgent: navigator.userAgent
-        ur,
-  l: window.location.href})
+        ur, l: window.location.href})
     })
   }
   private reportMetric(name: string, value: number): void {,
   // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {,
-      return,
+      return
 }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
@@ -185,7 +167,7 @@ class MonitoringService {
     this.errors.push(error);
     // Keep only last 50 errors
     if (this.errors.length > 50) {,
-      this.errors = this.errors.slice(-50);,
+      this.errors = this.errors.slice(-50);
     }
     // Send to error tracking service (if configured)
   }
@@ -200,10 +182,9 @@ class MonitoringService {
 }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,
-  t: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi, t: number } }).memory
       if (memory) {
-        this.metrics.memory = {
+        this.metrics.memory={
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
@@ -230,7 +211,6 @@ class MonitoringService {
     }
   }
 }
-// Singleton instance;
-
+// Singleton instance
 const monitoring = new MonitoringService()
-export default monitoring;
+export default monitoring

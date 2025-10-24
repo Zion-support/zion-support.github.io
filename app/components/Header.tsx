@@ -1,30 +1,26 @@
 'use client';
-import React from 'react';
-import Navigation from './Navigation';
+import React from "react";
+import Navigation from "./Navigation";
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const features = [
   {
-    icon: CheckCircle,
-    title: "Advanced AI",
+    icon: CheckCircle, title: "Advanced AI",
     description: "Cutting-edge artificial intelligence solutions",
     benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
   },
   {
-    icon: CheckCircle,
-    title: "Cloud Infrastructure",
+    icon: CheckCircle, title: "Cloud Infrastructure",
     description: "Scalable and secure cloud solutions",
     benefits: ["Auto-scaling", "High Availability", "Security"]
   },
   {
-    icon: CheckCircle,
-    title: "Data Analytics",
+    icon: CheckCircle, title: "Data Analytics",
     description: "Powerful data analysis and visualization",
     benefits: ["Real-time Analytics", "Predictive Modeling", "Business Intelligence"]
   },
   {
-    icon: CheckCircle,
-    title: "Automation",
+    icon: CheckCircle, title: "Automation",
     description: "Streamline your business processes",
     benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
   }
@@ -49,8 +45,7 @@ const Header: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
             <div className="relative max-w-7xl mx-auto text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Header
-              </h1>
+                Header</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Advanced Header solution for modern businesses.
               </p>
@@ -60,8 +55,7 @@ const Header: React.FC = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
                 <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                  Learn More
-                </button>
+                  Learn More</button>
               
             </div>
           </div>,
@@ -72,8 +66,7 @@ const Header: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -90,7 +83,6 @@ const Header: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              
             </div>
           </div>
         </section>
@@ -100,8 +92,7 @@ const Header: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -111,7 +102,6 @@ const Header: React.FC = () => {
                 </div>
         <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
-              
             </div>
           </div>
         </section>
@@ -120,20 +110,16 @@ const Header: React.FC = () => {
           <div className="max-w-4xlmx-autotext-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xltext-gray-300mb-8">
-            Join thousands of businesses already using our AI solutions
-            </p>
+            Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
       </div>
-      
     </header>
   );
 };

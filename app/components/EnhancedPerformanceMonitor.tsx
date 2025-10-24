@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
-import Navigation from '../components/Navigation';
+import Navigation from "../components/Navigation";
 
 const EnhancedPerformanceMonitorPage: React.FC = () => {
   const benefits = [
@@ -12,8 +12,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            
-          
         </section>
 
         {/* Features Section */}
@@ -82,20 +80,17 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   <Phone className="mr-2 h-5 w-5 inline" />
-                  Call Now
-                </button>
+                  Call Now</button>
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   <Mail className="mr-2 h-5 w-5 inline" />
-                  Email Us
-                </button>
+                  Email Us</button>
               </div>
             </div>
           </div>
         </section>
       </div>
-      
     </div>
   );
 };
 
-export default EnhancedPerformanceMonitorPage;
+export default EnhancedPerformanceMonitorPage

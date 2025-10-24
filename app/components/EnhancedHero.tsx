@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import  Helmet  from 'react-helmet-async';
+import React from "react";
+import Helmet from "react-helmet-async";
 import  ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react';
 import { { Phone Mail     } from 'lucide-react';
     'use client'
@@ -14,13 +14,10 @@ const EnhancedHero: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            
-          
         </section>
 
         / Benefits Section /
         <section className="py-20 px-4 bg-white/5">
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us?</h2>
@@ -35,17 +32,6 @@ const EnhancedHero: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-emerald-400" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
-=======
-          <><div className="max-w-7xl mx-auto">
-            </div>
-        <div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of our Enhanced Hero solution</p></p>
-            </div>
-        <div className="grid mdgrid-cols-2 lggrid-cols-3 gap-8">
-              benefitsmapbenefit index => 
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
                 </div>
         <div key=index className="flex items-start space-x-4">
                   </div>
@@ -54,7 +40,6 @@ const EnhancedHero: React.FC = () => {
                   </div>
                   <p className="text-gray-300">benefit</p></p>
                 </div>
-              
             </div>
           </div>
         </section>
@@ -70,13 +55,12 @@ const EnhancedHero: React.FC = () => {
           </div>
         </section>
       </div>
-
     </div>
   );
 };
 
 
-export default EnhancedHero    'Gain competitive advantage with advanced technology'
+export default EnhancedHero;    'Gain competitive advantage with advanced technology'
             <div className=quotflex flex-col sm flex-row gap-4 justify-centerquot>
             </div></div></div>
           </div>

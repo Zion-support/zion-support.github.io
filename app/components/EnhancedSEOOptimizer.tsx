@@ -1,32 +1,28 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, Zap, Shield, Globe } from 'lucide-react';
-import Navigation from '../components/Navigation';
+import Navigation from "../components/Navigation";
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [,
     {,
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      icon: Brain, title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
+      icon: BarChart, title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
+      icon: Target, title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
+      icon: TrendingUp, title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -53,8 +49,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Enhanced SEO Optimizer
-              </h1>
+                Enhanced SEO Optimizer</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Advanced SEO optimization tools powered by AI that maximize your search engine
                 visibility and drive organic traffic to your website.
@@ -65,8 +60,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                   <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </button>
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
+                  Learn More</button>
               
             
           
@@ -98,7 +92,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              
             </div>
           </div>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -127,20 +120,17 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   <Phone className="mr-2 h-5 w-5 inline" />
-                  Call Now
-                </button>
+                  Call Now</button>
                 <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   <Mail className="mr-2 h-5 w-5 inline" />
-                  Email Us
-                </button>
+                  Email Us</button>
               </div>
             </div>
           </div>
         </section>
       </div>
-      
     </div>
   );
 };
 
-export default EnhancedSEOOptimizerPage;
+export default EnhancedSEOOptimizerPage

@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -76,7 +76,6 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* AI Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
@@ -86,8 +85,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
-                  <Link
-                    href={service.url}
+                  <Link href={service.url}
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -97,7 +95,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* IT Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
@@ -107,8 +104,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
-                  <Link
-                    href={service.url}
+                  <Link href={service.url}
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -118,7 +114,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Company & Resources */}
           <div className="space-y-6">
             <div>
@@ -126,8 +121,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {company.map((item, index) => (
                   <li key={index}>
-                    <Link
-                      href={item.url}
+                    <Link href={item.url}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
@@ -141,8 +135,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {resources.map((item, index) => (
                   <li key={index}>
-                    <Link
-                      href={item.url}
+                    <Link href={item.url}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
@@ -153,7 +146,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -171,13 +163,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {legal.map((item, index) => (
-              <Link
-                key={index}
+              <Link key={index}
                 href={item.url}
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
@@ -191,4 +181,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default Footer

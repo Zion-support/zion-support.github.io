@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
 "use client"
 
 interface MetaTagsProps {
   className?: string}
-}
-;
+};
 const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
   return (</MetaTagsProps>
     <div className={className}></div>

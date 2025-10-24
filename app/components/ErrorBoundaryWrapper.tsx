@@ -2,21 +2,18 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 interface State {
-  hasErro,
-  r: boolean
+  hasErro, r: boolean
   error?: Error
-
 class ErrorBoundaryWrapper extends Component<Props, State> {
   constructor(props: Props) {
     super(props)}
-    this.state = { hasError: false};
+    this.state={ hasError: false};
   static getDerivedStateFromError(error: Error): State {
-    return { hasErro,
-  r: true, error}
+    return { hasErro, r: true, error}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
@@ -30,8 +27,7 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
           <div className="text-center p-8">
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick = {
+            <button onClick={
 () => window.location.reload();
 };
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semiboldtransition-colorsduration-200"
@@ -43,8 +39,8 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
       );
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundaryWrapper;
+export default ErrorBoundaryWrapper

@@ -1,7 +1,7 @@
 'use client';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
 import { ArrowRight } from 'lucide-react';
 
 export default function DemoPage() {
@@ -14,13 +14,11 @@ export default function DemoPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
-            Demo
-          </h1>
+            Demo</h1>
           <p className="text-lg text-gray-300 mb-8">
             demo services Transform your business with our expert solutions. services coming soon.
           </p>
-          <Link
-            href="/contact"
+          <Link href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-200"
           >
             Contact Us
@@ -28,7 +26,6 @@ export default function DemoPage() {
           </Link>
         </div>
       </div>
-
 </>
   );
 }

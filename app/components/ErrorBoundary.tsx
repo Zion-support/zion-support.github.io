@@ -4,29 +4,22 @@ import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 
-  children: ReactNode;,
-,
-
-}
+  children: ReactNode;}
 interface State {
-  hasError: boolean;
-  error: Error | undefined;
+  hasError: boolean
+  error: Error | undefined
 }
 
 
-  hasError: boolean;
-  error: Error | undefined;,
-,
-
-}
+  hasError: boolean
+  error: Error | undefined;}
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {,
-    hasError: false,
-    error: undefined,
+  public state: State={,
+    hasError: false, error: undefined
   };
 
   public static getDerivedStateFromError(error: Error): State {
@@ -57,7 +50,7 @@ class ErrorBoundary extends Component<Props, State> {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth = {
+                    strokeWidth={
 2
 };
         
@@ -75,18 +68,14 @@ class ErrorBoundary extends Component<Props, State> {
                 We're sorry, but something unexpected happened. Please try refreshing the page.
               </p>
               <div className="flex space-x-3">
-                <button
-                  onClick={() => window.location.reload()}
+                <button onClick={() => window.location.reload()}
                   className="flex-1 bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors"
                 >
-                  Refresh Page
-                </button>
-                <button
-                  onClick={() => this.setState({ hasError: false, error: undefined })}
+                  Refresh Page</button>
+                <button onClick={() => this.setState({ hasError: false, error: undefined })}
                   className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
                 >
-                  Try Again
-                </button>
+                  Try Again</button>
               
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-4 text-left">
@@ -107,8 +96,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations
-              </p>
+                Powerful AI-driven features designed to transform your business operations</p>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -135,8 +123,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology
-              </p>
+                Experience the benefits of cutting-edge AI technology</p>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -153,23 +140,18 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions
-            </p>
+              Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Start Free Trial
-              </button>
+                Start Free Trial</button>
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Sales
-              </button>
+                Contact Sales</button>
             </div>
           </div>
         </section>
       </div>
-      
 </div>
-
-    return this.props.children;
+    return this.props.children
   }
 }
 }export default ErrorBoundaryPage
@@ -177,12 +159,11 @@ error?: Error
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,
 super(props);,
-this.state = {
- hasError: false,
+this.state={
+ hasError: false
 };
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
-if (process.env.NODE_ENV=== 'production') {,
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production, if (process.env.NODE_ENV=== 'production') {,
 // In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo});
 this.setState({errorerrorInfo});
@@ -212,15 +193,13 @@ Error Details (Development)
 </details>
 )}
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-<button
-onClick={this.handleReload}
+<button onClick={this.handleReload}
 className="flex items-center justify-center space-x-2 bg-cyan-600 hover: bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 ></button>
 <RefreshCw className="w-4 h-4" />
 <span>Reload Page</span>
 </button>
-<button
-onClick={this.handleGoHome}
+<button onClick={this.handleGoHome}
 className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 ></button>
 <Home className="w-4 h-4" />
@@ -233,8 +212,7 @@ className="flex items-center justify-center space-x-2 border border-cyan-600 tex
 href="mailto: kleber@ziontechgroup.com"
 className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors">
 <Phone className="w-4 h-4 mr-2" />
-kleber@ziontechgroup.com
-</a>
+kleber@ziontechgroup.com</a>
 </div>
 </div>,
 </div>,

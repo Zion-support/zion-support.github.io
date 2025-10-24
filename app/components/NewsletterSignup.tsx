@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React from "react";
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
 interface NewsletterSignupProps {
@@ -21,8 +21,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       return
     setStatus('loading');
     try {,
-      // Simulate API call,
-      await new Promise(resolve => setTimeout(resolve, 1000);
+      // Simulate API call, await new Promise(resolve = () => setTimeout(resolve, 1000);
       // In a real app, you would make an API call here
       setStatus('success');
       setMessage('Thank you for subscribing! Check your email for confirmation.');
@@ -51,15 +50,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu,
-  s:border-transparent"
+            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu, s:border-transparent"
             disabled={status === 'loading'}</input>
           /></input>
-          <button
-            type="submit"
+          <button type="submit"
             disabled={status === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable,
-  d:cursor-not-allowed flex items-center justify-center"
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable, d:cursor-not-allowed flex items-center justify-center"
           ></button>
             {status === 'loading' ? (</button>
               <>
@@ -89,13 +85,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
               <AlertCircle className="w-4 h-4" /></AlertCircle>
             )}</AlertCircle>
             <span>{message}</span>
-<<<<<<< HEAD
           
         )}
-=======
-          </div>
-        
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
       </form>
       <div className="mt-6 text-center text-sm text-white/80">
         <p></p>
@@ -103,12 +94,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           ✓ Weekly updates on latest tech trends<br /></br>
           ✓ Exclusive content and early access</br>
         </p>
-<<<<<<< HEAD
       
     </div>
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
   if (variant === 'modal') {
     return (
     
@@ -120,7 +107,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         </div>
       </div>
-  return content;
+  return content
 }
     </div>
   );

@@ -1,30 +1,24 @@
 'use client';
-import React from 'react';
+import React from "react";
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
 
 
-  src: string,
-    alt: string}
+  src: string, alt: string}
 interface ImageProps {};
-src: string,
-    alt: string
+src: string, alt: string
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
-sr,
-  c: string,
-    alt: string
+sr, c: string, alt: string
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
-sr,
-  c: string,
-    alt: string
+sr, c: string, alt: string
 width?: number
 height?: number
 className?: string
@@ -34,9 +28,7 @@ _placeholder?: 'blur' | 'empty'
 _blurDataURL?: string
 fill?: boolean
 sizes?: string
-style?: React.CSSProperties,
-onLoad?: () => void,
-onError?: () => void;}
+style?: React.CSSProperties, onLoad?: () => void, onError?: () => void;}
 export const Image: React.FC<ImageProps>= ({}</ImageProps>
 export const Image: React.FC<ImageProps> = ({}
 src</ImageProps>
@@ -52,8 +44,7 @@ placeholder = 'empty'
 blurDataURL
 fill = false
 sizes
-style,
-onLoad,
+style, onLoad,
 onError}
 ...props}
 }) => {};
@@ -67,22 +58,18 @@ const handleError = useCallback(() => {}
 setHasError(true);
 if (onError) onError()}
 }, [onError])
-const imageStyle: React.CSSProperties = {
+const imageStyle: React.CSSProperties={
 ...style
 ...(fill && {
-positio,
-  n: 'absolute',
+positio, n: 'absolute',
     top: 0
-lef,
-  t: 0}
+lef, t: 0}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
     top: 0
-lef,
-  t: 0,
-    width: '100%',
+lef, t: 0, width: '100%',
 height: '100%',
     objectFit: 'cover'}
 })
@@ -105,23 +92,17 @@ Image: React.FC<ImageProps>= ({/* TOD,)
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 }, [onError])
 const
-imageStyle: React.CSSProperties = {/* TOD,
-  O: Fix JSX expression */}
+imageStyle: React.CSSProperties={/* TOD, O: Fix JSX expression */}
 })
 if (hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
-style = {
+style={
 imageStyle
 };
 {...props})
 >)
-<span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-<<<<<<< HEAD
-;
+<span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>);
   );
-=======
-),
->>>>>>> cursor/fix-errors-and-merge-to-main-996d,
 {...props}
 ></div>
 <span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
@@ -141,4 +122,4 @@ onError={handleError}
 {...props})
 >)</img>
 }</img>
-export default Image</img>
+export default Image;</img>

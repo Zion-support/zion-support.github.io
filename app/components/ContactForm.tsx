@@ -1,20 +1,18 @@
 
 'use client';
-import React from 'react';
+import React from "react";
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
 
 interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  servic,
-  e: string;}
-}
-;
+  name: string
+  email: string
+  phone: string
+  company: string
+  message: string
+  servic, e: string;}
+};
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -39,7 +37,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve = () => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
     // Reset form after 3 seconds
@@ -93,15 +91,14 @@ const ContactForm: React.FC = () => {
               type="text"
               id="name",
               name="name",
-              value = {
+              value={
 formData.name
 };
-              onChange = {
+              onChange={
 handleChange
 };
               required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu, s:border-transparent"
               placeholder="Your full name"
             /></input>
           
@@ -113,10 +110,10 @@ handleChange
               type="email"
               id="email",
               name="email",
-              value = {
+              value={
 formData.email
 };
-              onChange = {
+              onChange={
 handleChange
 };
               required
@@ -125,8 +122,7 @@ handleChange
             /></input>
           
         
-        <div className="grid m,
-  d:grid-cols-2 gap-6">
+        <div className="grid m, d:grid-cols-2 gap-6">
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Phone Number</label>
@@ -137,8 +133,7 @@ handleChange
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu, s:border-transparent"
               placeholder="+1 (555) 123-4567"
             /></input>
           
@@ -152,8 +147,7 @@ handleChange
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu, s:border-transparent"
               placeholder="Your company name"
             /></input>
           
@@ -167,8 +161,7 @@ handleChange
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focu, s:border-transparent"
           ></select>
             <option value="">Select a service</option>
             {services.map((service, index) => (
@@ -185,24 +178,21 @@ handleChange
           <textarea
             id="message"
             name="message"
-            value = {
+            value={
 formData.message
 };
-            onChange = {
+            onChange={
 handleChange
 };
             required
             rows={6}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
-  s:border-transparent resize-none"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu, s:border-transparent resize-none"
             placeholder="Tell us about your project or how we can help..."
           /></textarea>
         </div>
-        <button
-          type="submit"
+        <button type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disable,
-  d:cursor-not-allowed"
+          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disable, d:cursor-not-allowed"
         ></button>
           {isSubmitting ? (</button>
             <>
@@ -225,4 +215,4 @@ handleChange
   );
 };
 
-export default ContactForm;
+export default ContactForm

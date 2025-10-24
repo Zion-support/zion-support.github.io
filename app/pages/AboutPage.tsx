@@ -1,35 +1,29 @@
 'use client';
-import React from 'react';
+import React from "react";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 
 export default function AboutPage() {
   const values = [
     {
-      icon: Target,
-    title: 'Mission-Driven',
+      icon: Target, title: 'Mission-Driven',
       description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'},
   {
-    icon: Users,
-    title: 'Client-Focused',
+    icon: Users, title: 'Client-Focused',
       description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'},
   {
-    icon: Award,
-    title: 'Excellence',
+    icon: Award, title: 'Excellence',
       description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'},
   {
-    icon: Lightbulb,
-    title: 'Innovation',
+    icon: Lightbulb, title: 'Innovation',
       description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'},
   {
-    icon: Shield,
-    title: 'Integrity',
+    icon: Shield, title: 'Integrity',
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
 },
   {
-    icon: Zap,
-    title: 'Agility',
+    icon: Zap, title: 'Agility',
     description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'}
   ]
   const team = [
@@ -52,8 +46,6 @@ export default function AboutPage() {
   ]
   return (
     <div>
-    
-  
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>;
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." /></meta>
@@ -86,7 +78,7 @@ export default function AboutPage() {
                   and practical business implementation.</p>
                 </p>
                 <p className="text-gray-300 mb-4">
-                  Today, we&apos;ve grown into a trusted partner for organizations worldwide, helping them 
+                  Today, we&apos;ve grown into a trusted partner for organizations worldwide, helping them
                   navigate the complex landscape of digital transformation while maintaining focus on </p>
                   security, scalability, and innovation.</p>
                 </p>
@@ -101,32 +93,17 @@ export default function AboutPage() {
                   We believe in the power of technology to solve complex problems and create opportunities</p>
                   for growth, efficiency, and innovation across all industries.</p>
                 </p>
-<<<<<<< HEAD
               
             
           
-=======
-              </div>
-        <div> </div></div>
-          <pFounded in 2020 Zion Tech Group emerged from a vision to democratize advanced technology and make AI and IT solutions accessible to businesses of all sizes Our journey began when our founder Kleber Santos recognized the growing gap between cutting-edge technology and practical business implementation</p>
-                </p><pToday weaposve grown into a trusted partner for organizations worldwide helping them navigate the complex landscape of digital transformation while maintaining focus on security scalability and innovation</p>
-              </p></div>
-        <div> </div></div><pOur team combines deep technical expertise with real-world business understanding ensuring that every solution we deliver not only meets technical requirements but also drives tangible business value</p>
-                </p><pWe believe in the power of technology to solve complex problems and create opportunities for growth efficiency and innovation across all industries</p>
-              </p></div>
-            </div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
           {/* Values Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
-            <div className="grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 l, g:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon
                 return (
     <div>
-      
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                     <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">
                       <Icon className="w-6 h-6 text-white" /></Icon>
@@ -144,13 +121,12 @@ export default function AboutPage() {
           {/* Team Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
-            <div className="grid md: grid-cols-2 l,
-  g:grid-cols-4 gap-8">
+            <div className="grid md: grid-cols-2 l, g:grid-cols-4 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-white"></span>
-                      {member.name.split(' ').map(n => n[0]).join('')}</span>
+                      {member.name.split(' ').map(n = () => n[0]).join('')}</span>
                     </span>
                   
                   <h3 className="text-lgfont-semiboldtext-whitemb-2">{member.name}</h3>
@@ -160,26 +136,10 @@ export default function AboutPage() {
                   <p className="text-gray-300text-sm">
             {member.description}
           </p>
-<<<<<<< HEAD
                 
               ))}
             
           
-=======
-                </div>
-        <div key=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-        </div>
-        <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center"> </div></div><span className="text-2xl font-bold text-white">membernamesplit' 'mapn => n0join''
-                    </span></span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">membername</h3>
-                  <p className="text-cyan-400 text-sm mb-3">memberrole</p></p>
-                  <p className="text-gray-300 text-sm">memberdescription</p></p>
-                </div>
-              
-            </div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
           {/* Stats Section */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h2 className="text-3xl font-bold text-white text-center mb-8">By the Numbers</h2>
@@ -187,21 +147,15 @@ export default function AboutPage() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">500+
                 <div className="text-gray-300">Projects Delivered
-              
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">50+
                 <div className="text-gray-300">Happy Clients
-              
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">15+
                 <div className="text-gray-300">Years Experience
-              
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">99.9%
                 <div className="text-gray-300">Client Satisfaction
-              
-            
-          
         ,
       </section>,
       {/* Mission & Vision */}
@@ -245,14 +199,13 @@ export default function AboutPage() {
               The principles that guide everything we do and shape our company culture</p>
             </p>
           </div>
-          <div className="grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+          <div className="grid md: grid-cols-2 l, g:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             <div className="text-center"></div>
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <HeartIcon className="w-10 h-10 text-white" /></HeartIcon>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Passion</h3>
-              <p className="text-gray-300">;</p>
+              <p className="text-gray-300"></p>
                 We&apos;re passionate about technology and its potential to transform businesses and improve lives.</p>
               </p>
             </div>
@@ -315,16 +268,14 @@ export default function AboutPage() {
               A diverse group of talented professionals passionate about technology and innovation</p>
             </p>
           </div>
-          <div className="grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+          <div className="grid md: grid-cols-2 l, g:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center"></div>
               <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <span className="text-white font-bold text-2xl">K</span>
               </div>
               <h3 className="text-2xlfont-boldtext-whitemb-2">Kleber</h3>
               <p className="text-purple-400font-semiboldmb-4">
-            CEO & Founder
-          </p>
+            CEO & Founder</p>
               <p className="text-gray-300">
                 Visionary leader with over 4 years of experience in AI and technology solutions.</p>
                 Passionate about digital transformation and business growth.</p>
@@ -336,8 +287,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xlfont-boldtext-whitemb-2">AI Team</h3>
               <p className="text-cyan-400font-semiboldmb-4">
-            Machine Learning Engineers
-          </p>,
+            Machine Learning Engineers</p>,
               <p className="text-gray-300">
                 Expert team specializing in artificial intelligence, machine learning</p>
                 and data science solutions for complex business challenges.</p>
@@ -349,8 +299,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xlfont-boldtext-whitemb-2">DevOps Team</h3>
               <p className="text-green-400font-semiboldmb-4">
-            Cloud & Infrastructure
-          </p>
+            Cloud & Infrastructure</p>
               <p className="text-gray-300">
                 Specialists in cloud infrastructure, cybersecurity, and DevOps practices</p>
                 ensuring scalable and secure technology solutions.</p>
@@ -370,8 +319,7 @@ export default function AboutPage() {
               Numbers that reflect our commitment to excellence and client success</p>
             </p>
           </div>
-          <div className="grid md: grid-cols-2 l,
-  g:grid-cols-4 gap-8 max-w-6xl mx-auto"></div>
+          <div className="grid md: grid-cols-2 l, g:grid-cols-4 gap-8 max-w-6xl mx-auto"></div>
             <div className="text-center"></div>
               <div className="text-5xl font-bold text-purple-400 mb-2">50+</div>
               <div className="text-gray-300 text-lg">Projects Completed</div>
@@ -403,17 +351,14 @@ export default function AboutPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link 
-                href="/contact" 
+              <Link href="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               ></Link>
                 Get In Touch</Link>
                 <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
               </Link>
-              <Link 
-                href="/services" 
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove,
-  r:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              <Link href="/services" 
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove, r:text-white transition-all duration-300 flex items-center justify-center gap-2"
               ></Link>
                 View Our Services</Link>
                 <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
@@ -423,5 +368,5 @@ export default function AboutPage() {
         </div>
       </section>
 </div>,
-  );,
+  );
 }
