@@ -56,8 +56,7 @@ export interface ErrorReport {
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
-  private observe,
-      r: PerformanceObserver | null = null
+  private observer: PerformanceObserver | null = null
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -164,8 +163,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // eslint-disable-next-line no-console
-              console.log('Slow resourc,
-      e:', entry.name, entry.duration)
+              console.log('Slow resource:', entry.name, entry.duration)
             }
           })
         })
@@ -219,8 +217,7 @@ class MonitoringService {
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 100,
-      0: value),
+        value: Math.round(name === 'cls' ? value * 100 : value),
         event_category: 'Web Vitals'
       })
     }

@@ -3,10 +3,8 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 
 interface AnalyticsContextType {
-  trackEvent: (eventNam,
-      e: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pag,
-      e: string) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
 };
 
   const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -70,9 +68,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   return (
     <AnalyticsContext.Provider value={value}>
-      {children};
-
-  return (
+      {children}
+    </AnalyticsContext.Provider>
   );
 };
 
@@ -80,8 +77,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 declare global {
   interface Window {
     dataLayer: any[];
-    gta,
-      g: (...arg,
-      s: any[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }

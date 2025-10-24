@@ -15,16 +15,16 @@ const Page: React.FC = () => {
     uptime: 0
   })
 
-  const targetCounters = {
-    clients: 1000,
-    projects: 500,
-    satisfaction: 99,
-    years: 10,
-    countries: 25,
-    uptime: 99.9
-  }
-
   useEffect(() => {
+    const targetCounters = {
+      clients: 1000,
+      projects: 500,
+      satisfaction: 99,
+      years: 10,
+      countries: 25,
+      uptime: 99.9
+    }
+
     const duration = 2000
     const steps = 60
     const stepDuration = duration / steps
@@ -50,9 +50,9 @@ const Page: React.FC = () => {
 
         if (allComplete) {
           clearInterval(interval);
-        };
+        }
 
-  return newCounters
+        return newCounters
       })
     }, stepDuration)
 
@@ -60,138 +60,118 @@ const Page: React.FC = () => {
   }, [])
 
   const features = [
-    {,,,
-    'icon: BarChart,',,,
-    'title: 'Real-time Analytics',',,,
-    'description: 'Get instant insights into your content performance with advanced analytics.'',,,
-    '},',,,
-    {,,,
-    'icon: Brain,',,,
-    'title: 'AI-Powered Insights',',,,
-    'description: 'Leverage artificial intelligence to understand content trends and patterns.'',,,
-    '},',,,
-    {,,,
-    'icon: TrendingUp,',,,
-    'title: 'Performance Tracking',',,,
-    'description: 'Monitor and track content performance across all platforms.'',,,
-    '},',,,
-    {,,,
-    'icon: Target,',,,
-    'title: 'Goal Setting',',,,
-    'description: 'Set and track content goals with intelligent recommendations.'',,,
-    '}'
+    {
+      icon: BarChart,
+      title: 'Real-time Analytics',
+      description: 'Get instant insights into your content performance with advanced analytics.',
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Leverage artificial intelligence to understand content trends and patterns.',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Tracking',
+      description: 'Monitor and track content performance across all platforms.',
+    },
+    {
+      icon: Target,
+      title: 'Goal Setting',
+      description: 'Set and track content goals with intelligent recommendations.',
+    }
   ]
 
   const stats = [
-    { label: 'Happy Clients', value: Math.round(counters.clients), suffix: '+' },,,,
-    { label: 'Projects Completed', value: Math.round(counters.projects), suffix: '+' },,,,
-    { label: 'Client Satisfaction', value: counters.satisfaction, suffix: '%' },,,,
-    { label: 'Years Experience', value: Math.round(counters.years), suffix: '+' },,,,
-    { label: 'Countries Served', value: Math.round(counters.countries), suffix: '+' },,,,
+    { label: 'Happy Clients', value: Math.round(counters.clients), suffix: '+' },
+    { label: 'Projects Completed', value: Math.round(counters.projects), suffix: '+' },
+    { label: 'Client Satisfaction', value: counters.satisfaction, suffix: '%' },
+    { label: 'Years Experience', value: Math.round(counters.years), suffix: '+' },
+    { label: 'Countries Served', value: Math.round(counters.countries), suffix: '+' },
     { label: 'Uptime', value: counters.uptime, suffix: '%' }
   ]
 
   return (
     <>
       <Helmet>
-        <title >Content Statistics - Zion Tech Group</title>
-        <meta name="description" content="Advanced content statistics and analytics solutions for modern businesses." />
-        <meta name="keywords" content="content statistics, analytics, data insights, business intelligence" />
+        <title>Content Statistics - Zion Tech Group</title>
+        <meta name="description" content="Advanced content analytics and statistics dashboard powered by AI" />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {
-    /* Hero Section  */
-    return (
+        {/* Hero Section */}
+        <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">Content Statistics
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Content Statistics
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Advanced content statistics and analytics solution for modern businesses.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your content strategy with powerful AI-driven analytics and insights
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hove,
-      r:bg-emerald-400 hove,
-      r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">Learn More
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">Learn More
               </button>
             </div>
           </div>
-        </section>
+        </div>
 
-        {
-    /* Features Section  */
-    return (
+        {/* Features Section */}
+        <section className="py-20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI-driven features designed to transform your content analytics
               </p>
             </div>
-            <div className="grid md: grid-cols-2 l,
-      g:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title};
-
-  return (
-                  <p className="text-gray-300">{feature.description};
-
-  return (
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}
+                  </h3>
+                  <p className="text-gray-300">{feature.description}
+                  </p>
                 </div>
-              ))};
-
-  return (
+              ))}
+            </div>
           </div>
         </section>
 
-        {
-    /* Statistics Section  */
-    return (
+        {/* Stats Section */}
+        <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Impact</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Numbers that speak for our commitment to excellence
+              <p className="text-xl text-gray-300">Numbers that speak for themselves
               </p>
             </div>
-            <div className="grid grid-cols-2 md: grid-cols-3 l,
-      g:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-emerald-400 mb-2">
-                    {stat.value}{stat.suffix};
-
-  return (
-                  <div className="text-gray-300">{stat.label};
-
-  return (
+                  <div className="text-4xl font-bold text-emerald-400 mb-2">{stat.value}{stat.suffix}
+                  </div>
+                  <div className="text-gray-300">{stat.label}
+                  </div>
                 </div>
-              ))};
-
-  return (
+              ))}
+            </div>
           </div>
         </section>
 
-        {
-    /* CTA Section  */
-    return (
+        {/* CTA Section */}
+        <section className="py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Content Analytics?
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Content Strategy?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">Join thousands of businesses already using our advanced content statistics platform.
+            <p className="text-xl text-gray-300 mb-8">Join thousands of businesses already using our AI-powered analytics platform
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">Start Free Trial
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hove,
-      r:bg-emerald-400 hove,
-      r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">Contact Sales
-              </button>
-            </div>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
+              Start Your Free Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
           </div>
         </section>
       </div>
@@ -201,4 +181,3 @@ const Page: React.FC = () => {
 }
 
 export default Page;
-}}}}

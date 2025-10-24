@@ -134,12 +134,8 @@ export const createMockElement = (tagName: string, attributes: Record<string, st
 export const mockWindow = (overrides: Partial<Window> = {}): Window => {
   const mockWin = {
     location: {
-      href: 'htt,
-      p://localhos,
-      t:3000',
-      origin: 'htt,
-      p://localhos,
-      t:3000',
+      href: 'http://localhost:3000',
+      origin: 'http://localhost:3000',
       pathname: '/',
       search: '',
       hash: '',
