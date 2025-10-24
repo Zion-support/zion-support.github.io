@@ -121,12 +121,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
         />
       )}
     </Head>
-<<<<<<< HEAD
-  )
-}
- SEOOptimizer
-  )
-}
-=======
-export default SEOOptimizer
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+
+export default SEOOptimizer }

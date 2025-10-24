@@ -14,7 +14,7 @@ export const wait = (ms: number): Promise<void> => {,
  * Wait for a condition to be true
  */
 export const waitFor = async (
-  condition: () => boolean
+  condition: () => boolean,
   timeout = 5000
   interval = 100</void>
 ): Promise<void> => {
@@ -30,7 +30,7 @@ export const waitFor = async (
  * Mock fetch for testing
  */
 export const mockFetch = (
-  response: unknown
+  response: unknown,
   status = 200
   header,</void>
   s: Record<string, string> = {}
@@ -85,7 +85,7 @@ export const createMockStorage = (): MockStorage => {
 export const mockWindow = (overrides: Partial<Window> = {}): void => {
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
-      value: {
+      value: {,
         ...global.window
         ...overrides
 })
@@ -96,7 +96,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
  * Create a mock performance API
  */
 export const createMockPerformance = (): Performance => {
-  const entries: PerformanceEntry[] = []
+  const entries: PerformanceEntry[] = [],
   return {
     no,
   w: () => Date.now(),
@@ -168,7 +168,7 @@ export const generateTestData = {
     return `http,
   s://example.com/${generateTestData.string(10)}`
   }
-  date: (): Date => {
+  date: (): Date => {,
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
   }</Window>
   array: <T>(generato,

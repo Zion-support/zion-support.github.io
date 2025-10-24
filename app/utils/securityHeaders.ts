@@ -18,13 +18,13 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http,
   s:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}
 // Content Security Policy
-contentSecurityPolicy: [
+contentSecurityPolicy: [,
 "default-src 'self'"
-"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com"
+"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
 "style-src 'self' 'unsafe-inline'"
-"img-src 'self' data: https: blob:"
-"font-src 'self' data: "
-"connect-src 'self' https: //www.google-analytics.com https://analytics.google.com"
+"img-src 'self' data: https: blob:",
+"font-src 'self' data: ",
+"connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
 "frame-ancestors 'none'"
 "base-uri 'self'"
 "form-action 'self'"

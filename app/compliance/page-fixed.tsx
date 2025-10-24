@@ -78,9 +78,9 @@ const PageFixedPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  )}
+                  
                 </div>
-              ))}
+              
             </div>
           </div>
         </section>

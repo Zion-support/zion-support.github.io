@@ -89,7 +89,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             )}</AlertCircle>
             <span>{message}</span>
           </div>
-        )}
+        
       </form>
       <div className="mt-6 text-center text-sm text-white/80"></div>
         <p></p>

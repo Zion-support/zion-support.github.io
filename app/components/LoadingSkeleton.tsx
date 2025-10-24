@@ -69,6 +69,8 @@ const LoadingSkeletonPage: React.FC = () => {
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
+              <button className="border border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More</button>
             </div>
           </div>,
         </section>,
@@ -97,7 +99,7 @@ const LoadingSkeletonPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
+              
             </div>
           </div>
         </section>
@@ -117,7 +119,9 @@ const LoadingSkeletonPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+                </div>
+              
             </div>
           </div>
         </section>
