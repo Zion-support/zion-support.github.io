@@ -55,10 +55,10 @@ const HomePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/about" 
+                href="/services" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
-                Learn More
+                Our Services
               </Link>
               <Link 
                 href="/contact" 
@@ -109,6 +109,94 @@ const HomePage = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="py-20 bg-gray-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Latest Insights
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Stay updated with the latest trends and innovations in AI and IT technology
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-colors">
+              <div className="h-48 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-4xl mb-2">🤖</div>
+                  <div className="text-sm opacity-80">AI Trends</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                The Future of AI in Enterprise
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Explore the latest trends in enterprise AI adoption and how businesses are leveraging artificial intelligence.
+              </p>
+              <Link 
+                href="/blog"
+                className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
+              >
+                Read More →
+              </Link>
+            </div>
+            
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-colors">
+              <div className="h-48 bg-gradient-to-br from-green-600 to-emerald-600 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-4xl mb-2">🔒</div>
+                  <div className="text-sm opacity-80">Security</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Cybersecurity Best Practices
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Essential cybersecurity strategies to protect your business from evolving threats in the digital landscape.
+              </p>
+              <Link 
+                href="/blog"
+                className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
+              >
+                Read More →
+              </Link>
+            </div>
+            
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-colors">
+              <div className="h-48 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-4xl mb-2">☁️</div>
+                  <div className="text-sm opacity-80">Cloud</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Cloud Migration Guide
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Step-by-step guide to successfully migrating your business operations to the cloud.
+              </p>
+              <Link 
+                href="/blog"
+                className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
+              >
+                Read More →
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link 
+              href="/blog"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              View All Articles
+            </Link>
           </div>
         </div>
       </section>
