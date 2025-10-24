@@ -1,6 +1,4 @@
-import React from 'react'
-"use client"
-const seoConstants.ts = () => {
-  return null
+// SEO constants
+export const seoConstants = {
+  // Add SEO constants here
 }
-export default seoConstants.ts

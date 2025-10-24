@@ -1,6 +1,4 @@
-import React from 'react'
-"use client"
-const logger.ts = () => {
-  return null
+// Logger utility functions
+export const logger = {
+  // Add logger utility functions here
 }
-export default logger.ts

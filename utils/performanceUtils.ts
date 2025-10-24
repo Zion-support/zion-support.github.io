@@ -1,6 +1,4 @@
-import React from 'react'
-"use client"
-const performanceUtils.ts = () => {
-  return null
+// Performance utility functions
+export const performanceUtils = {
+  // Add performance utility functions here
 }
-export default performanceUtils.ts

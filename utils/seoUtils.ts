@@ -1,6 +1,4 @@
-import React from 'react'
-"use client"
-const seoUtils.ts = () => {
-  return null
+// SEO utility functions
+export const seoUtils = {
+  // Add SEO utility functions here
 }
-export default seoUtils.ts

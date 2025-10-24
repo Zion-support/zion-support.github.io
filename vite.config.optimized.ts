@@ -1,6 +1,4 @@
-import React from 'react'
-"use client"
-const vite.config.optimized.ts = () => {
-  return null
+// Vite configuration for optimization
+export default {
+  // Add Vite configuration here
 }
-export default vite.config.optimized.ts
