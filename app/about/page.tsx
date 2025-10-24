@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { Users, Shield, Globe, Brain } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | AI & IT Solutions',
@@ -13,8 +14,36 @@ export const metadata: Metadata = {
   }
 };
 
-
 export default function AboutPage() {
+  const _values = [
+    {
+      icon: Brain,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Serving clients worldwide with localized support and expertise.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients to understand their unique needs.'
+    }
+  ];
+
+  const _stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' }
+  ];
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">

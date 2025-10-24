@@ -4,6 +4,19 @@
 
 import '@testing-library/jest-dom';
 
+// Jest globals
+declare global {
+  var jest: any;
+  var expect: any;
+  var describe: any;
+  var it: any;
+  var beforeEach: any;
+  var afterEach: any;
+  var beforeAll: any;
+  var afterAll: any;
+  var test: any;
+}
+
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
@@ -36,7 +49,7 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn((cb: FrameRequestCallback) => setTimeout(cb, 0));
+global.requestAnimationFrame = jest.fn((cb: any) => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id));
 
 // Mock localStorage
@@ -87,19 +100,12 @@ console.info = (...args: any[]) => {
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  constructor(public callback: PerformanceObserverCallback) {}
+  constructor(public _callback: any) {}
   observe() {}
   disconnect() {}
   takeRecords() {
     return [];
   }
-};
-// Suppress JSDOM navigation warnings
-console.error = (...args: any[]) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return;
-  }
-  originalConsoleError(...args);
 };
 
 // Mock window.location

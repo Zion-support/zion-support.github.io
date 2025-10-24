@@ -26,6 +26,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   blurDataURL
 }) => {
   return (
+<<<<<<< HEAD
     <div className={`relative overflow-hidden ${className}`}>
       <Image
         src={src}
@@ -40,6 +41,19 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
+=======
+    <Image
+      className={className}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      quality={quality}
+      placeholder={placeholder}
+      blurDataURL={blurDataURL}
+    />
+>>>>>>> cursor/fix-errors-and-merge-to-main-463e
   );
 };
 
