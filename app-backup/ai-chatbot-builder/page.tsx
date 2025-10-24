@@ -1,49 +1,49 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart     ;} from 'lucide-react';
-'use client'
-      "title": 'No-Code Builder'
-    "description": 'Create sophisticated chatbots without any programming knowledge using our visual interface'
-    "color": 'from-cyan-500 to-blue-500'
-      "title": 'Multi-Language Support'
-    "description": 'Deploy chatbots in 50+ languages with automatic translation and localization'
-    "color": 'from-green-500 to-emerald-500'
-      "title": 'Advanced Analytics'
-    "description": 'Track performance with, detailed, analytics, conversation, insights, and user behavior data'
-    "color": 'from-purple-500 to-pink-500'
-      "title": 'AI-Powered Responses'
-    "description": 'Leverage advanced NLP and machine learning, for, intelligent, context-aware conversations'
-    "color": 'from-orange-500 to-red-500'
-      "title": 'Easy Integration'
-    "description": 'Seamlessly integrate with your, existing, systems, websites, and messaging platforms'
-    "color": 'from-blue-500 to-cyan-500'
-      "title": 'Custom Branding'
-    "description": 'Customize the chatbot appearance to match your brand identity and design guidelines'
-    "color": 'from-indigo-500 to-purple-500'
-  "title": 'Customer Support'
-    "description": 'Provide 24/7 customer support with instant responses to common queries'
-    "benefits": ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses'
-  "title": 'Lead Generation'
-    "description": 'Qualify leads and capture contact information through engaging conversations'
-    "benefits": ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates'
-  "title": 'E-commerce Assistant'
-    "description": 'Help customers, find, products, answer, questions, and guide them through purchases'
-    "benefits": ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations'
-  "title": 'Internal HR Bot'
-    "description": 'Answer employee questions, about, policies, benefits, and company information'
-    "benefits": ['Reduce HR workload', 'Consistent information', 'Employee satisfaction'
-      "name": 'Starter'
-    "price": '$29'
-      "period": '/month'
+import React from 'react";"
+import Link from 'next/link";"
+import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart, Send, BarChart3, Shield, DollarSign, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"
+'use client';'"
+      "title": 'No-Code Builder'"
+    "description": 'Create sophisticated chatbots without any programming knowledge using our visual interface'"
+    "color": 'from-cyan-500 to-blue-500'"
+      "title": 'Multi-Language Support'"
+    "description": 'Deploy chatbots in 50+ languages with automatic translation and localization'"
+    "color": 'from-green-500 to-emerald-500'"
+      "title": 'Advanced Analytics'"
+    "description": 'Track performance with, detailed, analytics, conversation, insights, and user behavior data'"
+    "color": 'from-purple-500 to-pink-500'"
+      "title": 'AI-Powered Responses'"
+    "description": 'Leverage advanced NLP and machine learning, for, intelligent, context-aware conversations'"
+    "color": 'from-orange-500 to-red-500'"
+      "title": 'Easy Integration'"
+    "description": 'Seamlessly integrate with your, existing, systems, websites, and messaging platforms'"
+    "color": 'from-blue-500 to-cyan-500'"
+      "title": 'Custom Branding'"
+    "description": 'Customize the chatbot appearance to match your brand identity and design guidelines'"
+    "color": 'from-indigo-500 to-purple-500'"
+  "title": 'Customer Support'"
+    "description": 'Provide 24/7 customer support with instant responses to common queries'"
+    "benefits": ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses'"
+  "title": 'Lead Generation'"
+    "description": 'Qualify leads and capture contact information through engaging conversations'"
+    "benefits": ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates'"
+  "title": 'E-commerce Assistant'"
+    "description": 'Help customers, find, products, answer, questions, and guide them through purchases'"
+    "benefits": ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations'"
+  "title": 'Internal HR Bot'"
+    "description": 'Answer employee questions, about, policies, benefits, and company information'"
+    "benefits": ['Reduce HR workload', 'Consistent information', 'Employee satisfaction'"
+      "name": 'Starter'"
+    "price": '$29'"
+      "period": '/month'"
     "description": 'Perfect for small businesses getting started'
         'Up, to, 1,000 conversations/month'
         'Basic AI responses'
         'Email support'
         'Standard templates'
-    'Basic analytics'
-      "name": 'Professional'
-    "price": '$99'
-      "period": '/month'
+    'Basic analytics'"
+      "name": 'Professional'"
+    "price": '$99'"
+      "period": '/month'"
     "description": 'Ideal for growing businesses with more needs'
         'Up, to, 10,000 conversations/month'
         'Advanced AI with custom training'
@@ -51,9 +51,9 @@ import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Ta
         'Custom branding'
         'Advanced analytics'
         'Multi-language support'
-    'API access'
-      "name": 'Enterprise'
-    "price": 'Custom'
+    'API access'"
+      "name": 'Enterprise'"
+    "price": 'Custom'"
     "description": 'For large organizations with complex requirements'
         'Unlimited conversations'
         'Custom AI models'
@@ -61,8 +61,9 @@ import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Ta
         'White-label solution'
         'Advanced integrations'
         'Custom development'
-    'SLA guarantee'
-    { "number": '10,000+', "label": 'Chatbots Created'
-    { "number": '50+', "label": 'Languages Supported'
-    { "number": '99.9%', "label": 'Uptime Guarantee';
+    'SLA guarantee'"
+    { "number": '10,000+', "label": 'Chatbots Created'"
+    { "number": '50+', "label": 'Languages Supported'"
+    { "number": '99.9%', "label": 'Uptime Guarantee";"'"
     { "number": '24/7', "label": 'Customer Support'
+}}}}'"

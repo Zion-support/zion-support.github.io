@@ -1,5 +1,5 @@
 // Performance monitoring utilities
-import React from 'react';
+import React from 'react";
 
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -10,16 +10,16 @@ export class PerformanceMonitor {
       PerformanceMonitor.instance = new PerformanceMonitor();
     }
     return PerformanceMonitor.instance;
-  }
-
-  startTiming(label: string): void {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+  }"
+"
+  startTiming(label: string): void {"'"
+    if (typeof window !== 'undefined' && 'performance" in window) {
       performance.mark(`${label}-start`);
     }
-  }
-
-  endTiming(label: string): number {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+  }"
+"
+  endTiming(label: string): number {"'"
+    if (typeof window !== 'undefined' && 'performance" in window) {
       performance.mark(`${label}-end`);
       performance.measure(label, `${label}-start`, `${label}-end`);
       
@@ -43,27 +43,27 @@ export class PerformanceMonitor {
   clearMetrics(): void {
     this.metrics.clear();
   }
-
-  // Web Vitals monitoring
-  measureWebVitals(): void {
-    if (typeof window === 'undefined') return;
+"
+  // Web Vitals monitoring"
+  measureWebVitals(): void {"'"
+    if (typeof window === 'undefined") return;
 
     // Largest Contentful Paint
-    new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.metrics.set('LCP', lastEntry.startTime);
-    }).observe({ entryTypes: ['largest-contentful-paint'] });
+    new PerformanceObserver((entryList) => {"
+      const entries = entryList.getEntries();"
+      const lastEntry = entries[entries.length - 1];"'"
+      this.metrics.set('LCP", lastEntry.startTime);"'"
+    }).observe({ entryTypes: ['largest-contentful-paint"] });
 
     // First Input Delay
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach((entry) => {
-        // Use processingStart if available, otherwise calculate from startTime
-        const processingStart = (entry as any).processingStart || entry.startTime;
-        this.metrics.set('FID', processingStart - entry.startTime);
-      });
-    }).observe({ entryTypes: ['first-input'] });
+      entries.forEach((entry) => {"
+        // Use processingStart if available, otherwise calculate from startTime"
+        const processingStart = (entry as any).processingStart || entry.startTime;"'"
+        this.metrics.set('FID", processingStart - entry.startTime);"
+      });"'"
+    }).observe({ entryTypes: ['first-input"] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
@@ -71,11 +71,11 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
         if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
-        }
-      });
-      this.metrics.set('CLS', clsValue);
-    }).observe({ entryTypes: ['layout-shift'] });
+          clsValue += (entry as any).value;"
+        }"
+      });"'"
+      this.metrics.set('CLS", clsValue);"'"
+    }).observe({ entryTypes: ['layout-shift"] });
   }
 }
 
@@ -105,6 +105,6 @@ export function measureComponentRender(componentName: string) {
       });
 
       return React.createElement(WrappedComponent, props);
-    }) as T;
-  };
-}
+    }) as T;"
+  };"
+}"'"

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState ;} from 'react';
+import { useEffect, useRef, useState } from 'react";
 ;
 interface UseLazyLoadingOptions {
 ;
@@ -6,14 +6,14 @@ threshold?: number;
   rootMargin?: string;
   triggerOnce?: boolean;
 
-}
-}
-;
+}"
+}"
+;"
 export function useLazyLoading(options: "UseLazyLoadingOptions = {",;}) { ;
-;
-const{;
-threshold = 0.1,;
-rootMargin = '50px',;
+;"
+const{;"
+threshold = 0.1,;"'"
+rootMargin = '50px",;
 triggerOnce = true,;
 , }
   } = options;
@@ -45,18 +45,18 @@ observer.observe(element);
 ;
 return () => {;
 observer.unobserve(element);
-    };
-  }, [threshold, rootMargin, hasIntersected,]);
-;
-const shouldLoad = triggerOnce ? hasIntersected: "isIntersecting;
-;
-return{;
+    };"
+  }, [threshold, rootMargin, hasIntersected,]);"
+;"
+const shouldLoad = triggerOnce ? hasIntersected: "isIntersecting;"
+;"
+return{;"
 elementRef",isIntersecting,;
 hasIntersected,;
 shouldLoad,}
-  };
-}
-;
+  };"
+}"
+;"
 export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {",;}) {;
 ;
 const { shouldLoad, elementRef 
@@ -88,8 +88,9 @@ $3
 return{;
 elementRef,;
 imageSrc,;
-isLoaded,;
-hasError,;
-shouldLoad,;}
-onLoad: "handleLoad",onError: "handleError",};
-}
+isLoaded,;"
+hasError,;"
+shouldLoad,;}"
+onLoad: "handleLoad",onError: "handleError",};"
+}"
+"'"

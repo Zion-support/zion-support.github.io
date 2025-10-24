@@ -8,13 +8,13 @@ console.error(error);
   };
   };
       res.status(500).json({;
-error: 'Internal server error",message: "error.message 
-)
+error: 'Internal server error",message: "error.message "
+)"
   ",});
     };
   };
 };
 ;
-export default withErrorLogging(async (req, res) => {
-
-;
+export default withErrorLogging(async (req, res) => {"
+"
+;"'"

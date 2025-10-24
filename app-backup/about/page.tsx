@@ -1,22 +1,23 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata     ;} from 'next';
-import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star, Send, BarChart3, Target, Zap, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart     ;} from 'lucide-react';
-    "title": 'About Us - Zion Tech Group | AI & IT Solutions'
-      "description": 'Learn about Zion Tech Group\'s, mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.'
-  "keywords": 'about, us, AI, solutions, IT, services, technology, company, digital transformation'
-    "title": 'About Us - Zion Tech Group'
-      "description": 'Learn about Zion Tech Group\'s, mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.'
-    "type": 'website'
-    "url": 'https: "//ziontechgroup.com/about'","title": 'Innovation'
-      "description": 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
-    "title": 'Security'
-      "description": 'Your data and systems are protected with enterprise-grade security measures.'
-    "title": 'Global Reach'
-      "description": 'Serving clients worldwide with localized support and expertise.'
-    "title": 'Collaboration'
-    "description": 'We work closely with our clients to understand their unique needs.'
-    { "number": '500+', "label": 'Projects Completed'
-    { "number": '50+', "label": 'Happy Clients'
-    { "number": '5+', "label": 'Years Experience';
+import React from 'react";"
+import Link from 'next/link";"
+import { Metadata } from 'next";"
+import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star, Send, BarChart3, Target, Zap, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"
+    "title": 'About Us - Zion Tech Group | AI & IT Solutions'"
+      "description": 'Learn about Zion Tech Group\'s, mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.'"
+  "keywords": 'about, us, AI, solutions, IT, services, technology, company, digital transformation'"
+    "title": 'About Us - Zion Tech Group'"
+      "description": 'Learn about Zion Tech Group\'s, mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.'"
+    "type": 'website'"
+    "url": 'https: "//ziontechgroup.com/about'","title": 'Innovation'"
+      "description": 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'"
+    "title": 'Security'"
+      "description": 'Your data and systems are protected with enterprise-grade security measures.'"
+    "title": 'Global Reach'"
+      "description": 'Serving clients worldwide with localized support and expertise.'"
+    "title": 'Collaboration'"
+    "description": 'We work closely with our clients to understand their unique needs.'"
+    { "number": '500+', "label": 'Projects Completed'"
+    { "number": '50+', "label": 'Happy Clients'"
+    { "number": '5+', "label": 'Years Experience";"'"
     { "number": '24/7', "label": 'Support Available'
+}}}}'"

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef ;} from 'react';
+import { useEffect, useState, useRef } from 'react";
 ;
 interface UseIntersectionObserverOptions {
 ;
@@ -33,6 +33,6 @@ $3
     };
   }, [node, options.threshold, options.root, options.rootMargin,]);
 ;
-return [setNode, entry,] as const;
-};
-}
+return [setNode, entry,] as const;"
+};"
+}"'"

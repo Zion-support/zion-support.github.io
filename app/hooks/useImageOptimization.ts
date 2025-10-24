@@ -1,21 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react";
 
 interface UseImageOptimizationOptions {
   src: string;
-  placeholder?: string;
-  lazy?: boolean;
-  quality?: number;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png';
+  placeholder?: string;"
+  lazy?: boolean;"
+  quality?: number;"'"
+  format?: 'webp' | 'avif' | 'jpeg' | 'png";
 }
 
 export const useImageOptimization = ({
   src,
-  placeholder,
-  lazy = true,
-  quality = 80,
-  format = 'webp'
-}: UseImageOptimizationOptions) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
+  placeholder,"
+  lazy = true,"
+  quality = 80,"'"
+  format = 'webp"
+}: UseImageOptimizationOptions) => {"'"
+  const [imageSrc, setImageSrc] = useState(placeholder || '");
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(!lazy);
 
@@ -40,9 +40,9 @@ export const useImageOptimization = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
-    );
-
+      { threshold: 0.1 }"
+    );"
+"
     const element = document.querySelector(`[data-src="${src}"]`);
     if (element) {
       observer.observe(element);
@@ -55,6 +55,6 @@ export const useImageOptimization = ({
     imageSrc,
     isLoaded,
     isInView,
-    shouldLoad: !lazy || isInView
-  };
-};
+    shouldLoad: !lazy || isInView"
+  };"
+};"'"

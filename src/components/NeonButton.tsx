@@ -1,5 +1,5 @@
 import React from &quot;react&quot;
-import { ArrowRight ;} from &quot;lucide-react&quot
+import { ArrowRight;} from &quot;lucide-react&quot
 interface NeonButtonProps {
 children?: React.ReactNode
 className?: string
@@ -16,28 +16,28 @@ disabled?: boolean
 }
 
 :all-pages-backup/components/NeonButton.tsx
-const NeonButton: "React.FC<NeonButtonProps> = ({
-  children
-href</NeonButtonProps>
-onClick",</NeonButtonProps>
+const NeonButton: "React.FC<NeonButtonProps> = ({"
+  children"
+href</NeonButtonProps>"
+onClick",</NeonButtonProps>"
 const NeonButton: "React.FC<NeonButtonProps> = ({
 children
 href
 onClick
-variant=&quot;primary&quot
-  size=&quot;md&quot
-  className=&quot;&quot
+variant=&quot;primary&quot"
+  size=&quot;md&quot"
+  className=&quot;&quot"
   icon",disabled = false
-,}) => {
-const baseClasses =;
-:all-pages-backup/components/NeonButton.tsx;
-    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: "scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot
-    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hove",r: "scale-100&quot
-const benefits = [
+,}) => {"
+const baseClasses =;"
+:all-pages-backup/components/NeonButton.tsx;"
+    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: "scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot"
+    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hove",r: "scale-100&quot"
+const benefits = ["
     'Increase efficiency by up to 50%'",'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology'
+    'Scale operations without proportional staff increases'"
+    'Gain competitive advantage with advanced technology"
   ]
 </NeonButtonProps>
 return(</NeonButtonProps>
@@ -46,46 +46,46 @@ return(</NeonButtonProps>
   </>;
       <Helmet>;</Helmet>
       <Helmet />
-        <Head />
-        <title>NeonButton</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced NeonButton solution for modern businesses.&quot; / />
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
-      </Head>;
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, NeonButton, AI, solutions, intelligent automation&quot; / />
+        <Head />"
+        <title>NeonButton</title>"
+        <meta name=&quot;description&quot; content=&quot;Advanced NeonButton solution for modern businesses.&quot; / />"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
+      </Head>;"
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, NeonButton, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
       </Head>
       </Helmet>;
       <Navigation/ />,;
     <divclassName = &quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; / />
         {/* Hero Section */,}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,
-    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,
-    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,"
+    <divclassName=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,"
+    <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,"
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 NeonButton</h1>
-            </h1>
-            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
-Advanced NeonButton solution for modern businesses.</p>
+            </h1>"
+            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />"
+Advanced NeonButton solution for modern businesses.</p>"
             </p>",<divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
-Get Started</button>
-                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />
-              </button>
+Get Started</button>"
+                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />"
+              </button>"
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Learn More</button>
-              </button>
-              </div>
-            </div>
+              </button>"
+              </div>"
+            </div>"
         </section>",{/* Features Section */}
         <section className=&quot;py-20 px-4&quot; />,
     <divclassName=&quot;max-w-7 xl mx-auto&quot; / />,
     <divclassName=&quot;text-center mb-16&quot; / />,
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Powerful AI-driven features designed to transform your business operations</p>
-              </p>
-              </div>,
-    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)
+Powerful AI-driven features designed to transform your business operations</p>"
+              </p>"
+              </div>,"
+    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
               {features.map((feature",index) => (
                 <divkey = {index,} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; / />
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,
@@ -111,10 +111,10 @@ Powerful AI-driven features designed to transform your business operations</p>
     <divclassName=&quot;text-center mb-16&quot; / />,
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Experience the benefits of cutting-edge AI technology</p>
-              </p>
-              </div>,
-    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
+Experience the benefits of cutting-edge AI technology</p>"
+              </p>"
+              </div>,"
+    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />"
               {benefits.map((benefit",index) => (
                 <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
                   <CheckCircleclassName=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
@@ -129,13 +129,13 @@ Experience the benefits of cutting-edge AI technology</p>
         <section className=&quot;py-20 px-4&quot; />,
     <divclassName=&quot;max-w-4 xl mx-auto text-center&quot; / />,
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />
-Join thousands of businesses already using our AI solutions</p>
-            </p>,
+            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />"
+Join thousands of businesses already using our AI solutions</p>"
+            </p>,"
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
-Start Free Trial</button>
-              </button>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />"
+Start Free Trial</button>"
+              </button>"
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Contact Sales</button>
               </button>
@@ -143,28 +143,28 @@ Contact Sales</button>
             </div>
         </section>
         </div>
-      <Footer/ />
-    </>
-:all-pages-backup/components/NeonButton.tsx
-  )",}
-export default NeonButtonPage;
-constvariantClasses = {;
-primary: "&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;",secondary: "&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white shado w-lghover: shado w-purple-50 0/25 hover:shado w-2 xl&quot;",accent: "&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove",r: "shadow-2 xl&quot
-  ",}
-
-const neonEffect =
-    &quot;before: "absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor",e: "-z-10&quot
+      <Footer/ />"
+    </>"
+:all-pages-backup/components/NeonButton.tsx"
+  )",}"
+export default NeonButtonPage;"
+constvariantClasses = {;"
+primary: "&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;",secondary: "&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white shado w-lghover: shado w-purple-50 0/25 hover:shado w-2 xl&quot;",accent: "&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove",r: "shadow-2 xl&quot"
+  ",}"
+"
+const neonEffect ="
+    &quot;before: "absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor",e: "-z-10&quot"
 const buttonClasses = `${baseClasses",} ${sizeClasses[size,]} ${variantClasses[variant,]} ${neonEffect} ${className;}`
       </div>
   );
-};
-export default NeonButtonPage;
-constvariantClasses = {;
-primary: "&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;",secondary: "&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white shado w-lghover: shado w-purple-50 0/25 hover:shado w-2 xl&quot;",accent: "&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove",r: "shadow-2 xl&quot
-  ",}
-
-const neonEffect =
-    &quot;before: "absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor",e: "-z-10&quot
+};"
+export default NeonButtonPage;"
+constvariantClasses = {;"
+primary: "&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;",secondary: "&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white shado w-lghover: shado w-purple-50 0/25 hover:shado w-2 xl&quot;",accent: "&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove",r: "shadow-2 xl&quot"
+  ",}"
+"
+const neonEffect ="
+    &quot;before: "absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor",e: "-z-10&quot"
   const buttonClasses = `${baseClasses",} ${sizeClasses[size,]} ${variantClasses[variant,]} ${neonEffect} ${className;}`
 ;
   constcontent = (;
@@ -199,6 +199,6 @@ export default NeonButton;
   )
 }
 export default NeonButton;
-</spanclassName>
-</di>
-}
+</spanclassName>"
+</di>"
+}"'"
