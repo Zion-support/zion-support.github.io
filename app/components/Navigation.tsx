@@ -19,7 +19,7 @@ import {
   Box, 
   Link as LinkIcon, 
   Workflow, 
-  Eye,
+  Eye, 
   Mic,
   Brain,
   Share,
