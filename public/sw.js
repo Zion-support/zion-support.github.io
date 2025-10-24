@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-// Service Worker for Zion Tech Group Website
-const CACHE_NAME = 'zion-tech-group-v1'
-const urlsToCache = [
-  '/'
-  '/about'
-  '/contact'
-  '/services'
-  '/ai-services'
-  '/consultation'
-  '/static/js/bundle.js'
-  '/static/css/main.css',
-    '/manifest.json'
-  ]
-// Install event - cache resources
-=======
 // Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
@@ -24,37 +7,27 @@ const urlsToCache = [
   '/manifest.json'
 ];
 
-// Install event
->>>>>>> origin/app-improvements-20251015-174030
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-<<<<<<< HEAD
-        return cache.addAll(urlsToCache)
-      })
-  )
-})
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request)
-      })
-  )
-})
-// Activate event - clean up old caches
-=======
-        return cache.addAll(urlsToCache);
-      })
-      .catch((error) => {
-        // Handle cache installation errors silently
-        console.error('Cache installation failed:', error);
-      })
+const Sw.jsPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Sw.Js
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-});
+};
 
 // Fetch event
 self.addEventListener('fetch', (event) => {
@@ -68,22 +41,12 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Activate event
->>>>>>> origin/app-improvements-20251015-174030
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-<<<<<<< HEAD
-            return caches.delete(cacheName)
-          }
-        })
-      )
-    })
-  )
-})
-=======
             return caches.delete(cacheName);
           }
         })
@@ -136,4 +99,3 @@ async function sendQueuedAnalytics() {
     console.error('Failed to send analytics data:', error);
   }
 }
->>>>>>> origin/app-improvements-20251015-174030

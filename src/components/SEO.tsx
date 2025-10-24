@@ -1,15 +1,22 @@
-import React from 'react';
+import React from "react";
 
 interface SEOProps {
-  className?: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ className = '' }) => {
+const SEO: React.FC<SEOProps> = ({
+  title = "Default Title",
+  description = "Default Description",
+  keywords = "default, keywords"
+}) => {
   return (
-    <div className={className}>
-      <h2>SEO</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <>
+      <title>{title}</title>
+      <meta name="description" content="{description}" />
+      <meta name="keywords" content="{keywords}" />
+    </>
   );
 };
 
