@@ -69,9 +69,9 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
@@ -98,9 +98,9 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
@@ -118,8 +118,8 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions

@@ -1,7 +1,6 @@
 'use client';
-'use client';
 import { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';

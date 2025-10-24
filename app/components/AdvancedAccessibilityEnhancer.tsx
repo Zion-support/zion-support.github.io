@@ -129,7 +129,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    consthandleKeyDown= (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
   
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
