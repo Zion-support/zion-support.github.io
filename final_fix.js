@@ -1,134 +1,112 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to fix missing imports
-function fixMissingImports(content) {
-  const missingIcons = [
-    'MapPin', 'Check', 'Bot', 'Cpu', 'Globe', 'Clock', 'Award', 'Download', 
-    'AlertTriangle', 'Settings', 'Home'
-  ];
-  
-  let imports = new Set();
-  
-  // Check which icons are missing
-  missingIcons.forEach(iconName => {
-    if (content.includes(`<${iconName}`) && !content.includes(`import { ${iconName}`)) {
-      imports.add(iconName);
-    }
-  });
-  
-  if (imports.size > 0) {
-    const importStatement = `import { ${Array.from(imports).join(', ')} } from 'lucide-react';\n`;
-    
-    // Find the last import statement
-    const lines = content.split('\n');
-    let lastImportIndex = -1;
-    
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].startsWith('import ')) {
-        lastImportIndex = i;
-      }
-    }
-    
-    if (lastImportIndex >= 0) {
-      lines.splice(lastImportIndex + 1, 0, importStatement);
-      return lines.join('\n');
-    } else {
-      return importStatement + content;
-    }
-  }
-  
-  return content;
+const fs = require('fs')
+const path = require('path')
+// Function to fix all remaining syntax errors
+function fixAllSyntaxErrors(content) {
+  // Fix function declarations with trailing commas
+  content = content.replace(/:\s*React\.FC\s*=\s*\(\s*\)\s*{\s*,/g, ': React.FC = () => {')
+  // Fix object literals with trailing commas
+  content = content.replace(/{\s*,/g, '{')
+  content = content.replace(/,\s*}/g, '}')
+  // Fix array literals with trailing commas
+  content = content.replace(/\[\s*,/g, '[')
+  content = content.replace(/,\s*\]/g, ']')
+  // Fix import statements with trailing commas
+  content = content.replace(/{\s*([^}]+);\s*}/g, '{\n  $1\n}')
+  // Fix export statements with trailing commas
+  content = content.replace(/export\s*{\s*([^}]+);\s*}/g, 'export {\n  $1\n}')
+  // Fix metadata objects
+  content = content.replace(/:\s*Metadata\s*=\s*{
+  \s*,/g, ': Metadata = {')
+  // Fix interface declarations
+  content = content.replace(/:\s*React\.ReactNode;\s*,/g, ': React.ReactNode;')
+  // Fix variable declarations
+  content = content.replace(/=\s*\[\s*,/g, '= [')
+  content = content.replace(/=\s*{\s*,/g, '= {')
+  // Remove standalone commas
+  content = content.replace(/^\s*,\s*$/gm, '')
+  // Fix semicolons in wrong places
+  content = content.replace(/;\s*$/gm, '')
+  content = content.replace(/,\s*$/gm, '')
+  // Fix specific patterns
+  content = content.replace(/ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star/g, 'ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star')
+  return content
 }
 
-// Function to fix unescaped entities
-function fixUnescapedEntities(content) {
-  // Fix quotes in JSX text content
-  content = content.replace(/([^\\])'([^']*?)'([^\\])/g, '$1&apos;$2&apos;$3');
-  content = content.replace(/([^\\])"([^"]*?)"([^\\])/g, '$1&quot;$2&quot;$3');
-  
-  return content;
-}
-
-// Function to fix JSX closing tags
-function fixJSXClosingTags(content) {
-  // Fix common missing closing tags
-  content = content.replace(/<h1([^>]*)>([^<]*?)(?![^<]*<\/h1>)/g, '<h1$1>$2</h1>');
-  content = content.replace(/<h2([^>]*)>([^<]*?)(?![^<]*<\/h2>)/g, '<h2$1>$2</h2>');
-  content = content.replace(/<h3([^>]*)>([^<]*?)(?![^<]*<\/h3>)/g, '<h3$1>$2</h3>');
-  content = content.replace(/<button([^>]*)>([^<]*?)(?![^<]*<\/button>)/g, '<button$1>$2</button>');
-  content = content.replace(/<span([^>]*)>([^<]*?)(?![^<]*<\/span>)/g, '<span$1>$2</span>');
-  content = content.replace(/<p([^>]*)>([^<]*?)(?![^<]*<\/p>)/g, '<p$1>$2</p>');
-  
-  return content;
-}
-
-// Function to fix syntax errors
-function fixSyntaxErrors(content) {
-  // Fix missing semicolons
-  content = content.replace(/([^;}])\s*$/gm, '$1;');
-  
-  // Fix missing closing braces
-  const openBraces = (content.match(/{/g) || []).length;
-  const closeBraces = (content.match(/}/g) || []).length;
-  
-  if (openBraces > closeBraces) {
-    const missingBraces = openBraces - closeBraces;
-    content += '\n' + '}'.repeat(missingBraces);
-  }
-  
-  // Fix empty function bodies
-  content = content.replace(/return\s*\(\s*\)\s*;\s*}\s*;\s*export/g, 'return null;\n};\n\nexport');
-  
-  return content;
-}
-
-// Function to remove console statements
-function removeConsoleStatements(content) {
-  // Comment out console statements instead of removing them
-  content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '// $&');
-  
-  return content;
-}
-
-// Main function to process files
+// Function to process a file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, 'utf8')
+    const originalContent = content
     // Apply fixes
-    content = fixMissingImports(content);
-    content = fixUnescapedEntities(content);
-    content = fixJSXClosingTags(content);
-    content = fixSyntaxErrors(content);
-    content = removeConsoleStatements(content);
+    content = fixAllSyntaxErrors(content)
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed: ${filePath}`)
+      return true
+    }
     
-    // Write back the fixed content
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    return false
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
   }
 }
 
-// Find all TSX files and process them
-function findAndProcessFiles(dir) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      findAndProcessFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      processFile(filePath);
+// Function to find all relevant files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.js']) {
+  const files = []
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir)
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item)
+        const stat = fs.statSync(fullPath)
+        if (stat.isDirectory()) {
+          // Skip node_modules and .next
+          if (!['node_modules', '.next', '.git'].includes(item)) {
+            traverse(fullPath)
+}
+        } else if (stat.isFile()) {
+  const ext = path.extname(item)
+          if (extensions.includes(ext)) {
+            files.push(fullPath)
+}
+        }
+      }
+    } catch (error) {
+      // Skip directories we can't read
     }
-  });
+  }
+  
+  traverse(dir)
+  return files
 }
 
-// Start processing
-console.log('Starting final fix...');
-findAndProcessFiles('./app');
-findAndProcessFiles('./src');
-console.log('Finished final fix!');
+// Main execution
+function main() {
+  const workspaceDir = process.cwd()
+  console.log('Starting final syntax error fixing...')
+  // Find all relevant files
+  const files = findFiles(workspaceDir)
+  console.log(`Found ${files.length} files to process`)
+  let fixedCount = 0
+  // Process each file
+  for (const file of files) {
+  if (processFile(file)) {
+      fixedCount++
+}
+  }
+  
+  console.log(`\nFixed ${fixedCount} files`)
+  console.log('Final syntax error fixing completed!')
+}
+
+// Run the script
+if (require.main === module) {
+  main()
+}
+
+module.exports = { fixAllSyntaxErrors, processFile }

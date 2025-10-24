@@ -1,108 +1,122 @@
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-
+<<<<<<< HEAD
+import js from '@eslint/js'
+import typescript from '@typescript-eslint/eslint-plugin'
+import typescriptParser from '@typescript-eslint/parser'
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
-  js.configs.recommended,
+  js.configs.recommended
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}']
     ignores: [
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'out/**',
-      '*.config.js',
-      '*.config.ts',
-      '*.config.mjs',
-      'add-missing-routes*.jsx',
-      'aggressive-*.js',
-      'aggressive-*.cjs',
-      'batch-*.js',
-      'cleanup-*.js',
-      'cleanup-*.cjs',
-      'comprehensive-*.js',
-      'fix-*.js',
-      'fix-*.cjs',
-      '*.cjs',
-      'create-*.js',
-      'identify-*.js',
-      'merge-*.js',
-      'remove-*.js',
-      'simple-*.js',
-      'website-*.js',
-      'resolve-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'analyze-*.js',
-      '*.broken',
-      '*.backup',
-      'temp-*.js',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'jest.setup.js',
+      'node_modules/**'
+      'dist/**'
+      'build/**'
+      '.next/**'
+      'out/**'
+      '*.config.js'
+      '*.config.ts'
+      '*.config.mjs'
+      'add-missing-routes*.jsx'
+      'aggressive-*.js'
+      'aggressive-*.cjs'
+      'batch-*.js'
+      'cleanup-*.js'
+      'cleanup-*.cjs'
+      'comprehensive-*.js'
+      'fix-*.js'
+      'fix-*.cjs'
+      '*.cjs'
+      'create-*.js'
+      'identify-*.js'
+      'merge-*.js'
+      'remove-*.js'
+      'simple-*.js'
+      'website-*.js'
+      'resolve-*.js'
+      'check-*.js'
+      'clean-*.js'
+      'analyze-*.js'
+      '*.broken'
+      '*.backup'
+      'temp-*.js'
+      'analyze-*.js'
+      'check-*.js'
+      'clean-*.js'
+      'jest.setup.js'
       'app-broken/**',
-      'app-disabled/**'
-    ],
-    languageOptions: {
-      ecmaVersion: 'latest',
+    'app-disabled/**'
+  ]
+    languageOptions: {,
+    ecmaVersion: 'latest'
       sourceType: 'module',
-      globals: {
+    globals: {
         window: 'readonly',
-        document: 'readonly',
+    document: 'readonly'
         console: 'readonly',
-        process: 'readonly',
+    process: 'readonly'
         global: 'readonly',
-        HTMLElement: 'readonly',
+    HTMLElement: 'readonly'
         Event: 'readonly',
-        KeyboardEvent: 'readonly',
+    KeyboardEvent: 'readonly'
         MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
+    PerformanceObserver: 'readonly'
         PerformanceNavigationTiming: 'readonly',
-        HTMLInputElement: 'readonly',
+    HTMLInputElement: 'readonly'
         HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
+    HTMLSelectElement: 'readonly'
         setTimeout: 'readonly',
-        clearTimeout: 'readonly',
+    clearTimeout: 'readonly'
         setInterval: 'readonly',
-        clearInterval: 'readonly',
+    clearInterval: 'readonly'
         performance: 'readonly',
-        require: 'readonly',
+    require: 'readonly'
         module: 'readonly',
-        exports: 'readonly',
-        fs: 'readonly'
-      },
+    exports: 'readonly'
+        fs: 'readonly'}
       parser: typescriptParser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
-    },
-    rules: {
-      'no-console': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn'
-    },
-    settings: {
-      react: {
-        version: 'detect'
+    parserOptions: {
+        ecmaFeatures: {,
+    jsx: true}
       }
     }
-  }
-];
+=======
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from 'typescript-eslint';
+
+export default tseslint.config(
+  { ignores: ['dist'] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+>>>>>>> 0037f0079afd7c1df869836a2655008c935027f4
+    plugins: {
+  '@typescript-eslint': typescript
+      'react': react
+      'react-hooks': reactHooks
+      'react-refresh': reactRefresh
+}
+    rules: {
+      'no-console': 'off'
+      'no-unused-vars': 'off'
+      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }]
+      'react/react-in-jsx-scope': 'off'
+      'react/prop-types': 'off'
+      'react-hooks/rules-of-hooks': 'error'
+      'react-hooks/exhaustive-deps': 'warn'
+      'react-refresh/only-export-components': 'warn'
+    }
+    settings: {,
+    react: {
+        version: 'detect'}
+    },
+    }
+  ]

@@ -1,61 +1,57 @@
-const fs = require('fs');
-const path = require('path');
 
+const fs = require('fs')
+const path = require('path')
 function fixHtmlEntities(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, 'utf8')
     // Fix common HTML entities
     const replacements = {
-      '&quot;': '"',
-      '&apos;': "'",
-      '&lt;': '<',
-      '&gt;': '>',
-      '&amp;': '&',
-      '&nbsp;': ' ',
-      '&ldquo;': '"',
-      '&rdquo;': '"',
-      '&lsquo;': "'",
-      '&rsquo;': "'",
-      '&#39;': "'",
-      '&#34;': '"',
-      '&#60;': '<',
-      '&#62;': '>',
+      '&quot;': '"'
+      '&apos;': "'"
+      '&lt;': '<'
+      '&gt;': '>'
+      '&amp;': '&'
+      '&nbsp;': ' '
+      '&ldquo;': '"'
+      '&rdquo;': '"'
+      '&lsquo;': "'"
+      '&rsquo;': "'"
+      '&#39;': "'"
+      '&#34;': '"'
+      '&#60;': '<'
+      '&#62;': '>'
       '&#38;': '&'
-    };
-    
-    let hasChanges = false;
+}
+    let hasChanges = false
     for (const [entity, replacement] of Object.entries(replacements)) {
-      if (content.includes(entity)) {
-        content = content.replace(new RegExp(entity, 'g'), replacement);
-        hasChanges = true;
-      }
+  if (content.includes(entity)) {
+        content = content.replace(new RegExp(entity, 'g'), replacement)
+        hasChanges = true
+}
     }
-    
     if (hasChanges) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed HTML entities in: ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8')
+      // eslint-disable-next-line no-console
+    console.log(`Fixed HTML entities in: ${filePath}`)
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // eslint-disable-next-line no-console
+    console.error(`Error processing ${filePath}:`, error.message)
   }
 }
-
 function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
-  
+  const files = fs.readdirSync(dir)
   for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
+    const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
-      walkDirectory(filePath);
+      walkDirectory(filePath)
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      fixHtmlEntities(filePath);
+      fixHtmlEntities(filePath)
     }
   }
 }
-
 // Start from the app directory
-walkDirectory('./app');
-console.log('HTML entities fix completed!');
+walkDirectory('./app')
+// eslint-disable-next-line no-console
+    console.log('HTML entities fix completed!')

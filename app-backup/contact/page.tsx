@@ -1,80 +1,69 @@
-"use client";
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
-
+import React, { useState } from "react"
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
+"use client"
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    email: ""
     company: "",
-    service: "",
-    message: ""
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+    service: ""
+    message: ""})
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
-      ...prev,
+  ...prev
       [name]: value
-    }));
-  };
-
+}))
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // Here you would typically send the form data to your backend
     // Form submitted successfully
-    setIsSubmitted(true);
+    setIsSubmitted(true)
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false)
       setFormData({
         name: "",
-        email: "",
+    email: ""
         company: "",
-        service: "",
-        message: ""
-      });
-    }, 3000);
-  };
-
+    service: ""
+        message: ""})
+    }, 3000)
+  }
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email Us",
+    title: "Email Us"
       details: "hello@ziontechgroup.com",
-      description: "Send us an email and we&apos;ll respond within 24 hours"
-    },
+    description: "Send us an email and we&apos;ll respond within 24 hours"}
     {
       icon: Phone,
-      title: "Call Us",
+    title: "Call Us"
       details: "+1 (555) 123-4567",
-      description: "Mon-Fri from 9am to 6pm EST"
-    },
+    description: "Mon-Fri from 9am to 6pm EST"}
     {
       icon: MapPin,
-      title: "Visit Us",
+    title: "Visit Us"
       details: "123 Tech Street, Silicon Valley, CA 94000",
-      description: "Come say hello at our headquarters"
-    }
-  ];
-
+    description: "Come say hello at our headquarters"}
+  ]
   const services = [
-    "AI Solutions",
-    "IT Services",
-    "Micro SaaS Development",
-    "Business Intelligence",
+  "AI Solutions"
+    "IT Services"
+    "Micro SaaS Development"
+    "Business Intelligence"
     "Consulting",
     "Other"
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Touch</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -82,13 +71,12 @@ const ContactPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Contact Info Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover: shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4 mx-auto">
                   <info.icon className="h-8 w-8 text-white" />
                 </div>
@@ -100,19 +88,17 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
               Send us a Message
             </h2>
             <p className="text-xl text-gray-600">
               Fill out the form below and we&apos;ll get back to you as soon as possible.
             </p>
           </div>
-
           {isSubmitted ? (
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-4 mx-auto">
@@ -123,7 +109,7 @@ const ContactPage: React.FC = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -135,7 +121,7 @@ const ContactPage: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
@@ -150,13 +136,12 @@ const ContactPage: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="your.email@company.com"
                   />
                 </div>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company
@@ -167,7 +152,7 @@ const ContactPage: React.FC = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
@@ -180,7 +165,7 @@ const ContactPage: React.FC = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
@@ -189,7 +174,6 @@ const ContactPage: React.FC = () => {
                   </select>
                 </div>
               </div>
-
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -201,14 +185,13 @@ const ContactPage: React.FC = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-emerald-500 focus:border-transparent"
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
-
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-emerald-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
                 <Send className="mr-2 h-5 w-5" />
                 Send Message
@@ -217,19 +200,17 @@ const ContactPage: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
               Quick answers to common questions about our services.
             </p>
           </div>
-
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">How quickly can you start a project?</h3>
@@ -251,7 +232,6 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ContactPage;
+  )
+}
+export default ContactPage
