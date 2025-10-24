@@ -163,13 +163,10 @@ const RoboticProcessAutomationPage = lazy(
 const LowCodePlatformPage = lazy(() => import("./app/low-code-platform/page"));
 
 // Additional missing pages
+const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
 const TaskManagerProPage = lazy(() => import("./app/task-manager-pro/page"));
-const AIWebsiteAnalyzerPage = lazy(
-  () => import("./app/ai-website-analyzer/page"),
-);
-const AISocialMediaManagerPage = lazy(
-  () => import("./app/ai-social-media-manager/page"),
-);
+const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const ServerlessArchitecturePage = lazy(
   () => import("./app/serverless-architecture/page"),
 );
@@ -180,31 +177,15 @@ const DataLakeSolutionsPage = lazy(
   () => import("./app/data-lake-solutions/page"),
 );
 
-const AIFraudDetectionProPage = lazy(
-  () => import("./app/ai-fraud-detection-pro/page"),
-);
-const AIImageRecognitionProPage = lazy(
-  () => import("./app/ai-image-recognition-pro/page"),
-);
-const AILeadScoringProPage = lazy(
-  () => import("./app/ai-lead-scoring-pro/page"),
-);
-const AIPredictiveMaintenanceProPage = lazy(
-  () => import("./app/ai-predictive-maintenance-pro/page"),
-);
-const AIPriceOptimizerProPage = lazy(
-  () => import("./app/ai-price-optimizer-pro/page"),
-);
-const AIVoiceAssistantProPage = lazy(
-  () => import("./app/ai-voice-assistant-pro/page"),
-);
-const BlockchainSolutionsProPage = lazy(
-  () => import("./app/blockchain-solutions-pro/page"),
-);
-const DevOpsAutomationProPage = lazy(
-  () => import("./app/devops-automation-pro/page"),
-);
-const IOTSolutionsProPage = lazy(() => import("./app/iot-solutions-pro/page"));
+const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
+const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
+const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
+const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
+const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
+const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
+const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
+const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
+const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
 
 // Zion AI Services
 const ZionAIChatbotBuilderPage = lazy(

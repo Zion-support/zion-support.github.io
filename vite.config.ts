@@ -20,9 +20,9 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist",
-    sourcemap: false,
-    minify: "esbuild",
+    outDir: 'dist',
+    sourcemap: true,
+    minify: 'terser',
     target: "es2020",
     cssCodeSplit: true,
     cssTarget: "chrome80",
@@ -30,6 +30,17 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     emptyOutDir: true,
     copyPublicDir: true,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+    },
     rollupOptions: {
       treeshake: {
         moduleSideEffects: false,
@@ -137,6 +148,8 @@ export default defineConfig({
     // Additional optimizations
     assetsInlineLimit: 4096,
     cssMinify: true,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
   },
   server: {
     port: 3000,
