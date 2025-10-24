@@ -15,10 +15,15 @@ const removeConsoleLogs = () => {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
       
-      // Remove console.log statements (basic regex)
+      // Remove console.log statements (improved regex)
       content = content.replace(/console\.log\([^)]*\);?/g, '');
       content = content.replace(/console\.warn\([^)]*\);?/g, '');
       content = content.replace(/console\.error\([^)]*\);?/g, '');
+      content = content.replace(/console\.debug\([^)]*\);?/g, '');
+      
+      // Clean up any double semicolons or empty statements
+      content = content.replace(/;;+/g, ';');
+      content = content.replace(/;\s*;/g, ';');
       
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);

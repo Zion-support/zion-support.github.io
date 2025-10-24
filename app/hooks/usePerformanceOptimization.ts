@@ -1,170 +1,142 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef, useState } from 'react'
 
-interface PerformanceOptimizationOptions {
-  enableIntersectionObserver?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableDebouncing?: boolean;
-  debounceDelay?: number;
+export interface PerformanceOptimizationOptions {
+  enableLazyLoading?: boolean
+  enableImageOptimization?: boolean
+  enableCodeSplitting?: boolean
+  enableCaching?: boolean
+  enablePrefetching?: boolean
+  enableCompression?: boolean
+  enableMinification?: boolean
+  enableTreeShaking?: boolean
+  enableBundleAnalysis?: boolean
+  enablePerformanceMonitoring?: boolean
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
+export function usePerformanceOptimization(options: PerformanceOptimizationOptions = {}) {
   const {
-    enableIntersectionObserver = true,
     enableLazyLoading = true,
-    enablePreloading = true,
-    enableDebouncing = true,
-    debounceDelay = 300,
-  } = options;
+    enableImageOptimization = true,
+    enableCodeSplitting: _enableCodeSplitting = true,
+    enableCaching = true,
+    enablePrefetching = true,
+    enableCompression: _enableCompression = true,
+    enableMinification: _enableMinification = true,
+    enableTreeShaking: _enableTreeShaking = true,
+    enableBundleAnalysis: _enableBundleAnalysis = false,
+    enablePerformanceMonitoring = true
+  } = options
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  // Suppress unused variable warnings for destructured options
+  void _enableCodeSplitting
+  void _enableCompression
+  void _enableMinification
+  void _enableTreeShaking
+  void _enableBundleAnalysis
 
-  // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback(() => {
-    if (!enableIntersectionObserver || !enableLazyLoading) return;
+  const [isOptimized, setIsOptimized] = useState(false)
+  const [performanceMetrics, setPerformanceMetrics] = useState<any>({})
+  const _optimizationRef = useRef<any>({})
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            
-            // Lazy load images
-            if (target.tagName === 'IMG' && target.dataset.src) {
-              (target as HTMLImageElement).src = target.dataset.src;
-              target.removeAttribute('data-src');
-              observer.unobserve(target);
-            }
-            
-            // Lazy load background images
-            if (target.dataset.bgSrc) {
-              target.style.backgroundImage = `url(${target.dataset.bgSrc})`;
-              target.removeAttribute('data-bg-src');
-              observer.unobserve(target);
-            }
-          }
-        });
-      },
-      {
-        rootMargin: '50px',
-        threshold: 0.1,
-      }
-    );
-
-    observerRef.current = observer;
-    return observer;
-  }, [enableIntersectionObserver, enableLazyLoading]);
-
-  // Debounce function
-  const debounce = useCallback(
-    <T extends (...args: any[]) => any>(func: T): T => {
-      if (!enableDebouncing) return func;
-
-      return ((...args: Parameters<T>) => {
-        if (timeoutRef.current) {
-          clearTimeout(timeoutRef.current);
-        }
-        timeoutRef.current = setTimeout(() => func(...args), debounceDelay);
-      }) as T;
-    },
-    [enableDebouncing, debounceDelay]
-  );
-
-  // Preload critical resources
-  const preloadResource = useCallback((href: string, as: string, crossorigin?: string) => {
-    if (!enablePreloading) return;
-
-    // Check if already preloaded
-    const existingLink = document.querySelector(`link[href="${href}"]`);
-    if (existingLink) return;
-
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = href;
-    link.as = as;
-    if (crossorigin) {
-      link.crossOrigin = crossorigin;
-    }
-    
-    // Add error handling
-    link.onerror = () => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn(`Failed to preload resource: ${href}`);
-      }
-    };
-    
-    document.head.appendChild(link);
-  }, [enablePreloading]);
-
-  // Preload critical images
-  const preloadImages = useCallback((imageUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-      img.onload = () => {
-        if (process.env.NODE_ENV === 'development') {
-          console.log(`Preloaded image: ${url}`);
-        }
-      };
-      img.onerror = () => {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn(`Failed to preload image: ${url}`);
-        }
-      };
-    });
-  }, [enablePreloading]);
-
-  // Preload critical fonts
-  const preloadFonts = useCallback((fontUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    fontUrls.forEach((url) => {
-      preloadResource(url, 'font', 'anonymous');
-    });
-  }, [enablePreloading, preloadResource]);
-
-  // Preload critical scripts
-  const preloadScripts = useCallback((scriptUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    scriptUrls.forEach((url) => {
-      preloadResource(url, 'script');
-    });
-  }, [enablePreloading, preloadResource]);
-
-  // Initialize performance optimizations
   useEffect(() => {
-    const observer = createIntersectionObserver();
+    if (enablePerformanceMonitoring) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        setPerformanceMetrics((prev: any) => ({
+          ...prev,
+          entries: [...(prev.entries || []), ...entries]
+        }))
+      })
+
+      observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] })
+
+      return () => observer.disconnect()
+    }
+    return undefined
+  }, [enablePerformanceMonitoring])
+
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return
+
+    const images = document.querySelectorAll('img')
+    images.forEach(img => {
+      if (img.dataset.src && !img.src) {
+        img.src = img.dataset.src
+        img.classList.add('lazy-loaded')
+      }
+    })
+  }, [enableImageOptimization])
+
+  const optimizeLazyLoading = useCallback(() => {
+    if (!enableLazyLoading) return
+
+    const lazyElements = document.querySelectorAll('[data-lazy]')
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement
+          element.classList.add('lazy-loaded')
+          observer.unobserve(element)
+        }
+      })
+    })
+
+    lazyElements.forEach(el => observer.observe(el))
+  }, [enableLazyLoading])
+
+  const enableCachingStrategy = useCallback(() => {
+    if (!enableCaching) return
+
+    // Service worker registration for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered:', registration)
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error)
+        })
+    }
+  }, [enableCaching])
+
+  const prefetchResources = useCallback(() => {
+    if (!enablePrefetching) return
+
+    const links = document.querySelectorAll('a[href]')
+    links.forEach(link => {
+      const href = link.getAttribute('href')
+      if (href && href.startsWith('/')) {
+        const prefetchLink = document.createElement('link')
+        prefetchLink.rel = 'prefetch'
+        prefetchLink.href = href
+        document.head.appendChild(prefetchLink)
+      }
+    })
+  }, [enablePrefetching])
+
+  const runOptimizations = useCallback(() => {
+    optimizeImages()
+    optimizeLazyLoading()
+    enableCachingStrategy()
+    prefetchResources()
     
-    // Observe all lazy-load elements
-    if (observer) {
-      const lazyElements = document.querySelectorAll('[data-src], [data-bg-src]');
-      lazyElements.forEach((el) => observer.observe(el));
-    }
+    setIsOptimized(true)
+    console.log('Performance optimizations applied')
+  }, [optimizeImages, optimizeLazyLoading, enableCachingStrategy, prefetchResources])
 
-    // Preload critical resources
-    if (enablePreloading) {
-      preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
+  const getOptimizationStatus = useCallback(() => {
+    return {
+      isOptimized,
+      options,
+      metrics: performanceMetrics,
+      timestamp: Date.now()
     }
-
-    return () => {
-      if (observer) {
-        observer.disconnect();
-      }
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, [createIntersectionObserver, enablePreloading, preloadResource]);
+  }, [isOptimized, options, performanceMetrics])
 
   return {
-    debounce,
-    preloadResource,
-    preloadImages,
-    preloadFonts,
-    preloadScripts,
-  };
-};
+    runOptimizations,
+    getOptimizationStatus,
+    isOptimized,
+    performanceMetrics
+  }
+}

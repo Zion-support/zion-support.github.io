@@ -1,66 +1,12 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noIndex?: boolean;
-}
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords,
-  canonicalUrl,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noIndex = false
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
-  const fullDescription = description || 'Professional AI and IT solutions for modern businesses';
-  const fullKeywords = keywords || 'AI solutions, IT services, technology consulting, software development, artificial intelligence';
+const SEOHead: React.FC = () => {
   return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={fullKeywords} />
-      <link rel="canonical" href={canonicalUrl || window.location.href} />
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl || window.location.href} />
-      {ogImage && <meta property="og:image" content={ogImage} />}
-
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
-
-      {/* Additional SEO */}
-      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      
-      {/* Performance hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-    </Helmet>
+    <div>
+      <h1>SEOHead</h1>
+    </div>
   );
 };
+
 export default SEOHead;

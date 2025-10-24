@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import { Suspense, lazy, useEffect, memo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
@@ -12,7 +12,8 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
-
+// Hooks
+import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
 const AboutPage = lazy(() => import('./app/about/page'));
@@ -26,6 +27,7 @@ const CareersPage = lazy(() => import('./app/careers/page'));
 const PrivacyPage = lazy(() => import('./app/privacy/page'));
 const TermsPage = lazy(() => import('./app/terms/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
+const AdminPage = lazy(() => import('./app/pages/AdminPage'));
 
 // AI Services Pages
 const AIServicesPage = lazy(() => import('./app/ai-services/page'));
@@ -33,8 +35,11 @@ const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
 
 // IT Services Pages
 const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
 const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
 const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const SolutionsPage = lazy(() => import('./app/solutions/page'));
 
 // 5G Solutions Pages
 const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
@@ -73,16 +78,40 @@ const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
+// Additional AI Services
+const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
+const AIAudioProcessorPage = lazy(() => import('./app/ai-audio-processor/page'));
+const AI3DModelGeneratorPage = lazy(() => import('./app/ai-3d-model-generator/page'));
+const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
+const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/page'));
+const AIEducationTutorPage = lazy(() => import('./app/ai-education-tutor/page'));
+const AIRealEstateAnalyzerPage = lazy(() => import('./app/ai-real-estate-analyzer/page'));
+const AISupplyChainOptimizerPage = lazy(() => import('./app/ai-supply-chain-optimizer/page'));
+
+// Enterprise Solutions
+const AIInfrastructurePage = lazy(() => import('./app/ai-infrastructure/page'));
+const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
+const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
+const AugmentedRealitySolutionsPage = lazy(() => import('./app/augmented-reality-solutions/page'));
+const VirtualRealitySolutionsPage = lazy(() => import('./app/virtual-reality-solutions/page'));
+const RoboticProcessAutomationPage = lazy(() => import('./app/robotic-process-automation/page'));
+const LowCodePlatformPage = lazy(() => import('./app/low-code-platform/page'));
+
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
+const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
+const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
+const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
 const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
 const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
-const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
-const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
 const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
 const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
 const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
@@ -135,6 +164,17 @@ const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-autom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
 
+// New AI Services
+const AIProjectManagerProPage = lazy(() => import('./app/ai-project-manager-pro/page'));
+const AICustomerFeedbackAnalyzerPage = lazy(() => import('./app/ai-customer-feedback-analyzer/page'));
+const AIInventoryOptimizerProPage = lazy(() => import('./app/ai-inventory-optimizer-pro/page'));
+const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-analyzer/page'));
+
+  // New IT Solutions
+
+// New AI Medical Services
+const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -164,10 +204,24 @@ const LoadingFallback = () => (
   </div>
 );
 
-function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+const App = memo(() => {
+  // Sidebar state removed as it's not used
+
+  // Initialize performance optimizations
+  usePerformanceOptimization();
 
   useEffect(() => {
+    // Register service worker
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => {
+          // Service worker registered successfully
+        })
+        .catch(() => {
+          // Service worker registration failed
+        });
+    }
+
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical CSS
@@ -195,23 +249,26 @@ function App() {
       });
     };
 
-    preloadCriticalResources();
+    // Only preload in production
+    if (process.env.NODE_ENV === 'production') {
+      preloadCriticalResources();
+    }
   }, []);
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
-            <Navigation onSidebarToggle={() => setSidebarOpen(!sidebarOpen)} />
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <Navigation />
+            <Sidebar isOpen={false} onClose={() => {}} />
             
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <SEOOptimizer />
-                
-                <Suspense fallback={<LoadingFallback />}>
+                <AccessibilityEnhancer>
+                  <SEOOptimizer />
+                  
+                  <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
                     <Routes>
                     {/* Main Pages */}
@@ -227,6 +284,7 @@ function App() {
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/cookies" element={<CookiesPage />} />
+                    <Route path="/admin" element={<AdminPage />} />
                     
                     {/* AI Services */}
                     <Route path="/ai-services" element={<AIServicesPage />} />
@@ -234,8 +292,11 @@ function App() {
                     
                     {/* IT Services */}
                     <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
                     <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
                     
                     {/* 5G Solutions */}
                     <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
@@ -279,10 +340,24 @@ function App() {
                     <Route path="/partnerships" element={<PartnershipsPage />} />
                     
                     {/* Additional missing pages */}
-                    <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
-                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
-                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
-                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
+                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
+                    <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
+                    <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />
+                    <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                    <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
+                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                    <Route path="/augmented-reality-solutions" element={<AugmentedRealitySolutionsPage />} />
+                    <Route path="/virtual-reality-solutions" element={<VirtualRealitySolutionsPage />} />
+                    <Route path="/robotic-process-automation" element={<RoboticProcessAutomationPage />} />
+                    <Route path="/low-code-platform" element={<LowCodePlatformPage />} />
+                    <Route path="/serverless-architecture" element={<ServerlessArchitecturePage />} />
+                    <Route path="/container-orchestration" element={<ContainerOrchestrationPage />} />
+                    <Route path="/ai-infrastructure" element={<AIInfrastructurePage />} />
+                    <Route path="/data-lake-solutions" element={<DataLakeSolutionsPage />} />
+                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
+                    
+                    {/* Pro AI Services */}
                     <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
                     <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
@@ -291,6 +366,8 @@ function App() {
                     <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
                     <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
                     <Route path="/ai-website-analyzer" element={<AIWebsiteAnalyzerPage />} />
+                    
+                    {/* Pro Enterprise Solutions */}
                     <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
                     <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                     <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
@@ -343,6 +420,38 @@ function App() {
                     <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
                     
+                    {/* Additional AI Services */}
+                    <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                    <Route path="/ai-translator" element={<AITranslatorPage />} />
+                    <Route path="/ai-audio-processor" element={<AIAudioProcessorPage />} />
+                    <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
+                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
+                    <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
+                    <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />
+                    <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                    
+                    {/* New AI Services */}
+                    <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
+                    <Route path="/ai-customer-feedback-analyzer" element={<AICustomerFeedbackAnalyzerPage />} />
+                    <Route path="/ai-inventory-optimizer-pro" element={<AIInventoryOptimizerProPage />} />
+                    <Route path="/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzerPage />} />
+                    
+                    {/* Enterprise Solutions */}
+                    <Route path="/ai-infrastructure" element={<AIInfrastructurePage />} />
+                    <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                    <Route path="/augmented-reality-solutions" element={<AugmentedRealitySolutionsPage />} />
+                    <Route path="/virtual-reality-solutions" element={<VirtualRealitySolutionsPage />} />
+                    <Route path="/robotic-process-automation" element={<RoboticProcessAutomationPage />} />
+                    <Route path="/low-code-platform" element={<LowCodePlatformPage />} />
+                    <Route path="/serverless-architecture" element={<ServerlessArchitecturePage />} />
+                    <Route path="/container-orchestration" element={<ContainerOrchestrationPage />} />
+                    <Route path="/data-lake-solutions" element={<DataLakeSolutionsPage />} />
+                    
+                    {/* New AI Medical Services */}
+                    <Route path="/ai-medical-diagnosis-assistant" element={<AIMedicalDiagnosisAssistantPage />} />
+                    
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
                       <div className="text-center">
@@ -354,14 +463,18 @@ function App() {
                     </Routes>
                   </ErrorBoundary>
                 </Suspense>
+                </AccessibilityEnhancer>
               </ErrorBoundary>
             </main>
             
-            <Footer />          </div>
+            <Footer />
+          </div>
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
 
 export default App;

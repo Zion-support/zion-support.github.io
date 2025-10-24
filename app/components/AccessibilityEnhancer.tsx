@@ -1,85 +1,91 @@
-import React, { useEffect } from 'react';
+'use client'
+import React, { useEffect } from 'react'
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode
+  enableKeyboardNavigation?: boolean
+  enableScreenReaderSupport?: boolean
+  enableHighContrast?: boolean
+  enableFocusManagement?: boolean
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = false,
+  enableFocusManagement = true
+}) => {
   useEffect(() => {
-    // Add skip links
-    const existingSkipLink = document.querySelector('.skip-link');
-    if (!existingSkipLink) {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      skipLink.setAttribute('aria-label', 'Skip to main content');
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
-
-    // Add main content landmark
-    const main = document.querySelector('main');
-    if (main && !main.id) {
-      main.id = 'main-content';
-      main.setAttribute('role', 'main');
-    }
-
-    // Add navigation landmark
-    const nav = document.querySelector('nav');
-    if (nav && !nav.getAttribute('role')) {
-      nav.setAttribute('role', 'navigation');
-      nav.setAttribute('aria-label', 'Main navigation');
-    }
-
-    // Add footer landmark
-    const footer = document.querySelector('footer');
-    if (footer && !footer.getAttribute('role')) {
-      footer.setAttribute('role', 'contentinfo');
-    }
-
-    // Enhance focus management
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-      
-      // Handle escape key for closing modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
+    // Keyboard navigation support
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Handle keyboard navigation
+        if (event.key === 'Tab') {
+          // Ensure focus is visible
+          document.body.classList.add('keyboard-navigation')
         }
       }
-    };
 
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
+      document.addEventListener('keydown', handleKeyDown)
+      return () => document.removeEventListener('keydown', handleKeyDown)
+    }
 
-    // Add focus visible styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .keyboard-navigation *:focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+    // Add screen reader support
+    if (enableScreenReaderSupport) {
+      // Add skip links
+      const skipLinks = document.createElement('div')
+      skipLinks.className = 'sr-only'
+      skipLinks.innerHTML = `
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <a href="#navigation" class="skip-link">Skip to navigation</a>
+      `
+      document.body.insertBefore(skipLinks, document.body.firstChild)
+
+      return () => {
+        if (skipLinks.parentNode) {
+          skipLinks.parentNode.removeChild(skipLinks)
+        }
       }
-      
-      .skip-link:focus {
-        outline: 2px solid #ffffff !important;
-        outline-offset: 2px !important;
-      }
-    `;
-    document.head.appendChild(style);
+    }
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    // High contrast mode
+    if (enableHighContrast) {
+      document.body.classList.add('high-contrast')
+      return () => document.body.classList.remove('high-contrast')
+    }
+
+    // Focus management
+    if (enableFocusManagement) {
+      const handleFocusIn = (event: FocusEvent) => {
+        const target = event.target as HTMLElement
+        if (target) {
+          target.classList.add('focused')
+        }
+      }
+
+      const handleFocusOut = (event: FocusEvent) => {
+        const target = event.target as HTMLElement
+        if (target) {
+          target.classList.remove('focused')
+        }
+      }
+
+      document.addEventListener('focusin', handleFocusIn)
+      document.addEventListener('focusout', handleFocusOut)
+
+      return () => {
+        document.removeEventListener('focusin', handleFocusIn)
+        document.removeEventListener('focusout', handleFocusOut)
+      }
+    }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-      if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
-    };
-  }, []);
+      // Cleanup function
+    }
+  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
 
-  return null;
-};
+  return <>{children}</>
+}
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

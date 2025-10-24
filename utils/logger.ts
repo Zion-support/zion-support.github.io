@@ -1,17 +1,24 @@
 export interface LogContext {
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  timestamp?: number;
+  component?: string | undefined;
+  action?: string | undefined;
+  userId?: string | undefined;
+  sessionId?: string | undefined;
+  timestamp?: number | undefined;
+  config?: any;
+  stats?: any;
+  error?: any;
+  storageType?: string;
+  executionTime?: number;
+  interval?: number;
+  nextRun?: any;
 }
 
 export interface LogEntry {
   level: 'debug' | 'info' | 'warn' | 'error';
   message: string;
-  context?: LogContext;
+  context?: LogContext | undefined;
   timestamp: number;
-  stack?: string;
+  stack?: string | undefined;
 }
 
 class Logger {
@@ -42,8 +49,9 @@ class Logger {
       const entry: LogEntry = {
         level: 'debug',
         message,
-        context,
+        context: context ?? undefined,
         timestamp: Date.now(),
+        stack: undefined
       };
       this.addLog(entry);
       console.debug(this.formatMessage('debug', message, context));
@@ -55,8 +63,9 @@ class Logger {
       const entry: LogEntry = {
         level: 'info',
         message,
-        context,
+        context: context ?? undefined,
         timestamp: Date.now(),
+        stack: undefined
       };
       this.addLog(entry);
       console.info(this.formatMessage('info', message, context));
@@ -68,8 +77,9 @@ class Logger {
       const entry: LogEntry = {
         level: 'warn',
         message,
-        context,
+        context: context ?? undefined,
         timestamp: Date.now(),
+        stack: undefined
       };
       this.addLog(entry);
       console.warn(this.formatMessage('warn', message, context));
@@ -80,9 +90,9 @@ class Logger {
     const entry: LogEntry = {
       level: 'error',
       message,
-      context,
+      context: context ?? undefined,
       timestamp: Date.now(),
-      stack: error?.stack,
+      stack: error?.stack ?? undefined,
     };
     this.addLog(entry);
     console.error(this.formatMessage('error', message, context), error);

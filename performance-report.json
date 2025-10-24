@@ -1,41 +1,27 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-15T13:58:08.036Z",
-  "optimizations": {
-    "criticalCSS": true,
-    "imageOptimization": true,
-    "bundleOptimization": true,
-    "codeSplitting": true
+  "timestamp": "2025-10-15T19:00:12.113Z",
+  "bundleAnalysis": {
+    "totalFiles": 136,
+    "totalSizeKB": 1323,
+    "totalSizeMB": 1.29
   },
-=======
-  "timestamp": "2025-10-15T17:00:40.748Z",
+  "performanceIssues": [],
   "optimizations": [
-    "Images optimized with WebP conversion",
-    "Critical CSS generated for above-the-fold content",
-    "JavaScript bundles minified and optimized",
-    "Console logs removed from production build",
-    "Source maps optimized",
-    "Lazy loading implemented for routes",
-    "Error boundaries added for better UX",
+    "Icon imports optimized",
+    "Bundle splitting improved",
+    "Lazy loading implemented",
+    "Service worker added",
+    "PWA manifest created",
+    "SEO enhancements applied",
+    "Error boundaries added",
     "Performance monitoring enabled"
   ],
->>>>>>> cursor/analyze-improve-and-merge-code-4a7a
   "recommendations": [
-    "Implement lazy loading for images",
-    "Use WebP format for better compression",
-    "Enable gzip compression on server",
+    "Consider implementing code splitting for large components",
+    "Use lazy loading for non-critical components",
+    "Optimize images and use WebP format",
     "Implement service worker for caching",
-    "Use CDN for static assets",
-    "Optimize font loading with font-display: swap"
-  ],
-  "metrics": {
-<<<<<<< HEAD
-=======
-    "buildTime": 1760547640749,
->>>>>>> cursor/analyze-improve-and-merge-code-4a7a
-    "bundleSize": "Optimized",
-    "imageCompression": "Enabled",
-    "criticalCSS": "Generated",
-    "codeSplitting": "Active"
-  }
+    "Use React.memo for expensive components",
+    "Consider using a CDN for static assets"
+  ]
 }

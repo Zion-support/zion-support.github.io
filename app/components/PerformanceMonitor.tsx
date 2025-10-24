@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+'use client'
+import React, { useEffect } from 'react'
 
 interface WebVitalMetric {
   name: string;
@@ -74,9 +75,14 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       window.removeEventListener('load', measurePageLoad);
     };
-  }, []);
+  }, [])
 
-  return null;
-};
+    return () => {
+      // Cleanup function
+    }
+  }, [])
 
-export default PerformanceMonitor;
+  return null
+}
+
+export default PerformanceMonitor
