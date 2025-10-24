@@ -13,14 +13,14 @@ interface EnhancedAccessibilityEnhancerProps {
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true,
+  enableKeyboardNavigation: _enableKeyboardNavigation = true,
+  enableScreenReaderSupport: _enableScreenReaderSupport = true,
+  enableHighContrast: _enableHighContrast = false,
+  enableFocusManagement: _enableFocusManagement = true,
   enableVoiceNavigation = false,
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState('medium');
+  const [_fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isVoiceEnabled, setIsVoiceEnabled] = useState(false);
 

@@ -45,7 +45,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setStatus('success');
       setMessage('Successfully subscribed!');
       setEmail('');
-    } catch (error) {
+    } catch (_error) {
       setStatus('error');
       setMessage('Failed to subscribe. Please try again.');
     }
