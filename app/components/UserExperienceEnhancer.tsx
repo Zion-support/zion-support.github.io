@@ -68,11 +68,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
-<<<<<<< HEAD
-      .keyboard-navigation *:focus {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
-=======
       .ux-enhanced {
         ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
       }
@@ -96,7 +91,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       
       .high-contrast {
         filter: contrast(150%);
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
       }
       
       .reduced-motion * {
@@ -104,45 +98,16 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-<<<<<<< HEAD
-      
-      .high-contrast {
-        filter: contrast(150%);
-      }
-      
-      [data-accessibility-enhanced] button:focus,
-      [data-accessibility-enhanced] a:focus,
-      [data-accessibility-enhanced] input:focus,
-      [data-accessibility-enhanced] textarea:focus,
-      [data-accessibility-enhanced] select:focus {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
-      }
-=======
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
     `;
     document.head.appendChild(style);
 
     return () => {
       document.head.removeChild(style);
     };
-<<<<<<< HEAD
-  }, []);
-
-  return (
-    <div
-      className={`
-        ${enableAnimations && !isReducedMotion ? 'animate-fade-in' : ''}
-        ${enableHoverEffects ? 'hover-effects-enabled' : ''}
-        ${enableFocusManagement ? 'focus-management-enabled' : ''}
-      `}
-    >
-=======
   }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion]);
 
   return (
     <div className="ux-enhanced">
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
       {children}
     </div>
   );

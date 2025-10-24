@@ -31,66 +31,6 @@ export interface Service {
 }
 
 export interface ContactFormData {
-<<<<<<< HEAD
-  name: string
-  email: string
-  company: string
-  message: string
-  service: string
-}
-
-export interface AnalyticsEvent {
-  name: string
-  timestamp: number
-  properties?: Record<string, string | number | boolean | null>
-}
-
-export interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-  timeToInteractive: number
-  totalBlockingTime: number
-}
-
-export interface ErrorContext {
-  url?: string
-  userAgent?: string
-  timestamp?: string
-  userId?: string
-  sessionId?: string
-  component?: string
-  action?: string
-  stack?: string
-}
-
-export interface ErrorReport {
-  id: string
-  message: string
-  stack?: string
-  context: ErrorContext
-  severity: ErrorSeverity
-  resolved: boolean
-  createdAt: string
-  updatedAt?: string
-}
-
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
-
-export interface ApiResponse<T = unknown> {
-  data: T
-  status: number
-  statusText: string
-  headers: Record<string, string>
-}
-
-export interface RequestOptions extends globalThis.RequestInit {
-  timeout?: number
-  retries?: number
-}
-=======
   name: string;
   email: string;
   company: string;
@@ -133,4 +73,3 @@ export interface ErrorReport {
 }
 
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb

@@ -47,61 +47,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
               />
             ))}
           </div>
-<<<<<<< HEAD
-        )
-      case 'pulse':
-        return (
-          <div className="flex space-x-1" role="status" aria-label="Loading">
-            <div className="w-2 h-2 bg-current rounded-full animate-ping" />
-          </div>
-        )
-      case 'spinner':
-        return (
-          <div
-            className={`animate-spin rounded-full border-2 border-gray-300 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`}
-            role="status"
-            aria-label="Loading"
-          />
-        )
-      case 'skeleton':
-        return (
-          <div className="animate-pulse" role="status" aria-label="Loading">
-            <div className="h-4 bg-gray-300 rounded w-3/4"></div>
-          </div>
-        )
-      case 'bars':
-        return (
-          <div className="flex space-x-1" role="status" aria-label="Loading">
-            {[0, 1, 2, 3].map(i => (
-              <div
-                key={i}
-                className="w-1 bg-current rounded animate-pulse"
-                style={{ 
-                  height: '20px',
-                  animationDelay: `${i * 0.1}s`,
-                  animationDuration: '1s'
-                }}
-              />
-            ))}
-          </div>
-        )
-      default:
-        return (
-          <div
-            className={`animate-spin rounded-full border-2 border-gray-300 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`}
-            role="status"
-            aria-label="Loading"
-          />
-        )
-    }
-  }
-
-  const content = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      {renderSpinner()}
-      {text && (
-        <p className="mt-2 text-sm text-gray-600 animate-pulse">
-=======
         );
 
       case 'pulse':
@@ -158,7 +103,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
       </div>
       {text && (
         <p className="mt-2 text-sm text-gray-600 font-medium">
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
           {text}
         </p>
       )}
@@ -167,24 +111,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
 
   if (fullScreen) {
     return (
-<<<<<<< HEAD
-      <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
-        {content}
-      </div>
-    )
-=======
       <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50">
         {content}
       </div>
     );
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
   }
 
   return content;
 };
 
-<<<<<<< HEAD
-export default OptimizedLoadingSpinner
-=======
 export default OptimizedLoadingSpinner;
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
