@@ -6,22 +6,22 @@ import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar,
 const AutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      icon: Zap,
       title: 'Process Automation',
       description: 'Automate repetitive business processes to increase efficiency and reduce human error.'
     },
     {
-      icon: <Workflow className="w-8 h-8 text-purple-400" />,
+      icon: Workflow,
       title: 'Workflow Optimization',
       description: 'Design and implement optimized workflows that streamline your business operations.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'AI-Powered Automation',
       description: 'Leverage AI and machine learning to create intelligent automation solutions.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: Settings,
       title: 'Custom Integration',
       description: 'Seamlessly integrate automation solutions with your existing systems and tools.'
     }

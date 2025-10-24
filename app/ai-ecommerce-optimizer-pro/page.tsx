@@ -6,22 +6,22 @@ import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, BarChart } from
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      icon: Zap,
       title: 'AI-Powered Optimization',
       description: 'Advanced machine learning algorithms to optimize your e-commerce performance.'
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      icon: BarChart3,
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics and insights to track your business growth.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection.'
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
+      icon: Users,
       title: 'Customer Insights',
       description: 'Deep customer behavior analysis to improve conversion rates.'
     }

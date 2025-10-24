@@ -1,28 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix icon rendering issues in a file
-function fixIconRendering(filePath) {
+// Function to fix icon issues in a file
+function fixIconIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Pattern to match {feature.icon} or {stat.icon} etc.
-    const iconPatterns = [
-      /\{(\w+)\.icon\}/g,
-      /\{(\w+)\.icon\s*className="[^"]*"\}/g
-    ];
+    // Pattern to match icon: <ComponentName className="..." />
+    const iconPattern = /icon:\s*<(\w+)\s+className="[^"]*"\s*\/>/g;
     
-    for (const pattern of iconPatterns) {
-      content = content.replace(pattern, (match, objectName) => {
-        modified = true;
-        return `{<${objectName}.icon className="w-8 h-8 text-cyan-400" />}`;
-      });
-    }
+    // Replace with icon: ComponentName
+    content = content.replace(iconPattern, (match, componentName) => {
+      modified = true;
+      return `icon: ${componentName}`;
+    });
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed icon rendering: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -52,15 +48,15 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Starting to fix icon rendering issues...');
+console.log('Starting to fix icon issues...');
 const appDir = path.join(__dirname, 'app');
 const tsxFiles = findTsxFiles(appDir);
 
 let fixedCount = 0;
 for (const file of tsxFiles) {
-  if (fixIconRendering(file)) {
+  if (fixIconIssues(file)) {
     fixedCount++;
   }
 }
 
-console.log(`\nFixed ${fixedCount} files with icon rendering issues.`);
+console.log(`\nFixed ${fixedCount} files with icon issues.`);

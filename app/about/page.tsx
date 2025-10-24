@@ -21,22 +21,22 @@ const AboutPage: React.FC = () => {
 
   const values = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
       title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      icon: Shield,
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-green-400" />,
+      icon: Globe,
       title: 'Global Reach',
       description: 'Serving clients worldwide with localized support and expertise.'
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
+      icon: Users,
       title: 'Collaboration',
       description: 'We work closely with our clients to understand their unique needs.'
     }

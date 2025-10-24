@@ -6,25 +6,25 @@ import { ArrowRight, Calculator, Receipt, BarChart, Target, CheckCircle, Zap, Br
 const AiExpenseTrackerPage: React.FC = () => {
   const features = [
     {
-      icon: <Camera className="w-8 h-8 text-cyan-400" />,
+      icon: Camera,
       title: 'Smart Receipt Scanning',
       description: 'Automatically extract expense data from receipts using advanced OCR and AI technology.',
       benefits: ['Instant data extraction', 'Multi-language support', 'Automatic categorization', 'Duplicate detection']
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
+      icon: Brain,
       title: 'AI-Powered Categorization',
       description: 'Intelligent expense categorization that learns from your spending patterns and preferences.',
       benefits: ['Smart categorization', 'Learning algorithms', 'Custom rules', 'Pattern recognition']
     },
     {
-      icon: <BarChart className="w-8 h-8 text-green-400" />,
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive spending analytics with insights and recommendations to optimize your budget.',
       benefits: ['Spending trends', 'Budget alerts', 'Cost optimization', 'ROI analysis']
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      icon: Zap,
       title: 'Automated Workflows',
       description: 'Streamline expense management with automated approval workflows and policy compliance.',
       benefits: ['Auto-approval rules', 'Policy compliance', 'Workflow automation', 'Exception handling']
@@ -35,25 +35,25 @@ const AiExpenseTrackerPage: React.FC = () => {
     {
       title: 'Business Travel',
       description: 'Track and manage business travel expenses with automatic categorization',
-      icon: <Globe className="w-6 h-6 text-blue-400" />,
+      icon: Globe,
       benefits: ['Per diem tracking', 'Mileage logging', 'Receipt management', 'Policy compliance']
     },
     {
       title: 'Team Expenses',
       description: 'Manage team expenses with approval workflows and budget controls',
-      icon: <Building2 className="w-6 h-6 text-green-400" />,
+      icon: Building2,
       benefits: ['Team budgets', 'Approval workflows', 'Expense policies', 'Reporting']
     },
     {
       title: 'Project Costs',
       description: 'Track project-specific expenses and allocate costs accurately',
-      icon: <Target className="w-6 h-6 text-purple-400" />,
+      icon: Target,
       benefits: ['Project allocation', 'Cost tracking', 'Budget monitoring', 'Client billing']
     },
     {
       title: 'Personal Finance',
       description: 'Manage personal expenses and budget with AI-powered insights',
-      icon: <Wallet className="w-6 h-6 text-yellow-400" />,
+      icon: Wallet,
       benefits: ['Personal budgets', 'Spending insights', 'Goal tracking', 'Financial planning']
     }
   ];
@@ -106,10 +106,10 @@ const AiExpenseTrackerPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '80%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
-    { number: '50K+', label: 'Receipts Processed', icon: <Receipt className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> }
+    { number: '95%', label: 'Accuracy Rate', icon: Target },
+    { number: '80%', label: 'Time Saved', icon: Clock },
+    { number: '50K+', label: 'Receipts Processed', icon: Receipt },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
   ];
 
   return (
@@ -148,7 +148,7 @@ const AiExpenseTrackerPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                  {stat.icon}
+                  {<stat.icon className="w-8 h-8 text-cyan-400" />}
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -173,7 +173,7 @@ const AiExpenseTrackerPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {feature.icon}
+                  {<feature.icon className="w-8 h-8 text-cyan-400" />}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -206,7 +206,7 @@ const AiExpenseTrackerPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {useCase.icon}
+                  {<useCase.icon className="w-8 h-8 text-cyan-400" />}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>

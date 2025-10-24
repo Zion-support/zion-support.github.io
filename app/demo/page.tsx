@@ -10,21 +10,21 @@ const DemoPage: React.FC = () => {
       id: 'ai-chatbot',
       title: 'AI Chatbot Demo',
       description: 'Experience our intelligent chatbot that can handle customer inquiries 24/7.',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
       features: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Integration Ready']
     },
     {
       id: 'ai-automation',
       title: 'AI Automation Demo',
       description: 'See how AI can automate complex business processes and workflows.',
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      icon: Zap,
       features: ['Workflow Automation', 'Smart Decision Making', 'Process Optimization', 'Real-time Monitoring']
     },
     {
       id: 'ai-security',
       title: 'AI Security Demo',
       description: 'Discover our AI-powered security solutions for threat detection and prevention.',
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: Shield,
       features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Security Analytics']
     }
   ];

@@ -6,22 +6,22 @@ import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Cal
 const APIPage: React.FC = () => {
   const features = [
     {
-      icon: <Code className="w-8 h-8 text-cyan-400" />,
+      icon: Code,
       title: 'RESTful API Design',
       description: 'Well-designed RESTful APIs that are intuitive, scalable, and easy to integrate.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      icon: Zap,
       title: 'High Performance',
       description: 'Optimized APIs with fast response times and efficient data processing capabilities.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'AI-Powered Features',
       description: 'APIs enhanced with AI capabilities for intelligent data processing and automation.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: Settings,
       title: 'Easy Integration',
       description: 'Comprehensive documentation and SDKs for seamless integration with any platform.'
     }

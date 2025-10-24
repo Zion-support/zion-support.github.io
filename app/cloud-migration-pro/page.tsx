@@ -6,22 +6,22 @@ import { ArrowRight, Cloud, Zap, CheckCircle, Brain, Settings, Target, Users, Ca
 const CloudMigrationProPage: React.FC = () => {
   const features = [
     {
-      icon: <Cloud className="w-8 h-8 text-cyan-400" />,
+      icon: Cloud,
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      icon: Shield,
       title: 'Security & Compliance',
       description: 'Ensure your cloud infrastructure meets the highest security standards and compliance requirements.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'AI-Powered Optimization',
       description: 'Leverage AI to optimize your cloud resources and reduce costs while improving performance.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: Settings,
       title: 'Custom Solutions',
       description: 'Tailored cloud migration strategies that fit your specific business needs and requirements.'
     }

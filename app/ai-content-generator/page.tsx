@@ -5,25 +5,25 @@ import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe,
 export default function AIContentGeneratorPage() {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
       title: 'AI-Powered Writing',
       description: 'Advanced AI-powered content generation with high accuracy and human-like quality.',
       benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
     },
     {
-      icon: <FileText className="w-8 h-8 text-green-400" />,
+      icon: FileText,
       title: 'Content Templates',
       description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
       benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-purple-400" />,
+      icon: MessageCircle,
       title: 'Social Media Content',
       description: 'Generate engaging social media posts, captions, and hashtags for all platforms.',
       benefits: ['Platform-specific content', 'Trending hashtags', 'Engagement optimization', 'Visual content suggestions']
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: Target,
       title: 'SEO Optimization',
       description: 'AI-optimized content that ranks higher in search engines and drives organic traffic.',
       benefits: ['Keyword research', 'Content optimization', 'Meta descriptions', 'Schema markup']
@@ -67,7 +67,7 @@ export default function AIContentGeneratorPage() {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="mr-3">
-                    {feature.icon}
+                    {<feature.icon className="w-8 h-8 text-cyan-400" />}
                   </div>
                   <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                 </div>

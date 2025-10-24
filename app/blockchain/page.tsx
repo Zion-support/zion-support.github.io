@@ -6,22 +6,22 @@ import { ArrowRight, Shield, Zap, CheckCircle, Brain, Settings, Target, Users, C
 const BlockchainPage: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-cyan-400" />,
+      icon: Shield,
       title: 'Secure Blockchain Development',
       description: 'Build secure, scalable blockchain solutions with advanced cryptography and smart contract development.'
     },
     {
-      icon: <Lock className="w-8 h-8 text-purple-400" />,
+      icon: Lock,
       title: 'Smart Contracts',
       description: 'Develop and deploy smart contracts that automate business processes with trust and transparency.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'DeFi Solutions',
       description: 'Create decentralized finance applications that revolutionize traditional financial services.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: Settings,
       title: 'Custom Integration',
       description: 'Integrate blockchain technology with your existing systems for enhanced security and transparency.'
     }
