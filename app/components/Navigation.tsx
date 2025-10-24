@@ -60,7 +60,8 @@ const Navigation = () => {
             {navigation.map((item) => {
               const Icon = item.icon
               return (
-                <div key={item.name} className="relative group"> </div><Link
+                <div key={item.name} className="relative group">
+                  <Link
                     href={item.href}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)
@@ -69,17 +70,20 @@ const Navigation = () => {
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
-                    <Icon className="w-4 h-4" /> </Icon><span>{item.name}</span>
+                    <Icon className="w-4 h-4" />
+                    <span>{item.name}</span>
                     {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
                   </Link>
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">{item.submenu.map((subItem) => (
-                        </div><Link key={subItem.name}
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                      {item.submenu.map((subItem) => (
+                        <Link key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700",
-                        >{subItem.name}
-                        </Link></Link>
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
+                        >
+                          {subItem.name}
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -87,12 +91,13 @@ const Navigation = () => {
             })}
           </div>
           {/* CTA Button */}
-          <div className="hidden lg: flex items-center space-x-4">,
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-purple-700 hover:to-cyan-700 transition-all duration-300",
-            >Get Started
-            </Link></Link>
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Started
+            </Link>
           </div>
           {/* Mobile menu button */}
           <div className="lg: hidden">,
