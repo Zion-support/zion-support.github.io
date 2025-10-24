@@ -20,28 +20,12 @@ const OptimizedImage = ({
       alt={alt} 
       width={width} 
       height={height}
-<<<<<<< HEAD
-      data-testid=&quot;optimized-image&quot;
-      loading=&quot;lazy&quot;
-=======
-      data-testid="optimized-image"
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     />
   );
 };
 
 describe('OptimizedImage', () => {
   it('renders with required props', () => {
-<<<<<<< HEAD
-    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; />);
-=======
-    render(
-      <OptimizedImage 
-        src="/test-image.jpg" 
-        alt="Test image" 
-      />
-    );
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
@@ -49,38 +33,12 @@ describe('OptimizedImage', () => {
     expect(image).toHaveAttribute('alt', 'Test image');
   });
 
-<<<<<<< HEAD
-  it('renders with optional dimensions', () => {
-    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; width={100} height={100} />);
-=======
-  it('renders with optional width and height props', () => {
-    render(
-      <OptimizedImage 
-        src="/test-image.jpg" 
-        alt="Test image"
-        width={300}
-        height={200}
-      />
-    );
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toHaveAttribute('width', '300');
     expect(image).toHaveAttribute('height', '200');
   });
 
-<<<<<<< HEAD
-  it('has lazy loading enabled', () => {
-    render(<OptimizedImage src=&quot;test.jpg&quot; alt=&quot;Test image&quot; />);
-=======
-  it('handles missing alt text gracefully', () => {
-    render(
-      <OptimizedImage 
-        src="/test-image.jpg" 
-        alt="" 
-      />
-    );
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toHaveAttribute('alt', '');
