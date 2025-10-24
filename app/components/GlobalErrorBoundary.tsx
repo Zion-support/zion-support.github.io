@@ -1,5 +1,7 @@
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Bug, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -87,7 +89,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
               </button>
               
               <Link
-                to="/"
+                href="/"
                 className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
               >
                 <Home className="w-4 h-4" />

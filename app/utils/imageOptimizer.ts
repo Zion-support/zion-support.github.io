@@ -3,13 +3,12 @@
  */
 
 export interface ImageOptimizationOptions {
-  quality?: number;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  width?: number;
-  height?: number;
-  blur?: boolean;
+  quality?: number
+  format?: 'webp' | 'avif' | 'jpeg' | 'png'
+  width?: number
+  height?: number
+  blur?: boolean
 }
-
 export const optimizeImageUrl = (
   src: string,
   options: ImageOptimizationOptions = {}
@@ -20,24 +19,20 @@ export const optimizeImageUrl = (
     width,
     height,
     blur = false
-  } = options;
-
+  } = options
   // For external images, use a placeholder service or CDN
   if (src.startsWith('http')) {
     // If using a CDN like Cloudinary, Vercel, or similar
-    const params = new URLSearchParams();
-    if (quality) params.set('q', quality.toString());
-    if (format) params.set('f', format);
-    if (width) params.set('w', width.toString());
-    if (height) params.set('h', height.toString());
-    if (blur) params.set('blur', '20');
-    
-    return `${src}?${params.toString()}`;
+    const params = new URLSearchParams()
+    if (quality) params.set('q', quality.toString())
+    if (format) params.set('f', format)
+    if (width) params.set('w', width.toString())
+    if (height) params.set('h', height.toString())
+    if (blur) params.set('blur', '20')
+    return `${src}?${params.toString()}`
   }
-
-  return src;
-};
-
+  return src
+}
 export const generateImagePlaceholder = (width: number, height: number): string => {
   return `data:image/svg+xml;base64,${btoa(`
     <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
@@ -46,35 +41,42 @@ export const generateImagePlaceholder = (width: number, height: number): string 
         Loading...
       </text>
     </svg>
-  `)}`;
-};
-
+  `)}`
+}
 export const preloadCriticalImages = (imageUrls: string[]): void => {
   imageUrls.forEach((url) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = url;
-    document.head.appendChild(link);
-  });
-};
-
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = url
+    document.head.appendChild(link)
+  })
+}
 export const lazyLoadImage = (img: HTMLImageElement): void => {
+  // Check if IntersectionObserver is available (e.g., in test environments)
+  if (typeof IntersectionObserver === 'undefined') {
+    // Fallback: load image immediately
+    if (img.dataset.src) {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    }
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const target = entry.target as HTMLImageElement;
+          const target = entry.target as HTMLImageElement
           if (target.dataset.src) {
-            target.src = target.dataset.src;
-            target.removeAttribute('data-src');
-            observer.unobserve(target);
+            target.src = target.dataset.src
+            target.removeAttribute('data-src')
+            observer.unobserve(target)
           }
         }
-      });
+      })
     },
     { rootMargin: '50px' }
-  );
-
-  observer.observe(img);
-};
+  )
+  observer.observe(img)
+}

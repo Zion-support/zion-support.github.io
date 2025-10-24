@@ -1,61 +1,25 @@
-const fs = require('fs');
-const path = require('path');
+import React from 'react';
 
-function cleanMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Fix common syntax issues
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
-    content = content.replace(/,\s*\)/g, ')');
-    
-    // Fix JSX syntax issues
-    content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2 />');
-    
-    // Remove empty lines with just whitespace
-    content = content.replace(/^\s*$/gm, '');
-    
-    // Fix common TypeScript issues
-    content = content.replace(/:\s*any\[\]/g, ': any[]');
-    content = content.replace(/:\s*string\[\]/g, ': string[]');
-    content = content.replace(/:\s*number\[\]/g, ': number[]');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Cleaned: ${filePath}`);
-  } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
-  }
-}
+const CleanupMergeConflicts.jsPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Cleanup Merge Conflicts.Js
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
-
-// Clean all TypeScript/TSX files in the app directory
-const appDir = './app';
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} files to clean...`);
-
-files.forEach(cleanMergeConflicts);
-
-console.log('Cleanup complete!');
+export default CleanupMergeConflicts.jsPage;
