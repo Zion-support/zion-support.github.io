@@ -11,6 +11,15 @@ interface PerformanceMetrics {
   memory: number | null;
 }
 
+interface PerformanceEntry {
+  name: string;
+  startTime: number;
+  value?: number;
+  delta?: number;
+  processingStart?: number;
+  hadRecentInput?: boolean;
+}
+
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
@@ -40,7 +49,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry) => {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
           }
@@ -56,7 +65,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry) => {
           if (entry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           }
@@ -73,7 +82,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -100,7 +109,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
       }
     } catch (error) {
