@@ -1,11 +1,23 @@
+import { CheckCircle, Zap, Music } from 'lucide-react'
+=======
+import React from 'react';
+import { Play, CheckCircle, Star, Zap, Music, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import React from 'react'
 import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+<<<<<<< HEAD
 import { CheckCircle, Zap, Music } from "lucide-react";
 constAIMusicCompositionPage: React.FC= () => {
   constfeatures= ['AI Composition,',
+
+constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
+    'AI Composition',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     'Multiple Genres',
     'Custom Length',
     'Royalty-free',

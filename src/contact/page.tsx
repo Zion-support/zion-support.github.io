@@ -1,9 +1,18 @@
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+import { MapPin, Clock } from 'lucide-react'
+=======
+'use client';
+import React, { useState } from 'react';
+import { Send, CheckCircle, Phone, Mail, Shield, TrendingUp, Database, Users, Clock, MapPin, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 'use client'
 import { Trending, U, p } from 'lucide-react'
 import React, { useSta, t, e } from 'react'
 import { Se, n, d } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCircle, Phone, Mail } from "lucide-react";
 import { MapPin, Clock  } from "lucide-react";
 constContactPage: React.FC= () => {
@@ -13,6 +22,14 @@ constContactPage: React.FC= () => {
     company: ',',
       phone: ',',
     service: ',',
+
+constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     message: ''
  ,
 })

@@ -1,9 +1,18 @@
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
 'use client'
 import { BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
+<<<<<<< HEAD
 import { CheckCircle, Star, BarChart, TrendingUp, Target  } from "lucide-react";
 constBusinessIntelligencePage: React.FC= () => {
   constbiServices= [
+
+constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       id: 'data-analytics,&apos;,
       title: 'Advanced Data Analytics,',

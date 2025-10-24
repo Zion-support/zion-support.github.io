@@ -1,5 +1,7 @@
 import Navigation  from "./Navigation";
 import React, { useEffect, useCallback, useRef }  from "react";import { Helmet }  from "lucide-react";'use client'
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 interface SEOData {
   title: string;
   description: string;

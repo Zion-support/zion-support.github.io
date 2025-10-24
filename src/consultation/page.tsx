@@ -1,9 +1,17 @@
+import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
+import { Clock } from 'lucide-react'
+=======
+'use client';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 'use client'
 import { Brain, Target, TrendingUp } from 'lucide-react'
 import React, { useSta, t, e } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+<<<<<<< HEAD
 import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
 import { Clo, c, k } from "lucide-react";
 constConsultationPage: React.FC= () => {
@@ -18,6 +26,19 @@ constConsultationPage: React.FC= () => {
     goals: ',',
       timeline: ',',
     budget: ',',
+
+constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    industry: '',
+    companySize: '',
+    currentChallenges: '',
+    goals: '',
+    timeline: '',
+    budget: '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     message: ''
  ,
 })

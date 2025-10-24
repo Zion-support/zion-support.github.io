@@ -1,10 +1,20 @@
+import { CheckSquare } from 'lucide-react'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { CheckSquare, CheckCircle, Phone, Star, Brain, Zap, Target, Users, BarChart, Check } from 'lucide-react';
 'use client'
 import { Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
+<<<<<<< HEAD
 import { CheckSqua, r, e } from "lucide-react";
 import { CheckCircle, Star, Phone } from "lucide-react";
 constTaskManagerProPage: React.FC= () => {
   constfeatures= [
+
+constTaskManagerProPage: React.FC= () =>{constfeatures= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       icon: CheckSquar,
       title: 'AI Task Prioritization,',

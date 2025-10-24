@@ -4,6 +4,8 @@ import { Helmet }  from "lucide-react";'use client'
  * SEO Component;
  * Provides comprehensive SEO meta tags and structured data;
  */
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 export interface SEOProps {
   title?: string;
   description?: string;

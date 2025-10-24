@@ -1,11 +1,23 @@
+import { Key, Copy } from 'lucide-react'
+import { Code } from 'lucide-react'
+import { Check } from 'lucide-react'
+=======
+'use client';
+import React, { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Key, Copy, Star, Code, Check } from 'lucide-react';
 'use client'
 import { X } from 'lucide-react'
 import React, { useSta, t, e } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { Key, Copy  } from "lucide-react";
 import { Co, d, e } from "lucide-react";
 import { Che, c, k } from "lucide-react";
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const ApiDocsPage: React.FC = () => {
   const [copiedCod, e, setCopiedCode] = useState<string | null>(nu, l, l)
 

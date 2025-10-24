@@ -3,6 +3,7 @@ import Footer from './Footer'
 import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 
 interface ContentNewsletterSignupProps {
   title?: string

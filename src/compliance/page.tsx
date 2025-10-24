@@ -1,10 +1,21 @@
+import { CheckCircle, Shield, Users } from 'lucide-react'
+import { Award } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { ArrowLeft, FileText, Lock, CheckCircle, Shield, Users, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 'use client'
 import React from 'react'
 import { ArrowLeft, FileText, Lock } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCircle, Shield, Users } from "lucide-react";
 import { Awa, r, d } from "lucide-react";
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II,&apos;, status: 'Certified',

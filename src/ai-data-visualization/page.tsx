@@ -1,12 +1,22 @@
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+=======
+'use client';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 'use client'
 import { Brain, BarChart, TrendingUp } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+<<<<<<< HEAD
 import { CheckCircle, Phone, Mail } from "lucide-react";
 constAIDataVisualizationPage: React.FC= () => {
   constfeatures= [
+
+constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       icon: BarChar,
       title: 'Interactive Dashboards,',

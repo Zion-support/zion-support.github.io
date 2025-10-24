@@ -1,11 +1,21 @@
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+=======
+'use client';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+<<<<<<< HEAD
 import { CheckCircle, Phone, Mail } from "lucide-react";
 constPricingPage: React.FC= () => {
   constpricingPlans= [
+
+constPricingPage: React.FC= () =>{constpricingPlans= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       name: 'Starter,&apos;,
       price: '$29 9,',

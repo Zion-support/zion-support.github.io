@@ -1,10 +1,20 @@
+import { CheckCircle, Star, BarChart } from 'lucide-react'
+import { Bot, Cpu } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Star, Bot, Cpu, BarChart, Check } from 'lucide-react';
 'use client'
 import { BarCha, r, t } from 'lucide-react'
 import React from 'react'
+<<<<<<< HEAD
 import { CheckCircle, Star, BarChart } from "lucide-react";
 import { Bot, Cpu  } from "lucide-react";
 constAutonomousSystemsPage: React.FC= () => {
   constautonomousServices= [
+
+constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       id: 'self-healing-infrastructure,&apos;,
       title: 'Self-Healing Infrastructure,',

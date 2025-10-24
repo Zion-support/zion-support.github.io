@@ -21,6 +21,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '&apos;, })
                 OptimizedImage
               <br />
               <span className=&quot;text-white&quot;>Solutions</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced OptimizedImage solution for modern businesses.

@@ -1,9 +1,17 @@
+import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
+import { Clock } from 'lucide-react'
+=======
+'use client';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 'use client'
 import { Bra, i, n } from 'lucide-react'
 import React, { useSta, t, e } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+<<<<<<< HEAD
 import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
 import { Clo, c, k } from "lucide-react";
 constDemoPage: React.FC= () => {
@@ -13,6 +21,14 @@ constDemoPage: React.FC= () => {
       company: ',',
     phone: ',',
       service: ',',
+
+constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     message: ''
  ,
 })

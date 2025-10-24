@@ -201,3 +201,4 @@ url: typeof window !== 'undefined' ? window.location.href : 'unknown',
 }
 }</string>
 export default getErrorBoundaryConfig</string>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

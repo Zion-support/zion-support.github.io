@@ -11,6 +11,8 @@ import { ArrowRight }  from "lucide-react";interface NeonButtonProps {
   icon?: React.ReactNode;
   disabled?: boolean;
 }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const NeonButton: React.FC<NeonButtonProps> = ({
   children
   href

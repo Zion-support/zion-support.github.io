@@ -3,6 +3,10 @@ import { Coins } from 'lucide-react'
 import { CheckCircle, Star, Zap, Brain, Shield, Database, Helmet } from 'lucide-react'
 import { Globe } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+import { Coins, CheckCircle, Star, Brain, Zap, Shield, Globe, Database, Code, Helmet, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
   return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect }  from "react";
 import { X }  from "lucide-react";import { Download }  from "lucide-react";'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void >
         </void>

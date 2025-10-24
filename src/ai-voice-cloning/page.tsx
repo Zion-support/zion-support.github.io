@@ -1,11 +1,23 @@
+import { CheckCircle, Zap, Music } from 'lucide-react'
+=======
+import React from 'react';
+import { Play, CheckCircle, Star, Zap, Music, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import React from 'react'
 import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+<<<<<<< HEAD
 import { CheckCircle, Zap, Music } from "lucide-react";
 constAIVoiceCloningPage: React.FC= () => {
   constfeatures= ['Voice Cloning,',
+
+constAIVoiceCloningPage: React.FC= () =>{constfeatures= [
+    'Voice Cloning',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     'Text-to-Speech',
     'Emotion Control',
     'Multi-language Support',

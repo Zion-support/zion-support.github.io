@@ -1,12 +1,23 @@
+import { CheckCircle } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Star, Brain, Zap, Shield, Settings, Palette, Video, Music, Code, BarChart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 'use client'
 import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2  } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCirc, l, e } from "lucide-react";
 constMicroSAASPage: React.FC= () => {
   constcategories= [
+
+constMicroSAASPage: React.FC= () =>{constcategories= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       title: 'AI-Powered Tools,',
       icon: Brai,

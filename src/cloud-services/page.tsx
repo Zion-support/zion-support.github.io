@@ -1,3 +1,7 @@
+import {CheckCircle} from 'lucide-react';
+import React from 'react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
 import React from 'react';import { CheckCircle, Star, Zap, Shield, BarChart, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation';
@@ -9,6 +13,9 @@ import { CheckCirc, l, e } from "lucide-react";
 import React  from "react";
 import Navigation  from "../components/Navigation";import Footer  from "../components/Footer";
 import { CheckCircle }  from "lucide-react";constCloudServicesPage: React.FC= () =>{constservices= [
+
+constCloudServicesPage: React.FC= () =>{constservices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       icon: Cloud
       title: 'Cloud Migration'

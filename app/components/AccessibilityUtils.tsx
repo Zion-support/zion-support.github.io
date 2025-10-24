@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 
 &quot;use client&quot;
 interface AccessibilityUtilsProps {
@@ -13,3 +14,5 @@ export default function AccessibilityUtils({ className }: AccessibilityUtilsProp
     </div>
   );
 }
+export default AccessibilityUtils;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Smartphone } from 'lucide-react'
 
+import { Smartphone, CheckCircle, Star, Database, Code, Helmet, Check } from 'lucide-react';
 "use client";
 import { Smartpho, n, e } from "lucide-react";
 import { CheckCircle, Database, Code, Cloud, Helmet  } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
 import {Smartphone, CheckCircle, Database, Code, Cloud, Helmet} from 'lucide-react';

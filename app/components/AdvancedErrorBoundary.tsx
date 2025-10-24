@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 
 interface AdvancedErrorBoundaryProps {
   children: ReactNode;
@@ -67,6 +68,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
       errorId: this.state.errorId,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
       error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,

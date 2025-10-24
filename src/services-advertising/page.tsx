@@ -1,6 +1,10 @@
+import React from 'react';
+import { ArrowLeft, CheckCircle, Star, ArrowRight, Target, Video, Check } from 'lucide-react';
 import React from 'react'
 import { ArrowLe, f, t } from "lucide-react";
 import { CheckCircle, Target, ArrowRight } from "lucide-react";
+export default function ServicesAdvertisingPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 export default function ServicesAdvertisingPage
 ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
   return (

@@ -105,3 +105,4 @@ onError="{handleError}
 >)</img>
 }</img>;
 export default Image</img>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c

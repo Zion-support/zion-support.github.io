@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 
 interface LazyImageProps {
   src: string;

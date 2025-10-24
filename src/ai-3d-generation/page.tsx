@@ -9,9 +9,20 @@ import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Camera, Zap } from 'lucide-react'
+=======
+import React from 'react';
+import { Play, Camera, CheckCircle, Zap, Star, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Camera, Zap } from "lucide-react";
 constAI3 DGenerationPage: React.FC= () => {
   constfeatures= ['3 D Model Generation,',
+
+constAI3 DGenerationPage: React.FC= () =>{constfeatures= [
+    '3 D Model Generation',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     'Animation Creation',
     'Real-time Rendering',
     'AI-Powered Design',

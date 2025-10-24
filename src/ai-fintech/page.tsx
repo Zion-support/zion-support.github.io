@@ -1,11 +1,20 @@
+import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
+=======
+'use client';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 'use client'
 import { X, Brain, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target  } from "lucide-react";
 constAIFintechPage: React.FC= () => {
   constaiFintechServices= [
+
+constAIFintechPage: React.FC= () =>{constaiFintechServices= [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
     {
       title: 'AI Algorithmic Trading Platform,',
       description: 'Advanced algorithmic trading system with machine learning for market predictio,n, risk management, and automated trading strategies.',

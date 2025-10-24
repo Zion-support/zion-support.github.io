@@ -67,8 +67,26 @@ const Navigation: React.FC = () => {
               <ArrowRight className="w-4 h-4" />
             </Link>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+            >
+              <Phone className="w-4 h-4" />
+              <span className="text-sm">(302) 464-0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+            >
+              <Mail className="w-4 h-4" />
+              <span className="text-sm">Email</span>
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
