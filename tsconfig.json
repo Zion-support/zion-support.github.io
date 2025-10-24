@@ -23,13 +23,13 @@
         "name": "next"
       }
     ],
-<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "strictNullChecks": true
   },
   "include": [
     "**/*.ts",
@@ -42,18 +42,6 @@
     "next-env.d.ts",
     "types/**/*.ts",
     "dist/types/**/*.ts"
-=======
-    "strictNullChecks": true,
-    "target": "ES2017"
-  },
-  "include": [
-    "next-env.d.ts",
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/team/page.tsx",
-    "app/_not-found.tsx",
-    ".next/types/**/*.ts"
->>>>>>> origin/main
   ],
   "exclude": [
     "node_modules",

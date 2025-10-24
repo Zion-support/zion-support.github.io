@@ -16,7 +16,7 @@ const ContactPage: React.FC = () => {
             <div className="max-w-4xlmx-autotext-center">
               <h1 className="text-5xlfont-boldmb-6">Contact Us</h1>
               <p className="text-xltext-blue-100">
-                Ready to transform your business? Let's discuss your project
+                Ready to transform your business? Let&apos;s discuss your project
               </p>
             </div>
           </div>

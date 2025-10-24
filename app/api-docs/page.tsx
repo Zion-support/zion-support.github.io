@@ -48,7 +48,7 @@ export default function APIDocsPage() {
               API Documentation
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete API documentation for Zion Tech Group's AI and IT solutions.
+              Complete API documentation for Zion Tech Group&apos;s AI and IT solutions.
             </p>
           </div>
 
