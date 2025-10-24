@@ -22,6 +22,7 @@ export const OptimizedImage = ({
       height={height}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c0b7
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
     />
   );
 };
@@ -66,6 +67,7 @@ describe('OptimizedImage Component', () => {
       unmount();
     });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c0b7
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();

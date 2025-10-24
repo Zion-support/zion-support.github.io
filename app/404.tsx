@@ -21,6 +21,7 @@ export default function NotFound() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Page Not Found
           </h2>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
           </p>
