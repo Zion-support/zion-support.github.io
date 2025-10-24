@@ -1,12 +1,7 @@
-import React from 'react'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Privacy Policy - Zion Tech Group',
-  description: 'Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information.',
-}
-
-export default function Privacy() {
+'use client';
+import React from 'react';
+import Head from 'next/head';
+export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="container mx-auto px-4 py-16 pt-24">

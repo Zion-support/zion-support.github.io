@@ -1,9 +1,7 @@
-'use client'
-
-import React from 'react'
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
-
+import React from 'react';
+import Link from 'next/link';
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -96,7 +94,6 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  )
-}
-
-export default Footer
+  );
+};
+export default Footer;

@@ -1,38 +1,7 @@
-'use client'
-  const features = [
-    {
-      icon: "🚀",
-      title: "Professional",
-      description: "Professional IT infrastructure solutions"
-    },
-    {
-      icon: "⚡",
-      title: "Fast & Reliable",
-      description: "Quick and efficient service delivery"
-    },
-    {
-      icon: "📊",
-      title: "Analytics",
-      description: "Comprehensive analytics and insights"
-    },
-    {
-      icon: "🔧",
-      title: "Customizable",
-      description: "Tailored solutions for your business needs"
-    }
-  ]
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-
+'use client';
+import React from 'react';
+import Head from 'next/head';
+export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

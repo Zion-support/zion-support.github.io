@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
 const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
@@ -56,8 +57,12 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  category: 'technology',
 }
-
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 export default function RootLayout({
   children,
 }: {
@@ -66,13 +71,30 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#1e1b4b" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Performance monitoring
+              if (typeof window !== 'undefined') {
+                window.addEventListener('load', function() {
+                  // Measure page load time
+                  const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
+                  console.log('Page load time:', loadTime + 'ms')
+                  // Track Core Web Vitals
+                  if ('web-vitals' in window) {
+                    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+                      getCLS(console.log)
+                      getFID(console.log)
+                      getFCP(console.log)
+                      getLCP(console.log)
+                      getTTFB(console.log)
+                    })
+                  }
+                })
+              }
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
