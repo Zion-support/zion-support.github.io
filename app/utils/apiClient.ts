@@ -46,3 +46,62 @@ export class ApiClient {
       clearTimeout(timeoutId);
 
       if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return {
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        headers: Object.fromEntries(response.headers.entries()),
+      };
+    } catch (error) {
+      clearTimeout(timeoutId);
+      if (error instanceof Error && error.name === 'AbortError') {
+        throw new Error('Request timeout');
+      }
+      throw error;
+    }
+  }
+
+  async get<T>(url: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'GET',
+    });
+  }
+
+  async post<T>(url: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options?.headers,
+      },
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+
+  async put<T>(url: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options?.headers,
+      },
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+
+  async delete<T>(url: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'DELETE',
+    });
+  }
+}
+
+export default ApiClient;

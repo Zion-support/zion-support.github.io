@@ -31,3 +31,37 @@ export interface Service {
 }
 
 export interface ContactFormData {
+  name: string;
+  email: string;
+  company?: string;
+  message: string;
+  service?: string;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  content: string;
+  excerpt: string;
+  author: string;
+  publishedAt: string;
+  tags: string[];
+  slug: string;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  company: string;
+  role: string;
+  content: string;
+  rating: number;
+  avatar?: string;
+}
+
+export interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+}
