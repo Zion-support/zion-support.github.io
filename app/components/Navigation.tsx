@@ -1,105 +1,83 @@
-<<<<<<< HEAD
 "use client";
 
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Menu, X } from "lucide-react";
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bb9d
 
-  const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "AI Services", href: "/ai-services" },
-    { name: "IT Services", href: "/it-services" },
-    { name: "Micro SaaS", href: "/micro-saas-solutions" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const closeAllMenus = () => {
+    setIsOpen(false);
+    setServicesOpen(false);
+  };
+
+  const serviceCategories = [
+    {
+      title: "AI Services",
+      bgColor: "bg-gradient-to-r from-purple-500 to-purple-600",
+      color: "text-white",
+      icon: Brain,
+      services: [
+        { name: "AI Analytics", path: "/ai-analytics" },
+        { name: "AI Data Analytics", path: "/ai-data-analytics" },
+        { name: "AI E-commerce Solutions", path: "/ai-ecommerce-solutions" },
+        { name: "AI Mobile App Development", path: "/ai-mobile-app-development" },
+        { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
+        { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
+        { name: "AI Cloud Infrastructure", path: "/ai-cloud-infrastructure" },
+        { name: "Autonomous Systems", path: "/autonomous-systems" },
+      ]
+    },
+    {
+      title: "IT Services",
+      bgColor: "bg-gradient-to-r from-blue-500 to-blue-600",
+      color: "text-white",
+      icon: Code,
+      services: [
+        { name: "Blockchain Solutions", path: "/blockchain" },
+        { name: "Blockchain Web3", path: "/blockchain-web3" },
+        { name: "Business Intelligence", path: "/business-intelligence" },
+        { name: "Ad Management", path: "/ad-management" },
+        { name: "Accessibility", path: "/accessibility" },
+      ]
+    },
+    {
+      title: "Micro SaaS",
+      bgColor: "bg-gradient-to-r from-green-500 to-green-600",
+      color: "text-white",
+      icon: BarChart,
+      services: [
+        { name: "E-commerce Analytics Pro", path: "/ecommerce-analytics-pro" },
+        { name: "Legal Document Manager", path: "/legal-document-manager" },
+        { name: "Medical Records Manager", path: "/medical-records-manager" },
+        { name: "Online Learning Platform", path: "/online-learning-platform" },
+        { name: "Property Management AI", path: "/property-management-ai" },
+        { name: "Supply Chain Optimizer", path: "/supply-chain-optimizer" },
+      ]
+    }
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-<<<<<<< HEAD
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.href}
-                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
-            >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-purple-600 transition-colors"
-            >
-              {isOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              {navigationItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Link
-                to="/contact"
-                className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
-=======
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
@@ -187,33 +165,13 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
             </div>
 
             <Link 
-              to="/case-studies" 
+              to="/contact" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
             >
-              Case Studies
-            </Link>
-            
-            <Link 
-              to="/enterprise" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
-              onClick={closeAllMenus}
-            >
-              Enterprise
-            </Link>
-            
-            <Link 
-              to="/team" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
-              onClick={closeAllMenus}
-            >
-              Team
+              Contact
             </Link>
 
             {/* Contact Button */}
@@ -222,7 +180,7 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
               onClick={closeAllMenus}
             >
-              Contact
+              Get Started
             </Link>
           </div>
 
@@ -296,30 +254,6 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
               </div>
 
               <Link 
-                to="/case-studies" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-              
-              <Link 
-                to="/enterprise" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
-                onClick={closeAllMenus}
-              >
-                Enterprise
-              </Link>
-              
-              <Link 
-                to="/team" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
-                onClick={closeAllMenus}
-              >
-                Team
-              </Link>
-
-              <Link 
                 to="/contact" 
                 className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
                 onClick={closeAllMenus}
@@ -346,7 +280,6 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bb9d
             </div>
           </div>
         )}
@@ -355,8 +288,4 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
   );
 };
 
-<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bb9d
