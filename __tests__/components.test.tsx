@@ -14,7 +14,7 @@ describe('Components', () => {
   });
   test('should render test content', () => {
     render(<TestComponent />);
-    expect(screen.getByText('Test content')).toBeInTheDocument();
+    expect(screen.getByText('Test content')).toBeTruthy();
   });
   test('should handle SEO head component', () => {
     render(
@@ -22,6 +22,6 @@ describe('Components', () => {
         <div>SEO Test</div>
       </HelmetProvider>
     );
-    expect(screen.getByText('SEO Test')).toBeInTheDocument();
+    expect(screen.getByText('SEO Test')).toBeTruthy();
   });
 });
