@@ -8,6 +8,9 @@ export interface ApiResponse<T = unknown> {
 export interface RequestOptions {
   timeout?: number;
   retries?: number;
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
 }
 
 export class ApiClient {
