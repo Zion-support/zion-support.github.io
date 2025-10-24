@@ -6,43 +6,42 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const PageBackupPage: React.FC = () => {
   const features = [
     {
-      ico,
-  n: Brain,
-    title: 'AI-Powered Analysis',
+      icon: Brain,
+      title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: BarChart,
-    title: 'Advanced Analytics',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {
-    icon: Target,
-    title: 'Precision Targeting',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {
-    icon: TrendingUp,
-    title: 'Growth Optimization',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  ]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+  
   return (
     <>
-    
-  </>
-      <Helmet></Helmet>
+      <Helmet>
         <title>Page Backup - Zion Tech Group</title>
-        <meta name="description" content="Advanced page backup solutions powered by AI technology." /></meta>
+        <meta name="description" content="Advanced page backup solutions powered by AI technology." />
       </Helmet>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">Page Backup</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Advanced page backup solutions powered by AI technology.</p>p>
