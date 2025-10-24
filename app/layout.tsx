@@ -7,7 +7,7 @@ import Analytics from './components/Analytics'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
@@ -95,5 +95,5 @@ export default function RootLayout({
         </AccessibilityEnhancer>
       </body>
     </html>
-  )
+  );
 }
