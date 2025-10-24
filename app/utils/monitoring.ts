@@ -123,6 +123,7 @@ class MonitoringService {
         ttfbObserver.observe({ entryTypes: ['navigation'] })
 
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.warn('Web Vitals monitoring failed:', error)
       }
     }
@@ -140,6 +141,7 @@ class MonitoringService {
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.warn('Long task monitoring failed:', error)
       }
     }
@@ -162,6 +164,7 @@ class MonitoringService {
         })
         resourceObserver.observe({ entryTypes: ['resource'] })
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.warn('Resource timing monitoring failed:', error)
       }
     }
@@ -195,6 +198,7 @@ class MonitoringService {
 
   private reportMetric(name: string, value: number | object): void {
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.log(`[Performance] ${name}:`, value)
     }
 
@@ -211,6 +215,7 @@ class MonitoringService {
     this.errors.push(error)
     
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('[Error]', error)
     }
 
