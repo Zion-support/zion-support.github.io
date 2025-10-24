@@ -1,65 +1,33 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Zap, Shield, Brain, Globe } from 'lucide-react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-const AiAutomatedReportingPage: React.FC = () => {
-  return()
-        <>
+export default function AiAutomatedReportingPage() {
+  return (
     <>
-    <title>
-</>AiAutomatedReporting - Zion Tech Group<>
-    </title>
-    <h1 className="text-4xl font-bold text-white mb-6">
-</>AiAutomatedReporting<>
-    </h1>
-    <p className="text-lg text-gray-300 mb-8">
-</>Professional aiautomatedreporting services coming soon.</p>
-            
-              Contact Us
-
-      </>)
+      <Head>
+        <title>Ai Automated Reporting - Zion Tech Group</title>
+        <meta name="description" content="Professional ai automated reporting services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Ai Automated Reporting
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional ai automated reporting services coming soon.
+          </p>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }
-
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-    </div>
-</>
-      <>
-    <Helmet>
-    </Helmet>
-</>
-        <title>AI Automated Reporting - Zion Tech Group<>
-    </title>
-    <meta name="description", content="Professional AI automated reporting services by Zion Tech Group. Transform your business with our expert solutions." />
-</><>
-    </meta>
-    </Helmet>
-</>
-      <>
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-    </div>
-</>
-        <h1 className="text-4xl font-bold text-white mb-6">AI Automated Reporting<>
-    </h1>
-    <p className="text-lg text-gray-300 mb-8">
-</>Professional AI automated reporting services coming soon.<>
-    </p>
-    <Link;</Link>
-</></Link>
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        ></Link>
-          Contact Us;
-          <>
-    <ArrowRight className="w-5 h-5 ml-2" />
-    </ArrowRight>
-</>
-        <>
-    </Link>
-    </div>
-</>
-    </div>
-  );
-};
