@@ -1,0 +1,189 @@
+'use client';
+
+import React, { useRef, useEffect } from 'react';
+
+const FuturisticBackground: React.FC = () => {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return
+    const resizeCanvas = () => {;
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Particle system
+    const particles: Array<{
+      x: number,
+  y: number,
+  vx: number,
+  vy: number,
+  size: number,
+  opacity: number
+    }> = [];
+
+    // Create particles
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  vx: (Math.random() - 0.5) * 2,
+  vy: (Math.random() - 0.5) * 2,
+  size: Math.random() * 3 + 1,
+  opacity: Math.random() * 0.5 + 0.1
+      })}
+
+    const animate = () => {;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update and draw particles
+      particles.forEach((particle) => {
+        particle.x += particle.vx
+        particle.y += particle.vy
+        // Wrap around screen
+        if (particle.x < 0) particle.x = canvas.width
+        if (particle.x > canvas.width) particle.x = 0
+        if (particle.y < 0) particle.y = canvas.height
+        if (particle.y > canvas.height) particle.y = 0
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(139, 92, 246, ${particle.opacity})`;
+        ctx.fill()});
+
+      // Draw connections
+      particles.forEach((particle, i) => {
+        particles.slice(i + 1).forEach((otherParticle) => {
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1
+            ctx.stroke()}
+        })});
+
+      requestAnimationFrame(animate)};
+
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas)}}, []);
+
+  return (
+    <>
+      <Helmet>
+        <title>FuturisticBackground - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Advanced futuristicbackground solutions powered by AI technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation&quot; />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              FuturisticBackground
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced futuristicbackground solutions powered by AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+                Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Powerful AI technology that drives results
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      style={{ background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)' }}
+    />
+  )};
+
+export default FuturisticBackground;

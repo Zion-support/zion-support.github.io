@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // API endpoint for shipping rates
 export default function handler(req: any, res: any) {
   if (req.method !== 'GET') {
@@ -16,3 +17,11 @@ export default function handler(req: any, res: any) {
     return res.status(500).json({ message: 'Internal server error' });
   }
 }
+=======
+import React from 'react'
+"use client"
+const ShippingRates = () => {;
+  return null
+};
+export default ShippingRates;
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a

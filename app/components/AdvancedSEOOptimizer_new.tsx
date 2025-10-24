@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/AdvancedSEOOptimizer_new.tsx
 "use client";
 
 import React from 'react';
@@ -11,6 +12,15 @@ interface AdvancedSEOOptimizerNewProps {
 
 const AdvancedSEOOptimizerNewPage: React.FC<AdvancedSEOOptimizerNewProps> = ({ className = '' }) => {
   const features = [
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+'use client'
+const AiHrPage: React.FC = () => {
+  const features = [;
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a:app-backup/ai-hr/page.tsx
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -139,8 +149,15 @@ const AdvancedSEOOptimizerNewPage: React.FC<AdvancedSEOOptimizerNewProps> = ({ c
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD:app/components/AdvancedSEOOptimizer_new.tsx
     </>
   );
 };
 
 export default AdvancedSEOOptimizerNewPage;
+=======
+</>
+  )
+};
+export default AiHrPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a:app-backup/ai-hr/page.tsx

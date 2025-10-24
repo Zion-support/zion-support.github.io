@@ -5,7 +5,7 @@ import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import ErrorBoundary from './components/ErrorBoundary'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -108,5 +108,5 @@ export default function RootLayout({
         </ErrorBoundary>
       </body>
     </html>
-  )
+  );
 }

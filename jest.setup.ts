@@ -1,5 +1,21 @@
 import { TextEncoder, TextDecoder } from 'util'
 import '@testing-library/jest-dom'
+<<<<<<< HEAD
+=======
+// Polyfill fetch and enable fetch mocks
+import 'whatwg-fetch'
+// import fetchMock from 'jest-fetch-mock'
+// fetchMock.enableMocks();
+// Reset fetch mocks before each test to ensure isolation
+// beforeEach(() => {
+//   fetchMock.resetMocks();
+// })
+// Polyfill TextEncoder and TextDecoder for JSDOM environment
+// Set up a mock for Vite environment variables accessed via import.meta.env
+process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'
+process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'
+process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -12,6 +28,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
+<<<<<<< HEAD
     dispatchEvent: jest.fn(),
   })),
 })
@@ -22,14 +39,37 @@ if (typeof URL.revokeObjectURL === 'undefined') {
     writable: true,
     value: jest.fn(),
   })
+=======
+    dispatchEvent: jest.fn();
+  }))
+})
+
+// Mock ResizeObserver for Radix UI components and other libraries that might use it
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn();
+}))
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+// Polyfill for URL.revokeObjectURL
+if (typeof URL.revokeObjectURL === 'undefined') {
+  URL.revokeObjectURL = jest.fn();
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a
 }
 
 // Mock window.scrollTo
 if (typeof window.scrollTo === 'undefined') {
+<<<<<<< HEAD
   Object.defineProperty(window, 'scrollTo', {
     writable: true,
     value: jest.fn(),
   })
+=======
+  window.scrollTo = jest.fn();
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a
 }
 
 // Mock IntersectionObserver
@@ -96,6 +136,7 @@ jest.mock('next/navigation', () => ({
   },
 }))
 
+<<<<<<< HEAD
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
@@ -142,3 +183,7 @@ jest.mock('web-vitals', () => ({
   getLCP: jest.fn(),
   getTTFB: jest.fn(),
 }))
+=======
+// Ensure all code paths use the mock implementation;
+// global.fetch = fetchMock
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a

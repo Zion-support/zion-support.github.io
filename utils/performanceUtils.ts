@@ -1,9 +1,26 @@
+<<<<<<< HEAD
 /**
  * Performance optimization utilities for the Zion Tech Group application
  */
 
 // Debounce function for performance optimization
 export function debounce<T extends (...args: any[]) => any>(
+=======
+// Performance utility functions
+<<<<<<< HEAD
+export const performanceUtils = {;
+  // Add performance utility functions here
+=======
+
+export const measurePerformance = (name: string, fn: () => void): void => {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start} milliseconds`)
+}
+
+export const debounce = <T extends (...args: any[]) => any>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-596a
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
