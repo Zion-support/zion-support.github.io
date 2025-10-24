@@ -1,9 +1,11 @@
-import React from 'react'
-import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react'
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
@@ -14,7 +16,7 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
     { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
-  ]
+  ];
 
   const itServices = [
     { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
@@ -25,27 +27,27 @@ const Footer: React.FC = () => {
     { name: 'DevOps', url: '/devops', description: 'Development operations' },
     { name: 'API Development', url: '/api-development', description: 'RESTful APIs' },
     { name: 'Database Management', url: '/database-management', description: 'Data management' }
-  ]
+  ];
 
   const company = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' }
-  ]
+  ];
 
   const resources = [
     { name: 'Blog', url: '/blog' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Documentation', url: '/docs' },
     { name: 'Support', url: '/support' }
-  ]
+  ];
 
   const legal = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' }
-  ]
+  ];
 
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
@@ -112,7 +114,7 @@ const Footer: React.FC = () => {
           {/* Company & Resources */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
+              <h3 className="text-lg font-semibold mb-4 text-emerald-400">Company</h3>
               <ul className="space-y-2">
                 {company.map((item, index) => (
                   <li key={index}>
@@ -124,7 +126,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
+              <h3 className="text-lg font-semibold mb-4 text-emerald-400">Resources</h3>
               <ul className="space-y-2">
                 {resources.map((item, index) => (
                   <li key={index}>
@@ -171,7 +173,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
