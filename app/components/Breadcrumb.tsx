@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import React from 'react'
-;
-interface BreadcrumbProps {;
-  items: Array<{;
-    label: string,
-    href?: string
-  }>
+import React from 'react';
+
+interface BreadcrumbProps {
+  items: Array<{
+    label: string;
+    href?: string;
+  }>;
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {

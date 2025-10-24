@@ -8,13 +8,15 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const ContentStatistics: React.FC = () => {
 
-  const [counters, setCounters] = useState({;
-    clients: 0,;
-    projects: 0,;
-    satisfaction: 0,;
-    years: 0});
-;
-    clients: 1000,;
+  const [counters, setCounters] = useState({
+    clients: 0,
+    projects: 0,
+    satisfaction: 0,
+    years: 0
+  });
+
+  const targetCounters = {
+    clients: 1000,
     projects: 500;
     satisfactio,;
   n: 99,;

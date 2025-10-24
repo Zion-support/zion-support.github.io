@@ -7,16 +7,20 @@ interface ContentNewsletterSignupProps {
   subtitle?: string;
   placeholder?: string;
   buttonText?: string;
-  onSubscribe?: (_email: string) => Promise<void>}
-;
-    icon: React.ComponentType<{ className?: string }>;
-    text: string}>
-  onSubscribe?: (email: string) => void}constContentNewsletterSignup: React.FC<ContentNewsletterSignupProp s>= ({;
-  title= &quot;Stay Updated with Our LatestInsights&quot;
-  subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;
-  placeholder= &quot;Enter your emailaddress&quot;
-  buttonText= &quot;Subscribe&quot;
-  features= [
+  onSubscribe?: (email: string) => Promise<void>;
+}
+
+interface Feature {
+  icon: React.ComponentType<{ className?: string }>;
+  text: string;
+}
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  title = "Stay Updated with Our Latest Insights",
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe",
+  features = [
     { icon: Star, text: &quot;Exclusive content&quot},
   {;
     icon: Users, text: &quot;Industry insights&quot},
