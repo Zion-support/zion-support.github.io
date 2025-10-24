@@ -21,6 +21,7 @@ interface RequestRecord {
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
  */
+class RateLimiter {
   private requests: Map<string, RequestRecord> = new Map();
   private config: RateLimitConfig;
 
@@ -98,6 +99,7 @@ interface RequestRecord {
 /**
  * Pre-configured rate limiters for common use cases
  */
+export const rateLimiters = {
   // Strict: 10 requests per minute
   strict: new RateLimiter({
     windowMs: 60 * 1000,
@@ -132,6 +134,8 @@ interface RequestRecord {
     skipSuccessfulRequests: true,
   }),
 };
+
+export default rateLimiters;
 
 /**
  * Get client identifier from request

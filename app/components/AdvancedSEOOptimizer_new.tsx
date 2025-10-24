@@ -1,33 +1,43 @@
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const AdvancedSEOOptimizerNewPage: React.FC = () => {
+"use client";
+
+import React from 'react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from './Navigation';
+import Footer from './Footer';
+
+interface AdvancedSEOOptimizerNewProps {
+  className?: string;
+}
+
+const AdvancedSEOOptimizerNewPage: React.FC<AdvancedSEOOptimizerNewProps> = ({ className = '' }) => {
   const features = [
     {
-      icon: Brai,
-      title: 'AI-Powered Intelligence,',
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,
-      title: 'Advanced Analytics',}
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,
-      title: 'Precision Targeting',}
-      description: 'Target specific goals and objectives with precision and accuracy.',}
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,
-      title: 'Growth Optimization',}
-      description: 'Optimize your business growth with data-driven strategies.',}
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-"
-  const benefits=";"
+
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -35,10 +45,8 @@ const AdvancedSEOOptimizerNewPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ className = '' }) => {
   return (
     <>
-      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -46,23 +54,22 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Advanced SEO Optimizer New
+              Advanced SEO Optimizer
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced SEO Optimizer New solution for modern businesses.
+              Advanced SEO optimization solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className='ml-2 h-5 w-5' /></ArrowRight>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
             </div>
           </div>
         </section>
-    </>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -70,7 +77,8 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI-driven features designed to transform your business operations</p>
+                Powerful AI-driven features designed to transform your business operations
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -80,9 +88,9 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={ i, d, x }className='flex items-center text-sm text-gray-300'></li>
-                        <CheckCircle className='h-4 w-4 text-emerald-400 mr-2 flex-shrink-0' /></CheckCircle>
-                        { benef, i, t }
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -98,7 +106,8 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cutting-edge AI technology</p>
+                Experience the benefits of cutting-edge AI technology
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -122,16 +131,16 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer />
     </>
-  );,
+  );
 };
 
-export default AdvancedSEOOptimizerNewPag;e;
+export default AdvancedSEOOptimizerNewPage;

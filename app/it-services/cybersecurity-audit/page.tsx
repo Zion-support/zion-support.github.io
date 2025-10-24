@@ -7,24 +7,37 @@ import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lu
 const Page: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: 'brain',
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: BarChart,
+      icon: 'bar-chart',
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: Target,
+      icon: 'target',
       title: 'Precision Targeting',
       description: 'Target the right audience with AI-driven precision and accuracy.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
+
+  const renderIcon = (iconName: string) => {
+    switch (iconName) {
+      case 'brain':
+        return <Brain className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'bar-chart':
+        return <BarChart className="w-12 h-12 text-emerald-400 mb-4" />;
+      case 'target':
+        return <Target className="w-12 h-12 text-emerald-400 mb-4" />;
+      default:
+        return <Brain className="w-12 h-12 text-emerald-400 mb-4" />;
+    }
+  };
 
   return (
     <>
@@ -48,7 +61,7 @@ const Page: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg">
-                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                {renderIcon(feature.icon)}
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">

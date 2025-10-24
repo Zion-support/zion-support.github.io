@@ -38,40 +38,44 @@ export const securityHeaders = {
 };
 
 /**
- * Rate limiting configuration;
+ * Rate limiting configuration
  */
-  windowMs: 15 * 60 * 1000, // 15 minutes;
-  max: 100, // Limit each IP to 100 requests per windowMs;
+export const rateLimitConfig = {
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP, please try again later.',
 };
 
 /**
- * CORS configuration;
+ * CORS configuration
  */
+export const corsConfig = {
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-  maxAge: 86400, // 24 hours;
+  maxAge: 86400, // 24 hours
 };
 
 /**
- * Session configuration;
+ * Session configuration
  */
+export const sessionConfig = {
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
   cookie: {
     secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours;
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
     sameSite: 'strict' as const,
   },
 };
 
 /**
- * Input validation patterns;
+ * Input validation patterns
  */
+export const validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
@@ -80,35 +84,39 @@ export const securityHeaders = {
 };
 
 /**
- * Sanitize user input;
+ * Sanitize user input
  */
-  return input;
+export function sanitizeInput(input: string): string {
+  return input
     .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol;
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers;
+    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
 }
 
 /**
- * Validate email address;
+ * Validate email address
  */
-  return validationPatterns.email.test(email;
+export function validateEmail(email: string): boolean {
+  return validationPatterns.email.test(email);
 }
 
 /**
- * Validate URL;
+ * Validate URL
  */
-  return validationPatterns.url.test(url;
+export function validateUrl(url: string): boolean {
+  return validationPatterns.url.test(url);
 }
 
 /**
- * Generate secure token;
+ * Generate secure token
  */
-  const _array = new Uint8Array(length);
+export function generateSecureToken(length: number = 32): string {
+  const array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   } else {
-    // Fallback for non-browser environments;
+    // Fallback for non-browser environments
     for (let i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
     }
@@ -116,6 +124,7 @@ export const securityHeaders = {
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
+export default {
   securityHeaders,
   rateLimitConfig,
   corsConfig,

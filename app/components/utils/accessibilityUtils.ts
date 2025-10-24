@@ -1,5 +1,4 @@
 "use client";
-<<<<<<< HEAD
 
 /**
  * Accessibility Utilities
@@ -21,6 +20,7 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Get accessible name for an element
  */
+export const getAccessibleName = (element: HTMLElement): string => {
   // Check aria-label first
   const ariaLabel = element.getAttribute('aria-label');
   if (ariaLabel) return ariaLabel;
@@ -45,12 +45,14 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Check if element has proper focus management
  */
+export const hasProperFocus = (element: HTMLElement): boolean => {
   return element.tabIndex >= 0 || element.getAttribute('tabindex') !== null;
 };
 
 /**
  * Get color contrast ratio between two colors
  */
+export const getContrastRatio = (color1: string, color2: string): number => {
   const getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g);
     if (!rgb || rgb.length !== 3) return 0;
@@ -74,6 +76,7 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Check if color combination meets WCAG standards
  */
+export const meetsWCAGStandards = (foreground: string, background: string): boolean => {
   const ratio = getContrastRatio(foreground, background);
   return ratio >= 4.5; // AA standard
 };
@@ -81,6 +84,7 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Generate ARIA attributes for better accessibility
  */
+export const generateARIA = (element: HTMLElement, options: {
   role?: string;
   label?: string;
   describedBy?: string;
@@ -99,6 +103,7 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Announce message to screen readers
  */
+export const announceToScreenReader = (message: string): void => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -115,6 +120,7 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Check if element is keyboard accessible
  */
+export const isKeyboardAccessible = (element: HTMLElement): boolean => {
   const tagName = element.tagName.toLowerCase();
   const interactiveElements = ['a', 'button', 'input', 'select', 'textarea', 'details', 'summary'];
   
@@ -128,6 +134,7 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Focus management utilities
  */
+export const focusManagement = {
   trap: (container: HTMLElement): (() => void) => {
     const focusableElements = container.querySelectorAll(
       'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
@@ -164,6 +171,7 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
   }
 };
 
+export default {
   isVisibleToScreenReader,
   getAccessibleName,
   hasProperFocus,
@@ -174,20 +182,3 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
   isKeyboardAccessible,
   focusManagement
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d3e3
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c0b7
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b73a
-"use client"
->>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
-"use client"
->>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
-"use client"
->>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
