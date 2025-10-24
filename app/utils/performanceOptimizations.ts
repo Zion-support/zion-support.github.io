@@ -225,7 +225,7 @@ export const useBundleSizeMonitoring = () => {
   }, []);
   return bundleSize;
 };
-export default {
+const performanceOptimizations = {
   debounce,
   throttle,
   useIntersectionObserver,
@@ -236,3 +236,5 @@ export default {
   preloadCriticalResources,
   useBundleSizeMonitoring
 };
+
+export default performanceOptimizations;

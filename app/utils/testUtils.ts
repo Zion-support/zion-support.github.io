@@ -1,3 +1,13 @@
+<<<<<<< HEAD:app-broken/app/utils/testUtils.ts
+"use client";
+import React from 'react';
+
+const testUtils.ts = () => {
+  return null;
+};
+
+export default testUtils.ts;
+=======
 'use client'
 /**
 * Testing Utilities
@@ -6,23 +16,25 @@
 /**
 * Wait for a specified amount of time
 */
-export const wait = (ms: number): Promise<void> => {,;}
-export const wait = (ms: number): Promise<void> => {}
-return new Promise(resolve => setTimeout(resolve, ms));}
+export const wait = (ms: number): Promise<void> => {
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
 /**
 * Wait for a condition to be true
 */
 export const waitFor = async (
-condition: () => boolean
-timeout = 5000,
-interval = 100
+  condition: () => boolean,
+  timeout = 5000,
+  interval = 100
 ): Promise<void> => {
-interval = 100;}
-): Promise<void> => {}
-const startTime = Date.now()
-while (!condition()) {}
-if (Date.now() - startTime > timeout) {}
+  const startTime = Date.now()
+  while (!condition()) {
+    if (Date.now() - startTime > timeout) {
+      throw new Error('Timeout waiting for condition')
+    }
+    await wait(interval)
+  }
+}
 throw new Error(`Timeout waiting for condition after ${timeout}ms`)
 }
 await wait(interval)
@@ -531,3 +543,4 @@ return { result, duration }
 export default {/* TODO: Fix JSX expression */}
 }
 `
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/testUtils.ts

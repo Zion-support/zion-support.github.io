@@ -7,21 +7,13 @@ contentSecurityPolicy?: string
 strictTransportSecurity?: string
 xFrameOptions?: string
 xContentTypeOptions?: string
-referrerPolicy?: string;}
-permissionsPolicy?: string;}
+referrerPolicy?: string
+permissionsPolicy?: string
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
 // Content Security Policy
-contentSecurityPolicy: [,;}
-export interface SecurityHeadersConfig {}
-contentSecurityPolicy?: string
-strictTransportSecurity?: string
-xFrameOptions?: string
-xContentTypeOptions?: string
-referrerPolicy?: string
-permissionsPolicy?: string;}
+contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {}
 // Content Security Policy
 contentSecurityPolicy: [
 "default-src 'self'",

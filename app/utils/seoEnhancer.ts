@@ -5,19 +5,17 @@
 */
 // Generate meta tags
 export const generateMetaTags = (data: {
-// Generate meta tags;}
-export const generateMetaTags = (data: {}
-// title: string,
-// description: string,
-// keywords?: string
-// canonical?: string
-// ogTitle?: string
-// ogDescription?: string
-// ogImage?: string
-// twitterCard?: string
-// twitterTitle?: string
-// twitterDescription?: string
-// twitterImage?: string
+  title: string
+  description: string
+  keywords?: string
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
 }) => {}
 const tags = [
 { name: 'title', content: data.title },
@@ -27,8 +25,7 @@ const tags = [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
 { name: 'author', content: 'Zion Holdings' },
 { name: 'canonical', content: data.canonical || '' },
-{ property: 'og:title', content: data.ogTitle || data.title },
-{}
+{ property: 'og:title', content: data.ogTitle || data.title }
 property: 'og:description',
 content: data.ogDescription || data.description
 },

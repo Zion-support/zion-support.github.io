@@ -1,27 +1,16 @@
 "use client";
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import {
-  Home,
-  ArrowLeft,
-  Search,
-  AlertTriangle,
-  RefreshCw,
-} from "lucide-react";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
-
         <meta name="robots" content="noindex, nofollow" />
-
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-        <meta property="og:description" content="Advanced AI and IT solutions for modern businesses" />
-        <meta property="og:image" content="/og-image.jpg" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -36,7 +25,6 @@ export default function NotFound() {
 
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
-
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you&apos;re looking for seems to have vanished into the
             digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
@@ -79,7 +67,6 @@ export default function NotFound() {
             <button
               onClick={() => window.history.back()}
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
-              aria-label="Go back to previous page"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
@@ -88,7 +75,7 @@ export default function NotFound() {
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">Still can&apos;t find what you need?</h3>
+            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and
               find exactly what you&apos;re looking for.
@@ -124,4 +111,4 @@ export default function NotFound() {
   );
 }
 
-
+export default NotFound;

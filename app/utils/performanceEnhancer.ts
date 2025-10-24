@@ -45,7 +45,7 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-      }ms`);
+      console.log(`${componentName} rendered in ${renderTime}ms`);
     }
   }
   // Track memory usage
@@ -73,7 +73,7 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-          }ms`);
+          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
         }
       });
     });
@@ -160,7 +160,7 @@ export const optimizeScrollPerformance = () => {
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
+    const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean;
       value: number;
@@ -259,5 +259,11 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+<<<<<<< HEAD:src/utils/performanceEnhancer.ts
+    // // console.log('Performance metrics:', metrics)
+  }
+}
+=======
     }
 };
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/performanceEnhancer.ts
