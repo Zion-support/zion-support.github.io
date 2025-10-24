@@ -1,355 +1,340 @@
-<<<<<<< HEAD
 import { useRef, useEffect } from 'react'
 'use client'
-=======
-import { useRef, useEffect } from 'react';
-
-'use client';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 /**
- * Performance Enhancement Utilities
- * Advanced performance optimization tools for the application
+ * Performance Enhancement Utilities;
+ * Advanced performance optimization tools for the application;
  */
-
-<<<<<<< HEAD
-export const debounce = <T extends (...args: unknown[]) => unknown>(,
-    func: T,
-  wait: number,
-): ((...args: Parameters<T>) => void) => {,
-  let timeout: NodeJS.Timeout;,
-  return (...args: Parameters<T>) => {,
+export const debounce = <T extends (...args: unknown[]) =>
+    </T> unknown>,(,
+    func:  ,T,
+  wait: number;
+): ((...args: Parameters<T>
+    </T>) => void) => ,{,
+  let timeout: NodeJS.Timeou,t;,
+  return (...args: Parameters<T>
+    </T>) => ,{,
     clearTimeout(timeout)
     timeout = setTimeout(() => func(..._args), wait)
   }
+
 }
+
 // Throttle function for performance optimization;
-=======
-// Debounce function for performance optimization
-export const debounce = <T extends (..._args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): ((..._args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (..._args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(..._args), wait);
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-
-export const throttle = <T extends (...args: unknown[]) => unknown>(,
-    func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {,
-  let inThrottle: boolean;,
-  return (...args: Parameters<T>) => {,
+export const throttle = <T extends (...args: unknown[]) =>
+    </T> unknown>,(,
+    func:  ,T,
+  limit: number;
+): ((...args: Parameters<T>
+    </T>) => void) => ,{,
+  let inThrottle: boolea,n;,
+  return (...args: Parameters<T>
+    </T>) => ,{,
     if (!inThrottle) {
-<<<<<<< HEAD
       func(..._args)
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
-=======
-      func(..._args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
+      setTimeout(() => (inThrottle = false), limit)
     }
+
   }
+
 }
 
-// Performance monitoring utilities
+// Performance monitoring utilities;
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;,
-  private metrics: Map<string, number> = new Map()
+  
+}
+
+  private static instance: PerformanceMonito,r;,
+  private metrics: Map<string, number>
+    </string> = new Map(,)
   private observers: PerformanceObserver[] = [];,
   static getInstance(): PerformanceMonitor {
+  
+}
+
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor()
     }
-    return PerformanceMonitor.instance
+
+    return PerformanceMonitor.instance;
   }
 
-  // Track component render time
-  trackRender(componentName: string, renderTime: number) {,
+  // Track component render time;
+  trackRender(componentName: string, renderTime: number) ,{,
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-<<<<<<< HEAD
       console.log(`${componentName} rendered in ${renderTime}ms`)
-=======
-      console.log(`${componentName} rendered in ${renderTime}ms`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
-      console.log(`${componentName} rendered in ${renderTime}ms`);
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
     }
+
   }
 
-  // Track memory usage
-  trackMemory(componentName: string) {
+  // Track memory usage;
+  trackMemory(componentName: string) ,{
     if ('memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memor,y;
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)
       }
+
     }
+
   }
 
-  // Get performance metrics
+  // Get performance metrics;
   getMetrics() {
     return Object.fromEntries(this.metrics)
   }
 
-  // Clear metrics
+  // Clear metrics;
   clearMetrics() {
     this.metrics.clear()
   }
 
-  // Monitor long tasks
+  // Monitor long tasks;
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return
+      return;
     }
+
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms
-<<<<<<< HEAD
-<<<<<<< HEAD
+        if (entry.duration > 50) { // Tasks longer than 50ms;
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
-=======
-          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
-          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
         }
+
       })
-    })
-    observer.observe({ entryTypes: ['longtask'] })
+    },)
+    observer.observe({ entryTypes: ['longtask'] },)
     this.observers.push(observer)
   }
 
-  // Cleanup observers
+  // Cleanup observers;
   cleanup() {
     this.observers.forEach(observer => observer.disconnect())
     this.observers = []
   }
-}
-}
-// React hook for performance monitoring;
 
-export const usePerformanceMonitor = ($2) => {
-$3
-};
+}
+
+}
+
+// React hook for performance monitoring;
+export const usePerformanceMonitor = ($2: any) => {
+$3;
+}
+
   }, [componentName, monitor])
   return {
-    trackRender: (fn: () => void) => {,
+  
+}
+
+    trackRender: (fn: () => void) => ,{,
       const start = performance.now()
       fn()
-      const duration = performance.now() - start
+      const duration = performance.now() - start;
       monitor.trackRender(`${componentName}_function`, duration)
     }
-  }
-}
-// Image lazy loading utility;
 
-export const lazyLoadImages = ($2) => {
-$3
-};
+  }
+
+}
+
+// Image lazy loading utility;
+export const lazyLoadImages = ($2: any) => {
+$3;
+}
+
     })
   })
   images.forEach((img) => imageObserver.observe(img))
 }
-// Preload critical resources;
 
-export const preloadCriticalResources = ($2) => {
-$3
-};
+// Preload critical resources;
+export const preloadCriticalResources = ($2: any) => {
+$3;
+}
+
     document.head.appendChild(link)
   })
 }
 
-// Optimize scroll performance
-export const optimizeScrollPerformance = () => {
-  if (typeof window === 'undefined') return
+// Optimize scroll performance;
+export const optimizeScrollPerformance = ($2: any) => ,{
+  if (typeof window === 'undefined') return;
   let ticking = false;
-
-const updateScrollPosition = () => {
-    // Update scroll position indicators;
-
-const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+const updateScrollPosition = ($2: any) => {
+    // Update scroll position indicator,s;
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`)
-    ticking = false
+    ticking = false;
   }
-  const requestTick = ($2) => {
-$3
-};
-  }
-  // Track Core Web Vitals;
 
-const trackCLS = ($2) => {
-$3
-};
+  const requestTick = ($2: any) => {
+$3;
+}
+
+  }
+
+  // Track Core Web Vitals;
+const trackCLS = ($2: any) => {
+$3;
+}
+
     const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-        const layoutEntry = entry as LayoutShiftEntry
+        const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {
-          clsEntries.push(entry);
-          clsValue += layoutEntry.value
+          clsEntries.push(entry)
+          clsValue += layoutEntry.value;
 }
+
       }
+
     })
-    observer.observe({ entryTypes: ['layout-shift'] })
+    observer.observe({ entryTypes: ['layout-shift'] },)
     return (
-    <>
+    <React.Fragment>
+    </React>
       ) => {
-    </>
+    </React.Fragment>
     </>
   observer.disconnect(
     </>
-  );
-      return clsValue
+  )
+      return clsValue;
 }
-  }
-  const trackLCP = ($2) => {
-$3
-};
-      }
-    })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    return (
-    <>
-      ) => observer.disconnect(
-    </>
-    </>
-    </>
-  );
-  }
-  const trackFID = ($2) => {
-$3
-};
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const layoutEntry = entry as LayoutShiftEntry
-        if (!layoutEntry.hadRecentInput) {
-          clsEntries.push(entry)
-          clsValue += layoutEntry.value
-        }
-      }
-    })
-    observer.observe({ entryTypes: ['first-input'] })
-    return (
-    <>
-      ) => observer.disconnect(
-    </>
-    </>
-    </>
-  );
+
   }
 
-  const trackLCP = () => {
+  const trackLCP = ($2: any) => {
+$3;
+}
+
+      }
+
+    })
+    observer.observe({ entryTypes: ['largest-contentful-paint'] },)
+    return (
+    <React.Fragment>
+    </React>
+      ) => observer.disconnect(
+    </React.Fragment>
+    </>
+    </>
+  )
+  }
+
+  const trackFID = ($2: any) => {
+$3;
+}
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const layoutEntry = entry as LayoutShiftEntry;
+        if (!layoutEntry.hadRecentInput) {
+          clsEntries.push(entry)
+          clsValue += layoutEntry.value;
+        }
+
+      }
+
+    })
+    observer.observe({ entryTypes: ['first-input'] },)
+    return (
+    <React.Fragment>
+    </React>
+      ) => observer.disconnect(
+    </React.Fragment>
+    </>
+    </>
+  )
+  }
+
+  const trackLCP = ($2: any) => ,{
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          console.log('LCP:', entry.startTime)
-=======
-          console.log('LCP:', entry.startTime);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
-          console.log('LCP:', entry.startTime);
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
+          console.log('LCP: ', entry.startTime)
         }
+
       }
-    })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
+
+    },)
+    observer.observe({ entryTypes: ['largest-contentful-paint'] },)
     return () => observer.disconnect()
   }
 
-  const trackFID = () => {
+  const trackFID = ($2: any) => ,{
     interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number
+  
+}
+
+      processingStart: number;
     }
-    const observer = new PerformanceObserver((list) => {
+
+    const observer = new PerformanceObserver((list) => ,{
       for (const entry of list.getEntries()) {
-        const fidEntry = entry as FirstInputEntry
-        const fid = fidEntry.processingStart - entry.startTime
+        const fidEntry = entry as FirstInputEntry;
+        const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          console.log('FID:', fid)
-=======
-          console.log('FID:', fid);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
-          console.log('FID:', fid);
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
+          console.log('FID: ', fid)
         }
+
       }
-    })
-    observer.observe({ entryTypes: ['first-input'] })
+
+    },)
+    observer.observe({ entryTypes: ['first-input'] },)
     return () => observer.disconnect()
   }
 
   window.addEventListener('scroll', requestTick, { passive: true })
 
-  // Start tracking
+  // Start trackin,g;
   const cleanupCLS = trackCLS()
   const cleanupLCP = trackLCP()
   const cleanupFID = trackFID()
-
   return () => {
     cleanupCLS()
     cleanupLCP()
     cleanupFID()
   }
+
 }
 
-// Memory usage monitoring
-export const getMemoryUsage = () => {
+// Memory usage monitoring;
+export const getMemoryUsage = ($2: any) => ,{
   if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null
+    return null;
   }
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: numbe,r; totalJSHeapSize: numbe,r; jsHeapSizeLimit: number } }).memor,y;
   return {
-    used: memory.usedJSHeapSize,
-    total: memory.totalJSHeapSize,
-    limit: memory.jsHeapSizeLimit,
+  
+}
+
+    used: memory.usedJSHeapSiz,e,
+    total: memory.totalJSHeapSiz,e,
+    limit: memory.jsHeapSizeLimi,t,
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
-}
-// Performance metrics collection;
 
-export const collectPerformanceMetrics = ($2) => {
-$3
-};
-    paint: {,
-    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+}
+
+// Performance metrics collectio,n;
+export const collectPerformanceMetrics = ($2: any) => {
+$3;
+}
+
+    paint:  ,{,
+    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || ,0,
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
-    memory: getMemoryUsage()}
-}
-// Initialize performance enhancements;
 
-<<<<<<< HEAD
-export const initializePerformanceEnhancements = ($2) => {
-$3
-};
+    memory: getMemoryUsage()}
+
 }
-=======
-// Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {
-  if (typeof window === 'undefined') return;
-  // Initialize lazy loading
-  lazyLoadImages();
-  // Preload critical resources
-  preloadCriticalResources();
-  // Optimize scroll performance
-  optimizeScrollPerformance();
-  // Collect performance metrics
-  const metrics = collectPerformanceMetrics();
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    console.log('Performance metrics:', metrics);
-  }
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
+
+// Initialize performance enhancement,s;
+export const initializePerformanceEnhancements = ($2: any) => {
+$3;
+}
+
+}

@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Us - Zion Tech Group',
     description: 'Learn about Zion Tech Group, a leading provider of AI and IT solutions.',
-    type: 'website',
-  },
+    type: 'website'
+  }
 };
 
 const AboutPage = () => {
@@ -96,7 +96,7 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              To empower businesses with cutting-edge AI and technology solutions 
+              To empower businesses with cutting-edge AI and technology solutions
               that drive growth, efficiency, and innovation in the digital age.
             </p>
           </div>
@@ -155,7 +155,7 @@ const AboutPage = () => {
               Meet Our Team
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our diverse team of experts brings together decades of experience 
+              Our diverse team of experts brings together decades of experience
               in AI, cloud computing, and software development.
             </p>
           </div>
@@ -189,7 +189,7 @@ const AboutPage = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help transform your business with our 
+            Let's discuss how we can help transform your business with our
             innovative AI and technology solutions.
           </p>
           <Link

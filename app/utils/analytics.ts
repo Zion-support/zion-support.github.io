@@ -1,140 +1,154 @@
-// Analytics utilities for tracking user interactions and performance
-<<<<<<< HEAD
-<<<<<<< HEAD
+// Analytics utilities for tracking user interactions and performance;
 import React from "react"
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-
 interface AnalyticsEvent {
-  category: string;
-  action: string;
+  
+}
+
+  category: strin,g;
+  action: strin,g;
   label?: string;
   value?: number;
   timestamp?: number;
-  custom_parameters?: Record<string, unknown>;
+  custom_parameters?: Record<string, unknown>
+    </string>
 }
 
 class Analytics {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private static instance: Analytics
-  private events: AnalyticsEvent[] = [  ];
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-  private static instance: Analytics;
-  private events: AnalyticsEvent[] = [];
+  
+}
+
+  private static instance: Analytic,s;
+  private events: AnalyticsEvent[] = [  ]
+  private static instance: Analytic,s;
+  private events: AnalyticsEvent[] = []
 
   static getInstance(): Analytics {
+  
+}
+
     if (!Analytics.instance) {
-      Analytics.instance = new Analytics();
+      Analytics.instance = new Analytics()
     }
+
     return Analytics.instance;
   }
 
-  // Track custom events
-  track(event: AnalyticsEvent): void {
-    this.events.push({
+  // Track custom events;
+  track(event: AnalyticsEvent): void ,{
+    this.events.push(
+  {
       ...event,
+)
       timestamp: Date.now()
-<<<<<<< HEAD
-<<<<<<< HEAD
     })
-    // In production, you would send this to your analytics service
+    // In production, you would send this to your analytics servic,e;
     if (process.env.NODE_ENV === "production") {
-      this.sendToAnalytics(event);
+      this.sendToAnalytics(event)
     } else {
-      console.log("Analytics Event:", event);
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-    });
+  
+}
 
-    // Send to external analytics service
+      console.log("Analytics Event: ", event,)
+    })
+    // Send to external analytics service;
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        ...event.custom_parameters
-      });
+      (window as any).gtag(
+  'event', event.action, {
+)
+        event_category: event.categor,y,
+        event_label: event.labe,l,
+        value: event.value;
+        ...event.custom_parameters;
+      },)
     }
+
   }
 
-  // Track page views
-  trackPageView(page: string, title?: string): void {
-    this.track({
-      category: "Page",
-      action: "View",
-      label: page,
-      custom_parameters: {
-        page_title: title || (typeof document !== 'undefined' ? document.title : ''),
+  // Track page views;
+  trackPageView(page: string, title?: string): void ,{
+    this.track(
+  {
+)
+      category: "Page,",
+      action: "View,",
+      label: pag,e,
+      custom_parameters:  ,{
+        page_title: title || (typeof document !== 'undefined' ? document.title : '',),
         page_url: typeof window !== 'undefined' ? window.location.href : ''
       }
-    });
+
+    },)
   }
 
-  // Track user interactions
-  trackClick(element: string, location?: string): void {
-    this.track({
-      category: "Interaction",
-      action: "Click",
-      label: element,
-      custom_parameters: {
+  // Track user interactions;
+  trackClick(element: string, location?: string): void ,{
+    this.track(
+  {
+)
+      category: "Interaction,",
+      action: "Click,",
+      label: elemen,t,
+      custom_parameters:  ,{
         location: location || 'unknown'
       }
-    });
+
+    },)
   }
 
-  // Track form submissions
-  trackFormSubmit(formName: string, success: boolean): void {
-    this.track({
-      category: "Form",
-      action: "Submit",
-      label: formName,
-      value: success ? 1 : 0
-    });
+  // Track form submissions;
+  trackFormSubmit(formName: string, success: boolean): void ,{
+    this.track(
+  {
+)
+      category: "Form,",
+      action: "Submit,",
+      label: formNam,e,
+      value: success ? 1 : 0;
+    },)
   }
 
-  // Track performance metrics
-  trackPerformance(metric: string, value: number): void {
-    this.track({
-      category: "Performance",
-      action: "Metric",
-      label: metric,
+  // Track performance metrics;
+  trackPerformance(metric: string, value: number): void ,{
+    this.track(
+  {
+)
+      category: "Performance,",
+      action: "Metric,",
+      label: metri,c,
       value: Math.round(value)
-    });
+    },)
   }
 
-  // Track errors
-  trackError(error: Error, context?: string): void {
-    this.track({
-      category: "Error",
-      action: "Occurred",
-      label: error.message,
-      custom_parameters: {
-        error_name: error.name,
-        error_stack: error.stack,
+  // Track errors;
+  trackError(error: Error, context?: string): void ,{
+    this.track(
+  {
+)
+      category: "Error,",
+      action: "Occurred,",
+      label: error.messag,e,
+      custom_parameters:  ,{
+        error_name: error.nam,e,
+        error_stack: error.stac,k,
         context: context || 'unknown'
       }
-    });
+
+    },)
   }
 
-  // Get all events
+  // Get all events;
   getEvents(): AnalyticsEvent[] {
-    return [...this.events];
+    return [...this.events]
   }
 
-  // Clear events
+  // Clear events;
   clearEvents(): void {
-    this.events = [];
+  
+}
+
+    this.events = []
   }
+
 }
 
 export default Analytics;
-<<<<<<< HEAD
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
-=======
-export const analytics = Analytics.getInstance();
->>>>>>> cursor/fix-errors-and-merge-to-main-8836

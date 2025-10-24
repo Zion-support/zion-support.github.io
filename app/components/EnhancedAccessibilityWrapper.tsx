@@ -1,16 +1,21 @@
-'use client';
-import React from 'react';
-import React, { ReactNode } from 'react';
+'use client'
+import React from 'react'
+import React from 'react'
 
 interface Props {
-
-  children: ReactNode,
-
+  
 }
-const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
+
+  children: ReactNode;
+}
+
+const EnhancedAccessibilityWrapper: React.FC<Props>
+    </Props> = ({ children }) => ,{
   return (
 
-    <div className="enhanced-accessibility" role="complementary">{children}
+    <div className="enhanced-accessibility" role="complementary">
+    </di>{children}
+
     </div></div>
   )
 }

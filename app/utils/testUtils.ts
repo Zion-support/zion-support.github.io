@@ -1,336 +1,417 @@
-'use client';
-
+'use client'
 /**
- * Testing Utilities
- * Provides helper functions and utilities for testing
+ * Testing Utilities;
+ * Provides helper functions and utilities for testing;
  */
 
-// Jest types for testing environment
+// Jest types for testing environment;
 declare global {
-  const jest: {
-    fn: (_implementation?: (..._args: any[]) => any) => any;
-  };
-  const Console: {
-    log: (..._args: any[]) => void;
-    error: (..._args: any[]) => void;
-    warn: (..._args: any[]) => void;
-  };
+  
+}
+
+  const jest:  ,{
+    fn: (_implementation?: (..._args: any[]) => any) => an,y;
+  }
+
+  const Console:  ,{
+    log: (..._args: any[]) => voi,d;
+    error: (..._args: any[]) => voi,d;
+    warn: (..._args: any[]) => voi,d;
+  }
+
 }
 
 /**
- * Wait for a specified amount of time
+ * Wait for a specified amount of time;
  */
-export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms));
-};
+export const wait = (ms: number): Promise<void>
+    </void> => ,{
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
 
 /**
- * Wait for a condition to be true
+ * Wait for a condition to be true;
  */
-export const waitFor = async (
-  condition: () => boolean,
+export const waitFor = async(
+  
+)
+  condition: () => boolea,n,
   timeout = 5000,
-  interval = 100
-): Promise<void> => {
-  const startTime = Date.now();
+  interval = 100;
+): Promise<void>
+    </void> => {
+  const startTime = Date.now()
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`)
     }
-    await wait(interval);
+
+    await wait(interval)
   }
-};
+
+}
 
 /**
- * Mock fetch for testing
+ * Mock fetch for testing;
  */
 export const mockFetch = (
-  response: unknown,
+  response: unknow,n,
   status = 200,
-  headers: Record<string, string> = {}
-): void => {
-<<<<<<< HEAD
+  headers: Record<string, string>
+    </string> = {}
+
+): void => ,{
   if(typeof, global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
-=======
-  if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-      Promise.resolve({
-        ok: status >= 200 && status < 300,
+    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>,
+      Promise.resolve(
+  {
+)
+        ok: status >= 200 && status < 30,0,
         status,
-        headers: new Headers(headers),
-<<<<<<< HEAD
-    json: async () => response,
+        headers: new Headers(headers,),
+    json: async () => respons,e,
         text: async () => JSON.stringify(response)} as Response)
-    ) as typeof fetch
-=======
-        json: async () => response,
-        text: async () => JSON.stringify(response)
-      } as Response));
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
+    ) as typeof fetch;
   }
-};
+
+}
 
 /**
- * Mock local storage
+ * Mock local storage;
  */
 export class MockStorage implements Storage {
-  private store: Map<string, string> = new Map();
+  
+}
+
+  private store: Map<string, string>
+    </string> = new Map(,)
 
   get length(): number {
+  
+}
+
     return this.store.size;
   }
 
   clear(): void {
-    this.store.clear();
+  
+}
+
+    this.store.clear()
   }
-  getItem(key: string): string | null {,
-  return this.store.get(key) || null
+
+  getItem(key: string): string | null ,{,
+  return this.store.get(key) || null;
 }
-  key(index: number): string | null {,
+
+  key(index: number): string | null ,{,
   const keys = Array.from(this.store.keys())
-    return keys[index] || null
+    return keys[index] || null;
 }
-  removeItem(key: string): void {,
+
+  removeItem(key: string): void ,{,
     this.store.delete(key)
   }
-  setItem(key: string, value: string): void {,
+
+  setItem(key: string, value: string): void ,{,
     this.store.set(key, value)
   }
+
 }
 
 /**
- * Create a mock localStorage for testing
+ * Create a mock localStorage for testing;
  */
 export const createMockStorage = (): MockStorage => {
-  return new MockStorage();
-};
+  return new MockStorage()
+}
 
 /**
- * Mock window object
+ * Mock window object;
  */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
+export const mockWindow = (overrides: Partial<Window>
+    </Window> = {}): void => ,{
   if (typeof global !== 'undefined') {
-    Object.defineProperty(global, 'window', {
+    Object.defineProperty(
+  global, 'window', {
+)
       value: {
-        ...global.window,
-        ...overrides
+        ...global.window;
+        ...overrides;
       },
-      writable: true
-    });
+      writable: true;
+    },)
   }
-};
+
+}
 
 /**
- * Create a mock performance API
+ * Create a mock performance API;
  */
 export const createMockPerformance = (): Performance => {
-  const entries: PerformanceEntry[] = [];
+  const entries: PerformanceEntry[] = []
   return {
-    now: () => Date.now(),
-    mark: (name: string) => {,
-      entries.push({
-        name
-        entryType: 'mark',
-    startTime: Date.now(),
-        duration: 0,
+  
+}
+
+    now: () => Date.now(,),
+    mark: (name: string) => ,{,
+      entries.push(
+  {
+)
+        name;
+        entryType: 'mark,',
+    startTime: Date.now(,),
+        duration:  ,0,
     toJSON: () => ({})
       } as PerformanceEntry)
     }
-    measure: (nam,
-  e: string, startMark?: string, endMark?: string) => {
-      entries.push({
-        name
-        entryType: 'measure',
-        startTime: Date.now(),
-        duration: 100,
+
+    measure: (na,m,
+  e: string, startMark?: string, endMark?: string) => ,{
+      entries.push(
+  {
+)
+        name;
+        entryType: 'measure,',
+        startTime: Date.now(,),
+        duration: 10,0,
         toJSON: () => ({})
-      } as PerformanceEntry);
+      } as PerformanceEntry,)
     },
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries,
-    clearMarks: () => {,
-  entries.length = 0
+    getEntriesByName: (name: string) => entries.filter(e => e.name === name,),
+    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type,),
+    getEntries: () => entrie,s,
+    clearMarks: () => ,{,
+  entries.length = 0;
 }
-    clearMeasures: () => {,
-  entries.length = 0
+
+    clearMeasures: () => ,{,
+  entries.length = 0;
 }
+
     clearResourceTimings: () => {}
+
     setResourceTimingBufferSize: () => {}
-    toJSON: () => ({})
+
+    toJSON: () => ({},)
     addEventListener: () => {}
+
     removeEventListener: () => {}
-    dispatchEvent: () => true,
-    onresourcetimingbufferfull: null,
-    timeOrigin: Date.now()} as unknown as Performance
+
+    dispatchEvent: () => tru,e,
+    onresourcetimingbufferfull: nul,l,
+    timeOrigin: Date.now()} as unknown as Performance;
 }
+
 /**
- * Generate random test data
- */
+ * Generate random test data;
+ *,/
 export const generateTestData = {
-<<<<<<< HEAD
-  string: (length = 10): string => {,
-=======
-  string: (length = 10): string => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
+  string: (length = 10): string => ,{,
     return Math.random()
       .toString(36)
       .substring(2, length + 2)
   }
-  number: (min = 0, max = 100): number => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
+
+  number: (min = 0, max = 100): number => ,{
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-  boolean: (): boolean => {,
-  return Math.random() > 0.5
+
+  boolean: (): boolean => ,{,
+  return Math.random() > 0.5;
 }
-  email: (): string => {,
+
+  email: (): string => ,{,
     return `test${generateTestData.string(5)}@example.com`
   }
-  url: (): string => {,
-    return `https://example.com/${generateTestData.string(10)}`
+
+  url: (): string => ,{,
+    return `https: //example.com/${generateTestData.string(10)}`
   }
-};
+
+}
 
 /**
- * Deep clone an object
+ * Deep clone an object;
  */
-export const deepClone = <T>(obj: T): T => {,
+export const deepClone = <T>(obj: T): T => ,{,
   return JSON.parse(JSON.stringify(obj))
 }
+
 /**
- * Compare objects for equality
+ * Compare objects for equality;
  */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean => ,{,
   return JSON.stringify(obj1) === JSON.stringify(obj2)
 }
+
 /**
- * Spy on console methods
+ * Spy on console methods;
  */
 export class ConsoleSpy {
-  private originalConsole: Console,
+  
+}
+
+  private originalConsole: Consol,e,
   private logs: string[] = [],
   private errors: string[] = [],
   private warnings: string[] = [],
   constructor() {
-    this.originalConsole = { ...console };
-    this.mock();
+    this.originalConsole = { ...console }
+
+    this.mock()
   }
 
   private mock(): void {
-    // eslint-disable-next-line no-console
+  // eslint-disable-next-line no-console;
+}
+
     console.log = ($2) => {
-$3
-};
-    // eslint-disable-next-line no-console
+$3;
+}
+
+    // eslint-disable-next-line no-console;
     console.error = ($2) => {
-$3
-};
-    // eslint-disable-next-line no-console
+$3;
+}
+
+    // eslint-disable-next-line no-console;
     console.warn = ($2) => {
-$3
-};
+$3;
+}
+
   }
 
   getLogs(): string[] {
-    return [...this.logs];
+    return [...this.logs]
   }
 
   getErrors(): string[] {
-    return [...this.errors];
+    return [...this.errors]
   }
 
   getWarnings(): string[] {
-    return [...this.warnings];
+    return [...this.warnings]
   }
 
   restore(): void {
-    Object.assign(console, this.originalConsole);
+  
+}
+
+    Object.assign(console, this.originalConsole)
   }
 
   clear(): void {
-    this.logs = [];
-    this.errors = [];
-    this.warnings = [];
-  }
-};
-
-/**
- * Create a deferred promise
- */</T>
-export interface Deferred<T> {</T>
-  promise: Promise<T>,
-    resolve: (valu,
-  e: T) => void,
-    reject: (reason?: unknown) => void}</T>
-export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (value: T) => void,
-  let reject: (reason?: unknown) => void,
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res
-    reject = rej
-})
-  return { promise, resolve, reject }
+  
 }
 
-export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (_value: T) => void;
-  let reject: (_reason?: unknown) => void;
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res;
-    reject = rej;
-  });
-  return { promise, resolve, reject };
-};
+    this.logs = []
+    this.errors = []
+    this.warnings = []
+  }
+
+}
 
 /**
- * Retry a function with exponential backoff
+ * Create a deferred promise;
+ */</T>
+export interface Deferred<T> {</T>
+  promise: Promise<T>,,
+    resolve: (val,u,
+  e: T) => voi,d,
+    reject: (reason?: unknown) => void}</T>,
+export const createDeferred = <T>
+    </T>(): Deferred<T>
+    </T> => {
+  let resolve: (value: T) => voi,d,
+  let reject: (reason?: unknown) => voi,d,
+  const promise = new Promise<T>
+    </T>((res, rej) => {
+    resolve = res;
+    reject = rej;
+})
+  return { promise, resolve, reject }
+
+}
+
+export const createDeferred = <T>
+    </T>(): Deferred<T>
+    </T> => {
+  let resolve: (_value: T) => voi,d;
+  let reject: (_reason?: unknown) => voi,d;
+  const promise = new Promise<T>
+    </T>((res, rej) => {
+    resolve = res;
+    reject = rej;
+  })
+  return { promise, resolve, reject }
+
+}
+
+/**
+ * Retry a function with exponential backoff;
  */
-export const retryWithBackoff = async <T>(
-  fn: () => Promise<T>,
+export const retryWithBackoff = async <T>
+    </T>(
+  fn: () => Promise<T>
+    </T>,,
   maxRetries = 3,
-  initialDelay = 1000
-): Promise<T> => {
-  let lastError: Error;
+  initialDelay = 1000;
+): Promise<T>
+    </T> => {
+  let lastError: Erro,r;
   for (let i = 0; i < maxRetries; i++) {
-    try {,
-      return await fn();,
+    try {
+  
+}
+
+      return await fn()
     } catch(error) {
-      lastError = error as Error
+      lastError = error as Error;
       if(i < maxRetries - 1) {
         await wait(initialDelay * Math.pow(2, i))
       }
+
     }
+
   }
-  throw lastError!;
-};
+
+  throw lastError!
+}
 
 /**
- * Measure execution time of a function
+ * Measure execution time of a function;
  */
-export const measureExecutionTime = async <T>(
+export const measureExecutionTime = async <T>
+    </T>(
   fn: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> => {
+    </T>
+): Promise<{ result:  ,T; duration: number }> => ,{
   const start = performance.now()
   const result = await fn()
-  const duration = performance.now() - start
+  const duration = performance.now() - start;
   return { result, duration }
+
 }
+
 export default {
-  wait
-  waitFor
-  mockFetch
-  createMockStorage
-  mockWindow
-  createMockPerformance
-  generateTestData
-  deepClone
-  deepEqual
-  ConsoleSpy
-  createDeferred
-  retryWithBackoff
-  measureExecutionTime
-};
+  
+}
+
+  wait;
+  waitFor;
+  mockFetch;
+  createMockStorage;
+  mockWindow;
+  createMockPerformance;
+  generateTestData;
+  deepClone;
+  deepEqual;
+  ConsoleSpy;
+  createDeferred;
+  retryWithBackoff;
+  measureExecutionTime;
+}
 
 export default testUtils;

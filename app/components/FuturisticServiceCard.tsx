@@ -1,31 +1,22 @@
 import React from 'react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
-
 interface FuturisticServiceCardProps {
-<<<<<<< HEAD
-  title: string,
-      description: string,
-      features: string[  ];
-  price?: string
-  priceDescription?: string
-  icon?: React.ReactNode
-  gradient?: string
-  onClick?: () => void
-  isPopular?: boolean
-=======
-  title: string;
-  description: string;
-  features: string[];
+  
+}
+
+  title: strin,g,
+      description: strin,g,
+      features: string[  ]
   price?: string;
   priceDescription?: string;
   icon?: React.ReactNode;
   gradient?: string;
   onClick?: () => void;
   isPopular?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>
+    </FuturisticServiceCardProps> = (,{
   title,
   description,
   features,
@@ -34,72 +25,108 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   icon,
   gradient = 'from-purple-500 to-blue-600',
   onClick,
-  isPopular = false
+  isPopular = false;
 }) => {
   return (
-    <div className={`relative group ${isPopular ? 'scale-105' : ''}`}>
+  <div className={`relative group ${isPopular ? 'scale-105' : ''}`}>
+    </di>
       {isPopular && (
         <div className="...">
+    </di>
           <div className="...">
-            Most Popular
+    </di>
+)
+            Most Popular;
           </div>
         </div>
       )}
-      
+
       <div className="...">
+    </di>
         {/* Background gradient */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity`}></div>
+
+        <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5 rounded-2xl group-hover: opacity-10 transition-opacity`}>
+    </di></div>
         
         {/* Content */}
+
         <div className="...">
+    </di>
           {/* Icon */}
+
           {icon && (
-            <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+            <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform`}>
+    </di>
               {icon}
+
             </div>
           )}
-          
+
           {/* Title */}
+
           <h3 className="...">
+    </h>
             {title}
+
           </h3>
           
           {/* Description */}
+
           <p className="...">
             {description}
+
           </p>
           
           {/* Features */}
+
           <ul className="...">
+    </u>
             {features.map((feature, index) => (
               <li key={index} className="...">
+    </l>
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                <span>{feature}</span>
+    </CheckCircle>
+                <span>
+    </spa>{feature}</span>
               </li>
             ))}
+
           </ul>
           
           {/* Price */}
+
           {price && (
             <div className="...">
+    </di>
               <div className="...">
+    </di>
                 {price}
+
               </div>
               {priceDescription && (
                 <div className="...">
+    </di>
                   {priceDescription}
+
                 </div>
               )}
+
             </div>
           )}
-          
+
           {/* Button */}
-          <button
+
+          <butto,n;
             onClick={onClick}
-            className={`w-full bg-gradient-to-r ${gradient} text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group`}
+
+            className={`w-full bg-gradient-to-r ${gradient} text-white font-semibold py-3 px-6 rounded-lg hover: shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group`}
+
           >
-            <span>Get Started</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+    </butto>
+            <span>
+    </spa>Get Started</span>
+            <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />
+    </ArrowRight>
           </button>
         </div>
       </div>
@@ -107,4 +134,4 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   )
 }
 
-export default FuturisticServiceCard
+export default FuturisticServiceCard;

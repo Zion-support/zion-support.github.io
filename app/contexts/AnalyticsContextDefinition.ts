@@ -1,18 +1,30 @@
-import React from 'react';
-// import { createContext } from 'react';
+import React from 'react'
+// import { createContext } from 'react'
 
 export interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (page: string) => void;
-  setUser: (userId: string, properties?: Record<string, unknown>) => void;
+  
+}
+
+  trackEvent: (eventName: string, properties?: Record<string, unknown>
+    </string>) => voi,d;
+  trackPageView: (page: string) => voi,d;
+  setUser: (userId: string, properties?: Record<string, unknown>
+    </string>) => voi,d;
 }
 
 export interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  
+}
+
+  children: React.ReactNod,e;
 }
 
 export interface AnalyticsEvent {
-  name: string;
-  properties?: Record<string, unknown>;
-  timestamp: number;
+  
+}
+
+  name: strin,g;
+  properties?: Record<string, unknown>
+    </string>
+  timestamp: numbe,r;
 }

@@ -1,8 +1,8 @@
-"use client";
-import React from 'react';
+"use client"
+import React from 'react'
 
-const AdminPage = ($2) => {
-$3
-};
+const AdminPage = ($2: any) => {
+$3;
+}
 
-export default AdminPage
+export default AdminPage;

@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
-
-export const useErrorMonitoring = () => {
+export const useErrorMonitoring = ($2: any) => ,{
   useEffect(() => {
-    const handleError = (error: ErrorEvent) => {
-      console.error('Error caught:', error)
+    const handleError = ($2: any) => ,{
+      console.error('Error caught: ', error)
     }
 
     window.addEventListener('error', handleError)

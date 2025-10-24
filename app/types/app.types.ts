@@ -1,70 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
+"use client"
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 export interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: "admin" | "user" | "guest";
+  
+}
+
+  id: strin,g;
+  email: strin,g;
+  name: strin,g;
+  role: "admin" | "user" | "guest,"
 }
 
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  features: string[];
-  pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-  };
-  benefits: string[];
-  useCases: string[];
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  link: string;
+  
+}
+
+  id: strin,g;
+  title: strin,g;
+  description: strin,g;
+  shortDescription: strin,g;
+  icon: strin,g;
+  features: string[]
+  pricing:  ,{
+    basic: numbe,r;
+    pro: numbe,r;
+    enterprise: numbe,r;
+  }
+
+  benefits: string[]
+  useCases: string[]
+  marketPrice: strin,g;
+  contactInfo:  ,{
+    phone: strin,g;
+    email: strin,g;
+    website: strin,g;
+  }
+
+  link: strin,g;
 }
 
 export interface ContactFormData {
-  name: string;
-  email: string;
-  company: string;
-  message: string;
-  service: string;
+  
+}
+
+  name: strin,g;
+  email: strin,g;
+  company: strin,g;
+  message: strin,g;
+  service: strin,g;
   phone?: string;
   budget?: string;
   timeline?: string;
 }
 
 export interface AnalyticsEvent {
-  name: string;
-  timestamp: number;
-  properties?: Record<string, string | number | boolean | null>;
+  
+}
+
+  name: strin,g;
+  timestamp: numbe,r;
+  properties?: Record<string, string | number | boolean | null>
+    </string>
 }
 
 export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  
+}
+
+  loadTime: numbe,r;
+  firstContentfulPaint: numbe,r;
+  largestContentfulPaint: numbe,r;
+  cumulativeLayoutShift: numbe,r;
+  firstInputDelay: numbe,r;
 }
 
 export interface ErrorContext {
+  
+}
+
   url?: string;
   userAgent?: string;
   timestamp?: string;
@@ -75,94 +87,16 @@ export interface ErrorContext {
 }
 
 export interface ErrorReport {
-  id: string;
-  message: string;
+  
+}
+
+  id: strin,g;
+  message: strin,g;
   stack?: string;
-  context: ErrorContext;
-  severity: ErrorSeverity;
-  resolved: boolean;
-  createdAt: string;
+  context: ErrorContex,t;
+  severity: ErrorSeverit,y;
+  resolved: boolea,n;
+  createdAt: strin,g;
 }
 
-<<<<<<< HEAD
-export type ErrorSeverity = "low" | "medium" | "high" | "critical";
-=======
-}
-
-export interface ContactForm {
-  name: string;
-  email: string;
-  company: string;
-  message: string;
-  service?: string;
-}
-
-export interface Testimonial {
-  id: string;
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar?: string;
-}
-
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  tags: string[];
-  featuredImage?: string;
-}
-
-export interface FAQ {
-  id: string;
-  question: string;
-  answer: string;
-  category: string;
-}
-
-export interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  social: {
-    linkedin?: string;
-    twitter?: string;
-    github?: string;
-  };
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  featured: boolean;
-}
-
-export interface Analytics {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-}
-
-export interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isSlowConnection: boolean;
-}
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
-=======
-export type ErrorSeverity = "low" | "medium" | "high" | "critical";
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
+export type ErrorSeverity = "low" | "medium" | "high" | "critical"

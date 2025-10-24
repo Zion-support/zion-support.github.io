@@ -1,17 +1,22 @@
-'use client';
+'use client'
 
-import React from 'react';
+import React from 'react'
 
 interface AdvancedSEOOptimizer_newProps {
+  
+}
+
   className?: string;
 }
 
-const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = (_props) => {
+const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps>
+    </AdvancedSEOOptimizer_newProps> = (_props) => ,{
   return (
-    <div>
+    <div></div>
       {/* Component content */}
+
     </div>
-  );
-};
+  )
+}
 
 export default AdvancedSEOOptimizer_new;

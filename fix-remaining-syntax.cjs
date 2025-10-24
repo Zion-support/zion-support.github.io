@@ -1,160 +1,91 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
-const path = require('path');
+const glob = require('glob');
 
-// Function to fix remaining syntax issues
+// Function to fix remaining syntax errors
 function fixRemainingSyntax(content) {
-  let fixed = content;
-  
-  // Fix missing closing braces in object literals
-  fixed = fixed.replace(/(\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, objPart, nextLine) => {
-    if (!objPart.includes('}') && objPart.includes('{')) {
-      return objPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing parentheses in function calls
-  fixed = fixed.replace(/(\w+\([^)]*?)(\n\s*[a-zA-Z])/g, (match, callPart, nextLine) => {
-    if (!callPart.includes(')') && callPart.includes('(')) {
-      return callPart + ')' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing semicolons after statements
-  fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z])/g, (match, statement, nextLine) => {
-    if (!statement.includes(';') && !statement.includes('{') && !statement.includes('}') && !statement.includes('=')) {
-      return statement + ';' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix malformed destructuring
-  fixed = fixed.replace(/(\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, destructurePart, nextLine) => {
-    if (!destructurePart.includes('}') && destructurePart.includes('{')) {
-      return destructurePart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in try-catch blocks
-  fixed = fixed.replace(/(try\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, tryPart, nextLine) => {
-    if (!tryPart.includes('}')) {
-      return tryPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in if statements
-  fixed = fixed.replace(/(if\s*\([^)]*\)\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, ifPart, nextLine) => {
-    if (!ifPart.includes('}')) {
-      return ifPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in for loops
-  fixed = fixed.replace(/(for\s*\([^)]*\)\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, forPart, nextLine) => {
-    if (!forPart.includes('}')) {
-      return forPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in while loops
-  fixed = fixed.replace(/(while\s*\([^)]*\)\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, whilePart, nextLine) => {
-    if (!whilePart.includes('}')) {
-      return whilePart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in switch statements
-  fixed = fixed.replace(/(switch\s*\([^)]*\)\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, switchPart, nextLine) => {
-    if (!switchPart.includes('}')) {
-      return switchPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in class methods
-  fixed = fixed.replace(/(\w+\s*\([^)]*\)\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, methodPart, nextLine) => {
-    if (!methodPart.includes('}')) {
-      return methodPart + '\n  }' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in arrow functions
-  fixed = fixed.replace(/(=>\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, arrowPart, nextLine) => {
-    if (!arrowPart.includes('}')) {
-      return arrowPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in regular functions
-  fixed = fixed.replace(/(function\s+\w+\s*\([^)]*\)\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, funcPart, nextLine) => {
-    if (!funcPart.includes('}')) {
-      return funcPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  // Fix missing closing braces in anonymous functions
-  fixed = fixed.replace(/(function\s*\([^)]*\)\s*\{[^}]*?)(\n\s*[a-zA-Z])/g, (match, anonFuncPart, nextLine) => {
-    if (!anonFuncPart.includes('}')) {
-      return anonFuncPart + '\n}' + nextLine;
-    }
-    return match;
-  });
-  
-  return fixed;
-}
-
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+  return content
+    // Fix double semicolons
+    .replace(/;;/g, ';')
+    // Fix semicolons in JSX attributes
+    .replace(/href="([^"]*);"/g, 'href="$1"')
+    .replace(/className="([^"]*);"/g, 'className="$1"')
+    // Fix semicolons in JSX closing tags
+    .replace(/;>/g, '>')
+    .replace(/;<\//g, '</')
+    // Fix semicolons in object properties
+    .replace(/(\w+):\s*([^;]+);/g, '$1: $2,')
+    // Fix semicolons in metadata objects
+    .replace(/export const metadata: Metadata = ;{;/g, 'export const metadata: Metadata = {')
+    .replace(/title: '([^']*);',;/g, "title: '$1',")
+    .replace(/description: '([^']*);',;/g, "description: '$1',")
+    .replace(/keywords: '([^']*);',;/g, "keywords: '$1',")
+    // Fix semicolons in function calls
+    .replace(/\(([^)]*);\)/g, '($1)')
+    // Fix semicolons in array literals
+    .replace(/\[([^\]]*);\]/g, '[$1]')
+    // Fix semicolons in template literals
+    .replace(/`([^`]*);`/g, '`$1`')
+    // Fix stray semicolons
+    .replace(/;\s*$/gm, '')
+    // Fix malformed JSX
+    .replace(/<(\w+)([^>]*);>/g, '<$1$2>')
+    .replace(/<\/(\w+)>/g, '</$1>')
+    // Fix missing closing tags
+    .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/gs, (match, tag, attrs) => {
+      const lines = match.split('\n');
+      const lastLine = lines[lines.length - 1];
+      if (lastLine.trim() && !lastLine.includes(`</${tag}>`)) {
+        return match + `\n    </${tag}>`;
       }
-    }
-  }
-  
-  traverse(dir);
-  return files;
+      return match;
+    });
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
-
-console.log(`Found ${files.length} files to process...`);
-
-let fixedCount = 0;
-for (const file of files) {
+// Main function to process files
+function processFile(filePath) {
   try {
-    const content = fs.readFileSync(file, 'utf8');
-    const fixed = fixRemainingSyntax(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
     
-    if (content !== fixed) {
-      fs.writeFileSync(file, fixed);
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
+    // Apply fixes
+    content = fixRemainingSyntax(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
+// Get all TypeScript and JavaScript files
+const patterns = [
+  'app/**/*.tsx',
+  'app/**/*.ts',
+  'app/**/*.js',
+  'app/**/*.jsx'
+];
+
+let totalFiles = 0;
+let fixedFiles = 0;
+
+patterns.forEach(pattern => {
+  const files = glob.sync(pattern, { cwd: process.cwd() });
+  totalFiles += files.length;
+  
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedFiles++;
+    }
+  });
+});
+
+console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);

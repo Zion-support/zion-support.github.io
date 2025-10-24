@@ -1,26 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-// Enhanced type definitions for better type safety
+import React from 'react'
+// Enhanced type definitions for better type safety;
 export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  timeToInteractive: number;
-  firstMeaningfulPaint: number;
+  
+}
+
+  loadTime: numbe,r;
+  firstContentfulPaint: numbe,r;
+  largestContentfulPaint: numbe,r;
+  cumulativeLayoutShift: numbe,r;
+  firstInputDelay: numbe,r;
+  timeToInteractive: numbe,r;
+  firstMeaningfulPaint: numbe,r;
 }
 
 export interface ErrorContext {
+  
+}
+
   url?: string;
   userAgent?: string;
   timestamp?: string;
@@ -33,170 +29,229 @@ export interface ErrorContext {
 }
 
 export interface ErrorReport {
-  id: string;
-  message: string;
+  
+}
+
+  id: strin,g;
+  message: strin,g;
   stack?: string;
-  context: ErrorContext;
-  severity: ErrorSeverity;
-  resolved: boolean;
-  createdAt: string;
+  context: ErrorContex,t;
+  severity: ErrorSeverit,y;
+  resolved: boolea,n;
+  createdAt: strin,g;
   updatedAt?: string;
 }
 
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
 
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  features: string[];
-  pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-  };
-  benefits: string[];
-  useCases: string[];
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  link: string;
-  category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot';
-  tags: string[];
+  
+}
+
+  id: strin,g;
+  title: strin,g;
+  description: strin,g;
+  shortDescription: strin,g;
+  icon: strin,g;
+  features: string[]
+  pricing:  ,{
+    basic: numbe,r;
+    pro: numbe,r;
+    enterprise: numbe,r;
+  }
+
+  benefits: string[]
+  useCases: string[]
+  marketPrice: strin,g;
+  contactInfo:  ,{
+    phone: strin,g;
+    email: strin,g;
+    website: strin,g;
+  }
+
+  link: strin,g;
+  category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot,'
+  tags: string[]
 }
 
 export interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
+  
+}
+
+  id: strin,g;
+  email: strin,g;
+  name: strin,g;
+  role: 'admin' | 'user' | 'guest,'
   preferences?: UserPreferences;
-  createdAt: string;
+  createdAt: strin,g;
   lastLogin?: string;
 }
 
 export interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  notifications: boolean;
-  analytics: boolean;
+  
+}
+
+  theme: 'light' | 'dark' | 'auto,'
+  language: strin,g;
+  notifications: boolea,n;
+  analytics: boolea,n;
 }
 
 export interface ContactFormData {
-  name: string;
-  email: string;
-  company: string;
-  message: string;
-  service: string;
+  
+}
+
+  name: strin,g;
+  email: strin,g;
+  company: strin,g;
+  message: strin,g;
+  service: strin,g;
   phone?: string;
   budget?: string;
   timeline?: string;
 }
 
 export interface AnalyticsEvent {
-  name: string;
-  timestamp: number;
-  properties?: Record<string, string | number | boolean | null>;
+  
+}
+
+  name: strin,g;
+  timestamp: numbe,r;
+  properties?: Record<string, string | number | boolean | null>
+    </string>
   userId?: string;
   sessionId?: string;
 }
 
 export interface AccessibilityMetrics {
-  score: number;
-  issues: AccessibilityIssue[];
-  recommendations: string[];
+  
+}
+
+  score: numbe,r;
+  issues: AccessibilityIssue[]
+  recommendations: string[]
 }
 
 export interface AccessibilityIssue {
-  id: string;
-  severity: 'error' | 'warning' | 'info';
-  message: string;
+  
+}
+
+  id: strin,g;
+  severity: 'error' | 'warning' | 'info,'
+  message: strin,g;
   element?: string;
   helpUrl?: string;
 }
 
 export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
+  
+}
+
+  title: strin,g;
+  description: strin,g;
+  keywords: string[]
   canonicalUrl?: string;
   ogImage?: string;
   twitterCard?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>
+    </string>
 }
 
 export interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ComponentType<{ className?: string }>;
-  submenu?: NavigationItem[];
+  
+}
+
+  name: strin,g;
+  href: strin,g;
+  icon?: React.ComponentType<{ className?: string }>
+  submenu?: NavigationItem[]
   external?: boolean;
 }
 
 export interface PerformanceConfig {
-  enableLazyLoading: boolean;
-  enablePreloading: boolean;
-  enableCodeSplitting: boolean;
-  enableImageOptimization: boolean;
-  enableBundleAnalysis: boolean;
-  enableServiceWorker: boolean;
+  
+}
+
+  enableLazyLoading: boolea,n;
+  enablePreloading: boolea,n;
+  enableCodeSplitting: boolea,n;
+  enableImageOptimization: boolea,n;
+  enableBundleAnalysis: boolea,n;
+  enableServiceWorker: boolea,n;
 }
 
 export interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
-  enableScreenReader: boolean;
-  enableHighContrast: boolean;
-  enableReducedMotion: boolean;
-  enableFocusIndicators: boolean;
+  
 }
 
-// Utility types
-export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
-export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
-export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
+  enableKeyboardNavigation: boolea,n;
+  enableScreenReader: boolea,n;
+  enableHighContrast: boolea,n;
+  enableReducedMotion: boolea,n;
+  enableFocusIndicators: boolea,n;
+}
 
-// API Response types
-export interface ApiResponse<T = unknown> {
-  success: boolean;
+// Utility types;
+export type Optional<T, K extends keyof T>
+    </T> = Omit<T, K>
+    </T> & Partial<Pick<T, K>
+    </Pick>>
+export type RequiredFields<T, K extends keyof T>
+    </T> = T & Required<Pick<T, K>
+    </Pick>>
+export type DeepPartial<T>
+    </T> = {
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]>
+    </T> : T[P]
+}
+
+// API Response types;
+export interface ApiResponse<T = unknown>
+    </T> {
+  success: boolea,n;
   data?: T;
   error?: string;
   message?: string;
-  timestamp: string;
+  timestamp: strin,g;
 }
 
-export interface PaginatedResponse<T = unknown> extends ApiResponse<T[]> {
-  pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-  };
+export interface PaginatedResponse<T = unknown>
+    </T> extends ApiResponse<T[]>
+    </T> {
+  pagination:  ,{
+    page: numbe,r;
+    limit: numbe,r;
+    total: numbe,r;
+    totalPages: numbe,r;
+  }
+
 }
 
-// Form validation types
+// Form validation types;
 export interface ValidationError {
-  field: string;
-  message: string;
-  code: string;
+  
 }
 
-export interface FormState<T = Record<string, unknown>> {
-  values: T;
-  errors: ValidationError[];
-  touched: Record<keyof T, boolean>;
-  isSubmitting: boolean;
-  isValid: boolean;
+  field: strin,g;
+  message: strin,g;
+  code: strin,g;
 }
 
-// Component props types
+export interface FormState<T = Record<string, unknown>
+    </T>> {
+  values:  ,T;
+  errors: ValidationError[]
+  touched: Record<keyof T, boolean>
+    </keyof>,
+  isSubmitting: boolea,n;
+  isValid: boolea,n;
+}
+
+// Component props types;
 export interface BaseComponentProps {
+  
+}
+
   className?: string;
   children?: React.ReactNode;
   id?: string;
@@ -204,99 +259,38 @@ export interface BaseComponentProps {
 }
 
 export interface LoadingProps extends BaseComponentProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white';
+  
+}
+
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'primary' | 'secondary' | 'white'
   text?: string;
 }
 
 export interface ButtonProps extends BaseComponentProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
+  
+}
+
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
+  size?: 'sm' | 'md' | 'lg'
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset'
 }
 
 export interface InputProps extends BaseComponentProps {
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search';
+  
+}
+
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search'
   placeholder?: string;
   value?: string;
-  onChange?: (_value: string) => void;
+  onChange?: (_value: string) => voi,d;
   onBlur?: () => void;
   onFocus?: () => void;
   disabled?: boolean;
   required?: boolean;
   error?: string;
   label?: string;
-<<<<<<< HEAD
 }
-=======
-  canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: Record<string, unknown>;
-}
-
-export interface AnalyticsEvent {
-  name: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  customParameters?: Record<string, unknown>;
-}
-
-export interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  accessibility: {
-    highContrast: boolean;
-    reducedMotion: boolean;
-    screenReader: boolean;
-  };
-  notifications: {
-    email: boolean;
-    push: boolean;
-    sms: boolean;
-  };
-}
-
-export interface APIResponse<T = unknown> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-  timestamp: string;
-}
-
-export interface PaginationParams {
-  page: number;
-  limit: number;
-  sortBy?: string;
-  sortOrder?: 'asc' | 'desc';
-}
-
-export interface SearchParams {
-  query: string;
-  filters?: Record<string, unknown>;
-  pagination?: PaginationParams;
-}
-
-export interface CacheConfig {
-  ttl: number;
-  maxSize: number;
-  strategy: 'lru' | 'fifo' | 'ttl';
-}
-
-export interface FeatureFlag {
-  name: string;
-  enabled: boolean;
-  description?: string;
-  rolloutPercentage?: number;
-  targetUsers?: string[];
-}
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-8836

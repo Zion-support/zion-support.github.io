@@ -1,16 +1,18 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 
 interface StructuredDataProps {
-  // Add props here
+  // Add props here;
 }
 
-const StructuredData: React.FC<StructuredDataProps> = (_props) => {
+const StructuredData: React.FC<StructuredDataProps>
+    </StructuredDataProps> = (_props) => ,{
   return (
-    <div>
+    <div></div>
       {/* Component content */}
+
     </div>
-  );
-};
+  )
+}
 
 export default StructuredData;

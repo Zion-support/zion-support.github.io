@@ -1,119 +1,134 @@
-'use client';
-import { useCallback, useMemo  } from "react";
-// Performance optimization utilities
+'use client'
+import { useCallback, useMemo  } from "react"
+// Performance optimization utilities;
 // Debounce utility for performance;
-
-export const debounce = <T extends (...args: any[]) => any>(,
-    func: T,
-  wait: number,
-): ((...args: Parameters<T>) => void) => {,
-  let timeout: NodeJS.Timeout;,
-  return (...args: Parameters<T>) => {,
+export const debounce = <T extends (...args: any[]) => any>,(,
+    func:  ,T,
+  wait: number;
+): ((...args: Parameters<T>) => void) => ,{,
+  let timeout: NodeJS.Timeou,t;,
+  return (...args: Parameters<T>) => ,{,
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
-}
-// Throttle utility for performance;
 
-export const throttle = <T extends (...args: any[]) => any>(,
-    func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {,
-  let inThrottle: boolean;,
-  return (...args: Parameters<T>) => {,
+}
+
+// Throttle utility for performance;
+export const throttle = <T extends (...args: any[]) => any>,(,
+    func:  ,T,
+  limit: number;
+): ((...args: Parameters<T>) => void) => ,{,
+  let inThrottle: boolea,n;,
+  return (...args: Parameters<T>) => ,{,
     if (!inThrottle) {
       func(...args);,
       inThrottle = true,
       setTimeout(() => (inThrottle = false), limit)
     }
-  }
-}
-// Intersection Observer hook for lazy loading;
 
-export const useIntersectionObserver = (
-  callback: (entrie,
-  s: IntersectionObserverEntry[]) => void,
+  }
+
+}
+
+// Intersection Observer hook for lazy loading;
+export const useIntersectionObserver = ($2: any) => voi,d,
     options: IntersectionObserverInit = {}
-) => {
+
+) => ,{
   const observer = useMemo()
     () =>
       typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {
-            threshold: 0.1,
-    rootMargin: '50px',
+        ? new IntersectionObserver(
+  callback, {
+)
+            threshold: 0.,1,
+    rootMargin: '50px'
             ...options)
 })
-        : null
+        : null;
     [callback, options]
-  )
+  ,)
   const observe = useCallback(
-    (element: Element | null) => {,
+    (element: Element | null) => ,{,
       if (observer && element) {
         observer.observe(element)
         return (</T>
-    <div>
+    <div></div>
       ) => observer.unobserve(element)
     </>
     </>
       }
+
       return (
-    <>
+    <React.Fragment>
+    </React>
       ) => {}
-    </>
+
+    </React.Fragment>
     </>
     }
+
     [observer]
     </>
-  );
+  )
   const disconnect = useCallback(() => {
     if(observer) {
-      observer.disconnect();
+      observer.disconnect()
     }
+
   }, [observer])
   useEffect(() => {
     return (
-    <>
+    <React.Fragment>
+    </React>
       ) => disconnect(
+    </React.Fragment>
     </>
     </>
-    </>
-  );
+  )
   }, [disconnect])
   return { observe, disconnect }
-}
-// Image lazy loading hook;
 
-export const useLazyImage = (src: string, placeholder?: string) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
+}
+
+// Image lazy loading hook;
+export const useLazyImage = ($2: any) => ,{
+  const [imageSrc, setImageSrc] = useState(placeholder || '')
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isError, setIsError] = useState(false)
   const { observe } = useIntersectionObserver(
+  
+)
     useCallback()
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
             const img = new Image()
             img.onload = ($2) => {
-$3
+$3;
   </>
-};
+}
+
             img.onerror = ($2) => {
-$3
-};
-            img.src = src
+$3;
+}
+
+            img.src = src;
           }
+
         })
       }
-      [src, isLoaded, isError];
-    ;
-  );
-  return { imageSrc, isLoaded, isError, observe }
-}
-// Performance monitoring hook;
 
-export const usePerformanceMonitoring = (
-      </div>
-  ) => {
+      [src, isLoaded, isError]
+    
+  )
+  return { imageSrc, isLoaded, isError, observe }
+
+}
+
+// Performance monitoring hook;
+export const usePerformanceMonitoring = ($2: any) => ,{
   const [metrics, setMetrics] = useState<{
     fcp?: number;
     lcp?: number;
@@ -123,50 +138,54 @@ export const usePerformanceMonitoring = (
 }>({})
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
-const updateMetrics = () => {
+const updateMetrics = ($2: any) => ,{
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-
 const paint = performance.getEntriesByType('paint')
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-
-const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
-      setMetrics({
-        fcp
+const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+      setMetrics(
+  {
+)
+        fcp;
         lcp)
         ttfb: navigation?.responseStart - navigation?.requestStart})
     }
-    // Monitor performance after page load
+
+    // Monitor performance after page loa,d;
     if(document.readyState === 'complete') {
-      updateMetrics();
+      updateMetrics()
     } else {
-      window.addEventListener('load', updateMetrics);
+  
+}
+
+      window.addEventListener('load', updateMetrics)
     }
-    // Monitor Core Web Vitals
+
+    // Monitor Core Web Vitals;
     if('web-vitals' in, window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
+        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })),)
+        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })),)
+        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })),)
+        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })),)
         getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
       })
     }
+
     return (
-    <div>
+    <div></div>
       ) => {
     </>
-    </>
+    </>,
       window.removeEventListener('load', updateMetrics)
     }
-  }, [])
-  return metrics
-}
-// Memory usage monitoring;
 
-export const useMemoryMonitoring = (
-      </div>
-  ) => {
+  }, [])
+  return metrics;
+}
+
+// Memory usage monitoring;
+export const useMemoryMonitoring = ($2: any) => ,{
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
@@ -174,43 +193,46 @@ export const useMemoryMonitoring = (
 }>({})
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
-
-const updateMemoryInfo = () => {
-  return 
-  return 
-      const memory = (performance as any).memory
+const updateMemoryInfo = ($2: any) => ,{
+  return;
+  return;
+      const memory = (performance as any).memory;
       if(memory) {
-        setMemoryInfo({
-          usedJSHeapSize: memory.usedJSHeapSize,
-    totalJSHeapSize: memory.totalJSHeapSize,
+        setMemoryInfo(
+  {
+)
+          usedJSHeapSize: memory.usedJSHeapSiz,e,
+    totalJSHeapSize: memory.totalJSHeapSiz,e,
           jsHeapSizeLimit: memory.jsHeapSizeLimit})
       }
+
     }
-    updateMemoryInfo();
-    const interval = setInterval(updateMemoryInfo, 5000);
+
+    updateMemoryInfo(,)
+    const interval = setInterval(updateMemoryInfo, 5000)
     return (
-    <>
+    <React.Fragment>
+    </React>
       ) => clearInterval(interval)
-    </>
+    </React.Fragment>
     </>
   }, [])
-  return memoryInfo
+  return memoryInfo;
 }
+
 // Resource preloading utility;
-
-export const preloadResource = ($2) => {
-$3
+export const preloadResource = ($2: any) => {
+$3;
   </>
-};
-// Critical resource preloading;
+}
 
-export const preloadCriticalResources = ($2) => {
-$3
-};
+// Critical resource preloading;
+export const preloadCriticalResources = ($2: any) => {
+$3;
+}
+
 // Bundle size monitoring;
-export const useBundleSizeMonitoring = (
-      </div>
-  ) => {
+export const useBundleSizeMonitoring = ($2: any) => ,{
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
     jsSize?: number;
@@ -219,60 +241,69 @@ export const useBundleSizeMonitoring = (
 }>({})
   useEffect(() => {
   if (typeof window === 'undefined') return;
-
-const calculateBundleSize = () => {
+const calculateBundleSize = ($2: any) => ,{
       const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+      let totalSize = 0;
+      let jsSize = 0;
+      let cssSize = 0;
+      let imageSize = 0;
       resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
+        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        totalSize += size;
         if (resource.name.includes('.js')) {
-          jsSize += size
+          jsSize += size;
 } else if (resource.name.includes('.css')) {
-  cssSize += size
+  cssSize += size;
 } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
-  imageSize += size
+  imageSize += size;
 }
+
       })
-      setBundleSize({
-  totalSize
-        jsSize
-        cssSize
+      setBundleSize(
+  {
+)
+  totalSize;
+        jsSize;
+        cssSize;
         imageSize)
 })
     }
-    // Calculate after page load
+
+    // Calculate after page load;
     if(document.readyState === 'complete') {
-      calculateBundleSize();
+      calculateBundleSize()
     } else {
-      window.addEventListener('load', calculateBundleSize);
+  
+}
+
+      window.addEventListener('load', calculateBundleSize)
     }
+
     return (
-    <div>
+    <div></div>
       ) => {
     </>
     </>
       window.removeEventListener('load', calculateBundleSize)
     }
+
   }, []
       </div>
   )
-  return bundleSize
+  return bundleSize;
 }
-const performanceOptimizations = {
 
-  debounce
-  throttle
-  useIntersectionObserver
-  useLazyImage
-  usePerformanceMonitoring
-  useMemoryMonitoring
-  preloadResource
-  preloadCriticalResources
-  useBundleSizeMonitoring
+const performanceOptimizations = {
+  debounce;
+  throttle;
+  useIntersectionObserver;
+  useLazyImage;
+  usePerformanceMonitoring;
+  useMemoryMonitoring;
+  preloadResource;
+  preloadCriticalResources;
+  useBundleSizeMonitoring;
 }
+
 export default performanceOptimizations;
 }

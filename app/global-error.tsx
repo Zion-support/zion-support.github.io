@@ -1,25 +1,34 @@
-"use client";
+'use client';
+
 import React from 'react';
-import { Helmet } from "react-helmet-async";
 
-const GlobalErrorPage: React.FC = () => {
+interface GlobalErrorProps {
+  error: Error & { digest?: string };
+  reset: () => void;
+}
+
+export default function GlobalError({ error, reset }: GlobalErrorProps) {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Global-error - Zion Tech Group</title>
-        <meta name="description" content="Professional global-error services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">Global-error</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
+    <html>
+      <body>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">⚠️</span>
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong!</h1>
+            <p className="text-gray-600 mb-6">
+              We encountered an unexpected error. Please try again.
+            </p>
+            <button
+              onClick={reset}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Try again
+            </button>
+          </div>
         </div>
-      </div>
-    </React.Fragment>
+      </body>
+    </html>
   );
-};
-
-export default GlobalErrorPage;
+}

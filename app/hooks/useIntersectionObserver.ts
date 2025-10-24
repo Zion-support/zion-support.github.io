@@ -1,4 +1,5 @@
-export const useIntersectionObserver = () => {
-  // Add hook logic here
+export const useIntersectionObserver = ($2: any) => {
+  // Add hook logic her,e;
   return {}
+
 }

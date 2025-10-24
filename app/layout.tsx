@@ -1,23 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Analytics from './components/Analytics';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 
-<<<<<<< HEAD
-const inter = Inter({ subsets: ['latin'] })
-=======
 const inter = Inter({ subsets: ['latin'] });
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-  description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
-  keywords: 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
+  title: 'Zion Tech Group - AI & IT Solutions',
+  description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+  keywords: 'AI solutions, IT services, technology consulting, digital transformation, cloud computing, software development',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -26,31 +16,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
-    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & Technology Solutions',
-      },
-    ],
-    locale: 'en_US',
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology.',
     type: 'website',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
-    description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
-    images: ['/og-image.jpg'],
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology.',
   },
   robots: {
     index: true,
@@ -63,40 +38,18 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-<<<<<<< HEAD
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-=======
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#3b82f6" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className={`${inter.className} antialiased`}>
-        <Analytics />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer>
-          {children}
-        </AccessibilityEnhancer>
-        <PerformanceMonitor />
+      <body className={inter.className}>
+        {children}
       </body>
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
     </html>
   );
 }

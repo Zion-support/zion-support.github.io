@@ -1,29 +1,85 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Footer from '@/components/Footer';
+import Footer from '../../components/Footer';
+import Navigation from '../../components/Navigation';
 
-export default function AiEmailMarketingAutomationPage() {
+export default function aiemailmarketingautomationPage() {
   return (
     <>
-      <Head>
-        <title>Ai Email Marketing Automation - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1>Ai Email Marketing Automation - Zion Tech Group</h1>
-          <p>Professional ai email marketing automation - zion tech group services coming soon.</p>
-          <Link href="/contact"
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Ai Email Marketing Automation
+          </h1>
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Professional ai email marketing automation services by Zion Tech Group.
+          </p>
+          <Link
+            href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            Get Started
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Our Ai Email Marketing Automation Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive ai email marketing automation solutions tailored to your business needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Advanced Solutions
+              </h3>
+              <p className="text-gray-600">
+                Cutting-edge technology and innovative approaches.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick deployment and rapid results.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Customized Approach
+              </h3>
+              <p className="text-gray-600">
+                Tailored solutions for your specific requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 }
