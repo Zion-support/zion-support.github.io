@@ -1,257 +1,81 @@
 'use client';
-import React from "react";
-import { Helmet } from 'react-helmet-async';
-export default function AiSupplyChainOptimizerPage() {
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
+
+export default function Ai Supply Chain OptimizerPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Ai Supply Chain Optimizer solutions by Zion Tech Group" />
-      </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Supply Chain Optimizer</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai supply chain optimizer solutions designed to meet your business needs.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-import {Helmet} from 'react-helmet-async';
-
-import {Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target} from 'lucide-react';
-
-  const features = [{title: 'Predictive Demand Forecasting',
-import React  from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
-import { Truck, ArrowRight} from 'lucide-react';
-export default function AISupplyChainOptimizerPage() {
-  const features = [
-    {
-      title: 'Predictive Demand Forecasting',
-      description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
-      icon: <TrendingUp className="w-5h-5ml-2"   />,
-      benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']},
-    {title: 'Smart Route Optimization',
-      description: 'Advanced logistics algorithms optimize delivery routes, reduce fuel costs, and improve delivery times.',
-      icon: <Truck className="w-5h-5ml-2"   />,
-      benefits: ['Route optimization', 'Fuel cost reduction', 'Delivery time improvement', 'Real-time tracking']},
-    {title: 'Automated Inventory Management',
-      description: 'Intelligent inventory control with automated reordering, stock level monitoring, and waste reduction.',
-      icon: <Package className="w-5h-5ml-2"   />,
-      benefits: ['Auto reordering', 'Stock monitoring', 'Waste reduction', 'Cost optimization']},
-    {title: 'Risk Management & Compliance',
-      description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
-      icon: <Shield className="w-5h-5ml-2"   />,
-      benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']}
-  ];
-  const pricingPlans = [{name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small to medium businesses',
-      features: [
-        'Up to 5 warehouses',
-        'Basic demand forecasting',
-        'Route optimization',
-        'Email support',
-        'Standard integrations'],
-      popular: false;},
-    {name: 'Professional',
-      price: '$599',
-      period: '/month',
-      description: 'Advanced features for growing companies',
-      features: ['Up to 25 warehouses',
-        'Advanced AI forecasting',
-        'Multi-modal optimization',
-        'Priority support',
-        'Custom integrations',
-        'Real-time analytics'],
-      popular: true;},
-    {name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Complete solution for large organizations',
-      features: ['Unlimited warehouses',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated account manager',
-        'API access',
-        'Advanced security'],
-      popular: false;}
-  ];
-  const testimonials = [{name: 'Robert Chen',
-      role: 'Supply Chain Director',
-      company: 'Global Logistics Inc.',
-      content: 'AI Supply Chain Optimizer reduced our logistics costs by 35% and improved delivery times by 40%. The predictive analytics are game-changing.',
-      rating: 5;},
-    {name: 'Maria Rodriguez',
-      role: 'Operations Manager',
-      company: 'RetailMax Corp',
-      content: 'The automated inventory management saved us from stockouts and overstocking. Our inventory turnover improved by 50%.',
-      rating: 5;},
-    {name: 'James Wilson',
-      role: 'CEO',
-      company: 'Manufacturing Solutions',
-      content: 'This AI tool transformed our entire supply chain. We can now predict disruptions before they happen and optimize accordingly.',
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AisupplychainoptimizerPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Ai Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional ai supply chain optimizer services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Supply Chain Optimizer</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ai supply chain optimizer services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-      rating: 5
-    }
-  ];
-  const stats = [
-    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-6h-6" /> },
-    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-6h-6" /> },
-    { number: '500+', label: 'Companies Using', icon: <Globe className="w-6h-6" /> },
-    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6h-6" /> }
-  ];
-  return (
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
-        <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." / / />
-        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
-      </Helmet>
-
-      <FuturisticBackground variant="services" />
-        {/* Hero Section */}
-        <section className="pt-20 px-4 py-12sm:py-16lg:py-20" />
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-12">
-              <h1 className="text-3 xl sm:text-4xl md:text-5 xl lg:text-6 xl font-bold text-white mb-6"  />AI Supply Chain Optimizer
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
-              Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
-                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-
-                <FuturisticButton
-                  variant="primary"
-                  size="lg"
-                  onClick="{()" = /> window.open('/contact', '_blank')}
-                >
-                  Start Free Trial
-                  <ArrowRight className="w-5h-5ml-2" />
-                </FuturisticButton>
-
-                <FuturisticButton
-                  variant="ghost"
-                  size="lg"
-                  onClick="{()" =  />window.open('#demo', '_blank')}
-                >
-                  Watch Demo
-                </FuturisticButton>
-              </div>
-
-              {features.map((feature, index) => (
-                <FuturisticCard key="{index}" variant="service" className="h-full" />
-
-              {pricingPlans.map((plan, index) => (
-                <FuturisticCard 
-                  key="{index}" 
-                  variant="{plan.popular" ? "feature" : "service"} 
-                  className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
-                  {plan.popular && (
-
-              {testimonials.map((testimonial, index) => (
-                <FuturisticCard key="{index}" variant="testimonial" className="h-full" />
-                  <div className="flex items-centermb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
-                    ))}
-                  </div>
-                  <blockquote className="text-gray-300 mb-6italic"  />"{testimonial.content}"
-                  </blockquote>
-                  <footer />
-                    <p className="font-semiboldtext-white">
-              {testimonial.name}</p>
-                    <p className="text-gray-400text-sm">
-              {testimonial.role}</p>
-                    <p className="text-gray-500text-sm">
-              {testimonial.company}</p>
-                  </footer>
-                </FuturisticCard>
-
-              ))}
-            </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-12 sm:py-16lg:py-20px-4" />
-          <div className="max-w-7xlmx-auto">
-            <FuturisticCard variant="feature" className="text-center" />
-              <h2 className="text-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Optimize Your Supply Chain?
-              </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto">
-              Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-                <FuturisticButton
-                  variant="primary"
-                  size="lg"
-                  onClick="{()" =>window.open('/contact', '_blank')}
-                >
-                  Start Free Trial
-                </FuturisticButton>
-                <FuturisticButton
-                  variant="secondary"
-                  size="lg"
-                  onClick="{()" =  />window.open('/contact', '_blank')}
-                >
-                  Schedule Demo
-                </FuturisticButton>
-              </div>
-              <div className="mt-8text-white/80text-sm">
-                <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-              </div>
-            </FuturisticCard>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive ai supply chain optimizer solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
           </div>
-        </section>
-      </FuturisticBackground>
-
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Ai Supply Chain Optimizer Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

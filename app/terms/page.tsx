@@ -1,351 +1,81 @@
-import { Helmet } from 'react-helmet-async';
-export default function TermsPage() {
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
+export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-import React  from 'react';
-const TermsPage: React.FC = () => {
-  return (
-      <Helmet>
-        <title>Terms - Zion Tech Group</title>
-        <meta name="description" content="Terms solutions by Zion Tech Group" />
-      </Helmet>
-'use client';
-
-import React from 'react';
-      title: 'Service Availability',
-      icon: Server,
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.',
-    },
-    {
-      icon: Shield,
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.',
-    },
-    {
-      title: 'Privacy Policy',
-      icon: Lock,
-      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.'
-    },
-    {
-      title: 'Intellectual Property',
-      icon: Database,
-      content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.'
-    },
-    {
-      title: 'Termination',
-      icon: AlertTriangle,
-      content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.'
-    },
-    {
-      title: 'Governing Law',
-      icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.',
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white"></div>
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
-        <div className="container mx-auto px-4 text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Terms of Service</h1>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services
-          </p>
-          <div className="flex items-center justify-center text-sm text-blue-200"></div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated,}
-          </div>
-        </div>
-      </div>
-
-  return (
-    <>
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Terms of service and legal information." />
-        <meta name="keywords" content="terms of service, legal, terms, conditions" />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Terms of Service
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Terms of service and legal information.
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        <div className="container mx-autopx-4py-16">
-          <div className="text-centermb-16">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Terms
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Professional terms services by Zion Tech Group.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-              We're working on bringing you comprehensive terms solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div>
-          </div>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-      </div>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Shield, Database, Lock, Eye, CheckCircle, AlertTriangle, Info, FileText, Scale, Users, Globe } from 'lucide-react'
-
-const TermsPage: React.FC = () => {
-  const lastUpdated = 'January 1, 2024'
-
-  const sections = [
-    {
-      title: 'Acceptance of Terms',
-      content: 'By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.'
-    },
-    {
-      title: 'Use License',
-      content: 'Permission is granted to temporarily download one copy of the materials on Zion Tech Group\'s website for personal, non-commercial transitory viewing only.'
-    },
-    {
-      title: 'Disclaimer',
-      content: 'The materials on Zion Tech Group\'s website are provided on an \'as is\' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.'
-    },
-    {
-      title: 'Limitations',
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group\'s website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.'
-    },
-    {
-      title: 'Accuracy of Materials',
-      content: 'The materials appearing on Zion Tech Group\'s website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current.'
-    },
-    {
-      title: 'Links',
-      content: 'Zion Tech Group has not reviewed all of the sites linked to our website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Zion Tech Group of the site.'
-    },
-    {
-      title: 'Modifications',
-      content: 'Zion Tech Group may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.'
-    },
-    {
-      title: 'Governing Law',
-      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
-    }
-  ]
-
-  const contactInfo = {
-    email: 'legal@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '123 Tech Street, San Francisco, CA 94105'
-  }
-
-  return (
-    <>
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Read our terms of service and understand the terms and conditions for using our website and services." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-white mb-6">Terms of Service</h1>
-            <p className="text-gray-300 mb-8">Last updated: {lastUpdated}</p>
-
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-2xl font-semibold text-white mb-4">Introduction</h2>
-              <p className="text-gray-300 mb-6">
-                Welcome to Zion Tech Group. These terms of service outline the rules and regulations for the use of 
-                our website and services. By accessing this website, we assume you accept these terms of service.
-              </p>
-
-              <div className="space-y-8">
-                {sections.map((section, index) => (
-                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700">
-                    <h3 className="text-xl font-semibold text-white mb-3">{section.title}</h3>
-                    <p className="text-gray-300">{section.content}</p>
-                  </div>
-                ))}
-              </div>
-
-              <h2 className="text-2xl font-semibold text-white mb-4 mt-12">Contact Information</h2>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700">
-                <p className="text-gray-300 mb-4">
-                  If you have any questions about these Terms of Service, please contact us:
-                </p>
-                <div className="space-y-2 text-gray-300">
-                  <p><strong>Email:</strong> {contactInfo.email}</p>
-                  <p><strong>Phone:</strong> {contactInfo.phone}</p>
-                  <p><strong>Address:</strong> {contactInfo.address}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <Footer />
-    </>
-import Footer from '../components/Footer';
-import SEOHead from '../components/SEOHead';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Navigation from '../components/Navigation';
-
-const TermsPage = () => {
-  return (
-    <ErrorBoundary>
-      <SEOHead 
-        title="Terms of Service - Zion Tech Group"
-        description="Terms of Service for Zion Tech Group - AI-Powered Enterprise Solutions"
-      />
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
-          <div className="prose prose-invert max-w-none">
-            <p className="text-gray-300 mb-6">
-              These terms of service govern your use of Zion Tech Group's services.
-            </p>
-            <h2 className="text-2xl font-semibold text-white mb-4">Acceptance of Terms</h2>
-            <p className="text-gray-300 mb-6">
-              By using our services, you agree to be bound by these terms.
-            </p>
-            <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Terms</h1>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive terms solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
             <p className="text-gray-300">
-              If you have any questions about these terms, please contact us at kleber@ziontechgroup.com.
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
             </p>
           </div>
         </div>
-      </main>
-
-      <Footer />
-    </ErrorBoundary>
-  );
-};
-
-export default TermsofServicePage;
-import React from 'react';
-
-import {Helmet} from 'react-helmet-async';
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-export default function Terms() {return (
-    <title>Terms - Zion Tech Group</title>
-
-            <h1 className="text-4xl font-bold text-white mb-6">Terms</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional terms services coming soon.</p>
-
-              Contact Us
-
-      <  />
-  );}
-
-    <><  />
-      <Helmet></Helmet>
-        <title>Terms - Zion Tech Group</title>
-        <meta name="description" content="Terms services by Zion Tech Group. Professional AI and IT solutions."   /></meta>
-        <meta name="keywords" content="terms, AI solutions, IT services"   /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2"   /></h1>
-              <span className="w-5h-5ml-2"   />Terms;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional terms services by Zion Tech Group.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive terms solutions.
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us;
-            </button>
-          </div>
-      </div>
-    <  />
-  );
-};
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function TermsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Terms - Zion Tech Group</title>
-        <meta name="description" content="Professional terms services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Terms</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional terms services coming soon.</p>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Terms Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
           
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-
-  );
-};
-
-export default TermsPage;

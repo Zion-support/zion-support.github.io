@@ -1,164 +1,81 @@
 'use client';
-import React from "react";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Workflow, 
-  Bot, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  BarChart3, 
-  Shield,
-  Sparkles,
-  Target,
-  Cpu,
-  Globe
-} from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-const ZionAIWorkflowAutomatorProPage: React.FC = () => {
-  const features = [
-    {
-      title: "Intelligent Process Automation",
-      description: "AI-powered workflow automation that learns from your business processes and optimizes them automatically.",
-      icon: <Bot className="w-6 h-6" />,
-      benefits: ["Reduce manual work by 80%", "Eliminate human errors", "24/7 automated execution"]
-    },
-    {
-      title: "Visual Workflow Builder",
-      description: "Drag-and-drop interface to create complex workflows without coding knowledge.",
-      icon: <Workflow className="w-6 h-6" />,
-      benefits: ["No-code automation", "Visual process mapping", "Easy customization"]
-    },
-    {
-      title: "Smart Decision Engine",
-      description: "AI makes intelligent decisions based on data patterns and business rules.",
-      icon: <Cpu className="w-6 h-6" />,
-      benefits: ["Context-aware decisions", "Pattern recognition", "Adaptive learning"]
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Monitor all workflows in real-time with detailed analytics and performance metrics.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Live workflow status", "Performance analytics", "Instant alerts"]
-    },
-    {
-      title: "Multi-platform Integration",
-      description: "Connect with 500+ applications and services through our extensive integration library.",
-      icon: <Globe className="w-6 h-6" />,
-      benefits: ["500+ integrations", "API connectivity", "Custom connectors"]
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, audit trails, and compliance features.",
-      icon: <Shield className="w-6 h-6" />,
-      benefits: ["End-to-end encryption", "Audit logs", "SOC 2 compliance"]
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small teams getting started with automation",
-      features: [
-        "Up to 10 workflows",
-        "Basic integrations",
-        "Email support",
-        "Standard templates",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing businesses with complex automation needs",
-      features: [
-        "Up to 50 workflows",
-        "Advanced integrations",
-        "Priority support",
-        "Custom templates",
-        "Advanced analytics",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large organizations with enterprise-scale automation requirements",
-      features: [
-        "Unlimited workflows",
-        "All integrations",
-        "24/7 dedicated support",
-        "Custom development",
-        "Enterprise analytics",
-        "Advanced security",
-        "White-label options",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      company: "TechFlow Solutions",
-      role: "Operations Director",
-      content: "Zion AI Workflow Automator Pro reduced our manual processes by 85%. The ROI was evident within the first month.",
-      rating: 5,
-      avatar: "SC",
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "DataCorp Inc.",
-      role: "CTO",
-      content: "The visual workflow builder is incredibly intuitive. We automated our entire customer onboarding process in just 2 days.",
-      rating: 5,
-      avatar: "MR",
-    },
-    {
-      name: "Emily Watson",
-      company: "GrowthTech",
-      role: "VP of Operations",
-      content: "The AI decision engine has been a game-changer. It handles complex business logic better than our previous solutions.",
-      rating: 5,
-      avatar: "EW",
-    }
-  ];
-
-export default function ZionaiworkflowautomatorproPage() {
+export default function Zion Ai Workflow Automator ProPage() {
   return (
-    <div>
-      <Head>
-        <title>Zion Ai Workflow Automator Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Zion Ai Workflow Automator Pro
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            zion-ai-workflow-automator-pro services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Zion Ai Workflow Automator Pro</h1>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive zion ai workflow automator pro solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Zion Ai Workflow Automator Pro Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

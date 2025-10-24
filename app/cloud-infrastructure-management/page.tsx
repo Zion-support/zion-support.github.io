@@ -1,326 +1,79 @@
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-import React from 'react'
-import {Link} from 'react-router-dom'
-
-import {Cloud, ArrowRight, CheckCircle, Star, TrendingUp, Server, Shield} from 'lucide-react';
-
-import Layout from '../layout'
-
+'use client';
 import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-export default function CloudInfrastructureManagement() {const features = [{
-      icon: <Cloud className="w-5h-5ml-2"   />,
-      title: 'Multi-Cloud Management',
-      description: 'Seamlessly manage infrastructure across AWS, Azure, Google Cloud, and private clouds'},
-    {icon: <Shield className="w-5h-5ml-2"   />,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with automated compliance monitoring and threat detection'},
-    {icon: <TrendingUp className="w-5h-5ml-2"   />,
-      title: 'Cost Optimization',
-      description: 'Reduce cloud costs by up to 40% with intelligent resource optimization and right-sizing'},
-    {icon: <Server className="w-5h-5ml-2"   />,
-      title: '24/7 Monitoring',
-      description: 'Proactive monitoring with automated scaling, performance optimization, and incident response'}]
-
-  const managementFeatures = [{category: 'Infrastructure Management',
-      items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup & Recovery', 'Disaster Recovery']},
-    {category: 'Security & Compliance',
-      items: ['Identity Management', 'Access Control', 'Encryption', 'Vulnerability Scanning', 'Compliance Auditing', 'Security Monitoring']},
-    {category: 'Cost Management',
-      items: ['Cost Analysis', 'Resource Optimization', 'Budget Alerts', 'Usage Tracking', 'Cost Forecasting', 'Right-sizing Recommendations']},
-    {category: 'Support & Maintenance',
-      items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']}
-  ]
-
-  const pricingPlans = [{name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 10 servers',
-        'Basic monitoring',
-        'Email support',
-        'Standard security',
-        'Monthly reports',
-        'Basic backup'],
-      popular: false;},
-    {name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: ['Up to 50 servers',
-        'Advanced monitoring',
-        'Priority support',
-        'Enhanced security',
-        'Weekly reports',
-        'Advanced backup',
-        'Cost optimization'],
-      popular: true;},
-    {name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'For large organizations',
-      features: ['Unlimited servers',
-        'Comprehensive monitoring',
-        'Dedicated support',
-        'Enterprise security',
-        'Real-time reports',
-        'Disaster recovery',
-        'Custom solutions'],
-      popular: false;}
-  ]
-
-  const testimonials = [{name: 'Robert Kim',
-      company: 'Financial Services',
-      content: 'Cloud Infrastructure Management reduced our operational costs by 35% while improving performance and security.',
-      rating: 5;},
-    {name: 'Lisa Martinez',
-      company: 'E-commerce Platform',
-      content: 'The automated scaling and monitoring saved us from multiple outages. Our uptime is now 99.99%.',
-      rating: 5;},
-    {name: 'David Wilson',
-      company: 'Healthcare Provider',
-      content: 'HIPAA compliance was seamless with their security framework. Our auditors were very impressed.',
-      rating: 5;}]
-
+export default function Cloud Infrastructure ManagementPage() {
   return (
-    <Layout;</Layout></Layout>
-      title="Cloud Infrastructure Management - Enterprise Cloud Solutions | Zion Tech Group"
-      description="Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. Multi-cloud support, 24/7 monitoring, and enterprise-grade security. Get your free assessment today."
-      keywords="cloud infrastructure management, cloud optimization, multi-cloud, cloud security, cloud monitoring, cloud cost optimization" /></Layout>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        {/* Hero Section */}
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Cloud className="w-5h-5ml-2"   /></Cloud>
-                Enterprise Cloud Management;
-              </div>
-              <h1 className="w-5h-5ml-2">Cloud Infrastructure Management;
-              </h1>
-              <p className="w-5h-5ml-2">Optimize your cloud infrastructure with comprehensive management, security, and cost optimization.
-                Multi-cloud support, 24/7 monitoring, and enterprise-grade security.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link;</Link></Link>
-          to="/contact"
-          className="bg-gradient-to-rfrom-sky-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-        ></Link>
-          Get Free Assessment;
-          <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
-        </Link>
-                <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Demo;
-                </Link>
-              </div>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Cloud Infrastructure Management</h1>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive cloud infrastructure management solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
           </div>
-        </section>
-        {/* Features Section */}
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2"   />Comprehensive Cloud Management;
-              </h2>
-              <p className="w-5h-5ml-2">Enterprise-grade features that optimize your cloud infrastructure performance and costs;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40transition-all duration-300"   /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    {feature.icon}
-                    <h3 className="w-5h-5ml-2"   />{feature.title}</h3>
-                  </div>
-                  <p className="w-5h-5ml-2">{feature.description}</p>
-                </div>
-  ))}
-            </div>
-        </section>
-        {/* Management Features */}
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2"   />Complete Infrastructure Solution;
-              </h2>
-              <p className="w-5h-5ml-2">Everything you need to manage, secure, and optimize your cloud infrastructure;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {managementFeatures.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700"   /></div>
-                  <h3 className="w-5h-5ml-2"   />{feature.category}</h3>
-                  <ul className="w-5h-5ml-2"   /></ul>
-                    {feature.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300"   /></li>
-                        <CheckCircle className="w-5h-5ml-2"   /></CheckCircle>
-                        {item}
-                      </li>
-  ))}
-                  </ul>
-                </div>
-  ))}
-            </div>
-        </section>
-        {/* Pricing Section */}
-        <section className="w-5h-5ml-2"   /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2"   />Transparent Pricing Plans;
-              </h2>
-              <p className="w-5h-5ml-2">Choose the plan that fits your infrastructure needs;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular;
-                    ? 'border-sky-400/40 scale-105 shadow-2 xl shadow-sky-500/20'
-                    : 'border-sky-500/20 hover: border-sky-400/40'}`}   /></div>
-                  {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <Star className="w-5h-5ml-2"   /></Star>
-                      Most Popular;
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Cloud, ArrowRight, CheckCircle, Star, TrendingUp, Server, Shield } from 'lucide-react';
-import Layout from '../layout'
-
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-
-              {features.map((feature, index) => (
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40transition-allduration-300" />
-
-              {managementFeatures.map((feature, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-
-              {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-sky-400/40 scale-105 shadow-2xll shadow-sky-500/20' 
-                    : 'border-sky-500/20 hover: border-sky-400/40'
-                }`} />
-                  {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-sky-500/20 rounded-full text-sky-400 text-smfont-mediummb-4">
-                      <Star className="w-4h-4mr-1" />
-                      Most Popular
-                    </div>
-  )}
-                  <h3 className="w-5h-5ml-2"   />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <span className="w-5h-5ml-2"   />{plan.price}</span>
-                    <span className="w-5h-5ml-2"   />{plan.period}</span>
-                  </div>
-                  <ul className="w-5h-5ml-2"   /></ul>
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-sky-400mr-3" />
-                        {feature}
-                      </li>
-  ))}
-                  </ul>
-                  <Link;</Link></Link>
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular;
-                        ? 'bg-gradient-to-r from-sky-500 to-purple-600 text-white hover:from-sky-600 hover:to-purple-700'
-                        : 'border-2 border-sky-400 text-sky-400 hover: bg-sky-400/10'
-                    }`}
-                    />Get Started
-                  </Link>
-                </div>
-              ))}
-            </div>
-        </section>
-        {/* Testimonials */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Industry Leaders
-              </h2>
-              <p className="w-5h-5ml-2">See how our Cloud Infrastructure Management transforms businesses;
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="flex items-centermb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4">
-              "{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-smtext-gray-400"   />{testimonial.company}</div>
-                </div>
-              ))}
-            </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-4 xlmx-autotext-center">
-            <div className="bg-gradient-to-r from-sky-500/20 to-purple-500/20 rounded-2xll p-8borderborder-sky-500/30">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Optimize Your Cloud Infrastructure Today
-              </h2>
-              <p className="w-5h-5ml-2">Join thousands of businesses using our Cloud Infrastructure Management to reduce costs and improve performance;
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-                <Link to="/contact" className="bg-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700transition-allduration-300">Get Your Free Assessment
-                </Link>
-                <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  )
-
-};
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function CloudinfrastructuremanagementPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Cloud Infrastructure Management - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud infrastructure management services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Cloud Infrastructure Management</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional cloud infrastructure management services coming soon.</p>
           
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Cloud Infrastructure Management Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
     </div>

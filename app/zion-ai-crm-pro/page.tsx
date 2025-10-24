@@ -1,167 +1,78 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-const ZionAICRMProPage = () => {
-  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
-
-  const benefits: string[] = [];
-
-  const features = [
-    {
-      title: 'AI Lead Scoring',
-      description: 'Intelligent lead scoring algorithm that automatically ranks prospects based on likelihood to convert.',
-      icon: <Target className="w-6 h-6" />,
-      benefits: ['Automatic scoring', 'Behavioral analysis', 'Conversion prediction', 'Custom scoring models']
-    },
-    {
-      title: 'Automated Follow-ups',
-      description: 'Smart follow-up sequences that automatically engage leads at the right time with personalized messages.',
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ['Smart timing', 'Personalized content', 'Multi-channel outreach', 'Performance tracking']
-    },
-    {
-      title: 'Predictive Analytics',
-      description: 'Advanced analytics that predict customer behavior, churn risk, and sales opportunities.',
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ['Churn prediction', 'Upsell opportunities', 'Customer lifetime value', 'Risk assessment']
-    },
-    {
-      title: 'Email Integration',
-      description: 'Seamless email integration with automatic logging, tracking, and response management.',
-      icon: <Mail className="w-6 h-6" />,
-      benefits: ['Auto-logging', 'Email tracking', 'Response management', 'Template library']
-    },
-    {
-      title: 'Sales Pipeline Management',
-      description: 'Visual pipeline management with drag-and-drop stages and automated progression rules.',
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ['Visual pipeline', 'Drag-and-drop', 'Automated rules', 'Stage analytics']
-    },
-    {
-      title: 'Customer Segmentation',
-      description: 'AI-powered customer segmentation for targeted marketing and personalized experiences.',
-      icon: <Users className="w-6 h-6" />,
-      benefits: ['AI segmentation', 'Behavioral grouping', 'Custom segments', 'Dynamic updates']
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small teams getting started with AI CRM',
-      features: [
-        'Up to 1,000 contacts',
-        'Basic AI lead scoring',
-        'Email integration',
-        'Mobile app',
-        'Email support',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing sales teams with advanced needs',
-      features: [
-        'Up to 10,000 contacts',
-        'Advanced AI features',
-        'Full email integration',
-        'Sales pipeline management',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom fields'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'Complete solution for large sales organizations',
-      features: [
-        'Unlimited contacts',
-        'Premium AI features',
-        'Advanced integrations',
-        'Custom workflows',
-        '24/7 dedicated support',
-        'Advanced reporting',
-        'White-label options',
-        'On-premise deployment',
-        'Custom training',
-        'SLA guarantee'
-      ],
-      popular: false
-  ];
-
-  const integrations = [
-    { name: 'Gmail', logo: 'GM', category: 'Email' },
-    { name: 'Outlook', logo: 'OL', category: 'Email' },
-    { name: 'Slack', logo: 'SL', category: 'Communication' },
-    { name: 'Microsoft Teams', logo: 'MT', category: 'Communication' },
-    { name: 'Zoom', logo: 'ZM', category: 'Video' },
-    { name: 'Calendly', logo: 'CL', category: 'Scheduling' },
-    { name: 'Stripe', logo: 'ST', category: 'Payments' },
-    { name: 'PayPal', logo: 'PP', category: 'Payments' },
-    { name: 'HubSpot', logo: 'HS', category: 'Marketing' },
-    { name: 'Mailchimp', logo: 'MC', category: 'Email Marketing' },
-    { name: 'Zapier', logo: 'ZP', category: 'Automation' },
-    { name: 'Salesforce', logo: 'SF', category: 'CRM' }
-  ];
-export default function ZionAiCrmProPage() {
-
+export default function Zion Ai Crm ProPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Crm Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Crm Pro solutions by Zion Tech Group" />
-      </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Zion Ai Crm Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion ai crm pro solutions designed to meet your business needs.
-          </p>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive zion ai crm pro solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Zion Ai Crm Pro Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </div>

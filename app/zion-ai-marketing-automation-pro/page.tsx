@@ -1,152 +1,78 @@
-import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, TrendingUp, Globe, Play, Star as StarIcon, Zap as ZapIcon, Star as StarIcon2, TrendingUp as Growth, CheckCircle as Success, MapPin as Address, Phone } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Target, Users, MessageSquare, Brain, Zap, ArrowRight, Play, CheckCircle, Mail, Phone, Globe } from 'lucide-react';
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-export default function page() {
-
-  const stats = [
-    { label: "Stat 1", value: "100%" }
-  ];
-  const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", avatar: "/placeholder-avatar.jpg", rating: 5 }
-  ];
-  const benefits = [
-    "Benefit 1",
-    "Benefit 2"
-  ];
-  const features = [
-    {
-      title: "AI-Powered Campaign Optimization",
-      description: "Automatically optimize your marketing campaigns using machine learning algorithms that analyze performance data and adjust targeting, timing, and content in real-time.",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "ROI maximization"]
-    },
-    {
-      title: "Intelligent Audience Segmentation",
-      description: "AI-driven audience segmentation that automatically groups customers based on behavior, preferences, and engagement patterns for highly targeted campaigns.",
-      icon: <Users className="w-6 h-6" />,
-      benefits: ["Behavioral segmentation", "Predictive modeling", "Dynamic audience updates", "Personalization at scale"]
-    },
-    {
-      title: "Multi-Channel Campaign Orchestration",
-      description: "Seamlessly coordinate campaigns across email, social media, SMS, push notifications, and web with unified messaging and timing.",
-      icon: <MessageSquare className="w-6 h-6" />,
-      benefits: ["Cross-channel consistency", "Unified customer journey", "Automated scheduling", "Performance tracking"]
-    },
-    {
-      title: "Predictive Content Generation",
-      description: "AI-powered content creation that generates personalized marketing messages, subject lines, and creative assets based on audience data and preferences.",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Personalized content", "A/B testing automation", "Brand voice consistency", "Performance optimization"]
-    },
-    {
-      title: "Advanced Analytics & Insights",
-      description: "Comprehensive analytics dashboard with AI-powered insights, attribution modeling, and predictive analytics for data-driven marketing decisions.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Attribution modeling", "Predictive analytics", "Custom dashboards", "Real-time reporting"]
-    },
-    {
-      title: "Automated Lead Nurturing",
-      description: "Intelligent lead nurturing workflows that automatically guide prospects through the sales funnel with personalized content and timing.",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"]
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$149",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 5,000 contacts",
-        "Basic AI features",
-        "Email campaigns",
-        "Social media integration",
-        "Email support",
-        "Basic analytics",
-        "5 users included"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Most popular for growing businesses",
-      features: [
-        "Up to 25,000 contacts",
-        "Advanced AI features",
-        "Multi-channel campaigns",
-        "Priority support",
-        "Advanced analytics",
-        "Custom workflows",
-        "15 users included",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited contacts",
-        "AI-powered insights",
-        "Custom integrations",
-        "24/7 phone support",
-        "Advanced security",
-        "White-label options",
-        "Unlimited users",
-        "Dedicated account manager"
-      ],
-      popular: false
-  ];
-
-  return null;
-};
-
-export default function ZionAiMarketingAutomationProPage() {
-
+export default function Zion Ai Marketing Automation ProPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Marketing Automation Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Marketing Automation Pro solutions by Zion Tech Group" />
-      </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Zion Ai Marketing Automation Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion ai marketing automation pro solutions designed to meet your business needs.
-          </p>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive zion ai marketing automation pro solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Zion Ai Marketing Automation Pro Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </div>
