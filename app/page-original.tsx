@@ -9,7 +9,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 // const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 // const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 // const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
@@ -18,9 +18,11 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Preload critical components
 // const preloadComponents = () => {
+
 //   if (typeof window !== 'undefined') {
 //     // Preload critical components after initial render
 //     setTimeout(() => {
+
 //       import('./components/ContentPromotionBanner');
 //       import('./components/ContentCarousel');
 //     }, 100);
@@ -28,8 +30,8 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 // };
 
 // Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+const ServiceCardSkeleton: React.FC = memo(() => (,
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
@@ -38,57 +40,50 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
+
   // const [isLoading, setIsLoading] = useState(true);
 
   // Analytics tracking for phone clicks - optimized
   const _handlePhoneClick = useCallback(() => {
+
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'header_phone',
-      });
-    }
+      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'phone_click', {;
+        event_category: 'engagement',;
+        event_label: 'header_phone'})}
   }, [])
   // Analytics tracking for email clicks - optimized
   const _handleEmailClick = useCallback(() => {
+
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'email_click', {
-        event_category: 'engagement',
-        event_label: 'header_email',
-      });
-    }
+      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'email_click', {;
+        event_category: 'engagement',;
+        event_label: 'header_email'})}
   }, [])
   const features = [
-    {
-      icon: '🤖'
-      title: 'AI-Powered Solutions'
-      description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.'
-        }
-    {
-      icon: '☁️',
-      title: 'Cloud Architecture',
-      description: 'Scalable and secure cloud solutions designed to grow with your business needs.',
-    },
-    {
-      icon: '📱',
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
-    },
-    {
-      icon: '🔒',
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-    },
-    {
-      icon: '📊',
-      title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights that drive business growth and efficiency.',
-    },
-    {
-      icon: '👥',
-      title: 'Expert Team',
-      description: 'Experienced developers and consultants dedicated to delivering exceptional results for your projects.'
-    }
+    {;
+      icon: '🤖',;
+      title: 'AI-Powered Solutions';
+      description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.'}
+    {;
+      icon: '☁️',;
+      title: 'Cloud Architecture',;
+      description: 'Scalable and secure cloud solutions designed to grow with your business needs.'},
+    {;
+      icon: '📱',;
+      title: 'Mobile Development',;
+      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.'},
+    {;
+      icon: '🔒',;
+      title: 'Cybersecurity',;
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.'},
+    {;
+      icon: '📊',;
+      title: 'Data Analytics',;
+      description: 'Transform raw data into actionable insights that drive business growth and efficiency.'},
+    {;
+      icon: '👥',;
+      title: 'Expert Team',;
+      description: 'Experienced developers and consultants dedicated to delivering exceptional results for your projects.'}
     ];
   const stats = [
     { number: '500+', label: 'Projects Completed'     }
@@ -97,23 +92,24 @@ const HomePage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
     ];
   return (
-    <SEOOptimizer
-      title="Zion Tech Group - Leading Technology Solutions Provider"
-      description="Transform your business with cutting-edge AI, cloud architecture, and innovative development services from Zion Tech Group."
+    
+    <SEOOptimizer;
+      title="Zion Tech Group - Leading Technology Solutions Provider";
+      description="Transform your business with cutting-edge AI, cloud architecture, and innovative development services from Zion Tech Group.";
       keywords="AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity"
     >
       <PerformanceOptimizer>
         <AccessibilityEnhancer>
           <SecurityEnhancer>
             <Analytics>
-              <div className="min-h-screen bg-gray-50">
+              <div className="min-h-screen bg-gray-50"></div>
                 <Navigation />
                 
                 <main className="pt-16">
                   {/* Hero Section */}
-                  <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-                    <div className="container mx-auto px-4">
-                      <div className="max-w-4xl mx-auto text-center">
+                  <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"></section>
+                    <div className="container mx-auto px-4"></div>
+                      <div className="max-w-4xl mx-auto text-center"></div>
                         <h1 className="text-5xl font-bold mb-6">
                           Transform Your Business with 
                           <span className="block text-yellow-300">Cutting-Edge Technology</span>
@@ -122,41 +118,42 @@ const HomePage: React.FC = () => {
                           Leading technology solutions provider helping businesses transform their digital
                           presence with AI, cloud architecture, and innovative development services.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                          <button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors">
+                        <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+                          <button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover: bg-yellow-300 transition-colors">,
                             Get Started Today
                           </button>
                           <button className="border border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                            Learn More
-                          </button>
-                        </div>
+              Learn More
+                          
+            </button>
+          </div>
                       </div>
-                    </div>
-                  </section>
+        </div>
+      </section>
 
                   {/* Stats Section */}
-                  <section className="py-16 bg-white">
-                    <div className="container mx-auto px-4">
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                  <section className="py-16 bg-white"></section>
+                    <div className="container mx-auto px-4"></div>
+                      <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto"></div>,
                         {stats.map((stat, index) => (
-                          <div key={index} className="text-center">
-                            <div className="text-4xl font-bold text-blue-600 mb-2">
+                          <div key={index} className="text-center"></div>
+                            <div className="text-4xl font-bold text-blue-600 mb-2"></div>
                               {stat.number}
                             </div>
-                            <div className="text-gray-600">
+                            <div className="text-gray-600"></div>
                               {stat.label}
                             </div>
                           </div>
                         ))}
                       </div>
-                    </div>
-                  </section>
+        </div>
+      </section>
 
                   {/* Features Section */}
-                  <section className="py-16 bg-gray-50">
-                    <div className="container mx-auto px-4">
-                      <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-16">
+                  <section className="py-16 bg-gray-50"></section>
+                    <div className="container mx-auto px-4"></div>
+                      <div className="max-w-6xl mx-auto"></div>
+                        <div className="text-center mb-16"></div>
                           <h2 className="text-4xl font-bold text-gray-900 mb-4">
                             Our Services
                           </h2>
@@ -165,9 +162,9 @@ const HomePage: React.FC = () => {
                           </p>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
                           {features.map((feature, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow"></div>,
                               <div className="text-4xl mb-4">{feature.icon}</div>
                               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                 {feature.title}
@@ -179,28 +176,29 @@ const HomePage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                    </div>
-                  </section>
+        </div>
+      </section>
 
                   {/* CTA Section */}
-                  <section className="py-16 bg-blue-600 text-white">
-                    <div className="container mx-auto px-4 text-center">
+                  <section className="py-16 bg-blue-600 text-white"></section>
+                    <div className="container mx-auto px-4 text-center"></div>
                       <h2 className="text-4xl font-bold mb-4">
                         Ready to Transform Your Business?
                       </h2>
                       <p className="text-xl mb-8 max-w-2xl mx-auto">
                         Let's discuss your project and explore how we can help you achieve your goals.
                       </p>
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors">
+                      <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+                        <button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover: bg-yellow-300 transition-colors">,
                           Get Started
                         </button>
                         <button className="border border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                          Contact Us
-                        </button>
-                      </div>
-                    </div>
-                  </section>
+              Contact Us
+                        
+            </button>
+          </div>
+        </div>
+      </section>
                 </main>
 
                 <Footer />
@@ -210,7 +208,6 @@ const HomePage: React.FC = () => {
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
     </SEOOptimizer>
-  );
-};
+  )};
 
 export default HomePage;

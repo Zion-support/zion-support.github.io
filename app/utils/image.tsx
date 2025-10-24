@@ -1,30 +1,28 @@
 'use client';
 import React from 'react';
 import React, { useState, useCallback } from 'react';
+interface ImageProps {;
+
+  src: string,;
+
+    alt: string}
+
 interface ImageProps {
-
-
-  src: string,
-
-    alt: string,
-  }
-
-interface ImageProps {}
-src: string,
+  [key: string]: any}src: string,;
     alt: string,
 width?: number;
 height?: number;
 className?: string;
 priority?: boolean;
 _quality?: number;
-src: string,
+src: string,;
     alt: string,
 width?: number;
 height?: number;
 className?: string;
 priority?: boolean;
 _quality?: number;
-src: string,
+src: string,;
     alt: string,
 width?: number;
 height?: number;
@@ -37,21 +35,21 @@ fill?: boolean;
 sizes?: string;
 style?: React.CSSProperties
 onLoad?: () => void
-onError?: () => void;}
+onError?: () => void}
 export const Image: React.FC<ImageProps>= ({}</ImageProps>
-export const Image: React.FC<ImageProps> = ({}
+export const Image: React.FC<ImageProps> = ({};
 src;
 
-export const Image: React.FC<ImageProps> = ({,
+export const Image: React.FC<ImageProps> = ({
 src
 alt
 width
-height
-className
-priority = false
-quality = 75
+height;
+className;
+priority = false;
+quality = 75;
 placeholder = 'empty'
-blurDataURL
+blurDataURL;
 fill = false
 sizes
 style,
@@ -71,41 +69,43 @@ if (onError) onError()}
 }, [onError])
 const imageStyle: React.CSSProperties={
 ...style
-...(fill && {
-position: 'absolute',
-    top: 0,
+...(fill && {;
+position: 'absolute',;
+    top: 0,;
 left: 0}
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
-position: 'absolute',
-    top: 0,
-left: 0,
-    width: '100%',
-height: '100%',
+position: 'absolute',;
+    top: 0,;
+left: 0,;
+    width: '100%',;
+height: '100%',;
     objectFit: 'cover'}
 })
 if (hasError) {</ImageProps>
   </ImageProps>
 return (
+    
     </ImageProps>
   );
 if (hasError) {}
 return (
+    
     <div}
 if (hasError) {}
 return(<div};
 interface ImageProps {/* TODO: Fix JSX expression */};
-export const
-Image: React.FC<ImageProps>= ({/* TOD,)
+export const;
+Image: React.FC<ImageProps>= ({/* TOD,);
   O: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 }, [onError])
-const
-imageStyle: React.CSSProperties={/* TOD,
-  O: Fix JSX expression */};})
+const;
+imageStyle: React.CSSProperties={/* TOD,;
+  O: Fix JSX expression */}})
 if (hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className};`}
 style = {
@@ -115,4 +115,4 @@ imageStyle
 >)</div>
 }</img>
 export default Image</img>
-}
+};

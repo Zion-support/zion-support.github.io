@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number;
@@ -28,8 +17,7 @@ export interface ErrorContext {
   sessionId?: string;
   component?: string;
   action?: string;
-  errorBoundary?: string;
-  stackTrace?: string;
+  stack?: string;
 }
 
 export interface ErrorReport {
@@ -106,27 +94,15 @@ export interface AnalyticsEvent {
   sessionId?: string;
 }
 
-export interface AccessibilityMetrics {
-  score: number;
-  issues: AccessibilityIssue[];
-  recommendations: string[];
-}
-
-export interface AccessibilityIssue {
-  id: string;
-  severity: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  helpUrl?: string;
-}
-
 export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
-  canonicalUrl?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
-  twitterCard?: string;
+  twitterCard?: 'summary' | 'summary_large_image';
   structuredData?: Record<string, unknown>;
 }
 
@@ -229,74 +205,4 @@ export interface InputProps extends BaseComponentProps {
   required?: boolean;
   error?: string;
   label?: string;
-<<<<<<< HEAD
 }
-=======
-  canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: Record<string, unknown>;
-}
-
-export interface AnalyticsEvent {
-  name: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  customParameters?: Record<string, unknown>;
-}
-
-export interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  accessibility: {
-    highContrast: boolean;
-    reducedMotion: boolean;
-    screenReader: boolean;
-  };
-  notifications: {
-    email: boolean;
-    push: boolean;
-    sms: boolean;
-  };
-}
-
-export interface APIResponse<T = unknown> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-  timestamp: string;
-}
-
-export interface PaginationParams {
-  page: number;
-  limit: number;
-  sortBy?: string;
-  sortOrder?: 'asc' | 'desc';
-}
-
-export interface SearchParams {
-  query: string;
-  filters?: Record<string, unknown>;
-  pagination?: PaginationParams;
-}
-
-export interface CacheConfig {
-  ttl: number;
-  maxSize: number;
-  strategy: 'lru' | 'fifo' | 'ttl';
-}
-
-export interface FeatureFlag {
-  name: string;
-  enabled: boolean;
-  description?: string;
-  rolloutPercentage?: number;
-  targetUsers?: string[];
-}
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-8836

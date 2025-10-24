@@ -1,110 +1,54 @@
-export interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-  timeToInteractive: number
-  firstMeaningfulPaint: number
+interface PerformanceMetrics {
+  loadTime: number | null;
+  firstContentfulPaint: number | null;
+  largestContentfulPaint: number | null;
+  firstInputDelay: number | null;
+  cumulativeLayoutShift: number | null;
+  timeToInteractive: number | null;
+  totalBlockingTime: number | null;
 }
 
-// Measure Core Web Vitals
-export const measureCoreWebVitals = (): Promise<PerformanceMetrics> => {
-  return new Promise((resolve) => {
-    const metrics: PerformanceMetrics = {
-      loadTime: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0,
-      timeToInteractive: 0,
-      firstMeaningfulPaint: 0
+// Global performance monitoring utilities
+export const performanceUtils = {
+  // Measure custom performance marks
+  mark: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(name);
     }
+  },
 
-    // Measure load time
-    if (performance.timing) {
-      metrics.loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
+  // Measure time between marks
+  measure: (name: string, startMark: string, endMark?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      if (endMark) {
+        performance.measure(name, startMark, endMark);
+      } else {
+        performance.measure(name, startMark);
+      }
     }
+  },
 
-    // Measure First Contentful Paint
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
-            metrics.firstContentfulPaint = entry.startTime
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['paint'] })
+  // Get performance entries
+  getEntries: (type?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      return type ? performance.getEntriesByType(type) : performance.getEntries();
     }
+    return [];
+  },
 
-    // Measure Largest Contentful Paint
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            metrics.largestContentfulPaint = entry.startTime
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+  // Clear performance entries
+  clearEntries: (type?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      if (type) {
+        performance.clearMeasures(type);
+        performance.clearMarks(type);
+      } else {
+        performance.clearMeasures();
+        performance.clearMarks();
+      }
     }
-
-    // Measure Cumulative Layout Shift
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'layout-shift') {
-            metrics.cumulativeLayoutShift += (entry as any).value
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
-    }
-
-    // Measure First Input Delay
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            metrics.firstInputDelay = (entry as any).processingStart - entry.startTime
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['first-input'] })
-    }
-
-    // Measure Time to Interactive
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            metrics.timeToInteractive = (entry as any).domInteractive
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['navigation'] })
-    }
-
-    // Measure First Meaningful Paint
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === 'first-meaningful-paint') {
-            metrics.firstMeaningfulPaint = entry.startTime
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['paint'] })
-    }
-
-    // Resolve after a delay to allow metrics to be collected
-    setTimeout(() => {
-      resolve(metrics)
-    }, 1000)
-  })
+  }
 }
-
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -120,12 +64,12 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
         time_to_interactive: metrics.timeToInteractive,
         total_blocking_time: metrics.totalBlockingTime
       }
-    })
+    });
   }
-}
+};
 
 declare global {
   interface Window {
-    gtag: (..._args: unknown[]) => void
+    gtag: (..._args: unknown[]) => void;
   }
 }

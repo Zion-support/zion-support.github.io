@@ -24,15 +24,18 @@ import { ArrowRight } from 'lucide-react';
       </section>
 
 interface PerformanceEnhancerProps {
-  // Add props here
+  enableOptimizations?: boolean;
+  onOptimizationComplete?: () => void;
 }
 
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
+
   return (
-    <div>
+    
+    <div></div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default PerformanceEnhancerPage
+;

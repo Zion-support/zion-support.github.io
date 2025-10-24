@@ -15,7 +15,7 @@ interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
-}
+};
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -23,17 +23,19 @@ const PerformanceMonitor: React.FC = () => {
     fid: null,
     fcp: null,
     lcp: null,
-    ttfb: null,
+    ttfb: null
   });
 
   useEffect(() => {
+
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
     const handleMetric = (metric: { name: string; value: number; id: string }) => {
+
       setMetrics(prev => ({
         ...prev,
-        [metric.name]: metric.value,
+        [metric.name]: metric.value
       }));
 
       // Send to analytics service (replace with your analytics endpoint)
@@ -42,7 +44,7 @@ const PerformanceMonitor: React.FC = () => {
           event_category: 'Web Vitals',
           value: Math.round(metric.value),
           event_label: metric.id,
-          non_interaction: true,
+          non_interaction: true
         });
       }
     };

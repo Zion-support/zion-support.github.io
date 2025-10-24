@@ -2,17 +2,6 @@ import React from 'react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
 interface FuturisticServiceCardProps {
-<<<<<<< HEAD
-  title: string,
-      description: string,
-      features: string[  ];
-  price?: string
-  priceDescription?: string
-  icon?: React.ReactNode
-  gradient?: string
-  onClick?: () => void
-  isPopular?: boolean
-=======
   title: string;
   description: string;
   features: string[];
@@ -22,7 +11,6 @@ interface FuturisticServiceCardProps {
   gradient?: string;
   onClick?: () => void;
   isPopular?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({

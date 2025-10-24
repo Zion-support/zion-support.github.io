@@ -1,12 +1,5 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
 
-<<<<<<< HEAD
-import { ArrowRight, Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
-import { Phone, Mail } from 'lucide-react',;
-    'use client'
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react'
@@ -33,23 +26,16 @@ const EnhancedHero: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-  ]
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+  ];
 
   const benefits = [
-    'Advanced AI technology integration'
-    'Real-time processing and analytics'
-    'Enterprise-grade security and compliance'
-    'Scalable and flexible solutions'
-    '24/7 technical support'
-    'Easy integration with existing systems'
-    'Cost-effective pricing plans'
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
     'Proven track record of success'
   ]
 
@@ -108,8 +94,6 @@ const EnhancedHero: React.FC = () => {
               Our enhanced hero solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
           <div className="...">
             {features.map((feature, index) => (
@@ -176,4 +160,3 @@ const EnhancedHero: React.FC = () => {
 }
 
 export default EnhancedHero
->>>>>>> cursor/fix-errors-and-merge-to-main-8836

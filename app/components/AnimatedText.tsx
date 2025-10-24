@@ -1,26 +1,52 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from "lucide-react";
 
 interface AnimatedTextProps {
-  text?: string;
+  text: string;
+  delay?: number;
+  speed?: number;
   className?: string;
 }
 
-export default function AnimatedText({ text = "Service", className = "" }: AnimatedTextProps) {
+const AnimatedText: React.FC<AnimatedTextProps> = ({ 
+  text, 
+  delay = 0, 
+  speed = 100, 
+  className = "" 
+}) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (currentIndex < text.length) {
+        setDisplayedText(prev => prev + text[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }
+    }, speed);
+
+    return () => clearTimeout(timer);
+  }, [currentIndex, text, speed]);
+
+  useEffect(() => {
+    const cursorTimer = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorTimer);
+  }, []);
+
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">{text}</h1>
-        <p className="text-xl text-gray-300 mb-8">Professional service services coming soon.</p>
-        <Link href="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
+    <div className={className}>
+      <span>
+        {displayedText}
+        {showCursor && <span className="animate-pulse">|</span>}
+      </span>
     </div>
   );
-}
+};
+
+export default AnimatedText;
