@@ -3,40 +3,95 @@ import Link from 'next/link';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
-import Head from 'next/head';
+import SEOOptimizer from './components/SEOOptimizer';
+import { useAnalytics } from './utils/analytics';
 
-export default function ServicePage() {
+export default function HomePage() {
+  const { trackPageView } = useAnalytics();
+
+  // Track page view on mount
+  React.useEffect(() => {
+    trackPageView('/', 'Zion Tech Group - Advanced AI & IT Solutions');
+  }, [trackPageView]);
+
   return (
     <>
-      <Head>
-        <title>App | Zion Tech Group</title>
-        <meta name="description" content="Professional app services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="App | Zion Tech Group" />
-        <meta property="og:description" content="Professional app services and solutions for modern businesses." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            App
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional app services and solutions for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
-            >
-              Learn More
-            </Link>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI & IT Solutions"
+        description="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, blockchain, IT services, machine learning, artificial intelligence"
+        url="https://zion.app"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "description": "Advanced AI & IT Solutions for the Future",
+          "url": "https://zion.app",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zion.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
+      <SEOOptimizer
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "description": "Advanced AI & IT Solutions for the Future",
+          "url": "https://zion.app",
+          "logo": "https://zion.app/logo.png",
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service"
+          }
+        }}
+        canonicalUrl="https://zion.app"
+      >
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
+          {/* Animated background elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+                Zion Tech Group
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">
+                Advanced AI & IT Solutions for the Future
+              </p>
+              <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto animate-slide-up delay-200">
+                Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. 
+                Transform your business with cutting-edge technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
+                >
+                  Learn More
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -168,7 +223,8 @@ export default function ServicePage() {
         </div>
 
         <Footer />
-      </div>
+        </div>
+      </SEOOptimizer>
     </>
   );
 }
