@@ -55,7 +55,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure First Input Delay (FID)
     try {
       const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+        const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
           if (entry.processingStart && entry.startTime) {
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
@@ -72,10 +72,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: PerformanceEntry) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value || 0;
+            clsValue += entry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         });
@@ -88,7 +88,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
@@ -100,7 +100,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-        const memory = performance.memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
       }
     } catch (error) {

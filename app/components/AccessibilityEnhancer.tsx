@@ -1,236 +1,279 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
+  enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
+  enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableKeyboardNavigation?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children,
-  enableKeyboardNavigation: _enableKeyboardNavigation = true,
-  enableScreenReaderSupport: _enableScreenReaderSupport = true,
-  enableHighContrast: _enableHighContrast = false,
-  enableFocusManagement: _enableFocusManagement = true
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableHighContrast = false,
+  enableReducedMotion = false,
+  enableScreenReaderSupport = true,
+  enableKeyboardNavigation = true,
 }) => {
-  useEffect(() => {
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
-          Skip to main content
-        </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-16 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
-          Skip to navigation
-        </a>
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
+  const [isHighContrast, setIsHighContrast] = useState(enableHighContrast);
+  const [isReducedMotion, setIsReducedMotion] = useState(enableReducedMotion);
 
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #2563eb;
-          outline-offset: 2px;
-        }
-        .focus-visible:focus {
-          outline: 2px solid #2563eb;
-          outline-offset: 2px;
-        }
-      `;
-      document.head.appendChild(style);
+  // Skip links functionality
+  const addSkipLinks = useCallback(() => {
+    if (!enableSkipLinks) return;
 
-      // Trap focus in modals
-      const trapFocus = (element: HTMLElement) => {
-        const focusableElements = element.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const skipLinks = document.querySelector('.skip-links');
+    if (skipLinks) return; // Already exists
 
-        const handleTabKey = (e: KeyboardEvent) => {
-          if (e.key === 'Tab') {
-            if (e.shiftKey) {
-              if (document.activeElement === firstElement) {
-                lastElement.focus();
-                e.preventDefault();
-              }
-            } else {
-              if (document.activeElement === lastElement) {
-                firstElement.focus();
-                e.preventDefault();
-              }
+    const skipLinksContainer = document.createElement('div');
+    skipLinksContainer.className = 'skip-links';
+    skipLinksContainer.innerHTML = `
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#navigation" class="skip-link">Skip to navigation</a>
+      <a href="#footer" class="skip-link">Skip to footer</a>
+    `;
+
+    // Add styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .skip-links {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        z-index: 1000;
+      }
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #000;
+        color: #fff;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        z-index: 1000;
+        transition: top 0.3s;
+      }
+      .skip-link:focus {
+        top: 6px;
+      }
+    `;
+    document.head.appendChild(style);
+    document.body.insertBefore(skipLinksContainer, document.body.firstChild);
+  }, [enableSkipLinks]);
+
+  // Focus management
+  const setupFocusManagement = useCallback(() => {
+    if (!enableFocusManagement) return;
+
+    // Trap focus in modals
+    const modals = document.querySelectorAll('[role="dialog"], .modal');
+    modals.forEach((modal) => {
+      const focusableElements = modal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
+              lastElement?.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              firstElement?.focus();
+              e.preventDefault();
             }
           }
-        };
-
-        element.addEventListener('keydown', handleTabKey);
-        firstElement?.focus();
-
-        return () => {
-          element.removeEventListener('keydown', handleTabKey);
-        };
+        }
       };
 
-      // Apply focus trap to modals
-      const modals = document.querySelectorAll('[role="dialog"]');
-      modals.forEach(modal => {
-        trapFocus(modal as HTMLElement);
-      });
+      modal.addEventListener('keydown', handleTabKey);
+    });
+
+    // Announce page changes to screen readers
+    const announcePageChange = (message: string) => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      document.body.appendChild(announcement);
+      setTimeout(() => document.body.removeChild(announcement), 1000);
     };
 
-    // Add ARIA labels and roles
-    const enhanceARIA = () => {
-      // Add ARIA labels to buttons without text
-      const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      iconButtons.forEach(button => {
-        const icon = button.querySelector('svg');
-        if (icon && !button.textContent?.trim()) {
-          const iconName = icon.getAttribute('data-icon') || 'button';
-          button.setAttribute('aria-label', iconName);
-        }
-      });
-
-      // Add ARIA labels to links
-      const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
-      links.forEach(link => {
-        if (!link.textContent?.trim()) {
-          const href = link.getAttribute('href');
-          if (href) {
-            link.setAttribute('aria-label', `Link to ${href}`);
-          }
-        }
-      });
-
-      // Add role="banner" to header
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-      }
-
-      // Add role="main" to main content
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-        main.setAttribute('id', 'main-content');
-      }
-
-      // Add role="navigation" to nav elements
-      const navs = document.querySelectorAll('nav:not([role])');
-      navs.forEach(nav => {
-        nav.setAttribute('role', 'navigation');
-        nav.setAttribute('id', 'navigation');
-      });
-
-      // Add role="contentinfo" to footer
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Enhance keyboard navigation
-    const enhanceKeyboardNavigation = () => {
-      // Add keyboard support for dropdowns
-      const dropdowns = document.querySelectorAll('[data-dropdown]');
-      dropdowns.forEach(dropdown => {
-        const trigger = dropdown.querySelector('[data-dropdown-trigger]') as HTMLElement;
-        const menu = dropdown.querySelector('[data-dropdown-menu]') as HTMLElement;
-
-        if (trigger && menu) {
-          const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              menu.classList.toggle('hidden');
-            } else if (e.key === 'Escape') {
-              menu.classList.add('hidden');
-              trigger.focus();
-            }
-          };
-
-          trigger.addEventListener('keydown', handleKeyDown);
-        }
-      });
-    };
-
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      if (_enableHighContrast) {
-        document.body.classList.add('high-contrast');
-      } else {
-        document.body.classList.remove('high-contrast');
-      }
-
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-contrast: high) {
-          * {
-            border-color: currentColor !important;
-          }
-          .bg-gray-100 {
-            background-color: #000 !important;
-            color: #fff !important;
-          }
-          .text-gray-600 {
-            color: #fff !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Add reduced motion support
-    const addReducedMotionSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-reduced-motion: reduce) {
-          *,
-          *::before,
-          *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Initialize all enhancements
-    addSkipLinks();
-    enhanceFocusManagement();
-    enhanceARIA();
-    enhanceKeyboardNavigation();
-    addHighContrastSupport();
-    addReducedMotionSupport();
-
-    // Re-run enhancements when DOM changes
+    // Listen for route changes (Next.js specific)
     const observer = new MutationObserver(() => {
-      enhanceARIA();
-      enhanceKeyboardNavigation();
+      const mainContent = document.querySelector('main, [role="main"]');
+      if (mainContent) {
+        announcePageChange('Page content has loaded');
+      }
     });
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
+    observer.observe(document.body, { childList: true, subtree: true });
+  }, [enableFocusManagement]);
+
+  // High contrast mode
+  const toggleHighContrast = useCallback(() => {
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast', !isHighContrast);
+  }, [isHighContrast]);
+
+  // Reduced motion
+  const toggleReducedMotion = useCallback(() => {
+    setIsReducedMotion(!isReducedMotion);
+    document.documentElement.classList.toggle('reduced-motion', !isReducedMotion);
+  }, [isReducedMotion]);
+
+  // Screen reader support
+  const enhanceScreenReaderSupport = useCallback(() => {
+    if (!enableScreenReaderSupport) return;
+
+    // Add ARIA labels to interactive elements
+    const buttons = document.querySelectorAll('button:not([aria-label])');
+    buttons.forEach((button) => {
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+        button.setAttribute('aria-label', 'Button');
+      }
     });
+
+    // Add role attributes
+    const navigation = document.querySelector('nav');
+    if (navigation && !navigation.getAttribute('role')) {
+      navigation.setAttribute('role', 'navigation');
+    }
+
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main');
+    }
+
+    // Add heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    headings.forEach((heading, index) => {
+      if (!heading.getAttribute('id')) {
+        heading.id = `heading-${index}`;
+      }
+    });
+  }, [enableScreenReaderSupport]);
+
+  // Keyboard navigation
+  const setupKeyboardNavigation = useCallback(() => {
+    if (!enableKeyboardNavigation) return;
+
+    // Add keyboard shortcuts
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Alt + M for main content
+      if (e.altKey && e.key === 'm') {
+        e.preventDefault();
+        const main = document.querySelector('main, [role="main"]');
+        (main as HTMLElement)?.focus();
+      }
+
+      // Alt + N for navigation
+      if (e.altKey && e.key === 'n') {
+        e.preventDefault();
+        const nav = document.querySelector('nav, [role="navigation"]');
+        (nav as HTMLElement)?.focus();
+      }
+
+      // Alt + S for search
+      if (e.altKey && e.key === 's') {
+        e.preventDefault();
+        const search = document.querySelector('input[type="search"], [role="search"] input');
+        (search as HTMLElement)?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [enableKeyboardNavigation]);
+
+  useEffect(() => {
+    addSkipLinks();
+    setupFocusManagement();
+    enhanceScreenReaderSupport();
+    const cleanup = setupKeyboardNavigation();
+
+    return cleanup;
+  }, [addSkipLinks, setupFocusManagement, enhanceScreenReaderSupport, setupKeyboardNavigation]);
+
+  // Add CSS for accessibility features
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .high-contrast {
+        filter: contrast(150%) brightness(120%);
+      }
+
+      .reduced-motion * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .focus-visible {
+        outline: 2px solid #0066cc;
+        outline-offset: 2px;
+      }
+
+      button:focus-visible,
+      a:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 2px solid #0066cc;
+        outline-offset: 2px;
+      }
+    `;
+    document.head.appendChild(style);
 
     return () => {
-      observer.disconnect();
-      document.body.classList.remove('high-contrast');
+      document.head.removeChild(style);
     };
-  }, [_enableHighContrast]);
+  }, []);
 
-  return <>{children}</>;
+  // Accessibility controls component
+  return (
+    <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
+      <button
+        onClick={toggleHighContrast}
+        className="accessibility-toggle"
+        aria-label="Toggle high contrast mode"
+        title="Toggle high contrast mode"
+      >
+        {isHighContrast ? '🔆' : '🌙'}
+      </button>
+      <button
+        onClick={toggleReducedMotion}
+        className="accessibility-toggle"
+        aria-label="Toggle reduced motion"
+        title="Toggle reduced motion"
+      >
+        {isReducedMotion ? '🎬' : '⏸️'}
+      </button>
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
