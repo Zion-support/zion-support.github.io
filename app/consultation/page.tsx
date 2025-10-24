@@ -1,6 +1,10 @@
 'use client'
 import React, { useState } from 'react'
+<<<<<<< HEAD
 import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle, Check } from 'lucide-react';;
+=======
+import {ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle} from 'lucide-react';
+>>>>>>> origin/main
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({

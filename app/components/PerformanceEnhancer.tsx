@@ -1,8 +1,12 @@
 'use client';
+import { CheckCircle } from 'lucide-react';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, Check } from 'lucide-react';;
 
+=======
+>>>>>>> origin/main
 const PerformanceEnhancer: React.FC = () => {
   useEffect(() => {
     // Performance optimization code

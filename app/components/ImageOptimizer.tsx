@@ -1,6 +1,10 @@
 'use client';
 import React, { useState, useCallback } from 'react';
+<<<<<<< HEAD
 import { Upload, Download, Zap, ImageIcon } from 'lucide-react';;
+=======
+import { Upload, Download, ImageIcon, Zap } from 'lucide-react';
+>>>>>>> origin/main
 
 interface ImageOptimizerProps {
   onImageOptimized?: (optimizedImage: File) => void;
@@ -41,7 +45,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       // Create a mock optimized file (in real implementation, you'd use a library like sharp)
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-      const img = new Image();
+      const img = new window.Image();
       
       img.onload = () => {
         canvas.width = img.width;

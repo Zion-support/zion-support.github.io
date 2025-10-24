@@ -1,7 +1,11 @@
 'use client';
+import { Zap, Users, Shield, ArrowRight, CheckCircle, BarChart3 } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Check, Zap, Users, BarChart, Shield, BarChart3 } from 'lucide-react';;
+=======
+>>>>>>> origin/main
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
     {

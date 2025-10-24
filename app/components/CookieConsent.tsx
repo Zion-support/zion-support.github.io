@@ -1,7 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRight, X } from 'lucide-react';;
+=======
+import { ArrowRight, X, } from 'lucide-react';
+>>>>>>> origin/main
 
 export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
