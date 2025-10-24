@@ -13,7 +13,10 @@ export const performanceMetrics = {
       value,
       timestamp: Date.now()
     };
-    console.log('Performance metric recorded:', metric);
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Performance metric recorded:', metric);
+    }
   },
   
   getMetrics: (): PerformanceMetric[] => {
@@ -21,7 +24,10 @@ export const performanceMetrics = {
   },
   
   clear: () => {
-    console.log('Performance metrics cleared');
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Performance metrics cleared');
+    }
   }
 };
 
