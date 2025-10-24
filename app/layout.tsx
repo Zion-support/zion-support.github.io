@@ -5,12 +5,10 @@ import '/globalscss'
 const inter="Inter" subsets 'latin' 
 
 export const metadata: Metadata = {
-  titl,
-  e: 'ZionTechGroup - AI Solutions & Technology Services',
+  title: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
   keywords: ['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
-  authors: [{ nam,
-  e: 'ZionTechGroup' }],
+  authors: [{ name: 'ZionTechGroup' }],
   creator: 'ZionTechGroup',
   publisher: 'ZionTechGroup',
   formatDetection: {
@@ -27,8 +25,8 @@ export const metadata: Metadata = {
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
     url: 'https://ziontechgroup.com',
     siteName: 'ZionTechGroup',
-    images: [,
-      {,
+    images: [
+      {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
@@ -38,6 +36,7 @@ export const metadata: Metadata = {
     locale: 'en_US''',
     type: 'website''',
   },
+<<<<<<< HEAD
   twitter: {card: 'summary_large_image''',
     title: 'ZionTechGroup - AI Solutions & Technology Services''',
     description: 'Leading provider of AI solution''',s, technology services, and digital transformation for businesses worldwide.''',
@@ -50,6 +49,27 @@ export const metadata: Metadata = {
       'max-video-preview': -1'',
       'max-image-preview': 'large''',
       'max-snippet': -1}'',
+=======
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ZionTechGroup - AI Solutions & Technology Services',
+    description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1948
   },
 };
 
@@ -59,8 +79,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en"></html>
-      <body className={inter.className}></body>
+    <html lang="en">
+      <body className={inter.className}>
         {children}
       </body>
 >>>>>>> origin/main

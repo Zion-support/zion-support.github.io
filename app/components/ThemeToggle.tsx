@@ -26,7 +26,5 @@ export default function ThemeToggle() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }

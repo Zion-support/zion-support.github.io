@@ -26,7 +26,5 @@ export default function main() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }

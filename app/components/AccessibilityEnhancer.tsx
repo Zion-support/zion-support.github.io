@@ -8,9 +8,8 @@ interface Props {
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   return (</Props>
     <div className="accessibility-enhanced" role="main">
-      {children};</div>
-    </div>
-  );
+      {children};
+    </div>);
 };
 
 export default AccessibilityEnhancer

@@ -26,7 +26,5 @@ export default function SearchBar() {
           </Link>
         </div>
       </div>
-    </div>
-    </div>
-  );
+    </div>);
 }

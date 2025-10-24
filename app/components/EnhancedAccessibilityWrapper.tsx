@@ -7,9 +7,8 @@ interface Props {
 const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
   return (</Props>
     <div className="enhanced-accessibility" role="complementary">
-      {children};</div>
-    </div>
-  );
+      {children};
+    </div>);
 };
 
 export default EnhancedAccessibilityWrapper;
