@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, Shield, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Lock } from 'lucide-react';
 
@@ -39,11 +38,7 @@ const BlockchainPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>Blockchain Services - Zion Tech Group | Blockchain Development</title>
-        <meta name="description" content="Transform your business with blockchain technology. Build secure, transparent, and decentralized solutions with our blockchain development services." />
-        <meta name="keywords" content="blockchain development, smart contracts, DeFi, cryptocurrency, blockchain solutions" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
