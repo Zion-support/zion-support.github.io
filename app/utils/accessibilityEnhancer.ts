@@ -211,7 +211,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key
    */
-  private handleEscape(event: KeyboardEvent): void {
+  private handleEscape(_event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
     modals.forEach(modal => {

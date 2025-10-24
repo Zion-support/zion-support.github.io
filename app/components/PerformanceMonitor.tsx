@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number | null;
@@ -13,7 +13,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
   logToConsole?: boolean;
 }
@@ -76,8 +76,9 @@ export default function PerformanceMonitor({
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            newMetrics.firstInputDelay = entry.processingStart - entry.startTime;
+          entries.forEach((entry: PerformanceEntry) => {
+            const fidEntry = entry as any;
+            newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -86,7 +87,8 @@ export default function PerformanceMonitor({
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
+            const _clsEntry = entry as any;
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }
@@ -98,7 +100,7 @@ export default function PerformanceMonitor({
         // Time to Interactive (TTI) - approximation
         const ttiObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          const longTasks = entries.filter((entry: any) => entry.duration > 50);
+          const longTasks = entries.filter((entry: PerformanceEntry) => (entry as any).duration > 50);
           if (longTasks.length === 0) {
             newMetrics.timeToInteractive = performance.now();
           }
@@ -109,8 +111,8 @@ export default function PerformanceMonitor({
         const tbtObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const blockingTime = entries
-            .filter((entry: any) => entry.duration > 50)
-            .reduce((total, entry: any) => total + (entry.duration - 50), 0);
+            .filter((entry: PerformanceEntry) => (entry as any).duration > 50)
+            .reduce((total, entry: PerformanceEntry) => total + ((entry as any).duration - 50), 0);
           newMetrics.totalBlockingTime = blockingTime;
         });
         tbtObserver.observe({ entryTypes: ['longtask'] });
@@ -240,6 +242,6 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (..._args: unknown[]) => void;
   }
 }

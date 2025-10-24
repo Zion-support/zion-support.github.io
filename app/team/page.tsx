@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Shield, Zap, Target, BarChart, TrendingUp, Users, CheckCircle } from 'lucide-react';
+import { Brain, Shield, Zap } from 'lucide-react';
 
 
 const teamMembers = [
