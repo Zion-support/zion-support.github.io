@@ -1,10 +1,21 @@
 "use client";
+
+// Icon mapping for serialization
+const iconMap = {
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  CheckCircle,
+  ArrowRight
+};
+
 import React from "react";
 import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
 const ITServicesPage: React.FC = () => {
   const services = [
   {
-      icon: Cloud,
+      icon: 'Cloud',
     title: "Cloud Solutions",
       description: "Scalable cloud infrastructure for modern businesses",
     features: [
@@ -16,7 +27,7 @@ const ITServicesPage: React.FC = () => {
       price: "Starting at $2,000"
 },
   {
-    icon: Shield,
+    icon: 'Shield',
     title: "Cybersecurity",
       description: "Protect your business from evolving threats",
     features: [
@@ -28,7 +39,7 @@ const ITServicesPage: React.FC = () => {
       price: "Starting at $3,500"
 },
   {
-    icon: Server,
+    icon: 'Server',
     title: "DevOps Services",
       description: "Streamline development and deployment processes",
     features: [
@@ -40,7 +51,7 @@ const ITServicesPage: React.FC = () => {
       price: "Starting at $4,000"
 },
   {
-    icon: Database,
+    icon: 'Database',
     title: "Data Analytics",
       description: "Turn your data into actionable insights",
     features: [

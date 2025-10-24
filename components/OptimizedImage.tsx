@@ -11,7 +11,7 @@ interface OptimizedImageProps {
   [key: string]: any
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps /> = ({
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width = 800,
