@@ -1,9 +1,7 @@
-'use client';
-
-import React from 'react';
-import Link from 'next/link';
-import { Search } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import Link from 'next/link'
+import { Search } from 'lucide-react'
 const Navigation = () => {
   return (
     <div>
@@ -22,7 +20,6 @@ const Navigation = () => {
           Blog
         </Link>
       </div>
-
       {/* Mobile Navigation */}
       <div className="md:hidden">
         <button className="text-gray-300 hover:text-white transition-colors">
@@ -30,7 +27,6 @@ const Navigation = () => {
         </button>
       </div>
     </div>
-  );
-};
-
-export default Navigation;
+      )
+}
+export default Navigation
