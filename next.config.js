@@ -4,8 +4,6 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
   
-  // Force all pages to be dynamic to avoid serialization issues
-  generateStaticParams: false,
   
   // Disable static generation to avoid serialization issues
   experimental: {

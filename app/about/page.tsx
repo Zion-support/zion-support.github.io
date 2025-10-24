@@ -1,95 +1,49 @@
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-6">
-              Zion Tech Group is a leading technology company specializing in cutting-edge solutions 
-              for modern businesses. We combine expertise in artificial intelligence, 5G technology, 
-              cybersecurity, and digital transformation to deliver innovative solutions that drive growth.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Our Mission</h2>
-            <p className="text-gray-600 mb-6">
-              To empower businesses with advanced technology solutions that enhance efficiency, 
-              security, and innovation while maintaining the highest standards of quality and service.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Our Vision</h2>
-            <p className="text-gray-600 mb-6">
-              To be the global leader in technology solutions, recognized for our innovation, 
-              reliability, and commitment to client success.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Why Choose Us</h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Expert team with decades of combined experience</li>
-              <li>Cutting-edge technology and methodologies</li>
-              <li>Proven track record of successful implementations</li>
-              <li>24/7 support and maintenance</li>
-              <li>Custom solutions tailored to your needs</li>
-            </ul>
-          </div>
-          
-          <div className="mt-12 text-center">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            We are a leading technology company specializing in cutting-edge solutions for modern businesses.
+            Our expertise spans artificial intelligence, 5G technology, cybersecurity, and digital transformation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
+              href="/" 
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Get in Touch
+              Back to Home
             </Link>
+            <Link 
+              href="/services" 
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg border border-blue-600 hover:bg-blue-50 transition-colors"
+            >
+              Our Services
+            </Link>
+          </div>
+        </div>
+        
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
+            <p className="text-gray-600">
+              To empower businesses with innovative technology solutions that drive growth and efficiency.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Our Vision</h3>
+            <p className="text-gray-600">
+              To be the global leader in technology solutions that transform how businesses operate.
+            </p>
           </div>
         </div>
       </div>
     </div>
   )
 }
-=======
-'use client'
-
-import React from 'react'
-import Footer from '../components/Footer'
-
-const AboutPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            About Zion Tech Group
-          </h1>
-          <div className="prose prose-lg prose-invert max-w-none">
-            <p className="text-xl text-gray-300 mb-6">
-              Zion Tech Group is a leading provider of advanced AI solutions, cloud services, and IT consulting for modern businesses.
-            </p>
-            <p className="text-lg text-gray-300 mb-6">
-              We specialize in delivering cutting-edge technology solutions that help businesses transform their operations and achieve unprecedented growth.
-            </p>
-            <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
-            <p className="text-lg text-gray-300 mb-6">
-              To empower businesses with innovative AI and IT solutions that drive efficiency, growth, and competitive advantage.
-            </p>
-            <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-            <ul className="list-disc list-inside text-lg text-gray-300 mb-6 space-y-2">
-              <li>AI-Powered Solutions</li>
-              <li>Cloud Services</li>
-              <li>IT Consulting</li>
-              <li>Digital Transformation</li>
-            </ul>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
-}
-
-export default AboutPage
->>>>>>> cursor/fix-errors-and-merge-to-main-0ea5
