@@ -1,4 +1,5 @@
 import React from 'react';
+import { CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
   title: string;
@@ -6,7 +7,7 @@ interface FuturisticServiceCardProps {
   features: string[];
   price?: string;
   priceDescription?: string;
-  icon?: React.ComponentType;
+  icon?: React.ReactNode;
   gradient?: string;
   onClick?: () => void;
   isPopular?: boolean;
@@ -47,7 +48,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           )}
           
           {/* Title */}
-          <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 transition-all">
+          <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text transition-all">
             {title}
           </h3>
           
@@ -60,8 +61,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           <ul className="space-y-3 mb-8">
             {features.map((feature, index) => (
               <li key={index} className="flex items-center text-gray-300">
-                <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3 flex-shrink-0"></div>
-                <span className="text-sm">{feature}</span>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span>{feature}</span>
               </li>
             ))}
           </ul>
@@ -69,9 +70,13 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           {/* Price */}
           {price && (
             <div className="mb-6">
-              <div className="text-3xl font-bold text-white mb-1">{price}</div>
+              <div className="text-3xl font-bold text-white mb-1">
+                {price}
+              </div>
               {priceDescription && (
-                <div className="text-sm text-gray-400">{priceDescription}</div>
+                <div className="text-gray-400 text-sm">
+                  {priceDescription}
+                </div>
               )}
             </div>
           )}
@@ -79,7 +84,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           {/* CTA Button */}
           <button
             onClick={onClick}
-            className={`w-full bg-gradient-to-r ${gradient} text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105`}
+            className={`w-full bg-gradient-to-r ${gradient} text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group-hover:scale-105`}
           >
             Get Started
           </button>

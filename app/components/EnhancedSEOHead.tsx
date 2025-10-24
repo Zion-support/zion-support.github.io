@@ -1,8 +1,10 @@
-'use client';
+
 import React from 'react';
 
 interface EnhancedSEOHeadProps {
-  // Add props here
+  title?: string;
+  description?: string;
+  canonical?: string;
 }
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {

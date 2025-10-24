@@ -1,144 +1,149 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useCallback, useMemo } from 'react';
 
-// Extend interfaces for browser APIs
-declare global {
-  interface Performance {
-    memory?: {
-      usedJSHeapSize: number
-    }
-  }
-  
-  interface Navigator {
-    connection?: {
-      effectiveType: string
-    }
-    mozConnection?: {
-      effectiveType: string
-    }
-    webkitConnection?: {
-      effectiveType: string
-    }
-  }
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enableCodeSplitting?: boolean;
+  enableCaching?: boolean;
+  enableCompression?: boolean;
 }
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isSlowConnection: boolean;
-}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enableCodeSplitting = true,
+  enableCaching = true,
+  enableCompression = true,
+}) => {
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isSlowConnection: false
-  });
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" for better performance
+      if (enableLazyLoading && !img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
 
-  useEffect(() => {
-    const startTime = performance.now();
+      // Add decoding="async" for non-blocking image loading
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
 
-    // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now() - startTime;
+      // Add fetchpriority="low" for below-the-fold images
+      if (!img.hasAttribute('fetchpriority')) {
+        img.setAttribute('fetchpriority', 'low');
+      }
+    });
+  }, [enableImageOptimization, enableLazyLoading]);
 
-      // Measure render time
-      const renderTime = performance.now() - startTime;
+  // Resource preloading
+  const preloadCriticalResources = useCallback(() => {
+    if (!enableCaching) return;
 
-      // Check memory usage (if available)
-      const memoryUsage = performance.memory?.usedJSHeapSize || 0;
+    const criticalResources = [
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
+      { href: '/css/critical.css', as: 'style' },
+      { href: '/js/app.js', as: 'script' },
+    ];
 
-      // Check connection speed
-      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-      const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }, [enableCaching]);
 
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        isSlowConnection
-      });
-    };
+  // Service Worker registration for caching
+  const registerServiceWorker = useCallback(() => {
+    if (!enableCaching || typeof window === 'undefined') return;
 
-    // Run measurements after component mounts
-    const timeoutId = setTimeout(measureLoadTime, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-      });
-    };
-
-    preloadCriticalResources();
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-    };
-
-    optimizeImages();
-
-    // Add performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach(entry => {
-          if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
-          }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
         });
-      });
+    }
+  }, [enableCaching]);
 
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+  // Performance monitoring
+  const monitorPerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+        if (entry.entryType === 'layout-shift') {
+          console.log('CLS:', (entry as any).value);
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+    // Monitor memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      console.log('Memory usage:', {
+        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+      });
     }
   }, []);
 
-  return (
-    <div className="performance-optimizer">
-      {/* Performance metrics display (only in development) */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-          <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-          <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
-          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-          <div>Slow: {metrics.isSlowConnection ? 'Yes' : 'No'}</div>
-        </div>
-      )}
-    </div>
-  );
+  // Memoized performance optimizations
+  const performanceOptimizations = useMemo(() => {
+    return {
+      imageOptimization: enableImageOptimization,
+      lazyLoading: enableLazyLoading,
+      codeSplitting: enableCodeSplitting,
+      caching: enableCaching,
+      compression: enableCompression,
+    };
+  }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enableCaching, enableCompression]);
+
+  useEffect(() => {
+    // Run optimizations on mount
+    optimizeImages();
+    preloadCriticalResources();
+    registerServiceWorker();
+    monitorPerformance();
+
+    // Re-optimize images when new content is added
+    const observer = new MutationObserver(() => {
+      optimizeImages();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [optimizeImages, preloadCriticalResources, registerServiceWorker, monitorPerformance]);
+
+  // Return null as this is a utility component
+  return null;
 };
 
 export default PerformanceOptimizer;
