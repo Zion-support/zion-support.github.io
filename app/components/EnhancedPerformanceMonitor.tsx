@@ -1,10 +1,23 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail } from 'lucide-react'
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
+const EnhancedPerformanceMonitorPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: Shield,
+      title: 'Security Monitoring',
+      description: 'Comprehensive security monitoring with real-time threat detection.',
+      benefits: ['Real-time monitoring', 'Threat detection', 'Security alerts', 'Compliance tracking']
     }
   ]
 
@@ -14,6 +27,41 @@ import { Phone, Mail } from 'lucide-react'
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Enhanced Performance Monitor</title>
+        <meta name="description" content="Advanced performance monitoring solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Enhanced Performance Monitor
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced performance monitoring solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
             </div>
           </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  )
+}
+
+export default EnhancedPerformanceMonitorPage

@@ -41,8 +41,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
 
   return (
     <section className={`relative py-20 px-4 overflow-hidden ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-      <div className="relative max-w-7xl mx-auto text-center">
+      <div className="text-center mb-16">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
           {title}
         </h1>
