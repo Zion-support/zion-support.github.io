@@ -35,9 +35,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        (window as { gtag?: (..._args: unknown[]) => void }).gtag = (window as { gtag?: (..._args: unknown[]) => void }).gtag || function(..._args: unknown[]) {
-          ((window as { gtag: (..._args: unknown[]) => void }).gtag.q = (window as { gtag: (..._args: unknown[]) => void }).gtag.q || []).push(_args);
+        const gtagFunction = function(..._args: unknown[]) {
+          (window.dataLayer = window.dataLayer || []).push(_args);
         };
+        (window as { gtag?: (..._args: unknown[]) => void }).gtag = (window as { gtag?: (..._args: unknown[]) => void }).gtag || gtagFunction;
         window.gtag = window.gtag || gtagFunction;
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
