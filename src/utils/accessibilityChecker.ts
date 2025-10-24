@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// accessibilityChecker utility
-export const accessibilityChecker = () => {
-  // Utility implementation
-  return null;
-};
-=======
 'use client'
 /**
  * Accessibility Checker Utility

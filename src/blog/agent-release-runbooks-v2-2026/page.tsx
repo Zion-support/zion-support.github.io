@@ -17,8 +17,6 @@ Page.displayName = "Page"() {
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
-<<<<<<< HEAD
-=======
 import {ListChecks, FileWarning, RefreshCw, Calendar} from 'lucide-react';;
 export default function Page
 Page.displayName = "Page"() {return (

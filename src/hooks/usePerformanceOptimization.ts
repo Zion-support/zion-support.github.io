@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// usePerformanceOptimization hook
-=======
 'use client'
 import Navigation from './Navigation'
 import { useCallback } from 'react'

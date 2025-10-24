@@ -14,8 +14,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true)
   }, [])
-<<<<<<< HEAD
-=======
 'use client'
 import { Brain, TrendingUp } from 'lucide-react';
 import React, {useStateuseEffect} from 'react';

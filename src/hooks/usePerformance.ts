@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// usePerformance hook
-=======
 'use client'
 import Navigation from './Navigation'
 

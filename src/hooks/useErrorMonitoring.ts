@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// useErrorMonitoring hook
-=======
 'use client'
 import { useCallback } from 'react'
 import { useAnalytics } from '../components/AnalyticsProvider'

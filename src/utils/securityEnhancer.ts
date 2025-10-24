@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-// securityEnhancer utility
-export const securityEnhancer = () => {
-  // Utility implementation
-  return null;
-};
-
-export default securityEnhancer;
-=======
 'use client'
 import { X } from 'lucide-react'
 import React from 'react'

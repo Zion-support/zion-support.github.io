@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// healthCheck utility
-export const healthCheck = () => {
-  // Utility implementation
-  return null;
-};
-=======
 'use client'
 /**
  * Application Health Check Utility
