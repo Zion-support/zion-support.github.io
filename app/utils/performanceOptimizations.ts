@@ -1,18 +1,27 @@
 'use client';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo  } from "react";
 // Performance optimization utilities
 // Debounce utility for performance;
 
 export const debounce = <T extends (...args: any[]) => any>(,
     func: T,
+<<<<<<< HEAD
   wait: number,
 ): ((...args: Parameters<T>) => void) => {,
   let timeout: NodeJS.Timeout;,
   return (...args: Parameters<T>) => {,
+=======
+  wait: number</T>
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout;
+  return (...arg,</T>
+  s: Parameters<T>) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
+<<<<<<< HEAD
 // Throttle utility for performance;
 
 export const throttle = <T extends (...args: any[]) => any>(,
@@ -22,6 +31,17 @@ export const throttle = <T extends (...args: any[]) => any>(,
   let inThrottle: boolean;,
   return (...args: Parameters<T>) => {,
     if (!inThrottle) {
+=======
+// Throttle utility for performance</T>
+export const throttle = <T extends (...args: any[]) => any>(,
+    func: T,
+  limit: number</T>
+): ((...args: Parameters<T>) => void) => {;
+  let inThrottle: boolean;
+  return (...arg,</T>
+  s: Parameters<T>) => {
+    if(!inThrottle) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       func(...args);,
       inThrottle = true,
       setTimeout(() => (inThrottle = false), limit)
@@ -46,9 +66,15 @@ export const useIntersectionObserver = (
         : null
     [callback, options]
   )
+<<<<<<< HEAD
   const observe = useCallback(
     (element: Element | null) => {,
       if (observer && element) {
+=======
+  const observe = useCallback()
+    (element: Element | null) => {
+      if(observer && element) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         observer.observe(element)
         return (</T>
     <div>
@@ -63,14 +89,22 @@ export const useIntersectionObserver = (
     </>
     }
     [observer]
+<<<<<<< HEAD
     </>
   );
+=======
+      </div>
+      </div>
+  );
+  )
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   const disconnect = useCallback(() => {
-    if (observer) {
+    if(observer) {
       observer.disconnect();
     }
   }, [observer])
   useEffect(() => {
+<<<<<<< HEAD
     return (
     <>
       ) => disconnect(
@@ -78,6 +112,9 @@ export const useIntersectionObserver = (
     </>
     </>
   );
+=======
+    return () => disconnect();
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }, [disconnect])
   return { observe, disconnect }
 }
@@ -91,6 +128,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
     useCallback()
       (entries) => {
         entries.forEach((entry) => {
+<<<<<<< HEAD
           if (entry.isIntersecting && !isLoaded && !isError) {
             const img = new Image()
             img.onload = ($2) => {
@@ -100,11 +138,22 @@ $3
             img.onerror = ($2) => {
 $3
 };
+=======
+          if(entry.isIntersecting && !isLoaded && !isError) {
+            const img = new Image();
+            img.onload = () => {
+              setImageSrc(src);
+              setIsLoaded(true);
+            }
+            img.onerror = () => {
+              setIsError(true);
+            }
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
             img.src = src
           }
         })
       }
-      [src, isLoaded, isError]
+      [src, isLoaded, isError];
     ;
   );
   return { imageSrc, isLoaded, isError, observe }
@@ -112,7 +161,7 @@ $3
 // Performance monitoring hook;
 
 export const usePerformanceMonitoring = (
-    </div>
+      </div>
   ) => {
   const [metrics, setMetrics] = useState<{
     fcp?: number;
@@ -122,6 +171,7 @@ export const usePerformanceMonitoring = (
     ttfb?: number;
 }>({})
   useEffect(() => {
+<<<<<<< HEAD
     if (typeof window === 'undefined') return;
 
 const updateMetrics = () => {
@@ -131,19 +181,29 @@ const paint = performance.getEntriesByType('paint')
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
 
 const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+=======
+    if (typeof window === 'undefined') return
+    const updateMetrics = () => {
+  return 
+  return 
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const paint = performance.getEntriesByType('paint');
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       setMetrics({
         fcp
         lcp)
         ttfb: navigation?.responseStart - navigation?.requestStart})
     }
     // Monitor performance after page load
-    if (document.readyState === 'complete') {
+    if(document.readyState === 'complete') {
       updateMetrics();
     } else {
       window.addEventListener('load', updateMetrics);
     }
     // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
+    if('web-vitals' in, window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
@@ -153,11 +213,21 @@ const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTi
       })
     }
     return (
+<<<<<<< HEAD
     <div>
       ) => {
     </>
     </>
       window.removeEventListener('load', updateMetrics)
+=======
+      <div>
+      ) => {
+      window.removeEventListener('load', updateMetrics
+      </div>
+  )
+      </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     }
   }, [])
   return metrics
@@ -165,7 +235,7 @@ const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTi
 // Memory usage monitoring;
 
 export const useMemoryMonitoring = (
-    </div>
+      </div>
   ) => {
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
@@ -176,17 +246,26 @@ export const useMemoryMonitoring = (
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
 const updateMemoryInfo = () => {
+  return 
+  return 
       const memory = (performance as any).memory
-      if (memory) {
+      if(memory) {
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
+<<<<<<< HEAD
     totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit})
+=======
+    totalJSHeapSize: memory.totalJSHeapSize
+          jsHeapSizeLimi,)
+  t: memory.jsHeapSizeLimit})
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       }
     }
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return (
+<<<<<<< HEAD
     <>
       ) => clearInterval(interval)
     </>
@@ -207,8 +286,43 @@ $3
 };
 // Bundle size monitoring;
 
+=======
+      <div>
+      ) => clearInterval(interval
+      </div>
+  )
+      </div>
+  );
+  }, [])
+  return memoryInfo
+}
+// Resource preloading utility
+export const preloadResource = (href: string, as: string) => {
+  if (typeof window === 'undefined') return
+  const link = document.createElement('link');
+  link.rel = 'preload'
+  link.href = href
+  link.as = as,;
+  document.head.appendChild(link);,
+}
+// Critical resource preloading
+export const preloadCriticalResources = () => {
+  return 
+  return 
+  if (typeof window === 'undefined') return
+  // Preload critical fonts
+  preloadResource('/fonts/inter-var.woff2', 'font');
+  preloadResource('/fonts/inter-var.woff', 'font');
+  // Preload critical images
+  preloadResource('/images/hero-bg.webp', 'image');
+  preloadResource('/images/logo.svg', 'image');
+  // Preload critical CSS
+  preloadResource('/styles/critical.css', 'style');
+}
+// Bundle size monitoring
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 export const useBundleSizeMonitoring = (
-    </div>
+      </div>
   ) => {
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
@@ -217,10 +331,18 @@ export const useBundleSizeMonitoring = (
     imageSize?: number;
 }>({})
   useEffect(() => {
+<<<<<<< HEAD
   if (typeof window === 'undefined') return;
 
 const calculateBundleSize = () => {
       const resources = performance.getEntriesByType('resource')
+=======
+  if (typeof window === 'undefined') return
+    const calculateBundleSize = () => {
+  return 
+  return 
+      const resources = performance.getEntriesByType('resource');
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       let totalSize = 0
       let jsSize = 0
       let cssSize = 0
@@ -244,20 +366,30 @@ const calculateBundleSize = () => {
 })
     }
     // Calculate after page load
-    if (document.readyState === 'complete') {
+    if(document.readyState === 'complete') {
       calculateBundleSize();
     } else {
       window.addEventListener('load', calculateBundleSize);
     }
     return (
+<<<<<<< HEAD
     <div>
       ) => {
     </>
     </>
       window.removeEventListener('load', calculateBundleSize)
+=======
+      <div>
+      ) => {
+      window.removeEventListener('load', calculateBundleSize
+      </div>
+  )
+      </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     }
   }, []
-    </div>
+      </div>
   )
   return bundleSize
 }
@@ -274,3 +406,4 @@ const performanceOptimizations = {
   useBundleSizeMonitoring
 }
 export default performanceOptimizations;
+}

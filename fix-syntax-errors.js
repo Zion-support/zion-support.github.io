@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Common syntax fixes
 const fixes = [
   // Fix missing semicolons after interface properties
@@ -101,11 +102,16 @@ function fixSyntaxErrors(content) {
 
 // Function to process a single file
 function processFile(filePath) {
+=======
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   try {
 <<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
+<<<<<<< HEAD
     // Apply fixes
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -113,22 +119,51 @@ function processFile(filePath) {
         content = newContent;
         modified = true;
       }
-    });
-
-    // Additional specific fixes
-    // Fix "use client" directive placement
-    if (content.includes('"use client",') && !content.startsWith('"use client";')) {
-      content = content.replace(/"use client",\s*/, '');
-      content = '"use client";\n' + content;
+=======
+    // Fix merge conflict markers
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`Fixing merge conflicts in ${filePath}`);
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
       modified = true;
     }
 
-    // Fix missing semicolons at end of statements
-    content = content.replace(/(\w+)\s*\n\s*export/g, '$1;\n\nexport');
-    content = content.replace(/(\w+)\s*\n\s*const/g, '$1;\n\nconst');
-    content = content.replace(/(\w+)\s*\n\s*function/g, '$1;\n\nfunction');
+    // Fix malformed JSX closing tags
+    content = content.replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
+      const tags = match.match(/<\/[^>]+>/g);
+      return tags[tags.length - 1]; // Keep only the last closing tag
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+    });
+
+    // Fix self-closing tags that are malformed
+    content = content.replace(/<([^>]+)><\/\1>/g, '<$1 />');
+
+    // Fix JSX expressions that need parent elements
+    content = content.replace(/(\s*)<([A-Z][^>]*)\s*\/><([A-Z][^>]*)\s*\/>/g, '$1<>\n$1  <$2 />\n$1  <$3 />\n$1</>');
+
+    // Fix missing closing tags for common elements
+    content = content.replace(/<div([^>]*)>\s*<\/div>/g, '<div$1 />');
+    content = content.replace(/<span([^>]*)>\s*<\/span>/g, '<span$1 />');
+
+    // Fix malformed className attributes
+    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1 $2"');
+
+    // Fix missing semicolons in JSX
+    content = content.replace(/(\w+)\s*=\s*{([^}]+)}\s*([^;])/g, '$1={$2};$3');
+
+    // Fix unterminated strings
+    content = content.replace(/(\w+)\s*=\s*"([^"]*)\s*$/gm, '$1="$2"');
+
+    // Fix malformed function declarations
+    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {\n  ');
+
+    // Fix missing commas in object literals
+    content = content.replace(/(\w+):\s*([^,}\n]+)\s*\n(\s*)(\w+):/g, '$1: $2,\n$3$4:');
+
+    // Fix malformed imports
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;?\s*$/gm, 'import { $1 } from "$2";');
 
     if (modified) {
+<<<<<<< HEAD
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
@@ -149,12 +184,26 @@ function processFile(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
 >>>>>>> cursor/fix-errors-and-merge-to-main-607a
+=======
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }
-  return false;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function walkDirectory(dir) {
+=======
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
 
@@ -163,9 +212,15 @@ function walkDirectory(dir) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+<<<<<<< HEAD
       fixedCount += walkDirectory(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       if (fixFile(filePath)) {
+=======
+      fixedCount += fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixSyntaxErrors(filePath)) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         fixedCount++;
       }
     }
@@ -174,6 +229,7 @@ function walkDirectory(dir) {
   return fixedCount;
 }
 
+<<<<<<< HEAD
 console.log('Starting syntax error fixes...');
 const fixedCount = walkDirectory('./app');
 =======
@@ -215,3 +271,17 @@ for (const file of tsxFiles) {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-607a
 console.log(`Fixed ${fixedCount} files`);
+=======
+// Main execution
+console.log('Starting syntax error fixes...');
+const fixedCount = fixFilesInDirectory('./app');
+console.log(`Fixed ${fixedCount} files with syntax errors.`);
+
+// Also fix files in src directory if it exists
+if (fs.existsSync('./src')) {
+  const srcFixedCount = fixFilesInDirectory('./src');
+  console.log(`Fixed ${srcFixedCount} files in src directory.`);
+}
+
+console.log('Syntax error fixes completed.');
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

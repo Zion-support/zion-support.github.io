@@ -8,8 +8,14 @@ import Footer from '../components/Footer';
 export default function ServicePage() {
   return (
     <>
+<<<<<<< HEAD
       <Head>
 <<<<<<< HEAD:clean-page-template.tsx
+=======
+    
+  </>
+      <Head></Head>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional service by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       </Head>
@@ -18,6 +24,7 @@ export default function ServicePage() {
           <h1 className="text-4xl font-bold text-white mb-6"></h1>
             Service</h1>
           </h1>
+<<<<<<< HEAD
           <p className="text-lg text-gray-300 mb-8">
             Professional service coming soon.
 =======
@@ -36,6 +43,18 @@ export default function ServicePage() {
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />
+=======
+          <p className="text-lg text-gray-300 mb-8"></p>
+            Professional service coming soon.</p>
+          </p>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
+  r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          ></Link>
+            Contact Us</Link>
+            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
           </Link>
         </div>
       </div>

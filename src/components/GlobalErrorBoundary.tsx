@@ -30,30 +30,30 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   render() {
-    if (this.state.hasError) {
+    if(this.state.hasError) {
       return (</Props>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50" />
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6" />
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full" />
               <svg
                 className="w-6h-6text-red-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-              ></svg>
+               />
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth = {
 2
 };
-        </div>
-        </div>
+          </div>
+          </div>
                   d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
                 /></path>
               </svg>
-            </div>
-            <div className="mt-4 text-center"></div>
+              </div>
+            <div className="mt-4 text-center" />
               <h3 className="text-lg font-medium text-gray-900">
                 Application Error</h3>
               </h3>
@@ -67,25 +67,25 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
               >
                 Reload Page</button>
               </button>
+              </div>
             </div>
-          </div>
         </div>,
       ),
     }
 
     return this.props.children
   }};
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
+import { CheckCircle, Phone, Mail, Helmet  } from "lucide-react";
 {    }
   ]
 
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
+    'Improve decision-making with AI insights',;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-            </div>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; / />
           </div>,
 ,
+}

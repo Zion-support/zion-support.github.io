@@ -1,11 +1,16 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check  } from "lucide-react";
 import Navigation from '../components/Navigation';
+<<<<<<< HEAD
 import Footer from 'Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 const EnhancedLoadingSkeletonPage: React.FC = () => {,
+=======
+
+const EnhancedLoadingSkeletonPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   const features = [
     {
       ico,
@@ -34,3 +39,4 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {,
   ];
 
 export default EnhancedLoadingSkeletonPage;
+}}

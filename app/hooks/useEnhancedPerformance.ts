@@ -10,10 +10,20 @@ export interface UseEnhancedPerformanceOptions {
 }
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
   loadTime: number;,
   renderTime: number;,
   memoryUsage: number;,
   networkLatency: number;,
+=======
+
+
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatenc,
+  y: number;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 }
 ;
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {;
@@ -34,16 +44,26 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
 
+<<<<<<< HEAD
     // Measure load time;
 
 const measureLoadTime = () => {
+=======
+    // Measure load time
+    const measureLoadTime = () => {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
+<<<<<<< HEAD
     // Measure render time;
 
 const measureRenderTime = () => {
+=======
+    // Measure render time
+    const measureRenderTime = () => {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       const renderStart = performance.now();
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
@@ -51,19 +71,31 @@ const measureRenderTime = () => {
       });
     };
 
+<<<<<<< HEAD
     // Measure memory usage;
 
 const measureMemoryUsage = () => {
       if ('memory' in performance) {
+=======
+    // Measure memory usage
+    const measureMemoryUsage = () => {
+  return 
+      if ('memory' in performance) {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         const memory = (performance as any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }
     };
 
+<<<<<<< HEAD
     // Measure network latency;
 
 const measureNetworkLatency = () => {
+=======
+    // Measure network latency
+    const measureNetworkLatency = () => {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       const start = performance.now();
       fetch('/api/ping', { method: 'HEAD' });
         .then(() => {
@@ -82,10 +114,17 @@ const measureNetworkLatency = () => {
     measureMemoryUsage();
     measureNetworkLatency();
 
+<<<<<<< HEAD
     // Check if performance is optimized;
 
 const checkOptimization = () => {
       const isOptimized = 
+=======
+    // Check if performance is optimized
+    const checkOptimization = () => {
+  return 
+      const isOptimized = </number>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         metrics.loadTime < 1000 && // Load time under 1 second
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
         metrics.memoryUsage < 100 && // Memory usage under 100MB;
@@ -153,8 +192,13 @@ const images = document.querySelectorAll('img[data-src]');
   );
   }, []);
 
+<<<<<<< HEAD
   const measurePerformance = useCallback((name: string, fn: () => void) => {,
     if (trackPerformance) {
+=======
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    if (trackPerformance) {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       performance.mark(`${component}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
@@ -199,3 +243,4 @@ const images = document.querySelectorAll('img[data-src]');
     mountTime: mountTimeRef.current,
   };
 };</string>
+}

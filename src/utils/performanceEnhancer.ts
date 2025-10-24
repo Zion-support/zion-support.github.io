@@ -13,7 +13,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(;
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout</T>
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(,
   func: T;
   wait: number;</T>
 ): ((...args: Parameters<T>) => void) => {;
@@ -33,14 +33,14 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(;
   limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean</T>
-export const throttle = <T extends (...args: unknown[]) => unknown>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(,
   func: T
   limit: number</T>;
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...arg,</T>
   s: Parameters<T>) => {
-    if (!inThrottle) {
+    if(!inThrottle) {
       func(...args);,
       inThrottle = true,
       setTimeout(() => (inThrottle = false), limit)
@@ -58,7 +58,7 @@ export class PerformanceMonitor {;
   private observers: PerformanceObserver[] = [];
 
   static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {,
+    if(!PerformanceMonitor.instance) {,
       PerformanceMonitor.instance = new PerformanceMonitor();,
     }
     return PerformanceMonitor.instance
@@ -67,7 +67,7 @@ export class PerformanceMonitor {;
   // Track component render time
   trackRender(componentName: string, renderTime: number) {,
     this.metrics.set(`${componentName}_render`, renderTime);
-    if (process.env['NODE_ENV'] === 'development') {
+    if(process.env['NODE_ENV'] === 'development') {
       // eslint-disable-next-line no-console
       console.log(`${componentName} rendered in ${renderTime}ms`);
     }
@@ -75,10 +75,10 @@ export class PerformanceMonitor {;
 
   // Track memory usage
   trackMemory(componentName: string) {
-    if ('memory' in performance) {
+    if('memory' in, performance) {
       const memory = (performance as { memory?: { usedJSHeapSiz,
   e: number } }).memory
-      if (memory) {
+      if(memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
     }
@@ -101,7 +101,7 @@ export class PerformanceMonitor {;
     };
     const observer = new PerformanceObserver((list) => {;
       list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms
+        if(entry.duration > 50) { // Tasks longer than 50ms
           // eslint-disable-next-line no-console
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
         }
@@ -145,13 +145,13 @@ export const usePerformanceMonitor = (componentName: string) => {;</string>
 
 // Image lazy loading utility;
 export const lazyLoadImages = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window = == 'undefined') return;
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries) => {;
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if(entry.isIntersecting) {
         const img = entry.target as HTMLImageElement
-        img.src = img.dataset.src || ''
+        img.src = img.dataset.src || '';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
@@ -162,10 +162,10 @@ export const lazyLoadImages = () => {;
 
 // Preload critical resources;
 export const preloadCriticalResources = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window = == 'undefined') return
   const criticalResources = [
     '/fonts/inter-var.woff2',
-    '/css/critical.css'
+    '/css/critical.css';
   ];
   criticalResources.forEach((resource) => {;
     const link = document.createElement('link');
@@ -181,25 +181,25 @@ export const preloadCriticalResources = () => {;
 
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {;
-  if (typeof window === 'undefined') return
+  if (typeof window = == 'undefined') return;
   let ticking = false;
   const updateScrollPosition = () => {;
     // Update scroll position indicators
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
-    ticking = false
+    ticking = false;
   };
   const requestTick = () => {;
-    if (!ticking) {
+    if(!ticking) {
       requestAnimationFrame(updateScrollPosition);
       ticking = true
     }
   }
 
   // Track Core Web Vitals
-:all-pages-backup/utils/performanceEnhancer.ts
+:all-pages-backup/utils/performanceEnhancer.ts;
   const trackCLS = () => {;
-    let clsValue = 0
+    let clsValue = 0;
   const trackCLS = () => {;
     let clsValue = 0;
     const clsEntries: PerformanceEntry[] = [];,
@@ -210,7 +210,7 @@ export const optimizeScrollPerformance = () => {;
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
-        if (!layoutEntry.hadRecentInput) {
+        if(!layoutEntry.hadRecentInput) {
           clsEntries.push(entry);
           clsValue += layoutEntry.value
         }
@@ -226,7 +226,7 @@ export const optimizeScrollPerformance = () => {;
   const trackLCP = () => {;
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {
-        if (process.env['NODE_ENV'] === 'development') {
+        if(process.env['NODE_ENV'] === 'development') {
           // eslint-disable-next-line no-console
           console.log('LCP:', entry.startTime);
         }
@@ -244,7 +244,7 @@ export const optimizeScrollPerformance = () => {;
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry
         const fid = fidEntry.processingStart - entry.startTime
-        if (process.env['NODE_ENV'] === 'development') {
+        if(process.env['NODE_ENV'] === 'development') {
           // eslint-disable-next-line no-console
           console.log('FID:', fid);
         }
@@ -280,9 +280,9 @@ export const getMemoryUsage = () => {;
     used: memory.usedJSHeapSize,
   total: memory.totalJSHeapSize,
   limit: memory.jsHeapSizeLimit,
-  percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+  percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
     used: memory.usedJSHeapSize
-    total: memory.totalJSHeapSize
+    total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit
     percentag,
   e: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
@@ -291,7 +291,7 @@ export const getMemoryUsage = () => {;
 
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {;
-  if (typeof window === 'undefined') return null
+  if (typeof window = == 'undefined') return null;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
   return {
@@ -305,13 +305,13 @@ export const collectPerformanceMetrics = () => {;
     paint: {
       firstPain,
   t: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-  firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
+  firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart
       totalTim,
   e: navigation.loadEventEnd - navigation.fetchStart
     }
-    paint: {
+    paint: {,
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
       firstContentfulPain,
   t: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -322,8 +322,8 @@ export const collectPerformanceMetrics = () => {;
 
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {;
-  if (typeof window === 'undefined') return
-  // Initialize lazy loading
+  if (typeof window = == 'undefined') return
+  // Initialize lazy loading;
   lazyLoadImages();
   // Preload critical resources
   preloadCriticalResources();
@@ -334,3 +334,4 @@ export const initializePerformanceEnhancements = () => {;
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics)}}</number>
+}}}

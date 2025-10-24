@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Head from 'next/head';
@@ -26,5 +27,15 @@ export default function TestSimplePage() {
       </div>
       <Footer />
     </>
+=======
+export default function TestSimplePage() {
+  
+  return (
+        <div>
+      <h1>Test Simple Page</h1>
+      <p>This is a test page to verify the build works.</p>
+
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   );
 }

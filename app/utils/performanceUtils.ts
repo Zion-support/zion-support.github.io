@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance monitoring utilities;
 
 export interface PerformanceMetric {
@@ -12,6 +13,26 @@ class PerformanceMonitor {
   private isEnabled: boolean;,
   constructor() {
     this.isEnabled = typeof window !== "undefined" && "performance" in window;
+=======
+// Performance monitoring utilities
+export interface PerformanceMetric {
+
+
+  name: string;
+  value: number;
+  timestamp: number;
+  ur,
+  l: string;}
+}
+;
+class PerformanceMonitor {
+  private metrics: PerformanceMetric[] = [];
+  private isEnable,
+  d: boolean;
+
+  constructor() {,
+    this.isEnabled = typeof window !== "undefined" && "performance" in window;,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }
 
   // Measure page load time
@@ -27,10 +48,18 @@ class PerformanceMonitor {
   }
 
   // Record a custom metric
+<<<<<<< HEAD
   recordMetric(name: string, value: number): void {,
     if (!this.isEnabled) return;
 
     const metric: PerformanceMetric = {,
+=======
+  recordMetric(name: string, value: number): void {
+    if (!this.isEnabled) return;
+
+    const metri,
+  c: PerformanceMetric = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       name,
       value,
       timestamp: Date.now(),
@@ -51,17 +80,31 @@ class PerformanceMonitor {
   }
 
   // Send metrics to analytics service
+<<<<<<< HEAD
   private sendToAnalytics(metric: PerformanceMetric): void {,
     // Example: Send to Google Analytics,
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", metric.name, {
         event_category: "Performance",
+=======
+  private sendToAnalytics(metric: PerformanceMetric): void {
+    // Exampl,
+  e: Send to Google Analytics
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", metric.name, {
+        event_category: "Performance",)
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         value: Math.round(metric.value),
       });
     }
   }
 }
 
+<<<<<<< HEAD
 // Export singleton instance;
 
+=======
+// Export singleton instance
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 export const performanceMonitor = new PerformanceMonitor();
+}

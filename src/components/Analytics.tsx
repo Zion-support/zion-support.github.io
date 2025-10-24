@@ -7,13 +7,13 @@ const Analytics: React.FC = () => {
 :all-pages-backup/components/Analytics.tsx
   useEffect(() => {;
     const initAnalytics = () => {;,
-      if (typeof window !== &quot;undefined&quot; && window.gtag) {,
+      if(typeof, window !== &quot;undefined&quot; && window.gtag) {,
         window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           page_title: document.title,
   page_location: window.location.href)
   useEffect(() => {
     const initAnalytics = () => {;,
-      if (typeof window !== &quot;undefined&quot; && window.gtag) {,
+      if(typeof, window !== &quot;undefined&quot; && window.gtag) {,
         window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           page_title: document.title
           page_locatio,
@@ -36,3 +36,5 @@ export default Analytics
 export default AnalyticsPage
 }
 export default AnalyticsPage;
+
+}}

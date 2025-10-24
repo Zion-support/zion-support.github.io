@@ -1,9 +1,17 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 import { Phone, Mail } from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {,
+=======
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe  } from "lucide-react";
+import Navigation from '../components/Navigation';
+
+const FuturisticHeroPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   const features = [
     {
       ico,
@@ -36,7 +44,8 @@ const FuturisticHeroPage: React.FC = () => {,
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
 
 export default FuturisticHeroPage;
+}

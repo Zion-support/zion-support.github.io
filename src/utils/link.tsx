@@ -5,3 +5,4 @@ export const link = () => {};
 {};
 
 export default link
+}

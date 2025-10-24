@@ -460,3 +460,4 @@ export default AdvancedAccessibilityEnhancerPage
 }
 export default AdvancedAccessibilityEnhancerPage;
 </HTMLElement>
+}

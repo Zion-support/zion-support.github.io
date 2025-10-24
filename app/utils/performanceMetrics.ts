@@ -8,11 +8,22 @@ export interface PerformanceMetric {
 
 
   name: string,
+<<<<<<< HEAD
     value: number,
 unit: string,
     timestamp: Date,
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
 metadata?: Record<string, unknown>}
+=======
+    value: number
+uni,
+  t: string,
+    timestamp: Date
+categor,
+  y: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
+metadata?: Record<string, unknown>}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 export interface WebVitalsMetrics {
 
 
@@ -20,6 +31,7 @@ FCP?: number; // First Contentful Paint
 LCP?: number; // Largest Contentful Paint
 FID?: number; // First Input Delay
 CLS?: number; // Cumulative Layout Shift
+<<<<<<< HEAD
 TTFB?: number; // Time to First Byte;
 
 export interface PerformanceMetric {}
@@ -29,6 +41,18 @@ unit: string,
     timestamp: Date,
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
 metadata?: Record</string><string, unknown>;}</strin>
+=======
+TTFB?: number; // Time to First Byte}
+export interface PerformanceMetric {};
+name: string,
+    value: number
+uni,
+  t: string,
+    timestamp: Date
+categor,
+  y: 'load' | 'runtime' | 'network' | 'memory' | 'custom'</string>
+metadata?: Record<string, unknown>;}</strin>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 }
 export interface WebVitalsMetrics {};
 FCP?: number; // First Contentful Paint
@@ -40,6 +64,7 @@ INP?: number; // Interaction to Next Paint}
 }
 export interface PerformanceReport {};
 metrics: PerformanceMetric[],
+<<<<<<< HEAD
     webVitals: WebVitalsMetrics,
 summary: {,
     avgLoadTime: number,
@@ -51,6 +76,23 @@ summary: {}
 avgLoadTime: number,
     totalMetrics: number,
 performanceScore: number,
+=======
+    webVitals: WebVitalsMetrics
+summar,
+  y: {,
+    avgLoadTime: number
+totalMetric,
+  s: number,
+    performanceScore: number
+webVital,
+  s: WebVitalsMetrics
+  }
+summary: {}
+avgLoadTime: number,
+    totalMetrics: number
+performanceScor,
+  e: number,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     recommendations: string[];}
 }
 timestamp: Date}
@@ -59,11 +101,20 @@ private static instance: PerformanceMetrics}
 private metrics: PerformanceMetric[] = [];}
 private webVitals: WebVitalsMetrics = {}
 private observers: PerformanceObserver[] = [],
+<<<<<<< HEAD
 constructor() {
 if (typeof window !== 'undefined') {}
 export class PerformanceMetrics {}
 private static instance: PerformanceMetrics,
 private metrics: PerformanceMetric[] = [];}
+=======
+constructor() {,
+if (typeof window !== 'undefined') {}
+export class PerformanceMetrics {}
+private static instance: PerformanceMetrics
+private metric,
+  s: PerformanceMetric[] = [];}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 private webVitals: WebVitalsMetrics = {}
 private observers: PerformanceObserver[] = [],
 constructor() {}
@@ -85,8 +136,14 @@ p: Date}
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
 webVitals: WebVitalsMetrics = {}
 private
+<<<<<<< HEAD
 observers: PerformanceObserver[] = [],
 constructor() {/* TODO: Fix JSX expression */}
+=======
+observers: PerformanceObserver[] = []
+constructor() {/* TOD,
+  O: Fix JSX expression */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 }
 }
 static getInstance(): PerformanceMetrics {/* TODO: Fix JSX expression */}
@@ -100,20 +157,37 @@ private initializeObservers(): void {
   // Observe navigation timing
 if ('PerformanceObserver' in window) {
 try {
+<<<<<<< HEAD
 // Navigation timing;
 
 const navObserver = new PerformanceObserver(list => {)
+=======
+// Navigation timing
+const navObserver = new PerformanceObserver(list => {);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 for (const entry of list.getEntries()) {
 if (entry.entryType === 'navigation') {
 const navEntry = entry as PerformanceNavigationTiming
 this.recordMetric({);
 name: 'pageLoadTime'),
+<<<<<<< HEAD
     value: navEntry.loadEventEnd - navEntry.fetchStart),
 unit: 'ms'),
     timestamp: new Date(),
 category: 'load',
     metadata: {,
 domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+=======
+    value: navEntry.loadEventEnd - navEntry.fetchStart)
+uni,
+  t: 'ms'),
+    timestamp: new Date()
+categor,
+  y: 'load',
+    metadata: {
+domContentLoade,
+  d: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }
 private initializeObservers(): void {}
 // Observe navigation timing
@@ -127,10 +201,19 @@ if (entry.entryType === 'navigation') {}
 const navEntry = entry as PerformanceNavigationTiming
 this.recordMetric({)}
 name: 'pageLoadTime',
+<<<<<<< HEAD
     value: navEntry.loadEventEnd - navEntry.fetchStart,
 unit: 'ms',
     timestamp: new Date(),
 category: 'load',
+=======
+    value: navEntry.loadEventEnd - navEntry.fetchStart
+uni,
+  t: 'ms',
+    timestamp: new Date()
+categor,
+  y: 'load',
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     metadata: {}
 domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
     domInteractive: navEntry.domInteractive - navEntry.fetchStart}
@@ -140,19 +223,32 @@ private initializeObservers(): void {/* TODO: Fix JSX expression */}
 }
 }
 })
+<<<<<<< HEAD
 navObserver.observe({ entryTypes: ['navigation'] })
 this.observers.push(navObserver)
 // Paint timing;
 
 const paintObserver = new PerformanceObserver(list => {
+=======
+navObserver.observe({ entryTypes: ['navigation'] });
+this.observers.push(navObserver);
+// Paint timing
+const paintObserver = new PerformanceObserver(list => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   )
 for (const entry of list.getEntries()) {
 if (entry.name === 'first-contentful-paint') {
 this.webVitals.FCP = entry.startTime
 this.recordMetric({);
 name: 'FCP'),
+<<<<<<< HEAD
     value: entry.startTime),
 unit: 'ms'),
+=======
+    value: entry.startTime)
+uni,
+  t: 'ms')
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 // Paint timing
 }
 const paintObserver = new PerformanceObserver(list => {)}
@@ -161,19 +257,35 @@ if (entry.name === 'first-contentful-paint') {}
 this.webVitals.FCP = entry.startTime
 this.recordMetric({)}
 name: 'FCP',
+<<<<<<< HEAD
     value: entry.startTime,
 unit: 'ms',
     timestamp: new Date(),
 category: 'load'}
+=======
+    value: entry.startTime
+uni,
+  t: 'ms',
+    timestamp: new Date()
+categor,
+  y: 'load'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 })
 }
 }
 })
+<<<<<<< HEAD
 paintObserver.observe({ entryTypes: ['paint'] })
 this.observers.push(paintObserver)
 // Largest Contentful Paint;
 
 const lcpObserver = new PerformanceObserver(list => {
+=======
+paintObserver.observe({ entryTypes: ['paint'] });
+this.observers.push(paintObserver);
+// Largest Contentful Paint
+const lcpObserver = new PerformanceObserver(list => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   )
 const entries = list.getEntries()
 const lastEntry = entries[entries.length - 1]
@@ -181,8 +293,14 @@ if (lastEntry) {
 this.webVitals.LCP = lastEntry.startTime
 this.recordMetric({);
 name: 'LCP'),
+<<<<<<< HEAD
     value: lastEntry.startTime),
 unit: 'ms'),
+=======
+    value: lastEntry.startTime)
+uni,
+  t: 'ms')
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 // Largest Contentful Paint
 }
 const lcpObserver = new PerformanceObserver(list => {)}
@@ -192,6 +310,7 @@ if (lastEntry) {}
 this.webVitals.LCP = lastEntry.startTime
 this.recordMetric({)}
 name: 'LCP',
+<<<<<<< HEAD
     value: lastEntry.startTime,
 unit: 'ms',
     timestamp: new Date(),
@@ -205,6 +324,22 @@ this.observers.push(lcpObserver)
 
 const clsObserver = new PerformanceObserver(list => {
   )
+=======
+    value: lastEntry.startTime
+uni,
+  t: 'ms',
+    timestamp: new Date()
+categor,
+  y: 'load'}
+})
+}
+})
+lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+this.observers.push(lcpObserver);
+// Layout Shift
+const clsObserver = new PerformanceObserver(list => {)
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 let clsValue = 0;)
 for (const entry of list.getEntries()) {
 if ((entry as LayoutShift).hadRecentInput) continue
@@ -215,8 +350,14 @@ this.webVitals.CLS = clsValue
 this.recordMetric({)
   )
 name: 'CLS'),
+<<<<<<< HEAD
     value: clsValue),
 unit: 'score'),
+=======
+    value: clsValue)
+uni,
+  t: 'score')
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 // Layout Shift
 }
 const clsObserver = new PerformanceObserver(list => {)}
@@ -228,10 +369,19 @@ clsValue += (entry as LayoutShift).value;}
 this.webVitals.CLS = clsValue
 this.recordMetric({)}
 name: 'CLS',
+<<<<<<< HEAD
     value: clsValue,
 unit: 'score',
     timestamp: new Date(),
 category: 'runtime'}
+=======
+    value: clsValue
+uni,
+  t: 'score',
+    timestamp: new Date()
+categor,
+  y: 'runtime'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 })
 })
 clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -240,28 +390,45 @@ this.observers.push(clsObserver);
 })
 navObserver.observe({/* TODO: Fix JSX expression */});
 s: ['navigation'] })
+<<<<<<< HEAD
 this.observers.push(navObserver)
 // Paint timing;
 
 const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
+=======
+this.observers.push(navObserver);
+// Paint timing
+const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */});
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 })
 }
 }
 })
 paintObserver.observe({/* TODO: Fix JSX expression */});
 s: ['paint'] })
+<<<<<<< HEAD
 this.observers.push(paintObserver)
 // Largest Contentful Paint;
 
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
+=======
+this.observers.push(paintObserver);
+// Largest Contentful Paint
+const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */});
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 })
 }
 })
 lcpObserver.observe({/* TODO: Fix JSX expression */});
 s: ['largest-contentful-paint'] })
+<<<<<<< HEAD
 this.observers.push(lcpObserver)
 // Layout Shift;
 
+=======
+this.observers.push(lcpObserver);
+// Layout Shift
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
 }
 this.webVitals.CLS = clsValue)
@@ -278,9 +445,15 @@ this.observers.push(clsObserver);
 /**
 * Record a custom performance metric
 */
+<<<<<<< HEAD
 recordMetric(metric: PerformanceMetric): void {,
 this.metrics.push(metric)
 // Keep only last 1000 metrics
+=======
+recordMetric(metric: PerformanceMetric): void {
+this.metrics.push(metric);,
+// Keep only last 1000 metrics,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 if (this.metrics.length > 1000) {}
 recordMetric(metric: PerformanceMetric): void {}
 this.metrics.push(metric);
@@ -303,6 +476,7 @@ const perfData = window.performance.timing;
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
 this.recordMetric({);
 name: 'pageLoad'),
+<<<<<<< HEAD
     value: pageLoadTime),
 unit: 'ms'),
     timestamp: new Date(),
@@ -311,6 +485,20 @@ category: 'load',
 dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
     tcpConnection: perfData.connectEnd - perfData.connectStart,
 serverResponse: perfData.responseEnd - perfData.requestStart,
+=======
+    value: pageLoadTime)
+uni,
+  t: 'ms'),
+    timestamp: new Date()
+categor,
+  y: 'load',
+    metadata: {
+dnsLooku,
+  p: perfData.domainLookupEnd - perfData.domainLookupStart,
+    tcpConnection: perfData.connectEnd - perfData.connectStart
+serverRespons,
+  e: perfData.responseEnd - perfData.requestStart
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }
 recordPageLoad(): void {}
 if (typeof window === 'undefined') return;
@@ -320,6 +508,7 @@ const perfData = window.performance.timing;
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
 this.recordMetric({)}
 name: 'pageLoad',
+<<<<<<< HEAD
     value: pageLoadTime,
 unit: 'ms',
     timestamp: new Date(),
@@ -328,6 +517,19 @@ category: 'load',
 dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
     tcpConnection: perfData.connectEnd - perfData.connectStart,
 serverResponse: perfData.responseEnd - perfData.requestStart,
+=======
+    value: pageLoadTime
+uni,
+  t: 'ms',
+    timestamp: new Date()
+categor,
+  y: 'load',
+    metadata: {}
+dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+    tcpConnection: perfData.connectEnd - perfData.connectStart
+serverRespons,
+  e: perfData.responseEnd - perfData.requestStart,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     domParsing: perfData.domComplete - perfData.domLoading}
 recordPageLoad(): void {/* TODO: Fix JSX expression */}
 }
@@ -338,21 +540,42 @@ recordPageLoad(): void {/* TODO: Fix JSX expression */}
 */
 recordNetworkRequest(url: string, duration: number, status: number): void {,
   this.recordMetric({)
+<<<<<<< HEAD
 name: 'networkRequest'),
     value: duration),
 unit: 'ms'),
     timestamp: new Date(),
 category: 'network',
     metadata: {,
+=======
+nam,
+  e: 'networkRequest'),
+    value: duration)
+uni,
+  t: 'ms'),
+    timestamp: new Date()
+categor,
+  y: 'network',
+    metadata: {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 url
 }
 recordNetworkRequest(url: string, duration: number, status: number): void {}
 this.recordMetric({)}
 name: 'networkRequest',
+<<<<<<< HEAD
     value: duration,
 unit: 'ms',
     timestamp: new Date(),
 category: 'network',
+=======
+    value: duration
+uni,
+  t: 'ms',
+    timestamp: new Date()
+categor,
+  y: 'network',
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     metadata: {}
 url
 status}
@@ -374,6 +597,7 @@ if (!(performance as PerformanceWithMemory).memory) return;
 const memory = (performance as PerformanceWithMemory).memory
 this.recordMetric({);
 name: 'memoryUsage'),
+<<<<<<< HEAD
     value: memory.usedJSHeapSize),
 unit: 'bytes'),
     timestamp: new Date(),
@@ -381,6 +605,18 @@ category: 'memory',
     metadata: {,
 total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
+=======
+    value: memory.usedJSHeapSize)
+uni,
+  t: 'bytes'),
+    timestamp: new Date()
+categor,
+  y: 'memory',
+    metadata: {
+tota,
+  l: memory.totalJSHeapSize,
+    limit: memory.jsHeapSizeLimit
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   }
 recordMemoryUsage(): void {}
 if (typeof window === 'undefined') return
@@ -389,6 +625,7 @@ if (!(performance as PerformanceWithMemory).memory) return;
 const memory = (performance as PerformanceWithMemory).memory
 this.recordMetric({)}
 name: 'memoryUsage',
+<<<<<<< HEAD
     value: memory.usedJSHeapSize,
 unit: 'bytes',
     timestamp: new Date(),
@@ -397,6 +634,19 @@ category: 'memory',
 total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
 percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
+=======
+    value: memory.usedJSHeapSize
+uni,
+  t: 'bytes',
+    timestamp: new Date()
+categor,
+  y: 'memory',
+    metadata: {}
+total: memory.totalJSHeapSize,
+    limit: memory.jsHeapSizeLimit
+percentag,
+  e: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 recordMemoryUsage(): void {/* TODO: Fix JSX expression */}
 }
 })
@@ -404,16 +654,28 @@ recordMemoryUsage(): void {/* TODO: Fix JSX expression */}
 /**
 * Measure function execution time
 */
+<<<<<<< HEAD
 measureFunction<T>(name: string, fn: () => T): T {,
 const startTime = performance.now()
 const result = fn()
+=======
+measureFunction<T>(name: string, fn: () => T): T {
+const startTime = performance.now();,
+const result = fn();,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const endTime = performance.now()}
 this.recordMetric({})
 name: `functio,
   n:${name}`)
 value: endTime - startTime),
+<<<<<<< HEAD
     unit: 'ms'),
 measureFunction<T>(name: string, fn: () => T): T {}
+=======
+    unit: 'ms')</T>
+measureFunction<T>(nam,
+  e: string, fn: () => T): T {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const startTime = performance.now()
 const result = fn()
 const endTime = performance.now()
@@ -443,17 +705,30 @@ return result
 }
 /**
 * Measure async function execution time
+<<<<<<< HEAD
 */
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
 const startTime = performance.now()
 const result = await fn()
+=======
+*/</T>
+async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+const startTime = performance.now();,
+const result = await fn();,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const endTime = performance.now()}
 this.recordMetric({`})
 name: `asyn,
   c:${name}`)
 value: endTime - startTime),
+<<<<<<< HEAD
     unit: 'ms'),
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
+=======
+    unit: 'ms')</T>
+async measureAsyncFunction<T>(nam,</T>
+  e: string, fn: () => Promise<T>): Promise<T> {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const startTime = performance.now()
 const result = await fn()
 const endTime = performance.now()
@@ -571,9 +846,15 @@ return Math.max(0, Math.min(100, score))
 * Get performance recommendations
 */
 getRecommendations(): string[] {
+<<<<<<< HEAD
 const recommendations: string[] = [],
 if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
 recommendations.push()
+=======
+const recommendations: string[] = []
+if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
+recommendations.push();,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'}
 getRecommendations(): string[] {}
 const recommendations: string[] = [],
@@ -625,20 +906,39 @@ const loadMetrics = this.getMetricsByCategory('load');
 const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
 return {
   metrics: this.getMetrics(),
+<<<<<<< HEAD
     webVitals: this.getWebVitals(),
 summary: {,
 avgLoadTime
 totalMetrics: this.metrics.length,
+=======
+    webVitals: this.getWebVitals();
+summary: {
+avgLoadTime
+totalMetric,
+  s: this.metrics.length
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
 }
 return {}
 metrics: this.getMetrics(),
+<<<<<<< HEAD
     webVitals: this.getWebVitals(),
 summary: {}
 avgLoadTime
 totalMetrics: this.metrics.length,
     performanceScore: this.calculatePerformanceScore(),
 recommendations: this.getRecommendations()}
+=======
+    webVitals: this.getWebVitals()
+summar,
+  y: {}
+avgLoadTime
+totalMetrics: this.metrics.length,
+    performanceScore: this.calculatePerformanceScore()
+recommendation,
+  s: this.getRecommendations()}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 }
 timestamp: new Date()}
 generateReport(): PerformanceReport {/* TODO: Fix JSX expression */}
@@ -673,6 +973,7 @@ this.observers = [];}
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {
   memory: {,
+<<<<<<< HEAD
 // Type for performance.memory
 }
 interface PerformanceWithMemory extends Performance {}
@@ -680,19 +981,38 @@ memory: {}
 // usedJSHeapSize: number,
 // totalJSHeapSize: number,
 // jsHeapSizeLimit: number}
+=======
+// Type for performance.memory,
+}
+interface PerformanceWithMemory extends Performance {}
+memory: {}
+// usedJSHeapSize: number
+// totalJSHeapSize: number
+// jsHeapSizeLimi,
+  t: number}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 }
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
   value: number,
+<<<<<<< HEAD
 // Type for LayoutShift
+=======
+// Type for LayoutShift,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 }
 interface LayoutShift extends PerformanceEntry {}
 value: number,
     hadRecentInput: boolean;}
 }
+<<<<<<< HEAD
 // Export singleton instance;
 
 export const performanceMetrics = PerformanceMetrics.getInstance()
+=======
+// Export singleton instance
+export const performanceMetrics = PerformanceMetrics.getInstance();
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 export default PerformanceMetrics
 cleanup(): void {/* TODO: Fix JSX expression */}
 }
@@ -708,3 +1028,4 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 
 export const performanceMetrics = PerformanceMetrics.getInstance()
 `</T>;
+}

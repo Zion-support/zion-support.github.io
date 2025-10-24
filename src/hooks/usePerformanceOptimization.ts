@@ -186,6 +186,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
+  return 
         const memory = (performance as any).memory
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
@@ -255,3 +256,4 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     registerServiceWorker,
     setupPerformanceMonitoring
   }}</IntersectionObserver>;
+}

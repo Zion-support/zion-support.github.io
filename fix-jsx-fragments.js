@@ -1,95 +1,47 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 function fixJSXFragments(filePath) {
+=======
+// Function to fix JSX fragment syntax issues
+function fixJSXFragmentSyntax(filePath) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix JSX fragment closing tags
-    // Look for patterns like <></> that are missing closing tags
-    const fragmentPattern = /<>\s*([^<]*?)\s*$/gm;
-    const matches = content.match(fragmentPattern);
-    
-    if (matches) {
-      // Find the last opening fragment and ensure it has a closing tag
-      const lines = content.split('\n');
-      let inFragment = false;
-      let fragmentStart = -1;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        // Check for opening fragment
-        if (line.includes('<>') && !line.includes('</>')) {
-          inFragment = true;
-          fragmentStart = i;
-        }
-        
-        // Check for closing fragment
-        if (line.includes('</>')) {
-          inFragment = false;
-          fragmentStart = -1;
-        }
-        
-        // If we're in a fragment and reach the end of the component, close it
-        if (inFragment && (line.includes('export default') || line.includes('return null') || line.includes('};'))) {
-          // Insert closing fragment before the export/default
-          lines[i] = '  </>\n' + line;
-          inFragment = false;
-          modified = true;
-        }
-      }
-      
-      if (modified) {
-        content = lines.join('\n');
-      }
+    // Fix malformed JSX fragments - replace <> with <div>
+    if (content.includes('return (\n    <>')) {
+      content = content.replace(/return \(\n\s*<>/g, 'return (\n    <div>');
+      modified = true;
     }
 
-    // Fix specific patterns that are common
-    // Fix missing closing tags for common elements
-    const commonFixes = [
-      // Fix missing closing tags
-      {
-        pattern: /<(\w+)([^>]*)>\s*$/gm,
-        replacement: '<$1$2></$1>'
-      },
-      // Fix JSX expressions that need parent elements
-      {
-        pattern: /return\s*\(\s*([^<]*?)\s*\)\s*;?\s*$/gm,
-        replacement: 'return (\n    <>\n      $1\n    </>\n  );'
-      },
-      // Fix malformed JSX attributes
-      {
-        pattern: /(\w+)=\{([^}]+)\}/g,
-        replacement: '$1={$2}'
-      },
-      // Fix missing semicolons
-      {
-        pattern: /(\w+)\s*\n\s*export/g,
-        replacement: '$1;\n\nexport'
-      }
-    ];
+    // Fix closing fragments - replace </> with </div>
+    if (content.includes('</>')) {
+      content = content.replace(/<\/>/g, '</div>');
+      modified = true;
+    }
 
-    commonFixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
+    // Fix malformed JSX where fragments are not properly closed
+    if (content.includes('  )\n}') && !content.includes('  );\n}')) {
+      content = content.replace(/  \)\n}/g, '  );\n}');
+      modified = true;
+    }
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed JSX fragments in: ${filePath}`);
       return true;
     }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-  return false;
 }
 
+<<<<<<< HEAD
 function walkDirectory(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -106,10 +58,37 @@ function walkDirectory(dir) {
       }
     }
   });
+=======
+// Function to recursively find and fix all .tsx files
+function fixAllJSXFragmentSyntax(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += fixAllJSXFragmentSyntax(filePath);
+    } else if (file.endsWith('.tsx')) {
+      if (fixJSXFragmentSyntax(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 
   return fixedCount;
 }
 
+<<<<<<< HEAD
 console.log('Starting JSX fragment fixes...');
 const fixedCount = walkDirectory('./app');
 console.log(`Fixed JSX fragments in ${fixedCount} files`);
+=======
+// Start fixing from the app directory
+const appDir = path.join(__dirname, 'app');
+console.log('Fixing JSX fragment syntax...');
+const totalFixed = fixAllJSXFragmentSyntax(appDir);
+console.log(`Fixed ${totalFixed} files`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

@@ -46,13 +46,13 @@ export class PerformanceMetrics {;
   private observers: PerformanceObserver[] = []
 
   constructor() {
-    if (typeof window !== 'undefined') {,
+    if(typeof, window !== 'undefined') {,
       this.initializeObservers();,
     }
   }
 
   static getInstance(): PerformanceMetrics {
-    if (!PerformanceMetrics.instance) {
+    if(!PerformanceMetrics.instance) {
       PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance
@@ -63,12 +63,12 @@ export class PerformanceMetrics {;
    */
   private initializeObservers(): void {
     // Observe navigation timing
-    if ('PerformanceObserver' in window) {
+    if('PerformanceObserver' in, window) {
       try {
         // Navigation timing
         const navObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
+            if(entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
@@ -90,7 +90,7 @@ export class PerformanceMetrics {;
                 timestamp: new Date()
                 categor,
   y: 'load',
-                metadata: {
+                metadata: {,
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
                   domInteractiv,
   e: navEntry.domInteractive - navEntry.fetchStart
@@ -105,7 +105,7 @@ export class PerformanceMetrics {;
         // Paint timing;
         const paintObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
+            if(entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
@@ -131,7 +131,7 @@ export class PerformanceMetrics {;
         const lcpObserver = new PerformanceObserver(list => {;)
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {
+          if(lastEntry) {
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
@@ -178,7 +178,7 @@ export class PerformanceMetrics {;
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
-      } catch (error) {
+      } catch(error) {
         // eslint-disable-next-line no-console
         console.error('Failed to initialize performance observers:', error);
       }
@@ -191,7 +191,7 @@ export class PerformanceMetrics {;
   recordMetric(metric: PerformanceMetric): void {
     this.metrics.push(metric);
     // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {,
+    if(this.metrics.length > 1000) {,
       this.metrics.shift();,
     }
   }
@@ -225,9 +225,9 @@ export class PerformanceMetrics {;
       timestamp: new Date()
       categor,
   y: 'load',
-      metadata: {
+      metadata: {,
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart
-        tcpConnection: perfData.connectEnd - perfData.connectStart
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart
         domParsin,
   g: perfData.domComplete - perfData.domLoading
@@ -292,7 +292,7 @@ export class PerformanceMetrics {;
       timestamp: new Date()
       categor,
   y: 'memory',
-      metadata: {
+      metadata: {,
         total: memory.totalJSHeapSize
         limit: memory.jsHeapSizeLimit
         percentag,
@@ -314,7 +314,7 @@ export class PerformanceMetrics {;
   e: name,
   value: endTime - startTime,
   unit: unit,)
-  timestamp: new Date()
+  timestamp: new Date(),
       name: `functio,
   n:${name}`
       value: endTime - startTime
@@ -340,7 +340,7 @@ export class PerformanceMetrics {;
   e: name,
   value: endTime - startTime,
   unit: unit,)
-  timestamp: new Date()
+  timestamp: new Date(),
       name: `asyn,
   c:${name}`
       value: endTime - startTime
@@ -380,22 +380,22 @@ export class PerformanceMetrics {;
   calculatePerformanceScore(): number {
     let score = 100
     // FCP scoring
-    if (this.webVitals.FCP) {
+    if(this.webVitals.FCP) {
       if (this.webVitals.FCP > 3000) score -= 20
       else if (this.webVitals.FCP > 1800) score -= 10
     }
     // LCP scoring
-    if (this.webVitals.LCP) {
+    if(this.webVitals.LCP) {
       if (this.webVitals.LCP > 4000) score -= 25
       else if (this.webVitals.LCP > 2500) score -= 12
     }
     // CLS scoring
-    if (this.webVitals.CLS) {
+    if(this.webVitals.CLS) {
       if (this.webVitals.CLS > 0.25) score -= 20
       else if (this.webVitals.CLS > 0.1) score -= 10
     }
     // FID scoring
-    if (this.webVitals.FID) {
+    if(this.webVitals.FID) {
       if (this.webVitals.FID > 300) score -= 15
       else if (this.webVitals.FID > 100) score -= 8
     }
@@ -407,21 +407,21 @@ export class PerformanceMetrics {;
    */
   getRecommendations(): string[] {;
     const recommendations: string[] = [];
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
+    if(this.webVitals.FCP && this.webVitals.FCP > 1800) {,
       recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'),
     }
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
+    if(this.webVitals.LCP && this.webVitals.LCP > 2500) {
       recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading')
     }
-    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
+    if(this.webVitals.CLS && this.webVitals.CLS > 0.1) {
       recommendations.push('Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds')
     }
-    if (this.webVitals.FID && this.webVitals.FID > 100) {
+    if(this.webVitals.FID && this.webVitals.FID > 100) {
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution')
     }
     const networkMetrics = this.getMetricsByCategory('network');
     const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
-    if (avgNetworkTime > 500) {
+    if(avgNetworkTime > 500) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
     }
     return recommendations
@@ -434,7 +434,7 @@ export class PerformanceMetrics {;
     const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
     return {
-      metrics: this.getMetrics()
+      metrics: this.getMetrics(),
       webVitals: this.getWebVitals()
       summar,
   y: {
@@ -443,7 +443,7 @@ export class PerformanceMetrics {;
   totalMetrics: this.metrics.length,
   performanceScore: this.calculatePerformanceScore();
         avgLoadTime
-        totalMetrics: this.metrics.length
+        totalMetrics: this.metrics.length,
         performanceScore: this.calculatePerformanceScore()
         recommendation,
   s: this.getRecommendations()
@@ -498,3 +498,4 @@ export default PerformanceMetrics
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 </T>
+}

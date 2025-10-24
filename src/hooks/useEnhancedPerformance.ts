@@ -14,7 +14,8 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean;
   trackAnalytics?: boolean;}
 };
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance() {
+  return 
   const {
     component = 'Unknown',
     trackErrors = true,
@@ -109,3 +110,4 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   };
 }
 export default useEnhancedPerformance;</string>
+}

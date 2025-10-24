@@ -1,20 +1,32 @@
 'use client';
 import React from 'react';
 import React, { useEffect } from &quot;react&quot;
+
 interface AnalyticsProps {
+<<<<<<< HEAD
 
   className?: string;
 }
 const Analytics: React.FC = () => {,
 
-  useEffect(() => {
-    // Initialize analytics tracking;
+=======
 
-const initAnalytics = () => {
+
+  className?: string;
+
+
+}
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+  useEffect(() => {
+    // Initialize analytics tracking
+    const initAnalytics = () => {
+  return 
       // Google Analytics initialization
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
+<<<<<<< HEAD
 
           page_location: window.location.href,
         });
@@ -22,6 +34,10 @@ const initAnalytics = () => {
     };
 
 
+=======
+          page_location: window.location.href});
+        });}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     initAnalytics();
   }, []);
 
@@ -30,6 +46,7 @@ const initAnalytics = () => {
   );}
 // Extend Window interface for gtag
 declare global {
+<<<<<<< HEAD
   interface Window {
 
     gtag: (...args: any[]) => void;,
@@ -38,3 +55,10 @@ declare global {
 
 
 export default Analytics;
+=======
+  interface Window {}
+    gtag: (...arg,
+  s: any[]) => void;};
+export default Analytics;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a

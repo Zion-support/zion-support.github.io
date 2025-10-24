@@ -37,3 +37,4 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
 
 
 export default EnhancedLoadingSkeletonPage;
+}

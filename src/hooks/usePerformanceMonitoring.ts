@@ -82,3 +82,4 @@ const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
 };
 
 export default usePerformanceMonitoring;</PerformanceMetrics>
+}

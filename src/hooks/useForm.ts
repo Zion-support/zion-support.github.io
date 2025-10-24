@@ -185,3 +185,4 @@ export function useForm<T extends Record<string, unknown>>({
     validateAllFields
   };
 }</keyof>
+}

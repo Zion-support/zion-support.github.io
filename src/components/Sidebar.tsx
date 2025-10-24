@@ -1,20 +1,19 @@
 'use client';
 :all-pages-backup/components/Sidebar.tsx
-import {Phone, Mail, Brain} from 'lucide-react';
+import { Phone, Mail, Brain } from "lucide-react";
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp  } from "lucide-react";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check  } from "lucide-react";
+import { Phone, Target, Mail, Users, Brain  } from "lucide-react";
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import { Phone, Target, Mail, Users, Brain  } from "lucide-react";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
-
+import { Phone, Target, Mail, Users, Brain  } from "lucide-react";
 const SidebarPage: React.FC = () => {
   const features = [
     {
@@ -89,36 +88,36 @@ const SidebarPage: React.FC = () => {
     
   </>
       <Helmet>;</Helmet>
-        <Head></Head>
+        <Head />
         <title>Sidebar</title>;
-        <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
-      </Head>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, Sidebar, AI solutions, intelligent automation&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+        <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; / />
+<meta name = "description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." / />
+      </Head>;
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, Sidebar, AI solutions, intelligent automation&quot; / />
+<meta name = "description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." / />
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+      <Navigation / />;
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; />
         {/* Hero Section */}
     </div>
     </div>
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; />
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot; />
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot; />
               Sidebar</h1>
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot; />
               Advanced Sidebar solution for modern businesses.</p>
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
                 Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; / />
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
                 Learn More</button>
               </button>
             </div>
@@ -126,25 +125,25 @@ const SidebarPage: React.FC = () => {
         </section>,
 ,
         {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
+        <section className=&quot;py-20 px-4&quot; />
+          <div className=&quot;max-w-7xl mx-auto&quot; />
+            <div className=&quot;text-center mb-16&quot; />
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot; />
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
             <div className=&quot;grid md: grid-cols-2 l,
-  g:grid-cols-4 gap-8&quot;></div>
+  g:grid-cols-4 gap-8&quot; />
               {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
+                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; />
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />
                   <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;></ul>
+                  <ul className=&quot;space-y-2&quot; />
                     {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot; />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; / />
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -156,19 +155,19 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
+        <section className=&quot;py-20 px-4 bg-white/5&quot; />
+          <div className=&quot;max-w-7xl mx-auto&quot; />
+            <div className=&quot;text-center mb-16&quot; />
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot; />
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
             <div className=&quot;grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8&quot;></div>
+  g:grid-cols-3 gap-8&quot; />
               {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
+                <div key={index} className=&quot;flex items-start space-x-4&quot; />
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
@@ -177,25 +176,25 @@ const SidebarPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+        <section className=&quot;py-20 px-4&quot; />
+          <div className=&quot;max-w-4xl mx-auto text-center&quot; />
             <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot; />
               Join thousands of businesses already using our AI solutions</p>
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
                 Start Free Trial</button>
               </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
                 Contact Sales</button>
               </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer / />
     </>
 :all-pages-backup/components/Sidebar.tsx
   )};
@@ -231,7 +230,7 @@ useEffect(() => {
   
 consthandleResize= () => {
   
-if (windo w.innerWidth >=1024) {
+if(windo, w.innerWidth >=1024) {
 setIsOpen(false)}
 }
 windo w.addEventListener('resize', handleResize);
@@ -254,7 +253,7 @@ constnavigationSections= [
   items: [,
 }
 constnavigationSections = [
-{title: 'Main'
+{title: 'Main',
 items: [
 { nam,
   e: 'Home', path: '/', icon: Home},
@@ -336,7 +335,7 @@ items: [
 :all-pages-backup/components/Sidebar.tsx
 {title: title,
   items: [
-{title: 'Company'
+{title: 'Company',
 items: [
 { nam,
   e: 'Team', path: '/team', icon: Users},
@@ -348,7 +347,7 @@ items: [
 :all-pages-backup/components/Sidebar.tsx
 {title: title,
   items: [
-{title: 'Resources'
+{title: 'Resources',
 items: [
 { nam,
   e: 'Documentation', path: '/do cs', icon: Settings},
@@ -374,7 +373,7 @@ return (</Set>
 <>
     {/* Mobile Menu Button */}
   </>
-<button ></button>
+<button  />
 onClick={() =></button> setIsOpen(true)}
 :all-pages-backup/components/Sidebar.tsx
 className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot
@@ -383,7 +382,7 @@ className=&quot;lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur
   r:bg-slate-700/90 transition-all&quot;
 aria-label=&quot;Open sidebar&quot;
 >
-<Menu className=&quot;w-6 h-6&quot; /></Menu>
+<Menu className=&quot;w-6 h-6&quot; / />
 </button>
 {/* Sidebar Overlay */}
 {isOpen && (
@@ -391,59 +390,59 @@ aria-label=&quot;Open sidebar&quot;
 <div
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;}
 onClick={() =>setIsOpen(false)}</div>
-<div className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}></div>
+<div className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;} />
 onClick = {() =>setIsOpen(false)}</div>
 />
 {)}
 {/* Sidebar */}</div>
-<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${></aside>
+<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${ />
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static l,</aside>
   g:z-auto`}>;</aside>
-<div className=&quot;flex flex-col h-full&quot;></div>
+<div className=&quot;flex flex-col h-full&quot; />
 {/* Header */}</div>
-<div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot;></div>
+<div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot; />
 <Link to=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick = {() => setIsOpen(false)}>;</Link>
-<div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>
-<Brain className=&quot;w-6 h-6 text-white&quot; /></Brain>
+<div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot; />
+<Brain className=&quot;w-6 h-6 text-white&quot; / />
 </div>
-<div></div>
+<div />
 <h2 className=&quot;text-xl font-bold text-white cyber-text&quot;>Zion Tech Group</h2>
 <p className=&quot;text-xs text-cyan-400&quot;>AI & IT Solutions</p>
 </div>
 </Link>
 :all-pages-backup/components/Sidebar.tsx
 <button
-onClick={() =></button> setIsOpen(false)}
+onClick={() = /> setIsOpen(false)}
 className=&quot;lg:hidden text-gray-400 hove,
   r:text-white transition-colors&quot
 aria-label=&quot;Close sidebar&quot
-<button ></button>
+<button  />
 onClick = {() =></button> setIsOpen(false)}
 className=&quot;lg: hidden text-gray-400 hove,
   r:text-white transition-colors&quot;
 aria-label=&quot;Close sidebar&quot;
 >
-<X className=&quot;w-6 h-6&quot; /></X>
+<X className=&quot;w-6 h-6&quot; / />
 </button>
 </div>
 {/* Navigation */}
-<div className=&quot;flex-1 overflow-y-auto py-6&quot;></div>
-<nav className=&quot;space-y-2 px-4&quot;></nav>
+<div className=&quot;flex-1 overflow-y-auto py-6&quot; />
+<nav className=&quot;space-y-2 px-4&quot; />
 {navigationSections.map((section, sectionIndex) => (}</nav>
-<div key={sectionIndex} className=&quot;space-y-1&quot;></div>
-<button ></button>
+<div key={sectionIndex} className=&quot;space-y-1&quot; />
+<button  />
 onClick = {() =></button> section.key && toggleSection(section.key)}
 className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors&quot;>
 <span>{section.title}</span>
 {section.key && (
 expandedSections.has(section.key) ?
 <ChevronDown className=&quot;w-4 h-4&quot; /> :</ChevronDown>
-<ChevronRight className=&quot;w-4 h-4&quot; /></ChevronRight>
+<ChevronRight className=&quot;w-4 h-4&quot; / />
 )}</ChevronRight>
 </button>
 {(!section.key || expandedSections.has(section.key)) && (
-<div className=&quot;ml-4 space-y-1&quot;></div>
+<div className=&quot;ml-4 space-y-1&quot; />
 {section.items.map((item, itemIndex) => (</div>
-<Link key = {itemIndex}></Link>
-</Link>
+<Link key = {itemIndex} / />
+}}}}}

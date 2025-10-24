@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
+<<<<<<< HEAD
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -66,6 +67,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+=======
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     </html>
   )
 }

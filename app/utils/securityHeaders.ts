@@ -1,9 +1,9 @@
-
 /**
 * Security Headers Configuration
 * Comprehensive security headers for production applications
 */
 export interface SecurityHeadersConfig {
+<<<<<<< HEAD
   contentSecurityPolicy?: string;
 strictTransportSecurity?: string;
 xFrameOptions?: string;
@@ -12,6 +12,18 @@ referrerPolicy?: string;
 permissionsPolicy?: string;
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {,
+=======
+
+
+  contentSecurityPolicy?: string
+strictTransportSecurity?: string
+xFrameOptions?: string
+xContentTypeOptions?: string
+referrerPolicy?: string
+permissionsPolicy?: string}
+};
+export const defaultSecurityHeaders: SecurityHeadersConfig = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 // Content Security Policy
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http,
   s:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}
@@ -52,29 +64,37 @@ permissionsPolicy: [,
 * Get security headers as key-value pairs
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
+<<<<<<< HEAD
 export function getSecurityHeaders()
 customConfig?: Partial<SecurityHeadersConfig>): Record</SecurityHeadersConfig><string, string> {}
 const config = { ...defaultSecurityHeaders, ...customConfig }
 const headers: Record<string, string> = {}
+=======
+export function getSecurityHeaders()</SecurityHeadersConfig>
+customConfig?: Partial<SecurityHeadersConfig />
+): Record<string, string> {}
+const config = { ...defaultSecurityHeaders, ...customConfig }</string>
+const headers: Record<string, string> = {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 'X-XSS-Protection': '1; mode=block'
 'X-DNS-Prefetch-Control': 'on'}
 }
-if (config.contentSecurityPolicy) {}
+if(config.contentSecurityPolicy) {}
 headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
 }
-if (config.strictTransportSecurity) {}
+if(config.strictTransportSecurity) {}
 headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
 }
-if (config.xFrameOptions) {}
+if(config.xFrameOptions) {}
 headers['X-Frame-Options'] = config.xFrameOptions;}
 }
-if (config.xContentTypeOptions) {}
+if(config.xContentTypeOptions) {}
 headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
 }
-if (config.referrerPolicy) {}
+if(config.referrerPolicy) {}
 headers['Referrer-Policy'] = config.referrerPolicy;}
 }
-if (config.permissionsPolicy) {}
+if(config.permissionsPolicy) {}
 headers['Permissions-Policy'] = config.permissionsPolicy;}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */};
 }
@@ -84,24 +104,30 @@ defaultSecurityHeaders: SecurityHeadersConfig = {/* TOD,
 }
 /**
 * Get security headers as key-value pairs
+<<<<<<< HEAD
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Record</SecurityHeadersConfig><string, string> {/* TODO: Fix JSX expression */}
+=======
+*/</string>
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
+): Record<string, string> {/* TODO: Fix JSX expression */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const config = { ...defaultSecurityHeaders, ...customConfig }
 const</string>
 headers: Record<string, string> = {/* TODO: Fix JSX expression */}
 }
-if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
+if(config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
 }
-if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
+if(config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
 }
-if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
+if(config.xFrameOptions) {/* TODO: Fix JSX expression */}
 }
-if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
+if(config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
 }
-if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
+if(config.referrerPolicy) {/* TODO: Fix JSX expression */}
 }
-if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
+if(config.permissionsPolicy) {/* TODO: Fix JSX expression */}
 }
 return headers
 }
@@ -112,16 +138,29 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 ): Array<{ key: string; valu,
   e: string }> {
   export function getNextSecurityHeaders()
+<<<<<<< HEAD
 customConfig?: Partial<SecurityHeadersConfig>}
 ): Array</SecurityHeadersConfig><{ key: string; value: string }> {}
+=======
+customConfig?: Partial<SecurityHeadersConfig>
+}</SecurityHeadersConfig>
+): Array<{ key: string; valu,
+  e: string }> {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 const headers = getSecurityHeaders(customConfig)
 return Object.entries(headers).map(([key, value]) => ({}
 key
 value}
 }))
+<<<<<<< HEAD
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array</SecurityHeadersConfig><{/* TODO: Fix JSX expression */}
+=======
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
+): Array<{/* TODO: Fix JSX expression */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
 e: string }> {/* TODO: Fix JSX expression */}
 }))
 }
 export default defaultSecurityHeaders;
+}

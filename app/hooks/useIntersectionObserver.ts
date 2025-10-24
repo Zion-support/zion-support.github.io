@@ -30,3 +30,4 @@ export const useIntersectionObserver = (options: UseIntersectionObserverOptions 
 
   return [setNode, entry] as const;
 };
+}

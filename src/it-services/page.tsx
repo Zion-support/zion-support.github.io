@@ -6,11 +6,12 @@ interface pageProps {
 ;
 const page: React.FC<pageProps> = ({ className = '' }) => {
   return (</pageProps>
-    <div className={className}></div>
+    <div className={className} />
       <h2>page</h2>
       <p>This component is under construction.</p>
-    </div>
+      </div>
   );
 };
 
 export default page;
+}

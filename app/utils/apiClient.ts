@@ -1,10 +1,17 @@
 interface ApiResponse<T = any> {
+<<<<<<< HEAD
   data: T;,
   status: number;,
+=======
+  data: T;
+  statu,
+  s: number;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
   message?: string;
 }
 
 interface ApiError {
+<<<<<<< HEAD
   message: string;,
   status: number;,
 }
@@ -16,6 +23,21 @@ class ApiClient {
   constructor(baseURL: string = '/api') {,
     this.baseURL = baseURL;
     this.defaultHeaders = {
+=======
+  message: string;
+  statu,
+  s: number;}
+}
+;
+class ApiClient {
+  private baseURL: string;
+  private defaultHeader,</T>
+  s: Record<string, string>;
+
+  constructor(baseURL: string = '/api') {
+    this.baseURL = baseURL;,
+    this.defaultHeaders = {,
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
       'Content-Type': 'application/json',
     };
   }
@@ -37,7 +59,7 @@ class ApiClient {
     try {
       const response = await fetch(url, config);
       
-      if (!response.ok) {
+      if(!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
@@ -47,7 +69,7 @@ class ApiClient {
         data,
         status: response.status,
       };
-    } catch (error) {
+    } catch(error) {
       throw {
         message: error instanceof Error ? error.message : 'Unknown error',
         status: 500,
@@ -64,8 +86,14 @@ class ApiClient {
 </T>
   async post<T>(
     endpoint: string,
+<<<<<<< HEAD
     data?: any,
     headers?: Record<string, string>): Promise</string><ApiResponse<T>> {
+=======
+    data?: any,</T>
+    headers?: Record<string, string />
+  ): Promise<ApiResponse<T>> {</ApiResponse>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     return this.request<T>(endpoint, {
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
@@ -75,8 +103,14 @@ class ApiClient {
 </T>
   async put<T>(
     endpoint: string,
+<<<<<<< HEAD
     data?: any,
     headers?: Record<string, string>): Promise</string><ApiResponse<T>> {
+=======
+    data?: any,</T>
+    headers?: Record<string, string />
+  ): Promise<ApiResponse<T>> {</ApiResponse>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
     return this.request<T>(endpoint, {
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
@@ -96,3 +130,4 @@ const apiClient = new ApiClient();
 
 export default apiClient;
 export { ApiClient, type ApiResponse, type ApiError };</T>
+}
