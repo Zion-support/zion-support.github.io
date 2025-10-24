@@ -2,6 +2,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface AdvancedErrorBoundaryProps {
+  children: ReactNode;
   className?: string;
   children: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
