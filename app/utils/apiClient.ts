@@ -1,6 +1,9 @@
 // API Client for making HTTP requests
 import logger from './logger';
 
+// Type definitions
+type RequestInit = globalThis.RequestInit;
+
 export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
