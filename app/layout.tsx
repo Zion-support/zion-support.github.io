@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -6,8 +5,23 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Professional AI and technology solutions by Zion Tech Group.',
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
+  authors: [{ name: 'Zion Tech Group' }],
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Advanced AI & IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
+  },
 };
 
 export default function RootLayout({
@@ -23,22 +37,3 @@ export default function RootLayout({
     </html>
   );
 }
-=======
-'use client';
-import React from 'react';
-
-interface layoutProps {
-  className?: string;
-}
-
-const layout: React.FC<layoutProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>layout</h2>
-      <p>layout component for enhanced functionality.</p>
-    </div>
-  );
-};
-
-export default layout;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
