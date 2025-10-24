@@ -3,43 +3,43 @@ import Link from 'next/link';
 import { 
   ShieldCheckIcon,
   ArrowRightIcon,
-  Target,
-  Users,
-  Award,
-  Lightbulb,
-  Shield,
-  Zap,
+  TagIcon as TargetIcon,
+  UsersIcon,
+  TrophyIcon,
+  LightBulbIcon,
+  ShieldCheckIcon as ShieldIcon,
+  BoltIcon,
 } from '@heroicons/react/24/outline';
 
 const AboutPage = () => {
   const features = [
     {
-      icon: Target,
+      icon: TargetIcon,
       title: 'Mission-Driven',
       description: 'We are committed to delivering exceptional AI solutions that drive real business value.'
     },
     {
-      icon: Users,
+      icon: UsersIcon,
       title: 'Expert Team',
       description: 'Our team consists of world-class AI researchers, engineers, and business strategists.'
     },
     {
-      icon: Award,
+      icon: TrophyIcon,
       title: 'Proven Results',
       description: 'We have helped hundreds of companies transform their operations with AI technology.'
     },
     {
-      icon: Lightbulb,
+      icon: LightBulbIcon,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with artificial intelligence.'
     },
     {
-      icon: Shield,
+      icon: ShieldIcon,
       title: 'Security First',
       description: 'Your data and privacy are our top priorities in everything we build.'
     },
     {
-      icon: Zap,
+      icon: BoltIcon,
       title: 'Fast Delivery',
       description: 'We deliver results quickly without compromising on quality or security.'
     }

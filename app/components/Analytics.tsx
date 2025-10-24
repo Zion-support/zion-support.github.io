@@ -4,9 +4,10 @@ import React, { useEffect } from 'react';
 
 interface AnalyticsProps {
   measurementId?: string;
+  children?: React.ReactNode;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ measurementId = 'GA_MEASUREMENT_ID' }) => {
+const Analytics: React.FC<AnalyticsProps> = ({ measurementId = 'GA_MEASUREMENT_ID', children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const script = document.createElement('script');
@@ -15,7 +16,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ measurementId = 'GA_MEASUREMENT_I
       document.head.appendChild(script);
 
       (window as Window & { gtag: Function }).gtag = (window as Window & { gtag: Function }).gtag || function() {
-        ((window as Window & { gtag: Function }).gtag.q = (window as Window & { gtag: Function }).gtag.q || []).push(arguments);
+        ((window as Window & { gtag: Function }).gtag as any).q = ((window as Window & { gtag: Function }).gtag as any).q || [];
+        ((window as Window & { gtag: Function }).gtag as any).q.push(arguments);
       };
 
       (window as Window & { gtag: Function }).gtag('js', new Date());
@@ -23,7 +25,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ measurementId = 'GA_MEASUREMENT_I
     }
   }, [measurementId]);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default Analytics;
