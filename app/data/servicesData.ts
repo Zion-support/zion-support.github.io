@@ -3,6 +3,17 @@ export interface Service {
   title: string;
   description: string;
   features: string[];
+  benefits?: string[];
+  pricing?: {
+    basic: string;
+    pro?: string;
+    enterprise?: string;
+  };
+  contactInfo?: {
+    website: string;
+    email?: string;
+    phone?: string;
+  };
   price?: string;
   icon?: string;
   href: string;
@@ -22,6 +33,22 @@ export const aiServices: Service[] = [
       'Automated reporting',
       'Machine learning models'
     ],
+    benefits: [
+      'Increased efficiency',
+      'Better decision making',
+      'Cost reduction',
+      'Competitive advantage'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '599',
+      enterprise: '999'
+    },
+    contactInfo: {
+      website: '/ai-analytics',
+      email: 'ai@ziontechgroup.com',
+      phone: '+1-555-0123'
+    },
     price: '$299/month',
     icon: '📊',
     href: '/ai-analytics',
@@ -39,6 +66,22 @@ export const aiServices: Service[] = [
       'Task scheduling',
       'Process optimization'
     ],
+    benefits: [
+      'Time savings',
+      'Reduced errors',
+      'Scalable processes',
+      'Improved productivity'
+    ],
+    pricing: {
+      basic: '199',
+      pro: '399',
+      enterprise: '799'
+    },
+    contactInfo: {
+      website: '/ai-automation',
+      email: 'automation@ziontechgroup.com',
+      phone: '+1-555-0124'
+    },
     price: '$199/month',
     icon: '🤖',
     href: '/ai-automation',
@@ -58,6 +101,22 @@ export const itServices: Service[] = [
       'Cross-browser compatibility',
       'Mobile-first approach'
     ],
+    benefits: [
+      'Better user experience',
+      'Higher conversion rates',
+      'Improved search rankings',
+      'Mobile accessibility'
+    ],
+    pricing: {
+      basic: '2999',
+      pro: '5999',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/web-development',
+      email: 'web@ziontechgroup.com',
+      phone: '+1-555-0125'
+    },
     price: '$2,999/project',
     icon: '🌐',
     href: '/web-development',
@@ -71,6 +130,7 @@ export const allServices: Service[] = [...aiServices, ...itServices];
 // Export as servicesData for backward compatibility
 export const servicesData = {
   aiServices,
+  itSolutions: itServices, // Add alias for itSolutions
   itServices,
   allServices
 };
