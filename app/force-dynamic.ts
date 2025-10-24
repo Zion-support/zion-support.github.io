@@ -1,1 +1,1 @@
-// Conflict resolved: taking HEAD version
+export const dynamic = 'force-dynamic'
