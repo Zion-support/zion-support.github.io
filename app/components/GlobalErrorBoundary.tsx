@@ -1,15 +1,16 @@
-'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 class GlobalErrorBoundary extends Component<Props, State> {
@@ -17,71 +18,119 @@ class GlobalErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
       hasError: false,
-      error: null
+      error: null,
+      errorInfo: null
     };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
-      error
+      error,
+      errorInfo: null
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global error caught:', error, errorInfo);
-    
-    // Log to external service in production
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to monitoring service
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Global error caught by boundary:', error, errorInfo);
+    }
+
+    // Send to error reporting service in production
     if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo);
+      // Example: Send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
 
   handleRetry = () => {
     this.setState({
       hasError: false,
-      error: null
+      error: null,
+      errorInfo: null
     });
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
   };
 
   render() {
     if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We encountered an unexpected error. Please try again.
-            </p>
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
 
-            <div className="flex flex-col gap-4">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="text-center">
+              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mb-4">
+                <svg
+                  className="h-6 w-6 text-red-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
               
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-semibold transition-colors"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </button>
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                Oops! Something went wrong
+              </h1>
+              
+              <p className="text-gray-600 mb-6">
+                We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+              </p>
+
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mb-6 text-left">
+                  <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
+                    Error Details (Development)
+                  </summary>
+                  <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto">
+                    <div className="mb-2">
+                      <strong>Error:</strong> {this.state.error.message}
+                    </div>
+                    {this.state.errorInfo && (
+                      <div>
+                        <strong>Stack:</strong>
+                        <pre className="whitespace-pre-wrap mt-1">
+                          {this.state.errorInfo.componentStack}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Try Again
+                </button>
+                <Link
+                  to="/"
+                  className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors text-center"
+                >
+                  Go Home
+                </Link>
+              </div>
             </div>
           </div>
         </div>
