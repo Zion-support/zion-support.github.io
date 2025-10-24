@@ -1,34 +1,34 @@
-'use client';
 import React from 'react';
-import Head from 'next/head';
+import Head from "next/head";
+
 import Link from 'next/link';
-import { ArrowRight     } from 'lucide-react';
-import Footer from '../components/Footer';
-export default function MobileApplications5 GPage() {
-return (
-    <div>
+import { ArrowRight } from 'lucide-react';
 
-      <Head>
-
-        <title>5 G Mobile Applications - Zion Tech Group</title>
-        <meta name="description" content="Professional 5 G mobile application development services by Zion Tech Group. Transform your business with our expert solutions." />
-
+export default function MobileApplications5GPage() {
+  return (
+    <>
+    :all-pages-backup/5g-mobile-applications/page.tsx
+</>
+      <title>5G Mobile Applications - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G mobile application development services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
+      </meta>
+        <Head></Head>
+        <title>5G Mobile Applications - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
       </Head>
-    </div>,
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>,
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<h1 className="text-4 xl font-bold text-white mb-6"></h1>
-            5 G Mobile Applications
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-Professional 5 G mobile application development services by Zion Tech Group. Transform your business with our expert solutions.
-          </p>
-          <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">
-Contact Us
-            <ArrowRightclassName="w-5 h-5 ml-2" />
+      
+      
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="con tainermx-auto px-4 py-16"></div>
+          <h1 className="tex t-4xlfont-bold text-white mb-6">5G Mobile Applications</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional 5G mobile application development services by Zion Tech Group. Transform your business with our expert solutions.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
+            Contact Us</Link>
+            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
           </Link>
         </div>
       </div>
-      <Footer />
-    </div>
-  )
-,}
+</div>;
+  )}
+
