@@ -14,12 +14,14 @@ const MobileOptimizer: React.FC = () => {
 
     // Add touch-friendly classes
     const addTouchClasses = () => {
-      const buttons = document.querySelectorAll('button, a, [role="button"]');
-      buttons.forEach((button) => {
-        if (!button.classList.contains('touch-manipulation')) {
-          button.classList.add('touch-manipulation');
-        }
-      });
+      if (typeof document !== 'undefined') {
+        const buttons = document.querySelectorAll('button, a, [role="button"]');
+        buttons.forEach((button) => {
+          if (!button.classList.contains('touch-manipulation')) {
+            button.classList.add('touch-manipulation');
+          }
+        });
+      }
     };
 
     // Optimize images for mobile

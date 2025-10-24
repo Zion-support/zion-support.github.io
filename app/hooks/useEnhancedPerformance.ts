@@ -1,33 +1,44 @@
-import { useEffect, useCallback, useRef } from 'react'
+import { useEffect, useCallback, useRef, useState } from 'react';
 
 export interface UseEnhancedPerformanceOptions {
-  component?: string
-  trackErrors?: boolean
-  trackPerformance?: boolean
-  trackAnalytics?: boolean
+  component?: string;
+  trackErrors?: boolean;
+  trackPerformance?: boolean;
+  trackAnalytics?: boolean;
 }
 
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
+}
+
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
+  
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0,)
+    networkLatency: 0,
   });
 
-  const renderCountRef = useRef<number>(0)
-  const mountTimeRef = useRef<number>(0)
+  const [isOptimized, setIsOptimized] = useState(false);
+  const renderCountRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0);
 
   useEffect(() => {
-    mountTimeRef.current = performance.now()
-    renderCountRef.current += 1
+    mountTimeRef.current = performance.now();
+    renderCountRef.current += 1;
 
-    // Measure load time;
+    // Measure load time
     const measureLoadTime = () => {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
-    // Measure render time;
+    // Measure render time
     const measureRenderTime = () => {
       const renderStart = performance.now();
       requestAnimationFrame(() => {
@@ -36,16 +47,16 @@ export interface UseEnhancedPerformanceOptions {
       });
     };
 
-    // Measure memory usage;
+    // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance, as, any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB;
+        const memory = (performance as any).memory;
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }
     };
 
-    // Measure network latency;
+    // Measure network latency
     const measureNetworkLatency = () => {
       const start = performance.now();
       fetch('/api/ping', { method: 'HEAD' })
@@ -54,36 +65,38 @@ export interface UseEnhancedPerformanceOptions {
           setMetrics(prev => ({ ...prev, networkLatency: latency }));
         })
         .catch(() => {
-          // Fallback if ping endpoint doesn't exist;
+          // Fallback if ping endpoint doesn't exist
           setMetrics(prev => ({ ...prev, networkLatency: 0 }));
         });
     };
 
-    // Run measurements;
+    // Run measurements
     measureLoadTime();
     measureRenderTime();
     measureMemoryUsage();
     measureNetworkLatency();
 
-    // Check if performance is optimized;
+    // Check if performance is optimized
     const checkOptimization = () => {
-      const isOptimized =;
-        metrics.loadTime < 1000 && // Load time under 1 second;
+      const isOptimized = 
+        metrics.loadTime < 1000 && // Load time under 1 second
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
-        metrics.memoryUsage < 100 && // Memory usage under 100MB;
-        metrics.networkLatency < 200; // Network latency under 200ms;
+        metrics.memoryUsage < 100 && // Memory usage under 100MB
+        metrics.networkLatency < 200; // Network latency under 200ms
       setIsOptimized(isOptimized);
     };
 
-    // Check optimization after metrics are updated;
+    // Check optimization after metrics are updated
     const timeoutId = setTimeout(checkOptimization, 1000);
 
     return () => clearTimeout(timeoutId);
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
-  const optimizePerformance = () => {
-    // Preload critical resources;
-    const criticalResources = [;
+  const optimizePerformance = useCallback(() => {
+    if (typeof document === 'undefined') return;
+
+    // Preload critical resources
+    const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.png',
@@ -100,7 +113,7 @@ export interface UseEnhancedPerformanceOptions {
       document.head.appendChild(link);
     });
 
-    // Optimize images;
+    // Optimize images
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -110,50 +123,51 @@ export interface UseEnhancedPerformanceOptions {
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
         }
-      })
+      });
+    });
 
-      observer.observe({ entryTypes: ['measure'] })
+    images.forEach((img) => imageObserver.observe(img));
 
-      return () => observer.disconnect()
-    }
-    
-    return undefined
-  }, [component, trackPerformance])
+    return () => imageObserver.disconnect();
+  }, [component, trackPerformance]);
 
   const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (trackPerformance) {
-      performance.mark(`${component}-${name}-start`)
-      fn()
-      performance.mark(`${component}-${name}-end`)
+      performance.mark(`${component}-${name}-start`);
+      fn();
+      performance.mark(`${component}-${name}-end`);
       performance.measure(
         `${component}-${name}`,
         `${component}-${name}-start`,
         `${component}-${name}-end`
-      )
+      );
     } else {
-      fn()
+      fn();
     }
-  }, [component, trackPerformance])
+  }, [component, trackPerformance]);
 
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
-      console.error(`Error in ${component}:`, error, context)
+      console.error(`Error in ${component}:`, error, context);
       // Here you would typically send to an error tracking service
     }
-  }, [component, trackErrors])
+  }, [component, trackErrors]);
 
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
-      console.log(`Analytics event in ${component}:`, event, data)
+      console.log(`Analytics event in ${component}:`, event, data);
       // Here you would typically send to an analytics service
     }
-  }, [component, trackAnalytics])
+  }, [component, trackAnalytics]);
 
   return {
+    metrics,
+    isOptimized,
+    optimizePerformance,
     measurePerformance,
     trackError,
     trackAnalytics: trackAnalyticsEvent,
     renderCount: renderCountRef.current,
     mountTime: mountTimeRef.current
-  }
-}
+  };
+};
