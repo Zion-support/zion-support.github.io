@@ -1,21 +1,8 @@
-"use client";
-import React from 'react';
+'use client'
+import { ArrowRight, TrendingUp } from 'lucide-react'
+import React from 'react'
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
-interface EnhancedServicesShowcaseProps {
-  className?: string;
-}
-
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className = '' }) => {
-  return (
-    <div className={`p-4 ${className}`}>
-      <h2 className="text-xl font-semibold text-gray-800">
-        EnhancedServicesShowcase
-      </h2>
-      <p className="text-gray-600">
-        This component is under construction.
-      </p>
-    </div>
-  );
-};
-
-export default EnhancedServicesShowcase;
+const EnhancedServicesShowcase: React.FC = () => {
+  const services = [

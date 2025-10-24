@@ -1,21 +1,62 @@
-"use client";
-import React from 'react';
+"use client"
+import React from "react"
+import { Helmet } from "react-helmet-async"
 
-interface ImageOptimizerProps {
-  className?: string;
+const ImageOptimizerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>ImageOptimizer | Zion Tech Group</title>
+        <meta name="description" content="Professional ImageOptimizer services by Zion Tech Group." />
+        <meta name="keywords" content="AI, artificial intelligence, ImageOptimizer, AI solutions, intelligent automation" />
+      </Helmet>
+      <section className="py-20 px-4"></section>
+        <div className="container mx-auto max-w-6xl"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">ImageOptimizer</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional ImageOptimizer services tailored to your business needs.</p>p>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className = '' }) => {
-  return (
-    <div className={`p-4 ${className}`}>
-      <h2 className="text-xl font-semibold text-gray-800">
-        ImageOptimizer
-      </h2>
-      <p className="text-gray-600">
-        This component is under construction.
-      </p>
-    </div>
-  );
-};
+export default ImageOptimizerPage
 
-export default ImageOptimizer;
+export default ImageOptimizerPage;

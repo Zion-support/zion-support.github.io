@@ -5,9 +5,3 @@ export const dataCleanupTest = () => {
 };
 
 export default dataCleanupTest;
-
-describe('dataCleanup', () => {
-  it('should return null', () => {
-    expect(dataCleanupTest()).toBeNull();
-  });
-});

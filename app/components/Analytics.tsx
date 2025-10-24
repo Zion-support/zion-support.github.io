@@ -1,17 +1,23 @@
-"use client";
-import React from 'react';
+import React, { useEffect } from "react"
 
 interface AnalyticsProps {
   className?: string;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ className = '' }) => {
-  return (
-    <div className={className}>
-      <h2>Analytics</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
+const Analytics: React.FC = () => {
+  useEffect(() => {
+    const initAnalytics = () => {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
+          page_location: window.location.href,
+        })
+      }
+    }
+    initAnalytics()
+  }, [])
 
-export default Analytics;
+  return null; // Analytics component doesn't render anything
+}
+
+export default Analytics
