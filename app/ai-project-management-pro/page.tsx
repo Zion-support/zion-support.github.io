@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, Users, BarChart, CheckCircle, Brain, Settings, Target, TrendingUp, Calendar, Zap } from 'lucide-react';
 
@@ -83,11 +82,7 @@ const AIProjectManagementProPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>AI Project Management Pro - Zion Tech Group | Smart Project Management</title>
-        <meta name="description" content="Transform project management with AI-powered automation. Plan, track, and deliver projects efficiently with our intelligent project management platform." />
-        <meta name="keywords" content="AI project management, project automation, team collaboration, project tracking, project analytics" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

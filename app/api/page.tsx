@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart } from 'lucide-react';
 
@@ -39,11 +38,7 @@ const APIPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>API Services - Zion Tech Group | Professional API Development</title>
-        <meta name="description" content="Professional API development and integration services. Build scalable, secure, and high-performance APIs for your business needs." />
-        <meta name="keywords" content="API development, RESTful APIs, API integration, web services, API design" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
