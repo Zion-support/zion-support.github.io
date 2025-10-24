@@ -61,13 +61,13 @@ const AboutPage: React.FC = () => {
                 To democratize AI and advanced technology, making it accessible and beneficial for businesses of all sizes. We believe that every company, regardless of its size or industry, should have access to the transformative power of artificial intelligence.
               </p>
               <p className="text-lg text-gray-600">
-                Our mission drives us to create innovative solutions that not only solve today&apos;s challenges but also prepare our clients for the future of technology.
+                Our mission drives us to create innovative solutions that not only solve today's challenges but also prepare our clients for the future of technology.
               </p>
             </div>
             <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-lg">
-                To be the leading force in AI innovation, creating a world where technology seamlessly integrates with human potential to solve the world&apos;s most complex challenges.
+                To be the leading force in AI innovation, creating a world where technology seamlessly integrates with human potential to solve the world's most complex challenges.
               </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ const AboutPage: React.FC = () => {
               Our Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Key milestones in our company&apos;s growth and development.
+              Key milestones in our company's growth and development.
             </p>
           </div>
           <div className="relative">
@@ -139,7 +139,7 @@ const AboutPage: React.FC = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-emerald-100 mb-8">
-              Let&apos;s discuss how we can help transform your business with AI and technology.
+              Let's discuss how we can help transform your business with AI and technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

@@ -4,5 +4,6 @@ module.exports = {
     "no-console": "warn",
     "prefer-const": "error",
     "no-var": "error",
+    "react/no-unescaped-entities": "off",
   },
 };
