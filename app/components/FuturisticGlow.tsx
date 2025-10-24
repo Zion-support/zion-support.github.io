@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticGlowProps {
@@ -15,18 +14,3 @@ const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', childre
 };
 
 export default FuturisticGlow;
-=======
-'use client'
-
-import React from 'react'
-
-const FuturisticGlow: React.FC = () => {
-  return (
-    <div className="futuristic-glow">
-      <div className="glow-effect"></div>
-    </div>
-  )
-}
-
-export default FuturisticGlow
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

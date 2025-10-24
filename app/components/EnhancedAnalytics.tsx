@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedAnalyticsProps {
@@ -15,19 +14,3 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', c
 };
 
 export default EnhancedAnalytics;
-=======
-'use client'
-
-import React, { useEffect } from 'react'
-
-const EnhancedAnalytics: React.FC = () => {
-  useEffect(() => {
-    // Analytics initialization
-    console.log('Analytics initialized')
-  }, [])
-
-  return null
-}
-
-export default EnhancedAnalytics
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

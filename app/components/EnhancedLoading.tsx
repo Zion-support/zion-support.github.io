@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedLoadingProps {
@@ -15,19 +14,3 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', child
 };
 
 export default EnhancedLoading;
-=======
-'use client'
-
-import React from 'react'
-
-const EnhancedLoading: React.FC = () => {
-  return (
-    <div className="loading-container">
-      <div className="spinner"></div>
-      <p>Loading...</p>
-    </div>
-  )
-}
-
-export default EnhancedLoading
->>>>>>> cursor/fix-errors-and-merge-to-main-2503
