@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import '@/types/analytics';
 
 interface PerformanceMetrics {
   loadTime: number | null;
@@ -187,5 +186,3 @@ export default function PerformanceMonitor({
 
   return null;
 }
-
-// Performance utilities are now available from their respective utility files
