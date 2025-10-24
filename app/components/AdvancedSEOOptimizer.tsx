@@ -1,16 +1,13 @@
-'use client';
-
+"use client";
 import React from 'react';
 
-interface AdvancedSEOOptimizerProps {
-  // Add props here
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = (_props) => {
+const AdvancedSEOOptimizer = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>AdvancedSEOOptimizer</h1>
+      <p>This component is under construction.</p>
     </div>
-  )};
+  );
+};
 
 export default AdvancedSEOOptimizer;

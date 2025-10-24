@@ -1,16 +1,13 @@
-'use client';
-
+"use client";
 import React from 'react';
 
-interface AnalyticsProviderProps {
-  // Add props here
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (_props) => {
+const AnalyticsProvider = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>AnalyticsProvider</h1>
+      <p>This component is under construction.</p>
     </div>
-  )};
+  );
+};
 
 export default AnalyticsProvider;

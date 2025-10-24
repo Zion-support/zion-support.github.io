@@ -1,16 +1,13 @@
-'use client';
-
+"use client";
 import React from 'react';
 
-interface AdvancedPerformanceMonitorProps {
-  // Add props here
-}
-
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = (_props) => {
+const AdvancedPerformanceMonitor = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>AdvancedPerformanceMonitor</h1>
+      <p>This component is under construction.</p>
     </div>
-  )};
+  );
+};
 
 export default AdvancedPerformanceMonitor;
