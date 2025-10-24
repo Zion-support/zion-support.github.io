@@ -108,7 +108,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle tab navigation
    */
-  private handleTabNavigation(_event: KeyboardEvent): void {
+  private handleTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
     
