@@ -1,6 +1,6 @@
-import React from 'react'
-import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star, BarChart } from 'lucide-react'
-import Link from 'next/link'
+import React from 'react';
+import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star, BarChart } from 'lucide-react';
+import Link from 'next/link';
 
 const AIEmailAutomationPage: React.FC = () => {
   const features = [
@@ -241,6 +241,6 @@ const AIEmailAutomationPage: React.FC = () => {
       </section>
     </div>
   )
-}
-
-export default AIEmailAutomationPage
+};
+;
+export default AIEmailAutomationPage;

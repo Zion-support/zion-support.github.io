@@ -1,7 +1,7 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle } from 'lucide-react'
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle } from 'lucide-react';
 
 constCloudServicesPage: React.FC= () =>{constservices= [
     {
@@ -26,15 +26,15 @@ constCloudServicesPage: React.FC= () =>{constservices= [
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ]
-  const benefits = []
+  const benefits = [];
     '99.9% Uptime Guarantee',
     '24/7 Expert Support',
     'Cost Optimization',
     'Scalable Infrastructure',
     'Enhanced Security',
     'Global CDN'
-  ]
-  return ()
+  ];
+  return ();
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Navigation />
       <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
@@ -125,4 +125,4 @@ constCloudServicesPage: React.FC= () =>{constservices= [
     </div>
   )
 }
-export default CloudServicesPage
+export default CloudServicesPage;

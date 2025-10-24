@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function CustomSoftwarePage() {
   return (
     <>
-      
-        <title>CustomSoftware - Zion Tech Group</title>
+      <title>CustomSoftware - Zion Tech Group</title>
         <meta name="description" content="Professional customsoftware services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function CustomSoftwarePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

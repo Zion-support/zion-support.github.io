@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiTaskManagerPage() {
   return (
     <>
-      
-        <title>AiTaskManager - Zion Tech Group</title>
+      <title>AiTaskManager - Zion Tech Group</title>
         <meta name="description" content="Professional aitaskmanager services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiTaskManagerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

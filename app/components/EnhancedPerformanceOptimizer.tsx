@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 const EnhancedPerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
+    const preloadCriticalResources = () => {;
       const criticalImages = [
         '/images/hero-bg.jpg',
-        '/images/logo.png'
+        '/images/logo.png';
       ];
       
       criticalImages.forEach(src => {
@@ -20,11 +20,11 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     };
 
     // Optimize images
-    const optimizeImages = () => {
+    const optimizeImages = () => {;
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
+      const imageObserver = new IntersectionObserver((entries) => {;
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting) {;
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
@@ -33,7 +33,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         });
       });
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -230,9 +229,9 @@ Email Us
 </button>
 </button>
 </h2>
-import { useEffect, useCallback } from 'react'
-import { useAnalytics } from './EnhancedAnalytics'
-import { Phone, Mail } from 'lucide-react'
+import { useEffect, useCallback } from 'react';
+import { useAnalytics } from './EnhancedAnalytics';
+import { Phone, Mail } from 'lucide-react';
 
 interface PerformanceMetrics {
 lcp: number | null
@@ -242,18 +241,17 @@ fcp: number | null
 ttfb: number | null
 }
 const EnhancedPerformanceOptimizer: React.FC = () => {
-const { trackEvent } = useAnalytics()
-const optimizeImages = useCallback(() => {
-const images = document.querySelectorAll('img')
-=======
+const { trackEvent } = useAnalytics();
+const optimizeImages = useCallback(() => {;
+const images = document.querySelectorAll('img');
       images.forEach(img => imageObserver.observe(img));
     };
 
     // Lazy load non-critical CSS
-    const lazyLoadCSS = () => {
+    const lazyLoadCSS = () => {;
       const nonCriticalCSS = [
         '/styles/animations.css',
-        '/styles/print.css'
+        '/styles/print.css';
       ];
 
       nonCriticalCSS.forEach(href => {
@@ -272,7 +270,7 @@ const images = document.querySelectorAll('img')
     const preconnectDomains = [
       'https://fonts.googleapis.com',
       'https://fonts.gstatic.com',
-      'https://www.google-analytics.com'
+      'https://www.google-analytics.com';
     ];
 
     preconnectDomains.forEach(domain => {
@@ -299,4 +297,3 @@ const images = document.querySelectorAll('img')
 };
 
 export default EnhancedPerformanceOptimizer;
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

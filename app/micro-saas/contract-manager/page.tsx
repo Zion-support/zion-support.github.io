@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ContractManagerPage() {
   return (
     <>
-      
-        <title>ContractManager - Zion Tech Group</title>
+      <title>ContractManager - Zion Tech Group</title>
         <meta name="description" content="Professional contractmanager services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ContractManagerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

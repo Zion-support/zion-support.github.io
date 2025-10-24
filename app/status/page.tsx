@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function StatusPage() {
   return (
     <>
-      
-        <title>Status - Zion Tech Group</title>
+      <title>Status - Zion Tech Group</title>
         <meta name="description" content="Professional status services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function StatusPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

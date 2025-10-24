@@ -1,22 +1,22 @@
 'use client'
-import { Brain, TrendingUp } from 'lucide-react'
-import React, { useState, useEffect } from 'react'
+import { Brain, TrendingUp } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 
-import { BarChart3 } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone } from 'lucide-react'
+import { BarChart3 } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Star, Phone } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
+const $1: React.FC = () => {;
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {}
     setIsLoaded(true)
   }, [])
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;
         description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
         keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'datainsights']}
@@ -175,7 +175,7 @@ const Page = () => {}
                     Get Started
                   </a>
                 </div>
-              ))}
+{              ))}
             </div>
           </div>
         </section>
@@ -241,6 +241,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
-export default AIAnalyticsDashboardPage
+export default AIAnalyticsDashboardPage;

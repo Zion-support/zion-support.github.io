@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiQuantumTaskOptimizerPage() {
   return (
     <>
-      
-        <title>AiQuantumTaskOptimizer - Zion Tech Group</title>
+      <title>AiQuantumTaskOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional aiquantumtaskoptimizer services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiQuantumTaskOptimizerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

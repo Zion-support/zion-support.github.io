@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function TeamPage() {
   return (
     <>
-      
-        <title>Team - Zion Tech Group</title>
+      <title>Team - Zion Tech Group</title>
         <meta name="description" content="Professional team services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function TeamPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

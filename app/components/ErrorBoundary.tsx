@@ -42,7 +42,6 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-<<<<<<< HEAD
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -54,7 +53,7 @@ class ErrorBoundary extends Component<Props, State> {
   return (
     <>
       <Helmet>
-        <title>ErrorBoundary</title>
+        <title>ErrorBoundary</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -222,10 +221,8 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
-=======
     return this.props.children;
   }
 }
 
 export default ErrorBoundary;
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

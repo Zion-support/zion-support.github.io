@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function OfflinePage() {
   return (
     <>
-      
-        <title>Offline - Zion Tech Group</title>
+      <title>Offline - Zion Tech Group</title>
         <meta name="description" content="Professional offline services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function OfflinePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

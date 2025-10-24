@@ -1,7 +1,7 @@
 'use client'
-import { BarChart, Target, TrendingUp } from 'lucide-react'
-import React from 'react'
-import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
+import { BarChart, Target, TrendingUp } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
 
 constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
     {
@@ -175,10 +175,9 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
               Learn More
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
   )
 }
-export default BusinessIntelligencePage
+export default BusinessIntelligencePage;

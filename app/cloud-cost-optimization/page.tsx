@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function CloudCostOptimizationPage() {
   return (
     <>
-      
-        <title>CloudCostOptimization - Zion Tech Group</title>
+      <title>CloudCostOptimization - Zion Tech Group</title>
         <meta name="description" content="Professional cloudcostoptimization services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function CloudCostOptimizationPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

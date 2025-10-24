@@ -4,11 +4,11 @@ interface PerformanceMonitorProps {
   performanceData?: any;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {;
   useEffect(() => {
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
         getCLS(console.log);
         getFID(console.log);
         getFCP(console.log);
@@ -33,7 +33,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
       });
     }
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -143,13 +142,13 @@ interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetri
   enableRealTimeMonitoring?: boolean
   logToConsole?: boolean}
 
-export default function PerformanceMonitor
+export default function PerformanceMonitor;
 PerformanceMonitor.displayName = "PerformanceMonitor"({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
   logToConsole = true
 }: PerformanceMonitorProps) {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({;
     loadTime: null,
     firstContentfulPaint: null,
     largestContentfulPaint: null,
@@ -160,8 +159,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
   })
   useEffect(() => {
     if (!enableRealTimeMonitoring || typeof window === 'undefined') return
-    const measurePerformance = () => {
-      const newMetrics: PerformanceMetrics = {
+    const measurePerformance = () => {;
+      const newMetrics: PerformanceMetrics = {;
         loadTime: null,
         firstContentfulPaint: null,
         largestContentfulPaint: null,
@@ -188,9 +187,9 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
         })
         fcpObserver.observe({ entryTypes: ['paint'] })
         // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
+        const lcpObserver = new PerformanceObserver((list) => {;
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
           newMetrics.largestContentfulPaint = lastEntry.startTime
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -263,8 +262,8 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
         })
     }
   }, [])
-  // Performance monitoring dashboard (only in development)
-  if (process.env.NODE_ENV=== 'development') {return (
+  // Performance monitoring dashboard (only in development);
+  if (process.env.NODE_ENV=== 'development') {return (;
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;><h3className=&quot;font-boldmb-2&quot;>PerformanceMetrics</h><divclassName=&quot;space-y-1&quot;><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di>
     )
   }
@@ -329,7 +328,6 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
-=======
     // Monitor memory usage
     if ('memory' in performance) {
       const memory = (performance as any).memory;
@@ -342,7 +340,6 @@ declare global {
   }, []);
 
   return null;
-};
+{};
 
 export default PerformanceMonitor;
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

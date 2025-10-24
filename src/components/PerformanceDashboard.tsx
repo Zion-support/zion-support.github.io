@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 
-const PerformanceDashboard = () => {}
+const PerformanceDashboard = () => {};
   return ()
     <div className="min-h-screen bg-gray-100 py-8">
         </div>
@@ -22,8 +22,8 @@ const PerformanceDashboard = () => {}
           </p>
         </div>
       </div>
-    </div>
+    </div>;
   );
-};
+{};
 
 export default PerformanceDashboard;

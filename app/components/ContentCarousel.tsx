@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 interface Slide {
   id: number
@@ -17,9 +16,9 @@ interface Slide {
 }
 
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
   
-  const slides: Slide[] = [
+  const slides: Slide[] = [;
     {
       id: 1,
       title: "AI-Powered Analytics",
@@ -61,18 +60,18 @@ const ContentCarousel: React.FC = () => {
     }
   ]
 
-  const nextSlide = () => {
+  const nextSlide = () => {;
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
 
-  const prevSlide = () => {
+  const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
   return (
     <>
-      <Helmet>
-        <title>ContentCarousel</title>
+      <Helmet>;
+        <title>ContentCarousel</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -344,6 +343,4 @@ export default ContentCarouselPage;
   )
 }
 
-export default ContentCarousel
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+export default ContentCarousel;

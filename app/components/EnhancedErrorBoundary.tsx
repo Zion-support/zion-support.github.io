@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const EnhancedErrorBoundaryPage: React.FC = () => {
   const features = [
@@ -42,11 +42,11 @@ const EnhancedErrorBoundaryPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' }) => {;
   return (
     <>
-      <Helmet>
-        <title>EnhancedErrorBoundary | Zion Tech Group</title>
+      <Helmet>;
+        <title>EnhancedErrorBoundary | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedErrorBoundary, AI solutions, intelligent automation&quot; />
       </Helmet>

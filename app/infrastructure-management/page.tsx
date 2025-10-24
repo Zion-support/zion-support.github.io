@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function InfrastructureManagementPage() {
   return (
     <>
-      
-        <title>InfrastructureManagement - Zion Tech Group</title>
+      <title>InfrastructureManagement - Zion Tech Group</title>
         <meta name="description" content="Professional infrastructuremanagement services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function InfrastructureManagementPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

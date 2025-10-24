@@ -1,11 +1,11 @@
 'use client'
-import { Brain } from 'lucide-react'
-import React from 'react'
-import { Atom, Lock } from 'lucide-react'
-import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
+import { Brain } from 'lucide-react';
+import React from 'react';
+import { Atom, Lock } from 'lucide-react';
+import { CheckCircle, Star, Brain, Shield } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const quantumServices = [
+const $1: React.FC = () => {;
+  const quantumServices = [;
     {
       id: 'quantum-algorithms',
       title: 'Quantum Algorithm Development',
@@ -173,10 +173,9 @@ const $1: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
   )
-}
-export default QuantumComputingPage
+};
+export default QuantumComputingPage;

@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Lock, BarChart3, FileText } from 'lucide-react'
-import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react'
-import { MapPin } from 'lucide-react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Lock, BarChart3, FileText } from 'lucide-react';
+import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const microSaasServices = []
+const $1: React.FC = () => {;
+  const microSaasServices = [];
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
@@ -20,7 +20,7 @@ const $1: React.FC = () => {
     { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
   ]
 
-  const aiServices = []
+  const aiServices = [];
     { name: 'Machine Learning', url: '/machine-learning', description: 'Custom ML models' },
     { name: 'Natural Language Processing', url: '/nlp', description: 'Text analysis & understanding' },
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
@@ -35,7 +35,7 @@ const $1: React.FC = () => {
     { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
   ]
 
-  const itServices = []
+  const itServices = [];
     { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
@@ -50,7 +50,7 @@ const $1: React.FC = () => {
     { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
   ]
 
-  const specializedServices = []
+  const specializedServices = [];
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
@@ -65,7 +65,7 @@ const $1: React.FC = () => {
     { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
   ]
 
-  const additionalServices = []
+  const additionalServices = [];
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
@@ -74,7 +74,7 @@ const $1: React.FC = () => {
     { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
   ]
 
-  const companyLinks = []
+  const companyLinks = [];
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
@@ -85,7 +85,7 @@ const $1: React.FC = () => {
     { name: 'Demo', url: '/demo' }
   ]
 
-  const supportLinks = []
+  const supportLinks = [];
     { name: 'Contact Us', url: '/contact' },
     { name: 'Support Center', url: '/support' },
     { name: 'Documentation', url: '/docs' },
@@ -94,7 +94,7 @@ const $1: React.FC = () => {
     { name: 'System Health', url: '/system-status' }
   ]
 
-  const legalLinks = []
+  const legalLinks = [];
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
@@ -103,7 +103,7 @@ const $1: React.FC = () => {
     { name: 'Compliance', url: '/compliance' }
   ]
 
-const Footer = () => {}
+const Footer = () => {};
   return ()
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
         </div>
@@ -295,11 +295,10 @@ const Footer = () => {}
               ))}
             </div>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </footer>
   )
-}
-
+};
+;
 export default Footer;

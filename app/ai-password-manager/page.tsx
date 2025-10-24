@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiPasswordManagerPage() {
   return (
     <>
-      
-        <title>AiPasswordManager - Zion Tech Group</title>
+      <title>AiPasswordManager - Zion Tech Group</title>
         <meta name="description" content="Professional aipasswordmanager services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiPasswordManagerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

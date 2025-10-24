@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiNlpPage() {
   return (
     <>
-      
-        <title>AiNlp - Zion Tech Group</title>
+      <title>AiNlp - Zion Tech Group</title>
         <meta name="description" content="Professional ainlp services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiNlpPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

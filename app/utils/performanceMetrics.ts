@@ -4,7 +4,7 @@
  * Advanced performance tracking and monitoring for web applications
  */
 
-export interface PerformanceMetric {
+export interface PerformanceMetric {;
   name: string
   value: number
   unit: string
@@ -13,7 +13,7 @@ export interface PerformanceMetric {
   metadata?: Record<string, unknown>
 }
 
-export interface WebVitalsMetrics {
+export interface WebVitalsMetrics {;
   FCP?: number // First Contentful Paint
   LCP?: number // Largest Contentful Paint
   FID?: number // First Input Delay
@@ -22,7 +22,7 @@ export interface WebVitalsMetrics {
   INP?: number // Interaction to Next Paint
 }
 
-export interface PerformanceReport {
+export interface PerformanceReport {;
   metrics: PerformanceMetric[]
   webVitals: WebVitalsMetrics
   summary: {
@@ -34,7 +34,7 @@ export interface PerformanceReport {
   timestamp: Date
 }
 
-export class PerformanceMetrics {
+export class PerformanceMetrics {;
   private static instance: PerformanceMetrics
   private metrics: PerformanceMetric[] = []
   private webVitals: WebVitalsMetrics = {}
@@ -61,10 +61,10 @@ export class PerformanceMetrics {
     if ('PerformanceObserver' in window) {
       try {
         // Navigation timing
-        const navObserver = new PerformanceObserver(list => {
+        const navObserver = new PerformanceObserver(list => {;
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming
+              const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({
                 name: 'pageLoadTime',
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
@@ -83,7 +83,7 @@ export class PerformanceMetrics {
         this.observers.push(navObserver)
 
         // Paint timing
-        const paintObserver = new PerformanceObserver(list => {
+        const paintObserver = new PerformanceObserver(list => {;
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime
@@ -101,9 +101,9 @@ export class PerformanceMetrics {
         this.observers.push(paintObserver)
 
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
+        const lcpObserver = new PerformanceObserver(list => {;
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({
@@ -119,8 +119,8 @@ export class PerformanceMetrics {
         this.observers.push(lcpObserver)
 
         // Layout Shift
-        const clsObserver = new PerformanceObserver(list => {
-          let clsValue = 0
+        const clsObserver = new PerformanceObserver(list => {;
+          let clsValue = 0;
           for (const entry of list.getEntries()) {
             if ((entry as LayoutShift).hadRecentInput) continue
             clsValue += (entry as LayoutShift).value
@@ -159,8 +159,8 @@ export class PerformanceMetrics {
    */
   recordPageLoad(): void {
     if (typeof window === 'undefined') return
-    const perfData = window.performance.timing
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
+    const perfData = window.performance.timing;
+    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({
       name: 'pageLoad',
       value: pageLoadTime,
@@ -199,7 +199,7 @@ export class PerformanceMetrics {
   recordMemoryUsage(): void {
     if (typeof window === 'undefined') return
     if (!(performance as PerformanceWithMemory).memory) return
-    const memory = (performance as PerformanceWithMemory).memory
+    const memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({
       name: 'memoryUsage',
       value: memory.usedJSHeapSize,
@@ -218,9 +218,9 @@ export class PerformanceMetrics {
    * Measure function execution time
    */
   measureFunction<T>(name: string, fn: () => T): T {
-    const startTime = performance.now()
-    const result = fn()
-    const endTime = performance.now()
+    const startTime = performance.now();
+    const result = fn();
+    const endTime = performance.now();
     this.recordMetric({
       name: `function:${name}`,
       value: endTime - startTime,
@@ -235,9 +235,9 @@ export class PerformanceMetrics {
    * Measure async function execution time
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const startTime = performance.now()
-    const result = await fn()
-    const endTime = performance.now()
+    const startTime = performance.now();
+    const result = await fn();
+    const endTime = performance.now();
     this.recordMetric({
       name: `async:${name}`,
       value: endTime - startTime,
@@ -273,7 +273,7 @@ export class PerformanceMetrics {
    * Calculate performance score (0-100)
    */
   calculatePerformanceScore(): number {
-    let score = 100
+    let score = 100;
     // FCP scoring
     if (this.webVitals.FCP) {
       if (this.webVitals.FCP > 3000) score -= 20
@@ -301,7 +301,7 @@ export class PerformanceMetrics {
    * Get performance recommendations
    */
   getRecommendations(): string[] {
-    const recommendations: string[] = []
+    const recommendations: string[] = [];
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
       recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources')
     }
@@ -314,8 +314,8 @@ export class PerformanceMetrics {
     if (this.webVitals.FID && this.webVitals.FID > 100) {
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution')
     }
-    const networkMetrics = this.getMetricsByCategory('network')
-    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
+    const networkMetrics = this.getMetricsByCategory('network');
+    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes')
     }
@@ -326,8 +326,8 @@ export class PerformanceMetrics {
    * Generate performance report
    */
   generateReport(): PerformanceReport {
-    const loadMetrics = this.getMetricsByCategory('load')
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
+    const loadMetrics = this.getMetricsByCategory('load');
+    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
@@ -380,6 +380,6 @@ interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean
 }
 
-// Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
-export default PerformanceMetrics
+// Export singleton instance;
+export const performanceMetrics = PerformanceMetrics.getInstance();
+export default PerformanceMetrics;

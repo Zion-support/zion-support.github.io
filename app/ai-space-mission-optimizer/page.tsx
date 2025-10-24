@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiSpaceMissionOptimizerPage() {
   return (
     <>
-      
-        <title>AiSpaceMissionOptimizer - Zion Tech Group</title>
+      <title>AiSpaceMissionOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional aispacemissionoptimizer services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiSpaceMissionOptimizerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

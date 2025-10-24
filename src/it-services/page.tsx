@@ -1,10 +1,10 @@
 'use client'
-import { ArrowRight, X, Target } from 'lucide-react'
-import React from 'react'
-import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+import { ArrowRight, X, Target } from 'lucide-react';
+import React from 'react';
+import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 interface ITService {}
   title: string
@@ -17,7 +17,7 @@ interface ITService {}
   technologies: string[]
   contactInfo: string
   color?: string
-}
+{}
 
 constITServicesPage: React.FC= () => {constitServices: ITService[] = []
     // Infrastructure & Cloud Services
@@ -237,7 +237,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = []
     }
   ]
 
-  const categories = []
+  const categories = [];
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
     { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
@@ -304,7 +304,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = []
     }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -565,9 +565,8 @@ const Page = () => {}
         </section>
       </main>
       <Footer />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-
+{};
+;
 export default Page;

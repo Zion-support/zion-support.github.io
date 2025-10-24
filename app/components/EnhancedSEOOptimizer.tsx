@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail, ArrowRight } from 'lucide-react';
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
@@ -96,15 +95,11 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            ))}
+            ))};
           </div>
-<<<<<<< HEAD
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
-=======
         </div>
       </section>
 
@@ -149,5 +144,4 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   )
 }
 
-export default EnhancedSEOOptimizerPage
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
+export default EnhancedSEOOptimizerPage;

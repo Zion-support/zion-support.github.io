@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react'
-import { Home, ChevronRight } from 'lucide-react'
-import { useLocation } from 'react-router-dom'
+import React from 'react';
+import { Home, ChevronRight } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 interface BreadcrumbItem {
   name: string
@@ -11,20 +10,20 @@ interface BreadcrumbItem {
 }
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation()
+  const location = useLocation();
 
   if (location.pathname === '/') {
     return null
   }
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
-  const breadcrumbItems: BreadcrumbItem[] = [
+  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+  const breadcrumbItems: BreadcrumbItem[] = [;
     { name: 'Home', path: '/', icon: Home }
   ]
 
   pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/')
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
+    const path = '/' + pathSegments.slice(0, index + 1).join('/');
+    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     breadcrumbItems.push({ name, path, icon: null })
   })
 
@@ -55,9 +54,8 @@ const Breadcrumb: React.FC = () => {
     </nav>
   )
 }
-
-export default Breadcrumb
-=======
+;
+export default Breadcrumb;
 'use client';
 
 import React from 'react';
@@ -108,4 +106,3 @@ export default function Breadcrumb() {
     </nav>
   );
 }
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

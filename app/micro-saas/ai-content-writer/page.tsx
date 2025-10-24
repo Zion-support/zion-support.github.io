@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiContentWriterPage() {
   return (
     <>
-      
-        <title>AiContentWriter - Zion Tech Group</title>
+      <title>AiContentWriter - Zion Tech Group</title>
         <meta name="description" content="Professional aicontentwriter services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiContentWriterPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

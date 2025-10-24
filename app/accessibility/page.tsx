@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AccessibilityPage() {
   return (
     <>
-      
-        <title>Accessibility - Zion Tech Group</title>
+      <title>Accessibility - Zion Tech Group</title>
         <meta name="description" content="Professional accessibility services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AccessibilityPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

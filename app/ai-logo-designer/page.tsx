@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiLogoDesignerPage() {
   return (
     <>
-      
-        <title>AiLogoDesigner - Zion Tech Group</title>
+      <title>AiLogoDesigner - Zion Tech Group</title>
         <meta name="description" content="Professional ailogodesigner services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiLogoDesignerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

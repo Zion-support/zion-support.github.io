@@ -1,25 +1,25 @@
 'use client'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight } from 'lucide-react'
+import Navigation from './Navigation';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 
-import React, { useEffect, useState, useCallback } from 'react'
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
-import { CheckCircle } from 'lucide-react'
-import { AlertTriangle } from 'lucide-react'
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
-interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps {;
   className?: string;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true,
 }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false)
-  const [optimizationStatus, setOptimizationStatus] = useState<{
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizationStatus, setOptimizationStatus] = useState<{;
     images: boolean
     lazyLoading: boolean
     preloading: boolean
@@ -31,11 +31,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     codeSplitting: false,
   })
 
-  const optimizeImages = useCallback(() => {
+  const optimizeImages = useCallback(() => {;
     if (!enableImageOptimization) return
 
     // Optimize images
-    const images = document.querySelectorAll('img')
+    const images = document.querySelectorAll('img');
     images.forEach((img) => {
   
       if (img.loading !== 'lazy') {
@@ -44,8 +44,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       // Add WebP support detection
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
-        const webpSrc = img.src.replace('.jpg', '.webp')
-        const webpImg = new Image()
+        const webpSrc = img.src.replace('.jpg', '.webp');
+        const webpImg = new Image();
         webpImg.onload = () => {
           img.src = webpSrc
         }
@@ -56,7 +56,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizationStatus(prev => ({ ...prev, images: true }))
   }, [enableImageOptimization])
 
-  const enableLazyLoadingOptimization = useCallback(() => {
+  const enableLazyLoadingOptimization = useCallback(() => {;
     if (!enableLazyLoading) return
 
     // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver(
@@ -65,7 +65,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         entries.forEach((entry) => {
   
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src
               img.removeAttribute('data-src')
@@ -77,13 +77,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       { rootMargin: '50px' }
     )
 
-    const lazyImages = document.querySelectorAll('img[data-src]')
+    const lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach((img) => observer.observe(img))
 
     setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }))
   }, [enableLazyLoading])
 
-  const enablePreloadingOptimization = useCallback(() => {
+  const enablePreloadingOptimization = useCallback(() => {;
     if (!enablePreloading) return
 
     // Preload critical resources
@@ -93,7 +93,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     ]
 
     criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
+      const link = document.createElement('link');
       link.rel = 'preload'
       link.href = resource
       link.as = resource.endsWith('.css') ? 'style' : 'font'
@@ -106,13 +106,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizationStatus(prev => ({ ...prev, preloading: true }))
   }, [enablePreloading])
 
-  const enableCodeSplittingOptimization = useCallback(() => {
+  const enableCodeSplittingOptimization = useCallback(() => {;
     if (!enableCodeSplitting) return
 
     // Dynamic imports for codesplittingconstloadComponent= async (componentName: string) => {
   
       try {
-        const module = await import(`../components/${componentName}.tsx`)
+        const module = await import(`../components/${componentName}.tsx`);
         return module.default
       } catch (error) {
         // // console.warn(`Failed to load component: ${componentName}`, error)
@@ -126,7 +126,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
   }, [enableCodeSplitting])
 
-  const runOptimizations = useCallback(async () => {
+  const runOptimizations = useCallback(async () => {;
     setIsOptimizing(true)
 
     try {
@@ -147,12 +147,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     runOptimizations()
   }, [runOptimizations])
 
-  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
+  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
 
   return (
     <>
       <Helmet>
-        <title>PerformanceOptimizer</title>
+        <title>PerformanceOptimizer</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -251,8 +251,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   )
 }
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer;
   );
-};
+{};
 
 export default PerformanceOptimizerPage;

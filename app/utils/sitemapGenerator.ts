@@ -3,16 +3,16 @@
  * Generates sitemap and robots.txt for SEO optimization
  */
 
-export interface SitemapEntry {
+export interface SitemapEntry {;
   loc: string
   lastmod: string
   changefreq: string
   priority: number
 }
 
-export const generateSitemap = (): SitemapEntry[] => {
-  const baseUrl = 'https://ziontechgroup.com'
-  const currentDate = new Date().toISOString()
+export const generateSitemap = (): SitemapEntry[] => {;
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
 
   return [
     {
@@ -108,7 +108,7 @@ export const generateSitemap = (): SitemapEntry[] => {
   ]
 }
 
-export const generateRobotsTxt = (): string => {
+export const generateRobotsTxt = (): string => {;
   return `User-agent: *
 Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -119,6 +119,6 @@ Crawl-delay: 1
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /private/`
+Disallow: /_next/;
+Disallow: /private/`;
 }

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function CaseStudiesPage() {
   return (
     <>
-      
-        <title>CaseStudies - Zion Tech Group</title>
+      <title>CaseStudies - Zion Tech Group</title>
         <meta name="description" content="Professional casestudies services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

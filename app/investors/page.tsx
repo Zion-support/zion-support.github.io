@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function InvestorsPage() {
   return (
     <>
-      
-        <title>Investors - Zion Tech Group</title>
+      <title>Investors - Zion Tech Group</title>
         <meta name="description" content="Professional investors services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function InvestorsPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiMusicCompositionPage() {
   return (
     <>
-      
-        <title>AiMusicComposition - Zion Tech Group</title>
+      <title>AiMusicComposition - Zion Tech Group</title>
         <meta name="description" content="Professional aimusiccomposition services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiMusicCompositionPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

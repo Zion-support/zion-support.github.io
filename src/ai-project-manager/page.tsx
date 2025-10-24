@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
 constAIProjectManagerPage: React.FC= () =>{constfeatures= []
     'AI-powered project planning and resource allocation',
@@ -17,7 +17,7 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= []
     'Integration with popular project management tools'
   ]
 
-  const benefits = []
+  const benefits = [];
     '40% increase in project delivery speed',
     '70% reduction in project delays',
     '85% improvement in planning accuracy',
@@ -48,11 +48,11 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
       </div>
 </>
   )
-}
-
+};
+;
 export default Page;

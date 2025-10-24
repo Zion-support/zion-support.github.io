@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiSecurityMonitorPage() {
   return (
     <>
-      
-        <title>AiSecurityMonitor - Zion Tech Group</title>
+      <title>AiSecurityMonitor - Zion Tech Group</title>
         <meta name="description" content="Professional aisecuritymonitor services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiSecurityMonitorPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

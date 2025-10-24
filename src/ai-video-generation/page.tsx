@@ -1,9 +1,9 @@
-import React from 'react'
-import { Play } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Video } from 'lucide-react'
+import React from 'react';
+import { Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Zap, Video } from 'lucide-react';
 
 constAIVideoGenerationPage: React.FC= () =>{constfeatures= []
     'AI Video Creation',
@@ -49,8 +49,8 @@ constAIVideoGenerationPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Video Generator Pro - Create Professional Videos with AI | ZionTechGroup&quot;
         description=&quot;Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at$199/month.&quot;
         keywords={['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'videoautomation']}
@@ -196,6 +196,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function SupplyChainPage() {
   return (
     <>
-      
-        <title>SupplyChain - Zion Tech Group</title>
+      <title>SupplyChain - Zion Tech Group</title>
         <meta name="description" content="Professional supplychain services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function SupplyChainPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -1,11 +1,11 @@
 'use client';
 import { useEffect } from 'react';
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
   useEffect(() => {
     // Add high contrast mode support
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
+    const handleContrastChange = (e: MediaQueryListEvent) => {;
+      if (e.matches) {;
         document.documentElement.classList.add('high-contrast');
       } else {
         document.documentElement.classList.remove('high-contrast');
@@ -17,7 +17,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Call with the MediaQueryList directly
     handleContrastChange(mediaQuery as any);
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -119,7 +118,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       <Footer />
     </>
   );
-=======
     return () => {
       mediaQuery.removeEventListener('change', handleContrastChange);
     };
@@ -127,8 +125,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   useEffect(() => {
     // Add reduced motion support
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
+    const handleMotionChange = (e: MediaQueryListEvent) => {;
+      if (e.matches) {;
         document.documentElement.classList.add('reduce-motion');
       } else {
         document.documentElement.classList.remove('reduce-motion');
@@ -164,9 +162,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   useEffect(() => {
     // Add keyboard navigation support
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {;
       // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {;
         const mainContent = document.querySelector('main');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
@@ -181,7 +179,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   return <>{children}</>;
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 };
 
 export default EnhancedAccessibility;

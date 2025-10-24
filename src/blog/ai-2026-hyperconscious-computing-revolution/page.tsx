@@ -1,11 +1,11 @@
-import React from 'react'
-import { Star } from 'lucide-react'
+import React from 'react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import { Star } from 'lucide-react';
 
 // import {Metadata} from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
-export default function AI2026HyperconsciousComputingRevolution
+export default function AI2026HyperconsciousComputingRevolution;
 AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousComputingRevolution"() {}
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -96,9 +96,8 @@ AI2026HyperconsciousComputingRevolution.displayName = "AI2026HyperconsciousCompu
               Get Started Today
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
   )
-}
+{};

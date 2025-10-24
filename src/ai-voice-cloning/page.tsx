@@ -1,9 +1,9 @@
-import React from 'react'
-import { Play } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Music } from 'lucide-react'
+import React from 'react';
+import { Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Zap, Music } from 'lucide-react';
 
 constAIVoiceCloningPage: React.FC= () =>{constfeatures= []
     'Voice Cloning',
@@ -49,8 +49,8 @@ constAIVoiceCloningPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Voice Cloning Studio - Create Realistic Voice Clones | ZionTechGroup&quot;
         description=&quot;Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at$199/month.&quot;
         keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voiceautomation']}
@@ -196,6 +196,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

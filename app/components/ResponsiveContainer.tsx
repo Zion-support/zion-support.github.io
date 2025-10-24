@@ -1,11 +1,11 @@
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import React from 'react'
-import { cn } from '../lib/utils'
-interface ResponsiveContainerProps {
+import Footer from './Footer';
+import Navigation from './Navigation';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { cn } from '../lib/utils';
+interface ResponsiveContainerProps {;
   className?: string;
 }
 
@@ -25,11 +25,11 @@ constResponsiveContainer= ({children,
     full: 'max-w-full'
   }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '' }) => {
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '' }) => {;
   return (
     <>
       <Helmet>
-        <title>ResponsiveContainer</title>
+        <title>ResponsiveContainer</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ResponsiveContainer solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ResponsiveContainer, AI solutions, intelligent automation&quot; />
       </Helmet>

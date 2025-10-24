@@ -1,7 +1,7 @@
 'use client'
-import { ArrowRight } from 'lucide-react'
-import React from 'react'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 interface MicroSAASCardProps {}
   service: {}
@@ -17,10 +17,10 @@ interface MicroSAASCardProps {}
     contactInfo: string
     link?: string
     popular?: boolean
-  }
-}
+{  }
+{}
 
-const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {}
+const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {};
   return ()
     <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
       {service.popular && ()
@@ -94,11 +94,10 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {}
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
   )
-}
-
+{};
+;
 export default MicroSAASCard;

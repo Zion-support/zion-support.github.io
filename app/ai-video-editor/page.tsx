@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiVideoEditorPage() {
   return (
     <>
-      
-        <title>AiVideoEditor - Zion Tech Group</title>
+      <title>AiVideoEditor - Zion Tech Group</title>
         <meta name="description" content="Professional aivideoeditor services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiVideoEditorPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

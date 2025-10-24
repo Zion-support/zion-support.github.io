@@ -1,9 +1,9 @@
-import React from 'react'
-import { Play } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Heart } from 'lucide-react'
+import React from 'react';
+import { Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Zap, Heart } from 'lucide-react';
 
 constAIFitnessCoachPage: React.FC= () =>{constfeatures= []
     'Personalized Plans',
@@ -49,8 +49,8 @@ constAIFitnessCoachPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Fitness Coach - Personalized Fitness & Nutrition Plans | ZionTechGroup&quot;
         description=&quot;Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get24/7 guidance, and achieve your health goals starting at$99/month.&quot;
         keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitnessautomation']}
@@ -196,6 +196,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

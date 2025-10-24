@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionChatAiPage() {
   return (
     <>
-      
-        <title>ZionChatAi - Zion Tech Group</title>
+      <title>ZionChatAi - Zion Tech Group</title>
         <meta name="description" content="Professional zionchatai services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ZionChatAiPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

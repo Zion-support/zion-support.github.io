@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiSocialMediaManagerPage() {
   return (
     <>
-      
-        <title>AiSocialMediaManager - Zion Tech Group</title>
+      <title>AiSocialMediaManager - Zion Tech Group</title>
         <meta name="description" content="Professional aisocialmediamanager services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiSocialMediaManagerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

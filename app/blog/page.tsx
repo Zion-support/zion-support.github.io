@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function BlogPage() {
   return (
     <>
-      
-        <title>Blog - Zion Tech Group</title>
+      <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Professional blog services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function BlogPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

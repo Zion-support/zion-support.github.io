@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ChatAnalyticsPage() {
   return (
     <>
-      
-        <title>ChatAnalytics - Zion Tech Group</title>
+      <title>ChatAnalytics - Zion Tech Group</title>
         <meta name="description" content="Professional chatanalytics services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ChatAnalyticsPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

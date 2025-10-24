@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function PenetrationTestingPage() {
   return (
     <>
-      
-        <title>PenetrationTesting - Zion Tech Group</title>
+      <title>PenetrationTesting - Zion Tech Group</title>
         <meta name="description" content="Professional penetrationtesting services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function PenetrationTestingPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

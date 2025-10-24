@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiClimatePredictionEnginePage() {
   return (
     <>
-      
-        <title>AiClimatePredictionEngine - Zion Tech Group</title>
+      <title>AiClimatePredictionEngine - Zion Tech Group</title>
         <meta name="description" content="Professional aiclimatepredictionengine services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiClimatePredictionEnginePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

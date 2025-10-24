@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ApiPage() {
   return (
     <>
-      
-        <title>Api - Zion Tech Group</title>
+      <title>Api - Zion Tech Group</title>
         <meta name="description" content="Professional api services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ApiPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

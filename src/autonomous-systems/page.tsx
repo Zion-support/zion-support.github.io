@@ -1,8 +1,8 @@
 'use client'
-import { BarChart } from 'lucide-react'
-import React from 'react'
-import { CheckCircle, Star, BarChart } from 'lucide-react'
-import { Bot, Cpu } from 'lucide-react'
+import { BarChart } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, BarChart } from 'lucide-react';
+import { Bot, Cpu } from 'lucide-react';
 
 constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
     {
@@ -176,10 +176,9 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               Learn More
             </button>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
   )
 }
-export default AutonomousSystemsPage
+export default AutonomousSystemsPage;

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function NotFoundPage() {
   return (
     <>
-      
-        <title>NotFound - Zion Tech Group</title>
+      <title>NotFound - Zion Tech Group</title>
         <meta name="description" content="Professional notfound services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function NotFoundPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

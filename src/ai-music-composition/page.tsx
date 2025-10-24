@@ -1,9 +1,9 @@
-import React from 'react'
-import { Play } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Music } from 'lucide-react'
+import React from 'react';
+import { Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Zap, Music } from 'lucide-react';
 
 constAIMusicCompositionPage: React.FC= () =>{constfeatures= []
     'AI Composition',
@@ -49,8 +49,8 @@ constAIMusicCompositionPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Music Composer - Generate Royalty-Free Music with AI | ZionTechGroup&quot;
         description=&quot;Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at$99/month.&quot;
         keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AIcomposer']}
@@ -196,6 +196,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

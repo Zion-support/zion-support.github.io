@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiTimeTrackerPage() {
   return (
     <>
-      
-        <title>AiTimeTracker - Zion Tech Group</title>
+      <title>AiTimeTracker - Zion Tech Group</title>
         <meta name="description" content="Professional aitimetracker services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiTimeTrackerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

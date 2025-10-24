@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function CookiePolicyPage() {
   return (
     <>
-      
-        <title>CookiePolicy - Zion Tech Group</title>
+      <title>CookiePolicy - Zion Tech Group</title>
         <meta name="description" content="Professional cookiepolicy services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function CookiePolicyPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

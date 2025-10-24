@@ -1,7 +1,7 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-import { X } from 'lucide-react'
-import { Download } from 'lucide-react'
+import React, { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>
@@ -9,13 +9,13 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
-  const [isInstalled, setIsInstalled] = useState(false)
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed
-    const checkInstalled = () => {
+    const checkInstalled = () => {;
       if (window.matchMedia('(display-mode: standalone)').matches) {
         setIsInstalled(true)
       }
@@ -23,14 +23,14 @@ const PWAInstaller: React.FC = () => {
     checkInstalled()
 
     // Listen for beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
+    const handleBeforeInstallPrompt = (e: Event) => {;
       e.preventDefault()
       setDeferredPrompt(e as BeforeInstallPromptEvent)
       setShowInstallPrompt(true)
     }
 
     // Listen for appinstalled event
-    const handleAppInstalled = () => {
+    const handleAppInstalled = () => {;
       setIsInstalled(true)
       setShowInstallPrompt(false)
       setDeferredPrompt(null)
@@ -45,11 +45,11 @@ const PWAInstaller: React.FC = () => {
     }
   }, [])
 
-  const handleInstallClick = async () => {
+  const handleInstallClick = async () => {;
     if (!deferredPrompt) return
     try {
       await deferredPrompt.prompt()
-      const { outcome } = await deferredPrompt.userChoice
+      const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
         // Installation successful
       } else {
@@ -62,8 +62,8 @@ const PWAInstaller: React.FC = () => {
     }
   }
 
-  const handleDismiss = () => {
-    setShowInstallPrompt(false)
+  const handleDismiss = () => {;
+    setShowInstallPrompt(false);
     // Don&apos;t show again for this session
     sessionStorage.setItem('pwa-install-dismissed', 'true')
   }
@@ -118,4 +118,4 @@ const PWAInstaller: React.FC = () => {
   )
 }
 
-export default PWAInstaller
+export default PWAInstaller;

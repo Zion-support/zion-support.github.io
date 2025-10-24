@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'lucide-react';
 
@@ -48,4 +48,4 @@ constAIMegaTrends2025202 6: React.FC= () =>{return ()
 </>
   )
 }
-export default AIMegaTrends20252026
+export default AIMegaTrends20252026;

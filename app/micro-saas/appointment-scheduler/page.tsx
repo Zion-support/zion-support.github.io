@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AppointmentSchedulerPage() {
   return (
     <>
-      
-        <title>AppointmentScheduler - Zion Tech Group</title>
+      <title>AppointmentScheduler - Zion Tech Group</title>
         <meta name="description" content="Professional appointmentscheduler services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AppointmentSchedulerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

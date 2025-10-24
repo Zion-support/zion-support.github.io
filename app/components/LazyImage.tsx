@@ -1,13 +1,13 @@
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+import Footer from './Footer';
+import Navigation from './Navigation';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail, ArrowRight } from 'lucide-react';
 
-    }
+{    }
   ]
 
   const benefits = [
@@ -18,11 +18,11 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
     'Gain competitive advantage with advanced technology'
   ]
 
-const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {
+const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;
   return (
     <>
-      <Helmet>
-        <title>LazyImage</title>
+      <Helmet>;
+        <title>LazyImage</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced LazyImage solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, LazyImage, AI solutions, intelligent automation&quot; />
       </Helmet>

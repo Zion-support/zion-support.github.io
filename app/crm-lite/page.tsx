@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function CrmLitePage() {
   return (
     <>
-      
-        <title>CrmLite - Zion Tech Group</title>
+      <title>CrmLite - Zion Tech Group</title>
         <meta name="description" content="Professional crmlite services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function CrmLitePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

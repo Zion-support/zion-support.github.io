@@ -7,12 +7,12 @@ interface NewsletterSignupProps {
   onClose?: () => void;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
 
     if (!email) {
@@ -50,7 +50,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     }
   };
 
-  const content = (
+  const content = (;
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
       <div className="text-center mb-6">
         <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />

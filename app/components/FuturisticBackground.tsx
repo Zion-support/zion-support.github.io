@@ -12,7 +12,7 @@ const FuturisticBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const resizeCanvas = () => {
+    const resizeCanvas = () => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -42,7 +42,7 @@ const FuturisticBackground: React.FC = () => {
       });
     }
 
-    const animate = () => {
+    const animate = () => {;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -92,7 +92,6 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>FuturisticBackground - Zion Tech Group</title>
@@ -191,13 +190,11 @@ const FuturisticBackground: React.FC = () => {
       </div>
       <Footer />
     </>
-=======
     <canvas
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)' }}
     />
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
   );
 };
 

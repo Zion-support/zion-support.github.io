@@ -1,12 +1,12 @@
-import { useCallback, useMemo, useState, useEffect } from 'react'
+import { useCallback, useMemo, useState, useEffect } from 'react';
 'use client'
 // Performance optimization utilities
 
 // Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
+export const debounce = <T extends (...args: any[]) => any>(;
+  func: T,;
+  wait: number;
+): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
@@ -15,10 +15,10 @@ export const debounce = <T extends (...args: any[]) => any>(
 }
 
 // Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: any[]) => any>(;
   func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
+  limit: number;
+): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -30,11 +30,11 @@ export const throttle = <T extends (...args: any[]) => any>(
 }
 
 // Intersection Observer hook for lazy loading
-export const useIntersectionObserver = (
+export const useIntersectionObserver = (;
   callback: (entries: IntersectionObserverEntry[]) => void,
   options: IntersectionObserverInit = {}
 ) => {
-  const observer = useMemo(
+  const observer = useMemo(;
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
@@ -46,7 +46,7 @@ export const useIntersectionObserver = (
     [callback, options]
   )
 
-  const observe = useCallback(
+  const observe = useCallback(;
     (element: Element | null) => {
       if (observer && element) {
         observer.observe(element)
@@ -57,7 +57,7 @@ export const useIntersectionObserver = (
     [observer]
   )
 
-  const disconnect = useCallback(() => {
+  const disconnect = useCallback(() => {;
     if (observer) {
       observer.disconnect()
     }
@@ -71,17 +71,17 @@ export const useIntersectionObserver = (
 }
 
 // Image lazy loading hook
-export const useLazyImage = (src: string, placeholder?: string) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false)
+export const useLazyImage = (src: string, placeholder?: string) => {;
+  const [imageSrc, setImageSrc] = useState(placeholder || '');
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isError, setIsError] = useState(false);
 
-  const { observe } = useIntersectionObserver(
+  const { observe } = useIntersectionObserver(;
     useCallback(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
-            const img = new Image()
+            const img = new Image();
             img.onload = () => {
               setImageSrc(src)
               setIsLoaded(true)
@@ -101,8 +101,8 @@ export const useLazyImage = (src: string, placeholder?: string) => {
 }
 
 // Performance monitoring hook
-export const usePerformanceMonitoring = () => {
-  const [metrics, setMetrics] = useState<{
+export const usePerformanceMonitoring = () => {;
+  const [metrics, setMetrics] = useState<{;
     fcp?: number
     lcp?: number
     fid?: number
@@ -113,11 +113,11 @@ export const usePerformanceMonitoring = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+    const updateMetrics = () => {;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({
         fcp,
         lcp,
@@ -152,8 +152,8 @@ export const usePerformanceMonitoring = () => {
 }
 
 // Memory usage monitoring
-export const useMemoryMonitoring = () => {
-  const [memoryInfo, setMemoryInfo] = useState<{
+export const useMemoryMonitoring = () => {;
+  const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number
     totalJSHeapSize?: number
     jsHeapSizeLimit?: number
@@ -162,8 +162,8 @@ export const useMemoryMonitoring = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return
 
-    const updateMemoryInfo = () => {
-      const memory = (performance as any).memory
+    const updateMemoryInfo = () => {;
+      const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
@@ -174,7 +174,7 @@ export const useMemoryMonitoring = () => {
     }
 
     updateMemoryInfo()
-    const interval = setInterval(updateMemoryInfo, 5000)
+    const interval = setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval)
   }, [])
 
@@ -182,9 +182,9 @@ export const useMemoryMonitoring = () => {
 }
 
 // Resource preloading utility
-export const preloadResource = (href: string, as: string) => {
+export const preloadResource = (href: string, as: string) => {;
   if (typeof window === 'undefined') return
-  const link = document.createElement('link')
+  const link = document.createElement('link');
   link.rel = 'preload'
   link.href = href
   link.as = as
@@ -192,7 +192,7 @@ export const preloadResource = (href: string, as: string) => {
 }
 
 // Critical resource preloading
-export const preloadCriticalResources = () => {
+export const preloadCriticalResources = () => {;
   if (typeof window === 'undefined') return
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font')
@@ -205,8 +205,8 @@ export const preloadCriticalResources = () => {
 }
 
 // Bundle size monitoring
-export const useBundleSizeMonitoring = () => {
-  const [bundleSize, setBundleSize] = useState<{
+export const useBundleSizeMonitoring = () => {;
+  const [bundleSize, setBundleSize] = useState<{;
     totalSize?: number
     jsSize?: number
     cssSize?: number
@@ -216,15 +216,15 @@ export const useBundleSizeMonitoring = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    const calculateBundleSize = () => {
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+    const calculateBundleSize = () => {;
+      const resources = performance.getEntriesByType('resource');
+      let totalSize = 0;
+      let jsSize = 0;
+      let cssSize = 0;
+      let imageSize = 0;
 
       resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
+        const size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size
         if (resource.name.includes('.js')) {
           jsSize += size
@@ -258,7 +258,7 @@ export const useBundleSizeMonitoring = () => {
   return bundleSize
 }
 
-const performanceOptimizations = {
+const performanceOptimizations = {;
   debounce,
   throttle,
   useIntersectionObserver,
@@ -268,6 +268,6 @@ const performanceOptimizations = {
   preloadResource,
   preloadCriticalResources,
   useBundleSizeMonitoring
-}
-
-export default performanceOptimizations
+};
+;
+export default performanceOptimizations;

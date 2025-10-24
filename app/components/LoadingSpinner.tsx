@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const LoadingSpinnerPage: React.FC = () => {
   const features = [
@@ -44,8 +44,8 @@ const LoadingSpinnerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>LoadingSpinner</title>
+      <Helmet>;
+        <title>LoadingSpinner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced LoadingSpinner solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, LoadingSpinner, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -147,7 +147,7 @@ const LoadingSpinnerPage: React.FC = () => {
 
 export default LoadingSpinnerPage;
 color?: 'primary' | 'secondary' | 'white'
-text?: string}
+{text?: string}
 constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
 color= 'primary',
 text}) => {constsizeClasses= {
@@ -159,12 +159,12 @@ secondary: 'text-gray-60 0',
 white: 'text-white'}
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;><divclassName={`animate-spin rounded-full border-2 border-gray-300border-t-transparent${sizeClasses[size]}${colorClasses[color]}`}></di>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}</p>)}</di>)
 }
-const colorClasses = {
+const colorClasses = {;
 primary: 'text-indigo-600',
 secondary: 'text-gray-600',
 white: 'text-white'
 }
-return (
+return (;
 <div className=&quot;flex flex-col items-center justify-center space-y-2&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;></div>
 <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
 {text && (
@@ -172,5 +172,5 @@ return (
 )}
 </div>
 )
-}
-export default LoadingSpinner
+{}
+export default LoadingSpinner;

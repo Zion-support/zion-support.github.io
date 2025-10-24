@@ -2,8 +2,8 @@
 * Error Boundary Configuration
 * Centralized configuration for error handling across the application
 */
-import React from 'react'
-export interface ErrorBoundaryConfig {}
+import React from 'react';
+export interface ErrorBoundaryConfig {};
 /**
 * Whether to log errors to console
 */
@@ -34,27 +34,27 @@ maxStoredErrors: number,
 customMessages: Record<string, string>
 /**
 * Fallback UI components
-*/
-fallbackComponents: {}
+*/;
+fallbackComponents: {};
 default: React.ComponentType<{ error: Error; resetError: () => void }>
 network: React.ComponentType<{ error: Error; resetError: () => void }>
 notFound: React.ComponentType<{ error: Error; resetError: () => void }>
-}
-}
+{}
+{}
 /**
 * Default error messages
 */
-const DEFAULT_ERROR_MESSAGES = {}
+const DEFAULT_ERROR_MESSAGES = {};
 default: 'Something went wrong. Please try again.',
 network: 'Network connection issue. Please check your internet connection.',
 notFound: 'The requested resource was not found.',
 timeout: 'Request timed out. Please try again.',
 serverError: 'Server error occurred. Please try again later.',
-validation: 'Validation error. Please check your input.'}
+{validation: 'Validation error. Please check your input.'}
 /**
 * Get error boundary configuration based on environment
 */
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}
+export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {};
 logErrors: true,
 showDetails: isDevelopment,
 reportErrors: !isDevelopment,
@@ -65,11 +65,11 @@ customMessages: DEFAULT_ERROR_MESSAGES,
 fallbackComponents: {}
 default: DefaultErrorFallback,
 network: NetworkErrorFallback,
-notFound: NotFoundFallback}}
-}
+{notFound: NotFoundFallback}}
+{}
 /**
-* Default error fallback component
-*/
+* Default error fallback component;
+*/;
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {}
 return ()
     <>
@@ -95,7 +95,7 @@ d="M6 18L18 6M6 6l12 12"
 <p className="mt-2 text-center text-gray-600">{error.message || 'An unexpected error occurred'}</p>
 {process.env['NODE_ENV'] === 'development' && (;}
 <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
-)}
+{)}
 <div className="mt-6 flex gap-4"></div>
 <button
 onClick={resetError}
@@ -110,7 +110,7 @@ Go Home
 </div>
 </div>
 )
-}
+{}
 /**
 * Network error fallback component
 */
@@ -143,7 +143,7 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 </div>
 </div>
 )
-}
+{}
 /**
 * Not found error fallback component
 */
@@ -171,32 +171,32 @@ Go Back
 </div>
 </div>
 )
-}
+{}
 /**
 * Get error type from error object
 */
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {}
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {};
 if (error.message.includes('Network') || error.message.includes('fetch')) {}
 return 'network'
-}
-if (error.message.includes('404') || error.message.includes('not found')) {}
-return 'notFound';}
-}
+{}
+if (error.message.includes('404') || error.message.includes('not found')) {};
+{return 'notFound';}
+{}
 if (error.message.includes('timeout')) {}
-return 'timeout';}
-}
+{return 'timeout';}
+{}
 if (error.message.includes('500') || error.message.includes('server')) {}
-return 'serverError';}
-}
+{return 'serverError';}
+{}
 if (error.message.includes('validation')) {}
-return 'validation';}
-}
+{return 'validation';}
+{}
 return 'default'
-}
+{}
 /**
 * Format error for logging
 */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {}
+export function formatErrorForLogging(error: Error): Record<string, unknown> {};
 return {}
 message: error.message,
 stack: error.stack,
@@ -204,8 +204,8 @@ name: error.name,
 type: getErrorType(error),
 timestamp: new Date().toISOString(),
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
-}
-export default getErrorBoundaryConfig
-
+{url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
+{}
+export default getErrorBoundaryConfig;
+;
     </>

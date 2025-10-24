@@ -1,10 +1,10 @@
 'use client'
-import { Brain, BarChart } from 'lucide-react'
-import React from 'react'
-import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle } from 'lucide-react'
+import { Brain, BarChart } from 'lucide-react';
+import React from 'react';
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle } from 'lucide-react';
 
 constMicroSAASPage: React.FC= () =>{constcategories= [
     {
@@ -107,7 +107,7 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
     }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -330,9 +330,8 @@ const Page = () => {}
         </section>
       </main>
       <Footer />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-
+};
+;
 export default Page;

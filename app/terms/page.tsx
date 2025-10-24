@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function TermsPage() {
   return (
     <>
-      
-        <title>Terms - Zion Tech Group</title>
+      <title>Terms - Zion Tech Group</title>
         <meta name="description" content="Professional terms services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function TermsPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

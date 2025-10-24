@@ -1,6 +1,6 @@
-import React from 'react'
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
-import { MapPin } from 'lucide-react'
+import React from 'react';
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, BarChart, Helmet, MapPin, Check } from 'lucide-react';
 
@@ -49,7 +49,7 @@ constAnalyticsToolsPage: React.FC= () =>{constanalyticsTools= [
       category: 'Financial Analytics'
     }
   ]
-  const benefits = [
+  const benefits = [;
     {
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
@@ -217,8 +217,7 @@ constAnalyticsToolsPage: React.FC= () =>{constanalyticsTools= [
           </div>
         </div>
       </section>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
 }
-export default AnalyticsToolsPage
+export default AnalyticsToolsPage;

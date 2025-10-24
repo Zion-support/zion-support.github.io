@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function FraudDetectionPage() {
   return (
     <>
-      
-        <title>FraudDetection - Zion Tech Group</title>
+      <title>FraudDetection - Zion Tech Group</title>
         <meta name="description" content="Professional frauddetection services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function FraudDetectionPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

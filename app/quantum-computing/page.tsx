@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function QuantumComputingPage() {
   return (
     <>
-      
-        <title>QuantumComputing - Zion Tech Group</title>
+      <title>QuantumComputing - Zion Tech Group</title>
         <meta name="description" content="Professional quantumcomputing services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function QuantumComputingPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -1,11 +1,11 @@
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-import { Home } from 'lucide-react'
+import Footer from './Footer';
+import Navigation from './Navigation';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -45,8 +45,8 @@ const ErrorHandlerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ErrorHandler</title>
+      <Helmet>;
+        <title>ErrorHandler</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorHandler solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -200,7 +200,7 @@ const ErrorHandlerPage: React.FC = () => {
 
     return thi s.props.children
   }
-}
+{}
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
@@ -243,6 +243,6 @@ const ErrorHandlerPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+{};
 
 export default ErrorHandlerPage;

@@ -1,11 +1,11 @@
 'use client'
-import { Brain, Target, TrendingUp } from 'lucide-react'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
-import { Clock } from 'lucide-react'
+import { Brain, Target, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Star, Phone, Mail } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     name: '',
@@ -21,21 +21,21 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     message: ''
   })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-    const { name, value } = e.target
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
+    const { name, value } = e.target;
     setFormData(prev => ({}
       ...prev,
       [name]: value
-    }))
-  }
+{    }))
+{  }
 
-  const handleSubmit = (e: React.FormEvent) => {}
+  const handleSubmit = (e: React.FormEvent) => {};
     e.preventDefault()
     // Handle form submission
-    const subject = `Free Consultation Request from ${formData.name} - ${formData.company}`
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nIndustry: ${formData.industry}\nCompany Size: ${formData.companySize}\nCurrent Challenges: ${formData.currentChallenges}\nGoals: ${formData.goals}\nTimeline: ${formData.timeline}\nBudget: ${formData.budget}\nMessage: ${formData.message}`
+    const subject = `Free Consultation Request from ${formData.name} - ${formData.company}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nIndustry: ${formData.industry}\nCompany Size: ${formData.companySize}\nCurrent Challenges: ${formData.currentChallenges}\nGoals: ${formData.goals}\nTimeline: ${formData.timeline}\nBudget: ${formData.budget}\nMessage: ${formData.message}`;
     window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  }
+{  }
 
   constconsultationBenefits= []
     {icon: Target,
@@ -91,8 +91,8 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;Free Business Consultation - ZionTechGroup&quot;
         description=&quot;Get a free30-minute consultation with our technology experts. Discover how AI and IT solutions can transformyourbusiness.&quot;
         keywords={['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'ITconsultation']}
@@ -348,6 +348,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

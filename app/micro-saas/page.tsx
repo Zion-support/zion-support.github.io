@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function MicroSaas() {
   return (
     <>
-      
-        <title>MicroSaas - Zion Tech Group</title>
+      <title>MicroSaas - Zion Tech Group</title>
         <meta name="description" content="Professional microsaas services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function MicroSaas() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

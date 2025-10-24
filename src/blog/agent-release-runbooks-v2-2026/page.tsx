@@ -1,8 +1,8 @@
-import { ListChecks, FileWarning, RefreshCw } from 'lucide-react'
-import { Calendar } from 'lucide-react'
-import { Clock } from 'lucide-react'
+import { ListChecks, FileWarning, RefreshCw } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
-export default function Page
+export default function Page;
 Page.displayName = "Page"() {}
   return ()
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
@@ -53,8 +53,8 @@ Page.displayName = "Page"() {}
               </h3>
               <p className='text-white/90'>
                 We implement v2 runbooks in 4–6 weeks with audits and training.
-              </p>
-            </div>
+              </p>;
+            </div>;
             <a href=&quot;/contact&quot;
               className=&quot;bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2&quot;
             >
@@ -65,4 +65,4 @@ Page.displayName = "Page"() {}
       </section>
     </main>
   )
-}
+{}

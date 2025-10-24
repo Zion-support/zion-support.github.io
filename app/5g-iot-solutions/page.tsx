@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function IoT5GPage() {
   return (
     <>
-      
-        <title>5G IoT Solutions - Zion Tech Group</title>
+      <title>5G IoT Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional 5G IoT solutions for connected devices and smart systems." />
       
       
@@ -25,7 +24,7 @@ export default function IoT5GPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }
 

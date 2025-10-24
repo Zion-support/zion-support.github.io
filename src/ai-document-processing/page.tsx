@@ -1,14 +1,14 @@
 'use client'
-import { Brain, BarChart } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { FileText, FileImage } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
+import { Brain, BarChart } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { FileText, FileImage } from 'lucide-react';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const features = [
+const $1: React.FC = () => {;
+  const features = [;
     {
       icon: Eye,
       title: 'Advanced OCR',
@@ -41,7 +41,7 @@ const $1: React.FC = () => {
       benefits: ['Review workflows', 'Approval processes', 'Team management']
     }
   ]
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: 'Starter',
       price: '$149',
@@ -89,13 +89,13 @@ const $1: React.FC = () => {
       popular: false
     }
   ]
-  const stats = []
+  const stats = [];
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '90%', label: 'Time Savings' },
     { number: '50+', label: 'Document Types' },
     { number: '24/7', label: 'Processing' }
   ]
-  const useCases = [
+  const useCases = [;
     {
       title: 'Invoice Processing',
       description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems.',
@@ -113,8 +113,8 @@ const $1: React.FC = () => {
       description: 'Extract patient information from medical records while maintaining HIPAA compliance and data security.',
       icon: Shield
     }
-  ]
-  return ()
+  ];
+  return ();
   <><SEOOptimizertitle=&quot;AI Document Processing Platform - ZionTechGroup&quot;
         description=&quot;Automate do cument processing with AI-powered OCR and data extraction. 9 9.9% accuracy,90% time savings, and50+ do cument typessupported.&quot;
         keywords={['AI do cument processing', 'OCR', 'data extraction', 'do cument automation', 'AIparsing']}
@@ -231,7 +231,7 @@ const $1: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-              ))}
+{              ))}
             </div>
           </section>
           {/* CTA Section */}
@@ -267,5 +267,5 @@ const $1: React.FC = () => {
       </div>
 </>
   )
-}
-export default AIDocumentProcessingPage
+{}
+export default AIDocumentProcessingPage;

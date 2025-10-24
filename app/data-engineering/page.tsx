@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function DataEngineeringPage() {
   return (
     <>
-      
-        <title>DataEngineering - Zion Tech Group</title>
+      <title>DataEngineering - Zion Tech Group</title>
         <meta name="description" content="Professional dataengineering services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function DataEngineeringPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

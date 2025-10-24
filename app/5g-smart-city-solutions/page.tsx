@@ -116,8 +116,7 @@ export default function FiveGSmartCitySolutions() {
 
   return (
     <>
-      
-        <title>5G Smart City Solutions - Zion Tech Group</title>
+      <title>5G Smart City Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions." />
       
       

@@ -1,14 +1,13 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD:app/components/AdvancedSEOOptimizer.tsx
       icon: Search,
       title: 'Advanced SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization recommendations.',
@@ -25,7 +24,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your website for maximum growth and visibility.',
       benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
-=======
       icon: Brain,
       title: 'AI-Powered 3D Generation',
       description: 'Advanced AI algorithms that generate high-quality 3D models and assets automatically.',
@@ -48,12 +46,10 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       title: 'Scalable Generation',
       description: 'Generate multiple 3D assets at scale with consistent quality and performance.',
       benefits: ['Batch processing', 'Scalable infrastructure', 'Consistent quality', 'Performance optimization']
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-3d-generation/page.tsx
     }
   ]
 
   const benefits = [
-<<<<<<< HEAD:app/components/AdvancedSEOOptimizer.tsx
     'Increase organic traffic by up to 300%',
     'Improve search rankings with AI-powered insights',
     'Optimize content for better visibility',
@@ -115,7 +111,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-=======
     'Generate 3D models 10x faster than traditional methods',
     'Reduce 3D asset creation costs by 70%',
     'Create high-quality 3D content with minimal expertise',
@@ -167,7 +162,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-3d-generation/page.tsx
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
@@ -185,7 +179,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD:app/components/AdvancedSEOOptimizer.tsx
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -224,7 +217,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -235,7 +227,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Our proven track record and innovative approach deliver measurable results.
             </p>
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-3d-generation/page.tsx
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -265,16 +256,13 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       </section>
       
       <Footer />
-<<<<<<< HEAD:app/components/AdvancedSEOOptimizer.tsx
     </>
   )
 }
 
-export default AdvancedSEOOptimizerPage
-=======
+export default AdvancedSEOOptimizerPage;
     </div>
   )
-}
-
-export default AI3DGenerationPage
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-3d-generation/page.tsx
+};
+;
+export default AI3DGenerationPage;

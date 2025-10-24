@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function EnergyManagementPage() {
   return (
     <>
-      
-        <title>EnergyManagement - Zion Tech Group</title>
+      <title>EnergyManagement - Zion Tech Group</title>
         <meta name="description" content="Professional energymanagement services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function EnergyManagementPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -1,13 +1,13 @@
 'use client'
-import { ArrowRight } from 'lucide-react'
-import React, { useState } from 'react'
-import { Mail, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, ArrowRight } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleSubmit = async (e: React.FormEvent) => {}
+const $1: React.FC = () => {;
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {};
     e.preventDefault()
     setIsSubmitting(true)
     // Simulate API call
@@ -20,8 +20,8 @@ const $1: React.FC = () => {
   }
   if (isSubmitted) {}
     return ()
-    <>
-
+    <>;
+;
       <section className=&quot;mb-16&quot; aria-labelledby=&quot;newsletter-heading&quot;></section>
         <div className=&quot;bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center&quot;></div>
           <div className=&quot;text-4xl mb-4&quot;>✅</div>
@@ -30,7 +30,7 @@ const $1: React.FC = () => {
         </div>
       </section>
     )
-  }
+{  }
   return ()
   <sectionclassName=&quot;mb-16&quot;aria-labelledby=&quot;newsletter-heading&quot;><divclassName=&quot;bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl&quot;><divclassName=&quot;max-w-2 xlmx-autotext-center&quot;><id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm:text-3 xlfont-boldmb-4&quot;></id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm:text-3 xlfont-boldmb-4&quot;>Stay Updated with AI Innovation
         </h><spanclassName=&quot;text-purple-100mb-6&quot;></spa></className=&quot;text-purple-100mb-6&quot;>Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
@@ -64,7 +64,7 @@ const $1: React.FC = () => {
       </div>
     </section>
   )
-}
-export default ContentNewsletterSignup
-
+{}
+export default ContentNewsletterSignup;
+;
     </>

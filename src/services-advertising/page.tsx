@@ -1,8 +1,8 @@
-import React from 'react'
-import { ArrowLeft } from 'lucide-react'
-import { CheckCircle, Target, ArrowRight } from 'lucide-react'
+import React from 'react';
+import { ArrowLeft } from 'lucide-react';
+import { CheckCircle, Target, ArrowRight } from 'lucide-react';
 
-export default function ServicesAdvertisingPage
+export default function ServicesAdvertisingPage;
 ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
@@ -389,9 +389,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
               View Success Stories
             </a>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
-  )
-}
+  );
+{};

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function DevopsCicdPage() {
   return (
     <>
-      
-        <title>DevopsCicd - Zion Tech Group</title>
+      <title>DevopsCicd - Zion Tech Group</title>
         <meta name="description" content="Professional devopscicd services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function DevopsCicdPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

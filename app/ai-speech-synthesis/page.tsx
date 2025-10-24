@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiSpeechSynthesisPage() {
   return (
     <>
-      
-        <title>AiSpeechSynthesis - Zion Tech Group</title>
+      <title>AiSpeechSynthesis - Zion Tech Group</title>
         <meta name="description" content="Professional aispeechsynthesis services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiSpeechSynthesisPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

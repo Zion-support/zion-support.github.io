@@ -1,18 +1,17 @@
-<<<<<<< HEAD
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+import Footer from './Footer';
+import Navigation from './Navigation';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail, ArrowRight } from 'lucide-react';
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {;
   return (
     <>
-      <Helmet>
-        <title>SEOEnhancer | Zion Tech Group</title>
+      <Helmet>;
+        <title>SEOEnhancer | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, SEOEnhancer, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -157,5 +156,3 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
 };
 
 export default SEOEnhancerPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8

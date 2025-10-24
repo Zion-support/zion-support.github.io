@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function IotIntegrationPage() {
   return (
     <>
-      
-        <title>IotIntegration - Zion Tech Group</title>
+      <title>IotIntegration - Zion Tech Group</title>
         <meta name="description" content="Professional iotintegration services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function IotIntegrationPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
+import {
   Bars3Icon, 
   XMarkIcon,
   HomeIcon,
@@ -17,7 +17,7 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
 } from '@heroicons/react/24/outline';
 
 const Navigation: React.FC = () => {
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
 
   // Handle scroll effect
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
@@ -57,10 +57,10 @@ const Navigation: React.FC = () => {
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    { name: 'Contact', href: '/contact', icon: PhoneIcon },
   ];
 
-  const isActive = (path: string) => {
+  const isActive = (path: string) => {;
     return pathname === path;
   };
 

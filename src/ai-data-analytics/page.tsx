@@ -1,9 +1,9 @@
-import React from 'react'
-import { BarChart3 } from 'lucide-react'
-import { CheckCircle, Brain, Target, Database } from 'lucide-react'
+import React from 'react';
+import { BarChart3 } from 'lucide-react';
+import { CheckCircle, Brain, Target, Database } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const analyticsServices = [
+const $1: React.FC = () => {;
+  const analyticsServices = [;
     {
       title: 'Real-Time Business Intelligence Platform',
       description: 'Advanced AI-powered analytics platform providing real-time insights, predictive modeling, and automated reporting for data-driven decision making.',
@@ -156,7 +156,7 @@ const $1: React.FC = () => {
       useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage']
     }
   ]
-  const additionalFeatures = [
+  const additionalFeatures = [;
     {
       title: 'Advanced Data Processing',
       description: 'Handle massive datasets with real-time processing capabilities',
@@ -319,10 +319,9 @@ const $1: React.FC = () => {
           <div className="mt-8 text-sm text-blue-200"></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
       </div>
     </div>
   )
-}
-export default AIDataAnalyticsPage
+};
+export default AIDataAnalyticsPage;

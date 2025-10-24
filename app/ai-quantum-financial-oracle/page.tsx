@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiQuantumFinancialOraclePage() {
   return (
     <>
-      
-        <title>AiQuantumFinancialOracle - Zion Tech Group</title>
+      <title>AiQuantumFinancialOracle - Zion Tech Group</title>
         <meta name="description" content="Professional aiquantumfinancialoracle services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiQuantumFinancialOraclePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

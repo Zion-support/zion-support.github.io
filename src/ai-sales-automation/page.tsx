@@ -1,14 +1,14 @@
 'use client'
-import { BarChart, Target } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Building } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
+import { BarChart, Target } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Building } from 'lucide-react';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const features = [
+const $1: React.FC = () => {;
+  const features = [;
     {
       icon: Target,
       title: 'Lead Scoring & Qualification',
@@ -49,7 +49,7 @@ const $1: React.FC = () => {
       features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
   ]
-  const stats = []
+  const stats = [];
     { number: '40%', label: 'Increase in Sales' },
     { number: '60%', label: 'Time Saved' },
     { number: '85%', label: 'Lead Accuracy' },
@@ -75,8 +75,8 @@ const $1: React.FC = () => {
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Sales Automation Solutions - ZionTechGroup&quot;
         description=&quot;Revolutionize your sales process with AI-powered automation. Increase sales by40%, save60% time, and improve lead accuracy by85%.&quot;
         keywords={['AI sales automation', 'lead scoring', 'sales forecasting', 'customer segmentation', 'salesoptimization']}
@@ -240,6 +240,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

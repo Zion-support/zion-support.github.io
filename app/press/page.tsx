@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function PressPage() {
   return (
     <>
-      
-        <title>Press - Zion Tech Group</title>
+      <title>Press - Zion Tech Group</title>
         <meta name="description" content="Professional press services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function PressPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

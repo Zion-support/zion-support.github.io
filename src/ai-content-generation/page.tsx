@@ -1,9 +1,9 @@
 'use client'
-import { Brain, BarChart } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react'
+import { Brain, BarChart } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react';
 
 constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
     {
@@ -36,7 +36,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
       popular: false
     }
   ]
-  const processSteps = [
+  const processSteps = [;
     {
       step: '1',
       title: 'Input Your Requirements',
@@ -172,8 +172,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
         </section>
       </main>
       <Footer />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-export default AIContentGenerationPage
+};
+export default AIContentGenerationPage;

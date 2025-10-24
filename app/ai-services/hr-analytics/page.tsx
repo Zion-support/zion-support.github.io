@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function HrAnalyticsPage() {
   return (
     <>
-      
-        <title>HrAnalytics - Zion Tech Group</title>
+      <title>HrAnalytics - Zion Tech Group</title>
         <meta name="description" content="Professional hranalytics services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function HrAnalyticsPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

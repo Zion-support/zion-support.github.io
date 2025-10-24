@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const ServiceWorkerPage: React.FC = () => {
   const features = [
@@ -39,11 +39,11 @@ const ServiceWorkerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;
   return (
     <>
-      <Helmet>
-        <title>ServiceWorker - Zion Tech Group</title>
+      <Helmet>;
+        <title>ServiceWorker - Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced serviceworker solutions powered by AI technology.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceWorker, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -155,5 +155,5 @@ export default ServiceWorkerPage;
     }
   }, [])
   return nul l
-}
-export default ServiceWorker
+{}
+export default ServiceWorker;

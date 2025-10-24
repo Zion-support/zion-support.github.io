@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiTelepathicInterfacePage() {
   return (
     <>
-      
-        <title>AiTelepathicInterface - Zion Tech Group</title>
+      <title>AiTelepathicInterface - Zion Tech Group</title>
         <meta name="description" content="Professional aitelepathicinterface services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiTelepathicInterfacePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

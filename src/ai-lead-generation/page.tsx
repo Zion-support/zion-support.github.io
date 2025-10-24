@@ -1,14 +1,14 @@
 'use client'
-import { Brain, BarChart, Target } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Building } from 'lucide-react'
-import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react'
+import { Brain, BarChart, Target } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Building } from 'lucide-react';
+import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const features = [
+const $1: React.FC = () => {;
+  const features = [;
     {
       icon: Brain,
       title: 'AI Lead Scoring',
@@ -41,7 +41,7 @@ const $1: React.FC = () => {
       benefits: ['Team workflows', 'Lead assignment', 'Activity tracking']
     }
   ]
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: 'Starter',
       price: '$199',
@@ -89,13 +89,13 @@ const $1: React.FC = () => {
       popular: false
     }
   ]
-  const stats = []
+  const stats = [];
     { number: '300%', label: 'More Qualified Leads' },
     { number: '85%', label: 'Time Savings' },
     { number: '95%', label: 'Lead Accuracy' },
     { number: '50+', label: 'CRM Integrations' }
   ]
-  const useCases = [
+  const useCases = [;
     {
       title: 'B2B Lead Generation',
       description: 'Generate high-quality B2B leads using AI-powered company research, contact discovery, and intent signals.',
@@ -113,8 +113,8 @@ const $1: React.FC = () => {
       description: 'Generate qualified real estate leads with AI-powered market analysis and automated follow-up sequences.',
       icon: Home
     }
-  ]
-  return ()
+  ];
+  return ();
   <><SEOOptimizertitle=&quot;AI Lead Generation Platform - ZionTechGroup&quot;
         description=&quot;Generate 30 0% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach.85% time savingsand95%accuracy.&quot;
         keywords={['AI lead generation', 'lead scoring', 'prospecting', 'sales automation', 'leadnurturing']}
@@ -176,7 +176,7 @@ const $1: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-              ))}
+{              ))}
             </div>
           </section>
           {/* CTA Section */}
@@ -212,5 +212,5 @@ const $1: React.FC = () => {
       </div>
 </>
   )
-}
-export default AILeadGenerationPage
+{}
+export default AILeadGenerationPage;

@@ -3,7 +3,7 @@
  * Comprehensive security headers for production applications
  */
 
-export interface SecurityHeadersConfig {
+export interface SecurityHeadersConfig {;
   contentSecurityPolicy?: string
   strictTransportSecurity?: string
   xFrameOptions?: string
@@ -12,7 +12,7 @@ export interface SecurityHeadersConfig {
   permissionsPolicy?: string
 }
 
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
+export const defaultSecurityHeaders: SecurityHeadersConfig = {;
   // Content Security Policy
   contentSecurityPolicy: [
     "default-src 'self'",
@@ -23,8 +23,8 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
     "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
     "frame-ancestors 'none'",
     "base-uri 'self'",
-    "form-action 'self'",
-    'upgrade-insecure-requests'
+    "form-action 'self'",;
+    'upgrade-insecure-requests';
   ].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
@@ -51,9 +51,9 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
 /**
  * Get security headers as key-value pairs
  */
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;
+  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const headers: Record<string, string> = {;
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'
   }
@@ -84,11 +84,11 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
  * Get security headers in Next.js format
  */
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; value: string }> {
-  const headers = getSecurityHeaders(customConfig)
+  const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({
     key,
     value
   }))
 }
-
-export default defaultSecurityHeaders
+;
+export default defaultSecurityHeaders;

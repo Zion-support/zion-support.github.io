@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function MachineLearningPage() {
   return (
     <>
-      
-        <title>MachineLearning - Zion Tech Group</title>
+      <title>MachineLearning - Zion Tech Group</title>
         <meta name="description" content="Professional machinelearning services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function MachineLearningPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

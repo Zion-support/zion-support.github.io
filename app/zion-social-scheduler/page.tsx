@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionSocialSchedulerPage() {
   return (
     <>
-      
-        <title>ZionSocialScheduler - Zion Tech Group</title>
+      <title>ZionSocialScheduler - Zion Tech Group</title>
         <meta name="description" content="Professional zionsocialscheduler services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ZionSocialSchedulerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

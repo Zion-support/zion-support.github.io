@@ -1,13 +1,13 @@
 'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { MessageCircle } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { MessageCircle } from 'lucide-react';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const features = [
+const $1: React.FC = () => {;
+  const features = [;
     {
       icon: MessageCircle,
       title: '2 4/7 AI Chat Support',
@@ -49,14 +49,14 @@ const $1: React.FC = () => {
     }
   ]
 
-  const stats = []
+  const stats = [];
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
   ]
-
-  return ()
+;
+  return ();
   <><SEOOptimizertitle=&quot;AI Customer Support Solutions - ZionTechGroup&quot;
         description=&quot;Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by95% and reduce costs by60%.&quot;
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AIhelpdesk']}
@@ -187,6 +187,6 @@ const $1: React.FC = () => {
       </div>
 </>
   )
-}
+{}
 
 export default Page;

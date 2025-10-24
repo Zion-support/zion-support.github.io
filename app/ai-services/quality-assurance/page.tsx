@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function QualityAssurancePage() {
   return (
     <>
-      
-        <title>QualityAssurance - Zion Tech Group</title>
+      <title>QualityAssurance - Zion Tech Group</title>
         <meta name="description" content="Professional qualityassurance services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function QualityAssurancePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

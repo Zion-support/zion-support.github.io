@@ -1,7 +1,7 @@
-import { Phone } from 'lucide-react'
-import { Home } from 'lucide-react'
+import { Phone } from 'lucide-react';
+import { Home } from 'lucide-react';
 
-export default function NotFound
+export default function NotFound;
 NotFound.displayName = "NotFound"() {constpopularPages= [
     {
       title: 'Home',
@@ -48,8 +48,8 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'
-    }]
-  return ()
+    }];
+  return ();
     <div className=&quot;min-h-screen bg-gray-50 flex items-center justify-center px-4&quot;></div>
       <div className=&quot;max-w-2xl w-full text-center&quot;></div>
         {/* Error Code */}

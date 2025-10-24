@@ -1,10 +1,10 @@
 'use client'
-import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
-import React from 'react'
+import { ArrowRight, Brain, BarChart, Target } from 'lucide-react';
+import React from 'react';
 
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 constAIServicesPage: React.FC= () =>{constservices= [
     {
@@ -71,7 +71,7 @@ constAIServicesPage: React.FC= () =>{constservices= [
     }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -189,9 +189,8 @@ const Page = () => {}
         </section>
       </main>
       <Footer />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-
+};
+;
 export default Page;

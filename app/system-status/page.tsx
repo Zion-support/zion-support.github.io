@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function SystemStatusPage() {
   return (
     <>
-      
-        <title>SystemStatus - Zion Tech Group</title>
+      <title>SystemStatus - Zion Tech Group</title>
         <meta name="description" content="Professional systemstatus services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function SystemStatusPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

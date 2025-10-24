@@ -1,21 +1,20 @@
-<<<<<<< HEAD
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
-interface HeaderProps {
+interface HeaderProps {;
   className?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ className = '' }) => {
+const Header: React.FC<HeaderProps> = ({ className = '' }) => {;
   return (
     <>
       <Helmet>
-        <title>Header</title>
+        <title>Header</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced Header solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, Header, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -117,7 +116,5 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
 export default HeaderPage;
   )
-}
-export default Header
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+{}
+export default Header;

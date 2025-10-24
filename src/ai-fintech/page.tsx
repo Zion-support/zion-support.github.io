@@ -1,9 +1,9 @@
 'use client'
-import { X, Brain, Target, TrendingUp } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react'
+import { X, Brain, Target, TrendingUp } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react';
 
 constAIFintechPage: React.FC= () =>{constaiFintechServices= [
     {
@@ -128,7 +128,7 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
       technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']
     }
   ]
-  const categories = [...new Set(aiFintechServices.map(service => service.category))]
+  const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -363,8 +363,7 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
         </section>
       </main>
       <Footer />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-export default AIFintechPage
+};
+export default AIFintechPage;

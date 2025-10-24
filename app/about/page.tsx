@@ -6,8 +6,7 @@ import { ArrowRight, Users, Award, Target, Lightbulb } from 'lucide-react';
 export default function AboutPage() {
   return (
     <>
-      
-        <title>About - Zion Tech Group</title>
+      <title>About - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading technology company dedicated to transforming businesses through innovative AI and IT solutions." />
       
       
@@ -97,6 +96,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }

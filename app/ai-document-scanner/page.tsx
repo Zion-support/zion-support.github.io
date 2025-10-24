@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiDocumentScannerPage() {
   return (
     <>
-      
-        <title>AiDocumentScanner - Zion Tech Group</title>
+      <title>AiDocumentScanner - Zion Tech Group</title>
         <meta name="description" content="Professional aidocumentscanner services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiDocumentScannerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

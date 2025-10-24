@@ -1,7 +1,7 @@
 'use client'
-import { Brain, BarChart, Target } from 'lucide-react'
-import React from 'react'
-import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
+import { Brain, BarChart, Target } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, Phone, BarChart } from 'lucide-react';
 
 constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
     {
@@ -86,7 +86,7 @@ constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-  const integrations = []
+  const integrations = [];
     { name: 'Google Analytics', icon: '📊', description: 'Website traffic and behavior' },
     { name: 'Salesforce', icon: '💼', description: 'CRM and sales data' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' },
@@ -116,7 +116,7 @@ constSmartAnalyticsPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
@@ -254,7 +254,7 @@ const Page = () => {}
                   Get Started
                 </button>
               </div>
-            ))}
+{            ))}
           </div>
         </section>
         {/* Testimonials */}
@@ -310,9 +310,8 @@ const Page = () => {}
           </div>
         </section>
       </section>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-
+{};
+;
 export default Page;

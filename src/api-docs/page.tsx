@@ -1,16 +1,16 @@
 'use client'
-import { X } from 'lucide-react'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Key, Copy } from 'lucide-react'
-import { Code } from 'lucide-react'
-import { Check } from 'lucide-react'
+import { X } from 'lucide-react';
+import React, { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Key, Copy } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Check } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null)
+const $1: React.FC = () => {;
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
-  const copyToClipboard = (code: string, id: string) => {}
+  const copyToClipboard = (code: string, id: string) => {};
     navigator.clipboard.writeText(code)
     setCopiedCode(id)
     setTimeout(() => setCopiedCode(null), 2000)
@@ -20,8 +20,8 @@ const $1: React.FC = () => {
     {id: 'ai-chat',
       title: 'AI Chat API',
       method: 'POST',
-      endpoint: '/$1/v1/$1/chat',
-      description: 'Send messages to our AI chatbot and get intelligent responses.',
+      endpoint: '/$1/v1/$1/chat',;
+      description: 'Send messages to our AI chatbot and get intelligent responses.',;
       example: `curl -X POST &quot;https://api.ziontechgroup.com/$1/ai/chat&quot; \\
   -H &quot;Authorization: BearerYOUR_API_KEY&quot; \\
   -H &quot;Content-Type:application/json&quot; \\
@@ -29,7 +29,7 @@ const $1: React.FC = () => {
     &quot;message&quot;:&quot;Hello, how can you help me?&quot;,
    &quot;context&quot;:&quot;customer_support&quot;
 }'`
-    },
+{    },
     {id: 'ai-analysis',
       title: 'AI Data Analysis',
       method: 'POST',
@@ -42,12 +42,12 @@ const $1: React.FC = () => {
    &quot;data&quot;: [1, 2, 3, 4, 5],
    &quot;analysis_type&quot;:&quot;trend_analysis&quot;
 }'`
-    }
+{    }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
-    <>
+    <>;
       <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900&quot;></div>
         <Navigation />
         <div className=&quot;container mx-auto px-4 py-8&quot;></div>
@@ -94,7 +94,7 @@ const Page = () => {}
                     <pre className=&quot;text-sm text-gray-300 whitespace-pre-wrap&quot;></p>{endpoint.example}</pre>
                   </div>
                 </div>
-              ))}
+{              ))}
             </div>
           </section>
           {/* CTA Section */}
@@ -127,6 +127,6 @@ const Page = () => {}
       <Footer />
 </>
   )
-}
+{}
 
 export default Page;

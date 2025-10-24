@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ServerManagementPage() {
   return (
     <>
-      
-        <title>ServerManagement - Zion Tech Group</title>
+      <title>ServerManagement - Zion Tech Group</title>
         <meta name="description" content="Professional servermanagement services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ServerManagementPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

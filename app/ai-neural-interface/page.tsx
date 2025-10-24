@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiNeuralInterfacePage() {
   return (
     <>
-      
-        <title>AiNeuralInterface - Zion Tech Group</title>
+      <title>AiNeuralInterface - Zion Tech Group</title>
         <meta name="description" content="Professional aineuralinterface services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiNeuralInterfacePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

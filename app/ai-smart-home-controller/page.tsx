@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiSmartHomeControllerPage() {
   return (
     <>
-      
-        <title>AiSmartHomeController - Zion Tech Group</title>
+      <title>AiSmartHomeController - Zion Tech Group</title>
         <meta name="description" content="Professional aismarthomecontroller services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiSmartHomeControllerPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

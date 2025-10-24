@@ -1,5 +1,5 @@
-import React from 'react'
-import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet } from 'lucide-react'
+import React from 'react';
+import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Mail, Star, Brain, Zap, Target, TrendingUp, Users, Video, BarChart, Helmet, Check } from 'lucide-react';
 
@@ -126,10 +126,10 @@ constAIMarketingPage: React.FC= () =>{constaiMarketingServices= [
       technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools']
     }
   ]
-  const categories = [...new Set(aiMarketingServices.map(service => service.category))]
+  const categories = [...new Set(aiMarketingServices.map(service => service.category))];
   return ()
       </div>
 </>
   )
 }
-export default AIMarketingPage
+export default AIMarketingPage;

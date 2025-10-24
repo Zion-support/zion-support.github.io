@@ -1,10 +1,9 @@
-<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
@@ -39,19 +38,16 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-=======
+    'Gain competitive advantage with advanced technology';
+  ];
 import React from 'react';
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/5g-implementation/page.tsx
 
 export default function Implementation5GPage() {
   return (
     <>
-<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
       <Helmet>
         <title>Advanced Performance Monitor</title>
         <meta name="description" content="Advanced Performance Monitor solution for modern businesses." />
@@ -150,7 +146,6 @@ export default function Implementation5GPage() {
             </div>
           </div>
         </section>
-=======
       
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Professional 5G implementation services for enterprise solutions." />
@@ -169,16 +164,12 @@ export default function Implementation5GPage() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/5g-implementation/page.tsx
       </div>
     </>
-<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
   )
 }
 
-export default AdvancedPerformanceMonitorPage
-=======
+export default AdvancedPerformanceMonitorPage;
   );
 }
 
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/5g-implementation/page.tsx

@@ -1,14 +1,14 @@
 'use client'
-import { Brain, BarChart } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Lock } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
+import { Brain, BarChart } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Lock } from 'lucide-react';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const features = [
+const $1: React.FC = () => {;
+  const features = [;
     {
       icon: Brain,
       title: 'AI Threat Detection',
@@ -41,7 +41,7 @@ const $1: React.FC = () => {
       benefits: ['Identity verification', 'Device trust', 'Least privilege']
     }
   ]
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: 'Essential',
       price: '$799',
@@ -92,13 +92,13 @@ const $1: React.FC = () => {
       popular: false
     }
   ]
-  const stats = []
+  const stats = [];
     { number: '99.9%', label: 'Threat Detection' },
     { number: '24/7', label: 'Monitoring' },
     { number: '60%', label: 'Faster Response' },
     { number: '100%', label: 'Compliance' }
   ]
-  const threats = [
+  const threats = [;
     {
       title: 'Ransomware Protection',
       description: 'Advanced AI detection and prevention of ransomware attacks with automated backup and recovery systems.',
@@ -116,8 +116,8 @@ const $1: React.FC = () => {
       description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.',
       icon: Globe
     }
-  ]
-  return ()
+  ];
+  return ();
   <><SEOOptimizertitle=&quot;AI Cybersecurity Solutions - ZionTechGroup&quot;
         description=&quot;Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats.&quot;
         keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']}
@@ -234,7 +234,7 @@ const $1: React.FC = () => {
                     Get Protected
                   </a>
                 </div>
-              ))}
+{              ))}
             </div>
           </section>
           {/* CTA Section */}
@@ -270,5 +270,5 @@ const $1: React.FC = () => {
       </div>
 </>
   )
-}
-export default AICybersecurityPage
+{}
+export default AICybersecurityPage;

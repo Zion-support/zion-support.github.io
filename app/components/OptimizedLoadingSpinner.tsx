@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const OptimizedLoadingSpinnerPage: React.FC = () => {
   const features = [
@@ -44,8 +44,8 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>OptimizedLoadingSpinner</title>
+      <Helmet>;
+        <title>OptimizedLoadingSpinner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced OptimizedLoadingSpinner solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, OptimizedLoadingSpinner, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -149,8 +149,8 @@ export default OptimizedLoadingSpinnerPage;
 text?: string
 class Nam e?: string
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-fullScreen?:boolean;}
-}
+{fullScreen?:boolean;}
+{}
 constOptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProp s>= memo(
 ({size= 'md',
 variant= 'spinner',
@@ -215,17 +215,17 @@ aria-label='Loading'
 /></di>)
 }
 }, [size, variant, color, sizeClasses, colorClasses])
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`
+const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
 }, [fullScreen, className])
 return (</div>
 <div className={containerClasses}></div>
-<div className='text-center'>{renderSpinner}</div>
+<div className='text-center'>{renderSpinner}</div>;
 {text && (</div>;}
 <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
-)}
+{)}
 </div>
 )
-}
+{}
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner
+export default OptimizedLoadingSpinner;

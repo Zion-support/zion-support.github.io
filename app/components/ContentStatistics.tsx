@@ -1,13 +1,13 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
+  const [counters, setCounters] = useState({;
     clients: 0,
     projects: 0,
     satisfaction: 0,
@@ -16,7 +16,7 @@ const ContentStatistics: React.FC = () => {
     uptime: 0
   })
 
-  const targetCounters = {
+  const targetCounters = {;
     clients: 1000,
     projects: 500,
     satisfaction: 99,
@@ -26,19 +26,19 @@ const ContentStatistics: React.FC = () => {
   }
 
   useEffect(() => {
-    const duration = 2000
-    const steps = 60
-    const stepDuration = duration / steps
+    const duration = 2000;
+    const steps = 60;
+    const stepDuration = duration / steps;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       setCounters(prev => {
-        const newCounters = { ...prev }
-        let allComplete = true
+        const newCounters = { ...prev };
+        let allComplete = true;
 
         Object.keys(targetCounters).forEach(key => {
-          const target = targetCounters[key as keyof typeof targetCounters]
-          const current = prev[key as keyof typeof prev]
-          const increment = target / steps
+          const target = targetCounters[key as keyof typeof targetCounters];
+          const current = prev[key as keyof typeof prev];
+          const increment = target / steps;
 
           if (current < target) {
             newCounters[key as keyof typeof newCounters] = Math.min(
@@ -101,8 +101,8 @@ const ContentStatistics: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ContentStatistics</title>
+      <Helmet>;
+        <title>ContentStatistics</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentStatistics solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentStatistics, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -207,7 +207,7 @@ projects: 0,
 satisfaction: 0,
 years: 0,
 countries: 0,
-uptime: 0})
+{uptime: 0})
 consttargetCounters= {clients: 1000 0,
 projects: 500 0,
 satisfaction: 9 9,
@@ -433,5 +433,5 @@ View Case Studies
 </div>
 </div>
 )
-}
-export default ContentStatistics
+{}
+export default ContentStatistics;

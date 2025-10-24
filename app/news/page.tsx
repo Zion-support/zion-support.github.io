@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function NewsPage() {
   return (
     <>
-      
-        <title>News - Zion Tech Group</title>
+      <title>News - Zion Tech Group</title>
         <meta name="description" content="Professional news services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function NewsPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

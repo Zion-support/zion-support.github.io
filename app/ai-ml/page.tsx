@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiMlPage() {
   return (
     <>
-      
-        <title>AiMl - Zion Tech Group</title>
+      <title>AiMl - Zion Tech Group</title>
         <meta name="description" content="Professional aiml services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiMlPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

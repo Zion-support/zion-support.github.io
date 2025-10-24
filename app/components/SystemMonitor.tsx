@@ -1,13 +1,13 @@
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { ArrowRight } from 'lucide-react'
+import Footer from './Footer';
+import Navigation from './Navigation';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-    }
+{    }
   ]
 
   const benefits = [
@@ -18,11 +18,11 @@ import { ArrowRight } from 'lucide-react'
     'Gain competitive advantage with advanced technology'
   ]
 
-const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;
   return (
     <>
-      <Helmet>
-        <title>SystemMonitor</title>
+      <Helmet>;
+        <title>SystemMonitor</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced SystemMonitor solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -127,5 +127,5 @@ export default SystemMonitorPage;
         </div>
     </div>
   )
-}
-export default SystemMonitorPage
+{}
+export default SystemMonitorPage;

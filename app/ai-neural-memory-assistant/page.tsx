@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiNeuralMemoryAssistantPage() {
   return (
     <>
-      
-        <title>AiNeuralMemoryAssistant - Zion Tech Group</title>
+      <title>AiNeuralMemoryAssistant - Zion Tech Group</title>
         <meta name="description" content="Professional aineuralmemoryassistant services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiNeuralMemoryAssistantPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

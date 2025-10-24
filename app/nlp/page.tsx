@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function NlpPage() {
   return (
     <>
-      
-        <title>Nlp - Zion Tech Group</title>
+      <title>Nlp - Zion Tech Group</title>
         <meta name="description" content="Professional nlp services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function NlpPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

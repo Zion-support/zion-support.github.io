@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiSpaceTechnologyPage() {
   return (
     <>
-      
-        <title>AiSpaceTechnology - Zion Tech Group</title>
+      <title>AiSpaceTechnology - Zion Tech Group</title>
         <meta name="description" content="Professional aispacetechnology services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiSpaceTechnologyPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

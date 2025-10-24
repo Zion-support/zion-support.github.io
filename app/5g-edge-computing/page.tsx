@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function EdgeComputing5GPage() {
   return (
     <>
-      
-        <title>5G Edge Computing - Zion Tech Group</title>
+      <title>5G Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Professional 5G edge computing services for low-latency applications." />
       
       
@@ -25,7 +24,7 @@ export default function EdgeComputing5GPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }
 

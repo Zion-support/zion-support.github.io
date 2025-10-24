@@ -1,9 +1,9 @@
-import React from 'react'
-import { Play } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Camera, Zap } from 'lucide-react'
+import React from 'react';
+import { Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Camera, Zap } from 'lucide-react';
 
 constAI3 DGenerationPage: React.FC= () =>{constfeatures= []
     '3 D Model Generation',
@@ -49,8 +49,8 @@ constAI3 DGenerationPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI3D Generation Studio - Create3D Models & Animations with AI | ZionTechGroup&quot;
         description=&quot;Create professional 3 D models, animations, and virtual environments with AI3D Generation Studio. No3D skills needed, starting at$299/month.&quot;
         keywords={['AI3D generation', '3 D models', '3 D animation', 'VR AR content', '3 D automation', 'AI 3D']}
@@ -196,6 +196,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
-export default AI3DGenerationPage
+export default AI3DGenerationPage;

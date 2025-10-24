@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 interface Testimonial {
   id: number
@@ -16,10 +16,10 @@ interface Testimonial {
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const testimonials: Testimonial[] = [
+  const testimonials: Testimonial[] = [;
     {
       id: 1,
       name: "Sarah Johnson",
@@ -45,7 +45,7 @@ const DynamicContentShowcase: React.FC = () => {
 
   useEffect(() => {
     setIsVisible(true)
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
     }, 5000)
 
@@ -72,8 +72,8 @@ const DynamicContentShowcase: React.FC = () => {
       color: "from-purple-500 to-pink-500"
     }
   ]
-
-  return (
+;
+  return (;
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;max-w-7xl mx-auto text-center&quot;></div>
@@ -334,4 +334,4 @@ const DynamicContentShowcase: React.FC = () => {
   )
 }
 
-export default DynamicContentShowcase
+export default DynamicContentShowcase;

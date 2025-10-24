@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const EnhancedLoadingStatesPage: React.FC = () => {
   const features = [
@@ -44,8 +44,8 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedLoadingStates</title>
+      <Helmet>;
+        <title>EnhancedLoadingStates</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedLoadingStates solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedLoadingStates, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -148,9 +148,9 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 export default EnhancedLoadingStatesPage;
 sm: 'w-4 h-4',
 md: 'w-8 h-8',
-lg: 'w-12h-1 2'}
+{lg: 'w-12h-1 2'}
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName=&quot;mt-2text-smtext-gray-500&quot;>{text}</p>)}</di>)
-}
+{}
 return (
 <div className=&quot;flex flex-col items-center justify-center p-8&quot;></div>
 <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
@@ -159,8 +159,8 @@ return (
 )}
 </div>
 )
-}
-export const PageLoader: React.FC = () => (
+{}
+export const PageLoader: React.FC = () => (;
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center&quot;></div>
 <div className=&quot;text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse&quot;></div>
@@ -171,7 +171,7 @@ export const PageLoader: React.FC = () => (
 </div>
 </div>
 )
-export const ServiceCardSkeleton: React.FC = () => (
+export const ServiceCardSkeleton: React.FC = () => (;
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse&quot;></div>
 <div className=&quot;w-16 h-16 bg-gray-600 rounded-2xl mb-6&quot;></div>
 <div className=&quot;h-6 bg-gray-600 rounded mb-4&quot;></div>
@@ -183,7 +183,7 @@ export const ServiceCardSkeleton: React.FC = () => (
 </div>
 </div>
 )
-export const StatsSkeleton: React.FC = () => (
+export const StatsSkeleton: React.FC = () => (;
 <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>{Array.from({ length: 4 }).map((_, index) => (</div>
 <div key={index} className=&quot;text-center animate-pulse&quot;></div>
 <div className=&quot;h-8 bg-gray-600 rounded mb-2&quot;></div>
@@ -192,7 +192,7 @@ export const StatsSkeleton: React.FC = () => (
 ))}
 </div>
 )
-export const ContentSkeleton: React.FC = () => (
+export const ContentSkeleton: React.FC = () => (;
 <div className=&quot;space-y-6 animate-pulse&quot;></div>
 <div className=&quot;h-8 bg-gray-600 rounded w-3/4&quot;></div>
 <div className=&quot;space-y-2&quot;></div>

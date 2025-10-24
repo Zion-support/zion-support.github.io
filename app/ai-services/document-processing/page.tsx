@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function DocumentProcessingPage() {
   return (
     <>
-      
-        <title>DocumentProcessing - Zion Tech Group</title>
+      <title>DocumentProcessing - Zion Tech Group</title>
         <meta name="description" content="Professional documentprocessing services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function DocumentProcessingPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

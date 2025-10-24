@@ -76,13 +76,12 @@ export default function FiveGSolutions() {
     { number: '10 Gbps', label: 'Peak Speed', icon: <Zap className="w-6 h-6 text-cyan-400" /> },
     { number: '1ms', label: 'Latency', icon: <Cpu className="w-6 h-6 text-emerald-400" /> },
     { number: '1M+', label: 'Devices per km²', icon: <Network className="w-6 h-6 text-purple-400" /> },
-    { number: '99.9%', label: 'Reliability', icon: <Shield className="w-6 h-6 text-orange-400" /> }
+    { number: '99.9%', label: 'Reliability', icon: <Shield className="w-6 h-6 text-orange-400" /> },
   ];
 
   return (
     <>
-      
-        <title>5G Solutions - Zion Tech Group</title>
+      <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions." />
       
       

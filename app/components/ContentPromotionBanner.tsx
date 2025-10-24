@@ -1,9 +1,9 @@
 'use client'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import React from 'react'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import Navigation from './Navigation';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   const benefits = [
@@ -16,8 +16,8 @@ const ContentPromotionBanner: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ContentPromotionBanner</title>
+      <Helmet>;
+        <title>ContentPromotionBanner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentPromotionBanner solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentPromotionBanner, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -215,4 +215,4 @@ const ContentPromotionBanner: React.FC = () => {
   )
 }
 
-export default ContentPromotionBanner
+export default ContentPromotionBanner;

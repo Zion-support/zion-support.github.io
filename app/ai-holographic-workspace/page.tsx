@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiHolographicWorkspacePage() {
   return (
     <>
-      
-        <title>AiHolographicWorkspace - Zion Tech Group</title>
+      <title>AiHolographicWorkspace - Zion Tech Group</title>
         <meta name="description" content="Professional aiholographicworkspace services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiHolographicWorkspacePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

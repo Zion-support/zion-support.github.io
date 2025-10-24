@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiExpenseTrackerProPage() {
   return (
     <>
-      
-        <title>AiExpenseTrackerPro - Zion Tech Group</title>
+      <title>AiExpenseTrackerPro - Zion Tech Group</title>
         <meta name="description" content="Professional aiexpensetrackerpro services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiExpenseTrackerProPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

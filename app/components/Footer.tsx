@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import { Brain } from 'lucide-react'
+import React from 'react';
+import Link from 'next/link';
+import { Brain } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics' },
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
     { name: 'Blog', url: '/blog' },
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Support', url: '/support' }
+    { name: 'Support', url: '/support' },
   ];
 
   const legal = [
@@ -184,4 +184,4 @@ const Footer: React.FC = () => {
   )
 }
 
-export default Footer
+export default Footer;

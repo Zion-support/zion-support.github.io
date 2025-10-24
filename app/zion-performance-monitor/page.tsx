@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionPerformanceMonitorPage() {
   return (
     <>
-      
-        <title>ZionPerformanceMonitor - Zion Tech Group</title>
+      <title>ZionPerformanceMonitor - Zion Tech Group</title>
         <meta name="description" content="Professional zionperformancemonitor services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ZionPerformanceMonitorPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const SEOHeadPage: React.FC = () => {
   const features = [
@@ -44,8 +44,8 @@ const SEOHeadPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{fullTitle}</title>
+      <Helmet>;
+        <title>{fullTitle}</title>;
         <meta name=&quot;description&quot; content=&quot;Zion Tech Group&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, SEOHead, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -152,8 +152,8 @@ canonical?: string
 ogImage?: string
 ogType?: string
 twitterCard?: string
-structuredData?:object;}
-}
+{structuredData?:object;}
+{}
 constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI & IT Solutions',
 description= 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
 keywords= 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
@@ -170,4 +170,4 @@ return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;d
 {canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl} />}
 {/* Open GraphMetaTags*/}<metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:type&quot; content={ogType} /><metaproperty=&quot;og:url&quot; content={canonicalUrl} /><metaproperty=&quot;og:image&quot; content={ogImage} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter CardMetaTags*/}<metaname=&quot;twitter:card&quot; content={twitterCard} /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEOMetaTags*/}<metaname=&quot;theme-color&quot;content=&quot;#0f172a&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot; /><metaname=&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot; /><metaname=&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot; />{/* StructuredData*/}<scripttype=&quot;application/ld+json&quot;>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
-export default SEOHead
+export default SEOHead;

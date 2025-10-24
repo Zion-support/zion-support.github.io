@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function MarketingToolsPage() {
   return (
     <>
-      
-        <title>MarketingTools - Zion Tech Group</title>
+      <title>MarketingTools - Zion Tech Group</title>
         <meta name="description" content="Professional marketingtools services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function MarketingToolsPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

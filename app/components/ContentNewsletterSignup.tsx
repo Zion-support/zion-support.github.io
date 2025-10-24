@@ -1,11 +1,11 @@
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight } from 'lucide-react'
-import React, { useState } from 'react'
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import Footer from './Footer';
+import Navigation from './Navigation';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -16,7 +16,7 @@ interface ContentNewsletterSignupProps {
     icon: React.ComponentType<{ className?: string }>
     text: string
   }>
-  onSubscribe?: (email: string) => void
+  onSubscribe?: (email: string) => void;
 }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;,
   subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;,
   placeholder= &quot;Enter your emailaddress&quot;,
@@ -29,9 +29,9 @@ interface ContentNewsletterSignupProps {
   ],
   onSubscribe
 }) => {const [emailsetEmail] = useState('')
-  const [isSubmittingsetIsSubmitting] = useState(false)
-  const [isSubscribedsetIsSubscribed] = useState(false)
-  const [isLoadingsetIsLoading] = useState(false)
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
   consthandleSubmit= async (e: React.FormEvent) => {
   
     e.preventDefault()
@@ -59,11 +59,11 @@ interface ContentNewsletterSignupProps {
     'Gain competitive advantage with advanced technology'
   ]
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {;
   return (
     <>
       <Helmet>
-        <title>ContentNewsletterSignup</title>
+        <title>ContentNewsletterSignup</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentNewsletterSignup solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation&quot; />
       </Helmet>

@@ -1,11 +1,11 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { ArrowRight } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-    }
+{    }
   ]
 
   const benefits = [
@@ -15,7 +15,7 @@ import { ArrowRight } from 'lucide-react'
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
                 </div>
-              ))}
+{              ))}
             </div>
           </div>
           </div>
@@ -28,5 +28,5 @@ import { ArrowRight } from 'lucide-react'
           </div>
         </div>
       </section>
-}
-export default PerformanceEnhancerPage
+{}
+export default PerformanceEnhancerPage;

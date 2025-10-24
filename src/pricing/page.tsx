@@ -1,9 +1,9 @@
 'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
 constPricingPage: React.FC= () =>{constpricingPlans= [
     {
@@ -94,8 +94,8 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;Pricing Plans - ZionTechGroup&quot;
         description=&quot;Transparent pricing for AI and IT services. Choose the perfect plan for your business needs. Starting at$299/month.&quot;
         keywords={['pricing', 'AI services pricing', 'IT services pricing', 'business plans', 'enterprisepricing']}
@@ -139,12 +139,12 @@ const Page = () => {}
                       plan.popular
                         ? 'cyber-button'
                         : 'bg-gray-700 text-white hover:bg-gray-600'
-                    }`}
+{                    }`}
                   >
                     {plan.popular ? 'Contact Sales' : plan.cta}
                   </a>
                 </div>
-              ))}
+{              ))}
             </div>
           </section>
           {/* Add-ons Section */}
@@ -209,6 +209,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

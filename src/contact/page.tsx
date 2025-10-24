@@ -1,11 +1,11 @@
 'use client'
-import { TrendingUp } from 'lucide-react'
-import React, { useState } from 'react'
-import { Send } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-import { MapPin, Clock } from 'lucide-react'
+import { TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { Send } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 
 constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     name: '',
@@ -16,17 +16,17 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     message: ''
   })
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-    const { name, value } = e.target
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
+    const { name, value } = e.target;
     setFormData(prev => ({}
       ...prev,
       [name]: value
-    }))
-  }
+{    }))
+{  }
 
-  const handleSubmit = (e: React.FormEvent) => {}
+  const handleSubmit = (e: React.FormEvent) => {};
     e.preventDefault()
     // Here you would typically send the form data to your backend
     // // // console.log('Form submitted:', formData)
@@ -41,9 +41,9 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
         phone: '',
         service: '',
         message: ''
-      })
-    }, 3000)
-  }
+{      })
+{    }, 3000)
+{  }
 
   constservices= []
     'AI Services',
@@ -58,14 +58,14 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     'Other'
   ]
 
-  const achievements = []
+  const achievements = [];
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -83,7 +83,6 @@ const Page = () => {}
         </div>
             Ready to transform your business with cutting-edge AI and IT solutions?
             Get in touch with our experts for a free consultation.
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
           </p>
         </section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
@@ -287,6 +286,6 @@ const Page = () => {}
       </div>
     </div>
   )
-}
-
+{};
+;
 export default Page;

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import React from 'react';
 import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Camera, Zap, Palette } from 'lucide-react'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Camera, Zap, Palette } from 'lucide-react';
 
 constAIFashionDesignPage: React.FC= () =>{constfeatures= []
     'Design Generation',
@@ -51,8 +51,8 @@ constAIFashionDesignPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup&quot;
         description=&quot;Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month.&quot;
         keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashiontechnology']}
@@ -198,6 +198,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

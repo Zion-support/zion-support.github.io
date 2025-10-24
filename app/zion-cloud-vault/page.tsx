@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionCloudVaultPage() {
   return (
     <>
-      
-        <title>ZionCloudVault - Zion Tech Group</title>
+      <title>ZionCloudVault - Zion Tech Group</title>
         <meta name="description" content="Professional zioncloudvault services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ZionCloudVaultPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

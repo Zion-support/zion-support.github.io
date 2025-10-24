@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function PrivacyPage() {
   return (
     <>
-      
-        <title>Privacy - Zion Tech Group</title>
+      <title>Privacy - Zion Tech Group</title>
         <meta name="description" content="Professional privacy services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function PrivacyPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

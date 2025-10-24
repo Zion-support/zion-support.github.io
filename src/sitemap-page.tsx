@@ -1,10 +1,10 @@
-import React from 'react'
-import { Helmet } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const pages = []
+const $1: React.FC = () => {;
+  const pages = [];
     { url: '/', title: 'Home', priority: '1.0' },
     { url: '/about', title: 'About Us', priority: '0.8' },
     { url: '/services', title: 'All Services', priority: '0.9' },
@@ -41,4 +41,4 @@ const $1: React.FC = () => {
 </>
   )
 }
-export default SitemapPage
+export default SitemapPage;

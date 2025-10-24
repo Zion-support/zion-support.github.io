@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiEcommerceOptimizerProPage() {
   return (
     <>
-      
-        <title>AiEcommerceOptimizerPro - Zion Tech Group</title>
+      <title>AiEcommerceOptimizerPro - Zion Tech Group</title>
         <meta name="description" content="Professional aiecommerceoptimizerpro services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiEcommerceOptimizerProPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function GdprCompliancePage() {
   return (
     <>
-      
-        <title>GdprCompliance - Zion Tech Group</title>
+      <title>GdprCompliance - Zion Tech Group</title>
         <meta name="description" content="Professional gdprcompliance services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function GdprCompliancePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

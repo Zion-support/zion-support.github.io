@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiCodeGenerationPage() {
   return (
     <>
-      
-        <title>AiCodeGeneration - Zion Tech Group</title>
+      <title>AiCodeGeneration - Zion Tech Group</title>
         <meta name="description" content="Professional aicodegeneration services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiCodeGenerationPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'lucide-react';
 import React from 'react';
 import { Code, Helmet } from 'lucide-react';
 
@@ -10,16 +10,16 @@ interface SEOEnhancerProps {}
   image?: string
   url?: string
   children: React.ReactNode
-}
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
+{}
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
   title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;,
   description = &quot;Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.&quot;,
   keywords = &quot;AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group&quot;,
   image = &quot;https://ziontechgroup.com/og-image.jpg&quot;,
   url = &quot;https://ziontechgroup.com&quot;,
   children
-}) => {}
-  const structuredData = {}
+{}) => {}
+  const structuredData = {};
     &quot;@context&quot;: &quot;https://schema.org&quot;,
     &quot;@type&quot;: &quot;TechCompany&quot;,
     &quot;name&quot;: &quot;Zion Tech Group&quot;,
@@ -44,7 +44,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
      &quot;contactType&quot;:&quot;Customer Service&quot;,
      &quot;areaServed&quot;:&quot;US&quot;,
      &quot;availableLanguage&quot;:&quot;en&quot;
-   },
+{   },
    &quot;sameAs&quot;: []
      &quot;https:// twitter.com/ziontechgroup&quot;,
      &quot;https:// linkedin.com/$1/ziontechgroup&quot;
@@ -68,7 +68,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
          &quot;priceCurrency&quot;:&quot;USD&quot;,
          &quot;billingIncrement&quot;:&quot;P1 M&quot;
        }
-      }
+{      }
     ],
    &quot;serviceArea&quot;: {&quot;@type&quot;:&quot;GeoCircle&quot;,
      &quot;geoMidpoint&quot;: {}
@@ -77,8 +77,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
        &quot;longitude&quot;:&quot;-7 5.579 5&quot;
      },
      &quot;geoRadius&quot;:&quot;100000 0&quot;
-    }
-  }
+{    }
+{  }
   return ()
     <>
       <Helmet>
@@ -116,5 +116,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
       {children}
 </>
   )
-}
-export default SEOEnhancer
+{}
+export default SEOEnhancer;

@@ -1,9 +1,9 @@
 "use client"
 
-import React from "react"
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
+import React from "react";
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 
 export default function Home() {
   const features = [
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      <Footer />;
     </div>
-  )
+  );
 }

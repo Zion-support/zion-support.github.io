@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const EnhancedLoadingPage: React.FC = () => {
   const features = [
@@ -44,8 +44,8 @@ const EnhancedLoadingPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedLoading</title>
+      <Helmet>;
+        <title>EnhancedLoading</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedLoading solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedLoading, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -147,5 +147,5 @@ const EnhancedLoadingPage: React.FC = () => {
 
 export default EnhancedLoadingPage;
   )
-}
-export default EnhancedLoadingPage
+{}
+export default EnhancedLoadingPage;

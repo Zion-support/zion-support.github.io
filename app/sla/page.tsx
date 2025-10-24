@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function SlaPage() {
   return (
     <>
-      
-        <title>Sla - Zion Tech Group</title>
+      <title>Sla - Zion Tech Group</title>
         <meta name="description" content="Professional sla services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function SlaPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiSmartCalendarPage() {
   return (
     <>
-      
-        <title>AiSmartCalendar - Zion Tech Group</title>
+      <title>AiSmartCalendar - Zion Tech Group</title>
         <meta name="description" content="Professional aismartcalendar services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiSmartCalendarPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

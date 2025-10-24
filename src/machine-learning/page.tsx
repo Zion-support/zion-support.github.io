@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
 constMachineLearningPage: React.FC= () =>{constfeatures= []
     'Custom ML model development and training',
@@ -17,7 +17,7 @@ constMachineLearningPage: React.FC= () =>{constfeatures= []
     'Continuous learning and model updates'
   ]
 
-  const benefits = []
+  const benefits = [];
     '40% better prediction accuracy',
     '60% faster insights generation',
     '50% reduction in manual analysis',
@@ -54,11 +54,11 @@ constMachineLearningPage: React.FC= () =>{constfeatures= []
     }
   ]
 
-const Page = () => {}
+const Page = () => {};
   return ()
       </div>
 </>
   )
-}
-
+};
+;
 export default Page;

@@ -1,6 +1,6 @@
-import React from 'react'
-import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react'
-import { MapPin } from 'lucide-react'
+import React from 'react';
+import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Camera, Palette, Video, Music, Calendar, Code, Bot, Helmet, MapPin, Check } from 'lucide-react';
 
@@ -1534,7 +1534,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= []
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ]
-  const saasIdeas = [
+  const saasIdeas = [;
     {
       title: 'AI Property Valuation Tool',
       description: 'Machine learning-powered property valuation with market analysis and investment insights.',
@@ -3094,7 +3094,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= []
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ]
-  const categories = []
+  const categories = [];
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
@@ -3288,8 +3288,7 @@ constMicroSAASPage: React.FC= () =>{constmicroSAASServices= []
           </div>
         </div>
       </section>
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-export default MicroSAASPage
+{}
+export default MicroSAASPage;

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiCyberDefenseMatrixPage() {
   return (
     <>
-      
-        <title>AiCyberDefenseMatrix - Zion Tech Group</title>
+      <title>AiCyberDefenseMatrix - Zion Tech Group</title>
         <meta name="description" content="Professional aicyberdefensematrix services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiCyberDefenseMatrixPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

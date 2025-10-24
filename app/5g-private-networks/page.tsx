@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function PrivateNetworks5GPage() {
   return (
     <>
-      
-        <title>5G Private Networks - Zion Tech Group</title>
+      <title>5G Private Networks - Zion Tech Group</title>
         <meta name="description" content="Professional 5G private network solutions by Zion Tech Group. Transform your business with our expert solutions." />
       
       
@@ -25,7 +24,7 @@ export default function PrivateNetworks5GPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }
 

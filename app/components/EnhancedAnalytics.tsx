@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:app/components/EnhancedAnalytics.tsx
-&quot;use client&quot;
+<&quot;use client&quot;
 
 import React, { createContext, useContext, useEffect } from &quot;react&quot;
 
@@ -10,13 +8,13 @@ interface AnalyticsContextType {
   page: (name: string, properties?: Record<string, unknown>) => void
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined,
 )
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
+export const useAnalytics = () => {;
+  const context = useContext(AnalyticsContext);
+  if (!context) {;
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
   }
   return context
@@ -32,7 +30,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
+        const script = document.createElement(&quot;script&quot;);
         script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
         document.head.appendChild(script)
@@ -96,7 +94,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     identify,
     page,
   }
-=======
 'use client';
 
 import { createContext, useContext, useEffect } from 'react';
@@ -109,7 +106,7 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
+export const useAnalytics = () => {;
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -121,12 +118,12 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {;
   // Initialize analytics
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (process.env.NODE_ENV === 'production') {
+      // Google Analytics;
+      if (process.env.NODE_ENV === 'production') {;
         const script = document.createElement('script');
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
@@ -142,10 +139,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, any>) => {
+  const track = (event: string, properties?: Record<string, any>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if (window.gtag) {
+      if (window.gtag) {;
         window.gtag('event', event, properties);
       }
       
@@ -154,13 +151,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (userId: string, traits?: Record<string, any>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
         window.gtag('config', process.env.REACT_APP_GA_ID, {
           user_id: userId,
-          custom_map: traits
+          custom_map: traits;
         });
       }
       
@@ -169,14 +166,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
+  const page = (name: string, properties?: Record<string, any>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
         window.gtag('event', 'page_view', {
           page_title: name,
           page_location: window.location.href,
-          ...properties
+          ...properties;
         });
       }
       
@@ -185,38 +182,33 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const value: AnalyticsContextType = {
+  const value: AnalyticsContextType = {;
     track,
     identify,
-    page
+    page;
   };
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
   )
 }
-=======
   );
 };
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-<<<<<<< HEAD
     dataLayer: unknown[]
     gtag: (...args: any[]) => void
   }
 }
 'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const EnhancedAnalyticsPage: React.FC = () => {
   const features = [
@@ -251,21 +243,18 @@ const EnhancedAnalyticsPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-========
+    'Gain competitive advantage with advanced technology';
+  ];
 import React from 'react';
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
->>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-crm/page.tsx
-
+>
 export default function AiCrmPage() {
   return (
     <>
       
-<<<<<<<< HEAD:app/components/EnhancedAnalytics.tsx
-      <Navigation />
+<      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -355,7 +344,6 @@ export default function AiCrmPage() {
             </div>
           </div>
         </section>
-========
         <title>AiCrm - Zion Tech Group</title>
         <meta name="description" content="Professional aicrm services by Zion Tech Group." />
       
@@ -373,20 +361,14 @@ export default function AiCrmPage() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
->>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-crm/page.tsx
-      </div>
-    </>
+>      </div>
+</>
   );
-<<<<<<<< HEAD:app/components/EnhancedAnalytics.tsx
-};
+<};
 
 export default EnhancedAnalyticsPage;
-========
 }
->>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-crm/page.tsx
-=======
-    dataLayer: any[];
+>    dataLayer: any[];
     gtag: (...args: any[]) => void;
-  }
-}
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
+{  }
+{}

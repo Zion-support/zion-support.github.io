@@ -1,11 +1,11 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { GitBranch } from 'lucide-react'
-import { CheckCircle } from 'lucide-react'
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { GitBranch } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const services = [
+const $1: React.FC = () => {;
+  const services = [;
     {
       icon: Code,
       title: 'CI/CD Pipeline',
@@ -65,8 +65,7 @@ const $1: React.FC = () => {
         </section>
       </main>
       <Footer />
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
   )
-}
-export default DevOpsPage
+};
+export default DevOpsPage;

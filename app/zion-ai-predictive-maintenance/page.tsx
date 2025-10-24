@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionAiPredictiveMaintenancePage() {
   return (
     <>
-      
-        <title>ZionAiPredictiveMaintenance - Zion Tech Group</title>
+      <title>ZionAiPredictiveMaintenance - Zion Tech Group</title>
         <meta name="description" content="Professional zionaipredictivemaintenance services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ZionAiPredictiveMaintenancePage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

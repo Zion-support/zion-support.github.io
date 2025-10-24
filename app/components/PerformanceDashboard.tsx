@@ -1,10 +1,10 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const PerformanceDashboardPage: React.FC = () => {
   const features = [
@@ -44,8 +44,8 @@ const PerformanceDashboardPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>PerformanceDashboard</title>
+      <Helmet>;
+        <title>PerformanceDashboard</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceDashboard solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceDashboard, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -149,9 +149,9 @@ export default PerformanceDashboardPage;
 loadTime: 0,
 renderTime: 0,
 memoryUsage: 0,
-fps: 0})
-const [isMonitoringsetIsMonitoring] = useState(false)
-const [alertssetAlerts]=useState<string[]>([])
+{fps: 0})
+const [isMonitoringsetIsMonitoring] = useState(false);
+const [alertssetAlerts]=useState<string[]>([]);
 useEffect(() => {constupdateMetrics= () => {
   
 constnavigation= performance.getEntriesByType(
@@ -206,7 +206,7 @@ return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
 constgetPerformanceColor= (value: number, thresholds: {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'
 if (value <= thresholds.warning) return 'text-yellow-40 0'
 return 'text-red-40 0'}
-return (
+return (;
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
 <div className=&quot;flex items-center justify-between mb-6&quot;></div>
 <h3 className=&quot;text-xl font-semibold text-white flex items-center gap-2&quot;></h3>
@@ -271,5 +271,5 @@ isMonitoring
 </div>
 </div>
 )
-}
-export default PerformanceDashboard
+{}
+export default PerformanceDashboard;

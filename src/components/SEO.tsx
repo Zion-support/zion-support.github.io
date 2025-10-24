@@ -3,10 +3,10 @@
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
-import React from 'react'
-import { Helmet } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'lucide-react';
 
-export interface SEOProps {}
+export interface SEOProps {};
   title?: string
   description?: string
   keywords?: string[]
@@ -19,11 +19,11 @@ export interface SEOProps {}
   canonical?: string
   noIndex?: boolean
   structuredData?: Record<string, unknown>
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
-  locale?: string
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  locale?: string;
   alternateLocales?: { locale: string; url: string }[]
-}
-const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
+{}
+const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',;
   description:
     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.',
   keywords: []
@@ -38,7 +38,7 @@ const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const
 }
-export const SEO: React.FC<SEOProps> = ({}
+export const SEO: React.FC<SEOProps> = ({};
   title,
   description,
   keywords,
@@ -64,36 +64,36 @@ export const SEO: React.FC<SEOProps> = ({}
     locale
   }
   // Generate structured data
-  const generateStructuredData = () => {}
+  const generateStructuredData = () => {};
     if (structuredData) {}
       return structuredData
-    }
-    const baseStructuredData: Record<string, unknown> = {}
+{    }
+    const baseStructuredData: Record<string, unknown> = {};
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
       description: seo.description,
       url: seo.url,
       image: seo.image
-    }
+{    }
     if (author) {}
       baseStructuredData.author = {}
         '@type': 'Person',
         name: author
-      }
-    }
+{      }
+{    }
     if (publishDate) {}
       baseStructuredData.datePublished = publishDate
-    }
+{    }
     if (modifiedDate) {}
       baseStructuredData.dateModified = modifiedDate
-    }
+{    }
     return baseStructuredData
-  }
+{  }
   return ()
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seo.title}</title>
+      {/* Basic Meta Tags */};
+      <title>{seo.title}</title>;
       <meta name=&quot;description&quot; content={seo.description} />
       {seo.keywords && <meta name=&quot;keywords&quot; content={seo.keywords.join(', ')} />}
       {/* Canonical URL */}
@@ -145,5 +145,5 @@ export const SEO: React.FC<SEOProps> = ({}
       />
     </Helmet>
   )
-}
-export default SEO
+{}
+export default SEO;

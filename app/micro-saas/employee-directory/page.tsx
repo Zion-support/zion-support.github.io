@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function EmployeeDirectoryPage() {
   return (
     <>
-      
-        <title>EmployeeDirectory - Zion Tech Group</title>
+      <title>EmployeeDirectory - Zion Tech Group</title>
         <meta name="description" content="Professional employeedirectory services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function EmployeeDirectoryPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

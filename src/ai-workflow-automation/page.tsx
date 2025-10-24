@@ -1,14 +1,14 @@
 'use client'
-import { Brain, BarChart } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Workflow } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
+import { Brain, BarChart } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Workflow } from 'lucide-react';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const features = [
+const $1: React.FC = () => {;
+  const features = [;
     {
       icon: Workflow,
       title: 'Process Automation',
@@ -31,7 +31,7 @@ const $1: React.FC = () => {
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ]
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: 'Starter',
       price: '$299/month',
@@ -49,7 +49,7 @@ const $1: React.FC = () => {
       features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
   ]
-  const stats = []
+  const stats = [];
     { number: '70%', label: 'Process Efficiency' },
     { number: '90%', label: 'Error Reduction' },
     { number: '50%', label: 'Time Savings' },
@@ -75,13 +75,13 @@ const $1: React.FC = () => {
     }
   ]
 
-  const pricing = pricingPlans
+  const pricing = pricingPlans;
 
-const Page = () => {}
+const Page = () => {};
   return ()
       </div>
 </>
   )
-}
-
+};
+;
 export default Page;

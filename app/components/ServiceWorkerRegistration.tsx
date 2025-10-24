@@ -1,10 +1,10 @@
 'use client'
-import Footer from './Footer'
+import Footer from './Footer';
 import {CheckCircle, Phone, Mail, ArrowRight, Helmet} from 'lucide-react';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';
 
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
@@ -38,8 +38,8 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Scale operations without proportional staff increases',;
+    'Gain competitive advantage with advanced technology';
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Phone className=&quot;mr-2 h-5 w-5&quot; />
@@ -58,7 +58,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
 
 export default ServiceWorkerRegistrationPage;
                 </div>
-              ))}
+{              ))}
             </div>
           </div>
           </div>

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ArVrPlatformPage() {
   return (
     <>
-      
-        <title>ArVrPlatform - Zion Tech Group</title>
+      <title>ArVrPlatform - Zion Tech Group</title>
         <meta name="description" content="Professional arvrplatform services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function ArVrPlatformPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

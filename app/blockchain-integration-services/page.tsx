@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function BlockchainIntegrationServicesPage() {
   return (
     <>
-      
-        <title>BlockchainIntegrationServices - Zion Tech Group</title>
+      <title>BlockchainIntegrationServices - Zion Tech Group</title>
         <meta name="description" content="Professional blockchainintegrationservices services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function BlockchainIntegrationServicesPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

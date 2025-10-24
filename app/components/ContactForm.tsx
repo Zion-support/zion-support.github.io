@@ -13,26 +13,26 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<FormData>({;
     name: '',
     email: '',
     phone: '',
     company: '',
     message: '',
-    service: ''
+    service: '';
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value;
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
     'Cybersecurity',
     'Data Analytics',
     'DevOps',
-    'Consulting'
+    'Consulting';
   ];
 
   if (isSubmitted) {

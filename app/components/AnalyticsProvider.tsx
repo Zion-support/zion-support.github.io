@@ -11,13 +11,13 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string) => void
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined,
 )
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
+export const useAnalytics = () => {;
+  const context = useContext(AnalyticsContext);
+  if (!context) {;
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
   }
   return context
@@ -32,7 +32,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
+        const script = document.createElement(&quot;script&quot;);
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
         script.async = true
         document.head.appendChild(script)
@@ -77,8 +77,8 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-export default AnalyticsProvider
+export default AnalyticsProvider;
   );
-};
+{};
 
 export default AnalyticsProviderPage;

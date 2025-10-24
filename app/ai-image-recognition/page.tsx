@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function AiImageRecognitionPage() {
   return (
     <>
-      
-        <title>AiImageRecognition - Zion Tech Group</title>
+      <title>AiImageRecognition - Zion Tech Group</title>
         <meta name="description" content="Professional aiimagerecognition services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function AiImageRecognitionPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function CybersecurityAuditPage() {
   return (
     <>
-      
-        <title>CybersecurityAudit - Zion Tech Group</title>
+      <title>CybersecurityAudit - Zion Tech Group</title>
         <meta name="description" content="Professional cybersecurityaudit services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function CybersecurityAuditPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

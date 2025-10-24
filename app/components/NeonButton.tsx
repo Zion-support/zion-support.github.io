@@ -13,17 +13,17 @@ interface NeonButtonProps {
   disabled?: boolean
 }
 
-const NeonButton: React.FC<NeonButtonProps> = ({
+const NeonButton: React.FC<NeonButtonProps> = ({;
   children,
   href,
-  onClick,
+  onClick,;
   variant=&quot;primary&quot;,
   size=&quot;md&quot;,
   className=&quot;&quot;,
   icon,
   disabled = false
 }) => {
-  const baseClasses =
+  const baseClasses =;
     &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot;
 
   const benefits = [
@@ -37,7 +37,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   return (
     <>
       <Helmet>
-        <title>NeonButton</title>
+        <title>NeonButton</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced NeonButton solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, NeonButton, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -147,12 +147,12 @@ export default NeonButtonPage;
       &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl&quot;
   }
 
-  const neonEffect =
+  const neonEffect =;
     &quot;before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10&quot;
 
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
+  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
 
-  constcontent= (
+  constcontent= (;
   <di v>{icon&&<spanclassName=&quot;mr-2&quot;>{icon}</spa>}
       {children}
       {!icon && <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />}
@@ -172,10 +172,10 @@ export default NeonButtonPage;
       {content}
     </button>
   )
-}
+{}
 
-export default NeonButton
+export default NeonButton;
   );
-};
+{};
 
 export default NeonButton;

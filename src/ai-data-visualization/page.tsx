@@ -1,10 +1,10 @@
 'use client'
-import { Brain, BarChart, TrendingUp } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
+import { Brain, BarChart, TrendingUp } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Phone, Mail } from 'lucide-react';
 
 constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
     {
@@ -47,7 +47,7 @@ constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
       features: ['Everything in Professional', 'Unlimited data sources', 'Custom integrations', 'Dedicated support', 'On-premise deployment']
     }
   ]
-  const stats = []
+  const stats = [];
     { number: '85%', label: 'Faster Decision Making' },
     { number: '300%', label: 'Data Processing Speed' },
     { number: '50+', label: 'Visualization Types' },
@@ -73,8 +73,8 @@ constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-const Page = () => {}
-  return ()
+const Page = () => {};
+  return ();
   <><SEOOptimizertitle=&quot;AI Data Visualization Solutions - ZionTechGroup&quot;
         description=&quot;Transform your data into actionable insights with AI-powered visualization tools. Create interactive dashboards, automated reports, andintelligentanalytics.&quot;
         keywords={['AI data visualization', 'business intelligence', 'data analytics', 'interactive dashboards', 'datainsights']}
@@ -238,6 +238,6 @@ const Page = () => {}
       </div>
 </>
   )
-}
+{}
 
 export default Page;

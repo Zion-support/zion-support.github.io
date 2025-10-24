@@ -6,8 +6,7 @@ import { ArrowRight } from 'lucide-react';
 export default function BackupRecoveryPage() {
   return (
     <>
-      
-        <title>BackupRecovery - Zion Tech Group</title>
+      <title>BackupRecovery - Zion Tech Group</title>
         <meta name="description" content="Professional backuprecovery services by Zion Tech Group." />
       
       
@@ -25,6 +24,6 @@ export default function BackupRecoveryPage() {
           </Link>
         </div>
       </div>
-    </>
+</>
   );
 }

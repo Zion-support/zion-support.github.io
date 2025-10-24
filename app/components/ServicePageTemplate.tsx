@@ -41,7 +41,7 @@ const ServicePageTemplatePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>ServicePageTemplate | Zion Tech Group</title>
+        <title>ServicePageTemplate | Zion Tech Group</title>;
         <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; />
       </Helmet>
@@ -57,6 +57,6 @@ const ServicePageTemplatePage: React.FC = () => {
   )
 }
 
-export default ServicePageTemplatePage
-
+export default ServicePageTemplatePage;
+;
 export default ServicePageTemplatePage;
