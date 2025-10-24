@@ -1,6 +1,16 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin// Fixed regex
 
+<<<<<<< HEAD
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+    const content = fs.readFileSync(filePath, 'utf8'
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>'
+  console.error('Error:'
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+const appDir = '
+=======
 // List of files with merge conflicts
 const filesToFix = [
   'app/components/AccessibilityComponents.tsx',
@@ -22,3 +32,4 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove merge conflict markers and keep the HEAD version (first part)
+>>>>>>> origin/main
