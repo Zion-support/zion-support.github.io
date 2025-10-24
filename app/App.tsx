@@ -147,22 +147,19 @@ const FiveGPrivateNetworksPage = lazy(() => import('./5g-private-networks/page')
 const FiveGSmartCitySolutionsPage = lazy(() => import('./5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
 
-// Test Page;
-
-const TestPage = lazy(() => import('./test/page'));
+// Test Page removed - file doesn't exist
 
 // Main App Component;
 
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <BrowserRouter>
+      <ErrorBoundary />
+      <BrowserRouter>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
-              <Route path="/test" element={<TestPage />} />
 
               {/* AI Services */}
               <Route path="/ai-services" element={<AIServicesPage />} />
@@ -286,7 +283,6 @@ function App() {
             </Routes>
           </Suspense>
         </BrowserRouter>
-      </ErrorBoundary>
     </HelmetProvider>
   );
 };

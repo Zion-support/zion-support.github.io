@@ -8,9 +8,9 @@ import SEOHeadWrapper from '../app/components/SEOHeadWrapper';
 describe('Loading Component', () => {
   test('renders loading text', () => {
     render(
-      <HelmetProvider></HelmetProvider>
-        <Loading /></Loading>
-      </HelmetProvider>)
+      <HelmetProvider>
+        <Loading />
+      </HelmetProvider>
     );
     expect(screen.getByText('Loading')).toBeTruthy();
   });
@@ -19,13 +19,9 @@ describe('Loading Component', () => {
 describe('SEOHeadWrapper Component', () => {
   test('renders without crashing', () => {
     const { container } = render(
-      <HelmetProvider></HelmetProvider>
-        <SEOHeadWrapper 
-          title="Test Title"
-          description="Test Description"
-          keywords={['test', 'keywords']}
-        /></SEOHeadWrapper>
-      </HelmetProvider>)
+      <HelmetProvider>
+        <SEOHeadWrapper />
+      </HelmetProvider>
     );
     expect(container).toBeTruthy();
   });

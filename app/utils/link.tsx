@@ -1,11 +1,13 @@
-'use client';
+"use client";
 import React from 'react';
 
-
-// link utility;
-
-export const link = ($2) => {
-$3
+const LinkComponent = () => {
+  return (
+    <div>
+      <h1>Link Component</h1>
+      <p>Link functionality coming soon.</p>
+    </div>
+  );
 };
 
-export default link
+export default LinkComponent;

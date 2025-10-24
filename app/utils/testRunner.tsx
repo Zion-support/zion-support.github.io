@@ -1,8 +1,13 @@
 "use client";
 import React from 'react';
 
-const testRunner = ($2) => {
-$3
+const TestRunner = () => {
+  return (
+    <div>
+      <h1>Test Runner</h1>
+      <p>Test runner functionality coming soon.</p>
+    </div>
+  );
 };
 
-export default testRunner
+export default TestRunner;

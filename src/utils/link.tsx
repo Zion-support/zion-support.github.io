@@ -1,7 +1,13 @@
-// link utility
-export const link = () => {};
-  // Utility function implementation
-  return null
-{};
+"use client";
+import React from 'react';
 
-export default link
+const LinkComponent = () => {
+  return (
+    <div>
+      <h1>Link Component</h1>
+      <p>Link functionality coming soon.</p>
+    </div>
+  );
+};
+
+export default LinkComponent;

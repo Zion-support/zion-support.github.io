@@ -1,8 +1,13 @@
 "use client";
 import React from 'react';
 
-const errorHandler = ($2) => {
-$3
+const ErrorHandler = () => {
+  return (
+    <div>
+      <h1>Error Handler</h1>
+      <p>Error handling functionality coming soon.</p>
+    </div>
+  );
 };
 
-export default errorHandler
+export default ErrorHandler;

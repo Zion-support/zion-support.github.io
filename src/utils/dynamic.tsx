@@ -1,7 +1,13 @@
-// dynamic utility
-export const dynamic = () => {};
-  // Utility function implementation
-  return null
-{};
+"use client";
+import React from 'react';
 
-export default dynamic
+const DynamicComponent = () => {
+  return (
+    <div>
+      <h1>Dynamic Component</h1>
+      <p>Dynamic functionality coming soon.</p>
+    </div>
+  );
+};
+
+export default DynamicComponent;
