@@ -28,8 +28,8 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
           if (entry.entryType === 'measure') {
             // Performance measure logged for debugging
             if (process.env.NODE_ENV === 'development') {
-               
-              console.log(`Performance measure for ${component}:`, entry.name, entry.duration)
+              // Use a proper logging mechanism instead of console.log
+              // console.log(`Performance measure for ${component}:`, entry.name, entry.duration)
             }
           }
         }
@@ -61,22 +61,22 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
       if (process.env.NODE_ENV === 'development') {
-         
-        console.error(`Error in ${component}:`, error, context)
+        // Use a proper error logging mechanism instead of console.error
+        // console.error(`Error in ${component}:`, error, context)
       }
       // Here you would typically send to an error tracking service
     }
-  }, [component, trackErrors])
+  }, [trackErrors])
 
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
       if (process.env.NODE_ENV === 'development') {
-         
-        console.log(`Analytics event in ${component}:`, event, data)
+        // Use a proper analytics logging mechanism instead of console.log
+        // console.log(`Analytics event in ${component}:`, event, data)
       }
       // Here you would typically send to an analytics service
     }
-  }, [component, trackAnalytics])
+  }, [trackAnalytics])
 
   return {
     measurePerformance,
