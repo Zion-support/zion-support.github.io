@@ -4,7 +4,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const Ai3dGenerationPage: React.FC = () => {
+export default function AI3DGenerationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -14,8 +14,6 @@ const Ai3dGenerationPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai 3d Generation</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
           </div>
         </section>
 
@@ -48,4 +46,3 @@ const Ai3dGenerationPage: React.FC = () => {
   );
 };
 
-export default Ai3dGenerationPage;

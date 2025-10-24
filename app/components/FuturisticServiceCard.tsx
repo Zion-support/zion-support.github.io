@@ -1,5 +1,5 @@
-import React from 'react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
   title: string;
@@ -81,18 +81,17 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
             </div>
           )}
           
-          {/* Button */}
+          {/* CTA Button */}
           <button
             onClick={onClick}
-            className={`w-full bg-gradient-to-r ${gradient} text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group`}
+            className={`w-full bg-gradient-to-r ${gradient} text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group-hover:scale-105`}
           >
-            <span>Get Started</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Get Started
           </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FuturisticServiceCard
+export default FuturisticServiceCard;

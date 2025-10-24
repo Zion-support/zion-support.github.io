@@ -6,14 +6,9 @@ const InteractiveAIROICalculator: React.FC = () => {
   const [timeframe, setTimeframe] = useState(12);
   
   const calculateROI = () => {
-    const annualSavings = (currentCost * efficiencyGain) / 100;
-    const totalSavings = annualSavings * (timeframe / 12);
-    const roi = ((totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, roi);
+    return (currentCost * efficiencyGain) / 100;
   };
-  
-  const roi = calculateROI();
-  
+
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -52,56 +47,46 @@ const InteractiveAIROICalculator: React.FC = () => {
               </div>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
-                  Implementation Timeline (months)
+                  Timeframe (months)
                 </label>
                 <input
-                  type='range'
-                  min='3'
-                  max='24'
+                  type='number'
+                  min='1'
+                  max='60'
                   value={timeframe}
                   onChange={e => setTimeframe(Number(e.target.value))}
-                  className='w-full'
+                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
-                <div className='text-center text-sm text-gray-600'>
-                  {timeframe} months
-                </div>
               </div>
             </div>
             
-            <div className='bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl'>
-              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-                ROI Projection
+            <div className='bg-gray-50 p-6 rounded-lg'>
+              <h3 className='text-xl font-semibold text-gray-900 mb-4'>
+                ROI Analysis
               </h3>
-              <div className='text-center mb-6'>
-                <div className='text-6xl font-bold text-blue-600 mb-2'>
-                  {roi.toFixed(0)}%
-                </div>
-                <div className='text-gray-600'>Return on Investment</div>
-              </div>
-              
               <div className='space-y-4'>
-                <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
-                  <span className='text-gray-700'>Annual Savings:</span>
+                <div className='flex justify-between'>
+                  <span className='text-gray-600'>Annual Savings:</span>
                   <span className='font-semibold text-green-600'>
-                    ${((currentCost * efficiencyGain) / 100).toLocaleString()}
+                    ${calculateROI().toLocaleString()}
                   </span>
                 </div>
-                <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
-                  <span className='text-gray-700'>Total Savings ({timeframe} months):</span>
+                <div className='flex justify-between'>
+                  <span className='text-gray-600'>Monthly Savings:</span>
                   <span className='font-semibold text-green-600'>
-                    ${((currentCost * efficiencyGain * timeframe) / 1200).toLocaleString()}
+                    ${(calculateROI() / 12).toLocaleString()}
                   </span>
                 </div>
-                <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
-                  <span className='text-gray-700'>Net Profit:</span>
+                <div className='flex justify-between'>
+                  <span className='text-gray-600'>Payback Period:</span>
                   <span className='font-semibold text-blue-600'>
-                    ${(((currentCost * efficiencyGain * timeframe) / 1200) - currentCost).toLocaleString()}
+                    {Math.ceil(currentCost / calculateROI())} months
                   </span>
                 </div>
               </div>
               
               <div className='mt-6 text-center'>
-                <button className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+                <button className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
                   Get Detailed Analysis
                 </button>
               </div>

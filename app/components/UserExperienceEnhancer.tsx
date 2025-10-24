@@ -2,47 +2,30 @@ import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;
+  enableAccessibility?: boolean;
+  enableKeyboardNavigation?: boolean;
   enableAnimations?: boolean;
   enableHoverEffects?: boolean;
   enableFocusManagement?: boolean;
-  enableKeyboardNavigation?: boolean;
-  enableAccessibility?: boolean;
+  enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children,
+  enableAccessibility: _enableAccessibility = true,
+  enableKeyboardNavigation = true,
   enableAnimations = true,
   enableHoverEffects = true,
   enableFocusManagement = true,
-  enableKeyboardNavigation = true,
-  enableAccessibility = true,
+  enableHighContrast: _enableHighContrast = false,
+  enableReducedMotion: _enableReducedMotion = false
 }) => {
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [_isHighContrast, _setIsHighContrast] = useState(_enableHighContrast);
+  const [isReducedMotion, _setIsReducedMotion] = useState(_enableReducedMotion);
 
+  // Handle keyboard navigation
   useEffect(() => {
-    // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setIsReducedMotion(mediaQuery.matches);
-
-    // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches);
-
-    // Apply accessibility enhancements
-    if (enableAccessibility) {
-      document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
-      
-      if (isHighContrast) {
-        document.documentElement.classList.add('high-contrast');
-      }
-      
-      if (isReducedMotion) {
-        document.documentElement.classList.add('reduced-motion');
-      }
-    }
-
-    // Add keyboard navigation support
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
@@ -62,7 +45,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         document.removeEventListener('mousedown', handleMouseDown);
       };
     }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
+  }, [enableKeyboardNavigation]);
 
   // Add CSS classes for enhanced UX
   useEffect(() => {
