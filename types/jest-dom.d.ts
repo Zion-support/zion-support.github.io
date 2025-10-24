@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest DOM type definitions
 
 declare global {
@@ -9,3 +10,6 @@ declare global {
 }
 
 export {};
+=======
+/// <reference types="jest""
+>>>>>>> origin/main

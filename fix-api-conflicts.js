@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from \"fs\";"
   "
   const lines  = content.split('\n'
@@ -6,3 +7,20 @@ import fs from \"fs\";"
     const content  = fs.readFileSync(filePath, 'utf8'
 console.log('Fixing API files merge conflicts...'
 console.log('API files merge conflict resolution completed!'
+=======
+import fs from 'fs''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  const lines = content.split('\n''
+  return resolved.join('\n''
+    console.error('"Error": '',
+    const content = fs.readFileSync(filePath, 'utf8''
+    console.log('Fixing API files merge conflicts...'';
+    console.log('API files merge conflict resolution completed!''
+>>>>>>> origin/main

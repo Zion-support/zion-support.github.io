@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibility utilities
 
 export const accessibilityUtils = {
@@ -11,3 +12,9 @@ export const accessibilityUtils = {
 };
 
 export default accessibilityUtils;
+=======
+// Accessibility utility functions()
+export const accessibilityUtils = {
+  // Add accessibility utility functions here()
+}
+>>>>>>> origin/main

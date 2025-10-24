@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 // Get all files that need fixing
 const files  = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v ".git", { encoding: 'utf8'
@@ -29,3 +30,12 @@ const files  = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o
     content = content.replace(/;\s*$/gm, '
     // Clean up extra whitespace: content = content.replace(/\n\s*\n\s*\n/g, '\n\n'
     content = content.replace(/\s+\n/g, '\n'
+=======
+
+const fs = require('fs''
+const path = require('path''
+    let content = fs.readFileSync(fullPath, 'utf8''
+    if (!content.includes('"use client"') && !content.includes("'use client''
+  content = ''
+  content = content.replace(/^/, ''
+>>>>>>> origin/main

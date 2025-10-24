@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -9,3 +10,6 @@ export const usePerformanceMonitor = () => {
 
   return { isMonitoring, setIsMonitoring };
 };
+=======
+import React from 'react'
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const __filename  = fileURLToPath(import.meta.url)
 const __dirname  = path.dirname(__filename)
@@ -63,3 +64,26 @@ function fixFile(filePath) {
       // Skip node_modules and other directories we don'
       if (!['node_modules', '.git', 'dist', '.next'
 console.log('Comprehensive syntax error fixes completed!'
+=======
+
+const fs = require('fs''
+const path = require('path''
+  'app/ai-data-analytics/page.tsx''
+  'app/ai-healthcare/page.tsx''
+  'app/ai-marketing/page.tsx''
+  'app/ai-sales-automation/page.tsx''
+    'app/ai-workflow-automation/page.tsx''
+    let content = fs.readFileSync(fullPath, 'utf8''
+    content = content.replace(/<\/div>\s*\)\s*\)/g, '\n    </div>\n  )\n}''
+    if (content.includes('))''
+    content = content.replace(/<\/div>\s*\)\s*}/g, '\n    </div>\n  )\n}''
+  content = content.replace(extraDivPattern, '\n    </div>\n  )''
+    content = content.replace(/<\s*\/\s*>/g, '</div>''
+    if (content.includes('</>''
+    if (!content.includes('    </div>\n  )\n}''
+      const lastDivIndex = content.lastIndexOf('</div>''
+        const cleanedAfter = afterLastDiv.replace(/^\s*\)\s*\)\s*}/, '\n  )\n}''
+        content = beforeLastDiv + '</div>''
+    console.log('Starting syntax error fixes v2...''
+    console.log('Syntax error fixes v2 completed!''
+>>>>>>> origin/main

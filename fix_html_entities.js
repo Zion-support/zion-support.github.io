@@ -1,0 +1,6 @@
+const fs = require('fs''
+const path = require('path''
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules''
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts''
+    .replace(/&quot;/g, ''
+    .replace(/&apos;/g, "''

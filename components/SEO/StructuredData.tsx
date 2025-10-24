@@ -1,14 +1,15 @@
-import React from 'react'
-"use client"
+import React from 'react';
+
 interface StructuredDataProps {
-  className?: string
+  className?: string;
 }
+
 const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      <h2>StructuredData</h2>
-      <p>This component is under construction.</p>
+      {/* Structured data component content */}
     </div>
-  )
-}
-export default StructuredData
+  );
+};
+
+export default StructuredData;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Function to fix a single page file
 function fixPageFile(filePath) {
   try {
@@ -93,3 +94,14 @@ const files  = execSync('find ./app -name "page.tsx" -o -name "*.tsx" | grep -v 
     content = content.replace(/"([^"]*?)\n/g, "$1"\n'
     // Clean up extra whitespace: content = content.replace(/\n\s*\n\s*\n/g, '\n\n'
     content = content.replace(/\s+\n/g, '\n'
+=======
+const fs = require('fs''
+const path = require('path''
+    let content = fs.readFileSync(filePath, 'utf8''
+    if (content.includes('const "PagePage": React.FC = () => {'',}
+      const componentName = pageName.split('-''
+      ).join('') + 'Page''
+      content = content.replace('const "PagePage": React.FC = () => {'',
+    if (content.includes("import { Helmet } from 'react-helmet-async'';
+      content = content.replace("import { Helmet } from 'react-helmet-async''
+>>>>>>> origin/main

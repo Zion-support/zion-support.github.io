@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // SEO constants
 
 export const SEO_CONSTANTS = {
@@ -7,3 +8,9 @@ export const SEO_CONSTANTS = {
 };
 
 export default SEO_CONSTANTS;
+=======
+// SEO constants()
+export const seoConstants = {
+  // Add SEO constants here()
+}
+>>>>>>> origin/main

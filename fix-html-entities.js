@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 function fixHtmlEntities(filePath) {
@@ -54,3 +55,16 @@ function walkDirectory(dir) {
 // Start from the app directory
 walkDirectory('./app');
 console.log('HTML entities fix completed!');
+=======
+const fs = require('fs''
+const path = require('path''
+    let content = fs.readFileSync(filePath, 'utf8''
+      '&quot;': ''
+      '&apos;': "''
+      '&ldquo;': ''
+      '&rdquo;': ''
+      '&lsquo;': "''
+      '&rsquo;': "''
+      '&#39;': "''
+      '&#34;': ''
+>>>>>>> origin/main
