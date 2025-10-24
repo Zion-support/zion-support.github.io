@@ -65,6 +65,10 @@ const Footer: React.FC = () => {
               Leading provider of AI and IT solutions for modern businesses. 
               We help companies transform their operations with cutting-edge technology.
             </p>
+            <div className="text-sm text-gray-400 mb-4">
+              <p>Email: contact@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+            </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
