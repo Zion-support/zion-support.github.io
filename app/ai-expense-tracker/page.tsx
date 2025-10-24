@@ -2,6 +2,10 @@
 import { Zap, Brain, Settings, Globe, Users, BarChart, MessageCircle, Clock, ArrowRight, CheckCircle, Workflow, Target, ShoppingCart, Server } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { ArrowRight, CheckCircle, Check, Zap, Brain, Settings, Globe, Users, BarChart, MessageCircle, Clock, Target, ShoppingCart, Server, Workflow } from 'lucide-react';;
+=======
+>>>>>>> origin/main
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
