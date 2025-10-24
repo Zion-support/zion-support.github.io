@@ -53,5 +53,5 @@ if (typeof performance.getEntriesByType !== 'function') {
 }
 
 // Mock TextEncoder and TextDecoder
-global.TextEncoder = TextEncoder;
+global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
