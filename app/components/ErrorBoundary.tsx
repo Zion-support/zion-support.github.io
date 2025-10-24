@@ -1,60 +1,47 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
+      interface Props {},
+      children: ReactNode;
+fallback?: ReactNode
+      interface State {},
+      hasError: boolean,
+      error: Error | null,
+      errorInfo: ErrorInfo | null
+class ErrorBoundary extends Component<Props, State> {},
+      constructor(props: Props) {},
+      super(props),
+      this.state = {},
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+      hasError: true,
+      error,
+      errorInfo: null
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+    this.setState({},)
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error for debugging
-    // console.error('Error caught by boundary:', error, errorInfo);
-  }
+      error,
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+    // Log error to console in development
 
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="text-center">
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry, but something unexpected happened. Please try again.
-              </p>
-              <button
-                onClick={() => this.setState({ hasError: false })}
-                className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Try Again
-              </button>
-            </div>
+      // Here you would typically send the error to an error reporting service
+  handleRetry = () => {},
+      this.setState({},)
+      hasError: false,
+      error: null,
+      errorInfo: null
+    })
+  render() {},
+      if (this.state.hasError) {}
+      // Custom fallback UI
+      if (this.props.fallback) {},
+
           </div>
         </div>
       );
     }
 
-    return this.props.children;
-  }
-}
 
-export default ErrorBoundary;
+

@@ -2,18 +2,6 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: "",
-    message: ""
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -248,10 +236,12 @@ const ContactPage: React.FC = () => {
               <p className="text-gray-600">Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after launch.</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
-};
+};";
+";";
+export default ContactPage;";";";
+"
 
-export default ContactPage;

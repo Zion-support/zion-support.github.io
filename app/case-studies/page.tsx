@@ -3,47 +3,69 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
 
-const CaseStudiesPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+const CaseStudiesPage: React.FC = () => {}
+  const  caseStudies = [
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+      id= 1,
+      title: "AI-Powered E-commerce Transformation",""
+      client: "TechRetail Inc.",""
+      industry: "E-commerce",""
+      challenge: "Low conversion rates and poor customer experience",""
+      solution: "Implemented AI-powered recommendation engine and chatbot",""
+      results: [
+        "40% increase in conversion rates",""
+        "60% reduction in customer service tickets",""
+        "25% increase in average order value"""
+      ],
+      image: "/images/case-studies/ecommerce-ai.jpg",""
+      duration: "6 months",""
+      team: "8 specialists"""
 
-  return (
-    <>
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      id= 2,
+      title: "Cloud Migration for Financial Services",""
+      client: "SecureBank Corp.",""
+      industry: "Financial Services",""
+      challenge: "Legacy systems causing performance issues and security concerns",""
+      solution: "Complete cloud migration with enhanced security measures",""
+      results: [
+        "99.9% uptime achieved",""
+        "50% reduction in infrastructure costs",""
+        "Enhanced security compliance"""
+      ],
+      image: "/images/case-studies/cloud-migration.jpg",""
+      duration: "4 months",""
+      team: "12 specialists"""
+
+      id= 3,
+      title: "Cybersecurity Implementation",""
+      client: "HealthCare Plus",""
+      industry: "Healthcare",""
+      challenge: "Vulnerable to cyber attacks and data breaches",""
+      solution: "Comprehensive cybersecurity framework and training",""
+      results: [
+        "Zero security incidents",""
+        "100% compliance with HIPAA",""
+        "50% reduction in security vulnerabilities"""
+      ],
+      image: "/images/case-studies/cybersecurity.jpg",""
+      duration: "3 months",""
+      team: "6 specialists"""
+
+  ]
+  const  stats = [
+    { label: "Projects Completed", value: "150+", icon: <CheckCircle: className ="w-6 h-6" /> },""
+    { label: "Client Satisfaction", value: "98%", icon: <TrendingUp: className ="w-6 h-6" /> },""
+    { label: "Team Members", value: "50+", icon: <Users: className ="w-6 h-6" /> },""
+    { label: "Cost Savings", value: "$2M+", icon: <DollarSign: className ="w-6 h-6" /> }""
+  ]
+  return ()
+    <>{}</>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group | Success Stories</title>
+        <meta: name ="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />""
+      </Helmet>
+
+      <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">""
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
@@ -138,4 +160,6 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 
-export default CaseStudiesPage;
+
+
+
