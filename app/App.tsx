@@ -139,7 +139,10 @@ const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
 // Main App Component;
 function App() {
   return (
-    <HelmetProvider>ErrorBoundary>BrowserRouter>Suspense fallback={<LoadingSpinner />}>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <BrowserRouter>
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
@@ -259,7 +262,12 @@ function App() {
               <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
               <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>/Suspense>/BrowserRouter>/ErrorBoundary>/HelmetProvider>
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
-};
+}
+
 export default App;
