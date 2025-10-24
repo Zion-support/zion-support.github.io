@@ -17,7 +17,7 @@ function fixAllSyntax() {
   files.forEach(file => {
     try {
       let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
       
       // Fix extra closing braces at the end
       content = content.replace(/\n\s*}\s*}\s*}\s*$/g, '\n}');
@@ -39,7 +39,7 @@ function fixAllSyntax() {
       // Remove orphaned closing braces
       const lines = content.split('\n');
       let braceCount = 0;
-      let fixedLines = [];
+      const fixedLines = [];
       
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];

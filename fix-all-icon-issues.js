@@ -23,7 +23,7 @@ function findPageFiles(dir) {
 // Function to fix a single file
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Skip if already has iconMap or no icon patterns
     if (content.includes('iconMap') || !content.includes('icon:')) {

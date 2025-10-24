@@ -3,7 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Users, Target, Award, Shield, Globe } from 'lucide-react'
+import { Target, Shield, Globe } from 'lucide-react'
 
 const AboutPage: React.FC = () => {
   const values = [

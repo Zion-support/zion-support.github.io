@@ -4,45 +4,19 @@ import React, { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { 
   ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
   Menu, 
   X, 
-  Brain, 
   Cloud, 
-  Shield, 
-  Code, 
   BarChart, 
-  Users, 
   Zap, 
-  ArrowRight, 
-  Cpu, 
-  Target, 
   Globe, 
-  Database, 
   Smartphone, 
   Lock, 
   TrendingUp, 
   Settings, 
-  Calendar, 
-  CheckSquare, 
-  FileText, 
   MessageCircle, 
-  Heart, 
-  DollarSign, 
-  Box, 
-  Monitor, 
-  Link as LinkIcon, 
-  Server, 
-  Package, 
   Mic, 
-  Workflow, 
-  Eye, 
-  Wifi, 
-  MessageSquare, 
-  CheckCircle, 
-  ShoppingCart 
+  Eye
 } from 'lucide-react'
 =======
 
@@ -54,9 +28,6 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [aiServicesOpen, setAiServicesOpen] = useState(false)
-  const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [microSaasOpen, setMicroSaasOpen] = useState(false)
 
   // Handle scroll effect
   useEffect(() => {
@@ -69,9 +40,6 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = useCallback(() => {
     setIsOpen(false)
-    setAiServicesOpen(false)
-    setItServicesOpen(false)
-    setMicroSaasOpen(false)
   }, [])
 
   // Service data
@@ -98,14 +66,6 @@ const Navigation: React.FC = () => {
     { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Data insights' }
   ]
 
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence' },
-    { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
-    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' }
-  ]
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

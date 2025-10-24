@@ -5,7 +5,7 @@ const path = require('path');
 function fixRemainingSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const modified = false;
 
     // Fix stray ); after import statements
     content = content.replace(/import[^;]*;\s*\);/g, (match) => {

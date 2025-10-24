@@ -17,7 +17,7 @@ function fixAllRemainingIssues() {
   files.forEach(file => {
     try {
       let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
       
       // Fix missing closing braces for function components
       if (content.includes('export default function') && !content.trim().endsWith('}')) {
@@ -44,7 +44,7 @@ function fixAllRemainingIssues() {
       const lines = content.split('\n');
       let braceCount = 0;
       let jsxDepth = 0;
-      let fixedLines = [];
+      const fixedLines = [];
       
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
