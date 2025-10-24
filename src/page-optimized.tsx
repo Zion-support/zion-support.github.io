@@ -145,4 +145,3 @@ View Success Stories;
     </div>
   );
 };
-export default OptimizedHomePage;
