@@ -1,3 +1,7 @@
+'use client'
+import { ArrowRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Mail, ArrowRight } from 'lucide-react'
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -16,8 +20,8 @@ const ContentNewsletterSignup: React.FC = () => {
   }
   if (isSubmitted) {
     return (
-      <section className="mb-16" aria-labelledby="newsletter-heading">
-        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
+      <section className="mb-16" aria-labelledby="newsletter-heading"></section>
+        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center"></div>
           <div className="text-4xl mb-4">✅</div>
           <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
           <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>
@@ -25,7 +29,6 @@ const ContentNewsletterSignup: React.FC = () => {
       </section>
     )
   }
-=======
 import {MailArrowRight} from 'lucide-react';
 import React, {useState} from 'react';
 
@@ -62,3 +65,24 @@ constContentNewsletterSignup: React.FC= () =>{const [emailsetEmail] = useState('
           </di><
              type="submit"
               disabled={isSubmitting}
+              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            ></button>
+              {isSubmitting ? (
+                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
+              ) : (
+                <>
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </>
+              )}
+            </button>
+          </form>
+          <p className="text-xs text-purple-200 mt-4">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+export default ContentNewsletterSignup

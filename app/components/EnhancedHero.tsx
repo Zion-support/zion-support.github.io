@@ -1,5 +1,10 @@
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
+
   ]
 
   const benefits = [
@@ -8,7 +13,6 @@ import React from 'react'
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Helmet} from 'lucide-react';
   ]
@@ -45,7 +49,6 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </div>
           </div>
-=======
     <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>EnhancedHero | ZionTechGroup</titl><metaname="description"content="Professional EnhancedHero services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="EnhancedHero, AI solutions, IT services, Zion Tech Group,enhancedhero" /></Helme></di></sectio>{/* FeaturesSection */}
     <sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Why Choose Our EnhancedHero?
           </h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Our enhancedhero solutions deliver unmatched performance, security, and scalability.
@@ -68,3 +71,6 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe,
 }
 export defaultEnhancedHeroPage</butto></butto></h>
 >>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </div>
+          </div>

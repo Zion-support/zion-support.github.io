@@ -1,6 +1,4 @@
 'use client'
-import React from 'react'
-=======
 import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe} from 'lucide-react'
 constEnhancedServicesShowcase: React.FC= () =>{constservices= [
 >>>>>>> cursor/fix-errors-and-merge-to-main-56a1
@@ -56,7 +54,6 @@ constEnhancedServicesShowcase: React.FC= () =>{constservices= [
 }
 export default EnhancedServicesShowcase
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
   <sectionclassName="py-16"><divclassName="containermx-autopx-4"><divclassName="text-centermb-16"><spanclassName="text-4 xlmd:text-5 xl font-bold text-white mb-6cyber-textneon-pulse"></spa></className="text-4 xlmd:text-5 xl font-bold text-white mb-6cyber-textneon-pulse">Our Core Services
 
         <spanclassName="text-xl text-cyan-400max-w-3xlmx-auto"></spa></className="text-xl text-cyan-400max-w-3xlmx-auto">Comprehensive AI and IT solutions designed to transform your business and drive innovation
@@ -72,3 +69,10 @@ export default EnhancedServicesShowcase
 }
 export defaultEnhancedServicesShowcase</p></h>
 >>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+import { ArrowRight, TrendingUp } from 'lucide-react'
+import React from 'react'
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+
+const EnhancedServicesShowcase: React.FC = () => {
+  const services = [

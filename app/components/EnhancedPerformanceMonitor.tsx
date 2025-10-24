@@ -1,5 +1,10 @@
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
+
     }
   ]
 
@@ -9,7 +14,6 @@ import React from 'react'
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
     }
@@ -47,7 +51,6 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </div>
           </div>
-=======
         </di></sectio>{/* FeaturesSection */}
     <sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Why Choose Our EnhancedPerformanceMonitor?
           </h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Our enhancedperformancemonitor solutions deliver unmatched performance, security, and scalability.
@@ -70,3 +73,6 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
 }
 export defaultEnhancedPerformanceMonitorPage</butto></butto></sectio></h>
 >>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </div>
+          </div>

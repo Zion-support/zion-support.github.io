@@ -1,5 +1,11 @@
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+
+  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -8,7 +14,6 @@ import React from 'react'
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -68,7 +73,6 @@ const FuturisticServiceCardPage: React.FC = () => {
 }
 export default FuturisticServiceCardPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
     <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>FuturisticServiceCard | ZionTechGroup</titl><metaname="description"content="Professional FuturisticServiceCard services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="FuturisticServiceCard, AI solutions, IT services, Zion Tech Group,futuristicservicecard" /></Helme>{/* HeroSection */}
     <sectionclassName="relative py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent"></className="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent">FuturisticServiceCard
 

@@ -1,3 +1,16 @@
+"use client"
+import React from "react"
 
-export default AccessibilityComponentsPage;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+interface AccessibilityComponentsProps {
+  className?: string;
+}
+
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h1>Accessibility Components</h1>
+    </div>
+  );
+};
+
+export default AccessibilityComponents;

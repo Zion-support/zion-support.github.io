@@ -1,5 +1,9 @@
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail, ArrowRight } from 'lucide-react'
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
@@ -35,7 +39,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Helmet} from 'lucide-react';
 constEnhancedSEOOptimizerPage: React.FC= () =>{constfeatures= [
@@ -100,10 +103,6 @@ constEnhancedSEOOptimizerPage: React.FC= () =>{constfeatures= [
               ))}
             </div>
           </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            </div>
-          </div>
-=======
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>EnhancedSEOOptimizer | ZionTechGroup</titl><metaname="description"content="Professional EnhancedSEOOptimizer services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="EnhancedSEOOptimizer, AI solutions, IT services, Zion Tech Group,enhancedseooptimizer" /></Helme>{/* HeroSection */}
     <sectionclassName="relative py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent"></className="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent">EnhancedSEOOptimizer
 
@@ -129,3 +128,6 @@ constEnhancedSEOOptimizerPage: React.FC= () =>{constfeatures= [
 }
 export defaultEnhancedSEOOptimizerPage</butto></butto></butto></spa>
 >>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </div>
+          </div>

@@ -1,5 +1,7 @@
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+import { Helmet } from 'lucide-react';
 
 constOperationalTrustScorecardsPage: React.FC= () =>{return (
   <><Helme t><titl e>Operational TrustScorecardsv3</titl><metaname="description"content="Measure reliability, cost, safety, and value with live AIscorecards." /><metaproperty="og:type"content="article" /></Helme><mainclassName="min-h-screen bg-slate-950text-white"><sectionclassName="py-16border-bborder-white/10"><divclassName="max-w-3 xlmx-autopx-4"><divclassName="mb-6 inline-flexitems-centergap-2"><spanclassName="px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30"></className="px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30">GUIDE
@@ -23,3 +25,12 @@ constOperationalTrustScorecardsPage: React.FC= () =>{return (
             </l></u></di><di v><h2className="text-2 xlfont-boldmb-3">Operational  Guardrails</h><spanclassName="text-gray-300"></spa></className="text-gray-300">Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
               safety violations spike, auto-rollback to last known good state.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    </>
+  )
+}
+export default OperationalTrustScorecardsPage

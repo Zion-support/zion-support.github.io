@@ -2,16 +2,69 @@
 /**
  * Jest setup file for testing environment
  */
+import React from 'react'
+import '@testing-library/jest-dom'
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util'
+global.TextEncoder = TextEncoder as any
+global.TextDecoder = TextDecoder as any
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || ''
+  if (message.includes('Not implemented: navigation') ||
+      message.includes('navigation (except hash changes)')) {
+    return
+  }
+  originalConsoleError(...args)
+}
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
+  }))
+})
+// Mock requestAnimationFrame
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn()
+}
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock
+})
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn()
+}
+Object.defineProperty(window, 'sessionStorage', {
+  value: sessionStorageMock
+})
+// Mock fetch
+global.fetch = jest.fn()
+// Mock console methods for cleaner test output
+const originalConsoleWarn = console.warn
+const originalConsoleInfo = console.info
+console.warn = (...args) => {
+    return
   }
   _originalConsoleWarn(...args)
 }
 console.info = (...args) => {
+    return
   }
   _originalConsoleInfo(...args)
 }
@@ -25,7 +78,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return []
   }
 }
-=======
  }))
 });
 // Mock requestAnimationFrame
@@ -61,10 +113,17 @@ global.PerformanceObserver= class MockPerformanceObserve r {static reado nlysupp
   takeRecords() {return [];
  }
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-56a1
 // Suppress JSDOM navigation warnings
 console.error= (...args) => {if (args[0] && args[0].type=== 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
+  }
+  _originalConsoleError.apply(console, args)
+}
+// Mock window.location
+delete (window as unknown as Record<string, unknown>).location
+(window as unknown as Record<string, unknown>).location = {
+  href: 'http://localhost:3000',
+  origin: 'http://localhost:3000',
   protocol: 'http:',
   host: 'localhost:300 0',
   hostname: 'localhost',
@@ -74,3 +133,6 @@ console.error= (...args) => {if (args[0] && args[0].type=== 'not implemented' &&
   hash: '',
   reload: jest.fn(),
   assign: jest.fn(),
+  replace: jest.fn()
+}
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

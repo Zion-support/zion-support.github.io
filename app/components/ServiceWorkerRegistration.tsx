@@ -1,6 +1,10 @@
 'use client'
+import Footer from './Footer'
 import {CheckCircle, Phone, Mail, ArrowRight, Helmet} from 'lucide-react';
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react'
 
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
@@ -36,7 +40,6 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {Helmet} from 'react-helmet-async'
 constServiceWorkerRegistrationPage: React.FC= () =>{constfeatures= [
     {
@@ -96,13 +99,30 @@ constServiceWorkerRegistrationPage: React.FC= () =>{constfeatures= [
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ServiceWorkerRegistrationPage;
                 </div>
               ))}
             </div>
           </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -111,16 +131,6 @@ constServiceWorkerRegistrationPage: React.FC= () =>{constfeatures= [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            </div>
-          </div>
-=======
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>ServiceWorkerRegistration | ZionTechGroup</titl><metaname="description"content="Professional ServiceWorkerRegistration services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="ServiceWorkerRegistration, AI solutions, IT services, Zion Tech Group,serviceworkerregistration" /></Helme>{/* HeroSection */}
     <sectionclassName="relative py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent"></className="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent">ServiceWorkerRegistration
 
@@ -150,3 +160,11 @@ constServiceWorkerRegistrationPage: React.FC= () =>{constfeatures= [
 }
 export defaultServiceWorkerRegistrationPage</butto></butto></h></butto></spa>
 >>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </div>
+          </div>

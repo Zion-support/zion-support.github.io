@@ -1,5 +1,9 @@
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -35,7 +39,6 @@ const FuturisticHeroPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
 constFuturisticHeroPage: React.FC= () =>{constfeatures= [
@@ -89,12 +92,10 @@ constFuturisticHeroPage: React.FC= () =>{constfeatures= [
 };
 
 export default FuturisticHeroPage;
-=======
   )
 }
 export default FuturisticHeroPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
         <divclassName="gridgrid-cols-1md:grid-cols-2gap-6">{benefits.map((benefitindex) => (
            <divkey={index} className="flexitems-startspace-x-3"><CheckCircleclassName="h-6 w-6text-purple-400mt-1flex-shrink-0" /><pclassName="text-gray-300text-lg">{benefit}</p></di>))}
         </di></di></sectio>{/* CTASection */}

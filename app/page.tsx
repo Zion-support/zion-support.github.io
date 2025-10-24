@@ -43,7 +43,6 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
@@ -97,7 +96,6 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
-=======
                   {stat.value}
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -110,10 +108,6 @@ const PagePage: React.FC = () => {
     </div>
   )
 }
-
-export default HomePage
-=======
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">{/* Skip to main content for accessibility */}</div>
       <a
         href="#main-content"

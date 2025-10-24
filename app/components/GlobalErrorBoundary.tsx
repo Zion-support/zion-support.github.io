@@ -1,3 +1,4 @@
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
     }
   ]
 
@@ -7,7 +8,6 @@
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
     }
   ]
@@ -44,7 +44,6 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </div>
           </div>
-=======
     <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>GlobalErrorBoundary | ZionTechGroup</titl><metaname="description"content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group,globalerrorboundary" /></Helme>{/* FeaturesSection */}
     <sectionclassName="py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-centermb-16"><spanclassName="text-3 xlmd:text-4 xl font-boldtext-whitemb-4"></spa></className="text-3 xlmd:text-4 xl font-boldtext-whitemb-4">Why Choose Our GlobalErrorBoundary?
           </h><spanclassName="text-xl text-gray-300max-w-3xlmx-auto"></spa></className="text-xl text-gray-300max-w-3xlmx-auto">Our globalerrorboundary solutions deliver unmatched performance, security, and scalability.
@@ -67,3 +66,6 @@ import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
 }
 export defaultGlobalErrorBoundaryPage</butto></butto></h>
 >>>>>>> cursor/fix-errors-and-merge-to-main-56a1
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            </div>
+          </div>

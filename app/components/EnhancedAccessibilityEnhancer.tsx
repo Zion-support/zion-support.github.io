@@ -1,5 +1,9 @@
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
@@ -35,7 +39,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
 import {Helmet} from 'react-helmet-async'
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Helmet} from 'lucide-react';
 constEnhancedAccessibilityEnhancerPage: React.FC= () =>{constfeatures= [
@@ -102,7 +105,7 @@ constEnhancedAccessibilityEnhancerPage: React.FC= () =>{constfeatures= [
           </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -112,8 +115,6 @@ constEnhancedAccessibilityEnhancerPage: React.FC= () =>{constfeatures= [
       </section>
 }
 export default EnhancedAccessibilityEnhancerPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-final
-=======
   <divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Helme t><titl e>EnhancedAccessibilityEnhancer | ZionTechGroup</titl><metaname="description"content="Professional EnhancedAccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for yourbusiness." /><metaname="keywords"content="EnhancedAccessibilityEnhancer, AI solutions, IT services, Zion Tech Group,enhancedaccessibilityenhancer" /></Helme>{/* HeroSection */}
     <sectionclassName="relative py-20px-4sm:px-6lg:px-8"><divclassName="max-w-7xlmx-auto"><divclassName="text-center"><spanclassName="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"></className="text-4 xlmd:text-6 xl font-boldtext-whitemb-6"><spanclassName="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent"></className="bg-gradient-to-r from-purple-40 0to-blue-400bg-clip-texttext-transparent">EnhancedAccessibilityEnhancer
 
