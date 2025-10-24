@@ -3,16 +3,17 @@ import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from './Navigation';
 import React, { useEffect, useState, useCallback } from 'react';
 interface AdvancedAccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean
-  enableScreenReader?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableARIALabels?: boolean
-  enableSkipLinks?: boolean
-  enableColorContrast?: boolean
-  enableMotionReduction?: boolean
-  enableFontScaling?: boolean
-  enableVoiceNavigation?: boolean
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableARIALabels?: boolean;
+  enableSkipLinks?: boolean;
+  enableColorContrast?: boolean;
+  enableMotionReduction?: boolean;
+  enableFontScaling?: boolean;
+  enableVoiceNavigation?: boolean;
+}
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true,
   enableScreenReader= true,
@@ -23,12 +24,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableColorContrast= true,
   enableMotionReduction= true,
   enableFontScaling= true,
-  enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
+  enableVoiceNavigation= true}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
-    reducedMotion: false
+    reducedMotion: false,
     fontSize: 'normal',
-    screenReader: false
-    keyboardNavigation: false})
+    screenReader: false,
+    keyboardNavigation: false
+  });
   // Detect user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -39,24 +42,26 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Check for color scheme preference
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
     setAccessibilitySettings(prev => ({
-      ...prev
+      ...prev,
       reducedMotion: prefersReducedMotion,
-    highContrast: prefersHighContrast})
+      highContrast: prefersHighContrast
+    }));
     // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
     const handleMotionChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches })
+      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
+    };
     const handleContrastChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches })
-    motionQuery.addEventListener('change', handleMotionChange)
-    contrastQuery.addEventListener('change', handleContrastChange)
-    return (
-    <>
-      ) => {
-      motionQuery.removeEventListener('change', handleMotionChange)
-      contrastQuery.removeEventListener('change', handleContrastChange)
-  }, [])
+      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }));
+    };
+    motionQuery.addEventListener('change', handleMotionChange);
+    contrastQuery.addEventListener('change', handleContrastChange);
+    return () => {
+      motionQuery.removeEventListener('change', handleMotionChange);
+      contrastQuery.removeEventListener('change', handleContrastChange);
+    };
+  }, []);
   // Apply accessibility styles
   useEffect(() => {
     if (typeof window === 'undefined') return
