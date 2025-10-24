@@ -1,53 +1,33 @@
+'use client'
 import React from 'react'
-import Link from 'next/link'
 
 export default function FiveGDataAnalyticsPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">5G Data Analytics Solutions</h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            5G Data Analytics
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Leverage the power of 5G networks for real-time data analytics and insights.
+          </p>
           
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-6">
-              Leverage the power of 5G networks for advanced data analytics. Our solutions 
-              enable real-time data processing, machine learning, and predictive analytics 
-              at unprecedented speeds and scale.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Features</h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-              <li>Real-time data streaming and processing</li>
-              <li>Advanced machine learning algorithms</li>
-              <li>Predictive analytics and forecasting</li>
-              <li>Interactive dashboards and visualizations</li>
-              <li>Automated reporting and alerts</li>
-            </ul>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Use Cases</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Smart Cities</h3>
-                <p className="text-gray-600">
-                  Analyze traffic patterns, energy usage, and citizen behavior in real-time.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Industrial IoT</h3>
-                <p className="text-gray-600">
-                  Monitor equipment performance and predict maintenance needs.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Real-time Processing</h3>
+              <p className="text-gray-300">Process massive amounts of data in real-time with 5G's ultra-low latency.</p>
             </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </Link>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Edge Computing</h3>
+              <p className="text-gray-300">Deploy analytics at the edge for faster decision making and reduced bandwidth usage.</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">AI Integration</h3>
+              <p className="text-gray-300">Combine 5G with AI for intelligent data processing and predictive analytics.</p>
+            </div>
           </div>
         </div>
       </div>

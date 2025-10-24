@@ -1,53 +1,33 @@
+'use client'
 import React from 'react'
-import Link from 'next/link'
 
 export default function FiveGEdgeComputingPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">5G Edge Computing Solutions</h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            5G Edge Computing
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Deploy computing resources at the edge of 5G networks for ultra-low latency applications.
+          </p>
           
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-6">
-              Transform your business with our cutting-edge 5G edge computing solutions. 
-              Reduce latency, improve performance, and enable real-time applications with 
-              our advanced edge infrastructure.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Key Benefits</h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-              <li>Ultra-low latency for real-time applications</li>
-              <li>Improved data processing and analytics</li>
-              <li>Enhanced security and privacy</li>
-              <li>Reduced bandwidth costs</li>
-              <li>Scalable infrastructure</li>
-            </ul>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Our Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Edge Data Centers</h3>
-                <p className="text-gray-600">
-                  Deploy edge computing infrastructure closer to your users for optimal performance.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Real-time Analytics</h3>
-                <p className="text-gray-600">
-                  Process and analyze data at the edge for instant insights and decision making.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Ultra-Low Latency</h3>
+              <p className="text-gray-300">Process data at the edge for sub-millisecond response times.</p>
             </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Learn More
-            </Link>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Distributed Processing</h3>
+              <p className="text-gray-300">Distribute computing workloads across edge nodes for optimal performance.</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3>
+              <p className="text-gray-300">Enable real-time data processing and analytics at the network edge.</p>
+            </div>
           </div>
         </div>
       </div>

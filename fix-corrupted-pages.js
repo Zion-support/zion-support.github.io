@@ -1,115 +1,89 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of corrupted pages that need to be fixed
-const corruptedPages = [
-  '5g-implementation',
-  '5g-iot-solutions',
-  '5g-mobile-applications',
-  '5g-network-infrastructure',
-  '5g-private-networks',
-  '5g-smart-city-solutions',
-  '5g-solutions'
-];
+// Function to create a basic page component
+function createBasicPage(pageName) {
+  const componentName = pageName
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('') + 'Page';
 
-// Template for 5G pages
-const fiveGPageTemplate = (pageName, title, description) => `import React from 'react'
-import Link from 'next/link'
+  return `'use client'
+import React from 'react'
 
-export default function ${pageName.charAt(0).toUpperCase() + pageName.slice(1).replace(/-/g, '')}Page() {
+export default function ${componentName}() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            ${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ${pageName.replace(/-/g, ' ')} services and solutions.
+          </p>
           
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-6">
-              ${description}
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Key Features</h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-              <li>Advanced 5G technology implementation</li>
-              <li>High-speed connectivity and low latency</li>
-              <li>Scalable and secure infrastructure</li>
-              <li>Real-time monitoring and analytics</li>
-              <li>24/7 support and maintenance</li>
-            </ul>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Performance</h3>
-                <p className="text-gray-600">
-                  Experience ultra-fast speeds and minimal latency for optimal performance.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Reliability</h3>
-                <p className="text-gray-600">
-                  Built with enterprise-grade reliability and security standards.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+              <p className="text-gray-300">Professional ${pageName.replace(/-/g, ' ')} solutions tailored to your needs.</p>
             </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Learn More
-            </Link>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+              <p className="text-gray-300">Round-the-clock support and maintenance for your ${pageName.replace(/-/g, ' ')} infrastructure.</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Scalable Architecture</h3>
+              <p className="text-gray-300">Build scalable ${pageName.replace(/-/g, ' ')} solutions that grow with your business.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   )
 }`;
+}
 
-// Page configurations
-const pageConfigs = {
-  '5g-implementation': {
-    title: '5G Implementation Services',
-    description: 'Complete 5G network implementation services for businesses looking to leverage next-generation connectivity. Our expert team ensures seamless deployment and optimization.'
-  },
-  '5g-iot-solutions': {
-    title: '5G IoT Solutions',
-    description: 'Revolutionary IoT solutions powered by 5G technology. Connect and manage millions of devices with ultra-low latency and high reliability.'
-  },
-  '5g-mobile-applications': {
-    title: '5G Mobile Applications',
-    description: 'Cutting-edge mobile applications designed to take full advantage of 5G capabilities. Experience the future of mobile technology.'
-  },
-  '5g-network-infrastructure': {
-    title: '5G Network Infrastructure',
-    description: 'Robust 5G network infrastructure solutions designed for enterprise needs. Scalable, secure, and optimized for performance.'
-  },
-  '5g-private-networks': {
-    title: '5G Private Networks',
-    description: 'Dedicated 5G private networks for enhanced security and control. Perfect for enterprises requiring isolated, high-performance connectivity.'
-  },
-  '5g-smart-city-solutions': {
-    title: '5G Smart City Solutions',
-    description: 'Transform your city with 5G-powered smart solutions. Enable connected infrastructure, real-time monitoring, and citizen services.'
-  },
-  '5g-solutions': {
-    title: '5G Solutions',
-    description: 'Comprehensive 5G solutions for modern businesses. From infrastructure to applications, we provide end-to-end 5G services.'
-  }
-};
-
-// Fix corrupted pages
-corruptedPages.forEach(pageName => {
-  const pagePath = path.join(__dirname, 'app', pageName, 'page.tsx');
-  const config = pageConfigs[pageName];
+// Function to recursively find and fix corrupted pages
+function fixCorruptedPages(dir) {
+  const items = fs.readdirSync(dir);
   
-  if (config) {
-    const content = fiveGPageTemplate(pageName, config.title, config.description);
-    fs.writeFileSync(pagePath, content);
-    console.log(`Fixed: ${pageName}/page.tsx`);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      // Recursively process subdirectories
+      fixCorruptedPages(fullPath);
+    } else if (item === 'page.tsx') {
+      // Check if this is a corrupted page
+      const content = fs.readFileSync(fullPath, 'utf8');
+      
+      if (content.includes('// Conflict resolved: taking HEAD version') || 
+          content.trim() === '// Conflict resolved: taking HEAD version' ||
+          content.trim() === '') {
+        
+        console.log(`Fixing corrupted page: ${fullPath}`);
+        
+        // Extract page name from directory path
+        const pathParts = fullPath.split('/');
+        const pageIndex = pathParts.findIndex(part => part === 'app');
+        const pageName = pathParts[pageIndex + 1] || 'page';
+        
+        // Create new page content
+        const newContent = createBasicPage(pageName);
+        
+        // Write the new content
+        fs.writeFileSync(fullPath, newContent);
+        console.log(`Fixed: ${fullPath}`);
+      }
+    }
   }
-});
+}
 
-console.log('All corrupted pages have been fixed!');
+// Start fixing from the app directory
+console.log('Starting to fix corrupted pages...');
+fixCorruptedPages('/workspace/app');
+console.log('Finished fixing corrupted pages!');

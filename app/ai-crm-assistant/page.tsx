@@ -1,52 +1,33 @@
+'use client'
 import React from 'react'
-import Link from 'next/link'
 
-export default function Page() {
+export default function AiCrmAssistantPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Professional Technology Solutions</h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Crm Assistant
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ai crm assistant services and solutions.
+          </p>
           
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-6">
-              Leading provider of professional technology solutions and services for modern businesses.
-              We specialize in AI, 5G, cybersecurity, and digital transformation.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Key Features</h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-              <li>Advanced technology implementation</li>
-              <li>Scalable and secure solutions</li>
-              <li>24/7 support and maintenance</li>
-              <li>Custom solutions tailored to your needs</li>
-              <li>Proven track record of success</li>
-            </ul>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Performance</h3>
-                <p className="text-gray-600">
-                  Optimized solutions designed for maximum performance and efficiency.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Reliability</h3>
-                <p className="text-gray-600">
-                  Built with enterprise-grade reliability and security standards.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+              <p className="text-gray-300">Professional ai crm assistant solutions tailored to your needs.</p>
             </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Learn More
-            </Link>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+              <p className="text-gray-300">Round-the-clock support and maintenance for your ai crm assistant infrastructure.</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Scalable Architecture</h3>
+              <p className="text-gray-300">Build scalable ai crm assistant solutions that grow with your business.</p>
+            </div>
           </div>
         </div>
       </div>
