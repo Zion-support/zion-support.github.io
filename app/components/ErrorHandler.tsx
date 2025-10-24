@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import Navigation from '../components/Navigation'
 import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react'
 
-const Page: React.FC = () => {
+const ErrorHandler: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -51,10 +51,10 @@ const Page: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                       {benefit}
                     </li>
-                  ))
+                  ))}
                 </ul>
               </div>
-            ))
+            ))}
           </div>
 
           <div className="text-center">
