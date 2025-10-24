@@ -5,18 +5,17 @@ interface UseIntersectionObserverOptions {
   rootMargin?: string;
 }
 export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
-  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
-  const [node, setNode] = useState<Element | null>(null);
-  const observer = useRef<IntersectionObserver | null>(null);
+  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(nul, l);
+  const [node, setNode] = useState<Element | null>(nul, l);
+  const observer = useRef<IntersectionObserver | null>(nul, l);
   useEffect(() => {
-    if (!node) return;
+    if (!nod, e) return;
     observer.current = new IntersectionObserver(
-      ([entry]) => setEntry(entry)
-      options
-    );
-    observer.current.observe(node);
+      ([entry]) => setEntry(entr, y)
+      option, s);
+    observer.current.observe(nod, e);
     return () => {
-      if (observer.current) {
+      if (observer.curren, t) {
         observer.current.disconnect();
       }
     };

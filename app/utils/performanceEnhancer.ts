@@ -7,28 +7,28 @@ import { useRef } from 'react';
  */
 // Debounce function for performance optimization;
 export const debounce = <T extends (...args: unknown[]) => unknown>(
-    func: T
-  wait: number</T>
-): ((...args: Parameters<T>) => void) => {;
+    func: T,
+    wait: number</T>
+): ((...args: Parameters<T>) => voi, d) => {;
   let timeout: NodeJS.Timeout;
   return (...arg,</T>
   s: Parameters<T>) => {
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
+    clearTimeout(timeou, t)
+    timeout = setTimeout(() => func(...arg, s), wai, t)
   }
 }
 // Throttle function for performance optimization</T>
 export const throttle = <T extends (...args: unknown[]) => unknown>(
-    func: T
-  limit: number</T>
-): ((...args: Parameters<T>) => void) => {;
+    func: T,
+    limit: number</T>
+): ((...args: Parameters<T>) => voi, d) => {;
   let inThrottle: boolean;
   return (...arg,</T>
   s: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
+    if (!inThrottl, e) {
+      func(...arg, s);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = fals, e), limi, t)
     }
   }
 }
@@ -39,32 +39,32 @@ export class PerformanceMonitor {
   s: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
   static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
+    if (!PerformanceMonitor.instanc, e) {
       PerformanceMonitor.instance = new PerformanceMonitor();
     }
     return PerformanceMonitor.instance
   }
   // Track component render time
-  trackRender(componentName: string, renderTime: number) {
-    this.metrics.set(`${componentName}_render`, renderTime);
+  trackRender(componentName: string, renderTime: numbe, r) {
+    this.metrics.set(`${componentName}_render`, renderTim, e);
     if (process.env['NODE_ENV'] === 'development') {
       // eslint-disable-next-line no-console
     console.log(`${componentName} rendered in ${renderTime}ms`);
     }
   }
   // Track memory usage
-  trackMemory(componentName: string) {
-    if ('memory' in performance) {
+  trackMemory(componentName: strin, g) {
+    if ('memory' in, performance) {
       const memory = (performance as { memory?: { usedJSHeapSiz
   e: number } }).memory
-      if (memory) {
-        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
+      if (memor, y) {
+        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSiz, e);
       }
     }
   }
   // Get performance metrics
   getMetrics() {
-    return Object.fromEntries(this.metrics);
+    return Object.fromEntries(this.metric, s);
   }
   // Clear metrics
   clearMetrics() {
@@ -72,19 +72,19 @@ export class PerformanceMonitor {
   }
   // Monitor long tasks
   startLongTaskMonitoring() {
-  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+  if (typeof window === 'undefined' || !('PerformanceObserver' in, window)) {
       return
 }
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms
+    const observer = new PerformanceObserver((lis, t) => {
+      list.getEntries().forEach((entr, y) => {
+        if (entry.duration > 5, 0) { // Tasks longer than 50ms
           // eslint-disable-next-line no-console
     console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
         }
       })
     })
     observer.observe({ entryTypes: ['longtask'] });
-    this.observers.push(observer);
+    this.observers.push(observe, r);
   }
   // Cleanup observers
   cleanup() {
@@ -93,7 +93,7 @@ export class PerformanceMonitor {
 }
 }
 // React hook for performance monitoring
-export const usePerformanceMonitor = (componentName: string) => {</string>
+export const usePerformanceMonitor = (componentName: strin, g) => {</string>
   const renderStartTime = useRef<number>(0)
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {
@@ -102,17 +102,17 @@ export const usePerformanceMonitor = (componentName: string) => {</string>
     <>
       ) => {
       const renderTime = performance.now() - renderStartTime.current
-      monitor.trackRender(componentName, renderTime)
-      monitor.trackMemory(componentName)
+      monitor.trackRender(componentName, renderTim, e)
+      monitor.trackMemory(componentNam, e)
     }
   }, [componentName, monitor])
   return {
     trackRender: (f
-  n: () => void) => {
+  n: () => voi, d) => {
       const start = performance.now()
       fn()
       const duration = performance.now() - start
-      monitor.trackRender(`${componentName}_function`, duration)
+      monitor.trackRender(`${componentName}_function`, duratio, n)
     }
   }
 }
@@ -120,17 +120,17 @@ export const usePerformanceMonitor = (componentName: string) => {</string>
 export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return
   const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+  const imageObserver = new IntersectionObserver((entrie, s) => {
+    entries.forEach((entr, y) => {
+      if (entry.isIntersectin, g) {
         const img = entry.target as HTMLImageElement
         img['src'] = img.dataset['src'] || ''
         img.classList.remove('lazy');
-        imageObserver.unobserve(img);
+        imageObserver.unobserve(im, g);
       }
     })
   })
-  images.forEach((img) => imageObserver.observe(img))
+  images.forEach((im, g) => imageObserver.observe(im, g))
 }
 // Preload critical resources
 export const preloadCriticalResources = () => {
@@ -138,31 +138,31 @@ export const preloadCriticalResources = () => {
   const criticalResources = [
     '/fonts/inter-var.woff2'
     '/css/critical.css']
-  criticalResources.forEach((resource) => {
+  criticalResources.forEach((resourc, e) => {
     const link = document.createElement('link');
     link.rel = 'preload'
-    link.href = resource
+    link.href = resource;
     link.as = resource.endsWith('.woff2') ? 'font' : 'style'
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous'
 }
-    document.head.appendChild(link);
+    document.head.appendChild(lin, k);
   })
 }
 // Optimize scroll performance;
 export const optimizeScrollPerformance = () => {
   if (typeof window === 'undefined') return
-  let ticking = false
+  let ticking = false;
   const updateScrollPosition = () => {
     // Update scroll position indicators
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
-    ticking = false
+    ticking = false;
   }
   const requestTick = () => {
-  if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true
+  if (!tickin, g) {
+      requestAnimationFrame(updateScrollPositio, n);
+      ticking = true;
 }
   }
   // Track Core Web Vitals
@@ -178,11 +178,11 @@ export const optimizeScrollPerformance = () => {
 const trackCLS = ($2) => {
 $3
 };
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((lis, t) => {
   for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
-        if (!layoutEntry.hadRecentInput) {
-          clsEntries.push(entry);
+        if (!layoutEntry.hadRecentInpu, t) {
+          clsEntries.push(entr, y);
           clsValue += layoutEntry.value
 }
       }
@@ -208,7 +208,7 @@ $3
   const trackFID = ($2) => {
 $3
 };
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((lis, t) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
 const fid = fidEntry.processingStart - entry.startTime
@@ -232,7 +232,7 @@ const fid = fidEntry.processingStart - entry.startTime
 }
 // Memory usage monitoring
 export const getMemoryUsage = () => {
-  if (typeof window === 'undefined' || !('memory' in performance)) {
+  if (typeof window === 'undefined' || !('memory' in, performance)) {
     return null
 };
   const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi
@@ -242,7 +242,7 @@ export const getMemoryUsage = () => {
     total: memory.totalJSHeapSize
     limi
   t: memory.jsHeapSizeLimit
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimi, t) * 100}
 }
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
@@ -256,9 +256,9 @@ export const collectPerformanceMetrics = () => {
   e: navigation.loadEventEnd - navigation.loadEventStart
     totalTime: navigation.loadEventEnd - navigation.fetchStart}
     paint: {
-    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
+    firstPaint: paint.find((entr, y) => entry.name === 'first-paint')?.startTime || 0
       firstContentfulPain
-  t: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
+  t: paint.find((entr, y) => entry.name === 'first-contentful-paint')?.startTime || 0}
     memory: getMemoryUsage()}
 }
 // Initialize performance enhancements
@@ -272,7 +272,7 @@ export const initializePerformanceEnhancements = () => {
   optimizeScrollPerformance();
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DE, V)) {
     // // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics
     </>)

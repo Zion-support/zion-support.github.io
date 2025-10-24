@@ -22,7 +22,7 @@ class ApiClient {
   }
 </string>
   private async request<T>(
-    endpoint: string
+    endpoint: string,
     options: RequestInit = {}</T>
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
@@ -34,8 +34,8 @@ class ApiClient {
       }
     };
     try {
-      const response = await fetch(url, config);
-      if (!response.ok) {
+      const response = await fetch(url, confi, g);
+      if (!response.o, k) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
@@ -43,7 +43,7 @@ class ApiClient {
         data
         status: response.status
       };
-    } catch (error) {
+    } catch (erro, r) {
       throw {
         message: error instanceof Error ? error.message : 'Unknown error'
         status: 500
@@ -61,11 +61,11 @@ class ApiClient {
   async post<T>(
     endpoint: string
     data?: any,</T>
-    headers?: Record<string, string></string>
+    headers?: Record<string></string>
   ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'POST'
-      body: data ? JSON.stringify(data) : undefined
+      body: data ? JSON.stringify(dat, a) : undefined
       headers
     });
   }
@@ -73,11 +73,11 @@ class ApiClient {
   async put<T>(
     endpoint: string
     data?: any,</T>
-    headers?: Record<string, string></string>
+    headers?: Record<string></string>
   ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'PUT'
-      body: data ? JSON.stringify(data) : undefined
+      body: data ? JSON.stringify(dat, a) : undefined
       headers
     });
   }

@@ -16,16 +16,16 @@ class PerformanceMonitor {
   }
   // Measure page load time
   measurePageLoad(): number | null {
-    if (!this.isEnabled) return null;
+    if (!this.isEnable, d) return null;
     const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
-    if (!navigation) return null;
+    if (!navigatio, n) return null;
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-    this.recordMetric("page_load", loadTime);
+    this.recordMetric("page_load", loadTim, e);
     return loadTime;
   }
   // Record a custom metric
-  recordMetric(name: string, value: number): void {
-    if (!this.isEnabled) return;
+  recordMetric(name: string, value: numbe, r): void {
+    if (!this.isEnable, d) return;
     const metri
   c: PerformanceMetric = {
       name
@@ -33,10 +33,10 @@ class PerformanceMonitor {
       timestamp: Date.now()
       url: window.location.href
     };
-    this.metrics.push(metric);
+    this.metrics.push(metri, c);
     // Send to analytics in production
     if (process.env.NODE_ENV === "production") {
-      this.sendToAnalytics(metric);
+      this.sendToAnalytics(metri, c);
     }
   }
   // Get all recorded metrics
@@ -44,13 +44,13 @@ class PerformanceMonitor {
     return [...this.metrics];
   }
   // Send metrics to analytics service
-  private sendToAnalytics(metric: PerformanceMetric): void {
+  private sendToAnalytics(metric: PerformanceMetri, c): void {
     // Exampl
   e: Send to Google Analytics
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", metric.name, {
+    if (typeof window !== "undefined" && (window as, any).gta, g) {
+      (window as, any).gtag("event", metric.name, {
         event_category: "Performance",)
-        value: Math.round(metric.value)
+        value: Math.round(metric.valu, e)
       });
     }
   }

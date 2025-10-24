@@ -6,26 +6,26 @@ import Navigation from '../components/Navigation';
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain
-      title: 'AI-Powered Intelligence'
+      icon: Brain,
+    title: 'AI-Powered Intelligence'
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
     {
-      icon: BarChart
-      title: 'Advanced Analytics'
+      icon: BarChart,
+    title: 'Advanced Analytics'
       description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
     {
-      icon: Target
-      title: 'Precision Targeting'
+      icon: Target,
+    title: 'Precision Targeting'
       description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
     {
-      icon: TrendingUp
-      title: 'Growth Optimization'
+      icon: TrendingUp,
+    title: 'Growth Optimization'
       description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -77,13 +77,13 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, inde, x) => (
                 <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                    {feature.benefits.map((benefit, id, x) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -93,10 +93,10 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 </div>
             </div>
           </div>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, inde, x) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>

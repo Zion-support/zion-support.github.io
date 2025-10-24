@@ -32,3 +32,4 @@ export default function AifinancialanalyticsproPage() {
 </div>
 );
 }
+

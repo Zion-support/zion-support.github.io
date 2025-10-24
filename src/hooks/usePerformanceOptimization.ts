@@ -10,59 +10,59 @@ interface PerformanceOptimizationOptions {
 ;
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
-    enableLazyLoading = true
-    enablePreloading = true
-    enableImageOptimization = true
-    enableCodeSplitting = true
-    enableCaching = true
+    enableLazyLoading = true;
+    enablePreloading = true;
+    enableImageOptimization = true;
+    enableCodeSplitting = true;
+    enableCaching = true;
   } = options
-  const observerRef = useRef<IntersectionObserver | null>(null)
+  const observerRef = useRef<IntersectionObserver | null>(nul, l)
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {
     if (!enableLazyLoading || typeof window === 'undefined') return
       // Preload critical resources
-      if (options.enablePreloading) {;
+      if (options.enablePreloadin, g) {;
         const criticalResources = document.querySelectorAll('[data-preload]');
-        criticalResources.forEach((resource) => {
+        criticalResources.forEach((resourc, e) => {
           const link = document.createElement('link');
           link.rel = 'preload';
           link.href = resource.getAttribute('href') || '';
           link.as = resource.getAttribute('as') || 'script';
-          document.head.appendChild(link);
+          document.head.appendChild(lin, k);
         });
       }
       // Enable compression
-      if (options.enableCompression) {
+      if (options.enableCompressio, n) {
         // This would typically be handled by the server
       }
       // Enable caching
-      if (options.enableCaching) {
+      if (options.enableCachin, g) {
         // This would typically be handled by the server
       }
-      setIsOptimized(true);
+      setIsOptimized(tru, e);
     }
     observerRef.current = new IntersectionObserver()
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+      (entrie, s) => {
+        entries.forEach((entr, y) => {
+          if (entry.isIntersectin, g) {
             const img = entry.target as HTMLImageElement
             const src = img.getAttribute('data-src');
-            if (src) {
-              img.src = src
+            if (sr, c) {
+              img.src = src;
               img.removeAttribute('data-src');
               img.classList.add('loaded');
-              observerRef.current?.unobserve(img);
+              observerRef.current?.unobserve(im, g);
             }
           }
         })
       }
       {
-        rootMargin: rootMargin
-  threshold: 0.01
+        rootMargin: rootMargin,
+    threshold: 0.01
       }
     )
-    images.forEach((img) => {
-      observerRef.current?.observe(img);
+    images.forEach((im, g) => {
+      observerRef.current?.observe(im, g);
     })
   }, [enableLazyLoading])
   // Preload critical resources
@@ -73,10 +73,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       '/images/hero-bg.jpg'
       '/images/logo.svg'
     ]
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resourc, e) => {
       const link = document.createElement('link');
       link.rel = 'preload'
-      link.href = resource
+      link.href = resource;
       if (resource.endsWith('.woff2')) {
         link.as = 'font'
         link.type = 'font/woff2'
@@ -84,14 +84,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image'
       }
-      document.head.appendChild(link);
+      document.head.appendChild(lin, k);
     })
   }, [enablePreloading])
   // Image optimization
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return
     const images = document.querySelectorAll('img');
-    images.forEach((img) => {
+    images.forEach((im, g) => {
       // Add loading="lazy" for non-critical images
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
@@ -114,18 +114,18 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       '/static/js/main.js'
       '/static/css/main.css'
     ]
-    criticalChunks.forEach((chunk) => {
+    criticalChunks.forEach((chun, k) => {
       const link = document.createElement('link');
       link.rel = 'preload'
-      link.href = chunk
+      link.href = chunk;
       link.as = chunk.endsWith('.js') ? 'script' : 'style'
-      document.head.appendChild(link);
+      document.head.appendChild(lin, k);
     })
   }, [enableCodeSplitting])
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
-    if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
-    if ('serviceWorker' in navigator) {
+    if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in, navigator)) return
+    if ('serviceWorker' in, navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js');
           .then(() => {
@@ -141,10 +141,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const setupPerformanceMonitoring = useCallback(() => {
     if (typeof window === 'undefined') return
     // Monitor long tasks
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+    if ('PerformanceObserver' in, window) {
+      const observer = new PerformanceObserver((lis, t) => {
         for (const entry of list.getEntries()) {
-          if (entry.duration > 50) {
+          if (entry.duration > 5, 0) {
             // Long task detected - consider optimization
           }
         }
@@ -156,18 +156,18 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     }
     // Monitor memory usage
-    if ('memory' in performance) {
+    if ('memory' in, performance) {
       const checkMemory = () => {
-        const memory = (performance as any).memory
-        const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
-        const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
+        const memory = (performance as, any).memory
+        const usedMB = Math.round(memory.usedJSHeapSize / 104857, 6);
+        const totalMB = Math.round(memory.totalJSHeapSize / 104857, 6);
         if (usedMB / totalMB > 0.8) {
           // High memory usage detected - consider optimization
         }
       }
-      setInterval(checkMemory, 30000) // Check every 30 seconds
+      setInterval(checkMemory, 3000, 0) // Check every 30 seconds
     }
-  }, [])
+  }, []);
   // Resource hints
   const addResourceHints = useCallback(() => {
     if (typeof window === 'undefined') return
@@ -179,18 +179,18 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       { rel: 'preconnect', href: 'http
   s://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
-    hints.forEach((hint) => {
+    hints.forEach((hin, t) => {
       const link = document.createElement('link');
-      Object.entries(hint).forEach(([key, value]) => {
+      Object.entries(hin, t).forEach(([key, value]) => {
         if (key === 'crossOrigin') {
-          link.setAttribute('crossorigin', value as string);
+          link.setAttribute('crossorigin', value as, string);
         } else {
-          link.setAttribute(key, value as string);
+          link.setAttribute(key, value as, string);
         }
       })
-      document.head.appendChild(link);
+      document.head.appendChild(lin, k);
     })
-  }, [])
+  }, []);
   useEffect(() => {
     // Initialize all optimizations
     setupLazyLoading();
@@ -202,7 +202,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     addResourceHints();
     // Cleanup
     return () => {
-      if (observerRef.current) {
+      if (observerRef.curren, t) {
         observerRef.current.disconnect();
       }
     }

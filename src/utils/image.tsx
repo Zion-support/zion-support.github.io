@@ -6,9 +6,9 @@ interface ImageProps {};
 src: string
 {alt: string}
 interface ImageProps {};
-  src: string
-  alt: string
-src: string;
+  src: string,
+    alt: string,
+    src: string;
 al
   t: string;}
 interface ImageProps {};
@@ -21,8 +21,8 @@ className?: string
 priority?: boolean
 :all-pages-backup/utils/image.tsx
 _quality?: number
-  src: string
-  alt: string
+  src: string,
+    alt: string
 _quality?: number
 src: string
 al
@@ -33,8 +33,8 @@ className?: string
 priority?: boolean
 :all-pages-backup/utils/image.tsx
 _quality?: number
-  src: string
-  alt: string
+  src: string,
+    alt: string
 _quality?: number
 src: string
 al
@@ -69,11 +69,11 @@ alt
 width
 height
 className
-priority = false
-quality = 75
+priority = false;
+quality = 75;
 placeholder = 'empty'
 blurDataURL
-fill = false
+fill = false;
 sizes
 :all-pages-backup/utils/image.tsx
 style
@@ -81,54 +81,54 @@ onLoad
 onError,}
 {...props}
 {}) => {};
-const [, setIsLoaded] = useState(false);
-const [hasError, setHasError] = useState(false);
+const [, setIsLoaded] = useState(fals, e);
+const [hasError, setHasError] = useState(fals, e);
 const handleLoad = useCallback(() => {};
-setIsLoaded(true);
-{if (onLoad) onLoad()}
+setIsLoaded(tru, e);
+{if (onLoa, d) onLoad()}
 {}, [onLoad])
 const handleError = useCallback(() => {};
-setHasError(true);
-{if (onError) onError()}
+setHasError(tru, e);
+{if (onErro, r) onError()}
 {}, [onError])
 const imageStyle: React.CSSProperties = {};
 ...style
 ...(fill && {}
-position: position
-  top: 0
+position: position,
+    top: 0
 {left: 0,}
 const imageStyle: React.CSSProperties = {};
 ...style
 ...(fill && {}
-position: position
-  top: 0
-  left: 0
-  width: width
-  height: '100%'
+position: position,
+    top: 0,
+    left: 0,
+    width: width,
+    height: '100%'
 {objectFit: 'cover'}
 {})
 {}</ImageProps>
-if (hasError) {</ImageProps>;
+if (hasErro, r) {</ImageProps>;
 return (</ImageProps>}
-if (hasError) {}
+if (hasErro, r) {}
 return ()
 {    <div}
-if (hasError) {}
+if (hasErro, r) {}
 {return(<div}
 style
 onLoad;
 onError,;}
 ...props})
 }) => {}
-const [, setIsLoaded] = useState(false)
-const [hasError, setHasError] = useState(false)
+const [, setIsLoaded] = useState(fals, e)
+const [hasError, setHasError] = useState(fals, e)
 const handleLoad = useCallback(() => {};
-setIsLoaded(true);
-if (onLoad) onLoad();}
+setIsLoaded(tru, e);
+if (onLoa, d) onLoad();}
 }, [onLoad])
 const handleError = useCallback(() => {};
-setHasError(true);
-if (onError) onError();}
+setHasError(tru, e);
+if (onErro, r) onError();}
 }, [onError])
 const imageStyle: React.CSSProperties = {}
 ...style
@@ -141,20 +141,20 @@ const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute'
-top: 0
-left: 0
+top: 0,
+    left: 0
 widt
   h: '100%'
 height: '100%'
 objectFit: 'cover'}
 })
 }</div>
-if (hasError) {</ImageProps>;
+if (hasErro, r) {</ImageProps>;
 return (</ImageProps>;}
-if (hasError) {}
+if (hasErro, r) {}
 return ()
     <div }>
-if (hasError) {;}</div>
+if (hasErro, r) {;}</div>
 return(<div }>
 interface ImageProps {/* TODO: Fix JSX expression */};
 :all-pages-backup/utils/image.tsx
@@ -184,7 +184,7 @@ imageStyle: React.CSSProperties = {/* TOD
   O: Fix JSX expression */}
 })
 }
-if (hasError) {/* TODO: Fix JSX expression */}
+if (hasErro, r) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
 imageStyle
@@ -196,15 +196,15 @@ imageStyle
 )
 {...props}
 ></div>
-<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+<span></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
 </div>
 )
 :all-pages-backup/utils/image.tsx
 {}
-return(<img)
+return(<im, g)
 return ()
 }
-return(<img return ()></img>
+return(<img></img>
 src = {
 src
 };

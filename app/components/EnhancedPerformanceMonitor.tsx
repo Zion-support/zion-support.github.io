@@ -23,13 +23,13 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
                 Our enhanced performance monitoring system provides comprehensive insights and optimization.
               </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, inde, x) => (
                 <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                    {feature.benefits.map((benefit, id, x) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -53,7 +53,7 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, inde, x) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>

@@ -32,3 +32,4 @@ export default function AimedicalassistantPage() {
 </div>
 );
 }
+

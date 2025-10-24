@@ -8,28 +8,28 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
       ico
-  n: Brain
-  title: title
-  description: description
-  benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+  n: Brain,
+    title: title,
+    description: description,
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
   {
-    icon: BarChart
-  title: title
-  description: description
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    icon: BarChart,
+    title: title,
+    description: description,
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
   {
-    icon: Target
-  title: title
-  description: description
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    icon: Target,
+    title: title,
+    description: description,
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   {
-    icon: TrendingUp
-  title: title
-  description: description
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingUp,
+    title: title,
+    description: description,
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
   const benefits = [
@@ -43,10 +43,10 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             </div>
           </div>;
           </div>;
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
-              <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, inde, x) => (</div>
+              <div></div>
+                <CheckCircle></CheckCircle>
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>

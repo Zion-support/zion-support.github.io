@@ -20,75 +20,75 @@ interface AdvancedAccessibilityEnhancerProps {
 }
 ;
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true
+constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true;
 constAdvancedAccessibilityEnhance,</AdvancedAccessibilityEnhancerProp>
-  r: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
-  enableScreenReader= true
-  enableHighContrast= true
-  enableFocusManagement= true
-  enableARIALabels= true
-  enableSkipLinks= true
-  enableColorContrast= true
-  enableMotionReduction= true
-  enableFontScaling= true
+  r: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true;
+  enableScreenReader = true;
+  enableHighContrast = true;
+  enableFocusManagement = true;
+  enableARIALabels = true;
+  enableSkipLinks = true;
+  enableColorContrast = true;
+  enableMotionReduction = true;
+  enableFontScaling = true;
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-    highContrast: false
-  reducedMotion: false
-  fontSize: fontSize
-  screenReader: false
-  keyboardNavigation: false
-    highContrast: false
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: fontSize,
+    screenReader: false,
+    keyboardNavigation: false,
+    highContrast: false,
     reducedMotion: false
     fontSiz
   e: 'normal'
     screenReader: false
     keyboardNavigatio
-  n: false)
+  n: fals, e)
   })
   // Detect user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduc, e)').matches
     // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: hig, h)').matches
     // Check for color scheme preference
     const prefersDarkScheme = window.matchMedia('(prefers-color-schem,)
-  e: dark)').matches
+  e: dar, k)').matches
     setAccessibilitySettings(prev => ({
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       ...prev
-  reducedMotion: prefersReducedMotion
-  highContrast: prefersHighContrast
+  reducedMotion: prefersReducedMotion,
+    highContrast: prefersHighContrast
       ...prev
       reducedMotion: prefersReducedMotion
       highContras
-  t: prefersHighContrast)
+  t: prefersHighContras, t)
     }))
     // Listen for changes in user preferences;
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduc, e)');
+    const contrastQuery = window.matchMedia('(prefers-contrast: hig, h)');
     const handleMotionChange = (,;
-  e: MediaQueryListEvent) => {;
+  e: MediaQueryListEven, t) => {;
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
     }
-    const handleContrastChange = (e: MediaQueryListEvent) => {;
+    const handleContrastChange = (e: MediaQueryListEven, t) => {;
       setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
     }
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
+    motionQuery.addEventListener('change', handleMotionChang, e);
+    contrastQuery.addEventListener('change', handleContrastChang, e);
     return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
+      motionQuery.removeEventListener('change', handleMotionChang, e);
+      contrastQuery.removeEventListener('change', handleContrastChang, e);
     }
-  }, [])
+  }, []);
   // Apply accessibility styles
   useEffect(() => {
     if (typeof window === 'undefined') return
     const root = document.documentElement
     // Apply high contrast mode
-    if (accessibilitySettings.highContrast) {
+    if (accessibilitySettings.highContras, t) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
@@ -97,28 +97,28 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     {
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       ico
-  n: Brain
-  title: title
-  description: description
-  benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+  n: Brain,
+    title: title,
+    description: description,
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
   {
-    icon: BarChart
-  title: title
-  description: description
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    icon: BarChart,
+    title: title,
+    description: description,
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
   {
-    icon: Target
-  title: title
-  description: description
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    icon: Target,
+    title: title,
+    description: description,
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   {
-    icon: TrendingUp
-  title: title
-  description: description
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingUp,
+    title: title,
+    description: description,
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
       icon: Brain
       titl
   e: 'AI-Powered Intelligence'
@@ -148,7 +148,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   ]
     // Apply reduced motion
-    if (accessibilitySettings.reducedMotion) {
+    if (accessibilitySettings.reducedMotio, n) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
@@ -159,11 +159,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   // Keyboard navigation enhancement;
   const setupKeyboardNavigation = useCallback(() => {;
     if (typeof window === 'undefined') return
-    consthandleKeyDown= (event: KeyboardEvent) => {
+    consthandleKeyDown= (event: KeyboardEven, t) => {
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.bod, y) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
-        if (skipLink) {
+        if (skipLin, k) {
           skipLink.focus();
           event.preventDefault();
         }
@@ -179,11 +179,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       // Arrow keys for menu navigation;
       // Arrow keys for menu navigation;
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
-        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
-        if (menu && menu.contains(event.target as Node)) {
+        const menu = document.querySelector('[role="menu"]') as HTMLElement
+        if (menu && menu.contains(event.target as, Node)) {
           event.preventDefault();
-          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[];
-          const currentIndex = menuItems.indexOf(event.target as HTMLElement);
+          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
+          const currentIndex = menuItems.indexOf(event.target as, HTMLElement);
           const nextIndex = event.key === 'ArrowDown';
             ? (currentIndex + 1) % menuItems.length
             : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
@@ -191,9 +191,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         }
       }
     }
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [])
+    document.addEventListener('keydown', handleKeyDow, n);
+    return () => document.removeEventListener('keydown', handleKeyDow, n);
+  }, []);
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {;
     if (typeof window === 'undefined') return
@@ -203,70 +203,70 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     liveRegion.setAttribute('aria-atomic', 'true');
     liveRegion.className = 'sr-only'
     liveRegion.id = 'live-region'
-    document.body.appendChild(liveRegion);
+    document.body.appendChild(liveRegio, n);
     // Announce page changes
-    const announcePageChange = (message: string) => {;
+    const announcePageChange = (message: strin, g) => {;
       const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {
-        liveRegion.textContent = message
+      if (liveRegio, n) {
+        liveRegion.textContent = message;
       }
     }
-    // Listen for route changes (if using client-side routing)
+    // Listen for route changes (if using client-side, routing)
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
-    history.pushState = function(...args) {
-      originalPushState.apply(history, args);
+    history.pushState = function(...arg, s) {
+      originalPushState.apply(history, arg, s);
       announcePageChange('Page changed');
     }
-    history.replaceState = function(...args) {
-      originalReplaceState.apply(history, args);
+    history.replaceState = function(...arg, s) {
+      originalReplaceState.apply(history, arg, s);
       announcePageChange('Page updated');
     }
-  }, [])
+  }, []);
   // Focus management;
   const setupFocusManagement = useCallback(() => {;
     if (typeof window === 'undefined') return
     // Trap focus in modals
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
-    const trapFocus = (element: HTMLElement) => {;
+    const trapFocus = (element: HTMLElemen, t) => {;
     const trapFocus = (elemen
-  t: HTMLElement) => {;
+  t: HTMLElemen, t) => {;
       const focusableElements = element.querySelectorAll(;)
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])',</AdvancedAccessibilityEnhancerProp>
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',</AdvancedAccessibilityEnhancerProp>
       ) as NodeListOf<HTMLElement>
       const firstElement = focusableElements[0];
       const lastElement = focusableElements[focusableElements.length - 1];
-      consthandleTabKey= (e: KeyboardEvent) => {
+      consthandleTabKey= (e: KeyboardEven, t) => {
         if (e.key=== 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
+          if (e.shiftKe, y) {
+            if (document.activeElement === firstElemen, t) {
               lastElement.focus();
               e.preventDefault();
             }
           } else {
-            if (document.activeElement === lastElement) {
+            if (document.activeElement === lastElemen, t) {
               firstElement.focus();
               e.preventDefault();
             }
           }
         }
       }
-      element.addEventListener('keydown', handleTabKey);
+      element.addEventListener('keydown', handleTabKe, y);
       firstElement?.focus();
-      return () => element.removeEventListener('keydown', handleTabKey);
+      return () => element.removeEventListener('keydown', handleTabKe, y);
     }
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+    const modals = document.querySelectorAll('[role="dialog"]');
     modals.forEach(modal => {)
-      const cleanup = trapFocus(modal as HTMLElement);
+      const cleanup = trapFocus(modal as, HTMLElement);
     // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
+    const modals = document.querySelectorAll('[role="dialog"]')
     modals.forEach(modal = > {)
-      const cleanup = trapFocus(modal as HTMLElement)
+      const cleanup = trapFocus(modal as, HTMLElement)
       // Store cleanup function for later use
-      (modal as any).__focusTrapCleanup = cleanup
-  }, [])
+      (modal as, any).__focusTrapCleanup = cleanup;
+  }, []);
   // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {;
     if (typeof window === 'undefined') return
@@ -275,10 +275,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
     const buttons = document.querySelectorAll('butto,)
   n: not([aria-label]):not([aria-labelledby])')
-    buttons.forEach((button, index) => {;
+    buttons.forEach((button, inde, x) => {;
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
-        button.setAttribute('aria-label', text);
+        button.setAttribute('aria-label', tex, t);
       } else {
         button.setAttribute('aria-label', `Button ${index + 1}`);
       }
@@ -287,24 +287,24 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     const images = document.querySelectorAll('img:not([alt])');
     const images = document.querySelectorAll('im,)
   g: not([alt])')
-    images.forEach((img, index) => {
+    images.forEach((img, inde, x) => {
       img.setAttribute('alt', `Image ${index + 1}`);
     // Add ARIA labels to form inputs
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
     const inputs = document.querySelectorAll('inpu,)
   t: not([aria-label]):not([aria-labelledby])')
-    inputs.forEach((input, index) => {;
+    inputs.forEach((input, inde, x) => {;
       const placeholder = input.getAttribute('placeholder');
       const label = input.getAttribute('name');
-      if (placeholder) {
-        input.setAttribute('aria-label', placeholder);
-      } else if (label) {
-        input.setAttribute('aria-label', label);
+      if (placeholde, r) {
+        input.setAttribute('aria-label', placeholde, r);
+      } else if (labe, l) {
+        input.setAttribute('aria-label', labe, l);
       } else {
         input.setAttribute('aria-label', `Input ${index + 1}`);
       }
-  }, [])
+  }, []);
   // Skip links
   const addSkipLinks = useCallback(() => {;
     if (typeof window === 'undefined') return
@@ -319,38 +319,38 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
     skipLinks.forEach(({ href, text }) => {
       const link = document.createElement('a');
-      link.href = href
-      link.textContent = text
+      link.href = href;
+      link.textContent = text;
       link.className = 'skip-link'
       link.setAttribute('data-skip-link', 'true');
-      skipLinksContainer.appendChild(link);
-    document.body.insertBefore(skipLinksContainer, document.body.firstChild);
-  }, [])
+      skipLinksContainer.appendChild(lin, k);
+    document.body.insertBefore(skipLinksContainer, document.body.firstChil, d);
+  }, []);
   // Color contrast checking
   const checkColorContrast = useCallback(() => {;
     if (typeof window === 'undefined') return
-    const checkElementContrast = (element: HTMLElement) => {;
-      const styles = window.getComputedStyle(element);
+    const checkElementContrast = (element: HTMLElemen, t) => {;
+      const styles = window.getComputedStyle(elemen, t);
       const backgroundColor = styles.backgroundColor
       const color = styles.color
-      // Simple contrast check (this would need a more sophisticated implementation)
-      if (backgroundColor && color) {
+      // Simple contrast check (this would need a more sophisticated, implementation)
+      if (backgroundColor && colo, r) {
         // Add visual indicator for low contrast elements
         element.setAttribute('data-contrast-checked', 'true');
       }
     }
 ;
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    elements.forEach(element => checkElementContrast(element as HTMLElement))
-  }, [])
+    elements.forEach(element => checkElementContrast(element as, HTMLElement))
+  }, []);
   // Voice navigation support
   const setupVoiceNavigation = useCallback(() => {;
-    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return
-    const recognition = new (window as any).webkitSpeechRecognition();
-    recognition.continuous = false
-    recognition.interimResults = false
+    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in, window)) return
+    const recognition = new (window as, any).webkitSpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
     recognition.lang = 'en-US'
-    recognition.onresult = (event: any) => {
+    recognition.onresult = (event: an, y) => {
       const command = event.results[0][0].transcript.toLowerCase();
       // Voice commands
       if (command.includes('go to home')) {
@@ -374,31 +374,31 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     voiceButton.setAttribute('aria-label', 'Start voice navigation');
     voiceButton.onclick = () => recognition.start();
     const header = document.querySelector('header') || document.querySelector('nav');
-    if (header) {
-      header.appendChild(voiceButton);
+    if (heade, r) {
+      header.appendChild(voiceButto, n);
     }
-  }, [])
+  }, []);
   // Initialize all accessibility features
   useEffect(() => {
-    if (enableKeyboardNavigation) {
+    if (enableKeyboardNavigatio, n) {
       setupKeyboardNavigation();
     }
-    if (enableScreenReader) {
+    if (enableScreenReade, r) {
       setupScreenReaderSupport();
     }
-    if (enableFocusManagement) {
+    if (enableFocusManagemen, t) {
       setupFocusManagement();
     }
-    if (enableARIALabels) {
+    if (enableARIALabel, s) {
       enhanceARIALabels();
     }
-    if (enableSkipLinks) {
+    if (enableSkipLink, s) {
       addSkipLinks();
     }
-    if (enableColorContrast) {
+    if (enableColorContras, t) {
       checkColorContrast();
     }
-    if (enableVoiceNavigation) {
+    if (enableVoiceNavigatio, n) {
       setupVoiceNavigation();
     }
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])

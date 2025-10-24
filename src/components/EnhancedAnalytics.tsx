@@ -42,7 +42,7 @@ const useAnalytics = () => {
                 { name: "About", path: "/about" }
                 { name: "Services", path: "/services" }
                 { name: "Contact", path: "/contact" }
-              ].map((item, index) => (
+              ].map((item, inde, x) => (
                 <Link
                   key={index}
                   href={item.path}
@@ -102,7 +102,7 @@ const useAnalytics = () => {
           </div>
         </div>
       </div>
-    </>
+      </>
   );
 };
 export default useAnalytics;

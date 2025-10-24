@@ -1,20 +1,20 @@
 import { useEffect, useCallback } from 'react';
 export const usePerformanceMonitoring = () => {
-  const reportWebVitals = useCallback((metric: unknown) => {;
-    const body = JSON.stringify(metric);
+  const reportWebVitals = useCallback((metric: unknow, n) => {;
+    const body = JSON.stringify(metri, c);
     const url = '/api/analytics';
-    if (navigator.sendBeacon) {
-      navigator.sendBeacon(url, body);
+    if (navigator.sendBeaco, n) {
+      navigator.sendBeacon(url, bod, y);
     } else {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
         // Failed to send analytics - handle silently
       });
     }
-  }, []);
+  }, []);;
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== 'undefined' && 'performance' in, window) {
       // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((lis, t) => {
         for (const entry of list.getEntries()) {
           reportWebVitals({
             name: entry.name

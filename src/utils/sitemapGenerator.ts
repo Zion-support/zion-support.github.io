@@ -4,10 +4,10 @@
  */
 export interface SitemapEntry {
 ;
-  loc: string
-  lastmod: string
-  changefreq: string
-  priority: number}
+  loc: string,
+    lastmod: string,
+    changefreq: string,
+    priority: number}
 }
 ;
 export const generateSitemap = (): SitemapEntry[] => {;
@@ -16,94 +16,94 @@ export const generateSitemap = (): SitemapEntry[] => {;
   return [
     {
       lo
-  c: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 1.0
+  c: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 1.0
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.8
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.8
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.9
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.9
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.9
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.9
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.9
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.9
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.9
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.9
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.9
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.9
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.8
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.8
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.9
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.9
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.8
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.8
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.7
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.7
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.8
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.8
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.8
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.8
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.3
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.3
     }
     {
-      loc: loc
-  lastmod: currentDate
-  changefreq: changefreq
-  priority: 0.3
+      loc: loc,
+    lastmod: currentDate,
+    changefreq: changefreq,
+    priority: 0.3
     }
   ]
 }
@@ -120,3 +120,5 @@ Disallow: /api/
 Disallow: /_next/;
 Disallo
   w: /private/`}
+
+export default ComponentName;

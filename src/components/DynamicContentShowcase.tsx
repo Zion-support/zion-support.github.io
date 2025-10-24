@@ -13,41 +13,41 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 interface Testimonial {
-  id: number
-  name: string
-  company: string
-  content: string
-  rating: number
+  id: number,
+    name: string,
+    company: string,
+    content: string,
+    rating: number
   avatar?: string}
 }
 ;
 const DynamicContentShowcase: React.FC = () => {;
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(fals, e);
   const testimonials: Testimonial[] = [;
     {
 :all-pages-backup/components/DynamicContentShowcase.tsx
       i
-  d: 1
-  name: name
-  company: company
-  content: content
-  rating: 5
+  d: 1,
+    name: name,
+    company: company,
+    content: content,
+    rating: 5
     }
     {
-      id: 2
-  name: name
-  company: company
-  content: content
-  rating: 5
+      id: 2,
+    name: name,
+    company: company,
+    content: content,
+    rating: 5
     }
     {
-      id: 3
-  name: name
-  company: company
-  content: content
-  rating: 5
-      id: 1
+      id: 3,
+    name: name,
+    company: company,
+    content: content,
+    rating: 5,
+    id: 1
       nam
   e: "Sarah Johnson"
       company: "TechCorp"
@@ -72,34 +72,34 @@ const DynamicContentShowcase: React.FC = () => {;
     }
   ]
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(tru, e);
     const interval = setInterval(() => {;
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval);
+      setCurrentTestimonial((pre, v) => (prev + 1) % testimonials.lengt, h)
+    }, 500, 0)
+    return () => clearInterval(interva, l);
   }, [testimonials.length])
   const features = [
     {
 :all-pages-backup/components/DynamicContentShowcase.tsx
       icon: <Brain className="h-8 w-8" />
       titl
-  e: title
-  description: description
-  color: "from-blue-500 to-cyan-500"
+  e: title,
+    description: description,
+    color: "from-blue-500 to-cyan-500"
     }
   {</Brain>
     icon: <Shield className="h-8 w-8" />
       titl
-  e: title
-  description: description
-  color: "from-green-500 to-emerald-500"
+  e: title,
+    description: description,
+    color: "from-green-500 to-emerald-500"
     }
   {</Shield>
     icon: <Zap className="h-8 w-8" />
       titl
-  e: title
-  description: description
-  color: "from-purple-500 to-pink-500"
+  e: title,
+    description: description,
+    color: "from-purple-500 to-pink-500"
     };
   ];
 ;</Zap>
@@ -125,92 +125,91 @@ const DynamicContentShowcase: React.FC = () => {;
     }
   ]
   return (;</Zap>
-    <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto text-center&quot;></div>
-          <h1 className=&quot;text-4xl md: text-6xl font-bold text-white mb-6&quot;></h1>
-            Transform Your Business with <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>AI Solutions</span>
+    <div></div>
+        <section></section>
+        <div></div>
+          <h1></h1>
+            Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>
-          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto mb-8&quot;></p>
+          <p></p>
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
   return (
-    <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
-      <div className=&quot;max-w-7xl mx-auto&quot;></div>
-        <div className=&quot;text-center mb-16&quot;></div>
-          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Our Solutions</h2>
-          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Discover how our cutting-edge AI and IT solutions can transform your business</p>p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-            <button className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;></button>
-              <Play className=&quot;w-5 h-5&quot; />
+    <div></div>
+      <div></div>
+        <div></div>
+          <h2 className="text-4xl font-bold text-white mb-6">Our Solutions</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how our cutting-edge AI and IT solutions can transform your business</p>p>
+          <div></div>
+            <button></button>
+              <Play className="w-5 h-5" />
               Start Demo</Play>
-            <button className=&quot;inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hove
-  r:bg-white/20 transition-all duration-300&quot;></button>
-              <ArrowRight className=&quot;w-5 h-5&quot; />
+            <button></button>
+              <ArrowRight className="w-5 h-5" />
               Learn More</ArrowRight>
           </div>
         </div>
 {/* Features Grid */}
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-8 mb-16&quot;>{features.map((feature, index) => (</div>
-            <div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-cyan-400/50 transition-all duration-300&quot;></div>
-              <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4&quot;></div>
-                <feature.icon className=&quot;w-6 h-6 text-white&quot; /></feature>
+        <div className="grid grid-cols-1 md:grid-cols-2 l
+  g:grid-cols-4 gap-8 mb-16">{features.map((feature, inde, x) => (</div>
+            <div></div>
+              <div></div>
+                <feature></feature>
               </div>
-              <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-              <p className=&quot;text-gray-300&quot;>{feature.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
         {/* Benefits Section */}
-        <div className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16&quot;></div>
-          <h3 className=&quot;text-2xl font-bold text-white mb-6 text-center&quot;>Why Choose Us?</h3>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-4&quot;>{benefits.map((benefit, index) => (</div>
-              <div key={index} className=&quot;flex items-center&quot;></div>
-                <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; /></CheckCircle>
-                <span className=&quot;text-gray-300&quot;>{benefit}</span>
+        <div></div>
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 l
+  g:grid-cols-4 gap-4">{benefits.map((benefit, inde, x) => (</div>
+              <div></div>
+                <CheckCircle></CheckCircle>
+                <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
           </div>
         </div>
         {/* Testimonials */}
-        <div className=&quot;text-center&quot;></div>
-          <h3 className=&quot;text-2xl font-bold text-white mb-8&quot;>What Our Clients Say</h3>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10&quot;></div>
-                <div className=&quot;flex justify-center mb-4&quot;></div>
-                  <stat.icon className=&quot;w-8 h-8 text-blue-400&quot; /></stat>
+        <div></div>
+          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, inde, x) => (</div>
+              <div></div>
+                <div></div>
+                  <stat></stat>
                 </div>
-                <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.value}</div>
-                <div className=&quot;text-gray-300&quot;>{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       {/* Features Section */}
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;></h2>
-              Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Solutions</span>
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2></h2>
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Comprehensive AI and IT solutions designed to transform your business operations.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI and IT solutions designed to transform your business operations.</p>p>
           </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-8&quot;>{features.map((feature, index) => (</div>
-              <div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300&quot;></div>
-                <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4&quot;></div>
-                  <feature.icon className=&quot;w-8 h-8 text-white&quot; /></feature>
+          <div className="grid grid-cols-1 md:grid-cols-2 l
+  g:grid-cols-4 gap-8">{features.map((feature, inde, x) => (</div>
+              <div></div>
+                <div></div>
+                  <feature></feature>
                 </div>
-                <h3 className=&quot;text-xl font-bold text-white mb-4 group-hove
-  r:text-purple-400 transition-colors&quot;>$3</h3>
-                <p className=&quot;text-gray-300 mb-6&quot;>{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4 group-hove
+  r:text-purple-400 transition-colors">$3</h3>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
                 {feature.stats && (
-                  <div className=&quot;grid grid-cols-3 gap-4&quot;>{feature.stats.map((stat, statIndex) => (</div>
-                      <div key={statIndex} className=&quot;text-center&quot;></div>
-                        <div className=&quot;text-lg font-bold text-white&quot;>{stat.value}</div>
-                        <div className=&quot;text-gray-400 text-xs&quot;>{stat.label}</div>
+                  <div className="grid grid-cols-3 gap-4">{feature.stats.map((stat, statInde, x) => (</div>
+                      <div></div>
+                        <div className="text-lg font-bold text-white">{stat.value}</div>
+                        <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
                     ))}
                   </div>
@@ -221,56 +220,56 @@ const DynamicContentShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Testimonials Section */}
-      <section className=&quot;py-16 px-4&quot;></section>
-        <div className=&quot;max-w-6xl mx-auto&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>What Our Customers Say</h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Don&apos;t just take our word for it. Here's what our satisfied customers have to say about their experience.</p>p>
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Don&apos;t just take our word for it. Here's what our satisfied customers have to say about their experience.</p>p>
           </div>
-          <div className=&quot;relative&quot;></div>
-            <div className=&quot;bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20&quot;></div>
-              <div className=&quot;text-center&quot;></div>
-                <Quote className=&quot;w-12 h-12 text-blue-400 mx-auto mb-6&quot; /></Quote>
-                <p className=&quot;text-xl text-gray-300 mb-8 italic&quot;>&quot;{testimonials[currentTestimonial].content}&quot;</p>p>
-                <div className=&quot;flex justify-center mb-4&quot;>{[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (</div>
-                    <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
+          <div></div>
+            <div></div>
+              <div></div>
+                <Quote></Quote>
+                <p className="text-xl text-gray-300 mb-8 italic">"{testimonials[currentTestimonial].content}"</p>p>
+                <div className="flex justify-center mb-4">{[...Array(testimonials[currentTestimonial].ratin, g)].map((_, i) => (</div>
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}</Star>
                 </div>
-                <blockquote className=&quot;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
-                  &quot;{currentTestimonial.content}&quot</blockquote>
+                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                  "{currentTestimonial.content}&quot</blockquote>
                 </blockquote>
-                <div className=&quot;flex items-center justify-center gap-4&quot;></div>
-                  <div className=&quot;w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center&quot;></div>
-                    <span className=&quot;text-white font-semibold text-lg&quot;>{testimonials[currentTestimonial].name.charAt(0)}</span>span>
+                <div></div>
+                  <div></div>
+                    <span className="text-white font-semibold text-lg">{testimonials[currentTestimonial].name.charAt(0)}</span>span>
                   </div>
-                  <div className=&quot;text-left&quot;></div>
-                    <h4 className=&quot;text-lg font-semibold text-white&quot;>{testimonials[currentTestimonial].name}</h4>
-                    <p className=&quot;text-gray-400&quot;>{testimonials[currentTestimonial].role}</p>
-                    <p className=&quot;text-blue-400&quot;>{testimonials[currentTestimonial].company}</p>
+                  <div></div>
+                    <h4 className="text-lg font-semibold text-white">{testimonials[currentTestimonial].name}</h4>
+                    <p className="text-gray-400">{testimonials[currentTestimonial].role}</p>
+                    <p className="text-blue-400">{testimonials[currentTestimonial].company}</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* Navigation Controls */}
-            <div className=&quot;flex items-center justify-center gap-4 mt-8&quot;></div>
-              <button onClick = {prevTestimonial};></button>
-                className=&quot;p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200&quot;></button>
-                <ChevronLeft className=&quot;w-6 h-6&quot; /></ChevronLeft>
+            <div></div>
+              <button></button>
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>
+                <ChevronLeft></ChevronLeft>
               </button>
               <button,>
                 onClick = {togglePlayPause}</button>
-                className=&quot;p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200&quot;></button>
-                {isPlaying ? <Pause className=&quot;w-6 h-6&quot; /> : <Play className=&quot;w-6 h-6&quot; />}</Play>
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>
+                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}</Play>
               </button>
-              <button onClick = {nextTestimonial};></button>
-                className=&quot;p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200&quot;></button>
-                <ChevronRight className=&quot;w-6 h-6&quot; /></ChevronRight>
+              <button></button>
+                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"></button>
+                <ChevronRight></ChevronRight>
               </button>
             </div>
             {/* Dots Indicator */}
-            <div className=&quot;flex justify-center mt-6 space-x-2&quot;>{testimonials.map((_, index) => (</div>
-                <button key = {index}></button>
-                  onClick={() =></button> setCurrentIndex(index)}
+            <div className="flex justify-center mt-6 space-x-2">{testimonials.map((_, inde, x) => (</div>
+                <button></button>
+                  onClick={() =></button> setCurrentIndex(inde, x)}
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
@@ -281,18 +280,18 @@ const DynamicContentShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Benefits Section */}
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Benefits</h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Discover the advantages that make our solutions the preferred choice for businesses worldwide.</p>p>
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover the advantages that make our solutions the preferred choice for businesses worldwide.</p>p>
           </div>
-          <div className=&quot;bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20&quot;></div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 l
-  g:grid-cols-4 gap-6&quot;>{benefits.map((benefit, index) => (</div>
-                <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                  <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0 mt-1&quot; /></CheckCircle>
-                  <span className=&quot;text-gray-300&quot;>{benefit}</span>
+          <div></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 l
+  g:grid-cols-4 gap-6">{benefits.map((benefit, inde, x) => (</div>
+                <div></div>
+                  <CheckCircle></CheckCircle>
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -300,43 +299,42 @@ const DynamicContentShowcase: React.FC = () => {;
         </div>
       </section>
       {/* CTA Section */}
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-          <div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-12&quot;></div>
-            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>Join thousands of satisfied customers and start your transformation journey today.</p>p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">Join thousands of satisfied customers and start your transformation journey today.</p>p>
+            <div></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
+                <ArrowRight></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More</button>
               </button>
             </div>
           </div>
         </section>
         {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l
-  g:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
-                    {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+            <div></div>
+              {features.map((feature, inde, x) => (
+                <div></div>
+                  <feature></feature>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, id, x) => (</ul>
+                      <li></li>
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -347,39 +345,37 @@ const DynamicContentShowcase: React.FC = () => {;
           </div>
         </section>
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l
-  g:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+            <div></div>
+              {benefits.map((benefit, inde, x) => (
+                <div></div>
+                  <CheckCircle></CheckCircle>
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+        <section></section>
+          <div></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions</p>
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
-                <Zap className=&quot;w-5 h-5&quot; />
+            <div></div>
+              <button></button>
+                <Zap className="w-5 h-5" />
                 Get Started Today</Zap>
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
-  r:scale-105&quot;></button>
+              <button></button>
                 Schedule Demo
             </div>
           </div>

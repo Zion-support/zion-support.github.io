@@ -41,7 +41,7 @@ const ContactPageBroken2 = () => {
                 { name: "About", path: "/about" }
                 { name: "Services", path: "/services" }
                 { name: "Contact", path: "/contact" }
-              ].map((item, index) => (
+              ].map((item, inde, x) => (
                 <Link
                   key={index}
                   href={item.path}
@@ -100,11 +100,10 @@ const ContactPageBroken2 = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-4xl mx-auto px-4"> </div></div>
+        <div></div></div>
           <h1Contact Us</h1>
-        <div className="bg-white rounded-lg shadow p-6"> </div></div>
-          <pThis is a backup contact page Please refer to the main contact page for current information</p>
-        </p></div>
+        <div></div></div>
+          <p></p></div>
       </div>
     </div>
   );

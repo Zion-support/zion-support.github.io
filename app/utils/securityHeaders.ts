@@ -27,7 +27,7 @@ contentSecurityPolicy: [
 "base-uri 'self'"
 "form-action 'self'"
 'upgrade-insecure-requests'].join('; ')
-// HTTP Strict Transport Security (HSTS)
+// HTTP Strict Transport Security (HST, S)
 strictTransportSecurit
   y: 'max-age=63072000; includeSubDomains; preload'
 // Prevent clickjacking
@@ -36,7 +36,7 @@ xFrameOptions: 'DENY'
 xContentTypeOptions: 'nosniff'
 // Referrer Policy
 referrerPolicy: 'strict-origin-when-cross-origin'
-// Permissions Policy (formerly Feature Policy)
+// Permissions Policy (formerly Feature, Policy)
 permissionsPolicy: [
 'camera=()'
 'microphone=()'
@@ -60,22 +60,22 @@ const headers: Record<string, string> = {};
 'X-XSS-Protection': '1; mode=block'
 'X-DNS-Prefetch-Control': 'on'}
 }
-if (config.contentSecurityPolicy) {}
+if (config.contentSecurityPolic, y) {}
 headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
 }
-if (config.strictTransportSecurity) {}
+if (config.strictTransportSecurit, y) {}
 headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
 }
-if (config.xFrameOptions) {}
+if (config.xFrameOption, s) {}
 headers['X-Frame-Options'] = config.xFrameOptions;}
 }
-if (config.xContentTypeOptions) {}
+if (config.xContentTypeOption, s) {}
 headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
 }
-if (config.referrerPolicy) {}
+if (config.referrerPolic, y) {}
 headers['Referrer-Policy'] = config.referrerPolicy;}
 }
-if (config.permissionsPolicy) {}
+if (config.permissionsPolic, y) {}
 headers['Permissions-Policy'] = config.permissionsPolicy;}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */};
 }
@@ -92,17 +92,17 @@ const config = { ...defaultSecurityHeaders, ...customConfig }
 const</string>
 headers: Record<string, string> = {/* TODO: Fix JSX expression */}
 }
-if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
+if (config.contentSecurityPolic, y) {/* TODO: Fix JSX expression */}
 }
-if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
+if (config.strictTransportSecurit, y) {/* TODO: Fix JSX expression */}
 }
-if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
+if (config.xFrameOption, s) {/* TODO: Fix JSX expression */}
 }
-if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
+if (config.xContentTypeOption, s) {/* TODO: Fix JSX expression */}
 }
-if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
+if (config.referrerPolic, y) {/* TODO: Fix JSX expression */}
 }
-if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
+if (config.permissionsPolic, y) {/* TODO: Fix JSX expression */}
 }
 return headers
 }
@@ -117,8 +117,8 @@ customConfig?: Partial<SecurityHeadersConfig>
 }</SecurityHeadersConfig>
 ): Array<{ key: string; valu
   e: string }> {}
-const headers = getSecurityHeaders(customConfig)
-return Object.entries(headers).map(([key, value]) => ({}
+const headers = getSecurityHeaders(customConfi, g)
+return Object.entries(header, s).map(([key, value]) => ({}
 key
 value}
 }))

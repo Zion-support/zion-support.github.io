@@ -2,10 +2,10 @@
 import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
-  src: string
+  src: string,
     alt: string}
 interface ImageProps {};
-src: string
+src: string,
     alt: string
 width?: number
 height?: number
@@ -13,7 +13,7 @@ className?: string
 priority?: boolean
 _quality?: number
 sr
-  c: string
+  c: string,
     alt: string
 width?: number
 height?: number
@@ -21,7 +21,7 @@ className?: string
 priority?: boolean
 _quality?: number
 sr
-  c: string
+  c: string,
     alt: string
 width?: number
 height?: number
@@ -44,26 +44,26 @@ alt
 width
 height
 className
-priority = false
-quality = 75
+priority = false;
+quality = 75;
 placeholder = 'empty'
 blurDataURL
-fill = false
+fill = false;
 sizes
 style
 onLoad
 onError}
 ...props}
 }) => {};
-const [ setIsLoaded] = useState(false)
-const [hasError, setHasError] = useState(false)
+const [ setIsLoaded] = useState(fals, e)
+const [hasError, setHasError] = useState(fals, e)
 const handleLoad = useCallback(() => {}
-setIsLoaded(true);
-if (onLoad) onLoad()}
+setIsLoaded(tru, e);
+if (onLoa, d) onLoad()}
 }, [onLoad])
 const handleError = useCallback(() => {}
-setHasError(true);
-if (onError) onError()}
+setHasError(tru, e);
+if (onErro, r) onError()}
 }, [onError])
 const imageStyle: React.CSSProperties = {
 ...style
@@ -79,20 +79,20 @@ const imageStyle: React.CSSProperties = {}
 position: 'absolute'
     top: 0
 lef
-  t: 0
+  t: 0,
     width: '100%'
 height: '100%'
     objectFit: 'cover'}
 })
-if (hasError) {</ImageProps>
+if (hasErro, r) {</ImageProps>
   </ImageProps>
 return (
     </ImageProps>
   );
-if (hasError) {}
+if (hasErro, r) {}
 return (
     <div}
-if (hasError) {}
+if (hasErro, r) {}
 return(<div};
 interface ImageProps {/* TODO: Fix JSX expression */};
 export const
@@ -106,7 +106,7 @@ const
 imageStyle: React.CSSProperties = {/* TOD
   O: Fix JSX expression */}
 })
-if (hasError) {/* TODO: Fix JSX expression */}
+if (hasErro, r) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
 imageStyle
@@ -116,10 +116,9 @@ imageStyle
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 {...props}
 ></div>
-<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+<span></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
 </div>
-return(<img
-return (<img></img>
+return(<img></img>
 src={src}
 alt={alt}
 width={width}

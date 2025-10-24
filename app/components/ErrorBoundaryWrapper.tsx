@@ -8,20 +8,20 @@ interface State {
   r: boolean
   error?: Error
 class ErrorBoundaryWrapper extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)}
+  constructor(props: Prop, s) {
+    super(prop, s)}
     this.state = { hasError: false};
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Erro, r): State {
     return { hasErro
   r: true, error}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInf, o) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.log('Error caught by boundar,)
-  y:', error, errorInfo)}
+  y:', error, errorInf, o)}
   render() {
-    if (this.state.hasError) {
+    if (this.state.hasErro, r) {
       return (</Props>
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
           <div className="text-center p-8">

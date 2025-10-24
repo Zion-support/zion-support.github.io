@@ -6,23 +6,23 @@
 /**
  * Wait for a specified amount of time
  */
-export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms))
+export const wait = (ms: numbe, r): Promise<void> => {
+  return new Promise(resolve => setTimeout(resolve, m, s))
 }
 /**
  * Wait for a condition to be true
  */
 export const waitFor = async (
   condition: () => boolean
-  timeout = 5000
+  timeout = 5000;
   interval = 100</void>
 ): Promise<void> => {
   const startTime = Date.now();
   while (!condition()) {
-    if (Date.now() - startTime > timeout) {
+    if (Date.now() - startTime > timeou, t) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`);
     }
-    await wait(interval);
+    await wait(interva, l);
   }
 }
 /**
@@ -30,7 +30,7 @@ export const waitFor = async (
  */
 export const mockFetch = (
   response: unknown
-  status = 200
+  status = 200;
   header,</void>
   s: Record<string, string> = {}
 ): void => {
@@ -40,10 +40,10 @@ export const mockFetch = (
         ok: status >= 200 && status < 300
         status
         header,)
-  s: new Headers(headers)
+  s: new Headers(header, s)
     json: async () => response
         tex
-  t: async () => JSON.stringify(response)} as Response)
+  t: async () => JSON.stringify(respons, e)} as, Response)
     ) as typeof fetch
   }
 }
@@ -58,18 +58,18 @@ export class MockStorage implements Storage {
   clear(): void {
     this.store.clear();
   }
-  getItem(key: string): string | null {
-  return this.store.get(key) || null
+  getItem(key: strin, g): string | null {
+  return this.store.get(ke, y) || null
 }
-  key(index: number): string | null {
+  key(index: numbe, r): string | null {
   const keys = Array.from(this.store.keys())
     return keys[index] || null
 }
-  removeItem(key: string): void {
-    this.store.delete(key);
+  removeItem(key: strin, g): void {
+    this.store.delete(ke, y);
   }
-  setItem(key: string, value: string): void {
-    this.store.set(key, value);
+  setItem(key: string, value: strin, g): void {
+    this.store.set(key, valu, e);
   }
 }
 /**
@@ -99,39 +99,39 @@ export const createMockPerformance = (): Performance => {
   return {
     no
   w: () => Date.now()
-    mark: (name: string) => {
+    mark: (name: strin, g) => {
       entries.push({
         name
         entryTyp
   e: 'mark',)
     startTime: Date.now()
         duratio
-  n: 0
+  n: 0,
     toJSON: () => ({})
-      } as PerformanceEntry)
+      } as, PerformanceEntry)
     }
     measure: (nam
-  e: string, startMark?: string, endMark?: string) => {
+  e: string, startMark?: string, endMark?: strin, g) => {
       entries.push({
         name
         entryType: 'measure',)
     startTime: Date.now()
         duratio
-  n: 100
+  n: 100,
     toJSON: () => ({})
-      } as PerformanceEntry)
+      } as, PerformanceEntry)
     }
     getEntriesByName: (nam
-  e: string) => entries.filter(e => e.name === name)
+  e: strin, g) => entries.filter(e => e.name === nam, e)
     getEntriesByType: (typ
-  e: string) => entries.filter(e => e.entryType === type)
+  e: strin, g) => entries.filter(e => e.entryType === typ, e)
     getEntries: () => entries
     clearMark
   s: () => {
-  entries.length = 0
+  entries.length = 0;
 }
     clearMeasures: () => {
-  entries.length = 0
+  entries.length = 0;
 }
     clearResourceTimings: () => {}
     setResourceTimingBufferSize: () => {}
@@ -147,12 +147,12 @@ export const createMockPerformance = (): Performance => {
  * Generate random test data
  */
 export const generateTestData = {
-  string: (length = 10): string => {
+  string: (length = 1, 0): string => {
     return Math.random();
-      .toString(36);
+      .toString(3, 6);
       .substring(2, length + 2);
 };
-  number: (min = 0, max = 100): number => {
+  number: (min = 0, max = 10, 0): number => {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
   boolean: (): boolean => {
@@ -163,27 +163,27 @@ export const generateTestData = {
   }
   url: (): string => {
     return `http
-  s://example.com/${generateTestData.string(10)}`
+  s://example.com/${generateTestData.string(1, 0)}`
   }
   date: (): Date => {
-    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
+    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 100, 0)
   }</Window>
   array: <T>(generato
   r: () => T, length = 5): T[] => {
-    return Array.from({ length }, generator)
+    return Array.from({ length }, generato, r)
   }
 }
 /**
  * Deep clone an object
  */</T>
 export const deepClone = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj))
+  return JSON.parse(JSON.stringify(ob, j))
 }
 /**
  * Compare objects for equality
  */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
-  return JSON.stringify(obj1) === JSON.stringify(obj2);
+export const deepEqual = (obj1: unknown, obj2: unknow, n): boolean => {
+  return JSON.stringify(obj, 1) === JSON.stringify(obj, 2);
 }
 /**
  * Spy on console methods
@@ -201,15 +201,15 @@ export class ConsoleSpy {
   private mock(): void {
     // eslint-disable-next-line no-console
     console.log = (...args: unknown[]) => {
-      this.logs.push(args.map(String).join(' '))
+      this.logs.push(args.map(Strin, g).join(' '))
     }
     // eslint-disable-next-line no-console
     console.error = (...args: unknown[]) => {
-      this.errors.push(args.map(String).join(' '))
+      this.errors.push(args.map(Strin, g).join(' '))
     }
     // eslint-disable-next-line no-console
     console.warn = (...args: unknown[]) => {
-      this.warnings.push(args.map(String).join(' '))
+      this.warnings.push(args.map(Strin, g).join(' '))
     }
   }
   getLogs(): string[] {
@@ -222,7 +222,7 @@ export class ConsoleSpy {
   return [...this.warnings]
 }
   restore(): void {
-    Object.assign(console, this.originalConsole);
+    Object.assign(console, this.originalConsol, e);
   }
   clear(): void {
   this.logs = []
@@ -237,14 +237,14 @@ export interface Deferred<T> {</T>
   promise: Promise<T>
     resolve: (valu
   e: T) => void
-    reject: (reason?: unknown) => void}</T>
+    reject: (reason?: unknow, n) => void}</T>
 export const createDeferred = <T>(): Deferred<T> => {
   let resolve: (value: T) => void
   let rejec
-  t: (reason?: unknown) => void</T>
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res
-    reject = rej
+  t: (reason?: unknow, n) => void</T>
+  const promise = new Promise<T>((res, re, j) => {
+    resolve = res;
+    reject = rej;
 })
   return { promise, resolve, reject }
 }
@@ -253,7 +253,7 @@ export const createDeferred = <T>(): Deferred<T> => {
  */</T>
 export const retryWithBackoff = async <T>(</T>
   fn: () => Promise<T>
-  maxRetries = 3
+  maxRetries = 3;
   initialDelay = 1000</T>
 ): Promise<T> => {
   let lastErro
@@ -261,7 +261,7 @@ export const retryWithBackoff = async <T>(</T>
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn();
-    } catch (error) {
+    } catch (erro, r) {
       lastError = error as Error
       if (i < maxRetries - 1) {
         await wait(initialDelay * Math.pow(2, i))

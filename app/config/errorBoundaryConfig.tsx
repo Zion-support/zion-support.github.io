@@ -59,19 +59,19 @@ serverError: 'Server error occurred. Please try again later.'
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
-logErrors: true
+logErrors: true,
     showDetails: isDevelopment
 reportError
   s: !isDevelopment
     reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
 showErrorOverla
-  y: isDevelopment
+  y: isDevelopment,
     maxStoredErrors: 50
 customMessage
-  s: DEFAULT_ERROR_MESSAGES
+  s: DEFAULT_ERROR_MESSAGES,
     fallbackComponents: {
 defaul
-  t: DefaultErrorFallback
+  t: DefaultErrorFallback,
     network: NetworkErrorFallback
 notFoun
   d: NotFoundFallback}
@@ -84,20 +84,8 @@ return (
     <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
 <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
 <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
-<svg
-className="w-6h-6text-red-600"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24"
-></svg>
-<path
-strokeLinecap="round"
-strokeLinejoin="round"
-strokeWidth = {
-2
-};
-d="M6 18L18 6M6 6l12 12"
-/></path>
+<svg></svg>
+<path></path>
 </svg>
 <h2 className="mt-4 text-2xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>
 <p className="mt-2text-centertext-gray-600">
@@ -126,27 +114,15 @@ return (
     <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
 <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
 <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
-<svg
-className="w-6h-6text-yellow-600"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24"
-></svg>
-<path
-strokeLinecap="round"
-strokeLinejoin="round"
-strokeWidth = {
-2
-};
-d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
-/></path>
+<svg></svg>
+<path></path>
 </svg>
 </div>
 <h2 className="mt-4 text-2xl font-boldtext-centertext-gray-900">Connection Issue</h2>
 <p className="mt-2text-centertext-gray-600">
             Unable to connect to the server. Please check your internet connection and try again.
           </p>
-<div className="mt-6"></div>
+<div></div>
 <button
 onClick = {
 resetError
@@ -160,8 +136,8 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700t
 */
 function NotFoundFallback(): JSX.Element {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-mdw-fulltext-center"></div>
+    <div></div>
+<div></div>
 <h1 className="text-6xlfont-boldtext-gray-900">
             404
           </h1>
@@ -169,7 +145,7 @@ return (
 <p className="mt-2text-gray-600">
             The page you're looking for doesn't exist or has been moved.
           </p>
-<div className="mt-6 flexgap-4justify-center"></div>
+<div></div>
 <button
 onClick={() =>(window.location.href = '/')}</button>
 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700transition-colors">
@@ -187,7 +163,7 @@ Go Back
 * Get error type from error object
 */
 export function getErrorType(erro,)
-  r: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
+  r: Erro, r): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
 return 'network'
 if (error.message.includes('404') || error.message.includes('not found')) {
@@ -202,13 +178,13 @@ return 'default'
 /**
 * Format error for logging
 */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
+export function formatErrorForLogging(error: Erro, r): Record<string, unknown> {
 return {
 message: error.message
     stack: error.stack
 nam
   e: error.name
-    type: getErrorType(error)
+    type: getErrorType(erro, r)
 timestam
   p: new Date().toISOString()
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'

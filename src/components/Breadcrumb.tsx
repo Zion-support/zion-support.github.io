@@ -3,8 +3,8 @@ import React from 'react';
 import { Home, ChevronRight } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 interface BreadcrumbItem {
-  name: string
-  path: string}
+  name: string,
+    path: string}
   icon?: React.ComponentType<{ className?: string }>
 }
 const Breadcrumb: React.FC = () => {;
@@ -17,16 +17,16 @@ const Breadcrumb: React.FC = () => {;
     { nam
   e: 'Home', path: '/', icon: Home }
   ]
-  pathSegments.forEach((segment, index) => {
+  pathSegments.forEach((segment, inde, x) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     breadcrumbItems.push({ name, path, icon: null });
   })
   return (
-    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700"></nav>
-      <div className="max-w-7x lmx-auto px-4 py-3"></div>
+    <nav></nav>
+      <div></div>
         <ol className="fle xitems-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (</ol>
+          {breadcrumbItems.map((item, inde, x) => (</ol>
             <li key={item.path} className="fle xitems-center">
               {index > 0 && (</li>
                 <ChevronRight className="w-4h-4te x t-gray-400 mx-2" />
@@ -61,20 +61,20 @@ export default function Breadcrumb() {;
     return null
   }
   return (
-    <nav className="bg-gray-800 text-white py-2 px-4"></nav>
-      <div className="container mx-auto"></div>
-        <ol className="flex items-center space-x-2 text-sm"></ol>
+    <nav></nav>
+      <div></div>
+        <ol></ol>
           <li></li>
-            <Link href="/" className="flex items-center hover:text-blue-400 transition-colors"></Link>
+            <Link></Link>
               <Home className="w-4 h-4 mr-1" />
               Home</Home>
             </Link>
           </li>
-          {pathnames.map((name, index) => {
+          {pathnames.map((name, inde, x) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1
             return (
-              <li key={name} className="flex items-center"></li>
+              <li></li>
                 <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
                 {isLast ? (</ChevronRight>
                   <span className="text-gray-300 capitalize">{name.replace(/-/g, ' ')}</span>

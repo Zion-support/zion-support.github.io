@@ -32,57 +32,55 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
 :all-pages-backup/components/LazyImage.tsx</Helmet>
         <Head></Head>
         <title>LazyImage</title>;
-        <meta name=&quot;description&quot; content=&quot;Advanced LazyImage solution for modern businesses.&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+        <meta></meta>
+<meta></meta>
       </Head>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, LazyImage, AI solutions, intelligent automation&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+        <meta></meta>
+<meta></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+      <Navigation></Navigation>
+      <div></div>
         {/* Hero Section */};
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+        <section></section>
+          <div></div>
+          <div></div>
+            <h1></h1>
               LazyImage</h1>
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
+            <p></p>
               Advanced LazyImage solution for modern businesses.</p>
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
+            <div></div>
+              <button></button>
                 Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
+                <ArrowRight></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+              <button></button>
                 Learn More</button>
               </button>
             </div>
           </div>
         </section>
         {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l
-  g:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;></ul>
-                    {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+            <div></div>
+              {features.map((feature, inde, x) => (
+                <div></div>
+                  <feature></feature>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul></ul>
+                    {feature.benefits.map((benefit, id, x) => (</ul>
+                      <li></li>
+                        <CheckCircle></CheckCircle>
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -93,44 +91,42 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
           </div>
         </section>
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l
-  g:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+            <div></div>
+              {benefits.map((benefit, inde, x) => (
+                <div></div>
+                  <CheckCircle></CheckCircle>
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
+        <section></section>
+          <div></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
-              <br /></br>
-              <span className=&quot;text-white&quot;>Solutions</span>
+              <br></br>
+              <span className="text-white">Solutions</span>
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>Transform your business with our advanced lazyimage solutions.</p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced lazyimage solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center&quot;>Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
+            <div></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">Get Started</button>
+                <ArrowRight></ArrowRight>
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
-  r:scale-105&quot;></button>
+              <button></button>
                 Learn More</button>
               </button>
             </div>
@@ -140,47 +136,45 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
         </div>
       </section>
       {/* Benefits Section */}
-      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;></h2>
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2></h2>
               Key Benefits
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+            <p></p>
               Experience the power of our lazyimage solutions for your business.</p>
             </p>
           </div>
-          <div className=&quot;grid grid-cols-1 m
-  d:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
-              <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
-                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+          <div className="grid grid-cols-1 m
+  d:grid-cols-2 gap-6">{benefits.map((benefit, inde, x) => (</div>
+              <div></div>
+                <CheckCircle></CheckCircle>
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12&quot;></div>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>
-            <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your lazyimage needs and get a customized solution.</p>p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
-                <Phone className=&quot;mr-2 h-5 w-5&quot; /></Phone>
+      <section></section>
+        <div></div>
+          <div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your lazyimage needs and get a customized solution.</p>p>
+            <div></div>
+              <button></button>
+                <Phone></Phone>
                 Call Now</Phone>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
-  r:scale-105&quot;></button>
-                <Mail className=&quot;mr-2 h-5 w-5&quot; /></Mail>
+              <button></button>
+                <Mail></Mail>
                 Email Us</Mail>
             </div>
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer></Footer>
     </>
-:all-pages-backup/components/LazyImage.tsx
-  )};
+:all-pages-backup/components/LazyImage.ts, x)};
 export default LazyImagePage
     </div>
   );

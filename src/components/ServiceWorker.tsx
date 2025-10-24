@@ -17,28 +17,28 @@ const ServiceWorkerPage: React.FC = () => {
     {
 :all-pages-backup/components/ServiceWorker.tsx
       ico
-  n: Brain
-  title: title
-  description: description
-  benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+  n: Brain,
+    title: title,
+    description: description,
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
    }
   {
-    icon: BarChart
-  title: title
-  description: description
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    icon: BarChart,
+    title: title,
+    description: description,
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
    }
   {
-    icon: Target
-  title: title
-  description: description
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    icon: Target,
+    title: title,
+    description: description,
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
    }
   {
-    icon: TrendingUp
-  title: title
-  description: description
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingUp,
+    title: title,
+    description: description,
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
       icon: Brain
       titl
   e: 'AI-Powered Intelligence'
@@ -83,55 +83,53 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
 :all-pages-backup/components/ServiceWorker.tsx</Helmet>
         <Head></Head>
         <title>ServiceWorker - Zion Tech Group</title>;
-        <meta name=&quot;description&quot; content=&quot;Advanced serviceworker solutions powered by AI technology.&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+        <meta></meta>
+<meta></meta>
       </Head>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceWorker, AI solutions, intelligent automation&quot; /></meta>
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+        <meta></meta>
+<meta></meta>
       </Head>
       </Helmet>
-      <Navigation /></Navigation>
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+      <Navigation></Navigation>
+      <div></div>
+        <section></section>
+          <div></div>
+          <div></div>
+            <h1></h1>
               ServiceWorker
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
+            <p></p>
               Advanced serviceworker solutions powered by AI technology.</p>
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
+            <div></div>
+              <button></button>
                 Get Started</button>
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
+                <ArrowRight></ArrowRight>
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
-  r:scale-105&quot;></button>
+              <button></button>
                 Learn More</button>
               </button>
             </div>
           </div>
         </section>
         {/* Features Section */};
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6&quot;></h2>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2></h2>
                 Key Features
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+              <p></p>
                 Powerful AI technology that drives results
             </div>
-            <div className=&quot;grid md:grid-cols-2 l
-  g:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;></ul>
-                    {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+            <div></div>
+              {features.map((feature, inde, x) => (
+                <div></div>
+                  <feature></feature>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul></ul>
+                    {feature.benefits.map((benefit, id, x) => (</ul>
+                      <li></li>
+                        <CheckCircle></CheckCircle>
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -142,38 +140,36 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
           </div>
         </section>
         {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l
-  g:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+            <div></div>
+              {benefits.map((benefit, inde, x) => (
+                <div></div>
+                  <CheckCircle></CheckCircle>
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
+        <section></section>
+          <div></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+            <div></div>
+              <button></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+              <button></button>
                 Contact Sales</button>
               </button>
               </div>
@@ -181,26 +177,25 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {;</
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer></Footer>
     </>
-:all-pages-backup/components/ServiceWorker.tsx
-  )};
+:all-pages-backup/components/ServiceWorker.ts, x)};
 export default ServiceWorkerPage
     </div>
   );
 }
 export default ServiceWorkerPage;
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in, navigator) {
       navigator.serviceWorker
         .register('/sw.js');
-        .then((registration) => {
-          // // console.log('SW registered: ', registration);
+        .then((registratio, n) => {
+          // // console.log('SW registered: ', registratio, n);
         })
-        .catch((registrationError) => {
-          // // console.log('SW registration failed: ', registrationError);
+        .catch((registrationErro, r) => {
+          // // console.log('SW registration failed: ', registrationErro, r);
         })
     }
-  }, [])
+  }, []);
   return nul l
 {}
 export default ServiceWorker

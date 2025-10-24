@@ -29,7 +29,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     "form-action 'self'"
     'upgrade-insecure-requests';
   ].join('; ');
-  // HTTP Strict Transport Security (HSTS)
+  // HTTP Strict Transport Security (HST, S)
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
 :all-pages-backup/utils/securityHeaders.ts
   // Prevent clickjacking
@@ -38,7 +38,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
   xContentTypeOptions: 'nosniff'
   // Referrer Policy
   referrerPolicy: 'strict-origin-when-cross-origin'
-  // Permissions Policy (formerly Feature Policy)
+  // Permissions Policy (formerly Feature, Policy)
   permissionsPolicy: [
     'camera=()'
   // Prevent clickjacking
@@ -47,7 +47,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
   xContentTypeOptions: 'nosniff'
   // Referrer Policy
   referrerPolicy: 'strict-origin-when-cross-origin'
-  // Permissions Policy (formerly Feature Policy)
+  // Permissions Policy (formerly Feature, Policy)
   permissionsPolicy: [
     'camera = ()'
     'microphone=()'
@@ -74,22 +74,22 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
     'X-XSS-Protection': '1; mode = block'
     'X-DNS-Prefetch-Control': 'on'
   }
-  if (config.contentSecurityPolicy) {
+  if (config.contentSecurityPolic, y) {
     headers['Content-Security-Policy'] = config.contentSecurityPolicy
   }
-  if (config.strictTransportSecurity) {
+  if (config.strictTransportSecurit, y) {
     headers['Strict-Transport-Security'] = config.strictTransportSecurity
   }
-  if (config.xFrameOptions) {
+  if (config.xFrameOption, s) {
     headers['X-Frame-Options'] = config.xFrameOptions
   }
-  if (config.xContentTypeOptions) {
+  if (config.xContentTypeOption, s) {
     headers['X-Content-Type-Options'] = config.xContentTypeOptions
   }
-  if (config.referrerPolicy) {
+  if (config.referrerPolic, y) {
     headers['Referrer-Policy'] = config.referrerPolicy
   }
-  if (config.permissionsPolicy) {
+  if (config.permissionsPolic, y) {
     headers['Permissions-Policy'] = config.permissionsPolicy
   }
   return headers
@@ -99,8 +99,8 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
  */;</string>
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; valu
   e: string }> {
-  const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({
+  const headers = getSecurityHeaders(customConfi, g);
+  return Object.entries(header, s).map(([key, value]) => ({
     key
     value
   }))

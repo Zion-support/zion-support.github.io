@@ -1,5 +1,5 @@
 
-export const generateSitemap = useCallback((...args) => {
+export const generateSitemap = useCallback((...arg, s) => {
   const baseUrl = 'https: //ziontechgroup.com'
   const staticPages = [
   ''
@@ -53,7 +53,7 @@ ${staticPages.map(page => `</urlset>
 </urlset>`
 return sitemap
 }
-export const generateRobotsTxt = useCallback((...args) => {}
+export const generateRobotsTxt = useCallback((...arg, s) => {}
 return `User-agent: *
     Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml

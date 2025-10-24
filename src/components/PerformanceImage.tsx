@@ -1,32 +1,32 @@
-&quot;use client&quot
-import React from &quot;react&quot;
-import { Helmet } from &quot;react-helmet-async&quot;
+"use client&quot
+import React from "react"
+import { Helmet } from "react-helmet-async"
 const PerformanceImagePage: React.FC = () => {
   const features = [
     {
       ico
-  n: Brain
-  title: title
-  description: description
-  benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+  n: Brain,
+    title: title,
+    description: description,
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
   {
-    icon: BarChart
-  title: title
-  description: description
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    icon: BarChart,
+    title: title,
+    description: description,
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
   {
-    icon: Target
-  title: title
-  description: description
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    icon: Target,
+    title: title,
+    description: description,
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   {
-    icon: TrendingUp
-  title: title
-  description: description
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    icon: TrendingUp,
+    title: title,
+    description: description,
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
   const benefits = [
@@ -42,14 +42,14 @@ const PerformanceImagePage: React.FC = () => {
   </>
       <Helmet>;</Helmet>
         <title>PerformanceImage | Zion Tech Group</title>;
-        <meta name=&quot;description&quot; content=&quot;Professional PerformanceImage services by Zion Tech Group.&quot; /></meta>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceImage, AI solutions, intelligent automation&quot; /></meta>
+        <meta></meta>
+        <meta></meta>
       </Helmet>
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;container mx-auto max-w-6xl&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>PerformanceImage</h1>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional PerformanceImage services tailored to your business needs.</p>p>
+      <section></section>
+        <div></div>
+          <div></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">PerformanceImage</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional PerformanceImage services tailored to your business needs.</p>p>
           </div>
         </div>
       </section>

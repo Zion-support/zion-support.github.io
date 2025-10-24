@@ -6,7 +6,7 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode}
 }
 ;
-export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
+export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProp, s) {
   useEffect(() => {
     // Accessibility enhancements
     if (typeof window !== 'undefined') {
@@ -16,20 +16,20 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       skipLink.textContent = 'Skip to main content'
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu
   s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-      document.body.insertBefore(skipLink, document.body.firstChild)
+      document.body.insertBefore(skipLink, document.body.firstChil, d)
       // Add main content ID
       const main = document.querySelector('main');
-      if (main && !main.id) {
+      if (main && !main.i, d) {
         main.id = 'main-content'
       }
       return () => {
         const existingSkipLink = document.querySelector('a[href="#main-content"]');
-        if (existingSkipLink) {
+        if (existingSkipLin, k) {
           existingSkipLink.remove();
         }
       }
     }
-  }, []);
+  }, []);;
 ;
   return <div>{children}</div>};
 import { useEffect } from 'react';
@@ -39,12 +39,12 @@ const AccessibilityEnhancer: React.FC<{ childre
   useEffect(() => {
     // Add keyboard navigation support
 :all-pages-backup/components/AccessibilityEnhancer.tsx
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEven, t) => {
       // Skip to main content with Alt + M;
       if (e.altKey && e.key === 'm') {;
         e.preventDefault();
         const mainContent = document.getElementById('main-content');
-        if (mainContent) {
+        if (mainConten, t) {
           mainContent.focus();
           mainContent.scrollIntoView({ behavio,)
   r: 'smooth' })}
@@ -53,29 +53,29 @@ const AccessibilityEnhancer: React.FC<{ childre
       if (e.altKey && e.key === 'n') {
         e.preventDefault();
         const navigation = document.querySelector('nav');
-        if (navigation) {
+        if (navigatio, n) {
           const firstLink = navigation.querySelector('a') as HTMLElement
-          if (firstLink) {
+          if (firstLin, k) {
             firstLink.focus()}
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
+    if (enableKeyboardNavigatio, n) {
+      const handleKeyDown = (event: KeyboardEven, t) => {
         // Skip to main content;
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
-          if (mainContent) {
-            (mainContent as HTMLElement).focus();
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.bod, y) {;
+          const mainContent = document.querySelector('main, [role="main"]');
+          if (mainConten, t) {
+            (mainContent as, HTMLElement).focus();
             event.preventDefault();
           }
         }
       }
     }
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDow, n);
     return () => {
 :all-pages-backup/components/AccessibilityEnhancer.tsx
-      document.removeEventListener('keydown', handleKeyDown)}}, []);
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDow, n)}}, []);;
+      document.removeEventListener('keydown', handleKeyDow, n);
     }
-  }, []);
+  }, []);;
   useEffect(() => {
     // Add focus indicators
     const style = document.createElement('style');
@@ -99,10 +99,10 @@ const AccessibilityEnhancer: React.FC<{ childre
   }, [enableScreenReaderSupport]);
   useEffect(() => {
     // Add high contrast support
-    if (enableHighContrast) {
+    if (enableHighContras, t) {
       const style = document.createElement('style');
       style.textContent = `
-        @media (prefers-contrast: high) {
+        @media (prefers-contrast: hig, h) {
 :all-pages-backup/components/AccessibilityEnhancer.tsx
           * {
             border-color: currentColor !important
@@ -115,22 +115,22 @@ const AccessibilityEnhancer: React.FC<{ childre
           }
         }
       `;
-      document.head.appendChild(style)}
+      document.head.appendChild(styl, e)}
   }, [enableHighContrast]);
   useEffect(() => {
     // Add focus management
-    if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
+    if (enableFocusManagemen, t) {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       .sr-only {
-        position: absolute
-  width: 1px
-  height: 1px
-  padding: 0
-  margin: -1px
-  overflow: hidden
-  clip: rect(0, 0, 0, 0);
-        white-space: nowrap
-  border: 0
+        position: absolute,
+    width: 1px,
+    height: 1px,
+    padding: 0,
+    margin: -1px
+  overflow: hidden,
+    clip: rect(0, 0, 0, 0);
+        white-space: nowrap,
+    border: 0
       }
       .high-contrast {
         filter: contrast(150%)}
@@ -141,16 +141,16 @@ const AccessibilityEnhancer: React.FC<{ childre
   n: 0.01ms !important
       }
     `;
-    document.head.appendChild(style);
+    document.head.appendChild(styl, e);
     return () => {
 :all-pages-backup/components/AccessibilityEnhancer.tsx
-      document.head.removeChild(style)}}, []);
-      document.head.removeChild(style);
+      document.head.removeChild(styl, e)}}, []);;
+      document.head.removeChild(styl, e);
     }
-  }, []);
+  }, []);;
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
-      modals.forEach(trapFocus);
+      const modals = document.querySelectorAll('[role="dialog"]');
+      modals.forEach(trapFocu, s);
 :all-pages-backup/components/AccessibilityEnhancer.tsx
   useEffect(() => {
     // Add ARIA landmarks
@@ -164,7 +164,7 @@ const AccessibilityEnhancer: React.FC<{ childre
     const footer = document.querySelector('footer');
     if (footer && !footer.getAttribute('role')) {
       footer.setAttribute('role', 'contentinfo')}
-  }, []);
+  }, []);;
 :all-pages-backup/components/AccessibilityEnhancer.tsx
   return <div>{children}</div>};
 export default AccessibilityEnhancer

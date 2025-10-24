@@ -1,30 +1,30 @@
 
 'use client';
-import React from &quot;react&quot;
-import { Helmet } from &quot;react-helmet-async&quot;
-&quot;use client&quot
+import React from "react"
+import { Helmet } from "react-helmet-async"
+"use client&quot
 const ServicePageTemplatePage: React.FC = () => {
   const features = [
     {
-      icon: Brain
+      icon: Brain,
     title: 'AI-Powered Intelligence'
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
 }
   {
-    icon: BarChart
+    icon: BarChart,
     title: 'Advanced Analytics'
       description: 'Comprehensive analytics dashboard with real-time data visualization.'
     benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
 }
   {
-    icon: Target
+    icon: Target,
     title: 'Precision Targeting'
       description: 'Target specific goals and objectives with precision and accuracy.'
     benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
 }
   {
-    icon: TrendingUp
+    icon: TrendingUp,
     title: 'Growth Optimization'
       description: 'Optimize your business growth with data-driven strategies.'
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
@@ -43,7 +43,7 @@ const ServicePageTemplatePage: React.FC = () => {
         <meta name="description" content="Professional ServicePageTemplate services by Zion Tech Group." />
         <meta name="keywords" content="AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation" />
       </Helmet>
-      <section className="py-20 px-4"></section>
+      <section></section>
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">ServicePageTemplate</h1>

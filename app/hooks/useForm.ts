@@ -20,8 +20,8 @@ export function useForm<T extends Record<string, any />>({
   validate,</T>
 }: UseFormOptions<T />) {</T>
   const [formState, setFormState] = useState<FormState<T />>({
-    data: initialData
-    isSubmitting: false
+    data: initialData,
+    isSubmitting: false,
     submitStatus: "idle"
     errors: {}
   });
@@ -39,12 +39,12 @@ export function useForm<T extends Record<string, any />>({
         [name]: "", // Clear error when user starts typing
       },)
     }));
-  }, []);
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {;
+  }, []);;
+  const handleSubmit = useCallback(async (e: React.FormEven, t) => {;
     e.preventDefault();
     // Validate form
-    const validationErrors = validate ? validate(formState.data) : {};
-    if (Object.keys(validationErrors).length > 0) {
+    const validationErrors = validate ? validate(formState.dat, a) : {};
+    if (Object.keys(validationError, s).length > 0) {
       setFormState(prev => ({
         ...prev
         errors: validationErrors,)
@@ -53,21 +53,21 @@ export function useForm<T extends Record<string, any />>({
     }
     setFormState(prev => ({
       ...prev
-      isSubmitting: true
-      submitStatus: "idle"
+      isSubmitting: true,
+    submitStatus: "idle"
       errors: {},)
     }));
     try {
-      await onSubmit(formState.data);
+      await onSubmit(formState.dat, a);
       setFormState(prev => ({
         ...prev
         submitStatus: "success"
-        data: initialData, // Reset form)
+        data: initialData, // Reset, form)
       }));
-    } catch (error) {
+    } catch (erro, r) {
       // Log error in development, send to error service in production
       if (process.env.NODE_ENV === "development") {
-        console.error("Form submission error:", error);
+        console.error("Form submission error:", erro, r);
       }
       // In production, you would send this to your error monitoring service
       // Example: sendToErrorService(error, "FormSubmission");
@@ -84,9 +84,9 @@ export function useForm<T extends Record<string, any />>({
   }, [formState.data, onSubmit, validate, initialData]);
   const resetForm = useCallback(() => {
     setFormState({
-      data: initialData
-      isSubmitting: false
-      submitStatus: "idle"
+      data: initialData,
+    isSubmitting: false,
+    submitStatus: "idle"
       errors: {},);
     });
   }, [initialData]);

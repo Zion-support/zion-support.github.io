@@ -41,7 +41,7 @@ const errorHandler = () => {
                 { name: "About", path: "/about" }
                 { name: "Services", path: "/services" }
                 { name: "Contact", path: "/contact" }
-              ].map((item, index) => (
+              ].map((item, inde, x) => (
                 <Link
                   key={index}
                   href={item.path}

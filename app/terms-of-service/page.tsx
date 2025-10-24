@@ -32,3 +32,4 @@ export default function TermsofservicePage() {
 </div>
 );
 }
+

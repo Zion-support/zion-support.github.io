@@ -5,11 +5,11 @@
  */
 export interface PerformanceMetric {
 ;
-  name: string
-  value: number
-  unit: string
-  timestamp: Date
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
+  name: string,
+    value: number,
+    unit: string,
+    timestamp: Date,
+    category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
   metadata?: Record<string, unknown>}
 }
 ;
@@ -25,13 +25,13 @@ export interface WebVitalsMetrics {;
 export interface PerformanceReport {;
   metrics: PerformanceMetric[]
   webVital
-  s: WebVitalsMetrics
-  summary: {
+  s: WebVitalsMetrics,
+    summary: {
     avgLoadTim
-  e: number
-  totalMetrics: number
-  performanceScore: number
-  recommendations: string[]}
+  e: number,
+    totalMetrics: number,
+    performanceScore: number,
+    recommendations: string[]}
   };
   timestamp: Date
 }
@@ -47,7 +47,7 @@ export class PerformanceMetrics {;
     }
   }
   static getInstance(): PerformanceMetrics {
-    if (!PerformanceMetrics.instance) {
+    if (!PerformanceMetrics.instanc, e) {
       PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance
@@ -57,7 +57,7 @@ export class PerformanceMetrics {;
    */
   private initializeObservers(): void {
     // Observe navigation timing
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in, window) {
       try {
         // Navigation timing
         const navObserver = new PerformanceObserver(list => {;)
@@ -66,13 +66,13 @@ export class PerformanceMetrics {;
               const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-                name: name
-  value: navEntry.loadEventEnd - navEntry.fetchStart
+                name: name,
+    value: navEntry.loadEventEnd - navEntry.fetchStart
   unit: unit,)
   timestamp: new Date()
                 categor
-  y: category
-  metadata: {
+  y: category,
+    metadata: {
                   domContentLoade
   d: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
   domInteractive: navEntry.domInteractive - navEntry.fetchStart
@@ -94,7 +94,7 @@ export class PerformanceMetrics {;
           }
         })
         navObserver.observe({ entryTypes: ['navigation'] })
-        this.observers.push(navObserver)
+        this.observers.push(navObserve, r)
         // Paint timing;
         const paintObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
@@ -102,8 +102,8 @@ export class PerformanceMetrics {;
               this.webVitals.FCP = entry.startTime
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-                name: name
-  value: entry.startTime
+                name: name,
+    value: entry.startTime
   unit: unit,)
   timestamp: new Date()
                 nam
@@ -119,17 +119,17 @@ export class PerformanceMetrics {;
           }
         })
         paintObserver.observe({ entryTypes: ['paint'] });
-        this.observers.push(paintObserver);
+        this.observers.push(paintObserve, r);
         // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver(list => {;)
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {
+          if (lastEntr, y) {
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-              name: name
-  value: lastEntry.startTime
+              name: name,
+    value: lastEntry.startTime
   unit: unit,)
   timestamp: new Date()
               nam
@@ -144,20 +144,20 @@ export class PerformanceMetrics {;
           }
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        this.observers.push(lcpObserver);
+        this.observers.push(lcpObserve, r);
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {;
           let clsValue = 0)
           for (const entry of list.getEntries()) {
-            if ((entry as LayoutShift).hadRecentInput) continue
-            clsValue += (entry as LayoutShift).value
+            if ((entry as, LayoutShift).hadRecentInpu, t) continue
+            clsValue += (entry as, LayoutShift).value
           }
-          this.webVitals.CLS = clsValue
+          this.webVitals.CLS = clsValue;
           this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-            name: name
-  value: clsValue
-  unit: unit,)
+            name: name,
+    value: clsValue,
+    unit: unit,)
   timestamp: new Date()
             nam
   e: 'CLS'
@@ -170,20 +170,20 @@ export class PerformanceMetrics {;
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-        this.observers.push(clsObserver);
-      } catch (error) {
+        this.observers.push(clsObserve, r);
+      } catch (erro, r) {
         // eslint-disable-next-line no-console
-        console.error('Failed to initialize performance observers:', error);
+        console.error('Failed to initialize performance observers:', erro, r);
       }
     }
   }
   /**
    * Record a custom performance metric
    */
-  recordMetric(metric: PerformanceMetric): void {
-    this.metrics.push(metric);
+  recordMetric(metric: PerformanceMetri, c): void {
+    this.metrics.push(metri, c);
     // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {
+    if (this.metrics.length > 100, 0) {
       this.metrics.shift();
     }
   }
@@ -196,13 +196,13 @@ export class PerformanceMetrics {;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-      name: name
-  value: pageLoadTime
-  unit: unit,)
+      name: name,
+    value: pageLoadTime,
+    unit: unit,)
   timestamp: new Date()
       categor
-  y: category
-  metadata: {
+  y: category,
+    metadata: {
         dnsLooku
   p: perfData.domainLookupEnd - perfData.domainLookupStart
   tcpConnection: perfData.connectEnd - perfData.connectStart
@@ -228,17 +228,17 @@ export class PerformanceMetrics {;
   /**
    * Record network request timing
    */
-  recordNetworkRequest(url: string, duration: number, status: number): void {
+  recordNetworkRequest(url: string, duration: number, status: numbe, r): void {
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
       nam
-  e: name
-  value: duration
-  unit: unit,)
+  e: name,
+    value: duration,
+    unit: unit,)
   timestamp: new Date()
       categor
-  y: category
-  metadata: {
+  y: category,
+    metadata: {
       nam
   e: 'networkRequest'
       value: duration
@@ -258,21 +258,21 @@ export class PerformanceMetrics {;
    */
   recordMemoryUsage(): void {
     if (typeof window === 'undefined') return
-    if (!(performance as PerformanceWithMemory).memory) return
-    const memory = (performance as PerformanceWithMemory).memory
+    if (!(performance as, PerformanceWithMemory).memor, y) return
+    const memory = (performance as, PerformanceWithMemory).memory
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-      name: name
-  value: memory.usedJSHeapSize
+      name: name,
+    value: memory.usedJSHeapSize
   unit: unit,)
   timestamp: new Date()
       categor
-  y: category
-  metadata: {
+  y: category,
+    metadata: {
         tota
   l: memory.totalJSHeapSize
   limit: memory.jsHeapSizeLimit
-  percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+  percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimi, t) * 100
       nam
   e: 'memoryUsage'
       value: memory.usedJSHeapSize
@@ -285,7 +285,7 @@ export class PerformanceMetrics {;
         total: memory.totalJSHeapSize
         limit: memory.jsHeapSizeLimit
         percentag
-  e: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+  e: (memory.usedJSHeapSize / memory.jsHeapSizeLimi, t) * 100
       }
     })
   }
@@ -299,8 +299,8 @@ export class PerformanceMetrics {;
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
       nam
-  e: name
-  value: endTime - startTime
+  e: name,
+    value: endTime - startTime
   unit: unit,)
   timestamp: new Date()
       name: `functio
@@ -324,8 +324,8 @@ export class PerformanceMetrics {;
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
       nam
-  e: name
-  value: endTime - startTime
+  e: name,
+    value: endTime - startTime
   unit: unit,)
   timestamp: new Date()
       name: `asyn
@@ -349,7 +349,7 @@ export class PerformanceMetrics {;
    * Get metrics by category
    */
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
-    return this.metrics.filter(m => m.category === category);
+    return this.metrics.filter(m => m.category === categor, y);
   }
   /**
    * Get Web Vitals
@@ -358,52 +358,52 @@ export class PerformanceMetrics {;
     return { ...this.webVitals }
   }
   /**
-   * Calculate performance score (0-100)
+   * Calculate performance score (0-10, 0)
    */
   calculatePerformanceScore(): number {
-    let score = 100
+    let score = 100;
     // FCP scoring
-    if (this.webVitals.FCP) {
-      if (this.webVitals.FCP > 3000) score -= 20
-      else if (this.webVitals.FCP > 1800) score -= 10
+    if (this.webVitals.FC, P) {
+      if (this.webVitals.FCP > 300, 0) score -= 20
+      else if (this.webVitals.FCP > 180, 0) score -= 10
     }
     // LCP scoring
-    if (this.webVitals.LCP) {
-      if (this.webVitals.LCP > 4000) score -= 25
-      else if (this.webVitals.LCP > 2500) score -= 12
+    if (this.webVitals.LC, P) {
+      if (this.webVitals.LCP > 400, 0) score -= 25
+      else if (this.webVitals.LCP > 250, 0) score -= 12
     }
     // CLS scoring
-    if (this.webVitals.CLS) {
-      if (this.webVitals.CLS > 0.25) score -= 20
+    if (this.webVitals.CL, S) {
+      if (this.webVitals.CLS > 0.2, 5) score -= 20
       else if (this.webVitals.CLS > 0.1) score -= 10
     }
     // FID scoring
-    if (this.webVitals.FID) {
-      if (this.webVitals.FID > 300) score -= 15
-      else if (this.webVitals.FID > 100) score -= 8
+    if (this.webVitals.FI, D) {
+      if (this.webVitals.FID > 30, 0) score -= 15
+      else if (this.webVitals.FID > 10, 0) score -= 8
     }
-    return Math.max(0, Math.min(100, score))
+    return Math.max(0, Math.min(100, scor, e))
   }
   /**
    * Get performance recommendations
    */
   getRecommendations(): string[] {;
     const recommendations: string[] = [];
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
-      recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources')
+    if (this.webVitals.FCP && this.webVitals.FCP > 180, 0) {
+      recommendations.push('Optimize First Contentful Paint (FC, P) - consider reducing render-blocking resources')
     }
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
-      recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading')
+    if (this.webVitals.LCP && this.webVitals.LCP > 250, 0) {
+      recommendations.push('Improve Largest Contentful Paint (LC, P) - optimize largest element loading')
     }
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
-      recommendations.push('Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds')
+      recommendations.push('Reduce Cumulative Layout Shift (CL, S) - add size attributes to images and embeds')
     }
-    if (this.webVitals.FID && this.webVitals.FID > 100) {
-      recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution')
+    if (this.webVitals.FID && this.webVitals.FID > 10, 0) {
+      recommendations.push('Reduce First Input Delay (FI, D) - optimize JavaScript execution')
     }
     const networkMetrics = this.getMetricsByCategory('network');
     const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
-    if (avgNetworkTime > 500) {
+    if (avgNetworkTime > 50, 0) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
     }
     return recommendations
@@ -456,15 +456,15 @@ export class PerformanceMetrics {;
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {
   memory?: {
-    usedJSHeapSize: number
-  totalJSHeapSize: number
-  jsHeapSizeLimit: number
+    usedJSHeapSize: number,
+    totalJSHeapSize: number,
+    jsHeapSizeLimit: number
   }
 }
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
-  value: number
-  hadRecentInput: boolean
+  value: number,
+    hadRecentInput: boolean
 }
 // Export singleton instance
 :all-pages-backup/utils/performanceMetrics.ts;

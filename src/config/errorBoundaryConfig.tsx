@@ -50,26 +50,26 @@ notFound: React.ComponentType<{ error: Error; resetErro
 */
 :all-pages-backup/config/errorBoundaryConfig.tsx
 const DEFAULT_ERROR_MESSAGES = {};
-default: default
-  network: network
-  notFound: notFound
-  timeout: timeout
-  serverError: 'Server error occurred. Please try again later.'
+default: default,
+    network: network,
+    notFound: notFound,
+    timeout: timeout,
+    serverError: 'Server error occurred. Please try again later.'
 {validation: 'Validation error. Please check your input.'}
 /**
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {};
-logErrors: true
-  showDetails: isDevelopment
-  reportErrors: !isDevelopment
+logErrors: true,
+    showDetails: isDevelopment,
+    reportErrors: !isDevelopment
   reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
-  showErrorOverlay: isDevelopment
-  maxStoredErrors: 50
-  customMessages: DEFAULT_ERROR_MESSAGES
-  fallbackComponents: {}
-default: DefaultErrorFallback
-  network: NetworkErrorFallback
+  showErrorOverlay: isDevelopment,
+    maxStoredErrors: 50,
+    customMessages: DEFAULT_ERROR_MESSAGES,
+    fallbackComponents: {}
+default: DefaultErrorFallback,
+    network: NetworkErrorFallback
 {notFoun
   d: NotFoundFallback}}
 {}
@@ -84,17 +84,17 @@ validation: 'Validation error. Please check your input.'}
 * Get error boundary configuration based on environment
 */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}
-logErrors: true
-showDetails: isDevelopment
-reportErrors: !isDevelopment
+logErrors: true,
+    showDetails: isDevelopment,
+    reportErrors: !isDevelopment
 reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
-showErrorOverlay: isDevelopment
-maxStoredErrors: 50
-customMessages: DEFAULT_ERROR_MESSAGES
+showErrorOverlay: isDevelopment,
+    maxStoredErrors: 50,
+    customMessages: DEFAULT_ERROR_MESSAGES
 fallbackComponent
   s: {}
-default: DefaultErrorFallback
-network: NetworkErrorFallback
+default: DefaultErrorFallback,
+    network: NetworkErrorFallback
 notFoun
   d: NotFoundFallback}}
 }
@@ -106,9 +106,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
 return ();
     <>
   </>
-    <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-<div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
-<div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
+    <div></div>
+<div></div>
+<div></div>
 <svg className="w-6h-6te x t-red-600">
 fill="none"
 stroke="currentColor"
@@ -129,7 +129,7 @@ d="M6 18L18 6M6 6l12 12"</path>
 {process.env['NODE_ENV'] === 'development' && (}
 <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>
 {)}
-<div className="mt-6flexgap-4"></div>
+<div></div>
 <button
 onClick = {
 resetError
@@ -143,10 +143,10 @@ className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700tr
 {process.env['NODE_ENV'] === 'development' && (;}
 <pre className = "mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
 )}
-<div className="mt-6fl ex gap-4"></div>
-<button onClick={resetError}></button>
+<div></div>
+<button></button>
 className="fle x-1bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Try Again</button>
-<button,></button>
+<button></button>
 onClick={() =>(window.location.href = '/')}</button>
 className="fle x-1bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors">
         </div>
@@ -163,10 +163,10 @@ Go Home
 function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
   r: () => void }) {}
 return ();
-    <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-<div className="max-w-m dw-full bg-white rounded-lgshadow-lgp-6"></div>
-<div className="fle xitems-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
-<svg className="w-6h-6text-yellow-600"></svg>
+    <div></div>
+<div></div>
+<div></div>
+<svg></svg>
 fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"</svg>
@@ -182,8 +182,8 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 <p className="mt-2text-centertext-gray-600">
             Unable to connect to the server. Please check your internet connection and try again.
           </p>
-<div className="mt-6"></div>
-<button onClick={resetError}></button>
+<div></div>
+<button></button>
 className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Retry Connection</button>
 </div>
 </div>
@@ -195,19 +195,19 @@ className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 */
 function NotFoundFallback(): JSX.Element {}
 return ();
-    <div className="min-h-s creenflex items-center justify-center bg-gray-50 px-4"></div>
-<div className="max-w-m dw-full text-center"></div>
+    <div></div>
+<div></div>
 <h1 className="tex t-6xlfont-bold text-gray-900">404</h1>
 <h2 className="mt-4te xt-2xl font-bold text-gray-900">Page Not Found</h2>;
 <p className="mt-2te xt-gray-600">The page you&apos;re looking for doesn't exist or has been moved.</p>
-<div className = "mt-6 flex gap-4 justify-center"></div>
-<button ></button>
+<div></div>
+<button></button>
 onClick={() =>(window.location.href = '/')}</button>
 className="bg-bl ue-600text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors">
         </div>
 Go Home
 </
-<button,></button>
+<button></button>
 onClick={() =>window.history.back()}</button>
 className="bg-gr ay-200text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors">
         </div>
@@ -221,7 +221,7 @@ Go Back
 /**
 * Get error type from error object
 */
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {};
+export function getErrorType(error: Erro, r): keyof typeof DEFAULT_ERROR_MESSAGES {};
 if (error.message.includes('Network') || error.message.includes('fetch')) {}
 return 'network'
 {}
@@ -242,13 +242,13 @@ return 'default'
 /**
 * Format error for logging
 */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {};
+export function formatErrorForLogging(error: Erro, r): Record<string, unknown> {};
 return {}
 :all-pages-backup/config/errorBoundaryConfig.tsx
 message: error.message
   stack: error.stack
   name: error.name
-  type: getErrorType(error)
+  type: getErrorType(erro, r)
 timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 {ur
@@ -257,7 +257,7 @@ userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 message: error.message
 stack: error.stack
 name: error.name
-type: getErrorType(error)
+type: getErrorType(erro, r)
 timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 ur

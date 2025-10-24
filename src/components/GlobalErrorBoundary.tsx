@@ -10,32 +10,27 @@ interface State {
 }
 ;
 export default class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
+  constructor(props: Prop, s) {
+    super(prop, s)
     this.state = { hasErro
   r: false }
   }
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Erro, r): State {
     return { hasErro
   r: true, error }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInf, o) {
     // Error logging can be implemented here for production monitoring
     // console.error('Global error caugh,)
-  t:', error, errorInfo)
+  t:', error, errorInf, o)
   }
   render() {
-    if (this.state.hasError) {
+    if (this.state.hasErro, r) {
       return (</Props>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
-              <svg
-                className="w-6h-6text-red-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              ></svg>
+        <div></div>
+          <div></div>
+            <div></div>
+              <svg></svg>
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -48,7 +43,7 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
                 /></path>
               </svg>
             </div>
-            <div className="mt-4 text-center"></div>
+            <div></div>
               <h3 className="text-lg font-medium text-gray-900">
                 Application Error</h3>
               </h3>
@@ -78,6 +73,6 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div></div>
             </div>
           </div>

@@ -1,7 +1,7 @@
-'use client'
-import { Link from 'next/link';
-import { usePathname   } from 'next/navigation';
-import React   } from 'react';
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React from 'react';
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
   const pathnames = pathname.split('/').filter((x) => x);
@@ -17,7 +17,7 @@ const Breadcrumb: React.FC = () => {
               Home
             </Link>
           </li>
-          {pathnames.map((name, index) => {
+          {pathnames.map((name, inde, x) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
             return (
@@ -50,3 +50,4 @@ const Breadcrumb: React.FC = () => {
       </div>
     </nav>
 export default Breadcrumb }
+

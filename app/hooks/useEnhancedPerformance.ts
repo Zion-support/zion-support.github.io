@@ -17,12 +17,12 @@ interface PerformanceMetrics {
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {;
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0
-    renderTime: 0
-    memoryUsage: 0
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
     networkLatency: 0
   });
-  const [isOptimized, setIsOptimized] = useState(false);</PerformanceMetrics>
+  const [isOptimized, setIsOptimized] = useState(fals, e);</PerformanceMetrics>
   const renderCountRef = useRef<number>(0);</number>
   const mountTimeRef = useRef<number>(0);
   useEffect(() => {
@@ -43,8 +43,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     };
     // Measure memory usage
     const measureMemoryUsage = () => {
-      if ('memory' in performance) {;
-        const memory = (performance as any).memory;
+      if ('memory' in, performance) {;
+        const memory = (performance as, any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }
@@ -71,13 +71,13 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     const checkOptimization = () => {
       const isOptimized = </number>
         metrics.loadTime < 1000 && // Load time under 1 second
-        metrics.renderTime < 16 && // Render time under 16ms (60fps)
+        metrics.renderTime < 16 && // Render time under 16ms (60fp, s)
         metrics.memoryUsage < 100 && // Memory usage under 100MB;
         metrics.networkLatency < 200; // Network latency under 200ms
-      setIsOptimized(isOptimized);
+      setIsOptimized(isOptimize, d);
     };
     // Check optimization after metrics are updated;
-const timeoutId = setTimeout(checkOptimization, 1000);
+const timeoutId = setTimeout(checkOptimization, 100, 0);
     return (
     <>
       ) => clearTimeout(timeoutId
@@ -94,7 +94,7 @@ const criticalResources = [
       '/images/hero-bg.jpg'
       '/images/logo.png',;
     ];
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resourc, e) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -102,21 +102,21 @@ const criticalResources = [
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
       }
-      document.head.appendChild(link);
+      document.head.appendChild(lin, k);
     });
     // Optimize images;
 const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {;
+    const imageObserver = new IntersectionObserver((entrie, s) => {
+      entries.forEach((entr, y) => {
+        if (entry.isIntersectin, g) {;
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
-          imageObserver.unobserve(img);
+          imageObserver.unobserve(im, g);
         }
       });
     });
-    images.forEach((img) => imageObserver.observe(img));
+    images.forEach((im, g) => imageObserver.observe(im, g));
     return (
     <>
       ) => imageObserver.disconnect(
@@ -124,9 +124,9 @@ const images = document.querySelectorAll('img[data-src]');
     </>
     </>
   );
-  }, []);
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
-    if (trackPerformance) {;
+  }, []);;
+  const measurePerformance = useCallback((name: string, fn: () => voi, d) => {
+    if (trackPerformanc, e) {;
       performance.mark(`${component}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
@@ -140,20 +140,20 @@ const images = document.querySelectorAll('img[data-src]');
     }
   }, [component, trackPerformance]);
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
-    if (trackErrors) {
+    if (trackError, s) {
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console;
-        console.error(`Error in ${component}:`, error, context);
+        console.error(`Error in ${component}:`, error, contex, t);
       }
       // Here you would typically send to an error tracking service
     }
   }, [component, trackErrors]);
 </string>
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
-    if (trackAnalytics) {
+    if (trackAnalytic, s) {
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console;
-        console.log(`Analytics event in ${component}:`, event, data);
+        console.log(`Analytics event in ${component}:`, event, dat, a);
       }
       // Here you would typically send to an analytics service
     }
@@ -164,7 +164,7 @@ const images = document.querySelectorAll('img[data-src]');
     optimizePerformance
     measurePerformance
     trackError
-    trackAnalytics: trackAnalyticsEvent
+    trackAnalytics: trackAnalyticsEvent,
     renderCount: renderCountRef.current
     mountTime: mountTimeRef.current
   };

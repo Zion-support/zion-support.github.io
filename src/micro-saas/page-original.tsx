@@ -15,25 +15,24 @@ const MicroSAASPage: React.FC = () => {
     </div>
         canonicalUrl="https://ziontechgroup.com/micro-saas"
       /></SEOOptimizer>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation /></Navigation>
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
-          <div className="text-center"></div>
-            <h1 className="text-4xl m
-  d:text-5xl font-bold text-white mb-8 neon-text"></h1>
+      <div></div>
+        <Navigation></Navigation>
+        <main></main>
+          <div></div>
+            <h1></h1>
               Micro SAAS Solutions</h1>
             </h1>
-            <p className="text-xl text-gray-300 mb-8"></p>
+            <p></p>
               Professional micro SAAS solutions and services for your business needs.</p>
             </p>
-            <div className="cyber-card p-8 max-w-4xl mx-auto"></div>
-              <p className="text-gray-300"></p>
+            <div></div>
+              <p></p>
                 This page is under development. Please check back soon for more information about our micro SAAS solutions.</p>
               </p>
             </div>
           </div>
         </main>
-        <Footer /></Footer>
+        <Footer></Footer>
       </div>
     </div>
     </div>

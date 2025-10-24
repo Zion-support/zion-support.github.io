@@ -5,7 +5,7 @@ interface MicroSAASCardProps {
 ;
 const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '' }) => {
   return (</MicroSAASCardProps>
-    <div className={className}></div>
+    <div></div>
       <h2>MicroSAASCard</h2>
       <p>This component is under construction.</p>
     </div>

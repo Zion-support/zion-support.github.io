@@ -15,7 +15,7 @@ export interface Metadata {;
   metadataBase?: URL
   alternates?: {
   canonical?: string
-    languages?: Record<string, string></string>
+    languages?: Record<string></string>
 }
   openGraph?: {
   title?: string
@@ -56,7 +56,7 @@ export interface Metadata {;
   google?: string
     yandex?: string
     yahoo?: string
-    other?: Record<string, string></string>
+    other?: Record<string></string>
 }
 }
 export interface MetadataRoute {
@@ -81,7 +81,7 @@ export interface NextPageProps {;}
 }
 // API route types
 export interface ApiRouteHandler {;}</string>
-  (req: Request): Promise<Response>};
+  (req: Reques, t): Promise<Response>};
 // Server components types
 export interface ServerComponentProps {;}
   params: { [ke
@@ -97,12 +97,12 @@ export interface ClientComponentProps {
 };
 // Route handlers
 export interface RouteHandler {;</Response>
-  GET?: (req: Request) => Promise<Response></Response>
-  POST?: (req: Request) => Promise<Response></Response>
-  PUT?: (req: Request) => Promise<Response>
+  GET?: (req: Reques, t) => Promise<Response></Response>
+  POST?: (req: Reques, t) => Promise<Response></Response>
+  PUT?: (req: Reques, t) => Promise<Response>
   DELETE?: (re,</Response>
-  q: Request) => Promise<Response>}</Response>
-  PATCH?: (req: Request) => Promise<Response>};
+  q: Reques, t) => Promise<Response>}</Response>
+  PATCH?: (req: Reques, t) => Promise<Response>};
 // Dynamic route types
 export interface DynamicRoute {;}
   params: { [ke
@@ -132,9 +132,9 @@ declare module 'next' {
   interface NextApiRequest {
     user?: {
 :all-pages-backup/types/next.d.ts
-      id: string
-  email: string
-      id: string
+      id: string,
+    email: string,
+    id: string
     emai
   l: string
       name?: string}
