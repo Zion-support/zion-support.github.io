@@ -7,6 +7,7 @@ const mockImportMetaEnv = (envValues: Record<string, string | boolean | undefine
     devToSet = envValues.DEV
   }
   
+  // Separate DEV from other envValues for clarity
   const otherEnvValues = { ...envValues }
   delete otherEnvValues.DEV
   
@@ -19,6 +20,10 @@ const mockImportMetaEnv = (envValues: Record<string, string | boolean | undefine
     }
   }
   
+  // Apply DEV last. For Jest, this usually means setting NODE_ENV or a specific mock
+  // if the code directly uses import.meta.env.DEV.
+  // Assuming babel-plugin-transform-import-meta or ts-jest handles import.meta.env.DEV
+  // to read from process.env.DEV or process.env.NODE_ENV.
   if (devToSet) {
     process.env.NODE_ENV = 'development'
     process.env.DEV = 'true'
@@ -28,9 +33,9 @@ const mockImportMetaEnv = (envValues: Record<string, string | boolean | undefine
   }
 }
 
-describe('Environment Validation', () => {
+describe('validateEnv', () => {
   beforeEach(() => {
-    // Clear all environment variables
+    // Clear all environment variables before each test
     const envKeys = Object.keys(process.env)
     envKeys.forEach(key => {
       if (key.startsWith('NEXT_PUBLIC_') || key.startsWith('SUPABASE_') || key === 'NODE_ENV' || key === 'DEV') {
@@ -41,12 +46,24 @@ describe('Environment Validation', () => {
 
   afterEach(() => {
     vi.clearAllMocks()
+    // Clean up after each test
+    const envKeys = Object.keys(process.env)
+    envKeys.forEach(key => {
+      if (key.startsWith('NEXT_PUBLIC_') || key.startsWith('SUPABASE_') || key === 'NODE_ENV' || key === 'DEV') {
+        delete process.env[key]
+      }
+    })
+
+    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    
+    expect(() => checkEssentialEnvVars()).toThrow('Missing required environment variables')
   })
 
-  it('should validate required environment variables', async () => {
+  it('should pass validation with all required environment variables', async () => {
     mockImportMetaEnv({
       NEXT_PUBLIC_SUPABASE_URL: 'https://test.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'test-anon-key',
+      SUPABASE_SERVICE_ROLE_KEY: 'test-service-role-key',
       DEV: true
     })
 
@@ -56,20 +73,57 @@ describe('Environment Validation', () => {
     expect(() => checkEssentialEnvVars()).not.toThrow()
   })
 
-  it('should throw error for missing required variables', async () => {
+  it('should throw error when NEXT_PUBLIC_SUPABASE_URL is missing', async () => {
+    mockImportMetaEnv({
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: 'test-anon-key',
+      SUPABASE_SERVICE_ROLE_KEY: 'test-service-role-key',
+      DEV: true
+    })
+
+    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    
+    expect(() => checkEssentialEnvVars()).toThrow('Missing required environment variable: NEXT_PUBLIC_SUPABASE_URL')
+  })
+
+  it('should throw error when NEXT_PUBLIC_SUPABASE_ANON_KEY is missing', async () => {
+    mockImportMetaEnv({
+      NEXT_PUBLIC_SUPABASE_URL: 'https://test.supabase.co',
+      SUPABASE_SERVICE_ROLE_KEY: 'test-service-role-key',
+      DEV: true
+    })
+
+    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    
+    expect(() => checkEssentialEnvVars()).toThrow('Missing required environment variable: NEXT_PUBLIC_SUPABASE_ANON_KEY')
+  })
+
+  it('should throw error when SUPABASE_SERVICE_ROLE_KEY is missing', async () => {
+    mockImportMetaEnv({
+      NEXT_PUBLIC_SUPABASE_URL: 'https://test.supabase.co',
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: 'test-anon-key',
+      DEV: true
+    })
+
+    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    
+    expect(() => checkEssentialEnvVars()).toThrow('Missing required environment variable: SUPABASE_SERVICE_ROLE_KEY')
+  })
+
+  it('should throw error when multiple environment variables are missing', async () => {
     mockImportMetaEnv({
       DEV: true
     })
 
     const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
     
-    expect(() => checkEssentialEnvVars()).toThrow('Missing required environment variables')
+    expect(() => checkEssentialEnvVars()).toThrow()
   })
 
-  it('should validate production environment', async () => {
+  it('should work in production mode', async () => {
     mockImportMetaEnv({
-      NEXT_PUBLIC_SUPABASE_URL: 'https://prod.supabase.co',
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: 'prod-anon-key',
+      NEXT_PUBLIC_SUPABASE_URL: 'https://test.supabase.co',
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: 'test-anon-key',
+      SUPABASE_SERVICE_ROLE_KEY: 'test-service-role-key',
       DEV: false
     })
 

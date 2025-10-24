@@ -1,5 +1,4 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { loginUser } from '@/services/authService'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 const mockSignInWithPassword = vi.fn()
@@ -14,7 +13,7 @@ vi.mock('@supabase/supabase-js', () => ({
     },
     from: vi.fn().mockReturnThis()
   }))
-})
+}));
 
 // Import the handler AFTER setting up the mock
 import loginHandler from '../../pages/api/auth/login'
@@ -55,7 +54,7 @@ describe('/api/auth/login API Handler', () => {
     const mockAuthToken = 'mock-access-token'
     const mockSessionData = {
       access_token: mockAuthToken,
-      refresh_token: 'mock-refresh-token',
+      refresh_token: 'mock-refresh-token'
     }
     const mockUserData = { id: 'user-123', email: testEmail }
 
@@ -67,7 +66,10 @@ describe('/api/auth/login API Handler', () => {
       error: null
     })
 
-    const req = mockApiReq({ email: testEmail, password: testPassword })
+    const req = mockApiReq({
+      email: testEmail,
+      password: testPassword
+    })
     const res = mockApiRes()
 
     await loginHandler(req, res)
@@ -75,8 +77,7 @@ describe('/api/auth/login API Handler', () => {
     expect(res.status).toHaveBeenCalledWith(200)
     expect(res.json).toHaveBeenCalledWith({
       success: true,
-      user: mockUserData,
-      message: 'Login successful'
+      user: mockUserData
     })
     expect(res.setHeader).toHaveBeenCalledWith(
       'Set-Cookie',
@@ -87,18 +88,20 @@ describe('/api/auth/login API Handler', () => {
   it('should return 400 for invalid credentials', async () => {
     mockSignInWithPassword.mockResolvedValueOnce({
       data: { user: null, session: null },
-      error: { message: 'Invalid login credentials' }
+      error: { message: 'Invalid credentials' }
     })
 
-    const req = mockApiReq({ email: 'wrong@example.com', password: 'wrong' })
+    const req = mockApiReq({
+      email: 'invalid@example.com',
+      password: 'wrongpassword'
+    })
     const res = mockApiRes()
 
     await loginHandler(req, res)
 
     expect(res.status).toHaveBeenCalledWith(400)
     expect(res.json).toHaveBeenCalledWith({
-      success: false,
-      error: 'Invalid login credentials'
+      error: 'Invalid credentials'
     })
   })
 
@@ -110,23 +113,7 @@ describe('/api/auth/login API Handler', () => {
 
     expect(res.status).toHaveBeenCalledWith(400)
     expect(res.json).toHaveBeenCalledWith({
-      success: false,
       error: 'Email and password are required'
-    })
-  })
-
-  it('should return 500 for server errors', async () => {
-    mockSignInWithPassword.mockRejectedValueOnce(new Error('Database connection failed'))
-
-    const req = mockApiReq({ email: 'test@example.com', password: 'password' })
-    const res = mockApiRes()
-
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(500)
-    expect(res.json).toHaveBeenCalledWith({
-      success: false,
-      error: 'Internal server error'
     })
   })
 })

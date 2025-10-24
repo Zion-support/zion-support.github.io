@@ -1,6 +1,6 @@
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -74,10 +74,10 @@ const EnhancedFooter: React.FC = () => {
             <ul className="space-y-2">
               {services.slice(0, 6).map(service => (
                 <li key={service.name}>
-                  <Link to={service.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {service.name}
-                    </span>
+                  <Link
+                    href={service.href}
+                    className="text-gray-300 hover:text-white transition-colors block">
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -89,10 +89,10 @@ const EnhancedFooter: React.FC = () => {
             <ul className="space-y-2">
               {products.slice(0, 6).map(product => (
                 <li key={product.name}>
-                  <Link to={product.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {product.name}
-                    </span>
+                  <Link
+                    href={product.href}
+                    className="text-gray-300 hover:text-white transition-colors block">
+                    {product.name}
                   </Link>
                 </li>
               ))}
@@ -104,10 +104,10 @@ const EnhancedFooter: React.FC = () => {
             <ul className="space-y-2">
               {quickLinks.map(item => (
                 <li key={item.name}>
-                  <Link to={item.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {item.name}
-                    </span>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors block">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -144,23 +144,23 @@ const EnhancedFooter: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/legal/privacy">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </span>
+              <Link
+                href="/legal/privacy"
+                className="text-gray-400 hover:text-white text-sm transition-colors">
+                Privacy Policy
               </Link>
-              <Link to="/legal/terms">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </span>
+              <Link
+                href="/legal/terms"
+                className="text-gray-400 hover:text-white text-sm transition-colors">
+                Terms of Service
               </Link>
-              <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Cookie Policy
-                </span>
+              <Link
+                href="/legal/cookies"
+                className="text-gray-400 hover:text-white text-sm transition-colors">
+                Cookie Policy
               </Link>
             </div>
           </div>
