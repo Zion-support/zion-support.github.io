@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
   title?: string
@@ -34,7 +35,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       meta.name = 'description'
       meta.content = description
       document.head.appendChild(meta)
-    
+    }
 
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]')
@@ -45,7 +46,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       meta.name = 'keywords'
       meta.content = keywords
       document.head.appendChild(meta)
-    
+    }
 
     // Update canonical URL
     if (canonicalUrl) {
@@ -57,41 +58,41 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         link.rel = 'canonical'
         link.href = canonicalUrl
         document.head.appendChild(link)
-      
-    
+      }
+    }
   }, [title, description, keywords, canonicalUrl])
 
   return (
+    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
-        {/* Open Graph */
+        {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         
-        {/* Twitter Card */
+        {/* Twitter Card */}
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         
-        {/* Structured Data */
+        {/* Structured Data */}
         {structuredData && (
           <script type="application/ld+json">
-            {JSON.stringify(structuredData)
+            {JSON.stringify(structuredData)}
           </script>
-        )
+        )}
       </Helmet>
       {children}
+    </>
   );
 };
 
-}
-
-export default SEOEnhancer;}
+export default SEOEnhancer;

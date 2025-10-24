@@ -47,7 +47,7 @@ export class ApiClient {
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
-      
+      }
 
       const data = await response.json()
       return {
@@ -67,7 +67,7 @@ export class ApiClient {
       method: 'GET',
       ...options,
     })
-  
+  }
 
   async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
@@ -79,7 +79,7 @@ export class ApiClient {
       body: data ? JSON.stringify(data) : undefined,
       ...options,
     })
-  
+  }
 
   async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
@@ -91,7 +91,7 @@ export class ApiClient {
       body: data ? JSON.stringify(data) : undefined,
       ...options,
     })
-  
+  }
 
   async patch<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
@@ -103,16 +103,14 @@ export class ApiClient {
       body: data ? JSON.stringify(data) : undefined,
       ...options,
     })
-  
+  }
 
   async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'DELETE',
       ...options,
     })
-  
-
-
+  }
 }
 
-export default ApiClient;}
+export default ApiClient;

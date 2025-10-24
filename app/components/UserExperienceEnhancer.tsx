@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
   children: React.ReactNode
@@ -35,19 +35,19 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       
       if (isHighContrast) {
         document.documentElement.classList.add('high-contrast')
-      
+      }
       
       if (isReducedMotion) {
         document.documentElement.classList.add('reduced-motion')
-      
-    
+      }
+    }
 
     // Add keyboard navigation support
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
           document.body.classList.add('keyboard-navigation')
-        
+        }
       }
 
       const handleMouseDown = () => {
@@ -61,7 +61,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         document.removeEventListener('keydown', handleKeyDown)
         document.removeEventListener('mousedown', handleMouseDown)
       }
-    
+    }
   }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
 
   // Add CSS classes for enhanced UX
@@ -69,35 +69,35 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     const style = document.createElement('style')
     style.textContent = `
       .ux-enhanced {
-        ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''
-      
+        ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
+      }
       
       .ux-enhanced button:hover {
-        ${enableHoverEffects ? 'transform: translateY(-2px);' : ''
-        ${enableHoverEffects ? 'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' : ''
-      
+        ${enableHoverEffects ? 'transform: translateY(-2px);' : ''}
+        ${enableHoverEffects ? 'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' : ''}
+      }
       
       .ux-enhanced input:focus,
       .ux-enhanced textarea:focus,
       .ux-enhanced select:focus {
-        ${enableFocusManagement ? 'outline: 2px solid #3b82f6;' : ''
-        ${enableFocusManagement ? 'outline-offset: 2px;' : ''
-      
+        ${enableFocusManagement ? 'outline: 2px solid #3b82f6;' : ''}
+        ${enableFocusManagement ? 'outline-offset: 2px;' : ''}
+      }
       
       .keyboard-navigation *:focus {
-        ${enableKeyboardNavigation ? 'outline: 2px solid #3b82f6;' : ''
-        ${enableKeyboardNavigation ? 'outline-offset: 2px;' : ''
-      
+        ${enableKeyboardNavigation ? 'outline: 2px solid #3b82f6;' : ''}
+        ${enableKeyboardNavigation ? 'outline-offset: 2px;' : ''}
+      }
       
       .high-contrast {
-        filter: contrast(150%)
-      
+        filter: contrast(150%);
+      }
       
       .reduced-motion * {
-        animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important
-      
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     `
     document.head.appendChild(style)
 
@@ -108,11 +108,9 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
   return (
     <div className="ux-enhanced">
-      {children
+      {children}
     </div>
   )
 }
 
-}
-
-export default UserExperienceEnhancer;}
+export default UserExperienceEnhancer;
