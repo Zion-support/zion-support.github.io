@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 'use client'
+import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -85,6 +86,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
 
   const pricing = pricingPlans
 
+const Page = () => {
   return (
     <>
       <SEOOptimizer
@@ -93,12 +95,12 @@ const AIWorkflowAutomationPage: React.FC = () => {
         keywords={['AI workflow automation', 'business process automation', 'workflow optimization', 'process intelligence', 'automation platform']}
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Workflow Automation Solutions
               </h1>
@@ -109,7 +111,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 Our AI-powered workflow automation platform helps you streamline operations,
                 reduce errors, and increase efficiency across your entire organization.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
@@ -127,10 +129,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 </a>
               </div>
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
                 {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
                       {stat.number}
                     </div>
                     <div className="text-gray-300 font-medium">{stat.label}</div>
@@ -140,13 +142,13 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
           {/* Features Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -163,13 +165,13 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
           {/* Use Cases Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Automate Any Business Process
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
@@ -178,20 +180,20 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
           {/* Pricing Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
               {pricing.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
-                >
+                ></div>
                   {index === 1 && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular
                       </span>
@@ -219,15 +221,15 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Automate Your Workflows?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join 200+ companies already using our AI workflow automation solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -248,9 +250,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
           </section>
         </main>
         <Footer />
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
       </div>
     </>
   )
 }
 
-export default AIWorkflowAutomationPage
+export default Page;

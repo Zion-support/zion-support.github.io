@@ -1,5 +1,6 @@
 'use client'
-<<<<<<< HEAD
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedAccessibilityEnhancerProps {
@@ -15,16 +16,19 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
-  enableScreenReader= true,
-  enableHighContrast= true,
-  enableFocusManagement= true,
-  enableARIALabels= true,
-  enableSkipLinks= true,
-  enableColorContrast= true,
-  enableMotionReduction= true,
-  enableFontScaling= true,
-  enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableARIALabels = true,
+  enableSkipLinks = true,
+  enableColorContrast = true,
+  enableMotionReduction = true,
+  enableFontScaling = true,
+  enableVoiceNavigation = true
+}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
@@ -83,7 +87,6 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
       root.classList.add('high-contrast')
     } else {
       root.classList.remove('high-contrast')
-=======
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -116,7 +119,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
 
     // Apply reduced motion
     if (accessibilitySettings.reducedMotion) {
@@ -125,11 +127,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       root.classList.remove('reduced-motion')
     }
 
-<<<<<<< HEAD
-    // Apply font scaling
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
-  }, [accessibilitySettings])
-=======
   return (
     <>
       
@@ -162,36 +159,13 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    consthandleKeyDown= (event: KeyboardEvent) => {
-  
+    const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
-        if (skipLink) {
-          skipLink.focus()
-          event.preventDefault()
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement
-        if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
-          activeElement.click()
-        }
-      }
-
-      // Arrow keys for menu navigation
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]') as HTMLElement
-        if (menu && menu.contains(event.target as Node)) {
-          event.preventDefault()
-          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
-          const currentIndex = menuItems.indexOf(event.target as HTMLElement)
-          const nextIndex = event.key === 'ArrowDown'
-            ? (currentIndex + 1) % menuItems.length
-            : currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1
-          menuItems[nextIndex]?.focus()
+      if (event.key === 'Tab' && event.shiftKey && event.ctrlKey) {
+        event.preventDefault()
+        const mainContent = document.getElementById('main-content')
+        if (mainContent) {
+          mainContent.focus()
         }
       }
     }
@@ -200,57 +174,51 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  // Screen reader enhancements
+  // Screen reader support
   const setupScreenReaderSupport = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    // Add live region for dynamic content updates
-    const liveRegion = document.createElement('div')
-    liveRegion.setAttribute('aria-live', 'polite')
-    liveRegion.setAttribute('aria-atomic', 'true')
-    liveRegion.className = 'sr-only'
-    liveRegion.id = 'live-region'
-    document.body.appendChild(liveRegion)
+    // Add screen reader announcements
+    const announceToScreenReader = (message: string) => {
+      const announcement = document.createElement('div')
+      announcement.setAttribute('aria-live', 'polite')
+      announcement.setAttribute('aria-atomic', 'true')
+      announcement.className = 'sr-only'
+      announcement.textContent = message
+      document.body.appendChild(announcement)
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement)
+      }, 1000)
+    }
 
     // Announce page changes
-    const announcePageChange = (message: string) => {
-      const liveRegion = document.getElementById('live-region')
-      if (liveRegion) {
-        liveRegion.textContent = message
-      }
-    }
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          announceToScreenReader('Page content updated')
+        }
+      })
+    })
 
-    // Listen for route changes (if using client-side routing)
-    const originalPushState = history.pushState
-    const originalReplaceState = history.replaceState
-
-    history.pushState = function(...args) {
-      originalPushState.apply(history, args)
-      announcePageChange('Page changed')
-    }
-
-    history.replaceState = function(...args) {
-      originalReplaceState.apply(history, args)
-      announcePageChange('Page updated')
-    }
+    observer.observe(document.body, { childList: true, subtree: true })
+    return () => observer.disconnect()
   }, [])
 
   // Focus management
   const setupFocusManagement = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    // Trap focus in modals
+    // Trap focus within modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      ) as NodeListOf<HTMLElement>
+      )
+      const firstElement = focusableElements[0] as HTMLElement
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
 
-      const firstElement = focusableElements[0]
-      const lastElement = focusableElements[focusableElements.length - 1]
-
-      consthandleTabKey= (e: KeyboardEvent) => {
-  
-        if (e.key=== 'Tab') {
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
           if (e.shiftKey) {
             if (document.activeElement === firstElement) {
               lastElement.focus()
@@ -266,118 +234,80 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
 
       element.addEventListener('keydown', handleTabKey)
-      firstElement?.focus()
-
       return () => element.removeEventListener('keydown', handleTabKey)
     }
 
-    // Apply focus trap to modals
+    // Apply to all modals
     const modals = document.querySelectorAll('[role="dialog"]')
-    modals.forEach(modal => {
-      const cleanup = trapFocus(modal as HTMLElement)
-      // Store cleanup function for later use
-      (modal as any).__focusTrapCleanup = cleanup
-
+    modals.forEach(modal => trapFocus(modal as HTMLElement))
   }, [])
 
-  // ARIA labels enhancement
+  // Enhanced ARIA labels
   const enhanceARIALabels = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    // Add missing ARIA labels to interactive elements
+    // Add missing ARIA labels
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
-    buttons.forEach((button, index) => {
-      const text = button.textContent?.trim()
-      if (text && text.length > 0) {
-        button.setAttribute('aria-label', text)
-      } else {
-        button.setAttribute('aria-label', `Button ${index + 1}`)
+    buttons.forEach(button => {
+      if (!button.textContent?.trim()) {
+        button.setAttribute('aria-label', 'Button')
       }
+    })
 
     // Add ARIA labels to images
     const images = document.querySelectorAll('img:not([alt])')
-    images.forEach((img, index) => {
-      img.setAttribute('alt', `Image ${index + 1}`)
-
-    // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
-    inputs.forEach((input, index) => {
-      const placeholder = input.getAttribute('placeholder')
-      const label = input.getAttribute('name')
-      if (placeholder) {
-        input.setAttribute('aria-label', placeholder)
-      } else if (label) {
-        input.setAttribute('aria-label', label)
-      } else {
-        input.setAttribute('aria-label', `Input ${index + 1}`)
-      }
-
+    images.forEach(img => {
+      img.setAttribute('alt', 'Image')
+    })
   }, [])
 
   // Skip links
   const addSkipLinks = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' },
-      { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
-    ]
-
-    const skipLinksContainer = document.createElement('div')
-    skipLinksContainer.className = 'skip-links'
-    skipLinksContainer.setAttribute('aria-label', 'Skip links')
-
-    skipLinks.forEach(({ href, text }) => {
-      const link = document.createElement('a')
-      link.href = href
-      link.textContent = text
-      link.className = 'skip-link'
-      link.setAttribute('data-skip-link', 'true')
-      skipLinksContainer.appendChild(link)
-
-    document.body.insertBefore(skipLinksContainer, document.body.firstChild)
+    const skipLinks = document.createElement('div')
+    skipLinks.className = 'skip-links'
+    skipLinks.innerHTML = `
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#navigation" class="skip-link">Skip to navigation</a>
+    `
+    document.body.insertBefore(skipLinks, document.body.firstChild)
   }, [])
 
-  // Color contrast checking
+  // Color contrast checker
   const checkColorContrast = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    const checkElementContrast = (element: HTMLElement) => {
+    const checkElement = (element: Element) => {
       const styles = window.getComputedStyle(element)
-      const backgroundColor = styles.backgroundColor
       const color = styles.color
-
-      // Simple contrast check (this would need a more sophisticated implementation)
-      if (backgroundColor && color) {
-        // Add visual indicator for low contrast elements
-        element.setAttribute('data-contrast-checked', 'true')
+      const backgroundColor = styles.backgroundColor
+      
+      // Basic contrast check (simplified)
+      if (color === backgroundColor) {
+        // Low contrast detected - could implement proper contrast checking here
       }
     }
 
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div')
-    elements.forEach(element => checkElementContrast(element as HTMLElement))
+    const allElements = document.querySelectorAll('*')
+    allElements.forEach(checkElement)
   }, [])
 
-  // Voice navigation support
+  // Voice navigation
   const setupVoiceNavigation = useCallback(() => {
-    if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return
+    if (typeof window === 'undefined') return
 
     const recognition = new (window as any).webkitSpeechRecognition()
     recognition.continuous = false
     recognition.interimResults = false
-    recognition.lang = 'en-US'
 
     recognition.onresult = (event: any) => {
       const command = event.results[0][0].transcript.toLowerCase()
-
-      // Voice commands
+      
       if (command.includes('go to home')) {
         window.location.href = '/'
       } else if (command.includes('go to about')) {
         window.location.href = '/about'
-      } else if (command.includes('go to contact')) {
-        window.location.href = '/contact'
       } else if (command.includes('go to services')) {
         window.location.href = '/services'
       } else if (command.includes('call phone')) {
@@ -429,7 +359,3 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
 
 export default AdvancedAccessibilityEnhancer
-}}}}}
-};
-
-export default AdvancedAccessibilityEnhancerPage;

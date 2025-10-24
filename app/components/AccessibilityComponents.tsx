@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-"use client"
-import React from "react"
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -9,15 +5,18 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
-const AccessibilityComponents: React.FC = () => {
-  return null
+interface AccessibilityComponentsProps {
+  className?: string;
 }
 
-export default AccessibilityComponents
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h1>Accessibility Components</h1>
+    </div>
+  );
+};
 
-<<<<<<< HEAD
-export default AccessibilityComponentsPage;
-=======
   return (
     <>
       
@@ -119,3 +118,4 @@ export default AccessibilityComponentsPage;
 
 export default AccessibilityComponentsPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
+export default AccessibilityComponents;

@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
+'use client'
+import Navigation from './Navigation';
 
 import React, { useEffect } from 'react';
 
@@ -55,13 +54,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
 
-<<<<<<< HEAD
-      // Add ARIA landmarks
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-=======
   return (
     <>
       

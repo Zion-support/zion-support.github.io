@@ -1,4 +1,5 @@
 'use client'
+import { ArrowRight, TrendingUp } from 'lucide-react'
 import React from 'react'
 <<<<<<< HEAD
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
