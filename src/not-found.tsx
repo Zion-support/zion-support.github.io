@@ -1,123 +1,85 @@
-import { Phone } from 'lucide-react';
-import { Home } from 'lucide-react';
+'use client';
 
-export default function NotFound;
-NotFound.displayName = "NotFound"() {const popularPages = [
-    {,
-    'title: 'Home'',
-    'description: 'Return to our homepage'',
-    'href: '/'',
-    'ico,',
-    'n: '🏠'',
-    '}',
-    {title: 'AI Services',
-    'description: 'Explore our comprehensive AI and IT solutions'',
-    'href: '/services'',
-    'ico,',
-    'n: '🤖'',
-    '}',
-    {title: 'Micro SAAS Solutions',
-    'description: 'Affordable AI-powered tools for modern businesses'',
-    'href: '/micro-saas'',
-    'ico,',
-    'n: '⚡'',
-    '}',
-    {title: 'AI Project Manager',
-    'description: 'Intelligent project planning and management'',
-    'href: '/ai-project-manager'',
-    'ico,',
-    'n: '📊'',
-    '}',
-    {title: 'AI Analytics Dashboard',
-    'description: 'Transform data into actionable insights'',
-    'href: '/ai-analytics-dashboard'',
-    'ico,',
-    'n: '📈'',
-    '}',
-    {title: 'Blog & Insights',
-    'description: 'Read about latest AI trends and innovations'',
-    'href: '/blog'',
-    'ico,',
-    'n: '📚'',
-    '}',
-    {title: 'Case Studies',
-    'description: 'See our success stories and client results'',
-    'href: '/case-studies'',
-    'ico,',
-    'n: '📊'',
-    '}',
-    {title: 'About Us',
-    'description: 'Learn about Zion Tech Group and our mission'',
-    'href: '/about'',
-    'ico,',
-    'n: '🏢'',
-    '}',
-    {title: 'Contact Us',
-    'description: 'Get in touch with our AI experts'',
-    'href: '/contact'',
-    'ico,',
-    'n: '📞'',
-    '}'
+import { Phone, Home, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
+
+export default function NotFound() {
+  const popularPages = [
+    {
+      title: 'Home',
+      description: 'Return to our homepage',
+      href: '/',
+      icon: Home
+    },
+    {
+      title: 'AI Solutions',
+      description: 'Explore our AI offerings',
+      href: '/ai-solutions',
+      icon: Phone
+    },
+    {
+      title: 'IT Services',
+      description: 'Discover our IT services',
+      href: '/it-services',
+      icon: Phone
+    },
+    {
+      title: 'Contact',
+      description: 'Get in touch with us',
+      href: '/contact',
+      icon: Phone
+    }
   ];
-  return ();
-    <div className=&quot;min-h-screen bg-gray-50 flex items-center justify-center px-4&quot;></div>
-      <div className=&quot;max-w-2xl w-full text-center&quot;></div>
-        {
-    /* Error Code  */
-    return (</div>
-          <h1 className=&quot;text-9xl font-bold text-white/20 mb-4&quot;>404
-          </h1>
-          <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 flex items-center justify-center px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="mb-8">
+          <h1 className="text-9xl font-bold text-emerald-400 mb-4">404</h1>
+          <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
+          </p>
         </div>
-        {
-    /* Error Message  */
-    return (</div>
-          <h2 className=&quot;text-3xl font-bold text-gray-900 mb-4&quot;>Page Not Found
-          </h2>
-          <p className=&quot;text-lg text-gray-600&quot;>The page you&apos;re looking for doesn&apos;t exist or has been moved.
-            Don&apos;t worry, let's get you back on track!
-        </p></di>{
-    /* PopularPages  */
-    return ({popularPages.map((pageindex) => ()
-         <akey = {index}>
-              href={page.href}
-              className=&quot;block p-6 bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow duration-300 text-left&quot;
-            >
-              <div className=&quot;text-3xl mb-3&quot;>{page.icon};
 
-  return (
-              <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>
-                {page.title};
-
-  return (
-              <p className=&quot;text-gray-600 text-sm&quot;>
-                {page.description};
-
-  return (
-            </a>
-          ))};
-
-  return (
-        {
-    /* Action Buttons  */
-    return (</div>
-          <a href=&quot;/&quot;>
-            className=&quot;inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300&quot;
+        <div className="mb-8">
+          <Link 
+            href="/"
+            className="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
           >
-            <Home className=&quot;w-4 h-4 mr-2&quot; />
-            Go Home
-          </a>
-          <a href=&quot;/contact&quot;>
-            className=&quot;inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hove,
-      r:bg-gray-300 transition-colors duration-300&quot;
+            <ArrowLeft className="h-5 w-5 mr-2" />
+            Go Back Home
+          </Link>
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+          <h3 className="text-2xl font-bold text-white mb-6">Popular Pages</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {popularPages.map((page, index) => (
+              <Link
+                key={index}
+                href={page.href}
+                className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors duration-200 group"
+              >
+                <page.icon className="h-8 w-8 text-emerald-400 mb-2 mx-auto group-hover:scale-110 transition-transform" />
+                <h4 className="text-white font-semibold mb-1">{page.title}</h4>
+                <p className="text-gray-300 text-sm">{page.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <p className="text-gray-400 mb-4">Still can't find what you're looking for?</p>
+          <Link 
+            href="/contact"
+            className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors"
           >
-            <Phone className=&quot;w-4 h-4 mr-2&quot; />
+            <Phone className="h-5 w-5 mr-2" />
             Contact Support
-          </a>
+          </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-}}}}

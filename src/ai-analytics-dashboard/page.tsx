@@ -1,272 +1,156 @@
-import { Brain, TrendingUp } from 'lucide-react';
+'use client';
+
+import { Brain, TrendingUp, BarChart3, CheckCircle, Star, Phone } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
-import { BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Phone } from 'lucide-react';
-'use client'
-
 
 const Page: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {}
-    setIsLoaded(true)
-  }, [])
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Advanced machine learning algorithms analyze your data to provide actionable insights and predictions.'
+    },
+    {
+      icon: BarChart3,
+      title: 'Real-time Analytics',
+      description: 'Monitor your business metrics in real-time with interactive dashboards and customizable reports.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Predictive Analytics',
+      description: 'Forecast future trends and outcomes using advanced statistical models and AI algorithms.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with intelligent data visualization and insights.'
+    }
+  ];
 
-        description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
-        keywords = {['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'datainsights']}
-        canonicalUrl=&quot;https: //ziontechgroup.com/ai-analytics-dashboard&quot;
+  const benefits = [
+    'Increase data-driven decision making by 300%',
+    'Reduce time spent on manual reporting by 80%',
+    'Improve forecast accuracy by 95%',
+    'Enable real-time business monitoring',
+    'Automate complex data analysis workflows',
+    'Scale analytics across all departments'
+  ];
+
+  return (
+    <>
+      <SEOOptimizer
+        title="AI Analytics Dashboard - Zion Tech Group"
+        description="Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, and intelligent recommendations."
+        keywords={['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'data insights']}
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg&quot;></div>
-        <Navigation />
-        {
-    /* Hero Section  */
-    return (</section>
-          <div className=&quot;container mx-auto max-w-7xl&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <div className=&quot;inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6&quot;></div>
-                <BarChart3 className=&quot;w-4 h-4&quot; />
-                AI-Powered Business Intelligence
-              </div>
-              <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse&quot;>AI Analytics Dashboard
-              </h1>
-              <p className=&quot;text-xl m,
-      d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;>Transform your data into actionable insights with AI-powered analytics. Get predictive insights
-                real-time monitoring, and intelligent recommendations that drive business growth.
-              </p>
-              <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center items-center&quot;></div>
-                <a href=&quot;#pricing&quot;>className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
-                >
-                  Start Free Trial
-                </a>
-                <a href=&quot;#demo&quot;>className=&quot;border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hove,
-      r:bg-blue-400 hove,
-      r:text-slate-900 transition-all duration-300&quot;
-                >
-                  Watch Demo
-                </a>
-              </div>
-            </div>
-            {
-    /* Key Stats  */
-    return (</div>
-              <div className=&quot;quantum-card p-6 text-center energy-pulse&quot;></div>
-                <div className=&quot;text-3xl font-bold text-blue-400 mb-2&quot;>45%</div>
-                <div className=&quot;text-gray-300&quot;>Revenue Increase</div>
-              </div>
-              <div className=&quot;quantum-card p-6 text-center energy-pulse&quot;></div>
-                <div className=&quot;text-3xl font-bold text-purple-400 mb-2&quot;>60%</div>
-                <div className=&quot;text-gray-300&quot;>Productivity Boost</div>
-              </div>
-              <div className=&quot;quantum-card p-6 text-center energy-pulse&quot;></div>
-                <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>30%</div>
-                <div className=&quot;text-gray-300&quot;>Conversion Lift</div>
-              </div>
-              <div className=&quot;quantum-card p-6 text-center energy-pulse&quot;></div>
-                <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>85%</div>
-                <div className=&quot;text-gray-300&quot;>Accuracy Rate</div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {
-    /* Features Section  */
-    return (</section>
-          <div className=&quot;container mx-auto max-w-7xl&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6 neon-text&quot;>Powerful AI Features
-              </h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Leverage cutting-edge AI technology to unlock insights from your data
-              </p>
-            </div>
-            <div className=&quot;grid grid-cols-1 m,
-      d:grid-cols-2 l,
-      g:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => ()
-                <div key={index} className=&quot;cyber-card p-6 hover: scale-105 transition-all duration-300&quot;></div>
-                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6&quot;></div>
-                    <feature.icon className=&quot;w-8 h-8 text-white&quot; />
-                  </div>
-                  <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{feature.title};
-
-  return (
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description};
-
-  return (
-                  <ul className=&quot;space-y-2&quot;>
-                    {feature.benefits.map((benefit, benefitIndex) => ()
-                      <li key={benefitIndex} className=&quot;flex items-center text-sm text-blue-400&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 mr-2 flex-shrink-0&quot; />
-                        {benefit};
-
-  return (
-                    ))};
-
-  return (
-                </div>
-              ))};
-
-  return (
-          </div>
-        </section>
-        {
-    /* Integrations Section  */
-    return (</section>
-          <div className=&quot;container mx-auto max-w-7xl&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6 neon-text&quot;>Seamless Integrations
-              </h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Connect all your data sources in one powerful dashboard
-              </p>
-            </div>
-            <div className=&quot;grid grid-cols-1 m,
-      d:grid-cols-2 l,
-      g:grid-cols-4 gap-8&quot;></div>
-              {integrations.map((integration, index) => ()
-                <div key={index} className=&quot;cyber-card p-6 text-center hover: scale-105 transition-all duration-300&quot;></div>
-                  <div className=&quot;text-6xl mb-4&quot;>{integration.icon};
-
-  return (
-                  <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{integration.name};
-
-  return (
-                  <p className=&quot;text-gray-300 text-sm&quot;>{integration.description};
-
-  return (
-                </div>
-              ))};
-
-  return (
-          </div>
-        </section>
-        {
-    /* Pricing Section  */
-    return (</section>
-          <div className=&quot;container mx-auto max-w-7xl&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6 neon-text&quot;>Simple, Transparent Pricing
-              </h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Choose the plan that fits your analytics needs
-              </p>
-            </div>
-            <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8&quot;></div>
-              {pricingPlans.map((plan, index) => ()
-                <div key = {index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''}`}></div>
-                  {plan.popular && ();
-                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
-                      <div className=&quot;bg-blue-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold&quot;></div>
-                        Most Popular
-                      </div>
-                    </div>
-                  )};
-
-  return (</div>
-                    <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name};
-
-  return (
-                    <p className=&quot;text-gray-300 mb-4&quot;>{plan.description};
-
-  return (
-                    <div className=&quot;text-4xl font-bold text-blue-400 mb-2&quot;>{plan.price};
-
-  return (
-                    <div className=&quot;text-gray-400&quot;>per month</div>
-                  </div>
-                  <ul className=&quot;space-y-4 mb-8&quot;>
-                    {plan.features.map((feature, featureIndex) => ()
-                      <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
-                        {feature};
-
-  return (
-                    ))};
-
-  return (
-                  <a href = {`mailto:kleber@ziontechgroup.com?subject=Interest in AI Analytics Dashboard ${plan.name} Plan`}>className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${}
-                      plan.popular
-                        ? 'bg-blue-400 text-slate-900 hover: bg-blue-300'
-                        : 'bg-slate-700 text-white hove,
-      r:bg-slate-600'
-                    }`}
-                  >
-                    Get Started
-                  </a>
-                </div>
-{              ))};
-
-  return (
-          </div>
-        </section>
-        {
-    /* Testimonials Section  */
-    return (</section>
-          <div className=&quot;container mx-auto max-w-7xl&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6 neon-text&quot;>What Our Customers Say
-              </h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Join thousands of businesses already using AI Analytics Dashboard
-              </p>
-            </div>
-            <div className=&quot;grid grid-cols-1 m,
-      d:grid-cols-3 gap-8&quot;></div>
-              {testimonials.map((testimonial, index) => ()
-                <div key={index} className=&quot;cyber-card p-6&quot;></div>
-                  <div className=&quot;flex items-center mb-4&quot;></div>
-                    {[...Array(testimonial.rating)].map((_, i) => ()
-                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
-                    ))};
-
-  return (
-                  <p className=&quot;text-gray-300 mb-6 italic&quot;>&quot;{testimonial.content}&quot;</p>
-                  
-                    <div className=&quot;font-semibold text-white&quot;>{testimonial.name};
-
-  return (
-                    <div className=&quot;text-blue-400 text-sm&quot;>{testimonial.role};
-
-  return (
-                  </div>
-                </div>
-              ))};
-
-  return (
-          </div>
-        </section>
-        {
-    /* CTA Section  */
-    return (</section>
-          <div className=&quot;container mx-auto max-w-4xl text-center&quot;></div>
-            <h2 className=&quot;text-4xl md: text-5xl font-bold text-white mb-6&quot;>Ready to Transform Your Data?
-            </h2>
-            <p className=&quot;text-xl text-blue-100 mb-8&quot;>Start your free trial today and experience the power of AI-driven analytics
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Analytics Dashboard
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, and intelligent recommendations.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;></div>
-              <a href=&quot;mailto:kleber@ziontechgroup.com?subject=AI Analytics Dashboard Free Trial Request&quot;>className=&quot;bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors&quot;
-              >
-                Start Free Trial
-              </a>
-              <a href=&quot;tel:+13024640950&quot;>
-                className=&quot;flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all&quot;
-              >
-                <Phone className=&quot;w-5 h-5&quot; />
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className=&quot;mt-8 text-blue-100&quot;></div>
-              <p >Contac,
-      t: kleber@ziontechgroup.com | Addres,
-      s: 364 E Main St STE 1008, Middletown, DE 19709</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <TrendingUp className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
-        <Footer />
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI-driven analytics tools designed to transform your business intelligence
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Analytics?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results and cutting-edge technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                    <p className="text-gray-300">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Analytics?</h3>
+                <p className="text-gray-300 mb-6">
+                  Get started with our comprehensive AI analytics platform and see results in weeks, not months.
+                </p>
+                <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+                  Start Free Trial
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Unlock the Power of Your Data?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our advanced AI analytics platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-</>
-  )
-{}
+      <Footer />
+    </>
+  );
+};
 
 export default Page;
-}}}}}}}
