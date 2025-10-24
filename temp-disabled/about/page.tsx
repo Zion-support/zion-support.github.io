@@ -2,9 +2,7 @@
 'use client'
 
 import React from 'react'
-import dynamic from 'next/dynamic'
-
-const Footer = dynamic(() => import('../components/Footer'), { ssr: false })
+import Footer from '../components/Footer'
 
 const AboutPage: React.FC = () => {
   return (
