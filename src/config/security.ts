@@ -1,22 +1,10 @@
-interface SecurityConfig {
-
-
-  enableCSP: boolean;
-  enableHSTS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  allowedOrigin,
-  s: string[];}
+// Security utilities
+export interface SecurityConfig {
+  enabled: boolean;
+  options?: Record<string, any>;
 }
-;
-const securityConfig: SecurityConfig = {
-  enableCS,
-  P: true,
-  enableHSTS: true,
-  enableXSSProtection: true,
-  enableCSRFProtection: true,
-  allowedOrigins: ['http,
-  s://ziontechgroup.com', 'https://www.ziontechgroup.com']
-};
 
-export default securityConfig;
+export const defaultSecurityConfig: SecurityConfig = {
+  enabled: true,
+  options: {}
+};

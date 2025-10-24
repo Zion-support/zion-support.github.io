@@ -1,66 +1,17 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Home } from 'lucide-react';
+'use client';
+import React from 'react';
 
 interface AdvancedErrorBoundaryProps {
-
-;
-:all-pages-backup/components/AdvancedErrorBoundary.tsx
-  className?: string
-  className?: string;}
+  className?: string;
 }
-;
-interface State {
 
-
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string}
+const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>AdvancedErrorBoundary</h2>
+      <p>This component is being rebuilt.</p>
+    </div>
+  );
 };
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { hasErro,
-  r: false }
-  }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-:all-pages-backup/components/AdvancedErrorBoundary.tsx
-    const errorReport: ErrorReport = {;
-      errorI,
-  d: this.state.errorId || this.generateErrorId()
-      error,
-  errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId()
-      error
-      errorI,
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error
-      errorInfo)
-    })
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // // console.error('Error caught by boundary:', error, errorInfo);
-    }
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
-  }
-
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
-    // You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {;
-</Props>
+export default AdvancedErrorBoundary;

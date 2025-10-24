@@ -1,20 +1,17 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+'use client';
+import React from 'react';
 
-interface SEOHeadProps {
-
-  title: string,
-  description: string,
-  keywords: string[],
+interface SEOHeadWrapperProps {
+  className?: string;
 }
 
-const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
+const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className }) => {
   return (
-    <Helmet> </Helmet><title>{title}</title>
-      <meta name="description" content={description} /> </meta><meta name="keywords" content={keywords.join(', ')} /> </meta></Helmet>
-  )
-}
+    <div className={className}>
+      <h2>SEOHeadWrapper</h2>
+      <p>This component is being rebuilt.</p>
+    </div>
+  );
+};
 
-
-export default SEOHeadWrapper
+export default SEOHeadWrapper;

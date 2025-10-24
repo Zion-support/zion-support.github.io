@@ -1,123 +1,45 @@
+'use client';
 import React from 'react';
+import Head from 'next/head';
 
-import Link from 'next/link';
-import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react';
-
-export default function FiveGSmartCitySolutions() {
-  const features = [
-    {
-      icon: <Wifi className="w-6 h-6 text-cyan-400" />
-      titl,
-  e: title,
-  description: '5G networks providing 10x faster speeds and ultra-low latency for smart city applications'
-    },</Wifi>
-  {</Wifi>
-    icon: <Building className="w-6 h-6 text-purple-400" />
-      titl,
-  e: title,
-  description: 'Intelligent traffic management, energy optimization, and environmental monitoring systems'
-    },</Building>
-  {</Building>
-    icon: <Brain className="w-6 h-6 text-yellow-400" />
-      titl,
-  e: title,
-  description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life'
-    },</Brain>
-  {</Brain>
-    icon: <Users className="w-6 h-6 text-green-400" />
-      titl,
-  e: title,;
-  description: 'Digital platforms connecting citizens with city services and enabling participatory governance'};
-  ];
-
-  const smartCityModules = [
-    {
-      category: category,
-  items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
-    }
-    {
-      category: category,
-  items: ['Smart Grid Management', 'Air Quality Monitoring', 'Waste Management', 'Water Systems', 'Renewable Energy', 'Carbon Footprint Tracking']
-    }
-    {
-      category: category,
-  items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
-    }
-    {
-      category: category,
-  items: ['Citizen Portal', 'Mobile Apps', 'Digital Payments', 'Service Requests', 'Open Data Platform', 'E-Government'];
-    };
-  ];
-
-  const pricingPlans = [
-    {
-      name: name,
-  price: price,
-  period: period,
-  description: description,
-  features: features,
-  popular: false,
-    }
-    {
-      name: name,
-  price: price,
-  period: period,
-  description: description,
-  features: features,
-  popular: true,
-    }
-    {
-      name: name,
-  price: price,
-  period: period,
-  description: description,
-  features: features,
-  popular: false;
-    };
-  ];
-
-  const testimonials = [
-    {
-      name: name,
-  company: company,
-  content: content,
-  rating: 5,
-    }
-    {
-      name: name,
-  company: company,
-  content: content,
-  rating: 5,
-    }
-    {
-      name: name,
-  company: company,
-  content: content,
-  rating: 5;
-    };
-  ];
-</Users>
-  return (</Users>
+const FiveGSmartCitySolutionsPage = () => {
+  return (
     <>
-    
-  </>
-      <title>5G Smart City Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions." />
-      </meta>
-      </meta>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <h1 className="text-4xl font-bold text-white mb-6">5G Smart City Solutions</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions.</p>
-          
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          ></Link>
-            Contact Us</Link>
-            <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
-          </Link>
+      <Head>
+        <title>FiveGSmartCitySolutions | Zion Tech Group</title>
+        <meta name="description" content="Professional FiveGSmartCitySolutions services and solutions." />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              FiveGSmartCitySolutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional FiveGSmartCitySolutions services and solutions for your business.
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-white mb-4">Our FiveGSmartCitySolutions Services</h2>
+              <p className="text-gray-300 mb-6">
+                We provide comprehensive FiveGSmartCitySolutions solutions tailored to your business needs.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white/5 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">Service 1</h3>
+                  <p className="text-gray-300">Description of the first service offering.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">Service 2</h3>
+                  <p className="text-gray-300">Description of the second service offering.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>,
-    </div>,
-  )}
+      </div>
+    </>
+  );
+};
+
+export default FiveGSmartCitySolutionsPage;

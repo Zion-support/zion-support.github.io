@@ -1,21 +1,45 @@
-"use client"
+'use client';
+import React from 'react';
+import Head from 'next/head';
 
-import React from "react";
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-export default function SolutionsPage() {
+const SolutionsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
-      <Navigation /></Navigation>
-      <main className="py-20 px-4"></main>
-        <div className="max-w-4xl mx-auto"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Comprehensive solutions for all your AI and IT needs.</p>
-          </p>
+    <>
+      <Head>
+        <title>Solutions | Zion Tech Group</title>
+        <meta name="description" content="Professional Solutions services and solutions." />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Solutions services and solutions for your business.
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-white mb-4">Our Solutions Services</h2>
+              <p className="text-gray-300 mb-6">
+                We provide comprehensive Solutions solutions tailored to your business needs.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white/5 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">Service 1</h3>
+                  <p className="text-gray-300">Description of the first service offering.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">Service 2</h3>
+                  <p className="text-gray-300">Description of the second service offering.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <Footer /></Footer>
-    </div>;
-  )}
+      </div>
+    </>
+  );
+};
+
+export default SolutionsPage;

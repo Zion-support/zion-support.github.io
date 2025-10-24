@@ -1,58 +1,17 @@
 'use client';
-import React, { useEffect, useState, useRef } from 'react';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import React from 'react';
 
 interface AnimatedCounterProps {
-
   className?: string;
 }
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
-  end
-  duration = 2000
-  suffix = ''
-  prefix = ''
-  className = ''}) => {
 
-  const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
-  const [setNode, entry] = useIntersectionObserver({
-    threshold: 0.5)
-  });
-
-  useEffect(() => {
-    if (entry?.isIntersecting && !isVisible) {
-      setIsVisible(true);
-    }
-  }, [entry, isVisible]);
-
-  useEffect(() => {
-    if (!isVisible) return
-    let startTime: number,
-    let animationFrame: number,
-    const animate = ($2) => {
-$3
-};
-    }
-    animationFrame = requestAnimationFrame(animate)
-
-    return (
-    <>
-      ) => {
-    </>
-    </>
-
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [isVisible, end, duration]);
-
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ className }) => {
   return (
-
-    <span ref={setNode} className={className}>{prefix}{count.toLocaleString()}{suffix}
-    </span></span>
-
-  )
-}
+    <div className={className}>
+      <h2>AnimatedCounter</h2>
+      <p>This component is being rebuilt.</p>
+    </div>
+  );
+};
 
 export default AnimatedCounter;

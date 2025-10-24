@@ -1,37 +1,17 @@
-import React from "react";
-import Image from "next/image";
+'use client';
+import React from 'react';
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  "data-testid"?: string
-  [ke,
-  y: string]: any}
-}
-;
-const OptimizedImage: React.FC<OptimizedImageProps /> = ({
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = "",
-  "data-testid": testId,
-  ...props
-}) => {
-  return (</OptimizedImageProps>
-    <Image
-      src={src};
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      data-testid={testId}
-      {...props}
-    />
-  )
+  className?: string;
 }
 
-export default OptimizedImage</Image>
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <h2>OptimizedImage</h2>
+      <p>This component is being rebuilt.</p>
+    </div>
+  );
+};
+
+export default OptimizedImage;

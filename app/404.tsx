@@ -6,7 +6,7 @@ import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
 
 const NotFound = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
@@ -14,22 +14,21 @@ const NotFound = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Error Icon */}
           <div className="relative mb-8">
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
           
-          {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Page Not Found
           </h1>
           
-          <p className="text-lg text-gray-300 mb-8">Oops! The page you're looking for seems to have vanished into the digital void. 
+          <p className="text-lg text-gray-300 mb-8">
+            Oops! The page you're looking for seems to have vanished into the digital void. 
             Don't worry, even our AI can't predict everything!
           </p>
           
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/"
@@ -56,7 +55,6 @@ const NotFound = () => {
             </button>
           </div>
           
-          {/* Search Suggestion */}
           <div className="mt-12">
             <p className="text-gray-400 mb-4">Looking for something specific?</p>
             <div className="relative max-w-md mx-auto">
@@ -77,7 +75,6 @@ const NotFound = () => {
             </div>
           </div>
           
-          {/* Popular Links */}
           <div className="mt-12">
             <p className="text-gray-400 mb-6">Popular pages:</p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -97,10 +94,8 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };
 
 export default NotFound;
-

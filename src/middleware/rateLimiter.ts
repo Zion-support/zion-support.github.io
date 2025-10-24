@@ -1,17 +1,10 @@
-interface RateLimitConfig {
-
-
-  windowMs: number;
-  maxRequests: number;
-  messag,
-  e: string;}
+// RateLimiter utilities
+export interface RateLimiterConfig {
+  enabled: boolean;
+  options?: Record<string, any>;
 }
-;
-const rateLimitConfig: RateLimitConfig = {
-  windowM,
-  s: 15 * 60 * 1000, // 15 minutes
-  maxRequests: 100,
-  message: 'Too many requests from this IP, please try again later.'
-};
 
-export default rateLimitConfig;
+export const defaultRateLimiterConfig: RateLimiterConfig = {
+  enabled: true,
+  options: {}
+};
