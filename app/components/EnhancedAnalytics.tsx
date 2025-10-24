@@ -35,12 +35,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        const gtagFunction = (..._args: unknown[]) => {
-          const gtag = window.gtag;
-          if (gtag) {
-            (gtag as unknown as { q?: unknown[] }).q = (gtag as unknown as { q?: unknown[] }).q || [];
-            ((gtag as unknown as { q: unknown[] }).q).push(_args);
-          }
+        (window as { gtag?: (..._args: unknown[]) => void }).gtag = (window as { gtag?: (..._args: unknown[]) => void }).gtag || function(..._args: unknown[]) {
+          ((window as { gtag: (..._args: unknown[]) => void }).gtag.q = (window as { gtag: (..._args: unknown[]) => void }).gtag.q || []).push(_args);
         };
         window.gtag = window.gtag || gtagFunction;
         window.gtag('js', new Date());
