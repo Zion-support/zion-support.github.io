@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Eye, Volume2, Keyboard, Mouse, CheckCircle, Shield, Brain, BarChart, Target, Globe, Code, Users } from 'lucide-react';
+import { Eye, Volume2, Keyboard, Mouse, CheckCircle, Shield, Brain, BarChart, Globe, Users } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
   const accessibilityFeatures = [

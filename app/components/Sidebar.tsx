@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Menu, X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
+import { X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;

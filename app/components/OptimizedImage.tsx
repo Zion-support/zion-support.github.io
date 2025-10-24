@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 'use client';
-
-=======
-'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
 import React from 'react';
 import Image from 'next/image';
 

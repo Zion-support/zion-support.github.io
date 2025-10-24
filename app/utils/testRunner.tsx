@@ -4,7 +4,7 @@
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
-import React, { ReactElement, useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 
 export interface PerformanceMetrics {
   renderTime: number;
@@ -43,22 +43,22 @@ export interface TestSuite {
 }
 
 // Mock utilities
-export const createMock = <T>(defaultValue: T): jest.Mocked<T> => {
-  return defaultValue as jest.Mocked<T>;
+export const createMock = <T,>(defaultValue: T): T => {
+  return defaultValue;
 };
 
-export const mockFunction = <T extends (...args: any[]) => any>(
+export const mockFunction = <T extends (..._args: unknown[]) => unknown>(
   implementation?: T
-): jest.MockedFunction<T> => {
-  return jest.fn(implementation) as jest.MockedFunction<T>;
+): T => {
+  return (implementation || (() => {})) as T;
 };
 
 // Test runner component
 interface TestRunnerProps {
   config: TestConfig;
-  onTestComplete?: (results: TestSuite[]) => void;
-  onPerformanceUpdate?: (metrics: PerformanceMetrics) => void;
-  onCoverageUpdate?: (metrics: CoverageMetrics) => void;
+  onTestComplete?: (_results: TestSuite[]) => void;
+  onPerformanceUpdate?: (_metrics: PerformanceMetrics) => void;
+  onCoverageUpdate?: (_metrics: CoverageMetrics) => void;
 }
 
 const TestRunner: React.FC<TestRunnerProps> = ({
@@ -97,13 +97,13 @@ const TestRunner: React.FC<TestRunnerProps> = ({
 
   const measurePerformance = async (): Promise<PerformanceMetrics> => {
     const startTime = performance.now();
-    const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
+    const startMemory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
     
     // Simulate some work
     await new Promise(resolve => setTimeout(resolve, 100));
     
     const endTime = performance.now();
-    const endMemory = (performance as any).memory?.usedJSHeapSize || 0;
+    const endMemory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
     
     return {
       renderTime: endTime - startTime,

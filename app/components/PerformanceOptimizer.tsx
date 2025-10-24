@@ -25,10 +25,10 @@ const PerformanceOptimizer: React.FC = () => {
       const renderTime = performance.now() - startTime
 
       // Check memory usage (if available)
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0
+      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0
 
       // Check connection speed
-      const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection
+      const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection
       const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false
 
       setMetrics({

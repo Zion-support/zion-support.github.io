@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 interface ServiceWorkerRegistrationProps {
   onUpdateAvailable?: () => void;
   onUpdateInstalled?: () => void;
-  onError?: (error: Error) => void;
+  onError?: (_error: Error) => void;
 }
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
@@ -45,8 +45,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
           window.location.reload();
         });
 
-      } catch (error) {
-        onError?.(error as Error);
+      } catch (_error) {
+        onError?.(_error as Error);
       }
     };
 

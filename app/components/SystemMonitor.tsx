@@ -18,7 +18,7 @@ interface SystemStats {
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  showDetails = true,
+  showDetails: _showDetails = true,
   refreshInterval = 1000,
   className = '',
 }) => {
@@ -47,7 +47,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     return () => clearInterval(interval);
   }, [refreshInterval]);
 
-  const getStatusColor = (value: number) => {
+  const _getStatusColor = (value: number) => {
     if (value < 50) return 'text-green-500';
     if (value < 80) return 'text-yellow-500';
     return 'text-red-500';
