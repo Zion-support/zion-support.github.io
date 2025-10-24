@@ -42,9 +42,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        const gtagFunction = function(...args: unknown[]) {
-          (window as { gtag: { q: unknown[] } }).gtag.q = (window as { gtag: { q: unknown[] } }).gtag.q || [];
-          (window as { gtag: { q: unknown[] } }).gtag.q.push(args);
+        const gtagFunction = function(..._args: unknown[]) {
+          const gtag = window as { gtag?: { q?: unknown[] } };
+          gtag.gtag = gtag.gtag || { q: [] };
+          gtag.gtag.q = gtag.gtag.q || [];
+          gtag.gtag.q.push(_args);
         };
         window.gtag = window.gtag || gtagFunction;
         window.gtag = window.gtag || gtagFunction;
