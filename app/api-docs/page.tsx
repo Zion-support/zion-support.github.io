@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 export default function APIDocsPage() {
   const [_copiedCode, _setCopiedCode] = useState<string | null>(null);

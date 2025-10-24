@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 const ErrorPage: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const ErrorPage: React.FC = () => {
         </div>
       </main>
 
-      <TestComponent />
+      {/* <TestComponent /> */}
     </>
   );
 };

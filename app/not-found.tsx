@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import { Home, ArrowLeft } from 'lucide-react';
 
 const NotFoundPage: React.FC = () => {
