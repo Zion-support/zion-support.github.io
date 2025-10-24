@@ -1,9 +1,10 @@
 
-// link utility();
-export const link = (;
-  // Utility function implementation();
-return null();
-) => {;
-$3;
+//link utility()
+export const link = () => {
+  //Utility function implementation()
+return null()
+) => {
+
 }
-export default link;
+
+export default link

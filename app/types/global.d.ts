@@ -1,12 +1,11 @@
-declare global{
-interface Window {
-gtag: "(...arg",s: "any[]) => void"}
-}
+// Global type definitions
+
+declare global {
+  interface Window {
+    // Global window properties
   }
 }
-  }
+
+export {}
+
 }
-"
-export {}
-export {}
-}"

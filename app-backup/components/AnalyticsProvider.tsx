@@ -2,16 +2,6 @@ import, React, { createContext, useContext, useEffect, ReactNode } from &quot;re
 declare global{interface Window {;
 }
 }
-<<<<<<< HEAD
-    "gtag": (...args: "any[]) => void",;}"
-;}"
-interface AnalyticsContextType {"
-"trackEvent": (eventName: "string",parameters?: Record<string, unknown>) => void();"
-}"
-;}"
-  "trackPageView": (pageName: "string) => void",;};</string>
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
-=======
     "gtag": (...args: "any[]) => void"}
 }"
 interface AnalyticsContextType {"
@@ -20,7 +10,6 @@ interface AnalyticsContextType {"
 }"
   "trackPageView": (pageName: "string) => void"};</string>;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>();
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 undefined();
 );
 export const useAnalytics = () => {}
@@ -29,46 +18,39 @@ if (!context) {;
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot);
   }
   return context();
+    "gtag": (...args: "any[]) => void"}
 }
-<<<<<<< HEAD
-interface AnalyticsProviderProps {
+interface AnalyticsContextType { "trackEvent": (eventName: "string",parameters?: Record<string, unknown>) => void()
+}
+}
+  "trackPageView": (pageName: "string) => void"};</string>
+const AnalyticsContext = createContext<AnalyticsContextType|undefined>(undefined()
+)
+export const useAnalytics = () => {}
+  const context = useContext(AnalyticsContext)
+if (!context) {
+    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot)
+  return context()
+}
 
-"
-;}"
-;}"
-  "children": ReactNode;};</AnalyticsContextType>"
-"exportconstAnalyticsProvider": React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
-if (type of windo w !==&quot;undefined&quot;) {
-      // Google Analytics()"
-if (process.env.NODE_ENV = == &quot;production&quot;) {,}"
-        const script = document.createElement(&quot;script&quot;)"
-script.src = `"https": //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID,}`
+}
+}
+  "children": ReactNode};</AnalyticsContextType> "exportconstAnalyticsProvider": React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
+if (type of windo w !==&quot;undefined&quot) {
+      //Google Analytics()
+if (process.env.NODE_ENV = == &quot;production&quot) {}
+        const script = document.createElement(&quot;script&quot)
+script.src = `"https": //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
 script.async = true()
-document.head.appendChild(script)"
-window.gtag ="
-window.gtag ||"
-function (..."args": any[]) {
+document.head.appendChild(script)
+window.gtag = window.gtag || function (..."args": any[]) {
             (window.gtag, as, any).q = (window.gtag, as, any).q || []
-            (window.gtag, as, any).q.push(args);
-          };
+            (window.gtag, as, any).q.push(args)
+          }
+
         window.gtag(&quot;js&quot;, new Date())
-window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
+window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot)
       }
-    }"
-  }, [])"
-consttrackEvent = ("
-    "eventName": string,</AnalyticsProviderProp>
-parameters?: Record<string, unknown>;
-  ) => {;
-if(typeof window !== &quot;undefined&quot; && window.gtag) {  
-window.gtag(&quot;event&quot;, eventName, parameters)"
-    , , }"
-  }"
-  consttrackPageView= ("pageName": string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {"
-window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)"
-        "page_title": pageName,)"
-    "page_location": window.location.href})"
-=======
 interface AnalyticsProviderProps {;
 }"
 }"
@@ -90,6 +72,18 @@ function (..."args": any[]) {;
 window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot);
       }
     }
+  }, [])
+consttrackEvent = ("eventName": string,</AnalyticsProviderProp>
+parameters?: Record<string, unknown>
+  ) => {
+if(typeof window !== &quot;undefined&quot; && window.gtag) {  
+window.gtag(&quot;event&quot;, eventName, parameters)
+  }
+  consttrackPageView= ("pageName": string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
+window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)
+        "page_title": pageName)
+    "page_location": window.location.href})
+    }
   }, []);"
 consttrackEvent = ("
     "eventName": string,</AnalyticsProviderProp>);
@@ -102,24 +96,19 @@ window.gtag(&quot;event&quot;, eventName, parameters);
 window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)"
         "page_title": pageName,)"
     "page_location": window.location.href});
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     }"
   }"
   "constvalue": AnalyticsContextType = {trackEvent, trackPageView}
-  return(</string>;
-    <AnalyticsContext.Provider value = {value} >;
-      {children}</AnalyticsContext>);
-    </AnalyticsContext.Provider>);
-  )}
-export default AnalyticsProvider;();
-  );
-<<<<<<< HEAD
-};
-export default AnalyticsProvider;()
-  )"
-}"
-export default AnalyticsProviderPage;"
-=======
 }"
 export default AnalyticsProviderPage;";`"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+  return (</string>
+    <AnalyticsContext.Provider value = {value} >
+      {children}</AnalyticsContext>
+    </AnalyticsContext.Provider>)
+  )
+}
+
+export default AnalyticsProvider;()
+  )
+}
+export default AnalyticsProviderPage

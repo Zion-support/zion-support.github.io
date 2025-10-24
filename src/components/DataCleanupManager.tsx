@@ -1,22 +1,27 @@
-<<<<<<< HEAD
-import React from 'react"
+import React from "react";
 interface DataCleanupManagerProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const DataCleanupManager: "React.FC<DataCleanupManagerProps> = ({ className = '' ",;}) => {
-return(</DataCleanupManagerProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const DataCleanupManager: "React.FC<DataCleanupManagerProps> = ({ className="" "}) => {
+return (</DataCleanupManagerProps>
+    <divclassName = {className} / />
       <h2>DataCleanupManager</h2>
       <p>This component is under construction.</p>
-      </div>)
+      </div>
+    </>
+  )
+  )
+}
+
+export const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`datacleanupmanager ${className}`}>
+      {children}
+    </div>
   );
-};"
-export default DataCleanupManager;"
-}"'"
-=======
 import React from 'react'
 interface DataCleanupManagerProps {;
 className?: string;
@@ -31,4 +36,6 @@ return(</>;
       </div>);
   )}"
 export default DataCleanupManager}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default DataCleanupManager;

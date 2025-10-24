@@ -1,24 +1,27 @@
-<<<<<<< HEAD
-import React from "react
-"
-use client";
+import React from "react"; "use client"
 interface DefaultSEOProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const DefaultSEO: "React.FC<DefaultSEOProps> = ({ className = '' ",;}) => {
-return(</DefaultSEOProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const DefaultSEO: "React.FC<DefaultSEOProps> = ({ className="" "}) => {
+return (</DefaultSEOProps>
+    <divclassName={className} />
       <h2>DefaultSEO</h2>
       <p>This component is under construction.</p>
-    </div>)
+    </div>
+    </>
+  )
+  )
+}
+
+export const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '', children }) => {
+  return (
+    <div className={`defaultseo ${className}`}>
+      {children}
+    </div>
   );
-};"
-;"
-export default DefaultSEO;"'"
-=======
 import React from 'react'
 "use client"
 interface DefaultSEOProps {;
@@ -35,4 +38,6 @@ return(</>;
     </div>);
   )}"
 export default DefaultSEO;";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default DefaultSEO;

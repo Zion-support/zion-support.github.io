@@ -1,22 +1,18 @@
-<<<<<<< HEAD
-import React from 'react"
+import React from "react";
 interface pageProps {
 className?: string
 }
-;}"
-;}"
-"'"
-const page: "React.FC<pageProps /> = ({ className = '' ",;}) => {
-return(</pageProps>,
-    <div className={className,;} />
+}
+}
+
+const page: "React.FC<pageProps /> = ({ className="" "}) => {
+return (</pageProps>
+    <divclassName = {className} //>
       <h2>page</h2>
       <p>This component is under construction.</p>
-      </div>)
+      </div>
+    </>
   )
-;}"
-export default page;"
-};"'"
-=======
 import React from 'react'
 interface pageProps {;
 className?: string;
@@ -32,4 +28,6 @@ return(</>;
   );
 }"
 export default page}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+  )
+export default page
+}

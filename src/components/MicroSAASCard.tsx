@@ -1,22 +1,27 @@
-<<<<<<< HEAD
-import React from 'react"
+import React from "react";
 interface MicroSAASCardProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const MicroSAASCard: "React.FC<MicroSAASCardProps> = ({ className = '' ",;}) => {
-return(</MicroSAASCardProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const MicroSAASCard: "React.FC<MicroSAASCardProps> = ({ className="" "}) => {
+return (</MicroSAASCardProps>
+    <divclassName = {className} / />
       <h2>MicroSAASCard</h2>
       <p>This component is under construction.</p>
-      </div>)
+      </div>
+    </>
+  )
+  )
+}
+
+export const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`microsaascard ${className}`}>
+      {children}
+    </div>
   );
-};"
-export default MicroSAASCard;"
-}"'"
-=======
 import React from 'react'
 interface MicroSAASCardProps {;
 className?: string;
@@ -31,4 +36,6 @@ return(</>;
       </div>);
   )}"
 export default MicroSAASCard}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default MicroSAASCard;

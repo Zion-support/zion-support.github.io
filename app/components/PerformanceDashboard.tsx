@@ -3,54 +3,68 @@ import React, { useState, useEffect } from 'react';
 import { usePerformanceMonitor } from '../utils/performance';
 
 const PerformanceDashboard: React.FC = () => {
-  const { startTiming, endTiming } = usePerformanceMonitor();
-  const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0
-  });
+return (<div>
+      <Helmet />
 
-  useEffect(() => {
-    startTiming('dashboard-load');
-    
-    // Simulate performance metrics collection
-    const timer = setTimeout(() => {
-      setMetrics({
-        loadTime: Math.random() * 1000 + 500,
-        renderTime: Math.random() * 100 + 50,
-        memoryUsage: Math.random() * 100 + 50,
-        networkLatency: Math.random() * 200 + 100
-      });
-      endTiming('dashboard-load');
-    }, 1000);
+        <title>PerformanceDashboard</title>
+        
+        <meta name="description" content="Advanced PerformanceDashboard solution for modern businesses." //>
+        <meta name="keywords" content="AI,artificial, intelligence, PerformanceDashboard, AI, solutions, intelligent automation" //>
 
-    return () => clearTimeout(timer);
-  }, [startTiming, endTiming]);
-
+export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Performance Dashboard</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-blue-50 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-blue-600">Load Time</h3>
-          <p className="text-2xl font-bold text-blue-900">{metrics.loadTime.toFixed(0)}ms</p>
-        </div>
-        <div className="bg-green-50 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-green-600">Render Time</h3>
-          <p className="text-2xl font-bold text-green-900">{metrics.renderTime.toFixed(0)}ms</p>
-        </div>
-        <div className="bg-yellow-50 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-yellow-600">Memory Usage</h3>
-          <p className="text-2xl font-bold text-yellow-900">{metrics.memoryUsage.toFixed(0)}MB</p>
-        </div>
-        <div className="bg-purple-50 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-purple-600">Network Latency</h3>
-          <p className="text-2xl font-bold text-purple-900">{metrics.networkLatency.toFixed(0)}ms</p>
-        </div>
-      </div>
+    <div className={`performancedashboard ${className}`}>
+      {children}
     </div>
-  );
-};
+      <Navigation//> <div className="[^"]*">
+        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
+PerformanceDashboard</h1>
+            </h1> <p className="[^"]*">
+Advanced PerformanceDashboard solution for modern businesses.</p>
+            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+Get Started</button>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Learn More</button>
 
-export default PerformanceDashboard;
+              </button>
+
+        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
+Discover the powerful features that make PerformanceDashboard the perfect solution for your business.</p>
+              </p>
+    <divclassName="grid md: "grid-cols-2 l","
+g: grid-cols-4 gap-8" />,<div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">Scalable</h3>
+                <p className="text-gray-300">Grows with your business needs and requirements.</p>
+                </div> <div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
+                </div> <div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
+
+                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
+                </div>
+              </div>
+            </div>
+        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="[^"]*">
+Join thousands of businesses already using PerformanceDashboard to transform their operations.</p>
+            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Start Your Free Trial</button>
+
+            </button>
+            </div>
+        </section>
+        </div>
+      </Footer>
+    </div>
+    </>
+  )
+  )  )}
+
+export default PerformanceDashboard
+}

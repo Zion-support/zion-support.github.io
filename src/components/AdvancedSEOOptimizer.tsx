@@ -1,22 +1,27 @@
-<<<<<<< HEAD
-import React from 'react"
+import React from "react";
 interface AdvancedSEOOptimizerProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className = '' ",;}) => {
-return(</AdvancedSEOOptimizerProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className="" "}) => {
+return (</AdvancedSEOOptimizerProps>
+    <divclassName = {className} / />
       <h2>AdvancedSEOOptimizer</h2>
       <p>This component is under construction.</p>
-      </div>)
+      </div>
+    </>
+  )
+  )
+}
+
+export const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancedseooptimizer ${className}`}>
+      {children}
+    </div>
   );
-};"
-export default AdvancedSEOOptimizer;"
-}"'"
-=======
 import React from 'react'
 interface AdvancedSEOOptimizerProps {;
 className?: string;
@@ -31,4 +36,6 @@ return(</>;
       </div>);
   )}"
 export default AdvancedSEOOptimizer}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default AdvancedSEOOptimizer;

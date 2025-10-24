@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-const fs = require('fs");"'"
-const path = require('path");
-
-<<<<<<< HEAD
-// Function to fix specific parsing errors;
-function fixParsingErrors(filePath) { "
-;"
-try { ;"'"
-let content = fs.readFileSync(filePath, 'utf8");
-    let modified = false;
-
-    // Fix malformed JSX closing tags;"
-const jsxClosingTagRegex = /<(\w+)([^>]*)>\s*<\/\1>/g;"
-    if (jsxClosingTagRegex.test(content)) {;"'"
-content = content.replace(jsxClosingTagRegex, '<$1$2 />");
-=======
 const fs = require('fs');
 const path = require('path');
 ;
-<<<<<<< HEAD;
 // Function to fix specific parsing errors;
 function fixParsingErrors(filePath) {;
 ;
@@ -30,24 +12,14 @@ let content = fs.readFileSync(filePath, 'utf8');
 const jsxClosingTagRegex = /<(\w+)([^>]*)>\s*<\/\1>/g;
     if (jsxClosingTagRegex.test(content)) {;
 content = content.replace(jsxClosingTagRegex, '<$1$2 />');
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       modified = true;
 ,}
     }
-<<<<<<< HEAD
-
-    // Fix missing closing tags for div elements;"
-const divRegex = /<div([^ />]*)>\s*$/gm;"
-    if (divRegex.test(content)) {"
-      // This is a complex fix - we"ll need to track opening and closing tags;"'"
-const lines = content.split('\n");
-=======
     // Fix missing closing tags for div elements;
 const divRegex = /<div([^ />]*)>\s*$/gm;
     if (divRegex.test(content)) {;
       // This is a complex fix - we'll need to track opening and closing tags;
 const lines = content.split('\n');
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       const fixedLines = [];
       const tagStack = [];
 ;
@@ -57,16 +29,9 @@ const line = lines[i];
         const closeTags = line.match(/<\/(\w+)>/g);
 ;
 if (openTags) { ;
-<<<<<<< HEAD
-openTags.forEach(tag = > {;"
-;)"
-const tagName = tag.match(/<(\w+)/)[1,];"'"
-            if (!tag.includes('/>")) {;
-=======
 openTags.forEach(tag = > {);
 const tagName = tag.match(/<(\w+)/)[1];
             if (!tag.includes('/>')) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 tagStack.push(tagName);
 ;
 , }
@@ -82,59 +47,6 @@ fixedLines.push(line)}
       // Add missing closing tags;
 while (tagStack.length > 0) {;
 const tag = tagStack.pop();
-<<<<<<< HEAD
-        fixedLines.push(`</${tag,}>`);"
-      }"
-;"'"
-content = fixedLines.join('\n");
-      modified = true;
-    ,}"
-"
-    // Fix malformed object properties;"'"
-content = content.replace(/(\w+)\s*:\s*([^,}\n,]+)\s*\n(\s*)(\w+)\s*:/g, '$1: "$2",\n$3$4: "");"
-"
-    // Fix missing commas in function parameters;"
-content = content.replace(/(\w+)\s*\(\s*([^)]+)\s*\)\s*{/g",(match, funcName, params) => {;"'"
-const fixedParams = params.replace(/(\w+)\s+(\w+)/g, '$1, $2");
-      return `${funcName}(${fixedParams;}) {`;
-    });"
-"
-    // Fix malformed imports;"'"
-content = content.replace(/import\s+{\s*([^,}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;?\s*$/gm, 'import { $1 } from '$2';");
-"
-    // Fix missing semicolons;"
-content = content.replace(/(\w+)\s*=\s*([^;]+)\s*$/gm, (match, varName, value) => {;"'"
-if (!value.includes(';') && !value.includes('{') && !value.includes('(")) {;
-return `${varName} = ${value;};`;
-      }
-      return match;
-    });"
-"
-    // Fix malformed JSX expressions;"'"
-content = content.replace(/<(\w+)([^>]*)>\s*<\/\1>/g, '<$1$2 />");
-
-    // Fix missing closing braces;
-const openBraces = (content.match(/{/g) || []).length;
-    const closeBraces = (content.match(/,;}/g) || []).length;"
-    if (openBraces > closeBraces) {;"
-const missingBraces = openBraces - closeBraces;"'"
-      content += '\n' + ',}".repeat(missingBraces);
-      modified = true;
-    ,}"
-"
-    // Fix malformed function declarations;"'"
-content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {\n  ");"
-"
-    // Fix missing return statements;"'"
-content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'function $1() {\n  return ");"
-"
-    // Fix malformed React components;"'"
-content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, 'const $1 = () => {\n  return ");"
-;"
-if (modified) {;"'"
-fs.writeFileSync(filePath, content, 'utf8");
-      console.log(`Fixed parsing errors in ${filePath;}`);
-======="
 function fixSyntaxErrors(filePath) {"
   try {"'"
     let content = fs.readFileSync(filePath, 'utf8");
@@ -220,7 +132,6 @@ function fixSyntaxErrors(filePath) {"
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-=======
         fixedLines.push(`</${tag}>`)}'
 content = fixedLines.join('\n');
       modified = true}
@@ -263,7 +174,6 @@ content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, 'const $
 if (modified) {;
 fs.writeFileSync(filePath, content, 'utf8');`
       console.log(`Fixed parsing errors in ${filePath}`);
-=======;
 function fixSyntaxErrors(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8');
@@ -336,32 +246,12 @@ function fixSyntaxErrors(filePath) {;
     // Only write if content changed;
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content);`
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       console.log(`Fixed: ${filePath}`);
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;
       return true}
     return false} catch (error) {;`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false}
 }
-<<<<<<< HEAD;
-// Function to fix specific files that are known to have issues;
-<<<<<<< HEAD
-function fixSpecificFiles() { "
-;"
-const problematicFiles = ["'"
-    'app/components/AccessibilityComponents.tsx","'"
-    'app/components/AdvancedAccessibilityEnhancer.tsx","'"
-    'app/components/AdvancedErrorBoundary.tsx","'"
-    'app/components/AdvancedPerformanceMonitor.tsx","'"
-    'app/components/AdvancedPerformanceOptimizer.tsx","'"
-    'app/components/AdvancedSEOOptimizer.tsx","'"
-    'app/components/Analytics.tsx","'"
-    'app/components/AnalyticsProvider.tsx","'"
-    'app/components/AnimatedCounter.tsx","'"
-    'app/components/AnimatedText.tsx",;"'"
-    'app/components/Breadcrumb.tsx";
-=======
 function fixSpecificFiles() {
 ;
 const problematicFiles = [;
@@ -375,7 +265,6 @@ const problematicFiles = [;
     'app/components/AnalyticsProvider.tsx',;
     'app/components/AnimatedCounter.tsx',;
     'app/components/AnimatedText.tsx','app/components/Breadcrumb.tsx'
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   ];
 ;
 let fixedCount = 0;
@@ -392,31 +281,16 @@ function fixFilesInDirectory(dir) {;
 const files = fs.readdirSync(dir);
   let fixedCount = 0;
 ;
-<<<<<<< HEAD
-files.forEach(file = > {;
-;)
-const filePath = path.join(dir, file);"
-    const stat = fs.statSync(filePath);"
-;"'"
-if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {;
-fixedCount += fixFilesInDirectory(filePath);"
-    "
-"'"
-,} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js")) {;
-=======
 files.forEach(file = > {);
 const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 ;
 if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {;
 fixedCount += fixFilesInDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 if (fixParsingErrors(filePath)) {;
 fixedCount++}
-=======;
 function findAndFixFiles(dir) {;
   const files = fs.readdirSync(dir);
-<<<<<<< HEAD
   
   for (const file of files) {
     const filePath = path.join(dir, file);"
@@ -425,7 +299,6 @@ function findAndFixFiles(dir) {;
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {"
       findAndFixFiles(filePath);"'"
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js")) {
-=======
 ;
   for (const file of files) {;
     const filePath = path.join(dir, file);
@@ -433,49 +306,188 @@ function findAndFixFiles(dir) {;
 ;
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {;
       findAndFixFiles(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
       fixSyntaxErrors(filePath);
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;
-    }
-  }
-<<<<<<< HEAD
-}"
-"
-// Start fixing from the app directory"'"
-findAndFixFiles('./app");"'"
-findAndFixFiles('./components");"'"
-findAndFixFiles('./src");
+#!/usr/bin/env node
 
-<<<<<<< HEAD
-// Fix specific problematic files first;
-const specificFixed = fixSpecificFiles();
-console.log(`Fixed ${specificFixed,} specific problematic files.`);"
-"
-// Then fix all files in the app directory;"'"
-const appFixed = fixFilesInDirectory('./app");
-console.log(`Fixed ${appFixed,} files in app directory.`);
-"
-// Also fix files in src directory if it exists;"
-let srcFixed = 0;"'"
-if (fs.existsSync('./src")) {;"'"
-srcFixed = fixFilesInDirectory('./src");
-  console.log(`Fixed ${srcFixed,} files in src directory.`);"
-}"
-;"
-console.log(`Comprehensive parsing error fixes completed. Total files fixed: "${specificFixed + appFixed + srcFixed",}`);"
-======="'"
+const fs = require("fs")
+const path = require("path")
+//Function to fix all syntax errors comprehensively
+function fixAllErrors(content) {
+  let fixed = content
+  //Fix malformed import statements;
+  fixed = fixed.replace(/import\s*{\s*React\s*from\s*"react"\s*$/gm, "import React from "react";")
+  fixed = fixed.replace(/import\s*{\s*React\s*}\s*from\s*"react"\s*$/gm, "import React from "react";")
+  fixed = fixed.replace(/import\s*React\s*from\s*"react"\s*$/gm, "import React from "react";")
+  //Fix import statements with missing semicolons;
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*$/gm, "import { $1  } from "$2";")
+  //Fix import statements with missing from keyword;
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*;\s*$/gm, "import { $1  } from "lucide-react";")
+  //Fix import statements with extra from;
+  fixed = fixed.replace(/from\s*from\s*[""]([^""]+)[""]\s*$/gm, "from "$1";")
+  //Fix import statements with missing closing brace;
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*from\s*[""]([^""]+)[""]\s*$/gm, "import { $1  } from "$2";")
+  //Fix import statements with missing opening brace
+  fixed = fixed.replace(/import\s*([^{][^}]+)\s*from\s*[""]([^""]+)[""]\s*$/gm, (match, imports, source) => {;
+   ;
+const cleanImports = imports.trim()
+    return`import { ${cleanImports} } from "${source}";`
+  })
+  //Fix malformed function declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, "const$1 = () => {\n")
+  fixed = fixed.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, "function$1() {\n")
+  //Fix malformed JSX returns
+  fixed = fixed.replace(/return\s*\(\s*<([^>]+)>\s*$/gm, "return (\n    <$1>")
+  fixed = fixed.replace(/return\s*<([^>]+)>\s*$/gm, "return (\n    <$1>")
+  //Fix missing closing brackets and parentheses
+  fixed = fixed.replace(/}\s*,\s*$/gm, "}\n")
+  fixed = fixed.replace(/\)\s*,\s*$/gm, ")\n")
+  //Fix malformed JSX attributes
+  fixed = fixed.replace(/className\s*=\s*"([^"]*)"\s*\/\s*>/g, "className="$1" />")
+  fixed = fixed.replace(/className\s*=\s*"([^"]*)"\s*\/\s*\/>/g, "className="$1" />")
+  //Fix malformed component returns
+  fixed = fixed.replace(/return\s+return\s*\(/g, "return (")
+  fixed = fixed.replace(/return\s*\(\s*<div\s*\/>\s*,\s*/g, "return (\n    ")
+  //Fix malformed JSX elements
+  fixed = fixed.replace(/<(\w+)className\s*=\s*"([^"]*)"\s*\/\s*>/g, "<$1 className="$2" />")
+  fixed = fixed.replace(/<(\w+)className\s*=\s*"([^"]*)"\s*\/\s*\/>/g, "<$1 className="$2" />")
+  //Fix malformed closing tags
+  fixed = fixed.replace(/<\/\s*(\w+)\s*>\s*,\s*$/gm, "</$1>")
+  fixed = fixed.replace(/<\/\s*(\w+)\s*>\s*;\s*$/gm, "</$1>")
+  //Fix malformed function calls
+  fixed = fixed.replace(/\(\s*\)\s*=>\s*{\s*;\s*}/g, "() => {\n  //TODO: Implement\n}")
+  //Fix malformed object properties
+  fixed = fixed.replace(/:\s*"([^"]*)"\s*,\s*$/gm, ": "$1"")
+  //Fix malformed array elements
+  fixed = fixed.replace(/,\s*$/gm, "")
+  //Fix malformed string literals
+  fixed = fixed.replace(/"([^"]*)"\s*,\s*$/gm, ""$1"")
+  //Fix malformed JSX expressions
+  fixed = fixed.replace(/\{\s*([^}]+)\s*\}\s*,\s*$/gm, "{$1}")
+  //Fix malformed component declarations
+  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, "export default function$1() {\n")
+  //Fix malformed arrow functions
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, "const$1 = () => {\n")
+  //Fix malformed JSX fragments
+  fixed = fixed.replace(/<>\s*$/gm, "<>\n")
+  fixed = fixed.replace(/<\/>\s*;\s*$/gm, "</>\n")
+  //Fix malformed closing brackets
+  fixed = fixed.replace(/}\s*;\s*$/gm, "}\n")
+  //Fix malformed semicolons
+  fixed = fixed.replace(/;\s*$/gm, "")
+  //Fix malformed commas
+  fixed = fixed.replace(/,\s*$/gm, "")
+  //Fix malformed parentheses
+  fixed = fixed.replace(/\)\s*;\s*$/gm, ")\n")
+  //Fix malformed brackets
+  fixed = fixed.replace(/\]\s*;\s*$/gm, "]\n")
+  //Fix malformed braces
+  fixed = fixed.replace(/\}\s*;\s*$/gm, "}\n")
+  //Fix malformed JSX attributes with spaces
+  fixed = fixed.replace(/\s+className\s*=\s*"([^"]*)"\s*\/\s*>/g, " className="$1" />")
+  //Fix malformed JSX elements with spaces
+  fixed = fixed.replace(/\s+<(\w+)\s*className\s*=\s*"([^"]*)"\s*\/\s*>/g, " <$1 className="$2" />")
+  //Fix malformed closing tags with spaces
+  fixed = fixed.replace(/\s+<\/\s*(\w+)\s*>\s*,\s*$/gm, " </$1>")
+  //Fix malformed JSX expressions with spaces
+  fixed = fixed.replace(/\s+\{\s*([^}]+)\s*\}\s*,\s*$/gm, " {$1}")
+  //Fix malformed function calls with spaces
+  fixed = fixed.replace(/\s+\(\s*\)\s*=>\s*{\s*;\s*}/g, " () => {\n  //TODO: Implement\n}")
+  //Fix malformed object properties with spaces
+  fixed = fixed.replace(/\s+:\s*"([^"]*)"\s*,\s*$/gm, " : "$1"")
+  //Fix malformed array elements with spaces
+  fixed = fixed.replace(/\s+,\s*$/gm, "")
+  //Fix malformed string literals with spaces
+  fixed = fixed.replace(/\s+"([^"]*)"\s*,\s*$/gm, " "$1"")
+  //Fix malformed JSX expressions with spaces
+  fixed = fixed.replace(/\s+\{\s*([^}]+)\s*\}\s*,\s*$/gm, " {$1}")
+  //Fix malformed component declarations with spaces
+  fixed = fixed.replace(/\s+export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, " export default function$1() {\n")
+  //Fix malformed arrow functions with spaces
+  fixed = fixed.replace(/\s+const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, " const$1 = () => {\n")
+  //Fix malformed JSX fragments with spaces
+  fixed = fixed.replace(/\s+<>\s*$/gm, " <>\n")
+  fixed = fixed.replace(/\s+<\/>\s*;\s*$/gm, " </>\n")
+  //Fix malformed closing brackets with spaces
+  fixed = fixed.replace(/\s+}\s*;\s*$/gm, " }\n")
+  //Fix malformed semicolons with spaces
+  fixed = fixed.replace(/\s+;\s*$/gm, "")
+  //Fix malformed commas with spaces
+  fixed = fixed.replace(/\s+,\s*$/gm, "")
+  //Fix malformed parentheses with spaces
+  fixed = fixed.replace(/\s+\)\s*;\s*$/gm, " )\n")
+  //Fix malformed brackets with spaces
+  fixed = fixed.replace(/\s+\]\s*;\s*$/gm, " ]\n")
+  //Fix malformed braces with spaces
+  fixed = fixed.replace(/\s+\}\s*;\s*$/gm, " }\n")
+  //Fix specific patterns found in the files
+  fixed = fixed.replace(/import\s*{\s*React\s*from\s*"react"\s*$/gm, "import React from "react";")
+  fixed = fixed.replace(/import\s*{\s*React\s*}\s*from\s*"react"\s*$/gm, "import React from "react";")
+  fixed = fixed.replace(/import\s*React\s*from\s*"react"\s*$/gm, "import React from "react";")
+  //Fix import statements with missing semicolons;
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*$/gm, "import { $1  } from "$2";")
+  //Fix import statements with missing from keyword;
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*;\s*$/gm, "import { $1  } from "lucide-react";")
+  //Fix import statements with extra from;
+  fixed = fixed.replace(/from\s*from\s*[""]([^""]+)[""]\s*$/gm, "from "$1";")
+  //Fix import statements with missing closing brace;
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*from\s*[""]([^""]+)[""]\s*$/gm, "import { $1  } from "$2";")
+  //Fix import statements with missing opening brace
+  fixed = fixed.replace(/import\s*([^{][^}]+)\s*from\s*[""]([^""]+)[""]\s*$/gm, (match, imports, source) => {;
+   ;
+const cleanImports = imports.trim()
+    return`import { ${cleanImports} } from "${source}";`
+  })
+  return fixed
+}
+
+//Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixAllErrors(content)
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed)
+      console.log(`Fixed: ${filePath}`)
+      return true
+    }
+    return false
+  } catch (error) {
+    console.error(`Error processing${filePath}:`, error.message)
+    return false
+  }
+}
+
+//Function to recursively find and process files
+function processDirectory(dirPath) {
+  let fixedCount = 0
+  try {
+    const items = fs.readdirSync(dirPath)
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item)
+      const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {
+        //Skip node_modules and other directories
+        if (item !== "node_modules" && item !== ".git" && item !== ".next") {
+          fixedCount+= processDirectory(fullPath)
+        }
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")) {
+        if (processFile(fullPath)) {
+          fixedCount++
+        }
+      }
+    }
+  } catch (error) {
+    console.error(`Error processing directory${dirPath}:`, error.message)
+  }
 console.log('Syntax error fixing completed!");"
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81"
 "
 }}}}}}}}}}}}'"
-=======
 }
 // Start fixing from the app directory;
 findAndFixFiles('./app');
 findAndFixFiles('./components');
 findAndFixFiles('./src');
 ;
-<<<<<<< HEAD;
 // Fix specific problematic files first;
 const specificFixed = fixSpecificFiles();`
 console.log(`Fixed ${specificFixed} specific problematic files.`);
@@ -490,8 +502,12 @@ if (fs.existsSync('./src')) {;
 srcFixed = fixFilesInDirectory('./src');`"
   console.log(`Fixed ${srcFixed} files in src directory.`)}";`"
 console.log(`Comprehensive parsing error fixes completed. Total files fixed: "${specificFixed + appFixed + srcFixed"}`);
-=======;
 console.log('Syntax error fixing completed!');
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81;"
 ";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+  
+  return fixedCount
+}
+
+//Main execution console.log("Starting comprehensive error fixes...")
+const totalFixed = processDirectory("/workspace")
+console.log(`Fixed${totalFixed} files`)

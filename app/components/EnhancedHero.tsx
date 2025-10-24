@@ -1,45 +1,31 @@
-'use client'
-import React from 'react'
-import Helmet from 'react-helmet-async'
-import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe         } from 'lucide-react'
-import { { Phone, Mail } from 'lucide-react'
-    'use client'
-      'Gain competitive advantage with advanced technology'
-const EnhancedHero: "React.FC = () => {"
-const benefits = ["
-    'Increase efficiency by up to 50%','Reduce costs by 30% with automation'
-    'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'
-'Gain competitive advantage with advanced technology",<div className="flex flex-col sm: flex-row gap-4 justify-center" />
+"use client"
+import React from "react";
+import { Helmet  } from "react-helmet-async";
+import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe        } from "lucide-react"
+import { Phone, Mail  } from "lucide-react";
+    "use client"
+      "Gain competitive advantage with advanced technology"
+const EnhancedHero: "React.FC = () => {
+const benefits = [
+    "Increase efficiency by up to 50%"","Reduce costs by 30% with automation"
+    "Improve decision-making with AI insights"
+    "Scale operations without proportional staff increases"
+"Gain competitive advantage with advanced technology" <div className="[^"]*">
 
         </section>
-        / Benefits Section /<section className="py-20 px-4 bg-white/5">
-<divkey=index className="flex items-start space-x-4" / /></div>,<div className="flex-shrink-0" /><CheckCircle className="w-6 h-6 text-emerald-400" /></div>
-'use client'
-import React from 'react'
-import Helmet  from 'react-helmet-async'
-import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe        } from 'lucide-react'
-import { { Phone, Mail } from from 'lucide-react''use client'
-      'Gain competitive advantage with advanced technology'
-const EnhancedHero: "React.FC = () => {"
-const benefits = ["
-    'Increase efficiency by up to 50%','Reduce costs by 30% with automation'
-    'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'
-'Gain competitive advantage with advanced technology',<div className="flex flex-col sm: flex-row gap-4 justify-center"  />
-        </section>
-        / Benefits Section /<section className="py-20 px-4 bg-white/5">
-<divkey=index className="flex items-start space-x-4" / /></div>,<div className="flex-shrink-0" / /><CheckCircle className="w-6 h-6 text-emerald-400"  />;</div>
+
+        /Benefits Section /<section className="py-20 px-4 bg-white/5">
+
+      <divkey= index className="flex items-start space-x-4" />
+    </div>,<div className="[^"]*"><CheckCircle className="w-6 h-6 text-emerald-400" />
+                    </div>
                   <p className="text-gray-300">benefit</p>
                   </div>
               </div>
             </div>
         </section>
-        / CTA Section /<section className="py-20 px-4">,<div className="max-w-4 xl mx-auto text-center" /><h2 className="text-4 xl font-bold text-white mb-6">Ready to Get Started</h2><p className="text-xl text-gray-300 mb-8" />
-Join thousands of businesses already using Enhanced Hero to transform their operations</p>
-        </section>
-        / CTA Section /<section className="py-20 px-4">,<div className="max-w-4 xl mx-auto text-center" / /><h2 className="text-4 xl font-bold text-white mb-6">Ready to Get Started</h2>
-            <p className="text-xl text-gray-300 mb-8"  />
+
+        /CTA Section /<section className="py-20 px-4"> <div className="[^"]*"><h2 className="text-4 xl font-bold text-white mb-6">Ready to Get Started</h2> <p className="[^"]*">
 Join thousands of businesses already using Enhanced Hero to transform their operations</p>
             <button className="bg-emerald-600 hoverbg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 Start Your Free Trial</button>
@@ -47,14 +33,20 @@ Start Your Free Trial</button>
         </section>
         </div>
       </div>
-  )"
-,}
-export default EnhancedHero;    'Gain competitive advantage with advanced technology",
-    <divclassName = quotflex flex-col sm flex-row gap-4 justify-centerquot / / / />
-,}"
-}</div>
-  )}
-export default EnhancedHero'Gain competitive advantage with advanced technology',
-    <div className = quotflex flex-col sm flex-row gap-4 justify-centerquot / / /  />
-}"
-}"
+    </>
+  )
+
+export default EnhancedHero;    "Gain competitive advantage with advanced technology"
+    <divclassName = quotflex flex-col sm flex-row gap-4 justify-centerquot ////>
+}
+}
+
+export const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedhero ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedHero;

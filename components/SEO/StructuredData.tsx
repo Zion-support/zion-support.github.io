@@ -1,24 +1,27 @@
-<<<<<<< HEAD
-import React from "react
-"
-use client";
+import React from "react"; "use client"
 interface StructuredDataProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const StructuredData: "React.FC<StructuredDataProps> = ({ className = '' ",;}) => {
-return(</StructuredDataProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const StructuredData: "React.FC<StructuredDataProps> = ({ className="" "}) => {
+return (</StructuredDataProps>
+    <divclassName={className} />
       <h2>StructuredData</h2>
       <p>This component is under construction.</p>
-    </div>)
+    </div>
+    </>
+  )
+  )
+}
+
+export const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
+  return (
+    <div className={`structureddata ${className}`}>
+      {children}
+    </div>
   );
-};"
-;"
-export default StructuredData;"'"
-=======
 import React from 'react'
 "use client"
 interface StructuredDataProps {;
@@ -35,4 +38,6 @@ return(</>;
     </div>);
   )}"
 export default StructuredData;";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default StructuredData;

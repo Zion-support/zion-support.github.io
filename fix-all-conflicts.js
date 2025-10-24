@@ -4,9 +4,6 @@ const path = require('path');
 // Function to fix merge conflicts and syntax errors
 function fixMergeConflicts(content) {
   // Remove merge conflict markers
-  content = content.replace(/<<<<<<< HEAD\n/g, '');
-  content = content.replace(/=======\n/g, '');
-  content = content.replace(/>>>>>>> [^\n]+\n/g, '');
   
   // Fix malformed URLs
   content = content.replace(/url=\"https:\/\/ ziontechgroup\.com\//g, 'url="https://ziontechgroup.com/');

@@ -1,24 +1,27 @@
-<<<<<<< HEAD
-import React from "react
-"
-use client";
+import React from "react"; "use client"
 interface MetaTagsProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const MetaTags: "React.FC<MetaTagsProps> = ({ className = '' ",;}) => {
-return(</MetaTagsProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const MetaTags: "React.FC<MetaTagsProps> = ({ className="" "}) => {
+return (</MetaTagsProps>
+    <divclassName={className} />
       <h2>MetaTags</h2>
       <p>This component is under construction.</p>
-    </div>)
+    </div>
+    </>
+  )
+  )
+}
+
+export const MetaTags: React.FC<MetaTagsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`metatags ${className}`}>
+      {children}
+    </div>
   );
-};"
-;"
-export default MetaTags;"'"
-=======
 import React from 'react'
 "use client"
 interface MetaTagsProps {;
@@ -35,4 +38,6 @@ return(</>;
     </div>);
   )}"
 export default MetaTags;";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default MetaTags;

@@ -1,22 +1,27 @@
-<<<<<<< HEAD
-import React from 'react"
+import React from "react";
 interface ContentNewsletterSignupProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const ContentNewsletterSignup: "React.FC<ContentNewsletterSignupProps> = ({ className = '' ",;}) => {
-return(</ContentNewsletterSignupProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const ContentNewsletterSignup: "React.FC<ContentNewsletterSignupProps> = ({ className="" "}) => {
+return (</ContentNewsletterSignupProps>
+    <divclassName = {className} / />
       <h2>ContentNewsletterSignup</h2>
       <p>This component is under construction.</p>
-      </div>)
+      </div>
+    </>
+  )
+  )
+}
+
+export const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
+  return (
+    <div className={`contentnewslettersignup ${className}`}>
+      {children}
+    </div>
   );
-};"
-export default ContentNewsletterSignup;"
-}"'"
-=======
 import React from 'react'
 interface ContentNewsletterSignupProps {;
 className?: string;
@@ -31,4 +36,6 @@ return(</>;
       </div>);
   )}"
 export default ContentNewsletterSignup}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default ContentNewsletterSignup;

@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-'use client';'
-  "category": 'load' | 'runtime' | 'network' | 'memory' | 'custom'",;"'"
-if(typeof window !== "undefined;"
-if ("PerformanceObserver;"
-if (entry.entryType === "navigation;"
-navObserver.observe({ "entryTypes": ['navigation'",;"'"
-if (entry.name = == "first-contentful-paint;"
-                "category": 'load'",;"'"
-paintObserver.observe({ "entryTypes": ['paint'","'"
-              "category": 'load'",;"'"
-lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'","'"
-            "category": 'runtime'",;"'"
-clsObserver.observe({ "entryTypes": ['layout-shift'",;"'"
-console.error('Failed to initialize performance "observers": '",;"'"
-if (typeof window === "undefined;"
-if (typeof window = == "undefined;"
-      "category": 'runtime'",;"'"
-      "category": 'runtime'",;)"'"
-getMetricsByCategory("category": PerformanceMetric['category'",);"'"
-recommendations.push("Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources;"
-recommendations.push("Improve Largest Contentful Paint (LCP) - optimize largest element loading;"
-recommendations.push("Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds;"
-recommendations.push("Reduce First Input Delay (FID) - optimize JavaScript execution;"
-const networkMetrics = this.getMetricsByCategory("network;"
-recommendations.push('Optimize network requests - consider caching and reducing payload sizes'",})"'"
-    const loadMetrics = this.getMetricsByCategory('load'");]"
-}}})))))))))))))))'"
-=======
 'use client''
   "category": 'load' | 'runtime' | 'network' | 'memory' | 'custom'',;
 if(typeof window !== 'undefined''
@@ -50,4 +21,22 @@ recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execu
 const networkMetrics = this.getMetricsByCategory('network'');
 recommendations.push('Optimize network requests - consider caching and reducing payload sizes''});'"
     const loadMetrics = this.getMetricsByCategory('load'');]";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+"use client""
+  "category": "load" | "runtime" | "network" | "memory" | "custom""
+if(typeof window !== "undefined""
+if ("PerformanceObserver""
+if (entry.entryType === "navigation""
+navObserver.observe({ "entryTypes": ["navigation""
+if (entry.name = == "first-contentful-paint""
+                "category": "load""
+paintObserver.observe({ "entryTypes": ["paint""
+              "category": "load""
+lcpObserver.observe({ "entryTypes": ["largest-contentful-paint""
+            "category": "runtime""
+clsObserver.observe({ "entryTypes": ["layout-shift"" console.error("Failed to initialize performance "observers": ""
+if (typeof window === "undefined""
+if (typeof window = == "undefined""
+      "category": "runtime""
+      "category": "runtime"") getMetricsByCategory("category": PerformanceMetric["category"") recommendations.push("Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources"" recommendations.push("Improve Largest Contentful Paint (LCP) - optimize largest element loading"" recommendations.push("Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds"" recommendations.push("Reduce First Input Delay (FID) - optimize JavaScript execution""
+const networkMetrics = this.getMetricsByCategory("network"" recommendations.push("Optimize network requests - consider caching and reducing payload sizes""})
+    const loadMetrics = this.getMetricsByCategory("load"");]

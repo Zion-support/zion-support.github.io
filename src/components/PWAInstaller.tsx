@@ -1,22 +1,27 @@
-<<<<<<< HEAD
-import React from 'react"
+import React from "react";
 interface PWAInstallerProps {
 className?: string
-;}
-;}"
-;}"
-"'"
-const PWAInstaller: "React.FC<PWAInstallerProps> = ({ className = '' ",;}) => {
-return(</PWAInstallerProps>,
-    <div className={className,;} />
+}
+}
+}
+
+const PWAInstaller: "React.FC<PWAInstallerProps> = ({ className="" "}) => {
+return (</PWAInstallerProps>
+    <divclassName = {className} / />
       <h2>PWAInstaller</h2>
       <p>This component is under construction.</p>
-      </div>)
+      </div>
+    </>
+  )
+  )
+}
+
+export const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`pwainstaller ${className}`}>
+      {children}
+    </div>
   );
-};"
-export default PWAInstaller;"
-}"'"
-=======
 import React from 'react'
 interface PWAInstallerProps {;
 className?: string;
@@ -31,4 +36,6 @@ return(</>;
       </div>);
   )}"
 export default PWAInstaller}";'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+};
+
+export default PWAInstaller;
