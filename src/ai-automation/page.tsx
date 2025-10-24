@@ -15,4 +15,4 @@ const pagePage = () => {
   );
 };
 
-export default pagePage;
+export default AIAutomationPage;
