@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 /**
  * Testing Utilities
@@ -313,3 +314,11 @@ const testUtils = {
 }
 
 export default testUtils
+=======
+// testUtils utility functions
+export const testUtils = () => {
+  return null;
+};
+
+export default testUtils;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

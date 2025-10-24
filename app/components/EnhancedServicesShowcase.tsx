@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
@@ -94,6 +95,16 @@ const EnhancedServicesShowcase: React.FC = () => {
           ))}
         </div>
       </div>
+=======
+"use client";
+import React from 'react';
+
+const EnhancedServicesShowcase = () => {
+  return (
+    <div>
+      <h1>EnhancedServicesShowcase</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

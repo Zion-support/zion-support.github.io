@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface EnhancedAccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -143,3 +144,5 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 };
 
 export default EnhancedAccessibilityEnhancer;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

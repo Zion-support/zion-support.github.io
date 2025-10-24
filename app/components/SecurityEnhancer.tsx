@@ -1,14 +1,15 @@
+<<<<<<< HEAD
 
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 import React from 'react';
 
-interface SecurityEnhancerProps {
-  // Add props here
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
+const SecurityEnhancer = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>SecurityEnhancer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 };

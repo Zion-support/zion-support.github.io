@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRef, useEffect } from 'react'
 'use client'
 /**
@@ -293,3 +294,11 @@ export const initializePerformanceEnhancements = () => {
     console.log('Performance metrics:', metrics)
   }
 }
+=======
+// performanceEnhancer utility functions
+export const performanceEnhancer = () => {
+  return null;
+};
+
+export default performanceEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

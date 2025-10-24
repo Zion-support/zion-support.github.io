@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Type definitions for API client
 // RequestInit is a built-in TypeScript type for fetch options
 export interface ApiResponse<T = unknown> {
@@ -114,3 +115,45 @@ export class ApiClient {
 }
 
 export default ApiClient;
+=======
+import React from 'react';
+export const apiClient = {
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
+  async request<T>(endpoint: string, options: RequestInit = { /* empty */ }): Promise<T> {
+    const url = `${this.baseURL}${endpoint}`;
+    const response = await fetch(url, {
+      headers: {
+        'Content-Type': 'application/json';
+        ...options.headers;
+      };
+      ...options;
+    });
+    
+    if (!response.ok) {
+      throw new Error(`API request failed: ${response.status}`);
+    }
+    
+    return response.json();
+  };
+  get: <T>(endpoint: string, options: RequestInit = { /* empty */ }): Promise<T> => {
+    return apiClient.request<T>(endpoint, { ...options, method: 'GET' });
+  };
+  post: <T>(endpoint: string, data: unknown, options: RequestInit = { /* empty */ }): Promise<T> => {
+    return apiClient.request<T>(endpoint, {
+      ...options;
+      method: 'POST';
+      body: JSON.stringify(data);
+    });
+  };
+  put: <T>(endpoint: string, data: unknown, options: RequestInit = { /* empty */ }): Promise<T> => {
+    return apiClient.request<T>(endpoint, {
+      ...options;
+      method: 'PUT';
+      body: JSON.stringify(data);
+    });
+  };
+  delete: <T>(endpoint: string, options: RequestInit = { /* empty */ }): Promise<T> => {
+    return apiClient.request<T>(endpoint, { ...options, method: 'DELETE' });
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

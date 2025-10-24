@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react';
@@ -75,3 +76,5 @@ const Page: React.FC = () => {
   )};
 
 export default Page;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

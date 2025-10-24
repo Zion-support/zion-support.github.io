@@ -1,14 +1,15 @@
+<<<<<<< HEAD
 
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 import React from 'react';
 
-interface PerformanceDashboardProps {
-  // Add props here
-}
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {
+const PerformanceDashboard = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>PerformanceDashboard</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, Users, Award, Clock } from 'lucide-react';
@@ -103,6 +104,16 @@ const ContentStatistics: React.FC = () => {
           ))}
         </div>
       </div>
+=======
+"use client";
+import React from 'react';
+
+const ContentStatistics = () => {
+  return (
+    <div>
+      <h1>ContentStatistics</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

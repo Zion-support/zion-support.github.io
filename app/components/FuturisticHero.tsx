@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -98,3 +99,5 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
 };
 
 export default FuturisticHero;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

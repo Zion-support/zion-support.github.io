@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { createContext, useContext, useEffect } from 'react';
@@ -88,8 +89,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     identify,
     page
   };
+=======
+"use client";
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 
+const EnhancedAnalytics = () => {
   return (
+<<<<<<< HEAD
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
@@ -103,3 +110,13 @@ declare global {
 }
 
 export default AnalyticsProvider;
+=======
+    <div>
+      <h1>EnhancedAnalytics</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedAnalytics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

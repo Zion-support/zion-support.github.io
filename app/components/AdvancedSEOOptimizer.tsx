@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 interface SEOOptimizerProps {
@@ -258,4 +259,18 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
   );
 };
+=======
+"use client";
+import React from 'react';
+
+const AdvancedSEOOptimizer = () => {
+  return (
+    <div>
+      <h1>AdvancedSEOOptimizer</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 export default AdvancedSEOOptimizer;

@@ -1,13 +1,28 @@
-import { useState, useEffect } from 'react';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
+const UsePerformanceMetrics.tsPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>UsePerformanceMetrics.ts - Zion Tech Group</title>
+        <meta name="description" content="Professional usePerformanceMetrics.ts services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">UsePerformanceMetrics.ts</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
+<<<<<<< HEAD
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
@@ -78,3 +93,6 @@ export function usePerformanceMetrics() {
 
   return { metrics, isSupported };
 }
+=======
+export default UsePerformanceMetrics.tsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

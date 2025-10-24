@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useEffect } from 'react';
 
@@ -63,3 +64,5 @@ const Analytics: React.FC<AnalyticsProps> = ({
 };
 
 export default Analytics;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { CheckCircle, ArrowRight, Mail } from 'lucide-react';
@@ -126,3 +127,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 };
 
 export default ContentNewsletterSignup;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

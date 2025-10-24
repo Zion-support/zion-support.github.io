@@ -1,14 +1,11 @@
-'use client';;
+"use client";
 import React from 'react';
 
-interface EnhancedPerformanceMonitorProps {
-  // Add props here
-}
-
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
+const EnhancedPerformanceMonitor = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>EnhancedPerformanceMonitor</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 };

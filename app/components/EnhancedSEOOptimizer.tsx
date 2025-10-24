@@ -1,14 +1,11 @@
-'use client';;
+"use client";
 import React from 'react';
 
-interface EnhancedSEOOptimizerProps {
-  // Add props here
-}
-
-const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
+const EnhancedSEOOptimizer = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>EnhancedSEOOptimizer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 };

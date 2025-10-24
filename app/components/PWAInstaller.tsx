@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -111,6 +112,16 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({
           <X className="w-4 h-4" />
         </button>
       </div>
+=======
+"use client";
+import React from 'react';
+
+const PWAInstaller = () => {
+  return (
+    <div>
+      <h1>PWAInstaller</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

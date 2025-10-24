@@ -133,125 +133,107 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import react from 'eslint-plugin-react';
 
 export default [
-  {ignores: [
-    'dist', 
-    'node_modules', 
-    '.next', 
-    'out',
-    'automation*',
-    'backup*',
-    'corrupted*',
-    'fix-*',
-    'clean*',
-    'merge*',
-    'comprehensive*',
-    'final*',
-    'aggressive*',
-    'analyze*',
-    'chunk-*',
-    'create*',
-    'enhanced*',
-    'fetch*',
-    'generate*',
-    'identify*',
-    'improve*',
-    'latest*',
-    'process*',
-    'resolve*',
-    'setup*',
-    'simple*',
-    'smart*',
-    'targeted*',
-    'ultimate*',
-    'website*',
-    'accessibility*',
-    'add-*',
-    'check*',
-    'close*',
-    'middleware*',
-    'performance*',
-    'security*',
-    'seo*',
-    'site*',
-    'vite*',
-    'jest*',
-    'tailwind*',
-    'tsconfig*',
-    'next*',
-    'index.html',
-    'index.css',
-    'page_template*',
-    '*.webmanifest',
-    '*.toml',
-    '*.example',
-    '*.template',
-    '*.txt',
-    '*.json',
-    '*.md',
-    '*.mdx',
-    '*.original',
-    'automation_backup/**',
-    'backup*/**',
-    'corrupted*/**',
-    'temp*/**',
-    'src*/**',
-    'pages*/**',
-    'clean*/**',
-    'problematic*/**',
-    'recovered*/**',
-    'ci-cd-reports/**',
-    'analysis/**',
-    'netlify/**',
-    'zion-*/**',
-    'hooks/**',
-    'services/**',
-    'scripts/**',
-    'types/**',
-    'utils/**',
-    'lib.disabled/**',
-    'lib/**',
-    'config/**',
-    'content/**',
-    'contracts/**',
-    'cypress/**',
-    'data/**',
-    'factories/**',
-    'public/**',
-    'tests/**',
-    '__tests__/**',
-    'api/**',
-    'apps/**',
-    'backend/**',
-    'blog/**',
-    'components/api/**',
-    'components/apps/**'
-  ]},
+  // Global ignores
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: [
+      'admin-api-disabled/**',
+      'ai-customer-support-disabled/**',
+      'ai-data-visualization-disabled/**',
+      'ai-sales-automation-disabled/**',
+      'ai-workflow-automation-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'components-disabled/**',
+      'components.disabled/**',
+      'automation_backup/**',
+      'backup*/**',
+      '*-disabled/**',
+      '*.disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'cache/**',
+      'dist/**',
+      'node_modules/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
+      '*.cjs',
+      '*.js.broken',
+      'components.disabled_full/**',
+      'backup/**',
+      'backup-merge-conflicts/**',
+      'backup-pages/**',
+      'backup-problematic/**',
+      'backup-problematic-files/**',
+      'corrupted-src-backup/**',
+      'clean-build/**',
+      'ci-cd-reports/**',
+      'apps.backup/**',
+      '.next/**',
+      'out/**',
+      '*.min.js',
+      '*.min.css',
+      'chunk-*.js',
+      'comprehensive-*.js',
+      'comprehensive_*.js',
+      'automation-runner.js',
+      'check_*.js',
+      'cleanup-*.js',
+      'close-*.js',
+      'code-quality-*.js',
+      'commit-and-*.js',
+      'contracts/**'
+    ]
+  },
+  // Base JavaScript configuration
+  {
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn'
+    }
+  },
+  // TypeScript configuration
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      'react': react,
+      'react-refresh': reactRefresh
     },
     rules: {
-      ...js.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
+<<<<<<< HEAD
         {
           allowConstantExport: true, 
           allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
@@ -289,10 +271,24 @@ export default [
       },
     },
     rules: {
+=======
+        { allowConstantExport: true }
+      ],
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
       '@typescript-eslint/no-unused-vars': 'off',
-      'no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+<<<<<<< HEAD
     },
   },
 ];
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
+=======
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'no-console': 'off',
+      'no-unused-vars': 'off'
+    }
+  }
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

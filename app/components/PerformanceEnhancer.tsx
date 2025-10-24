@@ -1,13 +1,14 @@
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 import React from 'react';
 
-interface PerformanceEnhancerProps {
-  // Add props here
-}
-
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
+const PerformanceEnhancer = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>PerformanceEnhancer</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 };

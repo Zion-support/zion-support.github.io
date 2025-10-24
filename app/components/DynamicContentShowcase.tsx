@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Cloud, Zap, Shield, Globe, Brain, Star } from 'lucide-react';
@@ -90,6 +91,16 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+"use client";
+import React from 'react';
+
+const DynamicContentShowcase = () => {
+  return (
+    <div>
+      <h1>DynamicContentShowcase</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

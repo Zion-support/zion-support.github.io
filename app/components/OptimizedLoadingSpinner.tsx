@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -106,6 +107,16 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
           {text}
         </p>
       )}
+=======
+"use client";
+import React from 'react';
+
+const OptimizedLoadingSpinner = () => {
+  return (
+    <div>
+      <h1>OptimizedLoadingSpinner</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 

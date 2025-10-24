@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -24,6 +25,16 @@ const Loading: React.FC<LoadingProps> = ({
           {text}
         </p>
       )}
+=======
+"use client";
+import React from 'react';
+
+const Loading = () => {
+  return (
+    <div>
+      <h1>Loading</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface EnhancedLoadingSkeletonProps {
   lines?: number;
@@ -42,6 +43,16 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
           ))}
         </div>
       </div>
+=======
+"use client";
+import React from 'react';
+
+const EnhancedLoadingSkeleton = () => {
+  return (
+    <div>
+      <h1>EnhancedLoadingSkeleton</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

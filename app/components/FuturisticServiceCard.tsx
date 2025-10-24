@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface FuturisticServiceCardProps {
   title: string;
@@ -83,6 +84,16 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           </button>
         </div>
       </div>
+=======
+"use client";
+import React from 'react';
+
+const FuturisticServiceCard = () => {
+  return (
+    <div>
+      <h1>FuturisticServiceCard</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

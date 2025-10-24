@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface ServiceCardSkeletonProps {
   showImage?: boolean;
@@ -41,6 +42,16 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
       {showButton && (
         <div className="h-10 bg-gray-300 rounded w-full"></div>
       )}
+=======
+"use client";
+import React from 'react';
+
+const ServiceCardSkeleton = () => {
+  return (
+    <div>
+      <h1>ServiceCardSkeleton</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

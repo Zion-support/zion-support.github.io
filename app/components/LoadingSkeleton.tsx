@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface LoadingSkeletonProps {
   className?: string
@@ -26,3 +27,5 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   )
 }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

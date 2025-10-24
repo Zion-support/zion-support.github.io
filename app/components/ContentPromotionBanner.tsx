@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 'use client';
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 import React from 'react';
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const ContentPromotionBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
@@ -33,6 +38,13 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+const ContentPromotionBanner = () => {
+  return (
+    <div>
+      <h1>ContentPromotionBanner</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

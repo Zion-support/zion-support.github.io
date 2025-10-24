@@ -1,13 +1,14 @@
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 import React from 'react';
 
-interface EnhancedLoadingProps {
-  // Add props here
-}
-
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
+const EnhancedLoading = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>EnhancedLoading</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 };

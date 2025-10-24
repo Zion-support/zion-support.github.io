@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface SystemMonitorProps {
   showDetails?: boolean;
@@ -148,6 +149,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             </div>
           </div>
         </div>
+=======
+"use client";
+import React from 'react';
+
+const SystemMonitor = () => {
+  return (
+    <div>
+      <h1>SystemMonitor</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

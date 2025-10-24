@@ -1,5 +1,6 @@
-'use client';
+"use client";
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
 
     {
@@ -34,8 +35,12 @@ import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 
+const AdvancedAccessibilityEnhancer = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
@@ -83,6 +88,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 
           </div>
         </div>
       </section>
+=======
+    <div>
+      <h1>AdvancedAccessibilityEnhancer</h1>
+      <p>This component is under construction.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
     </div>
   );
 };

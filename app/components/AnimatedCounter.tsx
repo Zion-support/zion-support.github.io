@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface AnimatedCounterProps {
@@ -13,3 +14,5 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
 };
 
 export default AnimatedCounter;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

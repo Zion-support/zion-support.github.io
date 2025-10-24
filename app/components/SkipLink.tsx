@@ -1,13 +1,14 @@
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 import React from 'react';
 
-interface SkipLinkProps {
-  // Add props here
-}
-
-const SkipLink: React.FC<SkipLinkProps> = (_props) => {
+const SkipLink = () => {
   return (
     <div>
-      {/* Component content */}
+      <h1>SkipLink</h1>
+      <p>This component is under construction.</p>
     </div>
   );
 };

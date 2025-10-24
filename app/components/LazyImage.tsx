@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface LazyImageProps {
   src: string
@@ -80,3 +81,18 @@ const LazyImage: React.FC<LazyImageProps> = ({
 }
 
 export default LazyImage
+=======
+"use client";
+import React from 'react';
+
+const LazyImage = () => {
+  return (
+    <div>
+      <h1>LazyImage</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default LazyImage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

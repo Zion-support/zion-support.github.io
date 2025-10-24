@@ -1,9 +1,21 @@
+import fs from 'fs';
+import path from 'path';
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'shipping-rates.json');
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
+  }
+
+  const { destination, weight } = req.body;
+  
+  if (!destination || !weight) {
+    return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
   try {
@@ -14,35 +26,55 @@ export default async function handler(req, res) {
       serviceType = 'standard' 
     } = req.body || {};
 
+    if (!apiKey) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'EasyPost API key not configured' }));
+      return;
+    }
 
-
-    // Mock shipping rates calculation
-    // In a real application, you would integrate with shipping providers like UPS, FedEx, etc.
-    const baseRate = 10; // Base rate in USD
-    const weightMultiplier = weight * 0.5; // $0.50 per pound
-    const distanceMultiplier = destination === 'US' ? 1 : 2; // International shipping costs more
+    // Calculate shipping rates (mock calculation)
+    const baseRate = 10;
+    const weightMultiplier = parseFloat(weight) * 0.5;
+    const destinationMultiplier = destination === 'international' ? 2 : 1;
     
-    const shippingRates = [
+    const rates = [
       {
         service: 'Standard',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100,
-        estimatedDays: destination === 'US' ? '3-5' : '7-14'
+        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier),
+        days: destination === 'international' ? '7-14' : '3-5'
       },
-        service: 'Express',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 1.5 * 100) / 100,
-        estimatedDays: destination === 'US' ? '1-2' : '3-7'
-        service: 'Overnight',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 2 * 100) / 100,
-        estimatedDays: destination === 'US' ? '1' : '2-3'
-    ];
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel: parcel
+        }
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`EasyPost API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const rates = data.shipment.rates || [];
 
     res.statusCode = 200;
-    res.end(JSON.stringify({
-      success: true,
-      rates: shippingRates
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      rates,
+      destination,
+      weight
     }));
 
   } catch (error) {
     console.error('Shipping rates error:', error);
     res.statusCode = 500;
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to calculate shipping rates' }));
+  }
+}
+
+module.exports = withSentry(handler);

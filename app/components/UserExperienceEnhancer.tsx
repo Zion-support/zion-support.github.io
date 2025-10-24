@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;
@@ -113,3 +114,5 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 };
 
 export default UserExperienceEnhancer;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

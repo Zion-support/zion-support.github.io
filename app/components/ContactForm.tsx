@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 interface FormData {
   name: string;
@@ -27,3 +28,5 @@ const ContactForm: React.FC = () => {
       [e.target.name]: e.target.value
 })
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

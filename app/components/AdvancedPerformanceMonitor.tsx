@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 interface PerformanceMetrics {
   fcp: number | null;
@@ -116,3 +117,18 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [metrics, onMetricsUpdate]);
 
+=======
+"use client";
+import React from 'react';
+
+const AdvancedPerformanceMonitor = () => {
+  return (
+    <div>
+      <h1>AdvancedPerformanceMonitor</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e

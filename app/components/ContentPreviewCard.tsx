@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -75,3 +76,5 @@ const Page: React.FC = () => {
   )};
 
 export default Page;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e66e
