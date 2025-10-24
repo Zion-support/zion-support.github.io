@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
 import { Monitor } from 'lucide-react';
@@ -416,9 +417,13 @@ export default EnhancedPerformanceMonitor;
 
   // Don't render anything in production;
   if (process.env.NODE_ENV === 'production') {return null
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
-export default function EnhancedPerformanceMonitor() {
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = () => {
   return (
+<<<<<<< HEAD
     <h3 className="text-sm font-boldmb-2">Performance Monitor</h3>
         <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
         <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
@@ -592,3 +597,13 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
 
 export default EnhancedPerformanceMonitor
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+    <div className="enhancedperformancemonitor">
+      <h2>EnhancedPerformanceMonitor</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

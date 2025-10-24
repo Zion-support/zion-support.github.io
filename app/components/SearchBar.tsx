@@ -1,11 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
-export default function SearchBar() {
+const SearchBar: React.FC<SearchBarProps> = () => {
   return (
+<<<<<<< HEAD
     <>
     
   </>
@@ -101,10 +106,19 @@ export default function SearchBar() {return (
             </div>
         </div>
   )}
+=======
+    <div className="searchbar">
+      <h2>SearchBar</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default SearchBar;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default SearchBar;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

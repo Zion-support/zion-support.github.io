@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -9,6 +13,7 @@ import Footer from '../components/Footer';
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -791,3 +796,30 @@ import {Shield, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Sta
 import {Link} from 'react-router-dom'
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default function AiblockchainanalyticsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Ai Blockchain Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional ai blockchain analytics services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Ai Blockchain Analytics</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai blockchain analytics services coming soon.</p>
+          
+          <Link
+            to="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

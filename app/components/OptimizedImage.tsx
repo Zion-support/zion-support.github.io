@@ -6,6 +6,7 @@ const Component: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const OptimizedImage: React.FC = () => {
@@ -549,3 +550,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 export default OptimizedImage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+
+const OptimizedImage: React.FC<OptimizedImageProps> = () => {
+  return (
+    <div className="optimizedimage">
+      <h2>OptimizedImage</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

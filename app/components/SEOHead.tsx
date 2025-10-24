@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface SeoheadProps {
   className?: string;
   children?: React.ReactNode;
@@ -380,3 +381,16 @@ export default SEOHead
 };
 export default SEOHead;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+const SEOHead: React.FC<SEOHeadProps> = () => {
+  return (
+    <div className="seohead">
+      <h2>SEOHead</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default SEOHead;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

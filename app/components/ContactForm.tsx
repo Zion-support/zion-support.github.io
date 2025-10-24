@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -565,8 +566,13 @@ interface FormData {name: string;,
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
   );}
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
+const ContactForm: React.FC<ContactFormProps> = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
@@ -830,3 +836,13 @@ export default ContactForm;
 
 export default ContactForm
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+    <div className="contactform">
+      <h2>ContactForm</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default ContactForm;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

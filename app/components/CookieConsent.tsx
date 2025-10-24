@@ -1,11 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
-export default function CookieConsent() {
+const CookieConsent: React.FC<CookieConsentProps> = () => {
   return (
+<<<<<<< HEAD
     <>
     
   </>
@@ -170,10 +175,19 @@ export default function CookieConsent() {return (
               </div>
   )}
         </div>
+=======
+    <div className="cookieconsent">
+      <h2>CookieConsent</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default CookieConsent;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default CookieConsent;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

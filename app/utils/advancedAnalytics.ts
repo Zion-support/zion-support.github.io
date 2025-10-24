@@ -97,8 +97,13 @@ class AdvancedAnalytics {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
 'use client';
 /**
+<<<<<<< HEAD
  * Advanced Analytics System for Zion Tech Group Website;
  * Provides comprehensive user behavior tracking and insights;
+=======
+ * Advanced Analytics Utility
+ * Provides comprehensive analytics tracking and reporting functionality
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
  */
 <<<<<<< HEAD
 interface UserEvent {/* TODO: Fix JSX expression */}
@@ -110,70 +115,40 @@ interface AnalyticsConfig {/* TODO: Fix JSX expression */}
 class AdvancedAnalytics {/* TODO: Fix JSX expression */}
 =======
 
+export interface AnalyticsEvent {
   name: string;
   properties?: Record<string, unknown>;
   timestamp?: number;
   userId?: string;
   sessionId?: string;
+}
 
+export interface AnalyticsReport {
   pageViews: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
+<<<<<<< HEAD
   topPages: Array<{page: string; views: number}>;
   userJourney: string[];
+=======
+  topPages: string[];
+  userEngagement: number;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
-  pageLoadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-
-  trackingId: string;
-  enabled: boolean;
-  debug: boolean;
-  sampleRate: number;
-  customDimensions?: Record<string, string>;
-
-  private config: AnalyticsConfig;
+export class AdvancedAnalytics {
   private events: AnalyticsEvent[] = [];
-    userJourney: []
-  };
-  private performanceMetrics: PerformanceMetrics | null = null;
+  private sessionStartTime: number = Date.now();
 
-    this.config = config;
-    this.initializeTracking();
-
-  /**
-   * Initialize analytics tracking;
-   */
-    if (typeof window === 'undefined' || !this.config.enabled) return;
-
-    // Track page view;
-    this.trackPageView();
-
-    // Track performance metrics;
-    this.trackPerformanceMetrics();
-
-    // Track user interactions;
-    this.trackUserInteractions();
-
-    // Track scroll depth;
-    this.trackScrollDepth();
-
-    // Track form submissions;
-    this.trackFormSubmissions();
-
-  /**
-   * Track a custom event;
-   */
-    if (!this.config.enabled) return;
-
-        sessionId: this.getSessionId()
+  trackEvent(event: AnalyticsEvent): void {
+    const eventWithTimestamp = {
+      ...event,
+      timestamp: Date.now(),
       sessionId: this.getSessionId()
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     };
+<<<<<<< HEAD
     this.currentSession = this.createNewSession();
     this.initializeTracking();
   }
@@ -610,8 +585,48 @@ export default AdvancedAnalyticsPage;
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', {depth: scrollDepth});
-    };
+=======
+    
+    this.events.push(eventWithTimestamp);
+    
+    // Send to analytics service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event.name, event.properties);
+    }
+  }
 
+  trackPageView(page: string): void {
+    this.trackEvent({
+      name: 'page_view',
+      properties: { page }
+    });
+  }
+
+  trackConversion(conversionType: string, value?: number): void {
+    this.trackEvent({
+      name: 'conversion',
+      properties: { conversionType, value }
+    });
+  }
+
+  generateReport(): AnalyticsReport {
+    const now = Date.now();
+    const sessionDuration = now - this.sessionStartTime;
+    const pageViews = this.events.filter(e => e.name === 'page_view').length;
+    const conversions = this.events.filter(e => e.name === 'conversion').length;
+    
+    return {
+      pageViews,
+      sessionDuration,
+      bounceRate: pageViews === 1 ? 100 : 0,
+      conversionRate: pageViews > 0 ? (conversions / pageViews) * 100 : 0,
+      topPages: this.getTopPages(),
+      userEngagement: this.calculateEngagement()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+    };
+  }
+
+<<<<<<< HEAD
     window.addEventListener('scroll', trackScrollDepth, {passive: true});
 
   /**
@@ -797,3 +812,39 @@ export default advancedAnalytics;
   console.log('Track page view: ', page);
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+  private getSessionId(): string {
+    let sessionId = sessionStorage.getItem('analytics_session_id');
+    if (!sessionId) {
+      sessionId = Math.random().toString(36).substring(2, 15);
+      sessionStorage.setItem('analytics_session_id', sessionId);
+    }
+    return sessionId;
+  }
+
+  private getTopPages(): string[] {
+    const pageViews = this.events
+      .filter(e => e.name === 'page_view')
+      .map(e => e.properties?.page as string)
+      .filter(Boolean);
+    
+    const pageCounts = pageViews.reduce((acc, page) => {
+      acc[page] = (acc[page] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    
+    return Object.entries(pageCounts)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+      .map(([page]) => page);
+  }
+
+  private calculateEngagement(): number {
+    // Simple engagement calculation based on events per minute
+    const sessionDurationMinutes = (Date.now() - this.sessionStartTime) / 60000;
+    return sessionDurationMinutes > 0 ? this.events.length / sessionDurationMinutes : 0;
+  }
+}
+
+export const advancedAnalytics = new AdvancedAnalytics();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

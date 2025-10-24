@@ -4,6 +4,7 @@ import Footer from 'Footer';
 import Navigation from './Navigation';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Brain } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -215,3 +216,16 @@ const SystemMonitor: React.FC<SystemMonitorProps   /> = ({onAlert,
       updateMetrics()};
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+const SystemMonitor: React.FC<SystemMonitorProps> = () => {
+  return (
+    <div className="systemmonitor">
+      <h2>SystemMonitor</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default SystemMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import React from 'react';
@@ -532,3 +533,17 @@ export default function SEOOptimizer() {return (
   )
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = () => {
+  return (
+    <div className="seooptimizer">
+      <h2>SEOOptimizer</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default SEOOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

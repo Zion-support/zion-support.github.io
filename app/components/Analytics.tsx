@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 =======
@@ -7,6 +8,9 @@ import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
+=======
+import React, { useEffect } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +26,7 @@ interface AnalyticsProps {}
   enableUserBehaviorTracking?: boolean;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -694,3 +699,22 @@ export default Analytics;</AnalyticsProps>
 
 export default Analytics
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+  useEffect(() => {
+    const initAnalytics = () => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
+    };
+    initAnalytics();
+  }, []);
+
+  return <React.Fragment>{children}</React.Fragment>;
+};
+
+export default Analytics;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const Component: React.FC = () => {
 'use client';
@@ -645,3 +646,17 @@ export default Component;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = () => {
+  return (
+    <div className="seoenhancer">
+      <h2>SEOEnhancer</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default SEOEnhancer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

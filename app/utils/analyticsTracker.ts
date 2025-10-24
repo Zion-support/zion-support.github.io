@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Analyticstracker utility functions
 export function analyticstracker() {
   // Implementation here
@@ -389,3 +390,40 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
 }
 export default analyticsTracker;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+// Utility file: analyticsTracker
+
+export interface AnalyticsEvent {
+  name: string;
+  properties?: Record<string, unknown>;
+  timestamp?: number;
+}
+
+export class AnalyticsTracker {
+  private events: AnalyticsEvent[] = [];
+
+  track(event: AnalyticsEvent): void {
+    const eventWithTimestamp = {
+      ...event,
+      timestamp: Date.now()
+    };
+    
+    this.events.push(eventWithTimestamp);
+    
+    // Send to analytics service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event.name, event.properties);
+    }
+  }
+
+  getEvents(): AnalyticsEvent[] {
+    return [...this.events];
+  }
+
+  clear(): void {
+    this.events = [];
+  }
+}
+
+export const analyticsTracker = new AnalyticsTracker();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

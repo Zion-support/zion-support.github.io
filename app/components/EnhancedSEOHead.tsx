@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -218,3 +219,16 @@ export default EnhancedSEOHead;
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = () => {
+  return (
+    <div className="enhancedseohead">
+      <h2>EnhancedSEOHead</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

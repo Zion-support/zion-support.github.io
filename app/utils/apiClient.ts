@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Apiclient utility functions
 export function apiclient() {
   // Implementation here
@@ -11,20 +12,27 @@ export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api'
 export type {RequestConfig, APIResponse};
 export {APIError};
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 /**
- * API Client Utility;
- * Provides a centralized API client with error handling and caching;
+ * API Client Utility
+ * Provides a centralized API client with error handling and caching
  */
 
+<<<<<<< HEAD
 import { apiCache } from './apiCache';
 
 interface RequestConfig {}
+=======
+export interface RequestConfig {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record<string, string>;</string></<<<string>body</string></string>?: any;
   cache?: boolean;
   cacheTTL?: number;
 }
 
+<<<<<<< HEAD
 interface APIResponse<T = any> {}
   data: T,
   status: number,
@@ -40,14 +48,29 @@ class APIClient {}
   status?: number;
   code?: string;
 
+=======
+export interface APIResponse<T = unknown> {
+  data: T;
+  status: number;
+  statusText: string;
+  headers: Headers;
+}
+
+export class APIError extends Error {
+  constructor(
+    message: string,
+    public status: number,
+    public response?: Response
+  ) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     super(message);
     this.name = 'APIError';
-    this.status = status;
-    this.code = code;
   }
 }
 
+export class APIClient {
   private baseURL: string;
+<<<<<<< HEAD
 
   private defaultHeaders: Record<string, string   />;
   private cache: Map<string, {data: unknown; timestamp: number; ttl: number}   /> = new Map();
@@ -66,10 +89,27 @@ class APIClient {}
     config: RequestConfig = {,}
   ): Promise<APIResponse<T>> {}
     const {}
+=======
+  private defaultHeaders: Record<string, string>;
+
+  constructor(baseURL: string) {
+    this.baseURL = baseURL;
+    this.defaultHeaders = {
+      'Content-Type': 'application/json',
+    };
+  }
+
+  async request<T = unknown>(
+    endpoint: string,
+    config: RequestConfig = {}
+  ): Promise<APIResponse<T>> {
+    const {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
       method = 'GET',
       headers = {},
       body,
       cache = false,
+<<<<<<< HEAD
       cacheTTL;
     } = config;
 
@@ -85,10 +125,23 @@ class APIClient {}
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
+=======
+      cacheTTL = 300000
+    } = config;
+
+    const url = `${this.baseURL}${endpoint}`;
+    const cacheKey = `${method}:${url}`;
+
+    // Check cache for GET requests
+    if (method === 'GET' && cache) {
+      const cachedData = this.getFromCache<T>(cacheKey);
+      if (cachedData) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
         return cachedData;
       }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {
       const response = await fetch(url, {)
@@ -118,9 +171,26 @@ class APIClient {}
           ...headers
         },
         body: body ? JSON.stringify(body) : undefined
+=======
+    try {
+      const response = await fetch(url, {
+        method,
+        headers: { ...this.defaultHeaders, ...headers },
+        body: body ? JSON.stringify(body) : undefined,
+      });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+
+      if (!response.ok) {
+        throw new APIError(
+          `Request failed: ${response.statusText}`,
+          response.status,
+          response
+        );
+      }
 
       const data = await response.json();
 
+<<<<<<< HEAD
       const apiResponse: APIResponse<T> = {,}
         data,
         status: response.status,
@@ -462,10 +532,44 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   // Clear cache
   clearCache(): void {}
     apiCache.clear();
+=======
+      const apiResponse: APIResponse<T> = {
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        headers: response.headers,
+      };
+
+      // Cache successful GET requests
+      if (method === 'GET' && cache) {
+        this.setCache(cacheKey, apiResponse, cacheTTL);
+      }
+
+      return apiResponse;
+    } catch (error) {
+      if (error instanceof APIError) {
+        throw error;
+      }
+      throw new APIError(
+        `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        0
+      );
+    }
+  }
+
+  private getFromCache<T>(): APIResponse<T> | null {
+    // Implementation would depend on your caching strategy
+    return null;
+  }
+
+  private setCache(): void {
+    // Implementation would depend on your caching strategy
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   }
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 // Create singleton instance;
 export const apiClient = new APIClient();
 
@@ -491,3 +595,8 @@ export default ApiClient;
 // Export types and classes;
     <  />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
+export type { RequestConfig, APIResponse };
+export { APIError };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

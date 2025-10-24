@@ -2,6 +2,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock } from 'lucide-react';
@@ -424,10 +425,14 @@ const CloudInfrastructurePage: React.FC = () => {
     }
   ];
 import React from 'react';
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Activity, BarChart3, CheckCircle } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function CloudInfrastructurePage() {
 
   const stats = [
@@ -466,16 +471,36 @@ export default function CloudInfrastructurePage() {
           <p className="text-lg text-gray-300 mb-8">
             Professional cloud infrastructure services coming soon.
           </p>
+=======
+export default function CloudinfrastructurePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Cloud Infrastructure</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional cloud infrastructure services coming soon.</p>
+          
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           <Link
 <<<<<<< HEAD
             to="/contact"
+<<<<<<< HEAD
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+=======
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           >
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
 =======
             href="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -992,3 +1017,8 @@ const CloudInfrastructurePage: React.FC = () => {return (
   );}
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

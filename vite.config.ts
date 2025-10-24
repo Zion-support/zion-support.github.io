@@ -46,8 +46,17 @@ export default defineConfig({// https: //vitejs.dev/config/
           // Router
           if (id.includes('react-router')) {return 'router'}
           // UI libraries
+<<<<<<< HEAD
           if (id.includes('framer-motion')) {return 'animations'}
           if (id.includes('lucide-react')) {return 'icons'}
+=======
+          if (id.includes('framer-motion')) {
+            return 'animations'
+          }
+          if (id.includes('lucide-react')) {
+            return 'icons'
+          }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           // SEO and meta
           if (id.includes('react-helmet')) {return 'seo'}
           // Charts and data visualization

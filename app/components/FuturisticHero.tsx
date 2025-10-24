@@ -3,6 +3,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -363,3 +364,16 @@ export default FuturisticHero;
 
 export default FuturisticHero
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+
+const FuturisticHero: React.FC<FuturisticHeroProps> = () => {
+  return (
+    <div className="futuristichero">
+      <h2>FuturisticHero</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default FuturisticHero;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

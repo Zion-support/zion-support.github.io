@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface FuturisticcardProps {
   className?: string;
 <<<<<<< HEAD
@@ -81,5 +82,16 @@ interface FuturisticCardProps {children: React.ReactNode;
       {/* Bottom accent */}
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+const FuturisticCard: React.FC<FuturisticCardProps> = () => {
+  return (
+    <div className="futuristiccard">
+      <h2>FuturisticCard</h2>
+      <p>Component content coming soon.</p>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
-}
+};
+
+export default FuturisticCard;

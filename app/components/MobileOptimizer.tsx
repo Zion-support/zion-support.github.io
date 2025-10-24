@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
@@ -58,3 +59,16 @@ import {ArrowRight} from 'lucide-react';
 
 export default MobileOptimizer
 
+=======
+
+const MobileOptimizer: React.FC<MobileOptimizerProps> = () => {
+  return (
+    <div className="mobileoptimizer">
+      <h2>MobileOptimizer</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default MobileOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

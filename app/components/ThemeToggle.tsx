@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -66,3 +67,17 @@ export default function ThemeToggle() {return (
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const ThemeToggle: React.FC<ThemeToggleProps> = () => {
+  return (
+    <div className="themetoggle">
+      <h2>ThemeToggle</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default ThemeToggle;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

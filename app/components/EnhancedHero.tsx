@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const EnhancedHero: React.FC = () => {
@@ -495,3 +496,16 @@ import {ArrowRight} from 'lucide-react';
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = () => {
+  return (
+    <div className="enhancedhero">
+      <h2>EnhancedHero</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default EnhancedHero;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

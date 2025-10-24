@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EnhancedServicesShowcase: React.FC = () => {
 <<<<<<< HEAD
   return (
@@ -183,3 +184,15 @@ export default EnhancedServicesShowcase;
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = () => {
+  return (
+    <div className="enhancedservicesshowcase">
+      <h2>EnhancedServicesShowcase</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default EnhancedServicesShowcase;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

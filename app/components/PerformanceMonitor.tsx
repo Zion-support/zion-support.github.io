@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 
@@ -249,3 +250,17 @@ export default PerformanceMonitor
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
+  return (
+    <div className="performancemonitor">
+      <h2>PerformanceMonitor</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

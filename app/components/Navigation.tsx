@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -1219,10 +1220,21 @@ const Navigation = () => {
         </div>
       )}
     </nav>
+=======
+import React from 'react';
+
+const Navigation: React.FC<NavigationProps> = () => {
+  return (
+    <div className="navigation">
+      <h2>Navigation</h2>
+      <p>Component content coming soon.</p>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default Navigation;
@@ -1245,3 +1257,6 @@ export default Navigation;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default Navigation;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

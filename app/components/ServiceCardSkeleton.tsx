@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -46,10 +47,19 @@ const ServiceCardSkeleton: React.FC = () => {
     <div className="servicecardskeleton">
       <h2>ServiceCardSkeleton</h2>
       <p>ServiceCardSkeleton component.</p>
+=======
+
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = () => {
+  return (
+    <div className="servicecardskeleton">
+      <h2>ServiceCardSkeleton</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default ServiceCardSkeleton;
 =======
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 animate-pulse"></div>
@@ -80,3 +90,6 @@ export default ServiceCardSkeleton;</div>
 
 export default ServiceCardSkeleton;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+export default ServiceCardSkeleton;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

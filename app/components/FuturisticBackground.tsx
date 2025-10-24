@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 interface FuturisticbackgroundProps {
   className?: string;
@@ -266,3 +267,17 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({
 
 export default FuturisticBackground
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+import React from 'react';
+
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = () => {
+  return (
+    <div className="futuristicbackground">
+      <h2>FuturisticBackground</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default FuturisticBackground;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

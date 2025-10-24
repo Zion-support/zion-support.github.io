@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface LoadingstatesProps {
   className?: string;
   children?: React.ReactNode;
@@ -78,10 +79,19 @@ import {ArrowRight} from 'lucide-react';
             <div className="w-2h-2bg-pi n k-500rounded-fullanimate-bounce" style="{{" animationDelay: '0.1 s'}}   /></div>
             <div className="w-2h-2bg-cy a n-500rounded-fullanimate-bounce" style="{{" animationDelay: '0.2 s'}}   /></div>
         </div>
+=======
+
+const LoadingStates: React.FC<LoadingStatesProps> = () => {
+  return (
+    <div className="loadingstates">
+      <h2>LoadingStates</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
   const sizeClasses = {sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8'};
@@ -155,3 +165,6 @@ import {ArrowRight} from 'lucide-react';
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default LoadingStates;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
@@ -216,3 +217,17 @@ export default NewsletterSignup
 export default NewsletterSignup;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const NewsletterSignup: React.FC<NewsletterSignupProps> = () => {
+  return (
+    <div className="newslettersignup">
+      <h2>NewsletterSignup</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default NewsletterSignup;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

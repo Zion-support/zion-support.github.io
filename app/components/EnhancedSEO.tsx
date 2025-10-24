@@ -3,6 +3,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface EnhancedseoProps {
   className?: string;
   children?: React.ReactNode;
@@ -385,8 +386,12 @@ export default EnhancedSEO;
 
   const finalStructuredData = structuredData || defaultStructuredData;
   const canonicalUrl = canonical || `https: // ziontechgroup.com${window.location.pathname}`
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
+const EnhancedSEO: React.FC<EnhancedSEOProps> = () => {
   return (
+<<<<<<< HEAD
     <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
 
@@ -525,3 +530,13 @@ const SEOAnalysis: React.FC = () => {
 export default EnhancedSEO
 export { SEOAnalysis }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+    <div className="enhancedseo">
+      <h2>EnhancedSEO</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default EnhancedSEO;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

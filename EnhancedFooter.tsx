@@ -9,8 +9,15 @@ import { Phone, Mail, ArrowRight, MapPin } from 'lucide-react'
 =======
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EnhancedFooter() {
 
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
+
+const EnhancedFooter: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
@@ -90,5 +97,9 @@ const EnhancedFooter: React.FC = () => {return (
     </footer>
   );};
 
+<<<<<<< HEAD
 export default EnhancedFooter;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default EnhancedFooter;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

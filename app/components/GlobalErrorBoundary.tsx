@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -386,3 +387,17 @@ export { GlobalErrorBoundary };
 
 export default GlobalErrorBoundary
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+import React from 'react';
+
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = () => {
+  return (
+    <div className="globalerrorboundary">
+      <h2>GlobalErrorBoundary</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default GlobalErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

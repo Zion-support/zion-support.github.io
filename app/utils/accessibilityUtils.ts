@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Accessibilityutils utility functions
 export function accessibilityutils() {
   // Implementation here
@@ -519,10 +520,22 @@ class AccessibilityEnhancer {}
 
   private setupScreenReaderSupport(): void {}
     // Add screen reader announcements
+=======
+// Utility file: accessibilityUtils
+
+export const accessibilityUtils = {
+  // Add utility functions here
+  focusElement: (element: HTMLElement) => {
+    element.focus();
+  },
+  
+  announceToScreenReader: (message: string) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
+<<<<<<< HEAD
     announcement.id = 'screen-reader-announcements';
     document.body.appendChild(announcement);
   }
@@ -731,3 +744,14 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 };`
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

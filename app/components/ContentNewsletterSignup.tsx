@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
@@ -632,3 +633,17 @@ export default function ContentNewsletterSignup() {return (
 export default ContentNewsletterSignup;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
+  return (
+    <div className="contentnewslettersignup">
+      <h2>ContentNewsletterSignup</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default ContentNewsletterSignup;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

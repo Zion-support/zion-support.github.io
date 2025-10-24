@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
@@ -49,8 +50,12 @@ const NeonButton: React.FC<NeonButtonProps   /> = ({children,
       </a>
   );
   }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
+const NeonButton: React.FC<NeonButtonProps> = () => {
   return (
+<<<<<<< HEAD
     <button;
       const onClick = {onClick}
       disabled="{disabled}"
@@ -64,3 +69,13 @@ const NeonButton: React.FC<NeonButtonProps   /> = ({children,
 
 export default NeonButton;
 
+=======
+    <div className="neonbutton">
+      <h2>NeonButton</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default NeonButton;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

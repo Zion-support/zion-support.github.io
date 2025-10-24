@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React from 'react';
@@ -64,3 +65,17 @@ export default ServiceCardSkeleton;
 =======
 export default LoadingSkeleton;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = () => {
+  return (
+    <div className="loadingskeleton">
+      <h2>LoadingSkeleton</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default LoadingSkeleton;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

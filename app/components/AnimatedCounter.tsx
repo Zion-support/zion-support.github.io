@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 'use client';
@@ -160,6 +161,17 @@ const AnimatedCounter: React.FC = () => {
     </span>
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const AnimatedCounter: React.FC<AnimatedCounterProps> = () => {
+  return (
+    <div className="animatedcounter">
+      <h2>AnimatedCounter</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 };
 
 export default AnimatedCounter;

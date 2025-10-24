@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Optimized icon system to reduce bundle size
 // Only import icons that are actually used
 // Core icons used across the application
@@ -111,3 +112,17 @@
 } as const;
 ;
 export type IconName = keyof typeof IconRegistry
+=======
+import React from 'react';
+
+const Icons: React.FC<IconsProps> = () => {
+  return (
+    <div className="icons">
+      <h2>Icons</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default Icons;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

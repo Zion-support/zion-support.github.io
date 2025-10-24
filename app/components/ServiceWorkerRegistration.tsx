@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 
@@ -324,3 +325,17 @@ export default ServiceWorkerRegistrationPage;
   )};export default ServiceWorkerRegistrationPage
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = () => {
+  return (
+    <div className="serviceworkerregistration">
+      <h2>ServiceWorkerRegistration</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default ServiceWorkerRegistration;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

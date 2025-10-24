@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       id: 'ai-solutions'
       title: 'AI Solutions'
@@ -398,10 +399,20 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps   /> = ({cons
             </div>
         </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = () => {
+  return (
+    <div className="dynamiccontentshowcase">
+      <h2>DynamicContentShowcase</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default DynamicContentShowcase;
 <<<<<<< HEAD
 =======
@@ -455,3 +466,6 @@ export default DynamicContentShowcase;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default DynamicContentShowcase;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

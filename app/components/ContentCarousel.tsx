@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
@@ -711,13 +712,26 @@ const ContentCarousel: React.FC = () => {
     <div className="contentcarousel">
       <h2>ContentCarousel</h2>
       <p>ContentCarousel component.</p>
+=======
+import React from 'react';
+
+const ContentCarousel: React.FC<ContentCarouselProps> = () => {
+  return (
+    <div className="contentcarousel">
+      <h2>ContentCarousel</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ContentCarousel;
 =======
 export default ContentCarousel;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+export default ContentCarousel;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

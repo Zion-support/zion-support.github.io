@@ -2,6 +2,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3 } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
@@ -292,3 +293,16 @@ export default function ContentPromotionBanner() {return (
 export default ContentPromotionBanner;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = () => {
+  return (
+    <div className="contentpromotionbanner">
+      <h2>ContentPromotionBanner</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default ContentPromotionBanner;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

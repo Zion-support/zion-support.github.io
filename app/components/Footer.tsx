@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
@@ -905,3 +906,17 @@ import {Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const Footer: React.FC<FooterProps> = () => {
+  return (
+    <div className="footer">
+      <h2>Footer</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default Footer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

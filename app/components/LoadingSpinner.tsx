@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface LoadingspinnerProps {
   className?: string;
   children?: React.ReactNode;
@@ -125,10 +126,22 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps   /> = ({const size = 'md',
       {text && (
         <p className="text-gray-400text-smanimate-pulse">{text}</p>
   )}
+=======
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
+  return (
+    <div className="loadingspinner">
+      <h2>LoadingSpinner</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default LoadingSpinner;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

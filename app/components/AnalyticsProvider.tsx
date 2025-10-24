@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 interface AnalyticsproviderProps {
@@ -172,3 +173,17 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
 
 export { AnalyticsProvider };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = () => {
+  return (
+    <div className="analyticsprovider">
+      <h2>AnalyticsProvider</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default AnalyticsProvider;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

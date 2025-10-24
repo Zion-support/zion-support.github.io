@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 export default function AIServices() {
@@ -2479,9 +2480,39 @@ const AIServicesPage: React.FC = () => {
 =======
         </div>
       </section>
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function AiservicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Ai Services - Zion Tech Group</title>
+        <meta name="description" content="Professional ai services services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Ai Services</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai services services coming soon.</p>
+          
+          <Link
+            to="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   );
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
@@ -2509,3 +2540,6 @@ export default AIServicesPage;
 =======
 export default AiServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

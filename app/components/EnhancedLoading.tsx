@@ -2,6 +2,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface EnhancedloadingProps {
   className?: string;
   children?: React.ReactNode;
@@ -87,10 +88,19 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
         </p>
       )}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
+  return (
+    <div className="enhancedloading">
+      <h2>EnhancedLoading</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedLoading;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 =======
@@ -168,3 +178,6 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
 
 export default EnhancedLoading
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+export default EnhancedLoading;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

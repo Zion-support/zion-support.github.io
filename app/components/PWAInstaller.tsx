@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -250,3 +251,17 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({
 
 export default PWAInstaller
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+import React from 'react';
+
+const PWAInstaller: React.FC<PWAInstallerProps> = () => {
+  return (
+    <div className="pwainstaller">
+      <h2>PWAInstaller</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default PWAInstaller;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

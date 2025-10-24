@@ -15,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>
   );
 
+<<<<<<< HEAD
 // Register service worker for PWA functionality
 if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js')
     .then((registration) => {
@@ -22,3 +23,15 @@ if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js')
     .catch((registrationError) => {console.log('SW registration failed: ', registrationError);});
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 }
+=======
+// Register service worker for PWA functionality;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then((registration) => {
+      console.log('SW registered: ', registration);
+    })
+    .catch((registrationError) => {
+      console.log('SW registration failed: ', registrationError);
+    });
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

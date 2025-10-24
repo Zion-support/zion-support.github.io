@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from './Navigation';
 <<<<<<< HEAD
 =======
@@ -237,3 +238,16 @@ export default Header;
 
 export default Header
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+
+const Header: React.FC<HeaderProps> = () => {
+  return (
+    <div className="header">
+      <h2>Header</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default Header;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

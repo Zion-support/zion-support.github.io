@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -259,6 +260,32 @@ const aiapimanagerPage: React.FC = () => {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function AiapimanagerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Ai Api Manager - Zion Tech Group</title>
+        <meta name="description" content="Professional ai api manager services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Ai Api Manager</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai api manager services coming soon.</p>
+          
+          <Link
+            to="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+            <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
           </Link>
         </div>
 =======
@@ -418,6 +445,7 @@ const aiapimanagerPage: React.FC = () => {
         </section>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
       </div>
+<<<<<<< HEAD
       <Footer />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -486,3 +514,8 @@ export default function AIAPIManager() {
   );
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

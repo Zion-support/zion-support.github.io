@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -345,10 +346,32 @@ export function getErrorType(error: Error,): keyof typeof DEFAULT_ERROR_MESSAGES
   if (error.message.includes('404') || error.message.includes('not found')) {
     return 'notFound';
   }
+=======
+
+export interface ErrorBoundaryConfig {
+  logToConsole: boolean;
+  showDetailedErrors: boolean;
+  reportToExternalService: boolean;
+  errorReportingEndpoint?: string;
+}
+
+export const DEFAULT_ERROR_MESSAGES = {
+  network: 'Network error occurred. Please check your connection.',
+  timeout: 'Request timed out. Please try again.',
+  server: 'Server error occurred. Please try again later.',
+  unknown: 'An unexpected error occurred.',
+} as const;
+
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
+  if (error.message.includes('Network') || error.message.includes('fetch')) {
+    return 'network';
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   if (error.message.includes('timeout')) {
     return 'timeout';
   }
   if (error.message.includes('500') || error.message.includes('server')) {
+<<<<<<< HEAD
     return 'serverError';
   }
   if (error.message.includes('validation')) {
@@ -383,3 +406,18 @@ export default getErrorBoundaryConfig
   }};
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+    return 'server';
+  }
+  return 'unknown';
+}
+
+export const getErrorBoundaryConfig = (): ErrorBoundaryConfig => ({
+  logToConsole: true,
+  showDetailedErrors: process.env.NODE_ENV === 'development',
+  reportToExternalService: process.env.NODE_ENV === 'production',
+  errorReportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
+});
+
+export default getErrorBoundaryConfig;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

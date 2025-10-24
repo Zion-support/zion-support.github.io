@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -141,15 +142,20 @@ import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
 
+=======
+import React from 'react';
+
+const Loading: React.FC<LoadingProps> = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <p className="text-whitetext-lg">Loading...</p>
-      </div>
+    <div className="loading">
+      <h2>Loading</h2>
+      <p>Component content coming soon.</p>
+    </div>
   );
 };
 
+<<<<<<< HEAD
 export default Loading;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
@@ -173,3 +179,6 @@ export default Loading;
 
 export default Loading
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+export default Loading;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

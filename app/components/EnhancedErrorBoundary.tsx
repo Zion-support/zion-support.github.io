@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
@@ -575,3 +576,17 @@ export default EnhancedErrorBoundary;
 export default EnhancedErrorBoundary;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = () => {
+  return (
+    <div className="enhancederrorboundary">
+      <h2>EnhancedErrorBoundary</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default EnhancedErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

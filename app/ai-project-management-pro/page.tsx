@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
@@ -123,9 +124,41 @@ const Page: React.FC = () => {
       company: 'Software Company',
       content: 'Our team collaboration and project visibility have improved dramatically since using this platform.',
       rating: 5]
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
-export default function Page() {
+export default function AiprojectmanagementproPage() {
   return (
+<<<<<<< HEAD
     <title>AI Project Management Pro - Zion Tech Group</title>
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Ai Project Management Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional ai project management pro services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Ai Project Management Pro</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai project management pro services coming soon.</p>
+          
+          <Link
+            to="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

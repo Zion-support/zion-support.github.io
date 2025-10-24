@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
@@ -438,10 +439,20 @@ export default function ContentStatistics() {return (
   );
       })}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
+  return (
+    <div className="contentstatistics">
+      <h2>ContentStatistics</h2>
+      <p>Component content coming soon.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default ContentStatistics;
@@ -452,3 +463,6 @@ export default ContentStatistics;
 export default ContentStatistics;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default ContentStatistics;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

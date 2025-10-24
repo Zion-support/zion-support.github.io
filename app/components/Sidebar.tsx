@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -873,3 +874,17 @@ export default function Sidebar() {return (
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const Sidebar: React.FC<SidebarProps> = () => {
+  return (
+    <div className="sidebar">
+      <h2>Sidebar</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default Sidebar;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

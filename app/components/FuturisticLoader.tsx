@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -122,5 +123,17 @@ export default function FuturisticLoader() {return (
   )}
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const FuturisticLoader: React.FC<FuturisticLoaderProps> = () => {
+  return (
+    <div className="futuristicloader">
+      <h2>FuturisticLoader</h2>
+      <p>Component content coming soon.</p>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
-}
+};
+
+export default FuturisticLoader;

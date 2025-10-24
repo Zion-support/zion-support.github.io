@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -187,3 +188,17 @@ const GenericServicePage: React.FC<GenericServicePageProps   /> = ({title,
 export default GenericServicePage;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+import React from 'react';
+
+const GenericServicePage: React.FC<GenericServicePageProps> = () => {
+  return (
+    <div className="genericservicepage">
+      <h2>GenericServicePage</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default GenericServicePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
