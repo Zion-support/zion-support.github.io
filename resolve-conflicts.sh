@@ -1,24 +1,15 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping HEAD version
-echo "Resolving merge conflicts..."
+# Get all conflicted files
+conflicted_files=$(git status --porcelain | grep "^UU" | cut -c4-)
 
-# Find all files with merge conflicts
-files_with_conflicts=$(find app -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
+echo "Resolving conflicts for $(echo "$conflicted_files" | wc -l) files..."
 
-for file in $files_with_conflicts; do
-    echo "Resolving conflicts in: $file"
-    
-    # Use git checkout to get the HEAD version (current main branch)
+# Resolve each conflict by accepting our version
+for file in $conflicted_files; do
+    echo "Resolving conflict in: $file"
     git checkout --ours "$file"
-    
-    # If the file still has conflicts, manually clean it up
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Manual cleanup needed for: $file"
-        # Remove conflict markers and keep only the HEAD version
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-    fi
+    git add "$file"
 done
 
-echo "Merge conflicts resolved!"
+echo "All conflicts resolved!"

@@ -205,6 +205,12 @@ const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ cla
 
           <//div>
         </section>
+        </div>
+      </Footer>
+    </div>
+</>
+  )
+  )  )}
 
         <//section>
         {

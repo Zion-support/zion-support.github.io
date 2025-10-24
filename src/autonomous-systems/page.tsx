@@ -1,18 +1,12 @@
-import { CheckCircle, Star, BarChart } from 'lucide-react'
-import { Bot, Cpu } from 'lucide-react'
-=======
-'use client';
 import React from 'react';
 import { CheckCircle, Star, Bot, Cpu, BarChart, Check } from 'lucide-react';
-'use client'
 import { BarCha, r, t } from 'lucide-react'
 import React from 'react'
 <<<<<<< HEAD
 import { CheckCircle, Star, BarChart } from "lucide-react";
 import { Bot, Cpu  } from "lucide-react";
-constAutonomousSystemsPage: React.FC= () => {
-  constautonomousServices= [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+import { CheckCircle, Star, BarChart } from 'lucide-react'
+import { Bot, Cpu } from 'lucide-react'
 
 constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -54,55 +48,47 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Autonomous Systems Services
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-              Transform your operations with intelligent autonomous systems that work 24/7
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-                Explore Autonomous Solutions
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                Schedule Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Key Benefits */}
-      <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Autonomous Systems?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our autonomous systems deliver unprecedented efficiency, reliability, and cost savings
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <Bot className="w-8 h-8 text-green-600" />
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Operation</h3>
-              <p className="text-gray-600">Systems that never sleep, continuously monitoring and optimizing your operations</p>
             </div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <Cpu className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Healing</h3>
-              <p className="text-gray-600">Automatically detect and resolve issues before they impact your business</p>
-            </div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <BarChart className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning</h3>
-              <p className="text-gray-600">AI systems that improve performance over time through machine learning</p>
-            </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </section>
       {/* Services */}

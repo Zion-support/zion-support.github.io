@@ -1,4 +1,12 @@
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { Helmet } from 'lucide-react';
 import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
@@ -119,18 +127,10 @@ const InnovationLabsPage: React.FC = () => {
               <p className=&quot;text-gray-700 mb-4&quot;>
                 Join leading companies transforming product development with AI-powered innovation
               </p>
-              <div className=&quot;space-x-4&quot;></div>
-                <a href=&quot;/contact&quot;
-                  className=&quot;inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors&quot;>
-                  Schedule Innovation Assessment
-                </a>
-                <a href=&quot;/services&quot;
-                  className=&quot;inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors&quot;>
-                  Explore AI Services
-                </a>
               </div>
             </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </div>
     </div>

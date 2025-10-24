@@ -1,3 +1,12 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import React from 'react';
 import { Phone } from 'lucide-react';
 import {Phone} from 'lucide-react';
@@ -47,4 +56,5 @@ const AIEmailMarketingPage: React.FC = () => {
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
 
-export default AIEmailMarketingPage
+export default Page
+}

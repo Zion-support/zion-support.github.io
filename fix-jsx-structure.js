@@ -82,8 +82,35 @@ function getAllTsxFiles(d, i, r) {
     }
   });
 }
+// Main execution;
+const appDir = '/workspace/app'
+const tsxFiles = findTsxFiles(appDir);
+;`
+console.log(`Found ${tsxFiles.length} .tsx files to process`);
+;
+let fixedCount = 0;
+for(const file, of, tsxFiles) { ;
+if (processFile(file)) {;
+// Start fixing from the app directory"'"
+findAndFixFiles('./app");"'"
+findAndFixFiles('./components");"'"
+findAndFixFiles('./src");"
+"'"
+console.log('JSX structure fixing completed!");"
+"
+}}}'"
+fixedCount++}
+}`
+console.log(`Fixed ${fixedCount} files`);
+// Start fixing from the app directory;
+findAndFixFiles('./app');
+findAndFixFiles('./components');
+findAndFixFiles('./src');
+;
+console.log('JSX structure fixing completed!');
+";`'"
 
-// Fix all TSX/TS files
+//Main execution
 console.log('Starting JSX structure fixes...');
 const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
 allFiles.forEach(fixFi, l, e);

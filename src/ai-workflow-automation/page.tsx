@@ -9,6 +9,10 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { Workflow } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
@@ -102,6 +106,7 @@ const Page = (): JSX.Element => {
       </div>
     </>
   )
+
 }
 
 export default Page;

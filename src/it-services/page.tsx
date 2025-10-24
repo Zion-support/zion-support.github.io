@@ -2,6 +2,11 @@ import React from 'react';
 import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Phone, Mail, Star, ArrowRight, Shield, Target, Globe, Database, Users, Settings, Video, Clock, Code, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, Star, ArrowRight } from "lucide-react";
+import React from 'react';
+import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Phone, Mail, Star, ArrowRight, Shield, Target, Globe, Database, Users, Settings, Video, Clock, Code, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, Star, ArrowRight } from 'lucide-react'
 'use client'
 import { ArrowRight, X, Target } from &apos;lucide-react'
@@ -10,15 +15,6 @@ import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, He
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-=======
-'use client';
-import React from 'react';
-import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Phone, Mail, Star, ArrowRight, Shield, Target, Globe, Database, Users, Settings, Video, Clock, Code, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, Star, ArrowRight } from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 interface ITService {
@@ -550,6 +546,38 @@ const Page = (): JSX.Element => {
 >>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
     </div>
   ),
+=======
+import React from "react";
+interface pageProps {
+className?: string
+}
+}
 }
 
-export default Page;
+const page: "React.FC<pageProps /> = ({ className="" "}) => {
+return (</pageProps>
+    <divclassName = {className} //>
+      <h2>page</h2>
+      <p>This component is under construction.</p>
+      </div>
+    </>
+  )
+import React from 'react'
+interface pageProps {;
+className?: string;
+}
+}
+}'
+const page: "React.FC<pageProps /> = ({ className = '' "}) => {;
+return(</>;
+    <div className={className} /  />
+      <h2>page</h2>
+      <p>This component is under construction.</p>);
+      </div>);
+  );
+}"
+export default page}";'"
+  )
+export default page
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
+}

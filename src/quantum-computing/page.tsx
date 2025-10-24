@@ -1,3 +1,8 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
 import React from 'react';
 import { Atom, Lock, CheckCircle, Star, Brain, Shield, Check } from 'lucide-react';
 'use client'
@@ -52,51 +57,29 @@ const QuantumComputingPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Quantum Computing Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-              Harness the power of quantum mechanics to solve the world's most complex computational problems
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                Explore Quantum Solutions
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Key Benefits */}
-      <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Quantum Computing?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Quantum computing offers unprecedented computational power for solving complex problems
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <Atom className="w-8 h-8 text-purple-600" />
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3>
-              <p className="text-gray-600">Solve problems that would take classical computers thousands of years in minutes</p>
             </div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <Shield className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ultimate Security</h3>
-              <p className="text-gray-600">Quantum cryptography provides unbreakable security for your most sensitive data</p>
-            </div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <Brain className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Complex Problem Solving</h3>
-              <p className="text-gray-600">Tackle optimization, simulation, and machine learning challenges at scale</p>
-            </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </section>
       {/* Services */}

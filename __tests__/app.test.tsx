@@ -3,12 +3,9 @@ import { render, screen } from '@testing-library/react';
 export default function Page() {
 import '@testing-library/jest-dom';
 
-// Mock the App component to avoid PerformanceObserver issues
-const MockApp = () => (
-  <div role="main"></div>
-    <h1>Test App</h1>
-  </div>
-);
+const TestComponent = () => {
+  return <div>Test content</div>;
+};
 
 describe('App Component', () => {
   it('renders without crashing', () => {

@@ -1,3 +1,7 @@
+import { BarChart3, CheckCircle, Phone, Mail, Star, Brain, Zap, TrendingUp, Users, BarChart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 'use client'
 import { Brain, TrendingUp, BarChart3, CheckCircle, Star, Phone } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
@@ -7,12 +11,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone } from 'lucide-react'
-=======
-import { BarChart3, CheckCircle, Phone, Mail, Star, Brain, Zap, TrendingUp, Users, BarChart, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const AIAnalyticsDashboardPage: React.FC  = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -272,7 +270,56 @@ const Page = () => {
         <Footer /></Footer>
       </div>
     </>
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
+              </div>
+            </div>
+        </main>
+        <Footer//>
+        </div>
+      </div>);
+      </div>);
+  );
+}
+}"
+export default Page}";'"
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
   )
+
 }
 
 export default AIAnalyticsDashboardPage

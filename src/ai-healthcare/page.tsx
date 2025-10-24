@@ -1,4 +1,12 @@
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react';
 import { CheckCircle, Star, Brain, Shield, Zap, Users, Target, Heart, Helmet, Check } from 'lucide-react';
 import {CheckCircle, Star, Zap, Brain, Target, Users, Shield, Heart, Helmet} from 'lucide-react';

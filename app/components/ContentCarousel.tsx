@@ -85,8 +85,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                 Get Started
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Learn More
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+Learn More
               </button>
             </div>
           </div>
@@ -116,10 +116,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                       </li>
                     ))}
                   </ul>
-                </div>
               ))}
-            </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -195,14 +192,15 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                     ))}
                   </div>
                 </div>
-                {/* Stats */}
-                {currentSlideData.stats && (
-                  <div className=&quot;grid grid-cols-3 gap-6&quot;>{currentSlideData.stats.map((stat, index) => (</div>
-                      <div key={index} className=&quot;text-center&quot;></div>
-                        <div className=&quot;text-2xl font-bold text-white mb-1&quot;>{stat.value}</div>
-                        <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>
+                {/* Stats*/}
+                {currentSlideData.stats && (<div className="grid grid-cols-3 gap-6">{currentSlideData.stats.map((stat, index) => (<divkey = {index};className="text-center" />
+    </div>
+    <div className="text-2 xl font-bold text-white mb-1">
+      {stat.value}</div>
+    <div className="text-gray-400 text-sm">{stat.label}</div>
                       </div>
-                    ))}
+</>
+  ))}
                   </div>
                 )}
                 {/* CTA */}
@@ -221,35 +219,35 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                     <div className=&quot;w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center&quot;></div>
                       <currentSlideData.icon className=&quot;w-16 h-16 text-white&quot; />
                     </div>
-                    <div className=&quot;text-4xl font-bold text-white mb-2&quot;>{currentSlideData.title}</div>div>
-                    <div className=&quot;text-gray-300&quot;>Slide {currentSlide + 1} of {slides.length}</div>div>
+    <div className="text-4 xl font-bold text-white mb-2">{currentSlideData.title}</div>div>
+    <div className="text-gray-300">Slide {currentSlide+1} of {slides.length}</div>div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>{currentSlideData.features.map((feature, index) => (</div>
-                <div key={index} className=&quot;flex items-center gap-3&quot;></div>
-                  <CheckCircle className=&quot;w-5 h-5 text-cyan-400 flex-shrink-0&quot; />
-                  <span className=&quot;text-gray-300&quot;>{feature}</span>
+    <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">{currentSlideData.features.map((feature,index) => (<divkey = {index};className="flex items-center gap-3" />
+    </div> <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+    <span className="text-gray-300">{feature}</span>
                 </div>
-              ))}
+</>
+  ))}
             </div>
-            {/* Stats */}
-            {currentSlideData.stats && (
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700&quot;>{currentSlideData.stats.map((stat, index) => (</div>
-                  <div key={index} className=&quot;text-center&quot;></div>
-                    <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{stat.value}</div>
-                    <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>
+            {/* Stats*/}
+            {currentSlideData.stats && (<div className="grid grid-cols-1 md: grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">
+      {currentSlideData.stats.map((stat,index) => (<divkey = {index};className="text-center" />
+    </div>
+    <div className="text-3 xl font-bold text-white mb-1">
+      {stat.value}</div>
+    <div className="text-sm text-gray-400">{stat.label}</div>
                   </div>
-                ))}
+</>
+  ))}
               </div>
-            )}
+</>
+  )}
           </div>
-
           <button
-            onClick={prevSlide}
-            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
-            <ChevronLeft className=&quot;h-6 w-6&quot; />
+onClick = {prevSlide};className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" /> <ChevronLeft className="h-6 w-6" />
           </button>
           <button;
             onClick={nextSlide}
@@ -261,6 +259,40 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
           >
             <ChevronLeft className=&quot;w-6 h-6&quot; />
           </button>
+          <button onClick={nextSlide};className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20" /> <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>,<divclassName="quotrelative" max-w-7 xl mx-auto text-centerquot //>
+    <h1className="quottext-5" xl md text-7 xl font-bold text-white mb-6 leading-tightquot />
+ContentCarousel</h1>
+            <pAdvanced ContentCarousel solution for modern businesses</p / /><divclassName="quotflex" flex-col sm flex-row gap-4 justify-centerquot / /><button className="quotbg-emerald-600" hover bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-centerquot>
+Get Started  <ArrowRightclassName="quotml-2" h-5 w-5 quot />
+
+              </button>
+              <button className="quotborder" border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 quot>
+Learn More</button>
+            </div>
+          </div>
+        </section>
+/ Features Section /<section className="quotpy-20" px-4 quot /><divclassName="quotmax-w-7" xl mx-autoquot //>
+    <divclassName="quottext-center" mb-16 quot //><h2 className="quottext-4" xl font-bold text-white mb-4 quot>Key Features</h2>
+              <pPowerful AI-driven features designed to transform your business operations</p />
+
+            </div>
+    <divclassName="quotgrid" md grid-cols-2 lggrid-cols-4 gap-8 quot />
+featuresmapfeature index => 
+                </div><><divkey="index" className="quotbg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20 quot //><featureicon className="quoth-12" w-12 text-emerald-400 mb-4 quot //><h3 className="quottext-xl" font-semibold text-white mb-3 quot>featuretitle</h3>
+                  <p className="quottext-gray-300" mb-4 quot>featuredescription</p>
+                  <ul className="quotspace-y-2" quot>featurebenefitsmapbenefit idx => 
+                      </ul><li key="idx" className="quotflex" items-center text-sm text-gray-300 quot /><CheckCircleclassName="quoth-4" w-4 text-emerald-400 mr-2 flex-shrink-0 quot />benefit</li>
+
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </section>
+/Benefits Section /<section className="quotpy-20" px-4 bg-white/5 quot /><divclassName="quotmax-w-7" xl mx-autoquot / />
+    <divclassName="quottext-center" mb-16 quot / /><h2 className="quottext-4" xl font-bold text-white mb-4 quot>Why Choose Our Solution</h2>
+              <pExperience the benefits of cutting-edge AI technology</p />
 
           <button
             onClick={nextSlide}
@@ -279,14 +311,9 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
             />
           ))}
         </div>
-        {/* Additional Info */}
-        <div className=&quot;mt-16 text-center&quot;></div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto&quot;></div>
-            <div className=&quot;flex items-center justify-center gap-3 text-white&quot;></div>
-              <Star className=&quot;w-6 h-6 text-yellow-400&quot; />
-              <div className=&quot;text-left&quot;></div>
-                <div className=&quot;text-2xl font-bold&quot;>4.9/5</div>
-                <div className=&quot;text-gray-400 text-sm&quot;>Customer Rating</div>
+{/* Additional Info*/} <div className="[^"]*"> <div className="[^"]*">,<div className="[^"]*"> <Star className="w-6 h-6 text-yellow-400" /> <div className="[^"]*">
+    <div className="text-2 xl font-bold">4.9/5</div>
+    <div className="text-gray-400 text-sm">Customer Rating</div>
               </div>
             </div>
             <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
@@ -295,7 +322,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
-              ))}
+</>)
+  ))}
             </div>
           </div>
         </div>
@@ -311,8 +339,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+Contact Sales
               </button>
             </div>
           </div>

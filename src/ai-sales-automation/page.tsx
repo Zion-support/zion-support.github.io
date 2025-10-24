@@ -9,6 +9,10 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { Building } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
@@ -111,37 +115,6 @@ const Page = (): JSX.Element => {
               <p className=&quot;text-xl md:text-2xl text-cyan-400 mb-8&quot;>
                 Automate your sales process and boost revenue with intelligent AI
               </p>
-              <p className=&quot;text-lg text-gray-300 mb-12 max-w-3xl mx-auto&quot;>
-                Our AI-powered sales automation platform helps you identify high-value leads,
-                optimize your sales process, and close more deals with less effort.
-              </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
-                >
-                  <Phone className=&quot;w-5 h-5&quot; />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className=&quot;w-5 h-5&quot; />
-                  <span>Get Free Demo</span>
-                </a>
-              </div>
-              {/* Stats */}
-              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;></div>
-                {stats.map((stat, index) => (
-                  <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
-                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot;></div>
-                      {stat.number}
-                    </div>
-                    <div className=&quot;text-gray-300 font-medium&quot;>{stat.label}</div>
-                  </div>
-                ))}
               </div>
             </div>
           </section>
@@ -255,6 +228,7 @@ const Page = (): JSX.Element => {
       </div>
     </>
   )
+
 }
 
 export default Page;

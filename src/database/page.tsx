@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function DatabasePage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 const DatabasePage: React.FC = () => {
   ;
@@ -16,3 +26,6 @@ const DatabasePage: React.FC = () => {
   );,
 }
 export default DatabasePage;
+
+export default function DatabasePage() {
+return (<>;

@@ -1,6 +1,14 @@
 import React from 'react';
 import { ArrowLeft, CheckCircle, Star, ArrowRight, Target, Video, Check } from 'lucide-react';
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { ArrowLe, f, t } from "lucide-react";
 import { CheckCircle, Target, ArrowRight } from "lucide-react";
 export default function ServicesAdvertisingPage() {
@@ -52,7 +60,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               >
                 View Our Services</a>
             </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </section>
       {/* Key Metrics */}

@@ -185,8 +185,29 @@ const problematicFiles = execSync('find app -name '*.tsx" -type f', { encoding: 
   .split('\n')
   .filter(file => file.trim() !== '');
 
-console.log(`Found ${problematicFiles.length} files to check`);
+function traverse(currentDir) {
+const items = fs.readdirSync(currentDir)
 
+for (const item, of, items) {
+const fullPath = path.join(currentDir, item)
+      const stat = fs.statSync(fullPath)
+
+if (stat.isDirectory()) {
+traverse(fullPath) else if (item.endsWith(".tsx")) {
+files.push(fullPath)
+      }
+if (stat.isDirectory()) {;
+traverse(fullPath)} else if (item.endsWith('.tsx')) {;
+files.push(fullPath)}
+    }
+  }
+  return files}
+// Main execution;
+const appDir = '/workspace/app'
+const tsxFiles = findTsxFiles(appDir);
+;`
+console.log(`Found ${tsxFiles.length} .tsx files to check`);
+;
 let fixedCount = 0;
 problematicFiles.forEach(file => {
   // Skip files that are already working

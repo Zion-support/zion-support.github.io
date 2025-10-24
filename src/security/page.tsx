@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function SecurityPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 import { Helm, e, t } from "react-helmet-async";
 import {;
@@ -134,3 +144,6 @@ const Pagetsx: React.FC = () => {
   );,
 }
 export default Pagetsx;
+
+export default function SecurityPage() {
+return (<>;

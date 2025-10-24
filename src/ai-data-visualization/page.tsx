@@ -8,17 +8,11 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-=======
-'use client';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 import { CheckCircle, Phone, Mail } from "lucide-react";
-constAIDataVisualizationPage: React.FC= () => {
-  constfeatures= [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+import { CheckCircle, Phone, Mail } from 'lucide-react'
 
 constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -110,38 +104,39 @@ const Page = (): JSX.Element => {
               </h1>
               <p className=&quot;text-xl md:text-2xl text-cyan-400 mb-8&quot;>
                 Transform complex data into stunning, actionable insights
+=======
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
               </p>
-              <p className=&quot;text-lg text-gray-300 mb-12 max-w-3xl mx-auto&quot;>
-                Our AI-powered data visualization platform automatically transforms your raw data into
-                interactive dashboards, intelligent reports, and actionable insights that drive business growth.
-              </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
-                >
-                  <Phone className=&quot;w-5 h-5&quot; />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className=&quot;w-5 h-5&quot; />
-                  <span>Get Free Demo</span>
-                </a>
-              </div>
-              {/* Stats */}
-              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;></div>
-                {stats.map((stat, index) => (
-                  <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
-                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot;></div>
-                      {stat.number}
-                    </div>
-                    <div className=&quot;text-gray-300 font-medium&quot;>{stat.label}</div>
-                  </div>
-                ))}
               </div>
             </div>
           </section>
@@ -255,6 +250,7 @@ const Page = (): JSX.Element => {
       </div>
     </>
   )
+
 }
 
 export default Page;

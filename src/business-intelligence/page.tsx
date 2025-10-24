@@ -1,5 +1,7 @@
 import React from 'react';
 import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
 import { BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 <<<<<<< HEAD
@@ -7,12 +9,6 @@ import { CheckCircle, Star, BarChart, TrendingUp, Target  } from "lucide-react";
 import { BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
-=======
-'use client';
-import React from 'react';
-import { CheckCircle, Star, Target, TrendingUp, BarChart, Check } from 'lucide-react';
-import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -54,55 +50,47 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Business Intelligence Services
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Transform your data into strategic insights that drive business growth
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Explore BI Solutions
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Schedule Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Key Benefits */}
-      <section className="py-16 bg-white"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our BI Solutions?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our business intelligence solutions deliver actionable insights that drive real business value
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <BarChart className="w-8 h-8 text-blue-600" />
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Data-Driven Decisions</h3>
-              <p className="text-gray-600">Make informed decisions based on real-time data and comprehensive analytics</p>
             </div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <TrendingUp className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Optimization</h3>
-              <p className="text-gray-600">Identify opportunities for improvement and optimize business processes</p>
-            </div>
-            <div className="text-center p-6"></div>
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                <Target className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategic Planning</h3>
-              <p className="text-gray-600">Plan for the future with predictive analytics and trend analysis</p>
-            </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </section>
       {/* Services */}

@@ -161,7 +161,7 @@ Go Home
 onClick="{()" =>window.history.back()}</button>;"
 className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">;
 Go Back
-</
+</</div>
 </div>
 </div>
 </div>

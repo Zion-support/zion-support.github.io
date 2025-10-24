@@ -2,6 +2,11 @@ import React from 'react';
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Star, Brain, Zap, Shield, Settings, Palette, Video, Music, Code, BarChart, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCirc, l, e } from "lucide-react";
+import React from 'react';
+import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Star, Brain, Zap, Shield, Settings, Palette, Video, Music, Code, BarChart, Check } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react'
 'use client'
 import { Brain, BarChart } from 'lucide-react'
@@ -10,17 +15,6 @@ import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle } from 'lucide-react'
-=======
-'use client';
-import React from 'react';
-import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, CheckCircle, Star, Brain, Zap, Shield, Settings, Palette, Video, Music, Code, BarChart, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCirc, l, e } from "lucide-react";
-constMicroSAASPage: React.FC= () => {
-  constcategories= [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constMicroSAASPage: React.FC= () =>{constcategories= [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
@@ -222,24 +216,44 @@ const Page = (): JSX.Element => {
                     </div>
                   ),)}
                 </div>
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
               </div>
-            ))}
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="mb-16"></section>
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8"></div>
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Micro SAAS Solutions?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                    <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -356,6 +370,8 @@ const Page = (): JSX.Element => {
 >>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
     </div>
   )
+
 }
 
-export default Page;
+export default Page
+}

@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 
 function resolveMergeConflicts(conte, n, t) {
   // Remove all merge conflict markers and keep the HEAD version

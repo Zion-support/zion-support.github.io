@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 
 // Function to restore proper quotes and fix syntax
 function restoreFile(conte, n, t) {

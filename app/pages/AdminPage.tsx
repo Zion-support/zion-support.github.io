@@ -12,6 +12,18 @@ const AdminPage = (): JSX.Element => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 const AdminPage = () => {
+  return (<div>
+      <h1>Admin Page</h1>
+      <p>Admin functionality coming soon.</p>
+    </div>
+    </>
+  )
+  )
+) => {
+
+}
+
+export default function AdminPagePage() {
   return (
     <>
       

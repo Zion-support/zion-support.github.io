@@ -72,7 +72,6 @@ export interface Metadata {
 </string, string>
 }
 }
-
 export interface MetadataRoute {
   ;
   url: string;
@@ -162,6 +161,7 @@ export interface StaticProps {
   revalidate?: number;
   notFound?: boolean;
 }
+//ISR types
 
 // ISR types;
 export interface ISRConfig {
@@ -189,6 +189,11 @@ declare module 'next' {
       name?: string;
 }
   }
+}"
+export {}</Response>
+}"
+}
+export {}</Response>
 }
 export {
   

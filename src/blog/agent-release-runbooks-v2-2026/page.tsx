@@ -1,3 +1,12 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { ListChecks, FileWarning, RefreshCw, Calendar, Clock, Check } from 'lucide-react';
 import { ListChecks, FileWarning, RefreshCw } from 'lucide-react'
 import { Calend, a, r } from "lucide-react";
@@ -67,15 +76,20 @@ Page.displayName = "Page"() {return (
               <p className='text-white/90'></p>
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
+              </div>
             </div>
-            <a href=&quot;/contact&quot;
-              className=&quot;bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2&quot;
-            >
-              Engage <RefreshCw />
-            </a>
-          </div>
+        </main>
+        <Footer//>
         </div>
-      </section>
-    </main>
+      </div>);
+      </div>);
+  );
+}
+}"
+export default Page}";'"
   )
+
+}
+
+export default Page
 }

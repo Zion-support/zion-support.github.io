@@ -358,7 +358,8 @@ const Footer = (): JSX.Element => {
 >>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
         </div>
       </div>
-    </footer>
+    </>
+  )
   )
 }
 

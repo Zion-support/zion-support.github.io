@@ -141,34 +141,6 @@ if ('serviceWorker' in navigator && enableServiceWorker) {
           console.error('Service Worker registration failed:', registrationError);
         });
     }
-=======
-  return (
-    <>
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AdvancedPerformanceOptimizer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AdvancedPerformanceOptimizer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
     // Memory-based caching for API responses;"
     const cache=";";"
@@ -390,3 +362,55 @@ if ('gtag' in window) {
 
 
 export default AdvancedPerformanceOptimizerPag;e;</AdvancedPerformanceOptimizerProp>"
+=======
+interface AdvancedPerformanceOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps> = ({
+  className"
+  enableWebVitals = true
+  enableAdvancedCaching = true
+  enableImageOptimization = true
+  enablePreloading = true
+  enableServiceWorker = true
+}) => {
+  const [performanceMetrics, setPerformanceMetrics ] = useState<PerformanceMetrics>({
+    lcp: "0"
+    fid: "0"
+    cls: "0"
+    fcp: "0"
+    ttfb: "0"
+  })
+  //Web Vitals monitoring
+  const measureWebVitals = useCallback(() => {
+    if (enableWebVitals && typeof window !== "undefined") {
+      //Measure Largest Contentful Paint
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === "largest-contentful-paint") {
+            setPerformanceMetrics(prev => ({
+              ...prev
+              lcp: "entry.startTime")
+            }))
+          }
+        }
+      })
+      observer.observe({ entryTypes: "["largest-contentful-paint"] "})
+    }
+  }, [enableWebVitals,])
+  useEffect(() => {
+    measureWebVitals()
+  }, [measureWebVitals,])
+  return (<div className = {className}>
+      <h2>Advanced Performance Optimizer</h2>
+      <p>Advanced performance optimization for better application performance.</p>
+    </div>
+    </>
+  )
+  )
+}
+
+export default AdvancedPerformanceOptimizer;
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

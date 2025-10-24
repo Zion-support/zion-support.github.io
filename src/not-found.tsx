@@ -218,3 +218,21 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
     <//div>
   )
 }
+}"
+export default Page}";'"
+  )
+
+interface NotFoundProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const NotFound: React.FC<NotFoundProps> = ({ className = '', children }) => {
+  return (
+    <div className={`notfound ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default NotFound;

@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function DeveloperToolsPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 import { Code, Zap, BarChart, Target, Users, TrendingUp  } from "lucide-react";
 const DeveloperToolsPage: React.FC = () => {
@@ -259,3 +269,6 @@ const DeveloperToolsPage: React.FC = () => {
   );
 }
 export default DeveloperToolsPage;
+
+export default function DeveloperToolsPage() {
+return (<>;

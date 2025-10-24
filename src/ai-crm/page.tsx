@@ -1,12 +1,7 @@
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import React from 'react'
-=======
-'use client';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Users, BarChart, Check } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Brain, Target, TrendingUp, Users, BarChart, Check } from 'lucide-react';
-'use client'
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 <<<<<<< HEAD
@@ -15,7 +10,8 @@ import Footer from '../components/Footer'
 import { CheckCircle, Star } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 import Navigation from '../components/Navigation'
@@ -144,66 +140,47 @@ const Page = (): JSX.Element => {
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI-Powered CRM Platform
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer relationships with intelligent automation, predictive analytics, and personalized experiences that drive growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="cyber-button px-8 py-4 text-lg">
-                Start Free Trial
-              </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg">
-                Watch Demo
-              </button>
-            </div>
-          </div>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
-            <div className="text-center"></div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">65%</div>
-              <div className="text-gray-300">Higher Conversion Rate</div>
-            </div>
-            <div className="text-center"></div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
-              <div className="text-gray-300">Increase in Email Opens</div>
-            </div>
-            <div className="text-center"></div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
-              <div className="text-gray-300">Data Accuracy</div>
-            </div>
-            <div className="text-center"></div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">20h</div>
-              <div className="text-gray-300">Time Saved Per Week</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-16 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Intelligent CRM Features</h2>
-            <p className="text-xl text-gray-300">Everything you need to manage and grow your customer relationships</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
               </div>
-            ))}
-          </div>
+            </div>
+        </main>
+        <Footer//>
         </div>
       </section>
       {/* Capabilities Section */}
@@ -317,4 +294,5 @@ const Page = (): JSX.Element => {
   ),
 }
 
-export default Page;
+export default Page
+}

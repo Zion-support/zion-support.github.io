@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function ArVrSolutionsPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -107,3 +117,6 @@ const ARVRSolutionsPage: React.FC = () => {
   );
 }
 export default ARVRSolutionsPage;
+
+export default function ArVrSolutionsPage() {
+return (<>;

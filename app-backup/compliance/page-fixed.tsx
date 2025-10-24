@@ -5,12 +5,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 const PageFixedPage: React.FC = () => {
-=======
-"use client";
-import React from "react";
-
-const Arvrsolutions = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/ar-vr-solutions/page.tsx
   const features = [
     {
       icon: "🚀",
@@ -187,3 +181,36 @@ export default PageFixedPage
 
 export default Arvrsolutions;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/ar-vr-solutions/page.tsx
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from from 'lucide-react''use client'
+    "title": 'AI-Powered Analysis'";'"
+      "description": 'Advanced AI algorithms provide intelligent insights and recommendations.'";'"
+    "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'";'"
+    "title": 'Advanced Analytics'";'"
+      "description": 'Comprehensive analytics dashboard with real-time data visualization.'";'"
+    "benefits": ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'";'"
+    "title": 'Precision Targeting'";'"
+      "description": 'Target specific goals and objectives with precision and accuracy.'";'"
+    "benefits": ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'";'"
+    "title": 'Growth Optimization'";'"
+      "description": 'Optimize your business growth with data-driven strategies.'"benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'";'"
+import React from "react";
+import { Navigation  } from "../components/Navigation"
+import { Footer  } from "../components/Footer";
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp   } from "lucide-react"; "use client"
+    "title": "AI-Powered Analysis"
+      "description": "Advanced AI algorithms provide intelligent insights and recommendations."
+    "benefits": ["Smart recommendations", "Predictive analytics", "Automated insights", "Real-time analysis"
+    "title": "Advanced Analytics"
+      "description": "Comprehensive analytics dashboard with real-time data visualization."
+    "benefits": ["Real-time dashboards", "Custom reports", "Data visualization", "Performance metrics"
+    "title": "Precision Targeting"
+      "description": "Target specific goals and objectives with precision and accuracy."
+    "benefits": ["Goal tracking", "Performance optimization", "Strategic planning", "Success metrics"
+    "title": "Growth Optimization"
+      "description": "Optimize your business growth with data-driven strategies."
+    "benefits": ["Growth strategies", "Market analysis", "Competitive insights", "ROI optimization"
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

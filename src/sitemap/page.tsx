@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function SitemapPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 
 import React from 'react';
 const SitemapPage: React.FC = () => {
@@ -37,3 +47,6 @@ const SitemapPage: React.FC = () => {
   );,
 }
 export default SitemapPage;
+
+export default function SitemapPage() {
+return (<>;

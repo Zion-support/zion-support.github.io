@@ -8,6 +8,10 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { MessageCircle } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
@@ -178,29 +182,19 @@ const AICustomerSupportPage: React.FC = () => {
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join 500+ companies already using our AI customer support solutions
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
-                >
-                  <Phone className=&quot;w-5 h-5&quot; />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center justify-center space-x-2&quot;
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className=&quot;w-5 h-5&quot; />
-                  <span>Schedule Demo</span>
-                </a>
               </div>
             </div>
-          </section>
+        </main>
+        <Footer//>
         </div>
-      </div>
-    </>
+      </div>);
+      </div>);
+  );
+}
+}"
+export default Page}";'"
   )
+
 }
 
 export default Page;

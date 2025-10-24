@@ -37,12 +37,13 @@ const performanceConfig = {
   }
 };
 export interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
+
+lcp?: number
+fid?: number
+cls?: number
+fcp?: number
+ttfb?: number
+inp?: number
 }
 
 export interface ErrorReport {
@@ -150,10 +151,20 @@ class MonitoringService {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
         })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
-      } catch (error) {
-        // Long task API might not be available
-      }
+clsObserver.observe({ entryTypes: "["layout-shift"] "})
+        //First Contentful Paint
+const fcpObserver = new PerformanceObserver(list => {
+)
+const entries = list.getEntries()
+entries.forEach(entry => {)
+this.metrics.fcp = entry.startTime)
+this.reportMetric("fcp", entry.startTime)
+          
+})
+        })
+fcpObserver.observe({ entryTypes: "["paint"] "})
+      } catch(error) {   
+        , }
     }
   }
 
@@ -242,6 +253,7 @@ class MonitoringService {
         event_category: 'Web Vitals'
       });
     }
+
   }
 
   public logError(error: ErrorReport): void {
@@ -257,8 +269,8 @@ class MonitoringService {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
     // Send to error tracking service (if configured)
   }
-  public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }
+  public getMetrics(): PerformanceMetrics{}
+return { ...this.metrics }
   }
   public getErrors(): ErrorReport[] {
     return [...this.errors]

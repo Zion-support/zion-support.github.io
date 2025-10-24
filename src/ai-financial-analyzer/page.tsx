@@ -1,3 +1,12 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import React from 'react';
 import { Phone } from 'lucide-react';
 import {Phone} from 'lucide-react';
@@ -43,7 +52,6 @@ const Page: React.FC  = () => {
                 +1 302 464 0950
               </a>
             </div>
-          </section>
         </main>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
       </div>
@@ -52,7 +60,10 @@ const Page: React.FC  = () => {
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
   );
-};
+}
+}"
+export default Page}";'"
+  )
 
 export default Page;
 

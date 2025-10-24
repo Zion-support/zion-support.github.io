@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function FaqPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
 'use client';
 import React, { useSta, t, e } from 'react';
@@ -217,3 +227,6 @@ type='text';
       <Footer /></Footer>
     </>
 export default FAQPage,;
+
+export default function FaqPage() {
+return (<>;

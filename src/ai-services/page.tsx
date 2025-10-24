@@ -1,12 +1,7 @@
-import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
-import React from 'react'
-=======
-'use client';
 import React from 'react';
 import { CheckCircle, Star, ArrowRight, Brain, Zap, Shield, Target, Globe, Users, BarChart, Check } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, ArrowRight, Brain, Zap, Shield, Target, Globe, Users, BarChart, Check } from 'lucide-react';
-'use client'
 import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
 <<<<<<< HEAD
@@ -15,7 +10,8 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../$1/Navigation';
 import Footer from '../$1/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 import Navigation from '../components/Navigation'
@@ -146,24 +142,44 @@ const Page = (): JSX.Element => {
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
               </div>
-            ))}
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="mb-16"></section>
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8"></div>
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Services?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                    <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -197,6 +213,8 @@ const Page = (): JSX.Element => {
 >>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
     </div>
   )
+
 }
 
-export default Page;
+export default Page
+}

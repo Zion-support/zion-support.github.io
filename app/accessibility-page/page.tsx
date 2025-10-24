@@ -1,3 +1,9 @@
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Footer from "../components/Footer";
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -25,6 +31,7 @@ const Page: React.FC = () => {
     }
   ];
 
+export default function ServicePage() {
   return (
     <>
       <Navigation />

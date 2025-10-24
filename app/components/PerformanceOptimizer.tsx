@@ -84,6 +84,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
 
   const allOptimizationsComplete = Object.values(optimizationStat, u, s).every(Boole, a, n)
 
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '', children }) => {
   return (
     <>
       

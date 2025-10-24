@@ -1,8 +1,6 @@
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+const FuturisticBackground: React.FC = () => {
+return (<div>
+      <Helmet />
 
 const FuturisticBackgroundPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
@@ -52,8 +50,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({className="'
                 Get Started
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
-                Learn More
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Learn More</button>
+
               </button>
             </div>
           </div>
@@ -96,35 +96,29 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({className="'
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Experience the benefits of cutting-edge AI technology
               </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+    <divclassName="grid md: "grid-cols-2 l","
+g: grid-cols-4 gap-8" />,<div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">Scalable</h3>
+                <p className="text-gray-300">Grows with your business needs and requirements.</p>
+                </div> <div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
+                </div> <div className="[^"]*">
+    <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
 
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
-              </button>
+                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
+                </div>
               </div>
             </div>
-          </div>
+        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
+    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="[^"]*">
+Join thousands of businesses already using FuturisticBackground to transform their operations.</p>
+            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Start Your Free Trial</button>
+            </button>
+            </div>
         </section>
       </div>
       <Footer /></Footer>

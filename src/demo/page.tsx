@@ -1,6 +1,11 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
+import { Clo, c, k } from "lucide-react";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
 'use client'
@@ -11,22 +16,6 @@ import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
-=======
-'use client';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
-import { Clo, c, k } from "lucide-react";
-constDemoPage: React.FC= () => {
-  const [formDatasetFormDa, t, a] = useState({
-    name: ',&apos;,
-    email: ',',
-      company: ',',
-    phone: ',',
-      service: ',',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',
@@ -245,36 +234,51 @@ const Page = (): JSX.Element => {
                     </div>
                   </div>
                 </div>
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+              </p>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
               </div>
             </div>
-          </section>
-          {/* Testimonials */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
-              What Our Clients Say
-            </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;></div>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className=&quot;cyber-card p-6&quot;></div>
-                  <div className=&quot;flex items-center mb-4&quot;></div>
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
-                    ))}
-                  </div>
-                  <p className=&quot;text-gray-300 mb-4&quot;>&quot;{testimonial.text}&quot;</p>
-                  <div></div>
-                    <div className=&quot;font-bold text-white&quot;>{testimonial.name}</div>
-                    <div className=&quot;text-cyan-400 text-sm&quot;>{testimonial.company}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
         </main>
         <Footer /></Footer>
       </div>
     </>
   )
+
 }
 
 export default Page;

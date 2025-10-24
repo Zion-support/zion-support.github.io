@@ -11,13 +11,6 @@ import { ArrowRight }  from "lucide-react";interface NeonButtonProps {
   icon?: React.ReactNode;
   disabled?: boolean;
 }
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const NeonButton: React.FC<NeonButtonProps> = ({
@@ -337,8 +330,33 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         </ArrowRight>
         </ArrowRight>
 }
+=======
+const NeonButton: React.FC = () => {
+return (<div>
+      <Helmet />
+
+        <title>NeonButton</title>
+        
+        <meta name="description" content="Advanced NeonButton solution for modern businesses." //>
+        <meta name="keywords" content="AI,artificial, intelligence, NeonButton, AI, solutions, intelligent automation" //>
+
+export const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
+  return (
+    <div className="{`neonbutton" ${className}`}>
+      {children}
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
     </div>
-  )
+      <Navigation//> <div className="[^"]*">
+        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
+NeonButton</h1>
+            </h1> <p className="[^"]*">
+Advanced NeonButton solution for modern businesses.</p>
+            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+Get Started</button>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Learn More</button>
 
   if (href) {}
     return ("

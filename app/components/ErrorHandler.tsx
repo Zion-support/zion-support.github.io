@@ -35,6 +35,7 @@ const ErrorHandlerPage: React.FC = () => {const features = [
     'Gain competitive advantage with advanced technology'
   ];
 
+export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
   return (
     <>
       

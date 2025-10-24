@@ -33,17 +33,50 @@ jest.mock('react-router-dom', () => {
     }
   };
 });
+;
+// Mock IntersectionObserver;
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver{;
+// Mock ResizeObserver}
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+// Mock window.gtag;
+global.gtag = jest.fn();
+// Mock window.dataLayer;
+global.dataLayer = [];
+// Mock window.gtag});
+;
+// Mock window.dataLayer});"
+";'"
+require("@testing-library/jest-dom")
+//Polyfill for TextEncoder/TextDecoder
+const { TextEncoder, TextDecoder } = require("util")
+global.TextEncoder = TextEncoder
+global.TextDecoder = TextDecoder
+//Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {)
+writable: "true")
+value: "jest.fn().mockImplementation(query => ({)
+matches: false",media: "query",onchange: "null")
+addListener: "jest.fn()",//deprecated
+removeListener: "jest.fn()",//deprecated
+addEventListener: "jest.fn()",removeEventListener: "jest.fn()",dispatchEvent: "jest.fn()"}))
 
-// Suppress console warnings for tests
-const originalError = console.error;
-beforeAll(() => {
-  console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
-      return;
-    }
-    originalError.call(console, ...args);
-  };
-});
+})
+//Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver{
+//Mock window.matchMedia}
+})
+//Mock IntersectionObserver
+  constructor() {}
 
 afterAll(() => {
   console.error = originalError;

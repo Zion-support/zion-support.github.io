@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function OfflinePage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 
 'use client';
 /**;
@@ -56,3 +66,6 @@ onClick={;
             Try refreshing the page once you're back online.;
   );
 export default OfflinePage,;
+
+export default function OfflinePage() {
+return (<>;

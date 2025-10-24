@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function NewsPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 const NewsPage: React.FC = () => {
   ;
@@ -16,3 +26,6 @@ const NewsPage: React.FC = () => {
   );,
 }
 export default NewsPage;
+
+export default function NewsPage() {
+return (<>;

@@ -1,36 +1,63 @@
-// Type definitions for Next.js compatibility
+
+//Type definitions for Next.js compatibility()
 export interface Metadata {
-  title?: string
-  description?: string
-  keywords?: string[]
-  authors?: Array<{ name: string; url?: string }> | string[]
-  creator?: string
-  publisher?: string
-  formatDetection?: {
-    email?: boolean
-    address?: boolean
-    telephone?: boolean
-  }
-  metadataBase?: URL
-  alternates?: {
-    canonical?: string
-    languages?: Record<string, string>
-  }
+
+title?: string()
+description?: string()
+keywords?: string[]
+}
+}
+  authors?: Array<{ "name": string; url?: string }> | string[]
+creator?: string()
+publisher?: string()
+formatDetection?: {
+email?: boolean()
+address?: boolean()
+telephone?: boolean()
+}
+url?: string();
+siteName?: string()</>;"
+images?: Array<{"
+      "url": string,;
+width?: number();
+height?: number();
+alt?: string();
+}>;
+locale?: string();"
+type?: string()"
+authors?: Array<{ "name": string; url?: string }> | string[];
+publishedTime?: string();"
+  }"
+  twitter?: {;"
+card?: 'summary' | 'summary_large_image' | 'app' | 'player''
+      'max-video-preview''
+      'max-image-preview'?: 'none' | 'standard' | 'large''
+      'max-snippet''
+changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';'"
+changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never''";'"
+  "runtime": 'edge'',";'"
+  "runtime": 'nodejs'',;'"
+declare module 'next''";'"
+  metadataBase?: URL()
+alternates?: {
+canonical?: string()
+languages?: Record<string, string>
+}
   openGraph?: {
-    title?: string
-    description?: string
-    url?: string
-    siteName?: string
-    images?: Array<{
-      url: string
-      width?: number
-      height?: number
-      alt?: string
-    }>
-    locale?: string
-    type?: string
-    authors?: Array<{ name: string; url?: string }> | string[]
-    publishedTime?: string
+title?: string()
+description?: string()
+url?: string()
+siteName?: string()</string>
+images?: Array<{
+      "url": string
+width?: number()
+height?: number()
+alt?: string()
+}>
+locale?: string()
+type?: string()
+authors?: Array<{ "name": string; url?: string }> | string[]
+publishedTime?: string()
   }
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player'
@@ -63,10 +90,6 @@ export interface MetadataRoute {
 <<<<<<< HEAD:app-backup/types/next.d.ts
   url: string
   lastModified?: string | Date
-=======
-  url: string,
-      lastModified?: string | Date
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c8e5:app-broken/app/types/next.d.ts
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number
 }
@@ -150,3 +173,14 @@ declare module 'next' {
 }
 
 export {}
+=======
+card?: "summary" | "summary_large_image" | "app" | "player""
+      "max-video-preview""
+      "max-image-preview"?: "none" | "standard" | "large""
+      "max-snippet""
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never""
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never""
+  "runtime": "edge""
+  "runtime": "nodejs""
+declare module "next"'
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

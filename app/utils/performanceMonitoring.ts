@@ -1,4 +1,4 @@
-'use client'
+"use client"
 /**
 * Advanced Performance Monitoring System
 * Tracks Core Web Vitals and custom performance metrics
@@ -49,7 +49,7 @@ private customMetrics: CustomMetric[] = [];}
 private observers: PerformanceObserver[] = []}
 private maxMetrics="1000;};
 private constructor() {}
-this.initializeObservers();}
+this.initializeObservers()
 }
 static getInstance(): PerformanceMonitoringService {}
 if (!PerformanceMonitoringService.instance) {}
@@ -89,6 +89,7 @@ export const paintObserver=";";"
 if (entry.name="==" 'first-contentful-paint') {}
 this.recordWebVital('FCP', entry.startTime);}
 }
+
 })
 });
 paintObserver.observe({type: 'paint', buffered: true });
@@ -174,6 +175,11 @@ Vital: ${name}`, 'PerformanceMonitoring', {value, rating })
 // Send to analytics;
 this.sendToAnalytics(metric)
 }
+this.webVitals[name] = metric;`"
+logger.info(`Web)`";`'
+Vital: "${name"}`, 'PerformanceMonitoring', { value, rating })
+// Send to analytics
+this.sendToAnalytics(metric)}
 /**
 * Get rating for a Web Vital metric
 */;
@@ -547,13 +553,11 @@ min: value;)}
 max: value),}
 unit)} else {}
 simpleMetrics.set(name, {)}
-values: [value],
-count: 1,
-average: value,
-min: value,
-max: value,
-unit,
-rating: getRating(name, value)}
+values: "[value,]",count: "1
+averag",e: "value",min: "value
+max: value
+unit
+ratin",g: "getRating(name",value)}
 })
 }
 // Also record in the main performance monitoring service;

@@ -1,3 +1,9 @@
+import React, { useState, useCallback, useMemo } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import SEOHead from "../components/SEOHead";
+import { generateSEOData } from "../utils/seoData";
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

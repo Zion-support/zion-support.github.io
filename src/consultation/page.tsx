@@ -1,6 +1,11 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
+import { Clo, c, k } from "lucide-react";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
 'use client'
@@ -11,27 +16,6 @@ import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
-=======
-'use client';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-import { CheckCircle, Star, Phone, Mail  } from "lucide-react";
-import { Clo, c, k } from "lucide-react";
-constConsultationPage: React.FC= () => {
-  const [formDatasetFormDa, t, a] = useState({
-    name: ',&apos;,
-    email: ',',
-      company: ',',
-    phone: ',',
-      industry: ',',
-    companySize: ',',
-      currentChallenges: ',',
-    goals: ',',
-      timeline: ',',
-    budget: ',',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     name: '',
@@ -139,27 +123,43 @@ const Page = (): JSX.Element => {
               </h1>
               <p className=&quot;text-xl md:text-2xl text-cyan-400 mb-8&quot;>
                 Discover how technology can transform your business
+=======
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+return (<>;
+  </>;
+      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page""
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
+        <Navigation/ />"
+        <main className="container mx-auto px-4 py-16 pt-24" />,"
+    <div className="text-center" / />,"
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+Page</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8" /  />"
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
+              <p className="text-gray-300" /  />
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
+const Page: React.FC = () => {
+return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = "https: //ziontechgroup.com/page"
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
+Page</h1>
+            </h1> <p className="text-xl text-gray-300 mb-8" />
+Professional page services and solutions for your business needs.</p>
+            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
+This page is under development. Please check back soon for more information about our page services.</p>
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
               </p>
-              <p className=&quot;text-lg text-gray-300 mb-12 max-w-3xl mx-auto&quot;>
-                Get a free 30-minute consultation with our technology experts. We'll assess your current setup,
-                identify opportunities, and provide actionable recommendations to drive your business forward.
-              </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;></div>
-                <a
-                  href=&quot;tel:+13024640950&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
-                >
-                  <Phone className=&quot;w-5 h-5&quot; />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                  className=&quot;cyber-button flex items-center space-x-2&quot;
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className=&quot;w-5 h-5&quot; />
-                  <span>Schedule Now</span>
-                </a>
               </div>
             </div>
           </section>
@@ -377,6 +377,7 @@ const Page = (): JSX.Element => {
       </div>
     </>
   )
+
 }
 
 export default Page;

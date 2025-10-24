@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function StatusPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 import { Li, n, k } from "react-router-dom";
 import { Star, Phone  } from "lucide-react";
@@ -54,3 +64,6 @@ const Status: React.FC = () => {
   );,
 }
 export default Status;
+
+export default function StatusPage() {
+return (<>;

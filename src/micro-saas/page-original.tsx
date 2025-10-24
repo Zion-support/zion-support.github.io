@@ -3170,7 +3170,8 @@ constMicroSAASPage: React.FC= () => {
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </section>
       {/* Services Grid */}
@@ -3277,4 +3278,21 @@ constMicroSAASPage: React.FC= () => {
     </div>
   ),
 }
-export default MicroSAASPage
+}"
+export default MicroSAASPage}";'"
+  )
+
+interface PageOriginalProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const PageOriginal: React.FC<PageOriginalProps> = ({ className = '', children }) => {
+  return (
+    <div className={`pageoriginal ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PageOriginal;

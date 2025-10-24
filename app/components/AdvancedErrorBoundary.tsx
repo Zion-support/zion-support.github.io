@@ -23,33 +23,32 @@ interface State {
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
-  constructor(props: AdvancedErrorBoundaryProps) {
+  constructor(props: "AdvancedErrorBoundaryProps) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false "}
+
   }
 
-  private generateErrorId = (): string => {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }
-
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId(),
+  private reportError = (error: "Error", errorInfo: "ErrorInfo) => {
+    const errorReport = {
+      errorId: this.state.errorId || this.generateErrorId()"
       error
+      errorInfo
+      timestamp: "new Date().toISOString()",
+    userAgent: "navigator.userAgent"
+      url: "window.location.href"
     }
-    // Report error to external service
-    console.error('Error reported:', errorReport)
+
+    //Log to console in development
+    if(process.env.NODE_ENV = == "development") {  
+      console.error("Error Boundary caught an error: """, error, errorInfo)
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {
     this.setState({
-      error,
-      errorInfo,
-      errorId: this.generateErrorId()
+      hasError: true"
+      error
+      errorInfo)
     })
     // Call custom error handler if provided;
     if (this.props.onError) {}
@@ -81,8 +80,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     console.error('Error logged to service:', errorData)
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+    return`error_${Date.now()_${Math.random().toString(36).substr(2, 9)`
   }
 
   render() {
@@ -103,32 +101,10 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-              <button
-                onClick={() => window.location.href = '/'}
-                className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
-              >
-                <Home className="h-4 w-4 mr-2" />
+              <button onClick={() => window.location.href="/"} > <Home className="icon" />
                 Go Home
               </button>
-              <button
-                onClick={() => window.location.href = 'mailto:support@example.com'}
-                className="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
-              >
-                <Mail className="h-4 w-4 mr-2" />
-                Contact Support
-              </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
           </div>
         </div>
       )

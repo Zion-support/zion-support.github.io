@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function CookiesPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 import { Cookie, Settings, Shield, Phone, Mail  } from "lucide-react";
 import Navigation from '../components/Navigation';
@@ -55,3 +65,6 @@ const CookiesPage: React.FC = () => {
   );,
 }
 export default CookiesPage;
+
+export default function CookiesPage() {
+return (<>;

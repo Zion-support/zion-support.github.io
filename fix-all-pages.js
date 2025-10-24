@@ -87,7 +87,6 @@ function fixPageFile(filePa, t, h) {
       console.log(`Fixed: ${ filePa, t, h }`);
       return true;
     }
-    
     return false;
   } catch (err, o, r) {
     console.error(`Error fixing ${ filePa, t, h }:`, error.message);

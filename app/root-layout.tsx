@@ -17,6 +17,6 @@ export const metadata: Metadata = {title: 'Zion Tech Group - Advanced AI and IT 
       <body className={inter.className}></body>
         { childr, e, n }
       </body>
-    </html>
+    </html>)
   )
 };

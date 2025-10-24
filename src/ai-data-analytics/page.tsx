@@ -1,6 +1,14 @@
 import React from 'react';
 import { BarChart3, CheckCircle, Star, Brain, Target, Database, BarChart, Check } from 'lucide-react';
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Brain, Target, Database } from 'lucide-react'
 
@@ -169,7 +177,8 @@ const AIDataAnalyticsPage: React.FC = () => {
               >
                 ✉️ Get Free Consultation</a>
             </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </section>
       {/* Services Grid */}

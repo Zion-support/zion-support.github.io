@@ -92,38 +92,27 @@ function fixSyntaxErrors(filePa, t, h) {
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
       
-      // Skip lines that are just semicolons or empty
-      if (line.trim() === ';' || line.trim() === '') {
-        continue;
-      }
+      //Fix JSX syntax
+      .replace(/<(\w+)\s*\/\s*>/g, "<$1 />")
+      .replace(/className\s*=\s*[""]([^""]*)\s+([^""]*)[""]/g, "className="$1$2"")
+      .replace(/hover:\s*([^""\s]+)/g, "hover:$1")
+      .replace(/from-(\w+)\s+([^""\s]+)/g, "from-$1$2")
+      .replace(/to-(\w+)\s+([^""\s]+)/g, "to-$1$2")
       
-      // Skip lines that are just closing braces with semicolons
-      if (line.trim() === '};' || line.trim() === '}') {
-        if (jsxDepth > 0) {
-          jsxDepth--;
-        }
-        fixedLines.push(line.replace(/;+$/, ''));
-        continue;
-      }
+      //Fix closing tags and brackets
+      .replace(/\)\s*,\s*}/g, ")")
+      .replace(/\)\s*;\s*}/g, ")")
+      .replace(/\)\s*,\s*\)/g, ")")
+      .replace(/}\s*,\s*\)/g, "}")
+      .replace(/}\s*;\s*\)/g, "}")
       
-      // Skip lines that are just opening braces with semicolons
-      if (line.trim() === '{;' || line.trim() === '{') {
-        jsxDepth++;
-        fixedLines.push(line.replace(/;+$/, ''));
-        continue;
-      }
+      //Fix malformed strings
+      .replace(/[""]([^""]*)\s+([^""]*)[""]/g, ""$1$2"")
+      .replace(/href\s*=\s*[""]([^""]*)\s+([^""]*)[""]/g, "href="$1$2"")
       
-      // Fix lines that end with semicolons inappropriately
-      if (line.includes(';') && !line.includes('//') && !line.includes('*')) {
-        // Check if this is a JSX line
-        if (line.includes('<') && line.includes('>')) {
-          line = line.replace(/;\s*$/, '');
-        } else if (line.includes('return') || line.includes('const') || line.includes('let') || line.includes('var')) {
-          // Keep semicolons for regular JavaScript
-        } else {
-          line = line.replace(/;\s*$/, '');
-        }
-      }
+      //Fix component syntax
+      .replace(/<(\w+)\s*\/\s*>/g, "<$1 />")
+      .replace(/<\/\s*(\w+)\s*>/g, "</$1>")
       
       fixedLines.push(li, n, e);
     }
@@ -158,7 +147,7 @@ function findTsxFiles(d, i, r) {
         files.push(fullPa, t, h);
       }
     }
-  }
+  });
   
   traverse(d, i, r);
   return files;

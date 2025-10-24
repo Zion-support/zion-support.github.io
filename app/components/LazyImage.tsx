@@ -3,83 +3,26 @@ import React, { useState, useEffect, useRef } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-}
+        <title>LazyImage</title>
+        
+        <meta name="description" content="Advanced LazyImage solution for modern businesses." //>
+        <meta name="keywords" content="AI,artificial, intelligence, LazyImage, AI, solutions, intelligent automation" //>
 
-const LazyImage: React.FC<LazyImageProps> = ({ 
-  src, 
-  alt, 
-  className = '', 
-  placeholder = '/placeholder.jpg',
-  onLoad,
-  onError 
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
+export const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {!isInView ? (
-        <div className="w-full h-full bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="text-gray-400">Loading...</div>
-        </div>
-      ) : (
-        <>
-          {!isLoaded && !hasError && (
-            <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-              <div className="text-gray-400">Loading...</div>
-            </div>
-          )}
-          <img
-            src={hasError ? placeholder : src}
-            alt={alt}
-            onLoad={handleLoad}
-            onError={handleError}
-            className={`transition-opacity duration-300 ${
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            loading="lazy"
-          />
-        </>
-      )}
+    <div className="{`lazyimage" ${className}`}>
+      {children}
     </div>
-  );
-};
+      <Navigation//> <div className="[^"]*">
+        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
+LazyImage</h1>
+            </h1> <p className="[^"]*">
+Advanced LazyImage solution for modern businesses.</p>
+            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+Get Started</button>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Learn More</button>
 
 export default LazyImag;e;

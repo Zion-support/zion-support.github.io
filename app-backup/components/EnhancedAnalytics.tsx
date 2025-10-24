@@ -95,13 +95,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     identify,
     page,
   }
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80:app/ai-customer-support-chatbot/page.tsx
 
   return (
     <AnalyticsContext.Provider value={value}>
@@ -321,3 +314,35 @@ export default EnhancedAnalyticsPage;
 =======
 export default AiCustomerSupportChatbotPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80:app/ai-customer-support-chatbot/page.tsx
+=======
+'use client'
+import, React, { createContext, useContext, useEffect } from 'react'
+throw new Error('useAnalytics must be used within an AnalyticsProvider'
+if (typeof window !== 'undefined'
+if (process.env.NODE_ENV = == 'production'
+const script = document.createElement('script'
+gtag('js'
+gtag('config'
+if (typeof window !== 'undefined'
+          'event'"
+console.log('Analytics "Event": '
+if (typeof window !== 'undefined';'"
+          'config'";'"
+console.log('Analytics "Identify": '
+if (typeof window !== 'undefined');'"
+          'config');";'"
+      console.log('Analytics "Page": ');";'"
+"use client"
+import, React, { createContext, useContext, useEffect } from "react"
+throw new Error("useAnalytics must be used within an AnalyticsProvider"
+if (typeof window !== "undefined"
+if (process.env.NODE_ENV = == "production"
+const script = document.createElement("script" gtag("js" gtag("config"
+if (typeof window !== "undefined"
+          "event" console.log("Analytics "Event": "
+if (typeof window !== "undefined"
+          "config" console.log("Analytics "Identify": "
+if (typeof window !== "undefined"
+          "config")
+      console.log("Analytics "Page": ")
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

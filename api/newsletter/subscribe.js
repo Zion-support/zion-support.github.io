@@ -34,4 +34,3 @@ export default async function handler(req, res) {
       details: process.env.NODE_ENV === 'development' ? error.message : undefined;)
     }));
   }
-}

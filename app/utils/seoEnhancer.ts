@@ -1,4 +1,4 @@
-'use client'
+"use client"
 /**
 * SEO Enhancement Utilities;
 * Tools to improve search engine optimization;
@@ -403,7 +403,13 @@ canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href')
 export const generateAdvancedStructuredData="(;)" => {}
 return (
 $3
-)
+}</loc>
+    <lastmod>${page.lastModified}</lastmod>
+    <changefreq>${page.changeFrequency}</changefreq>)
+    <priority />${page.priority}</priority>)
+  </url>`).join("\n")}
+ </urlset>`
+return, sitemap
 }
 export const baseStructure="{;}
 '@context': 'https: //schema.org'}) => {}

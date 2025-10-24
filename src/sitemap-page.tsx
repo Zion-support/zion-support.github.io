@@ -1,4 +1,12 @@
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { Helmet } from 'lucide-react';
 import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
@@ -89,4 +97,12 @@ const SitemapPage: React.FC = () => {
 export default SitemapPage
 
 export default SitemapPage;
+export default SitemapPage;
+
+export const SitemapPage: React.FC<SitemapPageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`sitemappage ${className}`}>
+      {children}
+    </div>
+  );
 export default SitemapPage;

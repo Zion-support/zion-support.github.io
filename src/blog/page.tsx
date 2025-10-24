@@ -1,3 +1,28 @@
+import React from "react"
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+export default function BlogPage() {"
+return(<>,"
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" /  />"
+      <Navigation/ />"
+      <main className="py-20 px-4" />,"
+    <div className="max-w-4 xl mx-auto" / />,"
+    <h1 className="text-4 xl font-bold text-gray-900 mb-8">Blog</h1>
+          <p className="text-xl text-gray-600 mb-8" /  />
+"use client"
+import { { React   } from "react";
+import { Navigation  } from "../components/Navigation";
+import Footer from "../components/Footer";
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function BlogPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import React from 'react';
 'use client';
 import React, { useState, useEffect, useMemo } from 'react';
@@ -73,3 +98,26 @@ export default function BlogPage() {;
       readTime: '14 min read,',;
       date: '2026-02-15,',;
       path: '/blog/ai-2026-consensus-intelligence-breakthrough,',;
+
+export default function BlogPage() {"
+return(<>,"
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" /  />"
+      <Navigation/ />"
+      <main className="py-20 px-4" />,"
+    <div className="max-w-4 xl mx-auto" / />,"
+    <h1 className="text-4 xl font-bold text-gray-900 mb-8">Blog</h1>
+          <p className="text-xl text-gray-600 mb-8" /  />
+"use client"
+import { { React   } from "react";
+export default function BlogPage() {
+
+return(<> <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" />
+      <Navigation/ /> <main className="py-20 px-4" /> <div className="max-w-4 xl mx-auto" />
+    <h1 className="text-4 xl font-bold text-gray-900 mb-8">Blog</h1> <p className="text-xl text-gray-600 mb-8" />
+Insights and updates, on, AI, IT, and technology trends.</p>
+          </p>
+            </div>
+      </main>
+      <Footer /  />;
+export default function BlogPage() {
+return (<>;

@@ -97,3 +97,20 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { fixJSXSyntax, processFile };
+  return files;
+}
+
+// Main execution
+console.log('Starting JSX syntax fix...');
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTSXFiles(appDir);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixJSXFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files out of ${tsxFiles.length} total files.`);
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

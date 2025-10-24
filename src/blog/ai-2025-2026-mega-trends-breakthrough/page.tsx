@@ -1,4 +1,12 @@
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { Helmet } from 'lucide-react';
 import { Helmet } from 'lucide-react';
 import {Helmet} from 'lucide-react';
@@ -46,7 +54,8 @@ constAIMegaTrends2025202 6: React.FC= () => {
                 </div>
               </div>
             </div>
-          </div>
+        </main>
+        <Footer//>
         </div>
       </div>
     </>

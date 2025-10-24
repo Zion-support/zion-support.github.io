@@ -1,3 +1,12 @@
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import React from 'react';
 import { CheckCircle, Zap, Palette, Camera, Check } from 'lucide-react';
 import {CheckCircle, Camera, Zap, Palette} from 'lucide-react';
@@ -85,20 +94,6 @@ const Page = (): JSX.Element => {
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 AI-powered fashion design and trend prediction for retail businesses
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-                <a
-                  href=&quot;/contact&quot;
-                  className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
-                >
-                  Start Free Trial
-                </a>
-                <a
-                  href=&quot;#demo&quot;
-                  className=&quot;flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
-                >
-                  <Camera className=&quot;w-5 h-5&quot; />
-                  View Gallery
-                </a>
               </div>
             </div>
           </section>

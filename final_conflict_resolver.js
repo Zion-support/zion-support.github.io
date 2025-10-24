@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 
 function resolveConflicts(conte, n, t) {
   return content

@@ -3,81 +3,38 @@
 # Script to merge all open PRs
 echo "Starting to merge all open PRs..."
 
-# Get list of open PRs
-PR_LIST=$(gh pr list --state open --json number,title,headRefName --jq '.[] | "\(.number) \(.headRefName)"')
+# Get list of open PR numbers
+PR_NUMBERS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
 
-# Process each PR
-while IFS= read -r line; do
-    if [ -z "$line" ]; then
-        continue
-    fi
+echo "Found PR numbers: $PR_NUMBERS"
+
+for pr in $PR_NUMBERS; do
+    echo "Processing PR #$pr..."
     
-    PR_NUMBER=$(echo "$line" | awk '{print $1}')
-    BRANCH_NAME=$(echo "$line" | awk '{print $2}')
+    # Get PR details
+    PR_DETAILS=$(curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr")
     
-    echo "Processing PR #$PR_NUMBER ($BRANCH_NAME)..."
+    # Extract head ref
+    HEAD_REF=$(echo "$PR_DETAILS" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
     
-    # Check if PR can be merged directly
-    if gh pr merge "$PR_NUMBER" --merge --dry-run 2>/dev/null; then
-        echo "Merging PR #$PR_NUMBER directly..."
-        gh pr merge "$PR_NUMBER" --merge
-    else
-        echo "PR #$PR_NUMBER has conflicts, resolving..."
+    if [ -n "$HEAD_REF" ]; then
+        echo "Merging PR #$pr from branch $HEAD_REF..."
         
-        # Checkout the PR branch
-        gh pr checkout "$PR_NUMBER"
+        # Fetch the branch
+        git fetch origin "$HEAD_REF"
         
-        # Fetch latest main
-        git fetch origin main
-        
-        # Try to merge main into the branch
-        if git merge origin/main; then
-            echo "Merge successful, pushing changes..."
-            git push origin "$BRANCH_NAME"
-            
-            # Now try to merge the PR
-            if gh pr merge "$PR_NUMBER" --merge; then
-                echo "Successfully merged PR #$PR_NUMBER"
-            else
-                echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
-            fi
+        # Try to merge
+        if git merge "origin/$HEAD_REF" --no-edit; then
+            echo "Successfully merged PR #$pr"
         else
-            echo "Merge conflict detected, attempting to resolve..."
-            
-            # Check for common conflict patterns and resolve them
-            if git status --porcelain | grep -q "deleted by us"; then
-                echo "Resolving delete conflicts..."
-                git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs git rm
-            fi
-            
-            if git status --porcelain | grep -q "deleted by them"; then
-                echo "Resolving delete conflicts (deleted by them)..."
-                git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs git add
-            fi
-            
-            # Add all changes
+            echo "Failed to merge PR #$pr, resolving conflicts..."
+            # Try to resolve conflicts automatically
             git add .
-            
-            # Commit the merge
-            if git commit -m "Resolve merge conflicts"; then
-                echo "Conflicts resolved, pushing changes..."
-                git push origin "$BRANCH_NAME"
-                
-                # Try to merge the PR
-                if gh pr merge "$PR_NUMBER" --merge; then
-                    echo "Successfully merged PR #$PR_NUMBER after conflict resolution"
-                else
-                    echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
-                fi
-            else
-                echo "Failed to resolve conflicts for PR #$PR_NUMBER"
-            fi
+            git commit -m "Resolve merge conflicts for PR #$pr"
         fi
+    else
+        echo "Could not extract head ref for PR #$pr"
     fi
-    
-    echo "Completed processing PR #$PR_NUMBER"
-    echo "---"
-    
-done <<< "$PR_LIST"
+done
 
 echo "Finished processing all PRs"

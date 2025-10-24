@@ -1,8 +1,10 @@
-import Footer from './Footer'
-import React from 'react'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+"use client"
+import React from "react";
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe   } from "lucide-react";
+import { Navigation  } from "../components/Navigation";
+const EnhancedSEOPage: "React.FC = () => {
+const benefits = [
 
 const EnhancedSEO: React.FC = () => {
   const benefits = [
@@ -58,11 +60,6 @@ const EnhancedSEO: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
 
                 </div>
               ))}
@@ -73,10 +70,9 @@ const EnhancedSEO: React.FC = () => {
               <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>

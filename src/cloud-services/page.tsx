@@ -9,6 +9,12 @@ import Footer from '../components/Footer';
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+const Page: React.FC = () => {;
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 import { CheckCirc, l, e } from "lucide-react";
 import React  from "react";
 import Navigation  from "../components/Navigation";import Footer  from "../components/Footer";

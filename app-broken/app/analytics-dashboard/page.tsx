@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app-broken/app/analytics-dashboard/page.tsx
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -40,31 +41,69 @@ const PagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+=======
+"use client"
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Footer from "../components/Footer";
+export default function ServicePage() {
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172:app/ai-customer-support/page.tsx
   return (
     <>
+      <Head>
+        <title>Ai Customer Support | Zion Tech Group</title>
+        
+        <meta name="description" content="Professional ai customer support services and solutions for modern businesses." />
+        
+        <meta name="robots" content="index, follow" />
+        
+        <meta property="og:type" content="website" />
+        
+        <meta property="og:title" content="Ai Customer Support|Zion Tech Group" />
+        
+        <meta property="og:description" content="Professional ai customer support services and solutions for modern businesses." />
       
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
               Page
             </h1>
+<<<<<<< HEAD:app-broken/app/analytics-dashboard/page.tsx
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Page solution for modern businesses.
+=======
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional Page services designed to help your business grow and succeed.
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172:app/ai-customer-support/page.tsx
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
+<<<<<<< HEAD:app-broken/app/analytics-dashboard/page.tsx
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+=======
+              </Link>
+              <Link 
+                href="/about" 
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172:app/ai-customer-support/page.tsx
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
+<<<<<<< HEAD:app-broken/app/analytics-dashboard/page.tsx
         </section>
 
         {/* Features Section */}
@@ -142,3 +181,11 @@ const PagePage: React.FC = () => {
 export default PagePage;
 
 export default PagePage;
+=======
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172:app/ai-customer-support/page.tsx

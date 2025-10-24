@@ -1,5 +1,15 @@
-'use client';
-&quot;use client&quot;
+"use client"
+import React from "react";
+import { Head  } from "next/head";
+import { Link  } from "next/link";
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+const useAnalytics = () => {
+return (<div>
+      <Head>
+        <title>404 - Page Not Found|Zion Tech Group</title>
+        
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og: type" content="website" />
 
 import React, { createContext, useContext, useEffect } from &quot;react&quot;
 
@@ -198,10 +208,12 @@ const EnhancedAnalyticsPage: React.FC = () => {const features = [
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          {/* Error Message*/} <h1 className="[^"]*">
+Page Not Found
+          </h1> <p className="[^"]*">
+Oops! The page you"re looking for seems to have vanished into the digital void. Don"t, worry,even our AI can"t predict everything!
+          </p>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>"
@@ -218,10 +230,18 @@ const EnhancedAnalyticsPage: React.FC = () => {const features = [
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>"
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
+            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: "</p>",<div className="[^"]*">
+              {[{ name: "Home",path: "/" }
+                { name: "About",path: "/about" }
+                { name: "Services",path: "/services" }
+                { name: "Contact",path: "/contact" })
+              ].map((item, index) => (<Link key = {index} href = {item.path} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
+                  {item.name}
+                </Link>
               ))}
-            </div>
-          </div>
-        </section>
+                </div>
+              </div>
+          {/* Action Buttons*/}
 
         {/* CTA Section */}
         <section className="py-20 px-4"></section>"

@@ -36,4 +36,19 @@ export default withErrorLogging(async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
-});
+
+  }
+
+      res.status(500).json({
+error: "Internal server error",message: "error.message 
+)
+  "})
+    }
+
+  }
+
+}
+
+
+export default withErrorLogging(async(req, res) => {
+

@@ -38,10 +38,21 @@ const Footer: React.FC = () => {
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Cookie Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
 export default Footer;

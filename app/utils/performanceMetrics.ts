@@ -1,4 +1,4 @@
-'use client'
+"use client"
 /**
 * Performance Metrics Utility
 * Advanced performance tracking and monitoring for web applications
@@ -129,7 +129,6 @@ domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
 domInteractive: navEntry.domInteractive - navEntry.fetchStart}
 private initializeObservers(): void {
   /* TODO: Fix JSX expression */
-}
 }
 })
 }
@@ -275,7 +274,6 @@ recordPageLoad(): void {
 }
 }
 })
-}
 /**
 * Record network request timing
 */;
@@ -303,7 +301,6 @@ n: number, statu);
 s: number): void {/* TODO: Fix JSX expression */}
 }
 })
-}
 /**
 * Record memory usage
 */;"
@@ -336,7 +333,6 @@ recordMemoryUsage(): void {
 }
 }
 })
-}
 /**
 * Measure function execution time
 */;
@@ -474,7 +470,6 @@ if (this.webVitals.FID > 300) score -= 15;
 else if (this.webVitals.FID > 100) score -= 8;}
 }
 return Math.max(0, Math.min(100, score))
-}
 /**
 * Get performance recommendations
 */;
@@ -522,7 +517,12 @@ if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
 if (this.webVitals.FID && this.webVitals.FID > 100) {
   /* TODO: Fix JSX expression */
 }
-if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */}
+if(this.webVitals.FID && this.webVitals.FID > 100) {  /* TODO: "Fix JSX expression*/",}
+}
+const networkMetrics = this.getMetricsByCategory("network")
+const avgNetworkTime = networkMetrics.reduce((sum, m) => sum+m.value, 0) /networkMetrics.length
+if (avgNetworkTime > 500) { recommendations.push("Optimize network requests - consider caching and reducing payload sizes")
+networkMetrics.reduce((sum, m) => sum+m.value, 0) / networkMetrics.length
 }
 export const networkMetrics="this.getMetricsByCategory('network')";"
 export const avgNetworkTime=";";
@@ -546,20 +546,21 @@ export const loadMetrics="this.getMetricsByCategory('load')";"
 export const avgLoadTime=";";"
 export const avgLoadTime="loadMetrics.reduce((sum," m) => sum + m.value, 0) / loadMetrics.length || 0;}
 return {}
-metrics: this.getMetrics(),
-webVitals: this.getWebVitals(),
-summary: {}
-avgLoadTime,
-totalMetrics: this.metrics.length,
-performanceScore: this.calculatePerformanceScore(),
-recommendations: this.getRecommendations()}
-},
-timestamp: new Date()}
-generateReport(): PerformanceReport {/* TODO: Fix JSX expression */}
-},
-timestam,
-p: new Date()
+metrics: "this.getMetrics()",webVitals: "this.getWebVitals()"
+summar",y: "{"}
+avgLoadTime"
+totalMetrics: "this.metrics.length",performanceScore: "this.calculatePerformanceScore()"
+recommendation",s: "this.getRecommendations()"}"
+}"
+timestamp: "new Date()"}"
+generateReport(): PerformanceReport {/* TODO: "Fix JSX expression  */}
+}"
+timestam"
+p: "new Date()"}
 }
+//Type for performance.memory
+interface PerformanceWithMemory extends Performance{
+memory: "{",//Type for performance.memory}
 }
 /**
 * Export metrics as JSON
@@ -595,10 +596,15 @@ this.observers="[];}
 interface PerformanceWithMemory extends Performance {}
 memory: {// Type for performance.memory;}
 interface PerformanceWithMemory extends Performance {}
-memory: {}
-// usedJSHeapSize: number,
-// totalJSHeapSize: number,
-// jsHeapSizeLimit: number,
+memory: "{"}
+//usedJSHeapSize: "number
+//totalJSHeapSize: number
+//jsHeapSizeLimi",t: "number"}
+
+}
+//Type for LayoutShift
+interface LayoutShift extends PerformanceEntry { 
+value: "number",//Type, for, LayoutShift
 }
 }
 // Type for LayoutShift;

@@ -25,34 +25,6 @@ const features = [
       description: 'Worldwide deployment and support for international businesses'
     },
   ];
-=======
-'use client'
-import Navigation from 'components/Navigation'
-import Footer from 'components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
-const MainPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance standards.',
-      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
-    }
-  ]
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e87d
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -139,6 +111,35 @@ const MainPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+"use client"
+import React from "react";
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
+export default function main() {
+
+return (<div className="[^"]*"> <div className="[^"]*">,<h1 className="[^"]*">
+Main|Zion Tech Group</h1>
+          </h1> <p className="[^"]*">
+Professional main|zion tech group services coming soon.</p>
+          </p>
+          <Linkhref="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: "from-cyan-600 hove","
+r: to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
+Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
+
+          </Link>
+)
+  )
+    </div>
+    </div>
+    </div>
+}
+
+export const Main: React.FC<MainProps> = ({ className = '', children }) => {
+  return (
+    <div className="{`main" ${className}`}>
+      {children}
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
     </div>
   );
 };

@@ -73,10 +73,11 @@ const Navigation: React.FC = () => {
               <ArrowRight className="w-4 h-4 inline ml-2" />
             </Link>
           </div>
-        )}
-      </div>
-    </nav>
-  );
-};
+    </div>
+    </>
+  ) "}
 
-export default Navigation;
+export default Navigation
+    </div>
+}
+export default Navigation

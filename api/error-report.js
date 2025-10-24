@@ -11,4 +11,19 @@ export default function handler(req, res)   {
     console.error('Error processing error report:', error);
     res.status(500).json({ error: 'Failed to process error report' });
   }
-}
+"}"
+  } catch (error) {;"
+console.error('Error reporting failed: "'",error);";'"
+    res.status(500).json({ error: "'Failed to report error' "})}"
+";'"
+
+try{
+error
+stack
+userAgent
+url
+timestamp: "new Date().toISOString() "}
+  } catch (error) {
+console.error("Error reporting failed: """,error)
+    res.status(500).json({ error: ""Failed to report error" "})
+  }

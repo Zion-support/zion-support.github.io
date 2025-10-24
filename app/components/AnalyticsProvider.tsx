@@ -9,7 +9,7 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
-
+gtag: "(...args: any[]) => void"}
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
   trackPageView: (pageName: string) => void

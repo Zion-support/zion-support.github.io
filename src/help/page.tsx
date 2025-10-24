@@ -1,3 +1,13 @@
+import React from 'react'
+import Head from "next/head"
+import Link from 'next/link'
+import { ArrowRight } from from 'lucide-react'
+export default function HelpPage() {
+return (<>;
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
 import {;
     HelpCircle,
     Search,
@@ -105,3 +115,6 @@ export const categories = [;
     </>
 export default HelpPag,e,;
   ];
+
+export default function HelpPage() {
+return (<>;
