@@ -7,7 +7,7 @@ interface DefaultSEOProps {
 const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
   return (
     <div className={className}>
-      {/* Default SEO component */}
+      {/* Default SEO component content */}
     </div>
   );
 };
