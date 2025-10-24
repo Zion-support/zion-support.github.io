@@ -43,8 +43,8 @@ export interface TestSuite {
 }
 
 // Mock utilities
-export const createMock = <T,>(defaultValue: T): any => {
-  return defaultValue as any;
+export const createMock = <T,>(defaultValue: T): T => {
+  return defaultValue;
 };
 
 export const mockFunction = <T extends (..._args: unknown[]) => unknown>(
