@@ -17,11 +17,11 @@ import {
   CogIcon
   ChevronDownIcon
 } from '@heroicons/react/24/outline'
-const Navigation = () => {
+const Navigation = () => {;
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
+  const pathname = usePathname();
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -180,5 +180,5 @@ const Navigation = () => {
       </div>
     </nav>
   )
-}
-export default Navigation
+};
+export default Navigation;

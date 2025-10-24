@@ -16,7 +16,7 @@ export default function CaseStudiesPage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   );
 import React from 'react';

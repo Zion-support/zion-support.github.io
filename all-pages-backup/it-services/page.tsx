@@ -16,7 +16,7 @@ export default function ITServicesPage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   );
 import React from 'react';

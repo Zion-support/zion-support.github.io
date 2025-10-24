@@ -7,7 +7,7 @@ import { Bot, Cpu, Settings } from 'lucide-react';
 
 const $1: React.FC = () => {;
   const roboticsServices = [];
-  return ()
+  return();
       </div>
 </>
   )

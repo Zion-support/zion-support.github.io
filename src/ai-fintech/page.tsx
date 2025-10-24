@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react';
 
-constAIFintechPage: React.FC= () =>{constaiFintechServices= [
+const AIFintechPage: React.FC = () => {const aiFintechServices = [
     {
       title: 'AI Algorithmic Trading Platform',
       description: 'Advanced algorithmic trading system with machine learning for market prediction, risk management, and automated trading strategies.',
@@ -127,9 +127,10 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
       category: 'KYC',
       technologies: ['OCR', 'Facial Recognition', 'Document APIs', 'Machine Learning', 'Identity Verification APIs']
     }
-  ]
+  ];
+
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
-  return ()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main>

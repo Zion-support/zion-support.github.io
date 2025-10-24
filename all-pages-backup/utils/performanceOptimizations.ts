@@ -59,12 +59,12 @@ export const useIntersectionObserver = (;
 
   const disconnect = useCallback(() => {;
     if (observer) {
-      observer.disconnect()
+      observer.disconnect();
     }
   }, [observer])
 
   useEffect(() => {
-    return () => disconnect()
+    return () => disconnect();
   }, [disconnect])
 
   return { observe, disconnect }
@@ -114,9 +114,11 @@ export const usePerformanceMonitoring = () => {;
     if (typeof window === 'undefined') return
 
     const updateMetrics = () => {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0
+  ];
+  const as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
         fcp
@@ -127,7 +129,7 @@ export const usePerformanceMonitoring = () => {;
 
     // Monitor performance after page load
     if (document.readyState === 'complete') {
-      updateMetrics()
+      updateMetrics();
     } else {
       window.addEventListener('load', updateMetrics)
     }
@@ -151,7 +153,7 @@ export const usePerformanceMonitoring = () => {;
   return metrics
 }
 
-// Memory usage monitoring
+// Memory usage monitoring;
 export const useMemoryMonitoring = () => {;
   const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number
@@ -163,7 +165,7 @@ export const useMemoryMonitoring = () => {;
     if (typeof window === 'undefined' || !('memory' in performance)) return
 
     const updateMemoryInfo = () => {;
-      const memory = (performance as any).memory
+      const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
@@ -173,7 +175,7 @@ export const useMemoryMonitoring = () => {;
       }
     }
 
-    updateMemoryInfo()
+    updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval)
   }, [])
@@ -218,7 +220,7 @@ export const useBundleSizeMonitoring = () => {;
 
     const calculateBundleSize = () => {;
       const resources = performance.getEntriesByType('resource');
-      let totalSize = 0
+      let totalSize = 0;
       let jsSize = 0
       let cssSize = 0
       let imageSize = 0
@@ -244,7 +246,7 @@ export const useBundleSizeMonitoring = () => {;
 
     // Calculate after page load
     if (document.readyState === 'complete') {
-      calculateBundleSize()
+      calculateBundleSize();
     } else {
       window.addEventListener('load', calculateBundleSize)
     }
@@ -269,4 +271,4 @@ const performanceOptimizations = {;
   useBundleSizeMonitoring
 };
 ;
-export default performanceOptimizations
+export default performanceOptimizations;

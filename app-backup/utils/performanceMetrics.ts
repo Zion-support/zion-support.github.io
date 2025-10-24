@@ -97,7 +97,7 @@ private initializeObservers(): void {
 if ('PerformanceObserver' in window) {
 try {
 // Navigation timing
-const navObserver = new PerformanceObserver(list => {)
+const navObserver = new PerformanceObserver(list => {);
 for (const entry of list.getEntries()) {
 if (entry.entryType === 'navigation') {
 const navEntry = entry as PerformanceNavigationTiming
@@ -105,7 +105,7 @@ this.recordMetric({)
 name: 'pageLoadTime'),
     value: navEntry.loadEventEnd - navEntry.fetchStart)
 unit: 'ms'),
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'load',
     metadata: {
 domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
@@ -123,7 +123,7 @@ this.recordMetric({)}
 name: 'pageLoadTime',
     value: navEntry.loadEventEnd - navEntry.fetchStart
 unit: 'ms',
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'load',
     metadata: {}
 domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
@@ -156,7 +156,7 @@ this.recordMetric({)}
 name: 'FCP',
     value: entry.startTime
 unit: 'ms',
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'load'}
 })
 }
@@ -167,9 +167,10 @@ this.observers.push(paintObserver)
 // Largest Contentful Paint
 const lcpObserver = new PerformanceObserver(list => {
   )
-const entries = list.getEntries()
-const lastEntry = entries[entries.length - 1]
-if (lastEntry) {
+const entries = list.getEntries();
+const lastEntry = entries[entries.length - 1
+  ];
+  const if (lastEntry) {
 this.webVitals.LCP = lastEntry.startTime
 this.recordMetric({)
 name: 'LCP'),
@@ -178,15 +179,16 @@ unit: 'ms')
 // Largest Contentful Paint
 }
 const lcpObserver = new PerformanceObserver(list => {)}
-const entries = list.getEntries()
-const lastEntry = entries[entries.length - 1]
-if (lastEntry) {}
+const entries = list.getEntries();
+const lastEntry = entries[entries.length - 1
+  ];
+  const if (lastEntry) {}
 this.webVitals.LCP = lastEntry.startTime
 this.recordMetric({)}
 name: 'LCP',
     value: lastEntry.startTime
 unit: 'ms',
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'load'}
 })
 }
@@ -210,7 +212,7 @@ name: 'CLS'),
 unit: 'score')
 // Layout Shift
 }
-const clsObserver = new PerformanceObserver(list => {)}
+const clsObserver = new PerformanceObserver(list => {)};
 let clsValue = 0
 for (const entry of list.getEntries()) {}
 if ((entry as LayoutShift).hadRecentInput) continue
@@ -221,7 +223,7 @@ this.recordMetric({)}
 name: 'CLS',
     value: clsValue
 unit: 'score',
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'runtime'}
 })
 })
@@ -233,7 +235,7 @@ navObserver.observe({/* TODO: Fix JSX expression */})
 s: ['navigation'] })
 this.observers.push(navObserver)
 // Paint timing
-const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
+const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */});
 })
 }
 }
@@ -290,7 +292,7 @@ this.recordMetric({)
 name: 'pageLoad'),
     value: pageLoadTime)
 unit: 'ms'),
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'load',
     metadata: {
 dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
@@ -305,7 +307,7 @@ this.recordMetric({)}
 name: 'pageLoad',
     value: pageLoadTime
 unit: 'ms',
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'load',
     metadata: {}
 dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
@@ -324,7 +326,7 @@ recordNetworkRequest(url: string, duration: number, status: number): void {
 name: 'networkRequest'),
     value: duration)
 unit: 'ms'),
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'network',
     metadata: {
 url
@@ -334,7 +336,7 @@ this.recordMetric({)}
 name: 'networkRequest',
     value: duration
 unit: 'ms',
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'network',
     metadata: {}
 url
@@ -357,7 +359,7 @@ this.recordMetric({)
 name: 'memoryUsage'),
     value: memory.usedJSHeapSize)
 unit: 'bytes'),
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'memory',
     metadata: {
 total: memory.totalJSHeapSize,
@@ -371,7 +373,7 @@ this.recordMetric({)}
 name: 'memoryUsage',
     value: memory.usedJSHeapSize
 unit: 'bytes',
-    timestamp: new Date()
+    timestamp: new Date();
 category: 'memory',
     metadata: {}
 total: memory.totalJSHeapSize,
@@ -385,17 +387,17 @@ recordMemoryUsage(): void {/* TODO: Fix JSX expression */}
 * Measure function execution time
 */
 measureFunction<T>(name: string, fn: () => T): T {
-const startTime = performance.now()
-const result = fn()
+const startTime = performance.now();
+const result = fn();
 const endTime = performance.now()}
 this.recordMetric({})
 name: `function:${name}`)
 value: endTime - startTime),
     unit: 'ms')
 measureFunction<T>(name: string, fn: () => T): T {}
-const startTime = performance.now()
-const result = fn()
-const endTime = performance.now()
+const startTime = performance.now();
+const result = fn();
+const endTime = performance.now();
 this.recordMetric({})
 name: `function:${name}`
 value: endTime - startTime,
@@ -411,7 +413,7 @@ e: endTime - startTime
 uni
 t: 'ms'
 timestam
-p: new Date()
+p: new Date();
 categor
 y: 'runtime'})
 return result
@@ -420,17 +422,17 @@ return result
 * Measure async function execution time
 */
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-const startTime = performance.now()
-const result = await fn()
+const startTime = performance.now();
+const result = await fn();
 const endTime = performance.now()}
 this.recordMetric({`})
 name: `async:${name}`)
 value: endTime - startTime),
     unit: 'ms')
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
-const startTime = performance.now()
-const result = await fn()
-const endTime = performance.now()
+const startTime = performance.now();
+const result = await fn();
+const endTime = performance.now();
 this.recordMetric({`})
 name: `async:${name}`
 value: endTime - startTime,
@@ -446,7 +448,7 @@ e: endTime - startTime
 uni
 t: 'ms'
 timestam
-p: new Date()
+p: new Date();
 categor
 y: 'runtime'})
 return result
@@ -479,7 +481,7 @@ return { ...this.webVitals }
 * Calculate performance score (0-100)
 */
 calculatePerformanceScore(): number {
-  let score = 100
+  let score = 100;
 // FCP scoring
 if (this.webVitals.FCP) {
 if (this.webVitals.FCP > 3000) score -= 20
@@ -503,7 +505,7 @@ if (this.webVitals.FID) {
   if (this.webVitals.FID > 300) score -= 15
 }
 calculatePerformanceScore(): number {}
-let score = 100
+let score = 100;
 // FCP scoring
 if (this.webVitals.FCP) {}
 if (this.webVitals.FCP > 3000) score -= 20
@@ -542,22 +544,22 @@ return Math.max(0, Math.min(100, score))
 getRecommendations(): string[] {
 const recommendations: string[] = []
 if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
-recommendations.push()
+recommendations.push();
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'}
 getRecommendations(): string[] {}
 const recommendations: string[] = []
 if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}
-recommendations.push()
+recommendations.push();
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
 )}
 }
 if (this.webVitals.LCP && this.webVitals.LCP > 2500) {}
-recommendations.push()
+recommendations.push();
 'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
 )}
 }
 if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {}
-recommendations.push()
+recommendations.push();
 'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
 )}
 }
@@ -571,7 +573,7 @@ if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {/* TODO: Fix JSX expression
 }
 if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */}
 }
-const networkMetrics = this.getMetricsByCategory('network')
+const networkMetrics = this.getMetricsByCategory('network');
 const avgNetworkTime =
 networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
 if (avgNetworkTime > 500) {
@@ -579,7 +581,7 @@ if (avgNetworkTime > 500) {
 networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
 }
 if (avgNetworkTime > 500) {}
-recommendations.push()
+recommendations.push();
 'Optimize network requests - consider caching and reducing payload sizes'
 )}
 if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */}
@@ -594,7 +596,7 @@ const loadMetrics = this.getMetricsByCategory('load')
 const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
 return {
   metrics: this.getMetrics(),
-    webVitals: this.getWebVitals()
+    webVitals: this.getWebVitals();
 summary: {
 avgLoadTime
 totalMetrics: this.metrics.length
@@ -602,11 +604,11 @@ const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetri
 }
 return {}
 metrics: this.getMetrics(),
-    webVitals: this.getWebVitals()
+    webVitals: this.getWebVitals();
 summary: {}
 avgLoadTime
 totalMetrics: this.metrics.length,
-    performanceScore: this.calculatePerformanceScore()
+    performanceScore: this.calculatePerformanceScore();
 recommendations: this.getRecommendations()}
 }
 timestamp: new Date()}
@@ -660,7 +662,7 @@ value: number,
     hadRecentInput: boolean;}
 }
 // Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
+export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics
 cleanup(): void {/* TODO: Fix JSX expression */}
 }
@@ -673,6 +675,6 @@ interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression
 interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 }
 // Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
+export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics
 `

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const AiEcommerceOptimizerProPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Zap,
     title: 'AI-Powered Optimization',
@@ -22,7 +22,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
     description: 'Deep customer behavior analysis to improve conversion rates.'}
   ]
   const pricingPlans = [
-  {
+    {
   name: 'Starter',
     price: '$99'
       period: '/month',
@@ -102,8 +102,8 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                 View All Services
               </Link>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
@@ -180,7 +180,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Optimize Your E-commerce Store?
           </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">;
             Let&apos;s discuss how our AI e-commerce optimizer can transform your online business and drive growth.
           </p>
 <<<<<<< HEAD:app-backup/ai-ecommerce-optimizer-pro/page.tsx
@@ -216,4 +216,4 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
     </div>
   )
 }
-export default AiEcommerceOptimizerProPage
+export default AiEcommerceOptimizerProPage;

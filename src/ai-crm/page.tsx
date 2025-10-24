@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star } from 'lucide-react';
 
-constAICRMPage: React.FC= () =>{constfeatures= [
+const AICRMPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Lead Scoring',
@@ -30,7 +30,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-  constcapabilities= []
+  const capabilities = []
     {title: 'Smart Contact Management',
       description: 'AI automatically enriches contact data and maintains up-to-date information.',
       icon: Users,
@@ -53,7 +53,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-  constpricingPlans= []
+  const pricingPlans = []
     {name: 'Starter',
       price: '$4 9',
       period: '/$1/month',
@@ -102,7 +102,7 @@ constAICRMPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-  consttestimonials= []
+  const testimonials = []
     {name: 'Sarah Johnson',
       company: 'TechStart Inc.',
       role: 'Sales Director',
@@ -120,9 +120,10 @@ constAICRMPage: React.FC= () =>{constfeatures= [
       rating: 5
     }
   ]
+;
 
 const Page = () => {};
-  return ()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       {/* Hero Section */}
@@ -239,8 +240,8 @@ const Page = () => {};
                 
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </div>
@@ -311,8 +312,8 @@ const Page = () => {};
               Contact Sales
             </button>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
 {};

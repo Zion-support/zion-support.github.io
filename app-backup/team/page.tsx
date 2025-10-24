@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Brain, Globe, Shield, Zap, Send, BarChart3, Target, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react'
 'use client'
-const teamMembers = [
+const teamMembers = [;
   {
     id: 1,
     name: "Dr. Sarah Chen"
@@ -47,7 +47,7 @@ const teamMembers = [
     image: "/api/placeholder/300/300"}
 ]
 const values = [
-  {
+    {
     icon: Brain,
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."}
@@ -65,7 +65,7 @@ const values = [
     description: "We deliver exceptional results through meticulous attention to detail."}
   ]
 const stats = [
-  { label: "Years Combined Experience", value: "150+" }
+    { label: "Years Combined Experience", value: "150+" }
   { label: "AI Projects Delivered", value: "1000+" }
   { label: "Team Members", value: "25+" }
   { label: "Client Satisfaction", value: "99%" }
@@ -122,8 +122,8 @@ const TeamPage: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
           {/* Values Section */}
@@ -172,10 +172,10 @@ const TeamPage: React.FC = () => {
                 Learn About Our Culture
               </Link>
             </div>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   )
-}
-export default TeamPage
+};
+export default TeamPage;

@@ -4,4 +4,4 @@ export const link = () => {};
   return null
 {};
 
-export default link
+export default link;

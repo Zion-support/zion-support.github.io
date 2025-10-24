@@ -29,7 +29,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       data-testid={testId}
       {...props}
     />
-  )
+  );
 };
 ;
-export default OptimizedImage
+export default OptimizedImage;

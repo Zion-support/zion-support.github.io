@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AdvancedSEOOptimizerPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Search,
   title: title,
@@ -265,4 +265,4 @@ export default AdvancedSEOOptimizerPage
   )
 };
 ;
-export default AI3DGenerationPage
+export default AI3DGenerationPage;

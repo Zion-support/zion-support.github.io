@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail } from 'lucide-react'
 'use client'
 const FuturisticHeroPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',
@@ -35,5 +35,5 @@ const FuturisticHeroPage: React.FC = () => {
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'
+    'Scale operations without proportional staff increases';
     'Gain competitive advantage with advanced technology'

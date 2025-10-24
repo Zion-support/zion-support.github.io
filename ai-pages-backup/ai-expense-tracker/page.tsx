@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Calculator, Receipt, BarChart, Target, CheckCircle, Zap, Brain, Settings, Globe, Clock, Shield, TrendingUp, Star, DollarSign, PieChart, Activity, FileText, Database, Building2, CreditCard, Wallet, Lock, Sparkles, Smartphone, Camera, Upload } from 'lucide-react';
 
 const AiExpenseTrackerPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: <Camera className="w-8 h-8 text-cyan-400" />
       title: title,
@@ -31,7 +31,7 @@ const AiExpenseTrackerPage: React.FC = () => {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     {
       title: title,
   description: description,
@@ -58,7 +58,7 @@ const AiExpenseTrackerPage: React.FC = () => {
     };
   ];
 
-  const pricing = [
+  const pricing = [;
     {
       name: name,
   price: price,
@@ -85,7 +85,7 @@ const AiExpenseTrackerPage: React.FC = () => {
     };
   ];
 
-  const stats = [
+  const stats = [;
     { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> }
     { number: '80%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> }
     { number: '50K+', label: 'Receipts Processed', icon: <Receipt className="w-6 h-6" /> }

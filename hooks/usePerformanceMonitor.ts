@@ -3,12 +3,12 @@ import React from 'react'
 
 "use client"
 
-const usePerformanceMonitor = () => {
+const usePerformanceMonitor = () => {;
   return null
 }
 
 export default usePerformanceMonitor
-=======
+=======;
 import { useState, useEffect } from 'react';
 
 interface PerformanceData {
@@ -23,15 +23,17 @@ interface PerformanceData {
   };
 }
 
-export const usePerformanceMonitor = () => {
+export const usePerformanceMonitor = () => {;
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
 
   useEffect(() => {
     // Monitor page load performance
-    const handleLoad = () => {
+    const handleLoad = () => {;
       if ('performance' in window) {
         setTimeout(() => {
-          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const navigation = performance.getEntriesByType('navigation')[0
+  ];
+  const as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
           
           // Log performance metrics
@@ -53,7 +55,7 @@ export const usePerformanceMonitor = () => {
     };
 
     // Monitor resource loading
-    const handleResourceLoad = () => {
+    const handleResourceLoad = () => {;
       if ('performance' in window) {
         const resources = performance.getEntriesByType('resource');
         const slowResources = resources.filter(resource => resource.duration > 1000);
@@ -65,10 +67,10 @@ export const usePerformanceMonitor = () => {
     };
 
     // Monitor memory usage
-    const checkMemoryUsage = () => {
+    const checkMemoryUsage = () => {;
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        const memoryData = {
+        const memoryData = {;
           used: Math.round(memory.usedJSHeapSize / 1048576),
           total: Math.round(memory.totalJSHeapSize / 1048576),
           limit: Math.round(memory.jsHeapSizeLimit / 1048576),

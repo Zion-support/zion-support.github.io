@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 // Mock the App component to avoid PerformanceObserver issues
-const MockApp = () => (
+const MockApp = () => (;
   <div role="main">
     <h1>Test App</h1>
   </div>
@@ -9,10 +9,10 @@ const MockApp = () => (
 describe('App Component', () => {
   it('renders without crashing', () => {
     render(<MockApp />)
-    expect(screen.getByRole('main')).toBeInTheDocument()
+    expect(screen.getByRole('main')).toBeInTheDocument();
   })
   it('renders the main content', () => {
     render(<MockApp />)
-    expect(screen.getByRole('main')).toBeInTheDocument()
-  })
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 })

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' }
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' }
@@ -149,8 +149,8 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
             </div>
+            </div>
           </div>
-        </div>
         {/* Contact Info */}
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
@@ -197,5 +197,5 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   )
-}
-export default Footer
+};
+export default Footer;

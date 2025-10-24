@@ -4,10 +4,10 @@ import '@testing-library/jest-dom'
 // Polyfill fetch and enable fetch mocks
 import 'whatwg-fetch'
 // import fetchMock from 'jest-fetch-mock'
-// fetchMock.enableMocks()
+// fetchMock.enableMocks();
 // Reset fetch mocks before each test to ensure isolation
 // beforeEach(() => {
-//   fetchMock.resetMocks()
+//   fetchMock.resetMocks();
 // })
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 // Set up a mock for Vite environment variables accessed via import.meta.env
@@ -26,7 +26,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
+    dispatchEvent: jest.fn();
   }))
 })
 
@@ -34,7 +34,7 @@ Object.defineProperty(window, 'matchMedia', {
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn()
+  disconnect: jest.fn();
 }))
 <<<<<<< HEAD
 =======
@@ -42,12 +42,12 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 >>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 // Polyfill for URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
-  URL.revokeObjectURL = jest.fn()
+  URL.revokeObjectURL = jest.fn();
 }
 
 // Polyfill for window.scrollTo
 if (typeof window.scrollTo === 'undefined') {
-  window.scrollTo = jest.fn()
+  window.scrollTo = jest.fn();
 }
 
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
@@ -72,5 +72,5 @@ if (typeof performance.getEntriesByType !== 'function') {
   (performance as Performance & { getEntriesByType: () => PerformanceEntry[] }).getEntriesByType = () => []
 }
 
-// Ensure all code paths use the mock implementation
+// Ensure all code paths use the mock implementation;
 // global.fetch = fetchMock

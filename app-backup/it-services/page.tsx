@@ -2,7 +2,7 @@ import React from "react"
 import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react"
 "use client"
 const ITServicesPage: React.FC = () => {
-  const services = [
+  const services = [;
   {
       icon: Cloud,
     title: "Cloud Solutions",
@@ -181,12 +181,12 @@ const ITServicesPage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Cost-Effective</h3>
                     <p className="text-gray-600">Optimize your IT spending with our efficient and cost-effective solutions.</p>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             </div>
             <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6">;
                 Let&apos;s discuss your IT needs and create a customized solution that drives your business forward.
               </p>
               <a
@@ -197,8 +197,8 @@ const ITServicesPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-emerald-600 to-blue-600">
@@ -229,4 +229,4 @@ const ITServicesPage: React.FC = () => {
     </div>
   )
 }
-export default ITServicesPage
+export default ITServicesPage;

@@ -16,6 +16,6 @@ export default function SolutionsPage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   )}

@@ -5,4 +5,4 @@ const errorHandler = () => {};
   return null
 {};
 
-export default errorHandler
+export default errorHandler;

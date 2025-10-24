@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Calculator, Activity, TrendingUp, Lock, Building2, Database, FileText, CreditCard, Wallet, ArrowRight, CheckCircle, Star, Sparkles, PieChart } from 'lucide-react';
 export default function AiFinancialAnalyticsProPage() {
-  const features = [
+  const features = [;
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />
       title: title,
@@ -39,7 +39,7 @@ export default function AiFinancialAnalyticsProPage() {
   description: description,
   benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']};
   ];
-  const analyticsTypes = [
+  const analyticsTypes = [;
     {
       category: category,
   icon: <DollarSign className="w-6 h-6 text-green-400" />
@@ -107,7 +107,7 @@ export default function AiFinancialAnalyticsProPage() {
       ]
     };
   ];
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: name,
   price: price,
@@ -136,7 +136,7 @@ export default function AiFinancialAnalyticsProPage() {
   cta: 'Contact Sales'
     };
   ];
-  const testimonials = [
+  const testimonials = [;
     {
       name: name,
   company: company,
@@ -165,13 +165,13 @@ export default function AiFinancialAnalyticsProPage() {
   results: '20+ hours saved weekly'
     };
   ];
-  const stats = [
+  const stats = [;
     { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6 h-6" /> }
     { number: '1M+', label: 'Transactions Analyzed', icon: <Database className="w-6 h-6" /> }
     { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6 h-6" /> }
     { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6 h-6" /> };
   ];
-  const integrations = [
+  const integrations = [;
     { name: 'QuickBooks', icon: <Calculator className="w-6 h-6" />, category: 'Accounting' }
     { name: 'Xero', icon: <FileText className="w-6 h-6" />, category: 'Accounting' }
     { name: 'SAP', icon: <Database className="w-6 h-6" />, category: 'ERP' }

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
   title: title,

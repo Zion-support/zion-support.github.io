@@ -1,6 +1,6 @@
 // Accessibility utility functions
 <<<<<<< HEAD
-export const accessibilityUtils = {
+export const accessibilityUtils = {;
   // Add accessibility utility functions here
 =======
 

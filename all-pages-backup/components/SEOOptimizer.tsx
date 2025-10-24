@@ -12,7 +12,7 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
     // SEO optimizations
     if (typeof window !== 'undefined') {
       // Add structured data
-      const structuredData = {
+      const structuredData = {;
         "@context": "https://schema.org"
         "@type": "Organization"
         "name": "Zion Tech Group"
@@ -28,7 +28,7 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
       return () => {
         const existingScript = document.querySelector('script[type="application/ld+json"]')
         if (existingScript) {
-          existingScript.remove()
+          existingScript.remove();
         }
       }
     }
@@ -43,7 +43,7 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
       </Helmet>
       {children}
     </>
-  )
+  );
 };
 'use client';
 ;
@@ -201,4 +201,4 @@ export default SEOOptimizer
   );
 {};
 
-export default SEOOptimizerPage
+export default SEOOptimizerPage;

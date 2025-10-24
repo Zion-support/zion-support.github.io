@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 const Ai3dGenerationPage: React.FC = () => {
 const AdvancedPerformanceMonitorPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
   title: title,
@@ -173,4 +173,4 @@ export default function Implementation5GPage() {
 export default AdvancedPerformanceMonitorPage
   )}
 
-export default Ai3dGenerationPage
+export default Ai3dGenerationPage;

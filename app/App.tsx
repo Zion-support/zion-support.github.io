@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 
-const App = () => {
+const App = () => {;
   return (
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto px-4">
@@ -13,8 +13,9 @@ const App = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>;
-  )};
+            </div>
+          </div>
+  );
+};;
 
-export default App
+export default App;

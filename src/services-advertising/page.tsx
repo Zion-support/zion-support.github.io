@@ -4,7 +4,7 @@ import { CheckCircle, Target, ArrowRight } from 'lucide-react';
 
 export default function ServicesAdvertisingPage;
 ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
@@ -55,8 +55,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
                 View Our Services
               </a>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Key Metrics */}
       <section className="py-16 bg-white"></section>
@@ -360,8 +360,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
                 Contact Sales
               </button>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
@@ -389,8 +389,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
               View Success Stories
             </a>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   );
 {};

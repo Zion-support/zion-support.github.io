@@ -18,7 +18,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {,
-    errorId: this.state.errorId || this.generateErrorId()
+    errorId: this.state.errorId || this.generateErrorId();
       error
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
@@ -43,5 +43,5 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
   }
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // You can integrate with services like Sentry, LogRocket, etc.
+    // You can integrate with services like Sentry, LogRocket, etc.;
     const errorData = {

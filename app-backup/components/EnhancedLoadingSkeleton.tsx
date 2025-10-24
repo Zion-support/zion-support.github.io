@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 'use client'
 const EnhancedLoadingSkeletonPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',
@@ -31,5 +31,5 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
-  ]
+  ];
 }

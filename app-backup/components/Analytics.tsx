@@ -4,17 +4,17 @@ interface AnalyticsProps {
 }
 const Analytics: React.FC = () => {
   useEffect(() => {
-    const initAnalytics = () => {
+    const initAnalytics = () => {;
       if (typeof window !== &quot;undefined&quot; && window.gtag) {
         window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           page_title: document.title,
     page_location: window.location.href})
       }
     }
-    initAnalytics()
+    initAnalytics();
   }, [])
   return null; // Analytics component doesn&apos;t render anything
 }
 export default Analytics
 }
-export default AnalyticsPage
+export default AnalyticsPage;

@@ -118,11 +118,11 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           <div className="relative w-full max-w-md">
             {content}
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     )}
 
   return content
 };
 
-export default NewsletterSignup
+export default NewsletterSignup;

@@ -83,7 +83,7 @@ return;}
 }
 try {}
 // Observe paint metrics (FCP)
-const paintObserver = new PerformanceObserver((list) => {}
+const paintObserver = new PerformanceObserver((list) => {};
 list.getEntries().forEach((entry) => {}
 if (entry.name === 'first-contentful-paint') {}
 this.recordWebVital('FCP', entry.startTime)}
@@ -97,16 +97,17 @@ const lcpObserver = new PerformanceObserver((list) => {
   // Observe LCP
 }
 const lcpObserver = new PerformanceObserver((list) => {}
-const entries = list.getEntries()
-const lastEntry = entries[entries.length - 1]
-if (lastEntry) {}
+const entries = list.getEntries();
+const lastEntry = entries[entries.length - 1
+  ];
+  const if (lastEntry) {}
 this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime)
 }
 })
 lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true })
 this.observers.push(lcpObserver)
 // Observe CLS
-let clsValue = 0
+let clsValue = 0;
 const clsObserver = new PerformanceObserver((list) => {
   // Observe CLS
 let clsValue = 0
@@ -237,7 +238,7 @@ CLS: { good: 0.1, poor: 0.25 }
 TTFB: { good: 800, poor: 1800 }
 INP: { good: 200, poor: 500 }
 }
-const threshold = thresholds[name]
+const threshold = thresholds[name];
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
@@ -263,8 +264,9 @@ IN
 P: {/* TODO: Fix JSX expression */}
 r: 500 }
 }
-const threshold = thresholds[name]
-if (!threshold) return 'good'
+const threshold = thresholds[name
+  ];
+  const if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'
@@ -352,7 +354,7 @@ getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */}
 * Get performance score (0-100)
 */
 getPerformanceScore(): number {}
-const vitals = Object.values(this.webVitals)
+const vitals = Object.values(this.webVitals);
 if (vitals.length === 0) return 0
 const scores = vitals.map(metric => {
   )
@@ -386,7 +388,7 @@ score: number,
 customMetrics: CustomMetric[],
     recommendations: string[];}
 } {}
-const score = this.getPerformanceScore()
+const score = this.getPerformanceScore();
 const recommendations: string[] = []
 // Generate recommendations based on metrics
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
@@ -419,11 +421,11 @@ recommendations}
 * Measure function execution time
 */
 measureFunction<T>(name: string, fn: () => T): T {
-const start = performance.now()
+const start = performance.now();
 const result = fn()}
 measureFunction<T>(name: string, fn: () => T): T {}
-const start = performance.now()
-const result = fn()
+const start = performance.now();
+const result = fn();
 const duration = performance.now() - start;`}
 this.recordCustomMetric(`fn_${name}`, duration, 'ms')
 return result
@@ -432,11 +434,11 @@ return result
 * Measure async function execution time
 */
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-const start = performance.now()
+const start = performance.now();
 const result = await fn()}
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
-const start = performance.now()
-const result = await fn()
+const start = performance.now();
+const result = await fn();
 const duration = performance.now() - start;`}
 this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
 return result
@@ -461,7 +463,7 @@ measure(name: string, startMark: string, endMark: string): number | null {}
 if (typeof performance !== 'undefined' && 'measure' in performance) {}
 try {}
 performance.measure(name, startMark, endMark)
-const measure = performance.getEntriesByName(name, 'measure')[0]
+const measure = performance.getEntriesByName(name, 'measure')[0];
 if (measure) {}
 this.recordCustomMetric(name, measure.duration, 'ms')
 return measure.duration;}
@@ -539,7 +541,7 @@ this.observers = [];}
 disconnect(): void {/* TODO: Fix JSX expression */}
 }
 }
-export const performanceMonitoring = PerformanceMonitoringService.getInstance()
+export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService
 // Export convenience enums and functions
 export enum MetricUnit {
@@ -565,7 +567,7 @@ max: number,
     unit: string
 rating?: 'good' | 'needs-improvement' | 'poor';}
 }
-const simpleMetrics = new Map<string, MetricData>()
+const simpleMetrics = new Map<string, MetricData>();
 export const recordMetric = useCallback((...args) => {
   // Record in our simple metrics store for testing
 }
@@ -608,7 +610,7 @@ const thresholds: Record<string, { good: number; poor: number }> = {}</strin>
 'TTFB': { good: 800, poor: 1800 }
 'INP': { good: 200, poor: 500 }
 }
-const threshold = thresholds[name]
+const threshold = thresholds[name];
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
@@ -620,37 +622,37 @@ result[key] = { ...value }
 return result
 }
 export const clearMetrics = useCallback((...args) => {}
-simpleMetrics.clear()
+simpleMetrics.clear();
 performanceMonitoring.clearMetrics()}
 }
 export const measureFunction = <T>(name: string, fn: () => T): T => {
-const start = performance.now()
-const result = fn()
+const start = performance.now();
+const result = fn();
 const duration = performance.now() - start
 recordMetric(name, duration, MetricUnit.Milliseconds)}
 return result;}
 }
-export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
-  const start = performance.now()
-const result = await fn()
+export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {;
+  const start = performance.now();
+const result = await fn();
 const duration = performance.now() - start
 }
 export const measureFunction = <T>(name: string, fn: () => T): T => {}
-const start = performance.now()
-const result = fn()
+const start = performance.now();
+const result = fn();
 const duration = performance.now() - start
 recordMetric(name, duration, MetricUnit.Milliseconds)
 return result;}
 }
-export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {}
-const start = performance.now()
-const result = await fn()
+export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {};
+const start = performance.now();
+const result = await fn();
 const duration = performance.now() - start
 recordMetric(name, duration, MetricUnit.Milliseconds)
 return result;}
 }
-export const getPerformanceScore = (): number => {}
-const metrics = getMetrics()
+export const getPerformanceScore = (): number => {};
+const metrics = getMetrics();
 const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB']
 const webVitals = webVitalNames
 .map(name => metrics[name])
@@ -672,11 +674,11 @@ case 'poor': return 0
 default: return 0;}
 }
 })
-const sum = scores.reduce((a: number, b: number) => a + b, 0)
+const sum = scores.reduce((a: number, b: number) => a + b, 0);
 return Math.round(sum / scores.length)
 }
 export const getRecommendations = (): string[] => {}
-const metrics = getMetrics()
+const metrics = getMetrics();
 const recommendations: string[] = []
 if (metrics.FCP && metrics.FCP.rating !== 'good') {
   const recommendations: string[] = []
@@ -730,8 +732,9 @@ r: 1800 }
 'INP': {/* TODO: Fix JSX expression */}
 r: 500 }
 }
-const threshold = thresholds[name]
-if (!threshold) return 'good'
+const threshold = thresholds[name
+  ];
+  const if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement'
 return 'poor'

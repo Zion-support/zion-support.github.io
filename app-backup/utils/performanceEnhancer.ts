@@ -6,10 +6,10 @@ import { useRef } from 'react'
  * Advanced performance optimization tools for the application
  */
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(,
+export const debounce = <T extends (...args: unknown[]) => unknown>(,;
     func: T
   wait: number
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
@@ -17,7 +17,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
   }
 }
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: unknown[]) => unknown>(,
+export const throttle = <T extends (...args: unknown[]) => unknown>(,;
     func: T
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -33,11 +33,11 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
-  private metrics: Map<string, number> = new Map()
+  private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor()
+      PerformanceMonitor.instance = new PerformanceMonitor();
     }
     return PerformanceMonitor.instance
   }
@@ -52,7 +52,7 @@ export class PerformanceMonitor {
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)
       }
@@ -64,7 +64,7 @@ export class PerformanceMonitor {
   }
   // Clear metrics
   clearMetrics() {
-    this.metrics.clear()
+    this.metrics.clear();
   }
   // Monitor long tasks
   startLongTaskMonitoring() {
@@ -91,9 +91,9 @@ export class PerformanceMonitor {
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
   const renderStartTime = useRef<number>(0)
-  const monitor = PerformanceMonitor.getInstance()
+  const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {
-    renderStartTime.current = performance.now()
+    renderStartTime.current = performance.now();
     return (
     <>
       ) => {
@@ -104,8 +104,8 @@ export const usePerformanceMonitor = (componentName: string) => {
   }, [componentName, monitor])
   return {
     trackRender: (fn: () => void) => {
-      const start = performance.now()
-      fn()
+      const start = performance.now();
+      fn();
       const duration = performance.now() - start
       monitor.trackRender(`${componentName}_function`, duration)
     }
@@ -168,7 +168,7 @@ export const optimizeScrollPerformance = () => {
       hadRecentInput?: boolean
       value: number
   }
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
   for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
         if (!layoutEntry.hadRecentInput) {
@@ -179,7 +179,7 @@ export const optimizeScrollPerformance = () => {
     })
     observer.observe({ entryTypes: ['layout-shift'] })
     return () => {
-  observer.disconnect()
+  observer.disconnect();
       return clsValue
 }
   }
@@ -191,7 +191,7 @@ export const optimizeScrollPerformance = () => {
       }
     })
     observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    return () => observer.disconnect()
+    return () => observer.disconnect();
   }
   const trackFID = () => {
   interface FirstInputEntry extends PerformanceEntry {
@@ -206,17 +206,17 @@ export const optimizeScrollPerformance = () => {
       }
     })
     observer.observe({ entryTypes: ['first-input'] })
-    return () => observer.disconnect()
+    return () => observer.disconnect();
   }
   window.addEventListener('scroll', requestTick, { passive: true })
   // Start tracking
-  const cleanupCLS = trackCLS()
-  const cleanupLCP = trackLCP()
-  const cleanupFID = trackFID()
+  const cleanupCLS = trackCLS();
+  const cleanupLCP = trackLCP();
+  const cleanupFID = trackFID();
   return () => {
-    cleanupCLS()
-    cleanupLCP()
-    cleanupFID()
+    cleanupCLS();
+    cleanupLCP();
+    cleanupFID();
   }
 }
 // Memory usage monitoring
@@ -232,9 +232,11 @@ export const getMemoryUsage = () => {
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
 }
 // Performance metrics collection
-export const collectPerformanceMetrics = () => {
+export const collectPerformanceMetrics = () => {;
   if (typeof window === 'undefined') return null
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+  const navigation = performance.getEntriesByType('navigation')[0
+  ];
+  const as PerformanceNavigationTiming
   const paint = performance.getEntriesByType('paint')
   return {
     navigation: {,
@@ -250,17 +252,17 @@ export const collectPerformanceMetrics = () => {
 export const initializePerformanceEnhancements = () => {
   if (typeof window === 'undefined') return
   // Initialize lazy loading
-  lazyLoadImages()
+  lazyLoadImages();
   // Preload critical resources
-  preloadCriticalResources()
+  preloadCriticalResources();
   // Optimize scroll performance
-  optimizeScrollPerformance()
+  optimizeScrollPerformance();
   // Collect performance metrics
-  const metrics = collectPerformanceMetrics()
+  const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics
     </>
   )
-  }
+  };
 }

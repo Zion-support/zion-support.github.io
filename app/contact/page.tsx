@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-const ContactPage = () => {
+const ContactPage = () => {;
   const contactInfo = [
     {
       icon: Mail,

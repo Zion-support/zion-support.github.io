@@ -22,8 +22,8 @@ export default function AIVideoEditorPage() {
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
-      </div>
-    </div>;
+            </div>
+          </div>;
 
 import { ArrowRight } from 'lucide-react';
 

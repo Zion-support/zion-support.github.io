@@ -104,7 +104,7 @@ const $1: React.FC = () => {;
   ]
 
 const Footer = () => {};
-  return ()
+  return();
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
         </div>
       <div className="container mx-auto px-4 py-12"></div>
@@ -294,8 +294,8 @@ const Footer = () => {};
                 </a>
               ))}
             </div>
+            </div>
           </div>
-        </div>
       </div>
     </footer>
   )

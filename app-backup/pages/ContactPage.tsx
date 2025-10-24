@@ -1,6 +1,6 @@
 import React from 'react'
 "use client"
-const ContactPage = () => {
+const ContactPage = () => {;
   return (
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto px-4">
@@ -12,8 +12,8 @@ const ContactPage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>
+            </div>
+          </div>
   )
-}
-export default ContactPage
+};
+export default ContactPage;

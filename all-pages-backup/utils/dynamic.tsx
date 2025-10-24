@@ -4,4 +4,4 @@ export const dynamic = () => {};
   return null
 {};
 
-export default dynamic
+export default dynamic;

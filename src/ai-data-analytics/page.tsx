@@ -3,7 +3,7 @@ import { BarChart3 } from 'lucide-react';
 import { CheckCircle, Brain, Target, Database } from 'lucide-react';
 
 const $1: React.FC = () => {;
-  const analyticsServices = [;
+  const analyticsServices = [
     {
       title: 'Real-Time Business Intelligence Platform',
       description: 'Advanced AI-powered analytics platform providing real-time insights, predictive modeling, and automated reporting for data-driven decision making.',
@@ -156,7 +156,7 @@ const $1: React.FC = () => {;
       useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage']
     }
   ]
-  const additionalFeatures = [;
+  const additionalFeatures = [
     {
       title: 'Advanced Data Processing',
       description: 'Handle massive datasets with real-time processing capabilities',
@@ -171,8 +171,9 @@ const $1: React.FC = () => {;
       description: 'AI-powered predictions and recommendations',
       icon: <Target className="w-8 h-8 text-orange-600" />
     }
-  ]
-  return ()
+  ];
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20"></section>
@@ -203,8 +204,8 @@ const $1: React.FC = () => {;
                 ✉️ Get Free Consultation
               </a>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Services Grid */}
       <section className="py-16 bg-white"></section>
@@ -319,8 +320,8 @@ const $1: React.FC = () => {;
           <div className="mt-8 text-sm text-blue-200"></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
 };

@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 'use client'
 const PageBackupPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Analysis',
@@ -96,5 +96,5 @@ const PageBackupPage: React.FC = () => {
       <Footer />
 </>
   )
-}
-export default PageBackupPage
+};
+export default PageBackupPage;

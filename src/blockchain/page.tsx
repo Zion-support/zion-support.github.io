@@ -7,7 +7,7 @@ import { Cpu } from 'lucide-react';
 
 const $1: React.FC = () => {;
   const blockchainServices = [];
-  return ()
+  return();
       </div>
 </>
   )

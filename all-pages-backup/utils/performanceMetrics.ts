@@ -42,13 +42,13 @@ export class PerformanceMetrics {;
 
   constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeObservers()
+      this.initializeObservers();
     }
   }
 
   static getInstance(): PerformanceMetrics {
     if (!PerformanceMetrics.instance) {
-      PerformanceMetrics.instance = new PerformanceMetrics()
+      PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance
   }
@@ -64,12 +64,12 @@ export class PerformanceMetrics {;
         const navObserver = new PerformanceObserver(list => {;
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming
+              const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({
                 name: name,
   value: navEntry.loadEventEnd - navEntry.fetchStart,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
                 category: category,
   metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
@@ -91,7 +91,7 @@ export class PerformanceMetrics {;
                 name: name,
   value: entry.startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
                 category: 'load'
               })
             }
@@ -110,7 +110,7 @@ export class PerformanceMetrics {;
               name: name,
   value: lastEntry.startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
               category: 'load'
             })
           }
@@ -120,7 +120,7 @@ export class PerformanceMetrics {;
 
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {;
-          let clsValue = 0
+          let clsValue = 0;
           for (const entry of list.getEntries()) {
             if ((entry as LayoutShift).hadRecentInput) continue
             clsValue += (entry as LayoutShift).value
@@ -130,7 +130,7 @@ export class PerformanceMetrics {;
             name: name,
   value: clsValue,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
             category: 'runtime'
           })
         })
@@ -150,7 +150,7 @@ export class PerformanceMetrics {;
     this.metrics.push(metric)
     // Keep only last 1000 metrics
     if (this.metrics.length > 1000) {
-      this.metrics.shift()
+      this.metrics.shift();
     }
   }
 
@@ -165,7 +165,7 @@ export class PerformanceMetrics {;
       name: name,
   value: pageLoadTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
       category: category,
   metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
@@ -184,7 +184,7 @@ export class PerformanceMetrics {;
       name: name,
   value: duration,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
       category: category,
   metadata: {
         url
@@ -204,7 +204,7 @@ export class PerformanceMetrics {;
       name: name,
   value: memory.usedJSHeapSize,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
       category: category,
   metadata: {
         total: memory.totalJSHeapSize,
@@ -225,7 +225,7 @@ export class PerformanceMetrics {;
       name: name,
   value: endTime - startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
       category: 'runtime'
     })
     return result
@@ -242,7 +242,7 @@ export class PerformanceMetrics {;
       name: name,
   value: endTime - startTime,
   unit: unit,
-  timestamp: new Date()
+  timestamp: new Date();
       category: 'runtime'
     })
     return result
@@ -273,7 +273,7 @@ export class PerformanceMetrics {;
    * Calculate performance score (0-100)
    */
   calculatePerformanceScore(): number {
-    let score = 100
+    let score = 100;
     // FCP scoring
     if (this.webVitals.FCP) {
       if (this.webVitals.FCP > 3000) score -= 20
@@ -315,7 +315,7 @@ export class PerformanceMetrics {;
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution')
     }
     const networkMetrics = this.getMetricsByCategory('network');
-    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
+    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes')
     }
@@ -327,17 +327,17 @@ export class PerformanceMetrics {;
    */
   generateReport(): PerformanceReport {
     const loadMetrics = this.getMetricsByCategory('load');
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
+    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {
-      metrics: this.getMetrics()
-      webVitals: this.getWebVitals()
+      metrics: this.getMetrics();
+      webVitals: this.getWebVitals();
       summary: {
         avgLoadTime,
   totalMetrics: this.metrics.length,
-  performanceScore: this.calculatePerformanceScore()
-        recommendations: this.getRecommendations()
+  performanceScore: this.calculatePerformanceScore();
+        recommendations: this.getRecommendations();
       }
-      timestamp: new Date()
+      timestamp: new Date();
     }
   }
 
@@ -382,4 +382,4 @@ interface LayoutShift extends PerformanceEntry {
 
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();
-export default PerformanceMetrics
+export default PerformanceMetrics;

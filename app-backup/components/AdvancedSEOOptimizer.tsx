@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
 const AdvancedSEOOptimizerPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Search,
     title: 'Advanced SEO Analysis',
@@ -133,5 +133,5 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       <Footer />
 </>
   )
-}
-export default AdvancedSEOOptimizerPage
+};
+export default AdvancedSEOOptimizerPage;

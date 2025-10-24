@@ -6,7 +6,7 @@
 */
 
 // Generate meta tags
-export const generateMetaTags = (data: {,
+export const generateMetaTags = (data: {,;
     title: string,
       description: string
   keywords?: string
@@ -21,7 +21,7 @@ export const generateMetaTags = (data: {,
 <<<<<<< HEAD:app-backup/utils/seoEnhancer.ts
 }) => {}
 const tags = [
-{ name: 'title', content: data.title }
+    { name: 'title', content: data.title }
 { name: 'description', content: data.description }
 { name: 'keywords', content: data.keywords || '' }
 { name: 'robots', content: 'index, follow' }
@@ -132,7 +132,7 @@ language: 'en',
 siteName: 'Zion Holdings',
     author: 'Zion Holdings'}
 // Generate structured data
-export const generateStructuredData = () => {
+export const generateStructuredData = () => {;
 return (
     <>
 
@@ -186,7 +186,7 @@ this.updateMetaTag('keywords', keywords.join(', '))}
 }
 // Update canonical URL
 updateCanonicalUrl(url: string) {
-  let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+  let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
 if (!canonical) {
 canonical = document.createElement('link')
 canonical.rel = 'canonical'
@@ -207,7 +207,7 @@ this.updateMetaTag('keywords', keywords.join(', '))}
 }
 // Update canonical URL
 updateCanonicalUrl(url: string) {}
-let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
 if (!canonical) {}
 canonical = document.createElement('link')
 canonical.rel = 'canonical'
@@ -389,7 +389,7 @@ this.updateMetaTag('author', author)}
 private updateMetaTag(nameOrProperty: string, content: string) {
   if (typeof document === 'undefined') return
 }
-let meta = document.querySelector(})
+let meta = document.querySelector(});
 `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])
 ) as HTMLMetaElement
 if (!meta) {
@@ -413,7 +413,7 @@ this.updateMetaTag('author', author)}
 // Helper method to update meta tags
 private updateMetaTag(nameOrProperty: string, content: string) {}
 if (typeof document === 'undefined') return
-let meta = document.querySelector(})
+let meta = document.querySelector(});
 `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]
 ) as HTMLMetaElement
 if (!meta) {}
@@ -521,7 +521,7 @@ export const generateStructuredData = (data: {
 <<<<<<< HEAD:app-backup/utils/seoEnhancer.ts
 generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>)
 ) {
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages
 .map(
@@ -529,10 +529,10 @@ ${pages
 generateSitemap()}
 pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
 ) {}
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages}
-.map()
+.map();
 page => `  <url>}
 <loc>${page.url}</loc>
 <lastmod>${page.lastmod}</lastmod>
@@ -581,7 +581,7 @@ initialize(config?: Partial<SEOConfig>) {
 }
 initialize(config?: Partial<SEOConfig>) {}
 if (typeof document === 'undefined') return;}
-const finalConfig = { ...this.config, ...config }
+const finalConfig = { ...this.config, ...config };
 this.updateTitle(finalConfig.title)
 this.updateDescription(finalConfig.description)
 this.updateKeywords(finalConfig.keywords)
@@ -766,7 +766,7 @@ loc: page.url;),
 changefreq: page.changeFrequency)
 // Generate sitemap data
 }
-export const generateSitemapData = useCallback((...args) => {}
+export const generateSitemapData = useCallback((...args) => {};
 return {}
 urlset: {}
 '@xmlns': 'http: //www.sitemaps.org/schemas/sitemap/0.9',
@@ -795,14 +795,14 @@ r: {/* TODO: Fix JSX expression */}
 }
 }
 datePublishe
-d: new Date().toISOString()
+d: new Date().toISOString();
 dateModifie
 d: new Date().toISOString()}
 }
 return baseStructure
 }
 // Generate sitemap data
-export const generateSitemapData = (page
+export const generateSitemapData = (page;
 s: Array<{/* TODO: Fix JSX expression */}
 }>)
 ) => {/* TODO: Fix JSX expression */}
@@ -863,7 +863,7 @@ issues.push('URL should start with http:// or https://')}
 return issues
 }
 // Generate breadcrumb data
-export const generateBreadcrumbData = useCallback((...args) => {
+export const generateBreadcrumbData = useCallback((...args) => {;
   return {
 '@context': 'https: //schema.org'
 // Generate breadcrumb data

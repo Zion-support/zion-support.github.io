@@ -71,8 +71,7 @@ default: DefaultErrorFallback,
 * Default error fallback component
 */;
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {}
-return ()
-    <>
+return (<>
 
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -107,15 +106,15 @@ className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-3
 Go Home
 </
 </div>
-</div>
-</div>
+            </div>
+          </div>
 )
 {}
 /**
 * Network error fallback component
 */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {}
-return ()
+return();
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
@@ -140,15 +139,15 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 onClick={resetError}
 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Retry Connection</button>
 </div>
-</div>
-</div>
+            </div>
+          </div>
 )
 {}
 /**
 * Not found error fallback component
 */
 function NotFoundFallback(): JSX.Element {}
-return ()
+return();
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-md w-full text-center"></div>
 <h1 className="text-6xl font-bold text-gray-900">404</h1>
@@ -168,8 +167,8 @@ className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 tran
 Go Back
 </
 </div>
-</div>
-</div>
+            </div>
+          </div>
 )
 {}
 /**
@@ -202,7 +201,7 @@ message: error.message,
   stack: error.stack,
   name: error.name,
   type: getErrorType(error)
-timestamp: new Date().toISOString()
+timestamp: new Date().toISOString();
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 {url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 {}

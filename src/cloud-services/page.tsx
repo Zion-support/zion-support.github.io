@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
 
-constCloudServicesPage: React.FC= () =>{constservices= [
+const CloudServicesPage: React.FC = () => {const services = [
     {
       icon: Cloud,
       title: 'Cloud Migration',
@@ -34,47 +34,47 @@ constCloudServicesPage: React.FC= () =>{constservices= [
     'Enhanced Security',
     'Global CDN'
   ];
-  return ();
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
+      <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className=&quot;text-center mb-16&quot;></section>
-          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Cloud Services
           </h1>
-          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our comprehensive cloud solutions.
             From migration to optimization, we provide end-to-end cloud services.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-              href=&quot;tel:+13024640950&quot;
-              className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all&quot;
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
               Get Started Today
             </a>
             <a
-              href=&quot;/contact&quot;
-              className=&quot;border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all&quot;
+              href="/contact"
+              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
               Learn More
             </a>
           </div>
         </section>
         {/* Services Grid */}
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Our Cloud Services</h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {services.map((service, index) => ()
-              <div key={index} className=&quot;bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20&quot;></div>
-                <service.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
-                <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{service.title}</h3>
-                <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
-                <ul className=&quot;space-y-2&quot;>
+              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"></div>
+                <service.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => ()
-                    <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                      <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
                   ))}
@@ -84,37 +84,37 @@ constCloudServicesPage: React.FC= () =>{constservices= [
           </div>
         </section>
         {/* Benefits Section */}
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Why Choose Our Cloud Services?</h2>
-          <div className=&quot;grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6&quot;></div>
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"></div>
             {benefits.map((benefit, index) => ()
-              <div key={index} className=&quot;text-center&quot;></div>
-                <div className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
-                  <CheckCircle className=&quot;w-8 h-8 text-white&quot; />
+              <div key={index} className="text-center"></div>
+                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                  <CheckCircle className="w-8 h-8 text-white" />
                 </div>
-                <p className=&quot;text-white font-medium&quot;>{benefit}</p>
+                <p className="text-white font-medium">{benefit}</p>
               </div>
             ))}
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>
+        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12"></section>
+          <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Infrastructure?
           </h2>
-          <p className=&quot;text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-              href=&quot;tel:+13024640950&quot;
-              className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all&quot;
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
               Call (302) 464-0950
             </a>
             <a
-              href=&quot;/contact&quot;
-              className=&quot;border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all&quot;
+              href="/contact"
+              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
               Get Free Consultation
             </a>

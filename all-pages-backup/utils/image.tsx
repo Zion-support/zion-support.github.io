@@ -84,7 +84,7 @@ position: position,
 if (hasError) {</ImageProps>;
 return (</ImageProps>}
 if (hasError) {}
-return ()
+return();
 {    <div}
 if (hasError) {}
 {return(<div}
@@ -116,7 +116,7 @@ style={imageStyle}
 )
 {}
 return(<img
-return ()
+return();
 src={src}
 alt={alt}
 width={width}

@@ -22,7 +22,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     if (!isVisible) return
     let startTime: number
     let animationFrame: number
-    const animate = (currentTime: number) => {
+    const animate = (currentTime: number) => {;
       if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1)
       // Easing function for smooth animation
@@ -49,5 +49,5 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   )
-}
-export default AnimatedCounter
+};
+export default AnimatedCounter;

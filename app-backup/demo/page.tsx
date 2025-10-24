@@ -3,7 +3,7 @@ import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Tar
 'use client'
 const DemoPage: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('ai-chatbot')
-  const demos = [
+  const demos = [;
     {
       id: 'ai-chatbot',
     title: 'AI Chatbot Demo',
@@ -89,16 +89,16 @@ const DemoPage: React.FC = () => {
                         This interactive demo is currently under development. Contact us to schedule a live demonstration.
                       </p>
                     </div>
-                  </div>
-                </div>
+            </div>
+          </div>
                 <div className="text-center">
                   <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
                     Schedule Live Demo
                     <ArrowRight className="w-8 h-8" />
                   </button>
                 </div>
-              </div>
             </div>
+          </div>
           </div>
         </section>
         {/* CTA Section */}
@@ -124,5 +124,5 @@ const DemoPage: React.FC = () => {
       </div>
 </>
   )
-}
-export default DemoPage
+};
+export default DemoPage;

@@ -2,7 +2,7 @@ import React from 'react'
 import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 export default function AIContentGeneratorPage() {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Writing',
@@ -97,9 +97,9 @@ export default function AIContentGeneratorPage() {
                 Learn More
               </button>
             </div>
+            </div>
           </div>
-        </div>
       </section>
     </div>
-  )
+  );
 }

@@ -11,7 +11,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     // Accessibility enhancements
     if (typeof window !== 'undefined') {
       // Add skip to content link
-      const skipLink = document.createElement('a')
+      const skipLink = document.createElement('a');
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
@@ -26,11 +26,11 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       return () => {
         const existingSkipLink = document.querySelector('a[href="#main-content"]')
         if (existingSkipLink) {
-          existingSkipLink.remove()
+          existingSkipLink.remove();
         }
       }
     }
-  }, [])
+  }, []);
 ;
   return <>{children}</>};
 'use client';
@@ -39,7 +39,7 @@ import { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {;
       // Skip to main content with Alt + M
       if (e.altKey && e.key === 'm') {;
         e.preventDefault();
@@ -54,7 +54,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         e.preventDefault();
         const navigation = document.querySelector('nav');
         if (navigation) {
-          const firstLink = navigation.querySelector('a') as HTMLElement
+          const firstLink = navigation.querySelector('a') as HTMLElement;
           if (firstLink) {
             firstLink.focus()}
         }
@@ -74,7 +74,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         outline: 2px solid #8b5cf6 !important
         outline-offset: 2px !important
       }
-
+;
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation')}
@@ -97,7 +97,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
           button, a {
             border: 2px solid currentColor !important
           }
-        }
+        };
       `;
       document.head.appendChild(style)}
   }, [enableHighContrast]);
@@ -126,7 +126,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
         transition-duration: 0.01ms !important
-      }
+      };
     `;
     document.head.appendChild(style);
 
@@ -153,4 +153,4 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
 
   return <>{children}</>};
 
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer;

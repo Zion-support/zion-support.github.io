@@ -1,13 +1,11 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import React from 'react';
-import { Star } from 'lucide-react';
 
 // import {Metadata} from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AutonomousEnterpriseAutomationMegaBreakthrough;
 AutonomousEnterpriseAutomationMegaBreakthrough.displayName = "AutonomousEnterpriseAutomationMegaBreakthrough"() {}
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="container mx-auto px-4 py-16"></div>
         {/* Hero Section */}
@@ -96,8 +94,8 @@ AutonomousEnterpriseAutomationMegaBreakthrough.displayName = "AutonomousEnterpri
               Get Started Today
             </button>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
 {};

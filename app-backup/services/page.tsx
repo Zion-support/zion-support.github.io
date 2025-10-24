@@ -2,7 +2,7 @@ import React from 'react'
 import { Circle, Star, ArrowRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe, Send, BarChart3, Target, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart, CheckCircle } from 'lucide-react'
 'use client'
 const ServicesPage: React.FC = () => {
-  const serviceCategories = [
+  const serviceCategories = [;
   {
       title: 'AI Solutions',
     icon: Brain
@@ -123,10 +123,10 @@ const ServicesPage: React.FC = () => {
                 Schedule Call
               </button>
             </div>
+            </div>
           </div>
-        </div>
       </section>
     </div>
   )
-}
-export default ServicesPage
+};
+export default ServicesPage;

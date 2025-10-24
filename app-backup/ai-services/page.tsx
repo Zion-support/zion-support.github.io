@@ -2,7 +2,7 @@ import React from "react"
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react"
 "use client"
 const AIServicesPage: React.FC = () => {
-  const services = [
+  const services = [;
   {
       icon: Brain,
     title: "Machine Learning Solutions",
@@ -163,7 +163,7 @@ const AIServicesPage: React.FC = () => {
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
             Ready to Harness the Power of AI?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8">;
             Let&apos;s discuss how our AI solutions can transform your business operations.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -186,4 +186,4 @@ const AIServicesPage: React.FC = () => {
     </div>
   )
 }
-export default AIServicesPage
+export default AIServicesPage;

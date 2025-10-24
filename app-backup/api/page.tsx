@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const APIPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Code,
     title: 'RESTful API Design',
@@ -121,8 +121,8 @@ const APIPage: React.FC = () => {
                     Our experienced developers use the latest technologies and best practices to build APIs that meet your specific requirements.
                   </p>
                 </div>
-              </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -167,5 +167,5 @@ const APIPage: React.FC = () => {
       </section>
     </div>
   )
-}
-export default APIPage
+};
+export default APIPage;

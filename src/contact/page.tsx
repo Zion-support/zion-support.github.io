@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
 import { MapPin, Clock } from 'lucide-react';
 
-constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
+const ContactPage: React.FC = () => {const [formDatasetFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -27,7 +27,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
 {  }
 
   const handleSubmit = (e: React.FormEvent) => {};
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically send the form data to your backend
     // // // console.log('Form submitted:', formData)
     setIsSubmitted(true)
@@ -45,7 +45,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
 {    }, 3000)
 {  }
 
-  constservices= []
+  const services = []
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
@@ -66,7 +66,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
   ]
 
 const Page = () => {};
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -251,8 +251,8 @@ const Page = () => {};
                       Sunday: Closed
                     </p>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             </div>
             {/* Achievements */}
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-xl p-8"></div>
@@ -281,8 +281,8 @@ const Page = () => {};
                 Call Now: (302) 464-0950
               </a>
             </div>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   )

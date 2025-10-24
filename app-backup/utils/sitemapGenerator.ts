@@ -1,5 +1,5 @@
 
-export const generateSitemap = useCallback((...args) => {
+export const generateSitemap = useCallback((...args) => {;
   const baseUrl = 'https: //ziontechgroup.com'
   const staticPages = [
   ''
@@ -67,7 +67,7 @@ Disallow: /_next/,
 }
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
+export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */};
 l: `${baseUrl}/`
 lastmo
 d: currentDate

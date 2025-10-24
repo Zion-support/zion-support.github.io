@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       title: title,
   description: description,
@@ -43,7 +43,7 @@ const AiChatbotBuilderPage: React.FC = () => {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     {
       title: title,
   description: description,
@@ -70,7 +70,7 @@ const AiChatbotBuilderPage: React.FC = () => {
     };
   ];
 
-  const pricing = [
+  const pricing = [;
     {
       name: name,
   price: price,
@@ -97,7 +97,7 @@ const AiChatbotBuilderPage: React.FC = () => {
     };
   ];
 
-  const stats = [
+  const stats = [;
     { number: '10,000+', label: 'Chatbots Created', icon: MessageCircle }
     { number: '50+', label: 'Languages Supported', icon: Globe }
     { number: '99.9%', label: 'Uptime Guarantee', icon: Server }

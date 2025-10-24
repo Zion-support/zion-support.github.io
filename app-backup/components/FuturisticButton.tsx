@@ -22,9 +22,9 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   type = 'button'
 }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const getVariantClasses = () => {
+  const getVariantClasses = () => {;
     switch (variant) {
-      case 'primary':
+      case 'primary':;
         return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover: shadow-cyan-500/40';
       case 'secondary':
         return 'bg-white/10 text-white border border-white/20 hover: bg-white/20 backdrop-blur-sm';
@@ -35,7 +35,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
   }
   }
-  const getSizeClasses = () => {
+  const getSizeClasses = () => {;
   switch (size) {
       case 'sm':
         return 'px-4 py-2 text-sm'
@@ -54,7 +54,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     ${getVariantClasses()}
     ${getSizeClasses()}
     ${className}
-  `.trim()
+  `.trim();
   return (
     <motion.button
       type={type}
@@ -107,4 +107,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     </motion.button>
   )
 }
-export default FuturisticButton
+export default FuturisticButton;

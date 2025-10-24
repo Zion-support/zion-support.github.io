@@ -27,20 +27,22 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fcp: 0
     ttfb: 0})
   // Web Vitals monitoring
-  const measureWebVitals = useCallback(() => {
+  const measureWebVitals = useCallback(() => {;
     if (enableWebVitals && typeof window !== 'undefined') {
       // Measure Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1
+  ];
+  const as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
           ...prev
           lcp: lastEntry.renderTime || lastEntry.loadTime || 0}))
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
       // Measure First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-  const entries = list.getEntries()
+      const fidObserver = new PerformanceObserver((list) => {;
+  const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
           const fid = (entry as any).processingStart - entry.startTime
           setPerformanceMetrics(prev => ({
@@ -53,7 +55,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       // Measure Cumulative Layout Shift
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+        const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
           if (!(entry as any).hadRecentInput) {
             clsValue += entry.value
@@ -66,7 +68,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       clsObserver.observe({ entryTypes: ['layout-shift'] })
       // Measure First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+        const entries = list.getEntries();
         entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
             ...prev
@@ -92,7 +94,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         })
     }
     // Memory-based caching for API responses
-    const cache = new Map()
+    const cache = new Map();
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input.url
@@ -157,23 +159,23 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   }, [performanceMetrics])
   useEffect(() => {
     if (enableAdvancedCaching) {
-      setupAdvancedCaching()
+      setupAdvancedCaching();
     }
     if (enableImageOptimization) {
-      optimizeImages()
+      optimizeImages();
     }
     if (enablePreloading) {
-      preloadCriticalResources()
+      preloadCriticalResources();
     }
     if (enableWebVitals) {
-      measureWebVitals()
+      measureWebVitals();
     }
   }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
   useEffect(() => {
     if (enableWebVitals && performanceMetrics.lcp > 0) {
-      reportPerformanceMetrics()
+      reportPerformanceMetrics();
     }
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
 }
-export default AdvancedPerformanceOptimizer
+export default AdvancedPerformanceOptimizer;

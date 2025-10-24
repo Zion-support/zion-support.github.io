@@ -1,13 +1,13 @@
 // Performance utility functions
 <<<<<<< HEAD
-export const performanceUtils = {
+export const performanceUtils = {;
   // Add performance utility functions here
 =======
 
 export const measurePerformance = (name: string, fn: () => void): void => {
-  const start = performance.now()
-  fn()
-  const end = performance.now()
+  const start = performance.now();
+  fn();
+  const end = performance.now();
   console.log(`${name} took ${end - start} milliseconds`)
 }
 

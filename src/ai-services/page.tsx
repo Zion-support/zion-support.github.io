@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-constAIServicesPage: React.FC= () =>{constservices= [
+const AIServicesPage: React.FC = () => {const services = [
     {
       icon: Brain,
       title: 'Machine Learning Solutions',
@@ -52,7 +52,7 @@ constAIServicesPage: React.FC= () =>{constservices= [
     }
   ]
 
-  constbenefits= []
+  const benefits = []
     {icon: Star,
       title: 'Proven ROI',
       description: 'Average300% ROI within6months of implementation'
@@ -70,9 +70,10 @@ constAIServicesPage: React.FC= () =>{constservices= [
       description: '24/7 support across all time zones with dedicated success managers'
     }
   ]
+;
 
 const Page = () => {};
-  return ()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

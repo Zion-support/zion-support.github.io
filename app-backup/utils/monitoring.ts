@@ -4,7 +4,7 @@ import React from 'react'
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-const performanceConfig = {
+const performanceConfig = {;
   monitoring: {,
     enableLongTaskDetection: true
     enableMemoryMonitoring: true,
@@ -26,7 +26,7 @@ export interface PerformanceMetrics {
   ttfb?: number
   inp?: number
 }
-export interface ErrorReport {
+export interface ErrorReport {;
   message: string;
   stack?: string
   component?: string
@@ -40,33 +40,35 @@ class MonitoringService {
   private observer: PerformanceObserver | null = null
   constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
+      this.initializeMonitoring();
     }
   }
   private initializeMonitoring(): void {
     // Monitor Web Vitals
-    this.monitorWebVitals()
+    this.monitorWebVitals();
     // Monitor Long Tasks
-    this.monitorLongTasks()
+    this.monitorLongTasks();
     // Monitor Resource Loading
-    this.monitorResourceTiming()
+    this.monitorResourceTiming();
     // Global Error Handler
-    this.setupErrorHandling()
+    this.setupErrorHandling();
   }
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
+        const lcpObserver = new PerformanceObserver((list) => {;
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1
+  ];
+  const as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
+        const fidObserver = new PerformanceObserver((list) => {;
+          const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime
             this.reportMetric('fid', this.metrics.fid)
@@ -76,7 +78,7 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries()
+          const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
               clsValue += entry.value
@@ -88,7 +90,7 @@ class MonitoringService {
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries()
+          const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime
             this.reportMetric('fcp', entry.startTime)
@@ -116,7 +118,7 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
+          const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               }
@@ -151,8 +153,9 @@ class MonitoringService {
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
 }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals
+  ];
+  const if (thresholds) {
   const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
 }
     // Send to analytics (if configured)
@@ -193,7 +196,9 @@ class MonitoringService {
   }
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0
+  ];
+  const as PerformanceNavigationTiming;
       if (navigation) {
         // eslint-disable-next-line no-console
     console.log('Performance metrics:', {
@@ -211,6 +216,6 @@ class MonitoringService {
   }
 }
 // Singleton instance
-const monitoring = new MonitoringService()
+const monitoring = new MonitoringService();
 export default monitoring
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d: app/utils/monitoring.ts

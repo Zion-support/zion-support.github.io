@@ -16,7 +16,7 @@ export default function CloudInfrastructurePage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   );
 import React from 'react';

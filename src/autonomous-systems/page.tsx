@@ -4,7 +4,7 @@ import React from 'react';
 import { CheckCircle, Star, BarChart } from 'lucide-react';
 import { Bot, Cpu } from 'lucide-react';
 
-constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
+const AutonomousSystemsPage: React.FC = () => {const autonomousServices = [
     {
       id: 'self-healing-infrastructure',
       title: 'Self-Healing Infrastructure',
@@ -34,7 +34,7 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
       technologies: ['AI Analytics', 'Time Series DB', 'Alert Systems', 'Machine Learning']
     }
   ]
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white"></section>
@@ -59,8 +59,8 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
                 Schedule Demo
               </button>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Key Benefits */}
       <section className="py-16 bg-white"></section>
@@ -97,8 +97,8 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning</h3>
               <p className="text-gray-600">AI systems that improve performance over time through machine learning</p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Services */}
       <section className="py-16 bg-gray-50"></section>
@@ -149,8 +149,8 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
                     <span className="text-2xl font-bold text-green-600">{service.marketPrice}</span>
                     <span className="text-sm text-gray-500">{service.category}</span>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </div>
@@ -176,8 +176,8 @@ constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
               Learn More
             </button>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
 }

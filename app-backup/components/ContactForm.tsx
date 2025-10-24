@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react'
 'use client'
-interface FormData {
+interface FormData {;
   name: string;,
     email: string;
   phone: string;,
@@ -19,14 +19,14 @@ const ContactForm: React.FC = () => {
     service: ''})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
   setFormData({
       ...formData
       [e.target.name]: e.target.value
 })
   }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     setIsSubmitting(true)
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
@@ -196,9 +196,9 @@ const ContactForm: React.FC = () => {
             <MessageSquare className="w-5 h-5 text-green-400 mr-2" />
             <span className="text-gray-300">24/7 Support</span>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
 }
-export default ContactForm
+export default ContactForm;

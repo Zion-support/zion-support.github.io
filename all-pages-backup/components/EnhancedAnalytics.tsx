@@ -141,7 +141,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, any>) => {
+  const track = (event: string, properties?: Record<string, any>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {;
@@ -249,7 +249,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 const EnhancedAnalyticsPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
   title: title,

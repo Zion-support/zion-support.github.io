@@ -6,7 +6,7 @@ declare global {
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
   trackPageView: (pageName: string) => void}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined
 )
 export const useAnalytics = () => {
@@ -62,4 +62,4 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
 export default AnalyticsProvider
   )
 }
-export default AnalyticsProviderPage
+export default AnalyticsProviderPage;

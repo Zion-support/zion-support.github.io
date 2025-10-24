@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Mail, Target, BarChart, Users, CheckCircle, Zap, Brain, Settings, Globe, Clock, Shield, TrendingUp, Star, MessageCircle, Send, PieChart, Activity, DollarSign, FileText, Database, Building2, CreditCard, Wallet, Lock, Sparkles, ShoppingCart } from 'lucide-react';
 
 const AiEmailMarketingAutomationPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
   title: title,
@@ -31,7 +31,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     {
       title: title,
   description: description,
@@ -58,7 +58,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
     };
   ];
 
-  const pricing = [
+  const pricing = [;
     {
       name: name,
   price: price,
@@ -85,7 +85,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
     };
   ];
 
-  const stats = [
+  const stats = [;
     { number: '2.5M+', label: 'Emails Sent Daily', icon: Send }
     { number: '40%', label: 'Higher Open Rates', icon: TrendingUp }
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }

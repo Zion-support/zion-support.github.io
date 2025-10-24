@@ -5,4 +5,4 @@ const testRunner = () => {};
   return null
 {};
 
-export default testRunner
+export default testRunner;

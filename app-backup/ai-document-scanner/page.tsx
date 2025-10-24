@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const AiDocumentScannerPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',
@@ -130,5 +130,5 @@ const AiDocumentScannerPage: React.FC = () => {
       <Footer />
 </>
   )
-}
-export default AiDocumentScannerPage
+};
+export default AiDocumentScannerPage;

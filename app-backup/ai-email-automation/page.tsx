@@ -14,7 +14,6 @@ export const metadata: Metadata = {,
     url: 'https://ziontechgroup.com/ai-email-automation'}}
 =======
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react'
-import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-email-automation/page.tsx
 const AIEmailAutomationPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI Email Generation',
@@ -71,7 +70,7 @@ const AIEmailAutomationPage: React.FC = () => {
 }
   ]
   const pricingPlans = [
-  {
+    {
       name: 'Starter',
     price: '$59'
       period: '/month',
@@ -342,7 +341,7 @@ const AIEmailAutomationPage: React.FC = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </div>
+                </div>;
                 <p className="text-gray-300 italic">&quot;{testimonial.content}&quot;</p>
               </div>
             ))}
@@ -390,4 +389,4 @@ const AIEmailAutomationPage: React.FC = () => {
 </>
   )
 }
-export default AIEmailAutomationPage
+export default AIEmailAutomationPage;

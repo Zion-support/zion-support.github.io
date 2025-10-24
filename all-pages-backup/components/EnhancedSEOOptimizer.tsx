@@ -6,7 +6,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
   title: title,
@@ -97,7 +97,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               </div>;
             ))};
           </div>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>
         </div>
@@ -144,4 +144,4 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   )
 }
 
-export default EnhancedSEOOptimizerPage
+export default EnhancedSEOOptimizerPage;

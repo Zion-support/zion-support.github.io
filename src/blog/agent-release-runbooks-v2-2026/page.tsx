@@ -4,7 +4,7 @@ import { Clock } from 'lucide-react';
 
 export default function Page;
 Page.displayName = "Page"() {}
-  return ()
+  return();
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'></div>
@@ -41,8 +41,8 @@ Page.displayName = "Page"() {}
               Rollback
             </div>
             <div className='text-slate-600'>One click, under 60s MTR</div>
+            </div>
           </div>
-        </div>
       </section>
       <section className='py-16'></section>
         <div className='max-w-4xl mx-auto px-6'></div>
@@ -55,8 +55,8 @@ Page.displayName = "Page"() {}
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>;
             </div>;
-            <a href=&quot;/contact&quot;
-              className=&quot;bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2&quot;
+            <a href="/contact"
+              className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
             >
               Engage <RefreshCw />
             </a>

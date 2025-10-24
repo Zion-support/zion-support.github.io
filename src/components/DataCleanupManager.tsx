@@ -2,7 +2,7 @@
 import React from 'react';
 
 const DataCleanupManager = () => {};
-  return ()
+  return();
     <div className="min-h-screen bg-gray-100 py-8">
         </div>
         </div>
@@ -21,8 +21,8 @@ const DataCleanupManager = () => {};
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>;
+            </div>
+          </div>;
   );
 {};
 

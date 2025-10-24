@@ -10,7 +10,7 @@ interface PerformanceOptimizationOptions {
   enableCaching?: boolean
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {;
   const {
     enableLazyLoading = true
     enablePreloading = true
@@ -27,7 +27,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
     const images = document.querySelectorAll('img[data-src]')
     if (observerRef.current) {
-      observerRef.current.disconnect()
+      observerRef.current.disconnect();
     }
 
     observerRef.current = new IntersectionObserver(
@@ -180,7 +180,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (typeof window === 'undefined') return
 
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
+    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
       { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' }
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
@@ -201,18 +201,17 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   useEffect(() => {
     // Initialize all optimizations
-    setupLazyLoading()
-    preloadCriticalResources()
-    optimizeImages()
-    optimizeCodeSplitting()
-    registerServiceWorker()
-    setupPerformanceMonitoring()
-    addResourceHints()
-
+    setupLazyLoading();
+    preloadCriticalResources();
+    optimizeImages();
+    optimizeCodeSplitting();
+    registerServiceWorker();
+    setupPerformanceMonitoring();
+    addResourceHints();
     // Cleanup
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect()
+        observerRef.current.disconnect();
       }
     }
   }, [
@@ -230,5 +229,5 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     preloadCriticalResources
     optimizeImages
     registerServiceWorker,
-    setupPerformanceMonitoring
+    setupPerformanceMonitoring;
   }}

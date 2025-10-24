@@ -9,7 +9,7 @@ const ContactPage: React.FC = () => {
     service: ""
     message: ""})
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target
     setFormData(prev => ({
   ...prev
@@ -17,7 +17,7 @@ const ContactPage: React.FC = () => {
 }))
   }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically send the form data to your backend
     // Form submitted successfully
     setIsSubmitted(true)
@@ -36,7 +36,7 @@ const ContactPage: React.FC = () => {
     {
       icon: Mail,
     title: "Email Us"
-      details: "hello@ziontechgroup.com",
+      details: "hello@ziontechgroup.com",;
     description: "Send us an email and we&apos;ll respond within 24 hours"}
     {
       icon: Phone,
@@ -49,7 +49,7 @@ const ContactPage: React.FC = () => {
       details: "123 Tech Street, Silicon Valley, CA 94000",
     description: "Come say hello at our headquarters"}
   ]
-  const services = [
+  const services = [;
   "AI Solutions"
     "IT Services"
     "Micro SaaS Development"
@@ -228,10 +228,10 @@ const ContactPage: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you provide ongoing support?</h3>
               <p className="text-gray-600">Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after launch.</p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
     </div>
   )
 }
-export default ContactPage
+export default ContactPage;

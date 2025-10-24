@@ -66,8 +66,9 @@ export default function HomePage() {  return (
                 Explore Services
                 <ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />
               </Link>
-            </div>          </div>
-        </div>
+            </div>
+            </div>
+          </div>
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
@@ -193,8 +194,8 @@ export default function HomePage() {  return (
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
@@ -208,7 +209,7 @@ export default function HomePage() {  return (
               With over 4 years of experience in cutting-edge technology solutions
               we've helped businesses across various industries transform their operations
 =======
-              With over 4 years of experience in cutting-edge technology solutions, 
+              With over 4 years of experience in cutting-edge technology solutions, ;
               we&apos;ve helped businesses across various industries transform their operations 
 >>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/HomePage.tsx
               and achieve unprecedented growth.
@@ -225,8 +226,8 @@ export default function HomePage() {  return (
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
-              </div>
             </div>
+          </div>
 <<<<<<< HEAD:app-backup/pages/HomePage.tsx
             <Link
               to="/about"
@@ -295,8 +296,8 @@ export default function HomePage() {  return (
                 Schedule Demo
               </Link>
             </div>
+            </div>
           </div>
-        </div>
       </section>
 </>
   )

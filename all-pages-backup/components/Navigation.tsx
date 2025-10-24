@@ -18,14 +18,14 @@ import {
   ShieldCheckIcon
   CurrencyDollarIcon
   CogIcon
-  ChevronDownIcon,
+  ChevronDownIcon,;
 } from '@heroicons/react/24/outline';
 import { Brain, ArrowRight, Mail } from 'lucide-react';
 
 const Navigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
 
-  const navigation = [
+  const navigation = [;
     { name: 'Home', href: '/' }
     { name: 'About', href: '/about' }
     { name: 'Services', href: '/services' }
@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  const navigation = [
+  const navigation = [;
     { name: 'Home', href: '/', icon: HomeIcon }
     { name: 'About', href: '/about', icon: InformationCircleIcon }
     { 
@@ -92,7 +92,7 @@ const Navigation: React.FC = () => {;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
-              const Icon = item.icon
+              const Icon = item.icon;
               return (
                 <div key={item.name} className="relative group">
                   <Link
@@ -222,4 +222,4 @@ const Navigation: React.FC = () => {;
     </nav>
   )};
 
-export default Navigation
+export default Navigation;

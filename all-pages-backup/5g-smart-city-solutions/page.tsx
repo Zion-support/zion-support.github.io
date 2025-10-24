@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react';
 
 export default function FiveGSmartCitySolutions() {
-  const features = [
+  const features = [;
     {
       icon: <Wifi className="w-6 h-6 text-cyan-400" />
       title: title,
@@ -26,7 +26,7 @@ export default function FiveGSmartCitySolutions() {
   description: 'Digital platforms connecting citizens with city services and enabling participatory governance'};
   ];
 
-  const smartCityModules = [
+  const smartCityModules = [;
     {
       category: category,
   items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
@@ -45,7 +45,7 @@ export default function FiveGSmartCitySolutions() {
     };
   ];
 
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: name,
   price: price,
@@ -72,7 +72,7 @@ export default function FiveGSmartCitySolutions() {
     };
   ];
 
-  const testimonials = [
+  const testimonials = [;
     {
       name: name,
   company: company,

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 // SEO constants
-export const seoConstants = {
+export const seoConstants = {;
   // Add SEO constants here
 =======
 // SEO constants and configuration

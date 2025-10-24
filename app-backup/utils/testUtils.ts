@@ -7,7 +7,7 @@
 /**
  * Wait for a specified amount of time
  */
-export const wait = (ms: number): Promise<void> => {
+export const wait = (ms: number): Promise<void> => {;
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 /**
@@ -18,7 +18,7 @@ export const waitFor = async (
   timeout = 5000
   interval = 100
 ): Promise<void> => {
-  const startTime = Date.now()
+  const startTime = Date.now();
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`)
@@ -49,12 +49,12 @@ export const mockFetch = (
  * Mock local storage
  */
 export class MockStorage implements Storage {
-  private store: Map<string, string> = new Map()
+  private store: Map<string, string> = new Map();
   get length(): number {
     return this.store.size
 }
   clear(): void {
-    this.store.clear()
+    this.store.clear();
   }
   getItem(key: string): string | null {
   return this.store.get(key) || null
@@ -74,7 +74,7 @@ export class MockStorage implements Storage {
  * Create a mock localStorage for testing
  */
 export const createMockStorage = (): MockStorage => {
-  return new MockStorage()
+  return new MockStorage();
 }
 /**
  * Mock window object
@@ -100,7 +100,7 @@ export const createMockPerformance = (): Performance => {
       entries.push({
         name
         entryType: 'mark',
-    startTime: Date.now()
+    startTime: Date.now();
         duration: 0,
     toJSON: () => ({})
       } as PerformanceEntry)
@@ -109,7 +109,7 @@ export const createMockPerformance = (): Performance => {
       entries.push({
         name
         entryType: 'measure',
-    startTime: Date.now()
+    startTime: Date.now();
         duration: 100,
     toJSON: () => ({})
       } as PerformanceEntry)
@@ -137,7 +137,7 @@ export const createMockPerformance = (): Performance => {
  */
 export const generateTestData = {
   string: (length = 10): string => {
-    return Math.random()
+    return Math.random();
       .toString(36)
       .substring(2, length + 2)
   }
@@ -182,7 +182,7 @@ export class ConsoleSpy {
   private warnings: string[] = []
   constructor() {
     this.originalConsole = { ...console }
-    this.mock()
+    this.mock();
   }
   private mock(): void {
     // eslint-disable-next-line no-console
@@ -243,7 +243,7 @@ export const retryWithBackoff = async <T>(
   let lastError: Error
   for (let i = 0; i < maxRetries; i++) {
     try {
-      return await fn()
+      return await fn();
     } catch (error) {
       lastError = error as Error
       if (i < maxRetries - 1) {
@@ -256,11 +256,11 @@ export const retryWithBackoff = async <T>(
 /**
  * Measure execution time of a function
  */
-export const measureExecutionTime = async <T>(
+export const measureExecutionTime = async <T>(;
   fn: () => T | Promise<T>
 ): Promise<{ result: T; duration: number }> => {
-  const start = performance.now()
-  const result = await fn()
+  const start = performance.now();
+  const result = await fn();
   const duration = performance.now() - start
   return { result, duration }
 }

@@ -4,7 +4,7 @@ import React from 'react';
 import { Receipt } from 'lucide-react';
 import { CheckCircle, Star, Phone } from 'lucide-react';
 
-constExpenseTrackerPage: React.FC= () =>{constfeatures= [
+const ExpenseTrackerPage: React.FC = () => {const features = [
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',
@@ -38,7 +38,7 @@ constExpenseTrackerPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-  constpricingPlans= []
+  const pricingPlans = []
     {name: 'Personal',
       price: '$9',
       period: '/month',
@@ -98,7 +98,7 @@ constExpenseTrackerPage: React.FC= () =>{constfeatures= [
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
   ]
 
-  consttestimonials= []
+  const testimonials = []
     {name: 'Michael Johnson',
       company: 'Small Business Owner',
       role: 'CEO',
@@ -118,7 +118,7 @@ constExpenseTrackerPage: React.FC= () =>{constfeatures= [
   ]
 
 const Page = () => {};
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>
@@ -178,8 +178,8 @@ const Page = () => {};
             <div className="text-4xl font-bold text-orange-400 mb-2">5x</div>
             <div className="text-white font-semibold mb-2">Faster Processing</div>
             <div className="text-gray-300 text-sm">With automated workflows</div>
+            </div>
           </div>
-        </div>
         {/* Features Section */}
         <section className="mb-16"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -277,8 +277,8 @@ const Page = () => {};
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </section>

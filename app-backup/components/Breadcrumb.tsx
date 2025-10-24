@@ -8,7 +8,7 @@ interface BreadcrumbItem {
   icon?: React.ComponentType<{ className?: string }>
 }
 const Breadcrumb: React.FC = () => {
-  const location = useLocation()
+  const location = useLocation();
   if (location.pathname === '/') {
     return null
 }
@@ -46,5 +46,5 @@ const Breadcrumb: React.FC = () => {
       </div>
     </nav>
   )
-}
-export default Breadcrumb
+};
+export default Breadcrumb;

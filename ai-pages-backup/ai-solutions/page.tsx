@@ -16,7 +16,7 @@ export default function AISolutionsPage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   );
 import React from 'react';

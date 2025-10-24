@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const AnalyticsPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: BarChart,
     title: 'Advanced Analytics',
@@ -120,8 +120,8 @@ const AnalyticsPage: React.FC = () => {
                     Our AI algorithms analyze your data patterns and automatically generate insights and recommendations for optimal business performance.
                   </p>
                 </div>
-              </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -166,5 +166,5 @@ const AnalyticsPage: React.FC = () => {
       </section>
     </div>
   )
-}
-export default AnalyticsPage
+};
+export default AnalyticsPage;

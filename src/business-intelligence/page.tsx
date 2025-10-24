@@ -3,7 +3,7 @@ import { BarChart, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
 
-constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
+const BusinessIntelligencePage: React.FC = () => {const biServices = [
     {
       id: 'data-analytics',
       title: 'Advanced Data Analytics',
@@ -33,7 +33,7 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ]
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"></section>
@@ -58,8 +58,8 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
                 Schedule Demo
               </button>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Key Benefits */}
       <section className="py-16 bg-white"></section>
@@ -96,8 +96,8 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategic Planning</h3>
               <p className="text-gray-600">Plan for the future with predictive analytics and trend analysis</p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Services */}
       <section className="py-16 bg-gray-50"></section>
@@ -148,8 +148,8 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
                     <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
                     <span className="text-sm text-gray-500">{service.category}</span>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </div>
@@ -175,8 +175,8 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
               Learn More
             </button>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
 }

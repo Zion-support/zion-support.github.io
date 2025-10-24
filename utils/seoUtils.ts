@@ -1,6 +1,6 @@
 // SEO utility functions
 <<<<<<< HEAD
-export const seoUtils = {
+export const seoUtils = {;
   // Add SEO utility functions here
 =======
 
@@ -86,5 +86,5 @@ export const validateSEO = (props: SEOProps): string[] => {
   }
 
   return errors
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+>>>>>>> cursor/fix-errors-and-merge-to-main-f44d;
 }

@@ -1,12 +1,11 @@
 import React from 'react';
-import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
-constMachineLearningPage: React.FC= () =>{constfeatures= []
+const MachineLearningPage: React.FC = () => {const features = []
     'Custom ML model development and training',
     'Predictive analytics and forecasting',
     'Data preprocessing and feature engineering',
@@ -26,7 +25,7 @@ constMachineLearningPage: React.FC= () =>{constfeatures= []
     '80% cost savings on analytics'
   ]
 
-  constuseCases= [
+  const useCases = [
     {
       title: 'Predictive Analytics',
       description: 'Forecast sales, demand, and market trends with high accuracy',
@@ -55,7 +54,7 @@ constMachineLearningPage: React.FC= () =>{constfeatures= []
   ]
 
 const Page = () => {};
-  return ()
+  return();
       </div>
 </>
   )

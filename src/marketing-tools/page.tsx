@@ -1,10 +1,9 @@
 import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
 import { MapPin } from 'lucide-react';
-import React from 'react';
 import { CheckCircle, Phone, Mail, Star, Target, TrendingUp, Clock, BarChart, Helmet, MapPin, Check } from 'lucide-react';
 
-constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
+const MarketingToolsPage: React.FC = () => {const marketingTools = [
     {
       title: 'AI Content Generator',
       price: '$19 9/month',
@@ -68,7 +67,7 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
       description: 'Make informed decisions with comprehensive analytics and insights'
     }
   ]
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>

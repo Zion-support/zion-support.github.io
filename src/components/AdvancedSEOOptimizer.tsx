@@ -148,7 +148,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   const _trackPerformanceMetrics = () => {};
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       window.addEventListener('load', () => {}
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const _perfData = performance.getEntriesByType('navigation')[0
+  ];
+  const as PerformanceNavigationTiming;
         if (_perfData) {}
           (window as any).gtag('event', 'page_load_performance', {}
             event_category: 'Performance',
@@ -159,14 +161,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
 {      })
 {    }
 {  }
-  return ()
+  return();
   <Helme t>{/* Basic MetaTags */};
     <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(',')} /><linkrel=&quot;canonical&quot; href={seoData.canonicalUrl} />{/* Open GraphTags */}
-      {enableOpenGraph && ()
-      <><metaproperty=&quot;og:title&quot;content={seoData.title} /><metaproperty=&quot;og:image:height&quot;content=&quot;630&quot; /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; /></>)}
+      {enableOpenGraph && (<<metaproperty=&quot;og:title&quot;content={seoData.title} /><metaproperty=&quot;og:image:height&quot;content=&quot;630&quot; /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; /></>)}
       {/* Twitter CardTags */}
-      {enableTwitterCards && ()
-      <><metaname=&quot;twitter:card&quot;content=&quot;summary_large_image&quot; /><metaname=&quot;twitter:title&quot;content={seoData.title} /><metaname=&quot;twitter:description&quot; content={seoData.description} /><metaname=&quot;twitter:image&quot; content={seoData.ogImage} /><metaname=&quot;twitter:site&quot;content=&quot;@ziontechgroup&quot; /><metaname=&quot;twitter:creator&quot;content=&quot;@ziontechgroup&quot; /></>)}
+      {enableTwitterCards && (<<metaname=&quot;twitter:card&quot;content=&quot;summary_large_image&quot; /><metaname=&quot;twitter:title&quot;content={seoData.title} /><metaname=&quot;twitter:description&quot; content={seoData.description} /><metaname=&quot;twitter:image&quot; content={seoData.ogImage} /><metaname=&quot;twitter:site&quot;content=&quot;@ziontechgroup&quot; /><metaname=&quot;twitter:creator&quot;content=&quot;@ziontechgroup&quot; /></>)}
       {/* Additional SEO MetaTags */}
    <metaname=&quot;robots&quot;content=&quot;index, follow, max-snippet:-1, max-image-preview:large,max-video-preview:-1&quot; /><metaname=&quot;googlebot&quot;content=&quot;index,follow&quot; /><metaname=&quot;bingbot&quot;content=&quot;index,follow&quot; /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;publisher&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;copyright&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;language&quot;content=&quot;en&quot; /><metaname=&quot;revisit-after&quot;content=&quot;7days&quot; /><metaname=&quot;distribution&quot;content=&quot;global&quot; /><metaname=&quot;rating&quot;content=&quot;general&quot; /><metaname=&quot;theme-color&quot;content=&quot;#4F46E5&quot; />{/* StructuredData */}
       {enableSchemaMarkup && _structuredData && ()
@@ -181,14 +181,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
         </script>
       )}
       {/* Preconnect to external domains for performance */}
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://www.google-analytics.com&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://www.googletagmanager.com&quot; />
+      <link rel=&quot;preconnect&quot; href="https://fonts.googleapis.com" />
+      <link rel=&quot;preconnect&quot; href="https://fonts.gstatic.com" crossOrigin=&quot;anonymous&quot; />
+      <link rel=&quot;preconnect&quot; href="https://www.google-analytics.com" />
+      <link rel=&quot;preconnect&quot; href="https://www.googletagmanager.com" />
       {/* DNS Prefetch for better performance */}
-      <link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.googleapis.com&quot; />
-      <link rel=&quot;dns-prefetch&quot; href=&quot;//www.google-analytics.com&quot; />
-      <link rel=&quot;dns-prefetch&quot; href=&quot;//www.googletagmanager.com&quot; />
+      <link rel=&quot;dns-prefetch&quot; href="//fonts.googleapis.com" />
+      <link rel=&quot;dns-prefetch&quot; href="//www.google-analytics.com" />
+      <link rel=&quot;dns-prefetch&quot; href="//www.googletagmanager.com" />
     </Helmet>
   )
 {}

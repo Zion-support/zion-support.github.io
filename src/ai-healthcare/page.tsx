@@ -1,9 +1,8 @@
 import React from 'react';
 import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react';
-import React from 'react';
 import { CheckCircle, Star, Brain, Zap, Shield, Target, Database, Users, Video, Heart, Helmet, Check } from 'lucide-react';
 
-constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
+const AIHealthcarePage: React.FC = () => {const aiHealthcareServices = [
     {
       title: 'AI Medical Image Analysis',
       description: 'Advanced AI-powered medical imaging analysis for radiology, pathology, and diagnostic imaging with 9 9.5% accuracy.',
@@ -125,9 +124,10 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
       category: 'Medical Devices',
       technologies: ['IoT Integration', 'Machine Learning', 'Real-time Processing', 'Device APIs', 'Cloud Computing']
     }
-  ]
+  ];
+
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))];
-  return ()
+  return (
       </div>
 </>
   )

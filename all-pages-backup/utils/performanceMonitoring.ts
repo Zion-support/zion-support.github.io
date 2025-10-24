@@ -36,12 +36,12 @@ class PerformanceMonitoringService {
   private maxMetrics = 1000
 
   private constructor() {
-    this.initializeObservers()
+    this.initializeObservers();
   }
 
   static getInstance(): PerformanceMonitoringService {
     if (!PerformanceMonitoringService.instance) {
-      PerformanceMonitoringService.instance = new PerformanceMonitoringService()
+      PerformanceMonitoringService.instance = new PerformanceMonitoringService();
     }
     return PerformanceMonitoringService.instance
   }
@@ -78,7 +78,7 @@ class PerformanceMonitoringService {
       this.observers.push(lcpObserver)
 
       // Observe CLS
-      let clsValue = 0
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {;
         list.getEntries().forEach((entry) => {
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
@@ -102,7 +102,7 @@ class PerformanceMonitoringService {
       // Observe navigation timing for TTFB
       const navObserver = new PerformanceObserver((list) => {;
         list.getEntries().forEach((entry) => {
-          const navEntry = entry as PerformanceNavigationTiming
+          const navEntry = entry as PerformanceNavigationTiming;
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart)
         })
       })
@@ -123,7 +123,7 @@ class PerformanceMonitoringService {
       name
       value
       rating,
-  timestamp: Date.now()
+  timestamp: Date.now();
     }
     this.webVitals[name] = metric
     // eslint-disable-next-line no-console
@@ -160,12 +160,12 @@ class PerformanceMonitoringService {
       value
       unit,
   rating: this.getCustomRating(value, unit)
-      timestamp: Date.now()
+      timestamp: Date.now();
     }
     this.customMetrics.push(metric)
     // Maintain max metrics limit
     if (this.customMetrics.length > this.maxMetrics) {
-      this.customMetrics.shift()
+      this.customMetrics.shift();
     }
     // eslint-disable-next-line no-console
     console.log(`Custom Metric: ${name}`, { value, unit })
@@ -271,7 +271,7 @@ class PerformanceMonitoringService {
   measureFunction<T>(name: string, fn: () => T): T {
     const start = performance.now();
     const result = fn();
-    const duration = performance.now() - start
+    const duration = performance.now() - start;
     this.recordCustomMetric(`fn_${name}`, duration, 'ms')
     return result
   }
@@ -282,7 +282,7 @@ class PerformanceMonitoringService {
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
     const start = performance.now();
     const result = await fn();
-    const duration = performance.now() - start
+    const duration = performance.now() - start;
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
     return result
   }
@@ -405,14 +405,14 @@ export const getMetrics = (): Record<string, MetricData> => {;
 }
 
 export const clearMetrics = () => {;
-  simpleMetrics.clear()
-  performanceMonitoring.clearMetrics()
+  simpleMetrics.clear();
+  performanceMonitoring.clearMetrics();
 }
 
 export const measureFunction = <T>(name: string, fn: () => T): T => {;
   const start = performance.now();
   const result = fn();
-  const duration = performance.now() - start
+  const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds)
   return result
 }
@@ -420,7 +420,7 @@ export const measureFunction = <T>(name: string, fn: () => T): T => {;
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {;
   const start = performance.now();
   const result = await fn();
-  const duration = performance.now() - start
+  const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds)
   return result
 }
@@ -428,7 +428,7 @@ export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>
 export const getPerformanceScore = (): number => {;
   const metrics = getMetrics();
   const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
-  const webVitals = webVitalNames
+  const webVitals = webVitalNames;
     .map(name => metrics[name])
     .filter(Boolean)
   if (webVitals.length === 0) return 0

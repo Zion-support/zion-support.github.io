@@ -90,7 +90,7 @@ export const SEO: React.FC<SEOProps> = ({};
 {    }
     return baseStructuredData
 {  }
-  return ()
+  return();
     <Helmet>
       {/* Basic Meta Tags */};
       <title>{seo.title}</title>;
@@ -123,8 +123,7 @@ export const SEO: React.FC<SEOProps> = ({};
       <meta name=&quot;twitter:site&quot; content=&quot;@ziontechgroup&quot; />
       {author && <meta name=&quot;twitter:creator&quot; content={`@${author}`} />}
       {/* Article Meta Tags */}
-      {type === 'article' && ()
-        <>
+      {type === 'article' && (<
           {publishDate && <meta property=&quot;article:published_time&quot; content={publishDate} />}
           {modifiedDate && <meta property=&quot;article:modified_time&quot; content={modifiedDate} />}
           {author && <meta property=&quot;article:author&quot; content={author} />}
@@ -133,10 +132,10 @@ export const SEO: React.FC<SEOProps> = ({};
       {/* Structured Data */}
       <script type=&quot;application/ld+json&quot;>{JSON.stringify(generateStructuredData())}</script>
       {/* Preconnect to external domains */}
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; />
-      <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
+      <link rel=&quot;preconnect&quot; href="https://fonts.googleapis.com" />
+      <link rel=&quot;preconnect&quot; href="https://fonts.gstatic.com" crossOrigin=&quot;anonymous&quot; />
       {/* DNS Prefetch */}
-      <link rel=&quot;dns-prefetch&quot; href=&quot;https://www.google-analytics.com&quot; />
+      <link rel=&quot;dns-prefetch&quot; href="https://www.google-analytics.com" />
       {/* Preload critical resources */}
       <link
         rel=&quot;preload&quot;

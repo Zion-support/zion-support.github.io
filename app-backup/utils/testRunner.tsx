@@ -1,6 +1,6 @@
 import React from 'react'
 "use client"
-const testRunner = () => {
+const testRunner = () => {;
   return null
-}
-export default testRunner
+};
+export default testRunner;

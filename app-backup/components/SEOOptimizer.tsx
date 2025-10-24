@@ -15,12 +15,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     // Update page title
     document.title = title
-    // Update meta description
+    // Update meta description;
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta')
+      const meta = document.createElement('meta');
       meta.name = 'description'
       meta.content = description
       document.head.appendChild(meta),
@@ -31,7 +31,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
     } else {
-      const meta = document.createElement('meta')
+      const meta = document.createElement('meta');
       meta.name = 'keywords'
       meta.content = keywords.join(', ')
       document.head.appendChild(meta)
@@ -47,7 +47,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.appendChild(canonicalLink)
     }
     // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {
+    const updateOGTag = (property: string, content: string) => {;
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
       if (ogTag) {
         ogTag.setAttribute('content', content)
@@ -64,7 +64,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateOGTag('og:url', canonicalUrl)
     updateOGTag('og:type', 'website')
     // Update Twitter Card tags
-    const updateTwitterTag = (name: string, content: string) => {
+    const updateTwitterTag = (name: string, content: string) => {;
       let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`)
       if (twitterTag) {
         twitterTag.setAttribute('content', content)
@@ -81,7 +81,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateTwitterTag('twitter:image', ogImage)
     // Add structured data
     if (structuredData) {
-      const script = document.createElement('script')
+      const script = document.createElement('script');
       script.type = 'application/ld+json'
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)
@@ -95,7 +95,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.appendChild(viewport)
     }
     // Add charset if not present
-    let charset = document.querySelector('meta[charset]')
+    let charset = document.querySelector('meta[charset]');
     if (!charset) {
       charset = document.createElement('meta')
       charset.setAttribute('charset', 'UTF-8')
@@ -137,4 +137,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 export default SEOOptimizer
   )
 }
-export default SEOOptimizerPage
+export default SEOOptimizerPage;

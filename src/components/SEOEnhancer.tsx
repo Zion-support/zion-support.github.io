@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'lucide-react';
-import React from 'react';
 import { Code, Helmet } from 'lucide-react';
 
 interface SEOEnhancerProps {}
@@ -79,8 +78,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
      &quot;geoRadius&quot;:&quot;100000 0&quot;
 {    }
 {  }
-  return ()
-    <>
+  return (<>
       <Helmet>
         {/* Primary meta tags */}
         <title>{title}</title>

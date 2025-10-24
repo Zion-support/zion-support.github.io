@@ -28,7 +28,7 @@ const $1: React.FC = () => {;
       features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
     }
   ]
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

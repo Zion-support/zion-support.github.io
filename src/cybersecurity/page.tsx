@@ -7,7 +7,7 @@ import { Globe, AlertTriangle } from 'lucide-react';
 
 const $1: React.FC = () => {;
   const securityServices = [];
-  return ()
+  return();
       </div>
 </>
   )

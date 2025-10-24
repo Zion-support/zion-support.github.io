@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-const TestComponent = () => {
+const TestComponent = () => {;
   return <div>Test content</div>
 }
 describe("Advanced Components", () => {
@@ -9,13 +9,13 @@ describe("Advanced Components", () => {
   })
   it("should render test content", () => {
     render(<TestComponent />)
-    expect(screen.getByText("Test content")).toBeInTheDocument()
+    expect(screen.getByText("Test content")).toBeInTheDocument();
   })
   it("should handle console errors", () => {
     const consoleSpy = jest
       .spyOn(console, "error")
       .mockImplementation(() => {})
     // Test implementation
-    consoleSpy.mockRestore()
-  })
+    consoleSpy.mockRestore();
+  });
 })

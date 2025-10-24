@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
 "use client"
-const NotFound = () => {
+const NotFound = () => {;
   return (
     <>
       <Head>
@@ -22,7 +22,7 @@ const NotFound = () => {
           </div>
           {/* Error Message */}
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">Page Not Found</h1>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
             Oops! The page you&apos;re looking for seems to have vanished into the digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
           {/* Search Suggestion */}
@@ -96,9 +96,9 @@ const NotFound = () => {
               go wrong! 🤖
             </p>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
 </>
   )
 }
-export default NotFound
+export default NotFound;

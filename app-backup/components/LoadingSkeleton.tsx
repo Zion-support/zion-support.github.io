@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 'use client'
 const LoadingSkeletonPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',
@@ -47,13 +47,13 @@ const LoadingSkeletonPage: React.FC = () => {
         <meta name="keywords" content="AI, artificial intelligence, LoadingSkeleton, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD:app-backup/components/LoadingSkeleton.tsx
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+<<<<<<< HEAD:app-backup/components/LoadingSkeleton.tsx;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
             {/* Hero Section */}
@@ -68,8 +68,8 @@ const LoadingSkeletonPage: React.FC = () => {
               Advanced LoadingSkeleton solution for modern businesses.
             </p>
 <<<<<<< HEAD:app-backup/components/LoadingSkeleton.tsx
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
 =======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -78,7 +78,7 @@ const LoadingSkeletonPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
 <<<<<<< HEAD:app-backup/components/LoadingSkeleton.tsx
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 =======
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 >>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/LoadingSkeleton.tsx
@@ -97,13 +97,13 @@ const LoadingSkeletonPage: React.FC = () => {
               </p>
             </div>
 <<<<<<< HEAD:app-backup/components/LoadingSkeleton.tsx
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
 =======
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -135,11 +135,11 @@ const LoadingSkeletonPage: React.FC = () => {
               </p>
             </div>
 <<<<<<< HEAD:app-backup/components/LoadingSkeleton.tsx
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
 =======
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -160,11 +160,11 @@ const LoadingSkeletonPage: React.FC = () => {
               Join thousands of businesses already using our AI solutions
             </p>
 <<<<<<< HEAD:app-backup/components/LoadingSkeleton.tsx
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 =======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
@@ -182,4 +182,4 @@ const LoadingSkeletonPage: React.FC = () => {
 </>
   )
 }
-export default LoadingSkeletonPage
+export default LoadingSkeletonPage;

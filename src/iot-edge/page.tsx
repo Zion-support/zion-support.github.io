@@ -7,7 +7,7 @@ import { Globe, Settings } from 'lucide-react';
 
 const $1: React.FC = () => {;
   const iotServices = [];
-  return ()
+  return();
       </div>
 </>
   )

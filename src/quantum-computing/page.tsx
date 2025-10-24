@@ -35,7 +35,7 @@ const $1: React.FC = () => {;
       technologies: ['D-Wave', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms']
     }
   ]
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white"></section>
@@ -56,8 +56,8 @@ const $1: React.FC = () => {;
                 Explore Quantum Solutions
               </button>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Key Benefits */}
       <section className="py-16 bg-white"></section>
@@ -94,8 +94,8 @@ const $1: React.FC = () => {;
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Complex Problem Solving</h3>
               <p className="text-gray-600">Tackle optimization, simulation, and machine learning challenges at scale</p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Services */}
       <section className="py-16 bg-gray-50"></section>
@@ -146,8 +146,8 @@ const $1: React.FC = () => {;
                     <span className="text-2xl font-bold text-purple-600">{service.marketPrice}</span>
                     <span className="text-sm text-gray-500">{service.category}</span>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </div>
@@ -173,8 +173,8 @@ const $1: React.FC = () => {;
               Learn More
             </button>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
 };

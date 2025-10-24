@@ -5,8 +5,8 @@ import React from 'react'
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-f44d
-const usePerformanceMetrics = () => {
+const usePerformanceMetrics = () => {;
   return null
 }
-
-export default usePerformanceMetrics
+;
+export default usePerformanceMetrics;

@@ -4,7 +4,7 @@ import React from 'react';
 import { CheckSquare } from 'lucide-react';
 import { CheckCircle, Star, Phone } from 'lucide-react';
 
-constTaskManagerProPage: React.FC= () =>{constfeatures= [
+const TaskManagerProPage: React.FC = () => {const features = [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
@@ -38,7 +38,7 @@ constTaskManagerProPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-  constpricingPlans= []
+  const pricingPlans = []
     {name: 'Individual',
       price: '$1 9',
       period: '/month',
@@ -86,7 +86,7 @@ constTaskManagerProPage: React.FC= () =>{constfeatures= [
       popular: false
     }
   ]
-
+;
   const integrations = [];
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
@@ -98,7 +98,7 @@ constTaskManagerProPage: React.FC= () =>{constfeatures= [
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
   ]
 
-  consttestimonials= []
+  const testimonials = []
     {name: 'Rachel Green',
       company: 'Marketing Agency',
       role: 'Project Manager',
@@ -118,7 +118,7 @@ constTaskManagerProPage: React.FC= () =>{constfeatures= [
   ]
 
 const Page = () => {};
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>
@@ -178,8 +178,8 @@ const Page = () => {};
             <div className="text-4xl font-bold text-orange-400 mb-2">85%</div>
             <div className="text-white font-semibold mb-2">Goal Achievement</div>
             <div className="text-gray-300 text-sm">With smart tracking</div>
+            </div>
           </div>
-        </div>
         {/* Features Section */}
         <section className="mb-16"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -277,8 +277,8 @@ const Page = () => {};
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </section>

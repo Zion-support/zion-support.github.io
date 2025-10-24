@@ -35,7 +35,7 @@ customMessages: Record<string, string>
 /**
 * Fallback UI components
 */
-fallbackComponents: {,
+fallbackComponents: {,;
     default: React.ComponentType<{ error: Error; resetError: () => void }>
 network: React.ComponentType<{ error: Error; resetError: () => void }>
 notFound: React.ComponentType<{ error: Error; resetError: () => void }>
@@ -44,7 +44,7 @@ notFound: React.ComponentType<{ error: Error; resetError: () => void }>
 /**
 * Default error messages
 */
-const DEFAULT_ERROR_MESSAGES = {
+const DEFAULT_ERROR_MESSAGES = {;
 default: 'Something went wrong. Please try again.',
     network: 'Network connection issue. Please check your internet connection.'
 notFound: 'The requested resource was not found.',
@@ -104,8 +104,8 @@ className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-
 Go Home
 </
 </div>
-</div>
-</div>
+            </div>
+          </div>
 )
 }
 /**
@@ -137,8 +137,8 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 onClick={resetError}
 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Retry Connection</button>
 </div>
-</div>
-</div>
+            </div>
+          </div>
 )
 }
 /**
@@ -163,8 +163,8 @@ className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 tra
 Go Back
 </
 </div>
-</div>
-</div>
+            </div>
+          </div>
 )
 }
 /**
@@ -205,4 +205,4 @@ timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 }
-export default getErrorBoundaryConfig
+export default getErrorBoundaryConfig;

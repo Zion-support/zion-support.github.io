@@ -80,4 +80,4 @@ export default AnalyticsProvider
   );
 {};
 
-export default AnalyticsProviderPage
+export default AnalyticsProviderPage;

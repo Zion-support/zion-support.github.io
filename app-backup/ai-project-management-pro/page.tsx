@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, Users, BarChart, CheckCircle, Brain, Settings, Target, TrendingUp, Calendar, Zap, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const AIProjectManagementProPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI Project Planning',
@@ -33,7 +33,7 @@ const AIProjectManagementProPage: React.FC = () => {
     'Real-time collaboration tools'
   ]
   const pricing = [
-  {
+    {
   name: 'Starter',
     price: '$29.99'
       period: '/month',
@@ -166,8 +166,8 @@ const AIProjectManagementProPage: React.FC = () => {
                     Our AI learns from your project patterns and automatically optimizes workflows, resource allocation, and timeline predictions.
                   </p>
                 </div>
-              </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -258,5 +258,5 @@ const AIProjectManagementProPage: React.FC = () => {
       </section>
     </div>
   )
-}
-export default AIProjectManagementProPage
+};
+export default AIProjectManagementProPage;

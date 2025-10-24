@@ -8,7 +8,7 @@ import { Workflow } from 'lucide-react';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
 
 const $1: React.FC = () => {;
-  const features = [;
+  const features = [
     {
       icon: Workflow,
       title: 'Process Automation',
@@ -30,8 +30,9 @@ const $1: React.FC = () => {;
       description: 'Connect with any system or application through our extensive integration library.',
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
-  ]
-  const pricingPlans = [;
+  ];
+
+  const pricingPlans = [
     {
       name: 'Starter',
       price: '$299/month',
@@ -56,7 +57,7 @@ const $1: React.FC = () => {;
     { number: '99.9%', label: 'Reliability' }
   ]
 
-  constuseCases= []
+  const useCases = []
     {title: 'HR Onboarding',
       description: 'Automate employee onboarding processes from application to first day.',
       icon: Users
@@ -74,11 +75,12 @@ const $1: React.FC = () => {;
       icon: Settings
     }
   ]
+;
 
   const pricing = pricingPlans;
 
 const Page = () => {};
-  return ()
+  return (
       </div>
 </>
   )

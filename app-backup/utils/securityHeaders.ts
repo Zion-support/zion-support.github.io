@@ -50,10 +50,10 @@ permissionsPolicy: [
 * Get security headers as key-value pairs
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
-export function getSecurityHeaders()
+export function getSecurityHeaders();
 customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {}
-const config = { ...defaultSecurityHeaders, ...customConfig }
+const config = { ...defaultSecurityHeaders, ...customConfig };
 const headers: Record<string, string> = {}
 'X-XSS-Protection': '1; mode=block'
 'X-DNS-Prefetch-Control': 'on'}
@@ -85,7 +85,7 @@ defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Record<string, string> {/* TODO: Fix JSX expression */}
-const config = { ...defaultSecurityHeaders, ...customConfig }
+const config = { ...defaultSecurityHeaders, ...customConfig };
 const
 headers: Record<string, string> = {/* TODO: Fix JSX expression */}
 }
@@ -108,11 +108,11 @@ return headers
 */
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
-  export function getNextSecurityHeaders()
+  export function getNextSecurityHeaders();
 customConfig?: Partial<SecurityHeadersConfig>
 }
 ): Array<{ key: string; value: string }> {}
-const headers = getSecurityHeaders(customConfig)
+const headers = getSecurityHeaders(customConfig);
 return Object.entries(headers).map(([key, value]) => ({}
 key
 value}
@@ -122,4 +122,4 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 e: string }> {/* TODO: Fix JSX expression */}
 }))
 }
-export default defaultSecurityHeaders
+export default defaultSecurityHeaders;

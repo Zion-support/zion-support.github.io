@@ -12,7 +12,7 @@ export const metadata: Metadata = {,
     type: 'website',
     url: 'https://ziontechgroup.com/about'}}
 const AboutPage: React.FC = () => {
-  const values = [
+  const values = [;
     {
       icon: Brain,
     title: 'Innovation',
@@ -137,5 +137,5 @@ const AboutPage: React.FC = () => {
         </section>
       </div>
   )
-}
-export default AboutPage
+};
+export default AboutPage;

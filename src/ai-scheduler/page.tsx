@@ -3,7 +3,7 @@ import { Brain, Target } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, Phone, Calendar } from 'lucide-react';
 
-constAISchedulerPage: React.FC= () =>{constfeatures= [
+const AISchedulerPage: React.FC = () => {const features = [
     {
       icon: Calendar,
       title: 'Smart Scheduling',
@@ -36,8 +36,9 @@ constAISchedulerPage: React.FC= () =>{constfeatures= [
       benefit: '100% secure scheduling'
     }
   ]
+;
 
-  constpricingPlans= []
+  const pricingPlans = []
     {name: 'Personal',
       price: '$1 9',
       period: '/month',
@@ -97,7 +98,7 @@ constAISchedulerPage: React.FC= () =>{constfeatures= [
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
   ]
 
-  consttestimonials= []
+  const testimonials = []
     {name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
@@ -115,9 +116,10 @@ constAISchedulerPage: React.FC= () =>{constfeatures= [
       rating: 5
     }
   ]
+;
 
 const Page = () => {};
-  return ()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>
@@ -178,8 +180,8 @@ const Page = () => {};
             <div className="text-4xl font-bold text-orange-400 mb-2">100%</div>
             <div className="text-white font-semibold mb-2">Conflict-Free</div>
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
+            </div>
           </div>
-        </div>
         {/* Features Section */}
         <section className="mb-16"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -277,8 +279,8 @@ const Page = () => {};
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </section>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, Shield, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Lock, Send, BarChart3, Globe, DollarSign, Clock, Star, Activity, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const BlockchainPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Shield,
     title: 'Secure Blockchain Development',
@@ -121,8 +121,8 @@ const BlockchainPage: React.FC = () => {
                     Our blockchain solutions combine cutting-edge technology with robust security measures to deliver reliable, scalable, and future-proof applications.
                   </p>
                 </div>
-              </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -167,5 +167,5 @@ const BlockchainPage: React.FC = () => {
       </section>
     </div>
   )
-}
-export default BlockchainPage
+};
+export default BlockchainPage;

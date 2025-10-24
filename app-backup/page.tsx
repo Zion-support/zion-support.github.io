@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Send, BarChart3, Shield, Zap, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 "use client"
 export default function HomePage() {
-  const features = [
+  const features = [;
   {
       title: "AI-Powered Solutions",
     description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics"
@@ -140,7 +140,7 @@ export default function HomePage() {
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8">;
             Let&apos;s discuss how our AI and IT solutions can help you achieve your goals.
           </p>
           <button className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">

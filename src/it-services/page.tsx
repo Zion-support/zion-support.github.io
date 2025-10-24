@@ -252,7 +252,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = []
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ]
 
-  constadditionalServices= []
+  const additionalServices = []
     {icon: Users,
       title: 'IT Consulting',
       description: 'Strategic IT planning and technology roadmap development.',
@@ -285,7 +285,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = []
     }
   ]
 
-  constbenefits= []
+  const benefits = []
     {icon: Star,
       title: 'Proven Expertise',
       description: '1 0+ years of experience with100+ successful projects'
@@ -305,7 +305,7 @@ constITServicesPage: React.FC= () => {constitServices: ITService[] = []
   ]
 
 const Page = () => {};
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const AutomationPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Zap,
     title: 'Process Automation',
@@ -120,8 +120,8 @@ const AutomationPage: React.FC = () => {
                     Our AI-powered automation solutions learn and adapt to your business processes, continuously improving efficiency and accuracy.
                   </p>
                 </div>
-              </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -166,5 +166,5 @@ const AutomationPage: React.FC = () => {
       </section>
     </div>
   )
-}
-export default AutomationPage
+};
+export default AutomationPage;

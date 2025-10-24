@@ -23,7 +23,7 @@ export const metadata: Metadata = {,
     url: 'https://ziontechgroup.com/ai-financial-analytics-pro'}}
 >>>>>>> cursor/fix-errors-and-merge-to-main-0ec1:app-backup/ai-financial-analytics-pro/page.tsx
 export default function AiFinancialAnalyticsProPage() {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Insights',
@@ -62,7 +62,7 @@ export default function AiFinancialAnalyticsProPage() {
 }
   ]
   const analyticsTypes = [
-  {
+    {
   category: 'Revenue Analytics',
     icon: DollarSign
       items: [
@@ -130,7 +130,7 @@ export default function AiFinancialAnalyticsProPage() {
 }
   ]
   const pricingPlans = [
-  {
+    {
       name: 'Starter',
     price: '$199'
       period: '/month',
@@ -438,7 +438,7 @@ export default function AiFinancialAnalyticsProPage() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
-                  </div>
+                  </div>;
                   <p className="text-gray-300 italic mb-3">&quot;{testimonial.content}&quot;</p>
                   <div className="text-cyan-400 font-semibold text-sm">
                     Result: {testimonial.results}

@@ -1,6 +1,6 @@
 import React from 'react'
 "use client"
-const AdminPage = () => {
+const AdminPage = () => {;
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -11,9 +11,9 @@ const AdminPage = () => {
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Coming Soon</h2>
             <p className="text-gray-600">Admin functionality will be available in a future update.</p>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   )
-}
-export default AdminPage
+};
+export default AdminPage;

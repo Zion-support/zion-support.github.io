@@ -12,7 +12,7 @@ import {
   StarIcon
 } from '@heroicons/react/24/outline'
 export default function AboutPage() {
-  const values = [
+  const values = [;
     {
       icon: Target,
     title: 'Mission-Driven',
@@ -60,7 +60,7 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
+        <title>About Us - Zion Tech Group</title>;
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
         <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
       </Helmet>
@@ -124,7 +124,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {values.map((value, index) => {
-                const Icon = value.icon
+                const Icon = value.icon;
                 return (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                     <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">
@@ -174,8 +174,8 @@ export default function AboutPage() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">99.9%</div>
                 <div className="text-gray-300">Client Satisfaction</div>
-              </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -205,8 +205,8 @@ export default function AboutPage() {
                 and drive sustainable growth.
               </p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Values */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
@@ -274,8 +274,8 @@ export default function AboutPage() {
                 We&apos;re committed to continuous learning and helping our clients achieve sustainable growth.
               </p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Team Section */}
       <section className="py-20 bg-slate-900">
@@ -322,8 +322,8 @@ export default function AboutPage() {
                 ensuring scalable and secure technology solutions.
               </p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
@@ -396,8 +396,8 @@ export default function AboutPage() {
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
             </div>
+            </div>
           </div>
-        </div>
       </section>
 </>
   )

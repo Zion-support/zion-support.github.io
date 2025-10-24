@@ -1,6 +1,6 @@
 import React from 'react'
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
-
+;
 const EnhancedHero = () => {;
 'use client';
 import React from 'react';
@@ -11,7 +11,7 @@ import { Phone, Mail } from 'lucide-react';
 
   ]
 
-  const benefits = [
+  const benefits = [;
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
@@ -24,14 +24,14 @@ import { Phone, Mail } from 'lucide-react';
       <div className="max-w-2xl w-full text-center">
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
         </div>
-      </div>
-    </div>
+            </div>
+          </div>
   )
 }
 
 export default EnhancedHero
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>

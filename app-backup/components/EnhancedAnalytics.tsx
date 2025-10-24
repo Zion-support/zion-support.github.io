@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect } from &quot;react&quot
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 &quot;use client&quot
 =======
 'use client'
@@ -16,7 +16,7 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, unknown>) => void
   page: (name: string, properties?: Record<string, unknown>) => void
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined
 )
 export const useAnalytics = () => {
@@ -48,7 +48,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 <<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
 =======
-
+;
         ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
 >>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
@@ -69,7 +69,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
           properties
 =======
 
-  const track = (event: string, properties?: Record<string, unknown>) => {
+  const track = (event: string, properties?: Record<string, unknown>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
@@ -94,7 +94,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     custom_map: traits}
 =======
 
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
+  const identify = (userId: string, traits?: Record<string, unknown>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
@@ -123,7 +123,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
             ...properties}
 =======
 
-  const page = (name: string, properties?: Record<string, unknown>) => {
+  const page = (name: string, properties?: Record<string, unknown>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
@@ -170,7 +170,7 @@ declare global {
 }
 'use client'
 const EnhancedAnalyticsPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',

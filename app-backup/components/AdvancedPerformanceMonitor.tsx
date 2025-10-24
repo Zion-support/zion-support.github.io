@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
 const AdvancedPerformanceMonitorPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',
@@ -146,5 +146,5 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
       <Footer />
 </>
   )
-}
-export default AdvancedPerformanceMonitorPage
+};
+export default AdvancedPerformanceMonitorPage;

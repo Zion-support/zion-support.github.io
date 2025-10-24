@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, FileText, Calculator, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, DollarSign, PieChart, Activity, FileText as Invoice, CreditCard, Wallet, Lock, Sparkles, Upload, Download, Send, Edit, Building2, ShoppingCart, Clock, Shield } from 'lucide-react';
 
 const AiInvoiceGeneratorPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />
       title: title,
@@ -31,7 +31,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     {
       title: title,
   description: description,
@@ -58,7 +58,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
     };
   ];
 
-  const pricing = [
+  const pricing = [;
     {
       name: name,
   price: price,
@@ -85,7 +85,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
     };
   ];
 
-  const stats = [
+  const stats = [;
     { number: '95%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> }
     { number: '10K+', label: 'Invoices Generated', icon: <FileText className="w-6 h-6" /> }
     { number: '99.9%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> }

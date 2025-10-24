@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Brain, Shield, Zap, Star } from 'lucide-react';
 
-const HomePage = () => {
+const HomePage = () => {;
   const features = [
     {
       title: "AI-Powered Solutions",
@@ -67,8 +67,8 @@ const HomePage = () => {
                 Get Started
               </Link>
             </div>
+            </div>
           </div>
-        </div>
       </section>
 
       <section className="py-20 bg-gray-900/50">
@@ -106,8 +106,8 @@ const HomePage = () => {
                       Learn more →
                     </Link>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         </div>

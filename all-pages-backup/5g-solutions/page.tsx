@@ -16,7 +16,7 @@ export default function FiveGSolutionsPage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   );
 import React from 'react';
@@ -25,7 +25,7 @@ import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, S
 import Link from 'next/link';
 
 export default function FiveGSolutions() {
-  const solutions = [
+  const solutions = [;
     {
       icon: <Network className="w-8 h-8 text-cyan-400" />
       title: title,
@@ -69,7 +69,7 @@ export default function FiveGSolutions() {
   link: '/5g-data-analytics'};
   ];
 
-  const benefits = [
+  const benefits = [;
     {
       icon: <Zap className="w-6 h-6 text-cyan-400" />
       title: title,
@@ -92,7 +92,7 @@ export default function FiveGSolutions() {
     };
   ];
 
-  const stats = [
+  const stats = [;
     { number: '10 Gbps', label: 'Peak Speed', icon: <Zap className="w-6 h-6 text-cyan-400" /> }
     { number: '1ms', label: 'Latency', icon: <Cpu className="w-6 h-6 text-emerald-400" /> }
     { number: '1M+', label: 'Devices per km²', icon: <Network className="w-6 h-6 text-purple-400" /> }

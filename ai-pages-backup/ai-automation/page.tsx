@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import { 
   ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle
-  Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu
+  Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu;
 } from 'lucide-react';
 
 const AIAutomationPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Zap,
   title: title,
@@ -30,7 +30,7 @@ const AIAutomationPage: React.FC = () => {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     {
       title: title,
   description: description,
@@ -53,7 +53,7 @@ const AIAutomationPage: React.FC = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce operational costs by up to 70%'
     'Increase productivity and efficiency'
     'Eliminate human errors in repetitive tasks'
@@ -62,7 +62,7 @@ const AIAutomationPage: React.FC = () => {
     'ROI within 3-6 months';
   ];
 
-  const stats = [
+  const stats = [;
     { number: '70%', label: 'Cost Reduction', icon: TrendingUp }
     { number: '24/7', label: 'Automated Operations', icon: Clock }
     { number: '99.9%', label: 'Accuracy Rate', icon: Shield }

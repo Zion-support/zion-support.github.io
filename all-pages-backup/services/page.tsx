@@ -16,7 +16,7 @@ export default function ServicesPage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   );
 import React from 'react';

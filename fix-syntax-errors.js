@@ -1,143 +1,127 @@
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    // Check if file has syntax issues
-    if (!content.includes(';') || !content.includes('</')) {
-      return false; // No obvious syntax issues
-}
-    // eslint-disable-next-line no-console
-    console.log(`Fixing syntax errors in: ${filePath}`)
-    // Fix common syntax issues
-    let fixedContent = content
-      // Remove trailing semicolons that shouldn't be there
-      .replace(/;\s*$/gm, '')
-      // Fix JSX closing tags that have semicolons
-      .replace(/<\/([^>]+)>;\s*$/gm, '</$1>')
-      // Fix JSX opening tags that have semicolons
-      .replace(/<([^>]+)>;\s*$/gm, '<$1>')
-      // Fix JSX attributes that have semicolons
-      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1="$2"')
-      // Fix JSX expressions that have semicolons
-      .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
-      // Remove standalone semicolons
-      .replace(/^\s*;\s*$/gm, '')
-      // Fix multiple empty lines
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Fix JSX fragments
-      .replace(/<>\s*;\s*$/gm, '<>')
-      .replace(/<\/>\s*;\s*$/gm, '</>')
-      // Fix React.Fragment
-      .replace(/<React\.Fragment>\s*;\s*$/gm, '<React.Fragment>')
-      .replace(/<\/React\.Fragment>\s*;\s*$/gm, '</React.Fragment>')
-      // Fix common JSX syntax issues
-      .replace(/>\s*;\s*</gm, '><')
-      .replace(/>\s*;\s*$/gm, '>')
-      // Fix function declarations
-      .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
-      .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
-      // Fix return statements
-      .replace(/return\s*\(\s*;\s*$/gm, 'return (
-    <>
-      '
-    </>
-  )
-      // Fix JSX elements that are missing closing tags
-      .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
-      // Clean up extra whitespace
-      .replace(/\s+$/gm, '')
-      .replace(/^\s+/gm, '')
-    // Try to fix incomplete JSX structures
-    const lines = fixedContent.split('\n')
-    const fixedLines = []
-    let inJSX = false
-    let jsxDepth = 0
-    for (let i = 0; i < lines.length; i++) {
-  let line = lines[i]
-      // Skip lines that are just semicolons or empty
-      if (line.trim() === ';' || line.trim() === '') {
-        continue
-}
-      // Skip lines that are just closing braces with semicolons
-      if (line.trim() === '}' || line.trim() === '}') {
-  if (jsxDepth > 0) {
-          jsxDepth--
-}
-        fixedLines.push(line.replace(/;+$/, ''))
-        continue
+const fs = require('fs');
+const path = require('path');
+
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix missing semicolons after imports
+  fixed = fixed.replace(/(import[^;]+)(\n)/g, '$1;$2');
+  
+  // Fix missing semicolons after variable declarations
+  fixed = fixed.replace(/(const|let|var)\s+(\w+)\s*=\s*[^;]+(\n)/g, (match, decl, varName, newline) => {
+    if (!match.includes(';')) {
+      return match.replace(newline, ';' + newline);
+    }
+    return match;
+  });
+  
+  // Fix malformed function declarations
+  fixed = fixed.replace(/const(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g, 'const $1: React.FC = () => {');
+  fixed = fixed.replace(/const(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*return\s*\(\)\s*;/g, 'const $1: React.FC = () => {');
+  
+  // Fix malformed JSX return statements
+  fixed = fixed.replace(/return\s*\(\s*\)\s*;/g, 'return (');
+  fixed = fixed.replace(/return\s*\(\s*\)\s*<>/g, 'return (<>');
+  
+  // Fix missing closing parentheses and brackets
+  fixed = fixed.replace(/\(\s*\)\s*<>/g, '(<');
+  fixed = fixed.replace(/\(\s*\)\s*<\/>/g, '(</>');
+  
+  // Fix malformed array declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\]\s*(\w+)/g, 'const $1 = [\n    $2');
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*(\w+)/g, 'const $1 = [\n    $2');
+  
+  // Fix malformed object declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\{/g, 'const $1 = [\n    {');
+  
+  // Fix missing closing brackets for arrays
+  fixed = fixed.replace(/(\w+)\s*\]\s*(\w+)/g, '$1\n  ];\n  const $2');
+  
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/title=&quot;([^&]+)&quot;/g, 'title="$1"');
+  fixed = fixed.replace(/description=&quot;([^&]+)&quot;/g, 'description="$1"');
+  fixed = fixed.replace(/className=&quot;([^&]+)&quot;/g, 'className="$1"');
+  fixed = fixed.replace(/href=&quot;([^&]+)&quot;/g, 'href="$1"');
+  fixed = fixed.replace(/id=&quot;([^&]+)&quot;/g, 'id="$1"');
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>/g, '</div>\n            </div>\n          </div>');
+  
+  // Fix missing semicolons after function calls
+  fixed = fixed.replace(/(\w+)\s*\(\s*\)\s*(\n)/g, '$1();$2');
+  
+  // Fix malformed export statements
+  fixed = fixed.replace(/export default (\w+)\s*$/g, 'export default $1;');
+  
+  // Fix duplicate imports
+  const lines = fixed.split('\n');
+  const seenImports = new Set();
+  const filteredLines = lines.filter(line => {
+    if (line.trim().startsWith('import ')) {
+      if (seenImports.has(line.trim())) {
+        return false;
       }
-      // Skip lines that are just opening braces with semicolons
-      if (line.trim() === '{
-  ' || line.trim() === '{') {
-        jsxDepth++
-        fixedLines.push(line.replace(/;+$/, ''))
-        continue
+      seenImports.add(line.trim());
+    }
+    return true;
+  });
+  fixed = filteredLines.join('\n');
+  
+  // Fix malformed function parameters
+  fixed = fixed.replace(/\(\{\s*children\s*\}\s*:\s*\{\s*children:\s*React\.ReactNode\s*\}\s*\)/g, '({ children }: { children: React.ReactNode })');
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<>\s*<\/div>\s*<\/>/g, '<>\n        </div>\n      </>');
+  
+  return fixed;
 }
-      // Fix lines that end with semicolons inappropriately
-      if (line.includes(';') && !line.includes('//') && !line.includes('*')) {
-        // Check if this is a JSX line
-        if (line.includes('<') && line.includes('>')) {
-          line = line.replace(/;\s*$/, '')
-        } else if (line.includes('return') || line.includes('const') || line.includes('let') || line.includes('var')) {
-  // Keep semicolons for regular JavaScript
-} else {
-          line = line.replace(/;\s*$/, '')
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find and process TSX files
+function processDirectory(dirPath) {
+  let processedCount = 0;
+  
+  try {
+    const items = fs.readdirSync(dirPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        processedCount += processDirectory(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        if (processFile(fullPath)) {
+          processedCount++;
         }
       }
-      fixedLines.push(line)
     }
-    const finalContent = fixedLines.join('\n')
-    // Only write if content changed
-    if (finalContent !== content) {
-  fs.writeFileSync(filePath, finalContent)
-      return true
-}
-    return false
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
+    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
+  
+  return processedCount;
 }
-function findTsxFiles(dir) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath)
-      }
-    }
-  }
-  traverse(dir)
-  return files
-}
+
 // Main execution
-const appDir = path.join(__dirname, 'app')
-const files = findTsxFiles(appDir)
-// eslint-disable-next-line no-console
-    console.log(`Found ${files.length} TypeScript files to check`)
-let fixedCount = 0
-for (const file of files) {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++
-}
-}
-// eslint-disable-next-line no-console
-    console.log(`Fixed syntax errors in ${fixedCount} files`)
-// Also check the root App.tsx
-if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++
-  // eslint-disable-next-line no-console
-    console.log('Fixed syntax errors in App.tsx')
-}
-// eslint-disable-next-line no-console
-    console.log(`Total files fixed: ${fixedCount}`)
+console.log('Starting syntax error fixes...');
+const processedCount = processDirectory('/workspace');
+console.log(`Processed ${processedCount} files with syntax fixes.`);

@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
 'use client'
 const CaseStudiesPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',
@@ -48,7 +48,7 @@ const CaseStudiesPage: React.FC = () => {
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               Page
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;
               Explore our successful AI implementation case studies. See how we&apos;ve helped companies achieve 300%+ ROI with our AI solutions.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -131,4 +131,4 @@ const CaseStudiesPage: React.FC = () => {
 </>
   )
 }
-export default CaseStudiesPage
+export default CaseStudiesPage;

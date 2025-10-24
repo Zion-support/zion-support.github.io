@@ -21,7 +21,7 @@ interface MicroSAASCardProps {}
 {}
 
 const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {};
-  return ()
+  return();
     <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
       {service.popular && ()
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
@@ -95,8 +95,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {};
           </a>
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
-      </div>
-    </div>
+            </div>
+          </div>
   )
 {};
 ;

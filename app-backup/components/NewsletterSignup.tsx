@@ -9,8 +9,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault();
     if (!email) {
       setStatus('error')
       setMessage('Please enter your email address')
@@ -32,7 +32,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       // Close modal after success if it's a modal variant
       if (variant === 'modal' && onClose) {
         setTimeout(() => {
-          onClose()
+          onClose();
         }, 2000)
       }
     } catch (error) {
@@ -108,10 +108,10 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           <div className="relative w-full max-w-md">
             {content}
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     )
   }
   return content
-}
-export default NewsletterSignup
+};
+export default NewsletterSignup;

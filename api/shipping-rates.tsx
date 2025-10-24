@@ -1,6 +1,6 @@
 import React from 'react'
 "use client"
-const ShippingRates = () => {
+const ShippingRates = () => {;
   return null
-}
-export default ShippingRates
+};
+export default ShippingRates;

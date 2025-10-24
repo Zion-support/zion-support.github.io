@@ -2,7 +2,7 @@ import React from "react"
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react"
 "use client"
 const MicroSaasPage: React.FC = () => {
-  const services = [
+  const services = [;
   {
       icon: Zap,
     title: "Rapid Development",
@@ -218,8 +218,8 @@ const MicroSaasPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Scaling & Expansion</h3>
               <p className="text-gray-600">We help you scale your infrastructure and expand your product features as your business grows.</p>
             </div>
+            </div>
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -227,7 +227,7 @@ const MicroSaasPage: React.FC = () => {
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
             Ready to Build Your SaaS Product?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8">;
             Let&apos;s turn your SaaS idea into a successful, scalable business.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -250,4 +250,4 @@ const MicroSaasPage: React.FC = () => {
     </div>
   )
 }
-export default MicroSaasPage
+export default MicroSaasPage;

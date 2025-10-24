@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react';
 
-constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
+const AIContentGenerationPage: React.FC = () => {const contentServices = [
     {
       title: 'AI Blog Content Generator Pro',
       description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
@@ -36,7 +36,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
       popular: false
     }
   ]
-  const processSteps = [;
+  const processSteps = [
     {
       step: '1',
       title: 'Input Your Requirements',
@@ -55,8 +55,9 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
       description: 'Publish your content and monitor performance with detailed analytics.',
       icon: <BarChart className="w-6 h-6" />
     }
-  ]
-  return ()
+  ];
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

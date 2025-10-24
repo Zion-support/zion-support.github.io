@@ -6,7 +6,7 @@ import { Brain } from 'lucide-react';
 const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
   
-  const aiServices = [
+  const aiServices = [;
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' }
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' }
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' }
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {;
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' };
   ];
 
-  const itServices = [
+  const itServices = [;
     { name: 'Web Development', url: '/web-development', description: 'Custom websites' }
     { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android apps' }
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' }
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {;
     { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' };
   ];
 
-  const company = [
+  const company = [;
     { name: 'About Us', url: '/about' }
     { name: 'Our Team', url: '/team' }
     { name: 'Careers', url: '/careers' }
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {;
     { name: 'Contact', url: '/contact' };
   ];
 
-  const legalLinks = [
+  const legalLinks = [;
     { name: 'Privacy Policy', url: '/privacy' }
     { name: 'Terms of Service', url: '/terms' }
     { name: 'Cookie Policy', url: '/cookies' }
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {;
               <Brain className="h-8 w-8 text-emerald-400" />
   ]
 
-  const resources = [
+  const resources = [;
     { name: 'Documentation', url: '/docs' }
     { name: 'API Reference', url: '/api' }
     { name: 'Blog', url: '/blog' }
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {;
     { name: 'Support', url: '/support' },
   ];
 
-  const legal = [
+  const legal = [;
     { name: 'Privacy Policy', url: '/privacy' }
     { name: 'Terms of Service', url: '/terms' }
   ]
@@ -195,8 +195,8 @@ const Footer: React.FC = () => {;
               <MapPin className="h-5 w-5 text-emerald-400" />
               <span className="text-gray-300 text-sm">San Francisco, CA</span>
             </div>
+            </div>
           </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-6">
@@ -254,8 +254,8 @@ export default Footer
                 ))}
               </ul>
             </div>
+            </div>
           </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
@@ -279,4 +279,4 @@ export default Footer
   )
 {}
 
-export default Footer
+export default Footer;

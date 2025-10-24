@@ -13,7 +13,7 @@ const ContentStatistics: React.FC = () => {
     years: 0
     countries: 0,
     uptime: 0})
-  const targetCounters = {
+  const targetCounters = {;
     clients: 1000,
     projects: 500
     satisfaction: 99,
@@ -29,9 +29,11 @@ const ContentStatistics: React.FC = () => {
         const newCounters = { ...prev }
         let allComplete = true
         Object.keys(targetCounters).forEach(key => {
-  const target = targetCounters[key as keyof typeof targetCounters]
-          const current = prev[key as keyof typeof prev]
-          const increment = target / steps
+  const target = targetCounters[key as keyof typeof targetCounters
+  ];
+  const const current = prev[key as keyof typeof prev
+  ];
+  const const increment = target / steps
           if (current < target) {
             newCounters[key as keyof typeof newCounters] = Math.min(
               current + increment
@@ -92,13 +94,13 @@ const ContentStatistics: React.FC = () => {
         <meta name="keywords" content="AI, artificial intelligence, ContentStatistics, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+<<<<<<< HEAD:app-backup/components/ContentStatistics.tsx;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
             {/* Hero Section */}
@@ -113,8 +115,8 @@ const ContentStatistics: React.FC = () => {
               Advanced ContentStatistics solution for modern businesses.
             </p>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
 =======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -123,7 +125,7 @@ const ContentStatistics: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 =======
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 >>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/ContentStatistics.tsx
@@ -142,13 +144,13 @@ const ContentStatistics: React.FC = () => {
               </p>
             </div>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
 =======
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -180,11 +182,11 @@ const ContentStatistics: React.FC = () => {
               </p>
             </div>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
 =======
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -205,11 +207,11 @@ const ContentStatistics: React.FC = () => {
               Join thousands of businesses already using our AI solutions
             </p>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 =======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
@@ -315,12 +317,14 @@ constachievements= [
 ]
 useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
 consttimers= Object.keys(targetCounters).map((key) => {
-consttarget= targetCounters[key as keyof type of targetCounters]
-constduration=2000; // 2secondsconstincrement= target / (duration /16) //60fps
+consttarget= targetCounters[key as keyof type of targetCounters
+  ];
+  const constduration=2000; // 2secondsconstincrement= target / (duration /16) //60fps
 return setInterva l(() => {
 setCounters(prev=> {
-constcurrent= prev[key as keyof type of prev]
-if(current< target) {
+constcurrent= prev[key as keyof type of prev
+  ];
+  const if(current< target) {
 return {
 ...prev
 [key]: Math.min(current + increment, target)}
@@ -337,10 +341,10 @@ return (
     </>
   )
 return (
-<div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm: px-6 lg:px-8&quot;></div>
-<div className=&quot;max-w-7xl mx-auto&quot;></div>
-<div className=&quot;text-center mb-16&quot;></div>
-<h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;></h2>
+<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm: px-6 lg:px-8"></div>
+<div className="max-w-7xl mx-auto"></div>
+<div className="text-center mb-16"></div>
+<h2 className="text-3xl md: text-4xl font-bold text-white mb-4"></h2>
 =======
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto"></div>
@@ -351,11 +355,11 @@ Our Impact in Numbers
 <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
 See how we've transformed businesses and delivered exceptional results.
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-<div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
-<div className=&quot;max-w-7xl mx-auto&quot;>{/* Header */}</div>
-<div className=&quot;text-center mb-16&quot;></div>
-<h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-6&quot;></h2>
-Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Impact</span> in Numbers
+<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
+<div className="max-w-7xl mx-auto">{/* Header */}</div>
+<div className="text-center mb-16"></div>
+<h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
+Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
 =======
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
             <div className="max-w-7xl mx-auto">{/* Header */}</div>
@@ -381,10 +385,10 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 </div>
 {/* Achievements */}
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>{achievements.map((achievement, index) => (</div>
-<div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300&quot;></div>
-<div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4&quot;></div>
-<achievement.icon className=&quot;h-6 w-6 text-white&quot; />
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{achievements.map((achievement, index) => (</div>
+<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300"></div>
+<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4"></div>
+<achievement.icon className="h-6 w-6 text-white" />
 =======
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{achievements.map((achievement, index) => (</div>
 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
@@ -397,10 +401,10 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 </div>
 ))}
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>{statistics.map((stat, index) => (</div>
-<div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300&quot;></div>
-<div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
-<stat.icon className=&quot;w-8 h-8 text-slate-900&quot; />
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">{statistics.map((stat, index) => (</div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300"></div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+<stat.icon className="w-8 h-8 text-slate-900" />
 =======
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">{statistics.map((stat, index) => (</div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300"></div>
@@ -421,10 +425,10 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the powerful features that make our solutions stand out.</p>p>
 </div>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>{features.map((feature, index) => (</div>
-<div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 hover: bg-white/10 transition-all duration-300&quot;></div>
-<div className=&quot;w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4&quot;></div>
-<feature.icon className=&quot;w-6 h-6 text-white&quot; />
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover: bg-white/10 transition-all duration-300"></div>
+<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"></div>
+<feature.icon className="w-6 h-6 text-white" />
 =======
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300"></div>
@@ -452,10 +456,10 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <p className="text-gray-300 max-w-2xl mx-auto">Recognition and milestones that showcase our commitment to excellence.</p>p>
 </div>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>{achievements.map((achievement, index) => (</div>
-<div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300&quot;></div>
-<div className=&quot;w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
-<achievement.icon className=&quot;w-8 h-8 text-white&quot; />
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{achievements.map((achievement, index) => (</div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover: bg-white/10 transition-all duration-300"></div>
+<div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+<achievement.icon className="w-8 h-8 text-white" />
 =======
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{achievements.map((achievement, index) => (</div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300"></div>
@@ -477,10 +481,10 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the advantages that make our solutions the preferred choice.</p>p>
 </div>
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>{benefits.map((benefit, index) => (</div>
-<div key={index} className=&quot;flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover: bg-white/10 transition-all duration-300&quot;></div>
-<CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
-<span className=&quot;text-gray-300&quot;>{benefit}</span>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+<div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover: bg-white/10 transition-all duration-300"></div>
+<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+<span className="text-gray-300">{benefit}</span>
 =======
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
 <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300"></div>
@@ -493,16 +497,16 @@ Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40
 </div>
 {/* CTA Section */}
 <<<<<<< HEAD:app-backup/components/ContentStatistics.tsx
-<div className=&quot;text-center&quot;></div>
-<div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-12&quot;></div>
-<h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Get Started?</h3>
-<p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>Join thousands of satisfied customers and transform your business today.</p>p>
-<div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-<button className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2&quot;></button>
-<Zap className=&quot;w-5 h-5&quot; />
+<div className="text-center"></div>
+<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12"></div>
+<h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h3>
+<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers and transform your business today.</p>p>
+<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"></button>
+<Zap className="w-5 h-5" />
 Get Started Today
 </button>
-<button className=&quot;border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white/10 transition-colors duration-200&quot;></button>
+<button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white/10 transition-colors duration-200"></button>
 =======
 <div className="text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12"></div>
@@ -517,10 +521,10 @@ Get Started Today
 >>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/ContentStatistics.tsx
 View Case Studies
 </div>
-</div>
-</div>
+            </div>
+          </div>
 </div>
 </div>
 )
 }
-export default ContentStatistics
+export default ContentStatistics;

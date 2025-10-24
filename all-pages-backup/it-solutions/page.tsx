@@ -16,6 +16,6 @@ export default function ITSolutionsPage() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </div>;
   )}

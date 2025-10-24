@@ -91,4 +91,4 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   }))
 }
 ;
-export default defaultSecurityHeaders
+export default defaultSecurityHeaders;

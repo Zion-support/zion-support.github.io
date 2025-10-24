@@ -13,7 +13,7 @@ const Analytics: React.FC = () => {
         })
       }
     }
-    initAnalytics()
+    initAnalytics();
   }, [])
 
   return null; // Analytics component doesn&apos;t render anything
@@ -22,4 +22,4 @@ const Analytics: React.FC = () => {
 export default Analytics
 {};
 
-export default AnalyticsPage
+export default AnalyticsPage;

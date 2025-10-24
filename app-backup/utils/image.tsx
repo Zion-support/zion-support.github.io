@@ -33,7 +33,7 @@ _blurDataURL?: string
 fill?: boolean
 sizes?: string
 style?: React.CSSProperties
-onLoad?: () => void
+onLoad?: () => void;
 onError?: () => void;}
 }
 export const Image: React.FC<ImageProps>= ({}
@@ -58,7 +58,7 @@ onError}
 }) => {}
 const [ setIsLoaded] = useState(false)
 const [hasError, setHasError] = useState(false)
-const handleLoad = useCallback(() => {}
+const handleLoad = useCallback(() => {};
 setIsLoaded(true)
 if (onLoad) onLoad()}
 }, [onLoad])

@@ -1,12 +1,11 @@
 import React from 'react';
-import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
-constAIProjectManagerPage: React.FC= () =>{constfeatures= []
+const AIProjectManagerPage: React.FC = () => {const features = []
     'AI-powered project planning and resource allocation',
     'Intelligent timeline prediction and risk assessment',
     'Smart task management with priority optimization',
@@ -16,6 +15,7 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= []
     'Budget optimization and cost forecasting',
     'Integration with popular project management tools'
   ]
+;
 
   const benefits = [];
     '40% increase in project delivery speed',
@@ -26,7 +26,7 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= []
     '50% faster decision making'
   ]
 
-  constpricing= [
+  const pricing = [
     {
       plan: 'Starter',
       price: '$19 9',
@@ -47,9 +47,10 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= []
       popular: false
     }
   ]
+;
 
 const Page = () => {};
-  return ()
+  return (
       </div>
 </>
   )

@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
 
-constMicroSAASPage: React.FC= () =>{constcategories= [
+const MicroSAASPage: React.FC = () => {const categories = [
     {
       title: 'AI-Powered Tools',
       icon: Brain,
@@ -88,7 +88,7 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
     }
   ]
 
-  constbenefits= []
+  const benefits = []
     {icon: Zap,
       title: 'Instant Deployment',
       description: 'Get started in minutes with our ready-to-use applications'
@@ -108,7 +108,7 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
   ]
 
 const Page = () => {};
-  return ()
+  return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

@@ -10,18 +10,18 @@ const UnifiedBanner = lazy(() =>;
   import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
   )
-)
+);
 const ContentPromotion = lazy(() =>;
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({}
     default: EmptyComponent
 {  }))
-)
+);
 const ContentShowcase = lazy(() =>;
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({}
     default: () => <div /></div>
 {  }))
 )
 
-    </div>
+    </div>;
   );
 {};
