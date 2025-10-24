@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
-
-interface PerformanceOptimizerProps {
-  // Add props here
-=======
-'use client'
-import React, { useEffect, useState } from 'react'
-
-interface PerformanceMetrics {
-  loadTime: number
-  renderTime: number
-  memoryUsage: number
-  isSlowConnection: boolean
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 }
 
 const PerformanceOptimizer: React.FC = () => {
@@ -50,8 +34,8 @@ const PerformanceOptimizer: React.FC = () => {
       if (loadTime > 3000 || renderTime > 100 || isSlowConnection) {
         setIsOptimized(true)
         applyOptimizations()
-      }
-    }
+      
+    
 
     const applyOptimizations = () => {
       // Lazy load images
@@ -61,14 +45,14 @@ const PerformanceOptimizer: React.FC = () => {
         if (imageElement.dataset.src) {
           imageElement.src = imageElement.dataset.src
           imageElement.removeAttribute('data-src')
-        }
+        
       })
 
       // Preload critical resources
       const criticalResources = [
         '/fonts/inter.woff2',
         '/css/critical.css'
-      ]
+  ]
 
       criticalResources.forEach(resource => {
         const link = document.createElement('link')
@@ -77,7 +61,7 @@ const PerformanceOptimizer: React.FC = () => {
         link.as = resource.endsWith('.woff2') ? 'font' : 'style'
         document.head.appendChild(link)
       })
-    }
+    
 
     // Measure performance after component mount
     const timer = setTimeout(measurePerformance, 100)
@@ -88,22 +72,24 @@ const PerformanceOptimizer: React.FC = () => {
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null
-  }
+  
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50"></div>
       <div className="mb-2 font-bold">Performance Monitor</div>
       {metrics && (
-        <div className="space-y-1">
+        <div className="space-y-1"></div>
           <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
           <div>Render: {metrics.renderTime.toFixed(0)}ms</div>
           <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB</div>
           <div>Slow: {metrics.isSlowConnection ? 'Yes' : 'No'}</div>
-          {isOptimized && <div className="text-green-400">Optimized</div>}
+          {isOptimized && <div className="text-green-400">Optimized</div>
         </div>
-      )}
+      )
     </div>
   )
+
+
 }
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer}

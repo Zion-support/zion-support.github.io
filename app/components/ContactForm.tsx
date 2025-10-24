@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, {useState}from 'react';
-=======
-
 import React, { useState } from 'react';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
@@ -25,19 +20,6 @@ const ContactForm: React.FC = () => {
     name: '',
     email: '',
     company: '',
-<<<<<<< HEAD
-    message: '',
-    service: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-})
-  }
-=======
     phone: '',
     service: '',
     message: ''
@@ -56,7 +38,6 @@ const ContactForm: React.FC = () => {
     }));
   };
 
->>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' });
@@ -69,34 +50,6 @@ const ContactForm: React.FC = () => {
       setFormData({
         name: '',
         email: '',
-<<<<<<< HEAD
-        phone: '',
-        company: '',
-        message: '',
-        service: ''
-      })
-    }, 3000)
-  }
-  const services = [
-    'AI Solutions',
-    'Web Development',
-    'Mobile Development',
-    'Cloud Migration',
-    'Cybersecurity',
-    'Data Analytics',
-    'DevOps',
-    'Consulting'
-  ]
-  if (isSubmitted) {
-    return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
-        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
-      </div>
-    )
-  }
-=======
         company: '',
         phone: '',
         service: '',
@@ -107,12 +60,11 @@ const ContactForm: React.FC = () => {
     }
   };
 
->>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-        <p className="text-gray-600">We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
+        <p className="text-gray-600">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">

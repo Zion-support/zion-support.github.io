@@ -1,65 +1,57 @@
-'use client';
-import React, { useEffect } from 'react';
+'use client'
 
-interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean;
-  enablePerformanceMonitoring?: boolean;
-  enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;
+import React, { useEffect } from 'react'
+import Script from 'next/script'
+
+declare global {
+  interface Window {
+    gtag: (..._args: any[]) => void
+  }
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true,
-}) => {
+const Analytics: React.FC = () => {
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
+
   useEffect(() => {
-    if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics();
-    }
-    if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring();
-    }
-    if (enableErrorTracking) {
-      initializeErrorTracking();
-    }
-    if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking();
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
+    if (!GA_TRACKING_ID) return
 
-  const initializeGoogleAnalytics = () => {
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID');
+    // Initialize gtag
+    window.gtag = window.gtag || function() {
+      (window.gtag.q = window.gtag.q || []).push(arguments)
     }
-  };
 
-  const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Performance monitoring logic
-    }
-  };
+    window.gtag('js', new Date())
+    window.gtag('config', GA_TRACKING_ID, {
+      page_title: document.title,
+      page_location: window.location.href,
+    })
+  }, [GA_TRACKING_ID])
 
-  const initializeErrorTracking = () => {
-    // Initialize error tracking
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('Error tracked:', event.error);
-      });
-    }
-  };
+  if (!GA_TRACKING_ID) return null
 
-  const initializeUserBehaviorTracking = () => {
-    // Initialize user behavior tracking
-    if (typeof window !== 'undefined') {
-      // User behavior tracking logic
-    }
-  };
+  return (
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_title: document.title,
+              page_location: window.location.href,
+            });
+          `,
+        }}
+      />
+    </>
+  )
+}
 
-  return null; // This component doesn't render anything visible
-};
-
-export default Analytics;
+export default Analytics

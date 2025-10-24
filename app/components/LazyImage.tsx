@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
-=======
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface LazyImageProps {
   src: string
@@ -13,7 +6,7 @@ interface LazyImageProps {
   placeholder?: string
   onLoad?: () => void
   onError?: () => void
-}
+
 
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
@@ -34,14 +27,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
         if (entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-        }
+        
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 
     )
 
     if (imgRef.current) {
       observer.observe(imgRef.current)
-    }
+    
 
     return () => observer.disconnect()
   }, [])
@@ -49,41 +42,43 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
-  }
+  
 
   const handleError = () => {
     setHasError(true)
     onError?.()
-  }
+  
 
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
       {!isLoaded && !hasError && (
         <img
-          src={placeholder}
+          src={placeholder
           alt=""
           className="absolute inset-0 w-full h-full object-cover blur-sm"
         />
-      )}
+      )
       {isInView && (
         <img
-          src={src}
-          alt={alt}
-          onLoad={handleLoad}
-          onError={handleError}
+          src={src
+          alt={alt
+          onLoad={handleLoad
+          onError={handleError
           className={`w-full h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          }`
           loading="lazy"
         />
-      )}
+      )
       {hasError && (
         <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500">
           Failed to load
         </div>
-      )}
+      )
     </div>
   )
+
+
 }
 
-export default LazyImage
+export default LazyImage}
