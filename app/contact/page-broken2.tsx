@@ -11,18 +11,18 @@ const ContactPage: React.FC = () => {
     phone: '',
     service: '',
     budget: '',
-    timeline: '',
-    message: '',
+    timeline: '',}
+    message: '',}
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+    const { name, _value } = e.target
     setFormData(prev => ({
-      ...prev,
-      [name]: value
+      ...prev,}
+      [name]: _value}
     }))
   }, [])
 
@@ -42,14 +42,14 @@ const ContactPage: React.FC = () => {
         phone: '',
         service: '',
         budget: '',
-        timeline: '',
-        message: '',
+        timeline: '',}
+        message: '',}
       })
     } catch (_error) {
-      setSubmitStatus('error')
+      setSubmitStatus('error')}
     } finally {
-      setIsSubmitting(false)
-    
+      setIsSubmitting(false)}
+    }
   }
 
   const services = [
@@ -68,20 +68,20 @@ const ContactPage: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST',
+      details: '+1 (302) 464-0950',}
+      description: 'Mon-Fri 9AM-6PM EST',}
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours',
+      details: 'kleber@ziontechgroup.com',}
+      description: 'We respond within 24 hours',}
     },
     {
       icon: MapPin,
       title: 'Address',
-      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office',
+      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',}
+      description: 'Visit our office',}
     },
     {
       icon: Clock,
@@ -90,14 +90,14 @@ const ContactPage: React.FC = () => {
       description: 'Eastern Time'
   ]
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
-      <div className="container mx-auto px-4"></div>
+  return();
+    <div className="accessibility-enhanced"></div>
+      <div className="accessibility-enhanced"></div>
         {/* Header */
-        <div className="text-center mb-16"></div>
+        <div className="accessibility-enhanced"></div>
           <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6"></h1>
-            Get in
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            Get in}
+            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">}
               {' '}Touch
             </span>
           </h1>
@@ -106,37 +106,35 @@ const ContactPage: React.FC = () => {
             how our AI and IT solutions can help you achieve your goals.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+        <div className="accessibility-enhanced"></div>
           {/* Contact Form */
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
+          <div className="accessibility-enhanced"></div>
             <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-            
             {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
+              <div className="accessibility-enhanced"></div>
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
               </div>
             )
             
             {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
+              <div className="accessibility-enhanced"></div>
                 <span className="text-red-400">Failed to send message. Please try again.</span>
               </div>
-            )
-
+            )}
+}
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div className="accessibility-enhanced"></div>
                 <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
                   </label>
-                  <div className="relative"></div>
+                  <div className="accessibility-enhanced"></div>
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
                       type="text"
                       name="name"
-                      value={formData.name
+                      _value={formData.name
                       onChange={handleInputChange
                       required
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
@@ -144,17 +142,16 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
                 </div>
-                
                 <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
-                  <div className="relative"></div>
+                  <div className="accessibility-enhanced"></div>
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
                       type="email"
                       name="email"
-                      value={formData.email
+                      _value={formData.email
                       onChange={handleInputChange
                       required
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
@@ -163,35 +160,33 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div className="accessibility-enhanced"></div>
                 <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
-                  <div className="relative"></div>
+                  <div className="accessibility-enhanced"></div>
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
                       type="text"
                       name="company"
-                      value={formData.company
+                      _value={formData.company
                       onChange={handleInputChange
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                       placeholder="Your company"
                     />
                   </div>
                 </div>
-                
                 <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Phone Number
                   </label>
-                  <div className="relative"></div>
+                  <div className="accessibility-enhanced"></div>
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
                       type="tel"
                       name="phone"
-                      value={formData.phone
+                      _value={formData.phone
                       onChange={handleInputChange
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                       placeholder="+1 (555) 123-4567"
@@ -199,38 +194,36 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div></div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
                   Service Interest
                 </label>
-                <div className="relative"></div>
+                <div className="accessibility-enhanced"></div>
                   <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <select
                     name="service"
-                    value={formData.service
+                    _value={formData.service
                     onChange={handleInputChange
                     className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
                   >
-                    <option value="">Select a service</option>
-                    {services.map((service) => (
-                      <option key={service} value={service}>
+                    <option _value="">Select a service</option>}
+                    {services.map((service) => (}
+                      <option key={service} _value={service}>
                         {service
                       </option>
                     ))
                   </select>
                 </div>
               </div>
-
               <div></div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
-                <div className="relative"></div>
+                <div className="accessibility-enhanced"></div>
                   <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                   <textarea
                     name="message"
-                    value={formData.message
+                    _value={formData.message
                     onChange={handleInputChange
                     required
                     rows={6
@@ -239,25 +232,23 @@ const ContactPage: React.FC = () => {
                   />
                 </div>
               </div>
-
               <button
                 type="submit"
                 disabled={isSubmitting
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <div className="accessibility-enhanced"></div>
                     <span>Sending...</span>
                 ) : (
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
+                    <Send className="w-5 h-5" />}
+                    <span>Send Message</span>}
                 )}
               </button>
             </form>
           </div>
-
           {/* Contact Information */
-          <div className="space-y-8"></div>
+          <div className="accessibility-enhanced"></div>
             <div></div>
               <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
               <p className="text-lg text-gray-300 mb-8">
@@ -265,11 +256,10 @@ const ContactPage: React.FC = () => {
                 and we'll get back to you as soon as possible.
               </p>
             </div>
-
-            <div className="space-y-6"></div>
-              {contactInfo.map((info, index) => (
+            <div className="accessibility-enhanced"></div>}
+              {contactInfo.map((info, index) => (}
                 <div key={index} className="flex items-center"></div>
-                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
+                  <div className="accessibility-enhanced"></div>
                     <info.icon className="w-6 h-6 text-white" />
                   </div>
                   <div></div>
@@ -289,8 +279,8 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  )
+    </div>}
+  )}
 }
 
 }

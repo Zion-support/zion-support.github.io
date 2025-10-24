@@ -4,17 +4,15 @@ import React from 'react'
 import Image from 'next/image'
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
   placeholder?: 'empty' | 'blur'
-  blurDataURL?: string
-
-
+  blurDataURL?: string;
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -23,10 +21,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   quality = 75,
-  placeholder = 'empty',
-  blurDataURL
+  placeholder = 'empty',}
+  blurDataURL}
 }) => {
-  return (
+  return();}
     <div className={`relative overflow-hidden ${className}`}></div>
       <Image
         src={src
@@ -40,8 +38,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
-    </div>
-  )
+    </div>}
+  )}
 }
 
 }

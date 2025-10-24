@@ -1,20 +1,18 @@
 
 interface UserExperienceEnhancerProps {
   children: React.ReactNode
-  enableAnimations?: boolean
-  enableHoverEffects?: boolean
-  enableFocusManagement?: boolean
-  enableKeyboardNavigation?: boolean
-  enableAccessibility?: boolean
-
-
+  enableAnimations?: boolean;
+  enableHoverEffects?: boolean;
+  enableFocusManagement?: boolean;
+  enableKeyboardNavigation?: boolean;
+  enableAccessibility?: boolean;
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children,
   enableAnimations = true,
   enableHoverEffects = true,
   enableFocusManagement = true,
-  enableKeyboardNavigation = true,
-  enableAccessibility = true,
+  enableKeyboardNavigation = true,}
+  enableAccessibility = true,}
 }) => {
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [isHighContrast, setIsHighContrast] = useState(false)
@@ -45,20 +43,20 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation')
-        
+          document.body.classList.add('keyboard-navigation')}
+        }
       }
 
       const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation')
+        document.body.classList.remove('keyboard-navigation')}
       }
 
       document.addEventListener('keydown', handleKeyDown)
       document.addEventListener('mousedown', handleMouseDown)
 
       return () => {
-        document.removeEventListener('keydown', handleKeyDown)
-        document.removeEventListener('mousedown', handleMouseDown)
+        document.removeEventListener('keydown', handleKeyDown)}
+        document.removeEventListener('mousedown', handleMouseDown)}
       }
     
   }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
@@ -100,16 +98,16 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     `
     document.head.appendChild(style)
 
-    return () => {
-      document.head.removeChild(style)
+    return () => {}
+      document.head.removeChild(style)}
     }
   }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion])
 
-  return (
+  return();
     <div className="ux-enhanced">
       {children
-    </div>
-  )
+    </div>}
+  )}
 }
 
 }

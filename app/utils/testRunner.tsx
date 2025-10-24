@@ -7,55 +7,47 @@
 import React, { ReactElement, useCallback } from 'react'
 
 export interface PerformanceMetrics {
-  renderTime: number
-  memoryUsage: number
-  timestamp: string
-
-
+  renderTime: number;
+  memoryUsage: number;
+  timestamp: string;
 export interface CoverageMetrics {
-  statements: number
-  branches: number
-  functions: number
-  lines: number
-
-
+  statements: number;
+  branches: number;
+  functions: number;
+  lines: number;
 // Test configuration interface
 export interface TestConfig {
-  enableMocking: boolean
-  enableCoverage: boolean
-  enablePerformance: boolean
-  enableAccessibility: boolean
-
-
+  enableMocking: boolean;
+  enableCoverage: boolean;
+  enablePerformance: boolean;
+  enableAccessibility: boolean;
 // Test result types
 export interface TestResult {
-  name: string
+  name: string;
   status: 'passed' | 'failed' | 'skipped'
-  duration: number
-  error?: string
-
-
+  duration: number;
+  error?: string;
 export interface TestSuite {
-  name: string
+  name: string;
   tests: TestResult[]
-  duration: number
+  duration: number;
   status: 'passed' | 'failed' | 'partial'
 
 
 // Mock utilities
-export const createMock = <T,>(defaultValue: T): jest.Mocked<T> => {
-  return defaultValue as jest.Mocked<T>
+export const createMock = <T,>(defaultValue: T): global.jest.Mocked<T> => {}
+  return defaultValue as global.jest.Mocked<T>}
 }
 
-export const mockFunction = <T extends (...args: any[]) => any>(
-  implementation?: T
-): jest.MockedFunction<T> => {
-  return jest.fn(implementation) as jest.MockedFunction<T>
+export const mockFunction = <T extends (...args: unknown[]) => any>(
+  implementation?: T;
+): global.jest.MockedFunction<T> => {
+  return global.jest.fn(implementation) as global.jest.MockedFunction<T>}
 }
 
 // Test runner component
 interface TestRunnerProps {
-  config: TestConfig
+  config: TestConfig;
   onTestComplete?: (results: TestSuite[]) => void
   onPerformanceUpdate?: (metrics: PerformanceMetrics) => void
   onCoverageUpdate?: (metrics: CoverageMetrics) => void
@@ -64,8 +56,8 @@ interface TestRunnerProps {
 const TestRunner: React.FC<TestRunnerProps> = ({
   config,
   onTestComplete,
-  onPerformanceUpdate,
-  onCoverageUpdate,
+  onPerformanceUpdate,}
+  onCoverageUpdate,}
 }) => {
   const runTests = useCallback(async () => {
     const results: TestSuite[] = []
@@ -88,11 +80,11 @@ const TestRunner: React.FC<TestRunnerProps> = ({
         const accessibilityResults = await runAccessibilityTests()
         results.push(accessibilityResults)
       
-
-      onTestComplete?.(results)
+}
+      onTestComplete?.(results)}
     } catch (error) {
-      console.error('Test execution failed:', error)
-    
+      console.error('Test execution failed:', error)}
+    }
   }, [config, onTestComplete, onPerformanceUpdate, onCoverageUpdate])
 
   const measurePerformance = async (): Promise<PerformanceMetrics> => {
@@ -107,8 +99,8 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     
     return {
       renderTime: endTime - startTime,
-      memoryUsage: endMemory - startMemory,
-      timestamp: new Date().toISOString(),
+      memoryUsage: endMemory - startMemory,}
+      timestamp: new Date().toISOString(),}
     }
   }
 
@@ -117,8 +109,8 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     return {
       statements: Math.floor(Math.random() * 100),
       branches: Math.floor(Math.random() * 100),
-      functions: Math.floor(Math.random() * 100),
-      lines: Math.floor(Math.random() * 100),
+      functions: Math.floor(Math.random() * 100),}
+      lines: Math.floor(Math.random() * 100),}
     }
   }
 
@@ -132,8 +124,8 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     tests.push({
       name: 'Images have alt text',
       status: images.length === imagesWithAlt.length ? 'passed' : 'failed',
-      duration: 0,
-      error: images.length !== imagesWithAlt.length ? 'Some images are missing alt text' : undefined,
+      duration: 0,}
+      error: images.length !== imagesWithAlt.length ? 'Some images are missing alt text' : undefined,}
     })
 
     // Check for heading structure
@@ -141,8 +133,8 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     tests.push({
       name: 'Proper heading structure',
       status: headings.length > 0 ? 'passed' : 'failed',
-      duration: 0,
-      error: headings.length === 0 ? 'No headings found' : undefined,
+      duration: 0,}
+      error: headings.length === 0 ? 'No headings found' : undefined,}
     })
 
     // Check for keyboard navigation
@@ -150,8 +142,8 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     tests.push({
       name: 'Focusable elements present',
       status: focusableElements.length > 0 ? 'passed' : 'failed',
-      duration: 0,
-      error: focusableElements.length === 0 ? 'No focusable elements found' : undefined,
+      duration: 0,}
+      error: focusableElements.length === 0 ? 'No focusable elements found' : undefined,}
     })
 
     const passedTests = tests.filter(test => test.status === 'passed').length
@@ -160,15 +152,15 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     return {
       name: 'Accessibility Tests',
       tests,
-      duration: 0,
-      status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed',
+      duration: 0,}
+      status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed',}
     }
   }
 
   React.useEffect(() => {
     if (config.enablePerformance || config.enableCoverage || config.enableAccessibility) {
-      runTests()
-    
+      runTests()}
+    }
   }, [runTests, config])
 
   return null
