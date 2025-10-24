@@ -4,6 +4,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+
+import Footer from '@/components/Footer';
+
 export default function AiInvoiceGeneratorPage() {
   return (
     <>
@@ -31,6 +34,4 @@ export default function AiInvoiceGeneratorPage() {
       <Footer />
     </>
   );
-};
-
-export default AIInvoiceGeneratorPage;
+}

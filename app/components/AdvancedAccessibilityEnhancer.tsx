@@ -336,7 +336,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   )
   return null
 }
+
 export default AdvancedAccessibilityEnhancer
 }}}}}
 }
+
 export default AdvancedAccessibilityEnhancerPage

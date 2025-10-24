@@ -176,4 +176,5 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
 }
+
 export default AdvancedPerformanceOptimizer

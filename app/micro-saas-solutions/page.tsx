@@ -4,6 +4,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+
+import Footer from '@/components/Footer';
+
 export default function MicroSaasSolutionsPage() {
   return (
     <>
@@ -32,4 +35,3 @@ export default function MicroSaasSolutionsPage() {
 </>
   )
 }
-export default MicroSaasSolutionsPage

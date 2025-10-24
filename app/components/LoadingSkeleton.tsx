@@ -138,4 +138,5 @@ const LoadingSkeletonPage: React.FC = () => {
 </>
   )
 }
+
 export default LoadingSkeletonPage

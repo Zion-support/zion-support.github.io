@@ -31,4 +31,3 @@ export default function DemoPage() {
 </>
   )
 }
-export default DemoPage

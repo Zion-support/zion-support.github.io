@@ -182,6 +182,7 @@ const ContentStatistics: React.FC = () => {
     </section>
   )
 }
+
 export default ContentStatisticsPage
 clients: 0,
     projects: 0
@@ -419,4 +420,5 @@ View Case Studies
 </div>
 )
 }
+
 export default ContentStatistics

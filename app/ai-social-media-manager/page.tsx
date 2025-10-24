@@ -4,6 +4,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+
+import Footer from '@/components/Footer';
+
 export default function AiSocialMediaManagerPage() {
   return (
     <>
@@ -31,6 +34,4 @@ export default function AiSocialMediaManagerPage() {
       <Footer />
     </>
   );
-};
-
-export default AISocialMediaManagerPage;
+}

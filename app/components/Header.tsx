@@ -1,7 +1,8 @@
 import React from 'react';
 import Navigation from './Navigation';
 
-const Header: React.FC = () => {
+
+import Footer from '@/components/Footer';const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-sm border-b">
       <Navigation />
@@ -96,7 +97,9 @@ const Header: React.FC = () => {
 </>
   )
 }
+
 export default HeaderPage
   )
 }
+
 export default Header

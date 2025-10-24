@@ -53,5 +53,6 @@ const ImageOptimizerPage: React.FC = () => {
     </div>
   )
 }
+
 export default ImageOptimizerPage
 export default ImageOptimizerPage
