@@ -20,7 +20,7 @@ const AIAutomatedReportingPage: React.FC = () => {
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
                 <Brain className="w-5 h-5 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 font-medium">AI-Powered Intelligence</span>
-              </div>
+              </Helmet></div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 AI Automated

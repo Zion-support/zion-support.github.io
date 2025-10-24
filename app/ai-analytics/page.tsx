@@ -54,7 +54,7 @@ const AIAnalyticsPage: React.FC = () => {
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-            </div>
+            </Helmet></div>
           </div>
         </section>
 
