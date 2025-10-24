@@ -24,9 +24,9 @@ export default [
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       'react-hooks': reactHooks,

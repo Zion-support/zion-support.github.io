@@ -1,6 +1,7 @@
-"use client"
-import React from "react"
-import { Helmet } from "react-helmet-async"
+&quot;use client&quot;
+import { Metadata } from 'next';
+import React from &quot;react&quot;
+import { Helmet } from &quot;react-helmet-async&quot;
 
 const NotFoundPagePage: React.FC = () => {
   const features = [
@@ -28,7 +29,7 @@ const NotFoundPagePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -36,27 +37,22 @@ const NotFoundPagePage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
-      <Helmet>
-        <title>NotFoundPage | Zion Tech Group</title>
-        <meta name="description" content="Professional NotFoundPage services by Zion Tech Group." />
-        <meta name="keywords" content="AI, artificial intelligence, NotFoundPage, AI solutions, intelligent automation" />
-      </Helmet>
-      <section className="py-20 px-4"></section>
-        <div className="container mx-auto max-w-6xl"></div>
-          <div className="text-center mb-16"></div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">NotFoundPage</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional NotFoundPage services tailored to your business needs.</p>p>
+      
+      <section className=&quot;py-20 px-4&quot;></section>
+        <div className=&quot;container mx-auto max-w-6xl&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>NotFoundPage</h1>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional NotFoundPage services tailored to your business needs.</p>p>
           </div>
         </div>
       </section>
     </div>
   )
-}
+, }
 
-export default NotFoundPagePage
-
+export default NotFoundPagePage;
 export default NotFoundPagePage;

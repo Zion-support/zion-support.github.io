@@ -4,7 +4,7 @@ import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -14,280 +14,195 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableColorContrast = true,
   enableMotionReduction = true,
   enableFontScaling = true,
-  enableVoiceNavigation = true
-}) => {
-  const [accessibilitySettings, setAccessibilitySettings] = useState({
+  enableVoiceNavigation = true;
+}) => {const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
     screenReader: false,
-    keyboardNavigation: false
+    keyboardNavigation: false;
   })
 
-  // Detect user preferences
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
-
-    // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-
+  // Detect user preferences;
+  useEffect(() => {if (typeof window === 'undefined') return;
+    // Check for reduced motion preference;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Check for high contrast preference;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    // Check for color scheme preference;
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setAccessibilitySettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast;
     }))
-
-    // Listen for changes in user preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
-
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
-    }
-
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }))
-    }
-
-    motionQuery.addEventListener('change', handleMotionChange)
-    contrastQuery.addEventListener('change', handleContrastChange)
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange)
-      contrastQuery.removeEventListener('change', handleContrastChange)
-    }
   }, [])
 
-  // Apply accessibility styles
+  // Apply accessibility settings;
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const root = document.documentElement
-
-    // Apply high contrast mode
+    if (typeof window === 'undefined') return;
+    const root = document.documentElement;
+    // Apply high contrast;
     if (accessibilitySettings.highContrast) {
       root.classList.add('high-contrast')
     } else {
       root.classList.remove('high-contrast')
     }
 
-    // Apply reduced motion
+    // Apply reduced motion;
     if (accessibilitySettings.reducedMotion) {
       root.classList.add('reduced-motion')
     } else {
       root.classList.remove('reduced-motion')
     }
 
-    // Apply font scaling
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
+    // Apply font scaling;
+    root.style.fontSize = accessibilitySettings.fontSize === 'large' ? '1.2em' : '1em'
   }, [accessibilitySettings])
 
-  // Keyboard navigation enhancement
-  const setupKeyboardNavigation = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.ctrlKey) {
+  // Keyboard navigation handler;
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {if (!enableKeyboardNavigation) return;
+    // Skip to main content;
+    if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+      const mainContent = document.querySelector('main')
+      if (mainContent) {
+        (mainContent as HTMLElement).focus()
         event.preventDefault()
-        const mainContent = document.getElementById('main-content')
-        if (mainContent) {
-          mainContent.focus()
-        }
       }
     }
 
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [])
-
-  // Screen reader support
-  const setupScreenReaderSupport = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    // Add screen reader announcements
-    const announceToScreenReader = (message: string) => {
-      const announcement = document.createElement('div')
-      announcement.setAttribute('aria-live', 'polite')
-      announcement.setAttribute('aria-atomic', 'true')
-      announcement.className = 'sr-only'
-      announcement.textContent = message
-      document.body.appendChild(announcement)
-      
-      setTimeout(() => {
-        document.body.removeChild(announcement)
-      }, 1000)
-    }
-
-    // Announce page changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-          announceToScreenReader('Page content updated')
+    // Escape key to close modals;
+    if (event.key === 'Escape') {
+      const modals = document.querySelectorAll('[role="dialog"]')
+      modals.forEach(modal => {
+        if (modal.getAttribute('aria-hidden') === 'false') {
+          (modal as HTMLElement).click()
         }
       })
-    })
-
-    observer.observe(document.body, { childList: true, subtree: true })
-    return () => observer.disconnect()
-  }, [])
-
-  // Focus management
-  const setupFocusManagement = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    // Trap focus within modals
-    const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      )
-      const firstElement = focusableElements[0] as HTMLElement
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-
-      const handleTabKey = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              lastElement.focus()
-              e.preventDefault()
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement.focus()
-              e.preventDefault()
-            }
-          }
-        }
-      }
-
-      element.addEventListener('keydown', handleTabKey)
-      return () => element.removeEventListener('keydown', handleTabKey)
     }
+  }, [enableKeyboardNavigation])
 
-    // Apply to all modals
-    const modals = document.querySelectorAll('[role="dialog"]')
-    modals.forEach(modal => trapFocus(modal as HTMLElement))
-  }, [])
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [handleKeyDown])
 
-  // Enhanced ARIA labels
-  const enhanceARIALabels = useCallback(() => {
-    if (typeof window === 'undefined') return
+  // Focus management;
+  useEffect(() => {
+    if (!enableFocusManagement) return;
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
 
-    // Add missing ARIA labels
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
+    focusableElements.forEach(element => {
+      element.setAttribute('tabindex', '0')
+    })
+  }, [enableFocusManagement])
+
+  // ARIA labels enhancement;
+  useEffect(() => {
+    if (!enableARIALabels) return;
+    // Add ARIA labels to buttons without text;
+    const buttons = document.querySelectorAll('button:not([aria-label])')
     buttons.forEach(button => {
-      if (!button.textContent?.trim()) {
+      const text = button.textContent?.trim()
+      if (!text) {
         button.setAttribute('aria-label', 'Button')
       }
     })
 
-    // Add ARIA labels to images
+    // Add ARIA labels to images;
     const images = document.querySelectorAll('img:not([alt])')
     images.forEach(img => {
       img.setAttribute('alt', 'Image')
     })
-  }, [])
+  }, [enableARIALabels])
 
-  // Skip links
-  const addSkipLinks = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const skipLinks = document.createElement('div')
-    skipLinks.className = 'skip-links'
-    skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-    `
-    document.body.insertBefore(skipLinks, document.body.firstChild)
-  }, [])
-
-  // Color contrast checker
-  const checkColorContrast = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const checkElement = (element: Element) => {
-      const styles = window.getComputedStyle(element)
-      const color = styles.color
-      const backgroundColor = styles.backgroundColor
-      
-      // Basic contrast check (simplified)
-      if (color === backgroundColor) {
-        // Low contrast detected - could implement proper contrast checking here
-      }
-    }
-
-    const allElements = document.querySelectorAll('*')
-    allElements.forEach(checkElement)
-  }, [])
-
-  // Voice navigation
-  const setupVoiceNavigation = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    const recognition = new (window as any).webkitSpeechRecognition()
-    recognition.continuous = false
-    recognition.interimResults = false
-
-    recognition.onresult = (event: any) => {
-      const command = event.results[0][0].transcript.toLowerCase()
-      
-      if (command.includes('go to home')) {
-        window.location.href = '/'
-      } else if (command.includes('go to about')) {
-        window.location.href = '/about'
-      } else if (command.includes('go to services')) {
-        window.location.href = '/services'
-      } else if (command.includes('call phone')) {
-        window.location.href = 'tel:+13024640950'
-      } else if (command.includes('send email')) {
-        window.location.href = 'mailto:kleber@ziontechgroup.com'
-      }
-    }
-
-    // Add voice navigation button
-    const voiceButton = document.createElement('button')
-    voiceButton.textContent = 'Voice Navigation'
-    voiceButton.className = 'voice-navigation-button'
-    voiceButton.setAttribute('aria-label', 'Start voice navigation')
-    voiceButton.onclick = () => recognition.start()
-
-    const header = document.querySelector('header') || document.querySelector('nav')
-    if (header) {
-      header.appendChild(voiceButton)
-    }
-  }, [])
-
-  // Initialize all accessibility features
+  // Skip links;
   useEffect(() => {
-    if (enableKeyboardNavigation) {
-      setupKeyboardNavigation()
-    }
-    if (enableScreenReader) {
-      setupScreenReaderSupport()
-    }
-    if (enableFocusManagement) {
-      setupFocusManagement()
-    }
-    if (enableARIALabels) {
-      enhanceARIALabels()
-    }
-    if (enableSkipLinks) {
-      addSkipLinks()
-    }
-    if (enableColorContrast) {
-      checkColorContrast()
-    }
-    if (enableVoiceNavigation) {
-      setupVoiceNavigation()
-    }
-  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
+    if (!enableSkipLinks) return;
+    const skipLink = document.createElement('a')
+    skipLink.href = '#main-content'
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'skip-link'
+    skipLink.style.cssText = `;
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
+      transition: top 0.3s;
+    `
 
-  return null
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.top = '6px'
+    })
+
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.top = '-40px'
+    })
+
+    document.body.insertBefore(skipLink, document.body.firstChild)
+  }, [enableSkipLinks])
+
+  // Voice navigation;
+  useEffect(() => {
+    if (!enableVoiceNavigation || typeof window === 'undefined') return;
+    const handleVoiceCommand = (event: any) => {
+      const command = event.detail?.command?.toLowerCase()
+      
+      switch (command) {
+        case 'navigate home':
+          window.location.href = '/'
+          break;
+        case 'navigate back':
+          window.history.back()
+          break;
+        case 'scroll up':
+          window.scrollBy(0, -100)
+          break;
+        case 'scroll down':
+          window.scrollBy(0, 100)
+          break;
+      }
+    }
+
+    window.addEventListener('voiceCommand', handleVoiceCommand)
+    return () =</ window.removeEventListener('voiceCommand', handleVoiceCommand)
+  }, [enableVoiceNavigation])
+
+  return (
+    <div className="accessibility-enhancer">
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }} />
+        <button onClick={() =>setAccessibilitySettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
+          className="accessibility-toggle"
+          aria-label="Toggle high contrast"
+        </
+          High Contrast</button />
+        <button onClick={() =>setAccessibilitySettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
+          className="accessibility-toggle"
+          aria-label="Toggle reduced motion"
+        </
+          Reduced Motion</button />
+        <button onClick={() =>setAccessibilitySettings(prev => ({ 
+            ...prev, 
+            fontSize: prev.fontSize === 'normal' ? 'large' : 'normal' 
+          }))}
+          className="accessibility-toggle"
+          aria-label="Toggle font size"
+        </
+          Large Text</button />
+      </div />
+      {/* Skip Link */}
+      {enableSkipLinks && (
+        <a href="#main-content" className="skip-link" />Skip to main content</a />
+      )}
+    </div />
+  )
 }
 
 export default AdvancedAccessibilityEnhancer

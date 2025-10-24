@@ -3,35 +3,34 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
-interface SEOOptimizerProps {
+interface SEOOptimizerProps {;
   className?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData;
 }) => {
   useEffect(() => {
-    // Update page title
-    document.title = title
-
-    // Update meta description
+    // Update page title;
+    document.title = title;
+    // Update meta description;
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
       const meta = document.createElement('meta')
       meta.name = 'description'
-      meta.content = description
+      meta.content = description;
       document.head.appendChild(meta)
     }
   ]
 
-    // Update keywords
+    // Update keywords;
     const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
@@ -42,20 +41,19 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.appendChild(meta)
     }
 
-    // Update canonical URL
+    // Update canonical URL;
     let canonicalLink = document.querySelector('link[rel="canonical"]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
     } else {
       canonicalLink = document.createElement('link')
       canonicalLink.rel = 'canonical'
-      canonicalLink.href = canonicalUrl
+      canonicalLink.href = canonicalUrl;
       document.head.appendChild(canonicalLink)
     }
 
-    // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {
-      let ogTag = document.querySelector(`meta[property="${property}"]`)
+    // Update Open Graph tags;
+    const updateOGTag = (property: string, content: string) => {let ogTag = document.querySelector(`meta[property="${property}"]`)
       if (ogTag) {
         ogTag.setAttribute('content', content)
       } else {
@@ -72,9 +70,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateOGTag('og:url', canonicalUrl)
     updateOGTag('og:type', 'website')
 
-    // Update Twitter Card tags
-    const updateTwitterTag = (name: string, content: string) => {
-      let twitterTag = document.querySelector(`meta[name="${name}"]`)
+    // Update Twitter Card tags;
+    const updateTwitterTag = (name: string, content: string) =</ {let twitterTag = document.querySelector(`meta[name="${name}"]`)
       if (twitterTag) {
         twitterTag.setAttribute('content', content)
       } else {
@@ -90,7 +87,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateTwitterTag('twitter:description', description)
     updateTwitterTag('twitter:image', ogImage)
 
-    // Add structured data
+    // Add structured data;
     if (structuredData) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
@@ -98,7 +95,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.appendChild(script)
     }
 
-    // Add viewport meta tag if not present
+    // Add viewport meta tag if not present;
     let viewport = document.querySelector('meta[name="viewport"]')
     if (!viewport) {
       viewport = document.createElement('meta')
@@ -107,7 +104,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.appendChild(viewport)
     }
 
-    // Add charset if not present
+    // Add charset if not present;
     let charset = document.querySelector('meta[charset]')
     if (!charset) {
       charset = document.createElement('meta')
@@ -118,40 +115,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
 
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      )}
-    </Head>
-  )
-}
-
-export default SEOOptimizer
-  );
-};
+    <Head />
+      <title>{title}</title />
+      <meta name="description" content={description} / />
+      <meta name="keywords" content={keywords.join(', ')} / />
+      <link rel="canonical" href={canonicalUrl} / />
 
 export default SEOOptimizerPage;

@@ -1,200 +1,143 @@
-'use client'
 import React from 'react'
 import Link from 'next/link'
 import { Brain, Globe, Shield, Zap } from 'lucide-react'
+export const dynamic = 'force-dynamic';
 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Dr. Sarah Chen",
-    role: "Chief Executive Officer",
-    bio: "Leading AI research and strategic vision with 15+ years in enterprise technology.",
-    expertise: ["AI Strategy", "Leadership", "Innovation"],
-    image: "/api/placeholder/300/300"
-  },
-  {
-    id: 2,
-    name: "Michael Rodriguez",
-    role: "Chief Technology Officer",
-    bio: "Expert in scalable architecture and cutting-edge AI implementation.",
-    expertise: ["System Architecture", "AI Development", "Cloud Computing"],
-    image: "/api/placeholder/300/300"
-  },
-  {
-    id: 3,
-    name: "Dr. Emily Watson",
-    role: "Head of AI Research",
-    bio: "Pioneering machine learning algorithms and neural network optimization.",
-    expertise: ["Machine Learning", "Deep Learning", "Research"],
-    image: "/api/placeholder/300/300"
-  },
-  {
-    id: 4,
-    name: "James Thompson",
-    role: "VP of Engineering",
-    bio: "Building robust, scalable solutions that power the future of business.",
-    expertise: ["Software Engineering", "DevOps", "Team Leadership"],
-    image: "/api/placeholder/300/300"
-  },
-  {
-    id: 5,
-    name: "Lisa Park",
-    role: "Head of Data Science",
-    bio: "Transforming raw data into actionable insights and business intelligence.",
-    expertise: ["Data Analytics", "Business Intelligence", "Statistics"],
-    image: "/api/placeholder/300/300"
-  },
-  {
-    id: 6,
-    name: "David Kumar",
-    role: "Lead AI Engineer",
-    bio: "Specializing in natural language processing and computer vision applications.",
-    expertise: ["NLP", "Computer Vision", "AI Implementation"],
-    image: "/api/placeholder/300/300"
-  }
-]
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
-const values = [
-  {
-    icon: Brain,
-    title: "Innovation",
-    description: "We constantly push the boundaries of what's possible with AI and technology."
-  },
-  {
-    icon: Globe,
-    title: "Global Impact",
-    description: "Our solutions create positive change for businesses and communities worldwide."
-  },
-  {
-    icon: Shield,
-    title: "Trust & Security",
-    description: "We prioritize data security and ethical AI practices in everything we do."
-  },
-  {
-    icon: Zap,
-    title: "Excellence",
-    description: "We deliver exceptional results through meticulous attention to detail."
-  }
-]
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-const stats = [
-  { label: "Years Combined Experience", value: "150+" },
-  { label: "AI Projects Delivered", value: "1000+" },
-  { label: "Team Members", value: "25+" },
-  { label: "Client Satisfaction", value: "99%" }
-]
-
-const TeamPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Team
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Meet the brilliant minds behind our innovative AI and IT solutions. 
-              Our diverse team of experts is dedicated to transforming your business.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced solutions designed to transform your business operations and drive innovation.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
           </div>
+        </section>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Team Members */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-300 mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-300 text-sm mb-4">
-                    {member.bio}
-                  </p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {member.expertise.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Values Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Values
-            </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our company culture.
-            </p>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful features designed to transform your business operations
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {value.description}
-                  </p>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* CTA Section */}
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join our team of innovators and help shape the future of AI and technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center"
-              >
-                View Open Positions
-              </Link>
-              <Link 
-                href="/about"
-                className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center"
-              >
-                Learn About Our Culture
-              </Link>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of intelligent automation and advanced technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-6 w-6 text-emerald-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+        </section>
 
-export default TeamPage
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's work together to create intelligent solutions that work for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Page;
