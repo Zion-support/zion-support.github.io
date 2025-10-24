@@ -2,14 +2,14 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ className }) => {
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, className }) => {
   return (
     <div className={className}>
-      <h2 className="text-xl font-semibold mb-4">S E O Optimizer</h2>
-      <p className="text-gray-600">This is a placeholder component for S E O Optimizer.</p>
+      {children}
     </div>
   );
 };

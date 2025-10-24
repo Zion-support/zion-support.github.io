@@ -1,17 +1,41 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
-export const useIntersectionObserver = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+interface UseIntersectionObserverOptions {
+  threshold?: number;
+  rootMargin?: string;
+  root?: Element | null;
+}
 
-  useEffect(() => {
-    // Hook implementation
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
+  const elementRef = useRef<Element | null>(null);
+
+  const setNode = useCallback((node: Element | null) => {
+    elementRef.current = node;
   }, []);
 
-  return {
-    data,
-    loading,
-    error
-  };
+  useEffect(() => {
+    if (!elementRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+        setEntry(entry);
+      },
+      {
+        threshold: options.threshold || 0,
+        rootMargin: options.rootMargin || '0px',
+        root: options.root || null,
+      }
+    );
+
+    observer.observe(elementRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [options.threshold, options.rootMargin, options.root]);
+
+  return [setNode, entry] as const;
 };

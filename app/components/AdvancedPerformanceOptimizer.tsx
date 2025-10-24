@@ -38,10 +38,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       // Measure Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
+        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number; value?: number }
         setPerformanceMetrics(prev => ({
           ...prev,
-          lcp: lastEntry.renderTime || lastEntry.loadTime || 0
+          lcp: lastEntry.renderTime || lastEntry.loadTime || lastEntry.value || lastEntry.startTime || 0
         }))
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -64,8 +64,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += entry.value
+          const layoutEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number }
+          if (!layoutEntry.hadRecentInput) {
+            clsValue += layoutEntry.value || 0
             setPerformanceMetrics(prev => ({
               ...prev,
               cls: clsValue
@@ -108,7 +109,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     const cache = new Map()
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url
+      const url = typeof input === 'string' ? input : (input as Request).url
       const cacheKey = `${url}-${JSON.stringify(init)}`
       
       if (cache.has(cacheKey)) {
