@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react';
-
-interface Slide {
-
-  id: number,
-    title: string,
-      description: string,
-    features: string[],
-  icon: React.ReactNode,
-    color: string}
-const ContentCarousel: React.FC = ($2) => {
-$3
-};
-
-=======
 'use client'
 import { { { React  useState useEffect  from 'react';
 import  ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users Settings             } from "lucide-react";
@@ -40,7 +21,7 @@ const ContentCarousel: React.FC = () => {
     icon: <BarChart className="h-12 w-12" />,
     color: "from-blue-500 to-cyan-500"
   },
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     {
       id: 2,
       title: "Cloud Infrastructure",
@@ -58,50 +39,15 @@ const ContentCarousel: React.FC = () => {
       id: 3,
       title: "Cybersecurity Solutions",
       description: "Protect your business with our comprehensive cybersecurity services.",
-<<<<<<< HEAD
+features: [
 
-    features: [,
-
-=======
-      features: [
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
         "Threat detection",
         "Vulnerability assessment",
         "Incident response",
         "Security training"
       ],
       icon: <Shield className="h-12 w-12" />,
-<<<<<<< HEAD
-
-    color: "from-red-500 to-pink-500"}
-  ]
-  const nextSlide = ($2) => {
-$3
-};
-  const prevSlide = ($2) => {
-$3
-};
-  return (
-    <>
-      
-    </>
-      <Helmet> </Helmet><title>ContentCarousel</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentCarousel, AI solutions, intelligent automation&quot; /> </meta></Helmet>
-      <Navigation /> </Navigation><div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;>{/* Hero Section */}
-        </div><section className=&quot;relative py-20 px-4 overflow-hidden&quot;> </section><div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;>
-        <div className=&quot;relative max-w-7xl mx-auto text-center&quot;> </div><h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>,
-              ContentCarousel
-            </h1>
-            <p>Advanced ContentCarousel solution for modern businesses.</p>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-              </div><button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>,
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
-                Learn More
-=======
-      color: "from-red-500 to-pink-500"
+color: "from-red-500 to-pink-500"
     },
     {
       id: 4,
@@ -350,24 +296,18 @@ $3
               ContentCarousel</h1>
             <pAdvanced ContentCarousel solution for modern businesses</p /><div className=quotflex flex-col sm flex-row gap-4 justify-centerquot /><button className=quotbg-emerald-600 hover bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-centerquot>
                 Get Started  <ArrowRight className=quotml-2 h-5 w-5quot />
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
               </button>
               <button className=quotborder border-emerald-400 text-emerald-400 hover bg-emerald-400 hovertext-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200quot>
                 Learn More</button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
-        <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p>Powerful AI-driven features designed to transform your business operations</p>
-=======
-        / Features Section /
+/ Features Section /
         <section className=quotpy-20 px-4quot /><div className=quotmax-w-7xl mx-autoquot />
         <div className=quottext-center mb-16quot /><h2 className=quottext-4xl font-bold text-white mb-4quot>Key Features</h2>
               <pPowerful AI-driven features designed to transform your business operations</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
             </div>
         <div className=quotgrid md grid-cols-2 lggrid-cols-4 gap-8quot>
               featuresmapfeature index => 
@@ -382,17 +322,11 @@ $3
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
-        <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p>Experience the benefits of cutting-edge AI technology</p>
-=======
-        / Benefits Section /
+/ Benefits Section /
         <section className=quotpy-20 px-4 bg-white/5quot /><div className=quotmax-w-7xl mx-autoquot />
         <div className=quottext-center mb-16quot /><h2 className=quottext-4xl font-bold text-white mb-4quot>Why Choose Our Solution</h2>
               <pExperience the benefits of cutting-edge AI technology</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
         </div>
         <div className=quotrelativequot />
         <divslidesmapslide index = />
@@ -474,29 +408,9 @@ $3
               </div>
             
           </div>
-<<<<<<< HEAD
-          <button
-            onClick={prevSlide}
-            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;>,
-            </button><ChevronLeft className=&quot;h-6 w-6&quot; /> </ChevronLeft></button>
-          <button
-            onClick={nextSlide}
-            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;>,
-            </button><ChevronRight className=&quot;h-6 w-6&quot; /> </ChevronRight></button>
-        </div>
-{/* Slide Indicators */}
-            className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;,
-          >
-            <ChevronLeft className=&quot;w-6 h-6&quot; /> </ChevronLeft></button>
-          <button
-            onClick={nextSlide}
-            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;,
-          > </button><ChevronRight className=&quot;w-6 h-6&quot; /> </ChevronRight></button>
-
-=======
-          <button onClick=prevSlide className=quotabsolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20quot /><ChevronLeft className=quoth-6 w-6quot /> </button>
+<button onClick=prevSlide className=quotabsolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20quot /><ChevronLeft className=quoth-6 w-6quot /> </button>
           <button onClick=nextSlide className=quotabsolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20quot /><ChevronRight className=quoth-6 w-6quot /> </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
         </div>
 / Slide Indicators /
             className=quotabsolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20quot >
@@ -512,55 +426,7 @@ $3
             />
           ))}
         </div>
-<<<<<<< HEAD
-
-        {/* Additional Info */}
-        <div className=&quot;mt-16 text-center&quot;>
-        <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto&quot;>,
-            </div><div className=&quot;flex items-center justify-center gap-3 text-white&quot;> </div><Star className=&quot;w-6 h-6 text-yellow-400&quot; /> </Star><div4.9/5</div>
-                <div className=&quot;text-gray-400 text-sm&quot;>Customer Rating</div>
-              </div>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;>,
-              {benefits.map((benefit, index) => (
-                </div><div key={index} className=&quot;flex items-start space-x-4&quot;> </div><CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /> </CheckCircle><p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-4xl mx-auto text-center&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p>Join thousands of businesses already using our AI solutions</p>
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-              </div><button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-</Footer></>
-  )
-}
-
-export default ContentCarouselPage
-            <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-export default ContentCarousel
-
-=======
-        {/* Additional Info */}
+{/* Additional Info */}
         <div className="mt-16 text-center" />
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto" />
             <div className="flex items-center justify-center gap-3 text-white" />
@@ -613,4 +479,4 @@ export default ContentCarousel }
 </pExperience>
 </pPowerful>
 }}}}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

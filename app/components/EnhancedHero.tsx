@@ -1,14 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-import { ArrowRight, Brain , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
-import { Phone, Mail } from 'lucide-react',;
-    'use client'
-  ]
-
-=======
 import  Helmet  from 'react-helmet-async';
 import  ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react';
 import { { Phone Mail       } from "lucide-react";
@@ -16,21 +7,13 @@ import { { Phone Mail       } from "lucide-react";
       'Gain competitive advantage with advanced technology'
 
 const EnhancedHero: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-<<<<<<< HEAD
-
-    'Gain competitive advantage with advanced technology',
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-            </div></div>
-          </div>
-
-=======
-    'Gain competitive advantage with advanced technology',
+'Gain competitive advantage with advanced technology',
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
             
           
@@ -68,4 +51,4 @@ export default EnhancedHero    'Gain competitive advantage with advanced technol
             <div className = quotflex flex-col sm flex-row gap-4 justify-centerquot / / />
 };
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

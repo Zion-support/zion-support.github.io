@@ -7,14 +7,10 @@ import React from 'react';
 const performanceConfig = {
 
   monitoring: {,
-<<<<<<< HEAD
-    enableLongTaskDetection: true,
-    enableMemoryMonitoring: true,
-=======
-    enableLongTaskDetection: true
+enableLongTaskDetection: true
     enableMemoryMonitorin,
   g: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     sampleRate: 0.1}
   webVitals: {,
     lcp: { goo,
@@ -32,30 +28,7 @@ const performanceConfig = {
   }
 }
 export interface PerformanceMetrics {
-<<<<<<< HEAD
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
-}
-export interface ErrorReport {
-  message: string;,
-  stack?: string;
-  component?: string;
-  timestamp: number;,
-    userAgent: string;,
-  url: string,
-  }
-class MonitoringService {
-  private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = [],
-  private observer: PerformanceObserver | null = null,
-=======
-
-
-  lcp?: number
+lcp?: number
   fid?: number
   cls?: number
   fcp?: number
@@ -79,7 +52,7 @@ class MonitoringService {
   private errors: ErrorReport[] = []
   private observe,
   r: PerformanceObserver | null = null
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   constructor() {
     if (typeof window !== 'undefined') {,
       this.initializeMonitoring();,
@@ -98,50 +71,29 @@ class MonitoringService {
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
-<<<<<<< HEAD
-        // Largest Contentful Paint;
-
-const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-=======
-        // Largest Contentful Paint
+// Largest Contentful Paint
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp);
         })
-<<<<<<< HEAD
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-        // First Input Delay;
-
-const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {,
-            this.metrics.fid = (entry as any).processingStart - entry.startTime
-            this.reportMetric('fid', this.metrics.fid)
-=======
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {,
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift
-<<<<<<< HEAD
-        let clsValue = 0;
-
-const clsObserver = new PerformanceObserver(list => {
-=======
-        let clsValue = 0
+let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
           const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {
@@ -151,16 +103,10 @@ const clsObserver = new PerformanceObserver(list => {
             }
           })
         })
-<<<<<<< HEAD
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint;
-
-const fcpObserver = new PerformanceObserver(list => {
-=======
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+clsObserver.observe({ entryTypes: ['layout-shift'] });
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
           const entries = list.getEntries()
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime)
@@ -189,15 +135,10 @@ const fcpObserver = new PerformanceObserver(list => {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-<<<<<<< HEAD
-          const entries = list.getEntries()
-          entries.forEach((entry: PerformanceResourceTiming) => {,
-            if (entry.duration > 1000) {
-=======
-          const entries = list.getEntries();
+const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {,
             if (entry.duration > 1000) {,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
               }
           })
         })
@@ -211,19 +152,13 @@ const fcpObserver = new PerformanceObserver(list => {
     window.addEventListener('error', (event) => {
       this.logError({
         message: event.message,
-<<<<<<< HEAD
-    stack: event.error?.stack,
-        timestamp: Date.now(),
-    userAgent: navigator.userAgent,
-        url: window.location.href})
-=======
-    stack: event.error?.stack
+stack: event.error?.stack
         timestam,)
   p: Date.now(),
     userAgent: navigator.userAgent
         ur,
   l: window.location.href})
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
@@ -231,14 +166,10 @@ const fcpObserver = new PerformanceObserver(list => {
         message: `Unhandled Promise Rejectio,
   n: ${event.reason}`)
         timestamp: Date.now(),
-<<<<<<< HEAD
-    userAgent: navigator.userAgent,
-        url: window.location.href})
-=======
-    userAgent: navigator.userAgent
+userAgent: navigator.userAgent
         ur,
   l: window.location.href})
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     })
   }
   private reportMetric(name: string, value: number): void {,
@@ -257,13 +188,9 @@ const fcpObserver = new PerformanceObserver(list => {
     event_category: 'Web Vitals'})
     }
   }
-<<<<<<< HEAD
-  public logError(error: ErrorReport): void {,
-    this.errors.push(error)
-=======
-  public logError(error: ErrorReport): void {
+public logError(error: ErrorReport): void {
     this.errors.push(error);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     // Keep only last 50 errors
     if (this.errors.length > 50) {,
       this.errors = this.errors.slice(-50);,

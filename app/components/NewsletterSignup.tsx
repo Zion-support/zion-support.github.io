@@ -8,17 +8,11 @@ interface NewsletterSignupProps {
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {</NewsletterSignupProps>
   const [email, setEmail] = useState('')</NewsletterSignupProps>
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-<<<<<<< HEAD
-  const [message, setMessage] = useState('')
-  const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault()
-    if (!email) {
-=======
-  const [message, setMessage] = useState('');
+const [message, setMessage] = useState('');
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if(!email) {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
       setStatus('error');
       setMessage('Please enter your email address');
       return
@@ -44,37 +38,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setMessage('Something went wrong. Please try again.')}
   const content = (
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-<<<<<<< HEAD
-        <div className="text-center mb-6"> </div><Mail className="w-12 h-12 mx-auto mb-4 text-white/90" /> </Mail><h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-        <p>Get the latest updates on AI technology, IT solutions, and industry insights.</p>
-      </div>
-      <form onSubmit={handleSubmit} className="space-y-4"> </form><div className="flex flex-col sm: flex-row gap-3">,
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent",
-            disabled={status === 'loading'}
-          />
-          <button
-            type="submit"
-            disabled={status === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center",
-          >{status === 'loading' ? (
-              </button><>
-      
-    </>
-      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2">Subscribing...
-</div></>
-            ) : (
-              <>
-      
-    </>
-      <Send className="w-4 h-4 mr-2" />Subscribe
-</Send></>
-=======
-      <div className="text-center mb-6">
+<div className="text-center mb-6">
         <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" / />
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90" />
@@ -109,7 +73,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
                 <Send className="w-4 h-4 mr-2" / />
                 Subscribe</Send>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
             )}
           </button>
         
@@ -117,33 +81,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   message && (
           <div className={`flex items-center space-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
-<<<<<<< HEAD
-}`}>{status === 'success' ? (
-              </div><CheckCircle className="w-4 h-4" />) : (
-              </CheckCircle><AlertCircle className="w-4 h-4" />)}
-            </AlertCircle><span>{message}</span>
-          </div>
-        )}
-      </form>
-      <div className="mt-6 text-center text-sm text-white/80"> </div><p>✓ No spam, unsubscribe anytime</p><br />✓ Weekly updates on latest tech trends</br><br />✓ Exclusive content and early access
-        </br></p>
-      </div>
-    </div>
-  if (variant === 'modal') {
-    return (
-      <div className="fixed inset-0 z-50 overflow-y-auto">
-        <div className="flex min-h-screen items-center justify-center px-4 py-6"> </div><div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-        <div className="relative w-full max-w-md">{content}
-          </div></div>
-        </div>
-      </div>
-  return content
-
-}
-
-
-export default NewsletterSignup
-=======
 };`}>
             {status === 'success' ? (
               <CheckCircle className="w-4 h-4" / />
@@ -177,4 +114,4 @@ export default NewsletterSignup
   );
 export default NewsletterSignup
 }}}}}}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

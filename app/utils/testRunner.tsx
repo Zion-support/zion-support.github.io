@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-const testRunner = ($2) => {
-$3
-};
-
-export default testRunner
-=======
 'use client';
 import React from 'react';
 import Head from 'next/head';
@@ -120,4 +110,4 @@ const testRunner = () => {
 export default testRunner;
     </div>
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

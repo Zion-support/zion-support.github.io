@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-const AdminPage = ($2) => {
-$3
-};
-
-export default AdminPage
-=======
 'use client';
 import React from 'react';
 import Head from 'next/head';
@@ -120,4 +110,4 @@ const AdminPage = () => {
 export default AdminPage;
     </div>
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

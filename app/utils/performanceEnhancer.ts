@@ -8,34 +8,17 @@ import { useRef } from 'react';
 // Debounce function for performance optimization;
 
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
-<<<<<<< HEAD
-    func: T,
-  wait: number,
-): ((...args: Parameters<T>) => void) => {,
-  let timeout: NodeJS.Timeout;,
-  return (...args: Parameters<T>) => {,
-=======
-    func: T
+func: T
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
   return (...arg,</T>
   s: Parameters<T>) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
-<<<<<<< HEAD
-// Throttle function for performance optimization;
-
-export const throttle = <T extends (...args: unknown[]) => unknown>(,
-    func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {,
-  let inThrottle: boolean;,
-  return (...args: Parameters<T>) => {,
-=======
 // Throttle function for performance optimization</T>
 export const throttle = <T extends (...args: unknown[]) => unknown>(,
     func: T
@@ -44,7 +27,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
   let inThrottle: boolean;
   return (...arg,</T>
   s: Parameters<T>) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     if (!inThrottle) {
       func(...args);,
       inThrottle = true,
@@ -55,16 +38,11 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
 // Performance monitoring utilities;
 
 export class PerformanceMonitor {
-<<<<<<< HEAD
-  private static instance: PerformanceMonitor;,
-  private metrics: Map<string, number> = new Map()
-  private observers: PerformanceObserver[] = [];,
-=======
-  private static instance: PerformanceMonitor;
+private static instance: PerformanceMonitor;
   private metric,</T>
   s: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {,
       PerformanceMonitor.instance = new PerformanceMonitor();,
@@ -73,11 +51,8 @@ export class PerformanceMonitor {
   }
   // Track component render time
   trackRender(componentName: string, renderTime: number) {,
-<<<<<<< HEAD
-    this.metrics.set(`${componentName}_render`, renderTime)
-=======
-    this.metrics.set(`${componentName}_render`, renderTime);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+this.metrics.set(`${componentName}_render`, renderTime);
+
     if (process.env['NODE_ENV'] === 'development') {
       // eslint-disable-next-line no-console
     console.log(`${componentName} rendered in ${renderTime}ms`);
@@ -123,16 +98,6 @@ export class PerformanceMonitor {
     this.observers = []
 }
 }
-<<<<<<< HEAD
-// React hook for performance monitoring;
-
-export const usePerformanceMonitor = ($2) => {
-$3
-};
-  }, [componentName, monitor])
-  return {
-    trackRender: (fn: () => void) => {,
-=======
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {</string>
   const renderStartTime = useRef<number>(0)
@@ -150,7 +115,7 @@ export const usePerformanceMonitor = (componentName: string) => {</string>
   return {
     trackRender: (f,
   n: () => void) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
       const start = performance.now()
       fn()
       const duration = performance.now() - start
@@ -158,13 +123,6 @@ export const usePerformanceMonitor = (componentName: string) => {</string>
     }
   }
 }
-<<<<<<< HEAD
-// Image lazy loading utility;
-
-export const lazyLoadImages = ($2) => {
-$3
-};
-=======
 // Image lazy loading utility
 export const lazyLoadImages = () => {
   return 
@@ -178,19 +136,11 @@ export const lazyLoadImages = () => {
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     })
   })
   images.forEach((img) => imageObserver.observe(img))
 }
-<<<<<<< HEAD
-// Preload critical resources;
-
-export const preloadCriticalResources = ($2) => {
-$3
-};
-    document.head.appendChild(link)
-=======
 // Preload critical resources
 export const preloadCriticalResources = () => {
   return 
@@ -207,7 +157,7 @@ export const preloadCriticalResources = () => {
       link.crossOrigin = 'anonymous'
 }
     document.head.appendChild(link);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   })
 }
 // Optimize scroll performance;
@@ -215,21 +165,7 @@ export const preloadCriticalResources = () => {
 export const optimizeScrollPerformance = () => {
   return 
   if (typeof window === 'undefined') return
-<<<<<<< HEAD
-  let ticking = false;
-
-const updateScrollPosition = () => {
-    // Update scroll position indicators;
-
-const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`)
-    ticking = false
-  }
-  const requestTick = ($2) => {
-$3
-};
-=======
-  let ticking = false
+let ticking = false
   const updateScrollPosition = () => {
   return 
     // Update scroll position indicators
@@ -253,7 +189,7 @@ $3
       hadRecentInput?: boolean
       valu,
   e: number
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   }
   // Track Core Web Vitals;
 
@@ -269,21 +205,10 @@ $3
 }
       }
     })
-<<<<<<< HEAD
-    observer.observe({ entryTypes: ['layout-shift'] })
-    return (
-    <>
-      ) => {
-    </>
-    </>
-  observer.disconnect(
-    </>
-  );
-=======
-    observer.observe({ entryTypes: ['layout-shift'] });
+observer.observe({ entryTypes: ['layout-shift'] });
     return () => {
   observer.disconnect();
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
       return clsValue
 }
   }
@@ -292,24 +217,14 @@ $3
 };
       }
     })
-<<<<<<< HEAD
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    return (
-    <>
-      ) => observer.disconnect(
-    </>
-    </>
-    </>
-  );
-=======
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+observer.observe({ entryTypes: ['largest-contentful-paint'] });
     return () => observer.disconnect();
   }
   const trackFID = () => {
   return 
   interface FirstInputEntry extends PerformanceEntry {
       processingStart: number,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   }
   const trackFID = ($2) => {
 $3
@@ -323,62 +238,7 @@ const fid = fidEntry.processingStart - entry.startTime
           }
       }
     })
-<<<<<<< HEAD
-    observer.observe({ entryTypes: ['first-input'] })
-    return (
-    <>
-      ) => observer.disconnect(
-    </>
-    </>
-    </>
-  );
-  }
-  window.addEventListener('scroll', requestTick, { passive: true })
-  // Start tracking;
-
-const cleanupCLS = trackCLS()
-  const cleanupLCP = trackLCP()
-  const cleanupFID = trackFID()
-  return (
-    <>
-      ) => {
-    </>
-    </>
-    cleanupCLS(
-    </>
-  );
-    cleanupLCP()
-    cleanupFID()
-  }
-}
-// Memory usage monitoring;
-
-export const getMemoryUsage = ($2) => {
-$3
-};
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-  return {
-    used: memory.usedJSHeapSize,
-    total: memory.totalJSHeapSize,
-    limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100}
-}
-// Performance metrics collection;
-
-export const collectPerformanceMetrics = ($2) => {
-$3
-};
-    paint: {,
-    firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0}
-    memory: getMemoryUsage()}
-}
-// Initialize performance enhancements;
-
-export const initializePerformanceEnhancements = ($2) => {
-$3
-=======
-    observer.observe({ entryTypes: ['first-input'] });
+observer.observe({ entryTypes: ['first-input'] });
     return () => observer.disconnect();
   }
   window.addEventListener('scroll', requestTick, { passive: true });
@@ -443,6 +303,6 @@ export const initializePerformanceEnhancements = () => {
     </>)
   )
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 };
 }

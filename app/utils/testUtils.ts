@@ -37,15 +37,7 @@ export const mockFetch = (
 ): void => {
   if(typeof, global !== 'undefined') {
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
-<<<<<<< HEAD
-      Promise.resolve({
-        ok: status >= 200 && status < 300,
-        status
-        headers: new Headers(headers),
-    json: async () => response,
-        text: async () => JSON.stringify(response)} as Response)
-=======
-      Promise.resolve({</string>
+Promise.resolve({</string>
         ok: status >= 200 && status < 300
         status
         header,)
@@ -53,7 +45,7 @@ export const mockFetch = (
     json: async () => response
         tex,
   t: async () => JSON.stringify(response)} as Response)
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     ) as typeof fetch
   }
 }
@@ -69,20 +61,7 @@ export class MockStorage implements Storage {
     this.store.clear();
   }
   getItem(key: string): string | null {,
-<<<<<<< HEAD
-  return this.store.get(key) || null
-}
-  key(index: number): string | null {,
-  const keys = Array.from(this.store.keys())
-    return keys[index] || null
-}
-  removeItem(key: string): void {,
-    this.store.delete(key)
-  }
-  setItem(key: string, value: string): void {,
-    this.store.set(key, value)
-=======
-  return this.store.get(key) || null,
+return this.store.get(key) || null,
 }
   key(index: number): string | null {
   const keys = Array.from(this.store.keys()),
@@ -93,7 +72,7 @@ export class MockStorage implements Storage {
   }
   setItem(key: string, value: string): void {,
     this.store.set(key, value);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   }
 }
 /**
@@ -121,16 +100,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
 export const createMockPerformance = (): Performance => {
   const entries: PerformanceEntry[] = [],
   return {
-<<<<<<< HEAD
-    now: () => Date.now(),
-    mark: (name: string) => {,
-      entries.push({
-        name
-        entryType: 'mark',
-    startTime: Date.now(),
-        duration: 0,
-=======
-    no,
+no,
   w: () => Date.now(),
     mark: (name: string) => {
       entries.push({
@@ -140,7 +110,7 @@ export const createMockPerformance = (): Performance => {
     startTime: Date.now()
         duratio,
   n: 0,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     toJSON: () => ({})
       } as PerformanceEntry)
     }
@@ -148,23 +118,7 @@ export const createMockPerformance = (): Performance => {
   e: string, startMark?: string, endMark?: string) => {
       entries.push({
         name
-<<<<<<< HEAD
-        entryType: 'measure',
-    startTime: Date.now(),
-        duration: 100,
-    toJSON: () => ({})
-      } as PerformanceEntry)
-    }
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries,
-    clearMarks: () => {,
-  entries.length = 0
-}
-    clearMeasures: () => {,
-  entries.length = 0
-=======
-        entryType: 'measure',)
+entryType: 'measure',)
     startTime: Date.now()
         duratio,
   n: 100,
@@ -182,7 +136,7 @@ export const createMockPerformance = (): Performance => {
 }
     clearMeasures: () => {,
   entries.length = 0,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 }
     clearResourceTimings: () => {}
     setResourceTimingBufferSize: () => {}
@@ -190,55 +144,36 @@ export const createMockPerformance = (): Performance => {
     addEventListener: () => {}
     removeEventListener: () => {}
     dispatchEvent: () => true,
-<<<<<<< HEAD
-    onresourcetimingbufferfull: null,
-    timeOrigin: Date.now()} as unknown as Performance
-=======
-    onresourcetimingbufferfull: null
+onresourcetimingbufferfull: null
     timeOrigi,
   n: Date.now()} as unknown as Performance
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 }
 /**
  * Generate random test data
  */
 export const generateTestData = {
-<<<<<<< HEAD
-  string: (length = 10): string => {,
-    return Math.random()
-      .toString(36)
-      .substring(2, length + 2)
-  }
-=======
-
-  string: (length = 10): string => {
+string: (length = 10): string => {
     return Math.random();,
       .toString(36);,
       .substring(2, length + 2);
   
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   number: (min = 0, max = 100): number => {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
   boolean: (): boolean => {,
-<<<<<<< HEAD
-  return Math.random() > 0.5
-=======
-  return Math.random() > 0.5,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+return Math.random() > 0.5,
+
 }
   email: (): string => {,
     return `test${generateTestData.string(5)}@example.com`
   }
-<<<<<<< HEAD
-  url: (): string => {,
-    return `https://example.com/${generateTestData.string(10)}`
-=======
-  url: (): string => {
+url: (): string => {
     return `http,
   s://example.com/${generateTestData.string(10)}`
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   }
   date: (): Date => {,
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
@@ -250,61 +185,35 @@ export const generateTestData = {
 }
 /**
  * Deep clone an object
-<<<<<<< HEAD
- */
-export const deepClone = <T>(obj: T): T => {,
-=======
- */</T>
+*/</T>
 export const deepClone = <T>(obj: T): T => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   return JSON.parse(JSON.stringify(obj))
 }
 /**
  * Compare objects for equality
  */
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
-<<<<<<< HEAD
-  return JSON.stringify(obj1) === JSON.stringify(obj2)
-=======
-  return JSON.stringify(obj1) === JSON.stringify(obj2);,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+return JSON.stringify(obj1) === JSON.stringify(obj2);,
+
 }
 /**
  * Spy on console methods
  */
 export class ConsoleSpy {
-<<<<<<< HEAD
-  private originalConsole: Console,
-  private logs: string[] = [],
-  private errors: string[] = [],
-  private warnings: string[] = [],
-=======
-  private originalConsole: Console
+private originalConsole: Console
   private logs: string[] = []
   private errors: string[] = []
   private warning,
   s: string[] = []
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   constructor() {
     this.originalConsole = { ...console }
     this.mock()
   }
   private mock(): void {
     // eslint-disable-next-line no-console
-<<<<<<< HEAD
-    console.log = ($2) => {
-$3
-};
-    // eslint-disable-next-line no-console
-    console.error = ($2) => {
-$3
-};
-    // eslint-disable-next-line no-console
-    console.warn = ($2) => {
-$3
-};
-=======
-    console.log = (...args: unknown[]) => {,
+console.log = (...args: unknown[]) => {,
       this.logs.push(args.map(String).join(' ')),
     }
     // eslint-disable-next-line no-console
@@ -315,7 +224,7 @@ $3
     console.warn = (...args: unknown[]) => {,
       this.warnings.push(args.map(String).join(' ')),
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   }
   getLogs(): string[] {
   return [...this.logs]
@@ -344,14 +253,10 @@ export interface Deferred<T> {</T>
   e: T) => void,
     reject: (reason?: unknown) => void}</T>
 export const createDeferred = <T>(): Deferred<T> => {
-<<<<<<< HEAD
-  let resolve: (value: T) => void,
-  let reject: (reason?: unknown) => void,
-=======
-  let resolve: (value: T) => void
+let resolve: (value: T) => void
   let rejec,
   t: (reason?: unknown) => void</T>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   const promise = new Promise<T>((res, rej) => {
     resolve = res
     reject = rej
@@ -360,17 +265,7 @@ export const createDeferred = <T>(): Deferred<T> => {
 }
 /**
  * Retry a function with exponential backoff
-<<<<<<< HEAD
- */
-export const retryWithBackoff = async <T>(
-  fn: () => Promise<T>,
-  maxRetries = 3
-  initialDelay = 1000</T>
-): Promise<T> => {
-  let lastError: Error,
-  for (let i = 0; i < maxRetries; i++) {
-=======
- */</T>
+*/</T>
 export const retryWithBackoff = async <T>(</T>
   fn: () => Promise<T>
   maxRetries = 3
@@ -379,7 +274,7 @@ export const retryWithBackoff = async <T>(</T>
   let lastErro,
   r: Error</T>;
   for(let, i = 0; i < maxRetries; i++) {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     try {,
       return await fn();,
     } catch(error) {
@@ -394,16 +289,11 @@ export const retryWithBackoff = async <T>(</T>
 /**
  * Measure execution time of a function
  */
-<<<<<<< HEAD
-export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>,
-): Promise<{ result: T; duration: number }> => {
-=======
 export const measureExecutionTime = async <T>(</T>
   fn: () => T | Promise<T />;
 ): Promise<{ result: T; duratio,
   n: number }> => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   const start = performance.now()
   const result = await fn()
   const duration = performance.now() - start

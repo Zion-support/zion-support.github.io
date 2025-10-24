@@ -8,16 +8,10 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-            </div></div>
-          </div>
-=======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
+
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center" />;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

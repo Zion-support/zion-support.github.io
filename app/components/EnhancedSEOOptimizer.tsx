@@ -1,13 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
-const EnhancedSEOOptimizerPage: React.FC = () => {,
-  const features = [
-    {
-=======
 import { Helmet  } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, Zap, Shield, Globe  } from "lucide-react";
 import Navigation from '../components/Navigation';
@@ -15,7 +7,7 @@ import Navigation from '../components/Navigation';
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [,
     {,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -110,12 +102,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               
             </div>
           </div>
-<<<<<<< HEAD
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
-            </div></div>
-          </div>
-=======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / />
+<div className="flex flex-col sm: flex-row gap-4 justify-center" / />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -159,4 +146,4 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 export default EnhancedSEOOptimizerPage;
 </div>
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

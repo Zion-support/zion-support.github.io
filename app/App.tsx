@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-=======
 'use client'
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

@@ -19,20 +19,12 @@ interface AnalyticsContextType {
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
-<<<<<<< HEAD
-
-)
-export const useAnalytics = ($2) => {
-$3
-};
-
-=======
 export const useAnalytics = () => {
   return 
   const context = useContext(AnalyticsContext);
   if(!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   return context
 interface AnalyticsProviderProps {
 
@@ -56,12 +48,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
         window.gtag("js", new Date()
         window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")}
   }, [])
-<<<<<<< HEAD
-
-export default AnalyticsProvider
-
-=======
-  consttrackEvent = ($2) => {
+consttrackEvent = ($2) => {
 $3
 };
   }
@@ -97,14 +84,9 @@ trackEvent,
     <AnalyticsContext.Provider value={value}; />
       {children}
     </AnalyticsContext.Provider>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 
 export default AnalyticsProvider
 
-<<<<<<< HEAD
-export default AnalyticsProviderPage
-
-=======
-
 }}}}}}}}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

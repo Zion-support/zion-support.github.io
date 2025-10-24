@@ -1,78 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-import React, { useRef, useEffect } from 'react';
-
-interface FuturisticGlowProps {
-  children: React.ReactNode;,
-  intensity?: 'low' | 'medium' | 'high';
-  color?: string;
-  className?: string;
-
-export default function FuturisticGlow({ 
-  children, 
-  intensity = 'medium',
-  color = 'cyan',
-  className = ''
-}: FuturisticGlowProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-
-    const getIntensityValue = ($2) => {
-$3
-};
-    };
-
-    const getColorValue = ($2) => {
-$3
-};
-    };
-
-
-    const rgb = getColorValue();
-    const opacity = getIntensityValue();
-    // Apply CSS custom properties for dynamic glow
-    container.style.setProperty('--glow-color', `rgba(${rgb}, ${opacity})`);
-    container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
-  }, [intensity, color]);
-
-const getIntensityValue = () => {
-  return (
-    <div
-      ref={containerRef}
-      className={`
-        relative
-        before: absolute,
-        before: inset-0 ,
-        before: rounded-inherit,
-        before: bg-gradient-to-r ,
-        before: from-transparent ,
-        before: via-[var(--glow-color)] ,
-        before: to-transparent,
-        before: opacity-0 ,
-        before: transition-opacity ,
-        before: duration-500,
-        hover: before:opacity-100,
-        after: absolute,
-        after: inset-0 ,
-        after: rounded-inherit,
-        after: shadow-[0_0_20px_var(--glow-color)],
-        after: opacity-0 ,
-        after: transition-opacity ,
-        after: duration-500,
-        hover: after:opacity-100,
-        ${className}
-      `}
-
-    >{children}
-    </div></div>
-  );
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -183,5 +110,5 @@ const getIntensityValue = () => {
 
 export default getIntensityValue;
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 }

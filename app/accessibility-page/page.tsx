@@ -2,13 +2,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import Footer from '@/components/Footer';
-=======
 import { ArrowRight } from "lucide-react";
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 
 export default function AccessibilitypagePage() {
   return (

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-const ContactPage = ($2) => {
-$3
-};
-
-export default ContactPage
-=======
 'use client';
 import React from 'react';
 import Head from 'next/head';
@@ -120,4 +110,4 @@ const ContactPage = () => {
 export default ContactPage;
     </div>
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

@@ -3,19 +3,12 @@
 import React from 'react';
 import React from &quot;react&quot;
 import { Helmet } from &quot;react-helmet-async&quot;
-<<<<<<< HEAD
-&quot;use client&quot;
-
-const ServicePageTemplatePage: React.FC = () => {,
-  const features = [
-    {
-=======
 &quot;use client&quot
 
 const ServicePageTemplatePage: React.FC = () => {
   const features = [,
     {,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
       icon: Brain,
     title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -47,25 +40,7 @@ const ServicePageTemplatePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-<<<<<<< HEAD
-    <>
-      
-    </>
-      <Helmet> </Helmet><title>ServicePageTemplate | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; /> </meta><meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; /> </meta></Helmet>
-      <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;container mx-auto max-w-6xl&quot;>
-        <div className=&quot;text-center mb-16&quot;> </div><h1 className=&quot;text-5xl md: text-6xl font-bold text-white mb-6&quot;>ServicePageTemplate</h1>,
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional ServicePageTemplate services tailored to your business needs.</p>p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-export default ServicePageTemplatePage
-
-=======
-
-  </>
+</>
 export default ServicePageTemplatePage;
 
 export default ServicePageTemplatePage
@@ -92,4 +67,4 @@ export default ServicePageTemplatePage
 
 </div>
 }}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

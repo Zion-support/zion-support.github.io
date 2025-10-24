@@ -9,19 +9,7 @@
 
 export const generateMetaTags = (data: {,
     title: string,
-<<<<<<< HEAD
-      description: string,
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-=======
-      description: string
+description: string
   keywords?: string
   canonical?: string
   ogTitle?: string
@@ -31,7 +19,7 @@ export const generateMetaTags = (data: {,
   twitterTitle?: string
   twitterDescription?: string,
   twitterImage?: string,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 }) => {
   const tags = [
     { name: 'title', content: data.title },
@@ -73,18 +61,7 @@ export const generateStructuredData = (data: {,
   logo?: string;
   address?: {
     streetAddress: string,
-<<<<<<< HEAD
-    addressLocality: string,
-    addressRegion: string,
-    postalCode: string,
-    addressCountry: string,
-  }
-  contactPoint?: {
-    telephone: string,
-    contactType: string,
-    email: string,
-=======
-    addressLocality: string
+addressLocality: string
     addressRegion: string,
     postalCode: string
     addressCountr,
@@ -95,7 +72,7 @@ export const generateStructuredData = (data: {,
     contactType: string
     emai,
   l: string
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   }
   sameAs?: string[]
 }) => {
@@ -124,19 +101,6 @@ export const generateStructuredData = (data: {,
   }
 }
 
-<<<<<<< HEAD
-// Generate sitemap;
-
-export const generateSitemap = (pages: Array<{,
-  url: string,
-  lastModified: string,
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
-  priority: number,
-}>) => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url> </url><loc>${page.url}</loc>
-=======
 // Generate sitemap
 export const generateSitemap = (pages: Array<{,
   url: string
@@ -149,7 +113,7 @@ export const generateSitemap = (pages: Array<{,
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" />
 ${pages.map(page => `  <url />
     <loc>${page.url}</loc>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
     <priority>${page.priority}</priority>)
@@ -159,15 +123,12 @@ ${pages.map(page => `  <url />
   return sitemap
 }
 
-<<<<<<< HEAD
-// Generate robots.txt;
-=======
 // Generate robots.txt
 export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
   return `User-agent: *
 ${allowAll ? 'Allow: /' : 'Disallo,
   w: /'}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 
 export const generateRobotsTxt = ($2) => {
 $3

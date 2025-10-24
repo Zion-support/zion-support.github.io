@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-607a
+
 "use client";
 import React from "react";
 interface AccessibilityComponentsProps {
@@ -37,4 +34,4 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
     </div>
 export default AccessibilityComponents
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+

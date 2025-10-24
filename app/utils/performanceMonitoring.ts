@@ -8,16 +8,11 @@ export interface PerformanceMetric {
 
 
 name: string,
-<<<<<<< HEAD
-    value: number,
-rating: 'good' | 'needs-improvement' | 'poor',
-    timestamp: number}
-=======
-    value: number
+value: number
 ratin,
   g: 'good' | 'needs-improvement' | 'poor',}
     timestamp: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 export interface WebVitals {
 
 
@@ -33,20 +28,13 @@ export interface CustomMetric {
 
 
   name: string,
-<<<<<<< HEAD
-    value: number,
-  unit: 'ms' | 'bytes' | 'count' | 'percentage',
-    rating: 'good' | 'needs-improvement' | 'poor',
-  timestamp: number}
-export interface WebVitals {}
-=======
-    value: number
+value: number
   uni,
   t: 'ms' | 'bytes' | 'count' | 'percentage',
     rating: 'good' | 'needs-improvement' | 'poor'}
   timestamp: number};
 export interface WebVitals {};
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 FCP?: PerformanceMetric; // First Contentful Paint
 LCP?: PerformanceMetric; // Largest Contentful Paint
 FID?: PerformanceMetric; // First Input Delay
@@ -56,14 +44,10 @@ INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {};
 name: string,
-<<<<<<< HEAD
-    value: number,
-unit: 'ms' | 'bytes' | 'count' | 'percentage',
-=======
-    value: number
+value: number
 uni,
   t: 'ms' | 'bytes' | 'count' | 'percentage',
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
     timestamp: number;}
 }
 class PerformanceMonitoringService {}
@@ -73,14 +57,10 @@ private customMetrics: CustomMetric[] = [],
 private observers: PerformanceObserver[] = [],
 private maxMetrics = 1000
 private constructor() {
-<<<<<<< HEAD
-  private customMetrics: CustomMetric[] = [],
-private observers: PerformanceObserver[] = [],
-=======
-  private customMetrics: CustomMetric[] = []
+private customMetrics: CustomMetric[] = []
 private observer,
   s: PerformanceObserver[] = []
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 private maxMetrics = 1000
 }
 private constructor() {}
@@ -125,16 +105,10 @@ this.recordWebVital('FCP', entry.startTime)}
 }
 })
 })
-<<<<<<< HEAD
-paintObserver.observe({ type: 'paint', buffered: true })
-this.observers.push(paintObserver)
-// Observe LCP;
-
-=======
 paintObserver.observe({ type: 'paint', buffered: true });
 this.observers.push(paintObserver);
 // Observe LCP
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const lcpObserver = new PerformanceObserver((list) => {
   // Observe LCP
 }
@@ -164,16 +138,10 @@ this.recordWebVital('CLS', clsValue);
 }
 })
 })
-<<<<<<< HEAD
-clsObserver.observe({ type: 'layout-shift', buffered: true })
-this.observers.push(clsObserver)
-// Observe FID;
-
-=======
 clsObserver.observe({ type: 'layout-shift', buffered: true });
 this.observers.push(clsObserver);
 // Observe FID
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const fidObserver = new PerformanceObserver((list) => {
   // Observe FID
 }
@@ -182,16 +150,10 @@ list.getEntries().forEach((entry) => {}
 this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime)
 })
 })
-<<<<<<< HEAD
-fidObserver.observe({ type: 'first-input', buffered: true })
-this.observers.push(fidObserver)
-// Observe navigation timing for TTFB;
-
-=======
 fidObserver.observe({ type: 'first-input', buffered: true });
 this.observers.push(fidObserver);
 // Observe navigation timing for TTFB
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const navObserver = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
 const navEntry = entry as PerformanceNavigationTiming
@@ -215,14 +177,9 @@ try {/* TODO: Fix JSX expression */}
 })
 paintObserver.observe({/* TODO: Fix JSX expression */});
 d: true })
-<<<<<<< HEAD
-this.observers.push(paintObserver)
-// Observe LCP;
-
-=======
 this.observers.push(paintObserver);
 // Observe LCP
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 e: number }).renderTime || (lastEntry as PerformanceEntry & {/* TODO: Fix JSX expression */})
 e: number }).loadTime)
@@ -243,28 +200,18 @@ this.recordWebVital('CLS', clsValue);
 })
 clsObserver.observe({/* TODO: Fix JSX expression */});
 d: true })
-<<<<<<< HEAD
-this.observers.push(clsObserver)
-// Observe FID;
-
-=======
 this.observers.push(clsObserver);
 // Observe FID
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 t: number }).processingStart - entry.startTime)
 })
 })
 fidObserver.observe({/* TODO: Fix JSX expression */});
 d: true })
-<<<<<<< HEAD
-this.observers.push(fidObserver)
-// Observe navigation timing for TTFB;
-
-=======
 this.observers.push(fidObserver);
 // Observe navigation timing for TTFB
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 })
 })
@@ -278,19 +225,13 @@ this.observers.push(navObserver);
 * Record a Web Vital metric
 */
 private recordWebVital(name: keyof WebVitals, value: number): void {,
-<<<<<<< HEAD
-  const rating = this.getRating(name, value)
-const metric: PerformanceMetric = {,
-name
-}
-=======
-  const rating = this.getRating(name, value);
+const rating = this.getRating(name, value);
 const metric: PerformanceMetric = {
 ,
 name,
 
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 private recordWebVital(name: keyof WebVitals, value: number): void {}
 const rating = this.getRating(name, value);
 const metric: PerformanceMetric = {}
@@ -372,14 +313,10 @@ return 'poor'
 /**
 * Record a custom metric
 */
-<<<<<<< HEAD
-recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {,
-  const metric: CustomMetric = {,
-=======
 recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {
   const metri,
   c: CustomMetric = {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 name
 }
 recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {}
@@ -414,16 +351,6 @@ Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
 /**
 * Send metric to analytics service
 */
-<<<<<<< HEAD
-private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,
-try {
-if (typeof window !== 'undefined' && 'fetch' in window) {
-await fetch('/api/analytics/performance', {)}
-method: 'POST'})
-headers: { 'Content-Type': 'application/json' })
-body: JSON.stringify(metric),
-private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {}
-=======
 private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {
 try {,
 if (typeof window !== 'undefined' && 'fetch' in window) {,
@@ -433,7 +360,7 @@ headers: { 'Content-Type': 'application/json' })
 body: JSON.stringify(metric)
 private async sendToAnalytics(metri,)</void>
   c: PerformanceMetric): Promise<void> {}
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 try {}
 if (typeof window !== 'undefined' && 'fetch' in window) {}
 await fetch('/api/analytics/performance', {)}
@@ -472,16 +399,10 @@ getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */}
 * Get performance score (0-100)
 */
 getPerformanceScore(): number {}
-<<<<<<< HEAD
-const vitals = Object.values(this.webVitals)
-if (vitals.length === 0) return 0;
-
-const scores = vitals.map(metric => {
-=======
 const vitals = Object.values(this.webVitals);
 if (vitals.length === 0) return 0
 const scores = vitals.map(metric => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   )
 switch (metric.rating) {
 case 'good': return 100
@@ -505,22 +426,7 @@ return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.len
 */
 getSummary(): {
 score: number,
-<<<<<<< HEAD
-    webVitals: WebVitals,
-customMetrics: CustomMetric[]}
-getSummary(): {}
-score: number,
-    webVitals: WebVitals,
-customMetrics: CustomMetric[],
-    recommendations: string[];}
-} {}
-const score = this.getPerformanceScore()
-const recommendations: string[] = [],
-// Generate recommendations based on metrics
-if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
-  const recommendations: string[] = [],
-=======
-    webVitals: WebVitals
+webVitals: WebVitals
 customMetric,
   s: CustomMetric[]}
 getSummary(): {}
@@ -536,7 +442,7 @@ const recommendations: string[] = []
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
   const recommendation,
   s: string[] = []
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 // Generate recommendations based on metrics
 }
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}
@@ -563,13 +469,9 @@ recommendations}
 }
 /**
 * Measure function execution time
-<<<<<<< HEAD
-*/
-measureFunction<T>(name: string, fn: () => T): T {,
-=======
 */</void>
 measureFunction<T>(name: string, fn: () => T): T {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const start = performance.now()
 const result = fn()}</T>
 measureFunction<T>(name: string, fn: () => T): T {}
@@ -581,13 +483,9 @@ return result
 }
 /**
 * Measure async function execution time
-<<<<<<< HEAD
-*/
-async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
-=======
 */</T>
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 const start = performance.now()
 const result = await fn()}</T>
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
@@ -611,11 +509,8 @@ performance.mark(name)}
 * Measure between two marks
 */
 measure(name: string, startMark: string, endMark: string): number | null {,
-<<<<<<< HEAD
-if (typeof performance !== 'undefined' && 'measure' in performance) {
-=======
 if (typeof performance !== 'undefined' && 'measure' in performance) {,
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 try {}
 measure(name: string, startMark: string, endMark: string): number | null {}
 if (typeof performance !== 'undefined' && 'measure' in performance) {}
@@ -722,21 +617,14 @@ interface MetricData {
 };
 interface MetricData {};
 values: number[],
-<<<<<<< HEAD
-    count: number,
-average: number,
-    min: number,
-max: number,
-    unit: string,
-=======
-    count: number
+count: number
 averag,
   e: number,
     min: number
 ma,
   x: number,
     unit: string
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 rating?: 'good' | 'needs-improvement' | 'poor';}
 }</T>
 const simpleMetrics = new Map<string, MetricData>()
@@ -744,14 +632,9 @@ export const recordMetric = useCallback((...args) => {
   // Record in our simple metrics store for testing
 }
 export const recordMetric = useCallback((...args) => {}
-<<<<<<< HEAD
-// Record in our simple metrics store for testing;
-
-const existing = simpleMetrics.get(name)
-=======
 // Record in our simple metrics store for testing
 const existing = simpleMetrics.get(name);
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 if (existing) {}
 existing.values.push(value);
 existing.count++
@@ -760,20 +643,6 @@ existing.min = Math.min(existing.min, value);
 existing.max = Math.max(existing.max, value)}
 } else {
 simpleMetrics.set(name, {
-<<<<<<< HEAD
-values: [value],
-    count: 1;),
-average: value;),
-    min: value;),
-max: value)}
-unit)} else {}
-simpleMetrics.set(name, {)}
-values: [value],
-    count: 1,
-average: value,
-    min: value,
-max: value,
-=======
 values: [value],);
     count: 1;)
 averag,
@@ -789,7 +658,7 @@ averag,
   e: value,
     min: value
 max: value
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 unit
 ratin,
   g: getRating(name, value)}
@@ -829,13 +698,9 @@ const result = fn()
 const duration = performance.now() - start
 recordMetric(name, duration, MetricUnit.Milliseconds)};
 return result;}
-<<<<<<< HEAD
-}
-export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {,
-=======
 }</T>
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   const start = performance.now()
 const result = await fn()
 const duration = performance.now() - start
@@ -858,18 +723,11 @@ export const getPerformanceScore = (): number => {}
 const metrics = getMetrics();
 const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB']
 const webVitals = webVitalNames
-<<<<<<< HEAD
-.map(name => metrics[name])
-.filter(Boolean)
-if (webVitals.length === 0) return 0;
-
-const scores = webVitals.map(metric => {
-=======
 .map(name => metrics[name]);
 .filter(Boolean);
 if (webVitals.length === 0) return 0
 const scores = webVitals.map(metric => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   )
 switch (metric.rating) {
 case 'good': return 100
@@ -889,18 +747,12 @@ const sum = scores.reduce((a: number, b: number) => a + b, 0)
 return Math.round(sum / scores.length);
 }
 export const getRecommendations = (): string[] => {}
-<<<<<<< HEAD
-const metrics = getMetrics()
-const recommendations: string[] = [],
-if (metrics.FCP && metrics.FCP.rating !== 'good') {
-  const recommendations: string[] = [],
-=======
 const metrics = getMetrics();
 const recommendations: string[] = []
 if (metrics.FCP && metrics.FCP.rating !== 'good') {
   const recommendation,
   s: string[] = []
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
   }
 if (metrics.FCP && metrics.FCP.rating !== 'good') {}
 recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources')}
@@ -966,15 +818,9 @@ result[key] = { ...value }
 })
 return result
 }
-<<<<<<< HEAD
-export const clearMetrics = ($2) => {
-$3
-};
-}
-=======
 export const clearMetrics = () => {/* TODO: Fix JSX expression */}
 }</string>
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
+
 export const measureFunction = <T>(nam
 e: string, f)
 n: () => T): T => {/* TOD,
