@@ -2,18 +2,16 @@
 import React from 'react';
 
 interface StructuredDataProps {
-
-  data: Record<string, any>;
+  data: any;
   type?: string;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = (_props) => {
-
   return (
-    
-    <div></div>
+    <div>
       {/* Component content */}
     </div>
-  )};
+  );
+};
 
 export default StructuredData;

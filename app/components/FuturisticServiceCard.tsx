@@ -1,8 +1,7 @@
 import React from 'react'
-import { CheckCircle, ArrowRight} from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
 interface FuturisticServiceCardProps {
-
   title: string;
   description: string;
   features: string[];
@@ -11,7 +10,8 @@ interface FuturisticServiceCardProps {
   icon?: React.ReactNode;
   gradient?: string;
   onClick?: () => void;
-  isPopular?: boolean}
+  isPopular?: boolean;
+}
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   title,
@@ -22,7 +22,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   icon,
   gradient = 'from-purple-500 to-blue-600',
   onClick,
-  isPopular = false}) => {
+  isPopular = false
+}) => {
   return (
     <div className={`relative group ${isPopular ? 'scale-105' : ''}`}>
       {isPopular && (
@@ -42,21 +43,18 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           {/* Icon */}
           {icon && (
             <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-              {icon;
-}
+              {icon}
             </div>
           )}
           
           {/* Title */}
           <h3 className="...">
-            {title;
-}
+            {title}
           </h3>
           
           {/* Description */}
           <p className="...">
-            {description;
-}
+            {description}
           </p>
           
           {/* Features */}
@@ -73,13 +71,11 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           {price && (
             <div className="...">
               <div className="...">
-                {price;
-}
+                {price}
               </div>
               {priceDescription && (
                 <div className="...">
-                  {priceDescription;
-}
+                  {priceDescription}
                 </div>
               )}
             </div>
@@ -87,8 +83,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           
           {/* Button */}
           <button
-            onClick={onClick;
-}
+            onClick={onClick}
             className={`w-full bg-gradient-to-r ${gradient} text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group`}
           >
             <span>Get Started</span>

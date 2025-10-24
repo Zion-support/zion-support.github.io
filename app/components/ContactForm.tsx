@@ -1,22 +1,21 @@
-import React, { useState} from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle} from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
-
   name: string;
   email: string;
   company: string;
   phone: string;
   service: string;
-  message: string}
+  message: string;
+}
 
 interface FormStatus {
-
   type: 'idle' | 'loading' | 'success' | 'error';
-  message: string}
+  message: string;
+}
 
 const ContactForm: React.FC = () => {
-
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -24,23 +23,22 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  })
+  });
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
   });
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value} = e.target
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value}));
+      [name]: value
+    }));
   }
-  const handleSubmit = async (e: React.FormEvent) =>
-                {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
     try {
-
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
       setStatus({ type: 'success', message: 'Message sent successfully!' })
@@ -73,10 +71,8 @@ const ContactForm: React.FC = () => {
               type="text"
               id="name"
               name="name"
-              value={formData.name;
-}
-              onChange={handleInputChange;
-}
+              value={formData.name}
+              onChange={handleInputChange}
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Your full name"
@@ -91,10 +87,8 @@ const ContactForm: React.FC = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email;
-}
-              onChange={handleInputChange;
-}
+              value={formData.email}
+              onChange={handleInputChange}
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="your.email@example.com"
@@ -111,10 +105,8 @@ const ContactForm: React.FC = () => {
               type="text"
               id="company"
               name="company"
-              value={formData.company;
-}
-              onChange={handleInputChange;
-}
+              value={formData.company}
+              onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Your company name"
             />
@@ -128,10 +120,8 @@ const ContactForm: React.FC = () => {
               type="tel"
               id="phone"
               name="phone"
-              value={formData.phone;
-}
-              onChange={handleInputChange;
-}
+              value={formData.phone}
+              onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="+1 (555) 123-4567"
             />
@@ -145,10 +135,8 @@ const ContactForm: React.FC = () => {
           <select
             id="service"
             name="service"
-            value={formData.service;
-}
-            onChange={handleInputChange;
-}
+            value={formData.service}
+            onChange={handleInputChange}
             className="...">
             <option value="">Select a service</option>
             <option value="ai-services">AI Services</option>
@@ -165,13 +153,10 @@ const ContactForm: React.FC = () => {
           <textarea
             id="message"
             name="message"
-            value={formData.message;
-}
-            onChange={handleInputChange;
-}
+            value={formData.message}
+            onChange={handleInputChange}
             required
-            rows={6;
-}
+            rows={6}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Tell us about your project or question..."
           />

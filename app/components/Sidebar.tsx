@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState} from 'react';
-import { X, Home, User, Settings, LogOut, ChevronRight} from 'lucide-react';
+import React, { useState } from 'react';
+import { X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
-
   isOpen: boolean;
   onClose: () => void;
   menuItems?: Array<{
@@ -13,12 +12,14 @@ interface SidebarProps {
     icon?: React.ReactNode;
     submenu?: Array<{
       label: string;
-      href: string}>;
+      href: string;
+    }>;
   }>;
   user?: {
-  name: string;
+    name: string;
     email: string;
-    avatar?: string};
+    avatar?: string;
+  };
   onLogout?: () => void;
 }
 
@@ -31,21 +32,19 @@ const Sidebar: React.FC<SidebarProps> = ({
     { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> }
   ],
   user,
-  onLogout,
+  onLogout
 }) => {
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label)
-  }
+    setActiveSubmenu(activeSubmenu === label ? null : label);
+  };
   if (!isOpen) return null;
-
   return (
     <>
       {/* Overlay */}
       <div
         className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-        onClick={onClose;
-}
+        onClick={onClose}
       />
       {/* Sidebar */}
       <div className="...">
@@ -54,8 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <div className="...">
             <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
             <button
-              onClick={onClose;
-}
+              onClick={onClose}
               className="...">
               <X className="w-5 h-5" />
             </button>
@@ -67,10 +65,8 @@ const Sidebar: React.FC<SidebarProps> = ({
               <div className="...">
                 {user.avatar ? (
                   <img
-                    src={user.avatar;
-}
-                    alt={user.name;
-}
+                    src={user.avatar}
+                    alt={user.name}
                     className="w-10 h-10 rounded-full"
                   />
                 ) : (
@@ -91,13 +87,11 @@ const Sidebar: React.FC<SidebarProps> = ({
             {menuItems.map((item, index) => (
               <div key={index}>
                 <a
-                  href={item.href;
-}
+                  href={item.href}
                   className="...">
                   <div className="...">
                     {item.icon && <span className="mr-3">{item.icon}</span>}
-                    {item.label;
-}
+                    {item.label}
                   </div>
                   {item.submenu && (
                     <button
@@ -115,13 +109,10 @@ const Sidebar: React.FC<SidebarProps> = ({
                   <div className="...">
                     {item.submenu.map((subItem, subIndex) => (
                       <a
-                        key={subIndex;
-}
-                        href={subItem.href;
-}
+                        key={subIndex}
+                        href={subItem.href}
                         className="...">
-                        {subItem.label;
-}
+                        {subItem.label}
                       </a>
                     ))}
                   </div>
@@ -134,8 +125,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           {onLogout && (
             <div className="...">
               <button
-                onClick={onLogout;
-}
+                onClick={onLogout}
                 className="flex items-center w-full px-3 py-2 text-sm font-medium text-red-600 rounded-md hover:bg-red-50"
               >
                 <LogOut className="w-4 h-4 mr-3" />
@@ -149,4 +139,4 @@ const Sidebar: React.FC<SidebarProps> = ({
   );
 };
 
-export default Sidebar;</div>
+export default Sidebar;

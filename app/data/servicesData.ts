@@ -1,5 +1,4 @@
 export interface Service {
-
   id: string;
   title: string;
   description: string;
@@ -8,11 +7,13 @@ export interface Service {
   pricing: {
     basic: string;
     pro: string;
-    enterprise: string};
+    enterprise: string;
+  };
   contactInfo: {
-  website: string;
+    website: string;
     email: string;
-    phone: string};
+    phone: string;
+  };
   price?: string;
   icon?: string;
   href: string;
@@ -40,9 +41,9 @@ export const aiServices: Service[] = [
     ],
     pricing: {
       basic: "/month",
-      pro: ",999/month"
+      pro: ",999/month",
       enterprise: "Custom pricing"
-        }
+    },
     contactInfo: {
       website: "https://ziontechgroup.com"
       email: "sales@ziontechgroup.com"

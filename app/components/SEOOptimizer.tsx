@@ -2,10 +2,8 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
-
-  pageTitle?: string;
-  metaDescription?: string;
-  keywords?: string[];
+  pageData?: any;
+  onOptimize?: (data: any) => void;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = (_props) => {

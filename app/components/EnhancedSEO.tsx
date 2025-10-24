@@ -2,7 +2,6 @@
 import React from 'react';
 
 interface EnhancedSEOProps {
-
   title?: string;
   description?: string;
   keywords?: string[];

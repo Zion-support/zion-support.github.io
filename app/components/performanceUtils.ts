@@ -1,12 +1,12 @@
 interface PerformanceMetrics {
-
   loadTime: number | null;
   firstContentfulPaint: number | null;
   largestContentfulPaint: number | null;
   firstInputDelay: number | null;
   cumulativeLayoutShift: number | null;
   timeToInteractive: number | null;
-  totalBlockingTime: number | null}
+  totalBlockingTime: number | null;
+}
 
 // Global performance monitoring utilities
 export const performanceUtils = {
@@ -23,12 +23,10 @@ export const performanceUtils = {
       if (endMark) {
         performance.measure(name, startMark, endMark);
       } else {
-
         performance.measure(name, startMark);
       }
     }
   },
-
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -44,7 +42,6 @@ export const performanceUtils = {
         performance.clearMeasures(type);
         performance.clearMarks(type);
       } else {
-
         performance.clearMeasures();
         performance.clearMarks();
       }
@@ -54,7 +51,7 @@ export const performanceUtils = {
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as unknown as { gtag: (..._args: unknown[]) => void}).gtag('event', 'performance_metrics', {
+    (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
       custom_map: {
@@ -64,15 +61,19 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
         first_input_delay: metrics.firstInputDelay,
         cumulative_layout_shift: metrics.cumulativeLayoutShift,
         time_to_interactive: metrics.timeToInteractive,
-        total_blocking_time: metrics.totalBlockingTime;
-}
+        total_blocking_time: metrics.totalBlockingTime
+<<<<<<< HEAD
+      }
     });
+=======
+      });
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   }
 };
 
 declare global {
-
   interface Window {
-
-  gtag: (..._args: unknown[]) => void}
+    gtag: (..._args: unknown[]) => void;
+  }
 }

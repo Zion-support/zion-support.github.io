@@ -2,7 +2,6 @@
 import React from 'react';
 
 interface EnhancedSEOHeadProps {
-
   title?: string;
   description?: string;
   canonical?: string;

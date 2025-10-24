@@ -1,6 +1,7 @@
 // Analytics utilities for tracking user interactions and performance
-interface AnalyticsEvent {
+import React from "react";
 
+interface AnalyticsEvent {
   category: string;
   action: string;
   label?: string;
@@ -10,12 +11,10 @@ interface AnalyticsEvent {
 }
 
 class Analytics {
-
   private static instance: Analytics;
   private events: AnalyticsEvent[] = [];
 
   static getInstance(): Analytics {
-
     if (!Analytics.instance) {
       Analytics.instance = new Analytics();
     }
@@ -24,7 +23,6 @@ class Analytics {
 
   // Track custom events
   track(event: AnalyticsEvent): void {
-
     this.events.push({
       ...event,
       timestamp: Date.now()
@@ -36,13 +34,13 @@ class Analytics {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
-        ...event.custom_parameters});
+        ...event.custom_parameters
+      });
     }
   }
 
   // Track page views
   trackPageView(page: string, title?: string): void {
-
     this.track({
       category: "Page",
       action: "View",
@@ -56,7 +54,6 @@ class Analytics {
 
   // Track user interactions
   trackClick(element: string, location?: string): void {
-
     this.track({
       category: "Interaction",
       action: "Click",
@@ -69,17 +66,16 @@ class Analytics {
 
   // Track form submissions
   trackFormSubmit(formName: string, success: boolean): void {
-
     this.track({
       category: "Form",
       action: "Submit",
       label: formName,
-      value: success ? 1 : 0});
+      value: success ? 1 : 0
+    });
   }
 
   // Track performance metrics
   trackPerformance(metric: string, value: number): void {
-
     this.track({
       category: "Performance",
       action: "Metric",
@@ -90,7 +86,6 @@ class Analytics {
 
   // Track errors
   trackError(error: Error, context?: string): void {
-
     this.track({
       category: "Error",
       action: "Occurred",
@@ -110,10 +105,35 @@ class Analytics {
 
   // Clear events
   clearEvents(): void {
-
     this.events = [];
   }
 }
 
 export const analytics = Analytics.getInstance();
+
+// React hooks for easy integration
+export function useAnalytics() {
+  return {
+    track: analytics.track.bind(analytics),
+    trackPageView: analytics.trackPageView.bind(analytics),
+    trackClick: analytics.trackClick.bind(analytics),
+    trackFormSubmit: analytics.trackFormSubmit.bind(analytics),
+    trackPerformance: analytics.trackPerformance.bind(analytics),
+    trackError: analytics.trackError.bind(analytics)
+  };
+}
+
+// Higher-order component for automatic page view tracking
+export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
+  return ((props: unknown) => {
+    const { trackPageView } = useAnalytics();
+    React.useEffect(() => {
+      if (typeof window !== 'undefined') {
+        trackPageView(window.location.pathname, document.title);
+      }
+    }, [trackPageView]);
+    return React.createElement(WrappedComponent, props);
+  }) as T;
+}
+
 export default Analytics;

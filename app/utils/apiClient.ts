@@ -1,6 +1,5 @@
 // API Client for making HTTP requests
 interface RequestOptions {
-
   method?: string;
   headers?: Record<string, string>;
   body?: string | FormData;
@@ -15,7 +14,6 @@ interface ApiResponse<T = unknown> {
 }
 
 class ApiClient {
-
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
 
@@ -32,7 +30,6 @@ class ApiClient {
     const timeoutId = setTimeout(() => controller.abort(), options.timeout || 10000);
 
     try {
-
       const response = await fetch(url, {
         method: options.method || 'GET',
         headers: {
@@ -51,7 +48,6 @@ class ApiClient {
 
       const data = await response.json();
       return {
-
         data,
         status: response.status,
         statusText: response.statusText,

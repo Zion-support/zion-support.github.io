@@ -1,7 +1,6 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
-
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
@@ -30,8 +29,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                 </label>
                 <input
                   type='number'
-                  value={currentCost;
-}
+                  value={currentCost}
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
@@ -44,8 +42,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                   type='range'
                   min='10'
                   max='90'
-                  value={efficiencyGain;
-}
+                  value={efficiencyGain}
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
                 />
@@ -61,8 +58,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                   type='range'
                   min='3'
                   max='24'
-                  value={timeframe;
-}
+                  value={timeframe}
                   onChange={e => setTimeframe(Number(e.target.value))}
                   className='w-full'
                 />
@@ -74,7 +70,7 @@ const InteractiveAIROICalculator: React.FC = () => {
             
             <div className='bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl'>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-                ROI Analysis
+                ROI Projection
               </h3>
               <div className='text-center mb-6'>
                 <div className='text-6xl font-bold text-blue-600 mb-2'>
@@ -85,11 +81,7 @@ const InteractiveAIROICalculator: React.FC = () => {
               
               <div className='space-y-4'>
                 <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
-                  <span className='text-gray-700'>Current Annual Cost:</span>
-                  <span className='font-semibold'>${currentCost.toLocaleString()}</span>
-                </div>
-                <div className='flex justify-between items-center p-4 bg-white rounded-lg shadow-sm'>
-                  <span className='text-gray-700'>Expected Annual Savings:</span>
+                  <span className='text-gray-700'>Annual Savings:</span>
                   <span className='font-semibold text-green-600'>
                     ${((currentCost * efficiencyGain) / 100).toLocaleString()}
                   </span>

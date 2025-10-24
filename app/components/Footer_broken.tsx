@@ -1,9 +1,8 @@
 import React from 'react';
 
 interface Footer_brokenProps {
-
   className?: string;
-  showSocialLinks?: boolean;
+  showSocial?: boolean;
 }
 
 const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {

@@ -2,9 +2,8 @@
 import React from 'react';
 
 interface SecurityEnhancerProps {
-
-  enableSecurityChecks?: boolean;
-  onSecurityUpdate?: () => void;
+  children?: React.ReactNode;
+  enableSecurity?: boolean;
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {

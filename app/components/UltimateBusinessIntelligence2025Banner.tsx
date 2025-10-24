@@ -2,19 +2,17 @@
 import React from 'react';
 
 interface UltimateBusinessIntelligence2025BannerProps {
-
   title?: string;
-  subtitle?: string;
+  description?: string;
   onAction?: () => void;
 }
 
 const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = (_props) => {
-
   return (
-    
-    <div></div>
+    <div>
       {/* Component content */}
     </div>
-  )};
+  );
+};
 
 export default UltimateBusinessIntelligence2025Banner;
