@@ -18,65 +18,69 @@ export const performanceUtils = {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       } catch (e) {
         // Fallback for older browsers
-        console.log('Performance monitoring not fully supported');
+        console.log('Performance Observer not supported');
       }
     }
   },
 
   optimizeImages: () => {
     if (typeof window !== 'undefined') {
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach((img: HTMLImageElement) => {
-        if (img.dataset.src) {
-          img.src = img.dataset.src;
-          img.removeAttribute('data-src');
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
         }
       });
     }
   },
 
-  optimizeFonts: () => {
+  preloadCriticalResources: () => {
     if (typeof window !== 'undefined') {
-      // Preload critical fonts
-      const fontPreloads = [
-        { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2' },
-        { href: '/fonts/inter-var.woff', as: 'font', type: 'font/woff' }
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/css/critical.css'
       ];
-
-      fontPreloads.forEach(font => {
+      
+      criticalResources.forEach((resource) => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = font.href;
-        link.as = font.as;
-        if (font.type) link.type = font.type;
-        link.crossOrigin = 'anonymous';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'font';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
         document.head.appendChild(link);
       });
     }
   },
 
-  optimizeThirdPartyScripts: () => {
-    if (typeof window !== 'undefined') {
-      // Defer non-critical scripts
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach((script: HTMLScriptElement) => {
-        script.defer = true;
-      });
-    }
+  debounce: (func: Function, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   },
 
-  preloadResource: (href: string, as: string) => {
-    if (typeof window !== 'undefined') {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = href;
-      link.as = as;
-      document.head.appendChild(link);
-    }
+  throttle: (func: Function, limit: number) => {
+    let inThrottle: boolean;
+    return function executedFunction(...args: any[]) {
+      if (!inThrottle) {
+        func.apply(this, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
   },
 
   cleanup: () => {
-    // Cleanup function for component unmount
     if (typeof window !== 'undefined') {
       // Remove any performance observers or timers
       console.log('Performance optimizer cleanup completed');
@@ -92,4 +96,3 @@ export const defaultConfig = {
 export const defaultFunction = () => {
   return null;
 };
-
