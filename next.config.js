@@ -24,6 +24,14 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  
+  // Add webpack configuration to handle react-helmet-async
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...(config.externals || []), 'react-helmet-async'];
+    }
+    return config;
+  },
 }
 
 export default nextConfig

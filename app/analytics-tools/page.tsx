@@ -3,16 +3,16 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 const AnalyticsToolsPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Analytics Tools - Zion Tech Group</title>
         <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Analytics Tools, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
+      </Head>
 
       <Navigation />
       
