@@ -46,11 +46,7 @@ export class ApiClient {
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-<<<<<<< HEAD
-        throw new Error(`HTTP error! status: ${response.status}`)
-=======
         throw new Error(`HTTP error! status: ${response.status}`);
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
       }
 
       const data = await response.json();
@@ -70,11 +66,7 @@ export class ApiClient {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'GET',
       ...options,
-<<<<<<< HEAD
-    })
-=======
     });
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
   }
 
   async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
@@ -86,11 +78,7 @@ export class ApiClient {
       },
       body: data ? JSON.stringify(data) : undefined,
       ...options,
-<<<<<<< HEAD
-    })
-=======
     });
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
   }
 
   async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
@@ -102,9 +90,6 @@ export class ApiClient {
       },
       body: data ? JSON.stringify(data) : undefined,
       ...options,
-<<<<<<< HEAD
-    })
-=======
     });
   }
 
@@ -118,24 +103,14 @@ export class ApiClient {
       body: data ? JSON.stringify(data) : undefined,
       ...options,
     });
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
   }
 
   async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'DELETE',
       ...options,
-<<<<<<< HEAD
-    })
-  }
-}
-
-// Create a default instance
-export const apiClient = new ApiClient()
-=======
     });
   }
 }
 
 export default ApiClient;
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb

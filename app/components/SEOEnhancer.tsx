@@ -70,23 +70,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
-<<<<<<< HEAD
-        {/* Open Graph tags */}
-=======
         {/* Open Graph */}
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
-<<<<<<< HEAD
-        
-        {/* Twitter Card tags */}
-=======
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         
         {/* Twitter Card */}
->>>>>>> 2fd0a884c5aaa8069c99fecfcd0ce2f61751a2fb
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
