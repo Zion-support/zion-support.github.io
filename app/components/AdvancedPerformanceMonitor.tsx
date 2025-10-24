@@ -2,179 +2,92 @@
 import React from 'react';
 import { Helmet   } from "react-helmet-async";
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle   } from "lucide-react";
-import Navigation from '../components/Navigation';
-
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-const AdvancedPerformanceMonitorPage: React.FC = () => {,
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-import React, { useState, useCallback, useEffect } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
-  memory: number | null
-}
-
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-}
-
-
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null,
-  })
-
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    if (typeof PerformanceObserver === 'undefined') return
-
-    const observers: PerformanceObserver[] = []
-
-    // Measure First Contentful Paint (FCP)
-    try {
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-          if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          }
-        });
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      observers.push(fcpObserver);
-    } catch (error) {
-      console.warn('FCP measurement failed:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
-    }
+import Navigation from '../components/Navigation'}
 
     // Measure First Input Delay (FID)
     try {
       const fidObserver = new PerformanceObserver((list) => {
+
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
+
           if (entry.processingStart && entry.startTime) {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-          }
-        });
-      });
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))}
+        })});
       fidObserver.observe({ entryTypes: ['first-input'] });
-      observers.push(fidObserver);
-    } catch (error) {
-      console.warn('FID measurement failed:', error);
-    }
+      observers.push(fidObserver)} catch (error) {
+      console.warn('FID measurement failed:', error)}
 
     // Measure Cumulative Layout Shift (CLS)
     try {
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
+
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+
           if (!entry.hadRecentInput) {
             clsValue += entry.value || 0;
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
-          }
-        });
-      });
+            setMetrics(prev => ({ ...prev, cls: clsValue }))}
+        })});
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-      observers.push(clsObserver);
-    } catch (error) {
-      console.warn('CLS measurement failed:', error);
-    }
+      observers.push(clsObserver)} catch (error) {
+      console.warn('CLS measurement failed:', error)}
 
     // Measure Time to First Byte (TTFB)
     try {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
         const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-        setMetrics(prev => ({ ...prev, ttfb }));
-      }
+        setMetrics(prev => ({ ...prev, ttfb }))}
     } catch (error) {
-      console.warn('TTFB measurement failed:', error);
-    }
+      console.warn('TTFB measurement failed:', error)}
 
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
         const memory = performance.memory;
-        setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
-      }
+        setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }))}
     } catch (error) {
-      console.warn('Memory measurement failed:', error);
-    }
+      console.warn('Memory measurement failed:', error)}
 
     return () => {
-      observers.forEach(observer => observer.disconnect());
-    };
-  }, []);
+
+      observers.forEach(observer => observer.disconnect())}}, []);
 
   useEffect(() => {
+
     if (!enableRealTimeMonitoring) return
 
     const cleanup = measureWebVitals()
 
     // Update metrics every 5 seconds
     const interval = setInterval(() => {
+
       measureWebVitals()
     }, 5000)
 
     return () => {
+
       if (cleanup) cleanup();
-      clearInterval(interval);
-    };
-  }, [measureWebVitals, enableRealTimeMonitoring]);
+      clearInterval(interval)}}, [measureWebVitals, enableRealTimeMonitoring]);
 
   useEffect(() => {
+
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
     }
   }, [metrics, onMetricsUpdate]);
 
   return (
+    
     <>
       
     </>
       <Helmet> </Helmet><title>Advanced Performance Monitor</title>
         <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /> </meta><meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" /> </meta></Helmet>
       <Navigation /> </Navigation><div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">{/* Hero Section */}
-        </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+        </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Advanced SEO Optimizer New
             </h1>
@@ -191,7 +104,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           ,
         </section>,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
@@ -210,7 +123,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
               <p>Experience the power of AI-driven performance monitoring</p>
             </div>
@@ -220,8 +133,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 </div>
               ))}
               </div>
-            </div>
-        </section>
+        </div>
+      </section>
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?
             </h2></h2>
@@ -231,12 +144,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Contact Sales
-              </button>
-              </div>
-            </div>
-        </section>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Contact Sales
+              
+            </button>
+          </div>
+        </div>
+      </section>
       </div>
       <Footer />
 
@@ -245,3 +159,4 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 }
 
 export default AdvancedPerformanceMonitorPage
+;

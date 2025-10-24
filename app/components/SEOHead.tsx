@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make SEOHead the perfect solution for your business.</p>
             </div>
@@ -28,30 +28,22 @@ import Footer from '../components/Footer'
                 <p className="text-gray-300">Optimized performance for maximum productivity.</p>
                 </div>
               </div>
-            </div>
-        </section>,
+        </div>
+      </section>,
 ,
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p>Join thousands of businesses already using SEOHead to transform their operations.</p>
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
+            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               Start Your Free Trial
+            
             </button>
-            </div>
+          </div>
         </section>
         </div>
       </Footer>
       </div>
-<<<<<<< HEAD
-
-      <Footer /> </Footer></>
-  )
-}
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9f8a
-  );
-}  )}
+;
+  )}  )}
 export default SEOHead
-}
+};

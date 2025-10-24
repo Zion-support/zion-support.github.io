@@ -1,6 +1,6 @@
 // accessibilityUtils utility functions
 export const accessibilityUtils = () => {
-  return null;
-};
+
+  return null};
 
 export default accessibilityUtils;

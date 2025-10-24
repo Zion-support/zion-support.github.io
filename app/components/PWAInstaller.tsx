@@ -6,15 +6,12 @@ interface PWAInstallerProps {
 }
 
 const PWAInstaller: React.FC<PWAInstallerProps> = (_props) => {
+
   return (
-    <div>
+    
+    <div></div>
       {/* Component content */}
     </div>
   )
 }
-<<<<<<< HEAD
 
-export default PWAInstaller
-=======
-export default PWAInstaller
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
