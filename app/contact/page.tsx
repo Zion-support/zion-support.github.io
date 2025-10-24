@@ -106,9 +106,10 @@ const ContactPage: React.FC = () => {
     openingHours: ["Mo-Fr 09:00-17:00"],
     priceRange: "$$"
   }), [])
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Contact|Zion Tech Group</title>
+        <title>Contact | Zion Tech Group</title>
         
         <meta name="description" content="Professional contact services and solutions for modern businesses." />
         

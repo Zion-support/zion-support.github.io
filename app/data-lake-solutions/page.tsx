@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Data Lake Solutions|Zion Tech Group</title>
+        <title>Data Lake Solutions | Zion Tech Group</title>
         
         <meta name="description" content="Professional data lake solutions services and solutions for modern businesses." />
         

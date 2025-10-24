@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Ai Climate Prediction Engine|Zion Tech Group</title>
+        <title>Ai Climate Prediction Engine | Zion Tech Group</title>
         
         <meta name="description" content="Professional ai climate prediction engine services and solutions for modern businesses." />
         

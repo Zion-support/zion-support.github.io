@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Ai Energy Grid Management Pro|Zion Tech Group</title>
+        <title>Ai Energy Grid Management Pro | Zion Tech Group</title>
         
         <meta name="description" content="Professional ai energy grid management pro services and solutions for modern businesses." />
         

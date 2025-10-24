@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Robotic Process Automation|Zion Tech Group</title>
+        <title>Robotic Process Automation | Zion Tech Group</title>
         
         <meta name="description" content="Professional robotic process automation services and solutions for modern businesses." />
         

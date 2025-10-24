@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Smart Contract Security Audit|Zion Tech Group</title>
+        <title>Smart Contract Security Audit | Zion Tech Group</title>
         
         <meta name="description" content="Professional smart contract security audit services and solutions for modern businesses." />
         

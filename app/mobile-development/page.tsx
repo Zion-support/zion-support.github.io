@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Mobile Development|Zion Tech Group</title>
+        <title>Mobile Development | Zion Tech Group</title>
         
         <meta name="description" content="Professional mobile development services and solutions for modern businesses." />
         

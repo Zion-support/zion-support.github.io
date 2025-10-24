@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Content Generator|Zion Tech Group</title>
+        <title>Content Generator | Zion Tech Group</title>
         
         <meta name="description" content="Professional content generator services and solutions for modern businesses." />
         

@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Chat Analytics|Zion Tech Group</title>
+        <title>Chat Analytics | Zion Tech Group</title>
         
         <meta name="description" content="Professional chat analytics services and solutions for modern businesses." />
         

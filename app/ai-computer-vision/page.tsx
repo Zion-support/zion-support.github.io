@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Ai Computer Vision|Zion Tech Group</title>
+        <title>Ai Computer Vision | Zion Tech Group</title>
         
         <meta name="description" content="Professional ai computer vision services and solutions for modern businesses." />
         

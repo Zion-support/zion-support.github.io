@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Ai Logo Designer|Zion Tech Group</title>
+        <title>Ai Logo Designer | Zion Tech Group</title>
         
         <meta name="description" content="Professional ai logo designer services and solutions for modern businesses." />
         

@@ -3,11 +3,12 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-export default function ServicePage() {
 
-  return (<>
+export default function ServicePage() {
+  return (
+    <>
       <Head>
-        <title>Ad Management|Zion Tech Group</title>
+        <title>Ad Management  | Zion Tech Group</title>
         
         <meta name="description" content="Professional ad management services and solutions for modern businesses." />
         

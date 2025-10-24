@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Task Manager Pro|Zion Tech Group</title>
+        <title>Task Manager Pro | Zion Tech Group</title>
         
         <meta name="description" content="Professional task manager pro services and solutions for modern businesses." />
         

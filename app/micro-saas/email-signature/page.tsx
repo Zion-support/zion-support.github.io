@@ -4,10 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function ServicePage() {
-
-  return (<>
+  return (
+    <>
       <Head>
-        <title>Email Signature|Zion Tech Group</title>
+        <title>Email Signature | Zion Tech Group</title>
         
         <meta name="description" content="Professional email signature services and solutions for modern businesses." />
         
