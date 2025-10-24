@@ -7,7 +7,7 @@ const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
-    fid= null,
+    fid: null,
     cls: null,
     ttfb: null
   })
@@ -104,6 +104,10 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       )}
     </div>
+
+
+
+
 
 
 export default PerformanceMonitor;

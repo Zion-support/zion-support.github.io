@@ -115,4 +115,8 @@ const AiLeadScoringProPage: React.FC = () => {
   );
 };
 
+
+
+
+
 export default AiLeadScoringProPage;

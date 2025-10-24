@@ -115,4 +115,8 @@ const AiRealEstateAnalyzerPage: React.FC = () => {
   );
 };
 
+
+
+
+
 export default AiRealEstateAnalyzerPage;

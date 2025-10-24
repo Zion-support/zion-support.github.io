@@ -115,4 +115,8 @@ const AiImageRecognitionProPage: React.FC = () => {
   );
 };
 
+
+
+
+
 export default AiImageRecognitionProPage;

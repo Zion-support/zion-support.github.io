@@ -115,4 +115,8 @@ const AiMedicalAssistantPage: React.FC = () => {
   );
 };
 
+
+
+
+
 export default AiMedicalAssistantPage;

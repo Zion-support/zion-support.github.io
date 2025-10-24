@@ -22,6 +22,13 @@ const nextConfig = {
   },
   // Disable static generation to avoid prerendering errors
   staticPageGenerationTimeout: 1000,
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname),
+    };
+    return config;
+  },
 }
 
 module.exports = nextConfig
