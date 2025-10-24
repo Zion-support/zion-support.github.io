@@ -77,7 +77,7 @@ const Ai3dModelGeneratorPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <div className="h-12 w-12 text-emerald-400 mb-4">
-                    <feature.icon className="h-12 w-12" />
+                    <div className="h-12 w-12">{feature.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
