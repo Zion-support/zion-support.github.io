@@ -1,13 +1,13 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react";"
-import { HelmetProvider } from 'react-helmet-async";"
-import { MemoryRouter } from 'react-router-dom";"
-import { Helmet } from 'react-helmet-async";"
-import { Component, ErrorInfo, ReactNode, useState, useEffect } from 'react";
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Component, ErrorInfo, ReactNode, useState, useEffect } from 'react';
 
-// Test component that throws an error"
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {"
-  if (shouldThrow) {"'"
-    throw new Error('Test error");
+// Test component that throws an error
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow) {
+    throw new Error('Test error');
   }
   return <div>No error</div>;
 };
@@ -56,94 +56,137 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
-// Performance monitoring component
+// Performance monitoring component for testing
 const PerformanceMonitor = () => {
   const [metrics, setMetrics] = useState({
     renderTime: 0,
     memoryUsage: 0,
-    errorCount: 0,
+    componentCount: 0
   });
 
   useEffect(() => {
-    const measurePerformance = () => {
-      const startTime = performance.now();
+    const startTime = performance.now();
+    
+    // Simulate performance monitoring
+    const interval = setInterval(() => {
       setMetrics(prev => ({
-        ...prev,
-        renderTime: endTime - startTime,
+        renderTime: performance.now() - startTime,
+        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+        componentCount: prev.componentCount + 1
       }));
-      const endTime = performance.now();
-    };
+    }, 100);
 
-    measurePerformance();
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div>
+    <div data-testid="performance-metrics">
       <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memory Usage: {metrics.memoryUsage}MB</div>
-      <div>Error Count: {metrics.errorCount}</div>
+      <div>Memory Usage: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+      <div>Component Count: {metrics.componentCount}</div>
     </div>
-  );"
-};"
-"
-describe("Advanced Components", () => {"
-  test("should render error boundary without errors", () => {
-    render(
-      <ErrorBoundary>
-        <div>Test content</div>"
-      </ErrorBoundary>"
-    );"
-    expect(screen.getByText("Test content")).toBeInTheDocument();"
-  });"
-"
-  test("should catch and display errors", () => {
+  );
+};
+
+// Accessibility wrapper component for testing
+const AccessibilityWrapper = ({ children }: { children: ReactNode }) => {
+  const [announcements, setAnnouncements] = useState<string[]>([]);
+
+  const announce = (message: string) => {
+    setAnnouncements(prev => [...prev, message]);
+  };
+
+  return (
+    <div>
+      <div role="status" aria-live="polite" aria-atomic="true">
+        {announcements.map((announcement, index) => (
+          <div key={index}>{announcement}</div>
+        ))}
+      </div>
+      {children}
+    </div>
+  );
+};
+
+describe('Advanced Components', () => {
+  test('ErrorBoundary catches and displays errors', async () => {
     const onError = jest.fn();
+    
     render(
       <ErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />"
-      </ErrorBoundary>"
-    );"
-    expect(screen.getByText("Something went wrong.")).toBeInTheDocument();"
-  });"
-"
-  test("should handle retry functionality", () => {
-    render(
-      <ErrorBoundary>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>"
-    );"
-    "
-    const retryButton = screen.getByText("Retry");"
-    fireEvent.click(retryButton);"
-    "
-    expect(screen.getByText("Something went wrong.")).toBeInTheDocument();"
-  });"
-"
-  test("should render performance monitor", () => {
+      </ErrorBoundary>
+    );
+
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    expect(onError).toHaveBeenCalledWith(expect.any(Error));
+  });
+
+  test('ErrorBoundary allows retry after error', async () => {
+    const onError = jest.fn();
+    
+    const { rerender } = render(
+      <ErrorBoundary onError={onError}>
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
+
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    
+    fireEvent.click(screen.getByText('Retry'));
+    
+    rerender(
+      <ErrorBoundary onError={onError}>
+        <ThrowError shouldThrow={false} />
+      </ErrorBoundary>
+    );
+
+    expect(screen.getByText('No error')).toBeInTheDocument();
+  });
+
+  test('PerformanceMonitor tracks metrics', async () => {
     render(<PerformanceMonitor />);
+    
+    await waitFor(() => {
+      expect(screen.getByTestId('performance-metrics')).toBeInTheDocument();
+    });
+
     expect(screen.getByText(/Render Time:/)).toBeInTheDocument();
     expect(screen.getByText(/Memory Usage:/)).toBeInTheDocument();
-    expect(screen.getByText(/Error Count:/)).toBeInTheDocument();"
-  });"
-"
-  test("should work with router", () => {
+    expect(screen.getByText(/Component Count:/)).toBeInTheDocument();
+  });
+
+  test('AccessibilityWrapper provides announcements', () => {
     render(
-      <MemoryRouter>
-        <div>Router test</div>"
-      </MemoryRouter>"
-    );"
-    expect(screen.getByText("Router test")).toBeInTheDocument();"
-  });"
-"
-  test("should work with helmet provider", () => {
+      <AccessibilityWrapper>
+        <div>Test content</div>
+      </AccessibilityWrapper>
+    );
+
+    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByText('Test content')).toBeInTheDocument();
+  });
+
+  test('HelmetProvider works correctly', () => {
     render(
       <HelmetProvider>
         <Helmet>
           <title>Test Title</title>
         </Helmet>
-        <div>Helmet test</div>"
-      </HelmetProvider>"
-    );"
-    expect(screen.getByText("Helmet test")).toBeInTheDocument();"
-  });"
-});"'"
+        <div>Test content</div>
+      </HelmetProvider>
+    );
+
+    expect(screen.getByText('Test content')).toBeInTheDocument();
+  });
+
+  test('MemoryRouter provides routing context', () => {
+    render(
+      <MemoryRouter initialEntries={['/test']}>
+        <div>Test content</div>
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Test content')).toBeInTheDocument();
+  });
+});
