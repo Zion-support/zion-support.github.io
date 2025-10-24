@@ -4,6 +4,9 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
   
+  // Force all pages to be dynamic to avoid serialization issues
+  generateStaticParams: false,
+  
   // Disable static generation to avoid serialization issues
   experimental: {
     missingSuspenseWithCSRBailout: false,
@@ -35,13 +38,6 @@ const nextConfig = {
   staticPageGenerationTimeout: 60,
   swcMinify: true,
   compress: true,
-  
-  // Disable static generation to avoid serialization issues
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-  },
   
   // Generate build ID for better caching
   generateBuildId: async () => {
@@ -83,7 +79,6 @@ const nextConfig = {
       },
     ];
   },
-  
   
   // Webpack optimizations
   webpack: (config, { isServer, dev }) => {

@@ -1,35 +1,18 @@
+'use client';
+
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
-    }
-  ];
-
   return (
     <>
       <Head>
-        <title>Medical records manager - Zion Tech Group</title>
+        <title>Medical Records Manager - Zion Tech Group</title>
         <meta name="description" content="Professional medical records manager services and solutions from Zion Tech Group." />
       </Head>
       
@@ -38,7 +21,7 @@ const Page: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Medical records manager
+              Medical Records Manager
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
               Advanced medical records manager solutions powered by artificial intelligence and machine learning.
@@ -46,21 +29,75 @@ const Page: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800 p-6 rounded-lg">
-                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <Brain className="w-12 h-12 text-emerald-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Intelligence</h3>
+              <p className="text-gray-300 mb-4">Advanced AI algorithms that provide intelligent insights and recommendations.</p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Smart recommendations
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Predictive analytics
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Automated insights
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Real-time analysis
+                </li>
+              </ul>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <BarChart className="w-12 h-12 text-emerald-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Advanced Analytics</h3>
+              <p className="text-gray-300 mb-4">Comprehensive analytics dashboard with real-time data visualization.</p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Real-time monitoring
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Custom dashboards
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Data visualization
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Performance metrics
+                </li>
+              </ul>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <Target className="w-12 h-12 text-emerald-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Precision Targeting</h3>
+              <p className="text-gray-300 mb-4">Target the right audience with AI-driven precision and accuracy.</p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Audience segmentation
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Behavioral analysis
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  Conversion optimization
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  ROI tracking
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="text-center">
