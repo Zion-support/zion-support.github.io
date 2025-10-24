@@ -35,7 +35,7 @@ class PerformanceMonitor {
       value,
       timestamp: Date.now(),
       url: window.location.href,
-    };
+    }
 
     this.metrics.push(metric);
 
