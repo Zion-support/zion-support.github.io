@@ -3,14 +3,15 @@
 import React from 'react';
 
 interface AnalyticsProviderProps {
-  // Add props here
+  children: React.ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (_props) => {
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   return (
     <div>
-      {/* Component content */}
+      {children}
     </div>
-  )};
+  );
+};
 
 export default AnalyticsProvider;

@@ -14,8 +14,8 @@ export default function AccessibilityEnhancer({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true
+  enableHighContrast: _enableHighContrast = false,
+  enableFocusManagement: _enableFocusManagement = true
 }: AccessibilityEnhancerProps) {
   React.useEffect(() => {
     // Add skip link functionality
